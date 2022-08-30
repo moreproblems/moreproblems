@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'More Problems';
-  logo = "logo.png";
+  
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: 'smooth'});
   }

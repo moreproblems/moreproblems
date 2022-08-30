@@ -37,49 +37,51 @@
   }
 
   .toolbar {
-    position: absolute;
+    position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     right: 0;
-    height: 85px;
+    /* min-height: 85px; */
+    max-height: 135px;
     display: flex;
     align-items: center;
     background-color: #0a1e33;
     color: white;
     font-weight: 600;
-    padding: 5px 10px 2px 20px;
+    padding: 5px;
   }
 
   .toolbar img {
     /* margin: 0 16px; */
     position: absolute;
-    left: -10px;
-    top: -18px;
+    left: 0;
+    top: 0;
+    margin: 5px
   }
 
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 8px;
+  .toolbar span {
+    
   }
 
-  .toolbar #youtube-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo:hover,
-  .toolbar #youtube-logo:hover {
-    opacity: 0.8;
+  .content-box {
+    /* display: flex; */
+    margin: 85px 0 0;
+    /* padding: 0 16px; */
+    width: 100%;
+    /* flex-direction: column; */
+    align-items: center;
   }
 
   .content-menu {
     display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
+    margin: 0 auto 32px;
+    /* padding: 0 16px; */
+    width: 100%;
     flex-direction: column;
     align-items: center;
   }
+
 
   .content {
     display: flex;
@@ -115,10 +117,10 @@
     border-radius: 4px;
     border: 1px solid #eee;
     background-color: #fafafa;
-    height: 40px;
+    max-height: 90px;
     width: 200px;
-    margin: 0 8px 16px;
-    padding: 16px;
+    margin: 0 4px 4px;
+    /* padding: 16px 8px; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -132,7 +134,7 @@
   }
 
   .card.card-small {
-    height: 16px;
+    height: 90px;
     width: 190px;
     border-radius: 8px;
   }
@@ -263,10 +265,26 @@
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
+  nav a {
+    font-size: 18px;
+    font-family: 'Orbitron';
+    color: white;
+    margin: 0 2px 10px;
+    padding: 3px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  nav a:hover {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
   footer {
     margin-top: 8px;
     display: flex;
     align-items: center;
+    text-align: center;
     line-height: 20px;
   }
 
@@ -318,1055 +336,35 @@
     }
 
   }
-
-  @media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-      display: none;
-      visibility: hidden;
-    }
-  }
 </style>
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <div class="card highlight-card card-small" style="transform: translateY(0.25rem)">
-    <img src="./assets/logo.png" style="width:90px; height:90px"/>
-    <span style="padding: 0 20px">
-      <h1 style="display: inline; font-family: 'Orbitron'; text-transform: uppercase"> {{ title }} ! </h1>
-      <p style="display: inline; font-size: 16px; font-family: 'Orbitron'; margin: 0 0 0 10px"> prepares every U.S. K-12
-        student to ace their standardized state assessments for free</p>
+    <img src="./assets/media/logo1.png" style="width: 80px; height: 80px" />
+    <span style="padding: 0 25px; text-align: center">
+      <h1 style="display: block; font-family: 'Orbitron'; text-transform: uppercase"> {{ title }} </h1>
+      <h2 style="display: block; padding: 5px 0 0"> Free K-12 State Assessments! </h2>
+      <!-- <p style="display: inline; font-size: 16px; font-family: 'Orbitron'; margin: 0 0 0 10px"> prepares every U.S. K-12
+        student to ace their standardized state assessments for free</p> -->
     </span>
   </div>
   <div class="spacer"></div>
-  <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
-    <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-      <rect width="400" height="400" fill="none" />
-      <path
-        d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"
-        fill="#fff" />
-    </svg>
-  </a>
-  <a aria-label="Angular on YouTube" target="_blank" rel="noopener" href="https://youtube.com/angular" title="YouTube">
-    <svg id="youtube-logo" height="24" width="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24" fill="#fff">
-      <path d="M0 0h24v24H0V0z" fill="none" />
-      <path
-        d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z" />
-    </svg>
-  </a>
+
+  <nav>
+    <a routerLink="/exams" routerLinkActive="active">Exams</a>&nbsp;&nbsp;
+    <!-- <a routerLink="/problems" routerLinkActive="active">Problems</a>&nbsp;&nbsp; -->
+    <a routerLink="/about" routerLinkActive="active">About Us</a>&nbsp;&nbsp;
+  </nav>
+</div>
+
+<div class="content-box" role="menu">
+  <router-outlet></router-outlet>
 </div>
 
 <div class="content-menu" role="menu">
-
-  <!-- Highlight Card -->
-  <br />
-  <h2>Select your State</h2>
-  <br />
-  <input type="hidden" value="California CAASPP" #state>
-  <section>
-    <button class="grade-button" (click)="state.value = 'Florida FSA'" tabindex="0">Florida (FSA)</button>
-    <button class="grade-button" (click)="state.value = 'Texas STAAR'" tabindex="0">Texas (STAAR)</button>
-  </section>
-  <br />
-
-  <!-- Texas STAAR Files -->
-  <h1>{{state.value}} Assessments</h1>
-</div>
-<div class="content" role="main" [ngSwitch]="state.value">
-  <div *ngSwitchDefault class="content">
-    <p>Here are some practice CAASPP assessments for students in California:</p>
-    <br />
-
-    <br />
-    <input type="hidden" #selection>
-    <div class="terminal" [ngSwitch]="selection.value" #terminal>
-      <pre *ngSwitchDefault>
-        <p>Assessments for this state are coming soon. Stay tuned!</p>
-      </pre>
-    </div>
-    <br />
-    <div class="card-container"></div>
-  </div>
-  
-  <div *ngSwitchCase="'Florida FSA'" class="content">
-    <p>Here are some practice FSA assessments for students in Florida:</p>
-    <br />
-
-    <br />
-    <h2>Select your Grade</h2>
-    <br />
-    <input type="hidden" #grade>
-    <section style="">
-      <button class="grade-button" (click)="grade.value = 'G3'; scroll(grade3)" tabindex="0">Grade 3</button>
-      <button class="grade-button" (click)="grade.value = 'G4'; scroll(grade4)" tabindex="0">Grade 4</button>
-      <button class="grade-button" (click)="grade.value = 'G5'; scroll(grade5)" tabindex="0">Grade 5</button>
-      <button class="grade-button" (click)="grade.value = 'G6'; scroll(grade6)" tabindex="0">Grade 6</button>
-      <button class="grade-button" (click)="grade.value = 'G7'; scroll(grade7)" tabindex="0">Grade 7</button>
-      <button class="grade-button" (click)="grade.value = 'G8'; scroll(grade8)" tabindex="0">Grade 8</button>
-      <button class="grade-button" (click)="grade.value = 'G9'; scroll(grade9)" tabindex="0">Grade 9</button>
-      <button class="grade-button" (click)="grade.value = 'G10'; scroll(grade10)" tabindex="0">Grade 10</button>
-    </section>
-    <br />
-
-    <!-- Florida FSA Exams -->
-    <br />
-    <h2>Select your Exam</h2>
-    <br />
-    <br #grade3 />
-    <h4>Grade 3</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'FL20G3M'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 3 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G3R'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 3 Reading Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br #grade4 />
-    <h4>Grade 4</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'FL20G4M'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 4 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G4R'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 4 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G4W'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 4 Writing Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br #grade5 />
-    <h4>Grade 5</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'FL20G5M'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 5 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G5R'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 5 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G5W'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 5 Writing Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G5S'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 5 Science Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br #grade6 />
-    <h4>Grade 6</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'FL20G6M'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 6 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G6R'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 6 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G6W'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 6 Writing Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br #grade7 />
-    <h4>Grade 7</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'FL20G7M'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 7 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G7R'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 7 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G7W'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 7 Writing Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br #grade8 />
-    <h4>Grade 8</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'FL20G8M'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 8 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G8R'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 8 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G8W'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 8 Writing Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G8S'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 8 Science Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br #grade9 />
-    <h4>Grade 9</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'FL20G9R'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 9 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G9W'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 9 Writing Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br #grade10 />
-    <h4>Grade 10</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'FL20G10R'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 10 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'FL20G10W'; scroll(terminalFL)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Florida FSA 2020 Practice Grade 10 Writing Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br />
-    <!-- Florida Terminal -->
-    <div class="terminal" [ngSwitch]="selection.value" #terminalFL>
-      <pre *ngSwitchDefault>
-        <p>Click one of the buttons above to download a practice exam.</p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G3M'">
-        <p><a href="https://drive.google.com/drive/folders/1q5bFlHUhGep2SkGi_rnnC345cWbpUAmy?usp=sharing" download>Florida FSA 2020 Practice Grade 3 Math Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G3R'">
-        <p><a href="https://drive.google.com/drive/folders/1z7GYsF4C46Lj7GKfuwcSYEAVzyDAx_C-?usp=sharing" download>Florida FSA 2020 Practice Grade 3 Reading Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G4M'">
-        <p><a href="https://drive.google.com/drive/folders/1hX_MDO3Hji8tHXA843vtEYq5p9gBVAt5?usp=sharing" download>Florida FSA 2020 Practice Grade 4 Math Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G4R'">
-        <p><a href="https://drive.google.com/drive/folders/1VwUCSwU4FdaYELyr-iuN5K_-dXGWlOKq?usp=sharing" download>Florida FSA 2020 Practice Grade 4 Reading Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G4W'">
-        <p><a href="https://drive.google.com/drive/folders/1oEkgA11A1QFzYvzDAe1FXZ6dE6al6HnE?usp=sharing" download>Florida FSA 2020 Practice Grade 4 Writing Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G5M'">
-        <p><a href="https://drive.google.com/drive/folders/1Vj1d9Zx_hpvyk7JO7xn0lZ9Zld8yCDhS?usp=sharing" download>Florida FSA 2020 Practice Grade 5 Math Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G5R'">
-        <p><a href="https://drive.google.com/drive/folders/18HlWAoHD4Y_3l8oW-vbBFdCoiR3JhF1o?usp=sharing" download>Florida FSA 2020 Practice Grade 5 Reading Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G5W'">
-        <p><a href="https://drive.google.com/drive/folders/17T6QVBnICunyfe-qq1xqV7pD1xTPVS9V?usp=sharing" download>Florida FSA 2020 Practice Grade 5 Writing Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G5S'">
-        <p><a href="https://drive.google.com/drive/folders/1ZQdR75Wz8fP5kFr94BSgDEodYsCJS3Ux?usp=sharing" download>Florida FSA 2020 Practice Grade 5 Science Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G6M'">
-        <p><a href="https://drive.google.com/drive/folders/1wCYPswQX36A1t7RmnJHAiDKPhNCEdO4n?usp=sharing" download>Florida FSA 2020 Practice Grade 6 Math Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G6R'">
-        <p><a href="https://drive.google.com/drive/folders/1JroLzyCZ_VesODkCDQJrlKsfN3ysMlae?usp=sharing" download>Florida FSA 2020 Practice Grade 6 Reading Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G6W'">
-        <p><a href="https://drive.google.com/drive/folders/1Ppph3SkrBETHpdpgPcL1KoejOA9UPpII?usp=sharing" download>Florida FSA 2020 Practice Grade 6 Writing Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G7M'">
-        <p><a href="https://drive.google.com/drive/folders/1CAJ62H8awm3spKOFq7KHLMQj9ax6RvFW?usp=sharing" download>Florida FSA 2020 Practice Grade 7 Math Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G7R'">
-        <p><a href="https://drive.google.com/drive/folders/1RrIeyOpzBvwDm8kz9K4lioON7mJMVR0m?usp=sharing" download>Florida FSA 2020 Practice Grade 7 Reading Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G7W'">
-        <p><a href="https://drive.google.com/drive/folders/1QsRx6EuPJ4e9iOWUkq2biiukFV47ul15?usp=sharing" download>Florida FSA 2020 Practice Grade 7 Writing Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G8M'">
-        <p><a href="https://drive.google.com/drive/folders/1XkA70OOJ-ydHO7K2uKMIo9q2tNVmS-9j?usp=sharing" download>Florida FSA 2020 Practice Grade 8 Math Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G8R'">
-        <p><a href="https://drive.google.com/drive/folders/1rWSc96bSLUyIzXSNwIXlZLpA8N7E5OWt?usp=sharing" download>Florida FSA 2020 Practice Grade 8 Reading Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G8W'">
-        <p><a href="https://drive.google.com/drive/folders/1Z5-_YPlFqBg7-ynITTIKP15C3xmQoSf0?usp=sharing" download>Florida FSA 2020 Practice Grade 8 Writing Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G8S'">
-        <p><a href="https://drive.google.com/drive/folders/12Rs_womtJCYi8QkjWAUfo4v73mJu0Cva?usp=sharing" download>Florida FSA 2020 Practice Grade 8 Science Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G9R'">
-        <p><a href="https://drive.google.com/drive/folders/1GkSBL6grI55x7beWC44Md_pgh8ysBEWL?usp=sharing" download>Florida FSA 2020 Practice Grade 9 Reading Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G9W'">
-        <p><a href="https://drive.google.com/drive/folders/1DSqJKt484HiFyMDPMfPd5UTIgv8H5ynE?usp=sharing" download>Florida FSA 2020 Practice Grade 9 Writing Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G10R'">
-        <p><a href="https://drive.google.com/drive/folders/1DWXUvDxsDRralKKhoJ7LSNzcoHj1iXk3?usp=sharing" download>Florida FSA 2020 Practice Grade 10 Reading Exam</a></p>
-      </pre>
-      <pre *ngSwitchCase="'FL20G10W'">
-        <p><a href="https://drive.google.com/drive/folders/1ifcSe88Sp2gdRqWORS4V08dQ1rwzefD_?usp=sharing" download>Florida FSA 2020 Practice Grade 10 Writing Exam</a></p>
-      </pre>
-    </div>
-    <br />
-  </div>
-  <div *ngSwitchCase="'Texas STAAR'" class="content">
-    <p>Here are some practice STAAR assessments for students in Texas:</p>
-    <br />
-
-    <br />
-    <h2>Select your Grade</h2>
-    <br />
-    <input type="hidden" #grade>
-    <section>
-      <button class="grade-button" (click)="grade.value = 'G3'; scroll(grade3)" tabindex="0">Grade 3</button>
-      <button class="grade-button" (click)="grade.value = 'G4'; scroll(grade4)" tabindex="0">Grade 4</button>
-      <button class="grade-button" (click)="grade.value = 'G5'; scroll(grade5)" tabindex="0">Grade 5</button>
-      <button class="grade-button" (click)="grade.value = 'G6'; scroll(grade6)" tabindex="0">Grade 6</button>
-      <button class="grade-button" (click)="grade.value = 'G7'; scroll(grade7)" tabindex="0">Grade 7</button>
-      <button class="grade-button" (click)="grade.value = 'G8'; scroll(grade8)" tabindex="0">Grade 8</button>
-    </section>
-    <br />
-
-    <!-- Texas STAAR Exams -->
-    <br />
-    <h2>Select your Exam</h2>
-    <br />
-    <br #grade3 />
-    <h4>Grade 3 Math</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G3M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 3 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G3M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 3 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G3M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 3 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX17G3M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2017 Grade 3 Math Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br />
-    <h4>Grade 3 Reading</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G3R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 3 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G3R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 3 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G3R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 3 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX17G3R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2017 Grade 3 Reading Exam</span>
-      </button>
-    </div>
-    <br />
-    <br />
-
-    <br />
-    <br #grade4 />
-    <h4>Grade 4 Math</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G4M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 4 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G4M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 4 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G4M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 4 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX17G4M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2017 Grade 4 Math Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br />
-    <h4>Grade 4 Reading</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G4R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 4 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G4R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 4 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G4R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 4 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX17G4R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2017 Grade 4 Reading Exam</span>
-      </button>
-    </div>
-    <br />
-    <br />
-
-    <br #grade5 />
-    <h4>Grade 5 Math</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G5M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 5 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G5M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 5 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G5M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 5 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX17G5M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2017 Grade 5 Math Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br />
-    <h4>Grade 5 Reading</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G5R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 5 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G5R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 5 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G5R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 4 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX17G5R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2017 Grade 5 Reading Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br />
-    <h4>Grade 5 Science</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G5S'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 5 Science Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G5S'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 5 Science Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G5S'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 5 Science Exam</span>
-      </button>
-    </div>
-    <br />
-    <br />
-
-    <br #grade6 />
-    <h4>Grade 6 Math</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G6M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 6 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G6M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 6 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G6M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 6 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX17G6M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2017 Grade 6 Math Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br />
-    <h4>Grade 6 Reading</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G6R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 6 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G6R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 6 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G6R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 6 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX17G6R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2017 Grade 6 Reading Exam</span>
-      </button>
-    </div>
-    <br />
-    <br />
-
-    <br #grade7 />
-    <h4>Grade 7 Math</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G7M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 7 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G7M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 7 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G7M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 7 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX17G7M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2017 Grade 7 Math Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br />
-    <h4>Grade 7 Reading</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G7R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 7 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G7R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 7 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G7R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 7 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX17G7R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2017 Grade 7 Reading Exam</span>
-      </button>
-    </div>
-    <br />
-    <br />
-
-    <br #grade8 />
-    <h4>Grade 8 Math</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G8M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 8 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G8M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 8 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G8M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 8 Math Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX17G8M'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2017 Grade 8 Math Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br />
-    <h4>Grade 8 Reading</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G8R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 8 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G8R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 8 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G8R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 8 Reading Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX17G8R'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2017 Grade 8 Reading Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br />
-    <h4>Grade 8 Science</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G8S'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 8 Science Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G8S'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 8 Science Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G8S'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 8 Science Exam</span>
-      </button>
-    </div>
-    <br />
-
-    <br />
-    <h4>Grade 8 Social Studies</h4>
-    <br />
-    <input type="hidden" #selection>
-    <div class="card-container">
-      <button class="card card-small" (click)="selection.value = 'TX21G8SS'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2021 Grade 8 Social Studies Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX19G8SS'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2019 Grade 8 Social Studies Exam</span>
-      </button>
-      <button class="card card-small" (click)="selection.value = 'TX18G8SS'; scroll(terminalTX)" tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-        </svg>
-        <span>Texas STAAR 2018 Grade 8 Social Studies Exam</span>
-      </button>
-    </div>
-    <br />
-    <br />
-
-    <br />
-    <!-- Texas Terminal -->
-    <div class="terminal" [ngSwitch]="selection.value" #terminalTX>
-      <pre *ngSwitchDefault>
-      <p>Click one of the buttons above to download a practice exam.</p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G3M'">
-      <p><a href="https://drive.google.com/drive/folders/1fMuwTitW1yajsVGKXzpUbFnpm149BZkm?usp=sharing" download>Texas STAAR 2021 Grade 3 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G3M'">
-      <p><a href="https://drive.google.com/drive/folders/1-1ngEaOoO2giMo59hpfKiNX8NbqqvqGw?usp=sharing" download>Texas STAAR 2019 Grade 3 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G3M'">
-      <p><a href="https://drive.google.com/drive/folders/1n7FO716EBoBP_MQsTA47J4PI3oG0kFHf?usp=sharing" download>Texas STAAR 2018 Grade 3 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX17G3M'">
-      <p><a href="https://drive.google.com/drive/folders/1_S7LbW5Th97jy9EeJ7Fo1Sfk6ToQ7G8y?usp=sharing" download>Texas STAAR 2017 Grade 3 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G3R'">
-      <p><a href="https://drive.google.com/drive/folders/1QU-ctSCqYb1XGBpp_v-1RT4hOHf5SSx2?usp=sharing" download>Texas STAAR 2021 Grade 3 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G3R'">
-      <p><a href="https://drive.google.com/drive/folders/1lsX1r5_LxKrhflYAir-sOTRxfmIBul0H?usp=sharing" download>Texas STAAR 2019 Grade 3 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G3R'">
-      <p><a href="https://drive.google.com/drive/folders/1-L3o9EUb03uqOij1Qjt3YE-jazSZgxK_?usp=sharing" download>Texas STAAR 2018 Grade 3 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX17G3R'">
-      <p><a href="https://drive.google.com/drive/folders/17FPz46ttUOe99v92NRcMYNgEh2xqQJK_?usp=sharing" download>Texas STAAR 2017 Grade 3 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G4M'">
-      <p><a href="https://drive.google.com/drive/folders/1VSgkaA2Om1Ky8rNnzR5r2NkWLTypHeLT?usp=sharing" download>Texas STAAR 2021 Grade 4 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G4M'">
-      <p><a href="https://drive.google.com/drive/folders/1cGCqN5ejxyhCI15t63aDijxxHPlB40qF?usp=sharing" download>Texas STAAR 2019 Grade 4 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G4M'">
-      <p><a href="https://drive.google.com/drive/folders/158hJNCHTBqj-o3E23YJtKxhh7-V_1AAE?usp=sharing" download>Texas STAAR 2018 Grade 4 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX17G4M'">
-      <p><a href="https://drive.google.com/drive/folders/1gVDjUdlhWlpj3DdgtVXMnGDkvpsaRpV7?usp=sharing" download>Texas STAAR 2017 Grade 4 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G4R'">
-      <p><a href="https://drive.google.com/drive/folders/1HdXmYb_Ftc60w1mkkS9Dl7ekSJGzljtn?usp=sharing" download>Texas STAAR 2021 Grade 4 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G4R'">
-      <p><a href="https://drive.google.com/drive/folders/1VeyJdd2zyhFpelS4FbuDE4-Pt7A3AiRk?usp=sharing" download>Texas STAAR 2019 Grade 4 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G4R'">
-      <p><a href="https://drive.google.com/drive/folders/11XeJWt5i-tw-2qSaOKWSE21ODrBEfmsQ?usp=sharing" download>Texas STAAR 2018 Grade 4 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX17G4R'">
-      <p><a href="https://drive.google.com/drive/folders/17BzXfhQ8_C7m1PwiHG3yb07V9YWB1ook?usp=sharing" download>Texas STAAR 2017 Grade 4 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G5M'">
-      <p><a href="https://drive.google.com/drive/folders/1zS9e3c6nXuH2gkrcCkUT7GBPrV_fSPhN?usp=sharing" download>Texas STAAR 2021 Grade 5 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G5M'">
-      <p><a href="https://drive.google.com/drive/folders/1eqHKVYPkaEc-IBcEQLDrRkrqC_EZE6hv?usp=sharing" download>Texas STAAR 2019 Grade 5 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G5M'">
-      <p><a href="https://drive.google.com/drive/folders/1b7EwjiQQYqDOnoWk0ZwRxxHV9Krgsdlf?usp=sharing" download>Texas STAAR 2018 Grade 5 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX17G5M'">
-      <p><a href="https://drive.google.com/drive/folders/14sjoJh3VBwiH3nPeHkCQ-Roqks2AJDYE?usp=sharing" download>Texas STAAR 2017 Grade 5 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G5R'">
-      <p><a href="https://drive.google.com/drive/folders/1RGkuL15tdsFMvAatEKmJHp0ehFXv9sDd?usp=sharing" download>Texas STAAR 2021 Grade 5 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G5R'">
-      <p><a href="https://drive.google.com/drive/folders/1xYiEwEvqbM03-N5YIPUbyOd_UDb7dkDP?usp=sharing" download>Texas STAAR 2019 Grade 5 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G5R'">
-      <p><a href="https://drive.google.com/drive/folders/1YA7rwIG5ERDYFAz3fVUND7uskEz5tapG?usp=sharing" download>Texas STAAR 2018 Grade 5 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX17G5R'">
-      <p><a href="https://drive.google.com/drive/folders/1ppLdzVrgj_QVi27TxwqqO9cIkY1OhLcS?usp=sharing" download>Texas STAAR 2017 Grade 5 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G5S'">
-      <p><a href="https://drive.google.com/drive/folders/1yRuidkbBAsqA_1QDb1YvAJF3ZbXFprkG?usp=sharing" download>Texas STAAR 2021 Grade 5 Science Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G5S'">
-      <p><a href="https://drive.google.com/drive/folders/1lqm4xpKPSFLAPsoeIMSKQWrqpuMiZ36o?usp=sharing" download>Texas STAAR 2019 Grade 5 Science Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G5S'">
-      <p><a href="https://drive.google.com/drive/folders/1xzKVWJHH4_wNj12LoUjv8OGk6lYuNEm4?usp=sharing" download>Texas STAAR 2018 Grade 5 Science Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G6M'">
-      <p><a href="https://drive.google.com/drive/folders/1zum3eQEatrH7x5LJ6jVhVQuD5COtf04G?usp=sharing" download>Texas STAAR 2021 Grade 6 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G6M'">
-      <p><a href="https://drive.google.com/drive/folders/13Nb4Nwg_aMbzVvgZao_bToam2KAxeYRW?usp=sharing" download>Texas STAAR 2019 Grade 6 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G6M'">
-      <p><a href="https://drive.google.com/drive/folders/1wJFpoBVwTtl_7ewgEXynDmzvmlUHsAxB?usp=sharing" download>Texas STAAR 2018 Grade 6 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX17G6M'">
-      <p><a href="https://drive.google.com/drive/folders/1qoE6_e2y0eDIBdPV4fQ0i4xkTNZvPPBk?usp=sharing" download>Texas STAAR 2017 Grade 6 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G6R'">
-      <p><a href="https://drive.google.com/drive/folders/15fgDc1aJiufGy-_k97rPFZhAvxAKns3D?usp=sharing" download>Texas STAAR 2021 Grade 6 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G6R'">
-      <p><a href="https://drive.google.com/drive/folders/1h6Blx8IOhRQ1kZpH8wbc_imN6sEp4KXk?usp=sharing" download>Texas STAAR 2019 Grade 6 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G6R'">
-      <p><a href="https://drive.google.com/drive/folders/1-PT2RRG0TXjnUU7AoW9kXFh6Ka77gi1t?usp=sharing" download>Texas STAAR 2018 Grade 6 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX17G6R'">
-      <p><a href="https://drive.google.com/drive/folders/1B4PFJz076yFgWQVK9wZFx8Nr7ZdFJyoZ?usp=sharing" download>Texas STAAR 2017 Grade 6 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G7M'">
-      <p><a href="https://drive.google.com/drive/folders/1TOqdRW4JkJ_a66bHlCIjkPRuC8ZM8VTe?usp=sharing" download>Texas STAAR 2021 Grade 7 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G7M'">
-      <p><a href="https://drive.google.com/drive/folders/1YvdXGVoTHmxvOXeA2-Lxv3DGH5Jz9Hi-?usp=sharing" download>Texas STAAR 2019 Grade 7 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G7M'">
-      <p><a href="https://drive.google.com/drive/folders/1fALIDu94qt1mYieAzmK1r1_lCtZzqpiX?usp=sharing" download>Texas STAAR 2018 Grade 7 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX17G7M'">
-      <p><a href="https://drive.google.com/drive/folders/1hQOmwHwTIBG_srGIA7HU8nBOOamyTYCX?usp=sharing" download>Texas STAAR 2017 Grade 7 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G7R'">
-      <p><a href="https://drive.google.com/drive/folders/1YLKT_p9RCXatq3AobKbS_MaNtF74P5fz?usp=sharing" download>Texas STAAR 2021 Grade 7 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G7R'">
-      <p><a href="https://drive.google.com/drive/folders/1pUTu3-QuTy8mHL3FwdsM2UCo-dhyLsRT?usp=sharing" download>Texas STAAR 2019 Grade 7 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G7R'">
-      <p><a href="https://drive.google.com/drive/folders/1amKJKI_1M8sa2jm5xRfHwtrq_q_KrhTK?usp=sharing" download>Texas STAAR 2018 Grade 7 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX17G7R'">
-      <p><a href="https://drive.google.com/drive/folders/1dNQ76TrkKn96thob4hmkPobe9SyWyO-H?usp=sharing" download>Texas STAAR 2017 Grade 7 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G8M'">
-      <p><a href="https://drive.google.com/drive/folders/1Yyjo92l6xEObqf4u4elOt9KBimUOr_Rz?usp=sharing" download>Texas STAAR 2021 Grade 8 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G8M'">
-      <p><a href="https://drive.google.com/drive/folders/1Ddt4yHC0KHzvsTjcnP4wU3yrO2nFO3uP?usp=sharing" download>Texas STAAR 2019 Grade 8 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G8M'">
-      <p><a href="https://drive.google.com/drive/folders/1Ruz4q4LpCWTUxYR74k9sD_35KH58wvDF?usp=sharing" download>Texas STAAR 2018 Grade 8 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX17G8M'">
-      <p><a href="https://drive.google.com/drive/folders/1uBQSz1LJOWVb-qrlsZt_e8_2up64BMs9?usp=sharing" download>Texas STAAR 2017 Grade 8 Math Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G8R'">
-      <p><a href="https://drive.google.com/drive/folders/1NfDbxcYzN1QGR4TrEhs7edmoyJsxdK0Q?usp=sharing" download>Texas STAAR 2021 Grade 8 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G8R'">
-      <p><a href="https://drive.google.com/drive/folders/1y8p5Kncul9Dc_JHAkFgkAnDYSBU0IKmx?usp=sharing" download>Texas STAAR 2019 Grade 8 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G8R'">
-      <p><a href="https://drive.google.com/drive/folders/1haRpIHPVc9DPChSvuj-olMxRdqqbhYaj?usp=sharing" download>Texas STAAR 2018 Grade 8 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX17G8R'">
-      <p><a href="https://drive.google.com/drive/folders/1BigLu8vr8R8HurgV-cRmx5K57N5M1ytM?usp=sharing" download>Texas STAAR 2017 Grade 8 Reading Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G8S'">
-      <p><a href="https://drive.google.com/drive/folders/1-i689v3znBtsUP0kkoUMKMBUYXIMEP6D?usp=sharing" download>Texas STAAR 2021 Grade 8 Science Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G8S'">
-      <p><a href="https://drive.google.com/drive/folders/1EuF5xbqbjV7hqEBH23uyz86mh1KiJmMT?usp=sharing" download>Texas STAAR 2019 Grade 8 Science Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G8S'">
-      <p><a href="https://drive.google.com/drive/folders/1YbaVONV3P1mDSBNijOv83bRvkr93kbqw?usp=sharing" download>Texas STAAR 2018 Grade 8 Science Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX21G8SS'">
-      <p><a href="https://drive.google.com/drive/folders/1Ux-KYdEA2HKLGv2zqiI5Cp24Jk2xAwD8?usp=sharing" download>Texas STAAR 2021 Grade 8 Social Studies Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX19G8SS'">
-      <p><a href="https://drive.google.com/drive/folders/1hgOE7dLk5q4Masqa7iZOGwb2FicOHUSt?usp=sharing" download>Texas STAAR 2019 Grade 8 Social Studies Exam</a></p>
-    </pre>
-      <pre *ngSwitchCase="'TX18G8SS'">
-      <p><a href="https://drive.google.com/drive/folders/1zZw56D6fV4NmkTsbZ1fiWXxA5q1zt1ZC?usp=sharing" download>Texas STAAR 2018 Grade 8 Social Studies Exam</a></p>
-    </pre>
-    </div>
-    <br />
-    <br />
-  </div>
-
   <!-- Footer -->
-  <footer>
+  <!-- <footer>
     Love Angular?&nbsp;
     <a href="https://github.com/angular/angular" target="_blank" rel="noopener"> Give our repo a star.
       <div class="github-star-badge">
@@ -1383,9 +381,9 @@
         <path d="M0 0h24v24H0z" fill="none" />
       </svg>
     </a>
-  </footer>
-
+  </footer> -->
 </div>
+
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
