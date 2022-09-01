@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 // import { readFileSync } from 'fs';
 // import { join } from 'path';
 // import { HttpClient } from '@angular/common/http';
@@ -17,6 +17,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./problems.component.css']
 })
 
+@Injectable()
 export class ProblemsComponent implements OnInit{
   title = 'More Problems';
 

@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-exams',
   templateUrl: './exams.component.html',
   styleUrls: ['./exams.component.css']
 })
+
+@Injectable()
 export class ExamsComponent implements OnInit{
   title = 'More Problems';
   
