@@ -86,7 +86,7 @@
   .content {
     display: flex;
     margin: 12px auto 32px;
-    padding: 0 16px;
+    padding: 0 0;
     max-width: 1000px;
     flex-direction: column;
     align-items: center;
@@ -358,8 +358,8 @@
   </nav>
 </div>
 
-<div class="content-box" role="menu">
-  <router-outlet></router-outlet>
+<div class="content-box" role="menu" style="width:100%; padding: 0px">
+  <router-outlet style="width:100%; padding: Opx"></router-outlet>
 </div>
 
 <div class="content-menu" role="menu">
