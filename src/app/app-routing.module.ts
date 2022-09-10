@@ -6,7 +6,7 @@ import { ProblemsComponent } from './components/problems/problems.component';
 import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'about', pathMatch: 'full' },
+  { path: '', redirectTo: 'exams', pathMatch: 'full' },
   { path: 'exams', component: ExamsComponent },
   { path: 'problems', component: ProblemsComponent },
   { path: 'about', component: AboutComponent }
