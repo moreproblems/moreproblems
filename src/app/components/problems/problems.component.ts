@@ -1,7 +1,7 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 // import { readFileSync } from 'fs';
 // import { join } from 'path';
-// import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 // function syncReadFile(filename: string) {
 //   const result = readFileSync(join(__dirname, filename), 'utf-8');
@@ -21,21 +21,21 @@ import { Component, OnInit, Injectable } from '@angular/core';
 export class ProblemsComponent implements OnInit{
   title = 'More Problems';
 
-  // exam_key = 'src/app/assets/exams/exams.txt';
-  // problem_file = 'src/app/assets/exams/TX21G3M/TX21G3M-problems.txt';
-
-  // syncReadFile('src/app/assets/exams/exams.txt');
+  exam_key = 'src/app/assets/exams/exams.txt';
+  problem_file = 'src/app/assets/exams/TX21G3M/TX21G3M-problems.txt';
+  
 
   // type Exam = { State: "string"; Grade: "string"; Subject: "string"; ExamYear: number; ExamName: "string"; NumQuestions: number };
 
   // examMap: Map<string, Exam[]>();
-  // problemArr: object[];
-  // problemNum: Number;
+  problemArr = [];
+  problemNum = 0;
   
   constructor() {}
 
     ngOnInit() {
-      // this.problemNum = 1
+      this.problemNum = 1;
+      // this.problemArr = syncReadFile(this.problem_file);
 
       // this.http.get<any>(this.exam_key).subscribe(data => {
       //   // console.log(data);
