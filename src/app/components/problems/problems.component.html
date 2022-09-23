@@ -129,11 +129,11 @@
     }
 
     .card.card-large {
-        max-height: 850px;
+        max-height: 1000px;
         width: 80%;
         border-radius: 8px;
         margin: 16px 16px;
-        padding: 16px 160px 80px;
+        padding: 16px 80px;
     }
 
     .card-container .card:not(.highlight-card) {
@@ -150,8 +150,8 @@
     }
 
     .card.highlight-card {
-        background-color: #0a1e33;
-        color: white;
+        background-color: white;
+        color: #0a1e33;
         font-weight: 600;
         border: none;
         width: auto;
@@ -214,38 +214,54 @@
     }
 
     button.toggle-button {
-    font-size: 18px;
-    color: white;
-    background-color: #ccc;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    padding: 7px 15px;
-    margin: 0 2px 10px;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
+        font-size: 18px;
+        color: white;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
     }
 
     .toggle-button:before {
         background-color: #1976d2;
     }
 
-    button.grade-button {
-    font-size: 18px;
-    color: white;
-    background-color: #1976d2;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    padding: 7px 15px;
-    margin: 0 2px 10px;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
+    button.topic-button {
+        font-size: 18px;
+        color: white;
+        background-color: #1976d2;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
 
-  button.grade-button:hover {
-    background-color: #0a1e33;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
+    .topic-button:before {
+        background-color: #ccc;
+    }
+
+    button.grade-button {
+        font-size: 18px;
+        color: white;
+        background-color: #1976d2;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.grade-button:hover {
+        background-color: #0a1e33;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
 
     .circle-link {
         height: 40px;
@@ -306,28 +322,38 @@
 
     /* The switch - the box around the slider */
     .switch {
-    position: relative;
-    display: inline-block;
-    min-width: 60px;
-    max-width: 150px;
-    height: 34px;
+        position: relative;
+        display: inline-block;
+        min-width: 60px;
+        max-width: 150px;
+        height: 34px;
     }
 
     /* Hide default HTML checkbox */
     .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+        opacity: 0;
+        width: 0;
+        height: 0;
     }
 
-    input:checked + .toggle-button {
-    background-color: #1976d2;
+    input:checked+.toggle-button {
+        background-color: #1976d2;
     }
 
-    input:hover + .toggle-button {
-    background-color: #0a1e33;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    input:hover+.toggle-button {
+        background-color: #0a1e33;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    input:checked+.topic-button {
+        background-color: #ccc;
+    }
+
+    input:hover+.topic-button {
+        background-color: #0a1e33;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
 
     /* Responsive Styles */
@@ -353,153 +379,214 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main">
-    <br/>
-    <h2>Select your State</h2>
-    <input type="hidden" value="All United States" #state>
-    <section>
-        <label class="switch">
-            <input type="checkbox" value="CA">
-            <button class="toggle-button">California</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="FL">
-            <button class="toggle-button">Florida</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="GA">
-            <button class="toggle-button">Georgia</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="IL">
-            <button class="toggle-button">Illinois</button>
-        </label>
-        
-        <label class="switch">
-            <input type="checkbox" value="MI">
-            <button class="toggle-button">Michigan</button>
-        </label>
-    </section>
-    <section>
-        <label class="switch">
-            <input type="checkbox" value="NY">
-            <button class="toggle-button">New York</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="NC">
-            <button class="toggle-button">North Carolina</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="OH">
-            <button class="toggle-button">Ohio</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="PA">
-            <button class="toggle-button">Pennsylvania</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="TX">
-            <button class="toggle-button">Texas</button>
-        </label>
-    </section>
-    <br/>
+    <div *ngIf="expand_filters" class="content">
+        <br />
+        <h2>Select your State</h2>
+        <input type="hidden" value="All United States" #state>
+        <section>
+            <label class="switch">
+                <input type="checkbox" value="CA">
+                <button *ngIf="filters.includes('California')" (click)="toggle_button('California')" class="toggle-button">California</button>
+                <button *ngIf="!filters.includes('California')" (click)="toggle_button('California')" class="toggle-button">California</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="FL">
+                <button *ngIf="filters.includes('Florida')" (click)="toggle_button('Florida')" class="toggle-button">Florida</button>
+                <button *ngIf="!filters.includes('Florida')" (click)="toggle_button('Florida')" class="toggle-button">Florida</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="GA">
+                <button *ngIf="filters.includes('Georgia')" (click)="toggle_button('Georgia')" class="toggle-button">Georgia</button>
+                <button *ngIf="!filters.includes('Georgia')" (click)="toggle_button('Georgia')" class="toggle-button">Georgia</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="IL">
+                <button *ngIf="filters.includes('Illinois')" (click)="toggle_button('Illinois')" class="toggle-button">Illinois</button>
+                <button *ngIf="!filters.includes('Illinois')" (click)="toggle_button('Illinois')" class="toggle-button">Illinois</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="MI">
+                <button *ngIf="filters.includes('Michigan')" (click)="toggle_button('Michigan')" class="toggle-button">Michigan</button>
+                <button *ngIf="!filters.includes('Michigan')" (click)="toggle_button('Michigan')" class="toggle-button">Michigan</button>
+            </label>
+        </section>
+        <section>
+            <label class="switch">
+                <input type="checkbox" value="NY">
+                <button *ngIf="filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button">New York</button>
+                <button *ngIf="!filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button">New York</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="NC">
+                <button *ngIf="filters.includes('North Carolina')" (click)="toggle_button('North Carolina')" class="toggle-button">North Carolina</button>
+                <button *ngIf="!filters.includes('North Carolina')" (click)="toggle_button('North Carolina')" class="toggle-button">North Carolina</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="OH">
+                <button *ngIf="filters.includes('Ohio')" (click)="toggle_button('Ohio')" class="toggle-button">Ohio</button>
+                <button *ngIf="!filters.includes('Ohio')" (click)="toggle_button('Ohio')" class="toggle-button">Ohio</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="PA">
+                <button *ngIf="filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')" class="toggle-button">Pennsylvania</button>
+                <button *ngIf="!filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')" class="toggle-button">Pennsylvania</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="TX">
+                <button *ngIf="filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button">Texas</button>
+                <button *ngIf="!filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button">Texas</button>
+            </label>
+        </section>
+        <br />
 
-    <!-- <section>
-        <button class="grade-button" (click)="state.value = 'California CAASPP'; scroll2(title)" tabindex="0"><b>California</b> <br/> (CAASPP)</button>
-        <button class="grade-button" (click)="state.value = 'Florida FSA'; scroll2(title)" tabindex="0"><b>Florida</b> <br/> (FSA)</button>
-        <button class="grade-button-gray" (click)="state.value = 'Georgia GMAS'; scroll2(title)" tabindex="0"><b>Georgia</b> <br/> (GMAS)</button>
-        <button class="grade-button" (click)="state.value = 'Illinois IAR'; scroll2(title)" tabindex="0"><b>Illinois</b> <br/> (IAR)</button>
-        <button class="grade-button" (click)="state.value = 'Michigan M-STEP'; scroll2(title)" tabindex="0"><b>Michigan</b> <br/> (M-STEP)</button>
-      </section>
-      <section>
-        <button class="grade-button" (click)="state.value = 'New York NYSTP'; scroll2(title)" tabindex="0"><b>New York</b> <br/> (NYSTP)</button>
-        <button class="grade-button" (click)="state.value = 'North Carolina EOG'; scroll2(title)" tabindex="0"><b>North Carolina</b> <br/> (EOG)</button>
-        <button class="grade-button" (click)="state.value = 'Ohio OST'; scroll2(title)" tabindex="0"><b>Ohio</b> <br/> (OST)</button>
-        <button class="grade-button" (click)="state.value = 'Pennsylvania PSSA'; scroll2(title)" tabindex="0"><b>Pennsylvania</b> <br/> (PSSA)</button>
-        <button class="grade-button" (click)="state.value = 'Texas STAAR'; scroll2(title)" tabindex="0"><b>Texas</b> <br/> (STAAR)</button>
-      </section> -->
+        <br />
+        <h2>Select your Grade</h2>
+        <input type="hidden" value="All Grades" #state>
+        <section>
+            <label class="switch">
+                <input type="checkbox" value="G3">
+                <button *ngIf="filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button">Grade 3</button>
+                <button *ngIf="!filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button">Grade 3</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="G4">
+                <button *ngIf="filters.includes('Grade 4')" (click)="toggle_button('Grade 4')" class="toggle-button">Grade 4</button>
+                <button *ngIf="!filters.includes('Grade 4')" (click)="toggle_button('Grade 4')" class="toggle-button">Grade 4</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="G5">
+                <button *ngIf="filters.includes('Grade 5')" (click)="toggle_button('Grade 5')" class="toggle-button">Grade 5</button>
+                <button *ngIf="!filters.includes('Grade 5')" (click)="toggle_button('Grade 5')" class="toggle-button">Grade 5</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="G6">
+                <button *ngIf="filters.includes('Grade 6')" (click)="toggle_button('Grade 6')" class="toggle-button">Grade 6</button>
+                <button *ngIf="!filters.includes('Grade 6')" (click)="toggle_button('Grade 6')" class="toggle-button">Grade 6</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="G7">
+                <button *ngIf="filters.includes('Grade 7')" (click)="toggle_button('Grade 7')" class="toggle-button">Grade 7</button>
+                <button *ngIf="!filters.includes('Grade 7')" (click)="toggle_button('Grade 7')" class="toggle-button">Grade 7</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="G8">
+                <button *ngIf="filters.includes('Grade 8')" (click)="toggle_button('Grade 8')" class="toggle-button">Grade 8</button>
+                <button *ngIf="!filters.includes('Grade 8')" (click)="toggle_button('Grade 8')" class="toggle-button">Grade 8</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="G9">
+                <button *ngIf="filters.includes('Grade 9')" (click)="toggle_button('Grade 9')" class="toggle-button">Grade 9</button>
+                <button *ngIf="!filters.includes('Grade 9')" (click)="toggle_button('Grade 9')" class="toggle-button">Grade 9</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="G10">
+                <button *ngIf="filters.includes('Grade 10')" (click)="toggle_button('Grade 10')" class="toggle-button">Grade 10</button>
+                <button *ngIf="!filters.includes('Grade 10')" (click)="toggle_button('Grade 10')" class="toggle-button">Grade 10</button>
+            </label>
+        </section>
+        <br />
 
-    <br/>
-    <h2>Select your Grade</h2>
-    <input type="hidden" value="All Grades" #state>
-    <section>
-        <label class="switch">
-            <input type="checkbox" value="G3">
-            <button class="toggle-button">Grade 3</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="G4">
-            <button class="toggle-button">Grade 4</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="G5">
-            <button class="toggle-button">Grade 5</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="G6">
-            <button class="toggle-button">Grade 6</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="G7">
-            <button class="toggle-button">Grade 7</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="G8">
-            <button class="toggle-button">Grade 8</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="G9">
-            <button class="toggle-button">Grade 9</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="G10">
-            <button class="toggle-button">Grade 10</button>
-        </label>
-    </section>
-    <br/>
+        <br />
+        <h2>Select your Subject</h2>
+        <input type="hidden" value="All Subjects" #state>
+        <section>
+            <label class="switch">
+                <input type="checkbox" value="ER">
+                <button *ngIf="filters.includes('ELA Reading')" (click)="toggle_button('ELA Reading')" class="toggle-button">ELA Reading</button>
+                <button *ngIf="!filters.includes('ELA Reading')" (click)="toggle_button('ELA Reading')" class="toggle-button">ELA Reading</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="EW">
+                <button *ngIf="filters.includes('ELA Writing')" (click)="toggle_button('ELA Writing')" class="toggle-button">ELA Writing</button>
+                <button *ngIf="!filters.includes('ELA Writing')" (click)="toggle_button('ELA Writing')" class="toggle-button">ELA Writing</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="M">
+                <button *ngIf="filters.includes('Math')" (click)="toggle_button('Math')" class="toggle-button">Math</button>
+                <button *ngIf="!filters.includes('Math')" (click)="toggle_button('Math')" class="toggle-button">Math</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="S">
+                <button *ngIf="filters.includes('Science')" (click)="toggle_button('Science')" class="toggle-button">Science</button>
+                <button *ngIf="!filters.includes('Science')" (click)="toggle_button('Science')" class="toggle-button">Science</button>
+            </label>
+            <label class="switch">
+                <input type="checkbox" value="SS">
+                <button *ngIf="filters.includes('Social Studies')" (click)="toggle_button('Social Studies')" class="toggle-button">Social Studies</button>
+                <button *ngIf="!filters.includes('Social Studies')" (click)="toggle_button('Social Studies')" class="toggle-button">Social Studies</button>
+            </label>
 
-    <br/>
-    <h2>Select your Subject</h2>
-    <input type="hidden" value="All Subjects" #state>
-    <section>
-        <label class="switch">
-            <input type="checkbox" value="ELA Reading">
-            <button class="toggle-button">ELA Reading</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="ELA Writing">
-            <button class="toggle-button">ELA Writing</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="Math">
-            <button class="toggle-button">Math</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="Science">
-            <button class="toggle-button">Science</button>
-        </label>
-        <label class="switch">
-            <input type="checkbox" value="Social Studies">
-            <button class="toggle-button">Social Studies</button>
-        </label>
-        
-    </section>
-    <br/>
+        </section>
+        <br />
 
-    <br/>
-    <section>
-        <br/>
-        <button class="grade-button"><h2><b>Give Me More Problems!</b></h2></button>
-    </section>
-    <br/>
+        <br />
+        <section>
+            <br />
+            <button class="grade-button" (click)="toggle_filter()">
+                <h2><b>Give Me More Problems!</b></h2>
+            </button>
+        </section>
+    </div>
+    <br />
 
     <div class="card-container">
-        <div class="card card-large">
-            <div class="content" style="overflow: hidden">
-                <h2>Exam: </h2>
-                <!-- <h2>Exam: {{examMap['TX21G3M']['State']}}</h2> -->
-                <h2>Problem #</h2>
-                <br/>
+        <div *ngIf="!expand_filters" class="card card-large" style="margin: auto" #problemCard>
+            <div class="content">
+                <h2> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_grade}} {{exam_subject}} Exam - Problem #{{problem_number}}/{{exam_length}} </h2>
+                <!-- <div class="card highlight-card card-small" -->
+                    <!-- style="height: 120px; width: 90%; padding: 10px"> -->
+                <section>
+                    <label class="switch" style="max-width: 90%">
+                        <input type="checkbox">
+                        <button *ngIf="!expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%"> <b>{{exam_dump[1].Topic}}</b> </button>
+                        <button *ngIf="expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%"> {{exam_dump[1].SubTopic}} </button>
+                    </label>
+                <!-- </div>  -->
+                </section>
+                <br />
+                <br />
+                <div *ngFor="let block of exam_dump[1].Content">
+                    <h3 *ngIf="!block.endsWith('.jpg')"> {{block}} </h3>
+                    <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
+                </div>
+                <br />
+                <input type="hidden" #selection>
+                <div *ngFor="let choice of exam_dump[1].AnswerChoices | keyvalue" class="card highlight-card card-small"
+                    style="min-height: 50px; max-height: 100px; max-width: 90%; padding: 10px">
+                    <button class="grade-button" (click)="selection.value = choice.key; attempt_problem(choice.key);"
+                        style="display: block; max-width: 100px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 0px">
+                        <b>{{choice.key}}</b> </button>
+                    <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')" style="display: block; margin: 0px 20px 0px 20px;"> {{choice.value.Choice}}</h3>
+                    <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}" style="max-width: 300px">
+                </div>
+                <br />
+                <div *ngIf="problem_attempts > 0" [ngSwitch]="selection.value" class="card highlight-card card-small"
+                    style="height: 120px; max-width: 90%; padding: 10px">
+                    <h3 *ngSwitchCase="'A'" style="display: block; margin: 0px 20px 0px 20px;">
+                        <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
+                        <br/> <br/> Explanation: {{exam_dump[1].AnswerChoices.A.Key.Rationale}}
+                    </h3>
+                    <h3 *ngSwitchCase="'B'" style="display: block; margin: 0px 20px 0px 20px;">
+                        <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
+                        <br/> <br/> Explanation: {{exam_dump[1].AnswerChoices.B.Key.Rationale}}
+                    </h3>
+                    <h3 *ngSwitchCase="'C'" style="display: block; margin: 0px 20px 0px 20px;">
+                        <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
+                        <br/> <br/> Explanation: {{exam_dump[1].AnswerChoices.C.Key.Rationale}}
+                    </h3>
+                    <h3 *ngSwitchCase="'D'"style="display: block; margin: 0px 20px 0px 20px;">
+                        <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
+                        <br/> <br/> Explanation: {{exam_dump[1].AnswerChoices.D.Key.Rationale}}
+                    </h3>
+                    <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button" (click)="next_problem(); scroll2(problemCard)" 
+                        style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 0px">
+                        <b> Next Problem </b>
+                    </button>
+                </div>
+                <!-- <br /> -->
             </div>
         </div>
     </div>
+    <br />
+    <!-- <p> {{exam_data}} </p> -->
 </div>
