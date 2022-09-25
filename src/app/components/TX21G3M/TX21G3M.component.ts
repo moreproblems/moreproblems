@@ -759,25 +759,25 @@ export class TX21G3MComponent implements OnInit {
                         'Rationale': 'The student likely realized that point A should be two same-size sections from 0 but disregarded the total number of same-size sections in the number line. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of same-size sections.'
                     }
                 },
-                'D': {
-                    'Choice': 'Exams/Texas/TX21G3M/media/19b.jpg',
-                    'Key': {
-                        'Correct': true,
-                        'Rationale': 'The student likely realized that point A should be two same-size sections from 0 but counted tick marks by starting with the tick mark at 0. The student needs to focus on understanding how to move to the left and to the right on a number line when representing fractions.'
-                    }
-                },
                 'B': {
-                    'Choice': 'Exams/Texas/TX21G3M/media/19c.jpg',
+                    'Choice': 'Exams/Texas/TX21G3M/media/19b.jpg',
                     'Key': {
                         'Correct': false,
                         'Rationale': 'The student likely realized that point A should be two same-size sections from 0 but counted tick marks by starting with the tick mark at 0. The student needs to focus on understanding how to move to the left and to the right on a number line when representing fractions.'
                     }
                 },
                 'C': {
-                    'Choice': 'Exams/Texas/TX21G3M/media/19d.jpg',
+                    'Choice': 'Exams/Texas/TX21G3M/media/19c.jpg',
                     'Key': {
                         'Correct': false,
                         'Rationale': 'The student likely realized that point A would be two same-size sections from 0 but chose a number line with 8 tick marks after point A rather than 8 same-size sections from 0 to 1 yard. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of same-size sections.'
+                    }
+                },
+                'D': {
+                    'Choice': 'Exams/Texas/TX21G3M/media/19d.jpg',
+                    'Key': {
+                        'Correct': true,
+                        'Rationale': 'The student likely realized that point A should be two same-size sections from 0 but counted tick marks by starting with the tick mark at 0. The student needs to focus on understanding how to move to the left and to the right on a number line when representing fractions.'
                     }
                 }
             }
@@ -1343,13 +1343,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[1].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[1].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[1].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[1].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[1].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[1].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[1].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1360,13 +1360,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[2].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[2].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[2].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[2].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[2].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[2].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[2].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1377,13 +1377,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[3].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[3].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[3].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[3].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[3].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[3].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[3].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1394,13 +1394,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[4].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[4].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[4].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[4].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[4].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[4].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[4].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1411,13 +1411,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[6].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[6].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[6].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[6].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[6].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[6].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[6].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1428,13 +1428,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[7].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[7].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[7].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[7].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[7].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[7].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[7].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1445,13 +1445,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[8].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[8].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[8].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[8].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[8].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[8].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[8].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1462,13 +1462,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[9].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[9].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[9].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[9].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[9].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[9].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[9].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1479,13 +1479,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[10].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[10].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[10].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[10].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[10].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[10].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[10].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1496,13 +1496,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[11].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[11].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[11].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[11].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[11].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[11].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[11].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1513,13 +1513,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[12].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[12].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[12].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[12].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[12].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[12].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[12].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1530,13 +1530,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[13].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[13].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[13].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[13].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[13].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[13].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[13].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1547,13 +1547,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[15].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[15].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[15].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[15].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[15].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[15].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[15].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1564,13 +1564,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[16].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[16].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[16].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[16].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[16].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[16].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[16].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1581,13 +1581,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[17].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[17].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[17].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[17].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[17].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[17].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[17].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1598,13 +1598,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[18].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[18].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[18].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[18].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[18].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[18].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[18].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1615,13 +1615,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[19].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[19].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[19].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[19].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[19].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[19].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[19].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1632,13 +1632,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[20].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[20].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[20].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[20].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[20].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[20].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[20].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1649,13 +1649,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[21].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[21].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[21].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[21].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[21].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[21].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[21].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1666,13 +1666,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[22].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[22].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[22].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[22].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[22].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[22].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[22].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1683,13 +1683,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[23].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[23].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[23].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[23].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[23].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[23].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[23].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1700,13 +1700,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[25].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[25].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[25].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[25].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[25].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[25].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[25].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1717,13 +1717,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[26].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[26].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[26].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[26].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[26].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[26].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[26].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1734,13 +1734,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[27].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[27].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[27].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[27].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[27].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[27].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[27].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1751,13 +1751,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[28].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[28].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[28].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[28].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[28].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[28].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[28].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1768,13 +1768,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[29].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[29].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[29].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[29].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[29].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[29].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[29].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1785,13 +1785,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[30].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[30].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[30].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[30].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[30].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[30].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[30].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1802,13 +1802,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'F' && this.exam_dump[31].AnswerChoices.A.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'G' && this.exam_dump[31].AnswerChoices.B.Key.Correct == true) {
+            else if (ch == 'G' && this.exam_dump[31].AnswerChoices.B.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'H' && this.exam_dump[31].AnswerChoices.C.Key.Correct == true) {
+            else if (ch == 'H' && this.exam_dump[31].AnswerChoices.C.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'J' && this.exam_dump[31].AnswerChoices.D.Key.Correct == true) {
+            else if (ch == 'J' && this.exam_dump[31].AnswerChoices.D.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {
@@ -1819,13 +1819,13 @@ export class TX21G3MComponent implements OnInit {
             if (ch == 'A' && this.exam_dump[32].AnswerChoices.F.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'B' && this.exam_dump[32].AnswerChoices.G.Key.Correct == true) {
+            else if (ch == 'B' && this.exam_dump[32].AnswerChoices.G.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'C' && this.exam_dump[32].AnswerChoices.H.Key.Correct == true) {
+            else if (ch == 'C' && this.exam_dump[32].AnswerChoices.H.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
-            if (ch == 'D' && this.exam_dump[32].AnswerChoices.J.Key.Correct == true) {
+            else if (ch == 'D' && this.exam_dump[32].AnswerChoices.J.Key.Correct == true) {
                 this.attempt_response = 'Correct'
             }
             else {

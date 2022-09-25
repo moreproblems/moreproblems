@@ -1546,17 +1546,17 @@
                         <b> Next Problem </b>
                     </button>
                 </div>
-                <div *ngIf="problem_number == 5 && problem_attempts > 0" [ngSwitch]="selection.value" class="card highlight-card card-small"
+                <div *ngIf="problem_number == 5 && problem_attempts > 0" class="card highlight-card card-small"
                     style="height: 350px; max-width: 90%; padding: 10px">
                     <h3 *ngIf="attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px;">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                         <br/> <br/> Explanation: {{exam_dump[5].Key.Rationale}}
                     </h3>
-                    <h3 *ngIf="attempt_response.startsWith('Inorrect')" style="display: block; margin: 0px 20px 0px 20px;">
+                    <h3 *ngIf="!attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px;">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                         <br/> <br/> Explanation: No rationale provided. The number submitted was not right.
                     </h3>
-                    <button class="grade-button" (click)="next_problem(); scroll2(problemCard)" 
+                    <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button" (click)="next_problem(); scroll2(problemCard)" 
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 0px">
                         <b> Next Problem </b>
                     </button>
@@ -1759,11 +1759,11 @@
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                         <br/> <br/> Explanation: {{exam_dump[14].Key.Rationale}}
                     </h3>
-                    <h3 *ngIf="attempt_response.startsWith('Inorrect')" style="display: block; margin: 0px 20px 0px 20px;">
+                    <h3 *ngIf="!attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px;">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                         <br/> <br/> Explanation: No rationale provided. The number submitted was not right.
                     </h3>
-                    <button class="grade-button" (click)="next_problem(); scroll2(problemCard)" 
+                    <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button" (click)="next_problem(); scroll2(problemCard)" 
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 0px">
                         <b> Next Problem </b>
                     </button>
@@ -1990,11 +1990,11 @@
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                         <br/> <br/> Explanation: {{exam_dump[24].Key.Rationale}}
                     </h3>
-                    <h3 *ngIf="attempt_response.startsWith('Inorrect')" style="display: block; margin: 0px 20px 0px 20px;">
+                    <h3 *!ngIf="attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px;">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                         <br/> <br/> Explanation: No rationale provided. The number submitted was not right.
                     </h3>
-                    <button class="grade-button" (click)="next_problem(); scroll2(problemCard)" 
+                    <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button" (click)="next_problem(); scroll2(problemCard)" 
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 0px">
                         <b> Next Problem </b>
                     </button>

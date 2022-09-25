@@ -1342,1076 +1342,1076 @@ export class ProblemsComponent implements OnInit {
     if (this.problem_number == 1) {
       if (ch == 'A' && this.exam_dump[1].AnswerChoices.A.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else if (ch == 'B' && this.exam_dump[1].AnswerChoices.B.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else if (ch == 'C' && this.exam_dump[1].AnswerChoices.C.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else if (ch == 'D' && this.exam_dump[1].AnswerChoices.D.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 2) {
       if (ch == 'F' && this.exam_dump[2].AnswerChoices.F.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else if (ch == 'G' && this.exam_dump[2].AnswerChoices.G.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else if (ch == 'H' && this.exam_dump[2].AnswerChoices.H.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else if (ch == 'J' && this.exam_dump[2].AnswerChoices.J.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 3) {
       if (ch == 'A' && this.exam_dump[3].AnswerChoices.A.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else if (ch == 'B' && this.exam_dump[3].AnswerChoices.B.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else if (ch == 'C' && this.exam_dump[3].AnswerChoices.C.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else if (ch == 'D' && this.exam_dump[3].AnswerChoices.D.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 4) {
       if (ch == 'F' && this.exam_dump[4].AnswerChoices.F.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else if (ch == 'G' && this.exam_dump[4].AnswerChoices.G.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else if (ch == 'H' && this.exam_dump[4].AnswerChoices.H.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else if (ch == 'J' && this.exam_dump[4].AnswerChoices.J.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 6) {
       if (ch == 'F' && this.exam_dump[6].AnswerChoices.F.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'G' && this.exam_dump[6].AnswerChoices.G.Key.Correct == true) {
+      else if (ch == 'G' && this.exam_dump[6].AnswerChoices.G.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'H' && this.exam_dump[6].AnswerChoices.H.Key.Correct == true) {
+      else if (ch == 'H' && this.exam_dump[6].AnswerChoices.H.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'J' && this.exam_dump[6].AnswerChoices.J.Key.Correct == true) {
+      else if (ch == 'J' && this.exam_dump[6].AnswerChoices.J.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 7) {
       if (ch == 'A' && this.exam_dump[7].AnswerChoices.A.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[7].AnswerChoices.B.Key.Correct == true) {
+      else if (ch == 'B' && this.exam_dump[7].AnswerChoices.B.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[7].AnswerChoices.C.Key.Correct == true) {
+      else if (ch == 'C' && this.exam_dump[7].AnswerChoices.C.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[7].AnswerChoices.D.Key.Correct == true) {
+      else if (ch == 'D' && this.exam_dump[7].AnswerChoices.D.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 8) {
       if (ch == 'F' && this.exam_dump[8].AnswerChoices.F.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'G' && this.exam_dump[8].AnswerChoices.G.Key.Correct == true) {
+      else if (ch == 'G' && this.exam_dump[8].AnswerChoices.G.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'H' && this.exam_dump[8].AnswerChoices.H.Key.Correct == true) {
+      else if (ch == 'H' && this.exam_dump[8].AnswerChoices.H.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'J' && this.exam_dump[8].AnswerChoices.J.Key.Correct == true) {
+      else if (ch == 'J' && this.exam_dump[8].AnswerChoices.J.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 9) {
       if (ch == 'A' && this.exam_dump[9].AnswerChoices.A.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[9].AnswerChoices.B.Key.Correct == true) {
+      else if (ch == 'B' && this.exam_dump[9].AnswerChoices.B.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[9].AnswerChoices.C.Key.Correct == true) {
+      else if (ch == 'C' && this.exam_dump[9].AnswerChoices.C.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[9].AnswerChoices.D.Key.Correct == true) {
+      else if (ch == 'D' && this.exam_dump[9].AnswerChoices.D.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 10) {
       if (ch == 'F' && this.exam_dump[10].AnswerChoices.F.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'G' && this.exam_dump[10].AnswerChoices.G.Key.Correct == true) {
+      else if (ch == 'G' && this.exam_dump[10].AnswerChoices.G.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'H' && this.exam_dump[10].AnswerChoices.H.Key.Correct == true) {
+      else if (ch == 'H' && this.exam_dump[10].AnswerChoices.H.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'J' && this.exam_dump[10].AnswerChoices.J.Key.Correct == true) {
+      else if (ch == 'J' && this.exam_dump[10].AnswerChoices.J.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 11) {
       if (ch == 'A' && this.exam_dump[11].AnswerChoices.A.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[11].AnswerChoices.B.Key.Correct == true) {
+      else if (ch == 'B' && this.exam_dump[11].AnswerChoices.B.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[11].AnswerChoices.C.Key.Correct == true) {
+      else if (ch == 'C' && this.exam_dump[11].AnswerChoices.C.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[11].AnswerChoices.D.Key.Correct == true) {
+      else if (ch == 'D' && this.exam_dump[11].AnswerChoices.D.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 12) {
       if (ch == 'F' && this.exam_dump[12].AnswerChoices.F.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'G' && this.exam_dump[12].AnswerChoices.G.Key.Correct == true) {
+      else if (ch == 'G' && this.exam_dump[12].AnswerChoices.G.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'H' && this.exam_dump[12].AnswerChoices.H.Key.Correct == true) {
+      else if (ch == 'H' && this.exam_dump[12].AnswerChoices.H.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'J' && this.exam_dump[12].AnswerChoices.J.Key.Correct == true) {
+      else if (ch == 'J' && this.exam_dump[12].AnswerChoices.J.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 13) {
       if (ch == 'A' && this.exam_dump[13].AnswerChoices.A.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[13].AnswerChoices.B.Key.Correct == true) {
+      else if (ch == 'B' && this.exam_dump[13].AnswerChoices.B.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[13].AnswerChoices.C.Key.Correct == true) {
+      else if (ch == 'C' && this.exam_dump[13].AnswerChoices.C.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[13].AnswerChoices.D.Key.Correct == true) {
+      else if (ch == 'D' && this.exam_dump[13].AnswerChoices.D.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 15) {
       if (ch == 'A' && this.exam_dump[15].AnswerChoices.A.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[15].AnswerChoices.B.Key.Correct == true) {
+      else if (ch == 'B' && this.exam_dump[15].AnswerChoices.B.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[15].AnswerChoices.C.Key.Correct == true) {
+      else if (ch == 'C' && this.exam_dump[15].AnswerChoices.C.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[15].AnswerChoices.D.Key.Correct == true) {
+      else if (ch == 'D' && this.exam_dump[15].AnswerChoices.D.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 16) {
       if (ch == 'F' && this.exam_dump[16].AnswerChoices.F.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'G' && this.exam_dump[16].AnswerChoices.G.Key.Correct == true) {
+      else if (ch == 'G' && this.exam_dump[16].AnswerChoices.G.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'H' && this.exam_dump[16].AnswerChoices.H.Key.Correct == true) {
+      else if (ch == 'H' && this.exam_dump[16].AnswerChoices.H.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'J' && this.exam_dump[16].AnswerChoices.J.Key.Correct == true) {
+      else if (ch == 'J' && this.exam_dump[16].AnswerChoices.J.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 17) {
       if (ch == 'A' && this.exam_dump[17].AnswerChoices.A.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[17].AnswerChoices.B.Key.Correct == true) {
+      else if (ch == 'B' && this.exam_dump[17].AnswerChoices.B.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[17].AnswerChoices.C.Key.Correct == true) {
+      else if (ch == 'C' && this.exam_dump[17].AnswerChoices.C.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[17].AnswerChoices.D.Key.Correct == true) {
+      else if (ch == 'D' && this.exam_dump[17].AnswerChoices.D.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 18) {
       if (ch == 'F' && this.exam_dump[18].AnswerChoices.F.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'G' && this.exam_dump[18].AnswerChoices.G.Key.Correct == true) {
+      else if (ch == 'G' && this.exam_dump[18].AnswerChoices.G.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'H' && this.exam_dump[18].AnswerChoices.H.Key.Correct == true) {
+      else if (ch == 'H' && this.exam_dump[18].AnswerChoices.H.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'J' && this.exam_dump[18].AnswerChoices.J.Key.Correct == true) {
+      else if (ch == 'J' && this.exam_dump[18].AnswerChoices.J.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 19) {
       if (ch == 'A' && this.exam_dump[19].AnswerChoices.A.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[19].AnswerChoices.B.Key.Correct == true) {
+      else if (ch == 'B' && this.exam_dump[19].AnswerChoices.B.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[19].AnswerChoices.C.Key.Correct == true) {
+      else if (ch == 'C' && this.exam_dump[19].AnswerChoices.C.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[19].AnswerChoices.D.Key.Correct == true) {
+      else if (ch == 'D' && this.exam_dump[19].AnswerChoices.D.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 20) {
       if (ch == 'F' && this.exam_dump[20].AnswerChoices.F.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'G' && this.exam_dump[20].AnswerChoices.G.Key.Correct == true) {
+      else if (ch == 'G' && this.exam_dump[20].AnswerChoices.G.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'H' && this.exam_dump[20].AnswerChoices.H.Key.Correct == true) {
+      else if (ch == 'H' && this.exam_dump[20].AnswerChoices.H.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'J' && this.exam_dump[20].AnswerChoices.J.Key.Correct == true) {
+      else if (ch == 'J' && this.exam_dump[20].AnswerChoices.J.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 21) {
       if (ch == 'A' && this.exam_dump[21].AnswerChoices.A.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[21].AnswerChoices.B.Key.Correct == true) {
+      else if (ch == 'B' && this.exam_dump[21].AnswerChoices.B.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[21].AnswerChoices.C.Key.Correct == true) {
+      else if (ch == 'C' && this.exam_dump[21].AnswerChoices.C.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[21].AnswerChoices.D.Key.Correct == true) {
+      else if (ch == 'D' && this.exam_dump[21].AnswerChoices.D.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 22) {
       if (ch == 'F' && this.exam_dump[22].AnswerChoices.F.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'G' && this.exam_dump[22].AnswerChoices.G.Key.Correct == true) {
+      else if (ch == 'G' && this.exam_dump[22].AnswerChoices.G.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'H' && this.exam_dump[22].AnswerChoices.H.Key.Correct == true) {
+      else if (ch == 'H' && this.exam_dump[22].AnswerChoices.H.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'J' && this.exam_dump[22].AnswerChoices.J.Key.Correct == true) {
+      else if (ch == 'J' && this.exam_dump[22].AnswerChoices.J.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 23) {
       if (ch == 'A' && this.exam_dump[23].AnswerChoices.A.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[23].AnswerChoices.B.Key.Correct == true) {
+      else if (ch == 'B' && this.exam_dump[23].AnswerChoices.B.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[23].AnswerChoices.C.Key.Correct == true) {
+      else if (ch == 'C' && this.exam_dump[23].AnswerChoices.C.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[23].AnswerChoices.D.Key.Correct == true) {
+      else if (ch == 'D' && this.exam_dump[23].AnswerChoices.D.Key.Correct == true) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 25) {
       if (ch == 'A' && this.exam_dump[25].AnswerChoices.A.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[25].AnswerChoices.B.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'B' && this.exam_dump[25].AnswerChoices.B.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[25].AnswerChoices.C.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'C' && this.exam_dump[25].AnswerChoices.C.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[25].AnswerChoices.D.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'D' && this.exam_dump[25].AnswerChoices.D.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-          this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
-  }
+    }
     if (this.problem_number == 26) {
       if (ch == 'F' && this.exam_dump[26].AnswerChoices.F.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'G' && this.exam_dump[26].AnswerChoices.G.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'G' && this.exam_dump[26].AnswerChoices.G.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'H' && this.exam_dump[26].AnswerChoices.H.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'H' && this.exam_dump[26].AnswerChoices.H.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'J' && this.exam_dump[26].AnswerChoices.J.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'J' && this.exam_dump[26].AnswerChoices.J.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-          this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
-  }
-  if (this.problem_number == 27) {
+    }
+    if (this.problem_number == 27) {
       if (ch == 'A' && this.exam_dump[27].AnswerChoices.A.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[27].AnswerChoices.B.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'B' && this.exam_dump[27].AnswerChoices.B.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[27].AnswerChoices.C.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'C' && this.exam_dump[27].AnswerChoices.C.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[27].AnswerChoices.D.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'D' && this.exam_dump[27].AnswerChoices.D.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-          this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
-  }
-  if (this.problem_number == 28) {
+    }
+    if (this.problem_number == 28) {
       if (ch == 'F' && this.exam_dump[28].AnswerChoices.F.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'G' && this.exam_dump[28].AnswerChoices.G.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'G' && this.exam_dump[28].AnswerChoices.G.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'H' && this.exam_dump[28].AnswerChoices.H.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'H' && this.exam_dump[28].AnswerChoices.H.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'J' && this.exam_dump[28].AnswerChoices.J.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'J' && this.exam_dump[28].AnswerChoices.J.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-          this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
-  }
-  if (this.problem_number == 29) {
+    }
+    if (this.problem_number == 29) {
       if (ch == 'A' && this.exam_dump[29].AnswerChoices.A.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[29].AnswerChoices.B.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'B' && this.exam_dump[29].AnswerChoices.B.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[29].AnswerChoices.C.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'C' && this.exam_dump[29].AnswerChoices.C.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[29].AnswerChoices.D.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'D' && this.exam_dump[29].AnswerChoices.D.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-          this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
-  }
-  if (this.problem_number == 30) {
+    }
+    if (this.problem_number == 30) {
       if (ch == 'F' && this.exam_dump[30].AnswerChoices.F.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'G' && this.exam_dump[30].AnswerChoices.G.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'G' && this.exam_dump[30].AnswerChoices.G.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'H' && this.exam_dump[30].AnswerChoices.H.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'H' && this.exam_dump[30].AnswerChoices.H.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'J' && this.exam_dump[30].AnswerChoices.J.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'J' && this.exam_dump[30].AnswerChoices.J.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-          this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
-  }
-  if (this.problem_number == 31) {
+    }
+    if (this.problem_number == 31) {
       if (ch == 'A' && this.exam_dump[31].AnswerChoices.A.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'B' && this.exam_dump[31].AnswerChoices.B.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'B' && this.exam_dump[31].AnswerChoices.B.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'C' && this.exam_dump[31].AnswerChoices.C.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'C' && this.exam_dump[31].AnswerChoices.C.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'D' && this.exam_dump[31].AnswerChoices.D.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'D' && this.exam_dump[31].AnswerChoices.D.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-          this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
-  }
-  if (this.problem_number == 32) {
+    }
+    if (this.problem_number == 32) {
       if (ch == 'F' && this.exam_dump[32].AnswerChoices.F.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'G' && this.exam_dump[32].AnswerChoices.G.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'G' && this.exam_dump[32].AnswerChoices.G.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'H' && this.exam_dump[32].AnswerChoices.H.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'H' && this.exam_dump[32].AnswerChoices.H.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
-      if (ch == 'J' && this.exam_dump[32].AnswerChoices.J.Key.Correct == true) {
-          if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+      else if (ch == 'J' && this.exam_dump[32].AnswerChoices.J.Key.Correct == true) {
+        if (this.problem_attempts == 1) {
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-          this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
-  }
+    }
   }
 
   attempt_fr_problem(ch: string) {
@@ -2419,40 +2419,40 @@ export class ProblemsComponent implements OnInit {
     if (this.problem_number == 5) {
       if (ch == this.exam_dump[5].Key.Answer) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 14) {
       if (ch == this.exam_dump[14].Key.Answer) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
     if (this.problem_number == 24) {
       if (ch == this.exam_dump[24].Key.Answer) {
         if (this.problem_attempts == 1) {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
         }
         else {
-          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.'
+          this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
         }
       }
       else {
-        this.attempt_response = 'That is not the correct answer - have another try.'
+        this.attempt_response = 'That is not the correct answer - have another try.';
       }
     }
   }
@@ -2460,6 +2460,7 @@ export class ProblemsComponent implements OnInit {
   next_problem() {
     this.problem_number += 1;
     this.problem_attempts = 0;
+    this.attempt_response = '';
   }
 
   scroll(el: HTMLElement) {
