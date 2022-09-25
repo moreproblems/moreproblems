@@ -1990,7 +1990,7 @@
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                         <br/> <br/> Explanation: {{exam_dump[24].Key.Rationale}}
                     </h3>
-                    <h3 *!ngIf="attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px;">
+                    <h3 *ngIf="!attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px;">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                         <br/> <br/> Explanation: No rationale provided. The number submitted was not right.
                     </h3>

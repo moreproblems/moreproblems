@@ -759,25 +759,25 @@ export class ProblemsComponent implements OnInit {
             'Rationale': 'The student likely realized that point A should be two same-size sections from 0 but disregarded the total number of same-size sections in the number line. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of same-size sections.'
           }
         },
-        'D': {
-          'Choice': 'Exams/Texas/TX21G3M/media/19b.jpg',
-          'Key': {
-            'Correct': true,
-            'Rationale': 'The student likely realized that point A should be two same-size sections from 0 but counted tick marks by starting with the tick mark at 0. The student needs to focus on understanding how to move to the left and to the right on a number line when representing fractions.'
-          }
-        },
         'B': {
-          'Choice': 'Exams/Texas/TX21G3M/media/19c.jpg',
+          'Choice': 'Exams/Texas/TX21G3M/media/19b.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely realized that point A should be two same-size sections from 0 but counted tick marks by starting with the tick mark at 0. The student needs to focus on understanding how to move to the left and to the right on a number line when representing fractions.'
           }
         },
         'C': {
-          'Choice': 'Exams/Texas/TX21G3M/media/19d.jpg',
+          'Choice': 'Exams/Texas/TX21G3M/media/19c.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely realized that point A would be two same-size sections from 0 but chose a number line with 8 tick marks after point A rather than 8 same-size sections from 0 to 1 yard. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of same-size sections.'
+          }
+        },
+        'D': {
+          'Choice': 'Exams/Texas/TX21G3M/media/19d.jpg',
+          'Key': {
+            'Correct': true,
+            'Rationale': 'The student likely realized that point A should be two same-size sections from 0 but counted tick marks by starting with the tick mark at 0. The student needs to focus on understanding how to move to the left and to the right on a number line when representing fractions.'
           }
         }
       }
