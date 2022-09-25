@@ -11,6 +11,7 @@ import { ExamsComponent } from './components/exams/exams.component';
 import { ProblemsComponent } from './components/problems/problems.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { TX21G3MComponent } from './components/TX21G3M/TX21G3M.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContactComponent } from './components/contact/contact.component';
     ExamsComponent,
     ProblemsComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    TX21G3MComponent,
   ],
   imports: [
     BrowserModule,
