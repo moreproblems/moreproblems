@@ -1301,6 +1301,7 @@ export class ProblemsComponent implements OnInit {
   };
 
   problem_number = 1;
+  problem_selection = '';
   problem_attempts = 0;
   attempt_response = '';
 
@@ -1339,6 +1340,7 @@ export class ProblemsComponent implements OnInit {
 
   attempt_mc_problem(ch: string) {
     this.problem_attempts += 1;
+    this.problem_selection = ch;
     if (this.problem_number == 1) {
       if (ch == 'A' && this.exam_dump[1].AnswerChoices.A.Key.Correct == true) {
         if (this.problem_attempts == 1) {
