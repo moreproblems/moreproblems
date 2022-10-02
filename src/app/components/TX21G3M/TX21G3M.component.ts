@@ -23,7 +23,7 @@ export class TX21G3MComponent implements OnInit {
     expand_filters = true;
     expand_topic = false;
 
-    exam_key = 'src/app/assets/Exams/exams.txt';
+    exam_dump_file = 'src/app/assets/Exams/exams.txt';
     exam_code = 'TX21G3M'
     exam_file = 'src/app/assets/Exams/Texas/' + this.exam_code + '/' + this.exam_code + '-problems.txt';
 
@@ -1300,10 +1300,208 @@ export class TX21G3MComponent implements OnInit {
         }
     };
 
+    exam_key: string[] = ['B', 'H', 'A', 'H', '972', 'H', 'A', 'G', 'D', 'J', 'C', 'H', 'D', '20', 'A', 'H', 'A', 'J', 'D', 'G', 'C', 'J', 'B', '13', 'A', 'G', 'D', 'F', 'B', 'F', 'C', 'G']
+
     problem_number = 1;
     problem_selection = '';
     problem_attempts = 0;
     attempt_response = '';
+    exam_submission = {
+        1: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        2: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        3: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        4: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        5: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        6: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        7: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        8: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        9: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        10: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        11: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        12: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        13: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        14: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        15: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        16: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        17: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        18: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        19: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        20: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        21: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        22: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        23: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        24: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        25: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        26: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        27: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        28: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        29: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        30: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        31: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        },
+        32: {
+            'Choice': '',
+            'Correct': '',
+            'Rationale': '',
+            'Attempts': 0
+        }
+    };
+
+    number_correct = 0;
 
     constructor() { }
 
@@ -1838,6 +2036,7 @@ export class TX21G3MComponent implements OnInit {
 
     attempt_fr_problem(ch: string) {
         this.problem_attempts += 1;
+        this.problem_selection = ch;
         if (this.problem_number == 5) {
             if (ch == this.exam_dump[5].Key.Answer) {
                 this.attempt_response = 'Correct'
@@ -1864,10 +2063,1326 @@ export class TX21G3MComponent implements OnInit {
         }
     }
 
-    next_problem() {
+    next_problem(ch: string) {
+        if (this.problem_number == 1) {
+            this.exam_submission[1].Choice = ch;
+            this.exam_submission[1].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[1].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[1].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[1].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[1].Rationale = this.exam_dump[1].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[1].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[1].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[1].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[1].Rationale = this.exam_dump[1].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[1].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[1].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[1].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[1].Rationale = this.exam_dump[1].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[1].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[1].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[1].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[1].Rationale = this.exam_dump[1].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 2) {
+            this.exam_submission[2].Choice = ch;
+            this.exam_submission[2].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[2].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[2].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[2].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[2].Rationale = this.exam_dump[2].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[2].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[2].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[2].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[2].Rationale = this.exam_dump[2].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[2].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[2].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[2].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[2].Rationale = this.exam_dump[2].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[2].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[2].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[2].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[2].Rationale = this.exam_dump[2].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 3) {
+            this.exam_submission[3].Choice = ch;
+            this.exam_submission[3].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[3].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[3].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[3].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[3].Rationale = this.exam_dump[3].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[3].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[3].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[3].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[3].Rationale = this.exam_dump[3].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[3].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[3].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[3].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[3].Rationale = this.exam_dump[3].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[3].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[3].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[3].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[3].Rationale = this.exam_dump[3].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 4) {
+            this.exam_submission[4].Choice = ch;
+            this.exam_submission[4].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[4].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[4].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[4].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[4].Rationale = this.exam_dump[4].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[4].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[4].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[4].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[4].Rationale = this.exam_dump[4].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[4].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[4].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[4].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[4].Rationale = this.exam_dump[4].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[4].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[4].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[4].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[4].Rationale = this.exam_dump[4].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 5) {
+            this.exam_submission[5].Choice = ch;
+            this.exam_submission[5].Attempts = this.problem_attempts;
+            if (ch == this.exam_dump[5].Key.Answer) {
+                this.exam_submission[5].Correct = '✅';
+                this.number_correct += 1;
+                this.exam_submission[5].Rationale = this.exam_dump[5].Key.Rationale;
+            }
+            else {
+                this.exam_submission[5].Correct = this.exam_key[this.problem_number - 1];
+                this.exam_submission[5].Rationale = 'No rationale provided. The number submitted was not right';
+            }
+        }
+        if (this.problem_number == 6) {
+            this.exam_submission[6].Choice = ch;
+            this.exam_submission[6].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[6].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[6].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[6].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[6].Rationale = this.exam_dump[6].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[6].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[6].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[6].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[6].Rationale = this.exam_dump[6].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[6].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[6].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[6].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[6].Rationale = this.exam_dump[6].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[6].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[6].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[6].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[6].Rationale = this.exam_dump[6].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 7) {
+            this.exam_submission[7].Choice = ch;
+            this.exam_submission[7].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[7].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[7].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[7].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[7].Rationale = this.exam_dump[7].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[7].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[7].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[7].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[7].Rationale = this.exam_dump[7].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[7].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[7].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[7].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[7].Rationale = this.exam_dump[7].AnswerChoices.D.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[7].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[7].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[7].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[7].Rationale = this.exam_dump[7].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 8) {
+            this.exam_submission[8].Choice = ch;
+            this.exam_submission[8].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[8].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[8].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[8].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[8].Rationale = this.exam_dump[8].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[8].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[8].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[8].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[8].Rationale = this.exam_dump[8].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[8].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[8].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[8].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[8].Rationale = this.exam_dump[8].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[8].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[8].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[8].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[8].Rationale = this.exam_dump[8].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 9) {
+            this.exam_submission[9].Choice = ch;
+            this.exam_submission[9].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[9].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[9].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[9].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[9].Rationale = this.exam_dump[9].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[9].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[9].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[9].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[9].Rationale = this.exam_dump[9].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[9].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[9].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[9].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[9].Rationale = this.exam_dump[9].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[9].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[9].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[9].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[9].Rationale = this.exam_dump[9].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 10) {
+            this.exam_submission[10].Choice = ch;
+            this.exam_submission[10].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[10].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[10].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[10].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[10].Rationale = this.exam_dump[10].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[10].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[10].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[10].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[10].Rationale = this.exam_dump[10].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[10].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[10].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[10].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[10].Rationale = this.exam_dump[10].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[10].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[10].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[10].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[10].Rationale = this.exam_dump[10].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 11) {
+            this.exam_submission[11].Choice = ch;
+            this.exam_submission[11].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[11].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[11].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[11].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[11].Rationale = this.exam_dump[11].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[11].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[11].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[11].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[11].Rationale = this.exam_dump[11].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[11].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[11].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[11].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[11].Rationale = this.exam_dump[11].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[11].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[11].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[11].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[11].Rationale = this.exam_dump[11].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 12) {
+            this.exam_submission[12].Choice = ch;
+            this.exam_submission[12].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[12].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[12].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[12].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[12].Rationale = this.exam_dump[12].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[12].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[12].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[12].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[12].Rationale = this.exam_dump[12].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[12].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[12].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[12].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[12].Rationale = this.exam_dump[12].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[12].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[12].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[12].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[12].Rationale = this.exam_dump[12].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 13) {
+            this.exam_submission[13].Choice = ch;
+            this.exam_submission[13].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[13].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[13].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[13].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[13].Rationale = this.exam_dump[13].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[13].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[13].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[13].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[13].Rationale = this.exam_dump[13].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[13].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[13].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[13].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[13].Rationale = this.exam_dump[13].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[13].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[13].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[13].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[13].Rationale = this.exam_dump[13].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 14) {
+            this.exam_submission[14].Choice = ch;
+            this.exam_submission[14].Attempts = this.problem_attempts;
+            if (ch == this.exam_dump[14].Key.Answer) {
+                this.exam_submission[14].Correct = '✅';
+                this.number_correct += 1;
+                this.exam_submission[14].Rationale = this.exam_dump[14].Key.Rationale;
+            }
+            else {
+                this.exam_submission[14].Correct = this.exam_key[this.problem_number - 1];
+                this.exam_submission[14].Rationale = 'No rationale provided. The number submitted was not right';
+            }
+        }
+        if (this.problem_number == 15) {
+            this.exam_submission[15].Choice = ch;
+            this.exam_submission[15].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[15].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[15].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[15].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[15].Rationale = this.exam_dump[15].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[15].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[15].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[15].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[15].Rationale = this.exam_dump[15].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[15].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[15].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[15].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[15].Rationale = this.exam_dump[15].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[15].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[15].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[15].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[15].Rationale = this.exam_dump[15].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 16) {
+            this.exam_submission[16].Choice = ch;
+            this.exam_submission[16].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[16].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[16].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[16].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[16].Rationale = this.exam_dump[16].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[16].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[16].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[16].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[16].Rationale = this.exam_dump[16].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[16].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[16].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[16].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[16].Rationale = this.exam_dump[16].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[16].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[16].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[16].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[16].Rationale = this.exam_dump[16].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 17) {
+            this.exam_submission[17].Choice = ch;
+            this.exam_submission[17].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[17].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[17].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[17].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[17].Rationale = this.exam_dump[17].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[17].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[17].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[17].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[17].Rationale = this.exam_dump[17].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[17].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[17].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[17].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[17].Rationale = this.exam_dump[17].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[17].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[17].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[17].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[17].Rationale = this.exam_dump[17].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 18) {
+            this.exam_submission[18].Choice = ch;
+            this.exam_submission[18].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[18].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[18].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[18].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[18].Rationale = this.exam_dump[18].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[18].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[18].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[18].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[18].Rationale = this.exam_dump[18].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[18].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[18].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[18].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[18].Rationale = this.exam_dump[18].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[18].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[18].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[18].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[18].Rationale = this.exam_dump[18].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 19) {
+            this.exam_submission[19].Choice = ch;
+            this.exam_submission[19].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[19].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[19].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[19].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[19].Rationale = this.exam_dump[19].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[19].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[19].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[19].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[19].Rationale = this.exam_dump[19].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[19].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[19].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[19].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[19].Rationale = this.exam_dump[19].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[19].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[19].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[19].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[19].Rationale = this.exam_dump[19].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 20) {
+            this.exam_submission[20].Choice = ch;
+            this.exam_submission[20].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[20].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[20].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[20].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[20].Rationale = this.exam_dump[20].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[20].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[20].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[20].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[20].Rationale = this.exam_dump[20].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[20].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[20].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[20].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[20].Rationale = this.exam_dump[20].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[20].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[20].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[20].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[20].Rationale = this.exam_dump[20].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 21) {
+            this.exam_submission[21].Choice = ch;
+            this.exam_submission[21].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[21].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[21].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[21].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[21].Rationale = this.exam_dump[21].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[21].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[21].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[21].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[21].Rationale = this.exam_dump[21].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[21].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[21].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[21].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[21].Rationale = this.exam_dump[21].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[21].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[21].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[21].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[21].Rationale = this.exam_dump[21].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 22) {
+            this.exam_submission[22].Choice = ch;
+            this.exam_submission[22].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[22].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[22].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[22].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[22].Rationale = this.exam_dump[22].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[22].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[22].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[22].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[22].Rationale = this.exam_dump[22].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[22].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[22].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[22].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[22].Rationale = this.exam_dump[22].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[22].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[22].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[22].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[22].Rationale = this.exam_dump[22].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 23) {
+            this.exam_submission[23].Choice = ch;
+            this.exam_submission[23].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[23].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[23].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[23].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[23].Rationale = this.exam_dump[23].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[23].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[23].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[23].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[23].Rationale = this.exam_dump[23].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[23].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[23].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[23].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[23].Rationale = this.exam_dump[23].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[23].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[23].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[23].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[23].Rationale = this.exam_dump[23].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 24) {
+            this.exam_submission[24].Choice = ch;
+            this.exam_submission[24].Attempts = this.problem_attempts;
+            if (ch == this.exam_dump[24].Key.Answer) {
+                this.exam_submission[24].Correct = '✅';
+                this.number_correct += 1;
+                this.exam_submission[24].Rationale = this.exam_dump[24].Key.Rationale;
+            }
+            else {
+                this.exam_submission[24].Correct = this.exam_key[this.problem_number - 1];
+                this.exam_submission[24].Rationale = 'No rationale provided. The number submitted was not right';
+            }
+        }
+        if (this.problem_number == 25) {
+            this.exam_submission[25].Choice = ch;
+            this.exam_submission[25].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[25].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[25].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[25].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[25].Rationale = this.exam_dump[25].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[25].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[25].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[25].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[25].Rationale = this.exam_dump[25].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[25].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[25].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[25].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[25].Rationale = this.exam_dump[25].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[25].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[25].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[25].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[25].Rationale = this.exam_dump[25].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 26) {
+            this.exam_submission[26].Choice = ch;
+            this.exam_submission[26].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[26].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[26].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[26].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[26].Rationale = this.exam_dump[26].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[26].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[26].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[26].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[26].Rationale = this.exam_dump[26].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[26].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[26].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[26].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[26].Rationale = this.exam_dump[26].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[26].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[26].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[26].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[26].Rationale = this.exam_dump[26].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 27) {
+            this.exam_submission[27].Choice = ch;
+            this.exam_submission[27].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[27].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[27].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[27].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[27].Rationale = this.exam_dump[27].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[27].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[27].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[27].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[27].Rationale = this.exam_dump[27].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[27].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[27].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[27].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[27].Rationale = this.exam_dump[27].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[27].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[27].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[27].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[27].Rationale = this.exam_dump[27].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 28) {
+            this.exam_submission[28].Choice = ch;
+            this.exam_submission[28].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[28].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[28].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[28].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[28].Rationale = this.exam_dump[28].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[28].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[28].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[28].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[28].Rationale = this.exam_dump[28].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[28].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[28].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[28].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[28].Rationale = this.exam_dump[28].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[28].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[28].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[28].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[28].Rationale = this.exam_dump[28].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 29) {
+            this.exam_submission[29].Choice = ch;
+            this.exam_submission[29].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[29].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[29].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[29].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[29].Rationale = this.exam_dump[29].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[29].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[29].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[29].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[29].Rationale = this.exam_dump[29].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[29].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[29].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[29].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[29].Rationale = this.exam_dump[29].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[29].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[29].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[29].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[29].Rationale = this.exam_dump[29].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 30) {
+            this.exam_submission[30].Choice = ch;
+            this.exam_submission[30].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[30].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[30].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[30].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[30].Rationale = this.exam_dump[30].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[30].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[30].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[30].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[30].Rationale = this.exam_dump[30].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[30].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[30].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[30].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[30].Rationale = this.exam_dump[30].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[30].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[30].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[30].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[30].Rationale = this.exam_dump[30].AnswerChoices.J.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 31) {
+            this.exam_submission[31].Choice = ch;
+            this.exam_submission[31].Attempts = this.problem_attempts;
+            if (ch == 'A') {
+                if (this.exam_dump[31].AnswerChoices.A.Key.Correct) {
+                    this.exam_submission[31].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[31].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[31].Rationale = this.exam_dump[31].AnswerChoices.A.Key.Rationale;
+            }
+            else if (ch == 'B') {
+                if (this.exam_dump[31].AnswerChoices.B.Key.Correct) {
+                    this.exam_submission[31].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[31].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[31].Rationale = this.exam_dump[31].AnswerChoices.B.Key.Rationale;
+            }
+            else if (ch == 'C') {
+                if (this.exam_dump[31].AnswerChoices.C.Key.Correct) {
+                    this.exam_submission[31].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[31].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[31].Rationale = this.exam_dump[31].AnswerChoices.C.Key.Rationale;
+            }
+            else if (ch == 'D') {
+                if (this.exam_dump[31].AnswerChoices.D.Key.Correct) {
+                    this.exam_submission[31].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[31].Correct = this.exam_key[this.problem_number - 1]
+                }
+                this.exam_submission[31].Rationale = this.exam_dump[31].AnswerChoices.D.Key.Rationale;
+            }
+        }
+        if (this.problem_number == 32) {
+            this.exam_submission[32].Choice = ch;
+            this.exam_submission[32].Attempts = this.problem_attempts;
+            if (ch == 'F') {
+                if (this.exam_dump[32].AnswerChoices.F.Key.Correct) {
+                    this.exam_submission[32].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[32].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[32].Rationale = this.exam_dump[32].AnswerChoices.F.Key.Rationale;
+            }
+            else if (ch == 'G') {
+                if (this.exam_dump[32].AnswerChoices.G.Key.Correct) {
+                    this.exam_submission[32].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[32].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[32].Rationale = this.exam_dump[32].AnswerChoices.G.Key.Rationale;
+            }
+            else if (ch == 'H') {
+                if (this.exam_dump[32].AnswerChoices.H.Key.Correct) {
+                    this.exam_submission[32].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[32].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[32].Rationale = this.exam_dump[32].AnswerChoices.H.Key.Rationale;
+            }
+            else if (ch == 'J') {
+                if (this.exam_dump[32].AnswerChoices.J.Key.Correct) {
+                    this.exam_submission[32].Correct = '✅';
+                    this.number_correct += 1;
+                }
+                else {
+                    this.exam_submission[32].Correct = this.exam_key[this.problem_number - 1];
+                }
+                this.exam_submission[32].Rationale = this.exam_dump[32].AnswerChoices.J.Key.Rationale;
+            }
+        }
         this.problem_number += 1;
         this.problem_selection = '';
         this.problem_attempts = 0;
+
     }
 
     scroll(el: HTMLElement) {

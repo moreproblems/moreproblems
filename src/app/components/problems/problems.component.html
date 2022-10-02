@@ -134,7 +134,7 @@
     }
 
     .card.card-large {
-        max-height: 1200px;
+        max-height: 1500px;
         width: 85%;
         border-radius: 8px;
         margin: 8px 8px;
@@ -613,11 +613,11 @@
     <br />
 
     <div class="card-container">
-        <div *ngIf="!expand_filters" class="card card-large" style="height: auto; margin: auto; text-align: center" #problemCard>
+        <div *ngIf="!expand_filters" class="card card-large" style="height: auto; margin: auto; text-align: center"
+            #problemCard>
             <div class="content" style="margin: auto; text-align: center">
                 <h2> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_grade}} {{exam_subject}} Exam </h2>
                 <h3> Problem #{{problem_number}}/{{exam_length}} </h3>
-                <br />
                 <section style="text-align: center; margin: auto">
                     <label *ngIf="problem_number == 1" class="switch" style="max-width: 90%">
                         <input type="checkbox">
@@ -1042,7 +1042,8 @@
                 <input type="hidden" #selection>
                 <div *ngIf="problem_number == 1" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[1].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1052,14 +1053,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 2" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[2].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1069,14 +1072,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 3" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[3].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1086,14 +1091,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 4" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[4].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1103,7 +1110,8 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
@@ -1121,7 +1129,8 @@
                 </div>
                 <div *ngIf="problem_number == 6" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[6].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1131,14 +1140,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 7" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[7].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1148,14 +1159,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 8" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[8].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1165,14 +1178,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 9" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[9].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1182,14 +1197,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 10" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[10].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1199,14 +1216,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 11" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[11].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1216,14 +1235,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 12" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[12].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1233,14 +1254,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 13" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[13].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1250,7 +1273,8 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
@@ -1268,7 +1292,8 @@
                 </div>
                 <div *ngIf="problem_number == 15" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[15].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1278,14 +1303,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 16" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[16].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1295,14 +1322,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 17" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[17].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1312,14 +1341,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 18" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[18].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1329,14 +1360,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 19" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[19].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1346,14 +1379,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 20" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[20].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1363,14 +1398,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 21" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[21].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1380,14 +1417,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 22" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[22].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1397,14 +1436,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 23" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[23].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1414,16 +1455,17 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 24" style="text-align: center; margin: auto">
                     <div class="card highlight-card card-small"
-                        style="min-height: 50px; min-width: 250px; max-height: 100px; max-width: 90%; padding: 10px; font-size: 20px">
+                        style="min-height: 50px; min-width: 250px; max-height: 100px; max-width: 90%; padding: 10px">
                         <input
-                            style="display: block; width: 150px; height: 50px; margin: 0px 20px 0px 20px; padding: 0px"
+                            style="display: block; width: 150px; height: 50px; margin: 0px 20px 0px 20px; padding: 0px; font-size: 20px"
                             #input24 />
                         <button class="grade-button" (click)="attempt_fr_problem(this.input24.value);"
                             style="display: block; max-width: 150px; max-height: 150px; margin: 0px 20px 0px 20px; padding: 0px">
@@ -1432,7 +1474,8 @@
                 </div>
                 <div *ngIf="problem_number == 25" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[25].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1442,14 +1485,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 26" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[26].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1459,14 +1504,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 27" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[27].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1476,14 +1523,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 28" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[28].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1493,14 +1542,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 29" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[29].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1510,14 +1561,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 30" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[30].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1527,14 +1580,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 31" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[31].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1544,14 +1599,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <div *ngIf="problem_number == 32" style="text-align: center; margin: auto">
                     <div *ngFor="let choice of exam_dump[32].AnswerChoices | keyvalue"
-                        class="card highlight-card card-small" (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                        class="card highlight-card card-small"
+                        (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
                         style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
                         <label class="switch" style="padding: 0 25px">
                             <input type="checkbox" value="{{choice.key}}">
@@ -1561,14 +1618,16 @@
                                 class="toggle-button-off">{{choice.key}}</button>
                         </label>
                         <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}</h3>
+                            style="display: block; margin: 0px 20px 0px 20px; margin: auto"> {{choice.value.Choice}}
+                        </h3>
                         <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                             style="height: 100px; margin: auto">
                     </div>
                 </div>
                 <br />
                 <div *ngIf="problem_number == 1 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1592,7 +1651,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 2 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1616,7 +1676,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 3 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1640,7 +1701,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 4 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1663,24 +1725,27 @@
                         <br /> <br /> Explanation: {{exam_dump[4].AnswerChoices.J.Key.Rationale}}
                     </h3>
                 </div>
-                <div *ngIf="problem_number == 5 && problem_attempts > 0"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                <div *ngIf="problem_number == 5 && problem_attempts > 0" class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
                         <b> Next Problem </b>
                     </button>
-                    <h3 *ngIf="attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px;">
+                    <h3 *ngIf="attempt_response.startsWith('Correct')"
+                        style="display: block; margin: 0px 20px 0px 20px;">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
-                        <br/> <br/> Explanation: {{exam_dump[5].Key.Rationale}}
+                        <br /> <br /> Explanation: {{exam_dump[5].Key.Rationale}}
                     </h3>
-                    <h3 *ngIf="!attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px;">
+                    <h3 *ngIf="!attempt_response.startsWith('Correct')"
+                        style="display: block; margin: 0px 20px 0px 20px;">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
-                        <br/> <br/> Explanation: No rationale provided. The number submitted was not right.
+                        <br /> <br /> Explanation: No rationale provided. The number submitted was not right.
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 6 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1704,7 +1769,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 7 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1728,7 +1794,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 8 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1752,7 +1819,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 9 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1776,7 +1844,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 10 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1800,7 +1869,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 11 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1824,7 +1894,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 12 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1848,7 +1919,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 13 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1872,23 +1944,27 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 14 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
                         <b> Next Problem </b>
                     </button>
-                    <h3 *ngIf="attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px;">
+                    <h3 *ngIf="attempt_response.startsWith('Correct')"
+                        style="display: block; margin: 0px 20px 0px 20px;">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
-                        <br/> <br/> Explanation: {{exam_dump[14].Key.Rationale}}
+                        <br /> <br /> Explanation: {{exam_dump[14].Key.Rationale}}
                     </h3>
-                    <h3 *ngIf="!attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px;">
+                    <h3 *ngIf="!attempt_response.startsWith('Correct')"
+                        style="display: block; margin: 0px 20px 0px 20px;">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
-                        <br/> <br/> Explanation: No rationale provided. The number submitted was not right.
+                        <br /> <br /> Explanation: No rationale provided. The number submitted was not right.
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 15 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1912,7 +1988,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 16 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1936,7 +2013,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 17 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1960,7 +2038,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 18 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -1984,7 +2063,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 19 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -2008,7 +2088,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 20 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -2032,7 +2113,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 21 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -2056,7 +2138,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 22 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -2080,7 +2163,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 23 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -2104,23 +2188,27 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 24 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
                         <b> Next Problem </b>
                     </button>
-                    <h3 *ngIf="attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px;">
+                    <h3 *ngIf="attempt_response.startsWith('Correct')"
+                        style="display: block; margin: 0px 20px 0px 20px;">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
-                        <br/> <br/> Explanation: {{exam_dump[24].Key.Rationale}}
+                        <br /> <br /> Explanation: {{exam_dump[24].Key.Rationale}}
                     </h3>
-                    <h3 *ngIf="!attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px;">
+                    <h3 *ngIf="!attempt_response.startsWith('Correct')"
+                        style="display: block; margin: 0px 20px 0px 20px;">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
-                        <br/> <br/> Explanation: No rationale provided. The number submitted was not right.
+                        <br /> <br /> Explanation: No rationale provided. The number submitted was not right.
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 25 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -2144,7 +2232,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 26 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -2168,7 +2257,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 27 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -2192,7 +2282,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 28 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -2216,7 +2307,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 29 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -2240,7 +2332,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 30 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -2264,7 +2357,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 31 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
@@ -2288,7 +2382,8 @@
                     </h3>
                 </div>
                 <div *ngIf="problem_number == 32 && problem_attempts > 0" [ngSwitch]="selection.value"
-                    class="card highlight-card card-small" style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
+                    class="card highlight-card card-small"
+                    style="height: auto; min-height: 100px; max-height: 750px; max-width: 90%; padding: 40px; margin: 0; display: inline-flex">
                     <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                         (click)="next_problem(); scroll2(problemCard)"
                         style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 25px">
