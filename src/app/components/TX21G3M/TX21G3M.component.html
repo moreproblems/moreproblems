@@ -134,7 +134,7 @@
     }
 
     .card.card-large {
-        max-height: 5000px;
+        max-height: 7500px;
         width: 85%;
         border-radius: 8px;
         margin: 8px 8px;
@@ -1465,6 +1465,7 @@
                         <thead>
                             <tr style="border: 1px solid black">
                                 <th> Problem Number </th>
+                                <th> Problem Topic </th>
                                 <th> Correct Response </th>
                                 <th> Student Response </th>
                                 <th> Student Response Explanation </th>
@@ -1472,12 +1473,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let prob of exam_submission | keyvalue">
+                            <!-- <tr *ngFor="let prob of exam_submission | keyvalue">
                                 <td style="border-top: 1px solid #ddd"> {{+prob.key}} </td>
+                                <td style="border-top: 1px solid #ddd"> {{prob.value.Topic}} </td>
                                 <td style="border-top: 1px solid #ddd"> {{prob.value.Correct}} </td>
                                 <td style="border-top: 1px solid #ddd"> {{prob.value.Choice}} </td>
                                 <td style="border-top: 1px solid #ddd; max-width: 750px"> {{prob.value.Rationale}} </td>
                                 <td style="border-top: 1px solid #ddd"> {{prob.value.Attempts}} </td>
+                            </tr> -->
+                            <tr *ngFor="let sub of [exam_submission[1],exam_submission[2],exam_submission[3],exam_submission[4],exam_submission[5],exam_submission[6],exam_submission[7],exam_submission[8],exam_submission[9],exam_submission[10],exam_submission[11],exam_submission[12],exam_submission[13],exam_submission[14],exam_submission[15],exam_submission[16],exam_submission[17],exam_submission[18],exam_submission[19],exam_submission[20],exam_submission[21],exam_submission[22],exam_submission[23],exam_submission[24],exam_submission[25],exam_submission[26],exam_submission[27],exam_submission[28],exam_submission[29],exam_submission[30],exam_submission[31],exam_submission[32]]">
+                                <td style="border-top: 1px solid #ddd"><b> {{sub.Number}} </b> </td>
+                                <td style="border-top: 1px solid #ddd"> {{sub.Topic}} </td>
+                                <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
+                                <td style="border-top: 1px solid #ddd; max-width: 750px"> {{sub.Rationale}} </td>
+                                <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
                             </tr>
                         </tbody>
                     </table>

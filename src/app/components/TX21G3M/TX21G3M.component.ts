@@ -1,7 +1,14 @@
 import { Component, OnInit, Injectable } from '@angular/core';
+// import { ProfileService } from ‘../profile.service’;
+// import { SnotifyService } from ‘ng-snotify’;
+// import { Model } from ‘./contact-form’;
+// import { NgForm } from ‘@angular/forms’;
+// // import ‘./../../../assets/js/smtp.js’;
+// declare let Email: any;
+
+// import { HttpClient } from '@angular/common/http';
 // import * as fs from 'fs';
 // import * as path from 'path';
-import { HttpClient } from '@angular/common/http';
 
 // function syncReadFile(filename: string) {
 //   const result = fs.readFile(path.join(__dirname, filename), 'utf8');
@@ -18,6 +25,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class TX21G3MComponent implements OnInit {
     title = 'More Problems';
+    // model: Model = new Model();
 
     filters: string[] = [];
     expand_filters = true;
@@ -1308,192 +1316,257 @@ export class TX21G3MComponent implements OnInit {
     attempt_response = '';
     exam_submission = {
         1: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         2: {
+
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         3: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         4: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         5: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         6: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         7: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         8: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         9: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         10: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         11: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         12: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         13: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         14: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         15: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         16: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         17: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         18: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         19: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         20: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         21: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         22: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         23: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         24: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         25: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         26: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         27: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         28: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         29: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         30: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         31: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
             'Attempts': 0
         },
         32: {
+            'Number': 0,
+            'Topic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -2065,6 +2138,8 @@ export class TX21G3MComponent implements OnInit {
 
     next_problem(ch: string) {
         if (this.problem_number == 1) {
+            this.exam_submission[1].Number = this.problem_number;
+            this.exam_submission[1].Topic = this.exam_dump[1].Topic;
             this.exam_submission[1].Choice = ch;
             this.exam_submission[1].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -2109,6 +2184,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 2) {
+            this.exam_submission[2].Number = this.problem_number;
+            this.exam_submission[2].Topic = this.exam_dump[2].Topic;
             this.exam_submission[2].Choice = ch;
             this.exam_submission[2].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -2153,6 +2230,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 3) {
+            this.exam_submission[3].Number = this.problem_number;
+            this.exam_submission[3].Topic = this.exam_dump[3].Topic;
             this.exam_submission[3].Choice = ch;
             this.exam_submission[3].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -2197,6 +2276,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 4) {
+            this.exam_submission[4].Number = this.problem_number;
+            this.exam_submission[4].Topic = this.exam_dump[4].Topic;
             this.exam_submission[4].Choice = ch;
             this.exam_submission[4].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -2241,6 +2322,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 5) {
+            this.exam_submission[5].Number = this.problem_number;
+            this.exam_submission[5].Topic = this.exam_dump[5].Topic;
             this.exam_submission[5].Choice = ch;
             this.exam_submission[5].Attempts = this.problem_attempts;
             if (ch == this.exam_dump[5].Key.Answer) {
@@ -2254,6 +2337,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 6) {
+            this.exam_submission[6].Number = this.problem_number;
+            this.exam_submission[6].Topic = this.exam_dump[6].Topic;
             this.exam_submission[6].Choice = ch;
             this.exam_submission[6].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -2298,6 +2383,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 7) {
+            this.exam_submission[7].Number = this.problem_number;
+            this.exam_submission[7].Topic = this.exam_dump[7].Topic;
             this.exam_submission[7].Choice = ch;
             this.exam_submission[7].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -2342,6 +2429,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 8) {
+            this.exam_submission[8].Number = this.problem_number;
+            this.exam_submission[8].Topic = this.exam_dump[8].Topic;
             this.exam_submission[8].Choice = ch;
             this.exam_submission[8].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -2386,6 +2475,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 9) {
+            this.exam_submission[9].Number = this.problem_number;
+            this.exam_submission[9].Topic = this.exam_dump[9].Topic;
             this.exam_submission[9].Choice = ch;
             this.exam_submission[9].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -2430,6 +2521,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 10) {
+            this.exam_submission[10].Number = this.problem_number;
+            this.exam_submission[10].Topic = this.exam_dump[10].Topic;
             this.exam_submission[10].Choice = ch;
             this.exam_submission[10].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -2474,6 +2567,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 11) {
+            this.exam_submission[11].Number = this.problem_number;
+            this.exam_submission[11].Topic = this.exam_dump[11].Topic;
             this.exam_submission[11].Choice = ch;
             this.exam_submission[11].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -2518,6 +2613,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 12) {
+            this.exam_submission[12].Number = this.problem_number;
+            this.exam_submission[12].Topic = this.exam_dump[12].Topic;
             this.exam_submission[12].Choice = ch;
             this.exam_submission[12].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -2562,6 +2659,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 13) {
+            this.exam_submission[13].Number = this.problem_number;
+            this.exam_submission[13].Topic = this.exam_dump[13].Topic;
             this.exam_submission[13].Choice = ch;
             this.exam_submission[13].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -2606,6 +2705,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 14) {
+            this.exam_submission[14].Number = this.problem_number;
+            this.exam_submission[14].Topic = this.exam_dump[14].Topic;
             this.exam_submission[14].Choice = ch;
             this.exam_submission[14].Attempts = this.problem_attempts;
             if (ch == this.exam_dump[14].Key.Answer) {
@@ -2619,6 +2720,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 15) {
+            this.exam_submission[15].Number = this.problem_number;
+            this.exam_submission[15].Topic = this.exam_dump[15].Topic;
             this.exam_submission[15].Choice = ch;
             this.exam_submission[15].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -2663,6 +2766,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 16) {
+            this.exam_submission[16].Number = this.problem_number;
+            this.exam_submission[16].Topic = this.exam_dump[16].Topic;
             this.exam_submission[16].Choice = ch;
             this.exam_submission[16].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -2707,6 +2812,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 17) {
+            this.exam_submission[17].Number = this.problem_number;
+            this.exam_submission[17].Topic = this.exam_dump[17].Topic;
             this.exam_submission[17].Choice = ch;
             this.exam_submission[17].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -2751,6 +2858,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 18) {
+            this.exam_submission[18].Number = this.problem_number;
+            this.exam_submission[18].Topic = this.exam_dump[18].Topic;
             this.exam_submission[18].Choice = ch;
             this.exam_submission[18].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -2795,6 +2904,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 19) {
+            this.exam_submission[19].Number = this.problem_number;
+            this.exam_submission[19].Topic = this.exam_dump[19].Topic;
             this.exam_submission[19].Choice = ch;
             this.exam_submission[19].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -2839,6 +2950,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 20) {
+            this.exam_submission[20].Number = this.problem_number;
+            this.exam_submission[20].Topic = this.exam_dump[20].Topic;
             this.exam_submission[20].Choice = ch;
             this.exam_submission[20].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -2883,6 +2996,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 21) {
+            this.exam_submission[21].Number = this.problem_number;
+            this.exam_submission[21].Topic = this.exam_dump[21].Topic;
             this.exam_submission[21].Choice = ch;
             this.exam_submission[21].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -2927,6 +3042,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 22) {
+            this.exam_submission[22].Number = this.problem_number;
+            this.exam_submission[22].Topic = this.exam_dump[22].Topic;
             this.exam_submission[22].Choice = ch;
             this.exam_submission[22].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -2971,6 +3088,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 23) {
+            this.exam_submission[23].Number = this.problem_number;
+            this.exam_submission[23].Topic = this.exam_dump[23].Topic;
             this.exam_submission[23].Choice = ch;
             this.exam_submission[23].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -3015,6 +3134,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 24) {
+            this.exam_submission[24].Number = this.problem_number;
+            this.exam_submission[24].Topic = this.exam_dump[24].Topic;
             this.exam_submission[24].Choice = ch;
             this.exam_submission[24].Attempts = this.problem_attempts;
             if (ch == this.exam_dump[24].Key.Answer) {
@@ -3028,6 +3149,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 25) {
+            this.exam_submission[25].Number = this.problem_number;
+            this.exam_submission[25].Topic = this.exam_dump[25].Topic;
             this.exam_submission[25].Choice = ch;
             this.exam_submission[25].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -3072,6 +3195,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 26) {
+            this.exam_submission[26].Number = this.problem_number;
+            this.exam_submission[26].Topic = this.exam_dump[26].Topic;
             this.exam_submission[26].Choice = ch;
             this.exam_submission[26].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -3116,6 +3241,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 27) {
+            this.exam_submission[27].Number = this.problem_number;
+            this.exam_submission[27].Topic = this.exam_dump[27].Topic;
             this.exam_submission[27].Choice = ch;
             this.exam_submission[27].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -3160,6 +3287,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 28) {
+            this.exam_submission[28].Number = this.problem_number;
+            this.exam_submission[28].Topic = this.exam_dump[28].Topic;
             this.exam_submission[28].Choice = ch;
             this.exam_submission[28].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -3204,6 +3333,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 29) {
+            this.exam_submission[29].Number = this.problem_number;
+            this.exam_submission[29].Topic = this.exam_dump[29].Topic;
             this.exam_submission[29].Choice = ch;
             this.exam_submission[29].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -3248,6 +3379,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 30) {
+            this.exam_submission[30].Number = this.problem_number;
+            this.exam_submission[30].Topic = this.exam_dump[30].Topic;
             this.exam_submission[30].Choice = ch;
             this.exam_submission[30].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -3292,6 +3425,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 31) {
+            this.exam_submission[31].Number = this.problem_number;
+            this.exam_submission[31].Topic = this.exam_dump[31].Topic;
             this.exam_submission[31].Choice = ch;
             this.exam_submission[31].Attempts = this.problem_attempts;
             if (ch == 'A') {
@@ -3336,6 +3471,8 @@ export class TX21G3MComponent implements OnInit {
             }
         }
         if (this.problem_number == 32) {
+            this.exam_submission[32].Number = this.problem_number;
+            this.exam_submission[32].Topic = this.exam_dump[32].Topic;
             this.exam_submission[32].Choice = ch;
             this.exam_submission[32].Attempts = this.problem_attempts;
             if (ch == 'F') {
@@ -3396,4 +3533,17 @@ export class TX21G3MComponent implements OnInit {
     ngOnInit() {
 
     }
+
+    // onSubmit(f: NgForm) {
+    //     Email.send({
+    //     Host : ‘smtp.gmail.com’,
+    //     Username : chris.more.problems@gmail.com’,
+    //     Password : ‘Crljr3rd!MoP’,
+    //     To : ‘udith.indrakantha@gmail.com’,
+    //     From : `chris.more.problemsa@gmail.com`,
+    //     Subject : this.model.subject,
+    //     Body : `
+    //     <i>This is sent as a feedback from my resume page.</i> <br/> <b>Name: </b>${this.model.name} <br /> <b>Email: </b>${this.model.email}<br /> <b>Subject: </b>${this.model.subject}<br /> <b>Message:</b> <br /> ${this.model.message} <br><br> <b>~End of Message.~</b> `
+    //     }).then( message => {alert(message); f.resetForm(); } );
+    // }
 }
