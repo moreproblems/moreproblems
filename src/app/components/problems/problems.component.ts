@@ -1094,8 +1094,8 @@ export class ProblemsComponent implements OnInit {
       'Number': 28,
       'Type': 'MC',
       'NumChoices': 4,
-      'Topic': '',
-      'SubTopic': '',
+      'Topic': 'Geometry & Measurement',
+      'SubTopic': 'Determine the solutions to problems involving addition and subtraction of time intervals in minutes using pictorial models or tools such as a 15-minute event plus a 30-minute event equals 45 minutes',
       'Content': [
         'On Saturday afternoon Marcus went to a swimming pool. The clock shows the time he arrived at the pool.',
         'Exams/Texas/TX21G3M/media/28a.jpg',
@@ -2418,6 +2418,7 @@ export class ProblemsComponent implements OnInit {
 
   attempt_fr_problem(ch: string) {
     this.problem_attempts += 1;
+    this.problem_selection = ch;
     if (this.problem_number == 5) {
       if (ch == this.exam_dump[5].Key.Answer) {
         if (this.problem_attempts == 1) {
