@@ -12,19 +12,52 @@ import printJS from 'print-js';
 export class ExamsComponent implements OnInit{
   title = 'More Problems';
 
-  // online_set = ['TX21G3M', 'TX19G3M'];
-  online_set: string[] = [];
+  online_set = ['TX21G3M', 'TX19G3M'];
+  // online_set: string[] = [];
+
+  selected_state = '';
+  selected_grade = '';
  
   exam_id = '';
-  exam_name = 'Find a Practice Exam Below';
+  exam_name = '';
   exam_url = '';
   file_source = '';
+  file_page = 1;
   
   constructor(private router: Router) { }
+
+  select_state(st: string) {
+    if (this.selected_state == st) {
+      this.selected_state = '';
+    }
+    else {
+      this.selected_state = st;
+    }
+    this.exam_id = '';
+    this.exam_name = '';
+    this.exam_url = '';
+    this.file_source = '';
+    this.file_page = 1;
+  }
+
+  select_grade(gr: string) {
+    if (this.selected_grade == gr) {
+      this.selected_grade = '';
+    }
+    else {
+      this.selected_grade = gr;
+    }
+    this.exam_id = '';
+    this.exam_name = '';
+    this.exam_url = '';
+    this.file_source = '';
+    this.file_page = 1;
+  }
 
   select_exam(ex: string) {
     this.exam_id = ex;
     this.exam_url = '/exam/' + ex;
+    this.file_page = 1;
     if (ex == 'FL20G3M') {
       this.exam_name = "Florida FSA 2020 Grade 3 Math Practice Exam";
       this.file_source = "./assets/Exams/Florida/FL20G3M/" + this.exam_name + ".pdf";
@@ -1255,6 +1288,14 @@ export class ExamsComponent implements OnInit{
 
   take_exam() {
     this.router.navigateByUrl(this.exam_url)
+  }
+
+  prev_page() {
+    this.file_page = Math.max(1, this.file_page-1);
+  }
+
+  next_page() {
+    this.file_page = this.file_page+1;
   }
 
   scroll_top() {
