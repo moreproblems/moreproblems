@@ -1,4 +1,6 @@
-import { Component, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-root',
@@ -7,9 +9,9 @@ import { Component, Injectable } from '@angular/core';
 })
 
 @Injectable()
-export class AppComponent {
+export class AppComponent{
   title = 'More Problems';
-  
+
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: 'smooth'});
   }

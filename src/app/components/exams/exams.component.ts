@@ -1,4 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import printJS from 'print-js';
 
@@ -10,10 +11,10 @@ import printJS from 'print-js';
 
 @Injectable()
 export class ExamsComponent implements OnInit{
-  title = 'More Problems';
+  // title = 'More Problems';
 
-  // online_set = ['TX21G3M', 'TX19G3M'];
-  online_set: string[] = [];
+  online_set = ['TX21G3M', 'TX19G3M'];
+  // online_set: string[] = [];
 
   selected_state = '';
   selected_grade = '';
@@ -24,7 +25,7 @@ export class ExamsComponent implements OnInit{
   file_source = '';
   file_page = 1;
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, private titleService: Title, private meta: Meta) { }
 
   select_state(st: string) {
     if (this.selected_state == st) {
@@ -1316,5 +1317,7 @@ export class ExamsComponent implements OnInit{
   // }
 
   ngOnInit() {
+    this.titleService.setTitle("MoreProblems.Org | U.S. K-12 State Testing Practice Exams");
+    this.meta.updateTag({ name: 'description', content: "Access released practice problems & solutions to prepare for end-of-year tests - including Florida FSA, Illinois IAR, New York NYSTP, North Carolina EOG, Pennsylvania PSSA, and Texas STAAR. Choose from more 300 assessments across math, English language, science, & social studies for elementary, middle, & high school students." });
   }
 }
