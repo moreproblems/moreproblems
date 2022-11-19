@@ -10,7 +10,7 @@ import { Meta } from '@angular/platform-browser';
 
 @Injectable()
 export class AppComponent{
-  title = 'More Problems';
+  title = 'MoreProblems.Org';
 
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: 'smooth'});

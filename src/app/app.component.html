@@ -42,26 +42,22 @@
     top: 0;
     left: 0;
     right: 0;
-    /* min-height: 85px; */
-    max-height: 135px;
+    height: auto;
     display: flex;
     align-items: center;
     background-color: #0a1e33;
     color: white;
     font-weight: 600;
-    padding: 5px;
+    /* padding: 5px; */
   }
 
   .toolbar img {
-    /* margin: 0 16px; */
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 5px
+    margin: auto;
+    padding-left: 10px;
   }
 
   .toolbar span {
-    
+    margin: auto;
   }
 
   .content-box {
@@ -120,7 +116,7 @@
     max-height: 90px;
     width: 200px;
     margin: 0 4px 4px;
-    /* padding: 16px 8px; */
+    padding: 16px 8px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -134,8 +130,8 @@
   }
 
   .card.card-small {
-    height: 90px;
-    width: 190px;
+    height: auto;
+    width: auto;
     border-radius: 8px;
   }
 
@@ -158,12 +154,13 @@
     font-weight: 600;
     border: none;
     width: auto;
-    min-width: 30%;
+    min-width: 300px;
     position: relative;
+    padding: 7px 0px;
   }
 
   .card.card.highlight-card span {
-    margin-left: 60px;
+    margin-left: 20px;
   }
 
   svg#rocket {
@@ -266,11 +263,11 @@
   }
 
   nav a {
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Orbitron';
     color: white;
-    margin: 0 2px 10px;
-    padding: 3px;
+    margin: 0 5px;
+    padding: 5px;
     transition: all 0.2s ease-in-out;
   }
 
@@ -332,7 +329,7 @@
     }
 
     .card.highlight-card span {
-      margin-left: 72px;
+      margin-left: 10px;
     }
 
   }
@@ -340,11 +337,11 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <div class="card highlight-card card-small" style="transform: translateY(0.25rem)">
-    <img src="./assets/media/logo1.png" style="width: 80px; height: 80px" />
-    <span style="padding: 0 25px; text-align: center">
-      <h1 style="display: block; font-family: 'Orbitron'; text-transform: uppercase"> {{ title }} </h1>
-      <h2 style="display: block; padding: 5px 0 0"> Free K-12 State Assessments! </h2>
+  <div class="card highlight-card"  style="transform: translateY(0.25rem)">
+    <img src="./assets/media/logo1.png" style="width: 65px; height: 65px" />
+    <span style="padding: 0px; text-align: left">
+      <h1 style="display: block; font-family: 'Orbitron'; font-size: 26px"> {{ title }} </h1>
+      <!-- <h2 style="display: block; padding: 5px 0 0"> Free K-12 State Assessments! </h2> -->
       <!-- <p style="display: inline; font-size: 16px; font-family: 'Orbitron'; margin: 0 0 0 10px"> prepares every U.S. K-12
         student to ace their standardized state assessments for free</p> -->
     </span>
