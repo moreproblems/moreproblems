@@ -13,8 +13,8 @@ import printJS from 'print-js';
 export class ExamsComponent implements OnInit{
   // title = 'More Problems';
 
-  online_set = ['TX21G3M', 'TX19G3M'];
-  // online_set: string[] = [];
+  // online_set = ['TX21G3M', 'TX19G3M'];
+  online_set: string[] = [];
 
   selected_state = '';
   selected_grade = '';
@@ -24,6 +24,9 @@ export class ExamsComponent implements OnInit{
   exam_url = '';
   file_source = '';
   file_page = 1;
+
+  viewerWidth = Math.round(window.innerWidth*.99).toString() + "px";
+  viewerHeight = Math.round(window.innerHeight*.8).toString() + "px";
   
   constructor(private router: Router, private titleService: Title, private meta: Meta) { }
 
@@ -1297,6 +1300,11 @@ export class ExamsComponent implements OnInit{
 
   next_page() {
     this.file_page = this.file_page+1;
+  }
+
+  width_change() {
+    this.viewerWidth = Math.round(window.innerWidth*.99).toString() + "px";
+    this.viewerHeight = Math.round(window.innerHeight*.8).toString() + "px";
   }
 
   scroll_top() {

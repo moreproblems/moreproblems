@@ -12,6 +12,25 @@ import { Meta } from '@angular/platform-browser';
 export class AppComponent{
   title = 'MoreProblems.Org';
 
+  public screenWidth = window.innerWidth;
+  public mobileWidth = 750;
+  public menuOpen = true;
+  
+
+  width_change() {
+    this.screenWidth = window.innerWidth;
+    if (this.screenWidth > this.mobileWidth) {
+      this.menuOpen = true;
+    }
+    if (this.screenWidth <= this.mobileWidth) {
+      this.menuOpen = false;
+    }
+  }
+
+  menu_toggle() {
+    this.menuOpen = !this.menuOpen;
+  }
+
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: 'smooth'});
   }
