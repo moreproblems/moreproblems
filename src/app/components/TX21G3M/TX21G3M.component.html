@@ -428,10 +428,8 @@
         <div class="card card-large" style="height: auto; margin: auto; text-align: center" #problemCard>
             <div class="content" style="margin: auto; align: center">
                 <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_grade}} {{exam_subject}} Exam </h2>
-                <h3 *ngIf="this.problem_number <= this.exam_length"> Problem #{{problem_number}}/{{exam_length}} </h3>
-                <h2 *ngIf="this.problem_number > this.exam_length"> With {{number_correct}} out of {{exam_length}} problems correct,
-                    you scored <b>{{correct_percent}}%</b>
-                </h2>
+                <h3 *ngIf="this.problem_number <= this.exam_length"> Problem #{{problem_number}}/{{exam_length}} <hr /> {{et_minutes}}m {{et_counter%60}}s </h3>
+                <h2 *ngIf="this.problem_number > this.exam_length"> With {{number_correct}} out of {{exam_length}} problems correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
                 <div *ngFor="let prob of exam_dump | keyvalue">
                     <div *ngIf="problem_number == prob.value.Number">
                         <div *ngFor="let block of prob.value.Content" style="align: center; text-align: center">
@@ -448,7 +446,7 @@
                             <div class="card highlight-card card-small"
                                 style="min-height: 50px; min-width: 250px; max-height: 100px; max-width: 90%; padding: 10px">
                                 <input
-                                    style="display: block; width: 150px; height: 50px; margin: 0px 20px 0px 20px; padding: 0px; font-size: 20px"
+                                    style="display: block; width: 150px; height: 50px; margin: 0px 20px 0px 20px; padding: 0px; font-size: 20px; text-indent: 10px"
                                     #inputFR />
                                 <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value);"
                                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 20px 0px 20px; padding: 0px">
@@ -486,7 +484,7 @@
                     </button>
                 </div>
                 <div *ngIf="problem_number > exam_length">
-                    <div class="card card-small" style="height: auto; width: auto; max-width: 55%; padding: 10px; margin: auto">
+                    <!-- <div class="card card-small" style="height: auto; width: auto; max-width: 500px; padding: 10px; margin: auto">
                         <button *ngIf="sub_form == ''" (click)="sub_form = 'adult'" class="grade-button"> <b> Share Your Results With An Adult </b> </button>
                         <button *ngIf="sub_form == ''" (click)="sub_form = 'friend'" class="grade-button"> <b> Invite A Friend To Beat Your Results </b> </button>
                         <form *ngIf="sub_form == 'adult'" action="https://getform.io/f/38254f36-dac8-42c4-b228-265b2112682b" method="POST" style="width: 100%; align-items: center">
@@ -526,7 +524,7 @@
                                 </button>
                             </div>
                         </form>
-                    </div>
+                    </div> -->
                     <br />
                     <table style="border: 1px solid black" #resultsTable>
                         <thead>
@@ -536,7 +534,9 @@
                                 <th> Correct Response </th>
                                 <th> Student Response </th>
                                 <th> Student Response Explanation </th>
+                                <th> Problem Time </th>
                                 <th> Problem Attempts </th>
+                                <th> Attempt Path </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -547,7 +547,9 @@
                                 <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
                                 <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
                                 <td style="border-top: 1px solid #ddd; max-width: 750px"> {{sub.Rationale}} </td>
+                                <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
                                 <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
+                                <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
                             </tr>
                         </tbody>
                     </table>
