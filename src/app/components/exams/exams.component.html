@@ -379,7 +379,6 @@
     max-width: 175px;
     max-height: 75px;
     transition: all 0.2s ease-in-out;
-    /* max-width: 200px; */
   }
 
   /* Hide default HTML checkbox */
@@ -455,7 +454,7 @@
         <!-- <img src="./assets/icons/download.png" style="height: 30px; width: 30px; filter: invert(100%)"> -->
         <b>Online Exam</b>
       </button>
-      <h1 style="margin: auto; font-size: 24px"> {{exam_name}} </h1>
+      <h1 style="margin: auto 50px; font-size: 24px"> {{exam_name}} </h1>
       <button *ngIf="file_source != ''" (click)="prev_page()" class="grade-button"
         style="margin: 10px; width: auto; height: auto">
         <img src="./assets/icons/minus.png" style="height: 30px; width: 30px; filter: invert(100%)">

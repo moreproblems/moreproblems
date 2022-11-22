@@ -1,4 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
+// import {NgPipesModule} from 'ngx-pipes';
 // import * as fs from 'fs';
 // import * as path from 'path';
 
@@ -37,7 +38,7 @@ export class TX21G3MComponent implements OnInit {
     exam_year = '2021';
     exam_length = 32;
 
-    exam_dump = {
+    exam_dump: { [key: number]: {'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: {'Choice': string, 'Key': {'Correct': boolean, 'Rationale': string} } } } } = {
         1: {
             'Number': 1,
             'Type': 'MC',
@@ -218,8 +219,11 @@ export class TX21G3MComponent implements OnInit {
             ],
             'AnswerChoices': {
                 'Key': {
-                    'Answer': '972',
-                    'Rationale': 'To determine a number that is equivalent to the expression, the student should have put the digits from the expression in place-value order. From left to right‚ the place-value order is hundreds place‚ tens place‚ and ones place. The student should have used a 9 in the hundreds place for the 900 in the expression, a 7 in the tens place for the 70 in the expression, and a 2 in the ones place for the 2 in the expression (972). This is an efficient way to solve the problem; however‚ other methods could be used to solve the problem correctly.'
+                    'Choice': '972',
+                    'Key': {
+                        'Correct': false,
+                        'Rationale': 'To determine a number that is equivalent to the expression, the student should have put the digits from the expression in place-value order. From left to right‚ the place-value order is hundreds place‚ tens place‚ and ones place. The student should have used a 9 in the hundreds place for the 900 in the expression, a 7 in the tens place for the 70 in the expression, and a 2 in the ones place for the 2 in the expression (972). This is an efficient way to solve the problem; however‚ other methods could be used to solve the problem correctly.'
+                    }
                 }
             }
         },
@@ -573,8 +577,11 @@ export class TX21G3MComponent implements OnInit {
             ],
             'AnswerChoices': {
                 'Key': {
-                    'Answer': '20',
-                    'Rationale': 'To determine a number that is equivalent to the expression, the student should have put the digits from the expression in place-value order. From left to right‚ the place-value order is hundreds place‚ tens place‚ and ones place. The student should have used a 9 in the hundreds place for the 900 in the expression, a 7 in the tens place for the 70 in the expression, and a 2 in the ones place for the 2 in the expression (972). This is an efficient way to solve the problem; however‚ other methods could be used to solve the problem correctly.'
+                    'Choice': '20',
+                    'Key': {
+                        'Correct': false,
+                        'Rationale': 'To determine a number that is equivalent to the expression, the student should have put the digits from the expression in place-value order. From left to right‚ the place-value order is hundreds place‚ tens place‚ and ones place. The student should have used a 9 in the hundreds place for the 900 in the expression, a 7 in the tens place for the 70 in the expression, and a 2 in the ones place for the 2 in the expression (972). This is an efficient way to solve the problem; however‚ other methods could be used to solve the problem correctly.'
+                    }
                 }
             }
         },
@@ -964,8 +971,11 @@ export class TX21G3MComponent implements OnInit {
             ],
             'AnswerChoices': {
                 'Key': {
-                    'Answer': '13',
-                    'Rationale': 'To determine the length of the rectangular floor, the student should have first recognized that the perimeter (distance around the outside) is 46 feet and the width of the floor is 10 feet and that the perimeter can be found by adding all the side lengths. Then the student could have subtracted the width of two sides of the floor from the perimeter (46 − 10 − 10 = 26). Then the student could have divided 26 feet by 2 since 26 is the length of 2 sides of the floor (26 ÷ 2 = 13) to find the length of one side. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.'
+                    'Choice': '13',
+                    'Key': {
+                        'Correct': false,
+                        'Rationale': 'To determine the length of the rectangular floor, the student should have first recognized that the perimeter (distance around the outside) is 46 feet and the width of the floor is 10 feet and that the perimeter can be found by adding all the side lengths. Then the student could have subtracted the width of two sides of the floor from the perimeter (46 − 10 − 10 = 26). Then the student could have divided 26 feet by 2 since 26 is the length of 2 sides of the floor (26 ÷ 2 = 13) to find the length of one side. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.'
+                    }
                 }
             }
         },
@@ -1306,11 +1316,12 @@ export class TX21G3MComponent implements OnInit {
 
     exam_key: string[] = ['B', 'H', 'A', 'H', '972', 'H', 'A', 'G', 'D', 'J', 'C', 'H', 'D', '20', 'A', 'H', 'A', 'J', 'D', 'G', 'C', 'J', 'B', '13', 'A', 'G', 'D', 'F', 'B', 'F', 'C', 'G']
 
-    problem_number = 1;
+    problem_number = 32;
     problem_selection = '';
     problem_attempts = 0;
     attempt_response = '';
-    exam_submission = {
+    exam_submission2: any[] = [];
+    exam_submission: { [key: number]: {'Number': number, 'Topic': string, 'Choice': string, 'Correct': string, 'Rationale': string, 'Attempts': number } }  = {
         1: {
             'Number': 0,
             'Topic': '',
@@ -1570,8 +1581,12 @@ export class TX21G3MComponent implements OnInit {
         }
     };
 
+    exam_submission_list: any[] = [];
     number_correct = 0;
     correct_percent = 0;
+    sub_form = '';
+    parent_select = false;
+    teacher_select = false;
 
     constructor() { }
 
@@ -1605,7 +1620,7 @@ export class TX21G3MComponent implements OnInit {
             if (this.problem_number == +num) {
                 for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
                     if (choice == ch) {
-                        if (key.Correct == true) {
+                        if (key.Key.Correct == true) {
                         this.attempt_response = 'Correct'
                         }
                         else {
@@ -1623,7 +1638,7 @@ export class TX21G3MComponent implements OnInit {
         for (const [num, prob] of Object.entries(this.exam_dump)) {
             if (this.problem_number == +num) {
                 for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
-                    if (choice == key.Answer) {
+                    if (choice == key.Choice) {
                             this.attempt_response = 'Correct'
                         }
                     else {
@@ -1636,7 +1651,7 @@ export class TX21G3MComponent implements OnInit {
 
     next_problem(choice: string) {
         for (const [num, prob] of Object.entries(this.exam_dump)) {
-            if (this.problem_number == +num) {
+            if (this.problem_number == +num) {  
                 for (const [num2, sub] of Object.entries(this.exam_submission)) {
                     if (this.problem_number == +num2) {
                         sub.Number = this.problem_number;
@@ -1655,21 +1670,25 @@ export class TX21G3MComponent implements OnInit {
                                 sub.Rationale = key.Key.Rationale;
                             }
                             else if (prob.Type == 'FR') {
-                                if (choice == key.Answer) {
+                                if (choice == key.Choice) {
                                     sub.Correct = '✅';
                                     this.number_correct += 1;
-                                    sub.Rationale = key.Rationale;
+                                    sub.Rationale = key.Key.Rationale;
                                 }
                                 else {
                                     sub.Correct = this.exam_key[this.problem_number-1];
                                     sub.Rationale = 'No rationale provided. The number submitted was not right';
-                        //     }
                                 }
                             }
                         }
                     }
                 }
                 
+            }
+        }
+        if (this.problem_number == this.exam_length) {
+            for (let i: number = 1; i <= this.exam_length; i++) {
+                this.exam_submission_list.push(this.exam_submission[i]);
             }
         }
         this.correct_percent = Math.round(this.number_correct/this.problem_number*100);

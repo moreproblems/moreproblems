@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgPipesModule } from 'ngx-pipes';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
@@ -33,6 +34,7 @@ import { TX19G3MKeyComponent } from './components/TX19G3M-key/TX19G3M-key.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgPipesModule,
     ReactiveFormsModule,
     HttpClientModule,
     PdfViewerModule,
