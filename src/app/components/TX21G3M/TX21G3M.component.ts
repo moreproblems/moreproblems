@@ -47,6 +47,8 @@ export class TX21G3MComponent implements OnInit {
     exam_year = '2021';
     exam_length = 32;
 
+    exam_directions = 'Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.';
+
     exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {
         1: {
             'Number': 1,
@@ -1325,7 +1327,7 @@ export class TX21G3MComponent implements OnInit {
 
     exam_key: string[] = ['B', 'H', 'A', 'H', '972', 'H', 'A', 'G', 'D', 'J', 'C', 'H', 'D', '20', 'A', 'H', 'A', 'J', 'D', 'G', 'C', 'J', 'B', '13', 'A', 'G', 'D', 'F', 'B', 'F', 'C', 'G']
 
-    problem_number = 1;
+    problem_number = 0;
     problem_selection = '';
     problem_attempts = 0;
     attempt_path: string[] = [];
@@ -1686,6 +1688,12 @@ export class TX21G3MComponent implements OnInit {
         }
     }
 
+    begin_exam() {
+        this.toggleExamTimer();
+        this.toggleProblemTimer();
+        this.problem_number = 1;
+    }
+
     attempt_mc_problem(choice: string) {
         if (choice != this.problem_selection) {
             this.problem_attempts += 1;
@@ -1830,7 +1838,6 @@ export class TX21G3MComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.toggleExamTimer();
-        this.toggleProblemTimer();
+        
     }
 }

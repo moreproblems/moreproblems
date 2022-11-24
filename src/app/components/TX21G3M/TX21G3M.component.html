@@ -415,7 +415,6 @@
         .card.highlight-card span {
             margin-left: 72px;
         }
-
     }
 </style>
 
@@ -426,10 +425,20 @@
 <div class="content" role="main">
     <div class="card-container">
         <div class="card card-large" style="height: auto; margin: auto; text-align: center" #problemCard>
-            <div class="content" style="margin: auto; align: center">
-                <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_grade}} {{exam_subject}} Exam </h2>
-                <h3 *ngIf="this.problem_number <= this.exam_length"> Problem #{{problem_number}}/{{exam_length}} <hr /> {{et_minutes}}m {{et_counter%60}}s </h3>
+            <div class="content" style="margin: auto; align-items: center">
+                <h2 *ngIf="this.problem_number > 0"style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_grade}} {{exam_subject}} Exam </h2>
+                <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0"> Problem #{{problem_number}}/{{exam_length}} <hr /> {{et_minutes}}m {{et_counter%60}}s </h3>
                 <h2 *ngIf="this.problem_number > this.exam_length"> With {{number_correct}} out of {{exam_length}} problems correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
+                <div *ngIf="this.problem_number == 0" class="card card-small" style="height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
+                    <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_grade}} {{exam_subject}} Exam </h2>
+                    <br />
+                    <p> <b>Directions</b> : {{exam_directions}} </p>
+                    <br />
+                    <button class="grade-button" (click)="begin_exam(); scroll2(problemCard)"
+                        style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 0px">
+                        <b> Begin Exam </b>
+                    </button>
+                </div>
                 <div *ngFor="let prob of exam_dump | keyvalue">
                     <div *ngIf="problem_number == prob.value.Number">
                         <div *ngFor="let block of prob.value.Content" style="align: center; text-align: center">

@@ -36,9 +36,9 @@ export class TX21G3MKeyComponent implements OnInit {
   exam_subject = 'Mathematics';
   exam_name = 'STAAR';
   exam_year = '2021';
-  exam_length = '32'
+  exam_length = 32;
 
-  exam_dump = {
+  exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {
     1: {
       'Number': 1,
       'Type': 'MC',
@@ -219,8 +219,11 @@ export class TX21G3MKeyComponent implements OnInit {
       ],
       'AnswerChoices': {
         'Key': {
-          'Answer': '972',
-          'Rationale': 'To determine a number that is equivalent to the expression, the student should have put the digits from the expression in place-value order. From left to right‚ the place-value order is hundreds place‚ tens place‚ and ones place. The student should have used a 9 in the hundreds place for the 900 in the expression, a 7 in the tens place for the 70 in the expression, and a 2 in the ones place for the 2 in the expression (972). This is an efficient way to solve the problem; however‚ other methods could be used to solve the problem correctly.'
+          'Choice': '972',
+          'Key': {
+            'Correct': false,
+            'Rationale': 'To determine a number that is equivalent to the expression, the student should have put the digits from the expression in place-value order. From left to right‚ the place-value order is hundreds place‚ tens place‚ and ones place. The student should have used a 9 in the hundreds place for the 900 in the expression, a 7 in the tens place for the 70 in the expression, and a 2 in the ones place for the 2 in the expression (972). This is an efficient way to solve the problem; however‚ other methods could be used to solve the problem correctly.'
+          }
         }
       }
     },
@@ -574,8 +577,11 @@ export class TX21G3MKeyComponent implements OnInit {
       ],
       'AnswerChoices': {
         'Key': {
-          'Answer': '20',
-          'Rationale': 'To determine a number that is equivalent to the expression, the student should have put the digits from the expression in place-value order. From left to right‚ the place-value order is hundreds place‚ tens place‚ and ones place. The student should have used a 9 in the hundreds place for the 900 in the expression, a 7 in the tens place for the 70 in the expression, and a 2 in the ones place for the 2 in the expression (972). This is an efficient way to solve the problem; however‚ other methods could be used to solve the problem correctly.'
+          'Choice': '20',
+          'Key': {
+            'Correct': false,
+            'Rationale': 'To determine a number that is equivalent to the expression, the student should have put the digits from the expression in place-value order. From left to right‚ the place-value order is hundreds place‚ tens place‚ and ones place. The student should have used a 9 in the hundreds place for the 900 in the expression, a 7 in the tens place for the 70 in the expression, and a 2 in the ones place for the 2 in the expression (972). This is an efficient way to solve the problem; however‚ other methods could be used to solve the problem correctly.'
+          }
         }
       }
     },
@@ -965,8 +971,11 @@ export class TX21G3MKeyComponent implements OnInit {
       ],
       'AnswerChoices': {
         'Key': {
-          'Answer': '13',
-          'Rationale': 'To determine the length of the rectangular floor, the student should have first recognized that the perimeter (distance around the outside) is 46 feet and the width of the floor is 10 feet and that the perimeter can be found by adding all the side lengths. Then the student could have subtracted the width of two sides of the floor from the perimeter (46 − 10 − 10 = 26). Then the student could have divided 26 feet by 2 since 26 is the length of 2 sides of the floor (26 ÷ 2 = 13) to find the length of one side. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.'
+          'Choice': '13',
+          'Key': {
+            'Correct': false,
+            'Rationale': 'To determine the length of the rectangular floor, the student should have first recognized that the perimeter (distance around the outside) is 46 feet and the width of the floor is 10 feet and that the perimeter can be found by adding all the side lengths. Then the student could have subtracted the width of two sides of the floor from the perimeter (46 − 10 − 10 = 26). Then the student could have divided 26 feet by 2 since 26 is the length of 2 sides of the floor (26 ÷ 2 = 13) to find the length of one side. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.'
+          }
         }
       }
     },
@@ -1357,8 +1366,8 @@ export class TX21G3MKeyComponent implements OnInit {
     for (const [num, prob] of Object.entries(this.exam_dump)) {
       if (this.problem_number == +num) {
         for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
-          if (choice == key.Answer) {
-            this.attempt_explanation = key.Rationale;
+          if (choice == key.Choice) {
+            this.attempt_explanation = key.Key.Rationale;
             if (this.problem_attempts == 1) {
               this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
             }
@@ -1375,9 +1384,19 @@ export class TX21G3MKeyComponent implements OnInit {
   }
 
   next_problem() {
-    this.problem_number += 1;
-    this.problem_attempts = 0;
-    this.attempt_response = '';
+    if (this.problem_number < this.exam_length) {
+      this.problem_number += 1;
+      this.problem_attempts = 0;
+      this.attempt_response = '';
+    }
+  }
+
+  prev_problem() {
+    if (this.problem_number > 1) {
+      this.problem_number -= 1;
+      this.problem_attempts = 0;
+      this.attempt_response = '';
+    }
   }
 
   scroll(el: HTMLElement) {
@@ -1389,6 +1408,6 @@ export class TX21G3MKeyComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    
   }
 }

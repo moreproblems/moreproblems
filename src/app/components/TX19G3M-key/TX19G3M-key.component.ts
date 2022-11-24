@@ -36,7 +36,7 @@ export class TX19G3MKeyComponent implements OnInit {
   exam_subject = 'Mathematics';
   exam_name = 'STAAR';
   exam_year = '2019';
-  exam_length = '32'
+  exam_length = 32;
 
   exam_dump = {
     1: {
@@ -1376,9 +1376,19 @@ export class TX19G3MKeyComponent implements OnInit {
   }
 
   next_problem() {
-    this.problem_number += 1;
-    this.problem_attempts = 0;
-    this.attempt_response = '';
+    if (this.problem_number < this.exam_length) {
+      this.problem_number += 1;
+      this.problem_attempts = 0;
+      this.attempt_response = '';
+    }
+  }
+
+  prev_problem() {
+    if (this.problem_number > 1) {
+      this.problem_number -= 1;
+      this.problem_attempts = 0;
+      this.attempt_response = '';
+    }
   }
 
   scroll(el: HTMLElement) {

@@ -269,6 +269,24 @@
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
+  #logo:hover {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  #title1:hover {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  #title2:hover {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
   nav a {
     font-size: 18px;
     font-family: 'Orbitron';
@@ -276,6 +294,7 @@
     margin: 0px;
     padding: 0px;
     transition: all 0.2s ease-in-out;
+    vertical-align: top;
   }
 
   nav a:hover {
@@ -344,11 +363,11 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner" (window:resize)="width_change()" #navbar>
-  <div class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 0 40px 0 0">
-    <img src="./assets/media/logo1.png" style="width: 65px; height: 65px" />
+  <div class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 0 40px 0 0" routerLink="/exams" routerLinkActive="active">
+    <img src="./assets/media/logo1.png" style="width: 65px; height: 65px" #logo />
     <span style="padding: 0px; text-align: left">
-      <h1 *ngIf="this.screenWidth > this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 26px"> {{ title }} </h1>
-      <h1 *ngIf="this.screenWidth <= this.mobileWidth"style="display: block; font-family: 'Orbitron'; font-size: 22px"> {{ title }} </h1>
+      <h1 *ngIf="this.screenWidth > this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 26px" #title1> {{ title }} </h1>
+      <h1 *ngIf="this.screenWidth <= this.mobileWidth"style="display: block; font-family: 'Orbitron'; font-size: 22px" #title2> {{ title }} </h1>
       <!-- <h2 style="display: block; padding: 5px 0 0"> Free K-12 State Assessments! </h2> -->
       <!-- <p style="display: inline; font-size: 16px; font-family: 'Orbitron'; margin: 0 0 0 10px"> prepares every U.S. K-12
         student to ace their standardized state assessments for free</p> -->
@@ -356,6 +375,7 @@
   </div>
   <div class="spacer"></div>
 
+  <!-- <nav *ngIf="this.menuOpen" style="margin: 0; padding: 0; display: flex; flex-direction: column"> -->
   <nav *ngIf="this.menuOpen">
     <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/about" routerLinkActive="active">About</a>&nbsp;&nbsp;
     <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/exams" routerLinkActive="active">Exams</a>&nbsp;&nbsp;
@@ -375,13 +395,6 @@
     </nav>
   </div> -->
 </div>
-<div *ngIf="this.menuOpen" role="banner">
-  
-</div>
-<div *ngIf="this.menuOpen">
-  
-</div>
-
 <div class="content-box" role="menu" style="width:100%; padding: 0px">
   <router-outlet style="width:100%; padding: Opx; margin: 0px"></router-outlet>
 </div>
