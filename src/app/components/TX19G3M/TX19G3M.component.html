@@ -535,6 +535,24 @@
                             </div>
                         </form>
                     </div> -->
+                    <table style="border: 1px solid black; margin: auto" #topicsTable>
+                        <thead>
+                            <tr style="border: 1px solid black">
+                                <th> Topic Name </th>
+                                <th> Percent Correct </th>
+                                <th> Total Problems </th>
+                                <th> Missed Problems </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let topic of topic_breakdown | keyvalue"> 
+                                <td style="border-top: 1px solid #ddd"> {{topic.key}} </td>
+                                <td style="border-top: 1px solid #ddd"> {{topic.value.Percent}}% </td>
+                                <td style="border-top: 1px solid #ddd"> {{topic.value.Total}} </td>
+                                <td style="border-top: 1px solid #ddd"> {{topic.value.Incorrect}} </td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <br />
                     <table style="border: 1px solid black" #resultsTable>
                         <thead>

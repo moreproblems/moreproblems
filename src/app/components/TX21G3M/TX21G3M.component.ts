@@ -1659,6 +1659,8 @@ export class TX21G3MComponent implements OnInit {
     exam_submission_list: any[] = [];
     number_correct = 0;
     correct_percent = 0;
+    topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number } } = {};
+
     sub_form = '';
     parent_select = false;
     teacher_select = false;
@@ -1787,7 +1789,33 @@ export class TX21G3MComponent implements OnInit {
         this.clearProblemTimer();
         this.toggleProblemTimer();
         if (this.problem_number > this.exam_length) {
-            this.toggleExamTimer();
+            this.completeExam();
+        }
+    }
+
+    completeExam() {
+        this.toggleExamTimer();
+        for (let i: number = 0; i < this.exam_length; i++) {
+            if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topic)) {
+                this.topic_breakdown[this.exam_submission_list[i].Topic].Total += 1;
+                if (this.exam_submission_list[i].Correct == '✅') {
+                    this.topic_breakdown[this.exam_submission_list[i].Topic].Correct += 1;
+                }
+                else {
+                    this.topic_breakdown[this.exam_submission_list[i].Topic].Incorrect += 1;
+                }
+            }
+            else {
+                if (this.exam_submission_list[i].Correct == '✅') {
+                    this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0};
+                }
+                else {
+                    this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0};
+                }
+            }
+        }
+        for (let topic of Object.keys(this.topic_breakdown)) {
+            this.topic_breakdown[topic].Percent = Math.round(100*this.topic_breakdown[topic].Correct/(this.topic_breakdown[topic].Total));
         }
     }
 

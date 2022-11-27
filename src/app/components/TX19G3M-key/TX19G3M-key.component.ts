@@ -38,7 +38,7 @@ export class TX19G3MKeyComponent implements OnInit {
   exam_year = '2019';
   exam_length = 32;
 
-  exam_dump = {
+  exam_dump: { [key: number]: {'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: {'Choice': string, 'Key': {'Correct': boolean, 'Rationale': string} } } } } = {
     1: {
         'Number': 1,
         'Type': 'MC',
@@ -214,8 +214,11 @@ export class TX19G3MKeyComponent implements OnInit {
         ],
         'AnswerChoices': {
             'Key': {
-                'Answer': '7',
-                'Rationale': 'To determine the total number of packages Serafina used, the student should have recognized that a values are correct total of 42 cupcakes with 6 cupcakes in “each package” indicates division (42 ÷ 6 = 7) .'
+                'Choice': '7',
+                'Key': {
+                    'Correct': true,
+                    'Rationale': 'To determine the total number of packages Serafina used, the student should have recognized that a values are correct total of 42 cupcakes with 6 cupcakes in “each package” indicates division (42 ÷ 6 = 7) .'
+                }
             }
         }
     },
@@ -404,7 +407,6 @@ export class TX19G3MKeyComponent implements OnInit {
         'AnswerChoices': {
             'F': {
                 'Choice': 'Exams/Texas/TX19G3M/media/10a.jpg',
-                'Rationale': '',
                 'Key': {
                     'Correct': false,
                     'Rationale': 'The student likely chose the table with multiples of 8 (numbers like 8, 16, 24, and 32 that can be found when multiplying by 8) but did not consider the relationship between each number of bags and each number of oranges in the table. The student needs to focus on understanding the relationship between numbers paired in a table.'
@@ -412,7 +414,6 @@ export class TX19G3MKeyComponent implements OnInit {
             },
             'G': {
                 'Choice': 'Exams/Texas/TX19G3M/media/10b.jpg',
-                'Rationale': '',
                 'Key': {
                     'Correct': true,
                     'Rationale': 'To determine the table that shows the relationship between the number of bags and the number of oranges in the bags, the student should have multiplied each number of bags by 8 and then used the result to confirm each number of oranges listed in the table (2 × 8 = 16, 3 × 8 = 24, 4 × 8 = 32, and 5 × 8 = 40).'
@@ -561,8 +562,8 @@ export class TX19G3MKeyComponent implements OnInit {
         'Number': 14,
         'Type': 'FR',
         'NumChoices': 0,
-        'Topic': '',
-        'SubTopic': '',
+        'Topic': 'Geometry & Measurement',
+        'SubTopic': 'Determine the perimeter of a polygon or a missing length when given perimeter and remaining side lengths in problems',
         'Content': [
             'Gina’s journal has a square cover with the side length shown.',
             'Exams/Texas/TX19G3M/media/14a.jpg',
@@ -570,17 +571,20 @@ export class TX19G3MKeyComponent implements OnInit {
         ],
         'AnswerChoices': {
             'Key': {
-                'Answer': '96',
-                'Rationale': 'To determine the perimeter of (distance around) the cover of Gina’s journal, the student should have values are correct first recognized that each side of the square is the same length (24 centimeters). Then the student could have added all of the side lengths (24+ 2 4+ 2 4+ 2 4 = 96). The student could have also multiplied the given side length (24 cm) by the 4 sides (24 × 4 = 96).'
-            }
+                'Choice': '96',
+                'Key': {
+                    'Correct': true,
+                    'Rationale': 'To determine the perimeter of (distance around) the cover of Gina’s journal, the student should have values are correct first recognized that each side of the square is the same length (24 centimeters). Then the student could have added all of the side lengths (24+ 2 4+ 2 4+ 2 4 = 96). The student could have also multiplied the given side length (24 cm) by the 4 sides (24 × 4 = 96).'
+                }
+            } 
         }
     },
     15: {
         'Number': 15,
         'Type': 'MC',
         'NumChoices': 3,
-        'Topic': 'Geometry & Measurement',
-        'SubTopic': 'Determine the perimeter of a polygon or a missing length when given perimeter and remaining side lengths in problems',
+        'Topic': 'Number & Operations',
+        'SubTopic': 'Solve with fluency one-step and two-step problems involving addition and subtraction within 1,000 using strategies based on place value, properties of operations, and the relationship between addition and subtraction',
         'Content': [
             'Roger has two boxes of nails. One box has 438 nails, and the other box has 375 nails.',
             'How many nailes does Roger have in these two boxes?'
@@ -620,8 +624,8 @@ export class TX19G3MKeyComponent implements OnInit {
         'Number': 16,
         'Type': 'MC',
         'NumChoices': 3,
-        'Topic': 'Number & Operations',
-        'SubTopic': 'Solve with fluency one-step and two-step problems involving addition and subtraction within 1,000 using strategies based on place value, properties of operations, and the relationship between addition and subtraction',
+        'Topic': 'Geometry & Measurement',
+        'SubTopic': 'Determine the area of rectangles with whole number side lengths in problems using multiplication related to the number of rows times the number of unit squares in each row',
         'Content': [
             'The shaded figure on the grid represents Erin’s rectangular lawn.',
             'Exams/Texas/TX19G3M/media/16a.jpg',
@@ -965,8 +969,11 @@ export class TX19G3MKeyComponent implements OnInit {
         ],
         'AnswerChoices': {
             'Key': {
-                'Answer': '18',
-                'Rationale': 'To determine the difference between the weight of Samantha’s ice chest and the combined weight of values are correct Gordon’s and Diego’s ice chests, the student should have interpreted that the word “difference” in the question meant that subtraction ( )− was necessary and that the word “combined” meant addition ( + ) was necessary. The student could have first added the weights of Gordon’s ice chest (28 pounds) and Diego’s ice chest (37 pounds) to get the combined weight of 65 pounds (28 + 37 = 65). Then the student could have subtracted 65 pounds from the weight of Samantha’s ice chest (83 pounds), resulting in a difference of 18 pounds (83 − 65 = 18). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.'
+                'Choice': '18',
+                'Key': {
+                    'Correct': true,
+                    'Rationale': 'To determine the difference between the weight of Samantha’s ice chest and the combined weight of values are correct Gordon’s and Diego’s ice chests, the student should have interpreted that the word “difference” in the question meant that subtraction ( )− was necessary and that the word “combined” meant addition ( + ) was necessary. The student could have first added the weights of Gordon’s ice chest (28 pounds) and Diego’s ice chest (37 pounds) to get the combined weight of 65 pounds (28 + 37 = 65). Then the student could have subtracted 65 pounds from the weight of Samantha’s ice chest (83 pounds), resulting in a difference of 18 pounds (83 − 65 = 18). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.'
+                }
             }
         }
     },
@@ -1358,8 +1365,8 @@ export class TX19G3MKeyComponent implements OnInit {
     for (const [num, prob] of Object.entries(this.exam_dump)) {
       if (this.problem_number == +num) {
         for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
-          if (choice == key.Answer) {
-            this.attempt_explanation = key.Rationale;
+          if (choice == key.Choice) {
+            this.attempt_explanation = key.Key.Rationale;
             if (this.problem_attempts == 1) {
               this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
             }
