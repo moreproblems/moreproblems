@@ -480,13 +480,20 @@
   <br />
   <input type="hidden" value="All United States" #state>
   <div class="card-container">
-    <label class="switch">
+    <!-- <label class="switch">
       <input type="checkbox" value="CA">
       <button *ngIf="selected_state == 'CA'" (click)="select_state('CA')" class="toggle-button-on"
         tabindex="0"><b>California</b> <br /> (CAASPP)</button>
       <button *ngIf="selected_state != 'CA'" (click)="select_state('CA')" class="toggle-button-off"
         tabindex="0"><b>California</b> <br /> (CAASPP)</button>
-    </label>
+    </label> -->
+    <!-- <label class="switch">
+      <input type="checkbox" value="CO">
+      <button *ngIf="selected_state == 'CO'" (click)="select_state('CO')" class="toggle-button-on"
+        tabindex="0"><b>Colorado</b> <br /> (CMAS)</button>
+      <button *ngIf="selected_state != 'CO'" (click)="select_state('CO')" class="toggle-button-off"
+        tabindex="0"><b>Colorado</b> <br /> (CMAS)</button>
+    </label> -->
     <label class="switch">
       <input type="checkbox" value="FL">
       <button *ngIf="selected_state == 'FL'" (click)="select_state('FL')" class="toggle-button-on"
@@ -494,13 +501,13 @@
       <button *ngIf="selected_state != 'FL'" (click)="select_state('FL')" class="toggle-button-off"
         tabindex="0"><b>Florida</b> <br /> (FSA)</button>
     </label>
-    <label class="switch">
+    <!-- <label class="switch">
       <input type="checkbox" value="GA">
       <button *ngIf="selected_state == 'GA'" (click)="select_state('GA')" class="toggle-button-on"
         tabindex="0"><b>Georgia</b> <br /> (GMAS)</button>
       <button *ngIf="selected_state != 'GA'" (click)="select_state('GA')" class="toggle-button-off"
         tabindex="0"><b>Georgia</b> <br /> (GMAS)</button>
-    </label>
+    </label> -->
     <label class="switch">
       <input type="checkbox" value="IL">
       <button *ngIf="selected_state == 'IL'" (click)="select_state('IL')" class="toggle-button-on"
@@ -508,13 +515,55 @@
       <button *ngIf="selected_state != 'IL'" (click)="select_state('IL')" class="toggle-button-off"
         tabindex="0"><b>Illinois</b> <br /> (IAR)</button>
     </label>
-    <label class="switch">
+    <!-- <label class="switch">
+      <input type="checkbox" value="IN">
+      <button *ngIf="selected_state == 'IN'" (click)="select_state('IN')" class="toggle-button-on"
+        tabindex="0"><b>Indiana</b> <br /> (ISTEP)</button>
+      <button *ngIf="selected_state != 'IN'" (click)="select_state('IN')" class="toggle-button-off"
+        tabindex="0"><b>Indiana</b> <br /> (ISTEP)</button>
+    </label> -->
+    <!-- <label class="switch">
+      <input type="checkbox" value="MD">
+      <button *ngIf="selected_state == 'MD'" (click)="select_state('MD')" class="toggle-button-on"
+        tabindex="0"><b>Maryland</b> <br /> (MCAP)</button>
+      <button *ngIf="selected_state != 'MD'" (click)="select_state('MD')" class="toggle-button-off"
+        tabindex="0"><b>Maryland</b> <br /> (MCAP)</button>
+    </label> -->
+    <!-- <label class="switch">
+      <input type="checkbox" value="MA">
+      <button *ngIf="selected_state == 'MA'" (click)="select_state('MA')" class="toggle-button-on"
+        tabindex="0"><b>Massachusetts</b> <br /> (MCAS)</button>
+      <button *ngIf="selected_state != 'MA'" (click)="select_state('MA')" class="toggle-button-off"
+        tabindex="0"><b>Massachusetts</b> <br /> (MCAS)</button>
+    </label> -->
+    <!-- <label class="switch">
       <input type="checkbox" value="MI">
       <button *ngIf="selected_state == 'MI'" (click)="select_state('MI')" class="toggle-button-on"
         tabindex="0"><b>Michigan</b> <br /> (M-STEP)</button>
       <button *ngIf="selected_state != 'MI'" (click)="select_state('MI')" class="toggle-button-off"
         tabindex="0"><b>Michigan</b> <br /> (M-STEP)</button>
-    </label>
+    </label> -->
+    <!-- <label class="switch">
+      <input type="checkbox" value="MO">
+      <button *ngIf="selected_state == 'MO'" (click)="select_state('MO')" class="toggle-button-on"
+        tabindex="0"><b>Missouri</b> <br /> (MAP)</button>
+      <button *ngIf="selected_state != 'MO'" (click)="select_state('MO')" class="toggle-button-off"
+        tabindex="0"><b>Missouri</b> <br /> (MAP)</button>
+    </label> -->
+    <!-- <label class="switch">
+      <input type="checkbox" value="MN">
+      <button *ngIf="selected_state == 'MN'" (click)="select_state('MN')" class="toggle-button-on"
+        tabindex="0"><b>Minnesota</b> <br /> (MCA)</button>
+      <button *ngIf="selected_state != 'MN'" (click)="select_state('MN')" class="toggle-button-off"
+        tabindex="0"><b>Minnesota</b> <br /> (MCA)</button>
+    </label> -->
+    <!-- <label class="switch">
+      <input type="checkbox" value="NJ">
+      <button *ngIf="selected_state == 'NJ'" (click)="select_state('NJ')" class="toggle-button-on"
+        tabindex="0"><b>New Jersey</b> <br /> (NJSLA)</button>
+      <button *ngIf="selected_state != 'NJ'" (click)="select_state('NJ')" class="toggle-button-off"
+        tabindex="0"><b>New Jersey</b> <br /> (NJSLA)</button>
+    </label> -->
     <label class="switch">
       <input type="checkbox" value="NY">
       <button *ngIf="selected_state == 'NY'" (click)="select_state('NY')" class="toggle-button-on" tabindex="0"><b>New
@@ -529,13 +578,13 @@
       <button *ngIf="selected_state != 'NC'" (click)="select_state('NC')" class="toggle-button-off"
         tabindex="0"><b>North Carolina</b> <br /> (EOG)</button>
     </label>
-    <label class="switch">
+    <!-- <label class="switch">
       <input type="checkbox" value="OH">
       <button *ngIf="selected_state == 'OH'" (click)="select_state('OH')" class="toggle-button-on"
         tabindex="0"><b>Ohio</b> <br /> (OST)</button>
       <button *ngIf="selected_state != 'OH'" (click)="select_state('OH')" class="toggle-button-off"
         tabindex="0"><b>Ohio</b> <br /> (OST)</button>
-    </label>
+    </label> -->
     <label class="switch">
       <input type="checkbox" value="PA">
       <button *ngIf="selected_state == 'PA'" (click)="select_state('PA')" class="toggle-button-on"
@@ -543,6 +592,13 @@
       <button *ngIf="selected_state != 'PA'" (click)="select_state('PA')" class="toggle-button-off"
         tabindex="0"><b>Pennsylvania</b> <br /> (PSSA)</button>
     </label>
+    <!-- <label class="switch">
+      <input type="checkbox" value="TN">
+      <button *ngIf="selected_state == 'TN'" (click)="select_state('TN')" class="toggle-button-on"
+        tabindex="0"><b>Tennessee</b> <br /> (TCAP)</button>
+      <button *ngIf="selected_state != 'TN'" (click)="select_state('TN')" class="toggle-button-off"
+        tabindex="0"><b>Tennessee</b> <br /> (TCAP)</button>
+    </label> -->
     <label class="switch">
       <input type="checkbox" value="TX">
       <button *ngIf="selected_state == 'TX'" (click)="select_state('TX')" class="toggle-button-on"
@@ -550,6 +606,20 @@
       <button *ngIf="selected_state != 'TX'" (click)="select_state('TX')" class="toggle-button-off"
         tabindex="0"><b>Texas</b> <br /> (STAAR)</button>
     </label>
+    <!-- <label class="switch">
+      <input type="checkbox" value="VA">
+      <button *ngIf="selected_state == 'VA'" (click)="select_state('VA')" class="toggle-button-on"
+        tabindex="0"><b>Virginia</b> <br /> (SOL)</button>
+      <button *ngIf="selected_state != 'VA'" (click)="select_state('VA')" class="toggle-button-off"
+        tabindex="0"><b>Virginia</b> <br /> (SOL)</button>
+    </label> -->
+    <!-- <label class="switch">
+      <input type="checkbox" value="WA">
+      <button *ngIf="selected_state == 'WA'" (click)="select_state('WA')" class="toggle-button-on"
+        tabindex="0"><b>Washingtong</b> <br /> (WCAP)</button>
+      <button *ngIf="selected_state != 'WA'" (click)="select_state('WA')" class="toggle-button-off"
+        tabindex="0"><b>Washingtong</b> <br /> (WCAP)</button>
+    </label> -->
   </div>
   <!-- <br /> -->
   <br #title />

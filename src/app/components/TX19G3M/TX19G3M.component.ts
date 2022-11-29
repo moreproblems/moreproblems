@@ -1330,10 +1330,11 @@ export class TX19G3MComponent implements OnInit {
     problem_attempts = 0;
     attempt_path: string[] = [];
     attempt_response = '';
-    exam_submission: { [key: number]: { 'Number': number, 'Topic': string, 'Choice': string, 'Correct': string, 'Rationale': string, 'Attempts': number, 'Path': string[], 'Time': string } } = {
+    exam_submission: { [key: number]: { 'Number': number, 'Topic': string, 'SubTopic': string, 'Choice': string, 'Correct': string, 'Rationale': string, 'Attempts': number, 'Path': string[], 'Time': string } } = {
         1: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1345,6 +1346,7 @@ export class TX19G3MComponent implements OnInit {
 
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1355,6 +1357,7 @@ export class TX19G3MComponent implements OnInit {
         3: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1365,6 +1368,7 @@ export class TX19G3MComponent implements OnInit {
         4: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1375,6 +1379,7 @@ export class TX19G3MComponent implements OnInit {
         5: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1385,6 +1390,7 @@ export class TX19G3MComponent implements OnInit {
         6: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1395,6 +1401,7 @@ export class TX19G3MComponent implements OnInit {
         7: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1405,6 +1412,7 @@ export class TX19G3MComponent implements OnInit {
         8: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1415,6 +1423,7 @@ export class TX19G3MComponent implements OnInit {
         9: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1425,6 +1434,7 @@ export class TX19G3MComponent implements OnInit {
         10: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1435,6 +1445,7 @@ export class TX19G3MComponent implements OnInit {
         11: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1445,6 +1456,7 @@ export class TX19G3MComponent implements OnInit {
         12: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1455,6 +1467,7 @@ export class TX19G3MComponent implements OnInit {
         13: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1465,6 +1478,7 @@ export class TX19G3MComponent implements OnInit {
         14: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1475,6 +1489,7 @@ export class TX19G3MComponent implements OnInit {
         15: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1485,6 +1500,7 @@ export class TX19G3MComponent implements OnInit {
         16: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1495,6 +1511,7 @@ export class TX19G3MComponent implements OnInit {
         17: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1505,6 +1522,7 @@ export class TX19G3MComponent implements OnInit {
         18: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1515,6 +1533,7 @@ export class TX19G3MComponent implements OnInit {
         19: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1525,6 +1544,7 @@ export class TX19G3MComponent implements OnInit {
         20: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1535,6 +1555,7 @@ export class TX19G3MComponent implements OnInit {
         21: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1545,6 +1566,7 @@ export class TX19G3MComponent implements OnInit {
         22: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1555,6 +1577,7 @@ export class TX19G3MComponent implements OnInit {
         23: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1565,6 +1588,7 @@ export class TX19G3MComponent implements OnInit {
         24: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1575,6 +1599,7 @@ export class TX19G3MComponent implements OnInit {
         25: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1585,6 +1610,7 @@ export class TX19G3MComponent implements OnInit {
         26: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1595,6 +1621,7 @@ export class TX19G3MComponent implements OnInit {
         27: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1605,6 +1632,7 @@ export class TX19G3MComponent implements OnInit {
         28: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1615,6 +1643,7 @@ export class TX19G3MComponent implements OnInit {
         29: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1625,6 +1654,7 @@ export class TX19G3MComponent implements OnInit {
         30: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1635,6 +1665,7 @@ export class TX19G3MComponent implements OnInit {
         31: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1645,6 +1676,7 @@ export class TX19G3MComponent implements OnInit {
         32: {
             'Number': 0,
             'Topic': '',
+            'SubTopic': '',
             'Choice': '',
             'Correct': '',
             'Rationale': '',
@@ -1657,7 +1689,7 @@ export class TX19G3MComponent implements OnInit {
     exam_submission_list: any[] = [];
     number_correct = 0;
     correct_percent = 0;
-    topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number } } = {};
+    topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number } } } } = {};
 
     sub_form = '';
     parent_select = false;
@@ -1688,7 +1720,18 @@ export class TX19G3MComponent implements OnInit {
         }
     }
 
+    read_exam_dump() {
+        // const rawFile = new XMLHttpRequest();
+        // rawFile.open("GET", "./assets/Exams/Texas/TX21G3M/TX21G3M-problems.txt", false);
+        // console.log(rawFile.open("GET", "./assets/Exams/Texas/TX21G3M/TX21G3M-problems.txt", false));
+        // this.exam_dump = JSON.parse(rawFile.responseText);
+        // fetch( "./assets/Exams/Texas/TX21G3M/TX21G3M-problems.txt")
+        //     .then((response) => response.json())
+        //     .then((json) => this.exam_dump = json);
+    }
+
     begin_exam() {
+        // this.read_exam_dump();
         this.toggleExamTimer();
         this.toggleProblemTimer();
         this.problem_number = 1;
@@ -1741,9 +1784,10 @@ export class TX19G3MComponent implements OnInit {
             if (this.problem_number == +num) {
                 for (const [num2, sub] of Object.entries(this.exam_submission)) {
                     if (this.problem_number == +num2) {
-                        sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter%60).toString() + 's';
+                        sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
                         sub.Number = this.problem_number;
                         sub.Topic = prob.Topic;
+                        sub.SubTopic = prob.SubTopic;
                         sub.Choice = choice;
                         sub.Attempts = this.problem_attempts;
                         sub.Path = this.attempt_path;
@@ -1787,7 +1831,7 @@ export class TX19G3MComponent implements OnInit {
         this.clearProblemTimer();
         this.toggleProblemTimer();
         if (this.problem_number > this.exam_length) {
-           this.completeExam();
+            this.completeExam();
         }
     }
 
@@ -1798,24 +1842,42 @@ export class TX19G3MComponent implements OnInit {
                 this.topic_breakdown[this.exam_submission_list[i].Topic].Total += 1;
                 if (this.exam_submission_list[i].Correct == '✅') {
                     this.topic_breakdown[this.exam_submission_list[i].Topic].Correct += 1;
+                    if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
+                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
+                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Correct += 1;
+                    }
+                    else {
+                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0 };
+                    }
                 }
                 else {
                     this.topic_breakdown[this.exam_submission_list[i].Topic].Incorrect += 1;
+                    if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
+                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
+                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Incorrect += 1;
+                    }
+                    else {
+                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0 };
+                    }
                 }
             }
             else {
                 if (this.exam_submission_list[i].Correct == '✅') {
-                    this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0};
+                    this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0 } } };
                 }
                 else {
-                    this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0};
+                    this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0 } } };
                 }
             }
         }
         for (let topic of Object.keys(this.topic_breakdown)) {
-            this.topic_breakdown[topic].Percent = Math.round(100*this.topic_breakdown[topic].Correct/(this.topic_breakdown[topic].Total));
+            this.topic_breakdown[topic].Percent = Math.round(100 * this.topic_breakdown[topic].Correct / (this.topic_breakdown[topic].Total));
+            for (let subtopic of Object.keys(this.topic_breakdown[topic].Subs)) {
+                this.topic_breakdown[topic].Subs[subtopic].Percent = Math.round(100 * this.topic_breakdown[topic].Subs[subtopic].Correct / (this.topic_breakdown[topic].Subs[subtopic].Total));
+            }
         }
     }
+
 
     toggleExamTimer() {
         this.et_running = !this.et_running;

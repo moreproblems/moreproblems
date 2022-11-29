@@ -13,8 +13,8 @@ import printJS from 'print-js';
 export class ExamsComponent implements OnInit{
   // title = 'More Problems';
 
-  online_set = ['TX21G3M', 'TX19G3M'];
-  // online_set: string[] = [];
+  // online_set = ['TX21G3M', 'TX19G3M'];
+  online_set: string[] = [];
 
   selected_state = '';
   selected_grade = '';
