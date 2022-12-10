@@ -1,0 +1,489 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+    :host {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 14px;
+        color: #333;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 8px 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .spacer {
+        flex: 1;
+    }
+
+    .toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        background-color: #0a1e33;
+        color: white;
+        font-weight: 600;
+        padding: 5px 10px 2px 20px;
+    }
+
+    .toolbar img {
+        /* margin: 0 16px; */
+        position: absolute;
+        left: -10px;
+        top: -18px;
+    }
+
+    .toolbar #twitter-logo {
+        height: 40px;
+        margin: 0 8px;
+    }
+
+    .toolbar #youtube-logo {
+        height: 40px;
+        margin: 0 16px;
+    }
+
+    .toolbar #twitter-logo:hover,
+    .toolbar #youtube-logo:hover {
+        opacity: 0.8;
+    }
+
+    .content-menu {
+        display: flex;
+        margin: 0 auto 32px;
+        padding: 0 16px;
+        max-width: 960px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        display: flex;
+        margin: auto;
+        padding: 0 16px;
+        max-width: 1500px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    svg.material-icons {
+        height: 24px;
+        width: auto;
+    }
+
+    svg.material-icons:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    .card svg.material-icons path {
+        fill: #888;
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        margin: auto;
+    }
+
+    .card {
+        all: unset;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        /* height: 40px;
+        width: 200px; */
+        margin: 0 8px 16px;
+        padding: 8px 8px;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        /* align-items: center; */
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    .card-container .card:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .card.card-small {
+        height: 16px;
+        width: 190px;
+        border-radius: 8px;
+    }
+
+    .card.card-small:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .card.card-medium {
+        height: auto;
+        width: 80%;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    .card.card-medium:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .card.card-large {
+        max-height: 1500px;
+        width: 85%;
+        border-radius: 8px;
+        margin: 8px 8px;
+        padding: 8px 20px;
+    }
+
+    .card-container .card:not(.highlight-card) {
+        cursor: pointer;
+    }
+
+    .card-container .card:not(.highlight-card):hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .card-container .card:not(.highlight-card):hover .material-icons path {
+        fill: rgb(105, 103, 103);
+    }
+
+    .card.highlight-card {
+        background-color: white;
+        color: #0a1e33;
+        font-weight: 600;
+        border: none;
+        width: auto;
+        min-width: 30%;
+        position: relative;
+    }
+
+    .card.card.highlight-card span {
+        margin-left: 60px;
+    }
+
+    .profile-card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 350px;
+        padding: 4px 0 0;
+        text-align: center;
+        border-radius: 0px;
+        border: 1px solid #eee;
+    }
+
+    .profile-card:hover {
+        transform: scale(1.05, 1.05)
+    }
+
+    a,
+    a:visited,
+    a:hover {
+        color: #1976d2;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #125699;
+    }
+
+    .title {
+        color: grey;
+        font-size: 18px;
+    }
+
+    button {
+        border: none;
+        border-radius: 0px;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 22px;
+        padding: 10px;
+        color: black;
+    }
+
+    button.toggle-button {
+        font-size: 18px;
+        color: black;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    .toggle-button:before {
+        background-color: #1976d2;
+        color: white;
+    }
+
+    button.toggle-button-off {
+        font-size: 18px;
+        color: black;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.toggle-button-on {
+        font-size: 18px;
+        background-color: #1976d2;
+        color: white;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.topic-button {
+        font-size: 18px;
+        color: white;
+        background-color: #1976d2;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    .topic-button:before {
+        background-color: #ccc;
+        color: black;
+    }
+
+    button.grade-button {
+        font-size: 18px;
+        color: white;
+        background-color: #1976d2;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.grade-button:hover {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .circle-link {
+        height: 40px;
+        width: 40px;
+        border-radius: 40px;
+        margin: 8px;
+        background-color: white;
+        border: 1px solid #eeeeee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: 1s ease-out;
+    }
+
+    .circle-link:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        line-height: 20px;
+    }
+
+    footer a {
+        display: flex;
+        align-items: center;
+    }
+
+    .github-star-badge {
+        color: #24292e;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        padding: 3px 10px;
+        border: 1px solid rgba(27, 31, 35, .2);
+        border-radius: 3px;
+        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+        margin-left: 4px;
+        font-weight: 600;
+    }
+
+    .github-star-badge:hover {
+        background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+        border-color: rgba(27, 31, 35, .35);
+        background-position: -.5em;
+    }
+
+    .github-star-badge .material-icons {
+        height: 16px;
+        width: 16px;
+        margin-right: 4px;
+    }
+
+    /* The switch - the box around the slider */
+    .switch {
+        position: relative;
+        display: inline-block;
+        min-width: 60px;
+        max-width: 150px;
+        height: 34px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    input:checked+.toggle-button {
+        background-color: #1976d2;
+        color: white
+    }
+
+    input:hover+.toggle-button {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    input:checked+.topic-button {
+        background-color: #ccc;
+        color: black;
+    }
+
+    input:hover+.topic-button {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 767px) {
+
+        .card-container>*:not(.circle-link),
+        .terminal {
+            width: 100%;
+        }
+
+        .card:not(.highlight-card) {
+            height: 16px;
+            margin: 8px 0;
+        }
+
+        .card.highlight-card span {
+            margin-left: 72px;
+        }
+
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="content" role="main">
+    <br />
+    <br />
+    <br />
+    <h2>  High School Mathematics (Common Core) State Standards - Algebra </h2>
+    <br />
+    <!-- <h3> In Grade 3 Math, instructional time should focus on the following four critical areas: </h3> -->
+    <br />
+    <div class="card-container">
+        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto">
+            <div style="margin: 0 20px">
+                <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+            </div>
+            <div style="margin: 0 20px; text-align: left">
+                <h4 style="font-size: 18px"> Expressions </h4>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> An expression is a record of a computation with numbers, symbols that represent numbers, arithmetic operations, exponentiation, and, at more advanced levels, the operation of evaluating a function. Conventions about the use of parentheses and the order of operations assure that each expression is unambiguous. Creating an expression that describes a computation involving a general quantity requires the ability to express the computation in general terms, abstracting from specific instances. </p>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> Reading an expression with comprehension involves analysis of its underlying structure. This may suggest a different but equivalent way of writing the expression that exhibits some different aspect of its meaning. For example, p + 0.05p can be interpreted as the addition of a 5% tax to a price p. Rewriting p + 0.05p as 1.05p shows that adding a tax is the same as multiplying the price by a constant factor. </p>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> Algebraic manipulations are governed by the properties of operations and exponents, and the conventions of algebraic notation. At times, an expression is the result of applying operations to simpler expressions. For example, p + 0.05p is the sum of the simpler expressions p and 0.05p. Viewing an expression as the result of operation on simpler expressions can sometimes clarify its underlying structure. </p>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> A spreadsheet or a computer algebra system (CAS) can be used to experiment with algebraic expressions, perform complicated algebraic manipulations, and understand how algebraic manipulations behave. </p>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto">
+            <div style="margin: 0 20px">
+                <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+            </div>
+            <div style="margin: 0 20px; text-align: left">
+                <h4 style="font-size: 18px"> Equations & Inequalities </h4>
+                <br *ngIf="domain_state[2]" />
+                <p *ngIf="domain_state[2]" style="font-size: 15px"> An equation is a statement of equality between two expressions, often viewed as a question asking for which values of the variables the expressions on either side are in fact equal. These values are the solutions to the equation. An identity, in contrast, is true for all values of the variables; identities are often developed by rewriting an expression in an equivalent form. </p>
+                <br *ngIf="domain_state[2]" />
+                <p *ngIf="domain_state[2]" style="font-size: 15px"> The solutions of an equation in one variable form a set of numbers; the solutions of an equation in two variables form a set of ordered pairs of numbers, which can be plotted in the coordinate plane. Two or more equations and/or inequalities form a system. A solution for such a system must satisfy every equation and inequality in the system. </p>
+                <br *ngIf="domain_state[2]" />
+                <p *ngIf="domain_state[2]" style="font-size: 15px"> An equation can often be solved by successively deducing from it one or more simpler equations. For example, one can add the same constant to both sides without changing the solutions, but squaring both sides might lead to extraneous solutions. Strategic competence in solving includes looking ahead for productive manipulations and anticipating the nature and number of solutions. </p>
+                <br *ngIf="domain_state[2]" />
+                <p *ngIf="domain_state[2]" style="font-size: 15px"> Some equations have no solutions in a given number system, but have a solution in a larger system. For example, the solution of x + 1 = 0 is an integer, not a whole number; the solution of 2x + 1 = 0 is a rational number, not an integer; the solutions of x2 – 2 = 0 are real numbers, not rational numbers; and the solutions of x2 + 2 = 0 are complex numbers, not real numbers. </p>
+                <br *ngIf="domain_state[2]" />
+                <p *ngIf="domain_state[2]" style="font-size: 15px"> The same solution techniques used to solve equations can be used to rearrange formulas. For example, the formula for the area of a trapezoid, A = ((b1+b2)/2)h, can be solved for h using the same deductive process. </p>
+                <br *ngIf="domain_state[2]" />
+                <p *ngIf="domain_state[2]" style="font-size: 15px"> Inequalities can be solved by reasoning about the properties of inequality. Many, but not all, of the properties of equality continue to hold for inequalities and can be useful in solving them. </p>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto">
+            <div style="margin: 0 20px">
+                <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+            </div>
+            <div style="margin: 0 20px; text-align: left">
+                <h4 style="font-size: 18px"> Connections To Functions & Modeling </h4>
+                <br *ngIf="domain_state[3]" />
+                <p *ngIf="domain_state[3]" style="font-size: 15px"> Expressions can define functions, and equivalent expressions define the same function. Asking when two functions have the same value for the same input leads to an equation; graphing the two functions allows for finding approximate solutions of the equation. Converting a verbal description to an equation, inequality, or system of these is an essential skill in modeling. </p>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>

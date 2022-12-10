@@ -1,0 +1,484 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+    :host {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 14px;
+        color: #333;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 8px 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .spacer {
+        flex: 1;
+    }
+
+    .toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        background-color: #0a1e33;
+        color: white;
+        font-weight: 600;
+        padding: 5px 10px 2px 20px;
+    }
+
+    .toolbar img {
+        /* margin: 0 16px; */
+        position: absolute;
+        left: -10px;
+        top: -18px;
+    }
+
+    .toolbar #twitter-logo {
+        height: 40px;
+        margin: 0 8px;
+    }
+
+    .toolbar #youtube-logo {
+        height: 40px;
+        margin: 0 16px;
+    }
+
+    .toolbar #twitter-logo:hover,
+    .toolbar #youtube-logo:hover {
+        opacity: 0.8;
+    }
+
+    .content-menu {
+        display: flex;
+        margin: 0 auto 32px;
+        padding: 0 16px;
+        max-width: 960px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        display: flex;
+        margin: auto;
+        padding: 0 16px;
+        max-width: 1500px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    svg.material-icons {
+        height: 24px;
+        width: auto;
+    }
+
+    svg.material-icons:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    .card svg.material-icons path {
+        fill: #888;
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        margin: auto;
+    }
+
+    .card {
+        all: unset;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        /* height: 40px;
+        width: 200px; */
+        margin: 0 8px 16px;
+        padding: 8px 8px;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        /* align-items: center; */
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    .card-container .card:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .card.card-small {
+        height: 16px;
+        width: 190px;
+        border-radius: 8px;
+    }
+
+    .card.card-small:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .card.card-medium {
+        height: auto;
+        width: 80%;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    .card.card-medium:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .card.card-large {
+        max-height: 1500px;
+        width: 85%;
+        border-radius: 8px;
+        margin: 8px 8px;
+        padding: 8px 20px;
+    }
+
+    .card-container .card:not(.highlight-card) {
+        cursor: pointer;
+    }
+
+    .card-container .card:not(.highlight-card):hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .card-container .card:not(.highlight-card):hover .material-icons path {
+        fill: rgb(105, 103, 103);
+    }
+
+    .card.highlight-card {
+        background-color: white;
+        color: #0a1e33;
+        font-weight: 600;
+        border: none;
+        width: auto;
+        min-width: 30%;
+        position: relative;
+    }
+
+    .card.card.highlight-card span {
+        margin-left: 60px;
+    }
+
+    .profile-card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 350px;
+        padding: 4px 0 0;
+        text-align: center;
+        border-radius: 0px;
+        border: 1px solid #eee;
+    }
+
+    .profile-card:hover {
+        transform: scale(1.05, 1.05)
+    }
+
+    a,
+    a:visited,
+    a:hover {
+        color: #1976d2;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #125699;
+    }
+
+    .title {
+        color: grey;
+        font-size: 18px;
+    }
+
+    button {
+        border: none;
+        border-radius: 0px;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 22px;
+        padding: 10px;
+        color: black;
+    }
+
+    button.toggle-button {
+        font-size: 18px;
+        color: black;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    .toggle-button:before {
+        background-color: #1976d2;
+        color: white;
+    }
+
+    button.toggle-button-off {
+        font-size: 18px;
+        color: black;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.toggle-button-on {
+        font-size: 18px;
+        background-color: #1976d2;
+        color: white;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.topic-button {
+        font-size: 18px;
+        color: white;
+        background-color: #1976d2;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    .topic-button:before {
+        background-color: #ccc;
+        color: black;
+    }
+
+    button.grade-button {
+        font-size: 18px;
+        color: white;
+        background-color: #1976d2;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.grade-button:hover {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .circle-link {
+        height: 40px;
+        width: 40px;
+        border-radius: 40px;
+        margin: 8px;
+        background-color: white;
+        border: 1px solid #eeeeee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: 1s ease-out;
+    }
+
+    .circle-link:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        line-height: 20px;
+    }
+
+    footer a {
+        display: flex;
+        align-items: center;
+    }
+
+    .github-star-badge {
+        color: #24292e;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        padding: 3px 10px;
+        border: 1px solid rgba(27, 31, 35, .2);
+        border-radius: 3px;
+        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+        margin-left: 4px;
+        font-weight: 600;
+    }
+
+    .github-star-badge:hover {
+        background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+        border-color: rgba(27, 31, 35, .35);
+        background-position: -.5em;
+    }
+
+    .github-star-badge .material-icons {
+        height: 16px;
+        width: 16px;
+        margin-right: 4px;
+    }
+
+    /* The switch - the box around the slider */
+    .switch {
+        position: relative;
+        display: inline-block;
+        min-width: 60px;
+        max-width: 150px;
+        height: 34px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    input:checked+.toggle-button {
+        background-color: #1976d2;
+        color: white
+    }
+
+    input:hover+.toggle-button {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    input:checked+.topic-button {
+        background-color: #ccc;
+        color: black;
+    }
+
+    input:hover+.topic-button {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 767px) {
+
+        .card-container>*:not(.circle-link),
+        .terminal {
+            width: 100%;
+        }
+
+        .card:not(.highlight-card) {
+            /* height: 16px; */
+            margin: 8px 0;
+        }
+
+        .card.highlight-card span {
+            margin-left: 72px;
+        }
+
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="content" role="main">
+    <br />
+    <br />
+    <br />
+    <h2> Grade 7 Mathematics (Common Core) State Standards </h2>
+    <br />
+    <!-- <h3> In Grade 3 Math, instructional time should focus on the following four critical areas: </h3> -->
+    <br />
+    <div class="card-container">
+        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto">
+            <div style="margin: 0 20px">
+                <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+            </div>
+            <div style="margin: 0 20px; text-align: left">
+                <h4 style="font-size: 18px"> Developing Understanding Of & Applying Proportional Relationships </h4>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> Students extend their understanding of ratios and develop understanding of proportionality to solve single- and multi-step problems. Students use their understanding of ratios and proportionality to solve a wide variety of percent problems, including those involving discounts, interest, taxes, tips, and percent increase or decrease. Students solve problems about scale drawings by relating corresponding lengths between the objects or by using the fact that relationships of lengths within an object are preserved in similar objects. Students graph proportional relationships and understand the unit rate informally as a measure of the steepness of the related line, called the slope. They distinguish proportional relationships from other relationships. </p>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto">
+            <div style="margin: 0 20px">
+                <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+            </div>
+            <div style="margin: 0 20px; text-align: left">
+                <h4 style="font-size: 18px"> Developing Understanding Of Operations With Rational Numbers And Working With Expressions & Linear Equations </h4>
+                <br *ngIf="domain_state[2]" />
+                <p *ngIf="domain_state[2]" style="font-size: 15px"> Students develop a unified understanding of number, recognizing fractions, decimals (that have a finite or a repeating decimal representation), and percents as different representations of rational numbers. Students extend addition, subtraction, multiplication, and division to all rational numbers, maintaining the properties of operations and the relationships between addition and subtraction, and multiplication and division. By applying these properties, and by viewing negative numbers in terms of everyday contexts (e.g., amounts owed or temperatures below zero), students explain and interpret the rules for adding, subtracting, multiplying, and dividing with negative numbers. They use the arithmetic of rational numbers as they formulate expressions and equations in one variable and use these equations to solve problems. </p>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto">
+            <div style="margin: 0 20px">
+                <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+            </div>
+            <div style="margin: 0 20px; text-align: left">
+                <h4 style="font-size: 18px"> Solving Problems Involving Scale Drawings & Informal Geometric Constructions, And Working With Two- & Three-Dimensional Shapes To Solve Problems Involving Area, Surface Area, & Volume </h4>
+                <br *ngIf="domain_state[3]" />
+                <p *ngIf="domain_state[3]" style="font-size: 15px"> Students continue their work with area from Grade 6, solving problems involving the area and circumference of a circle and surface area of three-dimensional objects. In preparation for work on congruence and similarity in Grade 8 they reason about relationships among two-dimensional figures using scale drawings and informal geometric constructions, and they gain familiarity with the relationships between angles formed by intersecting lines. Students work with three-dimensional figures, relating them to two-dimensional figures by examining cross-sections. They solve real-world and mathematical problems involving area, surface area, and volume of two- and three-dimensional objects composed of triangles, quadrilaterals, polygons, cubes and right prisms. </p>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto">
+            <div style="margin: 0 20px">
+                <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+            </div>
+            <div style="margin: 0 20px; text-align: left">
+                <h4 style="font-size: 18px"> Drawing Inferences About Populations Based On Samples </h4>
+                <br *ngIf="domain_state[4]" />
+                <p *ngIf="domain_state[4]" style="font-size: 15px"> Students build on their previous work with single data distributions to compare two data distributions and address questions about differences between populations. They begin informal work with random sampling to generate data sets and learn about the importance of representative samples for drawing inferences. </p>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>

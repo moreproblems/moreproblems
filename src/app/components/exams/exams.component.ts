@@ -13,8 +13,12 @@ import printJS from 'print-js';
 export class ExamsComponent implements OnInit{
   // title = 'More Problems';
 
-  // online_set = ['TX21G3M', 'TX19G3M'];
-  online_set: string[] = [];
+  screenWidth = window.innerWidth;
+  mobileWidth = 800;
+  menuOpen = false;
+
+  online_set = ['TX21G3M', 'TX19G3M'];
+  // online_set: string[] = [];
 
   selected_state = '';
   selected_grade = '';
@@ -29,6 +33,10 @@ export class ExamsComponent implements OnInit{
   viewerHeight = Math.round(window.innerHeight*.8).toString() + "px";
   
   constructor(private router: Router, private titleService: Title, private meta: Meta) { }
+
+  width_change2() {
+    this.screenWidth = window.innerWidth;
+  }
 
   select_state(st: string) {
     if (this.selected_state == st) {
@@ -988,292 +996,294 @@ export class ExamsComponent implements OnInit{
     }
     else if (ex == 'TX22G3M') {
       this.exam_name = "Texas STAAR 2022 Grade 3 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G3M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G3M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G3M') {
       this.exam_name = "Texas STAAR 2021 Grade 3 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G3M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G3M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G3M') {
       this.exam_name = "Texas STAAR 2019 Grade 3 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G3M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G3M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G3M') {
       this.exam_name = "Texas STAAR 2018 Grade 3 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G3M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G3M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX17G3M') {
       this.exam_name = "Texas STAAR 2017 Grade 3 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX17G3M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX17G3M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G3R') {
       this.exam_name = "Texas STAAR 2022 Grade 3 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G3R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G3R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G3R') {
       this.exam_name = "Texas STAAR 2021 Grade 3 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G3R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G3R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G3R') {
       this.exam_name = "Texas STAAR 2019 Grade 3 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G3R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G3R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G3R') {
       this.exam_name = "Texas STAAR 2018 Grade 3 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G3R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G3R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX17G3R') {
       this.exam_name = "Texas STAAR 2017 Grade 3 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX17G3R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX17G3R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G4M') {
       this.exam_name = "Texas STAAR 2022 Grade 4 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G4M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G4M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G4M') {
       this.exam_name = "Texas STAAR 2021 Grade 4 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G4M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G4M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G4M') {
       this.exam_name = "Texas STAAR 2019 Grade 4 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G4M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G4M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G4M') {
       this.exam_name = "Texas STAAR 2018 Grade 4 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G4M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G4M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX17G4M') {
       this.exam_name = "Texas STAAR 2017 Grade 4 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX17G4M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX17G4M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G4R') {
       this.exam_name = "Texas STAAR 2022 Grade 4 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G4R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G4R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G4R') {
       this.exam_name = "Texas STAAR 2021 Grade 4 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G4R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G4R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G4R') {
       this.exam_name = "Texas STAAR 2019 Grade 4 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G4R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G4R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G4R') {
       this.exam_name = "Texas STAAR 2018 Grade 4 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G4R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G4R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX17G4R') {
       this.exam_name = "Texas STAAR 2017 Grade 4 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX17G4R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX17G4R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G5M') {
       this.exam_name = "Texas STAAR 2022 Grade 5 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G5M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G5M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G5M') {
       this.exam_name = "Texas STAAR 2021 Grade 5 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G5M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G5M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G5M') {
       this.exam_name = "Texas STAAR 2019 Grade 5 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G5M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G5M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G5M') {
       this.exam_name = "Texas STAAR 2018 Grade 5 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G5M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G5M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX17G5M') {
       this.exam_name = "Texas STAAR 2017 Grade 5 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX17G5M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX17G5M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G5R') {
       this.exam_name = "Texas STAAR 2022 Grade 5 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G5R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G5R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G5R') {
       this.exam_name = "Texas STAAR 2021 Grade 5 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G5R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G5R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G5R') {
       this.exam_name = "Texas STAAR 2019 Grade 5 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G5R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G5R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G5R') {
       this.exam_name = "Texas STAAR 2018 Grade 5 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G5R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G5R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX17G5R') {
       this.exam_name = "Texas STAAR 2017 Grade 5 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX17G5R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX17G5R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G5S') {
       this.exam_name = "Texas STAAR 2022 Grade 5 Science Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G5S/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G5S/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G5S') {
       this.exam_name = "Texas STAAR 2021 Grade 5 Science Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G5S/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G5S/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G5S') {
       this.exam_name = "Texas STAAR 2019 Grade 5 Science Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G5S/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G5S/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G5S') {
       this.exam_name = "Texas STAAR 2018 Grade 5 Science Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G5S/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G5S/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G6M') {
       this.exam_name = "Texas STAAR 2022 Grade 6 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G6M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G6M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G6M') {
       this.exam_name = "Texas STAAR 2021 Grade 6 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G6M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G6M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G6M') {
       this.exam_name = "Texas STAAR 2019 Grade 6 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G6M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G6M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G6M') {
       this.exam_name = "Texas STAAR 2018 Grade 6 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G6M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G6M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX17G6M') {
       this.exam_name = "Texas STAAR 2017 Grade 6 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX17G6M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX17G6M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G6R') {
       this.exam_name = "Texas STAAR 2022 Grade 6 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G6R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G6R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G6R') {
       this.exam_name = "Texas STAAR 2021 Grade 6 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G6R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G6R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G6R') {
       this.exam_name = "Texas STAAR 2019 Grade 6 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G6R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G6R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G6R') {
       this.exam_name = "Texas STAAR 2018 Grade 6 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G6R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G6R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX17G6R') {
       this.exam_name = "Texas STAAR 2017 Grade 6 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX17G6R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX17G6R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G7M') {
       this.exam_name = "Texas STAAR 2022 Grade 7 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G7M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G7M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G7M') {
       this.exam_name = "Texas STAAR 2021 Grade 7 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G7M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G7M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G7M') {
       this.exam_name = "Texas STAAR 2019 Grade 7 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G7M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G7M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G7M') {
       this.exam_name = "Texas STAAR 2018 Grade 7 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G7M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G7M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX17G7M') {
       this.exam_name = "Texas STAAR 2017 Grade 7 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX17G7M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX17G7M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G7R') {
       this.exam_name = "Texas STAAR 2022 Grade 7 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G7R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G7R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G7R') {
       this.exam_name = "Texas STAAR 2021 Grade 7 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G7R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G7R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G7R') {
       this.exam_name = "Texas STAAR 2019 Grade 7 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G7R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G7R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G7R') {
       this.exam_name = "Texas STAAR 2018 Grade 7 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G7R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G7R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX17G7R') {
       this.exam_name = "Texas STAAR 2017 Grade 7 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX17G7R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX17G7R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G8M') {
       this.exam_name = "Texas STAAR 2022 Grade 8 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G8M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G8M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G8M') {
       this.exam_name = "Texas STAAR 2021 Grade 8 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G8M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G8M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G8M') {
       this.exam_name = "Texas STAAR 2019 Grade 8 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G8M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G8M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G8M') {
       this.exam_name = "Texas STAAR 2018 Grade 8 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G8M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G8M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX17G8M') {
       this.exam_name = "Texas STAAR 2017 Grade 8 Math Exam";
-      this.file_source = "./assets/Exams/Texas/TX17G8M/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX17G8M/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G8R') {
       this.exam_name = "Texas STAAR 2022 Grade 8 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G8R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G8R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G8R') {
       this.exam_name = "Texas STAAR 2021 Grade 8 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G8R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G8R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G8R') {
       this.exam_name = "Texas STAAR 2019 Grade 8 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G8R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G8R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G8R') {
       this.exam_name = "Texas STAAR 2018 Grade 8 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G8R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G8R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX17G8R') {
       this.exam_name = "Texas STAAR 2017 Grade 8 Reading Exam";
-      this.file_source = "./assets/Exams/Texas/TX17G8R/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX17G8R/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G8S') {
       this.exam_name = "Texas STAAR 2022 Grade 8 Science Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G8S/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G8S/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G8S') {
       this.exam_name = "Texas STAAR 2021 Grade 8 Science Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G8S/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G8S/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G8S') {
       this.exam_name = "Texas STAAR 2019 Grade 8 Science Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G8S/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G8S/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G8S') {
       this.exam_name = "Texas STAAR 2018 Grade 8 Science Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G8S/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G8S/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX22G8SS') {
       this.exam_name = "Texas STAAR 2022 Grade 8 Social Studies Exam";
-      this.file_source = "./assets/Exams/Texas/TX22G8SS/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX22G8SS/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX21G8SS') {
       this.exam_name = "Texas STAAR 2021 Grade 8 Social Studies Exam";
-      this.file_source = "./assets/Exams/Texas/TX21G8SS/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX21G8SS/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX19G8SS') {
       this.exam_name = "Texas STAAR 2019 Grade 8 Social Studies Exam";
-      this.file_source = "./assets/Exams/Texas/TX19G8SS/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX19G8SS/" + this.exam_name + ".pdf";
     }
     else if (ex == 'TX18G8SS') {
       this.exam_name = "Texas STAAR 2018 Grade 8 Social Studies Exam";
-      this.file_source = "./assets/Exams/Texas/TX18G8SS/" + this.exam_name + ".pdf";
+      this.file_source = "./assets/problems/TX18G8SS/" + this.exam_name + ".pdf";
     }
+    this.file_source = "./assets/exams/" + ex + ".pdf"
+
   }
 
   download_exam() {

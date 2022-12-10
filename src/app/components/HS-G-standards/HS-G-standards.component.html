@@ -1,0 +1,478 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+    :host {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 14px;
+        color: #333;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 8px 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .spacer {
+        flex: 1;
+    }
+
+    .toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        background-color: #0a1e33;
+        color: white;
+        font-weight: 600;
+        padding: 5px 10px 2px 20px;
+    }
+
+    .toolbar img {
+        /* margin: 0 16px; */
+        position: absolute;
+        left: -10px;
+        top: -18px;
+    }
+
+    .toolbar #twitter-logo {
+        height: 40px;
+        margin: 0 8px;
+    }
+
+    .toolbar #youtube-logo {
+        height: 40px;
+        margin: 0 16px;
+    }
+
+    .toolbar #twitter-logo:hover,
+    .toolbar #youtube-logo:hover {
+        opacity: 0.8;
+    }
+
+    .content-menu {
+        display: flex;
+        margin: 0 auto 32px;
+        padding: 0 16px;
+        max-width: 960px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        display: flex;
+        margin: auto;
+        padding: 0 16px;
+        max-width: 1500px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    svg.material-icons {
+        height: 24px;
+        width: auto;
+    }
+
+    svg.material-icons:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    .card svg.material-icons path {
+        fill: #888;
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        margin: auto;
+    }
+
+    .card {
+        all: unset;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        /* height: 40px;
+        width: 200px; */
+        margin: 0 8px 16px;
+        padding: 8px 8px;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        /* align-items: center; */
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    .card-container .card:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .card.card-small {
+        height: 16px;
+        width: 190px;
+        border-radius: 8px;
+    }
+
+    .card.card-small:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .card.card-medium {
+        height: auto;
+        width: 80%;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    .card.card-medium:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .card.card-large {
+        max-height: 1500px;
+        width: 85%;
+        border-radius: 8px;
+        margin: 8px 8px;
+        padding: 8px 20px;
+    }
+
+    .card-container .card:not(.highlight-card) {
+        cursor: pointer;
+    }
+
+    .card-container .card:not(.highlight-card):hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .card-container .card:not(.highlight-card):hover .material-icons path {
+        fill: rgb(105, 103, 103);
+    }
+
+    .card.highlight-card {
+        background-color: white;
+        color: #0a1e33;
+        font-weight: 600;
+        border: none;
+        width: auto;
+        min-width: 30%;
+        position: relative;
+    }
+
+    .card.card.highlight-card span {
+        margin-left: 60px;
+    }
+
+    .profile-card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 350px;
+        padding: 4px 0 0;
+        text-align: center;
+        border-radius: 0px;
+        border: 1px solid #eee;
+    }
+
+    .profile-card:hover {
+        transform: scale(1.05, 1.05)
+    }
+
+    a,
+    a:visited,
+    a:hover {
+        color: #1976d2;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #125699;
+    }
+
+    .title {
+        color: grey;
+        font-size: 18px;
+    }
+
+    button {
+        border: none;
+        border-radius: 0px;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 22px;
+        padding: 10px;
+        color: black;
+    }
+
+    button.toggle-button {
+        font-size: 18px;
+        color: black;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    .toggle-button:before {
+        background-color: #1976d2;
+        color: white;
+    }
+
+    button.toggle-button-off {
+        font-size: 18px;
+        color: black;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.toggle-button-on {
+        font-size: 18px;
+        background-color: #1976d2;
+        color: white;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.topic-button {
+        font-size: 18px;
+        color: white;
+        background-color: #1976d2;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    .topic-button:before {
+        background-color: #ccc;
+        color: black;
+    }
+
+    button.grade-button {
+        font-size: 18px;
+        color: white;
+        background-color: #1976d2;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.grade-button:hover {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .circle-link {
+        height: 40px;
+        width: 40px;
+        border-radius: 40px;
+        margin: 8px;
+        background-color: white;
+        border: 1px solid #eeeeee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: 1s ease-out;
+    }
+
+    .circle-link:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        line-height: 20px;
+    }
+
+    footer a {
+        display: flex;
+        align-items: center;
+    }
+
+    .github-star-badge {
+        color: #24292e;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        padding: 3px 10px;
+        border: 1px solid rgba(27, 31, 35, .2);
+        border-radius: 3px;
+        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+        margin-left: 4px;
+        font-weight: 600;
+    }
+
+    .github-star-badge:hover {
+        background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+        border-color: rgba(27, 31, 35, .35);
+        background-position: -.5em;
+    }
+
+    .github-star-badge .material-icons {
+        height: 16px;
+        width: 16px;
+        margin-right: 4px;
+    }
+
+    /* The switch - the box around the slider */
+    .switch {
+        position: relative;
+        display: inline-block;
+        min-width: 60px;
+        max-width: 150px;
+        height: 34px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    input:checked+.toggle-button {
+        background-color: #1976d2;
+        color: white
+    }
+
+    input:hover+.toggle-button {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    input:checked+.topic-button {
+        background-color: #ccc;
+        color: black;
+    }
+
+    input:hover+.topic-button {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 767px) {
+
+        .card-container>*:not(.circle-link),
+        .terminal {
+            width: 100%;
+        }
+
+        .card:not(.highlight-card) {
+            height: 16px;
+            margin: 8px 0;
+        }
+
+        .card.highlight-card span {
+            margin-left: 72px;
+        }
+
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="content" role="main">
+    <br />
+    <br />
+    <br />
+    <h2>  High School Mathematics (Common Core) State Standards - Geometry </h2>
+    <br />
+    <!-- <h3> In Grade 3 Math, instructional time should focus on the following four critical areas: </h3> -->
+    <br />
+    <div class="card-container">
+        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto">
+            <div style="margin: 0 20px">
+                <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+            </div>
+            <div style="margin: 0 20px; text-align: left">
+                <h4 style="font-size: 18px"> Geometry </h4>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> An understanding of the attributes and relationships of geometric objects can be applied in diverse contexts—interpreting a schematic drawing, estimating the amount of wood needed to frame a sloping roof, rendering computer graphics, or designing a sewing pattern for the most efficient use of material. </p>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> Although there are many types of geometry, school mathematics is devoted primarily to plane Euclidean geometry, studied both synthetically (without coordinates) and analytically (with coordinates). Euclidean geometry is characterized most importantly by the Parallel Postulate, that through a point not on a given line there is exactly one parallel line. (Spherical geometry, in contrast, has no parallel lines.) </p>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> During high school, students begin to formalize their geometry experiences from elementary and middle school, using more precise definitions and developing careful proofs. Later in college some students develop Euclidean and other geometries carefully from a small set of axioms. </p>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> The concepts of congruence, similarity, and symmetry can be understood from the perspective of geometric transformation. Fundamental are the rigid motions: translations, rotations, reflections, and combinations of these, all of which are here assumed to preserve distance and angles (and therefore shapes generally). Reflections and rotations each explain a particular type of symmetry, and the symmetries of an object offer insight into its attributes—as when the reflective symmetry of an isosceles triangle assures that its base angles are congruent. </p>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> In the approach taken here, two geometric figures are defined to be congruent if there is a sequence of rigid motions that carries one onto the other. This is the principle of superposition. For triangles, congruence means the equality of all corresponding pairs of sides and all corresponding pairs of angles. During the middle grades, through experiences drawing triangles from given conditions, students notice ways to specify enough measures in a triangle to ensure that all triangles drawn with those measures are congruent. Once these triangle congruence criteria (ASA, SAS, and SSS) are established using rigid motions, they can be used to prove theorems about triangles, quadrilaterals, and other geometric figures. </p>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> Similarity transformations (rigid motions followed by dilations) define similarity in the same way that rigid motions define congruence, thereby formalizing the similarity ideas of "same shape" and "scale factor" developed in the middle grades. These transformations lead to the criterion for triangle similarity that two pairs of corresponding angles are congruent. </p>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> The definitions of sine, cosine, and tangent for acute angles are founded on right triangles and similarity, and, with the Pythagorean Theorem, are fundamental in many real-world and theoretical situations. The Pythagorean Theorem is generalized to non-right triangles by the Law of Cosines. Together, the Laws of Sines and Cosines embody the triangle congruence criteria for the cases where three pieces of information suffice to completely solve a triangle. Furthermore, these laws yield two possible solutions in the ambiguous case, illustrating that Side-Side-Angle is not a congruence criterion. </p>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> Analytic geometry connects algebra and geometry, resulting in powerful methods of analysis and problem solving. Just as the number line associates numbers with locations in one dimension, a pair of perpendicular axes associates pairs of numbers with locations in two dimensions. This correspondence between numerical coordinates and geometric points allows methods from algebra to be applied to geometry and vice versa. The solution set of an equation becomes a geometric curve, making visualization a tool for doing and understanding algebra. Geometric shapes can be described by equations, making algebraic manipulation into a tool for geometric understanding, modeling, and proof. Geometric transformations of the graphs of equations correspond to algebraic changes in their equations. </p>
+                <br *ngIf="domain_state[1]" />
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> Dynamic geometry environments provide students with experimental and modeling tools that allow them to investigate geometric phenomena in much the same way as computer algebra systems allow them to experiment with algebraic phenomena. </p>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto">
+            <div style="margin: 0 20px">
+                <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+            </div>
+            <div style="margin: 0 20px; text-align: left">
+                <h4 style="font-size: 18px"> Connections To Equations </h4>
+                <br *ngIf="domain_state[2]" />
+                <p *ngIf="domain_state[2]" style="font-size: 15px"> The correspondence between numerical coordinates and geometric points allows methods from algebra to be applied to geometry and vice versa. The solution set of an equation becomes a geometric curve, making visualization a tool for doing and understanding algebra. Geometric shapes can be described by equations, making algebraic manipulation into a tool for geometric understanding, modeling, and proof. </p>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>

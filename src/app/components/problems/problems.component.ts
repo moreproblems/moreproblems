@@ -25,7 +25,7 @@ export class ProblemsComponent implements OnInit {
 
   exam_key = 'src/app/assets/Exams/exams.txt';
   exam_code = 'TX21G3M'
-  exam_file = 'src/app/assets/Exams/Texas/' + this.exam_code + '/' + this.exam_code + '-problems.txt';
+  exam_file = 'src/app/assets/problems/' + this.exam_code + '/' + this.exam_code + '-problems.txt';
 
   // exam_data = fs.readFileSync(this.problem_file, 'utf8');
   // exam_data: string = '';
@@ -52,28 +52,28 @@ export class ProblemsComponent implements OnInit {
       ],
       'AnswerChoices': {
         'A': {
-          'Choice': 'Exams/Texas/TX21G3M/media/1a.jpg',
+          'Choice': 'problems/TX21G3M/media/1a.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely thought the values should be subtracted instead of divided. The student needs to focus on understanding the mathematical operations (+, −−, ×, ÷) needed to solve real-world problems.'
           }
         },
         'B': {
-          'Choice': 'Exams/Texas/TX21G3M/media/1b.jpg',
+          'Choice': 'problems/TX21G3M/media/1b.jpg',
           'Key': {
             'Correct': true,
             'Rationale': 'To determine the model that best represents the number of cartons of eggs Victor bought, the student should have identified the model that shows the total number of eggs (36) divided into equal groups with 12 eggs in each group.'
           }
         },
         'C': {
-          'Choice': 'Exams/Texas/TX21G3M/media/1c.jpg',
+          'Choice': 'problems/TX21G3M/media/1c.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely thought the values should be added instead of divided. The student needs to focus on understanding the mathematical operations (+, −, ×, ÷) needed to solve real-world problems.'
           }
         },
         'D': {
-          'Choice': 'Exams/Texas/TX21G3M/media/1d.jpg',
+          'Choice': 'problems/TX21G3M/media/1d.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student chose a model that shows three groups but likely did not count the total number of eggs or the number of eggs in each group. The student needs to focus on the details of models used to represent real-world problems.'
@@ -89,7 +89,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Explain that the unit fraction 1/b represents the quantity formed by one part of a whole that has been partitioned into b equal parts where b is a non-zero whole number',
       'Content': [
         'Three friends divided three pizzas into pieces. The shaded parts of the models represent the pieces that the friends ate.',
-        'Exams/Texas/TX21G3M/media/2a.jpg',
+        'problems/TX21G3M/media/2a.jpg',
         'Which statement describes the fraction of a pizza that one of the friends ate?'
       ],
       'AnswerChoices': {
@@ -131,7 +131,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Solve with fluency one-step and two-step problems involving addition and subtraction within 1,000 using strategies based on place value, properties of operations, and the relationship between addition and subtraction',
       'Content': [
         'A theater sold tickets for three movies. The table shows the number of tickets sold for each movie.',
-        'Exams/Texas/TX21G3M/media/3a.jpg',
+        'problems/TX21G3M/media/3a.jpg',
         'What was the total number of tickets the theater sold for these three movies?'
       ],
       'AnswerChoices': {
@@ -173,7 +173,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Determine the value of a collection of coins and bills',
       'Content': [
         'Owen received the coins and bills shown when he sold lemonade.',
-        'Exams/Texas/TX21G3M/media/4a.jpg',
+        'problems/TX21G3M/media/4a.jpg',
         'What is the value of the coins and bills Owen received?'
       ],
       'AnswerChoices': {
@@ -231,7 +231,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Summarize a data set with multiple categories using a frequency table, dot plot, pictograph, or bar graph with scaled intervals',
       'Content': [
         'The bar graph shows the number of math problems each of five students completed during math class.',
-        'Exams/Texas/TX21G3M/media/6a.jpg',
+        'problems/TX21G3M/media/6a.jpg',
         'Which list matches the data in the bar graph?'
       ],
       'AnswerChoices': {
@@ -273,7 +273,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Determine the area of rectangles with whole number side lengths in problems using multiplication related to the number of rows times the number of unit squares in each row',
       'Content': [
         'Workers at a school are covering a rectangular patio with square tiles. Each square tile has an area of 1 square yard. The figure shows the part of the patio that has already been covered with square tiles.',
-        'Exams/Texas/TX21G3M/media/7a.jpg',
+        'problems/TX21G3M/media/7a.jpg',
         'What is the area of the entire patio in square yards?'
       ],
       'AnswerChoices': {
@@ -315,7 +315,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Round to the nearest 10 or 100 or use compatible numbers to estimate solutions to addition and subtraction problems',
       'Content': [
         'The table shows the number of snow cones sold at a shop on each of three days.',
-        'Exams/Texas/TX21G3M/media/8a.jpg',
+        'problems/TX21G3M/media/8a.jpg',
         'Which answer choice is the best estimate of the total number of snow cones sold on these three days?'
       ],
       'AnswerChoices': {
@@ -357,7 +357,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Determine the perimeter of a polygon or a missing length when given perimeter and remaining side lengths in problems',
       'Content': [
         'The side lengths of a rectangular mirror are shown in inches.',
-        'Exams/Texas/TX21G3M/media/9a.jpg',
+        'problems/TX21G3M/media/9a.jpg',
         'What is the perimeter of the mirror in inches?'
       ],
       'AnswerChoices': {
@@ -442,7 +442,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Solve one- and two-step problems using categorical data represented with a frequency table, dot plot, pictograph, or bar graph with scaled intervals',
       'Content': [
         'The bar graph shows the number of each different type of drink that was ordered in a restaurant one day.',
-        'Exams/Texas/TX21G3M/media/11a.jpg',
+        'problems/TX21G3M/media/11a.jpg',
         'What was the total number of drinks ordered?'
       ],
       'AnswerChoices': {
@@ -485,7 +485,7 @@ export class ProblemsComponent implements OnInit {
       'Content': [
         'Each strip of the diagram is shaded to represent a fraction of 1 whole.',
         '1 whole',
-        'Exams/Texas/TX21G3M/media/12a.jpg',
+        'problems/TX21G3M/media/12a.jpg',
         'The fractions represented are —'
       ],
       'AnswerChoices': {
@@ -527,7 +527,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Represent real-world relationships using number pairs in a table and verbal descriptions',
       'Content': [
         'The table shows the numbers of baseball cards in different numbers of packages.',
-        'Exams/Texas/TX21G3M/media/13a.jpg',
+        'problems/TX21G3M/media/13a.jpg',
         'Based on the relationship shown in the table, which statement is true?'
       ],
       'AnswerChoices': {
@@ -624,7 +624,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Determine the total number of objects when equally sized groups of objects are combined or arranged in arrays up to 10 by 10',
       'Content': [
         'The electrical panel shown has 4 outlets.',
-        'Exams/Texas/TX21G3M/media/16a.jpg',
+        'problems/TX21G3M/media/16a.jpg',
         'How many outlets do 6 of these electrical panels have?'
       ],
       'AnswerChoices': {
@@ -666,7 +666,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Compare two fractions having the same numerator or denominator in problems by reasoning about their sizes and justifying the conclusion using symbols, words, objects, and pictorial models',
       'Content': [
         'Fraction strips are shown.',
-        'Exams/Texas/TX21G3M/media/17a.jpg',
+        'problems/TX21G3M/media/17a.jpg',
         'Which comparison is true?'
       ],
       'AnswerChoices': {
@@ -708,7 +708,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Determine the area of rectangles with whole number side lengths in problems using multiplication related to the number of rows times the number of unit squares in each row',
       'Content': [
         'Heidi is making a rectangular card. The shaded rectangle on the grid represents the card.',
-        'Exams/Texas/TX21G3M/media/18a.jpg',
+        'problems/TX21G3M/media/18a.jpg',
         'What is the area of this card in square centimeters?'
       ],
       'AnswerChoices': {
@@ -753,28 +753,28 @@ export class ProblemsComponent implements OnInit {
       ],
       'AnswerChoices': {
         'A': {
-          'Choice': 'Exams/Texas/TX21G3M/media/19a.jpg',
+          'Choice': 'problems/TX21G3M/media/19a.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely realized that point A should be two same-size sections from 0 but disregarded the total number of same-size sections in the number line. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of same-size sections.'
           }
         },
         'B': {
-          'Choice': 'Exams/Texas/TX21G3M/media/19b.jpg',
+          'Choice': 'problems/TX21G3M/media/19b.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely realized that point A should be two same-size sections from 0 but counted tick marks by starting with the tick mark at 0. The student needs to focus on understanding how to move to the left and to the right on a number line when representing fractions.'
           }
         },
         'C': {
-          'Choice': 'Exams/Texas/TX21G3M/media/19c.jpg',
+          'Choice': 'problems/TX21G3M/media/19c.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely realized that point A would be two same-size sections from 0 but chose a number line with 8 tick marks after point A rather than 8 same-size sections from 0 to 1 yard. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of same-size sections.'
           }
         },
         'D': {
-          'Choice': 'Exams/Texas/TX21G3M/media/19d.jpg',
+          'Choice': 'problems/TX21G3M/media/19d.jpg',
           'Key': {
             'Correct': true,
             'Rationale': 'The student likely realized that point A should be two same-size sections from 0 but counted tick marks by starting with the tick mark at 0. The student needs to focus on understanding how to move to the left and to the right on a number line when representing fractions.'
@@ -831,7 +831,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Represent equivalent fractions with denominators of 2, 3, 4, 6, and 8 using a variety of objects and pictorial models, including number lines',
       'Content': [
         'Irene has a group of counters, as shown.',
-        'Exams/Texas/TX21G3M/media/21a.jpg',
+        'problems/TX21G3M/media/21a.jpg',
         'Which two fractions can represent the black counters in the group?'
       ],
       'AnswerChoices': {
@@ -873,33 +873,33 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Represent one- and two-step problems involving addition and subtraction of whole numbers to 1,000 using pictorial models, number lines, and equations',
       'Content': [
         'A cafeteria sold a total of 513 drinks on Wednesday. The table shows the number of each type of drink that was sold. The number of bottles of milk is missing from the table.',
-        'Exams/Texas/TX21G3M/media/22a.jpg',
+        'problems/TX21G3M/media/22a.jpg',
         'Which set of equations can be used to find the number of bottles of milk sold?'
       ],
       'AnswerChoices': {
         'F': {
-          'Choice': 'Exams/Texas/TX21G3M/media/22b.jpg',
+          'Choice': 'problems/TX21G3M/media/22b.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely realized that addition was needed to find the number of bottles of apple juice and bottles of water that were sold but then determined that this sum needed to be added to the total drinks sold on Wednesday (513) instead of subtracted from it. The student needs to focus on understanding problem situations and the mathematical operations (+, −, ×, ÷) needed to solve them.'
           }
         },
         'G': {
-          'Choice': 'Exams/Texas/TX21G3M/media/22c.jpg',
+          'Choice': 'problems/TX21G3M/media/22c.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely realized that subtraction was needed to find the number of bottles of milk that was missing from the table but then determined that the number of bottles of apple juice should be subtracted from the number of bottles of water rather than adding the numbers. The student needs to focus on understanding problem situations and the mathematical operations (+, −, ×, ÷) needed to solve them.'
           }
         },
         'H': {
-          'Choice': 'Exams/Texas/TX21G3M/media/22d.jpg',
+          'Choice': 'problems/TX21G3M/media/22d.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely realized that the number of bottles of apple juice could be subtracted from the total number of drinks sold to find the missing number of bottles of milk but then added instead of subtracting in the second step. The student needs to focus on understanding problem situations and the mathematical operations (+, −, ×, ÷) needed to solve them.'
           }
         },
         'J': {
-          'Choice': 'Exams/Texas/TX21G3M/media/22e.jpg',
+          'Choice': 'problems/TX21G3M/media/22e.jpg',
           'Key': {
             'Correct': true,
             'Rationale': 'To determine the set of equations that can be used to find the number of bottles of milk sold, the student should have first identified the set of equations that shows the addition ( + ) of the number of bottles of apple juice and the number of bottles of water sold (172 + 263 = 435). Then the student should have chosen the set of equations that shows subtracting ( − ) the sum (total) of the bottles of apple juice and the bottles of water (435) from the total number of drinks sold (513 − 435 = ).'
@@ -915,33 +915,33 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Summarize a data set with multiple categories using a frequency table, dot plot, pictograph, or bar graph with scaled intervals',
       'Content': [
         'The pictograph shows the number of each type of balloon animal a clown made on Tuesday.',
-        'Exams/Texas/TX21G3M/media/23a.jpg',
+        'problems/TX21G3M/media/23a.jpg',
         'Which table correctly represents the data?'
       ],
       'AnswerChoices': {
         'A': {
-          'Choice': 'Exams/Texas/TX21G3M/media/23b.jpg',
+          'Choice': 'problems/TX21G3M/media/23b.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely counted each icon as 1 animal, disregarding the key, and then miscounted the number of icons for rabbits. The student needs to focus on understanding how to use a key in a pictograph to accurately represent data and how to represent data shown in a pictograph with accuracy.'
           }
         },
         'B': {
-          'Choice': 'Exams/Texas/TX21G3M/media/23c.jpg',
+          'Choice': 'problems/TX21G3M/media/23c.jpg',
           'Key': {
             'Correct': true,
             'Rationale': 'To determine which table represents the data in the pictograph (graph that uses picture icons to represent numbers), the student should have multiplied the number of whole icons shown in each row by the number (2) shown in the key (sentence below each pictograph telling the value of each icon). The student should have identified the table that shows 8 dogs (4 × 2), 4 monkeys (2 × 2), 12 rabbits (6 × 2), and 6 bears (3 × 2).'
           }
         },
         'D': {
-          'Choice': 'Exams/Texas/TX21G3M/media/23d.jpg',
+          'Choice': 'problems/TX21G3M/media/23d.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely used the key to determine the number of each type of balloon animal but miscounted the number of icons for rabbits. The student needs to focus on understanding how to represent data shown in a pictograph with accuracy.'
           }
         },
         'C': {
-          'Choice': 'Exams/Texas/TX21G3M/media/23e.jpg',
+          'Choice': 'problems/TX21G3M/media/23e.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely counted each icon as 1 animal, disregarding the key. The student needs to focus on understanding how to use a key in a pictograph to accurately represent data.'
@@ -957,7 +957,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Determine the perimeter of a polygon or a missing length when given perimeter and remaining side lengths in problems',
       'Content': [
         'The perimeter of the rectangular floor of Mr. Bryan’s cabin is 46 feet. The width of the floor is 10 feet, as shown.',
-        'Exams/Texas/TX21G3M/media/24a.jpg',
+        'problems/TX21G3M/media/24a.jpg',
         'What is the length of the floor of Mr. Bryan’s cabin in feet?'
       ],
       'Key': {
@@ -1014,8 +1014,8 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Compare two fractions having the same numerator or denominator in problems by reasoning about their sizes and justifying the conclusion using symbols, words, objects, and pictorial models',
       'Content': [
         'The models shown are the same size. Each model is divided into equal-size parts and is shaded to represent a fraction.',
-        'Exams/Texas/TX21G3M/media/26a.jpg',
-        'Exams/Texas/TX21G3M/media/26b.jpg',
+        'problems/TX21G3M/media/26a.jpg',
+        'problems/TX21G3M/media/26b.jpg',
         'Which statement is true?'
       ],
       'AnswerChoices': {
@@ -1061,28 +1061,28 @@ export class ProblemsComponent implements OnInit {
       ],
       'AnswerChoices': {
         'A': {
-          'Choice': 'Exams/Texas/TX21G3M/media/27a.jpg',
+          'Choice': 'problems/TX21G3M/media/27a.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely chose the table that shows the number of muffins increasing by 12 and the number of cookies increasing by 12 added to the previous value and did not consider the relationship between each number of muffins and each number of cookies in the table. The student needs to focus on understanding the relationship between numbers paired in a table.'
           }
         },
         'B': {
-          'Choice': 'Exams/Texas/TX21G3M/media/27b.jpg',
+          'Choice': 'problems/TX21G3M/media/27b.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely reversed the relationship, choosing the table that shows that there were 12 more muffins than cookies rather than 12 more cookies than muffins. The student needs to focus on understanding the relationship between numbers paired in a table.'
           }
         },
         'C': {
-          'Choice': 'Exams/Texas/TX21G3M/media/27c.jpg',
+          'Choice': 'problems/TX21G3M/media/27c.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely confused addition with multiplication, thinking that the number of cookies was 12 times the number of muffins instead of 12 more than the number of muffins, and chose the table showing this relationship between the numbers in some of the pairs in the table but did not look at all of the pairs of the numbers in the table. The student needs to focus on understanding the relationship between numbers paired in a table.'
           }
         },
         'D': {
-          'Choice': 'Exams/Texas/TX21G3M/media/27d.jpg',
+          'Choice': 'problems/TX21G3M/media/27d.jpg',
           'Key': {
             'Correct': true,
             'Rationale': 'To determine the table that shows the relationship between the number of muffins and the number of cookies the bakery makes, the student should have added 12 to each number of muffins and then used the result to confirm each number of cookies listed in the table (12 + 12 = 24; 24 + 12 = 36; 48+12 = 60).'
@@ -1098,7 +1098,7 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Determine the solutions to problems involving addition and subtraction of time intervals in minutes using pictorial models or tools such as a 15-minute event plus a 30-minute event equals 45 minutes',
       'Content': [
         'On Saturday afternoon Marcus went to a swimming pool. The clock shows the time he arrived at the pool.',
-        'Exams/Texas/TX21G3M/media/28a.jpg',
+        'problems/TX21G3M/media/28a.jpg',
         'He left the pool 45 minutes later. At what time did Marcus leave the pool?'
       ],
       'AnswerChoices': {
@@ -1183,33 +1183,33 @@ export class ProblemsComponent implements OnInit {
       'SubTopic': 'Classify and sort two- and three-dimensional figures, including cones, cylinders, spheres, triangular and rectangular prisms, and cubes, based on attributes using formal geometric language',
       'Content': [
         'The objects shown can be classified into groups based on their shape.',
-        'Exams/Texas/TX21G3M/media/30a.jpg',
+        'problems/TX21G3M/media/30a.jpg',
         'Which table best represents the classifications for these objects?'
       ],
       'AnswerChoices': {
         'F': {
-          'Choice': 'Exams/Texas/TX21G3M/media/30b.jpg',
+          'Choice': 'problems/TX21G3M/media/30b.jpg',
           'Key': {
             'Correct': true,
             'Rationale': 'To determine the correct way to group the objects, the student should have classified each figure according to its attributes (characteristics). The first and fourth figures are cylinders because they are round and have top and bottom bases in the shape of a circle; the bases are congruent and are parallel to each other. The second and third figures are rectangular prisms because they each have six faces that are rectangles.'
           }
         },
         'G': {
-          'Choice': 'Exams/Texas/TX21G3M/media/30c.jpg',
+          'Choice': 'problems/TX21G3M/media/30c.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely confused cubes (special prisms in which all of the faces are the same-size square) with rectangular prisms, determining that the eraser and the toolbox were cubes. The student needs to focus on understanding the attributes of prisms and cubes.'
           }
         },
         'H': {
-          'Choice': 'Exams/Texas/TX21G3M/media/30d.jpg',
+          'Choice': 'problems/TX21G3M/media/30d.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely confused spheres (round figures that look like a ball) with cylinders, determining that the can and the drum were spheres. The student needs to focus on understanding the attributes of cylinders and spheres.'
           }
         },
         'J': {
-          'Choice': 'Exams/Texas/TX21G3M/media/30e.jpg',
+          'Choice': 'problems/TX21G3M/media/30e.jpg',
           'Key': {
             'Correct': false,
             'Rationale': 'The student likely chose the correct group names but associated the objects to the incorrect groups. The student needs to focus on the details of problems involving attributes of objects.'

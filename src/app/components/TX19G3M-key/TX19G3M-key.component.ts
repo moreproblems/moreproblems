@@ -24,7 +24,7 @@ export class TX19G3MKeyComponent implements OnInit {
 
   exam_key = 'src/app/assets/Exams/exams.txt';
   exam_code = 'TX21G3M'
-  exam_file = 'src/app/assets/Exams/Texas/' + this.exam_code + '/' + this.exam_code + '-problems.txt';
+  exam_file = 'src/app/assets/problems/' + this.exam_code + '/' + this.exam_code + '-problems.txt';
 
   // exam_data = fs.readFileSync(this.problem_file, 'utf8');
   // exam_data: string = '';
@@ -126,33 +126,33 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Summarize a data set with multiple categories using a frequency table, dot plot, pictograph, or bar graph with scaled intervals",
         "Content": [
             "Alberto ran for exercise every day for 16 days. The table shows how many days he ran each distance.",
-            "Exams/Texas/TX19G3M/media/3a.jpg",
+            "problems/TX19G3M/media/3a.jpg",
             "Which dot plot represents these data?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Exams/Texas/TX19G3M/media/3b.jpg",
+                "Choice": "problems/TX19G3M/media/3b.jpg",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the correct dot plot (graph that uses dots to display data), the student should have chosen the dot plot that has dots matching the number of tally marks for each distance (two dots for 1 mile, five dots for 1 1/2 miles, three dots for 2 miles, four dots for 2 1/2 miles, and two dots for 3 miles)."
                 }
             },
             "B": {
-                "Choice": "Exams/Texas/TX19G3M/media/3c.jpg",
+                "Choice": "problems/TX19G3M/media/3c.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely miscounted the numbers of dots on the dot plot for 1 1/2 miles and 2 1/2 miles. The student needs to focus on understanding how to accurately represent data in a dot plot."
                 }
             },
             "C": {
-                "Choice": "Exams/Texas/TX19G3M/media/3d.jpg",
+                "Choice": "problems/TX19G3M/media/3d.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student reversed the data for 1 1/2 miles and 2 1/2 miles, choosing the dot plot with four instead of five dots for 1 1/2 miles and five instead of four dots for 2 1/2 miles. The student needs to focus on understanding how to accurately represent data in a dot plot."
                 }
             },
             "D": {
-                "Choice": "Exams/Texas/TX19G3M/media/3e.jpg",
+                "Choice": "problems/TX19G3M/media/3e.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student chose a dot plot with one dot for each unique value instead of a dot plot with a dot for each occurrence of a value in the table. The student needs to focus on understanding that each number in a set of data should be represented with one dot on a dot plot."
@@ -276,28 +276,28 @@ export class TX19G3MKeyComponent implements OnInit {
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Exams/Texas/TX19G3M/media/7a.jpg",
+                "Choice": "problems/TX19G3M/media/7a.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely thought that subtraction should be used instead of addition for the $50 Freddie put into his account. The student needs to focus on understanding problem situations and the mathematical operations (+, −, ×, ÷) needed to solve them."
                 }
             },
             "B": {
-                "Choice": "Exams/Texas/TX19G3M/media/7b.jpg",
+                "Choice": "problems/TX19G3M/media/7b.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely thought that addition should be used instead of subtraction for the $87 Freddie took out of his account. The student needs to focus on understanding problem situations and the mathematical operations (+, −, ×, ÷) needed to solve them."
                 }
             },
             "C": {
-                "Choice": "Exams/Texas/TX19G3M/media/7c.jpg",
+                "Choice": "problems/TX19G3M/media/7c.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student chose an equation that incorrectly has $250 as Freddie’s starting amount. The student then likely thought that subtraction should be used instead of addition for the $50 Freddie put into his account and that addition should be used instead of subtraction for the $87 Freddie took out of the account. The student needs to focus on attending to details and understanding the mathematical operations (+, −, ×, ÷) needed to solve problem situations."
                 }
             },
             "D": {
-                "Choice": "Exams/Texas/TX19G3M/media/7d.jpg",
+                "Choice": "problems/TX19G3M/media/7d.jpg",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the equation that can be used to find the amount of money Freddie had in his bank account after taking out money on Tuesday, the student should have first identified the equations that began with Freddie’s starting amount of $256. Then the student should have chosen the equation using addition ( + ) for the $50 Freddie put into his account and subtraction ( )− for the $87 Freddietook out of his account (256 + 50 − 87 = _)."
@@ -313,7 +313,7 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Decompose two congruent two-dimensional figures into parts with equal areas and express the area of each part as a unit fraction of the whole and recognize that equal shares of identical wholes need not have the same shape",
         "Content": [
             "Brandon drew the two congruent squares shown.",
-            "Exams/Texas/TX19G3M/media/8a.jpg",
+            "problems/TX19G3M/media/8a.jpg",
             "•  He divided one square into 2 congruent triangular parts.",
             "•  He divided the other square into 2 congruent rectangular parts.",
             "Which statement is true?"
@@ -361,7 +361,7 @@ export class TX19G3MKeyComponent implements OnInit {
             "•  He spent 19 minutes swimming.",
             "•  He spent 21 minutes riding his bike.",
             "•  He spent 30 minutes running.",
-            "Exams/Texas/TX19G3M/media/9a.jpg",
+            "problems/TX19G3M/media/9a.jpg",
             "What was the total amount of time Felix spent swimming, riding his bike, and running in this race?"
         ],
         "AnswerChoices": {
@@ -406,28 +406,28 @@ export class TX19G3MKeyComponent implements OnInit {
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Exams/Texas/TX19G3M/media/10a.jpg",
+                "Choice": "problems/TX19G3M/media/10a.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely chose the table with multiples of 8 (numbers like 8, 16, 24, and 32 that can be found when multiplying by 8) but did not consider the relationship between each number of bags and each number of oranges in the table. The student needs to focus on understanding the relationship between numbers paired in a table."
                 }
             },
             "G": {
-                "Choice": "Exams/Texas/TX19G3M/media/10b.jpg",
+                "Choice": "problems/TX19G3M/media/10b.jpg",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the table that shows the relationship between the number of bags and the number of oranges in the bags, the student should have multiplied each number of bags by 8 and then used the result to confirm each number of oranges listed in the table (2 × 8 = 16, 3 × 8 = 24, 4 × 8 = 32, and 5 × 8 = 40)."
                 }
             },
             "H": {
-                "Choice": "Exams/Texas/TX19G3M/media/10c.jpg",
+                "Choice": "problems/TX19G3M/media/10c.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely added 8 to each number of bags instead of multiplying by 8. The student needs to focus on understanding the mathematical operations (+, −−, ×, ÷) needed to solve real-world problems."
                 }
             },
             "J": {
-                "Choice": "Exams/Texas/TX19G3M/media/10d.jpg",
+                "Choice": "problems/TX19G3M/media/10d.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely chose the table showing the correct relationship between the numbers in the first pair in the table but did not look at the remaining pairs of numbers in the table. The student needs to focus on understanding the relationship between numbers paired in a table."
@@ -446,28 +446,28 @@ export class TX19G3MKeyComponent implements OnInit {
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Exams/Texas/TX19G3M/media/11a.jpg",
+                "Choice": "problems/TX19G3M/media/11a.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely did not recognize that a cube is a special prism in which all of the faces are the same-size square. The student needs to focus on understanding the characteristics of prisms."
                 }
             },
             "B": {
-                "Choice": "Exams/Texas/TX19G3M/media/11b.jpg",
+                "Choice": "problems/TX19G3M/media/11b.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely did not recognize that a prism could have triangular bases. The student needs to focus on understanding the characteristics of prisms."
                 }
             },
             "C": {
-                "Choice": "Exams/Texas/TX19G3M/media/11c.jpg",
+                "Choice": "problems/TX19G3M/media/11c.jpg",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the figure that CANNOT be classified as a prism, the student should have identified the characteristics of a prism (1. bases (sides) that are polygons (closed shapes with at least three sides), 2. bases that are the same size and shape, 3. bases that are parallel to each other (never touch), and 4. bases that are connected by rectangles). The first figure is a prism because it has square bases that are parallel to each other, are the same size, and are connected by rectangles. The second figure is a prism because it has triangular bases that are parallel to each other, are the same size and shape, and are connected by rectangles. The fourth figure is a prism because it has rectangular bases that are parallel to each other, are the same size and shape, and are connected by rectangles. The student should have recognized that the third figure is a cylinder and CANNOT be classified as a prism because the bases are circles and circles are not polygons."
                 }
             },
             "D": {
-                "Choice": "Exams/Texas/TX19G3M/media/11d.jpg",
+                "Choice": "problems/TX19G3M/media/11d.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely did not understand the characteristics of a prism. The student needs to focus on understanding the characteristics of prisms."
@@ -524,7 +524,7 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Compare two fractions having the same numerator or denominator in problems by reasoning about their sizes and justifying the conclusion using symbols, words, objects, and pictorial models",
         "Content": [
             "Fraction strips are shown.",
-            "Exams/Texas/TX19G3M/media/13a.jpg",
+            "problems/TX19G3M/media/13a.jpg",
             "Which comparison and explanation are true?"
         ],
         "AnswerChoices": {
@@ -566,7 +566,7 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Determine the perimeter of a polygon or a missing length when given perimeter and remaining side lengths in problems",
         "Content": [
             "Gina’s journal has a square cover with the side length shown.",
-            "Exams/Texas/TX19G3M/media/14a.jpg",
+            "problems/TX19G3M/media/14a.jpg",
             "What is the perimeter of the cover of Gina’s journal in centimeters?"
         ],
         "AnswerChoices": {
@@ -628,7 +628,7 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Determine the area of rectangles with whole number side lengths in problems using multiplication related to the number of rows times the number of unit squares in each row",
         "Content": [
             "The shaded figure on the grid represents Erin’s rectangular lawn.",
-            "Exams/Texas/TX19G3M/media/16a.jpg",
+            "problems/TX19G3M/media/16a.jpg",
             "What is the area in square meters of Erin\"s lawn?"
         ],
         "AnswerChoices": {
@@ -670,7 +670,7 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Explain that the unit fraction 1/b represents the quantity formed by one part of a whole that has been partitioned into b equal parts where b is a non-zero whole number",
         "Content": [
             "Models R and T are shown.",
-            "Exams/Texas/TX19G3M/media/17a.jpg",
+            "problems/TX19G3M/media/17a.jpg",
             "Which statement is true?"
         ],
         "AnswerChoices": {
@@ -712,7 +712,7 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Determine the number of objects in each group when a set of objects is partitioned into equal shares or a set of objects is shared equally",
         "Content": [
             "A group of 27 students played a game with the hoops shown. An equal number of the students shared each hoop.",
-            "Exams/Texas/TX19G3M/media/18a.jpg",
+            "problems/TX19G3M/media/18a.jpg",
             "How many students shared each hoop?"
         ],
         "AnswerChoices": {
@@ -754,7 +754,7 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Represent equivalent fractions with denominators of 2, 3, 4, 6, and 8 using a variety of objects and pictorial models, including number lines",
         "Content": [
             "Point P on the number line represents two equivalent fractions.",
-            "Exams/Texas/TX19G3M/media/19a.jpg",
+            "problems/TX19G3M/media/19a.jpg",
             "Which two equivalent fractions can point P represent?"
         ],
         "AnswerChoices": {
@@ -796,7 +796,7 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Determine the total number of objects when equally sized groups of objects are combined or arranged in arrays up to 10 by 10",
         "Content": [
             "There are 6 photographs on each page of an album. One page of the album is shown.",
-            "Exams/Texas/TX19G3M/media/20a.jpg",
+            "problems/TX19G3M/media/20a.jpg",
             "How many photographs are on 9 pages of the album?"
         ],
         "AnswerChoices": {
@@ -838,7 +838,7 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Represent real-world relationships using number pairs in a table and verbal descriptions",
         "Content": [
             "Four people at a snack bar each bought a drink. The table shows the amount of money each person gave the cashier and the amount of money each person got back in change.",
-            "Exams/Texas/TX19G3M/media/21a.jpg",
+            "problems/TX19G3M/media/21a.jpg",
             "Based on the relationship shown in the table, which statement is true?"
         ],
         "AnswerChoices": {
@@ -880,33 +880,33 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Summarize a data set with multiple categories using a frequency table, dot plot, pictograph, or bar graph with scaled intervals",
         "Content": [
             "A school keeps boxes of paper of different colors in a room. The table shows how many boxes of each color are in the room.",
-            "Exams/Texas/TX19G3M/media/22a.jpg",
+            "problems/TX19G3M/media/22a.jpg",
             "Which answer choice does NOT represent the information in the table?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Exams/Texas/TX19G3M/media/22b.jpg",
+                "Choice": "problems/TX19G3M/media/22b.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student chose an answer choice that does represent the information in the table instead of one that does NOT, or the student made an error in counting the bundles of tally marks (groups of 5 tally marks) in the table. The student needs to focus on attending to the details of the question and/or the student needs to focus on understanding how tally marks are used to represent data in tables."
                 }
             },
             "G": {
-                "Choice": "Exams/Texas/TX19G3M/media/22c.jpg",
+                "Choice": "problems/TX19G3M/media/22c.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student chose an answer choice that does represent the information in the table instead of one that does NOT, or the student made an error in using the key of the pictograph (graph that uses picture icons to represent numbers) to understand that each icon represents 12 boxes and each half icon represents 6 (half of 12). The student needs to focus on attending to the details of the question and/or the student needs to focus on understanding how icons and half icons are used to represent data in a pictograph."
                 }
             },
             "J": {
-                "Choice": "Exams/Texas/TX19G3M/media/22d.jpg",
+                "Choice": "problems/TX19G3M/media/22d.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student chose an answer choice that does represent the information in the table instead of one that does NOT, or the student made an error in using the key of the pictograph (graph that uses picture icons to represent numbers) to understand that each icon represents 6 boxes. The student needs to focus on attending to the details of the question and/or the student needs to focus on understanding how icons are used to represent data in a pictograph."
                 }
             },
             "H": {
-                "Choice": "Exams/Texas/TX19G3M/media/22e.jpg",
+                "Choice": "problems/TX19G3M/media/22e.jpg",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the answer choice that does NOT represent the information in the table, the student should have seen that the first, second, and fourth answer choices represent the values 48 for White, 24 for Yellow, 42 for Blue, and 18 for Red. While the bar graph in this third answer choice does represent 48 for White and 24 for Yellow, it incorrectly represents the value for Blue as 46 and the value for Red as 16."
@@ -985,7 +985,7 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Determine the perimeter of a polygon or a missing length when given perimeter and remaining side lengths in problems",
         "Content": [
             "A model of Mr. Estrada’s rectangular calculator is shown. Use the ruler provided to measure the length and width of the calculator to the nearest centimeter.",
-            "Exams/Texas/TX19G3M/media/25a.jpg",
+            "problems/TX19G3M/media/25a.jpg",
             "Which measurement is closest to the perimeter of the calculator in centimeters?"
         ],
         "AnswerChoices": {
@@ -1156,28 +1156,28 @@ export class TX19G3MKeyComponent implements OnInit {
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Exams/Texas/TX19G3M/media/29a.jpg",
+                "Choice": "problems/TX19G3M/media/29a.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely considered the fraction 1/2 to be represented on a number line as a point at the end of the first section from 0 with 2 same-size sections between point J and the 1-mile mark. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections."
                 }
             },
             "B": {
-                "Choice": "Exams/Texas/TX19G3M/media/29b.jpg",
+                "Choice": "problems/TX19G3M/media/29b.jpg",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the number line on which point J represents a position that is 1/2 mile from 0, or Javier’s house, the student should have found the point that is at the end of the first of 2 same-size sections"
                 }
             },
             "C": {
-                "Choice": "Exams/Texas/TX19G3M/media/29c.jpg",
+                "Choice": "problems/TX19G3M/media/29c.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely considered only the numerator (top number) of the fraction and found the number line where point J was one section back from the 1-mile mark. The student needs to focus on understanding that a fraction is composed of a numerator and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections. The student also needs to focus on moving from left to right on a number line with representing fractions."
                 }
             },
             "D": {
-                "Choice": "Exams/Texas/TX19G3M/media/29d.jpg",
+                "Choice": "problems/TX19G3M/media/29d.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely moved from right to left on the number line and considered the fraction 1/2 to be represented on a number line as a point at the end of the first section from 1 with 2 same-size sections between point J and 0. The student needs to focus on moving from left to right on a number line when representing fractions. The student also needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections."
@@ -1193,7 +1193,7 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Classify and sort two- and three-dimensional figures, including cones, cylinders, spheres, triangular and rectangular prisms, and cubes, based on attributes using formal geometric language",
         "Content": [
             "The figures shown can be sorted into groups.",
-            "Exams/Texas/TX19G3M/media/30a.jpg",
+            "problems/TX19G3M/media/30a.jpg",
             "Which list shows a correct way to group these figures?"
         ],
         "AnswerChoices": {
@@ -1235,7 +1235,7 @@ export class TX19G3MKeyComponent implements OnInit {
         "SubTopic": "Determine the value of a collection of coins and bills",
         "Content": [
             "Dana used the money shown to buy a snack.",
-            "Exams/Texas/TX19G3M/media/31a.jpg",
+            "problems/TX19G3M/media/31a.jpg",
             "What amount of money did Dana use to buy the snack?"
         ],
         "AnswerChoices": {
@@ -1281,21 +1281,21 @@ export class TX19G3MKeyComponent implements OnInit {
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Exams/Texas/TX19G3M/media/32a.jpg",
+                "Choice": "problems/TX19G3M/media/32a.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely confused what the numbers labeled in each section represent and chose a strip diagram that represents 11 × 11 instead of 2 × 11. The student needs to focus on understanding how to use strip diagrams to represent multiplication problems."
                 }
             },
             "G": {
-                "Choice": "Exams/Texas/TX19G3M/media/32b.jpg",
+                "Choice": "problems/TX19G3M/media/32b.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely confused what the number of same-size sections represent and chose a strip diagram that represents 2 × 2 instead of 2 × 11. The student needs to focus on understanding how to use strip diagrams to represent multiplication problems."
                 }
             },
             "H": {
-                "Choice": "Exams/Texas/TX19G3M/media/32c.jpg",
+                "Choice": "problems/TX19G3M/media/32c.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely confused a strip diagram modeling addition (2 + 11) instead of multiplication (2 × 11). The student needs to focus on understanding how to use strip diagrams to represent multiplication problems."
@@ -1303,7 +1303,7 @@ export class TX19G3MKeyComponent implements OnInit {
             },
 
             "J": {
-                "Choice": "Exams/Texas/TX19G3M/media/32d.jpg",
+                "Choice": "problems/TX19G3M/media/32d.jpg",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the strip diagram that can be used, the student should have understood that the strip diagram should use same-size sections to model the multiplication problem 2 × 11 = ?, where “?” represents the total number of pieces of bread Yolanda used. The strip diagram shows 11 same-size sections representing the sandwiches labeled with a 2 in each section to represent the number of pieces of bread used for each sandwich."

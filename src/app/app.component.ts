@@ -13,8 +13,8 @@ export class AppComponent{
   title = 'MoreProblems.Org';
 
   public screenWidth = window.innerWidth;
-  public mobileWidth = 750;
-  public menuOpen = true;
+  public mobileWidth = 800;
+  public menuOpen = false;
   
 
   width_change() {

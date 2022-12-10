@@ -199,8 +199,8 @@
     background-color: #1976d2;
     border-radius: 12px;
     border: 1px solid #eee;
-    margin: 0 8px 16px;
-    padding: 16px 8px;
+    margin: 8px;
+    padding: 8px 8px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -432,38 +432,40 @@
   }
 </style>
 
-<div class="content-menu" role="menu">
+<div class="content-menu" (window:resize)="width_change2()" role="menu">
   <!-- PDF Viewer -->
   <br />
   <br #pdfViewer />
   <div *ngIf="file_source != ''" class="card card-large" (window:resize)="width_change()"
     style="height: auto; border: 3px solid black; border-radius: 20px; display: block" [attr.max-width]="viewerWidth" [attr.max-height]="viewerHeight">
     <section style="height: 75px; width: 100%; display: flex; justify-content: right">
-      <button *ngIf="file_source != ''" (click)="print_exam()" class="grade-button"
+      <button *ngIf="file_source != '' && this.screenWidth > this.mobileWidth" (click)="print_exam()" class="grade-button"
         style="margin: 10px; width: auto; height: auto">
         <!-- <img src="./assets/icons/print.png" style="height: 30px; width: 30px; filter: invert(100%)"> -->
         <b>Print</b>
       </button>
       <button *ngIf="file_source != ''" (click)="download_exam()" class="grade-button"
         style="margin: 10px; width: auto; height: auto">
-        <!-- <img src="./assets/icons/download.png" style="height: 30px; width: 30px; filter: invert(100%)"> -->
-        <b>Download</b>
+        <img *ngIf="this.screenWidth <= this.mobileWidth" src="./assets/icons/download.png" style="height: 25px; filter: invert(100%)">
+        <b *ngIf="this.screenWidth > this.mobileWidth"> Download </b>
       </button>
       <button *ngIf="online_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
         style="margin: 10px; width: auto; height: auto">
         <!-- <img src="./assets/icons/download.png" style="height: 30px; width: 30px; filter: invert(100%)"> -->
         <b>Online Exam</b>
       </button>
-      <h1 style="margin: auto 50px; font-size: 24px"> {{exam_name}} </h1>
+      <h1 *ngIf="this.screenWidth > this.mobileWidth" style="margin: auto 25px; text-align: center; font-size: 22px"> {{exam_name}} </h1>
+      <h1 *ngIf="this.screenWidth <= this.mobileWidth"  style="margin: auto 25px; text-align: center; font-size: 16px"> {{exam_name}} </h1>
       <button *ngIf="file_source != ''" (click)="prev_page()" class="grade-button"
-        style="margin: 10px; width: auto; height: auto">
-        <img src="./assets/icons/minus.png" style="height: 30px; width: 30px; filter: invert(100%)">
+        style="margin: 20px 0; width: auto; height: auto">
+        <img src="./assets/icons/minus.png" style="height: 25px; filter: invert(100%)">
         <!-- <b>PD</b> -->
       </button>
-      <h3 style="margin: auto 10px; font-size: 20px">Page {{file_page}}</h3>
+      <p style="margin: auto 5px auto 10px; font-size: 14px">Page </p>
+      <h3 style="margin: auto 10px auto 0; font-size: 20px"> {{file_page}} </h3>
       <button *ngIf="file_source != ''" (click)="next_page()" class="grade-button"
-        style="margin: 10px; width: auto; height: auto">
-        <img src="./assets/icons/plus.png" style="height: 30px; width: 30px; filter: invert(100%)">
+        style="margin: 20px 0; width: auto; height: auto">
+        <img src="./assets/icons/plus.png" style="height: 25px; filter: invert(100%)">
         <!-- <b>PU</b> -->
       </button>
       
