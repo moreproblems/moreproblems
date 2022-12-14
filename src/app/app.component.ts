@@ -13,14 +13,17 @@ export class AppComponent{
   title = 'MoreProblems.Org';
 
   public screenWidth = window.innerWidth;
+  // public toolbarHeight = this.navbar.nativeElement.offsetWidth;
   public mobileWidth = 800;
   public menuOpen = false;
   
+  constructor() { }
 
   width_change() {
     this.screenWidth = window.innerWidth;
+    // this.toolbarHeight = this.navbar.nativElement.offsetWidth;
     if (this.screenWidth > this.mobileWidth) {
-      this.menuOpen = true;
+      this.menuOpen = false;
     }
     if (this.screenWidth <= this.mobileWidth) {
       this.menuOpen = false;
@@ -34,4 +37,5 @@ export class AppComponent{
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: 'smooth'});
   }
+
 }

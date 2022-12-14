@@ -97,7 +97,7 @@
     .card-container {
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: center; */
+        justify-content: center;
         margin: auto;
     }
 
@@ -397,7 +397,7 @@
 
         .card-container>*:not(.circle-link),
         .terminal {
-            width: 100%;
+            /* width: 100%; */
         }
 
         .card:not(.highlight-card) {
@@ -415,11 +415,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main">
+    <br />
     <div *ngIf="expand_filters" class="content">
-        <br />
         <h2>Select your State</h2>
         <input type="hidden" value="All United States" #state>
-        <section>
+        <div class="card-container">
             <label class="switch">
                 <input type="checkbox" value="CA">
                 <button *ngIf="filters.includes('California')" (click)="toggle_button('California')"
@@ -455,8 +455,8 @@
                 <button *ngIf="!filters.includes('Michigan')" (click)="toggle_button('Michigan')"
                     class="toggle-button">Michigan</button>
             </label>
-        </section>
-        <section>
+        </div>
+        <div class="card-container">
             <label class="switch">
                 <input type="checkbox" value="NY">
                 <button *ngIf="filters.includes('New York')" (click)="toggle_button('New York')"
@@ -492,13 +492,13 @@
                 <button *ngIf="!filters.includes('Texas')" (click)="toggle_button('Texas')"
                     class="toggle-button">Texas</button>
             </label>
-        </section>
+        </div>
         <br />
 
         <br />
         <h2>Select your Grade</h2>
         <input type="hidden" value="All Grades" #state>
-        <section>
+        <div class="card-container">
             <label class="switch">
                 <input type="checkbox" value="G3">
                 <button *ngIf="filters.includes('Grade 3')" (click)="toggle_button('Grade 3')"
@@ -555,13 +555,13 @@
                 <button *ngIf="!filters.includes('Grade 10')" (click)="toggle_button('Grade 10')"
                     class="toggle-button">Grade 10</button>
             </label>
-        </section>
+        </div>
         <br />
 
         <br />
         <h2>Select your Subject</h2>
         <input type="hidden" value="All Subjects" #state>
-        <section>
+        <div class="card-container">
             <label class="switch">
                 <input type="checkbox" value="ER">
                 <button *ngIf="filters.includes('ELA Reading')" (click)="toggle_button('ELA Reading')"
@@ -598,7 +598,7 @@
                     class="toggle-button">Social Studies</button>
             </label>
 
-        </section>
+        </div>
         <br />
 
         <br />

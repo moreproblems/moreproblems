@@ -417,7 +417,7 @@
 
     .card-container>*:not(.circle-link),
     .terminal {
-      width: 100%;
+      /* width: 100%; */
     }
 
     .card:not(.highlight-card) {
@@ -434,10 +434,8 @@
 
 <div class="content-menu" (window:resize)="width_change2()" role="menu">
   <!-- PDF Viewer -->
-  <br />
-  <br #pdfViewer />
   <div *ngIf="file_source != ''" class="card card-large" (window:resize)="width_change()"
-    style="height: auto; border: 3px solid black; border-radius: 20px; display: block" [attr.max-width]="viewerWidth" [attr.max-height]="viewerHeight">
+    style="height: auto; border: 3px solid black; border-radius: 20px; display: block" [attr.max-width]="viewerWidth" [attr.max-height]="viewerHeight" #pdfViewer>
     <section style="height: 75px; width: 100%; display: flex; justify-content: right">
       <button *ngIf="file_source != '' && this.screenWidth > this.mobileWidth" (click)="print_exam()" class="grade-button"
         style="margin: 10px; width: auto; height: auto">
@@ -468,7 +466,6 @@
         <img src="./assets/icons/plus.png" style="height: 25px; filter: invert(100%)">
         <!-- <b>PU</b> -->
       </button>
-      
     </section>
     <section
       style="height: auto; width: 100%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden" [attr.max-width]="viewerWidth"  [attr.max-height]="viewerHeight">

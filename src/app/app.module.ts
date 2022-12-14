@@ -14,6 +14,7 @@ import { ExamsComponent } from './components/exams/exams.component';
 import { ProblemsComponent } from './components/problems/problems.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { StandardsComponent } from './components/standards/standards.component';
 import { KMStandardsComponent } from './components/KM-standards/KM-standards.component';
 import { G1MStandardsComponent } from './components/G1M-standards/G1M-standards.component';
 import { G2MStandardsComponent } from './components/G2M-standards/G2M-standards.component';
@@ -41,6 +42,7 @@ import { TX19G3MKeyComponent } from './components/TX19G3M-key/TX19G3M-key.compon
     ProblemsComponent,
     AboutComponent,
     ContactComponent,
+    StandardsComponent,
     KMStandardsComponent,
     G1MStandardsComponent,
     G2MStandardsComponent,

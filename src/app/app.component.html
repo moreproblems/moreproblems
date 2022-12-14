@@ -42,18 +42,20 @@
   }
 
   .toolbar {
-    position: fixed;
+    position: sticky;
     z-index: 999;
     top: 0;
     left: 0;
     right: 0;
     height: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #0a1e33;
     color: white;
     font-weight: 600;
-    /* padding: 5px; */
+    padding: 0;
+    margin: 0;
   }
 
   .toolbar img {
@@ -69,7 +71,7 @@
 
   .content-box {
     /* display: flex; */
-    margin: 50px 0 0;
+    margin: 0;
     /* padding: 0 16px; */
     width: 100%;
     /* flex-direction: column; */
@@ -363,41 +365,34 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner" (window:resize)="width_change()" #navbar>
-  <div class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 0 20px 0 0" routerLink="/exams" routerLinkActive="active">
-    <img src="./assets/media/logo1.png" style="width: 65px; height: 65px" #logo />
-    <span style="padding: 0px; text-align: left">
-      <h1 *ngIf="this.screenWidth > this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 26px" #title1> {{ title }} </h1>
-      <h1 *ngIf="this.screenWidth <= this.mobileWidth"style="display: block; font-family: 'Orbitron'; font-size: 22px" #title2> More </h1>
-      <h1 *ngIf="this.screenWidth <= this.mobileWidth"style="display: block; font-family: 'Orbitron'; font-size: 22px" #title2> Problems </h1>
-      <!-- <h2 style="display: block; padding: 5px 0 0"> Free K-12 State Assessments! </h2> -->
-      <!-- <p style="display: inline; font-size: 16px; font-family: 'Orbitron'; margin: 0 0 0 10px"> prepares every U.S. K-12
-        student to ace their standardized state assessments for free</p> -->
-    </span>
-  </div>
-  <div class="spacer"></div>
-
-  <!-- <nav *ngIf="this.menuOpen" style="margin: 0; padding: 0; display: flex; flex-direction: column"> -->
-  <nav style="text-align: right">
-    <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/about" routerLinkActive="active">About</a>&nbsp;&nbsp;
-    <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/exams" routerLinkActive="active">Exams</a>&nbsp;&nbsp;
-    <!-- <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/standards" routerLinkActive="active">Standards</a>&nbsp;&nbsp; -->
-    <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/contact" routerLinkActive="active">Contact</a>&nbsp;
-    <!-- <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/problems" routerLinkActive="active">Problems</a>&nbsp;&nbsp; -->
-    <a *ngIf="this.screenWidth <= this.mobileWidth && this.menuOpen" routerLink="/about" routerLinkActive="active" style="font-size: 16px">About</a>&nbsp;&nbsp;
-    <a *ngIf="this.screenWidth <= this.mobileWidth && this.menuOpen" routerLink="/exams" routerLinkActive="active" style="font-size: 16px">Exams</a>&nbsp;&nbsp;
-    <!-- <a *ngIf="this.screenWidth <= this.mobileWidth && this.menuOpen" routerLink="/standards" routerLinkActive="active" style="font-size: 16px">Standards</a>&nbsp;&nbsp; -->
-    <a *ngIf="this.screenWidth <= this.mobileWidth && this.menuOpen" routerLink="/contact" routerLinkActive="active" style="font-size: 16px">Contact</a>&nbsp;
-    <!-- <a *ngIf="this.screenWidth <= this.mobileWidth && this.menuOpen" routerLink="/problems" routerLinkActive="active" style="font-size: 16px">Problems</a>&nbsp;&nbsp; -->
-  </nav>
-  <img *ngIf="this.screenWidth <= this.mobileWidth" (click)="menu_toggle()" src="./assets/icons/menu.png" style="height: 35px; width: 35px; margin: 0 20px 0 0; filter: invert(100%)">
-  <!-- <div *ngIf="this.menuOpen" class="toolbar-menu">
-    <div class="break"></div>
-    <nav>
-      <a routerLink="/about" routerLinkActive="active" style="font-size: 20px">About</a>&nbsp;&nbsp;
-      <a routerLink="/exams" routerLinkActive="active" style="font-size: 20px">Exams</a>&nbsp;&nbsp;
-      <a routerLink="/contact" routerLinkActive="active" style="font-size: 20px">Contact</a>&nbsp;&nbsp;
+  <div style="display: flex; flex-direction: row; width: 100%; margin: auto; align-items: center">
+    <div class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 0 20px 0 0" routerLink="/exams" routerLinkActive="active">
+      <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 65px; height: 65px" #logo />
+      <img *ngIf="this.screenWidth <= this.mobileWidth" src="./assets/media/logo1.png" style="width: 50px; height: 50px" #logo />
+      <span style="padding: 0px; text-align: left">
+        <h1 *ngIf="this.screenWidth > this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 26px" #title1> {{ title }} </h1>
+        <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 20px" #title1> {{ title }} </h1>
+      </span>
+    </div>
+    <div class="spacer"></div>
+    <nav style="text-align: right" style="display: block">
+      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/about" routerLinkActive="active"> About </a>&nbsp;&nbsp;
+      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/standards" routerLinkActive="active"> Standards </a>&nbsp;&nbsp;
+      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/exams" routerLinkActive="active"> Exams </a>&nbsp;&nbsp;
+      <!-- <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/problems" routerLinkActive="active"> Problems </a>&nbsp;&nbsp; -->
+      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/contact" routerLinkActive="active"> Contact </a>&nbsp;
     </nav>
-  </div> -->
+    <img *ngIf="this.screenWidth <= this.mobileWidth" (click)="menu_toggle()" src="./assets/icons/menu.png" style="height: 30px; width: 30px; margin: 0 10px 0 0; filter: invert(100%)">
+  </div>
+  <div *ngIf="this.menuOpen" style="width: 100%">
+    <nav style="text-align: center">
+      <a routerLink="/about" routerLinkActive="active" style="padding: 0 15px; font-size: 16px">About</a>&nbsp;&nbsp;
+      <a routerLink="/standards" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Standards </a>&nbsp;&nbsp;
+      <a routerLink="/exams" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Exams </a>&nbsp;&nbsp;
+      <!-- <a routerLink="/problems" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Problems </a>&nbsp; -->
+      <a routerLink="/contact" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Contact </a>&nbsp;
+    </nav>
+  </div>
 </div>
 <div class="content-box" role="menu" style="width:100%; padding: 0px">
   <router-outlet style="width:100%; padding: Opx; margin: 0px"></router-outlet>
