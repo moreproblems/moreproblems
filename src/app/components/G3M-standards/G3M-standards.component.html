@@ -1,106 +1,115 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
+  
     :host {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: 14px;
-        color: #333;
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-
+  
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        margin: 8px 0;
+      margin: 8px 0;
     }
-
+  
     p {
-        margin: 0;
+      margin: 0;
     }
-
+  
     .spacer {
-        flex: 1;
+      flex: 1;
     }
-
+  
     .toolbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 85px;
-        display: flex;
-        align-items: center;
-        background-color: #0a1e33;
-        color: white;
-        font-weight: 600;
-        padding: 5px 10px 2px 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      padding: 5px 10px 2px 20px;
     }
-
+  
     .toolbar img {
-        /* margin: 0 16px; */
-        position: absolute;
-        left: -10px;
-        top: -18px;
+      /* margin: 0 16px; */
+      position: absolute;
+      left: -10px;
+      top: -18px;
     }
-
+  
     .toolbar #twitter-logo {
-        height: 40px;
-        margin: 0 8px;
+      height: 40px;
+      margin: 0 8px;
     }
-
+  
     .toolbar #youtube-logo {
-        height: 40px;
-        margin: 0 16px;
+      height: 40px;
+      margin: 0 16px;
     }
-
+  
     .toolbar #twitter-logo:hover,
     .toolbar #youtube-logo:hover {
-        opacity: 0.8;
+      opacity: 0.8;
     }
-
+  
     .content-menu {
-        display: flex;
-        margin: 0 auto 32px;
-        padding: 0 16px;
-        max-width: 960px;
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      margin: 0 auto 32px;
+      padding: 0 16px;
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     .content {
-        display: flex;
-        margin: auto;
-        padding: 0 16px;
-        max-width: 1500px;
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      margin: 12px auto 32px;
+      padding: 0 16px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
+    .subcontent {
+      display: flex;
+      margin: 12px auto;
+      padding: 0px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
     svg.material-icons {
-        height: 24px;
-        width: auto;
+      height: 24px;
+      width: auto;
     }
-
+  
     svg.material-icons:not(:last-child) {
-        margin-right: 8px;
+      margin-right: 8px;
     }
-
+  
     .card svg.material-icons path {
-        fill: #888;
+      fill: #888;
     }
-
+  
     .card-container {
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: center; */
-        margin: auto;
+        justify-content: center;
+        margin-top: 16px;
     }
-
+  
     .card {
         all: unset;
         border-radius: 4px;
@@ -117,366 +126,498 @@
         transition: all 0.2s ease-in-out;
         line-height: 24px;
     }
-
-    .card-container .card:not(:last-child) {
-        margin-right: 0;
+  
+    /* .card-container .card:not(:last-child) {
+      margin-right: 0;
     }
-
+  
+    .card-container .switch:not(:last-child) {
+      margin-right: 0;
+    } */
+  
     .card.card-small {
-        height: 16px;
-        width: 190px;
-        border-radius: 8px;
+      height: 16px;
+      width: 190px;
+      border-radius: 8px;
     }
-
-    .card.card-small:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
+  
     .card.card-medium {
         height: auto;
         width: 80%;
         border-radius: 8px;
         padding: 20px;
     }
-
+  
     .card.card-medium:hover {
         transform: translateY(-3px);
         box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
     .card.card-large {
-        max-height: 1500px;
-        width: 85%;
-        border-radius: 8px;
-        margin: 8px 8px;
-        padding: 8px 20px;
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      margin: 8px 8px;
+      padding: 8px 20px;
     }
-
+  
     .card-container .card:not(.highlight-card) {
-        cursor: pointer;
+      cursor: pointer;
     }
-
+  
     .card-container .card:not(.highlight-card):hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
-    .card-container .card:not(.highlight-card):hover .material-icons path {
-        fill: rgb(105, 103, 103);
-    }
-
+  
+    /* .card-container .card:not(.highlight-card):hover .material-icons path {
+      fill: rgb(105, 103, 103);
+    } */
+  
     .card.highlight-card {
-        background-color: white;
-        color: #0a1e33;
-        font-weight: 600;
-        border: none;
-        width: auto;
-        min-width: 30%;
-        position: relative;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      border: none;
+      width: auto;
+      min-width: 30%;
+      position: relative;
     }
-
+  
     .card.card.highlight-card span {
-        margin-left: 60px;
+      margin-left: 60px;
     }
-
-    .profile-card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        max-width: 350px;
-        padding: 4px 0 0;
-        text-align: center;
-        border-radius: 0px;
-        border: 1px solid #eee;
+  
+    svg#rocket {
+      width: 80px;
+      position: absolute;
+      left: -10px;
+      top: -24px;
     }
-
-    .profile-card:hover {
-        transform: scale(1.05, 1.05)
+  
+    svg#rocket-smoke {
+      height: calc(100vh - 95px);
+      position: absolute;
+      top: 10px;
+      right: 180px;
+      z-index: -10;
     }
-
+  
     a,
     a:visited,
     a:hover {
-        color: #1976d2;
-        text-decoration: none;
+      color: #1976d2;
+      text-decoration: none;
     }
-
+  
     a:hover {
-        color: #125699;
+      color: #125699;
     }
-
-    .title {
-        color: grey;
-        font-size: 18px;
-    }
-
-    button {
-        border: none;
-        border-radius: 0px;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-    }
-
-    a {
-        text-decoration: none;
-        font-size: 22px;
-        padding: 10px;
-        color: black;
-    }
-
-    button.toggle-button {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    .toggle-button:before {
-        background-color: #1976d2;
-        color: white;
-    }
-
-    button.toggle-button-off {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    button.toggle-button-on {
-        font-size: 18px;
-        background-color: #1976d2;
-        color: white;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    button.topic-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    .topic-button:before {
-        background-color: #ccc;
-        color: black;
-    }
-
+  
     button.grade-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #1976d2;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      margin: 8px;
+      padding: 8px 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
     }
-
+  
     button.grade-button:hover {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
+    button.grade-button-gray {
+      font-size: 18px;
+      color: white;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    button.grade-button-gray:hover {
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    button.toggle-button {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    .toggle-button:before {
+      background-color: #1976d2;
+      color: white;
+    }
+  
+    button.toggle-button-off {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    button.toggle-button-on {
+      font-size: 18px;
+      background-color: #1976d2;
+      color: white;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    .terminal {
+      position: relative;
+      /* width: 100%; */
+      max-width: 625px;
+      border-radius: 6px;
+      padding-top: 45px;
+      margin-top: 8px;
+      overflow: hidden;
+      background-color: rgb(15, 15, 16);
+      color: #c2c3c4;
+    }
+  
+    .terminal::before {
+      content: "\2022 \2022 \2022";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: rgb(58, 58, 58);
+      color: #c2c3c4;
+      width: 100%;
+      line-height: 0;
+      padding: 14px 0;
+      font-size: 2rem;
+      text-indent: 4px;
+    }
+  
+    .terminal pre {
+      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+      color: white;
+      padding: 0 1rem 1rem;
+      margin: 0;
+      text-align: center;
+    }
+  
     .circle-link {
-        height: 40px;
-        width: 40px;
-        border-radius: 40px;
-        margin: 8px;
-        background-color: white;
-        border: 1px solid #eeeeee;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        transition: 1s ease-out;
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      margin: 8px;
+      background-color: white;
+      border: 1px solid #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: 1s ease-out;
     }
-
+  
     .circle-link:hover {
-        transform: translateY(-0.25rem);
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-0.25rem);
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     }
-
+  
     footer {
-        margin-top: 8px;
-        display: flex;
-        align-items: center;
-        line-height: 20px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      line-height: 20px;
     }
-
+  
     footer a {
-        display: flex;
-        align-items: center;
+      display: flex;
+      align-items: center;
     }
-
+  
     .github-star-badge {
-        color: #24292e;
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        padding: 3px 10px;
-        border: 1px solid rgba(27, 31, 35, .2);
-        border-radius: 3px;
-        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-        margin-left: 4px;
-        font-weight: 600;
+      color: #24292e;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      padding: 3px 10px;
+      border: 1px solid rgba(27, 31, 35, .2);
+      border-radius: 3px;
+      background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+      margin-left: 4px;
+      font-weight: 600;
     }
-
+  
     .github-star-badge:hover {
-        background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-        border-color: rgba(27, 31, 35, .35);
-        background-position: -.5em;
+      background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+      border-color: rgba(27, 31, 35, .35);
+      background-position: -.5em;
     }
-
+  
     .github-star-badge .material-icons {
-        height: 16px;
-        width: 16px;
-        margin-right: 4px;
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
     }
-
+  
     /* The switch - the box around the slider */
     .switch {
-        position: relative;
-        display: inline-block;
-        min-width: 60px;
-        max-width: 150px;
-        height: 34px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      max-width: 250px;
+      max-height: 75px;
+      transition: all 0.2s ease-in-out;
     }
-
+  
     /* Hide default HTML checkbox */
     .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
+      opacity: 0;
+      width: 0;
+      height: 0;
     }
-
-    input:checked+.toggle-button {
-        background-color: #1976d2;
-        color: white
+  
+    input:checked+.toggle-button-on {
+      background-color: #1976d2;
+      color: white
     }
-
-    input:hover+.toggle-button {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  
+    input:hover+.toggle-button-on {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
-    input:checked+.topic-button {
-        background-color: #ccc;
-        color: black;
+  
+    input:checked+.toggle-button-off {
+      background-color: #ccc;
+      color: black;
     }
-
-    input:hover+.topic-button {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  
+    input:hover+.toggle-button-off {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
     /* Responsive Styles */
     @media screen and (max-width: 767px) {
-
-        .card-container>*:not(.circle-link),
-        .terminal {
-            width: 100%;
-        }
-
-        .card:not(.highlight-card) {
-            /* height: 16px; */
-            margin: 8px 0;
-        }
-
-        .card.highlight-card span {
-            margin-left: 72px;
-        }
-
+  
+      .card-container>*:not(.circle-link),
+      .terminal {
+        /* width: 100%; */
+      }
+  
+      .card:not(.highlight-card) {
+        /* height: 16px; */
+        margin: 8px 0;
+      }
+  
+      .card.highlight-card span {
+        margin-left: 72px;
+      }
+  
     }
-</style>
+  </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main">
     <br />
+    <section style="width: 100%; align-items: left">
+        <div routerLink="/standards" routerLinkActive="active" class="card card-small" style="width: 300px; border: none; background-color: white">
+          <img src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
+        </div>
+    </section>
     <br />
-    <br />
-    <h2> Grade 3 Mathematics (Common Core) State Standards </h2>
-    <br />
-    <!-- <h3> In Grade 3 Math, instructional time should focus on the following four critical areas: </h3> -->
+    <h2 style="text-align: center; margin-bottom: 10px"> Grade 3 Mathematics (Common Core) Learning Standards </h2>
     <br />
     <div class="card-container">
-        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Operations and Algebraic Thinking </h4>
+                </div>
             </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Developing Understanding Of Multiplication & Division And Strategies For Multiplication & Division Within 100 </h4>
-                <br *ngIf="domain_state[1]" />
-                <p *ngIf="domain_state[1]" style="font-size: 15px"> Students develop an understanding of the meanings of multiplication and division of whole numbers through activities and problems involving equal-sized groups, arrays, and area models; multiplication is finding an unknown product, and division is finding an unknown factor in these situations. For equal-sized group situations, division can require finding the unknown number of groups or the unknown group size. Students use properties of operations to calculate products of whole numbers, using increasingly sophisticated strategies based on these properties to solve multiplication and division problems involving single-digit factors. By comparing a variety of solution strategies, students learn the relationship between multiplication and division. </p>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[1]" style="font-size: 15px">
+                    <li> <b> A : Represent and solve problems involving multiplication and division. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Interpret products of whole numbers, e.g., interpret 5 × 7 as the total number of objects in 5 groups of 7 objects each. </li>
+                            <li> <b> 2 </b> : Interpret whole-number quotients of whole numbers, e.g., interpret 56 ÷ 8 as the number of objects in each share when 56 objects are partitioned equally into 8 shares, or as a number of shares when 56 objects are partitioned into equal shares of 8 objects each. </li>
+                            <li> <b> 3 </b> : Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem. </li>
+                            <li> <b> 4 </b> : Determine the unknown whole number in a multiplication or division equation relating three whole numbers. </li>
+                        </ul>
+                    <li> <b> B : Understand properties of multiplication and the relationship between multiplication and division. </b> </li>
+                        <ul>
+                            <li> <b> 5 </b> : Apply properties of operations as strategies to multiply and divide. </li>
+                            <li> <b> 6 </b> : Understand division as an unknown-factor problem. </li>
+                        </ul>
+                    <li> <b> C : Multiply and divide within 100. </b> </li>
+                        <ul>
+                            <li> <b> 7 </b> : Fluently multiply and divide within 100, using strategies such as the relationship between multiplication and division (e.g., knowing that 8 × 5 = 40, one knows 40 ÷ 5 = 8) or properties of operations. By the end of Grade 3, know from memory all products of two one-digit numbers. </li>
+                        </ul>
+                    <li> <b> D : Solve problems involving the four operations, and identify and explain patterns in arithmetic. </b> </li>
+                        <ul>
+                            <li> <b> 8 </b> : Solve two-step word problems using the four operations. Represent these problems using equations with a letter standing for the unknown quantity. Assess the reasonableness of answers using mental computation and estimation strategies including rounding. </li>
+                            <li> <b> 9 </b> : Identify arithmetic patterns (including patterns in the addition table or multiplication table), and explain them using properties of operations. </li>
+                        </ul>
+                </ul>
             </div>
         </div>
-        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Number and Operations in Base Ten </h4>
+                </div>
             </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Developing Understanding Of Fractions, Especially Unit Fractions (fractions with numerator 1) </h4>
-                <br *ngIf="domain_state[2]" />
-                <p *ngIf="domain_state[2]" style="font-size: 15px"> Students develop an understanding of fractions, beginning with unit fractions. Students view fractions in general as being built out of unit fractions, and they use fractions along with visual fraction models to represent parts of a whole. Students understand that the size of a fractional part is relative to the size of the whole. For example, 1/2 of the paint in a small bucket could be less paint than 1/3 of the paint in a larger bucket, but 1/3 of a ribbon is longer than 1/5 of the same ribbon because when the ribbon is divided into 3 equal parts, the parts are longer than when the ribbon is divided into 5 equal parts. Students are able to use fractions to represent numbers equal to, less than, and greater than one. They solve problems that involve comparing fractions by using visual fraction models and strategies based on noticing equal numerators or denominators. </p>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[2]" style="font-size: 15px">
+                    <li> <b> A : Use place value understanding and properties of operations to perform multi-digit arithmetic. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Use place value understanding to round whole numbers to the nearest 10 or 100. </li>
+                            <li> <b> 2 </b> : Fluently add and subtract within 1000 using strategies and algorithms based on place value, properties of operations, and/or the relationship between addition and subtraction. </li>
+                            <li> <b> 3 </b> : Multiply one-digit whole numbers by multiples of 10 in the range 10-90 (e.g., 9 × 80, 5 × 60) using strategies based on place value and properties of operations. </li>
+                        </ul>
+                </ul>
             </div>
         </div>
-        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Number and Operations - Fractions </h4>
+                </div>
             </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Developing Understanding Of The Structure Of Rectangular Arrays & Of Area </h4>
-                <br *ngIf="domain_state[3]" />
-                <p *ngIf="domain_state[3]" style="font-size: 15px"> Students recognize area as an attribute of two-dimensional regions. They measure the area of a shape by finding the total number of same-size units of area required to cover the shape without gaps or overlaps, a square with sides of unit length being the standard unit for measuring area. Students understand that rectangular arrays can be decomposed into identical rows or into identical columns. By decomposing rectangles into rectangular arrays of squares, students connect area to multiplication, and justify using multiplication to determine the area of a rectangle. </p>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[3]" style="font-size: 15px">
+                    <li> <b> A : Develop understanding of fractions as numbers. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Understand a fraction 1/b as the quantity formed by 1 part when a whole is partitioned into b equal parts; understand a fraction a/b as the quantity formed by a parts of size 1/b. </li>
+                            <li> <b> 2 </b> : Understand a fraction as a number on the number line; represent fractions on a number line diagram. </li>
+                                <ul>
+                                    <li> <b> a </b> : Represent a fraction 1/b on a number line diagram by defining the interval from 0 to 1 as the whole and partitioning it into b equal parts. Recognize that each part has size 1/b and that the endpoint of the part based at 0 locates the number 1/b on the number line. </li>
+                                    <li> <b> b </b> : Represent a fraction a/b on a number line diagram by marking off a lengths 1/b from 0. Recognize that the resulting interval has size a/b and that its endpoint locates the number a/b on the number line. </li>
+                                </ul>
+                            <li> <b> 3 </b> : Explain equivalence of fractions in special cases, and compare fractions by reasoning about their size. </li>
+                                <ul>
+                                    <li> <b> a </b> : Understand two fractions as equivalent (equal) if they are the same size, or the same point on a number line. </li>
+                                    <li> <b> b </b> : Recognize and generate simple equivalent fractions, (e.g., 1/2 = 2/4, 4/6 = 2/3). Explain why the fractions are equivalent, e.g., by using a visual fraction model. </li>
+                                    <li> <b> c </b> : Express whole numbers as fractions, and recognize fractions that are equivalent to whole numbers. </li>
+                                    <li> <b> d </b> : Compare two fractions with the same numerator or the same denominator by reasoning about their size. Recognize that comparisons are valid only when the two fractions refer to the same whole. Record the results of comparisons with the symbols >, =, or <, and justify the conclusions, e.g., by using a visual fraction model. </li>
+                                </ul>
+                        </ul>
+                </ul>
             </div>
         </div>
-        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Measurement and Data </h4>
+                </div>
             </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Describing & Analyzing Two-Dimensional Shapes </h4>
-                <br *ngIf="domain_state[4]" />
-                <p *ngIf="domain_state[4]" style="font-size: 15px"> Students describe, analyze, and compare properties of two-dimensional shapes. They compare and classify shapes by their sides and angles, and connect these with definitions of shapes. Students also relate their fraction work to geometry by expressing the area of part of a shape as a unit fraction of the whole. </p>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[4]" style="font-size: 15px">
+                    <li> <b> A : Solve problems involving measurement and estimation of intervals of time, liquid volumes, and masses of objects. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Tell and write time to the nearest minute and measure time intervals in minutes. Solve word problems involving addition and subtraction of time intervals in minutes, e.g., by representing the problem on a number line diagram. </li>
+                            <li> <b> 2 </b> : Measure and estimate liquid volumes and masses of objects using standard units of grams (g), kilograms (kg), and liters (l). Add, subtract, multiply, or divide to solve one-step word problems involving masses or volumes that are given in the same units, e.g., by using drawings (such as a beaker with a measurement scale) to represent the problem. </li>
+                        </ul>
+                    <li> <b> B : Represent and interpret data. </b> </li>
+                        <ul>
+                            <li> <b> 3 </b> : Draw a scaled picture graph and a scaled bar graph to represent a data set with several categories. Solve one- and two-step "how many more" and "how many less" problems using information presented in scaled bar graphs. </li>
+                            <li> <b> 4 </b> : Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units-whole numbers, halves, or quarters. </li>
+                        </ul>
+                    <li> <b> C : Geometric measurement: understand concepts of area and relate area to multiplication and to addition. </b> </li>
+                        <ul>
+                            <li> <b> 5 </b> : Recognize area as an attribute of plane figures and understand concepts of area measurement. </li>
+                                <ul>
+                                    <li> <b> a </b> : A square with side length 1 unit, called "a unit square," is said to have "one square unit" of area, and can be used to measure area. </li>
+                                    <li> <b> b </b> : A plane figure which can be covered without gaps or overlaps by n unit squares is said to have an area of n square units. </li>
+                                </ul>
+                            <li> <b> 6 </b> : Measure areas by counting unit squares (square cm, square m, square in, square ft, and improvised units). </li>
+                            <li> <b> 7 </b> : Relate area to the operations of multiplication and addition. </li>
+                                <ul>
+                                    <li> <b> a </b> : Find the area of a rectangle with whole-number side lengths by tiling it, and show that the area is the same as would be found by multiplying the side lengths. </li>
+                                    <li> <b> b </b> : Multiply side lengths to find areas of rectangles with whole-number side lengths in the context of solving real world and mathematical problems, and represent whole-number products as rectangular areas in mathematical reasoning. </li>
+                                    <li> <b> c </b> : Use tiling to show in a concrete case that the area of a rectangle with whole-number side lengths a and b + c is the sum of a × b and a × c. Use area models to represent the distributive property in mathematical reasoning. </li>
+                                    <li> <b> d </b> : Recognize area as additive. Find areas of rectilinear figures by decomposing them into non-overlapping rectangles and adding the areas of the non-overlapping parts, applying this technique to solve real world problems. </li>
+                                </ul>
+                        </ul>
+                    <li> <b> D : Geometric measurement: recognize perimeter as an attribute of plane figures and distinguish between linear and area measures. </b> </li>
+                        <ul>
+                            <li> <b> 8 </b> : Solve real world and mathematical problems involving perimeters of polygons, including finding the perimeter given the side lengths, finding an unknown side length, and exhibiting rectangles with the same perimeter and different areas or with the same area and different perimeters. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(5)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[5]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[5]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Geometry </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[5]" style="font-size: 15px">
+                    <li> <b> A : Reason with shapes and their attributes. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Understand that shapes in different categories (e.g., rhombuses, rectangles, and others) may share attributes (e.g., having four sides), and that the shared attributes can define a larger category (e.g., quadrilaterals). Recognize rhombuses, rectangles, and squares as examples of quadrilaterals, and draw examples of quadrilaterals that do not belong to any of these subcategories. </li>
+                            <li> <b> 2 </b> : Partition shapes into parts with equal areas. Express the area of each part as a unit fraction of the whole. </li>
+                        </ul>
+                </ul>
             </div>
         </div>
     </div>

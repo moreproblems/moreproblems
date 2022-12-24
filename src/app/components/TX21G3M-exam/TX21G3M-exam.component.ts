@@ -1,4 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
+// import problemsData from "./assets/problems/TX21G3M/TX21G3M-problems.json";
 // import {NgPipesModule} from 'ngx-pipes';
 // import * as fs from 'fs';
 // import * as path from 'path';
@@ -49,7 +50,7 @@ export class TX21G3MExamComponent implements OnInit {
 
     exam_directions = 'Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.';
 
-    // exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
+    // exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
     exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {
         1: {
             "Number": 1,

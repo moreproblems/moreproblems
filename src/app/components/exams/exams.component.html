@@ -67,7 +67,7 @@
     display: flex;
     margin: 0 auto 32px;
     padding: 0 16px;
-    max-width: 90%;
+    width: 90%;
     flex-direction: column;
     align-items: center;
   }
@@ -76,7 +76,16 @@
     display: flex;
     margin: 12px auto 32px;
     padding: 0 16px;
-    max-width: 90%;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subcontent {
+    display: flex;
+    margin: 12px auto;
+    padding: 0px;
+    width: 95%;
     flex-direction: column;
     align-items: center;
   }
@@ -99,6 +108,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 16px;
+    width: 90%;
   }
 
   .card {
@@ -376,7 +386,7 @@
     align-items: center;
     width: auto;
     height: auto;
-    max-width: 175px;
+    max-width: 250px;
     max-height: 75px;
     transition: all 0.2s ease-in-out;
   }
@@ -421,7 +431,7 @@
     }
 
     .card:not(.highlight-card) {
-      height: 16px;
+      /* height: 16px; */
       margin: 8px 0;
     }
 
@@ -432,7 +442,15 @@
   }
 </style>
 
-<div class="content-menu" (window:resize)="width_change2()" role="menu">
+<div class="content-menu" (window:resize)="width_change2()" role="menu"  style="margin-bottom: 0px">
+  <br *ngIf="file_source != ''" />
+  <section *ngIf="file_source != ''" style="width: 100%; align-items: left">
+    <div (click)="file_source=''" class="card card-small" style="width: 300px; border: none; background-color: white">
+      <img src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+      <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other exams </a>
+    </div>
+  </section>
+  <!-- <br *ngIf="file_source != ''" /> -->
   <!-- PDF Viewer -->
   <div *ngIf="file_source != ''" class="card card-large" (window:resize)="width_change()"
     style="height: auto; border: 3px solid black; border-radius: 20px; display: block" [attr.max-width]="viewerWidth" [attr.max-height]="viewerHeight" #pdfViewer>
@@ -473,158 +491,159 @@
         style="min-height: 600px;" [attr.max-width]="viewerWidth" [attr.max-height]="viewerHeight"></pdf-viewer>
     </section>
   </div>
-  <!-- State Selector -->
-  <br />
-  <h2>Select your State</h2>
-  <br />
-  <input type="hidden" value="All United States" #state>
-  <div class="card-container">
-    <!-- <label class="switch">
-      <input type="checkbox" value="CA">
-      <button *ngIf="selected_state == 'CA'" (click)="select_state('CA')" class="toggle-button-on"
-        tabindex="0"><b>California</b> <br /> (CAASPP)</button>
-      <button *ngIf="selected_state != 'CA'" (click)="select_state('CA')" class="toggle-button-off"
-        tabindex="0"><b>California</b> <br /> (CAASPP)</button>
-    </label> -->
-    <!-- <label class="switch">
-      <input type="checkbox" value="CO">
-      <button *ngIf="selected_state == 'CO'" (click)="select_state('CO')" class="toggle-button-on"
-        tabindex="0"><b>Colorado</b> <br /> (CMAS)</button>
-      <button *ngIf="selected_state != 'CO'" (click)="select_state('CO')" class="toggle-button-off"
-        tabindex="0"><b>Colorado</b> <br /> (CMAS)</button>
-    </label> -->
-    <label class="switch">
-      <input type="checkbox" value="FL">
-      <button *ngIf="selected_state == 'FL'" (click)="select_state('FL')" class="toggle-button-on"
-        tabindex="0"><b>Florida</b> <br /> (FSA)</button>
-      <button *ngIf="selected_state != 'FL'" (click)="select_state('FL')" class="toggle-button-off"
-        tabindex="0"><b>Florida</b> <br /> (FSA)</button>
-    </label>
-    <!-- <label class="switch">
-      <input type="checkbox" value="GA">
-      <button *ngIf="selected_state == 'GA'" (click)="select_state('GA')" class="toggle-button-on"
-        tabindex="0"><b>Georgia</b> <br /> (GMAS)</button>
-      <button *ngIf="selected_state != 'GA'" (click)="select_state('GA')" class="toggle-button-off"
-        tabindex="0"><b>Georgia</b> <br /> (GMAS)</button>
-    </label> -->
-    <label class="switch">
-      <input type="checkbox" value="IL">
-      <button *ngIf="selected_state == 'IL'" (click)="select_state('IL')" class="toggle-button-on"
-        tabindex="0"><b>Illinois</b> <br /> (IAR)</button>
-      <button *ngIf="selected_state != 'IL'" (click)="select_state('IL')" class="toggle-button-off"
-        tabindex="0"><b>Illinois</b> <br /> (IAR)</button>
-    </label>
-    <!-- <label class="switch">
-      <input type="checkbox" value="IN">
-      <button *ngIf="selected_state == 'IN'" (click)="select_state('IN')" class="toggle-button-on"
-        tabindex="0"><b>Indiana</b> <br /> (ISTEP)</button>
-      <button *ngIf="selected_state != 'IN'" (click)="select_state('IN')" class="toggle-button-off"
-        tabindex="0"><b>Indiana</b> <br /> (ISTEP)</button>
-    </label> -->
-    <!-- <label class="switch">
-      <input type="checkbox" value="MD">
-      <button *ngIf="selected_state == 'MD'" (click)="select_state('MD')" class="toggle-button-on"
-        tabindex="0"><b>Maryland</b> <br /> (MCAP)</button>
-      <button *ngIf="selected_state != 'MD'" (click)="select_state('MD')" class="toggle-button-off"
-        tabindex="0"><b>Maryland</b> <br /> (MCAP)</button>
-    </label> -->
-    <!-- <label class="switch">
-      <input type="checkbox" value="MA">
-      <button *ngIf="selected_state == 'MA'" (click)="select_state('MA')" class="toggle-button-on"
-        tabindex="0"><b>Massachusetts</b> <br /> (MCAS)</button>
-      <button *ngIf="selected_state != 'MA'" (click)="select_state('MA')" class="toggle-button-off"
-        tabindex="0"><b>Massachusetts</b> <br /> (MCAS)</button>
-    </label> -->
-    <!-- <label class="switch">
-      <input type="checkbox" value="MI">
-      <button *ngIf="selected_state == 'MI'" (click)="select_state('MI')" class="toggle-button-on"
-        tabindex="0"><b>Michigan</b> <br /> (M-STEP)</button>
-      <button *ngIf="selected_state != 'MI'" (click)="select_state('MI')" class="toggle-button-off"
-        tabindex="0"><b>Michigan</b> <br /> (M-STEP)</button>
-    </label> -->
-    <!-- <label class="switch">
-      <input type="checkbox" value="MO">
-      <button *ngIf="selected_state == 'MO'" (click)="select_state('MO')" class="toggle-button-on"
-        tabindex="0"><b>Missouri</b> <br /> (MAP)</button>
-      <button *ngIf="selected_state != 'MO'" (click)="select_state('MO')" class="toggle-button-off"
-        tabindex="0"><b>Missouri</b> <br /> (MAP)</button>
-    </label> -->
-    <!-- <label class="switch">
-      <input type="checkbox" value="MN">
-      <button *ngIf="selected_state == 'MN'" (click)="select_state('MN')" class="toggle-button-on"
-        tabindex="0"><b>Minnesota</b> <br /> (MCA)</button>
-      <button *ngIf="selected_state != 'MN'" (click)="select_state('MN')" class="toggle-button-off"
-        tabindex="0"><b>Minnesota</b> <br /> (MCA)</button>
-    </label> -->
-    <!-- <label class="switch">
-      <input type="checkbox" value="NJ">
-      <button *ngIf="selected_state == 'NJ'" (click)="select_state('NJ')" class="toggle-button-on"
-        tabindex="0"><b>New Jersey</b> <br /> (NJSLA)</button>
-      <button *ngIf="selected_state != 'NJ'" (click)="select_state('NJ')" class="toggle-button-off"
-        tabindex="0"><b>New Jersey</b> <br /> (NJSLA)</button>
-    </label> -->
-    <label class="switch">
-      <input type="checkbox" value="NY">
-      <button *ngIf="selected_state == 'NY'" (click)="select_state('NY')" class="toggle-button-on" tabindex="0"><b>New
-          York</b> <br /> (NYSTP)</button>
-      <button *ngIf="selected_state != 'NY'" (click)="select_state('NY')" class="toggle-button-off" tabindex="0"><b>New
-          York</b> <br /> (NYSTP)</button>
-    </label>
-    <label class="switch">
-      <input type="checkbox" value="NC">
-      <button *ngIf="selected_state == 'NC'" (click)="select_state('NC')" class="toggle-button-on" tabindex="0"><b>North
-          Carolina</b> <br /> (EOG)</button>
-      <button *ngIf="selected_state != 'NC'" (click)="select_state('NC')" class="toggle-button-off"
-        tabindex="0"><b>North Carolina</b> <br /> (EOG)</button>
-    </label>
-    <!-- <label class="switch">
-      <input type="checkbox" value="OH">
-      <button *ngIf="selected_state == 'OH'" (click)="select_state('OH')" class="toggle-button-on"
-        tabindex="0"><b>Ohio</b> <br /> (OST)</button>
-      <button *ngIf="selected_state != 'OH'" (click)="select_state('OH')" class="toggle-button-off"
-        tabindex="0"><b>Ohio</b> <br /> (OST)</button>
-    </label> -->
-    <label class="switch">
-      <input type="checkbox" value="PA">
-      <button *ngIf="selected_state == 'PA'" (click)="select_state('PA')" class="toggle-button-on"
-        tabindex="0"><b>Pennsylvania</b> <br /> (PSSA)</button>
-      <button *ngIf="selected_state != 'PA'" (click)="select_state('PA')" class="toggle-button-off"
-        tabindex="0"><b>Pennsylvania</b> <br /> (PSSA)</button>
-    </label>
-    <!-- <label class="switch">
-      <input type="checkbox" value="TN">
-      <button *ngIf="selected_state == 'TN'" (click)="select_state('TN')" class="toggle-button-on"
-        tabindex="0"><b>Tennessee</b> <br /> (TCAP)</button>
-      <button *ngIf="selected_state != 'TN'" (click)="select_state('TN')" class="toggle-button-off"
-        tabindex="0"><b>Tennessee</b> <br /> (TCAP)</button>
-    </label> -->
-    <label class="switch">
-      <input type="checkbox" value="TX">
-      <button *ngIf="selected_state == 'TX'" (click)="select_state('TX')" class="toggle-button-on"
-        tabindex="0"><b>Texas</b> <br /> (STAAR)</button>
-      <button *ngIf="selected_state != 'TX'" (click)="select_state('TX')" class="toggle-button-off"
-        tabindex="0"><b>Texas</b> <br /> (STAAR)</button>
-    </label>
-    <!-- <label class="switch">
-      <input type="checkbox" value="VA">
-      <button *ngIf="selected_state == 'VA'" (click)="select_state('VA')" class="toggle-button-on"
-        tabindex="0"><b>Virginia</b> <br /> (SOL)</button>
-      <button *ngIf="selected_state != 'VA'" (click)="select_state('VA')" class="toggle-button-off"
-        tabindex="0"><b>Virginia</b> <br /> (SOL)</button>
-    </label> -->
-    <!-- <label class="switch">
-      <input type="checkbox" value="WA">
-      <button *ngIf="selected_state == 'WA'" (click)="select_state('WA')" class="toggle-button-on"
-        tabindex="0"><b>Washingtong</b> <br /> (WCAP)</button>
-      <button *ngIf="selected_state != 'WA'" (click)="select_state('WA')" class="toggle-button-off"
-        tabindex="0"><b>Washingtong</b> <br /> (WCAP)</button>
-    </label> -->
+  <div *ngIf="file_source == ''" class="content-menu"  style="margin-bottom: 0px">
+    <!-- State Selector -->
+    <br />
+    <h2> Select your State </h2>
+    <br />
+    <input type="hidden" value="All United States" #state>
+    <div class="card-container">
+      <!-- <label class="switch">
+        <input type="checkbox" value="CA">
+        <button *ngIf="selected_state == 'CA'" (click)="select_state('CA')" class="toggle-button-on"
+          tabindex="0"><b>California</b> <br /> (CAASPP)</button>
+        <button *ngIf="selected_state != 'CA'" (click)="select_state('CA')" class="toggle-button-off"
+          tabindex="0"><b>California</b> <br /> (CAASPP)</button>
+      </label> -->
+      <!-- <label class="switch">
+        <input type="checkbox" value="CO">
+        <button *ngIf="selected_state == 'CO'" (click)="select_state('CO')" class="toggle-button-on"
+          tabindex="0"><b>Colorado</b> <br /> (CMAS)</button>
+        <button *ngIf="selected_state != 'CO'" (click)="select_state('CO')" class="toggle-button-off"
+          tabindex="0"><b>Colorado</b> <br /> (CMAS)</button>
+      </label> -->
+      <label class="switch">
+        <input type="checkbox" value="FL">
+        <button *ngIf="selected_state == 'FL'" (click)="select_state('FL')" class="toggle-button-on"
+          tabindex="0"><b>Florida</b> <br /> (FSA)</button>
+        <button *ngIf="selected_state != 'FL'" (click)="select_state('FL')" class="toggle-button-off"
+          tabindex="0"><b>Florida</b> <br /> (FSA)</button>
+      </label>
+      <!-- <label class="switch">
+        <input type="checkbox" value="GA">
+        <button *ngIf="selected_state == 'GA'" (click)="select_state('GA')" class="toggle-button-on"
+          tabindex="0"><b>Georgia</b> <br /> (GMAS)</button>
+        <button *ngIf="selected_state != 'GA'" (click)="select_state('GA')" class="toggle-button-off"
+          tabindex="0"><b>Georgia</b> <br /> (GMAS)</button>
+      </label> -->
+      <label class="switch">
+        <input type="checkbox" value="IL">
+        <button *ngIf="selected_state == 'IL'" (click)="select_state('IL')" class="toggle-button-on"
+          tabindex="0"><b>Illinois</b> <br /> (IAR)</button>
+        <button *ngIf="selected_state != 'IL'" (click)="select_state('IL')" class="toggle-button-off"
+          tabindex="0"><b>Illinois</b> <br /> (IAR)</button>
+      </label>
+      <!-- <label class="switch">
+        <input type="checkbox" value="IN">
+        <button *ngIf="selected_state == 'IN'" (click)="select_state('IN')" class="toggle-button-on"
+          tabindex="0"><b>Indiana</b> <br /> (ISTEP)</button>
+        <button *ngIf="selected_state != 'IN'" (click)="select_state('IN')" class="toggle-button-off"
+          tabindex="0"><b>Indiana</b> <br /> (ISTEP)</button>
+      </label> -->
+      <!-- <label class="switch">
+        <input type="checkbox" value="MD">
+        <button *ngIf="selected_state == 'MD'" (click)="select_state('MD')" class="toggle-button-on"
+          tabindex="0"><b>Maryland</b> <br /> (MCAP)</button>
+        <button *ngIf="selected_state != 'MD'" (click)="select_state('MD')" class="toggle-button-off"
+          tabindex="0"><b>Maryland</b> <br /> (MCAP)</button>
+      </label> -->
+      <!-- <label class="switch">
+        <input type="checkbox" value="MA">
+        <button *ngIf="selected_state == 'MA'" (click)="select_state('MA')" class="toggle-button-on"
+          tabindex="0"><b>Massachusetts</b> <br /> (MCAS)</button>
+        <button *ngIf="selected_state != 'MA'" (click)="select_state('MA')" class="toggle-button-off"
+          tabindex="0"><b>Massachusetts</b> <br /> (MCAS)</button>
+      </label> -->
+      <!-- <label class="switch">
+        <input type="checkbox" value="MI">
+        <button *ngIf="selected_state == 'MI'" (click)="select_state('MI')" class="toggle-button-on"
+          tabindex="0"><b>Michigan</b> <br /> (M-STEP)</button>
+        <button *ngIf="selected_state != 'MI'" (click)="select_state('MI')" class="toggle-button-off"
+          tabindex="0"><b>Michigan</b> <br /> (M-STEP)</button>
+      </label> -->
+      <!-- <label class="switch">
+        <input type="checkbox" value="MO">
+        <button *ngIf="selected_state == 'MO'" (click)="select_state('MO')" class="toggle-button-on"
+          tabindex="0"><b>Missouri</b> <br /> (MAP)</button>
+        <button *ngIf="selected_state != 'MO'" (click)="select_state('MO')" class="toggle-button-off"
+          tabindex="0"><b>Missouri</b> <br /> (MAP)</button>
+      </label> -->
+      <!-- <label class="switch">
+        <input type="checkbox" value="MN">
+        <button *ngIf="selected_state == 'MN'" (click)="select_state('MN')" class="toggle-button-on"
+          tabindex="0"><b>Minnesota</b> <br /> (MCA)</button>
+        <button *ngIf="selected_state != 'MN'" (click)="select_state('MN')" class="toggle-button-off"
+          tabindex="0"><b>Minnesota</b> <br /> (MCA)</button>
+      </label> -->
+      <!-- <label class="switch">
+        <input type="checkbox" value="NJ">
+        <button *ngIf="selected_state == 'NJ'" (click)="select_state('NJ')" class="toggle-button-on"
+          tabindex="0"><b>New Jersey</b> <br /> (NJSLA)</button>
+        <button *ngIf="selected_state != 'NJ'" (click)="select_state('NJ')" class="toggle-button-off"
+          tabindex="0"><b>New Jersey</b> <br /> (NJSLA)</button>
+      </label> -->
+      <label class="switch">
+        <input type="checkbox" value="NY">
+        <button *ngIf="selected_state == 'NY'" (click)="select_state('NY')" class="toggle-button-on" tabindex="0"><b>New
+            York</b> <br /> (NYSTP)</button>
+        <button *ngIf="selected_state != 'NY'" (click)="select_state('NY')" class="toggle-button-off" tabindex="0"><b>New
+            York</b> <br /> (NYSTP)</button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="NC">
+        <button *ngIf="selected_state == 'NC'" (click)="select_state('NC')" class="toggle-button-on" tabindex="0"><b>North
+            Carolina</b> <br /> (EOG)</button>
+        <button *ngIf="selected_state != 'NC'" (click)="select_state('NC')" class="toggle-button-off"
+          tabindex="0"><b>North Carolina</b> <br /> (EOG)</button>
+      </label>
+      <!-- <label class="switch">
+        <input type="checkbox" value="OH">
+        <button *ngIf="selected_state == 'OH'" (click)="select_state('OH')" class="toggle-button-on"
+          tabindex="0"><b>Ohio</b> <br /> (OST)</button>
+        <button *ngIf="selected_state != 'OH'" (click)="select_state('OH')" class="toggle-button-off"
+          tabindex="0"><b>Ohio</b> <br /> (OST)</button>
+      </label> -->
+      <label class="switch">
+        <input type="checkbox" value="PA">
+        <button *ngIf="selected_state == 'PA'" (click)="select_state('PA')" class="toggle-button-on"
+          tabindex="0"><b>Pennsylvania</b> <br /> (PSSA)</button>
+        <button *ngIf="selected_state != 'PA'" (click)="select_state('PA')" class="toggle-button-off"
+          tabindex="0"><b>Pennsylvania</b> <br /> (PSSA)</button>
+      </label>
+      <!-- <label class="switch">
+        <input type="checkbox" value="TN">
+        <button *ngIf="selected_state == 'TN'" (click)="select_state('TN')" class="toggle-button-on"
+          tabindex="0"><b>Tennessee</b> <br /> (TCAP)</button>
+        <button *ngIf="selected_state != 'TN'" (click)="select_state('TN')" class="toggle-button-off"
+          tabindex="0"><b>Tennessee</b> <br /> (TCAP)</button>
+      </label> -->
+      <label class="switch">
+        <input type="checkbox" value="TX">
+        <button *ngIf="selected_state == 'TX'" (click)="select_state('TX')" class="toggle-button-on"
+          tabindex="0"><b>Texas</b> <br /> (STAAR)</button>
+        <button *ngIf="selected_state != 'TX'" (click)="select_state('TX')" class="toggle-button-off"
+          tabindex="0"><b>Texas</b> <br /> (STAAR)</button>
+      </label>
+      <!-- <label class="switch">
+        <input type="checkbox" value="VA">
+        <button *ngIf="selected_state == 'VA'" (click)="select_state('VA')" class="toggle-button-on"
+          tabindex="0"><b>Virginia</b> <br /> (SOL)</button>
+        <button *ngIf="selected_state != 'VA'" (click)="select_state('VA')" class="toggle-button-off"
+          tabindex="0"><b>Virginia</b> <br /> (SOL)</button>
+      </label> -->
+      <!-- <label class="switch">
+        <input type="checkbox" value="WA">
+        <button *ngIf="selected_state == 'WA'" (click)="select_state('WA')" class="toggle-button-on"
+          tabindex="0"><b>Washingtong</b> <br /> (WCAP)</button>
+        <button *ngIf="selected_state != 'WA'" (click)="select_state('WA')" class="toggle-button-off"
+          tabindex="0"><b>Washingtong</b> <br /> (WCAP)</button>
+      </label> -->
+    </div>
+    <!-- <br /> -->
+    <br #title />
   </div>
-  <!-- <br /> -->
-  <br #title />
-  <h1 *ngIf="state.value != 'All United States'" style="margin: 0">{{state.value}} Assessments</h1>
 </div>
-<div class="content" role="main" [ngSwitch]="selected_state">
+<div *ngIf="file_source == ''" class="content" role="main" [ngSwitch]="selected_state">
   <!-- California CAASPP -->
   <div *ngSwitchCase="'CA'" class="content">
     <h2>Assessments for this state are coming soon. Stay tuned!</h2>
@@ -701,8 +720,8 @@
     </div>
     <br />
     <!-- Exam Selector -->
-    <div class="content" role="main" [ngSwitch]="selected_grade">
-      <div *ngSwitchCase="'G3'" class="content">
+    <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+      <div *ngSwitchCase="'G3'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade3 />
         <h3>Grade 3</h3>
@@ -720,7 +739,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G4'" class="content">
+      <div *ngSwitchCase="'G4'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade4 />
         <h3>Grade 4</h3>
@@ -742,7 +761,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G5'" class="content">
+      <div *ngSwitchCase="'G5'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade5 />
         <h3>Grade 5</h3>
@@ -768,7 +787,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G6'" class="content">
+      <div *ngSwitchCase="'G6'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade6 />
         <h3>Grade 6</h3>
@@ -790,7 +809,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G7'" class="content">
+      <div *ngSwitchCase="'G7'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade7 />
         <h3>Grade 7</h3>
@@ -812,7 +831,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G8'" class="content">
+      <div *ngSwitchCase="'G8'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade8 />
         <h3>Grade 8</h3>
@@ -838,7 +857,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G9'" class="content">
+      <div *ngSwitchCase="'G9'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade9 />
         <h3>Grade 9</h3>
@@ -856,7 +875,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G10'" class="content">
+      <div *ngSwitchCase="'G10'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade10 />
         <h3>Grade 10</h3>
@@ -938,8 +957,8 @@
     </div>
     <br />
     <!-- Exam Selector -->
-    <div class="content" role="main" [ngSwitch]="selected_grade">
-      <div *ngSwitchCase="'G3'" class="content">
+    <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+      <div *ngSwitchCase="'G3'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade3 />
         <h3>Grade 3</h3>
@@ -957,7 +976,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G4'" class="content">
+      <div *ngSwitchCase="'G4'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade4 />
         <h3>Grade 4</h3>
@@ -975,7 +994,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G5'" class="content">
+      <div *ngSwitchCase="'G5'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade5 />
         <h3>Grade 5</h3>
@@ -993,7 +1012,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G6'" class="content">
+      <div *ngSwitchCase="'G6'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade6 />
         <h3>Grade 6</h3>
@@ -1011,7 +1030,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G7'" class="content">
+      <div *ngSwitchCase="'G7'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade7 />
         <h3>Grade 7</h3>
@@ -1029,7 +1048,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G8'" class="content">
+      <div *ngSwitchCase="'G8'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade8 />
         <h3>Grade 8</h3>
@@ -1113,8 +1132,8 @@
     </div>
     <br />
     <!-- Exam Selector -->
-    <div class="content" role="main" [ngSwitch]="selected_grade">
-      <div *ngSwitchCase="'G3'" class="content">
+    <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+      <div *ngSwitchCase="'G3'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade3 />
         <h3>Grade 3 Math</h3>
@@ -1186,7 +1205,7 @@
           </button>
         </div>
       </div>
-      <div *ngSwitchCase="'G4'" class="content">
+      <div *ngSwitchCase="'G4'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade4 />
         <h3>Grade 4 Math</h3>
@@ -1293,7 +1312,7 @@
           </button>
         </div>
       </div>
-      <div *ngSwitchCase="'G5'" class="content">
+      <div *ngSwitchCase="'G5'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade5 />
         <h3>Grade 5 Math</h3>
@@ -1365,7 +1384,7 @@
           </button>
         </div>
       </div>
-      <div *ngSwitchCase="'G6'" class="content">
+      <div *ngSwitchCase="'G6'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade6 />
         <h3>Grade 6 Math</h3>
@@ -1437,7 +1456,7 @@
           </button>
         </div>
       </div>
-      <div *ngSwitchCase="'G7'" class="content">
+      <div *ngSwitchCase="'G7'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade7 />
         <h3>Grade 7 Math</h3>
@@ -1509,7 +1528,7 @@
           </button>
         </div>
       </div>
-      <div *ngSwitchCase="'G8'" class="content">
+      <div *ngSwitchCase="'G8'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade8 />
         <h3>Grade 8 Math</h3>
@@ -1670,8 +1689,8 @@
     </div>
     <br />
     <!-- Exam Selector -->
-    <div class="content" role="main" [ngSwitch]="selected_grade">
-      <div *ngSwitchCase="'G3'" class="content">
+    <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+      <div *ngSwitchCase="'G3'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade3 />
         <h3>Grade 3</h3>
@@ -1689,7 +1708,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G4'" class="content">
+      <div *ngSwitchCase="'G4'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade4 />
         <h3>Grade 4</h3>
@@ -1707,7 +1726,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G5'" class="content">
+      <div *ngSwitchCase="'G5'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade5 />
         <h3>Grade 5</h3>
@@ -1729,7 +1748,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G6'" class="content">
+      <div *ngSwitchCase="'G6'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade6 />
         <h3>Grade 6</h3>
@@ -1747,7 +1766,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G7'" class="content">
+      <div *ngSwitchCase="'G7'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade7 />
         <h3>Grade 7</h3>
@@ -1765,7 +1784,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G8'" class="content">
+      <div *ngSwitchCase="'G8'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade8 />
         <h3>Grade 8</h3>
@@ -1852,8 +1871,8 @@
     </div>
     <br />
     <!-- Exam Selector -->
-    <div class="content" role="main" [ngSwitch]="selected_grade">
-      <div *ngSwitchCase="'G3'" class="content">
+    <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+      <div *ngSwitchCase="'G3'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade3 />
         <h3>Grade 3 Math</h3>
@@ -1918,7 +1937,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G4'" class="content">
+      <div *ngSwitchCase="'G4'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade4 />
         <h3>Grade 4 Math</h3>
@@ -2014,7 +2033,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G5'" class="content">
+      <div *ngSwitchCase="'G5'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade5 />
         <h3>Grade 5 Math</h3>
@@ -2078,7 +2097,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G6'" class="content">
+      <div *ngSwitchCase="'G6'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade6 />
         <h3>Grade 6 Math</h3>
@@ -2143,7 +2162,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G7'" class="content">
+      <div *ngSwitchCase="'G7'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade7 />
         <h3>Grade 7 Math</h3>
@@ -2208,7 +2227,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G8'" class="content">
+      <div *ngSwitchCase="'G8'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade8 />
         <h3>Grade 8 Math</h3>
@@ -2358,8 +2377,8 @@
     </div>
     <br />
     <!-- Exam Selector -->
-    <div class="content" role="main" [ngSwitch]="selected_grade">
-      <div *ngSwitchCase="'G3'" class="content">
+    <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+      <div *ngSwitchCase="'G3'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade3 />
         <h3>Grade 3 Math</h3>
@@ -2415,7 +2434,7 @@
           </button>
         </div>
       </div>
-      <div *ngSwitchCase="'G4'" class="content">
+      <div *ngSwitchCase="'G4'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade4 />
         <h3>Grade 4 Math</h3>
@@ -2471,7 +2490,7 @@
           </button>
         </div>
       </div>
-      <div *ngSwitchCase="'G5'" class="content">
+      <div *ngSwitchCase="'G5'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade5 />
         <h3>Grade 5 Math</h3>
@@ -2550,7 +2569,7 @@
           </button>
         </div>
       </div>
-      <div *ngSwitchCase="'G6'" class="content">
+      <div *ngSwitchCase="'G6'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade6 />
         <h3>Grade 6 Math</h3>
@@ -2606,7 +2625,7 @@
           </button>
         </div>
       </div>
-      <div *ngSwitchCase="'G7'" class="content">
+      <div *ngSwitchCase="'G7'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade7 />
         <h3>Grade 7 Math</h3>
@@ -2662,7 +2681,7 @@
           </button>
         </div>
       </div>
-      <div *ngSwitchCase="'G8'" class="content">
+      <div *ngSwitchCase="'G8'" class="subcontent">
         <h2>Select your Exam</h2>
         <br #grade8 />
         <h3>Grade 8 Math</h3>

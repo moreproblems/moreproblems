@@ -22,7 +22,8 @@ export class G5MStandardsComponent implements OnInit {
   domain_state: {[key: number]: boolean} = {
     1: false,
     2: false,
-    3: false
+    3: false,
+    4: false
   }
 
   constructor() { }

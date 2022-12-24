@@ -1,106 +1,115 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
+  
     :host {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: 14px;
-        color: #333;
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-
+  
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        margin: 8px 0;
+      margin: 8px 0;
     }
-
+  
     p {
-        margin: 0;
+      margin: 0;
     }
-
+  
     .spacer {
-        flex: 1;
+      flex: 1;
     }
-
+  
     .toolbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 85px;
-        display: flex;
-        align-items: center;
-        background-color: #0a1e33;
-        color: white;
-        font-weight: 600;
-        padding: 5px 10px 2px 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      padding: 5px 10px 2px 20px;
     }
-
+  
     .toolbar img {
-        /* margin: 0 16px; */
-        position: absolute;
-        left: -10px;
-        top: -18px;
+      /* margin: 0 16px; */
+      position: absolute;
+      left: -10px;
+      top: -18px;
     }
-
+  
     .toolbar #twitter-logo {
-        height: 40px;
-        margin: 0 8px;
+      height: 40px;
+      margin: 0 8px;
     }
-
+  
     .toolbar #youtube-logo {
-        height: 40px;
-        margin: 0 16px;
+      height: 40px;
+      margin: 0 16px;
     }
-
+  
     .toolbar #twitter-logo:hover,
     .toolbar #youtube-logo:hover {
-        opacity: 0.8;
+      opacity: 0.8;
     }
-
+  
     .content-menu {
-        display: flex;
-        margin: 0 auto 32px;
-        padding: 0 16px;
-        max-width: 960px;
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      margin: 0 auto 32px;
+      padding: 0 16px;
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     .content {
-        display: flex;
-        margin: auto;
-        padding: 0 16px;
-        max-width: 1500px;
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      margin: 12px auto 32px;
+      padding: 0 16px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
+    .subcontent {
+      display: flex;
+      margin: 12px auto;
+      padding: 0px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
     svg.material-icons {
-        height: 24px;
-        width: auto;
+      height: 24px;
+      width: auto;
     }
-
+  
     svg.material-icons:not(:last-child) {
-        margin-right: 8px;
+      margin-right: 8px;
     }
-
+  
     .card svg.material-icons path {
-        fill: #888;
+      fill: #888;
     }
-
+  
     .card-container {
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: center; */
-        margin: auto;
+        justify-content: center;
+        margin-top: 16px;
     }
-
+  
     .card {
         all: unset;
         border-radius: 4px;
@@ -117,357 +126,492 @@
         transition: all 0.2s ease-in-out;
         line-height: 24px;
     }
-
-    .card-container .card:not(:last-child) {
-        margin-right: 0;
+  
+    /* .card-container .card:not(:last-child) {
+      margin-right: 0;
     }
-
+  
+    .card-container .switch:not(:last-child) {
+      margin-right: 0;
+    } */
+  
     .card.card-small {
-        height: 16px;
-        width: 190px;
-        border-radius: 8px;
+      height: 16px;
+      width: 190px;
+      border-radius: 8px;
     }
-
-    .card.card-small:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
+  
     .card.card-medium {
         height: auto;
         width: 80%;
         border-radius: 8px;
         padding: 20px;
     }
-
+  
     .card.card-medium:hover {
         transform: translateY(-3px);
         box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
     .card.card-large {
-        max-height: 1500px;
-        width: 85%;
-        border-radius: 8px;
-        margin: 8px 8px;
-        padding: 8px 20px;
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      margin: 8px 8px;
+      padding: 8px 20px;
     }
-
+  
     .card-container .card:not(.highlight-card) {
-        cursor: pointer;
+      cursor: pointer;
     }
-
+  
     .card-container .card:not(.highlight-card):hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
-    .card-container .card:not(.highlight-card):hover .material-icons path {
-        fill: rgb(105, 103, 103);
-    }
-
+  
+    /* .card-container .card:not(.highlight-card):hover .material-icons path {
+      fill: rgb(105, 103, 103);
+    } */
+  
     .card.highlight-card {
-        background-color: white;
-        color: #0a1e33;
-        font-weight: 600;
-        border: none;
-        width: auto;
-        min-width: 30%;
-        position: relative;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      border: none;
+      width: auto;
+      min-width: 30%;
+      position: relative;
     }
-
+  
     .card.card.highlight-card span {
-        margin-left: 60px;
+      margin-left: 60px;
     }
-
-    .profile-card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        max-width: 350px;
-        padding: 4px 0 0;
-        text-align: center;
-        border-radius: 0px;
-        border: 1px solid #eee;
+  
+    svg#rocket {
+      width: 80px;
+      position: absolute;
+      left: -10px;
+      top: -24px;
     }
-
-    .profile-card:hover {
-        transform: scale(1.05, 1.05)
+  
+    svg#rocket-smoke {
+      height: calc(100vh - 95px);
+      position: absolute;
+      top: 10px;
+      right: 180px;
+      z-index: -10;
     }
-
+  
     a,
     a:visited,
     a:hover {
-        color: #1976d2;
-        text-decoration: none;
+      color: #1976d2;
+      text-decoration: none;
     }
-
+  
     a:hover {
-        color: #125699;
+      color: #125699;
     }
-
-    .title {
-        color: grey;
-        font-size: 18px;
-    }
-
-    button {
-        border: none;
-        border-radius: 0px;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-    }
-
-    a {
-        text-decoration: none;
-        font-size: 22px;
-        padding: 10px;
-        color: black;
-    }
-
-    button.toggle-button {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    .toggle-button:before {
-        background-color: #1976d2;
-        color: white;
-    }
-
-    button.toggle-button-off {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    button.toggle-button-on {
-        font-size: 18px;
-        background-color: #1976d2;
-        color: white;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    button.topic-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    .topic-button:before {
-        background-color: #ccc;
-        color: black;
-    }
-
+  
     button.grade-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #1976d2;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      margin: 8px;
+      padding: 8px 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
     }
-
+  
     button.grade-button:hover {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
+    button.grade-button-gray {
+      font-size: 18px;
+      color: white;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    button.grade-button-gray:hover {
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    button.toggle-button {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    .toggle-button:before {
+      background-color: #1976d2;
+      color: white;
+    }
+  
+    button.toggle-button-off {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    button.toggle-button-on {
+      font-size: 18px;
+      background-color: #1976d2;
+      color: white;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    .terminal {
+      position: relative;
+      /* width: 100%; */
+      max-width: 625px;
+      border-radius: 6px;
+      padding-top: 45px;
+      margin-top: 8px;
+      overflow: hidden;
+      background-color: rgb(15, 15, 16);
+      color: #c2c3c4;
+    }
+  
+    .terminal::before {
+      content: "\2022 \2022 \2022";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: rgb(58, 58, 58);
+      color: #c2c3c4;
+      width: 100%;
+      line-height: 0;
+      padding: 14px 0;
+      font-size: 2rem;
+      text-indent: 4px;
+    }
+  
+    .terminal pre {
+      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+      color: white;
+      padding: 0 1rem 1rem;
+      margin: 0;
+      text-align: center;
+    }
+  
     .circle-link {
-        height: 40px;
-        width: 40px;
-        border-radius: 40px;
-        margin: 8px;
-        background-color: white;
-        border: 1px solid #eeeeee;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        transition: 1s ease-out;
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      margin: 8px;
+      background-color: white;
+      border: 1px solid #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: 1s ease-out;
     }
-
+  
     .circle-link:hover {
-        transform: translateY(-0.25rem);
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-0.25rem);
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     }
-
+  
     footer {
-        margin-top: 8px;
-        display: flex;
-        align-items: center;
-        line-height: 20px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      line-height: 20px;
     }
-
+  
     footer a {
-        display: flex;
-        align-items: center;
+      display: flex;
+      align-items: center;
     }
-
+  
     .github-star-badge {
-        color: #24292e;
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        padding: 3px 10px;
-        border: 1px solid rgba(27, 31, 35, .2);
-        border-radius: 3px;
-        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-        margin-left: 4px;
-        font-weight: 600;
+      color: #24292e;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      padding: 3px 10px;
+      border: 1px solid rgba(27, 31, 35, .2);
+      border-radius: 3px;
+      background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+      margin-left: 4px;
+      font-weight: 600;
     }
-
+  
     .github-star-badge:hover {
-        background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-        border-color: rgba(27, 31, 35, .35);
-        background-position: -.5em;
+      background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+      border-color: rgba(27, 31, 35, .35);
+      background-position: -.5em;
     }
-
+  
     .github-star-badge .material-icons {
-        height: 16px;
-        width: 16px;
-        margin-right: 4px;
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
     }
-
+  
     /* The switch - the box around the slider */
     .switch {
-        position: relative;
-        display: inline-block;
-        min-width: 60px;
-        max-width: 150px;
-        height: 34px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      max-width: 250px;
+      max-height: 75px;
+      transition: all 0.2s ease-in-out;
     }
-
+  
     /* Hide default HTML checkbox */
     .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
+      opacity: 0;
+      width: 0;
+      height: 0;
     }
-
-    input:checked+.toggle-button {
-        background-color: #1976d2;
-        color: white
+  
+    input:checked+.toggle-button-on {
+      background-color: #1976d2;
+      color: white
     }
-
-    input:hover+.toggle-button {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  
+    input:hover+.toggle-button-on {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
-    input:checked+.topic-button {
-        background-color: #ccc;
-        color: black;
+  
+    input:checked+.toggle-button-off {
+      background-color: #ccc;
+      color: black;
     }
-
-    input:hover+.topic-button {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  
+    input:hover+.toggle-button-off {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
     /* Responsive Styles */
     @media screen and (max-width: 767px) {
-
-        .card-container>*:not(.circle-link),
-        .terminal {
-            width: 100%;
-        }
-
-        .card:not(.highlight-card) {
-            /* height: 16px; */
-            margin: 8px 0;
-        }
-
-        .card.highlight-card span {
-            margin-left: 72px;
-        }
-
+  
+      .card-container>*:not(.circle-link),
+      .terminal {
+        /* width: 100%; */
+      }
+  
+      .card:not(.highlight-card) {
+        /* height: 16px; */
+        margin: 8px 0;
+      }
+  
+      .card.highlight-card span {
+        margin-left: 72px;
+      }
+  
     }
-</style>
+  </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main">
     <br />
+    <section style="width: 100%; align-items: left">
+        <div routerLink="/standards" routerLinkActive="active" class="card card-small" style="width: 300px; border: none; background-color: white">
+          <img src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
+        </div>
+    </section>
     <br />
-    <br />
-    <h2> Grade 8 Mathematics (Common Core) State Standards </h2>
-    <br />
-    <!-- <h3> In Grade 3 Math, instructional time should focus on the following four critical areas: </h3> -->
+    <h2 style="text-align: center; margin-bottom: 10px"> Grade 8 Mathematics (Common Core) Learning Standards </h2>
     <br />
     <div class="card-container">
-        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> The Number System </h4>
+                </div>
             </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Formulating & reasoning About Expressions & Equations, Including Modeling An Association In Bivariate Data With A Linear Equation, And Solving Linear Equations & Systems Of Linear Equations </h4>
-                <br *ngIf="domain_state[1]" />
-                <p *ngIf="domain_state[1]" style="font-size: 15px"> Students use linear equations and systems of linear equations to represent, analyze, and solve a variety of problems. Students recognize equations for proportions (y/x = m or y = mx) as special linear equations (y = mx + b), understanding that the constant of proportionality (m) is the slope, and the graphs are lines through the origin. They understand that the slope (m) of a line is a constant rate of change, so that if the input or x-coordinate changes by an amount A, the output or y-coordinate changes by the amount m·A. Students also use a linear equation to describe the association between two quantities in bivariate data (such as arm span vs. height for students in a classroom). At this grade, fitting the model, and assessing its fit to the data are done informally. Interpreting the model in the context of the data requires students to express a relationship between the two quantities in question and to interpret components of the relationship (such as slope and y-intercept) in terms of the situation. </p>
-                <br *ngIf="domain_state[1]" />
-                <p *ngIf="domain_state[1]" style="font-size: 15px"> Students strategically choose and efficiently implement procedures to solve linear equations in one variable, understanding that when they use the properties of equality and the concept of logical equivalence, they maintain the solutions of the original equation. Students solve systems of two linear equations in two variables and relate the systems to pairs of lines in the plane; these intersect, are parallel, or are the same line. Students use linear equations, systems of linear equations, linear functions, and their understanding of slope of a line to analyze situations and solve problems. </p>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
-            </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Grasping The Concept Of A Function & Using Functions To Describe Quantitative Relationships </h4>
-                <br *ngIf="domain_state[2]" />
-                <p *ngIf="domain_state[2]" style="font-size: 15px"> Students grasp the concept of a function as a rule that assigns to each input exactly one output. They understand that functions describe situations where one quantity determines another. They can translate among representations and partial representations of functions (noting that tabular and graphical representations may be partial representations), and they describe how aspects of the function are reflected in the different representations. </p>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[1]" style="font-size: 15px">
+                    <li> <b> A : Know that there are numbers that are not rational, and approximate them by rational numbers. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Know that numbers that are not rational are called irrational. Understand informally that every number has a decimal expansion; for rational numbers show that the decimal expansion repeats eventually, and convert a decimal expansion which repeats eventually into a rational number. </li>
+                            <li> <b> 2 </b> : Use rational approximations of irrational numbers to compare the size of irrational numbers, locate them approximately on a number line diagram, and estimate the value of expressions (e.g., π2). </li>
+                        </ul>
+                </ul>
             </div>
         </div>
-        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Expressions and Equations </h4>
+                </div>
             </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Analyzing Two- & Three-Dimensional Space & Figures Using Distance, Angle, Similarity, & Congruence, And Understanding & Applying The Pythagorean Theorem </h4>
-                <br *ngIf="domain_state[3]" />
-                <p *ngIf="domain_state[3]" style="font-size: 15px"> Students use ideas about distance and angles, how they behave under translations, rotations, reflections, and dilations, and ideas about congruence and similarity to describe and analyze two-dimensional figures and to solve problems. Students show that the sum of the angles in a triangle is the angle formed by a straight line, and that various configurations of lines give rise to similar triangles because of the angles created when a transversal cuts parallel lines. Students understand the statement of the Pythagorean Theorem and its converse, and can explain why the Pythagorean Theorem holds, for example, by decomposing a square in two different ways. They apply the Pythagorean Theorem to find distances between points on the coordinate plane, to find lengths, and to analyze polygons. Students complete their work on volume by solving problems involving cones, cylinders, and spheres. </p>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[2]" style="font-size: 15px">
+                    <li> <b> A : Work with radicals and integer exponents. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Know and apply the properties of integer exponents to generate equivalent numerical expressions. </li>
+                            <li> <b> 2 </b> : Use square root and cube root symbols to represent solutions to equations of the form x2 = p and x3 = p, where p is a positive rational number. Evaluate square roots of small perfect squares and cube roots of small perfect cubes. Know that the square root of 2 is irrational. </li>
+                            <li> <b> 3 </b> : Use numbers expressed in the form of a single digit times an integer power of 10 to estimate very large or very small quantities, and to express how many times as much one is than the other. </li>
+                            <li> <b> 4 </b> : Perform operations with numbers expressed in scientific notation, including problems where both decimal and scientific notation are used. Use scientific notation and choose units of appropriate size for measurements of very large or very small quantities (e.g., use millimeters per year for seafloor spreading). Interpret scientific notation that has been generated by technology. </li>
+                        </ul>
+                    <li> <b> B : Understand the connections between proportional relationships, lines, and linear equations. </b> </li>
+                        <ul>
+                            <li> <b> 5 </b> : Graph proportional relationships, interpreting the unit rate as the slope of the graph. Compare two different proportional relationships represented in different ways. </li>
+                            <li> <b> 6 </b> : Use similar triangles to explain why the slope m is the same between any two distinct points on a non-vertical line in the coordinate plane; derive the equation y = mx for a line through the origin and the equation y = mx + b for a line intercepting the vertical axis at b. </li>
+                        </ul>
+                    <li> <b> C : Analyze and solve linear equations and pairs of simultaneous linear equations. </b> </li>
+                        <ul>
+                            <li> <b> 7 </b> : Solve linear equations in one variable. </li>
+                                <ul>
+                                    <li> <b> a </b> : Give examples of linear equations in one variable with one solution, infinitely many solutions, or no solutions. Show which of these possibilities is the case by successively transforming the given equation into simpler forms, until an equivalent equation of the form x = a, a = a, or a = b results (where a and b are different numbers). </li>
+                                    <li> <b> b </b> : Solve linear equations with rational number coefficients, including equations whose solutions require expanding expressions using the distributive property and collecting like terms. </li>
+                                </ul>
+                            <li> <b> 8 </b> : Analyze and solve pairs of simultaneous linear equations. </li>
+                                <ul>
+                                    <li> <b> a </b> : Understand that solutions to a system of two linear equations in two variables correspond to points of intersection of their graphs, because points of intersection satisfy both equations simultaneously. </li>
+                                    <li> <b> b </b> : Solve systems of two linear equations in two variables algebraically, and estimate solutions by graphing the equations. Solve simple cases by inspection. </li>
+                                    <li> <b> c </b> : Solve real-world and mathematical problems leading to two linear equations in two variables. </li>
+                                </ul>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Functions </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[3]" style="font-size: 15px">
+                    <li> <b> A : Define, evaluate, and compare functions. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Understand that a function is a rule that assigns to each input exactly one output. The graph of a function is the set of ordered pairs consisting of an input and the corresponding output. </li>
+                            <li> <b> 2 </b> : Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions). </li>
+                            <li> <b> 3 </b> : Interpret the equation y = mx + b as defining a linear function, whose graph is a straight line; give examples of functions that are not linear. </li>
+                        </ul>
+                    <li> <b> B : Use functions to model relationships between quantities. </b> </li>
+                        <ul>
+                            <li> <b> 4 </b> : Construct a function to model a linear relationship between two quantities. Determine the rate of change and initial value of the function from a description of a relationship or from two (x, y) values, including reading these from a table or from a graph. Interpret the rate of change and initial value of a linear function in terms of the situation it models, and in terms of its graph or a table of values. </li>
+                            <li> <b> 5 </b> : Describe qualitatively the functional relationship between two quantities by analyzing a graph (e.g., where the function is increasing or decreasing, linear or nonlinear). Sketch a graph that exhibits the qualitative features of a function that has been described verbally. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Geometry </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[4]" style="font-size: 15px">
+                    <li> <b> A : Understand congruence and similarity using physical models, transparencies, or geometry software. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Verify experimentally the properties of rotations, reflections, and translations: </li>
+                                <ul>
+                                    <li> <b> a </b> : Lines are taken to lines, and line segments to line segments of the same length. </li>
+                                    <li> <b> b </b> : Angles are taken to angles of the same measure. </li>
+                                    <li> <b> c </b> : Parallel lines are taken to parallel lines. </li>
+                                </ul>
+                            <li> <b> 2 </b> : Understand that a two-dimensional figure is congruent to another if the second can be obtained from the first by a sequence of rotations, reflections, and translations; given two congruent figures, describe a sequence that exhibits the congruence between them. </li>
+                            <li> <b> 3 </b> : Describe the effect of dilations, translations, rotations, and reflections on two-dimensional figures using coordinates. </li>
+                            <li> <b> 4 </b> : Understand that a two-dimensional figure is similar to another if the second can be obtained from the first by a sequence of rotations, reflections, translations, and dilations; given two similar two-dimensional figures, describe a sequence that exhibits the similarity between them. </li>
+                            <li> <b> 5 </b> : Use informal arguments to establish facts about the angle sum and exterior angle of triangles, about the angles created when parallel lines are cut by a transversal, and the angle-angle criterion for similarity of triangles. </li>
+                        </ul>
+                    <li> <b> B : Understand and apply the Pythagorean Theorem. </b> </li>
+                        <ul>
+                            <li> <b> 6 </b> : Explain a proof of the Pythagorean Theorem and its converse. </li>
+                            <li> <b> 7 </b> : Apply the Pythagorean Theorem to determine unknown side lengths in right triangles in real-world and mathematical problems in two and three dimensions. </li>
+                            <li> <b> 8 </b> : Apply the Pythagorean Theorem to find the distance between two points in a coordinate system. </li>
+                        </ul>
+                    <li> <b> C : Solve real-world and mathematical problems involving volume of cylinders, cones, and spheres.</b> </li>
+                        <ul>
+                            <li> <b> 9 </b> : Know the formulas for the volumes of cones, cylinders, and spheres and use them to solve real-world and mathematical problems. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(5)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[5]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[5]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Statistics and Probability </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[5]" style="font-size: 15px">
+                    <li> <b> A : Investigate patterns of association in bivariate data. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Construct and interpret scatter plots for bivariate measurement data to investigate patterns of association between two quantities. Describe patterns such as clustering, outliers, positive or negative association, linear association, and nonlinear association. </li>
+                            <li> <b> 2 </b> : Know that straight lines are widely used to model relationships between two quantitative variables. For scatter plots that suggest a linear association, informally fit a straight line, and informally assess the model fit by judging the closeness of the data points to the line. </li>
+                            <li> <b> 3 </b> : Use the equation of a linear model to solve problems in the context of bivariate measurement data, interpreting the slope and intercept. </li>
+                            <li> <b> 4 </b> : Understand that patterns of association can also be seen in bivariate categorical data by displaying frequencies and relative frequencies in a two-way table. Construct and interpret a two-way table summarizing data on two categorical variables collected from the same subjects. Use relative frequencies calculated for rows or columns to describe possible association between the two variables. </li>
+                        </ul>
+                </ul>
             </div>
         </div>
     </div>

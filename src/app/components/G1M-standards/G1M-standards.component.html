@@ -1,106 +1,115 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
+  
     :host {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: 14px;
-        color: #333;
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-
+  
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        margin: 8px 0;
+      margin: 8px 0;
     }
-
+  
     p {
-        margin: 0;
+      margin: 0;
     }
-
+  
     .spacer {
-        flex: 1;
+      flex: 1;
     }
-
+  
     .toolbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 85px;
-        display: flex;
-        align-items: center;
-        background-color: #0a1e33;
-        color: white;
-        font-weight: 600;
-        padding: 5px 10px 2px 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      padding: 5px 10px 2px 20px;
     }
-
+  
     .toolbar img {
-        /* margin: 0 16px; */
-        position: absolute;
-        left: -10px;
-        top: -18px;
+      /* margin: 0 16px; */
+      position: absolute;
+      left: -10px;
+      top: -18px;
     }
-
+  
     .toolbar #twitter-logo {
-        height: 40px;
-        margin: 0 8px;
+      height: 40px;
+      margin: 0 8px;
     }
-
+  
     .toolbar #youtube-logo {
-        height: 40px;
-        margin: 0 16px;
+      height: 40px;
+      margin: 0 16px;
     }
-
+  
     .toolbar #twitter-logo:hover,
     .toolbar #youtube-logo:hover {
-        opacity: 0.8;
+      opacity: 0.8;
     }
-
+  
     .content-menu {
-        display: flex;
-        margin: 0 auto 32px;
-        padding: 0 16px;
-        max-width: 960px;
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      margin: 0 auto 32px;
+      padding: 0 16px;
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     .content {
-        display: flex;
-        margin: auto;
-        padding: 0 16px;
-        max-width: 1500px;
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      margin: 12px auto 32px;
+      padding: 0 16px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
+    .subcontent {
+      display: flex;
+      margin: 12px auto;
+      padding: 0px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
     svg.material-icons {
-        height: 24px;
-        width: auto;
+      height: 24px;
+      width: auto;
     }
-
+  
     svg.material-icons:not(:last-child) {
-        margin-right: 8px;
+      margin-right: 8px;
     }
-
+  
     .card svg.material-icons path {
-        fill: #888;
+      fill: #888;
     }
-
+  
     .card-container {
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: center; */
-        margin: auto;
+        justify-content: center;
+        margin-top: 16px;
     }
-
+  
     .card {
         all: unset;
         border-radius: 4px;
@@ -117,366 +126,464 @@
         transition: all 0.2s ease-in-out;
         line-height: 24px;
     }
-
-    .card-container .card:not(:last-child) {
-        margin-right: 0;
+  
+    /* .card-container .card:not(:last-child) {
+      margin-right: 0;
     }
-
+  
+    .card-container .switch:not(:last-child) {
+      margin-right: 0;
+    } */
+  
     .card.card-small {
-        height: 16px;
-        width: 190px;
-        border-radius: 8px;
+      height: 16px;
+      width: 190px;
+      border-radius: 8px;
     }
-
-    .card.card-small:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
+  
     .card.card-medium {
         height: auto;
         width: 80%;
         border-radius: 8px;
         padding: 20px;
     }
-
+  
     .card.card-medium:hover {
         transform: translateY(-3px);
         box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
     .card.card-large {
-        max-height: 1500px;
-        width: 85%;
-        border-radius: 8px;
-        margin: 8px 8px;
-        padding: 8px 20px;
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      margin: 8px 8px;
+      padding: 8px 20px;
     }
-
+  
     .card-container .card:not(.highlight-card) {
-        cursor: pointer;
+      cursor: pointer;
     }
-
+  
     .card-container .card:not(.highlight-card):hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
-    .card-container .card:not(.highlight-card):hover .material-icons path {
-        fill: rgb(105, 103, 103);
-    }
-
+  
+    /* .card-container .card:not(.highlight-card):hover .material-icons path {
+      fill: rgb(105, 103, 103);
+    } */
+  
     .card.highlight-card {
-        background-color: white;
-        color: #0a1e33;
-        font-weight: 600;
-        border: none;
-        width: auto;
-        min-width: 30%;
-        position: relative;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      border: none;
+      width: auto;
+      min-width: 30%;
+      position: relative;
     }
-
+  
     .card.card.highlight-card span {
-        margin-left: 60px;
+      margin-left: 60px;
     }
-
-    .profile-card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        max-width: 350px;
-        padding: 4px 0 0;
-        text-align: center;
-        border-radius: 0px;
-        border: 1px solid #eee;
+  
+    svg#rocket {
+      width: 80px;
+      position: absolute;
+      left: -10px;
+      top: -24px;
     }
-
-    .profile-card:hover {
-        transform: scale(1.05, 1.05)
+  
+    svg#rocket-smoke {
+      height: calc(100vh - 95px);
+      position: absolute;
+      top: 10px;
+      right: 180px;
+      z-index: -10;
     }
-
+  
     a,
     a:visited,
     a:hover {
-        color: #1976d2;
-        text-decoration: none;
+      color: #1976d2;
+      text-decoration: none;
     }
-
+  
     a:hover {
-        color: #125699;
+      color: #125699;
     }
-
-    .title {
-        color: grey;
-        font-size: 18px;
-    }
-
-    button {
-        border: none;
-        border-radius: 0px;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-    }
-
-    a {
-        text-decoration: none;
-        font-size: 22px;
-        padding: 10px;
-        color: black;
-    }
-
-    button.toggle-button {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    .toggle-button:before {
-        background-color: #1976d2;
-        color: white;
-    }
-
-    button.toggle-button-off {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    button.toggle-button-on {
-        font-size: 18px;
-        background-color: #1976d2;
-        color: white;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    button.topic-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    .topic-button:before {
-        background-color: #ccc;
-        color: black;
-    }
-
+  
     button.grade-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #1976d2;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      margin: 8px;
+      padding: 8px 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
     }
-
+  
     button.grade-button:hover {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
+    button.grade-button-gray {
+      font-size: 18px;
+      color: white;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    button.grade-button-gray:hover {
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    button.toggle-button {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    .toggle-button:before {
+      background-color: #1976d2;
+      color: white;
+    }
+  
+    button.toggle-button-off {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    button.toggle-button-on {
+      font-size: 18px;
+      background-color: #1976d2;
+      color: white;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    .terminal {
+      position: relative;
+      /* width: 100%; */
+      max-width: 625px;
+      border-radius: 6px;
+      padding-top: 45px;
+      margin-top: 8px;
+      overflow: hidden;
+      background-color: rgb(15, 15, 16);
+      color: #c2c3c4;
+    }
+  
+    .terminal::before {
+      content: "\2022 \2022 \2022";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: rgb(58, 58, 58);
+      color: #c2c3c4;
+      width: 100%;
+      line-height: 0;
+      padding: 14px 0;
+      font-size: 2rem;
+      text-indent: 4px;
+    }
+  
+    .terminal pre {
+      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+      color: white;
+      padding: 0 1rem 1rem;
+      margin: 0;
+      text-align: center;
+    }
+  
     .circle-link {
-        height: 40px;
-        width: 40px;
-        border-radius: 40px;
-        margin: 8px;
-        background-color: white;
-        border: 1px solid #eeeeee;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        transition: 1s ease-out;
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      margin: 8px;
+      background-color: white;
+      border: 1px solid #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: 1s ease-out;
     }
-
+  
     .circle-link:hover {
-        transform: translateY(-0.25rem);
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-0.25rem);
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     }
-
+  
     footer {
-        margin-top: 8px;
-        display: flex;
-        align-items: center;
-        line-height: 20px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      line-height: 20px;
     }
-
+  
     footer a {
-        display: flex;
-        align-items: center;
+      display: flex;
+      align-items: center;
     }
-
+  
     .github-star-badge {
-        color: #24292e;
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        padding: 3px 10px;
-        border: 1px solid rgba(27, 31, 35, .2);
-        border-radius: 3px;
-        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-        margin-left: 4px;
-        font-weight: 600;
+      color: #24292e;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      padding: 3px 10px;
+      border: 1px solid rgba(27, 31, 35, .2);
+      border-radius: 3px;
+      background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+      margin-left: 4px;
+      font-weight: 600;
     }
-
+  
     .github-star-badge:hover {
-        background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-        border-color: rgba(27, 31, 35, .35);
-        background-position: -.5em;
+      background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+      border-color: rgba(27, 31, 35, .35);
+      background-position: -.5em;
     }
-
+  
     .github-star-badge .material-icons {
-        height: 16px;
-        width: 16px;
-        margin-right: 4px;
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
     }
-
+  
     /* The switch - the box around the slider */
     .switch {
-        position: relative;
-        display: inline-block;
-        min-width: 60px;
-        max-width: 150px;
-        height: 34px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      max-width: 250px;
+      max-height: 75px;
+      transition: all 0.2s ease-in-out;
     }
-
+  
     /* Hide default HTML checkbox */
     .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
+      opacity: 0;
+      width: 0;
+      height: 0;
     }
-
-    input:checked+.toggle-button {
-        background-color: #1976d2;
-        color: white
+  
+    input:checked+.toggle-button-on {
+      background-color: #1976d2;
+      color: white
     }
-
-    input:hover+.toggle-button {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  
+    input:hover+.toggle-button-on {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
-    input:checked+.topic-button {
-        background-color: #ccc;
-        color: black;
+  
+    input:checked+.toggle-button-off {
+      background-color: #ccc;
+      color: black;
     }
-
-    input:hover+.topic-button {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  
+    input:hover+.toggle-button-off {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
     /* Responsive Styles */
     @media screen and (max-width: 767px) {
-
-        .card-container>*:not(.circle-link),
-        .terminal {
-            width: 100%;
-        }
-
-        .card:not(.highlight-card) {
-            /* height: 16px; */
-            margin: 8px 0;
-        }
-
-        .card.highlight-card span {
-            margin-left: 72px;
-        }
-
+  
+      .card-container>*:not(.circle-link),
+      .terminal {
+        /* width: 100%; */
+      }
+  
+      .card:not(.highlight-card) {
+        /* height: 16px; */
+        margin: 8px 0;
+      }
+  
+      .card.highlight-card span {
+        margin-left: 72px;
+      }
+  
     }
-</style>
+  </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main">
     <br />
+    <section style="width: 100%; align-items: left">
+        <div routerLink="/standards" routerLinkActive="active" class="card card-small" style="width: 300px; border: none; background-color: white">
+          <img src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
+        </div>
+    </section>
     <br />
-    <br />
-    <h2> Grade 1 Mathematics (Common Core) State Standards </h2>
-    <br />
-    <!-- <h3> In Grade 3 Math, instructional time should focus on the following four critical areas: </h3> -->
+    <h2 style="text-align: center; margin-bottom: 10px"> Grade 1 Mathematics (Common Core) Learning Standards </h2>
     <br />
     <div class="card-container">
-        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Operations and Algebraic Thinking </h4>
+                </div>
             </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Developing Understanding Of Addition, Subtraction, & Strategies For Addition & Subtraction Within 20 </h4>
-                <br *ngIf="domain_state[1]" />
-                <p *ngIf="domain_state[1]" style="font-size: 15px"> Students develop strategies for adding and subtracting whole numbers based on their prior work with small numbers. They use a variety of models, including discrete objects and length-based models (e.g., cubes connected to form lengths), to model add-to, take-from, put-together, take-apart, and compare situations to develop meaning for the operations of addition and subtraction, and to develop strategies to solve arithmetic problems with these operations. Students understand connections between counting and addition and subtraction (e.g., adding two is the same as counting on two). They use properties of addition to add whole numbers and to create and use increasingly sophisticated strategies based on these properties (e.g., “making tens”) to solve addition and subtraction problems within 20. By comparing a variety of solution strategies, children build their understanding of the relationship between addition and subtraction. </p>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[1]" style="font-size: 15px">
+                    <li> <b> A : Represent and solve problems involving addition and subtraction. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem. </li>
+                            <li> <b> 2 </b> : Solve word problems that call for addition of three whole numbers whose sum is less than or equal to 20, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem. </li>
+                        </ul>
+                    <li> <b> B : Understand and apply properties of operations and the relationship between addition and subtraction. </b> </li>
+                        <ul>
+                            <li> <b> 3 </b> : Apply properties of operations as strategies to add and subtract. </li>
+                            <li> <b> 4 </b> : Understand subtraction as an unknown-addend problem. </li>
+                        </ul>
+                    <li> <b> C : Add and subtract within 20. </b> </li>
+                        <ul>
+                            <li> <b> 5 </b> : Relate counting to addition and subtraction (e.g., by counting on 2 to add 2). </li>
+                            <li> <b> 6 </b> : Add and subtract within 20, demonstrating fluency for addition and subtraction within 10. Use strategies such as counting on; making ten (e.g., 8 + 6 = 8 + 2 + 4 = 10 + 4 = 14); decomposing a number leading to a ten (e.g., 13 - 4 = 13 - 3 - 1 = 10 - 1 = 9); using the relationship between addition and subtraction (e.g., knowing that 8 + 4 = 12, one knows 12 - 8 = 4); and creating equivalent but easier or known sums (e.g., adding 6 + 7 by creating the known equivalent 6 + 6 + 1 = 12 + 1 = 13). </li>
+                        </ul>
+                    <li> <b> D : Work with addition and subtraction equations. </b> </li>
+                        <ul>
+                            <li> <b> 7 </b> : Understand the meaning of the equal sign, and determine if equations involving addition and subtraction are true or false. </li>
+                            <li> <b> 8 </b> : Determine the unknown whole number in an addition or subtraction equation relating three whole numbers. </li>
+                        </ul>
+                </ul>
             </div>
         </div>
-        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Number and Operations in Base Ten </h4>
+                </div>
             </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Developing Understanding Of Whole Number Relationships & Place Value, Including Grouping In Tens & Ones </h4>
-                <br *ngIf="domain_state[2]" />
-                <p *ngIf="domain_state[2]" style="font-size: 15px"> Students develop, discuss, and use efficient, accurate, and generalizable methods to add within 100 and subtract multiples of 10. They compare whole numbers (at least to 100) to develop understanding of and solve problems involving their relative sizes. They think of whole numbers between 10 and 100 in terms of tens and ones (especially recognizing the numbers 11 to 19 as composed of a ten and some ones). Through activities that build number sense, they understand the order of the counting numbers and their relative magnitudes. </p>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[2]" style="font-size: 15px">
+                    <li> <b> A : Extend the counting sequence. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Count to 120, starting at any number less than 120. In this range, read and write numerals and represent a number of objects with a written numeral. </li>
+                        </ul>
+                    <li> <b> B : Understand the place value. </b> </li>
+                        <ul>
+                            <li> <b> 2 </b> : Understand that the two digits of a two-digit number represent amounts of tens and ones. Understand the following as special cases: </li>
+                                <ul>
+                                    <li> <b> a </b> : 10 can be thought of as a bundle of ten ones - called a "ten." </li>
+                                    <li> <b> b </b> : The numbers from 11 to 19 are composed of a ten and one, two, three, four, five, six, seven, eight, or nine ones. </li>
+                                    <li> <b> c </b> : The numbers 10, 20, 30, 40, 50, 60, 70, 80, 90 refer to one, two, three, four, five, six, seven, eight, or nine tens (and 0 ones). </li>
+                                </ul>
+                            <li> <b> 3 </b> : Compare two two-digit numbers based on meanings of the tens and ones digits, recording the results of comparisons with the symbols >, =, and <. </li>
+                        </ul>
+                    <li> <b> C : Use place value understanding and properties of operations to add and subtract. </b> </li>
+                        <ul>
+                            <li> <b> 4 </b> : Add within 100, including adding a two-digit number and a one-digit number, and adding a two-digit number and a multiple of 10, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used. Understand that in adding two-digit numbers, one adds tens and tens, ones and ones; and sometimes it is necessary to compose a ten. </li>
+                            <li> <b> 5 </b> : Given a two-digit number, mentally find 10 more or 10 less than the number, without having to count; explain the reasoning used. </li>
+                            <li> <b> 6 </b> : Subtract multiples of 10 in the range 10-90 from multiples of 10 in the range 10-90 (positive or zero differences), using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used. </li>
+                        </ul>
+                </ul>
             </div>
         </div>
-        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Measurement and Data </h4>
+                </div>
             </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Developing Understanding Of Linear Measurement & Measuring Lengths As Iterating Length Units </h4>
-                <br *ngIf="domain_state[3]" />
-                <p *ngIf="domain_state[3]" style="font-size: 15px"> Students develop an understanding of the meaning and processes of measurement, including underlying concepts such as iterating (the mental activity of building up the length of an object with equal-sized units) and the transitivity principle for indirect measurement. </p>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[3]" style="font-size: 15px">
+                    <li> <b> A : Measure lengths indirectly and by iterating length units. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Order three objects by length; compare the lengths of two objects indirectly by using a third object. </li>
+                            <li> <b> 2 </b> : Express the length of an object as a whole number of length units, by laying multiple copies of a shorter object (the length unit) end to end; understand that the length measurement of an object is the number of same-size length units that span it with no gaps or overlaps. </li>
+                        </ul>
+                    <li> <b> B : Tell and write time. </b> </li>
+                        <ul>
+                            <li> <b> 3 </b> : Tell and write time in hours and half-hours using analog and digital clocks. </li>
+                        </ul>
+                    <li> <b> C : Measure lengths indirectly and by iterating length units. </b> </li>
+                        <ul>
+                            <li> <b> 4 </b> : Organize, represent, and interpret data with up to three categories; ask and answer questions about the total number of data points, how many in each category, and how many more or less are in one category than in another. </li>
+                        </ul>
+                </ul>
             </div>
         </div>
-        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Geometry </h4>
+                </div>
             </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Reasoning About Attributes Of, And Composing & Decomposing Geometric Shapes </h4>
-                <br *ngIf="domain_state[4]" />
-                <p *ngIf="domain_state[4]" style="font-size: 15px"> Students compose and decompose plane or solid figures (e.g., put two triangles together to make a quadrilateral) and build understanding of part-whole relationships as well as the properties of the original and composite shapes. As they combine shapes, they recognize them from different perspectives and orientations, describe their geometric attributes, and determine how they are alike and different, to develop the background for measurement and for initial understandings of properties such as congruence and symmetry. </p>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[4]" style="font-size: 15px">
+                    <li> <b> A : Reason with shapes and their attributes. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Distinguish between defining attributes (e.g., triangles are closed and three-sided) versus non-defining attributes (e.g., color, orientation, overall size); build and draw shapes to possess defining attributes. </li>
+                            <li> <b> 2 </b> : Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles, half-circles, and quarter-circles) or three-dimensional shapes (cubes, right rectangular prisms, right circular cones, and right circular cylinders) to create a composite shape, and compose new shapes from the composite shape. </li>
+                            <li> <b> 3 </b> : Partition circles and rectangles into two and four equal shares, describe the shares using the words halves, fourths, and quarters, and use the phrases half of, fourth of, and quarter of. Describe the whole as two of, or four of the shares. Understand for these examples that decomposing into more equal shares creates smaller shares. </li>
+                        </ul>
+                </ul>
             </div>
         </div>
     </div>

@@ -1,106 +1,115 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
+  
     :host {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: 14px;
-        color: #333;
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-
+  
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        margin: 8px 0;
+      margin: 8px 0;
     }
-
+  
     p {
-        margin: 0;
+      margin: 0;
     }
-
+  
     .spacer {
-        flex: 1;
+      flex: 1;
     }
-
+  
     .toolbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 85px;
-        display: flex;
-        align-items: center;
-        background-color: #0a1e33;
-        color: white;
-        font-weight: 600;
-        padding: 5px 10px 2px 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      padding: 5px 10px 2px 20px;
     }
-
+  
     .toolbar img {
-        /* margin: 0 16px; */
-        position: absolute;
-        left: -10px;
-        top: -18px;
+      /* margin: 0 16px; */
+      position: absolute;
+      left: -10px;
+      top: -18px;
     }
-
+  
     .toolbar #twitter-logo {
-        height: 40px;
-        margin: 0 8px;
+      height: 40px;
+      margin: 0 8px;
     }
-
+  
     .toolbar #youtube-logo {
-        height: 40px;
-        margin: 0 16px;
+      height: 40px;
+      margin: 0 16px;
     }
-
+  
     .toolbar #twitter-logo:hover,
     .toolbar #youtube-logo:hover {
-        opacity: 0.8;
+      opacity: 0.8;
     }
-
+  
     .content-menu {
-        display: flex;
-        margin: 0 auto 32px;
-        padding: 0 16px;
-        max-width: 960px;
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      margin: 0 auto 32px;
+      padding: 0 16px;
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     .content {
-        display: flex;
-        margin: auto;
-        padding: 0 16px;
-        max-width: 1500px;
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      margin: 12px auto 32px;
+      padding: 0 16px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
+    .subcontent {
+      display: flex;
+      margin: 12px auto;
+      padding: 0px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
     svg.material-icons {
-        height: 24px;
-        width: auto;
+      height: 24px;
+      width: auto;
     }
-
+  
     svg.material-icons:not(:last-child) {
-        margin-right: 8px;
+      margin-right: 8px;
     }
-
+  
     .card svg.material-icons path {
-        fill: #888;
+      fill: #888;
     }
-
+  
     .card-container {
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: center; */
-        margin: auto;
+        justify-content: center;
+        margin-top: 16px;
     }
-
+  
     .card {
         all: unset;
         border-radius: 4px;
@@ -117,344 +126,474 @@
         transition: all 0.2s ease-in-out;
         line-height: 24px;
     }
-
-    .card-container .card:not(:last-child) {
-        margin-right: 0;
+  
+    /* .card-container .card:not(:last-child) {
+      margin-right: 0;
     }
-
+  
+    .card-container .switch:not(:last-child) {
+      margin-right: 0;
+    } */
+  
     .card.card-small {
-        height: 16px;
-        width: 190px;
-        border-radius: 8px;
+      height: 16px;
+      width: 190px;
+      border-radius: 8px;
     }
-
-    .card.card-small:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
+  
     .card.card-medium {
         height: auto;
         width: 80%;
         border-radius: 8px;
         padding: 20px;
     }
-
+  
     .card.card-medium:hover {
         transform: translateY(-3px);
         box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
     .card.card-large {
-        max-height: 1500px;
-        width: 85%;
-        border-radius: 8px;
-        margin: 8px 8px;
-        padding: 8px 20px;
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      margin: 8px 8px;
+      padding: 8px 20px;
     }
-
+  
     .card-container .card:not(.highlight-card) {
-        cursor: pointer;
+      cursor: pointer;
     }
-
+  
     .card-container .card:not(.highlight-card):hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
-    .card-container .card:not(.highlight-card):hover .material-icons path {
-        fill: rgb(105, 103, 103);
-    }
-
+  
+    /* .card-container .card:not(.highlight-card):hover .material-icons path {
+      fill: rgb(105, 103, 103);
+    } */
+  
     .card.highlight-card {
-        background-color: white;
-        color: #0a1e33;
-        font-weight: 600;
-        border: none;
-        width: auto;
-        min-width: 30%;
-        position: relative;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      border: none;
+      width: auto;
+      min-width: 30%;
+      position: relative;
     }
-
+  
     .card.card.highlight-card span {
-        margin-left: 60px;
+      margin-left: 60px;
     }
-
-    .profile-card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        max-width: 350px;
-        padding: 4px 0 0;
-        text-align: center;
-        border-radius: 0px;
-        border: 1px solid #eee;
+  
+    svg#rocket {
+      width: 80px;
+      position: absolute;
+      left: -10px;
+      top: -24px;
     }
-
-    .profile-card:hover {
-        transform: scale(1.05, 1.05)
+  
+    svg#rocket-smoke {
+      height: calc(100vh - 95px);
+      position: absolute;
+      top: 10px;
+      right: 180px;
+      z-index: -10;
     }
-
+  
     a,
     a:visited,
     a:hover {
-        color: #1976d2;
-        text-decoration: none;
+      color: #1976d2;
+      text-decoration: none;
     }
-
+  
     a:hover {
-        color: #125699;
+      color: #125699;
     }
-
-    .title {
-        color: grey;
-        font-size: 18px;
-    }
-
-    button {
-        border: none;
-        border-radius: 0px;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-    }
-
-    a {
-        text-decoration: none;
-        font-size: 22px;
-        padding: 10px;
-        color: black;
-    }
-
-    button.toggle-button {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    .toggle-button:before {
-        background-color: #1976d2;
-        color: white;
-    }
-
-    button.toggle-button-off {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    button.toggle-button-on {
-        font-size: 18px;
-        background-color: #1976d2;
-        color: white;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    button.topic-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    .topic-button:before {
-        background-color: #ccc;
-        color: black;
-    }
-
+  
     button.grade-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #1976d2;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      margin: 8px;
+      padding: 8px 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
     }
-
+  
     button.grade-button:hover {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
+    button.grade-button-gray {
+      font-size: 18px;
+      color: white;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    button.grade-button-gray:hover {
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    button.toggle-button {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    .toggle-button:before {
+      background-color: #1976d2;
+      color: white;
+    }
+  
+    button.toggle-button-off {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    button.toggle-button-on {
+      font-size: 18px;
+      background-color: #1976d2;
+      color: white;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    .terminal {
+      position: relative;
+      /* width: 100%; */
+      max-width: 625px;
+      border-radius: 6px;
+      padding-top: 45px;
+      margin-top: 8px;
+      overflow: hidden;
+      background-color: rgb(15, 15, 16);
+      color: #c2c3c4;
+    }
+  
+    .terminal::before {
+      content: "\2022 \2022 \2022";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: rgb(58, 58, 58);
+      color: #c2c3c4;
+      width: 100%;
+      line-height: 0;
+      padding: 14px 0;
+      font-size: 2rem;
+      text-indent: 4px;
+    }
+  
+    .terminal pre {
+      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+      color: white;
+      padding: 0 1rem 1rem;
+      margin: 0;
+      text-align: center;
+    }
+  
     .circle-link {
-        height: 40px;
-        width: 40px;
-        border-radius: 40px;
-        margin: 8px;
-        background-color: white;
-        border: 1px solid #eeeeee;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        transition: 1s ease-out;
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      margin: 8px;
+      background-color: white;
+      border: 1px solid #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: 1s ease-out;
     }
-
+  
     .circle-link:hover {
-        transform: translateY(-0.25rem);
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-0.25rem);
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     }
-
+  
     footer {
-        margin-top: 8px;
-        display: flex;
-        align-items: center;
-        line-height: 20px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      line-height: 20px;
     }
-
+  
     footer a {
-        display: flex;
-        align-items: center;
+      display: flex;
+      align-items: center;
     }
-
+  
     .github-star-badge {
-        color: #24292e;
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        padding: 3px 10px;
-        border: 1px solid rgba(27, 31, 35, .2);
-        border-radius: 3px;
-        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-        margin-left: 4px;
-        font-weight: 600;
+      color: #24292e;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      padding: 3px 10px;
+      border: 1px solid rgba(27, 31, 35, .2);
+      border-radius: 3px;
+      background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+      margin-left: 4px;
+      font-weight: 600;
     }
-
+  
     .github-star-badge:hover {
-        background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-        border-color: rgba(27, 31, 35, .35);
-        background-position: -.5em;
+      background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+      border-color: rgba(27, 31, 35, .35);
+      background-position: -.5em;
     }
-
+  
     .github-star-badge .material-icons {
-        height: 16px;
-        width: 16px;
-        margin-right: 4px;
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
     }
-
+  
     /* The switch - the box around the slider */
     .switch {
-        position: relative;
-        display: inline-block;
-        min-width: 60px;
-        max-width: 150px;
-        height: 34px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      max-width: 250px;
+      max-height: 75px;
+      transition: all 0.2s ease-in-out;
     }
-
+  
     /* Hide default HTML checkbox */
     .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
+      opacity: 0;
+      width: 0;
+      height: 0;
     }
-
-    input:checked+.toggle-button {
-        background-color: #1976d2;
-        color: white
+  
+    input:checked+.toggle-button-on {
+      background-color: #1976d2;
+      color: white
     }
-
-    input:hover+.toggle-button {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  
+    input:hover+.toggle-button-on {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
-    input:checked+.topic-button {
-        background-color: #ccc;
-        color: black;
+  
+    input:checked+.toggle-button-off {
+      background-color: #ccc;
+      color: black;
     }
-
-    input:hover+.topic-button {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  
+    input:hover+.toggle-button-off {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
     /* Responsive Styles */
     @media screen and (max-width: 767px) {
-
-        .card-container>*:not(.circle-link),
-        .terminal {
-            width: 100%;
-        }
-
-        .card:not(.highlight-card) {
-            height: 16px;
-            margin: 8px 0;
-        }
-
-        .card.highlight-card span {
-            margin-left: 72px;
-        }
-
+  
+      .card-container>*:not(.circle-link),
+      .terminal {
+        /* width: 100%; */
+      }
+  
+      .card:not(.highlight-card) {
+        /* height: 16px; */
+        margin: 8px 0;
+      }
+  
+      .card.highlight-card span {
+        margin-left: 72px;
+      }
+  
     }
-</style>
+  </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main">
     <br />
+    <section style="width: 100%; align-items: left">
+        <div routerLink="/standards" routerLinkActive="active" class="card card-small" style="width: 300px; border: none; background-color: white">
+          <img src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
+        </div>
+    </section>
     <br />
-    <br />
-    <h2> Kindergarten Mathematics (Common Core) State Standards </h2>
-    <br />
-    <!-- <h3> In Grade 3 Math, instructional time should focus on the following four critical areas: </h3> -->
+    <h2 style="text-align: center; margin-bottom: 10px"> Kindergarten Mathematics (Common Core) Learning Standards </h2>
     <br />
     <div class="card-container">
-        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Counting and Cardinality </h4>
+                </div>
             </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Representing, Relating, & Operating On Whole Numbers, Initially With Sets Of Objects </h4>
-                <br *ngIf="domain_state[1]" />
-                <p *ngIf="domain_state[1]" style="font-size: 15px"> Students use numbers, including written numerals, to represent quantities and to solve quantitative problems, such as counting objects in a set; counting out a given number of objects; comparing sets or numerals; and modeling simple joining and separating situations with sets of objects, or eventually with equations such as 5 + 2 = 7 and 7 – 2 = 5. (Kindergarten students should see addition and subtraction equations, and student writing of equations in kindergarten is encouraged, but it is not required.) Students choose, combine, and apply effective strategies for answering quantitative questions, including quickly recognizing the cardinalities of small sets of objects, counting and producing sets of given sizes, counting the number of objects in combined sets, or counting the number of objects that remain in a set after some are taken away. </p>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[1]" style="font-size: 15px">
+                    <li> <b> A : Count to tell the number of objects. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Count to 100 by ones and by tens. </li>
+                            <li> <b> 2 </b> : Count forward beginning from a given number within the known sequence (instead of having to begin at 1). </li>
+                            <li> <b> 3 </b> : Write numbers from 0 to 20. Represent a number of objects with a written numeral 0-20 (with 0 representing a count of no objects). </li>
+                        </ul>
+                    <li> <b> B : Know number names and the count sequence. </b> </li>
+                        <ul>
+                            <li> <b> 4 </b> : Understand the relationship between numbers and quantities; connect counting to cardinality. </li>
+                                <ul>
+                                    <li> <b> a </b> : When counting objects, say the number names in the standard order, pairing each object with one and only one number name and each number name with one and only one object. </li>
+                                    <li> <b> b </b> : Understand that the last number name said tells the number of objects counted. The number of objects is the same regardless of their arrangement or the order in which they were counted. </li>
+                                    <li> <b> c </b> : Understand that each successive number name refers to a quantity that is one larger. </li>
+                                </ul>
+                            <li> <b> 5 </b> : Count to answer "how many?" questions about as many as 20 things arranged in a line, a rectangular array, or a circle, or as many as 10 things in a scattered configuration; given a number from 1-20, count out that many objects. </li>
+                        </ul>
+                    <li> <b> C : Compare numbers. </b> </li>
+                        <ul>
+                            <li> <b> 6 </b> : Identify whether the number of objects in one group is greater than, less than, or equal to the number of objects in another group, e.g., by using matching and counting strategies. </li>
+                            <li> <b> 7 </b> : Compare two numbers between 1 and 10 presented as written numerals. </li>
+                        </ul>
+                </ul>
             </div>
         </div>
-        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Operations and Algebraic Thinking </h4>
+                </div>
             </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Describing Shapes & Space </h4>
-                <br *ngIf="domain_state[2]" />
-                <p *ngIf="domain_state[2]" style="font-size: 15px"> Students describe their physical world using geometric ideas (e.g., shape, orientation, spatial relations) and vocabulary. They identify, name, and describe basic two-dimensional shapes, such as squares, triangles, circles, rectangles, and hexagons, presented in a variety of ways (e.g., with different sizes and orientations), as well as three-dimensional shapes such as cubes, cones, cylinders, and spheres. They use basic shapes and spatial reasoning to model objects in their environment and to construct more complex shapes. </p>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[2]" style="font-size: 15px">
+                    <li> <b> A : Understand addition as putting together and adding to, and understand subtraction as taking apart and taking from. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Represent addition and subtraction with objects, fingers, mental images, drawings, sounds (e.g., claps), acting out situations, verbal explanations, expressions, or equations. </li>
+                            <li> <b> 2 </b> : Solve addition and subtraction word problems, and add and subtract within 10, e.g., by using objects or drawings to represent the problem. </li>
+                            <li> <b> 3 </b> : Decompose numbers less than or equal to 10 into pairs in more than one way, e.g., by using objects or drawings, and record each decomposition by a drawing or equation (e.g., 5 = 2 + 3 and 5 = 4 + 1). </li>
+                            <li> <b> 4 </b> : For any number from 1 to 9, find the number that makes 10 when added to the given number, e.g., by using objects or drawings, and record the answer with a drawing or equation. </li>
+                            <li> <b> 5 </b> : Fluently add and subtract within 5. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Number and Operations in Base Ten </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[3]" style="font-size: 15px">
+                    <li> <b> A : Work with numbers 11-19 to gain foundations for place value. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Compose and decompose numbers from 11 to 19 into ten ones and some further ones, e.g., by using objects or drawings, and record each composition or decomposition by a drawing or equation (e.g., 18 = 10 + 8); understand that these numbers are composed of ten ones and one, two, three, four, five, six, seven, eight, or nine ones. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Measurement and Data </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[4]" style="font-size: 15px">
+                    <li> <b> A : Describe and compare measurable attributes. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Describe measurable attributes of objects, such as length or weight. Describe several measurable attributes of a single object. </li>
+                            <li> <b> 2 </b> : Directly compare two objects with a measurable attribute in common, to see which object has "more of"/"less of" the attribute, and describe the difference. </li>
+                        </ul>
+                    <li> <b> B : Classify objects and count the number of objects in each category. </b> </li>
+                        <ul>
+                            <li> <b> 3 </b> : Classify objects into given categories; count the numbers of objects in each category and sort the categories by count. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(5)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[5]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[5]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> Geometry </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[5]" style="font-size: 15px">
+                    <li> <b> A : Identify and describe shapes (squares, circles, triangles, rectangles, hexagons, cubes, cones, cylinders, and spheres). </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to. </li>
+                            <li> <b> 2 </b> : Correctly name shapes regardless of their orientations or overall size. </li>
+                            <li> <b> 3 </b> : Identify shapes as two-dimensional (lying in a plane, "flat") or three-dimensional ("solid"). </li>
+                        </ul>
+                    <li> <b> B : Analyze, compare, create, and compose shapes. </b> </li>
+                        <ul>
+                            <li> <b> 4 </b> : Analyze and compare two- and three-dimensional shapes, in different sizes and orientations, using informal language to describe their similarities, differences, parts (e.g., number of sides and vertices/"corners") and other attributes (e.g., having sides of equal length). </li>
+                            <li> <b> 5 </b> : Model shapes in the world by building shapes from components (e.g., sticks and clay balls) and drawing shapes. </li>
+                            <li> <b> 6 </b> : Compose simple shapes to form large shapes. </li>
+                        </ul>
+                </ul>
             </div>
         </div>
     </div>
