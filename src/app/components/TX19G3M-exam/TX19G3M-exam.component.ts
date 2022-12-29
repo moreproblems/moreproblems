@@ -18,6 +18,9 @@ import { Component, OnInit, Injectable } from '@angular/core';
 export class TX19G3MExamComponent implements OnInit {
     title = 'More Problems';
 
+    screenWidth = window.innerWidth;
+    mobileWidth = 800;
+
     et_counter: number = 0;
     et_minutes: number = 0;
     et_timer: any;
@@ -60,28 +63,28 @@ export class TX19G3MExamComponent implements OnInit {
             ],
             'AnswerChoices': {
                 'A': {
-                    'Choice': '38,945 9,052 9,181',
+                    'Choice': '38,945 \t 9,052 \t 9,181',
                     'Key': {
                         'Correct': false,
                         'Rationale': 'The student likely understood that because 38,945 has five digits and 9,052 and 9,181 each have only four digits, 38,945 is the greatest number and should come first in the list. The student likely then compared the digits in the ones place (rightmost digits) for 9,052 and 9,181, concluding that 9,052 should come second in the list. The student should have started comparing the digits in the thousands place (leftmost digits) for 9,052 and 9,181 and then used the same method to compare the digits in the hundreds place (second digits from the left). The student needs to focus on understanding how to order whole numbers from greatest to least value.'
                     }
                 },
                 'B': {
-                    'Choice': '6,912 29,013 34,987',
+                    'Choice': '6,912 \t 29,013 \t 34,987',
                     'Key': {
                         'Correct': false,
                         'Rationale': 'The student identified a list of numbers in order from least to greatest instead of from greatest to least as directed. The student needs to focus on attending to the details of the question in problems that order whole numbers.'
                     }
                 },
                 'C': {
-                    'Choice': '58,702 50,716 581',
+                    'Choice': '58,702 \t 50,716 \t 581',
                     'Key': {
                         'Correct': true,
                         'Rationale': 'To determine the list that shows the numbers in order from greatest (largest) to least (smallest), the student should have compared the digits in each place value for each number. Since 58,702 and 50,716 both have five digits and 581 only has three digits, 581 must be the number with the least value, making its correct position in the list last. Next the student should have compared the digits in the ten-thousands place (leftmost digits) in 58,702 and 50,716 and determined that the digits represented the same value. Then the student should have compared the digits in the thousands place (second digits from the left) in 58,702 and 50,716 and determined that, since 8 is greater than 0, the number 58,702 is the greatest number and should come first in the list. The student should have determined that the list in order from greatest to least has 58,702 first, 50,716 second, and 581 last.'
                     }
                 },
                 'D': {
-                    'Choice': '6,092 60,019 5,005',
+                    'Choice': '6,092 \t 60,019 \t 5,005',
                     'Key': {
                         'Correct': false,
                         'Rationale': 'The student likely compared the leftmost digits in 6,092 and 60,019, incorrectly thinking that both digits were in the ten-thousands place. Then the student likely compared the values of the last three digits in each number. The student should have understood that the digit 6 in 6,092 is in the thousands place, the digit 6 in 60,019 is in the ten-thousands place, and 6 thousands is less than 6 ten-thousands, making 60,019 the number that should come first in the list. The student needs to focus on understanding how to order whole numbers from greatest to least value.'
@@ -367,7 +370,6 @@ export class TX19G3MExamComponent implements OnInit {
             'SubTopic': 'Determine the solutions to problems involving addition and subtraction of time intervals in minutes using pictorial models or tools such as a 15-minute event plus a 30-minute event equals 45 minutes',
             'Content': [
                 'Felix swam, rode his bike, and ran in a race.',
-                '•',
                 '•  He spent 19 minutes swimming.',
                 '•  He spent 21 minutes riding his bike.',
                 '•  He spent 30 minutes running.',
@@ -1705,6 +1707,10 @@ export class TX19G3MExamComponent implements OnInit {
     //   }
     //   fileReader.readAsText(file);
     // }
+
+    width_change2() {
+        this.screenWidth = window.innerWidth;
+    }
 
     toggle_button(val: string) {
         if (!this.filters.includes(val)) {

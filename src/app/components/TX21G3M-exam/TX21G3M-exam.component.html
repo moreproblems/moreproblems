@@ -1,111 +1,120 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
+  
     :host {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: 14px;
-        color: #333;
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-
+  
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        margin: 8px 0;
+      margin: 8px 0;
     }
-
+  
     p {
-        margin: 0;
+      margin: 0;
     }
-
+  
     .spacer {
-        flex: 1;
+      flex: 1;
     }
-
+  
     .toolbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 85px;
-        display: flex;
-        align-items: center;
-        background-color: #0a1e33;
-        color: white;
-        font-weight: 600;
-        padding: 5px 10px 2px 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      padding: 5px 10px 2px 20px;
     }
-
+  
     .toolbar img {
-        /* margin: 0 16px; */
-        position: absolute;
-        left: -10px;
-        top: -18px;
+      /* margin: 0 16px; */
+      position: absolute;
+      left: -10px;
+      top: -18px;
     }
-
+  
     .toolbar #twitter-logo {
-        height: 40px;
-        margin: 0 8px;
+      height: 40px;
+      margin: 0 8px;
     }
-
+  
     .toolbar #youtube-logo {
-        height: 40px;
-        margin: 0 16px;
+      height: 40px;
+      margin: 0 16px;
     }
-
+  
     .toolbar #twitter-logo:hover,
     .toolbar #youtube-logo:hover {
-        opacity: 0.8;
+      opacity: 0.8;
     }
-
+  
     .content-menu {
-        display: flex;
-        margin: 0 auto 32px;
-        padding: 0 16px;
-        max-width: 960px;
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      margin: 0 auto 32px;
+      padding: 0 16px;
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     .content {
-        display: flex;
-        margin: auto;
-        padding: 0 16px;
-        max-width: 1500px;
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      margin: 12px auto 32px;
+      padding: 0 16px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
+    .subcontent {
+      display: flex;
+      margin: 12px auto;
+      padding: 0px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
     svg.material-icons {
-        height: 24px;
-        width: auto;
+      height: 24px;
+      width: auto;
     }
-
+  
     svg.material-icons:not(:last-child) {
-        margin-right: 8px;
+      margin-right: 8px;
     }
-
+  
     .card svg.material-icons path {
-        fill: #888;
+      fill: #888;
     }
-
+  
     .card-container {
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: center; */
-        margin: auto;
+        justify-content: center;
+        margin-top: 16px;
     }
-
+  
     .card {
         all: unset;
         border-radius: 4px;
-        /* border: 1px solid #eee; */
-        /* background-color: #fafafa; */
+        border: 1px solid #eee;
+        background-color: #fafafa;
         /* height: 40px;
         width: 200px; */
         margin: 0 8px 16px;
@@ -117,325 +126,348 @@
         transition: all 0.2s ease-in-out;
         line-height: 24px;
     }
-
-    .card-container .card:not(:last-child) {
-        margin-right: 0;
+  
+    /* .card-container .card:not(:last-child) {
+      margin-right: 0;
     }
-
-    .card .card-small {
+  
+    .card-container .switch:not(:last-child) {
+      margin-right: 0;
+    } */
+  
+    .card.card-small {
+      height: 16px;
+      width: 190px;
+      border-radius: 8px;
+    }
+  
+    .card.card-medium {
         height: auto;
-        width: auto;
+        width: 80%;
         border-radius: 8px;
-        border: 1px solid #eee;
-        background-color: #fafafa;
+        padding: 20px;
     }
-
-    .card.card-small:hover {
+  
+    .card.card-medium:hover {
         transform: translateY(-3px);
         box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
     .card.card-large {
-        max-height: 7500px;
-        width: 85%;
-        border-radius: 8px;
-        margin: 8px 8px;
-        padding: 8px 20px;
-        border: none;
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      margin: 8px 8px;
+      padding: 8px 20px;
     }
-
+  
     .card-container .card:not(.highlight-card) {
-        cursor: pointer;
+      cursor: pointer;
     }
-
+  
     .card-container .card:not(.highlight-card):hover {
-        /* transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35); */
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
-    .card-container .card:not(.highlight-card):hover .material-icons path {
-        /* fill: rgb(105, 103, 103); */
-    }
-
+  
+    /* .card-container .card:not(.highlight-card):hover .material-icons path {
+      fill: rgb(105, 103, 103);
+    } */
+  
     .card.highlight-card {
-        background-color: white;
-        color: #0a1e33;
-        font-weight: 600;
-        border: none;
-        width: auto;
-        min-width: 30%;
-        position: relative;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      border: none;
+      width: auto;
+      min-width: 30%;
+      position: relative;
     }
-
+  
     .card.card.highlight-card span {
-        margin-left: 60px;
+      margin-left: 60px;
     }
-
-    .profile-card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        max-width: 350px;
-        padding: 4px 0 0;
-        text-align: center;
-        border-radius: 0px;
-        border: 1px solid #eee;
+  
+    svg#rocket {
+      width: 80px;
+      position: absolute;
+      left: -10px;
+      top: -24px;
     }
-
-    .profile-card:hover {
-        transform: scale(1.05, 1.05)
+  
+    svg#rocket-smoke {
+      height: calc(100vh - 95px);
+      position: absolute;
+      top: 10px;
+      right: 180px;
+      z-index: -10;
     }
-
+  
     a,
     a:visited,
     a:hover {
-        color: #1976d2;
-        text-decoration: none;
+      color: #1976d2;
+      text-decoration: none;
     }
-
+  
     a:hover {
-        color: #125699;
+      color: #125699;
     }
-
-    .title {
-        color: grey;
-        font-size: 18px;
-    }
-
-    button {
-        border: none;
-        border-radius: 0px;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-    }
-
-    a {
-        text-decoration: none;
-        font-size: 22px;
-        padding: 10px;
-        color: black;
-    }
-
-    button.toggle-button {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    .toggle-button:before {
-        background-color: #1976d2;
-        color: white;
-    }
-
-    button.toggle-button-off {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    button.toggle-button-on {
-        font-size: 18px;
-        background-color: #1976d2;
-        color: white;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    button.topic-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    .topic-button:before {
-        background-color: #ccc;
-        color: black;
-    }
-
+  
     button.grade-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #1976d2;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      margin: 8px;
+      padding: 8px 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
     }
-
+  
     button.grade-button:hover {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
+    button.grade-button-gray {
+      font-size: 18px;
+      color: white;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    button.grade-button-gray:hover {
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    button.toggle-button {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    .toggle-button:before {
+      background-color: #1976d2;
+      color: white;
+    }
+  
+    button.toggle-button-off {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    button.toggle-button-on {
+      font-size: 18px;
+      background-color: #1976d2;
+      color: white;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    .terminal {
+      position: relative;
+      /* width: 100%; */
+      max-width: 625px;
+      border-radius: 6px;
+      padding-top: 45px;
+      margin-top: 8px;
+      overflow: hidden;
+      background-color: rgb(15, 15, 16);
+      color: #c2c3c4;
+    }
+  
+    .terminal::before {
+      content: "\2022 \2022 \2022";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: rgb(58, 58, 58);
+      color: #c2c3c4;
+      width: 100%;
+      line-height: 0;
+      padding: 14px 0;
+      font-size: 2rem;
+      text-indent: 4px;
+    }
+  
+    .terminal pre {
+      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+      color: white;
+      padding: 0 1rem 1rem;
+      margin: 0;
+      text-align: center;
+    }
+  
     .circle-link {
-        height: 40px;
-        width: 40px;
-        border-radius: 40px;
-        margin: 8px;
-        background-color: white;
-        border: 1px solid #eeeeee;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        transition: 1s ease-out;
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      margin: 8px;
+      background-color: white;
+      border: 1px solid #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: 1s ease-out;
     }
-
+  
     .circle-link:hover {
-        transform: translateY(-0.25rem);
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-0.25rem);
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     }
-
+  
     footer {
-        margin-top: 8px;
-        display: flex;
-        align-items: center;
-        line-height: 20px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      line-height: 20px;
     }
-
+  
     footer a {
-        display: flex;
-        align-items: center;
+      display: flex;
+      align-items: center;
     }
-
+  
     .github-star-badge {
-        color: #24292e;
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        padding: 3px 10px;
-        border: 1px solid rgba(27, 31, 35, .2);
-        border-radius: 3px;
-        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-        margin-left: 4px;
-        font-weight: 600;
+      color: #24292e;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      padding: 3px 10px;
+      border: 1px solid rgba(27, 31, 35, .2);
+      border-radius: 3px;
+      background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+      margin-left: 4px;
+      font-weight: 600;
     }
-
+  
     .github-star-badge:hover {
-        background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-        border-color: rgba(27, 31, 35, .35);
-        background-position: -.5em;
+      background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+      border-color: rgba(27, 31, 35, .35);
+      background-position: -.5em;
     }
-
+  
     .github-star-badge .material-icons {
-        height: 16px;
-        width: 16px;
-        margin-right: 4px;
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
     }
-
+  
     /* The switch - the box around the slider */
     .switch {
-        position: relative;
-        display: inline-block;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-        height: auto;
-        max-width: 150px;
-        max-height: 75px;
-        transition: all 0.2s ease-in-out;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      max-width: 250px;
+      max-height: 75px;
+      transition: all 0.2s ease-in-out;
     }
-
+  
     /* Hide default HTML checkbox */
     .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
+      opacity: 0;
+      width: 0;
+      height: 0;
     }
-
-    input:checked+.toggle-button {
-        background-color: #1976d2;
-        color: white
+  
+    input:checked+.toggle-button-on {
+      background-color: #1976d2;
+      color: white
     }
-
-    input:hover+.toggle-button {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  
+    input:hover+.toggle-button-on {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
-    input:checked+.topic-button {
-        background-color: #ccc;
-        color: black;
+  
+    input:checked+.toggle-button-off {
+      background-color: #ccc;
+      color: black;
     }
-
-    input:hover+.topic-button {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  
+    input:hover+.toggle-button-off {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
-
+  
     /* Responsive Styles */
     @media screen and (max-width: 767px) {
-
-        .card-container>*:not(.circle-link),
-        .terminal {
-            width: 100%;
-        }
-
-        .card:not(.highlight-card) {
-            height: 16px;
-            margin: 8px 0;
-        }
-
-        .card.highlight-card span {
-            margin-left: 72px;
-        }
+  
+      .card-container>*:not(.circle-link),
+      .terminal {
+        /* width: 100%; */
+      }
+  
+      .card:not(.highlight-card) {
+        /* height: 16px; */
+        margin: 8px 0;
+      }
+  
+      .card.highlight-card span {
+        margin-left: 72px;
+      }
+  
     }
-</style>
+  </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<br />
-<br />
-<div class="content" role="main">
-    <div class="card-container">
-        <div class="card card-large" style="height: auto; margin: auto; text-align: center" #problemCard>
+<div class="content" role="main" (window:resize)="width_change2()">
+    <div class="card-container" style="padding: 0px">
+        <div class="card card-large" style="height: auto; width: auto; margin: auto; text-align: center; max-width: 95%" #problemCard>
             <div class="content" style="margin: auto; align-items: center">
-                <h2 *ngIf="this.problem_number > 0"style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_grade}} {{exam_subject}} Exam </h2>
-                <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0"> Problem #{{problem_number}}/{{exam_length}} <hr /> {{et_minutes}}m {{et_counter%60}}s </h3>
+                <h2 *ngIf="this.problem_number > 0" style="padding-top: 20px; color: darkgrey"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_grade}} {{exam_subject}} Exam </h2>
+                <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0" style="color: darkgrey; font-size: 18px"> Problem #{{problem_number}}/{{exam_length}} <hr /> {{et_minutes}}m {{et_counter%60}}s </h3>
                 <h2 *ngIf="this.problem_number > this.exam_length"> With {{number_correct}} out of {{exam_length}} problems correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
-                <div *ngIf="this.problem_number == 0" class="card card-small" style="height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
+                <div *ngIf="this.problem_number == 0" style="height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
                     <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_grade}} {{exam_subject}} Exam </h2>
-                    <br />
-                    <p> <b>Directions</b> : {{exam_directions}} </p>
+                    <p style="font-size: 16px; padding: 20px"> <b>Directions</b> : {{exam_directions}} </p>
                     <br />
                     <button class="grade-button" (click)="begin_exam(); scroll2(problemCard)"
-                        style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 0px">
+                        style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px">
                         <b> Begin Exam </b>
                     </button>
                 </div>
@@ -452,21 +484,21 @@
                 <div *ngFor="let prob of exam_dump | keyvalue">
                     <div *ngIf="prob.value.Number == problem_number">
                         <div *ngIf="prob.value.Type == 'FR'">
-                            <div class="card highlight-card card-small"
-                                style="min-height: 50px; min-width: 250px; max-height: 100px; max-width: 90%; padding: 10px">
+                            <div class="card card-small"
+                                style="min-height: 50px; width: 300px; max-height: 100px; padding: 10px">
                                 <input
                                     style="display: block; width: 150px; height: 50px; margin: 0px 20px 0px 20px; padding: 0px; font-size: 20px; text-indent: 10px"
                                     #inputFR />
                                 <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value);"
-                                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 20px 0px 20px; padding: 0px">
+                                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 20px 0px 20px">
                                     <b> Submit </b> </button>
                             </div>
                         </div>
                         <div *ngIf="prob.value.Type == 'MC'">
                             <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue"
-                                class="card highlight-card card-small"
+                                class="card card-small"
                                 (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
-                                style="min-height: 100px; min-width: 40%; max-height: 150px; max-width: 45%; padding: 10px; display: inline-flex; margin: 10px">
+                                style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto">
                                 <label class="switch" style="padding: 0 25px">
                                     <input type="checkbox" value="{{choice.key}}">
                                     <button *ngIf="problem_selection==choice.key"
@@ -475,7 +507,7 @@
                                         class="toggle-button-off"> <b> {{choice.key}} </b> </button>
                                 </label>
                                 <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                                    style="display: block; margin: 0px 20px 0px 20px; margin: auto">
+                                    style="display: block; margin: 0px 20px 0px 20px; margin: auto; white-space: pre-wrap">
                                     {{choice.value.Choice}}
                                 </h3>
                                 <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
@@ -485,14 +517,14 @@
                     </div>
                 </div>
                 <br />
-                <div *ngIf="problem_attempts > 0" [ngSwitch]="selection.value" class="card"
-                    style="height: 75px; max-width: 90%; padding: 10px; margin: auto">
+                <div *ngIf="problem_attempts > 0" [ngSwitch]="selection.value"
+                    style="height: 75px; max-width: 90%; padding-top: 10px; margin: auto">
                     <button class="grade-button" (click)="next_problem(problem_selection); scroll2(problemCard)"
-                        style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px; padding: 0px">
+                        style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
                         <b> Next Problem </b>
                     </button>
                 </div>
-                <div *ngIf="problem_number > exam_length">
+                <div *ngIf="problem_number > exam_length" style="width: 100%">
                     <!-- <div class="card card-small" style="height: auto; width: auto; max-width: 500px; padding: 10px; margin: auto">
                         <button *ngIf="sub_form == ''" (click)="sub_form = 'adult'" class="grade-button"> <b> Share Your Results With An Adult </b> </button>
                         <button *ngIf="sub_form == ''" (click)="sub_form = 'friend'" class="grade-button"> <b> Invite A Friend To Beat Your Results </b> </button>
@@ -534,9 +566,27 @@
                             </div>
                         </form>
                     </div> -->
-                    <table style="border: 1px solid black; margin: auto; width: 90%" #topicsTable>
+                    <table *ngIf="this.screenWidth <= this.mobileWidth" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableS>
                         <thead>
-                            <tr style="border: 3px solid black">
+                            <tr style="border: 3px solid black; background-color: grey">
+                                <th> Topic </th>
+                                <th> Percent Correct </th>
+                                <th> Missed Problems </th>
+                                <th> Total Problems </th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
+                            <tr style="background-color: lightgrey"> 
+                                <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table *ngIf="this.screenWidth > this.mobileWidth" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableL>
+                        <thead>
+                            <tr style="border: 3px solid black; background-color: grey">
                                 <th> Topic </th>
                                 <th> Percent Correct </th>
                                 <th> Missed Problems </th>
@@ -545,7 +595,7 @@
                             </tr>
                         </thead>
                         <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
-                            <tr> 
+                            <tr style="background-color: lightgrey"> 
                                 <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
                                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
                                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
@@ -562,14 +612,14 @@
                         </tbody>
                     </table>
                     <br />
-                    <table style="border: 1px solid black; margin: auto; width: 90%" #resultsTable>
+                    <table style="border: 1px solid black; margin: auto; width: 99%" #resultsTable>
                         <thead>
-                            <tr style="border: 1px solid black">
+                            <tr style="border: 1px solid black; background-color: grey">
                                 <th> Problem Number </th>
                                 <th> Problem Topic </th>
                                 <th> Correct Response </th>
                                 <th> Student Response </th>
-                                <th> Student Response Explanation </th>
+                                <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
                                 <th> Problem Time </th>
                                 <th> Problem Attempts </th>
                                 <th> Attempt Path </th>
@@ -581,7 +631,7 @@
                                 <td style="border-top: 1px solid #ddd"> {{sub.Topic}} </td>
                                 <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
                                 <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
-                                <td style="border-top: 1px solid #ddd; max-width: 750px"> {{sub.Rationale}} </td>
+                                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px"> {{sub.Rationale}} </td>
                                 <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
                                 <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
                                 <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
