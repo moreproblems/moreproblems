@@ -1,0 +1,659 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  
+    :host {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 8px 0;
+    }
+  
+    p {
+      margin: 0;
+    }
+  
+    .spacer {
+      flex: 1;
+    }
+  
+    .toolbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      padding: 5px 10px 2px 20px;
+    }
+  
+    .toolbar img {
+      /* margin: 0 16px; */
+      position: absolute;
+      left: -10px;
+      top: -18px;
+    }
+  
+    .toolbar #twitter-logo {
+      height: 40px;
+      margin: 0 8px;
+    }
+  
+    .toolbar #youtube-logo {
+      height: 40px;
+      margin: 0 16px;
+    }
+  
+    .toolbar #twitter-logo:hover,
+    .toolbar #youtube-logo:hover {
+      opacity: 0.8;
+    }
+  
+    .content-menu {
+      display: flex;
+      margin: 0 auto 32px;
+      padding: 0 16px;
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .content {
+      display: flex;
+      margin: 12px auto 32px;
+      padding: 0 16px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .subcontent {
+      display: flex;
+      margin: 12px auto;
+      padding: 0px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    svg.material-icons {
+      height: 24px;
+      width: auto;
+    }
+  
+    svg.material-icons:not(:last-child) {
+      margin-right: 8px;
+    }
+  
+    .card svg.material-icons path {
+      fill: #888;
+    }
+  
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 16px;
+    }
+  
+    .card {
+        all: unset;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        /* height: 40px;
+        width: 200px; */
+        margin: 0 8px 16px;
+        padding: 8px 8px;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        /* align-items: center; */
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+  
+    /* .card-container .card:not(:last-child) {
+      margin-right: 0;
+    }
+  
+    .card-container .switch:not(:last-child) {
+      margin-right: 0;
+    } */
+  
+    .card.card-small {
+      height: 16px;
+      width: 190px;
+      border-radius: 8px;
+    }
+  
+    .card.card-medium {
+        height: auto;
+        width: 80%;
+        border-radius: 8px;
+        padding: 20px;
+    }
+  
+    .card.card-medium:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    .card.card-large {
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      margin: 8px 8px;
+      padding: 8px 20px;
+    }
+  
+    .card-container .card:not(.highlight-card) {
+      cursor: pointer;
+    }
+  
+    .card-container .card:not(.highlight-card):hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    /* .card-container .card:not(.highlight-card):hover .material-icons path {
+      fill: rgb(105, 103, 103);
+    } */
+  
+    .card.highlight-card {
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      border: none;
+      width: auto;
+      min-width: 30%;
+      position: relative;
+    }
+  
+    .card.card.highlight-card span {
+      margin-left: 60px;
+    }
+  
+    svg#rocket {
+      width: 80px;
+      position: absolute;
+      left: -10px;
+      top: -24px;
+    }
+  
+    svg#rocket-smoke {
+      height: calc(100vh - 95px);
+      position: absolute;
+      top: 10px;
+      right: 180px;
+      z-index: -10;
+    }
+  
+    a,
+    a:visited,
+    a:hover {
+      color: #1976d2;
+      text-decoration: none;
+    }
+  
+    a:hover {
+      color: #125699;
+    }
+  
+    button.grade-button {
+      font-size: 18px;
+      color: white;
+      background-color: #1976d2;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      margin: 8px;
+      padding: 8px 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    button.grade-button:hover {
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    button.grade-button-gray {
+      font-size: 18px;
+      color: white;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    button.grade-button-gray:hover {
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    button.toggle-button {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    .toggle-button:before {
+      background-color: #1976d2;
+      color: white;
+    }
+  
+    button.toggle-button-off {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    button.toggle-button-on {
+      font-size: 18px;
+      background-color: #1976d2;
+      color: white;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    .terminal {
+      position: relative;
+      /* width: 100%; */
+      max-width: 625px;
+      border-radius: 6px;
+      padding-top: 45px;
+      margin-top: 8px;
+      overflow: hidden;
+      background-color: rgb(15, 15, 16);
+      color: #c2c3c4;
+    }
+  
+    .terminal::before {
+      content: "\2022 \2022 \2022";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: rgb(58, 58, 58);
+      color: #c2c3c4;
+      width: 100%;
+      line-height: 0;
+      padding: 14px 0;
+      font-size: 2rem;
+      text-indent: 4px;
+    }
+  
+    .terminal pre {
+      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+      color: white;
+      padding: 0 1rem 1rem;
+      margin: 0;
+      text-align: center;
+    }
+  
+    .circle-link {
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      margin: 8px;
+      background-color: white;
+      border: 1px solid #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: 1s ease-out;
+    }
+  
+    .circle-link:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    footer {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      line-height: 20px;
+    }
+  
+    footer a {
+      display: flex;
+      align-items: center;
+    }
+  
+    .github-star-badge {
+      color: #24292e;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      padding: 3px 10px;
+      border: 1px solid rgba(27, 31, 35, .2);
+      border-radius: 3px;
+      background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+      margin-left: 4px;
+      font-weight: 600;
+    }
+  
+    .github-star-badge:hover {
+      background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+      border-color: rgba(27, 31, 35, .35);
+      background-position: -.5em;
+    }
+  
+    .github-star-badge .material-icons {
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
+    }
+  
+    /* The switch - the box around the slider */
+    .switch {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      max-width: 250px;
+      max-height: 75px;
+      transition: all 0.2s ease-in-out;
+    }
+  
+    /* Hide default HTML checkbox */
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  
+    input:checked+.toggle-button-on {
+      background-color: #1976d2;
+      color: white
+    }
+  
+    input:hover+.toggle-button-on {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    input:checked+.toggle-button-off {
+      background-color: #ccc;
+      color: black;
+    }
+  
+    input:hover+.toggle-button-off {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    /* Responsive Styles */
+    @media screen and (max-width: 767px) {
+  
+      .card-container>*:not(.circle-link),
+      .terminal {
+        /* width: 100%; */
+      }
+  
+      .card:not(.highlight-card) {
+        /* height: 16px; */
+        margin: 8px 0;
+      }
+  
+      .card.highlight-card span {
+        margin-left: 72px;
+      }
+  
+    }
+  </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="content" role="main">
+    <section style="width: 100%; align-items: left">
+        <div routerLink="/standards" routerLinkActive="active" class="card card-small" style="width: 300px; border: none; background-color: white">
+          <img src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
+        </div>
+    </section>
+    <br />
+    <h2 style="text-align: center; margin-bottom: 10px"> Eighth Grade English Language Arts (Common Core) Learning Standards </h2>
+    <br />
+    <div class="card-container">
+        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> 8.L : Language </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[1]" style="font-size: 15px">
+                    <li> <b> A : Conventions of Standard English </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Write routinely over extended time frames (time for research, reflection, and revision) and shorter time frames (a single sitting or a day or two) for a range of discipline-specific tasks, purposes, and audiences. </li>
+                                <ul>
+                                    <li> <b> a </b> : Explain the function of verbals (gerunds, participles, infinitives) in general and their function in particular sentences. </li>
+                                    <li> <b> b </b> : Form and use verbs in the active and passive voice. </li>
+                                    <li> <b> c </b> : Form and use verbs in the indicative, imperative, interrogative, conditional, and subjunctive mood. </li>
+                                    <li> <b> d </b> : Recognize and correct inappropriate shifts in verb voice and mood. </li>
+                                </ul>
+                            <li> <b> 2 </b> : Demonstrate command of the conventions of standard English capitalization, punctuation, and spelling when writing. </li>
+                                <ul>
+                                    <li> <b> a </b> : Use punctuation (comma, ellipsis, dash) to indicate a pause or break. </li>
+                                    <li> <b> b </b> : Use an ellipsis to indicate an omission. </li>
+                                    <li> <b> c </b> : Spell correctly. </li>
+                                </ul>
+                        </ul>
+                    <li> <b> B : Knowledge of Language </b> </li>
+                        <ul>
+                            <li> <b> 3 </b> : Use knowledge of language and its conventions when writing, speaking, reading, or listening. </li>
+                                <ul>
+                                    <li> <b> a </b> : Use verbs in the active and passive voice and in the conditional and subjunctive mood to achieve particular effects (e.g., emphasizing the actor or the action; expressing uncertainty or describing a state contrary to fact). </li>
+                                </ul>
+                        </ul>
+                    <li> <b> C : Vocabulary Acquisition and Use </b> </li>
+                        <ul>
+                            <li> <b> 4 </b> : Determine or clarify the meaning of unknown and multiple-meaning words or phrases based on grade 8 reading and content, choosing flexibly from a range of strategies. </li>
+                                <ul>
+                                    <li> <b> a </b> : Use context (e.g., the overall meaning of a sentence or paragraph; a word's position or function in a sentence) as a clue to the meaning of a word or phrase. </li>
+                                    <li> <b> b </b> : Use common, grade-appropriate Greek or Latin affixes and roots as clues to the meaning of a word (e.g., precede, recede, secede). </li>
+                                    <li> <b> c </b> : Consult general and specialized reference materials (e.g., dictionaries, glossaries, thesauruses), both print and digital, to find the pronunciation of a word or determine or clarify its precise meaning or its part of speech. </li>
+                                    <li> <b> d </b> : Verify the preliminary determination of the meaning of a word or phrase (e.g., by checking the inferred meaning in context or in a dictionary). </li>
+                                </ul>
+                            <li> <b> 5 </b> : Demonstrate understanding of figurative language, word relationships, and nuances in word meanings. </li>
+                                <ul>
+                                    <li> <b> a </b> : Interpret figures of speech (e.g. verbal irony, puns) in context. </li>
+                                    <li> <b> b </b> : Use the relationship between particular words to better understand each of the words. </li>
+                                    <li> <b> c </b> : Distinguish among the connotations (associations) of words with similar denotations (definitions) (e.g., bullheaded, willful, firm, persistent, resolute). </li>
+                                </ul>
+                            <li> <b> 6 </b> : Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases; gather vocabulary knowledge when considering a word or phrase important to comprehension or expression. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> 8.RI : Reading - Informational Text </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[2]" style="font-size: 15px">
+                    <li> <b> A : Key Ideas and Details </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Cite the textual evidence that most strongly supports an analysis of what the text says explicitly as well as inferences drawn from the text. </li>
+                            <li> <b> 2 </b> : Determine a central idea of a text and analyze its development over the course of the text, including its relationship to supporting ideas; provide an objective summary of the text. </li>
+                            <li> <b> 3 </b> : Analyze how a text makes connections among and distinctions between individuals, ideas, or events (e.g., through comparisons, analogies, or categories). </li>
+                        </ul>
+                    <li> <b> B : Craft and Structure </b> </li>
+                        <ul>
+                            <li> <b> 4 </b> : Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze the impact of specific word choices on meaning and tone, including analogies or allusions to other texts. </li>
+                            <li> <b> 5 </b> : AAnalyze in detail the structure of a specific paragraph in a text, including the role of particular sentences in developing and refining a key concept. </li>
+                            <li> <b> 6 </b> : Determine an author's point of view or purpose in a text and analyze how the author acknowledges and responds to conflicting evidence or viewpoints. </li>
+                        </ul>
+                    <li> <b> C : Integration of Knowledge and Ideas </b> </li>
+                        <ul>
+                            <li> <b> 7 </b> : Evaluate the advantages and disadvantages of using different mediums (e.g., print or digital text, video, multimedia) to present a particular topic or idea. </li>
+                            <li> <b> 8 </b> : Delineate and evaluate the argument and specific claims in a text, assessing whether the reasoning is sound and the evidence is relevant and sufficient; recognize when irrelevant evidence is introduced. </li>
+                            <li> <b> 9 </b> : Analyze a case in which two or more texts provide conflicting information on the same topic and identify where the texts disagree on matters of fact or interpretation. </li>
+                        </ul>
+                    <li> <b> D : Range of Reading and Level of Text Complexity </b> </li>
+                        <ul>
+                            <li> <b> 10 </b> : By the end of the year, read and comprehend literary nonfiction at the high end of the grades 6–8 text complexity band independently and proficiently. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> 8.RL : Reading - Literature </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[3]" style="font-size: 15px">
+                    <li> <b> A : Key Ideas and Details </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Cite the textual evidence that most strongly supports an analysis of what the text says explicitly as well as inferences drawn from the text. </li>
+                            <li> <b> 2 </b> : Determine a theme or central idea of a text and analyze its development over the course of the text, including its relationship to the characters, setting, and plot; provide an objective summary of the text. </li>
+                            <li> <b> 3 </b> : Analyze how particular lines of dialogue or incidents in a story or drama propel the action, reveal aspects of a character, or provoke a decision. </li>
+                        </ul>
+                    <li> <b> B : Craft and Structure </b> </li>
+                        <ul>
+                            <li> <b> 4 </b> : Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific word choices on meaning and tone, including analogies or allusions to other texts. </li>
+                            <li> <b> 5 </b> : Compare and contrast the structure of two or more texts and analyze how the differing structure of each text contributes to its meaning and style. </li>
+                            <li> <b> 6 </b> : Analyze how differences in the points of view of the characters and the audience or reader (e.g., created through the use of dramatic irony) create such effects as suspense or humor. </li>
+                            <li> <b> 7 </b> : Analyze the extent to which a filmed or live production of a story or drama stays faithful to or departs from the text or script, evaluating the choices made by the director or actors. </li>
+                            <li> <b> 9 </b> : Analyze how a modern work of fiction draws on themes, patterns of events, or character types from myths, traditional stories, or religious works such as the Bible, including describing how the material is rendered new. </li>
+                        </ul>
+                    <li> <b> C : Range of Reading and Level of Text Complexity </b> </li>
+                        <ul>
+                            <li> <b> 10 </b> : By the end of the year, read and comprehend literature, including stories, dramas, and poems, at the high end of grades 6–8 text complexity band independently and proficiently. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> 8.W : Writing </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[4]" style="font-size: 15px">
+                    <li> <b> A : Text Types and Purposes </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Write arguments to support claims with clear reasons and relevant evidence. </li>
+                                <ul>
+                                    <li> <b> a </b> : Introduce claim(s), acknowledge and distinguish the claim(s) from alternate or opposing claims, and organize the reasons and evidence logically. </li>
+                                    <li> <b> b </b> : Support claim(s) with logical reasoning and relevant evidence, using accurate, credible sources and demonstrating an understanding of the topic or text. </li>
+                                    <li> <b> c </b> : Use words, phrases, and clauses to create cohesion and clarify the relationships among claim(s), counterclaims, reasons, and evidence. </li>
+                                    <li> <b> d </b> : Establish and maintain a formal style. </li>
+                                    <li> <b> e </b> : Provide a concluding statement or section that follows from and supports the argument presented. </li>
+                                </ul>
+                            <li> <b> 2 </b> : Write informative/explanatory texts to examine a topic and convey ideas, concepts, and information through the selection, organization, and analysis of relevant content. </li>
+                                <ul>
+                                    <li> <b> a </b> : Introduce a topic clearly, previewing what is to follow; organize ideas, concepts, and information into broader categories; include formatting (e.g., headings), graphics (e.g., charts, tables), and multimedia when useful to aid comprehension. </li>
+                                    <li> <b> b </b> : Develop the topic with relevant, well-chosen facts, definitions, concrete details, quotations, or other information and examples. </li>
+                                    <li> <b> c </b> : Use appropriate and varied transitions to create cohesion and clarify the relationships among ideas and concepts. </li>
+                                    <li> <b> d </b> : Use precise language and domain-specific vocabulary to inform about or explain the topic. </li>
+                                    <li> <b> e </b> : Establish and maintain a formal style. </li>
+                                    <li> <b> f </b> : Provide a concluding statement or section that follows from and supports the information or explanation presented. </li>
+                                </ul>
+                            <li> <b> 3 </b> : Write narratives to develop real or imagined experiences or events using effective technique, relevant descriptive details, and well-structured event sequences. </li>
+                                <ul>
+                                    <li> <b> a </b> : Engage and orient the reader by establishing a context and point of view and introducing a narrator and/or characters; organize an event sequence that unfolds naturally and logically. </li>
+                                    <li> <b> b </b> : Use narrative techniques, such as dialogue, pacing, description, and reflection, to develop experiences, events, and/or characters. </li>
+                                    <li> <b> c </b> : Use a variety of transition words, phrases, and clauses to convey sequence, signal shifts from one time frame or setting to another, and show the relationships among experiences and events. </li>
+                                    <li> <b> d </b> : Use precise words and phrases, relevant descriptive details, and sensory language to capture the action and convey experiences and events. </li>
+                                    <li> <b> e </b> : Provide a conclusion that follows from and reflects on the narrated experiences or events. </li>
+                                </ul>
+                        </ul>
+                    <li> <b> B : Production and Distribution of Writing </b> </li>
+                        <ul>
+                            <li> <b> 4 </b> : Produce clear and coherent writing in which the development, organization, and style are appropriate to task, purpose, and audience. </li>
+                            <li> <b> 5 </b> : With some guidance and support from peers and adults, develop and strengthen writing as needed by planning, revising, editing, rewriting, or trying a new approach, focusing on how well purpose and audience have been addressed. </li>
+                            <li> <b> 6 </b> : Use technology, including the Internet, to produce and publish writing and present the relationships between information and ideas efficiently as well as to interact and collaborate with others. </li>
+                        </ul>
+                    <li> <b> C : Research to Build and Present Knowledge </b> </li>
+                        <ul>
+                            <li> <b> 7 </b> : Conduct short research projects to answer a question (including a self-generated question), drawing on several sources and generating additional related, focused questions that allow for multiple avenues of exploration. </li>
+                            <li> <b> 8 </b> : Gather relevant information from multiple print and digital sources, using search terms effectively; assess the credibility and accuracy of each source; and quote or paraphrase the data and conclusions of others while avoiding plagiarism and following a standard format for citation. </li>
+                            <li> <b> 9 </b> : Draw evidence from literary or informational texts to support analysis, reflection, and research. </li>
+                                <ul>
+                                    <li> <b> a </b> : Apply grade 8 Reading standards to literature (e.g., "Analyze how a modern work of fiction draws on themes, patterns of events, or character types from myths, traditional stories, or religious works such as the Bible, including describing how the material is rendered new"). </li>
+                                    <li> <b> b </b> : Apply grade 8 Reading standards to literary nonfiction (e.g., "Delineate and evaluate the argument and specific claims in a text, assessing whether the reasoning is sound and the evidence is relevant and sufficient; recognize when irrelevant evidence is introduced"). </li>
+                                </ul>
+                        </ul>
+                    <li> <b> D : Range of Writing </b> </li>
+                        <ul>
+                            <li> <b> 10 </b> : Write routinely over extended time frames (time for research, reflection, and revision) and shorter time frames (a single sitting or a day or two) for a range of discipline-specific tasks, purposes, and audiences. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>

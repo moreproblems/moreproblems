@@ -429,8 +429,7 @@
 <div class="content" role="main">
     <br />
     <br />
-    <br />
-    <h2>  High School Mathematics (Common Core) Learning Standards - Algebra </h2>
+    <h2> High School Mathematics (Common Core) Learning Standards - Number & Quantity </h2>
     <br />
     <!-- <h3> In Grade 3 Math, instructional time should focus on the following four critical areas: </h3> -->
     <br />
@@ -441,15 +440,15 @@
                 <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
             </div>
             <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Expressions </h4>
+                <h4 style="font-size: 18px"> Numbers & Number Systems </h4>
                 <br *ngIf="domain_state[1]" />
-                <p *ngIf="domain_state[1]" style="font-size: 15px"> An expression is a record of a computation with numbers, symbols that represent numbers, arithmetic operations, exponentiation, and, at more advanced levels, the operation of evaluating a function. Conventions about the use of parentheses and the order of operations assure that each expression is unambiguous. Creating an expression that describes a computation involving a general quantity requires the ability to express the computation in general terms, abstracting from specific instances. </p>
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> During the years from kindergarten to eighth grade, students must repeatedly extend their conception of number. At first, “number” means “counting number”: 1, 2, 3... Soon after that, 0 is used to represent “none” and the whole numbers are formed by the counting numbers together with zero. The next extension is fractions. At first, fractions are barely numbers and tied strongly to pictorial representations. Yet by the time students understanddivision of fractions, they have a strong concept of fractions as numbers and have connected them, via their decimal representations, with the base-ten system used to represent the whole numbers. During middle school, fractions are augmented by negative fractions to form the rational numbers. In Grade 8, students extend this system once more, augmenting the rational numbers with the irrational numbers to form the real numbers. In high school, students will be exposed to yet another extension of number, when the real numbers are augmented by the imaginary numbers to form the complex numbers. </p>
                 <br *ngIf="domain_state[1]" />
-                <p *ngIf="domain_state[1]" style="font-size: 15px"> Reading an expression with comprehension involves analysis of its underlying structure. This may suggest a different but equivalent way of writing the expression that exhibits some different aspect of its meaning. For example, p + 0.05p can be interpreted as the addition of a 5% tax to a price p. Rewriting p + 0.05p as 1.05p shows that adding a tax is the same as multiplying the price by a constant factor. </p>
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> With each extension of number, the meanings of addition, subtraction, multiplication, and division are extended. In each new number system—integers, rational numbers, real numbers, and complex numbers—the four operations stay the same in two important ways: They have the commutative, associative, and distributive properties and their new meanings are consistent with their previous meanings. </p>
                 <br *ngIf="domain_state[1]" />
-                <p *ngIf="domain_state[1]" style="font-size: 15px"> Algebraic manipulations are governed by the properties of operations and exponents, and the conventions of algebraic notation. At times, an expression is the result of applying operations to simpler expressions. For example, p + 0.05p is the sum of the simpler expressions p and 0.05p. Viewing an expression as the result of operation on simpler expressions can sometimes clarify its underlying structure. </p>
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> Extending the properties of whole-number exponents leads to new and productive notation. For example, properties of whole-number exponents suggest that (51/3)3 should be 5(1/3)3 = 51 = 5 and that 51/3 should be the cube root of 5. </p>
                 <br *ngIf="domain_state[1]" />
-                <p *ngIf="domain_state[1]" style="font-size: 15px"> A spreadsheet or a computer algebra system (CAS) can be used to experiment with algebraic expressions, perform complicated algebraic manipulations, and understand how algebraic manipulations behave. </p>
+                <p *ngIf="domain_state[1]" style="font-size: 15px"> Calculators, spreadsheets, and computer algebra systems can provide ways for students to become better acquainted with these new number systems and their notation. They can be used to generate data for numerical experiments, to help understand the workings of matrix, vector, and complex number algebra, and to experiment with non-integer exponents. </p>
             </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto">
@@ -458,30 +457,9 @@
                 <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
             </div>
             <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Equations & Inequalities </h4>
+                <h4 style="font-size: 18px"> Quantities </h4>
                 <br *ngIf="domain_state[2]" />
-                <p *ngIf="domain_state[2]" style="font-size: 15px"> An equation is a statement of equality between two expressions, often viewed as a question asking for which values of the variables the expressions on either side are in fact equal. These values are the solutions to the equation. An identity, in contrast, is true for all values of the variables; identities are often developed by rewriting an expression in an equivalent form. </p>
-                <br *ngIf="domain_state[2]" />
-                <p *ngIf="domain_state[2]" style="font-size: 15px"> The solutions of an equation in one variable form a set of numbers; the solutions of an equation in two variables form a set of ordered pairs of numbers, which can be plotted in the coordinate plane. Two or more equations and/or inequalities form a system. A solution for such a system must satisfy every equation and inequality in the system. </p>
-                <br *ngIf="domain_state[2]" />
-                <p *ngIf="domain_state[2]" style="font-size: 15px"> An equation can often be solved by successively deducing from it one or more simpler equations. For example, one can add the same constant to both sides without changing the solutions, but squaring both sides might lead to extraneous solutions. Strategic competence in solving includes looking ahead for productive manipulations and anticipating the nature and number of solutions. </p>
-                <br *ngIf="domain_state[2]" />
-                <p *ngIf="domain_state[2]" style="font-size: 15px"> Some equations have no solutions in a given number system, but have a solution in a larger system. For example, the solution of x + 1 = 0 is an integer, not a whole number; the solution of 2x + 1 = 0 is a rational number, not an integer; the solutions of x2 – 2 = 0 are real numbers, not rational numbers; and the solutions of x2 + 2 = 0 are complex numbers, not real numbers. </p>
-                <br *ngIf="domain_state[2]" />
-                <p *ngIf="domain_state[2]" style="font-size: 15px"> The same solution techniques used to solve equations can be used to rearrange formulas. For example, the formula for the area of a trapezoid, A = ((b1+b2)/2)h, can be solved for h using the same deductive process. </p>
-                <br *ngIf="domain_state[2]" />
-                <p *ngIf="domain_state[2]" style="font-size: 15px"> Inequalities can be solved by reasoning about the properties of inequality. Many, but not all, of the properties of equality continue to hold for inequalities and can be useful in solving them. </p>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto">
-            <div style="margin: 0 20px">
-                <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
-            </div>
-            <div style="margin: 0 20px; text-align: left">
-                <h4 style="font-size: 18px"> Connections To Functions & Modeling </h4>
-                <br *ngIf="domain_state[3]" />
-                <p *ngIf="domain_state[3]" style="font-size: 15px"> Expressions can define functions, and equivalent expressions define the same function. Asking when two functions have the same value for the same input leads to an equation; graphing the two functions allows for finding approximate solutions of the equation. Converting a verbal description to an equation, inequality, or system of these is an essential skill in modeling. </p>
+                <p *ngIf="domain_state[2]" style="font-size: 15px"> In real world problems, the answers are usually not numbers but quantities: numbers with units, which involves measurement. In their work in measurement up through Grade 8, students primarily measure commonly used attributes such as length, area, and volume. In high school, students encounter a wider variety of units in modeling, e.g., acceleration, currency conversions, derived quantities such as person-hours and heating degree days, social science rates such as per-capita income, and rates in everyday life such as points scored per game or batting averages. They also encounter novel situations in which they themselves must conceive the attributes of interest. For example, to find a good measure of overall highway safety, they might propose measures such as fatalities per year, fatalities per year per driver, or fatalities per vehicle-mile traveled. Such a conceptual process is sometimes called quantification. Quantification is important for science, as when surface area suddenly “stands out” as an important variable in evaporation. Quantification is also important for companies, which must conceptualize relevant attributes and create or choose suitable measures for them. </p>
             </div>
         </div>
     </div>

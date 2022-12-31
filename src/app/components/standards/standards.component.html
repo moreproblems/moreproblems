@@ -1291,7 +1291,7 @@
       <label class="switch">
         <input type="checkbox" value="KE">
         <button *ngIf="selected_subject == 'KE'" (click)="select_subject('KE')" class="toggle-button-on" tabindex="0"> <b> Language Arts </b></button>
-        <button *ngIf="selected_subject != 'KE'" (click)="select_subject('KE'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+        <button *ngIf="selected_subject != 'KE'" routerLink="/standards/K-English" routerLinkActive="active" (click)="select_subject('KE')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
       </label>
     </div>
   </div>
@@ -1310,7 +1310,7 @@
       <label class="switch">
         <input type="checkbox" value="G1E">
         <button *ngIf="selected_subject == 'G1E'" (click)="select_subject('G1E')" class="toggle-button-on" tabindex="0"> <b> Language Arts </b></button>
-        <button *ngIf="selected_subject != 'G1E'" (click)="select_subject('G1E'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+        <button *ngIf="selected_subject != 'G1E'" routerLink="/standards/G1-English" routerLinkActive="active" (click)="select_subject('G1E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
       </label>
     </div>
   </div>
@@ -1329,7 +1329,7 @@
       <label class="switch">
         <input type="checkbox" value="G2E">
         <button *ngIf="selected_subject == 'G2E'" (click)="select_subject('G2E')" class="toggle-button-on" tabindex="0"> <b> Language Arts </b></button>
-        <button *ngIf="selected_subject != 'G2E'" (click)="select_subject('G2E'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+        <button *ngIf="selected_subject != 'G2E'" routerLink="/standards/G2-English" routerLinkActive="active" (click)="select_subject('G2E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
       </label>
     </div>
   </div>
@@ -1348,7 +1348,7 @@
       <label class="switch">
         <input type="checkbox" value="G3E">
         <button *ngIf="selected_subject == 'G3E'" (click)="select_subject('G3E')" class="toggle-button-on" tabindex="0"> <b> Language Arts </b></button>
-        <button *ngIf="selected_subject != 'G3E'" (click)="select_subject('G3E'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+        <button *ngIf="selected_subject != 'G3E'" routerLink="/standards/G3-English" routerLinkActive="active" (click)="select_subject('G3E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
       </label>
     </div>
   </div>
@@ -1367,7 +1367,7 @@
       <label class="switch">
         <input type="checkbox" value="G4E">
         <button *ngIf="selected_subject == 'G4E'" (click)="select_subject('G4E')" class="toggle-button-on" tabindex="0"> <b> Language Arts </b></button>
-        <button *ngIf="selected_subject != 'G4E'" (click)="select_subject('G4E'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+        <button *ngIf="selected_subject != 'G4E'" routerLink="/standards/G4-English" routerLinkActive="active" (click)="select_subject('G4E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
       </label>
     </div>
   </div>
@@ -1386,7 +1386,7 @@
       <label class="switch">
         <input type="checkbox" value="G5E">
         <button *ngIf="selected_subject == 'G5E'" (click)="select_subject('G5E')" class="toggle-button-on" tabindex="0"> <b> Language Arts </b></button>
-        <button *ngIf="selected_subject != 'G5E'" (click)="select_subject('G5E'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+        <button *ngIf="selected_subject != 'G5E'" routerLink="/standards/G5-English" routerLinkActive="active" (click)="select_subject('G5E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
       </label>
     </div>
   </div>
@@ -1405,9 +1405,9 @@
       <label class="switch">
         <input type="checkbox" value="G6E">
         <button *ngIf="selected_subject == 'G6E'" (click)="select_subject('G6E')" class="toggle-button-on" tabindex="0"> <b> Language Arts </b></button>
-        <button *ngIf="selected_subject != 'G6E'" (click)="select_subject('G6E'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+        <button *ngIf="selected_subject != 'G6E'" routerLink="/standards/G6-English" routerLinkActive="active" (click)="select_subject('G6E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
       </label>
-      <label class="switch">
+      <!-- <label class="switch">
         <input type="checkbox" value="G6S">
         <button *ngIf="selected_subject == 'G6S'" (click)="select_subject('G6S')" class="toggle-button-on" tabindex="0"> <b> Science </b></button>
         <button *ngIf="selected_subject != 'G6S'" (click)="select_subject('G6S'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
@@ -1416,7 +1416,7 @@
         <input type="checkbox" value="G6SS">
         <button *ngIf="selected_subject == 'G6SS'" (click)="select_subject('G6SS')" class="toggle-button-on" tabindex="0"> <b> Social Studies </b></button>
         <button *ngIf="selected_subject != 'G6SS'" (click)="select_subject('G6SS'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Social Studies </b></button>
-      </label>
+      </label> -->
     </div>
   </div>
   <!-- Sevenh Grade Standards -->
@@ -1434,9 +1434,9 @@
       <label class="switch">
         <input type="checkbox" value="G7E">
         <button *ngIf="selected_subject == 'G7E'" (click)="select_subject('G7E')" class="toggle-button-on" tabindex="0"> <b> Language Arts </b></button>
-        <button *ngIf="selected_subject != 'G7E'" (click)="select_subject('G7E'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+        <button *ngIf="selected_subject != 'G7E'" routerLink="/standards/G7-English" routerLinkActive="active" (click)="select_subject('G7E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
       </label>
-      <label class="switch">
+      <!-- <label class="switch">
         <input type="checkbox" value="G7S">
         <button *ngIf="selected_subject == 'G7S'" (click)="select_subject('G7S')" class="toggle-button-on" tabindex="0"> <b> Science </b></button>
         <button *ngIf="selected_subject != 'G7S'" (click)="select_subject('G7S'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
@@ -1445,7 +1445,7 @@
         <input type="checkbox" value="G7SS">
         <button *ngIf="selected_subject == 'G7SS'" (click)="select_subject('G7SS')" class="toggle-button-on" tabindex="0"> <b> Social Studies </b></button>
         <button *ngIf="selected_subject != 'G7SS'" (click)="select_subject('G7SS'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Social Studies </b></button>
-      </label>
+      </label> -->
     </div>
   </div>
   <!-- Eigth Grade Standards -->
@@ -1463,9 +1463,9 @@
       <label class="switch">
         <input type="checkbox" value="G8E">
         <button *ngIf="selected_subject == 'G8E'" (click)="select_subject('G8E')" class="toggle-button-on" tabindex="0"> <b> Language Arts </b></button>
-        <button *ngIf="selected_subject != 'G8E'" (click)="select_subject('G8E'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+        <button *ngIf="selected_subject != 'G8E'" routerLink="/standards/G8-English" routerLinkActive="active" (click)="select_subject('G8E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
       </label>
-      <label class="switch">
+      <!-- <label class="switch">
         <input type="checkbox" value="G8S">
         <button *ngIf="selected_subject == 'G8S'" (click)="select_subject('G8S')" class="toggle-button-on" tabindex="0"> <b> Science </b></button>
         <button *ngIf="selected_subject != 'G8S'" (click)="select_subject('G8S'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
@@ -1474,7 +1474,7 @@
         <input type="checkbox" value="G8SS">
         <button *ngIf="selected_subject == 'G8SS'" (click)="select_subject('G8SS')" class="toggle-button-on" tabindex="0"> <b> Social Studies </b></button>
         <button *ngIf="selected_subject != 'G8SS'" (click)="select_subject('G8SS'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Social Studies </b></button>
-      </label>
+      </label> -->
     </div>
   </div>
   <!-- Ninth Grade Standards -->

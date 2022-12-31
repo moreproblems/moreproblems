@@ -463,7 +463,7 @@
         </div>
     </section>
     <br />
-    <h2 style="text-align: center; margin-bottom: 10px"> Eighth Grade Mathematics (Common Core) Learning Standards </h2>
+    <h2 style="text-align: center; margin-bottom: 10px"> High School Mathematics (Common Core) Learning Standards </h2>
     <br />
     <div class="card-container">
         <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
@@ -473,27 +473,97 @@
                     <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
                 </div>
                 <div style="margin: 0 20px; text-align: left">
-                    <h4 style="font-size: 18px"> 8.NS : The Number System </h4>
+                    <h4 style="font-size: 18px"> 9-12.HSNQ : Number & Quantity </h4>
                 </div>
             </div>
             <div style="display: flex; flex-direction: row; text-align: left">
                 <ul *ngIf="domain_state[1]" style="font-size: 15px">
-                    <li> <b> A : Know that there are numbers that are not rational, and approximate them by rational numbers. </b> </li>
+                    <li> <b> RN : The Real Number System </b> </li>
                         <ul>
-                            <li> <b> 1 </b> : Know that numbers that are not rational are called irrational. Understand informally that every number has a decimal expansion; for rational numbers show that the decimal expansion repeats eventually, and convert a decimal expansion which repeats eventually into a rational number. </li>
-                            <li> <b> 2 </b> : Use rational approximations of irrational numbers to compare the size of irrational numbers, locate them approximately on a number line diagram, and estimate the value of expressions (e.g., π2). </li>
+                            <li> <b> A </b> : Extend the properties of exponents to rational exponents. </li>
+                                <ul>
+                                    <li> <b> 1 </b> : Explain how the definition of the meaning of rational exponents follows from extending the properties of integer exponents to those values, allowing for a notation for radicals in terms of rational exponents. </li>
+                                    <li> <b> 2 </b> : Rewrite expressions involving radicals and rational exponents using the properties of exponents. </li>
+                                </ul>
+                            <li> <b> B </b> : Use properties of rational and irrational numbers. </li>
+                                <ul>
+                                    <li> <b> 3 </b> : Explain why the sum or product of two rational numbers is rational; that the sum of a rational number and an irrational number is irrational; and that the product of a nonzero rational number and an irrational number is irrational. </li>
+                                </ul>
+                        </ul>
+                    <li> <b> Q : Quantities </b> </li>
+                        <ul>
+                            <li> <b> A </b> : Reason quantitatively and use units to solve problems. </li>
+                                <ul>
+                                    <li> <b> 1 </b> : Use units as a way to understand problems and to guide the solution of multi-step problems; choose and interpret units consistently in formulas; choose and interpret the scale and the origin in graphs and data displays. </li>
+                                    <li> <b> 2 </b> : Define appropriate quantities for the purpose of descriptive modeling. </li>
+                                    <li> <b> 3 </b> : Choose a level of accuracy appropriate to limitations on measurement when reporting quantities. </li>
+                                </ul>
+                        </ul>
+                    <li> <b> CN : The Complex Number System </b> </li>
+                        <ul>
+                            <li> <b> A </b> : Perform arithmetic operations with complex numbers. </li>
+                                <ul>
+                                    <li> <b> 1 </b> : Know there is a complex number i such that i² = –1, and every complex number has the form a + bi with a and b real. </li>
+                                    <li> <b> 2 </b> : Use the relation i² = –1 and the commutative, associative, and distributive properties to add, subtract, and multiply complex numbers. </li>
+                                    <li> <b> 3 </b> : Find the conjugate of a complex number; use conjugates to find moduli and quotients of complex numbers. </li>
+                                </ul>
+                            <li> <b> B </b> : Represent complex numbers and their operations on the complex plane. </li>
+                                <ul>
+                                    <li> <b> 4 </b> : Represent complex numbers on the complex plane in rectangular and polar form (including real and imaginary numbers), and explain why the rectangular and polar forms of a given complex number represent the same number. </li>
+                                    <li> <b> 5 </b> : Represent addition, subtraction, multiplication, and conjugation of complex numbers geometrically on the complex plane; use properties of this representation for computation. </li>
+                                    <li> <b> 6 </b> : Calculate the distance between numbers in the complex plane as the modulus of the difference, and the midpoint of a segment as the average of the numbers at its endpoints. </li>
+                                </ul>
+                            <li> <b> C </b> : Use complex numbers in polynomial identities and equations. </li>
+                                <ul>
+                                    <li> <b> 7 </b> : Solve quadratic equations with real coefficients that have complex solutions. </li>
+                                    <li> <b> 8 </b> : Extend polynomial identities to the complex numbers. </li>
+                                    <li> <b> 9 </b> : Know the Fundamental Theorem of Algebra; show that it is true for quadratic polynomials. </li>
+                                </ul>
+                        </ul>
+                    <li> <b> VM : Vector and Matrix Quantities </b> </li>
+                        <ul>
+                            <li> <b> A </b> : Represent and model with vector quantities. </li>
+                                <ul>
+                                    <li> <b> 1 </b> : Recognize vector quantities as having both magnitude and direction. Represent vector quantities by directed line segments, and use appropriate symbols for vectors and their magnitudes (e.g., v, |v|, ||v||, v). </li>
+                                    <li> <b> 2 </b> : Find the components of a vector by subtracting the coordinates of an initial point from the coordinates of a terminal point. </li>
+                                    <li> <b> 3 </b> : Solve problems involving velocity and other quantities that can be represented by vectors. </li>
+                                </ul>
+                            <li> <b> B </b> : Perform operations on vectors. </li>
+                                <ul>
+                                    <li> <b> 4 </b> : Add and subtract vectors. </li>
+                                        <ul>
+                                            <li> <b> a </b> : Add vectors end-to-end, component-wise, and by the parallelogram rule. Understand that the magnitude of a sum of two vectors is typically not the sum of the magnitudes. </li>
+                                            <li> <b> b </b> : Given two vectors in magnitude and direction form, determine the magnitude and direction of their sum. </li>
+                                            <li> <b> c </b> : Understand vector subtraction v - w as v + (-w), where -w is the additive inverse of w, with the same magnitude as w and pointing in the opposite direction. Represent vector subtraction graphically by connecting the tips in the appropriate order, and perform vector subtraction component-wise. </li>
+                                        </ul>
+                                    <li> <b> 5 </b> : Multiply a vector by a scalar. </li>
+                                        <ul>
+                                            <li> <b> a </b> : Represent scalar multiplication graphically by scaling vectors and possibly reversing their direction; perform scalar multiplication component-wise, e.g., as c(vx, vy) = (cvx, cvy). </li>
+                                            <li> <b> b </b> : Compute the magnitude of a scalar multiple cv using ||cv|| = |c|·||v||. Compute the direction of cv knowing that when |c|v is not equal to 0, the direction of cv is either along v (for c > 0) or against v (for c < 0). </li>
+                                        </ul>
+                                </ul>
+                            <li> <b> C </b> : Perform operations on matrices and use matrices in applications. </li>
+                                <ul>
+                                    <li> <b> 6 </b> : Use matrices to represent and manipulate data, e.g., to represent payoffs or incidence relationships in a network. </li>
+                                    <li> <b> 7 </b> : Multiply matrices by scalars to produce new matrices, e.g., as when all of the payoffs in a game are doubled. </li>
+                                    <li> <b> 8 </b> : Add, subtract, and multiply matrices of appropriate dimensions. </li>
+                                    <li> <b> 9 </b> : Understand that, unlike multiplication of numbers, matrix multiplication for square matrices is not a commutative operation, but still satisfies the associative and distributive properties. </li>
+                                    <li> <b> 10 </b> : Understand that the zero and identity matrices play a role in matrix addition and multiplication similar to the role of 0 and 1 in the real numbers. The determinant of a square matrix is nonzero if and only if the matrix has a multiplicative inverse. </li>
+                                    <li> <b> 11 </b> : Multiply a vector (regarded as a matrix with one column) by a matrix of suitable dimensions to produce another vector. Work with matrices as transformations of vectors. </li>
+                                    <li> <b> 12 </b> : Work with 2 × 2 matrices as transformations of the plane, and interpret the absolute value of the determinant in terms of area. </li>
+                                </ul>
                         </ul>
                 </ul>
             </div>
         </div>
-        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+        <!-- <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
             <div style="display: flex; flex-direction: row">
                 <div style="margin: 0 20px">
                     <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
                     <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
                 </div>
                 <div style="margin: 0 20px; text-align: left">
-                    <h4 style="font-size: 18px"> 8.EE : Expressions and Equations </h4>
+                    <h4 style="font-size: 18px"> 9-12.HSA : Algebra </h4>
                 </div>
             </div>
             <div style="display: flex; flex-direction: row; text-align: left">
@@ -534,7 +604,7 @@
                     <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
                 </div>
                 <div style="margin: 0 20px; text-align: left">
-                    <h4 style="font-size: 18px"> 8.F : Functions </h4>
+                    <h4 style="font-size: 18px"> 9-12.HSF : Functions </h4>
                 </div>
             </div>
             <div style="display: flex; flex-direction: row; text-align: left">
@@ -560,7 +630,7 @@
                     <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
                 </div>
                 <div style="margin: 0 20px; text-align: left">
-                    <h4 style="font-size: 18px"> 8.G : Geometry </h4>
+                    <h4 style="font-size: 18px"> 9-12.HSG : Geometry </h4>
                 </div>
             </div>
             <div style="display: flex; flex-direction: row; text-align: left">
@@ -598,7 +668,7 @@
                     <img *ngIf="!domain_state[5]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
                 </div>
                 <div style="margin: 0 20px; text-align: left">
-                    <h4 style="font-size: 18px"> 8.SP : Statistics and Probability </h4>
+                    <h4 style="font-size: 18px"> 9-12.HSS : Statistics and Probability </h4>
                 </div>
             </div>
             <div style="display: flex; flex-direction: row; text-align: left">
@@ -612,7 +682,7 @@
                         </ul>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </div>
     <br />
 </div>

@@ -11,20 +11,30 @@ import { TX19G3MExamComponent } from './components/TX19G3M-exam/TX19G3M-exam.com
 import { TX19G3MKeyComponent } from './components/TX19G3M-key/TX19G3M-key.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { KMStandardsComponent } from './components/KM-standards/KM-standards.component';
+import { KEStandardsComponent } from './components/KE-standards/KE-standards.component';
 import { G1MStandardsComponent } from './components/G1M-standards/G1M-standards.component';
+import { G1EStandardsComponent } from './components/G1E-standards/G1E-standards.component';
 import { G2MStandardsComponent } from './components/G2M-standards/G2M-standards.component';
+import { G2EStandardsComponent } from './components/G2E-standards/G2E-standards.component';
 import { G3MStandardsComponent } from './components/G3M-standards/G3M-standards.component';
+import { G3EStandardsComponent } from './components/G3E-standards/G3E-standards.component';
 import { G4MStandardsComponent } from './components/G4M-standards/G4M-standards.component';
+import { G4EStandardsComponent } from './components/G4E-standards/G4E-standards.component';
 import { G5MStandardsComponent } from './components/G5M-standards/G5M-standards.component';
+import { G5EStandardsComponent } from './components/G5E-standards/G5E-standards.component';
 import { G6MStandardsComponent } from './components/G6M-standards/G6M-standards.component';
+import { G6EStandardsComponent } from './components/G6E-standards/G6E-standards.component';
 import { G7MStandardsComponent } from './components/G7M-standards/G7M-standards.component';
+import { G7EStandardsComponent } from './components/G7E-standards/G7E-standards.component';
 import { G8MStandardsComponent } from './components/G8M-standards/G8M-standards.component';
-import { HSNQStandardsComponent } from './components/HS-NQ-standards/HS-NQ-standards.component';
-import { HSAStandardsComponent } from './components/HS-A-standards/HS-A-standards.component';
-import { HSFStandardsComponent } from './components/HS-F-standards/HS-F-standards.component';
-import { HSMStandardsComponent } from './components/HS-M-standards/HS-M-standards.component';
-import { HSGStandardsComponent } from './components/HS-G-standards/HS-G-standards.component';
-import { HSSPStandardsComponent } from './components/HS-SP-standards/HS-SP-standards.component';
+import { G8EStandardsComponent } from './components/G8E-standards/G8E-standards.component';
+import { HSMStandardsComponent } from './components/HSM-standards/HSM-standards.component';
+// import { HSNQStandardsComponent } from './components/HS-NQ-standards/HS-NQ-standards.component';
+// import { HSAStandardsComponent } from './components/HS-A-standards/HS-A-standards.component';
+// import { HSFStandardsComponent } from './components/HS-F-standards/HS-F-standards.component';
+// import { HSMStandardsComponent } from './components/HS-M-standards/HS-M-standards.component';
+// import { HSGStandardsComponent } from './components/HS-G-standards/HS-G-standards.component';
+// import { HSSPStandardsComponent } from './components/HS-SP-standards/HS-SP-standards.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -35,20 +45,30 @@ const routes: Routes = [
   { path: 'exam/TX19G3M/key', component: TX19G3MKeyComponent },
   { path: 'standards', component: StandardsComponent },
   { path: 'standards/K-Math', component: KMStandardsComponent },
+  { path: 'standards/K-English', component: KEStandardsComponent },
   { path: 'standards/G1-Math', component: G1MStandardsComponent },
+  { path: 'standards/G1-English', component: G1EStandardsComponent },
   { path: 'standards/G2-Math', component: G2MStandardsComponent },
+  { path: 'standards/G2-English', component: G2EStandardsComponent },
   { path: 'standards/G3-Math', component: G3MStandardsComponent },
+  { path: 'standards/G3-English', component: G3EStandardsComponent },
   { path: 'standards/G4-Math', component: G4MStandardsComponent },
+  { path: 'standards/G4-English', component: G4EStandardsComponent },
   { path: 'standards/G5-Math', component: G5MStandardsComponent },
+  { path: 'standards/G5-English', component: G5EStandardsComponent },
   { path: 'standards/G6-Math', component: G6MStandardsComponent },
+  { path: 'standards/G6-English', component: G6EStandardsComponent },
   { path: 'standards/G7-Math', component: G7MStandardsComponent },
+  { path: 'standards/G7-English', component: G7EStandardsComponent },
   { path: 'standards/G8-Math', component: G8MStandardsComponent },
-  { path: 'standards/HS-Number-Quant', component: HSNQStandardsComponent },
-  { path: 'standards/HS-Algebra', component: HSAStandardsComponent },
-  { path: 'standards/HS-Functions', component: HSFStandardsComponent },
-  { path: 'standards/HS-Modeling', component: HSMStandardsComponent },
-  { path: 'standards/HS-Geometry', component: HSGStandardsComponent },
-  { path: 'standards/HS-Stats-Prob', component: HSSPStandardsComponent },
+  { path: 'standards/G8-English', component: G8EStandardsComponent },
+  { path: 'standards/HS-Math', component: HSMStandardsComponent },
+  // { path: 'standards/HS-Number-Quant', component: HSNQStandardsComponent },
+  // { path: 'standards/HS-Algebra', component: HSAStandardsComponent },
+  // { path: 'standards/HS-Functions', component: HSFStandardsComponent },
+  // { path: 'standards/HS-Modeling', component: HSMStandardsComponent },
+  // { path: 'standards/HS-Geometry', component: HSGStandardsComponent },
+  // { path: 'standards/HS-Stats-Prob', component: HSSPStandardsComponent },
   { path: 'problems', component: ProblemsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent }

@@ -75,7 +75,7 @@
   .content {
     display: flex;
     margin: 12px auto 32px;
-    padding: 0 16px;
+    padding: 0;
     width: 95%;
     flex-direction: column;
     align-items: center;
@@ -465,26 +465,28 @@
   <!-- PDF Viewer -->
   <div *ngIf="file_source != ''" class="card card-large" (window:resize)="width_change()"
     style="height: auto; border: 3px solid black; border-radius: 20px; display: block" [attr.max-width]="viewerWidth" [attr.max-height]="viewerHeight" #pdfViewer>
-    <section style="height: 75px; width: 100%; display: flex; justify-content: right">
+    <section style="height: auto; max-height: 50px; width: 100%; display: flex; justify-content: center">
+      <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="margin: auto 25px; text-align: center; font-size: 18px"> {{exam_name}} </h1>
+      <h1 *ngIf="this.screenWidth > this.mobileWidth" style="margin: auto 25px; text-align: center; font-size: 22px"> {{exam_name}} </h1>
+    </section>
+    <section style="height: auto; max-height: 75px; width: 100%; display: flex; justify-content: center">
       <button *ngIf="file_source != '' && this.screenWidth > this.mobileWidth" (click)="print_exam()" class="grade-button"
-        style="margin: 10px; width: auto; height: auto">
+        style="margin: 10px 10px 10px 0; width: auto; height: auto">
         <!-- <img src="./assets/icons/print.png" style="height: 30px; width: 30px; filter: invert(100%)"> -->
-        <b>Print</b>
+        <b> Print </b>
       </button>
       <button *ngIf="file_source != ''" (click)="download_exam()" class="grade-button"
-        style="margin: 10px; width: auto; height: auto">
+        style="margin: 10px 10px 10px 0; width: auto; height: auto">
         <img *ngIf="this.screenWidth <= this.mobileWidth" src="./assets/icons/download.png" style="height: 25px; filter: invert(100%)">
         <b *ngIf="this.screenWidth > this.mobileWidth"> Download </b>
       </button>
       <button *ngIf="online_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
-        style="margin: 10px; width: auto; height: auto">
+        style="margin: 10px 10px 10px 0; width: auto; height: auto">
         <!-- <img src="./assets/icons/download.png" style="height: 30px; width: 30px; filter: invert(100%)"> -->
         <b>Online Exam</b>
       </button>
-      <h1 *ngIf="this.screenWidth > this.mobileWidth" style="margin: auto 25px; text-align: center; font-size: 22px"> {{exam_name}} </h1>
-      <h1 *ngIf="this.screenWidth <= this.mobileWidth"  style="margin: auto 25px; text-align: center; font-size: 16px"> {{exam_name}} </h1>
       <button *ngIf="file_source != ''" (click)="prev_page()" class="grade-button"
-        style="margin: 20px 0; width: auto; height: auto">
+        style="margin: 20px 0; margin-left: 10px; width: auto; height: auto">
         <img src="./assets/icons/minus.png" style="height: 25px; filter: invert(100%)">
         <!-- <b>PD</b> -->
       </button>
