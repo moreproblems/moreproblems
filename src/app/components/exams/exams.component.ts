@@ -14,6 +14,7 @@ export class ExamsComponent implements OnInit{
   // title = 'More Problems';
 
   screenWidth = window.innerWidth;
+  screenHeight = window.innerHeight;
   mobileWidth = 800;
   menuOpen = false;
 
@@ -30,12 +31,13 @@ export class ExamsComponent implements OnInit{
   file_page = 1;
 
   viewerWidth = Math.round(window.innerWidth*.99).toString() + "px";
-  viewerHeight = Math.round(window.innerHeight*.8).toString() + "px";
+  viewerHeight = Math.round(window.innerHeight*.95).toString() + "px";
   
   constructor(private router: Router, private titleService: Title, private meta: Meta) { }
 
   width_change2() {
     this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
   }
 
   select_state(st: string) {
@@ -1314,7 +1316,7 @@ export class ExamsComponent implements OnInit{
 
   width_change() {
     this.viewerWidth = Math.round(window.innerWidth*.99).toString() + "px";
-    this.viewerHeight = Math.round(window.innerHeight*.8).toString() + "px";
+    this.viewerHeight = Math.round(window.innerHeight*.95).toString() + "px";
   }
 
   scroll_top() {

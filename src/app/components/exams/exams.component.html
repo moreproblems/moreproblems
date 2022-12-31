@@ -154,8 +154,8 @@
   }
 
   .card.card-large {
-    width: auto;
-    height: auto;
+    /* width: auto;
+    height: auto; */
     border-radius: 8px;
     margin: 8px 8px;
     padding: 8px 20px;
@@ -464,7 +464,7 @@
   <!-- <br *ngIf="file_source != ''" /> -->
   <!-- PDF Viewer -->
   <div *ngIf="file_source != ''" class="card card-large" (window:resize)="width_change()"
-    style="height: auto; border: 3px solid black; border-radius: 20px; display: block" [attr.max-width]="viewerWidth" [attr.max-height]="viewerHeight" #pdfViewer>
+    style="border: 3px solid black; border-radius: 20px; display: block; min-width: 310px; max-width: 1000px; width: 70%; max-height: 800px" [attr.width]="viewerWidth" [attr.height]="viewerHeight" #pdfViewer>
     <section style="height: auto; max-height: 50px; width: 100%; display: flex; justify-content: center">
       <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="margin: auto 25px; text-align: center; font-size: 18px"> {{exam_name}} </h1>
       <h1 *ngIf="this.screenWidth > this.mobileWidth" style="margin: auto 25px; text-align: center; font-size: 22px"> {{exam_name}} </h1>
@@ -499,9 +499,9 @@
       </button>
     </section>
     <section
-      style="height: auto; width: 100%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden" [attr.max-width]="viewerWidth"  [attr.max-height]="viewerHeight">
+      style="border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden" [attr.width]="viewerWidth"  [attr.height]="viewerHeight">
       <pdf-viewer *ngIf="file_source != ''" [src]="file_source" [original-size]="false" [zoom]="0.85" [(page)]="file_page"
-        style="min-height: 600px;" [attr.max-width]="viewerWidth" [attr.max-height]="viewerHeight"></pdf-viewer>
+        style="min-height: 500px; max-height: 1000px" [attr.width]="viewerWidth" [attr.height]="viewerHeight"></pdf-viewer>
     </section>
   </div>
   <div *ngIf="file_source == ''" class="content-menu"  style="margin-bottom: 0px">
