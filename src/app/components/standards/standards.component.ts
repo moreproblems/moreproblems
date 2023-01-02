@@ -19,6 +19,7 @@ export class StandardsComponent implements OnInit{
 
   selected_grade = '';
   selected_subject = '';
+  selected_category = '';
   subject_name = '';
 
   domain_state: {[key: number]: boolean} = {
@@ -33,6 +34,8 @@ export class StandardsComponent implements OnInit{
   select_grade(gr: string) {
     this.domain_state = { 1: false, 2: false, 3: false, 4: false };
     this.selected_subject = '';
+    this.selected_category = '';
+    this.subject_name = '';
     if (this.selected_grade == gr) {
       this.selected_grade = '';
     }
@@ -45,9 +48,11 @@ export class StandardsComponent implements OnInit{
   select_subject(sbj: string) {
     if (this.selected_subject == sbj) {
       this.selected_subject = '';
+      // this.selected_category = '';
     }
     else {
       this.selected_subject = sbj;
+      // this.selected_category = sbj;
       this.domain_state = { 1: false, 2: false, 3: false, 4: false };
     }
     if (sbj == 'KM') {
@@ -149,7 +154,32 @@ export class StandardsComponent implements OnInit{
     // this.scroll2(title);
   }
 
-  
+  select_category(cat: string) {
+    if (this.selected_category == cat) {
+      this.selected_category = '';
+      this.selected_subject = '';
+    }
+    else {
+      this.selected_category = cat;
+      this.selected_subject = cat;
+      this.domain_state = { 1: false, 2: false, 3: false, 4: false };
+    }
+    if (cat == 'HSM-NQ') {
+      this.subject_name = 'High School Mathematics - Number & Quantity';
+    }
+    else if (cat == 'HSM-A') {
+      this.subject_name = 'High School Mathematics - Algebra';
+    }
+    else if (cat == 'HSM-F') {
+      this.subject_name = 'High School Mathematics - Functions';
+    }
+    else if (cat == 'HSM-G') {
+      this.subject_name = 'High School Mathematics - Geometry';
+    }
+    else if (cat == 'HSM-SP') {
+      this.subject_name = 'High School Mathematics - Statistics & Probability';
+    }
+  }
 
   toggle_domain(dmn: number) {
     this.domain_state[dmn] = !this.domain_state[dmn];

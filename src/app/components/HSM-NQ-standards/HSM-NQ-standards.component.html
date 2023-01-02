@@ -1,0 +1,594 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  
+    :host {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 8px 0;
+    }
+  
+    p {
+      margin: 0;
+    }
+  
+    .spacer {
+      flex: 1;
+    }
+  
+    .toolbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      padding: 5px 10px 2px 20px;
+    }
+  
+    .toolbar img {
+      /* margin: 0 16px; */
+      position: absolute;
+      left: -10px;
+      top: -18px;
+    }
+  
+    .toolbar #twitter-logo {
+      height: 40px;
+      margin: 0 8px;
+    }
+  
+    .toolbar #youtube-logo {
+      height: 40px;
+      margin: 0 16px;
+    }
+  
+    .toolbar #twitter-logo:hover,
+    .toolbar #youtube-logo:hover {
+      opacity: 0.8;
+    }
+  
+    .content-menu {
+      display: flex;
+      margin: 0 auto 32px;
+      padding: 0 16px;
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .content {
+      display: flex;
+      margin: 12px auto 32px;
+      padding: 0 16px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .subcontent {
+      display: flex;
+      margin: 12px auto;
+      padding: 0px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    svg.material-icons {
+      height: 24px;
+      width: auto;
+    }
+  
+    svg.material-icons:not(:last-child) {
+      margin-right: 8px;
+    }
+  
+    .card svg.material-icons path {
+      fill: #888;
+    }
+  
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 16px;
+    }
+  
+    .card {
+        all: unset;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        /* height: 40px;
+        width: 200px; */
+        margin: 0 8px 16px;
+        padding: 8px 8px;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        /* align-items: center; */
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+  
+    /* .card-container .card:not(:last-child) {
+      margin-right: 0;
+    }
+  
+    .card-container .switch:not(:last-child) {
+      margin-right: 0;
+    } */
+  
+    .card.card-small {
+      height: 16px;
+      width: 190px;
+      border-radius: 8px;
+    }
+  
+    .card.card-medium {
+        height: auto;
+        width: 80%;
+        border-radius: 8px;
+        padding: 20px;
+    }
+  
+    .card.card-medium:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    .card.card-large {
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      margin: 8px 8px;
+      padding: 8px 20px;
+    }
+  
+    .card-container .card:not(.highlight-card) {
+      cursor: pointer;
+    }
+  
+    .card-container .card:not(.highlight-card):hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    /* .card-container .card:not(.highlight-card):hover .material-icons path {
+      fill: rgb(105, 103, 103);
+    } */
+  
+    .card.highlight-card {
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      border: none;
+      width: auto;
+      min-width: 30%;
+      position: relative;
+    }
+  
+    .card.card.highlight-card span {
+      margin-left: 60px;
+    }
+  
+    svg#rocket {
+      width: 80px;
+      position: absolute;
+      left: -10px;
+      top: -24px;
+    }
+  
+    svg#rocket-smoke {
+      height: calc(100vh - 95px);
+      position: absolute;
+      top: 10px;
+      right: 180px;
+      z-index: -10;
+    }
+  
+    a,
+    a:visited,
+    a:hover {
+      color: #1976d2;
+      text-decoration: none;
+    }
+  
+    a:hover {
+      color: #125699;
+    }
+  
+    button.grade-button {
+      font-size: 18px;
+      color: white;
+      background-color: #1976d2;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      margin: 8px;
+      padding: 8px 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    button.grade-button:hover {
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    button.grade-button-gray {
+      font-size: 18px;
+      color: white;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    button.grade-button-gray:hover {
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    button.toggle-button {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+    }
+  
+    .toggle-button:before {
+      background-color: #1976d2;
+      color: white;
+    }
+  
+    button.toggle-button-off {
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    button.toggle-button-on {
+      font-size: 18px;
+      background-color: #1976d2;
+      color: white;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+    }
+  
+    .terminal {
+      position: relative;
+      /* width: 100%; */
+      max-width: 625px;
+      border-radius: 6px;
+      padding-top: 45px;
+      margin-top: 8px;
+      overflow: hidden;
+      background-color: rgb(15, 15, 16);
+      color: #c2c3c4;
+    }
+  
+    .terminal::before {
+      content: "\2022 \2022 \2022";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: rgb(58, 58, 58);
+      color: #c2c3c4;
+      width: 100%;
+      line-height: 0;
+      padding: 14px 0;
+      font-size: 2rem;
+      text-indent: 4px;
+    }
+  
+    .terminal pre {
+      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+      color: white;
+      padding: 0 1rem 1rem;
+      margin: 0;
+      text-align: center;
+    }
+  
+    .circle-link {
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      margin: 8px;
+      background-color: white;
+      border: 1px solid #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: 1s ease-out;
+    }
+  
+    .circle-link:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    footer {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      line-height: 20px;
+    }
+  
+    footer a {
+      display: flex;
+      align-items: center;
+    }
+  
+    .github-star-badge {
+      color: #24292e;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      padding: 3px 10px;
+      border: 1px solid rgba(27, 31, 35, .2);
+      border-radius: 3px;
+      background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+      margin-left: 4px;
+      font-weight: 600;
+    }
+  
+    .github-star-badge:hover {
+      background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+      border-color: rgba(27, 31, 35, .35);
+      background-position: -.5em;
+    }
+  
+    .github-star-badge .material-icons {
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
+    }
+  
+    /* The switch - the box around the slider */
+    .switch {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      max-width: 250px;
+      max-height: 75px;
+      transition: all 0.2s ease-in-out;
+    }
+  
+    /* Hide default HTML checkbox */
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  
+    input:checked+.toggle-button-on {
+      background-color: #1976d2;
+      color: white
+    }
+  
+    input:hover+.toggle-button-on {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    input:checked+.toggle-button-off {
+      background-color: #ccc;
+      color: black;
+    }
+  
+    input:hover+.toggle-button-off {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+  
+    /* Responsive Styles */
+    @media screen and (max-width: 767px) {
+  
+      .card-container>*:not(.circle-link),
+      .terminal {
+        /* width: 100%; */
+      }
+  
+      .card:not(.highlight-card) {
+        /* height: 16px; */
+        margin: 8px 0;
+      }
+  
+      .card.highlight-card span {
+        margin-left: 72px;
+      }
+  
+    }
+  </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="content" role="main">
+    <section style="width: 100%; align-items: left">
+        <div routerLink="/standards" routerLinkActive="active" class="card card-small" style="width: 300px; border: none; background-color: white">
+          <img src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
+        </div>
+    </section>
+    <br />
+    <h2> High School Mathematics - Number & Quantity (Common Core) Learning Standards </h2>
+    <br />
+    <div class="card-container">
+        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> 9-12.HSNQ.RN : The Real Number System </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[1]" style="font-size: 15px">
+                    <li> <b> A : Extend the properties of exponents to rational exponents. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Explain how the definition of the meaning of rational exponents follows from extending the properties of integer exponents to those values, allowing for a notation for radicals in terms of rational exponents. </li>
+                            <li> <b> 2 </b> : Rewrite expressions involving radicals and rational exponents using the properties of exponents. </li>
+                        </ul>
+                    <li> <b> B : Use properties of rational and irrational numbers. </b> </li>
+                        <ul>
+                            <li> <b> 3 </b> : Explain why the sum or product of two rational numbers is rational; that the sum of a rational number and an irrational number is irrational; and that the product of a nonzero rational number and an irrational number is irrational. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> 9-12.HSNQ.Q : Quantities </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[2]" style="font-size: 15px">
+                    <li> <b> A : Reason quantitatively and use units to solve problems. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Use units as a way to understand problems and to guide the solution of multi-step problems; choose and interpret units consistently in formulas; choose and interpret the scale and the origin in graphs and data displays. </li>
+                            <li> <b> 2 </b> : Define appropriate quantities for the purpose of descriptive modeling. </li>
+                            <li> <b> 3 </b> : Choose a level of accuracy appropriate to limitations on measurement when reporting quantities. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> 9-12.HSNQ.CN : The Complex Number System </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[3]" style="font-size: 15px">
+                    <li> <b> A : Perform arithmetic operations with complex numbers. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Know there is a complex number i such that i² = –1, and every complex number has the form a + bi with a and b real. </li>
+                            <li> <b> 2 </b> : Use the relation i² = –1 and the commutative, associative, and distributive properties to add, subtract, and multiply complex numbers. </li>
+                            <li> <b> 3 </b> : Find the conjugate of a complex number; use conjugates to find moduli and quotients of complex numbers. </li>
+                        </ul>
+                    <li> <b> B : Represent complex numbers and their operations on the complex plane. </b> </li>
+                        <ul>
+                            <li> <b> 4 </b> : Represent complex numbers on the complex plane in rectangular and polar form (including real and imaginary numbers), and explain why the rectangular and polar forms of a given complex number represent the same number. </li>
+                            <li> <b> 5 </b> : Represent addition, subtraction, multiplication, and conjugation of complex numbers geometrically on the complex plane; use properties of this representation for computation. </li>
+                            <li> <b> 6 </b> : Calculate the distance between numbers in the complex plane as the modulus of the difference, and the midpoint of a segment as the average of the numbers at its endpoints. </li>
+                        </ul>
+                    <li> <b> C : Use complex numbers in polynomial identities and equations.  </b> </li>
+                        <ul>
+                            <li> <b> 7 </b> : Solve quadratic equations with real coefficients that have complex solutions. </li>
+                            <li> <b> 8 </b> : Extend polynomial identities to the complex numbers. </li>
+                            <li> <b> 9 </b> : Know the Fundamental Theorem of Algebra; show that it is true for quadratic polynomials. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+            <div style="display: flex; flex-direction: row">
+                <div style="margin: 0 20px">
+                    <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px">
+                    <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: 0 20px; text-align: left">
+                    <h4 style="font-size: 18px"> 9-12.HSNQ.VM : Vector and Matrix Quantities </h4>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; text-align: left">
+                <ul *ngIf="domain_state[4]" style="font-size: 15px">
+                    <li> <b> A : Represent and model with vector quantities. </b> </li>
+                        <ul>
+                            <li> <b> 1 </b> : Recognize vector quantities as having both magnitude and direction. Represent vector quantities by directed line segments, and use appropriate symbols for vectors and their magnitudes (e.g., v, |v|, ||v||, v). </li>
+                            <li> <b> 2 </b> : Find the components of a vector by subtracting the coordinates of an initial point from the coordinates of a terminal point. </li>
+                            <li> <b> 3 </b> : Solve problems involving velocity and other quantities that can be represented by vectors. </li>
+                        </ul>
+                    <li> <b> B : Perform operations on vectors. </b> </li>
+                        <ul>
+                            <li> <b> 4 </b> : Add and subtract vectors. </li>
+                                <ul>
+                                    <li> <b> a </b> : Add vectors end-to-end, component-wise, and by the parallelogram rule. Understand that the magnitude of a sum of two vectors is typically not the sum of the magnitudes. </li>
+                                    <li> <b> b </b> : Given two vectors in magnitude and direction form, determine the magnitude and direction of their sum. </li>
+                                    <li> <b> c </b> : Understand vector subtraction v - w as v + (-w), where -w is the additive inverse of w, with the same magnitude as w and pointing in the opposite direction. Represent vector subtraction graphically by connecting the tips in the appropriate order, and perform vector subtraction component-wise. </li>
+                                </ul>
+                            <li> <b> 5 </b> : Multiply a vector by a scalar. </li>
+                                <ul>
+                                    <li> <b> a </b> : Represent scalar multiplication graphically by scaling vectors and possibly reversing their direction; perform scalar multiplication component-wise, e.g., as c(vx, vy) = (cvx, cvy). </li>
+                                    <li> <b> b </b> : Compute the magnitude of a scalar multiple cv using ||cv|| = |c|·||v||. Compute the direction of cv knowing that when |c|v is not equal to 0, the direction of cv is either along v (for c > 0) or against v (for c < 0). </li>
+                                </ul>
+                        </ul>
+                    <li> <b> C : Perform operations on matrices and use matrices in applications. </b> </li>
+                        <ul>
+                            <li> <b> 6 </b> : Use matrices to represent and manipulate data, e.g., to represent payoffs or incidence relationships in a network. </li>
+                            <li> <b> 7 </b> : Multiply matrices by scalars to produce new matrices, e.g., as when all of the payoffs in a game are doubled. </li>
+                            <li> <b> 8 </b> : Add, subtract, and multiply matrices of appropriate dimensions. </li>
+                            <li> <b> 9 </b> : Understand that, unlike multiplication of numbers, matrix multiplication for square matrices is not a commutative operation, but still satisfies the associative and distributive properties. </li>
+                            <li> <b> 10 </b> : Understand that the zero and identity matrices play a role in matrix addition and multiplication similar to the role of 0 and 1 in the real numbers. The determinant of a square matrix is nonzero if and only if the matrix has a multiplicative inverse. </li>
+                            <li> <b> 11 </b> : Multiply a vector (regarded as a matrix with one column) by a matrix of suitable dimensions to produce another vector. Work with matrices as transformations of vectors. </li>
+                            <li> <b> 12 </b> : Work with 2 × 2 matrices as transformations of the plane, and interpret the absolute value of the determinant in terms of area. </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>

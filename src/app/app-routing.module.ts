@@ -28,13 +28,13 @@ import { G7MStandardsComponent } from './components/G7M-standards/G7M-standards.
 import { G7EStandardsComponent } from './components/G7E-standards/G7E-standards.component';
 import { G8MStandardsComponent } from './components/G8M-standards/G8M-standards.component';
 import { G8EStandardsComponent } from './components/G8E-standards/G8E-standards.component';
-import { HSMStandardsComponent } from './components/HSM-standards/HSM-standards.component';
-// import { HSNQStandardsComponent } from './components/HS-NQ-standards/HS-NQ-standards.component';
-// import { HSAStandardsComponent } from './components/HS-A-standards/HS-A-standards.component';
-// import { HSFStandardsComponent } from './components/HS-F-standards/HS-F-standards.component';
-// import { HSMStandardsComponent } from './components/HS-M-standards/HS-M-standards.component';
-// import { HSGStandardsComponent } from './components/HS-G-standards/HS-G-standards.component';
-// import { HSSPStandardsComponent } from './components/HS-SP-standards/HS-SP-standards.component';
+import { HS1EStandardsComponent } from './components/HS1E-standards/HS1E-standards.component';
+import { HS2EStandardsComponent } from './components/HS2E-standards/HS2E-standards.component';
+import { HSMNQStandardsComponent } from './components/HSM-NQ-standards/HSM-NQ-standards.component';
+import { HSMAStandardsComponent } from './components/HSM-A-standards/HSM-A-standards.component';
+import { HSMFStandardsComponent } from './components/HSM-F-standards/HSM-F-standards.component';
+import { HSMGStandardsComponent } from './components/HSM-G-standards/HSM-G-standards.component';
+import { HSMSPStandardsComponent } from './components/HSM-SP-standards/HSM-SP-standards.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -62,13 +62,13 @@ const routes: Routes = [
   { path: 'standards/G7-English', component: G7EStandardsComponent },
   { path: 'standards/G8-Math', component: G8MStandardsComponent },
   { path: 'standards/G8-English', component: G8EStandardsComponent },
-  { path: 'standards/HS-Math', component: HSMStandardsComponent },
-  // { path: 'standards/HS-Number-Quant', component: HSNQStandardsComponent },
-  // { path: 'standards/HS-Algebra', component: HSAStandardsComponent },
-  // { path: 'standards/HS-Functions', component: HSFStandardsComponent },
-  // { path: 'standards/HS-Modeling', component: HSMStandardsComponent },
-  // { path: 'standards/HS-Geometry', component: HSGStandardsComponent },
-  // { path: 'standards/HS-Stats-Prob', component: HSSPStandardsComponent },
+  { path: 'standards/HS1-English', component: HS1EStandardsComponent },
+  { path: 'standards/HS2-English', component: HS2EStandardsComponent },
+  { path: 'standards/HS-Math-Number-Quantity', component: HSMNQStandardsComponent },
+  { path: 'standards/HS-Math-Algebra', component: HSMAStandardsComponent },
+  { path: 'standards/HS-Math-Functions', component: HSMFStandardsComponent },
+  { path: 'standards/HS-Math-Geometry', component: HSMGStandardsComponent },
+  { path: 'standards/HS-Math-Statistics-Probability', component: HSMSPStandardsComponent },
   { path: 'problems', component: ProblemsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent }

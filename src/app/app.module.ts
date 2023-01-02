@@ -33,13 +33,13 @@ import { G7MStandardsComponent } from './components/G7M-standards/G7M-standards.
 import { G7EStandardsComponent } from './components/G7E-standards/G7E-standards.component';
 import { G8MStandardsComponent } from './components/G8M-standards/G8M-standards.component';
 import { G8EStandardsComponent } from './components/G8E-standards/G8E-standards.component';
-import { HSMStandardsComponent } from './components/HSM-standards/HSM-standards.component';
-// import { HSNQStandardsComponent } from './components/HS-NQ-standards/HS-NQ-standards.component';
-// import { HSAStandardsComponent } from './components/HS-A-standards/HS-A-standards.component';
-// import { HSFStandardsComponent } from './components/HS-F-standards/HS-F-standards.component';
-// import { HSModStandardsComponent } from './components/HS-M-standards/HS-M-standards.component';
-// import { HSGStandardsComponent } from './components/HS-G-standards/HS-G-standards.component';
-import { HSSPStandardsComponent } from './components/xHS-SP-standards/HS-SP-standards.component';
+import { HS1EStandardsComponent } from './components/HS1E-standards/HS1E-standards.component';
+import { HS2EStandardsComponent } from './components/HS2E-standards/HS2E-standards.component';
+import { HSMNQStandardsComponent } from './components/HSM-NQ-standards/HSM-NQ-standards.component';
+import { HSMAStandardsComponent } from './components/HSM-A-standards/HSM-A-standards.component';
+import { HSMFStandardsComponent } from './components/HSM-F-standards/HSM-F-standards.component';
+import { HSMGStandardsComponent } from './components/HSM-G-standards/HSM-G-standards.component';
+import { HSMSPStandardsComponent } from './components/HSM-SP-standards/HSM-SP-standards.component';
 import { TX21G3MExamComponent } from './components/TX21G3M-exam/TX21G3M-exam.component';
 import { TX21G3MKeyComponent } from './components/TX21G3M-key/TX21G3M-key.component';
 import { TX19G3MExamComponent } from './components/TX19G3M-exam/TX19G3M-exam.component';
@@ -71,13 +71,13 @@ import { TX19G3MKeyComponent } from './components/TX19G3M-key/TX19G3M-key.compon
     G7EStandardsComponent,
     G8MStandardsComponent,
     G8EStandardsComponent,
-    HSMStandardsComponent,
-    // HSNQStandardsComponent,
-    // HSAStandardsComponent,
-    // HSFStandardsComponent,
-    // HSModStandardsComponent,
-    // HSGStandardsComponent,
-    HSSPStandardsComponent,
+    HS1EStandardsComponent,
+    HS2EStandardsComponent,    
+    HSMNQStandardsComponent,
+    HSMAStandardsComponent,
+    HSMFStandardsComponent,
+    HSMGStandardsComponent,
+    HSMSPStandardsComponent,
     TX21G3MExamComponent,
     TX21G3MKeyComponent,
     TX19G3MExamComponent,

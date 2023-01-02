@@ -10,18 +10,20 @@ import { HttpClient } from '@angular/common/http';
 // }
 
 @Component({
-  selector: 'app-HS-G-standards',
-  templateUrl: './HS-G-standards.component.html',
-  styleUrls: ['./HS-G-standards.component.css']
+  selector: 'app-HS1E-standards',
+  templateUrl: './HS1E-standards.component.html',
+  styleUrls: ['./HS1E-standards.component.css']
 })
 
 @Injectable()
-export class HSGStandardsComponent implements OnInit {
+export class HS1EStandardsComponent implements OnInit {
   title = 'More Problems';
 
   domain_state: {[key: number]: boolean} = {
     1: false,
-    2: false
+    2: false,
+    3: false,
+    4: false
   }
 
   constructor() { }
