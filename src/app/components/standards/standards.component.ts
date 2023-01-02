@@ -179,6 +179,9 @@ export class StandardsComponent implements OnInit{
     else if (cat == 'HSM-SP') {
       this.subject_name = 'High School Mathematics - Statistics & Probability';
     }
+    else if (cat == 'HSM-M') {
+      this.subject_name = 'High School Mathematics - Modeling';
+    }
   }
 
   toggle_domain(dmn: number) {
