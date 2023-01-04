@@ -75,7 +75,7 @@
     .content {
       display: flex;
       margin: 12px auto 32px;
-      padding: 0 16px;
+      padding: 0 4px;
       width: 95%;
       flex-direction: column;
       align-items: center;
@@ -467,7 +467,7 @@
     <br />
     <div class="card-container">
         <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row">
+            <div style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: 0 10px">
                     <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
                     <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
@@ -507,7 +507,7 @@
             </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row">
+            <div style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: 0 10px">
                     <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
                     <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
@@ -549,7 +549,7 @@
             </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row">
+            <div style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: 0 10px">
                     <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
                     <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
@@ -575,7 +575,7 @@
             </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row">
+            <div style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: 0 10px">
                     <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
                     <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
@@ -603,7 +603,7 @@
             </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(5)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row">
+            <div style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: 0 10px">
                     <img *ngIf="domain_state[5]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
                     <img *ngIf="!domain_state[5]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
@@ -628,7 +628,7 @@
             </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(6)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row">
+            <div style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: 0 10px">
                     <img *ngIf="domain_state[6]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
                     <img *ngIf="!domain_state[6]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
