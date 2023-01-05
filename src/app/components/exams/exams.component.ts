@@ -267,8 +267,56 @@ export class ExamsComponent implements OnInit{
     else if (ex == 'MDG8SS') {
       this.exam_name = "Maryland MCAP Grade 8 Social Studies Practice Exam";
     }
-    else if (ex == 'MDH10S') {
+    else if (ex == 'MDG10E') {
       this.exam_name = "Maryland MCAP Grade 10 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MAG3M') {
+      this.exam_name = "Massachusetts MCAS Grade 3 Math Practice Exam";
+    }
+    else if (ex == 'MAG3E') {
+      this.exam_name = "Massachusetts MCAS Grade 3 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MAG4M') {
+      this.exam_name = "Massachusetts MCAS Grade 4 Math Practice Exam";
+    }
+    else if (ex == 'MAG4E') {
+      this.exam_name = "Massachusetts MCAS Grade 4 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MAG5M') {
+      this.exam_name = "Massachusetts MCAS Grade 5 Math Practice Exam";
+    }
+    else if (ex == 'MAG5E') {
+      this.exam_name = "Massachusetts MCAS Grade 5 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MAG5S') {
+      this.exam_name = "Massachusetts MCAS Grade 5 Science Practice Exam";
+    }
+    else if (ex == 'MAG6M') {
+      this.exam_name = "Massachusetts MCAS Grade 6 Math Practice Exam";
+    }
+    else if (ex == 'MAG6E') {
+      this.exam_name = "Massachusetts MCAS Grade 6 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MAG7M') {
+      this.exam_name = "Massachusetts MCAS Grade 7 Math Practice Exam";
+    }
+    else if (ex == 'MAG7E') {
+      this.exam_name = "Massachusetts MCAS Grade 7 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MAG8M') {
+      this.exam_name = "Massachusetts MCAS Grade 8 Math Practice Exam";
+    }
+    else if (ex == 'MAG8E') {
+      this.exam_name = "Massachusetts MCAS Grade 8 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MAG8S') {
+      this.exam_name = "Massachusetts MCAS Grade 8 Science Practice Exam";
+    }
+    else if (ex == 'MAG10M') {
+      this.exam_name = "Massachusetts MCAS Grade 10 Math Practice Exam";
+    }
+    else if (ex == 'MAG10E') {
+      this.exam_name = "Massachusetts MCAS Grade 10 English Language Arts Practice Exam";
     }
     else if (ex == 'NY22G3M') {
       this.exam_name = "New York NYSTP 2022 Grade 3 Math Exam";

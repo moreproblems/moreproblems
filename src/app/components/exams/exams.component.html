@@ -566,13 +566,13 @@
         <button *ngIf="selected_state != 'MD'" (click)="select_state('MD')" class="toggle-button-off"
           tabindex="0"><b>Maryland</b> <br /> (MCAP)</button>
       </label>
-      <!-- <label class="switch">
+      <label class="switch">
         <input type="checkbox" value="MA">
         <button *ngIf="selected_state == 'MA'" (click)="select_state('MA')" class="toggle-button-on"
           tabindex="0"><b>Massachusetts</b> <br /> (MCAS)</button>
         <button *ngIf="selected_state != 'MA'" (click)="select_state('MA')" class="toggle-button-off"
           tabindex="0"><b>Massachusetts</b> <br /> (MCAS)</button>
-      </label> -->
+      </label>
       <!-- <label class="switch">
         <input type="checkbox" value="MI">
         <button *ngIf="selected_state == 'MI'" (click)="select_state('MI')" class="toggle-button-on"
@@ -1468,6 +1468,201 @@
           <button class="card card-small" (click)="select_exam('MDG10E'); scroll_top()" tabindex="0">
             <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
             <span>Maryland MCAP Grade 10 <b>English</b> Practice Exam</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Massachusetts MCAS -->
+  <div *ngSwitchCase="'MA'" class="content">
+    <!-- Grade Selector -->
+    <h2>Select your Grade</h2>
+    <br />
+    <input type="hidden" #grade>
+    <div class="card-container">
+      <label class="switch">
+        <input type="checkbox" value="G3">
+        <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
+          <b>3</b></button>
+        <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3')" class="toggle-button-off" tabindex="0">Grade
+          <b>3</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G4">
+        <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
+          <b>4</b></button>
+        <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4')" class="toggle-button-off" tabindex="0">Grade
+          <b>4</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G5">
+        <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
+          <b>5</b></button>
+        <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5')" class="toggle-button-off" tabindex="0">Grade
+          <b>5</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G6">
+        <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
+          <b>6</b></button>
+        <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6')" class="toggle-button-off" tabindex="0">Grade
+          <b>6</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G7">
+        <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
+          <b>7</b></button>
+        <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7')" class="toggle-button-off" tabindex="0">Grade
+          <b>7</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G8">
+        <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
+          <b>8</b></button>
+        <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8')" class="toggle-button-off" tabindex="0">Grade
+          <b>8</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G10">
+        <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10')" class="toggle-button-on" tabindex="0">Grade
+          <b>10</b></button>
+        <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10')" class="toggle-button-off" tabindex="0">Grade
+          <b>10</b></button>
+      </label>
+    </div>
+    <br />
+    <!-- Exam Selector -->
+    <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+      <div *ngSwitchCase="'G3'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade3 />
+        <h3>Grade 3</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('MAG3M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 3 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('MAG3E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 3 <b>English</b> Practice Exam</span>
+          </button>
+        </div>
+        <br />
+      </div>
+      <div *ngSwitchCase="'G4'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade4 />
+        <h3>Grade 4</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('MAG4M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 4 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('MAG4E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 4 <b>English</b> Practice Exam</span>
+          </button>
+        </div>
+        <br />
+      </div>
+      <div *ngSwitchCase="'G5'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade5 />
+        <h3>Grade 5</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('MAG5M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 5 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('MAG5E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 5 <b>English</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('MAG5S'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 5 <b>Science</b> Practice Exam</span>
+          </button>
+        </div>
+        <br />
+      </div>
+      <div *ngSwitchCase="'G6'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade6 />
+        <h3>Grade 6</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('MAG6M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 6 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('MAG6E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 6 <b>English</b> Practice Exam</span>
+          </button>
+        </div>
+        <br />
+      </div>
+      <div *ngSwitchCase="'G7'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade7 />
+        <h3>Grade 7</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('MAG7M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 7 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('MAG7E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 7 <b>English</b> Practice Exam</span>
+          </button>
+        </div>
+        <br />
+      </div>
+      <div *ngSwitchCase="'G8'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade8 />
+        <h3>Grade 8</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('MAG8M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 8 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('MAG8E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 8 <b>English</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('MAG8S'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 8 <b>Science</b> Practice Exam</span>
+          </button>
+        </div>
+      </div>
+      <div *ngSwitchCase="'G10'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade10 />
+        <h3>Grade 10</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('MAG10M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 10 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('MAG10E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>Massachusetts MCAS Grade 10 <b>English</b> Practice Exam</span>
           </button>
         </div>
       </div>
