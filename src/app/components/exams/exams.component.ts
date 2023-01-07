@@ -318,6 +318,102 @@ export class ExamsComponent implements OnInit{
     else if (ex == 'MAG10E') {
       this.exam_name = "Massachusetts MCAS Grade 10 English Language Arts Practice Exam";
     }
+    else if (ex == 'MNG3M') {
+      this.exam_name = "Minnesota MCA Grade 3 Math Practice Exam";
+    }
+    else if (ex == 'MNG3R') {
+      this.exam_name = "Minnesota MCA Grade 3 Reading Practice Exam";
+    }
+    else if (ex == 'MNG4M') {
+      this.exam_name = "Minnesota MCA Grade 4 Math Practice Exam";
+    }
+    else if (ex == 'MNG4R') {
+      this.exam_name = "Minnesota MCA Grade 4 Reading Practice Exam";
+    }
+    else if (ex == 'MNG5M') {
+      this.exam_name = "Minnesota MCA Grade 5 Math Practice Exam";
+    }
+    else if (ex == 'MNG5R') {
+      this.exam_name = "Minnesota MCA Grade 5 Reading Practice Exam";
+    }
+    else if (ex == 'MNG5S') {
+      this.exam_name = "Minnesota MCA Grade 5 Science Practice Exam";
+    }
+    else if (ex == 'MNG6M') {
+      this.exam_name = "Minnesota MCA Grade 6 Math Practice Exam";
+    }
+    else if (ex == 'MNG6R') {
+      this.exam_name = "Minnesota MCA Grade 6 Reading Practice Exam";
+    }
+    else if (ex == 'MNG7M') {
+      this.exam_name = "Minnesota MCA Grade 7 Math Practice Exam";
+    }
+    else if (ex == 'MNG7R') {
+      this.exam_name = "Minnesota MCA Grade 7 Reading Practice Exam";
+    }
+    else if (ex == 'MNG8M') {
+      this.exam_name = "Minnesota MCA Grade 8 Math Practice Exam";
+    }
+    else if (ex == 'MNG8R') {
+      this.exam_name = "Minnesota MCA Grade 8 Reading Practice Exam";
+    }
+    else if (ex == 'MNG8S') {
+      this.exam_name = "Minnesota MCA Grade 8 Science Practice Exam";
+    }
+    else if (ex == 'MNG8SS') {
+      this.exam_name = "Minnesota MCA Grade 8 Social Studies Practice Exam";
+    }
+    else if (ex == 'MNG10R') {
+      this.exam_name = "Minnesota MCA Grade 10 Reading Practice Exam";
+    }
+    else if (ex == 'MNG11M') {
+      this.exam_name = "Minnesota MCA Grade 11 Math Practice Exam";
+    }
+    else if (ex == 'MNHSS') {
+      this.exam_name = "Minnesota MCA High School Science Practice Exam";
+    }
+    else if (ex == 'MOG3M') {
+      this.exam_name = "Missouri MAP Grade 3 Math Practice Exam";
+    }
+    else if (ex == 'MOG3E') {
+      this.exam_name = "Missouri MAP Grade 3 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MOG4M') {
+      this.exam_name = "Missouri MAP Grade 4 Math Practice Exam";
+    }
+    else if (ex == 'MOG4E') {
+      this.exam_name = "Missouri MAP Grade 4 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MOG5M') {
+      this.exam_name = "Missouri MAP Grade 5 Math Practice Exam";
+    }
+    else if (ex == 'MOG5E') {
+      this.exam_name = "Missouri MAP Grade 5 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MOG5S') {
+      this.exam_name = "Missouri MAP Grade 5 Science Practice Exam";
+    }
+    else if (ex == 'MOG6M') {
+      this.exam_name = "Missouri MAP Grade 6 Math Practice Exam";
+    }
+    else if (ex == 'MOG6E') {
+      this.exam_name = "Missouri MAP Grade 6 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MOG7M') {
+      this.exam_name = "Missouri MAP Grade 7 Math Practice Exam";
+    }
+    else if (ex == 'MOG7E') {
+      this.exam_name = "Missouri MAP Grade 7 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MOG8M') {
+      this.exam_name = "Missouri MAP Grade 8 Math Practice Exam";
+    }
+    else if (ex == 'MOG8E') {
+      this.exam_name = "Missouri MAP Grade 8 English Language Arts Practice Exam";
+    }
+    else if (ex == 'MOG8S') {
+      this.exam_name = "Missouri MAP Grade 8 Science Practice Exam";
+    }
     else if (ex == 'NY22G3M') {
       this.exam_name = "New York NYSTP 2022 Grade 3 Math Exam";
     }
@@ -905,6 +1001,69 @@ export class ExamsComponent implements OnInit{
     }
     else if (ex == 'PA15G8S') {
       this.exam_name = "Pennsylvania PSSA 2015 Grade 8 Science Exam";
+    }
+    else if (ex == 'TN20G3M') {
+      this.exam_name = "Tennessee TCAP Grade 3 Math Practice Exam";
+    }
+    else if (ex == 'TN20G3E') {
+      this.exam_name = "Tennessee TCAP Grade 3 English Language Arts Practice Exam";
+    }
+    else if (ex == 'TN20G3S') {
+      this.exam_name = "Tennessee TCAP Grade 3 Science Practice Exam";
+    }
+    else if (ex == 'TN20G4M') {
+      this.exam_name = "Tennessee TCAP Grade 4 Math Practice Exam";
+    }
+    else if (ex == 'TN20G4E') {
+      this.exam_name = "Tennessee TCAP Grade 4 English Language Arts Practice Exam";
+    }
+    else if (ex == 'TN20G4S') {
+      this.exam_name = "Tennessee TCAP Grade 4 Science Practice Exam";
+    }
+    else if (ex == 'TN20G5M') {
+      this.exam_name = "Tennessee TCAP Grade 5 Math Practice Exam";
+    }
+    else if (ex == 'TN20G5E') {
+      this.exam_name = "Tennessee TCAP Grade 5 English Language Arts Practice Exam";
+    }
+    else if (ex == 'TN20G5S') {
+      this.exam_name = "Tennessee TCAP Grade 5 Science Practice Exam";
+    }
+    else if (ex == 'TN20G6M') {
+      this.exam_name = "Tennessee TCAP Grade 6 Math Practice Exam";
+    }
+    else if (ex == 'TN20G6E') {
+      this.exam_name = "Tennessee TCAP Grade 6 English Language Arts Practice Exam";
+    }
+    else if (ex == 'TN20G6S') {
+      this.exam_name = "Tennessee TCAP Grade 6 Science Practice Exam";
+    }
+    else if (ex == 'TN20G6SS') {
+      this.exam_name = "Tennessee TCAP Grade 6 Social Studies Practice Exam";
+    }
+    else if (ex == 'TN20G7M') {
+      this.exam_name = "Tennessee TCAP Grade 7 Math Practice Exam";
+    }
+    else if (ex == 'TN20G7E') {
+      this.exam_name = "Tennessee TCAP Grade 7 English Language Arts Practice Exam";
+    }
+    else if (ex == 'TN20G7S') {
+      this.exam_name = "Tennessee TCAP Grade 7 Science Practice Exam";
+    }
+    else if (ex == 'TN20G7SS') {
+      this.exam_name = "Tennessee TCAP Grade 7 Social Studies Practice Exam";
+    }
+    else if (ex == 'TN20G8M') {
+      this.exam_name = "Tennessee TCAP Grade 8 Math Practice Exam";
+    }
+    else if (ex == 'TN20G8E') {
+      this.exam_name = "Tennessee TCAP Grade 8 English Language Arts Practice Exam";
+    }
+    else if (ex == 'TN20G8S') {
+      this.exam_name = "Tennessee TCAP Grade 8 Science Practice Exam";
+    }
+    else if (ex == 'TN20G8SS') {
+      this.exam_name = "Tennessee TCAP Grade 8 Social Studies Practice Exam";
     }
     else if (ex == 'TX22G3M') {
       this.exam_name = "Texas STAAR 2022 Grade 3 Math Exam";
