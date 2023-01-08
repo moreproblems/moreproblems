@@ -414,6 +414,54 @@ export class ExamsComponent implements OnInit{
     else if (ex == 'MOG8S') {
       this.exam_name = "Missouri MAP Grade 8 Science Practice Exam";
     }
+    else if (ex == 'NJG3M') {
+      this.exam_name = "New Jersey NJSLA Grade 3 Math Practice Exam";
+    }
+    else if (ex == 'NJG3E') {
+      this.exam_name = "New Jersey NJSLA Grade 3 English Language Arts Practice Exam";
+    }
+    else if (ex == 'NJG4M') {
+      this.exam_name = "New Jersey NJSLA Grade 4 Math Practice Exam";
+    }
+    else if (ex == 'NJG4E') {
+      this.exam_name = "New Jersey NJSLA Grade 4 English Language Arts Practice Exam";
+    }
+    else if (ex == 'NJG5M') {
+      this.exam_name = "New Jersey NJSLA Grade 5 Math Practice Exam";
+    }
+    else if (ex == 'NJG5E') {
+      this.exam_name = "New Jersey NJSLA Grade 5 English Language Arts Practice Exam";
+    }
+    else if (ex == 'NJG5S') {
+      this.exam_name = "New Jersey NJSLA Grade 5 Science Practice Exam";
+    }
+    else if (ex == 'NJG6M') {
+      this.exam_name = "New Jersey NJSLA Grade 6 Math Practice Exam";
+    }
+    else if (ex == 'NJG6E') {
+      this.exam_name = "New Jersey NJSLA Grade 6 English Language Arts Practice Exam";
+    }
+    else if (ex == 'NJG7M') {
+      this.exam_name = "New Jersey NJSLA Grade 7 Math Practice Exam";
+    }
+    else if (ex == 'NJG7E') {
+      this.exam_name = "New Jersey NJSLA Grade 7 English Language Arts Practice Exam";
+    }
+    else if (ex == 'NJG8M') {
+      this.exam_name = "New Jersey NJSLA Grade 8 Math Practice Exam";
+    }
+    else if (ex == 'NJG8E') {
+      this.exam_name = "New Jersey NJSLA Grade 8 English Language Arts Practice Exam";
+    }
+    else if (ex == 'NJG8S') {
+      this.exam_name = "New Jersey NJSLA Grade 8 Science Practice Exam";
+    }
+    else if (ex == 'NJG9E') {
+      this.exam_name = "New Jersey NJSLA Grade 9 English Language Arts Practice Exam";
+    }
+    else if (ex == 'NJG11S') {
+      this.exam_name = "New Jersey NJSLA Grade 11 Science Practice Exam";
+    }
     else if (ex == 'NY22G3M') {
       this.exam_name = "New York NYSTP 2022 Grade 3 Math Exam";
     }

@@ -594,13 +594,13 @@
         <button *ngIf="selected_state != 'MO'" (click)="select_state('MO')" class="toggle-button-off"
           tabindex="0"><b>Missouri</b> <br /> (MAP)</button>
       </label>
-      <!-- <label class="switch">
+      <label class="switch">
         <input type="checkbox" value="NJ">
         <button *ngIf="selected_state == 'NJ'" (click)="select_state('NJ')" class="toggle-button-on"
           tabindex="0"><b>New Jersey</b> <br /> (NJSLA)</button>
         <button *ngIf="selected_state != 'NJ'" (click)="select_state('NJ')" class="toggle-button-off"
           tabindex="0"><b>New Jersey</b> <br /> (NJSLA)</button>
-      </label> -->
+      </label>
       <label class="switch">
         <input type="checkbox" value="NY">
         <button *ngIf="selected_state == 'NY'" (click)="select_state('NY')" class="toggle-button-on" tabindex="0"><b>New
@@ -2081,6 +2081,217 @@
     <br />
     <br />
     <br />
+  </div>
+
+  <!-- New Jersey NJSLA -->
+  <div *ngSwitchCase="'NJ'" class="content">
+    <!-- Grade Selector -->
+    <h2>Select your Grade</h2>
+    <br />
+    <input type="hidden" #grade>
+    <div class="card-container">
+      <label class="switch">
+        <input type="checkbox" value="G3">
+        <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
+          <b>3</b></button>
+        <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3')" class="toggle-button-off" tabindex="0">Grade
+          <b>3</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G4">
+        <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
+          <b>4</b></button>
+        <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4')" class="toggle-button-off" tabindex="0">Grade
+          <b>4</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G5">
+        <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
+          <b>5</b></button>
+        <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5')" class="toggle-button-off" tabindex="0">Grade
+          <b>5</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G6">
+        <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
+          <b>6</b></button>
+        <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6')" class="toggle-button-off" tabindex="0">Grade
+          <b>6</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G7">
+        <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
+          <b>7</b></button>
+        <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7')" class="toggle-button-off" tabindex="0">Grade
+          <b>7</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G8">
+        <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
+          <b>8</b></button>
+        <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8')" class="toggle-button-off" tabindex="0">Grade
+          <b>8</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G9">
+        <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9')" class="toggle-button-on" tabindex="0">Grade
+          <b>9</b></button>
+        <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9')" class="toggle-button-off" tabindex="0">Grade
+          <b>9</b></button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G11">
+        <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11')" class="toggle-button-on" tabindex="0">Grade
+          <b>11</b></button>
+        <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11')" class="toggle-button-off" tabindex="0">Grade
+          <b>11</b></button>
+      </label>
+    </div>
+    <br />
+    <!-- Exam Selector -->
+    <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+      <div *ngSwitchCase="'G3'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade3 />
+        <h3>Grade 3</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('NJG3M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 3 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('NJG3E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 3 <b>English</b> Practice Exam</span>
+          </button>
+        </div>
+        <br />
+      </div>
+      <div *ngSwitchCase="'G4'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade4 />
+        <h3>Grade 4</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('NJG4M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 4 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('NJG4E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 4 <b>English</b> Practice Exam</span>
+          </button>
+        </div>
+        <br />
+      </div>
+      <div *ngSwitchCase="'G5'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade5 />
+        <h3>Grade 5</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('NJG5M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLACA Grade 5 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('NJG5E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 5 <b>English</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('NJG5S'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 5 <b>Science</b> Practice Exam</span>
+          </button>
+        </div>
+        <br />
+      </div>
+      <div *ngSwitchCase="'G6'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade6 />
+        <h3>Grade 6</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('NJG6M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 6 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('NJG6E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 6 <b>English</b> Practice Exam</span>
+          </button>
+        </div>
+        <br />
+      </div>
+      <div *ngSwitchCase="'G7'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade7 />
+        <h3>Grade 7</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('NJG7M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 7 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('NJG7E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 7 <b>English</b> Practice Exam</span>
+          </button>
+        </div>
+        <br />
+      </div>
+      <div *ngSwitchCase="'G8'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade8 />
+        <h3>Grade 8</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('NJG8M'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 8 <b>Math</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('NJG8E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 8 <b>English</b> Practice Exam</span>
+          </button>
+          <button class="card card-small" (click)="select_exam('NJG8S'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 8 <b>Science</b> Practice Exam</span>
+          </button>
+        </div>
+      </div>
+      <div *ngSwitchCase="'G9'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade8 />
+        <h3>Grade 10</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('NJG9E'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 9 <b>English</b> Practice Exam</span>
+          </button>
+        </div>
+      </div>
+      <div *ngSwitchCase="'G11'" class="subcontent">
+        <h2>Select your Exam</h2>
+        <br #grade8 />
+        <h3>Grade 11</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container">
+          <button class="card card-small" (click)="select_exam('NJG11S'); scroll_top()" tabindex="0">
+            <img src="./assets/icons/select.png" style="height: 15px; margin: 0 5px 0 0;">
+            <span>New Jersey NJSLA Grade 11 <b>Science</b> Practice Exam</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- New York NYSTP -->
