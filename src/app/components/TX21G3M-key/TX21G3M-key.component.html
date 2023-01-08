@@ -477,8 +477,8 @@
           </button>
         </section>
         <section style="height: auto; width: 100%; display: flex; justify-content: center">
-          <div *ngFor="let prob of exam_dump | keyvalue" style="align-items: center; text-align: center; justify-content: center">
-            <label *ngIf="problem_number == prob.value.Number" class="switch" style="max-width: 80%; align-items: center; text-align: center; margin: auto">
+          <div *ngFor="let prob of exam_dump | keyvalue" style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
+            <label *ngIf="problem_number == prob.value.Number" class="switch" style="max-height: 500px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
               <input type="checkbox">
               <button *ngIf="!expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%; font-size: 16px">
                 <b>{{prob.value.Topic}}</b> </button>
@@ -487,7 +487,6 @@
             </label>
           </div>
         </section>
-        <br />
         <br />
         <div *ngFor="let prob of exam_dump | keyvalue">
           <div *ngIf="problem_number == prob.value.Number">
