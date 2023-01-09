@@ -32,6 +32,8 @@ export class TX21G3MExamComponent implements OnInit {
     pt_timer: any;
     pt_running: boolean = false;
 
+    expand_topics = true;
+    show_correct = false;
     filters: string[] = [];
     expand_filters = true;
 
@@ -1694,6 +1696,7 @@ export class TX21G3MExamComponent implements OnInit {
     };
 
     exam_submission_list: any[] = [];
+    wrong_submission_list: any[] = [];
     number_correct = 0;
     correct_percent = 0;
     topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number } } } } = {};
@@ -1715,6 +1718,9 @@ export class TX21G3MExamComponent implements OnInit {
 
     width_change2() {
         this.screenWidth = window.innerWidth;
+        if (this.screenWidth <= this.mobileWidth) {
+            this.expand_topics = false;
+        }
     }
 
     toggle_button(val: string) {
@@ -1832,6 +1838,9 @@ export class TX21G3MExamComponent implements OnInit {
         if (this.problem_number == this.exam_length) {
             for (let i: number = 1; i <= this.exam_length; i++) {
                 this.exam_submission_list.push(this.exam_submission[i]);
+                if (this.exam_submission[i].Correct != '✅') {
+                    this.wrong_submission_list.push(this.exam_submission[i]);
+                }
             }
         }
         this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
@@ -1925,6 +1934,14 @@ export class TX21G3MExamComponent implements OnInit {
         this.pt_running = false;
         this.pt_counter = 0;
         clearInterval(this.pt_timer);
+    }
+
+    expandTopics() {
+        this.expand_topics = !this.expand_topics;
+    }
+
+    showCorrect() {
+        this.show_correct = !this.show_correct;
     }
 
     scroll(el: HTMLElement) {
