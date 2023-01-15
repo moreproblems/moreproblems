@@ -139,8 +139,6 @@
     min-height: 16px;
     width: 210px;
     border-radius: 8px;
-    justify-content: center;
-    align-items: center;
   }
 
   .card.card-small span {
@@ -497,7 +495,7 @@
         <!-- <b>PD</b> -->
       </button>
       <p style="margin: auto 5px auto 10px; font-size: 14px">Page </p>
-      <h3 style="margin: auto 10px auto 0; font-size: 20px"> {{file_page}} </h3>
+      <input (keyup)="go_to_page(+this.pageNum.value)" type="text" inputmode="numeric" value="{{file_page}}" min="1" maxlength="3" style="margin: auto 10px auto 0; width: 40px; height: 30px; font-size: 20px; font-weight: 800; text-align: center" #pageNum />
       <button *ngIf="file_source != ''" (click)="next_page()" class="grade-button"
         style="margin: 20px 0; width: auto; height: auto">
         <img src="./assets/icons/plus.png" style="height: 25px; filter: invert(100%)">

@@ -1359,6 +1359,10 @@ export class ExamsComponent implements OnInit{
     this.file_page = this.file_page+1;
   }
 
+  go_to_page(num: number) {
+    this.file_page = num;
+  }
+
   width_change() {
     this.viewerWidth = Math.round(window.innerWidth*.99).toString() + "px";
     this.viewerHeight = Math.round(window.innerHeight*.95).toString() + "px";
