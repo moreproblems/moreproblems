@@ -22,10 +22,10 @@ export class TX21G3MKeyComponent implements OnInit {
     screenWidth = window.innerWidth;
     mobileWidth = 800;
 
-    et_counter: number = 0;
-    et_minutes: number = 0;
-    et_timer: any;
-    et_running: boolean = false;
+    // et_counter: number = 0;
+    // et_minutes: number = 0;
+    // et_timer: any;
+    // et_running: boolean = false;
     pt_counter: number = 0;
     pt_minutes: number = 0;
     pt_timer: any;
@@ -1399,12 +1399,33 @@ export class TX21G3MKeyComponent implements OnInit {
         }
     }
 
+    toggleProblemTimer() {
+        this.pt_running = !this.pt_running;
+        if (this.pt_running) {
+            const startTime = Date.now() - (this.pt_counter || 0);
+            this.pt_timer = setInterval(() => {
+                this.pt_counter = Math.round((Date.now() - startTime) / 1000);
+                this.pt_minutes = Math.floor(this.pt_counter / 60);
+            });
+        } else {
+            clearInterval(this.pt_timer);
+        }
+    }
+
+    clearProblemTimer() {
+        this.pt_running = false;
+        this.pt_counter = 0;
+        clearInterval(this.pt_timer);
+    }
+
     next_problem() {
         if (this.problem_number < this.exam_length) {
             this.problem_number += 1;
             this.problem_selection = '';
             this.problem_attempts = 0;
             this.attempt_response = '';
+            this.clearProblemTimer();
+            this.toggleProblemTimer();
         }
     }
 
@@ -1414,7 +1435,27 @@ export class TX21G3MKeyComponent implements OnInit {
             this.problem_selection = '';
             this.problem_attempts = 0;
             this.attempt_response = '';
+            this.clearProblemTimer();
+            this.toggleProblemTimer();
         }
+    }
+
+    go_to_prob(num: number) {
+        if (num < 1) {
+            this.problem_number = 1;
+        }
+        else if (num > this.exam_length) {
+            this.problem_number = this.exam_length;
+        }
+        else if (Number.isNaN(num)) {
+            this.problem_number = this.problem_number;
+        }
+        else {
+            this.problem_number = num;
+        }
+        this.problem_selection = '';
+        this.problem_attempts = 0;
+        this.attempt_response = '';
     }
 
     scroll(el: HTMLElement) {
@@ -1426,6 +1467,6 @@ export class TX21G3MKeyComponent implements OnInit {
     }
 
     ngOnInit() {
-
+        this.toggleProblemTimer();
     }
 }
