@@ -498,7 +498,7 @@
                             <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue"
                                 class="card card-small"
                                 (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
-                                style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto">
+                                style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                                 <label class="switch" style="padding: 0 25px">
                                     <input type="checkbox" value="{{choice.key}}">
                                     <button *ngIf="problem_selection==choice.key"

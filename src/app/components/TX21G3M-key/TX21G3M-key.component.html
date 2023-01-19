@@ -468,8 +468,9 @@
             <img src="./assets/icons/minus.png" style="height: 30px; width: 30px; filter: invert(100%)">
           </button>
           <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0" style="margin: auto 0; color: darkgrey; font-size: 18px"> Problem # </h3>
-                <input (keyup)="go_to_prob(+this.probNum.value)" type="text" inputmode="numeric" value="{{problem_number}}" min="1" maxlength="2" style="margin: auto 3px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center" #probNum />
-                <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0" style="margin: auto 0; color: darkgrey; font-size: 18px"> / {{exam_length}}  ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
+          <input *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0" (keyup)="go_to_prob(+this.probNum.value)" type="text" inputmode="numeric" value="{{problem_number}}" min="1" maxlength="2" style="margin: auto 3px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center" #probNum />
+          <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0 && screenWidth > mobileWidth" style="margin: auto 0; color: darkgrey; font-size: 18px"> / {{exam_length}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
+          <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0 && screenWidth <= mobileWidth" style="margin: auto 0; color: darkgrey; font-size: 18px"> / {{exam_length}}  </h3>
           <button (click)="next_problem()" class="grade-button"
             style="margin: 20px 0; margin-left: 20px; width: auto; height: auto">
             <img src="./assets/icons/plus.png" style="height: 30px; width: 30px; filter: invert(100%)">
@@ -512,7 +513,7 @@
             <div *ngIf="prob.value.Type == 'MC'">
               <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
                 (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
-                style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto">
+                style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                 <label class="switch" style="padding: 0 25px">
                   <input type="checkbox" value="{{choice.key}}">
                   <button *ngIf="problem_selection==choice.key" class="toggle-button-on"> <b> {{choice.key}} </b>
