@@ -32,7 +32,7 @@ export class ProblemsComponent implements OnInit {
   // exam_subject = 'Mathematics';
   // exam_name = 'STAAR';
   // exam_year = '2021';
-  exam_length = 0;
+  exam_length = 10;
 
   TX21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX21G3MProblems;
   TX19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX19G3MProblems;
@@ -75,39 +75,52 @@ export class ProblemsComponent implements OnInit {
     }
   }
 
+  set_problem_num(num: number) {
+    if (num < 5) {
+      this.exam_length = 5;
+    }
+    else if (num > 50) {
+      this.exam_length = 50;
+    }
+    else {
+      this.exam_length = num;
+    }
+  }
+
   generate_problems() {
     for (const [num, value] of Object.entries(this.TX21G3M_exam_dump)) {
       if (value.Number <= 32) {
-        this.exam_dump[this.dump_count] = value;
+        // this.exam_dump[this.dump_count] = value;
         this.ordered_dump[this.dump_count] = value;
         this.dump_count += 1;
       }
     }
     for (const [num, value] of Object.entries(this.TX19G3M_exam_dump)) {
       if (value.Number <= 32) {
-        this.exam_dump[this.dump_count] = value;
+        // this.exam_dump[this.dump_count] = value;
         this.ordered_dump[this.dump_count] = value;
         this.dump_count += 1;
       }
     }
-    this.exam_length = Object.keys(this.exam_dump).length;
-    this.randomize_problems();
+    // this.exam_length = Object.keys(this.exam_dump).length;
+    this.randomize_problems(this.exam_length);
     this.toggle_filters();
   }
 
-  randomize_problems() {
+  randomize_problems(total: number) {
     this.problems_sequence = Array.from({length: this.exam_length}, (_, i) => i + 1);
     this.random_list = []
-    for (const [num, value] of Object.entries(this.exam_dump)) {
+    for (let i = 1; i <= this.exam_length; i++) {
       this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
       this.random_list.push(this.problems_sequence[this.random_index]);
-      this.exam_dump[+num] = this.ordered_dump[this.problems_sequence[this.random_index]];
+      this.exam_dump[i] = this.ordered_dump[this.problems_sequence[this.random_index]];
       this.problems_sequence.splice(this.random_index, 1);
     }
   }
 
   toggle_filters() {
     this.expand_filters = !this.expand_filters;
+    this.toggleProblemTimer();
   }
 
   toggle_topic() {
@@ -199,6 +212,6 @@ export class ProblemsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.toggleProblemTimer();
+    
   }
 }

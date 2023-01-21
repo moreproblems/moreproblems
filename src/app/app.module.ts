@@ -89,7 +89,7 @@ import { TX19G3MKeyComponent } from './components/TX19G3M-key/TX19G3M-key.compon
     NgPipesModule,
     ReactiveFormsModule,
     HttpClientModule,
-    PdfViewerModule,
+    PdfViewerModule
     // printJS
     // fs
   ],
