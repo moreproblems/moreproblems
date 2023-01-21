@@ -41,11 +41,6 @@ export class TX21G3MExamComponent implements OnInit {
     exam_code = 'TX21G3M'
     exam_file = 'src/app/assets/problems/' + this.exam_code + '/' + this.exam_code + '-problems.txt';
 
-    // exam_data = fs.readFileSync(this.problem_file, 'utf8');
-    // exam_data: string = '';
-    // fileReader: FileReader = new FileReader()
-    // this.fileReader.readAsText(this.problem_file);
-
     exam_state = 'Texas';
     exam_grade = 'Grade 3';
     exam_subject = 'Mathematics';
@@ -55,7 +50,15 @@ export class TX21G3MExamComponent implements OnInit {
 
     exam_directions = 'Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.';
 
-    exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
+    TX21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
+    exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
+    dump_count = 1;
+
+    problems_sequence: number[] = Array.from({length: this.exam_length}, (_, i) => i + 1);
+    ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
+    random_index = 0
+    random_list: number[] = Array.from({length: this.exam_length}, (_, i) => i + 1);
+    random = false;
 
     exam_key: string[] = ['B', 'H', 'A', 'H', '972', 'H', 'A', 'G', 'D', 'J', 'C', 'H', 'D', '20', 'A', 'H', 'A', 'J', 'D', 'G', 'C', 'J', 'B', '13', 'A', 'G', 'D', 'F', 'B', 'F', 'C', 'G']
 
@@ -450,30 +453,37 @@ export class TX21G3MExamComponent implements OnInit {
 
     toggle_button(val: string) {
         if (!this.filters.includes(val)) {
-            this.filters.push(val)
+            this.filters.push(val);
         }
         else {
             if (this.filters.indexOf(val) !== -1) {
                 this.filters.splice(this.filters.indexOf(val), 1);
             }
             else {
-                this.filters.pop()
+                this.filters.pop();
             }
         }
     }
 
-    read_exam_dump() {
-        // const rawFile = new XMLHttpRequest();
-        // rawFile.open("GET", "./assets/problems/TX21G3M/TX21G3M-problems.txt", false);
-        // console.log(rawFile.open("GET", "./assets/problems/TX21G3M/TX21G3M-problems.txt", false));
-        // this.exam_dump = JSON.parse(rawFile.responseText);
-        // fetch( "./assets/problems/TX21G3M/TX21G3M-problems.txt")
-        //     .then((response) => response.json())
-        //     .then((json) => this.exam_dump = json);
+    toggle_random() {
+        this.random = !this.random;
     }
 
+    randomize_problems() {
+        this.problems_sequence = Array.from({length: this.exam_length}, (_, i) => i + 1);
+        this.random_list = []
+        for (const [num, value] of Object.entries(this.exam_dump)) {
+          this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
+          this.random_list.push(this.problems_sequence[this.random_index]);
+          this.exam_dump[+num] = this.ordered_dump[this.problems_sequence[this.random_index]];
+          this.problems_sequence.splice(this.random_index, 1);
+        }
+      }
+
     begin_exam() {
-        // this.read_exam_dump();
+        if (this.random == true) {
+            this.randomize_problems();
+        }
         this.toggleExamTimer();
         this.toggleProblemTimer();
         this.problem_number = 1;
@@ -678,6 +688,12 @@ export class TX21G3MExamComponent implements OnInit {
     }
 
     ngOnInit() {
-
+        for (const [num, value] of Object.entries(this.TX21G3M_exam_dump)) {
+            if (value.Number <= 32) {
+              this.exam_dump[this.dump_count] = value;
+              this.ordered_dump[this.dump_count] = value;
+              this.dump_count += 1;
+            }
+          }
     }
 }
