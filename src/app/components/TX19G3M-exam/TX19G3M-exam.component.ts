@@ -33,12 +33,6 @@ export class TX19G3MExamComponent implements OnInit {
 
     expand_topics = true;
     show_correct = false;
-    filters: string[] = [];
-    expand_filters = true;
-
-    exam_dump_file = 'src/app/assets/Exams/exams.txt';
-    exam_code = 'TX21G3M'
-    exam_file = 'src/app/assets/problems/' + this.exam_code + '/' + this.exam_code + '-problems.txt';
 
     exam_state = 'Texas';
     exam_grade = 'Grade 3';
@@ -59,7 +53,7 @@ export class TX19G3MExamComponent implements OnInit {
     random_list: number[] = Array.from({length: this.exam_length}, (_, i) => i + 1);
     random = false;
 
-    exam_key: string[] = ['C', 'G', 'A', 'H', '7', 'F', 'D', 'F', 'C', 'G', 'C', 'G', 'D', '96', 'A', 'J', 'B', 'F', 'C', 'J', 'A', 'H', 'D', '18', 'B', 'J', 'B', 'H', 'B', 'F', 'B', 'J']
+    exam_key: string[] = ['C', 'G', 'A', 'H', '7', 'F', 'D', 'F', 'C', 'G', 'C', 'G', 'D', '96', 'A', 'J', 'B', 'F', 'C', 'J', 'A', 'H', 'D', '18', 'B', 'J', 'B', 'H', 'B', 'F', 'B', 'J'];
 
     problem_number = 0;
     problem_selection = '';
@@ -447,20 +441,6 @@ export class TX19G3MExamComponent implements OnInit {
         this.screenWidth = window.innerWidth;
         if (this.screenWidth <= this.mobileWidth) {
             this.expand_topics = false;
-        }
-    }
-
-    toggle_button(val: string) {
-        if (!this.filters.includes(val)) {
-            this.filters.push(val)
-        }
-        else {
-            if (this.filters.indexOf(val) !== -1) {
-                this.filters.splice(this.filters.indexOf(val), 1);
-            }
-            else {
-                this.filters.pop()
-            }
         }
     }
 

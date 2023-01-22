@@ -177,15 +177,43 @@ export class ProblemsComponent implements OnInit {
   }
 
   attempt_mc_problem(ch: string) {
-    this.problem_attempts += 1;
-    this.attempt_path.push(ch);
-    this.problem_selection = ch;
-    for (const [num, prob] of Object.entries(this.exam_dump)) {
-      if (this.problem_number == +num) {
-        for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
-          if (choice == ch) {
-            this.attempt_explanation = key.Key.Rationale;
-            if (key.Key.Correct == true) {
+    if (ch != this.problem_selection) {
+      this.problem_attempts += 1;
+      this.attempt_path.push(ch);
+      this.problem_selection = ch;
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
+        if (this.problem_number == +num) {
+          for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
+            if (choice == ch) {
+              this.attempt_explanation = key.Key.Rationale;
+              if (key.Key.Correct == true) {
+                if (this.problem_attempts == 1) {
+                  this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
+                }
+                else {
+                  this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
+                }
+              }
+              else {
+                this.attempt_response = 'That is not the correct answer - have another try.';
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  attempt_fr_problem(ch: string) {
+    if (ch != this.problem_selection) {
+      this.problem_attempts += 1;
+      this.attempt_path.push(ch);
+      this.problem_selection = ch;
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
+        if (this.problem_number == +num) {
+          for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
+            if (ch == key.Choice) {
+              this.attempt_explanation = key.Key.Rationale;
               if (this.problem_attempts == 1) {
                 this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
               }
@@ -196,30 +224,6 @@ export class ProblemsComponent implements OnInit {
             else {
               this.attempt_response = 'That is not the correct answer - have another try.';
             }
-          }
-        }
-      }
-    }
-  }
-
-  attempt_fr_problem(ch: string) {
-    this.problem_attempts += 1;
-    this.attempt_path.push(ch);
-    this.problem_selection = ch;
-    for (const [num, prob] of Object.entries(this.exam_dump)) {
-      if (this.problem_number == +num) {
-        for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
-          if (ch == key.Choice) {
-            this.attempt_explanation = key.Key.Rationale;
-            if (this.problem_attempts == 1) {
-              this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
-            }
-            else {
-              this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' tries.';
-            }
-          }
-          else {
-            this.attempt_response = 'That is not the correct answer - have another try.';
           }
         }
       }

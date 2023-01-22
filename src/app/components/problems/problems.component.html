@@ -457,7 +457,7 @@
 
 <div class="content" role="main" (window:resize)="width_change2()">
   <div *ngIf="expand_filters" class="content">
-    <h2>Select your State</h2>
+    <h2>Choose your State</h2>
     <input type="hidden" value="All United States" #state>
     <div class="card-container">
       <label class="switch">
@@ -555,7 +555,7 @@
     <br />
 
     <br />
-    <h2>Select your Grade</h2>
+    <h2>Choose your Grade</h2>
     <input type="hidden" value="All Grades" #state>
     <div class="card-container">
       <label class="switch">
@@ -604,7 +604,7 @@
     <br />
 
     <br />
-    <h2>Select your Subject</h2>
+    <h2>Choose your Subject</h2>
     <input type="hidden" value="All Subjects" #state>
     <div class="card-container">
       <label class="switch">
@@ -646,8 +646,8 @@
     <br />
 
     <br />
-    <h2>Select your Settings</h2>
-    <div style="display: flex; justify-content: center; align-items: center">
+    <h2>Choose your Settings</h2>
+    <div class="card-container" style="display: flex; justify-content: center; align-items: center; max-width: 100%">
       <div class="slider">
         <input type="range" min="5" max="50" value="{{exam_length}}" (input)="set_problem_num(+this.probSlider.value)"
           style="width: 250px" #probSlider>
@@ -659,7 +659,7 @@
             #probEntry />
         </div>
       </div>
-      <label class="switch" style="align-items: center">
+      <label class="switch" style="align-items: center; margin: 15px 0">
         <input type="checkbox" value="random">
         <button (click)="toggle_mode()" *ngIf="mode=='explain'" class="toggle-button-on"
           style="margin: 0px 20px 0px 20px; font-size: 18px"> <b> Assessment </b> Mode
