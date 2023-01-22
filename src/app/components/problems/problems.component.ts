@@ -1,5 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-// import * as exams from "src/assets/problems/exams.json"; 
+// import * as examData from "src/assets/problems/exams.json"; 
 import * as TX21G3MProblems from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
 import * as TX19G3MProblems from "src/assets/problems/TX19G3M/TX19G3M-problems.json";
 import { HttpClient } from '@angular/common/http';
@@ -17,7 +17,9 @@ export class ProblemsComponent implements OnInit {
   screenWidth = window.innerWidth;
   mobileWidth = 800;
 
-  filters: string[] = [];
+  state_filters: string[] = [];
+  grade_filters: string[] = [];
+  subject_filters: string[] = [];
   expand_filters = true;
   sub_topic = false;
   expand_topics = true;
@@ -44,6 +46,10 @@ export class ProblemsComponent implements OnInit {
   TX19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX19G3MProblems;
   exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
   dump_count = 1;
+
+  online_set = ["TX21G3M", "TX19G3M"];
+  filtered_set: string[] = [];
+  generate_message = "";
 
   problems_sequence: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
   ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
@@ -85,15 +91,43 @@ export class ProblemsComponent implements OnInit {
   }
 
   toggle_button(val: string) {
-    if (!this.filters.includes(val)) {
-      this.filters.push(val)
-    }
-    else {
-      if (this.filters.indexOf(val) !== -1) {
-        this.filters.splice(this.filters.indexOf(val), 1);
+    if (['Math', 'English Reading', 'English Writing', 'Science', 'Social Studies'].includes(val)) {
+      if (!this.subject_filters.includes(val)) {
+        this.subject_filters.push(val)
       }
       else {
-        this.filters.pop()
+        if (this.subject_filters.indexOf(val) !== -1) {
+          this.subject_filters.splice(this.subject_filters.indexOf(val), 1);
+        }
+        else {
+          this.subject_filters.pop()
+        }
+      }
+    }
+    else if (['Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8'].includes(val)) {
+      if (!this.grade_filters.includes(val)) {
+        this.grade_filters.push(val)
+      }
+      else {
+        if (this.grade_filters.indexOf(val) !== -1) {
+          this.grade_filters.splice(this.grade_filters.indexOf(val), 1);
+        }
+        else {
+          this.grade_filters.pop()
+        }
+      }
+    }
+    else {
+      if (!this.state_filters.includes(val)) {
+        this.state_filters.push(val)
+      }
+      else {
+        if (this.state_filters.indexOf(val) !== -1) {
+          this.state_filters.splice(this.state_filters.indexOf(val), 1);
+        }
+        else {
+          this.state_filters.pop()
+        }
       }
     }
   }
@@ -119,24 +153,41 @@ export class ProblemsComponent implements OnInit {
     }
   }
 
+  filter_exams() {
+    if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.grade_filters.includes('Grade 3') || this.grade_filters.length == 0) && (this.subject_filters.includes('Math') || this.subject_filters.length == 0)) {
+      this.filtered_set.push('TX21G3M');
+      this.filtered_set.push('TX19G3M');
+    }
+  }
+
   generate_problems() {
-    for (const [num, value] of Object.entries(this.TX21G3M_exam_dump)) {
-      if (value.Number <= 32) {
-        // this.exam_dump[this.dump_count] = value;
-        this.ordered_dump[this.dump_count] = value;
-        this.dump_count += 1;
+    this.filter_exams();
+    if (this.filtered_set.length == 0) {
+      this.generate_message = "There are no problems based on your selection.";
+    }
+    if (this.filtered_set.includes('TX21G3M')) {
+      for (const [num, value] of Object.entries(this.TX21G3M_exam_dump)) {
+        if (value.Number <= 32) {
+          // this.exam_dump[this.dump_count] = value;
+          this.ordered_dump[this.dump_count] = value;
+          this.dump_count += 1;
+        }
       }
     }
-    for (const [num, value] of Object.entries(this.TX19G3M_exam_dump)) {
-      if (value.Number <= 32) {
-        // this.exam_dump[this.dump_count] = value;
-        this.ordered_dump[this.dump_count] = value;
-        this.dump_count += 1;
+    if (this.filtered_set.includes('TX19G3M')) {
+      for (const [num, value] of Object.entries(this.TX19G3M_exam_dump)) {
+        if (value.Number <= 32) {
+          // this.exam_dump[this.dump_count] = value;
+          this.ordered_dump[this.dump_count] = value;
+          this.dump_count += 1;
+        }
       }
     }
-    // this.exam_length = Object.keys(this.exam_dump).length;
-    this.randomize_problems(this.exam_length);
-    this.toggle_filters();
+    if (this.filtered_set.length != 0) {
+      this.generate_message = "";
+      this.randomize_problems(this.exam_length);
+      this.toggle_filters();
+    }
   }
 
   randomize_problems(total: number) {
