@@ -1,691 +1,702 @@
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-  
-    :host {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      font-size: 14px;
-      color: #333;
-      box-sizing: border-box;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    background-color: #0a1e33;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px 2px 20px;
+  }
+
+  .toolbar img {
+    /* margin: 0 16px; */
+    position: absolute;
+    left: -10px;
+    top: -18px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+  .content-menu {
+    display: flex;
+    margin: 0 auto 32px;
+    padding: 0 16px;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    margin: 12px auto 32px;
+    padding: 0;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subcontent {
+    display: flex;
+    margin: 12px auto;
+    padding: 0px;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    /* height: 40px;
+      width: 200px; */
+    margin: 0 8px 16px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  /* .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card-container .switch:not(:last-child) {
+    margin-right: 0;
+  } */
+
+  .card.card-small {
+    height: 16px;
+    width: 190px;
+    border-radius: 8px;
+  }
+
+  .card.card-medium {
+    height: auto;
+    width: 80%;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .card.card-medium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card.card-large {
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    margin: 8px 8px;
+    padding: 8px 0;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  /* .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  } */
+
+  .card.highlight-card {
+    background-color: #0a1e33;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+  svg#rocket {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+  }
+
+  svg#rocket-smoke {
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+  button.grade-button {
+    font-size: 18px;
+    color: white;
+    background-color: #1976d2;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin: 8px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  button.grade-button:hover {
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  button.grade-button-gray {
+    font-size: 18px;
+    color: white;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  button.grade-button-gray:hover {
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  button.toggle-button {
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .toggle-button:before {
+    background-color: #1976d2;
+    color: white;
+  }
+
+  button.toggle-button-off {
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  button.toggle-button-on {
+    font-size: 18px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  .terminal {
+    position: relative;
+    /* width: 100%; */
+    max-width: 625px;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+    color: #c2c3c4;
+  }
+
+  .terminal::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: rgb(58, 58, 58);
+    color: #c2c3c4;
+    width: 100%;
+    line-height: 0;
+    padding: 14px 0;
+    font-size: 2rem;
+    text-indent: 4px;
+  }
+
+  .terminal pre {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .circle-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+  }
+
+  .circle-link:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
+  .github-star-badge {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27, 31, 35, .2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
+  }
+
+  .github-star-badge:hover {
+    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+    border-color: rgba(27, 31, 35, .35);
+    background-position: -.5em;
+  }
+
+  .github-star-badge .material-icons {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 75px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  input:checked+.toggle-button-on {
+    background-color: #1976d2;
+    color: white
+  }
+
+  input:hover+.toggle-button-on {
+    background-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  input:checked+.toggle-button-off {
+    background-color: #ccc;
+    color: black;
+  }
+
+  input:hover+.toggle-button-off {
+    background-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+
+    .card-container>*:not(.circle-link),
+    .terminal {
+      /* width: 100%; */
     }
-  
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+
+    .card:not(.highlight-card) {
+      /* height: 16px; */
       margin: 8px 0;
     }
-  
-    p {
-      margin: 0;
+
+    .card.highlight-card span {
+      margin-left: 72px;
     }
-  
-    .spacer {
-      flex: 1;
-    }
-  
-    .toolbar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 85px;
-      display: flex;
-      align-items: center;
-      background-color: #0a1e33;
-      color: white;
-      font-weight: 600;
-      padding: 5px 10px 2px 20px;
-    }
-  
-    .toolbar img {
-      /* margin: 0 16px; */
-      position: absolute;
-      left: -10px;
-      top: -18px;
-    }
-  
-    .toolbar #twitter-logo {
-      height: 40px;
-      margin: 0 8px;
-    }
-  
-    .toolbar #youtube-logo {
-      height: 40px;
-      margin: 0 16px;
-    }
-  
-    .toolbar #twitter-logo:hover,
-    .toolbar #youtube-logo:hover {
-      opacity: 0.8;
-    }
-  
-    .content-menu {
-      display: flex;
-      margin: 0 auto 32px;
-      padding: 0 16px;
-      width: 90%;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .content {
-      display: flex;
-      margin: 12px auto 32px;
-      padding: 0;
-      width: 95%;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .subcontent {
-      display: flex;
-      margin: 12px auto;
-      padding: 0px;
-      width: 95%;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    svg.material-icons {
-      height: 24px;
-      width: auto;
-    }
-  
-    svg.material-icons:not(:last-child) {
-      margin-right: 8px;
-    }
-  
-    .card svg.material-icons path {
-      fill: #888;
-    }
-  
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 16px;
-    }
-  
-    .card {
-      all: unset;
-      border-radius: 4px;
-      border: 1px solid #eee;
-      background-color: #fafafa;
-      /* height: 40px;
-          width: 200px; */
-      margin: 0 8px 16px;
-      padding: 8px 8px;
-      display: flex;
-      flex-direction: row;
-      /* justify-content: center; */
-      /* align-items: center; */
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-    }
-  
-    /* .card-container .card:not(:last-child) {
-        margin-right: 0;
-      }
-    
-      .card-container .switch:not(:last-child) {
-        margin-right: 0;
-      } */
-  
-    .card.card-small {
-      height: 16px;
-      width: 190px;
-      border-radius: 8px;
-    }
-  
-    .card.card-medium {
-      height: auto;
-      width: 80%;
-      border-radius: 8px;
-      padding: 20px;
-    }
-  
-    .card.card-medium:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    .card.card-large {
-      width: auto;
-      height: auto;
-      border-radius: 8px;
-      margin: 8px 8px;
-      padding: 8px 0;
-    }
-  
-    .card-container .card:not(.highlight-card) {
-      cursor: pointer;
-    }
-  
-    .card-container .card:not(.highlight-card):hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    /* .card-container .card:not(.highlight-card):hover .material-icons path {
-        fill: rgb(105, 103, 103);
-      } */
-  
-    .card.highlight-card {
-      background-color: #0a1e33;
-      color: white;
-      font-weight: 600;
-      border: none;
-      width: auto;
-      min-width: 30%;
-      position: relative;
-    }
-  
-    .card.card.highlight-card span {
-      margin-left: 60px;
-    }
-  
-    svg#rocket {
-      width: 80px;
-      position: absolute;
-      left: -10px;
-      top: -24px;
-    }
-  
-    svg#rocket-smoke {
-      height: calc(100vh - 95px);
-      position: absolute;
-      top: 10px;
-      right: 180px;
-      z-index: -10;
-    }
-  
-    a,
-    a:visited,
-    a:hover {
-      color: #1976d2;
-      text-decoration: none;
-    }
-  
-    a:hover {
-      color: #125699;
-    }
-  
-    button.grade-button {
-      font-size: 18px;
-      color: white;
-      background-color: #1976d2;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      margin: 8px;
-      padding: 8px 8px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-    }
-  
-    button.grade-button:hover {
-      background-color: #0a1e33;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    button.grade-button-gray {
-      font-size: 18px;
-      color: white;
-      background-color: #ccc;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      padding: 7px 15px;
-      margin: 0 2px 10px;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-    }
-  
-    button.grade-button-gray:hover {
-      background-color: #0a1e33;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    button.toggle-button {
-      font-size: 18px;
-      color: black;
-      background-color: #ccc;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      padding: 7px 15px;
-      margin: 0 2px 10px;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-    }
-  
-    .toggle-button:before {
-      background-color: #1976d2;
-      color: white;
-    }
-  
-    button.toggle-button-off {
-      font-size: 18px;
-      color: black;
-      background-color: #ccc;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      padding: 7px 15px;
-      margin: 0 2px 10px;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-      width: 100%;
-    }
-  
-    button.toggle-button-on {
-      font-size: 18px;
-      background-color: #1976d2;
-      color: white;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      padding: 7px 15px;
-      margin: 0 2px 10px;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-      width: 100%;
-    }
-  
-    .terminal {
-      position: relative;
-      /* width: 100%; */
-      max-width: 625px;
-      border-radius: 6px;
-      padding-top: 45px;
-      margin-top: 8px;
-      overflow: hidden;
-      background-color: rgb(15, 15, 16);
-      color: #c2c3c4;
-    }
-  
-    .terminal::before {
-      content: "\2022 \2022 \2022";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 4px;
-      background: rgb(58, 58, 58);
-      color: #c2c3c4;
-      width: 100%;
-      line-height: 0;
-      padding: 14px 0;
-      font-size: 2rem;
-      text-indent: 4px;
-    }
-  
-    .terminal pre {
-      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-      color: white;
-      padding: 0 1rem 1rem;
-      margin: 0;
-      text-align: center;
-    }
-  
-    .circle-link {
-      height: 40px;
-      width: 40px;
-      border-radius: 40px;
-      margin: 8px;
-      background-color: white;
-      border: 1px solid #eeeeee;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      transition: 1s ease-out;
-    }
-  
-    .circle-link:hover {
-      transform: translateY(-0.25rem);
-      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-    }
-  
-    footer {
-      margin-top: 8px;
-      display: flex;
-      align-items: center;
-      line-height: 20px;
-    }
-  
-    footer a {
-      display: flex;
-      align-items: center;
-    }
-  
-    .github-star-badge {
-      color: #24292e;
-      display: flex;
-      align-items: center;
-      font-size: 12px;
-      padding: 3px 10px;
-      border: 1px solid rgba(27, 31, 35, .2);
-      border-radius: 3px;
-      background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-      margin-left: 4px;
-      font-weight: 600;
-    }
-  
-    .github-star-badge:hover {
-      background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-      border-color: rgba(27, 31, 35, .35);
-      background-position: -.5em;
-    }
-  
-    .github-star-badge .material-icons {
-      height: 16px;
-      width: 16px;
-      margin-right: 4px;
-    }
-  
-    /* The switch - the box around the slider */
-    .switch {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: auto;
-      height: auto;
-      max-width: 250px;
-      max-height: 75px;
-      transition: all 0.2s ease-in-out;
-    }
-  
-    /* Hide default HTML checkbox */
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-  
-    input:checked+.toggle-button-on {
-      background-color: #1976d2;
-      color: white
-    }
-  
-    input:hover+.toggle-button-on {
-      background-color: #0a1e33;
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    input:checked+.toggle-button-off {
-      background-color: #ccc;
-      color: black;
-    }
-  
-    input:hover+.toggle-button-off {
-      background-color: #0a1e33;
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    /* Responsive Styles */
-    @media screen and (max-width: 767px) {
-  
-      .card-container>*:not(.circle-link),
-      .terminal {
-        /* width: 100%; */
-      }
-  
-      .card:not(.highlight-card) {
-        /* height: 16px; */
-        margin: 8px 0;
-      }
-  
-      .card.highlight-card span {
-        margin-left: 72px;
-      }
-  
-    }
-  </style>
+
+  }
+</style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="content" role="main">
-    <div *ngIf="expand_filters" class="content">
-        <h2>Select your State</h2>
-        <input type="hidden" value="All United States" #state>
-        <div class="card-container">
-          <label class="switch">
-            <input type="checkbox" value="CO">
-            <button *ngIf="filters.includes('Colorado')" (click)="toggle_button('Colorado')" class="toggle-button-on"
-              tabindex="0"> <b>Colorado</b> </button>
-            <button *ngIf="!filters.includes('Colorado')" (click)="toggle_button('Colorado')" class="toggle-button-off"
-              tabindex="0"> <b>Colorado</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="FL">
-            <button *ngIf="filters.includes('Florida')" (click)="toggle_button('Florida')" class="toggle-button-on"
-              tabindex="0"> <b>Florida</b> </button>
-            <button *ngIf="!filters.includes('Florida')" (click)="toggle_button('Florida')" class="toggle-button-off"
-              tabindex="0"> <b>Florida</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="IL">
-            <button *ngIf="filters.includes('Illinois')" (click)="toggle_button('Illinois')" class="toggle-button-on"
-              tabindex="0"> <b>Illinois</b> </button>
-            <button *ngIf="!filters.includes('Illinois')" (click)="toggle_button('Illinois')" class="toggle-button-off"
-              tabindex="0"> <b>Illinois</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="MD">
-            <button *ngIf="filters.includes('Maryland')" (click)="toggle_button('Maryland')" class="toggle-button-on"
-              tabindex="0"> <b>Maryland</b> </button>
-            <button *ngIf="!filters.includes('Maryland')" (click)="toggle_button('Maryland')" class="toggle-button-off"
-              tabindex="0"> <b>Maryland</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="MA">
-            <button *ngIf="filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')" class="toggle-button-on"
-              tabindex="0"> <b>Massachusetts</b> </button>
-            <button *ngIf="!filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')" class="toggle-button-off"
-              tabindex="0"> <b>Massachusetts</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="MN">
-            <button *ngIf="filters.includes('Minnesota')" (click)="toggle_button('Minnesota')" class="toggle-button-on"
-              tabindex="0"> <b>Minnesota</b> </button>
-            <button *ngIf="!filters.includes('Minnesota')" (click)="toggle_button('Minnesota')" class="toggle-button-off"
-              tabindex="0"> <b>Minnesota</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="MI">
-            <button *ngIf="filters.includes('Missouri')" (click)="toggle_button('Missouri')" class="toggle-button-on"
-              tabindex="0"> <b>Missouri</b> </button>
-            <button *ngIf="!filters.includes('Missouri')" (click)="toggle_button('Missouri')" class="toggle-button-off"
-              tabindex="0"> <b>Missouri</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="NJ">
-            <button *ngIf="filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-on"
-              tabindex="0"> <b>New Jersey</b> </button>
-            <button *ngIf="!filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-off"
-              tabindex="0"> <b>New Jersey</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="NY">
-            <button *ngIf="filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button-on"
-              tabindex="0"> <b>New York</b> </button>
-            <button *ngIf="!filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button-off"
-              tabindex="0"> <b>New York</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="NC">
-            <button *ngIf="filters.includes('North Carolina')" (click)="toggle_button('North Carolina')" class="toggle-button-on"
-              tabindex="0"> <b>North Carolina</b> </button>
-            <button *ngIf="!filters.includes('North Carolina')" (click)="toggle_button('North Carolina')" class="toggle-button-off"
-              tabindex="0"> <b>North Carolina</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="PA">
-            <button *ngIf="filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')" class="toggle-button-on"
-              tabindex="0"> <b>Pennsylvania</b> </button>
-            <button *ngIf="!filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')" class="toggle-button-off"
-              tabindex="0"> <b>Pennsylvania</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="TN">
-            <button *ngIf="filters.includes('Tennessee')" (click)="toggle_button('Tennessee')" class="toggle-button-on"
-              tabindex="0"> <b>Tennessee</b> </button>
-            <button *ngIf="!filters.includes('Tennessee')" (click)="toggle_button('Tennessee')" class="toggle-button-off"
-              tabindex="0"> <b>Tennessee</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="TX">
-            <button *ngIf="filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button-on"
-              tabindex="0"> <b>Texas</b> </button>
-            <button *ngIf="!filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button-off"
-              tabindex="0"> <b>Texas</b> </button>
-          </label>
-        </div>
-        <br />
-
-        <br />
-        <h2>Select your Grade</h2>
-        <input type="hidden" value="All Grades" #state>
-        <div class="card-container">
-            <label class="switch">
-              <input type="checkbox" value="G3">
-              <button *ngIf="filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button-on"
-                tabindex="0"> <b>Grade 3</b> </button>
-              <button *ngIf="!filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button-off"
-                tabindex="0"> <b>Grade 3</b> </button>
-            </label>
-            <label class="switch">
-              <input type="checkbox" value="G4">
-              <button *ngIf="filters.includes('Grade 4')" (click)="toggle_button('Grade 4')" class="toggle-button-on"
-                tabindex="0"> <b>Grade 4</b> </button>
-              <button *ngIf="!filters.includes('Grade 4')" (click)="toggle_button('Grade 4')" class="toggle-button-off"
-                tabindex="0"> <b>Grade 4</b> </button>
-            </label>
-            <label class="switch">
-              <input type="checkbox" value="G5">
-              <button *ngIf="filters.includes('Grade 5')" (click)="toggle_button('Grade 5')" class="toggle-button-on"
-                tabindex="0"> <b>Grade 5</b> </button>
-              <button *ngIf="!filters.includes('Grade 5')" (click)="toggle_button('Grade 5')" class="toggle-button-off"
-                tabindex="0"> <b>Grade 5</b> </button>
-            </label>
-            <label class="switch">
-              <input type="checkbox" value="G6">
-              <button *ngIf="filters.includes('Grade 6')" (click)="toggle_button('Grade 6')" class="toggle-button-on"
-                tabindex="0"> <b>Grade 6</b> </button>
-              <button *ngIf="!filters.includes('Grade 6')" (click)="toggle_button('Grade 6')" class="toggle-button-off"
-                tabindex="0"> <b>Grade 6</b> </button>
-            </label>
-            <label class="switch">
-              <input type="checkbox" value="G7">
-              <button *ngIf="filters.includes('Grade 7')" (click)="toggle_button('Grade 7')" class="toggle-button-on"
-                tabindex="0"> <b>Grade 7</b> </button>
-              <button *ngIf="!filters.includes('Grade 7')" (click)="toggle_button('Grade 7')" class="toggle-button-off"
-                tabindex="0"> <b>Grade 7</b> </button>
-            </label>
-            <label class="switch">
-              <input type="checkbox" value="G8">
-              <button *ngIf="filters.includes('Grade 8')" (click)="toggle_button('Grade 8')" class="toggle-button-on"
-                tabindex="0"> <b>Grade 8</b> </button>
-              <button *ngIf="!filters.includes('Grade 8')" (click)="toggle_button('Grade 8')" class="toggle-button-off"
-                tabindex="0"> <b>Grade 8</b> </button>
-            </label>
-        </div>
-        <br />
-
-        <br />
-        <h2>Select your Subject</h2>
-        <input type="hidden" value="All Subjects" #state>
-        <div class="card-container">
-          <label class="switch">
-            <input type="checkbox" value="M">
-            <button *ngIf="filters.includes('Math')" (click)="toggle_button('Math')" class="toggle-button-on"
-              tabindex="0"> <b>Math</b> </button>
-            <button *ngIf="!filters.includes('Math')" (click)="toggle_button('Math')" class="toggle-button-off"
-              tabindex="0"> <b>Math</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="ER">
-            <button *ngIf="filters.includes('English Reading')" (click)="toggle_button('English Reading')" class="toggle-button-on"
-              tabindex="0"> <b>English Reading</b> </button>
-            <button *ngIf="!filters.includes('English Reading')" (click)="toggle_button('English Reading')" class="toggle-button-off"
-              tabindex="0"> <b>English Reading</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="EW">
-            <button *ngIf="filters.includes('English Writing')" (click)="toggle_button('English Writing')" class="toggle-button-on"
-              tabindex="0"> <b>English Writing</b> </button>
-            <button *ngIf="!filters.includes('English Writing')" (click)="toggle_button('English Writing')" class="toggle-button-off"
-              tabindex="0"> <b>English Writing</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="S">
-            <button *ngIf="filters.includes('Science')" (click)="toggle_button('Science')" class="toggle-button-on"
-              tabindex="0"> <b>Science</b> </button>
-            <button *ngIf="!filters.includes('Science')" (click)="toggle_button('Science')" class="toggle-button-off"
-              tabindex="0"> <b>Science</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="SS">
-            <button *ngIf="filters.includes('Social Studies')" (click)="toggle_button('Social Studies')" class="toggle-button-on"
-              tabindex="0"> <b>Social Studies</b> </button>
-            <button *ngIf="!filters.includes('Social Studies')" (click)="toggle_button('Social Studies')" class="toggle-button-off"
-              tabindex="0"> <b>Social Studies</b> </button>
-          </label>
-        </div>
-        <br />
-
-        <br />
-        <div style="display: flex; justify-content: center; align-items: center">
-          <div class="slider">
-            <input type="range" min="5" max="50" value="{{exam_length}}" (input)="set_problem_num(+this.probSlider.value)" style="width: 250px" #probSlider>
-            <div class="slider" style="display: flex; justify-content: center; align-items: center">
-              <p style="font-size: 16px"> Total Problems: </p>
-              <input (keyup)="set_problem_num(+this.probEntry.value)" type="text" inputmode="numeric" value="{{exam_length}}" min="5" max="50" maxlength="2" style="margin: auto 0 auto 5px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center" #probEntry />
-            </div>
-          </div>
-          <br />
-          <button class="grade-button" (click)="generate_problems()">
-              <h3><b>Generate Problems!</b></h3>
-          </button>
-        </div>
+<div class="content" role="main" (window:resize)="width_change2()">
+  <div *ngIf="expand_filters" class="content">
+    <h2>Select your State</h2>
+    <input type="hidden" value="All United States" #state>
+    <div class="card-container">
+      <label class="switch">
+        <input type="checkbox" value="CO">
+        <button *ngIf="filters.includes('Colorado')" (click)="toggle_button('Colorado')" class="toggle-button-on"
+          tabindex="0"> <b>Colorado</b> </button>
+        <button *ngIf="!filters.includes('Colorado')" (click)="toggle_button('Colorado')" class="toggle-button-off"
+          tabindex="0"> <b>Colorado</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="FL">
+        <button *ngIf="filters.includes('Florida')" (click)="toggle_button('Florida')" class="toggle-button-on"
+          tabindex="0"> <b>Florida</b> </button>
+        <button *ngIf="!filters.includes('Florida')" (click)="toggle_button('Florida')" class="toggle-button-off"
+          tabindex="0"> <b>Florida</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="IL">
+        <button *ngIf="filters.includes('Illinois')" (click)="toggle_button('Illinois')" class="toggle-button-on"
+          tabindex="0"> <b>Illinois</b> </button>
+        <button *ngIf="!filters.includes('Illinois')" (click)="toggle_button('Illinois')" class="toggle-button-off"
+          tabindex="0"> <b>Illinois</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="MD">
+        <button *ngIf="filters.includes('Maryland')" (click)="toggle_button('Maryland')" class="toggle-button-on"
+          tabindex="0"> <b>Maryland</b> </button>
+        <button *ngIf="!filters.includes('Maryland')" (click)="toggle_button('Maryland')" class="toggle-button-off"
+          tabindex="0"> <b>Maryland</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="MA">
+        <button *ngIf="filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')"
+          class="toggle-button-on" tabindex="0"> <b>Massachusetts</b> </button>
+        <button *ngIf="!filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')"
+          class="toggle-button-off" tabindex="0"> <b>Massachusetts</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="MN">
+        <button *ngIf="filters.includes('Minnesota')" (click)="toggle_button('Minnesota')" class="toggle-button-on"
+          tabindex="0"> <b>Minnesota</b> </button>
+        <button *ngIf="!filters.includes('Minnesota')" (click)="toggle_button('Minnesota')" class="toggle-button-off"
+          tabindex="0"> <b>Minnesota</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="MI">
+        <button *ngIf="filters.includes('Missouri')" (click)="toggle_button('Missouri')" class="toggle-button-on"
+          tabindex="0"> <b>Missouri</b> </button>
+        <button *ngIf="!filters.includes('Missouri')" (click)="toggle_button('Missouri')" class="toggle-button-off"
+          tabindex="0"> <b>Missouri</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="NJ">
+        <button *ngIf="filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-on"
+          tabindex="0"> <b>New Jersey</b> </button>
+        <button *ngIf="!filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-off"
+          tabindex="0"> <b>New Jersey</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="NY">
+        <button *ngIf="filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button-on"
+          tabindex="0"> <b>New York</b> </button>
+        <button *ngIf="!filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button-off"
+          tabindex="0"> <b>New York</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="NC">
+        <button *ngIf="filters.includes('North Carolina')" (click)="toggle_button('North Carolina')"
+          class="toggle-button-on" tabindex="0"> <b>North Carolina</b> </button>
+        <button *ngIf="!filters.includes('North Carolina')" (click)="toggle_button('North Carolina')"
+          class="toggle-button-off" tabindex="0"> <b>North Carolina</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="PA">
+        <button *ngIf="filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')"
+          class="toggle-button-on" tabindex="0"> <b>Pennsylvania</b> </button>
+        <button *ngIf="!filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')"
+          class="toggle-button-off" tabindex="0"> <b>Pennsylvania</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="TN">
+        <button *ngIf="filters.includes('Tennessee')" (click)="toggle_button('Tennessee')" class="toggle-button-on"
+          tabindex="0"> <b>Tennessee</b> </button>
+        <button *ngIf="!filters.includes('Tennessee')" (click)="toggle_button('Tennessee')" class="toggle-button-off"
+          tabindex="0"> <b>Tennessee</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="TX">
+        <button *ngIf="filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button-on"
+          tabindex="0"> <b>Texas</b> </button>
+        <button *ngIf="!filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button-off"
+          tabindex="0"> <b>Texas</b> </button>
+      </label>
     </div>
     <br />
+
+    <br />
+    <h2>Select your Grade</h2>
+    <input type="hidden" value="All Grades" #state>
+    <div class="card-container">
+      <label class="switch">
+        <input type="checkbox" value="G3">
+        <button *ngIf="filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button-on"
+          tabindex="0"> <b>Grade 3</b> </button>
+        <button *ngIf="!filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button-off"
+          tabindex="0"> <b>Grade 3</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G4">
+        <button *ngIf="filters.includes('Grade 4')" (click)="toggle_button('Grade 4')" class="toggle-button-on"
+          tabindex="0"> <b>Grade 4</b> </button>
+        <button *ngIf="!filters.includes('Grade 4')" (click)="toggle_button('Grade 4')" class="toggle-button-off"
+          tabindex="0"> <b>Grade 4</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G5">
+        <button *ngIf="filters.includes('Grade 5')" (click)="toggle_button('Grade 5')" class="toggle-button-on"
+          tabindex="0"> <b>Grade 5</b> </button>
+        <button *ngIf="!filters.includes('Grade 5')" (click)="toggle_button('Grade 5')" class="toggle-button-off"
+          tabindex="0"> <b>Grade 5</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G6">
+        <button *ngIf="filters.includes('Grade 6')" (click)="toggle_button('Grade 6')" class="toggle-button-on"
+          tabindex="0"> <b>Grade 6</b> </button>
+        <button *ngIf="!filters.includes('Grade 6')" (click)="toggle_button('Grade 6')" class="toggle-button-off"
+          tabindex="0"> <b>Grade 6</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G7">
+        <button *ngIf="filters.includes('Grade 7')" (click)="toggle_button('Grade 7')" class="toggle-button-on"
+          tabindex="0"> <b>Grade 7</b> </button>
+        <button *ngIf="!filters.includes('Grade 7')" (click)="toggle_button('Grade 7')" class="toggle-button-off"
+          tabindex="0"> <b>Grade 7</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="G8">
+        <button *ngIf="filters.includes('Grade 8')" (click)="toggle_button('Grade 8')" class="toggle-button-on"
+          tabindex="0"> <b>Grade 8</b> </button>
+        <button *ngIf="!filters.includes('Grade 8')" (click)="toggle_button('Grade 8')" class="toggle-button-off"
+          tabindex="0"> <b>Grade 8</b> </button>
+      </label>
+    </div>
     <br />
 
+    <br />
+    <h2>Select your Subject</h2>
+    <input type="hidden" value="All Subjects" #state>
     <div class="card-container">
-        <div *ngIf="!expand_filters" class="card card-large" style="height: auto; width: auto; margin: auto; text-align: center; max-width: 95%"
-      #problemCard>
+      <label class="switch">
+        <input type="checkbox" value="M">
+        <button *ngIf="filters.includes('Math')" (click)="toggle_button('Math')" class="toggle-button-on" tabindex="0">
+          <b>Math</b> </button>
+        <button *ngIf="!filters.includes('Math')" (click)="toggle_button('Math')" class="toggle-button-off"
+          tabindex="0"> <b>Math</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="ER">
+        <button *ngIf="filters.includes('English Reading')" (click)="toggle_button('English Reading')"
+          class="toggle-button-on" tabindex="0"> <b>English Reading</b> </button>
+        <button *ngIf="!filters.includes('English Reading')" (click)="toggle_button('English Reading')"
+          class="toggle-button-off" tabindex="0"> <b>English Reading</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="EW">
+        <button *ngIf="filters.includes('English Writing')" (click)="toggle_button('English Writing')"
+          class="toggle-button-on" tabindex="0"> <b>English Writing</b> </button>
+        <button *ngIf="!filters.includes('English Writing')" (click)="toggle_button('English Writing')"
+          class="toggle-button-off" tabindex="0"> <b>English Writing</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="S">
+        <button *ngIf="filters.includes('Science')" (click)="toggle_button('Science')" class="toggle-button-on"
+          tabindex="0"> <b>Science</b> </button>
+        <button *ngIf="!filters.includes('Science')" (click)="toggle_button('Science')" class="toggle-button-off"
+          tabindex="0"> <b>Science</b> </button>
+      </label>
+      <label class="switch">
+        <input type="checkbox" value="SS">
+        <button *ngIf="filters.includes('Social Studies')" (click)="toggle_button('Social Studies')"
+          class="toggle-button-on" tabindex="0"> <b>Social Studies</b> </button>
+        <button *ngIf="!filters.includes('Social Studies')" (click)="toggle_button('Social Studies')"
+          class="toggle-button-off" tabindex="0"> <b>Social Studies</b> </button>
+      </label>
+    </div>
+    <br />
+
+    <br />
+    <h2>Select your Settings</h2>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <div class="slider">
+        <input type="range" min="5" max="50" value="{{exam_length}}" (input)="set_problem_num(+this.probSlider.value)"
+          style="width: 250px" #probSlider>
+        <div class="slider" style="display: flex; justify-content: center; align-items: center">
+          <p style="font-size: 16px"> Total Problems: </p>
+          <input (keyup)="set_problem_num(+this.probEntry.value)" type="text" inputmode="numeric"
+            value="{{exam_length}}" min="5" max="50" maxlength="2"
+            style="margin: auto 0 auto 5px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
+            #probEntry />
+        </div>
+      </div>
+      <label class="switch" style="align-items: center">
+        <input type="checkbox" value="random">
+        <button (click)="toggle_mode()" *ngIf="mode=='explain'" class="toggle-button-on"
+          style="margin: 0px 20px 0px 20px; font-size: 18px"> <b> Assessment </b> Mode
+        </button>
+        <button (click)="toggle_mode()" *ngIf="mode=='assess'" class="toggle-button-off"
+          style="margin: 0px 20px 0px 20px; font-size: 18px"> <b> Explanation </b> Mode
+        </button>
+      </label>
+      <button class="grade-button" (click)="generate_problems()">
+        <h3><b>Generate Problems!</b></h3>
+      </button>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div *ngIf="!expand_filters" class="card card-large"
+      style="height: auto; width: auto; margin: auto; text-align: center; max-width: 95%" #problemCard>
       <div class="content" style="margin: auto; align-items: center">
-        <!-- <h2 *ngIf="this.problem_number > 0" style="padding-top: 20px; color: darkgrey"> {{exam_state}} {{exam_name}}
-          {{exam_year}} {{exam_grade}} {{exam_subject}} Exam </h2> -->
-        <section style="height: auto; width: 100%; display: flex; justify-content: center">
-          <h3 style="margin: auto 0; color: darkgrey; font-size: 18px"> (#{{problem_number}}/{{exam_length}}) Time spent solving problem: {{pt_minutes}}m {{pt_counter%60}}s </h3>
-        </section>
+        <h3 *ngIf="exam_length >= problem_number" style="margin: auto 0; color: darkgrey; font-size: 18px"> (#{{problem_number}}/{{exam_length}}) Time spent solving problem: {{pt_minutes}}m {{pt_counter%60}}s </h3>
         <br />
         <section style="height: auto; width: 100%; display: flex; justify-content: center">
-          <div *ngFor="let prob of exam_dump | keyvalue" style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
-            <label *ngIf="problem_number == +prob.key" class="switch" style="max-height: 500px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
+          <div *ngFor="let prob of exam_dump | keyvalue"
+            style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
+            <label *ngIf="problem_number == +prob.key" class="switch"
+              style="max-height: 500px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
               <input type="checkbox">
-              <button *ngIf="!expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%; font-size: 16px">
+              <button *ngIf="!sub_topic" (click)="toggle_topic()" class="topic-button"
+                style="width: 100%; font-size: 16px">
                 <b>{{prob.value.Topic}}</b> </button>
-              <button *ngIf="expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%; font-size: 16px">
+              <button *ngIf="sub_topic" (click)="toggle_topic()" class="topic-button"
+                style="width: 100%; font-size: 16px">
                 {{prob.value.SubTopic}} </button>
             </label>
             <!-- <p *ngIf="problem_number == +prob.key"> {{prob.value.Content}} </p> -->
           </div>
         </section>
-        <br />
+        <br *ngIf="problem_number <= exam_length" />
         <div *ngFor="let prob of exam_dump | keyvalue">
           <div *ngIf="problem_number == +prob.key">
             <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
@@ -694,7 +705,7 @@
             </div>
           </div>
         </div>
-        <br />
+        <br *ngIf="problem_number <= exam_length" />
         <input type="hidden" #selection>
         <div *ngFor="let prob of exam_dump | keyvalue">
           <div *ngIf="problem_number == +prob.key">
@@ -729,14 +740,15 @@
             </div>
           </div>
         </div>
-        <br />
+        <br *ngIf="problem_number <= exam_length" />
         <div *ngFor="let prob of exam_dump | keyvalue">
-          <div *ngIf="problem_number == +prob.key && problem_attempts > 0"
+          <div *ngIf="problem_number == +prob.key && problem_attempts > 0 && mode == 'explain'"
             class="card highlight-card card-small"
             style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
             <div *ngIf="prob.value.Type == 'MC'">
               <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
-                <h3 *ngIf="choice.key == selection.value" style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                <h3 *ngIf="choice.key == selection.value"
+                  style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
                   <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                   <br /> <br /> <b>Explanation:</b> {{attempt_explanation}}
                 </h3>
@@ -744,12 +756,14 @@
             </div>
             <div *ngIf="prob.value.Type == 'FR'">
               <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
-                <h3 *ngIf="attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                <h3 *ngIf="attempt_response.startsWith('Correct')"
+                  style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
                   <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                   <!-- wrong data format, extra KEY -->
                   <br /> <br /> <b>Explanation:</b> {{attempt_explanation}}
                 </h3>
-                <h3 *ngIf="!attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                <h3 *ngIf="!attempt_response.startsWith('Correct')"
+                  style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
                   <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                   <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                 </h3>
@@ -761,18 +775,193 @@
               <b> Next Problem </b>
             </button>
           </div>
-          <div *ngIf="problem_number == +prob.key && problem_attempts == 0"
-            class="card highlight-card card-small"
+          <div *ngIf="problem_number == +prob.key && problem_attempts > 0 && mode == 'assess'" [ngSwitch]="selection.value"
+            style="height: 75px; max-width: 90%; padding-top: 10px; margin: auto">
+            <button class="grade-button" (click)="next_problem_a(problem_selection); scroll2(problemCard)"
+              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
+              <b> Next Problem </b>
+            </button>
+          </div>
+          <div *ngIf="problem_number == +prob.key && problem_attempts == 0" class="card highlight-card card-small"
             style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white; padding: 10px">
-            <button class="grade-button"
-              (click)="next_problem(); scroll2(problemCard)"
+            <button class="grade-button" (click)="next_problem(); scroll2(problemCard)"
               style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
               <b> Skip Problem </b>
             </button>
+          </div>
         </div>
+        <div *ngIf="problem_number > exam_length && mode == 'assess'" style="width: 100%">
+          <!-- <div class="card card-small" style="height: auto; width: auto; max-width: 500px; padding: 10px; margin: auto">
+                        <button *ngIf="sub_form == ''" (click)="sub_form = 'adult'" class="grade-button"> <b> Share Your Results With An Adult </b> </button>
+                        <button *ngIf="sub_form == ''" (click)="sub_form = 'friend'" class="grade-button"> <b> Invite A Friend To Beat Your Results </b> </button>
+                        <form *ngIf="sub_form == 'adult'" action="https://getform.io/f/38254f36-dac8-42c4-b228-265b2112682b" method="POST" style="width: 100%; align-items: center">
+                            <h2> Share Your Results With An Adult </h2>
+                            <div style="text-align: right">
+                                <b> Your Name </b>
+                                <input type="text" name="name"
+                                    style="width: 250px; height: 50px; padding: 0px; font-size: 20px; margin: 10px; text-indent: 10px">
+                            </div>
+                            <div style="text-align: center; align-items: center; margin: auto">
+                                <label class="switch" style="margin: 0 25px">
+                                    <input type="checkbox" value="Parent">
+                                    <button *ngIf="parent_select" (click)="parent_select = !parent_select" class="toggle-button-on" tabindex="0"> <b> Parent </b> </button>
+                                    <button *ngIf="!parent_select" (click)="parent_select = !parent_select" class="toggle-button-off" tabindex="0"> <b> Parent </b> </button>
+                                </label>
+                                <label class="switch" style="margin: 0 25px">
+                                    <input type="checkbox" value="Teacher">
+                                    <button *ngIf="teacher_select" (click)="teacher_select = !teacher_select" class="toggle-button-on" tabindex="0"> <b> Teacher </b> </button>
+                                    <button *ngIf="!teacher_select" (click)="teacher_select = !teacher_select" class="toggle-button-off" tabindex="0"> <b> Teacher </b> </button>
+                                </label>
+                            </div>
+                            <div *ngIf="parent_select" style="text-align: right">
+                                <b> Parent Email </b>
+                                <input type="email" name="email"
+                                    style="width: 250px; height: 50px; padding: 0px; font-size: 20px; margin: 10px; text-indent: 10px">
+                            </div>
+                            <div *ngIf="teacher_select" style="text-align: right">
+                                <b> Teacher Email </b>
+                                <input type="email" name="email"
+                                    style="width: 250px; height: 50px; padding: 0px; font-size: 20px; margin: 10px; text-indent: 10px">
+                            </div>
+                            <br />
+                            <div>
+                                <button class="grade-button" type="submit"
+                                    style="display: block; max-width: 150px; max-height: 100px; margin: auto; padding: 20px">
+                                    <b> Send </b>
+                                </button>
+                            </div>
+                        </form>
+                    </div> -->
+          <section style="height: auto; width: 100%; display: flex; justify-content: center">
+            <label class="switch"
+              style="max-height: 100px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
+              <input type="checkbox">
+              <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
+                style="width: 100%; font-size: 16px">
+                <b>Show Subtopics</b> </button>
+              <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
+                style="width: 100%; font-size: 16px">
+                Hide Subtopics </button>
+            </label>
+          </section>
+          <br />
+          <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableS>
+            <thead>
+              <tr style="border: 3px solid black; background-color: grey">
+                <th> Topic </th>
+                <th> Percent Correct </th>
+                <th> Missed Problems </th>
+                <th> Total Problems </th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
+              <tr style="background-color: lightgrey">
+                <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
+                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
+                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
+                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
+              </tr>
+            </tbody>
+          </table>
+          <table *ngIf="this.expand_topics" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableL>
+            <thead>
+              <tr style="border: 3px solid black; background-color: grey">
+                <th> Topic </th>
+                <th> Percent Correct </th>
+                <th> Missed Problems </th>
+                <th> Total Problems </th>
+                <th> Skill Tested </th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
+              <tr style="background-color: lightgrey">
+                <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
+                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
+                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
+                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
+                <td style="border-top: 1px solid #ddd"> </td>
+              </tr>
+              <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
+                <td style="border-top: 1px solid #ddd"> </td>
+                <td style="border-top: 1px solid #ddd"> </td>
+                <td style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
+                <td style="border-top: 1px solid #ddd"> {{subtopic.value.Total}} </td>
+                <td style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px"> <i>
+                    {{subtopic.key}} </i> </td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <section style="height: auto; width: 100%; display: flex; justify-content: center">
+            <label class="switch"
+              style="max-height: 100px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
+              <input type="checkbox">
+              <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
+                style="width: 100%; font-size: 16px">
+                <b>Show Correct Responses</b> </button>
+              <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
+                style="width: 100%; font-size: 16px">
+                Hide Correct Responses </button>
+            </label>
+          </section>
+          <br />
+          <table *ngIf="!this.show_correct" style="border: 1px solid black; margin: auto; width: 99%" #resultsTableI>
+            <thead>
+              <tr style="border: 1px solid black; background-color: grey">
+                <th> Problem Number </th>
+                <th> Problem Topic </th>
+                <th> Correct Response </th>
+                <th> Student Response </th>
+                <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
+                <th> Problem Time </th>
+                <th> Problem Attempts </th>
+                <th> Attempt Path </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let sub of wrong_submission_list">
+                <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
+                <td style="border-top: 1px solid #ddd"> {{sub.Topic}} </td>
+                <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
+                <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
+                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
+                  {{sub.Rationale}} </td>
+                <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
+                <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
+                <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
+              </tr>
+            </tbody>
+          </table>
+          <table *ngIf="this.show_correct" style="border: 1px solid black; margin: auto; width: 99%" #resultsTableA>
+            <thead>
+              <tr style="border: 1px solid black; background-color: grey">
+                <th> Problem Number </th>
+                <th> Problem Topic </th>
+                <th> Correct Response </th>
+                <th> Student Response </th>
+                <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
+                <th> Problem Time </th>
+                <th> Problem Attempts </th>
+                <th> Attempt Path </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let sub of exam_submission_list">
+                <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
+                <td style="border-top: 1px solid #ddd"> {{sub.Topic}} </td>
+                <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
+                <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
+                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
+                  {{sub.Rationale}} </td>
+                <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
+                <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
+                <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-    </div>
-    <br />
+  </div>
+  <br />
 </div>

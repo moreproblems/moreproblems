@@ -14,14 +14,20 @@ import { HttpClient } from '@angular/common/http';
 export class ProblemsComponent implements OnInit {
   title = 'More Problems';
 
+  screenWidth = window.innerWidth;
+  mobileWidth = 800;
+
   filters: string[] = [];
   expand_filters = true;
-  expand_topic = false;
+  sub_topic = false;
+  expand_topics = true;
+  show_correct = false;
+  mode = 'assess';
 
-  // exam_key = exams;
-  // exam_code = 'TX21G3M'
-  // exam_file = 'src/app/assets/problems/' + this.exam_code + '/' + this.exam_code + '-problems.txt';
-
+  et_counter: number = 0;
+  et_minutes: number = 0;
+  et_timer: any;
+  et_running: boolean = false;
   pt_counter: number = 0;
   pt_minutes: number = 0;
   pt_timer: any;
@@ -39,16 +45,26 @@ export class ProblemsComponent implements OnInit {
   exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
   dump_count = 1;
 
-  problems_sequence: number[] = Array.from({length: this.exam_length}, (_, i) => i + 1);
+  problems_sequence: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
   ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
   random_index = 0
-  random_list: number[] = Array.from({length: this.exam_length}, (_, i) => i + 1);
+  random_list: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
 
-  problem_number = 1;
+  exam_key: string[] = [];
+
+  problem_number = 0;
   problem_selection = '';
   problem_attempts = 0;
+  attempt_path: string[] = [];
   attempt_response = '';
   attempt_explanation = '';
+  exam_submission: { [key: number]: { 'Number': number, 'Topic': string, 'SubTopic': string, 'Choice': string, 'Correct': string, 'Rationale': string, 'Attempts': number, 'Path': string[], 'Time': string } } = {};
+
+  exam_submission_list: any[] = [];
+  wrong_submission_list: any[] = [];
+  number_correct = 0;
+  correct_percent = 0;
+  topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number } } } } = {};
 
   constructor() { }
 
@@ -61,6 +77,13 @@ export class ProblemsComponent implements OnInit {
   //   fileReader.readAsText(file);
   // }
 
+  width_change2() {
+    this.screenWidth = window.innerWidth;
+    if (this.screenWidth <= this.mobileWidth) {
+      this.expand_topics = false;
+    }
+  }
+
   toggle_button(val: string) {
     if (!this.filters.includes(val)) {
       this.filters.push(val)
@@ -72,6 +95,15 @@ export class ProblemsComponent implements OnInit {
       else {
         this.filters.pop()
       }
+    }
+  }
+
+  toggle_mode() {
+    if (this.mode == 'assess') {
+      this.mode = 'explain';
+    }
+    else if (this.mode == 'explain') {
+      this.mode = 'assess';
     }
   }
 
@@ -108,7 +140,7 @@ export class ProblemsComponent implements OnInit {
   }
 
   randomize_problems(total: number) {
-    this.problems_sequence = Array.from({length: this.exam_length}, (_, i) => i + 1);
+    this.problems_sequence = Array.from({ length: Object.keys(this.ordered_dump).length }, (_, i) => i + 1);
     this.random_list = []
     for (let i = 1; i <= this.exam_length; i++) {
       this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
@@ -120,15 +152,33 @@ export class ProblemsComponent implements OnInit {
 
   toggle_filters() {
     this.expand_filters = !this.expand_filters;
+    if (this.mode == 'assess') {
+      for (let num of Object.keys(this.exam_dump)) {
+        this.exam_submission[+num] = {
+          'Number': 0,
+          'Topic': '',
+          'SubTopic': '',
+          'Choice': '',
+          'Correct': '',
+          'Rationale': '',
+          'Attempts': 0,
+          'Path': [],
+          'Time': ''
+        };
+      }
+      this.toggleExamTimer();
+    }
     this.toggleProblemTimer();
+    this.problem_number = 1;
   }
 
   toggle_topic() {
-    this.expand_topic = !this.expand_topic;
+    this.sub_topic = !this.sub_topic;
   }
 
   attempt_mc_problem(ch: string) {
     this.problem_attempts += 1;
+    this.attempt_path.push(ch);
     this.problem_selection = ch;
     for (const [num, prob] of Object.entries(this.exam_dump)) {
       if (this.problem_number == +num) {
@@ -154,6 +204,7 @@ export class ProblemsComponent implements OnInit {
 
   attempt_fr_problem(ch: string) {
     this.problem_attempts += 1;
+    this.attempt_path.push(ch);
     this.problem_selection = ch;
     for (const [num, prob] of Object.entries(this.exam_dump)) {
       if (this.problem_number == +num) {
@@ -173,6 +224,25 @@ export class ProblemsComponent implements OnInit {
         }
       }
     }
+  }
+
+  toggleExamTimer() {
+    this.et_running = !this.et_running;
+    if (this.et_running) {
+      const startTime = Date.now() - (this.et_counter || 0);
+      this.et_timer = setInterval(() => {
+        this.et_counter = Math.round((Date.now() - startTime) / 1000);
+        this.et_minutes = Math.floor(this.et_counter / 60);
+      });
+    } else {
+      clearInterval(this.et_timer);
+    }
+  }
+
+  clearExamTimer() {
+    this.et_running = false;
+    this.et_counter = 0;
+    clearInterval(this.et_timer);
   }
 
   toggleProblemTimer() {
@@ -195,12 +265,138 @@ export class ProblemsComponent implements OnInit {
   }
 
   next_problem() {
+    if (this.mode == 'assess') {
+      this.exam_submission[this.problem_number].Number = this.problem_number;
+      this.exam_submission[this.problem_number].Topic = this.exam_dump[this.problem_number].Topic;
+      this.exam_submission[this.problem_number].SubTopic = this.exam_dump[this.problem_number].SubTopic;
+      if (this.problem_number == this.exam_length) {
+        for (let i: number = 1; i <= this.exam_length; i++) {
+          this.exam_submission_list.push(this.exam_submission[i]);
+          if (this.exam_submission[i].Correct != '✅') {
+            this.wrong_submission_list.push(this.exam_submission[i]);
+          }
+        }
+      }
+    }
     this.problem_number += 1;
     this.problem_selection = '';
     this.problem_attempts = 0;
     this.attempt_response = '';
     this.clearProblemTimer();
     this.toggleProblemTimer();
+    if (this.problem_number > this.exam_length) {
+      this.completeExam();
+    }
+  }
+
+  next_problem_a(choice: string) {
+    for (const [num, prob] of Object.entries(this.exam_dump)) {
+      if (this.problem_number == +num) {
+        for (const [num2, sub] of Object.entries(this.exam_submission)) {
+          if (this.problem_number == +num2) {
+            sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+            sub.Number = this.problem_number;
+            sub.Topic = prob.Topic;
+            sub.SubTopic = prob.SubTopic;
+            sub.Choice = choice;
+            sub.Attempts = this.problem_attempts;
+            sub.Path = this.attempt_path;
+            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+              if (choice == ch) {
+                if (key.Key.Correct == true) {
+                  sub.Correct = '✅';
+                  this.number_correct += 1;
+                }
+                else {
+                  sub.Correct = this.exam_key[this.problem_number - 1];
+                }
+                sub.Rationale = key.Key.Rationale;
+              }
+              else if (prob.Type == 'FR') {
+                if (choice == key.Choice) {
+                  sub.Correct = '✅';
+                  this.number_correct += 1;
+                  sub.Rationale = key.Key.Rationale;
+                }
+                else {
+                  sub.Correct = this.exam_key[this.problem_number - 1];
+                  sub.Rationale = 'No rationale provided. The number submitted was not right';
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    if (this.problem_number == this.exam_length) {
+      for (let i: number = 1; i <= this.exam_length; i++) {
+        this.exam_submission_list.push(this.exam_submission[i]);
+        if (this.exam_submission[i].Correct != '✅') {
+          this.wrong_submission_list.push(this.exam_submission[i]);
+        }
+      }
+    }
+    this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
+    this.problem_number += 1;
+    this.problem_selection = '';
+    this.problem_attempts = 0;
+    this.attempt_path = [];
+    this.clearProblemTimer();
+    this.toggleProblemTimer();
+    if (this.problem_number > this.exam_length) {
+      this.completeExam();
+    }
+  }
+
+  completeExam() {
+    this.toggleExamTimer();
+    for (let i: number = 0; i < this.exam_length; i++) {
+      if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topic)) {
+        this.topic_breakdown[this.exam_submission_list[i].Topic].Total += 1;
+        if (this.exam_submission_list[i].Correct == '✅') {
+          this.topic_breakdown[this.exam_submission_list[i].Topic].Correct += 1;
+          if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Correct += 1;
+          }
+          else {
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0 };
+          }
+        }
+        else {
+          this.topic_breakdown[this.exam_submission_list[i].Topic].Incorrect += 1;
+          if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Incorrect += 1;
+          }
+          else {
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0 };
+          }
+        }
+      }
+      else {
+        if (this.exam_submission_list[i].Correct == '✅') {
+          this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0 } } };
+        }
+        else {
+          this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0 } } };
+        }
+      }
+    }
+    for (let topic of Object.keys(this.topic_breakdown)) {
+      this.topic_breakdown[topic].Percent = Math.round(100 * this.topic_breakdown[topic].Correct / (this.topic_breakdown[topic].Total));
+      for (let subtopic of Object.keys(this.topic_breakdown[topic].Subs)) {
+        this.topic_breakdown[topic].Subs[subtopic].Percent = Math.round(100 * this.topic_breakdown[topic].Subs[subtopic].Correct / (this.topic_breakdown[topic].Subs[subtopic].Total));
+      }
+    }
+  }
+
+  expandTopics() {
+    this.expand_topics = !this.expand_topics;
+  }
+
+  showCorrect() {
+    this.show_correct = !this.show_correct;
   }
 
   scroll(el: HTMLElement) {
@@ -212,6 +408,6 @@ export class ProblemsComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+
   }
 }
