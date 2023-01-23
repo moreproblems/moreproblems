@@ -54,13 +54,14 @@ export class TX21G3MExamComponent implements OnInit {
     exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
     dump_count = 1;
 
-    problems_sequence: number[] = Array.from({length: this.exam_length}, (_, i) => i + 1);
+    problems_sequence: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
     ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
     random_index = 0
-    random_list: number[] = Array.from({length: this.exam_length}, (_, i) => i + 1);
+    random_list: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
     random = false;
 
-    exam_key: string[] = ['B', 'H', 'A', 'H', '972', 'H', 'A', 'G', 'D', 'J', 'C', 'H', 'D', '20', 'A', 'H', 'A', 'J', 'D', 'G', 'C', 'J', 'B', '13', 'A', 'G', 'D', 'F', 'B', 'F', 'C', 'G']
+    // exam_key: string[] = ['B', 'H', 'A', 'H', '972', 'H', 'A', 'G', 'D', 'J', 'C', 'H', 'D', '20', 'A', 'H', 'A', 'J', 'D', 'G', 'C', 'J', 'B', '13', 'A', 'G', 'D', 'F', 'B', 'F', 'C', 'G']
+    exam_key: string[] = [];
 
     problem_number = 0;
     problem_selection = '';
@@ -470,15 +471,15 @@ export class TX21G3MExamComponent implements OnInit {
     }
 
     randomize_problems() {
-        this.problems_sequence = Array.from({length: this.exam_length}, (_, i) => i + 1);
+        this.problems_sequence = Array.from({ length: this.exam_length }, (_, i) => i + 1);
         this.random_list = []
         for (const [num, value] of Object.entries(this.exam_dump)) {
-          this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
-          this.random_list.push(this.problems_sequence[this.random_index]);
-          this.exam_dump[+num] = this.ordered_dump[this.problems_sequence[this.random_index]];
-          this.problems_sequence.splice(this.random_index, 1);
+            this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
+            this.random_list.push(this.problems_sequence[this.random_index]);
+            this.exam_dump[+num] = this.ordered_dump[this.problems_sequence[this.random_index]];
+            this.problems_sequence.splice(this.random_index, 1);
         }
-      }
+    }
 
     begin_exam() {
         if (this.random == true) {
@@ -690,10 +691,22 @@ export class TX21G3MExamComponent implements OnInit {
     ngOnInit() {
         for (const [num, value] of Object.entries(this.TX21G3M_exam_dump)) {
             if (value.Number <= 32) {
-              this.exam_dump[this.dump_count] = value;
-              this.ordered_dump[this.dump_count] = value;
-              this.dump_count += 1;
+                this.exam_dump[this.dump_count] = value;
+                this.ordered_dump[this.dump_count] = value;
+                this.dump_count += 1;
             }
-          }
+        }
+        for (let value of Object.values(this.exam_dump)) {
+            for (const [ch, value2] of Object.entries(value.AnswerChoices)) {
+                if (ch == 'Key') {
+                    this.exam_key.push(value2.Choice);
+                }
+                else {
+                    if (value2.Key.Correct) {
+                        this.exam_key.push(ch);
+                    }
+                }
+            }
+        }
     }
 }

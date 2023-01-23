@@ -47,13 +47,14 @@ export class TX19G3MExamComponent implements OnInit {
     exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
     dump_count = 1;
 
-    problems_sequence: number[] = Array.from({length: this.exam_length}, (_, i) => i + 1);
+    problems_sequence: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
     ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
     random_index = 0
-    random_list: number[] = Array.from({length: this.exam_length}, (_, i) => i + 1);
+    random_list: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
     random = false;
 
-    exam_key: string[] = ['C', 'G', 'A', 'H', '7', 'F', 'D', 'F', 'C', 'G', 'C', 'G', 'D', '96', 'A', 'J', 'B', 'F', 'C', 'J', 'A', 'H', 'D', '18', 'B', 'J', 'B', 'H', 'B', 'F', 'B', 'J'];
+    // exam_key: string[] = ['C', 'G', 'A', 'H', '7', 'F', 'D', 'F', 'C', 'G', 'C', 'G', 'D', '96', 'A', 'J', 'B', 'F', 'C', 'J', 'A', 'H', 'D', '18', 'B', 'J', 'B', 'H', 'B', 'F', 'B', 'J'];
+    exam_key: string[] = [];
 
     problem_number = 0;
     problem_selection = '';
@@ -449,23 +450,24 @@ export class TX19G3MExamComponent implements OnInit {
     }
 
     randomize_problems() {
-        this.problems_sequence = Array.from({length: this.exam_length}, (_, i) => i + 1);
+        this.problems_sequence = Array.from({ length: this.exam_length }, (_, i) => i + 1);
         this.random_list = []
         for (const [num, value] of Object.entries(this.exam_dump)) {
-          this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
-          this.random_list.push(this.problems_sequence[this.random_index]);
-          this.exam_dump[+num] = this.ordered_dump[this.problems_sequence[this.random_index]];
-          this.problems_sequence.splice(this.random_index, 1);
+            this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
+            this.random_list.push(this.problems_sequence[this.random_index]);
+            this.exam_dump[+num] = this.ordered_dump[this.problems_sequence[this.random_index]];
+            this.problems_sequence.splice(this.random_index, 1);
         }
-      }
+    }
 
     begin_exam() {
-        if (this.random == true) {
+        if (this.random) {
             this.randomize_problems();
         }
         this.toggleExamTimer();
         this.toggleProblemTimer();
         this.problem_number = 1;
+        
     }
 
     attempt_mc_problem(choice: string) {
@@ -618,8 +620,8 @@ export class TX19G3MExamComponent implements OnInit {
         if (this.et_running) {
             const startTime = Date.now() - (this.et_counter || 0);
             this.et_timer = setInterval(() => {
-                this.et_counter = Math.round((Date.now() - startTime)/1000);
-                this.et_minutes = Math.floor(this.et_counter/60);
+                this.et_counter = Math.round((Date.now() - startTime) / 1000);
+                this.et_minutes = Math.floor(this.et_counter / 60);
             });
         } else {
             clearInterval(this.et_timer);
@@ -637,8 +639,8 @@ export class TX19G3MExamComponent implements OnInit {
         if (this.pt_running) {
             const startTime = Date.now() - (this.pt_counter || 0);
             this.pt_timer = setInterval(() => {
-                this.pt_counter = Math.round((Date.now() - startTime)/1000);
-                this.pt_minutes = Math.floor(this.pt_counter/60);
+                this.pt_counter = Math.round((Date.now() - startTime) / 1000);
+                this.pt_minutes = Math.floor(this.pt_counter / 60);
             });
         } else {
             clearInterval(this.pt_timer);
@@ -670,10 +672,22 @@ export class TX19G3MExamComponent implements OnInit {
     ngOnInit() {
         for (const [num, value] of Object.entries(this.TX19G3M_exam_dump)) {
             if (value.Number <= 32) {
-              this.exam_dump[this.dump_count] = value;
-              this.ordered_dump[this.dump_count] = value;
-              this.dump_count += 1;
+                this.exam_dump[this.dump_count] = value;
+                this.ordered_dump[this.dump_count] = value;
+                this.dump_count += 1;
             }
-          }
+        }
+        for (let value of Object.values(this.exam_dump)) {
+            for (const [ch, value2] of Object.entries(value.AnswerChoices)) {
+                if (ch == 'Key') {
+                    this.exam_key.push(value2.Choice);
+                }
+                else {
+                    if (value2.Key.Correct) {
+                        this.exam_key.push(ch);
+                    }
+                }
+            }
+        }
     }
 }

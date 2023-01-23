@@ -199,6 +199,18 @@ export class ProblemsComponent implements OnInit {
       this.exam_dump[i] = this.ordered_dump[this.problems_sequence[this.random_index]];
       this.problems_sequence.splice(this.random_index, 1);
     }
+    for (const [num, val] of Object.entries(this.exam_dump)) {
+      for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+        if (ch == 'Key') {
+          this.exam_key.push(val2.Choice);
+        }
+        else {
+          if (val2.Key.Correct) {
+            this.exam_key.push(ch);
+          }
+        }
+      }
+    }
   }
 
   toggle_filters() {
