@@ -1,0 +1,571 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    background-color: #0a1e33;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px 2px 20px;
+  }
+
+  .toolbar img {
+    /* margin: 0 16px; */
+    position: absolute;
+    left: -10px;
+    top: -18px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+  .content-menu {
+    display: flex;
+    margin: 0 auto 32px;
+    padding: 0 16px;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    margin: 12px auto 32px;
+    padding: 0;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subcontent {
+    display: flex;
+    margin: 12px auto;
+    padding: 0px;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    /* height: 40px;
+        width: 200px; */
+    margin: 0 8px 16px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  /* .card-container .card:not(:last-child) {
+      margin-right: 0;
+    }
+  
+    .card-container .switch:not(:last-child) {
+      margin-right: 0;
+    } */
+
+  .card.card-small {
+    height: 16px;
+    width: 190px;
+    border-radius: 8px;
+  }
+
+  .card.card-medium {
+    height: auto;
+    width: 80%;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .card.card-medium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card.card-large {
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    margin: 8px 8px;
+    padding: 8px 0;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  /* .card-container .card:not(.highlight-card):hover .material-icons path {
+      fill: rgb(105, 103, 103);
+    } */
+
+  .card.highlight-card {
+    background-color: #0a1e33;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+  svg#rocket {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+  }
+
+  svg#rocket-smoke {
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+  button.grade-button {
+    font-size: 18px;
+    color: white;
+    background-color: #1976d2;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin: 8px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  button.grade-button:hover {
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  button.grade-button-gray {
+    font-size: 18px;
+    color: white;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  button.grade-button-gray:hover {
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  button.toggle-button {
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .toggle-button:before {
+    background-color: #1976d2;
+    color: white;
+  }
+
+  button.toggle-button-off {
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  button.toggle-button-on {
+    font-size: 18px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  .terminal {
+    position: relative;
+    /* width: 100%; */
+    max-width: 625px;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+    color: #c2c3c4;
+  }
+
+  .terminal::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: rgb(58, 58, 58);
+    color: #c2c3c4;
+    width: 100%;
+    line-height: 0;
+    padding: 14px 0;
+    font-size: 2rem;
+    text-indent: 4px;
+  }
+
+  .terminal pre {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .circle-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+  }
+
+  .circle-link:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
+  .github-star-badge {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27, 31, 35, .2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
+  }
+
+  .github-star-badge:hover {
+    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+    border-color: rgba(27, 31, 35, .35);
+    background-position: -.5em;
+  }
+
+  .github-star-badge .material-icons {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 75px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  input:checked+.toggle-button-on {
+    background-color: #1976d2;
+    color: white
+  }
+
+  input:hover+.toggle-button-on {
+    background-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  input:checked+.toggle-button-off {
+    background-color: #ccc;
+    color: black;
+  }
+
+  input:hover+.toggle-button-off {
+    background-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+
+    .card-container>*:not(.circle-link),
+    .terminal {
+      /* width: 100%; */
+    }
+
+    .card:not(.highlight-card) {
+      /* height: 16px; */
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="content" role="main" (window:resize)="width_change2()">
+  <div class="card-container" style="padding: 0px">
+    <div class="card card-large" style="height: auto; width: auto; margin: auto; text-align: center; max-width: 95%"
+      #problemCard>
+      <div class="content" style="margin: auto; align-items: center">
+        <h2 *ngIf="this.problem_number > 0" style="padding-top: 20px; color: darkgrey"> {{exam_state}} {{exam_name}}
+          {{exam_year}} {{exam_grade}} {{exam_subject}} Exam </h2>
+        <section style="height: auto; width: 100%; display: flex; justify-content: center">
+          <button (click)="prev_problem()" class="grade-button"
+            style="margin: 20px 0; margin-right: 20px; width: auto; height: auto">
+            <img src="./assets/icons/minus.png" style="height: 30px; width: 30px; filter: invert(100%)">
+          </button>
+          <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0" style="margin: auto 0; color: darkgrey; font-size: 18px"> Problem # </h3>
+          <input *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0" (keyup)="go_to_prob(+this.probNum.value)" type="text" inputmode="numeric" value="{{problem_number}}" min="1" maxlength="2" style="margin: auto 3px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center" #probNum />
+          <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0 && screenWidth > mobileWidth" style="margin: auto 0; color: darkgrey; font-size: 18px"> / {{exam_length}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
+          <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0 && screenWidth <= mobileWidth" style="margin: auto 0; color: darkgrey; font-size: 18px"> / {{exam_length}}  </h3>
+          <button (click)="next_problem()" class="grade-button"
+            style="margin: 20px 0; margin-left: 20px; width: auto; height: auto">
+            <img src="./assets/icons/plus.png" style="height: 30px; width: 30px; filter: invert(100%)">
+          </button>
+        </section>
+        <section style="height: auto; width: 100%; display: flex; justify-content: center">
+          <div *ngFor="let prob of exam_dump | keyvalue" style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
+            <label *ngIf="problem_number == prob.value.Number" class="switch" style="max-height: 500px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
+              <input type="checkbox">
+              <button *ngIf="!expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%; font-size: 16px">
+                <b>{{prob.value.Topic}}</b> </button>
+              <button *ngIf="expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%; font-size: 16px">
+                {{prob.value.SubTopic}} </button>
+            </label>
+          </div>
+        </section>
+        <br />
+        <div *ngFor="let prob of exam_dump | keyvalue">
+          <div *ngIf="problem_number == prob.value.Number">
+            <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
+              <h3 *ngIf="!block.endsWith('.jpg')"> {{block}} </h3>
+              <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
+            </div>
+          </div>
+        </div>
+        <br />
+        <input type="hidden" #selection>
+        <div *ngFor="let prob of exam_dump | keyvalue">
+          <div *ngIf="prob.value.Number == problem_number">
+            <div *ngIf="prob.value.Type == 'FR'">
+              <div class="card card-small" style="min-height: 50px; width: 275px; max-height: 100px; padding: 10px">
+                <input
+                  style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                  inputmode="numeric" #inputFR />
+                <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value);"
+                  style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                  <b> Submit </b> </button>
+              </div>
+            </div>
+            <div *ngIf="prob.value.Type == 'MC'">
+              <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                <label class="switch" style="padding: 0 25px">
+                  <input type="checkbox" value="{{choice.key}}">
+                  <button *ngIf="problem_selection==choice.key" class="toggle-button-on"> <b> {{choice.key}} </b>
+                  </button>
+                  <button *ngIf="problem_selection!=choice.key" class="toggle-button-off"> <b> {{choice.key}} </b>
+                  </button>
+                </label>
+                <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                  style="display: block; margin: 0px 20px 0px 20px; margin: auto; white-space: pre-wrap">
+                  {{choice.value.Choice}}
+                </h3>
+                <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                  style="height: 100px; margin: auto">
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div *ngFor="let prob of exam_dump | keyvalue">
+          <div *ngIf="prob.value.Number == problem_number && problem_attempts > 0"
+            class="card highlight-card card-small"
+            style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+            <div *ngIf="prob.value.Type == 'MC'">
+              <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
+                <h3 *ngIf="choice.key == selection.value" style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                  <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
+                  <br /> <br /> <b>Explanation:</b> {{attempt_explanation}}
+                </h3>
+              </div>
+            </div>
+            <div *ngIf="prob.value.Type == 'FR'">
+              <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
+                <h3 *ngIf="attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                  <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
+                  <!-- wrong data format, extra KEY -->
+                  <br /> <br /> <b>Explanation:</b> {{attempt_explanation}}
+                </h3>
+                <h3 *ngIf="!attempt_response.startsWith('Correct')" style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                  <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
+                  <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
+                </h3>
+              </div>
+            </div>
+            <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
+              (click)="next_problem(); scroll2(problemCard)"
+              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
+              <b> Next Problem </b>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+</div>

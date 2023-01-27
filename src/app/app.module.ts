@@ -40,6 +40,9 @@ import { HSMAStandardsComponent } from './components/HSM-A-standards/HSM-A-stand
 import { HSMFStandardsComponent } from './components/HSM-F-standards/HSM-F-standards.component';
 import { HSMGStandardsComponent } from './components/HSM-G-standards/HSM-G-standards.component';
 import { HSMSPStandardsComponent } from './components/HSM-SP-standards/HSM-SP-standards.component';
+import { TestExamComponent } from './components/test-exam/test-exam.component';
+import { TX22G3MExamComponent } from './components/TX22G3M-exam/TX22G3M-exam.component';
+import { TX22G3MKeyComponent } from './components/TX22G3M-key/TX22G3M-key.component';
 import { TX21G3MExamComponent } from './components/TX21G3M-exam/TX21G3M-exam.component';
 import { TX21G3MKeyComponent } from './components/TX21G3M-key/TX21G3M-key.component';
 import { TX19G3MExamComponent } from './components/TX19G3M-exam/TX19G3M-exam.component';
@@ -78,6 +81,9 @@ import { TX19G3MKeyComponent } from './components/TX19G3M-key/TX19G3M-key.compon
     HSMFStandardsComponent,
     HSMGStandardsComponent,
     HSMSPStandardsComponent,
+    TestExamComponent,
+    TX22G3MExamComponent,
+    TX22G3MKeyComponent,
     TX21G3MExamComponent,
     TX21G3MKeyComponent,
     TX19G3MExamComponent,

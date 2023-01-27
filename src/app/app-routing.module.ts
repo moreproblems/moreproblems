@@ -5,6 +5,9 @@ import { ExamsComponent } from './components/exams/exams.component';
 import { ProblemsComponent } from './components/problems/problems.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { TestExamComponent } from './components/test-exam/test-exam.component';
+import { TX22G3MExamComponent } from './components/TX22G3M-exam/TX22G3M-exam.component';
+import { TX22G3MKeyComponent } from './components/TX22G3M-key/TX22G3M-key.component';
 import { TX21G3MExamComponent } from './components/TX21G3M-exam/TX21G3M-exam.component';
 import { TX21G3MKeyComponent } from './components/TX21G3M-key/TX21G3M-key.component';
 import { TX19G3MExamComponent } from './components/TX19G3M-exam/TX19G3M-exam.component';
@@ -39,6 +42,9 @@ import { HSMSPStandardsComponent } from './components/HSM-SP-standards/HSM-SP-st
 const routes: Routes = [
   { path: '', redirectTo: 'about', pathMatch: 'full' },
   { path: 'exams', component: ExamsComponent },
+  { path: 'exam/test', component: TestExamComponent },
+  { path: 'exam/TX22G3M', component: TX22G3MExamComponent },
+  { path: 'exam/TX22G3M/key', component: TX22G3MKeyComponent },
   { path: 'exam/TX21G3M', component: TX21G3MExamComponent },
   { path: 'exam/TX21G3M/key', component: TX21G3MKeyComponent },
   { path: 'exam/TX19G3M', component: TX19G3MExamComponent },

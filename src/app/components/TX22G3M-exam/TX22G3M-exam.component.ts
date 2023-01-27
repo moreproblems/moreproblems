@@ -1,5 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import * as problemsData from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
+import * as problemsData from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
 // import {NgPipesModule} from 'ngx-pipes';
 // import * as fs from 'fs';
 // import * as path from 'path';
@@ -11,13 +11,13 @@ import * as problemsData from "src/assets/problems/TX21G3M/TX21G3M-problems.json
 // }
 
 @Component({
-    selector: 'app-TX21G3M-exam',
-    templateUrl: './TX21G3M-exam.component.html',
-    styleUrls: ['./TX21G3M-exam.component.css']
+    selector: 'app-TX22G3M-exam',
+    templateUrl: './TX22G3M-exam.component.html',
+    styleUrls: ['./TX22G3M-exam.component.css']
 })
 
 @Injectable()
-export class TX21G3MExamComponent implements OnInit {
+export class TX22G3MExamComponent implements OnInit {
     title = 'More Problems';
 
     screenWidth = window.innerWidth;
@@ -45,12 +45,12 @@ export class TX21G3MExamComponent implements OnInit {
     exam_grade = 'Grade 3';
     exam_subject = 'Mathematics';
     exam_name = 'STAAR';
-    exam_year = '2021';
+    exam_year = '2022';
     exam_length = 32;
 
     exam_directions = 'Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.';
 
-    TX21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
+    TX22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
     exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
     dump_count = 1;
 
@@ -702,7 +702,7 @@ export class TX21G3MExamComponent implements OnInit {
     }
 
     ngOnInit() {
-        for (const [num, value] of Object.entries(this.TX21G3M_exam_dump)) {
+        for (const [num, value] of Object.entries(this.TX22G3M_exam_dump)) {
             if (value.Number <= 32) {
                 this.exam_dump[this.dump_count] = value;
                 this.ordered_dump[this.dump_count] = value;

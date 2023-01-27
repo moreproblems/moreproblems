@@ -1,5 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import * as problemsData from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
+import * as problemsData from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
 // import * as fs from 'fs';
 // import * as path from 'path';
 // import { HttpClient } from '@angular/common/http';
@@ -11,13 +11,13 @@ import * as problemsData from "src/assets/problems/TX21G3M/TX21G3M-problems.json
 // }
 
 @Component({
-    selector: 'app-TX21G3M-key',
-    templateUrl: './TX21G3M-key.component.html',
-    styleUrls: ['./TX21G3M-key.component.css']
+    selector: 'app-TX22G3M-key',
+    templateUrl: './TX22G3M-key.component.html',
+    styleUrls: ['./TX22G3M-key.component.css']
 })
 
 @Injectable()
-export class TX21G3MKeyComponent implements OnInit {
+export class TX22G3MKeyComponent implements OnInit {
     title = 'More Problems';
 
     screenWidth = window.innerWidth;
@@ -36,7 +36,7 @@ export class TX21G3MKeyComponent implements OnInit {
     expand_topic = false;
 
     exam_key = 'src/app/assets/Exams/exams.txt';
-    exam_code = 'TX21G3M'
+    exam_code = 'TX22G3M'
     exam_file = 'src/app/assets/problems/' + this.exam_code + '/' + this.exam_code + '-problems.txt';
 
     // exam_data = fs.readFileSync(this.problem_file, 'utf8');
@@ -48,7 +48,7 @@ export class TX21G3MKeyComponent implements OnInit {
     exam_grade = 'Grade 3';
     exam_subject = 'Mathematics';
     exam_name = 'STAAR';
-    exam_year = '2021';
+    exam_year = '2022';
     exam_length = 32;
 
     exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;

@@ -458,6 +458,19 @@ export class TX19G3MExamComponent implements OnInit {
             this.exam_dump[+num] = this.ordered_dump[this.problems_sequence[this.random_index]];
             this.problems_sequence.splice(this.random_index, 1);
         }
+        this.exam_key = [];
+        for (let value of Object.values(this.exam_dump)) {
+            for (const [ch, value2] of Object.entries(value.AnswerChoices)) {
+                if (ch == 'Key') {
+                    this.exam_key.push(value2.Choice);
+                }
+                else {
+                    if (value2.Key.Correct) {
+                        this.exam_key.push(ch);
+                    }
+                }
+            }
+        }
     }
 
     begin_exam() {
