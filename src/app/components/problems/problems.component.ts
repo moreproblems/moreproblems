@@ -66,13 +66,13 @@ export class ProblemsComponent implements OnInit {
   attempt_path: string[] = [];
   attempt_response = '';
   attempt_explanation = '';
-  exam_submission: { [key: number]: { 'Number': number, 'Topic': string, 'SubTopic': string, 'Choice': string, 'Correct': string, 'Rationale': string, 'Attempts': number, 'Path': string[], 'Time': string } } = {};
+  exam_submission: { [key: number]: { 'Number': number, 'Topic': string, 'SubTopic': string, 'Choice': string, 'Correct': string, 'Rationale': string, 'Attempts': number, 'Path': string[], 'Seconds': number, 'Time': string } } = {};
 
   exam_submission_list: any[] = [];
   wrong_submission_list: any[] = [];
   number_correct = 0;
   correct_percent = 0;
-  topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number } } } } = {};
+  topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
 
   constructor() { }
 
@@ -238,6 +238,7 @@ export class ProblemsComponent implements OnInit {
           'Rationale': '',
           'Attempts': 0,
           'Path': [],
+          'Seconds': 0,
           'Time': ''
         };
       }
@@ -345,6 +346,8 @@ export class ProblemsComponent implements OnInit {
 
   next_problem() {
     if (this.mode == 'assess') {
+      this.exam_submission[this.problem_number].Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+      this.exam_submission[this.problem_number].Seconds = this.pt_counter;
       this.exam_submission[this.problem_number].Number = this.problem_number;
       this.exam_submission[this.problem_number].Topic = this.exam_dump[this.problem_number].Topic;
       this.exam_submission[this.problem_number].SubTopic = this.exam_dump[this.problem_number].SubTopic;
@@ -373,7 +376,8 @@ export class ProblemsComponent implements OnInit {
       if (this.problem_number == +num) {
         for (const [num2, sub] of Object.entries(this.exam_submission)) {
           if (this.problem_number == +num2) {
-            sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+            sub.Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+            sub.Seconds = this.pt_counter;
             sub.Number = this.problem_number;
             sub.Topic = prob.Topic;
             sub.SubTopic = prob.SubTopic;
@@ -432,14 +436,16 @@ export class ProblemsComponent implements OnInit {
     for (let i: number = 0; i < this.exam_length; i++) {
       if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topic)) {
         this.topic_breakdown[this.exam_submission_list[i].Topic].Total += 1;
+        this.topic_breakdown[this.exam_submission_list[i].Topic].Seconds += this.exam_submission_list[i].Seconds;
         if (this.exam_submission_list[i].Correct == '✅') {
           this.topic_breakdown[this.exam_submission_list[i].Topic].Correct += 1;
           if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
             this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
             this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Correct += 1;
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Seconds += this.exam_submission_list[i].Seconds;
           }
           else {
-            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0 };
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
           }
         }
         else {
@@ -447,25 +453,28 @@ export class ProblemsComponent implements OnInit {
           if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
             this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
             this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Incorrect += 1;
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Seconds += this.exam_submission_list[i].Seconds;
           }
           else {
-            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0 };
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
           }
         }
       }
       else {
         if (this.exam_submission_list[i].Correct == '✅') {
-          this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0 } } };
+          this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
         }
         else {
-          this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0 } } };
+          this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
         }
       }
     }
     for (let topic of Object.keys(this.topic_breakdown)) {
       this.topic_breakdown[topic].Percent = Math.round(100 * this.topic_breakdown[topic].Correct / (this.topic_breakdown[topic].Total));
+      this.topic_breakdown[topic].Time = (Math.floor(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total % 60)).toString() + 's';
       for (let subtopic of Object.keys(this.topic_breakdown[topic].Subs)) {
         this.topic_breakdown[topic].Subs[subtopic].Percent = Math.round(100 * this.topic_breakdown[topic].Subs[subtopic].Correct / (this.topic_breakdown[topic].Subs[subtopic].Total));
+        this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
       }
     }
   }

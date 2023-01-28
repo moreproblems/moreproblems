@@ -68,367 +68,13 @@ export class TX22G3MExamComponent implements OnInit {
     problem_attempts = 0;
     attempt_path: string[] = [];
     attempt_response = '';
-    exam_submission: { [key: number]: { 'Number': number, 'Topic': string, 'SubTopic': string, 'Choice': string, 'Correct': string, 'Rationale': string, 'Attempts': number, 'Path': string[], 'Time': string } } = {
-        1: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        2: {
-
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        3: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        4: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        5: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        6: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        7: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        8: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        9: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        10: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        11: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        12: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        13: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        14: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        15: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        16: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        17: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        18: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        19: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        20: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        21: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        22: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        23: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        24: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        25: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        26: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        27: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        28: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        29: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        30: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        31: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        },
-        32: {
-            'Number': 0,
-            'Topic': '',
-            'SubTopic': '',
-            'Choice': '',
-            'Correct': '',
-            'Rationale': '',
-            'Attempts': 0,
-            'Path': [],
-            'Time': ''
-        }
-    };
+    exam_submission: { [key: number]: { 'Number': number, 'Topic': string, 'SubTopic': string, 'Choice': string, 'Correct': string, 'Rationale': string, 'Attempts': number, 'Path': string[], 'Seconds': number, 'Time': string } } = {};
 
     exam_submission_list: any[] = [];
     wrong_submission_list: any[] = [];
     number_correct = 0;
     correct_percent = 0;
-    topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number } } } } = {};
+    topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
 
     sub_form = '';
     parent_select = false;
@@ -449,20 +95,6 @@ export class TX22G3MExamComponent implements OnInit {
         this.screenWidth = window.innerWidth;
         if (this.screenWidth <= this.mobileWidth) {
             this.expand_topics = false;
-        }
-    }
-
-    toggle_button(val: string) {
-        if (!this.filters.includes(val)) {
-            this.filters.push(val);
-        }
-        else {
-            if (this.filters.indexOf(val) !== -1) {
-                this.filters.splice(this.filters.indexOf(val), 1);
-            }
-            else {
-                this.filters.pop();
-            }
         }
     }
 
@@ -495,12 +127,27 @@ export class TX22G3MExamComponent implements OnInit {
     }
 
     begin_exam() {
-        if (this.random == true) {
+        if (this.random) {
             this.randomize_problems();
+        }
+        for (let num of Object.keys(this.exam_dump)) {
+            this.exam_submission[+num] = {
+                'Number': 0,
+                'Topic': '',
+                'SubTopic': '',
+                'Choice': '',
+                'Correct': '',
+                'Rationale': '',
+                'Attempts': 0,
+                'Path': [],
+                'Seconds': 0,
+                'Time': ''
+            };
         }
         this.toggleExamTimer();
         this.toggleProblemTimer();
         this.problem_number = 1;
+
     }
 
     attempt_mc_problem(choice: string) {
@@ -551,6 +198,7 @@ export class TX22G3MExamComponent implements OnInit {
                 for (const [num2, sub] of Object.entries(this.exam_submission)) {
                     if (this.problem_number == +num2) {
                         sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+                        sub.Seconds = this.pt_counter;
                         sub.Number = this.problem_number;
                         sub.Topic = prob.Topic;
                         sub.SubTopic = prob.SubTopic;
@@ -609,14 +257,16 @@ export class TX22G3MExamComponent implements OnInit {
         for (let i: number = 0; i < this.exam_length; i++) {
             if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topic)) {
                 this.topic_breakdown[this.exam_submission_list[i].Topic].Total += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topic].Seconds += this.exam_submission_list[i].Seconds;
                 if (this.exam_submission_list[i].Correct == '✅') {
                     this.topic_breakdown[this.exam_submission_list[i].Topic].Correct += 1;
                     if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
                         this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
                         this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Correct += 1;
+                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Seconds += this.exam_submission_list[i].Seconds;
                     }
                     else {
-                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0 };
+                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
                     }
                 }
                 else {
@@ -624,25 +274,28 @@ export class TX22G3MExamComponent implements OnInit {
                     if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
                         this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
                         this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Incorrect += 1;
+                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Seconds += this.exam_submission_list[i].Seconds;
                     }
                     else {
-                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0 };
+                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
                     }
                 }
             }
             else {
                 if (this.exam_submission_list[i].Correct == '✅') {
-                    this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0 } } };
+                    this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
                 }
                 else {
-                    this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0 } } };
+                    this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
                 }
             }
         }
         for (let topic of Object.keys(this.topic_breakdown)) {
             this.topic_breakdown[topic].Percent = Math.round(100 * this.topic_breakdown[topic].Correct / (this.topic_breakdown[topic].Total));
+            this.topic_breakdown[topic].Time = (Math.floor(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total % 60)).toString() + 's';
             for (let subtopic of Object.keys(this.topic_breakdown[topic].Subs)) {
                 this.topic_breakdown[topic].Subs[subtopic].Percent = Math.round(100 * this.topic_breakdown[topic].Subs[subtopic].Correct / (this.topic_breakdown[topic].Subs[subtopic].Total));
+                this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
             }
         }
     }

@@ -855,6 +855,7 @@
                 <th> Percent Correct </th>
                 <th> Missed Problems </th>
                 <th> Total Problems </th>
+                <th> Average Time </th>
               </tr>
             </thead>
             <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
@@ -863,6 +864,7 @@
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
+                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
               </tr>
             </tbody>
           </table>
@@ -873,6 +875,7 @@
                 <th> Percent Correct </th>
                 <th> Missed Problems </th>
                 <th> Total Problems </th>
+                <th> Average Time </th>
                 <th> Skill Tested </th>
               </tr>
             </thead>
@@ -882,6 +885,7 @@
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
+                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
                 <td style="border-top: 1px solid #ddd"> </td>
               </tr>
               <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
@@ -889,6 +893,7 @@
                 <td style="border-top: 1px solid #ddd"> </td>
                 <td style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
                 <td style="border-top: 1px solid #ddd"> {{subtopic.value.Total}} </td>
+                <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}}  </td>
                 <td style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px"> <i>
                     {{subtopic.key}} </i> </td>
               </tr>
