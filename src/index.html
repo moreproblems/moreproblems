@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <title>MoreProblems.Org | U.S. K-12 State Testing Preparation</title>
   <base href="/">
-  <meta name="description" content="Access released practice problems & solutions to prepare for end-of-year tests - including Florida FSA, Illinois IAR, New York NYSTP, North Carolina EOG, Pennsylvania PSSA, and Texas STAAR. Choose from more 300 assessments across math, English language, science, & social studies for elementary, middle, & high school students.">
+  <meta name="description"
+    content="Access released practice problems & solutions to prepare for end-of-year tests - including Florida FSA, Illinois IAR, New York NYSTP, North Carolina EOG, Pennsylvania PSSA, and Texas STAAR. Choose from more 300 assessments across math, English language, science, & social studies for elementary, middle, & high school students.">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0; user-scalable=0">
   <link rel="icon" type="image/x-icon" href="./assets/media/logo1.png">
 
@@ -31,14 +32,38 @@
   </script>
 
   <!-- Google tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-239963476-1">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-239963476-1">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'UA-239963476-1');
+    gtag('config', 'UA-239963476-1');
+  </script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCTWNr6p153EXISnahtbgQ6c_Z6HA1KwiQ",
+    authDomain: "moreproblems-2f951.firebaseapp.com",
+    projectId: "moreproblems-2f951",
+    storageBucket: "moreproblems-2f951.appspot.com",
+    messagingSenderId: "294573579077",
+    appId: "1:294573579077:web:ea4a7c91204c82f6783c2c",
+    measurementId: "G-0VJ25ZENFW"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 </script>
 
 </head>

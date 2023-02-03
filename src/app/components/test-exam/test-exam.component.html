@@ -491,6 +491,8 @@
     <div *ngIf="!expand_filters" class="card card-large"
       style="height: auto; width: auto; margin: auto; text-align: center; max-width: 95%" #problemCard>
       <div class="content" style="margin: auto; align-items: center">
+        <h2 *ngIf="this.problem_number > 0" style="padding-top: 20px; color: darkgrey"> {{exam_state}} {{exam_name}}
+          {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
         <h3 *ngIf="exam_length >= problem_number" style="margin: auto 0; color: darkgrey; font-size: 18px"> (#{{problem_number}}/{{exam_length}}) Time spent solving problem: {{pt_minutes}}m {{pt_counter%60}}s </h3>
         <h2 *ngIf="this.problem_number > this.exam_length && this.mode == 'assess'"> With {{number_correct}} out of {{exam_length}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>

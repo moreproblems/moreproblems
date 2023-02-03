@@ -1,14 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
+import * as examMetadata from "src/assets/problems/exams.json"; 
 import * as problemsData from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
-// import * as fs from 'fs';
-// import * as path from 'path';
-// import { HttpClient } from '@angular/common/http';
-
-// function syncReadFile(filename: string) {
-//   const result = fs.readFile(path.join(__dirname, filename), 'utf8');
-//   console.log(result);
-//   return result;
-// }
 
 @Component({
     selector: 'app-TX21G3M-key',
@@ -35,21 +27,16 @@ export class TX21G3MKeyComponent implements OnInit {
     expand_filters = true;
     expand_topic = false;
 
-    exam_key = 'src/app/assets/Exams/exams.txt';
-    exam_code = 'TX21G3M'
-    exam_file = 'src/app/assets/problems/' + this.exam_code + '/' + this.exam_code + '-problems.txt';
-
-    // exam_data = fs.readFileSync(this.problem_file, 'utf8');
-    // exam_data: string = '';
-    // fileReader: FileReader = new FileReader()
-    // this.fileReader.readAsText(this.problem_file);
-
-    exam_state = 'Texas';
-    exam_grade = 'Grade 3';
-    exam_subject = 'Mathematics';
-    exam_name = 'STAAR';
-    exam_year = '2021';
-    exam_length = 32;
+    key = 'TX21G3M'
+    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
+  
+    exam_state = this.exam_attribute_dump[this.key].State;
+    exam_grade = this.exam_attribute_dump[this.key].Grade;
+    exam_subject = this.exam_attribute_dump[this.key].Subject;
+    exam_name = this.exam_attribute_dump[this.key].ExamName;
+    exam_year = this.exam_attribute_dump[this.key].ExamYear;
+    exam_type = this.exam_attribute_dump[this.key].ExamType;
+    exam_length = this.exam_attribute_dump[this.key].NumQuestions;
 
     exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
 
@@ -60,15 +47,6 @@ export class TX21G3MKeyComponent implements OnInit {
     attempt_explanation = '';
 
     constructor() { }
-
-    // public onChange(file: File): void {
-    //   let fileReader: FileReader = new FileReader();
-    //   let self = this;
-    //   fileReader.onloadend = function(x) {
-    //     self.exam_data = fileReader.result;
-    //   }
-    //   fileReader.readAsText(file);
-    // }
 
     width_change2() {
         this.screenWidth = window.innerWidth;

@@ -1,6 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-// import * as examData from "src/assets/problems/exams.json"; 
-import * as TX22G3MProblems from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
+import * as examMetadata from "src/assets/problems/exams.json"; 
+import * as TestProblems from "src/assets/problems/TX17G3M/TX17G3M-problems.json";
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -34,18 +34,22 @@ export class TestExamComponent implements OnInit {
   pt_timer: any;
   pt_running: boolean = false;
 
-  // exam_state = 'Texas';
-  // exam_grade = 'Grade 3';
-  // exam_subject = 'Mathematics';
-  // exam_name = 'STAAR';
-  // exam_year = '2021';
-  exam_length = 10;
+  key = 'TX21G3M'
+  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
 
-  TX22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX22G3MProblems;
+  exam_state = this.exam_attribute_dump[this.key].State;
+  exam_grade = this.exam_attribute_dump[this.key].Grade;
+  exam_subject = this.exam_attribute_dump[this.key].Subject;
+  exam_name = this.exam_attribute_dump[this.key].ExamName;
+  exam_year = this.exam_attribute_dump[this.key].ExamYear;
+  exam_type = this.exam_attribute_dump[this.key].ExamType;
+  exam_length = this.exam_attribute_dump[this.key].NumQuestions;
+
+  test_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TestProblems;
   exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
   dump_count = 1;
 
-  online_set = ["TX21G3M", "TX19G3M"];
+  online_set = ["TX22G3M", "TX21G3M", "TX19G3M"];
   filtered_set: string[] = [];
   generate_message = "";
 
@@ -110,7 +114,7 @@ export class TestExamComponent implements OnInit {
   }
 
   generate_problems() {
-    for (const [num, value] of Object.entries(this.TX22G3M_exam_dump)) {
+    for (const [num, value] of Object.entries(this.test_exam_dump)) {
         if (value.Number <= 32) {
           // this.exam_dump[this.dump_count] = value;
           this.ordered_dump[this.dump_count] = value;

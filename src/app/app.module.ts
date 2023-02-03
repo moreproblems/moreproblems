@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ExamsComponent } from './components/exams/exams.component';
 import { ProblemsComponent } from './components/problems/problems.component';
 import { AboutComponent } from './components/about/about.component';
+import { LoginComponent } from './components/login/login.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { KMStandardsComponent } from './components/KM-standards/KM-standards.component';
@@ -54,6 +55,7 @@ import { TX19G3MKeyComponent } from './components/TX19G3M-key/TX19G3M-key.compon
     ExamsComponent,
     ProblemsComponent,
     AboutComponent,
+    LoginComponent,
     ContactComponent,
     StandardsComponent,
     KMStandardsComponent,
@@ -81,13 +83,14 @@ import { TX19G3MKeyComponent } from './components/TX19G3M-key/TX19G3M-key.compon
     HSMFStandardsComponent,
     HSMGStandardsComponent,
     HSMSPStandardsComponent,
-    TestExamComponent,
     TX22G3MExamComponent,
     TX22G3MKeyComponent,
     TX21G3MExamComponent,
     TX21G3MKeyComponent,
     TX19G3MExamComponent,
-    TX19G3MKeyComponent
+    TX19G3MKeyComponent,
+    TestExamComponent,
+
   ],
   imports: [
     BrowserModule,

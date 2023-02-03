@@ -1,5 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-// import * as examData from "src/assets/problems/exams.json"; 
+// import * as examMetadata from "src/assets/problems/exams.json"; 
 import * as TX22G3MProblems from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
 import * as TX21G3MProblems from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
 import * as TX19G3MProblems from "src/assets/problems/TX19G3M/TX19G3M-problems.json";
@@ -376,7 +376,7 @@ export class ProblemsComponent implements OnInit {
       if (this.problem_number == +num) {
         for (const [num2, sub] of Object.entries(this.exam_submission)) {
           if (this.problem_number == +num2) {
-            sub.Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+            sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
             sub.Seconds = this.pt_counter;
             sub.Number = this.problem_number;
             sub.Topic = prob.Topic;

@@ -461,7 +461,7 @@
       #problemCard>
       <div class="content" style="margin: auto; align-items: center">
         <h2 *ngIf="this.problem_number > 0" style="padding-top: 20px; color: darkgrey"> {{exam_state}} {{exam_name}}
-          {{exam_year}} {{exam_grade}} {{exam_subject}} Exam </h2>
+          {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
         <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0"
           style="color: darkgrey; font-size: 18px"> Problem #{{problem_number}}/{{exam_length}}
           <hr /> {{et_minutes}}m {{et_counter%60}}s
@@ -470,7 +470,7 @@
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
         <div *ngIf="this.problem_number == 0"
           style="height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
-          <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_grade}} {{exam_subject}} Exam
+          <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam
           </h2>
           <p style="font-size: 16px; padding: 20px"> <b>Directions</b> : {{exam_directions}} </p>
           <br />

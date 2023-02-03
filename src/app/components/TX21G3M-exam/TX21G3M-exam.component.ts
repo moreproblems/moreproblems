@@ -1,14 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
+import * as examMetadata from "src/assets/problems/exams.json"; 
 import * as problemsData from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
-// import {NgPipesModule} from 'ngx-pipes';
-// import * as fs from 'fs';
-// import * as path from 'path';
-
-// function syncReadFile(filename: string) {
-//   const result = fs.readFile(path.join(__dirname, filename), 'utf8');
-//   console.log(result);
-//   return result;
-// }
 
 @Component({
     selector: 'app-TX21G3M-exam',
@@ -37,16 +29,16 @@ export class TX21G3MExamComponent implements OnInit {
     filters: string[] = [];
     expand_filters = true;
 
-    exam_dump_file = 'src/app/assets/Exams/exams.txt';
-    exam_code = 'TX21G3M'
-    exam_file = 'src/app/assets/problems/' + this.exam_code + '/' + this.exam_code + '-problems.txt';
-
-    exam_state = 'Texas';
-    exam_grade = 'Grade 3';
-    exam_subject = 'Mathematics';
-    exam_name = 'STAAR';
-    exam_year = '2021';
-    exam_length = 32;
+    key = 'TX21G3M'
+    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
+  
+    exam_state = this.exam_attribute_dump[this.key].State;
+    exam_grade = this.exam_attribute_dump[this.key].Grade;
+    exam_subject = this.exam_attribute_dump[this.key].Subject;
+    exam_name = this.exam_attribute_dump[this.key].ExamName;
+    exam_year = this.exam_attribute_dump[this.key].ExamYear;
+    exam_type = this.exam_attribute_dump[this.key].ExamType;
+    exam_length = this.exam_attribute_dump[this.key].NumQuestions;
 
     exam_directions = 'Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.';
 
@@ -60,7 +52,6 @@ export class TX21G3MExamComponent implements OnInit {
     random_list: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
     random = false;
 
-    // exam_key: string[] = ['B', 'H', 'A', 'H', '972', 'H', 'A', 'G', 'D', 'J', 'C', 'H', 'D', '20', 'A', 'H', 'A', 'J', 'D', 'G', 'C', 'J', 'B', '13', 'A', 'G', 'D', 'F', 'B', 'F', 'C', 'G']
     exam_key: string[] = [];
 
     problem_number = 0;

@@ -1,4 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
+import * as examMetadata from "src/assets/problems/exams.json"; 
 import * as problemsData from "src/assets/problems/TX19G3M/TX19G3M-problems.json";
 // import * as fs from 'fs';
 // import * as path from 'path';
@@ -34,12 +35,16 @@ export class TX19G3MExamComponent implements OnInit {
     expand_topics = true;
     show_correct = false;
 
-    exam_state = 'Texas';
-    exam_grade = 'Grade 3';
-    exam_subject = 'Mathematics';
-    exam_name = 'STAAR';
-    exam_year = '2019';
-    exam_length = 32;
+    key = 'TX19G3M'
+    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
+  
+    exam_state = this.exam_attribute_dump[this.key].State;
+    exam_grade = this.exam_attribute_dump[this.key].Grade;
+    exam_subject = this.exam_attribute_dump[this.key].Subject;
+    exam_name = this.exam_attribute_dump[this.key].ExamName;
+    exam_year = this.exam_attribute_dump[this.key].ExamYear;
+    exam_type = this.exam_attribute_dump[this.key].ExamType;
+    exam_length = this.exam_attribute_dump[this.key].NumQuestions;
 
     exam_directions = 'Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.';
 
