@@ -3,6 +3,8 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import * as TX22G3MProblems from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
 import * as TX21G3MProblems from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
 import * as TX19G3MProblems from "src/assets/problems/TX19G3M/TX19G3M-problems.json";
+import * as TX18G3MProblems from "src/assets/problems/TX18G3M/TX18G3M-problems.json";
+import * as TX17G3MProblems from "src/assets/problems/TX17G3M/TX17G3M-problems.json";
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -46,10 +48,12 @@ export class ProblemsComponent implements OnInit {
   TX22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX22G3MProblems;
   TX21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX21G3MProblems;
   TX19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX19G3MProblems;
+  TX18G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX18G3MProblems;
+  TX17G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX17G3MProblems;
   exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
   dump_count = 1;
 
-  online_set = ["TX22G3M", "TX21G3M", "TX19G3M"];
+  online_set = ["TX22G3M", "TX21G3M", "TX19G3M", "TX18G3M", "TX17G3M"];
   filtered_set: string[] = [];
   generate_message = "";
 
@@ -160,6 +164,8 @@ export class ProblemsComponent implements OnInit {
       this.filtered_set.push('TX22G3M');
       this.filtered_set.push('TX21G3M');
       this.filtered_set.push('TX19G3M');
+      this.filtered_set.push('TX18G3M');
+      this.filtered_set.push('TX17G3M');
     }
   }
 
@@ -188,6 +194,24 @@ export class ProblemsComponent implements OnInit {
     }
     if (this.filtered_set.includes('TX19G3M')) {
       for (const [num, value] of Object.entries(this.TX19G3M_exam_dump)) {
+        if (value.Number <= 32) {
+          // this.exam_dump[this.dump_count] = value;
+          this.ordered_dump[this.dump_count] = value;
+          this.dump_count += 1;
+        }
+      }
+    }
+    if (this.filtered_set.includes('TX18G3M')) {
+      for (const [num, value] of Object.entries(this.TX18G3M_exam_dump)) {
+        if (value.Number <= 32) {
+          // this.exam_dump[this.dump_count] = value;
+          this.ordered_dump[this.dump_count] = value;
+          this.dump_count += 1;
+        }
+      }
+    }
+    if (this.filtered_set.includes('TX17G3M')) {
+      for (const [num, value] of Object.entries(this.TX17G3M_exam_dump)) {
         if (value.Number <= 32) {
           // this.exam_dump[this.dump_count] = value;
           this.ordered_dump[this.dump_count] = value;

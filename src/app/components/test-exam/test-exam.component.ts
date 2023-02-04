@@ -1,6 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import * as examMetadata from "src/assets/problems/exams.json"; 
-import * as TestProblems from "src/assets/problems/TX17G3M/TX17G3M-problems.json";
+import * as TestProblems from "src/assets/problems/TX18G3M/TX18G3M-problems.json";
 import { HttpClient } from '@angular/common/http';
 
 @Component({
