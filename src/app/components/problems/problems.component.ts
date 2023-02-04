@@ -1,5 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-// import * as examMetadata from "src/assets/problems/exams.json"; 
+import * as examMetadata from "src/assets/problems/exams.json"; 
 import * as TX22G3MProblems from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
 import * as TX21G3MProblems from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
 import * as TX19G3MProblems from "src/assets/problems/TX19G3M/TX19G3M-problems.json";
@@ -53,8 +53,11 @@ export class ProblemsComponent implements OnInit {
   exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
   dump_count = 1;
 
+  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
   online_set = ["TX22G3M", "TX21G3M", "TX19G3M", "TX18G3M", "TX17G3M"];
-  filtered_set: string[] = [];
+  filtered_set: string[] = this.online_set;
+  filtered_exam_num = 0;
+  filtered_prob_num = 0;
   generate_message = "";
 
   problems_sequence: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
@@ -97,7 +100,7 @@ export class ProblemsComponent implements OnInit {
   }
 
   toggle_button(val: string) {
-    if (['Math', 'English Reading', 'English Writing', 'Science', 'Social Studies'].includes(val)) {
+    if (['Mathematics', 'English Reading', 'English Writing', 'Science', 'Social Studies'].includes(val)) {
       if (!this.subject_filters.includes(val)) {
         this.subject_filters.push(val)
       }
@@ -136,6 +139,7 @@ export class ProblemsComponent implements OnInit {
         }
       }
     }
+    this.filter_exams();
   }
 
   toggle_mode() {
@@ -160,20 +164,24 @@ export class ProblemsComponent implements OnInit {
   }
 
   filter_exams() {
-    if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.grade_filters.includes('Grade 3') || this.grade_filters.length == 0) && (this.subject_filters.includes('Math') || this.subject_filters.length == 0)) {
-      this.filtered_set.push('TX22G3M');
-      this.filtered_set.push('TX21G3M');
-      this.filtered_set.push('TX19G3M');
-      this.filtered_set.push('TX18G3M');
-      this.filtered_set.push('TX17G3M');
+    this.filtered_set = [];
+    for (let i = 0; i < this.online_set.length; i++) {
+      if ((this.state_filters.includes(this.exam_attribute_dump[this.online_set[i]].State) || this.state_filters.length == 0) && (this.grade_filters.includes(this.exam_attribute_dump[this.online_set[i]].Grade) || this.grade_filters.length == 0) && (this.subject_filters.includes(this.exam_attribute_dump[this.online_set[i]].Subject) || this.subject_filters.length == 0)) {
+        this.filtered_set.push(this.online_set[i]);
+      }
+    }
+    this.filtered_exam_num = this.filtered_set.length;
+    this.filtered_prob_num = 0;
+    for (let i = 0; i < this.filtered_set.length; i++) {
+      this.filtered_prob_num += this.exam_attribute_dump[this.online_set[i]].NumQuestions;
+    }
+    if (this.filtered_set.length == 0) {
+      this.generate_message = "There are no problems based on your selection.";
     }
   }
 
   generate_problems() {
     this.filter_exams();
-    if (this.filtered_set.length == 0) {
-      this.generate_message = "There are no problems based on your selection.";
-    }
     if (this.filtered_set.includes('TX22G3M')) {
       for (const [num, value] of Object.entries(this.TX22G3M_exam_dump)) {
         if (value.Number <= 32) {
@@ -520,6 +528,6 @@ export class ProblemsComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.filter_exams();
   }
 }

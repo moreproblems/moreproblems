@@ -34,7 +34,7 @@ export class TestExamComponent implements OnInit {
   pt_timer: any;
   pt_running: boolean = false;
 
-  key = 'TX21G3M'
+  key = 'TX18G3M'
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
 
   exam_state = this.exam_attribute_dump[this.key].State;

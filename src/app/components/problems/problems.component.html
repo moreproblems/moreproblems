@@ -609,9 +609,9 @@
     <div class="card-container">
       <label class="switch">
         <input type="checkbox" value="M">
-        <button *ngIf="subject_filters.includes('Math')" (click)="toggle_button('Math')" class="toggle-button-on" tabindex="0">
+        <button *ngIf="subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')" class="toggle-button-on" tabindex="0">
           <b>Math</b> </button>
-        <button *ngIf="!subject_filters.includes('Math')" (click)="toggle_button('Math')" class="toggle-button-off"
+        <button *ngIf="!subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')" class="toggle-button-off"
           tabindex="0"> <b>Math</b> </button>
       </label>
       <label class="switch">
@@ -647,6 +647,8 @@
 
     <br />
     <h2>Choose your Settings</h2>
+    <h3 *ngIf="filtered_set.length != 0" style="color: blue"> There are a total of {{filtered_exam_num}} exams with {{filtered_prob_num}} problems matching you selection. </h3>
+    <h3 *ngIf="filtered_set.length == 0" style="color: red"> {{generate_message}} </h3>
     <div class="card-container" style="display: flex; justify-content: center; align-items: center; max-width: 100%">
       <div class="slider">
         <input type="range" min="5" max="50" value="{{exam_length}}" (input)="set_problem_num(+this.probSlider.value)"
@@ -672,7 +674,6 @@
         <h3><b>Generate Problems!</b></h3>
       </button>
     </div>
-    <h3 style="color: red"> {{generate_message}} </h3>
   </div>
 
   <div class="card-container">
