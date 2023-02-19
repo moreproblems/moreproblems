@@ -647,8 +647,8 @@
 
     <br />
     <h2>Choose your Settings</h2>
-    <h3 *ngIf="filtered_set.length != 0" style="color: blue"> There are a total of {{filtered_exam_num}} exams with {{filtered_prob_num}} problems matching you selection. </h3>
-    <h3 *ngIf="filtered_set.length == 0" style="color: red"> {{generate_message}} </h3>
+    <h3 *ngIf="filtered_set.length != 0" style="color: blue; text-align: center"> There are a total of {{filtered_exam_num}} exams with {{filtered_prob_num}} problems matching you selection. </h3>
+    <h3 *ngIf="filtered_set.length == 0" style="color: red; text-align: center"> {{generate_message}} </h3>
     <div class="card-container" style="display: flex; justify-content: center; align-items: center; max-width: 100%">
       <div class="slider">
         <input type="range" min="5" max="50" value="{{exam_length}}" (input)="set_problem_num(+this.probSlider.value)"
