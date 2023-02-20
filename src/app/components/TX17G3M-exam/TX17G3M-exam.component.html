@@ -468,7 +468,11 @@
         </h3>
         <h2 *ngIf="this.problem_number > this.exam_length"> With {{number_correct}} out of {{exam_length}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
-        <div *ngIf="this.problem_number == 0"
+        <h2 *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Masters Grade Level Performance'" style="color: green"> {{performance_level}} </h2>
+        <h2 *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Approaches Grade Level Performance'" style="color: blue"> {{performance_level}} </h2>
+        <h2 *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Meets Grade Level Performance'" style="color: magenta"> {{performance_level}} </h2>
+        <h2 *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Does Not Meet Grade Level Performance'" style="color: red"> {{performance_level}} </h2>
+          <div *ngIf="this.problem_number == 0"
           style="height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
           <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam
           </h2>

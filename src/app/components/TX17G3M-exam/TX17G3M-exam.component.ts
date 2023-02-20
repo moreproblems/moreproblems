@@ -73,6 +73,7 @@ export class TX17G3MExamComponent implements OnInit {
     number_correct = 0;
     correct_percent = 0;
     topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
+    performance_level = "";
 
     sub_form = '';
     parent_select = false;
@@ -295,6 +296,18 @@ export class TX17G3MExamComponent implements OnInit {
                 this.topic_breakdown[topic].Subs[subtopic].Percent = Math.round(100 * this.topic_breakdown[topic].Subs[subtopic].Correct / (this.topic_breakdown[topic].Subs[subtopic].Total));
                 this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
             }
+        }
+        if (this.number_correct >= 28) {
+            this.performance_level = "Masters Grade Level Performance";
+        }
+        else if (this.number_correct >= 24) {
+            this.performance_level = "Meets Grade Level Performance";
+        }
+        else if (this.number_correct >= 16) {
+            this.performance_level = "Approaches Grade Level Performance";
+        }
+        else {
+            this.performance_level = "Does Not Meet Grade Level Performance";
         }
     }
 
