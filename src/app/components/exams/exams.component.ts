@@ -15,7 +15,7 @@ export class ExamsComponent implements OnInit{
 
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
-  mobileWidth = 800;
+  mobileWidth = 900;
   menuOpen = false;
 
   online_set = ['TX22G3M', 'TX21G3M', 'TX19G3M', 'TX18G3M', 'TX17G3M', 'TX21G5S'];

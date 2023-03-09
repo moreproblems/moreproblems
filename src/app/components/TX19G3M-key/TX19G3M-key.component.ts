@@ -13,7 +13,7 @@ export class TX19G3MKeyComponent implements OnInit {
     title = 'More Problems';
 
     screenWidth = window.innerWidth;
-    mobileWidth = 800;
+    mobileWidth = 900;
 
     // et_counter: number = 0;
     // et_minutes: number = 0;

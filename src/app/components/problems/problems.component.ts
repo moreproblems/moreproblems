@@ -19,7 +19,7 @@ export class ProblemsComponent implements OnInit {
   title = 'More Problems';
 
   screenWidth = window.innerWidth;
-  mobileWidth = 800;
+  mobileWidth = 900;
 
   state_filters: string[] = [];
   grade_filters: string[] = [];
@@ -476,6 +476,9 @@ export class ProblemsComponent implements OnInit {
 
   completeExam() {
     this.toggleExamTimer();
+    if (this.mode == 'explain') {
+      this.resetExam();
+    }
     for (let i: number = 0; i < this.exam_length; i++) {
       if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topic)) {
         this.topic_breakdown[this.exam_submission_list[i].Topic].Total += 1;
@@ -520,6 +523,19 @@ export class ProblemsComponent implements OnInit {
         this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
       }
     }
+    // if (this.mode == 'explain') {
+    //   this.resetExam();
+    // }
+  }
+
+  resetExam() {
+    this.problem_number = 0;
+    this.expand_filters = true;
+    this.attempt_path = [];
+    this.exam_submission = {};
+    this.exam_submission_list = [];
+    this.wrong_submission_list = [];
+    this.topic_breakdown = {};
   }
 
   expandTopics() {

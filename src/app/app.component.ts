@@ -15,7 +15,7 @@ export class AppComponent{
   public screenWidth = window.innerWidth;
   public screenHeight = window.innerHeight;
   // public toolbarHeight = this.navbar.nativeElement.offsetWidth;
-  public mobileWidth = 800;
+  public mobileWidth = 900;
   public menuOpen = false;
   
   constructor() { }
