@@ -5,6 +5,7 @@ import * as TX21G3MProblems from "src/assets/problems/TX21G3M/TX21G3M-problems.j
 import * as TX19G3MProblems from "src/assets/problems/TX19G3M/TX19G3M-problems.json";
 import * as TX18G3MProblems from "src/assets/problems/TX18G3M/TX18G3M-problems.json";
 import * as TX17G3MProblems from "src/assets/problems/TX17G3M/TX17G3M-problems.json";
+import * as TX21G5SProblems from "src/assets/problems/TX21G5S/TX21G5S-problems.json";
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -50,11 +51,12 @@ export class ProblemsComponent implements OnInit {
   TX19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX19G3MProblems;
   TX18G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX18G3MProblems;
   TX17G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX17G3MProblems;
+  TX21G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX21G5SProblems;
   exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
   dump_count = 1;
 
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
-  online_set = ["TX22G3M", "TX21G3M", "TX19G3M", "TX18G3M", "TX17G3M"];
+  online_set = ["TX22G3M", "TX21G3M", "TX19G3M", "TX18G3M", "TX17G3M", "TX21G5S"];
   filtered_set: string[] = this.online_set;
   filtered_exam_num = 0;
   filtered_prob_num = 0;
@@ -173,7 +175,7 @@ export class ProblemsComponent implements OnInit {
     this.filtered_exam_num = this.filtered_set.length;
     this.filtered_prob_num = 0;
     for (let i = 0; i < this.filtered_set.length; i++) {
-      this.filtered_prob_num += this.exam_attribute_dump[this.online_set[i]].NumQuestions;
+      this.filtered_prob_num += this.exam_attribute_dump[this.filtered_set[i]].NumQuestions;
     }
     if (this.filtered_set.length == 0) {
       this.generate_message = "There are no problems based on your selection.";
@@ -221,6 +223,15 @@ export class ProblemsComponent implements OnInit {
     if (this.filtered_set.includes('TX17G3M')) {
       for (const [num, value] of Object.entries(this.TX17G3M_exam_dump)) {
         if (value.Number <= 32) {
+          // this.exam_dump[this.dump_count] = value;
+          this.ordered_dump[this.dump_count] = value;
+          this.dump_count += 1;
+        }
+      }
+    }
+    if (this.filtered_set.includes('TX21G5S')) {
+      for (const [num, value] of Object.entries(this.TX21G5S_exam_dump)) {
+        if (value.Number <= 36) {
           // this.exam_dump[this.dump_count] = value;
           this.ordered_dump[this.dump_count] = value;
           this.dump_count += 1;

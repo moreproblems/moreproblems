@@ -58,6 +58,8 @@ import { TX18G3MExamComponent } from './components/TX18G3M-exam/TX18G3M-exam.com
 import { TX18G3MKeyComponent } from './components/TX18G3M-key/TX18G3M-key.component';
 import { TX17G3MExamComponent } from './components/TX17G3M-exam/TX17G3M-exam.component';
 import { TX17G3MKeyComponent } from './components/TX17G3M-key/TX17G3M-key.component';
+import { TX21G5SExamComponent } from './components/TX21G5S-exam/TX21G5S-exam.component';
+import { TX21G5SKeyComponent } from './components/TX21G5S-key/TX21G5S-key.component';
 
 @NgModule({
   declarations: [
@@ -103,6 +105,8 @@ import { TX17G3MKeyComponent } from './components/TX17G3M-key/TX17G3M-key.compon
     TX18G3MKeyComponent,
     TX17G3MExamComponent,
     TX17G3MKeyComponent,
+    TX21G5SExamComponent,
+    TX21G5SKeyComponent,
     TestExamComponent,
 
   ],
