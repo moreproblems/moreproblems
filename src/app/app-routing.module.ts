@@ -19,6 +19,8 @@ import { TX17G3MExamComponent } from './components/TX17G3M-exam/TX17G3M-exam.com
 import { TX17G3MKeyComponent } from './components/TX17G3M-key/TX17G3M-key.component';
 import { TX21G5SExamComponent } from './components/TX21G5S-exam/TX21G5S-exam.component';
 import { TX21G5SKeyComponent } from './components/TX21G5S-key/TX21G5S-key.component';
+import { TX19G5SExamComponent } from './components/TX19G5S-exam/TX19G5S-exam.component';
+import { TX19G5SKeyComponent } from './components/TX19G5S-key/TX19G5S-key.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { KMStandardsComponent } from './components/KM-standards/KM-standards.component';
 import { KEStandardsComponent } from './components/KE-standards/KE-standards.component';
@@ -62,6 +64,8 @@ const routes: Routes = [
   { path: 'exam/TX17G3M/key', component: TX17G3MKeyComponent },
   { path: 'exam/TX21G5S', component: TX21G5SExamComponent },
   { path: 'exam/TX21G5S/key', component: TX21G5SKeyComponent },
+  { path: 'exam/TX19G5S', component: TX19G5SExamComponent },
+  { path: 'exam/TX19G5S/key', component: TX19G5SKeyComponent },
   { path: 'standards', component: StandardsComponent },
   { path: 'standards/K-Math', component: KMStandardsComponent },
   { path: 'standards/K-English', component: KEStandardsComponent },

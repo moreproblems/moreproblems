@@ -18,7 +18,7 @@ export class ExamsComponent implements OnInit{
   mobileWidth = 900;
   menuOpen = false;
 
-  online_set = ['TX22G3M', 'TX21G3M', 'TX19G3M', 'TX18G3M', 'TX17G3M', 'TX21G5S'];
+  online_set = ['TX22G3M', 'TX21G3M', 'TX19G3M', 'TX18G3M', 'TX17G3M', 'TX21G5S', 'TX19G5S'];
   // online_set: string[] = [];
 
   selected_state = '';
