@@ -585,22 +585,25 @@
                             </div>
                         </form>
                     </div> -->
-          <section style="height: auto; width: 100%; display: flex; justify-content: center">
-            <label class="switch"
-              style="max-height: 100px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
-              <input type="checkbox">
-              <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
-                style="width: 100%; font-size: 16px">
-                <b>Show Subtopics</b> </button>
-              <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
-                style="width: 100%; font-size: 16px">
-                Hide Subtopics </button>
-            </label>
-          </section>
           <br />
           <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableS>
             <thead>
-              <tr style="border: 3px solid black; background-color: grey">
+              <tr>
+                <th colspan="3" style="font-size: 18px"> Report: Results by Topic </th>
+                <th colspan="2">
+                  <label class="switch"
+                    style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
+                    <input type="checkbox">
+                    <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
+                      style="width: 100%; font-size: 14px">
+                      <b>Show Subtopics</b> </button>
+                    <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
+                      style="width: 100%; font-size: 14px">
+                      Hide Subtopics </button>
+                  </label>
+                </th>
+              </tr>
+              <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
                 <th> Topic </th>
                 <th> Percent Correct </th>
                 <th> Missed Problems </th>
@@ -620,13 +623,27 @@
           </table>
           <table *ngIf="this.expand_topics" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableL>
             <thead>
-              <tr style="border: 3px solid black; background-color: grey">
-                <th> Topic </th>
+              <tr>
+                <th colspan="3" style="font-size: 18px"> Report: Results by Topic & Skill Tested </th>
+                <th colspan="2">
+                  <label class="switch"
+                    style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
+                    <input type="checkbox">
+                    <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
+                      style="width: 100%; font-size: 14px">
+                      <b>Show Subtopics</b> </button>
+                    <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
+                      style="width: 100%; font-size: 14px">
+                      Hide Subtopics </button>
+                  </label>
+                </th>
+              </tr>
+              <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
+                <th> Topic & Skill Tested </th>
                 <th> Percent Correct </th>
                 <th> Missed Problems </th>
                 <th> Total Problems </th>
                 <th> Average Time </th>
-                <th> Skill Tested </th>
               </tr>
             </thead>
             <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
@@ -636,36 +653,36 @@
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> </td>
               </tr>
               <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
-                <td style="border-top: 1px solid #ddd"> </td>
+                <td style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px"> <i>
+                    {{subtopic.key}} </i> </td>
                 <td style="border-top: 1px solid #ddd"> </td>
                 <td style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
                 <td style="border-top: 1px solid #ddd"> {{subtopic.value.Total}} </td>
-                <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}} </td>
-                <td style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px"> <i>
-                    {{subtopic.key}} </i> </td>
+                <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}}  </td>
               </tr>
             </tbody>
           </table>
           <br />
-          <section style="height: auto; width: 100%; display: flex; justify-content: center">
-            <label class="switch"
-              style="max-height: 100px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
-              <input type="checkbox">
-              <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
-                style="width: 100%; font-size: 16px">
-                <b>Show Correct Responses</b> </button>
-              <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
-                style="width: 100%; font-size: 16px">
-                Hide Correct Responses </button>
-            </label>
-          </section>
-          <br />
           <table *ngIf="!this.show_correct" style="border: 1px solid black; margin: auto; width: 99%" #resultsTableI>
             <thead>
-              <tr style="border: 1px solid black; background-color: grey">
+              <tr>
+                <th colspan="6" style="font-size: 18px"> Report: Details on Incorrect Problems </th>
+                <th colspan="2">
+                  <label class="switch"
+                    style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
+                    <input type="checkbox">
+                    <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
+                      style="width: 100%; font-size: 14px">
+                      <b>Show Correct Responses</b> </button>
+                    <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
+                      style="width: 100%; font-size: 14px">
+                      Hide Correct Responses </button>
+                  </label>
+                </th>
+              </tr>
+              <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
                 <th> Problem Number </th>
                 <th> Problem Topic </th>
                 <th> Correct Response </th>
@@ -692,7 +709,22 @@
           </table>
           <table *ngIf="this.show_correct" style="border: 1px solid black; margin: auto; width: 99%" #resultsTableA>
             <thead>
-              <tr style="border: 1px solid black; background-color: grey">
+              <tr>
+                <th colspan="6" style="font-size: 18px"> Report: Details on All Problems </th>
+                <th colspan="2">
+                  <label class="switch"
+                    style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
+                    <input type="checkbox">
+                    <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
+                      style="width: 100%; font-size: 14px">
+                      <b>Show Correct Responses</b> </button>
+                    <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
+                      style="width: 100%; font-size: 14px">
+                      Hide Correct Responses </button>
+                  </label>
+                </th>
+              </tr>
+              <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
                 <th> Problem Number </th>
                 <th> Problem Topic </th>
                 <th> Correct Response </th>
