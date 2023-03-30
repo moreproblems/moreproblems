@@ -28,7 +28,7 @@ export class AppComponent{
       this.menuOpen = false;
     }
     if (this.screenWidth <= this.mobileWidth) {
-      this.menuOpen = false;
+      this.menuOpen = true;
     }
   }
 

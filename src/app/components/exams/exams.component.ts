@@ -1387,6 +1387,6 @@ export class ExamsComponent implements OnInit{
 
   ngOnInit() {
     this.titleService.setTitle("MoreProblems.Org | U.S. K-12 State Testing Practice Exams");
-    this.meta.updateTag({ name: 'description', content: "Access released practice problems & solutions to prepare for end-of-year tests - including Florida FSA, Illinois IAR, New York NYSTP, North Carolina EOG, Pennsylvania PSSA, and Texas STAAR. Choose from more 300 assessments across math, English language, science, & social studies for elementary, middle, & high school students." });
+    this.meta.updateTag({ name: 'description', content: "Access released practice problems & solutions to prepare for end-of-year tests - including Florida FSA, Illinois IAR, New York NYSTP, North Carolina EOG, Pennsylvania PSSA, and Texas STAAR. Choose from more 400 assessments across math, English language, science, & social studies for elementary, middle, & high school students." });
   }
 }

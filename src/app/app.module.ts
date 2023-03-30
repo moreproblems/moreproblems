@@ -2,15 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgPipesModule } from 'ngx-pipes';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+// import { FirebaseUIModule, firebase, firebaseui } from 'firebaseui-angular';
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import printJS from 'print-js';
 // import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 // import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-// import { environment } from "src/environments/environment";
-import { HttpClientModule } from '@angular/common/http';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
-import printJS from 'print-js';
+import { environment } from "src/environments/environment";
 // import * as fs from 'fs';
 
 
@@ -62,6 +63,16 @@ import { TX21G5SExamComponent } from './components/TX21G5S-exam/TX21G5S-exam.com
 import { TX21G5SKeyComponent } from './components/TX21G5S-key/TX21G5S-key.component';
 import { TX19G5SExamComponent } from './components/TX19G5S-exam/TX19G5S-exam.component';
 import { TX19G5SKeyComponent } from './components/TX19G5S-key/TX19G5S-key.component';
+
+// const firebaseUiAuthConfig: firebaseui.auth.Config = {
+//   signInFlow: 'popup',
+//   signInOptions: [{
+//     provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+//     requireDisplayName: true,
+//   }],
+//   tosUrl: '/',
+//   privacyPolicyUrl: '/'
+// };
 
 @NgModule({
   declarations: [
@@ -119,8 +130,10 @@ import { TX19G5SKeyComponent } from './components/TX19G5S-key/TX19G5S-key.compon
     AppRoutingModule,
     NgPipesModule,
     ReactiveFormsModule,
+    AppRoutingModule,
     // AngularFireModule.initializeApp(environment.firebaseConfig),
     // AngularFireAuthModule,
+    // FirebaseUIModule.forRoot(firebaseUiAuthConfig),
     // AngularFirestoreModule,
     // AngularFireStorageModule,
     // AngularFireDatabaseModule,
