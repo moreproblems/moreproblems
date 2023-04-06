@@ -366,7 +366,7 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner" (window:resize)="width_change()" #navbar>
   <div style="display: flex; flex-direction: row; width: 100%; margin: auto; align-items: center">
-    <div class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 0 20px 0 0" routerLink="/exams" routerLinkActive="active">
+    <div class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 0 20px 0 0" routerLink="/about" routerLinkActive="active">
       <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 65px; height: 65px" #logo />
       <img *ngIf="this.screenWidth <= this.mobileWidth" src="./assets/media/logo1.png" style="width: 50px; height: 50px" #logo />
       <span style="padding: 0px; text-align: left">
@@ -376,20 +376,20 @@
     </div>
     <div class="spacer"></div>
     <nav style="text-align: right" style="display: block">
+      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/about" routerLinkActive="active"> About </a>&nbsp;&nbsp;
       <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/exams" routerLinkActive="active"> Exams </a>&nbsp;&nbsp;
       <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/problems" routerLinkActive="active"> Problems </a>&nbsp;&nbsp;
       <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/standards" routerLinkActive="active"> Standards </a>&nbsp;&nbsp;
-      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/about" routerLinkActive="active"> About </a>&nbsp;&nbsp;
       <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/contact" routerLinkActive="active"> Contact </a>&nbsp;
     </nav>
     <img *ngIf="this.screenWidth <= this.mobileWidth" (click)="menu_toggle()" src="./assets/icons/menu.png" style="height: 30px; width: 30px; margin: 0 10px 0 0; filter: invert(100%)">
   </div>
   <div *ngIf="this.menuOpen" style="width: 100%">
     <nav style="text-align: center">
+      <a routerLink="/about" routerLinkActive="active" style="padding: 0 15px; font-size: 16px">About</a>&nbsp;&nbsp;
       <a routerLink="/exams" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Exams </a>&nbsp;&nbsp;
       <a routerLink="/problems" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Problems </a>&nbsp;
       <a routerLink="/standards" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Standards </a>&nbsp;&nbsp;
-      <a routerLink="/about" routerLinkActive="active" style="padding: 0 15px; font-size: 16px">About</a>&nbsp;&nbsp;
       <a routerLink="/contact" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Contact </a>&nbsp;
     </nav>
   </div>
