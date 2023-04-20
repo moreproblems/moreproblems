@@ -1369,12 +1369,22 @@ export class ExamsComponent implements OnInit{
   }
 
   scroll_top() {
-    window.scrollTo({left: 0, top: 0, behavior: 'smooth'});
+    setTimeout(function(){
+      window.scrollTo({left: 0, top: 0, behavior: 'smooth'});
+    }, 250);
   }
 
+  scroll_bottom() {
+    setTimeout(function(){
+      window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: 'smooth'});
+    }, 250);
+  }
+
+
   scroll(el: HTMLElement) {
-    el.scrollIntoView({behavior: 'smooth'});
-    // window.scrollTo({left: 0, top: el.getBoundingClientRect().top-80, behavior: 'smooth'});
+    setTimeout(function(){
+      el.scrollIntoView({behavior: 'smooth'});
+    }, 250);
   }
   
   scroll2(el: HTMLElement) {
