@@ -1380,7 +1380,6 @@ export class ExamsComponent implements OnInit{
     }, 250);
   }
 
-
   scroll(el: HTMLElement) {
     setTimeout(function(){
       el.scrollIntoView({behavior: 'smooth'});
@@ -1388,12 +1387,10 @@ export class ExamsComponent implements OnInit{
   }
   
   scroll2(el: HTMLElement) {
-    window.scrollTo({left: 0, top: el.getBoundingClientRect().top-120, behavior: 'smooth'});
+    setTimeout(function(){
+      window.scrollTo({left: 0, top: el.getBoundingClientRect().top-120, behavior: 'smooth'});
+    }, 250);
   }
-
-  // delay(ms: number) {
-  //   return new Promise( resolve => setTimeout(resolve, ms) );
-  // }
 
   ngOnInit() {
     this.titleService.setTitle("MoreProblems.Org | U.S. K-12 State Testing Practice Exams");
