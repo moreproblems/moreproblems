@@ -10,6 +10,14 @@ import * as problemsData from "src/assets/problems/TX18G3M/TX18G3M-problems.json
 //   return result;
 // }
 
+const confetti = require('canvas-confetti');
+
+const confettiCanvas = document.getElementById('confetticanvas');
+const confettiHandler = confetti.create(confettiCanvas, {
+  resize: true,
+  useWorker: true,
+});
+
 @Component({
     selector: 'app-TX18G3M-exam',
     templateUrl: './TX18G3M-exam.component.html',
@@ -253,6 +261,7 @@ export class TX18G3MExamComponent implements OnInit {
 
     completeExam() {
         this.toggleExamTimer();
+        this.confetti_pop();
         for (let i: number = 0; i < this.exam_length; i++) {
             if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topic)) {
                 this.topic_breakdown[this.exam_submission_list[i].Topic].Total += 1;
@@ -311,6 +320,62 @@ export class TX18G3MExamComponent implements OnInit {
         }
     }
 
+    confetti_pop() {
+        confettiHandler({
+          particleCount: 750,
+          startVelocity: 100,
+          scalar: 1.15,
+          ticks: 300,
+          decay: 0.9,
+          angle: 90,
+          spread: 360,
+          origin: { x: 0.25, y: 0.25 }
+        });
+        confettiHandler({
+          particleCount: 1000,
+          startVelocity: 100,
+          scalar: 1.15,
+          ticks: 300,
+          decay: 0.9,
+          angle: 90,
+          spread: 360,
+          origin: { x: 0.25, y: 0.75 }
+        });
+        confettiHandler({
+          particleCount: 1000,
+          startVelocity: 100,
+          scalar: 1.15,
+          ticks: 300,
+          decay: 0.9,
+          angle: 90,
+          spread: 360,
+          origin: { x: 0.75, y: 0.25 }
+        });
+        confettiHandler({
+          particleCount: 1000,
+          startVelocity: 100,
+          scalar: 1.15,
+          ticks: 300,
+          decay: 0.9,
+          angle: 90,
+          spread: 360,
+          origin: { x: 0.75, y: 0.75 }
+        });
+        if(this.screenWidth > this.mobileWidth) {
+          confettiHandler({
+            shapes: ['star'],
+            colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+            particleCount: 100,
+            startVelocity: 250,
+            ticks: 200,
+            decay: 0.45,
+            scalar: 1.5,
+            angle: 270,
+            spread: 180,
+            origin: { x: 0.5, y: 0 }
+          });
+        }
+    }
 
     toggleExamTimer() {
         this.et_running = !this.et_running;

@@ -63,7 +63,6 @@ import { TX21G5SExamComponent } from './components/TX21G5S-exam/TX21G5S-exam.com
 import { TX21G5SKeyComponent } from './components/TX21G5S-key/TX21G5S-key.component';
 import { TX19G5SExamComponent } from './components/TX19G5S-exam/TX19G5S-exam.component';
 import { TX19G5SKeyComponent } from './components/TX19G5S-key/TX19G5S-key.component';
-import { ConfettiComponent } from './components/confetti/confetti.component';
 
 // const firebaseUiAuthConfig: firebaseui.auth.Config = {
 //   signInFlow: 'popup',
@@ -123,8 +122,7 @@ import { ConfettiComponent } from './components/confetti/confetti.component';
     TX21G5SKeyComponent,
     TX19G5SExamComponent,
     TX19G5SKeyComponent,
-    TestExamComponent,
-    ConfettiComponent
+    TestExamComponent
 
   ],
   imports: [

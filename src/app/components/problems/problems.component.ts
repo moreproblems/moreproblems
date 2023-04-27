@@ -9,6 +9,14 @@ import * as TX21G5SProblems from "src/assets/problems/TX21G5S/TX21G5S-problems.j
 import * as TX19G5SProblems from "src/assets/problems/TX19G5S/TX19G5S-problems.json";
 import { HttpClient } from '@angular/common/http';
 
+const confetti = require('canvas-confetti');
+
+const confettiCanvas = document.getElementById('confetticanvas');
+const confettiHandler = confetti.create(confettiCanvas, {
+  resize: true,
+  useWorker: true,
+});
+
 @Component({
   selector: 'app-problems',
   templateUrl: './problems.component.html',
@@ -487,6 +495,7 @@ export class ProblemsComponent implements OnInit {
 
   completeExam() {
     this.toggleExamTimer();
+    this.confetti_pop();
     if (this.mode == 'explain') {
       this.resetExam();
     }
@@ -537,6 +546,64 @@ export class ProblemsComponent implements OnInit {
     // if (this.mode == 'explain') {
     //   this.resetExam();
     // }
+    // this.confetti_pop();
+  }
+
+  confetti_pop() {
+    confettiHandler({
+      particleCount: 750,
+      startVelocity: 100,
+      scalar: 1.15,
+      ticks: 300,
+      decay: 0.9,
+      angle: 90,
+      spread: 360,
+      origin: { x: 0.25, y: 0.25 }
+    });
+    confettiHandler({
+      particleCount: 1000,
+      startVelocity: 100,
+      scalar: 1.15,
+      ticks: 300,
+      decay: 0.9,
+      angle: 90,
+      spread: 360,
+      origin: { x: 0.25, y: 0.75 }
+    });
+    confettiHandler({
+      particleCount: 1000,
+      startVelocity: 100,
+      scalar: 1.15,
+      ticks: 300,
+      decay: 0.9,
+      angle: 90,
+      spread: 360,
+      origin: { x: 0.75, y: 0.25 }
+    });
+    confettiHandler({
+      particleCount: 1000,
+      startVelocity: 100,
+      scalar: 1.15,
+      ticks: 300,
+      decay: 0.9,
+      angle: 90,
+      spread: 360,
+      origin: { x: 0.75, y: 0.75 }
+    });
+    if(this.screenWidth > this.mobileWidth) {
+      confettiHandler({
+        shapes: ['star'],
+        colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+        particleCount: 100,
+        startVelocity: 250,
+        ticks: 200,
+        decay: 0.45,
+        scalar: 1.5,
+        angle: 270,
+        spread: 180,
+        origin: { x: 0.5, y: 0 }
+      });
+    }
   }
 
   resetExam() {

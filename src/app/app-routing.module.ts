@@ -96,7 +96,6 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   // { path: 'login', component: LoginComponent }
-  // { path: 'file/sitemap.txt', redirectTo: 'assets/exams/COG3E.pdf', pathMatch: 'full' }
 ];
 
 @NgModule({

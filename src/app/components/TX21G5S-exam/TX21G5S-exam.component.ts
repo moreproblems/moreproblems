@@ -2,6 +2,14 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import * as examMetadata from "src/assets/problems/exams.json"; 
 import * as problemsData from "src/assets/problems/TX21G5S/TX21G5S-problems.json";
 
+const confetti = require('canvas-confetti');
+
+const confettiCanvas = document.getElementById('confetticanvas');
+const confettiHandler = confetti.create(confettiCanvas, {
+  resize: true,
+  useWorker: true,
+});
+
 @Component({
     selector: 'app-TX21G5S-exam',
     templateUrl: './TX21G5S-exam.component.html',
@@ -246,6 +254,7 @@ export class TX21G5SExamComponent implements OnInit {
 
     completeExam() {
         this.toggleExamTimer();
+        this.confetti_pop();
         for (let i: number = 0; i < this.exam_length; i++) {
             if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topic)) {
                 this.topic_breakdown[this.exam_submission_list[i].Topic].Total += 1;
@@ -301,6 +310,63 @@ export class TX21G5SExamComponent implements OnInit {
         }
         else {
             this.performance_level = "Does Not Meet Grade Level Performance";
+        }
+    }
+
+    confetti_pop() {
+        confettiHandler({
+          particleCount: 750,
+          startVelocity: 100,
+          scalar: 1.15,
+          ticks: 300,
+          decay: 0.9,
+          angle: 90,
+          spread: 360,
+          origin: { x: 0.25, y: 0.25 }
+        });
+        confettiHandler({
+          particleCount: 1000,
+          startVelocity: 100,
+          scalar: 1.15,
+          ticks: 300,
+          decay: 0.9,
+          angle: 90,
+          spread: 360,
+          origin: { x: 0.25, y: 0.75 }
+        });
+        confettiHandler({
+          particleCount: 1000,
+          startVelocity: 100,
+          scalar: 1.15,
+          ticks: 300,
+          decay: 0.9,
+          angle: 90,
+          spread: 360,
+          origin: { x: 0.75, y: 0.25 }
+        });
+        confettiHandler({
+          particleCount: 1000,
+          startVelocity: 100,
+          scalar: 1.15,
+          ticks: 300,
+          decay: 0.9,
+          angle: 90,
+          spread: 360,
+          origin: { x: 0.75, y: 0.75 }
+        });
+        if(this.screenWidth > this.mobileWidth) {
+          confettiHandler({
+            shapes: ['star'],
+            colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+            particleCount: 100,
+            startVelocity: 250,
+            ticks: 200,
+            decay: 0.45,
+            scalar: 1.5,
+            angle: 270,
+            spread: 180,
+            origin: { x: 0.5, y: 0 }
+          });
         }
     }
 

@@ -63,6 +63,15 @@
     opacity: 0.8;
   }
 
+  #confetticanvas {
+    position: fixed;
+    z-index: 50;
+    top: 81px;
+    right: 0px;
+    bottom: 0px;
+    left: 125px;
+  }
+
   .content-menu {
     display: flex;
     margin: 0 auto 32px;
@@ -456,6 +465,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main" (window:resize)="width_change2()">
+  <canvas id="confetticanvas"></canvas>
   <div *ngIf="expand_filters" class="content">
     <h2>Choose your State</h2>
     <input type="hidden" value="All United States" #state>

@@ -63,6 +63,15 @@
     opacity: 0.8;
   }
 
+  #confetticanvas {
+    position: fixed;
+    z-index: 50;
+    top: 81px;
+    right: 0px;
+    bottom: 0px;
+    left: 125px;
+  }
+
   .content-menu {
     display: flex;
     margin: 0 auto 32px;
@@ -456,6 +465,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main" (window:resize)="width_change2()">
+  <canvas id="confetticanvas"></canvas>
   <div class="card-container" style="padding: 0px">
     <div class="card card-large" style="height: auto; width: auto; margin: auto; text-align: center; max-width: 95%"
       #problemCard>
