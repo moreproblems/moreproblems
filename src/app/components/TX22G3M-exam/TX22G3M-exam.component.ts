@@ -419,12 +419,28 @@ export class TX22G3MExamComponent implements OnInit {
     }
 
     scroll(el: HTMLElement) {
-        el.scrollIntoView({ behavior: 'smooth' });
-    }
+    setTimeout(function(){
+      el.scrollIntoView({behavior: 'smooth'});
+    }, 250);
+  }
 
     scroll2(el: HTMLElement) {
-        window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 80, behavior: 'smooth' });
-    }
+    setTimeout(function(){
+      window.scrollTo({left: 0, top: el.getBoundingClientRect().top-120, behavior: 'smooth'});
+    }, 250);
+  }
+
+  scroll_top() {
+    setTimeout(function(){
+      window.scrollTo({left: 0, top: 0, behavior: 'smooth'});
+    }, 250);
+  }
+
+  scroll_bottom() {
+    setTimeout(function(){
+      window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: 'smooth'});
+    }, 250);
+  }
 
     ngOnInit() {
         for (const [num, value] of Object.entries(this.TX22G3M_exam_dump)) {

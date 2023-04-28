@@ -505,14 +505,14 @@
                 <input
                   style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
                   inputmode="numeric" #inputFR />
-                <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value);"
+                <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value); scroll_bottom()"
                   style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                   <b> Submit </b> </button>
               </div>
             </div>
             <div *ngIf="prob.value.Type == 'MC'">
               <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
-                (click)="selection.value = choice.key; attempt_mc_problem(choice.key);"
+                (click)="selection.value = choice.key; attempt_mc_problem(choice.key); scroll_bottom()"
                 style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                 <label class="switch" style="padding: 0 25px">
                   <input type="checkbox" value="{{choice.key}}">
@@ -558,7 +558,7 @@
               </div>
             </div>
             <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
-              (click)="next_problem(); scroll2(problemCard)"
+              (click)="next_problem(); scroll_top()"
               style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
               <b> Next Problem </b>
             </button>

@@ -1,6 +1,14 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import * as examMetadata from "src/assets/problems/exams.json"; 
+import * as examMetadata from "src/assets/problems/exams.json";
 import * as problemsData from "src/assets/problems/TX19G5S/TX19G5S-problems.json";
+
+const confetti = require('canvas-confetti');
+
+const confettiCanvas = document.getElementById('confetticanvas');
+const confettiHandler = confetti.create(confettiCanvas, {
+    resize: true,
+    useWorker: true,
+});
 
 @Component({
     selector: 'app-TX19G5S-key',
@@ -29,7 +37,7 @@ export class TX19G5SKeyComponent implements OnInit {
 
     key = 'TX19G5S'
     exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
-  
+
     exam_state = this.exam_attribute_dump[this.key].State;
     exam_grade = this.exam_attribute_dump[this.key].Grade;
     exam_subject = this.exam_attribute_dump[this.key].Subject;
@@ -66,7 +74,7 @@ export class TX19G5SKeyComponent implements OnInit {
                         if (choice == ch) {
                             this.attempt_explanation = key.Key.Rationale;
                             if (key.Key.Correct == true) {
-                                if (this.problem_attempts == 1) {
+                                this.confetti_light();                                if (this.problem_attempts == 1) {
                                     this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
                                 }
                                 else {
@@ -92,6 +100,7 @@ export class TX19G5SKeyComponent implements OnInit {
                     for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
                         if (choice == key.Choice) {
                             this.attempt_explanation = key.Key.Rationale;
+                            this.confetti_light();
                             if (this.problem_attempts == 1) {
                                 this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
                             }
@@ -167,12 +176,41 @@ export class TX19G5SKeyComponent implements OnInit {
         this.attempt_response = '';
     }
 
+    confetti_light() {
+        confettiHandler({
+            particleCount: Math.round(250 / this.problem_attempts),
+            startVelocity: 125,
+            scalar: 1.15,
+            ticks: 150,
+            decay: 0.8,
+            angle: 90,
+            spread: 60,
+            origin: { x: 0.5, y: 1 }
+        });
+    }
+
     scroll(el: HTMLElement) {
-        el.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(function () {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }, 250);
     }
 
     scroll2(el: HTMLElement) {
-        window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 80, behavior: 'smooth' });
+        setTimeout(function () {
+            window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 120, behavior: 'smooth' });
+        }, 250);
+    }
+
+    scroll_top() {
+        setTimeout(function () {
+            window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+        }, 250);
+    }
+
+    scroll_bottom() {
+        setTimeout(function () {
+            window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
+        }, 250);
     }
 
     ngOnInit() {

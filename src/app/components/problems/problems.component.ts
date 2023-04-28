@@ -1,5 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import * as examMetadata from "src/assets/problems/exams.json"; 
+import * as examMetadata from "src/assets/problems/exams.json";
 import * as TX22G3MProblems from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
 import * as TX21G3MProblems from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
 import * as TX19G3MProblems from "src/assets/problems/TX19G3M/TX19G3M-problems.json";
@@ -325,6 +325,9 @@ export class ProblemsComponent implements OnInit {
             if (choice == ch) {
               this.attempt_explanation = key.Key.Rationale;
               if (key.Key.Correct == true) {
+                if (this.mode == 'explain') {
+                  this.confetti_light();
+                }
                 if (this.problem_attempts == 1) {
                   this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
                 }
@@ -351,6 +354,9 @@ export class ProblemsComponent implements OnInit {
         if (this.problem_number == +num) {
           for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
             if (ch == key.Choice) {
+              if (this.mode == 'explain') {
+                this.confetti_light();
+              }
               this.attempt_explanation = key.Key.Rationale;
               if (this.problem_attempts == 1) {
                 this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
@@ -546,7 +552,6 @@ export class ProblemsComponent implements OnInit {
     // if (this.mode == 'explain') {
     //   this.resetExam();
     // }
-    // this.confetti_pop();
   }
 
   confetti_pop() {
@@ -590,7 +595,7 @@ export class ProblemsComponent implements OnInit {
       spread: 360,
       origin: { x: 0.75, y: 0.75 }
     });
-    if(this.screenWidth > this.mobileWidth) {
+    if (this.screenWidth > this.mobileWidth) {
       confettiHandler({
         shapes: ['star'],
         colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
@@ -604,6 +609,19 @@ export class ProblemsComponent implements OnInit {
         origin: { x: 0.5, y: 0 }
       });
     }
+  }
+
+  confetti_light() {
+    confettiHandler({
+      particleCount: Math.round(250 / this.problem_attempts),
+      startVelocity: 125,
+      scalar: 1.15,
+      ticks: 150,
+      decay: 0.8,
+      angle: 90,
+      spread: 60,
+      origin: { x: 0.5, y: 1 }
+    });
   }
 
   resetExam() {
@@ -625,11 +643,27 @@ export class ProblemsComponent implements OnInit {
   }
 
   scroll(el: HTMLElement) {
-    el.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(function () {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }, 250);
   }
 
   scroll2(el: HTMLElement) {
-    window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 80, behavior: 'smooth' });
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 120, behavior: 'smooth' });
+    }, 250);
+  }
+
+  scroll_top() {
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+    }, 250);
+  }
+
+  scroll_bottom() {
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
+    }, 250);
   }
 
   ngOnInit() {

@@ -1,7 +1,15 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import * as examMetadata from "src/assets/problems/exams.json"; 
+import * as examMetadata from "src/assets/problems/exams.json";
 import * as TestProblems from "src/assets/problems/TX18G3M/TX18G3M-problems.json";
 import { HttpClient } from '@angular/common/http';
+
+const confetti = require('canvas-confetti');
+
+const confettiCanvas = document.getElementById('confetticanvas');
+const confettiHandler = confetti.create(confettiCanvas, {
+  resize: true,
+  useWorker: true,
+});
 
 @Component({
   selector: 'app-test-exam',
@@ -115,11 +123,11 @@ export class TestExamComponent implements OnInit {
 
   generate_problems() {
     for (const [num, value] of Object.entries(this.test_exam_dump)) {
-        if (value.Number <= 32) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
-        }
+      if (value.Number <= 32) {
+        // this.exam_dump[this.dump_count] = value;
+        this.ordered_dump[this.dump_count] = value;
+        this.dump_count += 1;
+      }
     }
     this.randomize_problems(this.exam_length);
     this.toggle_filters();
@@ -185,6 +193,9 @@ export class TestExamComponent implements OnInit {
             if (choice == ch) {
               this.attempt_explanation = key.Key.Rationale;
               if (key.Key.Correct == true) {
+                if (this.mode == 'explain') {
+                  this.confetti_light();
+                }
                 if (this.problem_attempts == 1) {
                   this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
                 }
@@ -211,6 +222,9 @@ export class TestExamComponent implements OnInit {
         if (this.problem_number == +num) {
           for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
             if (ch == key.Choice) {
+              if (this.mode == 'explain') {
+                this.confetti_light();
+              }
               this.attempt_explanation = key.Key.Rationale;
               if (this.problem_attempts == 1) {
                 this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
@@ -393,6 +407,76 @@ export class TestExamComponent implements OnInit {
     }
   }
 
+  confetti_pop() {
+    confettiHandler({
+      particleCount: 750,
+      startVelocity: 100,
+      scalar: 1.15,
+      ticks: 300,
+      decay: 0.9,
+      angle: 90,
+      spread: 360,
+      origin: { x: 0.25, y: 0.25 }
+    });
+    confettiHandler({
+      particleCount: 1000,
+      startVelocity: 100,
+      scalar: 1.15,
+      ticks: 300,
+      decay: 0.9,
+      angle: 90,
+      spread: 360,
+      origin: { x: 0.25, y: 0.75 }
+    });
+    confettiHandler({
+      particleCount: 1000,
+      startVelocity: 100,
+      scalar: 1.15,
+      ticks: 300,
+      decay: 0.9,
+      angle: 90,
+      spread: 360,
+      origin: { x: 0.75, y: 0.25 }
+    });
+    confettiHandler({
+      particleCount: 1000,
+      startVelocity: 100,
+      scalar: 1.15,
+      ticks: 300,
+      decay: 0.9,
+      angle: 90,
+      spread: 360,
+      origin: { x: 0.75, y: 0.75 }
+    });
+    if (this.screenWidth > this.mobileWidth) {
+      confettiHandler({
+        shapes: ['star'],
+        colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+        particleCount: 100,
+        startVelocity: 250,
+        ticks: 200,
+        decay: 0.45,
+        scalar: 1.5,
+        angle: 270,
+        spread: 180,
+        origin: { x: 0.5, y: 0 }
+      });
+    }
+  }
+
+  confetti_light() {
+    confettiHandler({
+      particleCount: Math.round(250 / this.problem_attempts),
+      startVelocity: 125,
+      scalar: 1.15,
+      ticks: 150,
+      decay: 0.8,
+      angle: 90,
+      spread: 60,
+      origin: { x: 0.5, y: 1 }
+    });
+  }
+
   expandTopics() {
     this.expand_topics = !this.expand_topics;
   }
@@ -402,11 +486,27 @@ export class TestExamComponent implements OnInit {
   }
 
   scroll(el: HTMLElement) {
-    el.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(function () {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }, 250);
   }
 
   scroll2(el: HTMLElement) {
-    window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 80, behavior: 'smooth' });
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 120, behavior: 'smooth' });
+    }, 250);
+  }
+
+  scroll_top() {
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+    }, 250);
+  }
+
+  scroll_bottom() {
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
+    }, 250);
   }
 
   ngOnInit() {
