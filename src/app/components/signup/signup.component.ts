@@ -42,13 +42,13 @@ import { AuthService } from "../../shared/services/auth.service";
 //   };
 
 @Component({
-    selector: 'app-login',
-    templateUrl: './login.component.html',
-    styleUrls: ['./login.component.css']
+    selector: 'app-signup',
+    templateUrl: './signup.component.html',
+    styleUrls: ['./signup.component.css']
 })
 
 @Injectable()
-export class LoginComponent implements OnInit {
+export class SignupComponent implements OnInit {
     // title = 'More Problems';
     login_method = "";
 

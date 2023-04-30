@@ -463,12 +463,12 @@
 <div class="content" role="main" style="height: 100%; width: 100%; text-align: center">
     <div class="card card-large" style="border: 3px solid black; border-radius: 20px; display: block; min-width: 310px; max-width: 650px; width: 70%; max-height: 800px">
         <br />
-        <h1> Log In To MoreProblems.Org </h1>
+        <h1> Sign Up For MoreProblems.Org </h1>
         <br />
         <div class="displayTable" style="text-align: center; align-items: center; margin: auto">
             <div class="displayTableCell" style="text-align: center; align-items: center; margin: auto">
                 <br />
-                <h2 style="padding-bottom: 10px"> Choose Your Login Method </h2>
+                <h2 style="padding-bottom: 10px"> Choose Your Signup Method </h2>
                 <!-- <br /> -->
                 <div class="card-container" style="align-items: center">
                     <label class="switch">
@@ -510,14 +510,14 @@
                 <div *ngIf="login_method=='email'" class="authBlock">
                     <h2 style="padding-bottom: 10px"> Enter Your Login Info Below </h2>
                     <div class="formGroup">
-                        <input type="text" class="formControl" placeholder="Username (Email)" style="width: 95%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px" #userName required>
+                        <input type="email" class="formControl" placeholder="Email Address" style="width: 95%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px" #userEmail required>
                     </div>
                     <div class="formGroup">
                         <input type="password" class="formControl" placeholder="Password" style="width: 95%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px" #userPassword required>
                     </div>
                     <br />
                     <div class="formGroup">
-                        <button class="grade-button" (click)="authService.SignIn(userName.value, userPassword.value)" style="margin: auto"> <b>Log In</b> </button>
+                        <button class="grade-button" (click)="authService.SignUp(userEmail.value, userPassword.value)" style="margin: auto"> <b>Sign Up</b> </button>
                     </div>
                     <!-- <div class="forgotPassword">
                 <span routerLink="/forgot-password">Forgot Password?</span>
@@ -526,7 +526,7 @@
                 <br />
                 <br />
                 <div class="redirectToLogin">
-                    <p><span class="redirect" routerLink="/signup">Don't have an account? <b>Sign Up</b></span></p>
+                    <p><span class="redirect" routerLink="/login">Already have an account? <b>Log In</b></span></p>
                 </div>
             </div>
         </div>

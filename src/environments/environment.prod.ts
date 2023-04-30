@@ -1,13 +1,13 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: "AIzaSyCTWNr6p153EXISnahtbgQ6c_Z6HA1KwiQ",
-    authDomain: "moreproblems-2f951.firebaseapp.com",
-    projectId: "moreproblems-2f951",
-    storageBucket: "moreproblems-2f951.appspot.com",
-    messagingSenderId: "294573579077",
-    appId: "1:294573579077:web:ea4a7c91204c82f6783c2c",
-    measurementId: "G-0VJ25ZENFW"
+    apiKey: "AIzaSyCgAN_FjhgE4GecF7hCVQjWTokz7GnB6n0",
+    authDomain: "moreproblems-org.firebaseapp.com",
+    projectId: "moreproblems-org",
+    storageBucket: "moreproblems-org.appspot.com",
+    messagingSenderId: "335748101105",
+    appId: "1:335748101105:web:72336e9b737bfb09d4ca50",
+    measurementId: "G-Z9N60CFBFB"
   },
   apiUrl: 'http://moreproblems.org'
 };

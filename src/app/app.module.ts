@@ -5,15 +5,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 // import { FirebaseUIModule, firebase, firebaseui } from 'firebaseui-angular';
-// import { AngularFireModule } from '@angular/fire/compat';
-// import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import printJS from 'print-js';
-// import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-// import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-// import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from "src/environments/environment";
 // import * as fs from 'fs';
 
+import { AuthService } from "./shared/services/auth.service";
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +22,7 @@ import { ExamsComponent } from './components/exams/exams.component';
 import { ProblemsComponent } from './components/problems/problems.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { KMStandardsComponent } from './components/KM-standards/KM-standards.component';
@@ -81,6 +83,7 @@ import { TX19G5SKeyComponent } from './components/TX19G5S-key/TX19G5S-key.compon
     ProblemsComponent,
     AboutComponent,
     LoginComponent,
+    SignupComponent,
     ContactComponent,
     StandardsComponent,
     KMStandardsComponent,
@@ -131,18 +134,18 @@ import { TX19G5SKeyComponent } from './components/TX19G5S-key/TX19G5S-key.compon
     NgPipesModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    // AngularFireModule.initializeApp(environment.firebaseConfig),
-    // AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
     // FirebaseUIModule.forRoot(firebaseUiAuthConfig),
-    // AngularFirestoreModule,
-    // AngularFireStorageModule,
-    // AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     HttpClientModule,
     PdfViewerModule
     // printJS
     // fs
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
