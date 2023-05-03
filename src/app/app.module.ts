@@ -23,6 +23,7 @@ import { ProblemsComponent } from './components/problems/problems.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { KMStandardsComponent } from './components/KM-standards/KM-standards.component';
@@ -83,6 +84,7 @@ import { TX19G5SKeyComponent } from './components/TX19G5S-key/TX19G5S-key.compon
     ProblemsComponent,
     AboutComponent,
     LoginComponent,
+    ProfileComponent,
     SignupComponent,
     ContactComponent,
     StandardsComponent,

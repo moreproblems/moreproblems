@@ -6,13 +6,13 @@ import { getAuth, RecaptchaVerifier } from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css']
 })
 
 @Injectable()
-export class LoginComponent implements OnInit {
+export class ProfileComponent implements OnInit {
   // title = 'More Problems';
   user: any;
   windowRef: any;
@@ -21,15 +21,6 @@ export class LoginComponent implements OnInit {
 
   // constructor(private titleService: Title, private meta: Meta, public authService: AuthService, private win: WindowService, private afAuth: AngularFireAuth) { }
   constructor(private titleService: Title, private meta: Meta, public authService: AuthService, private afAuth: AngularFireAuth) { }
-
-  toggle_login_method(mthd: string) {
-    if (this.login_method != mthd) {
-      this.login_method = mthd;
-    }
-    else {
-      this.login_method = "";
-    }
-  }
 
   scroll_top() {
     setTimeout(function () {
@@ -55,29 +46,8 @@ export class LoginComponent implements OnInit {
     }, 250);
   }
 
-  sendLoginCode(phone: string) {
-    const appVerifier = this.windowRef.recaptchaVerifier;
-
-    this.afAuth
-      .signInWithPhoneNumber(phone, appVerifier)
-      .then(result => {
-        this.windowRef.confirmationResult = result;
-      })
-      .catch(error => console.log('error', error));
-  }
-
-  verifyLoginCode(code: string) {
-    this.windowRef.confirmationResult
-      .confirm(code)
-      .then((result: any) => {
-        this.user = result.user;
-        console.log(result);
-      })
-      .catch((error: any) => console.log(error, 'Incorrect code entered?'));
-  }
-
   ngOnInit() {
-    this.titleService.setTitle("Log In To MoreProblems.Org | U.S. K-12 State Testing Preparation");
+    this.titleService.setTitle("Your Profile On MoreProblems.Org | U.S. K-12 State Testing Preparation");
     // this.meta.updateTag({ name: 'description', content: "" });
     this.windowRef = this.win.windowRef;
     this.windowRef.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {

@@ -42,7 +42,7 @@
     gtag('config', 'UA-239963476-1');
   </script>
 
-<!-- <script type="module">
+  <!-- <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
@@ -80,10 +80,11 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
-    import { getAuth } from "firebase/auth";
+    import { getDatabase } from "firebase/database";
+    import { getAuth, RecaptchaVerifier } from "firebase/auth";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
-  
+
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
@@ -93,13 +94,23 @@
       storageBucket: "moreproblems-org.appspot.com",
       messagingSenderId: "335748101105",
       appId: "1:335748101105:web:72336e9b737bfb09d4ca50",
-      measurementId: "G-Z9N60CFBFB"
+      measurementId: "G-Z9N60CFBFB",
+      databaseURL: "https://moreproblems-org-default-rtdb.firebaseio.com"
     };
-  
+
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
+    const database = getDatabase(app);
     const auth = getAuth(app);
+
+    const recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
+      'size': 'invisible',
+      'callback': (response) => {
+        // reCAPTCHA solved, allow signInWithPhoneNumber.
+        onSignInSubmit();
+      }
+    }, auth);
   </script>
   <app-root style="width:100%; padding: 0px; margin: 0px"></app-root>
 </body>
