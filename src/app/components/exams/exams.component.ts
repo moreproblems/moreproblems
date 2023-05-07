@@ -1,6 +1,7 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { AuthService } from "../../shared/services/auth.service";
 import printJS from 'print-js';
 
 @Component({
@@ -10,7 +11,7 @@ import printJS from 'print-js';
 })
 
 @Injectable()
-export class ExamsComponent implements OnInit{
+export class ExamsComponent implements OnInit {
   // title = 'More Problems';
 
   screenWidth = window.innerWidth;
@@ -18,22 +19,25 @@ export class ExamsComponent implements OnInit{
   mobileWidth = 900;
   menuOpen = false;
 
+  // user_data: any = null;
+
   online_set = ['TX22G3M', 'TX21G3M', 'TX19G3M', 'TX18G3M', 'TX17G3M', 'TX21G5S', 'TX19G5S'];
-  // online_set: string[] = [];
+  favorite_set: string[] = [];
 
   selected_state = '';
   selected_grade = '';
- 
+
   exam_id = '';
   exam_name = '';
   exam_url = '';
+  exam_fav = false;
   file_source = '';
   file_page = 1;
 
-  viewerWidth = Math.round(window.innerWidth*.99).toString() + "px";
-  viewerHeight = Math.round(window.innerHeight*.95).toString() + "px";
-  
-  constructor(private router: Router, private titleService: Title, private meta: Meta) { }
+  viewerWidth = Math.round(window.innerWidth * .99).toString() + "px";
+  viewerHeight = Math.round(window.innerHeight * .95).toString() + "px";
+
+  constructor(private router: Router, private titleService: Title, private meta: Meta, public authService: AuthService) { }
 
   width_change2() {
     this.screenWidth = window.innerWidth;
@@ -71,7 +75,13 @@ export class ExamsComponent implements OnInit{
   select_exam(ex: string) {
     this.exam_id = ex;
     this.exam_url = '/exam/' + ex;
+    this.file_source = "./assets/exams/" + ex + ".pdf";
     this.file_page = 1;
+    for (let exm of this.authService.userData.exams.favorites) {
+      if (ex == exm) {
+        this.exam_fav = true;
+      }
+    }
     if (ex == 'COG3M') {
       this.exam_name = "Colorado CMAS Grade 3 Math Practice Exam";
     }
@@ -1329,8 +1339,40 @@ export class ExamsComponent implements OnInit{
     else if (ex == 'TX18G8SS') {
       this.exam_name = "Texas STAAR 2018 Grade 8 Social Studies Exam";
     }
-    this.file_source = "./assets/exams/" + ex + ".pdf"
+  }
 
+  toggle_favorite() {
+    this.favorite_set = [];
+    for (let exm of this.authService.userData.exams.favorites) {
+      this.favorite_set.push(exm as string);
+    }
+    if (this.favorite_set.includes(this.exam_id)) {
+      if (this.favorite_set.indexOf(this.exam_id) !== -1) {
+        this.favorite_set.splice(this.favorite_set.indexOf(this.exam_id), 1);
+      }
+      else {
+        this.favorite_set.pop()
+      }
+    }
+    else {
+      this.favorite_set.push(this.exam_id);
+    }
+    this.authService.UpdateUserData({'exams/favorites': {}});
+    this.authService.UpdateUserData({'exams/favorites': this.favorite_set});
+    this.exam_fav = !this.exam_fav;
+  }
+
+  assert_favorite() {
+    this.favorite_set = [];
+    for (let exm of this.authService.userData.exams.favorites) {
+      this.favorite_set.push(exm as string);
+    }
+    if (!this.favorite_set.includes(this.exam_id)) {
+      this.favorite_set.push(this.exam_id);
+    }
+    this.authService.UpdateUserData({'exams/favorites': {}});
+    this.authService.UpdateUserData({'exams/favorites': this.favorite_set});
+    this.exam_fav = true;
   }
 
   download_exam() {
@@ -1341,10 +1383,12 @@ export class ExamsComponent implements OnInit{
     document.body.appendChild(link);
     link.click();
     link.remove();
+    this.assert_favorite();
   }
 
   print_exam() {
-    printJS({printable: this.file_source, type:'pdf', showModal:true});
+    printJS({ printable: this.file_source, type: 'pdf', showModal: true });
+    this.assert_favorite();
   }
 
   take_exam() {
@@ -1352,11 +1396,11 @@ export class ExamsComponent implements OnInit{
   }
 
   prev_page() {
-    this.file_page = Math.max(1, this.file_page-1);
+    this.file_page = Math.max(1, this.file_page - 1);
   }
 
   next_page() {
-    this.file_page = this.file_page+1;
+    this.file_page = this.file_page + 1;
   }
 
   go_to_page(num: number) {
@@ -1364,31 +1408,35 @@ export class ExamsComponent implements OnInit{
   }
 
   width_change() {
-    this.viewerWidth = Math.round(window.innerWidth*.99).toString() + "px";
-    this.viewerHeight = Math.round(window.innerHeight*.95).toString() + "px";
+    this.viewerWidth = Math.round(window.innerWidth * .99).toString() + "px";
+    this.viewerHeight = Math.round(window.innerHeight * .95).toString() + "px";
+  }
+
+  data_reload() {
+    location.reload();
   }
 
   scroll_top() {
-    setTimeout(function(){
-      window.scrollTo({left: 0, top: 0, behavior: 'smooth'});
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
     }, 250);
   }
 
   scroll_bottom() {
-    setTimeout(function(){
-      window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: 'smooth'});
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
     }, 250);
   }
 
   scroll(el: HTMLElement) {
-    setTimeout(function(){
-      el.scrollIntoView({behavior: 'smooth'});
+    setTimeout(function () {
+      el.scrollIntoView({ behavior: 'smooth' });
     }, 250);
   }
-  
+
   scroll2(el: HTMLElement) {
-    setTimeout(function(){
-      window.scrollTo({left: 0, top: el.getBoundingClientRect().top-120, behavior: 'smooth'});
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 120, behavior: 'smooth' });
     }, 250);
   }
 

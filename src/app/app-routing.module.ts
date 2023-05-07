@@ -97,9 +97,9 @@ const routes: Routes = [
   { path: 'problems', component: ProblemsComponent },
   { path: 'about', component: AboutComponent },
   // { path: 'contact', component: ContactComponent },
-  // { path: 'login', component: LoginComponent },
-  // { path: 'signup', component: SignupComponent },
-  // { path: 'profile', component: ProfileComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'profile', component: ProfileComponent }
 ];
 
 @NgModule({

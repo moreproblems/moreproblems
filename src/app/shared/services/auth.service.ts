@@ -4,7 +4,7 @@ import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
-import { getDatabase, ref, set, update } from "firebase/database";
+import { getDatabase, ref, set, get, child, update } from "firebase/database";
 // import { UserService } from './user.service';
 // import { RecaptchaVerifier } from 'firebase/auth';
 import { WindowService } from './window.service';
@@ -35,7 +35,18 @@ export class AuthService {
     logged in and setting up null when logged out */
     this.afAuth.authState.subscribe((user) => {
       if (user) {
-        this.userData = user;
+        const db = getDatabase();
+        // this.userData = user;
+        get(child(ref(db), '/users/' + user.uid)).then((snapshot) => {
+          if (snapshot.exists()) {
+            console.log(snapshot.val());
+            this.userData = snapshot.val();
+          } else {
+            console.log("No data available");
+          }
+        }).catch((error) => {
+          console.error(error);
+        });
         localStorage.setItem('user', JSON.stringify(this.userData));
         JSON.parse(localStorage.getItem('user')!);
       } else {
@@ -79,15 +90,16 @@ export class AuthService {
   // }
 
   // Sign up with email/password
-  SignUp(email: string, password: string) {
+  SignUp(email: string, password: string, role: string) {
     return this.afAuth
       .createUserWithEmailAndPassword(email, password)
       .then((result) => {
         /* Call the SendVerificaitonMail() function when new user sign 
         up and returns promise */
         this.SendVerificationMail();
+        this.router.navigate(['profile']);
+        this.WriteUserData(result.user, role);
         this.SetUserData(result.user);
-        this.WriteUserData(result.user);
         // this.setUserLoggedIn(result.user);
       })
       .catch((error) => {
@@ -123,7 +135,7 @@ export class AuthService {
   }
 
   // Sign in with Google
-  GoogleAuth() {
+  GoogleAuthLogin() {
     return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
       this.router.navigate(['profile']);
     });
@@ -136,7 +148,29 @@ export class AuthService {
       .then((result) => {
         this.router.navigate(['profile']);
         this.SetUserData(result.user);
-        // this.WriteUserData(result.user);
+        // this.WriteUserData(result.user, role);
+        // this.setUserLoggedIn(result.user);
+      })
+      .catch((error) => {
+        window.alert(error);
+      });
+  }
+
+  // Sign in with Google
+  GoogleAuthSignup(role: string) {
+    return this.AuthSignup(new auth.GoogleAuthProvider(), role).then((res: any) => {
+      this.router.navigate(['profile']);
+    });
+  }
+
+  // Auth logic to run auth providers
+  AuthSignup(provider: any, role: string) {
+    return this.afAuth
+      .signInWithPopup(provider)
+      .then((result) => {
+        this.router.navigate(['profile']);
+        this.WriteUserData(result.user, role);
+        this.SetUserData(result.user);
         // this.setUserLoggedIn(result.user);
       })
       .catch((error) => {
@@ -148,35 +182,80 @@ export class AuthService {
   sign up with username/password and sign in with social auth  
   provider in Firestore database using AngularFirestore + AngularFirestoreDocument service */
   SetUserData(user: any) {
+    const db = getDatabase();
+    // const userRef = ref(db, '/users/' + user.uid)
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(
       `users/${user.uid}`
     );
-    const userData: User = {
+    const userDataFS: User = {
       uid: user.uid,
       email: user.email,
+      phoneNumber: user.phoneNumber,
+      // password: user.password,
       displayName: user.displayName,
       photoURL: user.photoURL,
       emailVerified: user.emailVerified,
     };
+    get(child(ref(db), '/users/' + user.uid)).then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        this.userData = snapshot.val();
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
     // this.WriteUserData(user);
-    return userRef.set(userData, {
+    return userRef.set(userDataFS, {
       merge: true,
     });
   }
 
-  WriteUserData(user: any) {
+  WriteUserData(user: any, role: string) {
     const db = getDatabase();
     const updates: any = {};
-    const userData: User = {
+    const updates2: any = {};
+    this.userData = {
       uid: user.uid,
+      role: role,
       email: user.email,
+      phoneNumber: user.phoneNumber,
+      // password: user.password,
       displayName: user.displayName,
       photoURL: user.photoURL,
       emailVerified: user.emailVerified,
+      // exams: {favorites: {}}
     };
-    updates['/users/' + user.uid] = userData;
+    updates['/users/' + user.uid] = this.userData;
     return update(ref(db), updates).catch(error => {
       console.log(error.message)
+    }).then((result) => {
+      updates2['/users/' + user.uid + '/role'] = role;
+      updates2['/users/' + user.uid + '/exams/favorites'] = [""];
+      update(ref(db), updates2);
+    });
+  }
+
+  UpdateUserData(changes: { [index: string]: any }) {
+    const db = getDatabase();
+    const updates: any = {};
+    for (let key in changes) {
+      updates['/users/' + this.userData.uid + '/'+ key] = changes[key];
+    }
+    return update(ref(db), updates).then(() => {
+      get(child(ref(db), '/users/' + this.userData.uid)).then((snapshot) => {
+        if (snapshot.exists()) {
+          console.log(snapshot.val());
+          this.userData = snapshot.val();
+        } else {
+          console.log("No data available");
+        }
+      }).catch((error) => {
+        console.error(error);
+      });
+    }).catch(error => {
+      console.log(error.message);
     });
   }
 
@@ -205,7 +284,11 @@ export class AuthService {
   SignOut() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
+      localStorage.clear();
       this.router.navigate(['login']);
+      setTimeout(function () {
+        location.reload();
+      }, 50);
     });
   }
 }

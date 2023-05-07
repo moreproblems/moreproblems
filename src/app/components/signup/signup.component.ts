@@ -2,6 +2,14 @@ import { Component, OnInit, Injectable, ElementRef, Renderer2 } from '@angular/c
 import { Meta, Title } from '@angular/platform-browser';
 import { AuthService } from "../../shared/services/auth.service";
 
+const confetti = require('canvas-confetti');
+
+const confettiCanvas = document.getElementById('confetticanvas');
+const confettiHandler = confetti.create(confettiCanvas, {
+  resize: true,
+  useWorker: true,
+});
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -12,10 +20,20 @@ import { AuthService } from "../../shared/services/auth.service";
 export class SignupComponent implements OnInit {
   // title = 'More Problems';
   login_method = "";
+  user_role = "";
 
   constructor(private titleService: Title, private meta: Meta, public authService: AuthService) { }
 
-  toggle_login_method(mthd: string) {
+  set_user_role(role: string) {
+    if (this.user_role != role) {
+      this.user_role = role;
+    }
+    else {
+      this.user_role = "";
+    }
+  }
+
+  set_login_method(mthd: string) {
     if (this.login_method != mthd) {
       this.login_method = mthd;
     }
@@ -46,6 +64,22 @@ export class SignupComponent implements OnInit {
     setTimeout(function () {
       window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 120, behavior: 'smooth' });
     }, 250);
+  }
+
+  confetti_light() {
+    setTimeout(function () {
+      confettiHandler({
+        particleCount: 200,
+        startVelocity: 125,
+        scalar: 1.15,
+        ticks: 150,
+        decay: 0.8,
+        angle: 90,
+        spread: 60,
+        origin: { x: 0.5, y: 1 }
+      });
+    }, 500);
+
   }
 
   ngOnInit() {

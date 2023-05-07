@@ -457,49 +457,352 @@
     }
 </style>
 
-<!-- Sidebar navigation -->
-<div class="container-fluid">
-    <div class="row">
-        <nav class="col-md-2 d-md-block bg-light sidebar">
-            <div class="sidebar-sticky">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active">
-                            <i class="fas fa-user"></i>User Profile
-                        </a>
-                    </li>
-                    <!-- Calling SignOut() Api from AuthService -->
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="authService.SignOut()">
-                            <i class="fas fa-sign-out-alt"></i>Log out
-                        </a>
-                    </li>
-                </ul>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+<div class="content" (window:resize)="width_change2()" role="main" style="height: 100%; width: 100%; text-align: center">
+    <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: left">
+        <div (click)="authService.SignOut()" class="card card-small"
+            style="height: 100%; width: 150px; border: none; background-color: white; display: flex; flex-direction: row; align-items: center; margin: auto 0px; padding-left: 20px">
+            <img src="./assets/icons/logout.png" style="padding: 5px; width: 25px; height: 25px; transform: scaleX(-1)">
+            <a style="font-size: 24px; font-weight: 600; padding-left: 10px"> Log Out </a>
+        </div>
+    </section>
+    <div class="card card-large"
+        style="border: 3px solid black; border-radius: 20px; display: block; min-width: 300px; max-width: 650px; width: 70%; max-height: 1200px">
+        <!-- <br /> -->
+        <div class="inner-adjust" *ngIf="authService.userData as user" style="padding-top: 10px">
+            <div class="pt-3 pb-2 mb-3 border-bottom">
+                <h1 *ngIf="this.screenWidth > this.mobileWidth" class="h2">Welcome to your profile, <strong>{{(user.displayName) ? user.displayName :
+                        'User'}}</strong>!</h1>
+                <h2 *ngIf="this.screenWidth <= this.mobileWidth" class="h3">Welcome to your profile, <strong>{{(user.displayName) ? user.displayName :
+                        'User'}}</strong>!</h2>
             </div>
-        </nav>
-        <!-- Main content -->
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-            <div class="inner-adjust">
-                <div class="pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">User Profile</h1>
-                </div>
-                <!-- Show user data when logged in -->
-                <div class="row" *ngIf="authService.userData as user">
-                    <div class="col-md-12">
-                        <div class="media">
-                            <img class="align-self-start mr-5 img-thumbnail rounded-circle"
-                                src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}"
-                                alt="{{user.displayName}}">
-                            <div class="media-body">
-                                <h1>Hello: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
-                                <p>User ID: <strong>{{user.uid}}</strong></p>
-                                <p>Email: <strong>{{user.email}}</strong></p>
-                                <p>Email Verified: <strong>{{user.emailVerified}}</strong></p>
+            <br />
+            <!-- Show user data when logged in -->
+            <div *ngIf="!edit" class="row">
+                <div class="col-md-12">
+                    <div class="media">
+                        <img class="align-self-start mr-5 img-thumbnail rounded-circle"
+                            style="height: 300px; width: 300px; border-radius: 50%"
+                            src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user.png'}}"
+                            alt="{{user.displayName}}">
+                        <div class="media-body">
+                            <br />
+                            <h4>Display Name: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h4>
+                            <!-- <p>User Role: <strong>{{user.role}}</strong></p> -->
+                            <h4>User ID: <strong>{{user.uid}}</strong></h4>
+                            <h4>Role: <strong>{{user.role}}</strong></h4>
+                            <h4>Email: <strong>{{user.email}}</strong></h4>
+                            <h4>Phone Number: <strong>{{user.phoneNumber}}</strong></h4>
+                            <!-- <p>Password: <strong>{{user.password}}</strong></p> -->
+                            <h4>Email Verified: <strong>{{user.emailVerified}}</strong></h4>
+                            <div *ngIf="user.role=='Student'">
+                                <br />
+                                <h4> Grade: <strong>{{user.grade}}</strong></h4>
+                                <h4> State: <strong>{{user.state}}</strong></h4>
+                            </div>
+                            <div *ngIf="user.role=='Teacher'">
+                                <br />
+                                <h4> Grade: <strong>{{user.grade}}</strong></h4>
+                                <h4> State: <strong>{{user.state}}</strong></h4>
+                                <h4> Subject: <strong>{{user.subject}}</strong></h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+            <div *ngIf="edit" class="row">
+                <div class="col-md-12">
+                    <div class="media">
+                        <img class="align-self-start mr-5 img-thumbnail rounded-circle"
+                            style="height: 300px; width: 300px; border-radius: 50%"
+                            src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user.png'}}"
+                            alt="{{user.displayName}}">
+                        <div class="media-body">
+                            <br />
+                            <section
+                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Display Name: </h4>
+                                <input (change)="edit_profile('displayName', this.userName.value)" type="text"
+                                    inputmode="text" value="{{(user.displayName) ? user.displayName : 'User'}}"
+                                    maxlength="40"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 250px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    #userName />
+                            </section>
+                            <!-- <p>User Role: <strong>{{user.role}}</strong></p> -->
+                            <section
+                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> PhotoURL: </h4>
+                                <input (change)="edit_profile('photoURL', this.userPhotoURL.value)" type="text"
+                                    inputmode="text" value="{{user.photoURL}}" maxlength="150"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 250px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    #userPhotoURL />
+                            </section>
+                            <section
+                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> User ID: </h4>
+                                <input type="text" inputmode="text" value="{{user.uid}}" maxlength="40"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 250px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    disabled #userId />
+                            </section>
+                            <!-- <section
+                                style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center; padding: 5px">
+                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Role: </h4>
+                                <input (change)="edit_profile('role', this.userRole.value)" type="text" inputmode="text"
+                                    value="{{user.role}}" maxlength="40"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 300px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    disabled #userRole />
+                            </section> -->
+                            <section
+                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Role: </h4>
+                                <select value="{{user.role}}" (change)="edit_profile('role', this.userRole.value)"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 265px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    disabled #userRole>
+                                    <option value="Teacher">Teacher</option>
+                                    <option value="Student">Student</option>
+                                    <option value="Parent">Parent</option>
+                                </select>
+                            </section>
+                            <section
+                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Email Address: </h4>
+                                <input (change)="edit_profile('email', this.userEmail.value)" type="text"
+                                    inputmode="email" value="{{user.email}}" maxlength="40"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 250px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    #userEmail />
+                            </section>
+                            <section
+                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Phone Number: </h4>
+                                <input (change)="edit_profile('phoneNumber', this.userPhone.value)" type="text"
+                                    inputmode="tel" value="{{user.phoneNumber}}" maxlength="40"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 250px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    #userPhone />
+                            </section>
+                            <!-- <p>Password: <strong>{{user.password}}</strong></p> -->
+                            <section
+                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Email Verified: </h4>
+                                <input type="text" inputmode="text" value="{{user.emailVerified}}" maxlength="40"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 250px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    disabled #userVerified />
+                            </section>
+                            <div *ngIf="user.role=='Student'">
+                                <br />
+                                <section
+                                    style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                    <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Grade: </h4>
+                                    <select value="{{user.grade}}"
+                                        (change)="edit_profile('grade', this.userGrade.value)"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 265px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        #userGrade>
+                                        <option value="Kindergarten">Kindergarten</option>
+                                        <option value="Grade 1">Grade 1</option>
+                                        <option value="Grade 2">Grade 2</option>
+                                        <option value="Grade 3">Grade 3</option>
+                                        <option value="Grade 4">Grade 4</option>
+                                        <option value="Grade 5">Grade 5</option>
+                                        <option value="Grade 6">Grade 6</option>
+                                        <option value="Grade 7">Grade 7</option>
+                                        <option value="Grade 8">Grade 8</option>
+                                        <option value="Grade 9">Grade 9</option>
+                                        <option value="Grade 10">Grade 10</option>
+                                        <option value="Grade 11">Grade 11</option>
+                                        <option value="Grade 12">Grade 12</option>
+                                    </select>
+                                </section>
+                                <section
+                                    style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                    <h4 style="margin: auto 5px auto 10px; font-size: 14px"> State: </h4>
+                                    <select value="{{user.state}}"
+                                        (change)="edit_profile('state', this.userState.value)"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 265px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        #userState>
+                                        <option value="Alabama">Alabama</option>
+                                        <option value="Alaska">Alaska</option>
+                                        <option value="Arizona">Arizona</option>
+                                        <option value="Arkansas">Arkansas</option>
+                                        <option value="California">California</option>
+                                        <option value="Colorado">Colorado</option>
+                                        <option value="Connecticut">Connecticut</option>
+                                        <option value="Delaware">Delaware</option>
+                                        <option value="Florida">Florida</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Hawaii">Hawaii</option>
+                                        <option value="Idaho">Idaho</option>
+                                        <option value="Illinois">Illinois</option>
+                                        <option value="Indiana">Indiana</option>
+                                        <option value="Iowa">Iowa</option>
+                                        <option value="Kansas">Kansas</option>
+                                        <option value="Kentucky">Kentucky</option>
+                                        <option value="Louisiana">Louisiana</option>
+                                        <option value="Maine">Maine</option>
+                                        <option value="Maryland">Maryland</option>
+                                        <option value="Massachusetts">Massachusetts</option>
+                                        <option value="Michigan">Michigan</option>
+                                        <option value="Minnesota">Minnesota</option>
+                                        <option value="Mississippi">Mississippi</option>
+                                        <option value="Missouri">Missouri</option>
+                                        <option value="Montana">Montana</option>
+                                        <option value="Nebraska">Nebraska</option>
+                                        <option value="Nevada">Nevada</option>
+                                        <option value="New Hampshire">New Hampshire</option>
+                                        <option value="New Jersey">New Jersey</option>
+                                        <option value="New Mexico">New Mexico</option>
+                                        <option value="New York">New York</option>
+                                        <option value="North Carolina">North Carolina</option>
+                                        <option value="North Dakota">North Dakota</option>
+                                        <option value="Ohio">Ohio</option>
+                                        <option value="Oklahoma">Oklahoma</option>
+                                        <option value="Oregon">Oregon</option>
+                                        <option value="Pennsylvania">Pennsylvania</option>
+                                        <option value="Rhode Island">Rhode Island</option>
+                                        <option value="South Carolina">South Carolina</option>
+                                        <option value="South Dakota">South Dakota</option>
+                                        <option value="Tennessee">Tennessee</option>
+                                        <option value="Texas">Texas</option>
+                                        <option value="Utah">Utah</option>
+                                        <option value="Vermont">Vermont</option>
+                                        <option value="Virginia">Virginia</option>
+                                        <option value="Washington">Washington</option>
+                                        <option value="West Virginia">West Virginia</option>
+                                        <option value="Wisconsin">Wisconsin</option>
+                                        <option value="Wyoming">Wyoming</option>
+                                    </select>
+                                </section>
+                            </div>
+                            <div *ngIf="user.role=='Teacher'">
+                                <br />
+                                <section
+                                    style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                    <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Grade: </h4>
+                                    <select value="{{user.grade}}"
+                                        (change)="edit_profile('grade', this.userGrade.value)"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 265px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        #userGrade>
+                                        <option value="Kindergarten">Kindergarten</option>
+                                        <option value="Grade 1">Grade 1</option>
+                                        <option value="Grade 2">Grade 2</option>
+                                        <option value="Grade 3">Grade 3</option>
+                                        <option value="Grade 4">Grade 4</option>
+                                        <option value="Grade 5">Grade 5</option>
+                                        <option value="Grade 6">Grade 6</option>
+                                        <option value="Grade 7">Grade 7</option>
+                                        <option value="Grade 8">Grade 8</option>
+                                        <option value="Grade 9">Grade 9</option>
+                                        <option value="Grade 10">Grade 10</option>
+                                        <option value="Grade 11">Grade 11</option>
+                                        <option value="Grade 12">Grade 12</option>
+                                    </select>
+                                </section>
+                                <section
+                                    style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                    <h4 style="margin: auto 5px auto 10px; font-size: 14px"> State: </h4>
+                                    <select value="{{user.state}}"
+                                        (change)="edit_profile('state', this.userState.value)"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 265px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        #userState>
+                                        <option value="Alabama">Alabama</option>
+                                        <option value="Alaska">Alaska</option>
+                                        <option value="Arizona">Arizona</option>
+                                        <option value="Arkansas">Arkansas</option>
+                                        <option value="California">California</option>
+                                        <option value="Colorado">Colorado</option>
+                                        <option value="Connecticut">Connecticut</option>
+                                        <option value="Delaware">Delaware</option>
+                                        <option value="Florida">Florida</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Hawaii">Hawaii</option>
+                                        <option value="Idaho">Idaho</option>
+                                        <option value="Illinois">Illinois</option>
+                                        <option value="Indiana">Indiana</option>
+                                        <option value="Iowa">Iowa</option>
+                                        <option value="Kansas">Kansas</option>
+                                        <option value="Kentucky">Kentucky</option>
+                                        <option value="Louisiana">Louisiana</option>
+                                        <option value="Maine">Maine</option>
+                                        <option value="Maryland">Maryland</option>
+                                        <option value="Massachusetts">Massachusetts</option>
+                                        <option value="Michigan">Michigan</option>
+                                        <option value="Minnesota">Minnesota</option>
+                                        <option value="Mississippi">Mississippi</option>
+                                        <option value="Missouri">Missouri</option>
+                                        <option value="Montana">Montana</option>
+                                        <option value="Nebraska">Nebraska</option>
+                                        <option value="Nevada">Nevada</option>
+                                        <option value="New Hampshire">New Hampshire</option>
+                                        <option value="New Jersey">New Jersey</option>
+                                        <option value="New Mexico">New Mexico</option>
+                                        <option value="New York">New York</option>
+                                        <option value="North Carolina">North Carolina</option>
+                                        <option value="North Dakota">North Dakota</option>
+                                        <option value="Ohio">Ohio</option>
+                                        <option value="Oklahoma">Oklahoma</option>
+                                        <option value="Oregon">Oregon</option>
+                                        <option value="Pennsylvania">Pennsylvania</option>
+                                        <option value="Rhode Island">Rhode Island</option>
+                                        <option value="South Carolina">South Carolina</option>
+                                        <option value="South Dakota">South Dakota</option>
+                                        <option value="Tennessee">Tennessee</option>
+                                        <option value="Texas">Texas</option>
+                                        <option value="Utah">Utah</option>
+                                        <option value="Vermont">Vermont</option>
+                                        <option value="Virginia">Virginia</option>
+                                        <option value="Washington">Washington</option>
+                                        <option value="West Virginia">West Virginia</option>
+                                        <option value="Wisconsin">Wisconsin</option>
+                                        <option value="Wyoming">Wyoming</option>
+                                    </select>
+                                </section>
+                                <section
+                                    style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                    <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Subject: </h4>
+                                    <select value="{{user.subject}}"
+                                        (change)="edit_profile('subject', this.userSubject.value)"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 265px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        #userSubject>
+                                        <option value="English Language">English Language</option>
+                                        <option value="Math">Math</option>
+                                        <option value="Reading">Reading</option>
+                                        <option value="Science">Science</option>
+                                        <option value="Writing">Writing</option>
+                                    </select>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <section *ngIf="!edit"
+            style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+            <button *ngIf="!edit && authService.userData as user" (click)="toggle_edit()" class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/edit.png" style="padding: 5px 0 0; height: 30px; width: 30px">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-size: 24px"><b> Edit Profile </b></div>
+            </button>
+        </section>
+        <section *ngIf="edit"
+            style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+            <button *ngIf="authService.userData as user" (click)="update_profile(); toggle_edit()"
+                class="grade-button" style="display: flex; flex-direction: row; align-items: center">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
+            </button>
+            <button *ngIf="authService.userData as user" (click)="toggle_edit()" class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
+            </button>
+        </section>
     </div>
 </div>

@@ -14,14 +14,43 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 @Injectable()
 export class ProfileComponent implements OnInit {
   // title = 'More Problems';
+
+  screenWidth = window.innerWidth;
+  screenHeight = window.innerHeight;
+  mobileWidth = 900;
+  menuOpen = false;
+
   user: any;
-  windowRef: any;
+  edit: boolean = false;
+  edit_list: { [index: string]: any } = {};
   login_method = "";
+  windowRef: any;
   win = new WindowService;
 
   // constructor(private titleService: Title, private meta: Meta, public authService: AuthService, private win: WindowService, private afAuth: AngularFireAuth) { }
   constructor(private titleService: Title, private meta: Meta, public authService: AuthService, private afAuth: AngularFireAuth) { }
 
+  width_change2() {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+  }
+  
+  toggle_edit() {
+    this.edit = !this.edit;
+  }
+
+  edit_profile(field: string, val: string) {
+    this.edit_list[field] = val;
+  }
+
+  update_profile() {
+    this.authService.UpdateUserData(this.edit_list).then(() => {
+      setTimeout(function () {
+        location.reload();
+      }, 50);
+    });
+  }
+  
   scroll_top() {
     setTimeout(function () {
       window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });

@@ -1,4 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
+import { AuthService } from "./shared/services/auth.service";
 import { Meta } from '@angular/platform-browser';
 
 
@@ -18,7 +19,7 @@ export class AppComponent{
   public mobileWidth = 900;
   public menuOpen = false;
   
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   width_change() {
     this.screenWidth = window.innerWidth;

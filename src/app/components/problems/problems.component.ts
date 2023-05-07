@@ -7,6 +7,7 @@ import * as TX18G3MProblems from "src/assets/problems/TX18G3M/TX18G3M-problems.j
 import * as TX17G3MProblems from "src/assets/problems/TX17G3M/TX17G3M-problems.json";
 import * as TX21G5SProblems from "src/assets/problems/TX21G5S/TX21G5S-problems.json";
 import * as TX19G5SProblems from "src/assets/problems/TX19G5S/TX19G5S-problems.json";
+import { AuthService } from "../../shared/services/auth.service";
 import { HttpClient } from '@angular/common/http';
 
 const confetti = require('canvas-confetti');
@@ -93,7 +94,7 @@ export class ProblemsComponent implements OnInit {
   correct_percent = 0;
   topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   // public onChange(file: File): void {
   //   let fileReader: FileReader = new FileReader();
@@ -549,6 +550,7 @@ export class ProblemsComponent implements OnInit {
         this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
       }
     }
+    this.authService.UpdateUserData({'problems': this.exam_submission});
     // if (this.mode == 'explain') {
     //   this.resetExam();
     // }
