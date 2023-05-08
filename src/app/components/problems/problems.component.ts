@@ -629,6 +629,7 @@ export class ProblemsComponent implements OnInit {
   resetExam() {
     this.problem_number = 0;
     this.expand_filters = true;
+    this.exam_dump = {};
     this.attempt_path = [];
     this.exam_submission = {};
     this.exam_submission_list = [];
