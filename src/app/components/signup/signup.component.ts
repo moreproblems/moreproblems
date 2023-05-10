@@ -1,6 +1,7 @@
 import { Component, OnInit, Injectable, ElementRef, Renderer2 } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { AuthService } from "../../shared/services/auth.service";
+import { Router } from '@angular/router';
 
 const confetti = require('canvas-confetti');
 
@@ -22,7 +23,7 @@ export class SignupComponent implements OnInit {
   login_method = "";
   user_role = "";
 
-  constructor(private titleService: Title, private meta: Meta, public authService: AuthService) { }
+  constructor(private titleService: Title, private meta: Meta, public authService: AuthService, public router: Router) { }
 
   set_user_role(role: string) {
     if (this.user_role != role) {
@@ -84,7 +85,11 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle("Sign Up For MoreProblems.Org | U.S. K-12 State Testing Preparation");
+    this.authService.AuthRoute();
     // this.meta.updateTag({ name: 'description', content: "" });
+    // if (this.authService.userData) {
+    //   this.router.navigate(['profile']);
+    // }
   }
 
 }

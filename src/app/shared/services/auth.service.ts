@@ -144,16 +144,29 @@ export class AuthService {
   // Auth logic to run auth providers
   AuthLogin(provider: any) {
     return this.afAuth
-      .signInWithPopup(provider)
-      .then((result) => {
-        this.router.navigate(['profile']);
-        this.SetUserData(result.user);
-        // this.WriteUserData(result.user, role);
-        // this.setUserLoggedIn(result.user);
+      .signInWithRedirect(provider)
+      .then(() => {
+        this.afAuth.getRedirectResult().then((result) => {
+          this.SetUserData(result.user);
+        });
+        // .signInWithPopup(provider)
+        // .then((result) => {
+        //   this.router.navigate(['profile']);
+        //   this.SetUserData(result.user);
+        //   this.WriteUserData(result.user, role);
+        //   this.setUserLoggedIn(result.user);
       })
       .catch((error) => {
         window.alert(error);
       });
+  }
+
+  AuthRoute() {
+    this.afAuth.onAuthStateChanged(user => {
+      if (user) {
+        this.router.navigate(['profile']);
+      }
+    });
   }
 
   // Sign in with Google
@@ -166,12 +179,17 @@ export class AuthService {
   // Auth logic to run auth providers
   AuthSignup(provider: any, role: string) {
     return this.afAuth
-      .signInWithPopup(provider)
-      .then((result) => {
-        this.router.navigate(['profile']);
-        this.WriteUserData(result.user, role);
-        this.SetUserData(result.user);
-        // this.setUserLoggedIn(result.user);
+      .signInWithRedirect(provider)
+      .then(() => {
+        this.afAuth.getRedirectResult().then((result) => {
+          this.SetUserData(result.user);
+        });
+        // .signInWithPopup(provider)
+        // .then((result) => {
+        //   this.router.navigate(['profile']);
+        //   this.WriteUserData(result.user, role);
+        //   this.SetUserData(result.user);
+        //   this.setUserLoggedIn(result.user);
       })
       .catch((error) => {
         window.alert(error);
@@ -241,7 +259,7 @@ export class AuthService {
     const db = getDatabase();
     const updates: any = {};
     for (let key in changes) {
-      updates['/users/' + this.userData.uid + '/'+ key] = changes[key];
+      updates['/users/' + this.userData.uid + '/' + key] = changes[key];
     }
     return update(ref(db), updates).then(() => {
       get(child(ref(db), '/users/' + this.userData.uid)).then((snapshot) => {

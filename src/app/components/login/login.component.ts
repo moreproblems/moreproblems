@@ -4,6 +4,7 @@ import { AuthService } from "../../shared/services/auth.service";
 import { WindowService } from '../../shared/services/window.service';
 import { getAuth, RecaptchaVerifier } from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
   win = new WindowService;
 
   // constructor(private titleService: Title, private meta: Meta, public authService: AuthService, private win: WindowService, private afAuth: AngularFireAuth) { }
-  constructor(private titleService: Title, private meta: Meta, public authService: AuthService, private afAuth: AngularFireAuth) { }
+  constructor(private titleService: Title, private meta: Meta, public authService: AuthService, public router: Router, private afAuth: AngularFireAuth) { }
 
   toggle_login_method(mthd: string) {
     if (this.login_method != mthd) {
@@ -79,6 +80,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle("Log In To MoreProblems.Org | U.S. K-12 State Testing Preparation");
     // this.meta.updateTag({ name: 'description', content: "" });
+    this.authService.AuthRoute();
     this.windowRef = this.win.windowRef;
     this.windowRef.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
       'size': 'invisible',
