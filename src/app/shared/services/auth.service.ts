@@ -144,17 +144,17 @@ export class AuthService {
   // Auth logic to run auth providers
   AuthLogin(provider: any) {
     return this.afAuth
-      .signInWithRedirect(provider)
-      .then(() => {
-        this.afAuth.getRedirectResult().then((result) => {
-          this.SetUserData(result.user);
-        });
-        // .signInWithPopup(provider)
-        // .then((result) => {
-        //   this.router.navigate(['profile']);
-        //   this.SetUserData(result.user);
-        //   this.WriteUserData(result.user, role);
-        //   this.setUserLoggedIn(result.user);
+      // .signInWithRedirect(provider)
+      // .then(() => {
+      //   this.afAuth.getRedirectResult().then((result) => {
+      //     this.SetUserData(result.user);
+      //   });
+      .signInWithPopup(provider)
+      .then((result) => {
+        this.router.navigate(['profile']);
+        this.SetUserData(result.user);
+        // this.WriteUserData(result.user, role);
+        // this.setUserLoggedIn(result.user);
       })
       .catch((error) => {
         window.alert(error);
@@ -179,17 +179,17 @@ export class AuthService {
   // Auth logic to run auth providers
   AuthSignup(provider: any, role: string) {
     return this.afAuth
-      .signInWithRedirect(provider)
-      .then(() => {
-        this.afAuth.getRedirectResult().then((result) => {
-          this.SetUserData(result.user);
-        });
-        // .signInWithPopup(provider)
-        // .then((result) => {
-        //   this.router.navigate(['profile']);
-        //   this.WriteUserData(result.user, role);
-        //   this.SetUserData(result.user);
-        //   this.setUserLoggedIn(result.user);
+      // .signInWithRedirect(provider)
+      // .then(() => {
+      //   this.afAuth.getRedirectResult().then((result) => {
+      //     this.SetUserData(result.user);
+      //   });
+      .signInWithPopup(provider)
+      .then((result) => {
+        this.router.navigate(['profile']);
+        this.WriteUserData(result.user, role);
+        this.SetUserData(result.user);
+        // this.setUserLoggedIn(result.user);
       })
       .catch((error) => {
         window.alert(error);
