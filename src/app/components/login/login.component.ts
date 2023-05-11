@@ -2,9 +2,19 @@ import { Component, OnInit, Injectable, ElementRef, Renderer2 } from '@angular/c
 import { Meta, Title } from '@angular/platform-browser';
 import { AuthService } from "../../shared/services/auth.service";
 import { WindowService } from '../../shared/services/window.service';
+import firebase from 'firebase/app';
+import * as auth from 'firebase/auth';
 import { getAuth, RecaptchaVerifier } from 'firebase/auth';
+import { getDatabase, ref, set, get, child, update } from "firebase/database";
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
+import { NgOtpInputModule } from  'ng-otp-input';
+
+// import {
+//   SearchCountryField,
+//   TooltipLabel,
+//   CountryISO
+// } from "ngx-intl-tel-input";
 
 @Component({
   selector: 'app-login',
@@ -16,9 +26,19 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   // title = 'More Problems';
   user: any;
+  otp: string = '';
+  verify: any
   windowRef: any;
   login_method = "";
   win = new WindowService;
+
+  // this.window.recaptchaVerifier = new this.afAuth.RecaptchaVerifier('sign-in-button', {
+  //   'size': 'invisible',
+  //   'callback': (response) => {
+  //     // reCAPTCHA solved, allow signInWithPhoneNumber.
+  //     onSignInSubmit();
+  //   }
+  // }, auth);
 
   // constructor(private titleService: Title, private meta: Meta, public authService: AuthService, private win: WindowService, private afAuth: AngularFireAuth) { }
   constructor(private titleService: Title, private meta: Meta, public authService: AuthService, public router: Router, private afAuth: AngularFireAuth) { }
@@ -57,14 +77,22 @@ export class LoginComponent implements OnInit {
   }
 
   sendLoginCode(phone: string) {
-    const appVerifier = this.windowRef.recaptchaVerifier;
-
+    // const appVerifier = this.windowRef.recaptchaVerifier;
+    // const num = `+${phone}`;
+    const appVerifier = new RecaptchaVerifier('sign-in-button', {
+      'size': 'invisible',
+      // 'callback': (response) => {
+      //   // reCAPTCHA solved, allow signInWithPhoneNumber.
+      //   // onSignInSubmit();
+      // }
+    }, getAuth());
     this.afAuth
       .signInWithPhoneNumber(phone, appVerifier)
       .then(result => {
         this.windowRef.confirmationResult = result;
+        console.log(result);
       })
-      .catch(error => console.log('error', error));
+      .catch((error: any) => window.alert(error.message));
   }
 
   verifyLoginCode(code: string) {
@@ -72,22 +100,44 @@ export class LoginComponent implements OnInit {
       .confirm(code)
       .then((result: any) => {
         this.user = result.user;
+        // check if user in database, write user data
+        this.authService.userData = this.user;
         console.log(result);
       })
       .catch((error: any) => console.log(error, 'Incorrect code entered?'));
+    // get(child(ref(getDatabase()), '/users/' + this.user.uid)).then((snapshot) => {
+    //   if (snapshot.exists()) {
+    //     console.log(snapshot.val());
+    //     this.authService.userData = snapshot.val();
+    //   } else {
+    //     console.log("No data available");
+    //     this.authService.WriteUserData(this.user, "");
+    //     this.authService.SetUserData(this.user);
+    //   }
+    // }).catch((error) => {
+    //   console.error(error);
+    // });
   }
+
+  onOtpChange(otpCode: any) {
+    this.otp = otpCode;
+  }
+
+  // handleClick() {
+  //   var credentials = auth.PhoneAuthProvider.credential(this.verify, this.otp);
+  //   this.afAuth.signInWithCredential(credentials)
+  //   .then((response: any) => {
+  //     console.log(response);
+  //   })
+  // }
 
   ngOnInit() {
     this.titleService.setTitle("Log In To MoreProblems.Org | U.S. K-12 State Testing Preparation");
     // this.meta.updateTag({ name: 'description', content: "" });
-    this.authService.AuthRoute();
+    setTimeout(() => {
+      this.authService.AuthRoute();
+      }, 250);
     this.windowRef = this.win.windowRef;
-    this.windowRef.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
-      'size': 'invisible',
-      // 'callback': (response) => {
-      //   // reCAPTCHA solved, allow signInWithPhoneNumber.
-      //   // onSignInSubmit();
-      // }
-    }, getAuth());
+    this.verify = JSON.parse(localStorage.getItem('verificationId') || '{}');
   }
 }

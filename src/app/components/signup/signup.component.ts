@@ -1,6 +1,10 @@
 import { Component, OnInit, Injectable, ElementRef, Renderer2 } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { AuthService } from "../../shared/services/auth.service";
+import { WindowService } from '../../shared/services/window.service';
+import { getAuth, RecaptchaVerifier } from 'firebase/auth';
+import { getDatabase, ref, set, get, child, update } from "firebase/database";
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 
 const confetti = require('canvas-confetti');
@@ -20,10 +24,15 @@ const confettiHandler = confetti.create(confettiCanvas, {
 @Injectable()
 export class SignupComponent implements OnInit {
   // title = 'More Problems';
+  user: any;
+  otp: string = '';
+  verify: any;
+  windowRef: any;
   login_method = "";
   user_role = "";
+  win = new WindowService;
 
-  constructor(private titleService: Title, private meta: Meta, public authService: AuthService, public router: Router) { }
+  constructor(private titleService: Title, private meta: Meta, public authService: AuthService, public router: Router, private afAuth: AngularFireAuth) { }
 
   set_user_role(role: string) {
     if (this.user_role != role) {
@@ -83,13 +92,62 @@ export class SignupComponent implements OnInit {
 
   }
 
+  sendLoginCode(phone: string) {
+    // const appVerifier = this.windowRef.recaptchaVerifier;
+    // const num = `+${phone}`;
+    const appVerifier = new RecaptchaVerifier('sign-in-button', {
+      'size': 'invisible',
+      // 'callback': (response) => {
+      //   // reCAPTCHA solved, allow signInWithPhoneNumber.
+      //   // onSignInSubmit();
+      // }
+    }, getAuth());
+    this.afAuth
+      .signInWithPhoneNumber(phone, appVerifier)
+      .then(result => {
+        this.windowRef.confirmationResult = result;
+        console.log(result);
+      })
+      .catch((error: any) => window.alert(error.message));
+  }
+
+  verifyLoginCode(code: string) {
+    this.windowRef.confirmationResult
+      .confirm(code)
+      .then((result: any) => {
+        this.user = result.user;
+        // check if user in database, write user data
+        this.authService.userData = this.user;
+        console.log(this.user);
+        console.log(result);
+      })
+      .catch((error: any) => console.log(error, 'Incorrect code entered?'));
+    // get(child(ref(getDatabase()), '/users/' + this.user.uid)).then((snapshot) => {
+    //   if (snapshot.exists()) {
+    //     console.log(snapshot.val());
+    //     this.authService.userData = snapshot.val();
+    //   } else {
+    //     console.log("No data available");
+    //     this.authService.WriteUserData(this.user, this.user_role);
+    //     this.authService.SetUserData(this.user);
+    //   }
+    // }).catch((error) => {
+    //   console.error(error);
+    // });
+  }
+
+  onOtpChange(otpCode: any) {
+    this.otp = otpCode;
+  }
+
   ngOnInit() {
     this.titleService.setTitle("Sign Up For MoreProblems.Org | U.S. K-12 State Testing Preparation");
-    this.authService.AuthRoute();
     // this.meta.updateTag({ name: 'description', content: "" });
-    // if (this.authService.userData) {
-    //   this.router.navigate(['profile']);
-    // }
+    setTimeout(() => {
+      this.authService.AuthRoute();
+      }, 250);
+    this.windowRef = this.win.windowRef;
+    this.verify = JSON.parse(localStorage.getItem('verificationId') || '{}');
   }
 
 }

@@ -6,7 +6,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat
 import { Router } from '@angular/router';
 import { getDatabase, ref, set, get, child, update } from "firebase/database";
 // import { UserService } from './user.service';
-// import { RecaptchaVerifier } from 'firebase/auth';
+import { RecaptchaVerifier } from 'firebase/auth';
 import { WindowService } from './window.service';
 
 @Injectable({
@@ -75,7 +75,7 @@ export class AuthService {
       });
   }
 
-  // Sign in with phone number
+  // // Sign in with phone number
   // SignInPhone(phone: string, win: WindowService) {
   //   return this.afAuth
   //     .signInWithPhoneNumber(phone, win.windowRef.recapthcaVerifier)
@@ -306,7 +306,7 @@ export class AuthService {
       this.router.navigate(['login']);
       setTimeout(function () {
         location.reload();
-      }, 50);
+      }, 100);
     });
   }
 }

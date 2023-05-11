@@ -11,6 +11,8 @@ import printJS from 'print-js';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+// import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+import { NgOtpInputModule } from  'ng-otp-input';
 import { environment } from "src/environments/environment";
 // import * as fs from 'fs';
 
@@ -18,6 +20,7 @@ import { AuthService } from "./shared/services/auth.service";
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
 import { ExamsComponent } from './components/exams/exams.component';
 import { ProblemsComponent } from './components/problems/problems.component';
 import { AboutComponent } from './components/about/about.component';
@@ -80,6 +83,7 @@ import { TX19G5SKeyComponent } from './components/TX19G5S-key/TX19G5S-key.compon
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     ExamsComponent,
     ProblemsComponent,
     AboutComponent,
@@ -143,7 +147,9 @@ import { TX19G5SKeyComponent } from './components/TX19G5S-key/TX19G5S-key.compon
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     HttpClientModule,
-    PdfViewerModule
+    PdfViewerModule,
+    NgOtpInputModule,
+		// NgxIntlTelInputModule
     // printJS
     // fs
   ],

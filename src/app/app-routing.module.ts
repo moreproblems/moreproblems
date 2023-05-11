@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ExamsComponent } from './components/exams/exams.component';
+import { HomeComponent } from './components/home/home.component';
 import { ProblemsComponent } from './components/problems/problems.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
@@ -52,6 +53,7 @@ import { HSMSPStandardsComponent } from './components/HSM-SP-standards/HSM-SP-st
 
 const routes: Routes = [
   { path: '', redirectTo: 'exams', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'exams', component: ExamsComponent },
   { path: 'exam/test', component: TestExamComponent },
   { path: 'exam/TX22G3M', component: TX22G3MExamComponent },

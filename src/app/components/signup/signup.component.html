@@ -462,7 +462,7 @@
 
 <div class="content" role="main" style="height: 100%; width: 100%; text-align: center">
   <div class="card card-large"
-    style="border: 3px solid black; border-radius: 20px; display: block; min-width: 310px; max-width: 650px; width: 70%; max-height: 800px">
+    style="border: 3px solid black; border-radius: 20px; display: block; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px">
     <br />
     <h1> Sign Up For MoreProblems.Org </h1>
     <br />
@@ -600,12 +600,9 @@
             <button class="grade-button" (click)="authService.SignUp(userEmail.value, userPassword.value, this.user_role); confetti_light()"
               style="margin: auto"> <b>Sign Up</b> </button>
           </div>
-          <!-- <div class="forgotPassword">
-                <span routerLink="/forgot-password">Forgot Password?</span>
-                </div> -->
         </div>
-        <div *ngIf="login_method=='phone'" class="authBlock">
-          <h2 style="padding-bottom: 10px"> Register Your Number Below </h2>
+        <!-- <div *ngIf="login_method=='phone'" class="authBlock">
+          <h2 style="padding-bottom: 10px"> Enter Your Number Below </h2>
           <div class="formGroup">
             <input type="tel" class="formControl" placeholder="Phone Number"
               style="width: 95%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
@@ -613,12 +610,22 @@
           </div>
           <br />
           <div class="formGroup">
-            <button class="grade-button" style="margin: auto"> <b>Sign Up</b> </button>
+            <button class="grade-button" (click)="sendLoginCode(userPhone.value)" style="margin: auto"> <b>Send Code</b>
+            </button>
           </div>
-          <!-- <div class="forgotPassword">
-              <span routerLink="/forgot-password">Forgot Password?</span>
-              </div> -->
         </div>
+        <br />
+        <div *ngIf="windowRef.confirmationResult">
+          <h2 style="padding-bottom: 10px"> Enter Your Code Below </h2>
+          <div class="formGroup">
+            <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:6, allowNumbersOnly: true, disableAutoFocus: false}" required></ng-otp-input>
+          </div>
+          <br />
+          <div class="formGroup">
+            <button class="grade-button" (click)="verifyLoginCode(this.otp)" style="margin: auto"> <b>Log In</b>
+            </button>
+          </div>
+        </div> -->
         <br />
         <br />
         <div class="redirectToLogin">
@@ -628,3 +635,4 @@
     </div>
   </div>
 </div>
+<div id="sign-in-button"></div>

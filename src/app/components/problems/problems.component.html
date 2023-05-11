@@ -725,7 +725,7 @@
           <div *ngFor="let prob of exam_dump | keyvalue">
             <div *ngIf="problem_number == +prob.key">
               <div *ngIf="prob.value.Type == 'FR'">
-                <div class="card card-small" style="min-height: 50px; width: 275px; max-height: 100px; padding: 10px">
+                <div class="card card-small" style="min-height: 50px; width: 275px; max-height: 100px; padding: 10px; margin: auto">
                   <input
                     style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
                     inputmode="numeric" #inputFR />
@@ -786,21 +786,21 @@
               </div>
               <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
                 (click)="next_problem(); scroll_top()"
-                style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
+                style="display: block; max-width: 150px; max-height: 100px; margin: auto">
                 <b> Next Problem </b>
               </button>
             </div>
             <div *ngIf="problem_number == +prob.key && problem_attempts > 0 && mode == 'assess'" [ngSwitch]="selection.value"
-              style="height: 75px; max-width: 90%; padding-top: 10px; margin: auto">
+              style="height: auto; min-height: 100px;  max-width: 90%; padding-top: 10px; margin: auto; align-items: center; display: inline-flex">
               <button class="grade-button" (click)="next_problem_a(problem_selection); scroll_top()"
-                style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
+                style="display: block; max-width: 150px; max-height: 100px; margin: auto">
                 <b> Next Problem </b>
               </button>
             </div>
             <div *ngIf="problem_number == +prob.key && problem_attempts == 0" class="card highlight-card card-small"
-              style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white; padding: 10px">
+              style="height: auto; min-height: 100px; max-width: 90%; padding-top: 10px; margin: auto; align-items: center; display: inline-flex; background-color: transparent">
               <button class="grade-button" (click)="next_problem(); scroll_top()"
-                style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
+                style="display: block; max-width: 150px; max-height: 100px; margin: auto">
                 <b> Skip Problem </b>
               </button>
             </div>
@@ -810,6 +810,7 @@
           <button class="grade-button" (click)="resetExam();"
             style="display: block; max-width: 150px; max-height: 150px; margin: auto">
             <b> Reset Test </b> </button>
+          <br />
           <!-- <div class="card card-small" style="height: auto; width: auto; max-width: 500px; padding: 10px; margin: auto">
                         <button *ngIf="sub_form == ''" (click)="sub_form = 'adult'" class="grade-button"> <b> Share Your Results With An Adult </b> </button>
                         <button *ngIf="sub_form == ''" (click)="sub_form = 'friend'" class="grade-button"> <b> Invite A Friend To Beat Your Results </b> </button>
