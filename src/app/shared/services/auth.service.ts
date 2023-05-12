@@ -16,6 +16,7 @@ import { WindowService } from './window.service';
 export class AuthService {
   // user: User;
   userData: any; // Save logged in user data
+  avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
   constructor(
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
@@ -245,12 +246,17 @@ export class AuthService {
       emailVerified: user.emailVerified,
       // exams: {favorites: {}}
     };
+    if (role == 'Student') {
+      const avatar = this.avatars[Math.floor(Math.random() * this.avatars.length)];
+      this.userData.photoURL = '/assets/icons/user/' + avatar + '.png';
+    }
     updates['/users/' + user.uid] = this.userData;
     return update(ref(db), updates).catch(error => {
       console.log(error.message)
     }).then((result) => {
       updates2['/users/' + user.uid + '/role'] = role;
       updates2['/users/' + user.uid + '/exams/favorites'] = [""];
+      // updates2['/users/' + user.uid + '/exams/history'] = {};
       update(ref(db), updates2);
     });
   }

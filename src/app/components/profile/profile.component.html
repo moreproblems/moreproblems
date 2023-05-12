@@ -301,6 +301,33 @@
         width: 100%;
     }
 
+    .select-avatar {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%)
+    }
+
+    .avatar-container:hover .select-avatar {
+        opacity: 0.3;
+    }
+
+    .avatar-container:hover .middle {
+        opacity: 1;
+    }
+
     .terminal {
         position: relative;
         /* width: 100%; */
@@ -460,7 +487,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
-<div class="content" (window:resize)="width_change2()" role="main" style="height: 100%; width: 100%; text-align: center">
+<div class="content" (window:resize)="width_change2()" role="main"
+    style="height: 100%; width: 100%; text-align: center">
     <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: left">
         <div (click)="authService.SignOut()" class="card card-small"
             style="height: 100%; width: 150px; border: none; background-color: white; display: flex; flex-direction: row; align-items: center; margin: auto 0px; padding-left: 20px">
@@ -473,9 +501,11 @@
         <!-- <br /> -->
         <div class="inner-adjust" *ngIf="authService.userData as user" style="padding-top: 10px">
             <div class="pt-3 pb-2 mb-3 border-bottom">
-                <h1 *ngIf="this.screenWidth > this.mobileWidth" class="h2">Welcome to your profile, <strong>{{(user.displayName) ? user.displayName :
+                <h1 *ngIf="this.screenWidth > this.mobileWidth" class="h2">Welcome to your profile,
+                    <strong>{{(user.displayName) ? user.displayName :
                         'User'}}</strong>!</h1>
-                <h2 *ngIf="this.screenWidth <= this.mobileWidth" class="h3">Welcome to your profile, <strong>{{(user.displayName) ? user.displayName :
+                <h2 *ngIf="this.screenWidth <= this.mobileWidth" class="h3">Welcome to your profile,
+                    <strong>{{(user.displayName) ? user.displayName :
                         'User'}}</strong>!</h2>
             </div>
             <br />
@@ -485,7 +515,7 @@
                     <div class="media">
                         <img class="align-self-start mr-5 img-thumbnail rounded-circle"
                             style="height: 300px; width: 300px; border-radius: 50%"
-                            src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user.png'}}"
+                            src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
                             alt="{{user.displayName}}">
                         <div class="media-body">
                             <br />
@@ -515,10 +545,23 @@
             <div *ngIf="edit" class="row">
                 <div class="col-md-12">
                     <div class="media">
-                        <img class="align-self-start mr-5 img-thumbnail rounded-circle"
+                        <img *ngIf="user.role != 'Student'" class="align-self-start mr-5 img-thumbnail rounded-circle"
                             style="height: 300px; width: 300px; border-radius: 50%"
-                            src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user.png'}}"
+                            src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
                             alt="{{user.displayName}}">
+                        <div *ngIf="user.role == 'Student'" class="card-container">
+                            <div *ngFor="let pic of this.avatars" (click)="edit_profile_pic(pic)" class="avatar-container"
+                                style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 5px">
+                                <img src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                    style="width:100%; height: 100%">
+                                <div class="middle">
+                                    <div class="text" style="color: white; background-color: #1976d2; border-radius: 10px">Select</div>
+                                </div>
+                            </div>
+                            <!-- <img *ngFor="let pic of this.avatars" class="select-avatar"
+                                style="height: 60px; width: 60px; border-radius: 50%; padding: 5px"
+                                src="{{'/assets/icons/user/' + pic + '.png'}}"> -->
+                        </div>
                         <div class="media-body">
                             <br />
                             <section
@@ -531,7 +574,7 @@
                                     #userName />
                             </section>
                             <!-- <p>User Role: <strong>{{user.role}}</strong></p> -->
-                            <section
+                            <section *ngIf="user.role != 'Student'"
                                 style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
                                 <h4 style="margin: auto 5px auto 10px; font-size: 14px"> PhotoURL: </h4>
                                 <input (change)="edit_profile('photoURL', this.userPhotoURL.value)" type="text"
@@ -789,8 +832,8 @@
         </section>
         <section *ngIf="edit"
             style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
-            <button *ngIf="authService.userData as user" (click)="update_profile(); toggle_edit()"
-                class="grade-button" style="display: flex; flex-direction: row; align-items: center">
+            <button *ngIf="authService.userData as user" (click)="update_profile(); toggle_edit()" class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: 0 5px">
                     <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>

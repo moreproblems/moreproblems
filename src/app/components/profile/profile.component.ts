@@ -21,6 +21,8 @@ export class ProfileComponent implements OnInit {
   mobileWidth = 900;
   menuOpen = false;
 
+  avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
+
   user: any;
   edit: boolean = false;
   edit_list: { [index: string]: any } = {};
@@ -38,10 +40,15 @@ export class ProfileComponent implements OnInit {
   
   toggle_edit() {
     this.edit = !this.edit;
+    this.edit_list = [];
   }
 
   edit_profile(field: string, val: string) {
     this.edit_list[field] = val;
+  }
+
+  edit_profile_pic(avatar: string) {
+    this.edit_list['photoURL'] = '/assets/icons/user/' + avatar + '.png';
   }
 
   update_profile() {
