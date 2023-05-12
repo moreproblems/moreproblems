@@ -22,6 +22,7 @@ export class ProfileComponent implements OnInit {
   menuOpen = false;
 
   avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
+  photoURL = "";
 
   user: any;
   edit: boolean = false;
@@ -41,6 +42,7 @@ export class ProfileComponent implements OnInit {
   toggle_edit() {
     this.edit = !this.edit;
     this.edit_list = [];
+    this.photoURL = this.authService.userData.photoURL;
   }
 
   edit_profile(field: string, val: string) {
@@ -48,14 +50,15 @@ export class ProfileComponent implements OnInit {
   }
 
   edit_profile_pic(avatar: string) {
-    this.edit_list['photoURL'] = '/assets/icons/user/' + avatar + '.png';
+    this.photoURL = '/assets/icons/user/' + avatar + '.png';
+    this.edit_list['photoURL'] = this.photoURL;
   }
 
   update_profile() {
     this.authService.UpdateUserData(this.edit_list).then(() => {
-      setTimeout(function () {
-        location.reload();
-      }, 50);
+      // setTimeout(function () {
+      //   location.reload();
+      // }, 50);
     });
   }
   

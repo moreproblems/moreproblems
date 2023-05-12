@@ -320,6 +320,17 @@
         -ms-transform: translate(-50%, -50%)
     }
 
+    .select-middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
     .avatar-container:hover .select-avatar {
         opacity: 0.3;
     }
@@ -503,10 +514,12 @@
             <div class="pt-3 pb-2 mb-3 border-bottom">
                 <h1 *ngIf="this.screenWidth > this.mobileWidth" class="h2">Welcome to your profile,
                     <strong>{{(user.displayName) ? user.displayName :
-                        'User'}}</strong>!</h1>
+                        'User'}}</strong>!
+                </h1>
                 <h2 *ngIf="this.screenWidth <= this.mobileWidth" class="h3">Welcome to your profile,
                     <strong>{{(user.displayName) ? user.displayName :
-                        'User'}}</strong>!</h2>
+                        'User'}}</strong>!
+                </h2>
             </div>
             <br />
             <!-- Show user data when logged in -->
@@ -519,24 +532,23 @@
                             alt="{{user.displayName}}">
                         <div class="media-body">
                             <br />
-                            <h4>Display Name: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h4>
+                            <h3>Display Name: <strong style="font-weight: 500">{{(user.displayName) ? user.displayName : 'User'}}</strong></h3>
                             <!-- <p>User Role: <strong>{{user.role}}</strong></p> -->
-                            <h4>User ID: <strong>{{user.uid}}</strong></h4>
-                            <h4>Role: <strong>{{user.role}}</strong></h4>
-                            <h4>Email: <strong>{{user.email}}</strong></h4>
-                            <h4>Phone Number: <strong>{{user.phoneNumber}}</strong></h4>
+                            <h3>User ID: <strong style="font-weight: 500">{{user.uid}}</strong></h3>
+                            <h3>Email: <strong style="font-weight: 500">{{user.email}}</strong></h3>
+                            <h3>Phone Number: <strong style="font-weight: 500">{{user.phoneNumber}}</strong></h3>
                             <!-- <p>Password: <strong>{{user.password}}</strong></p> -->
-                            <h4>Email Verified: <strong>{{user.emailVerified}}</strong></h4>
+                            <h3>Email Verified: <strong style="font-weight: 500">{{user.emailVerified}}</strong></h3>
+                            <br />
+                            <h3>Role: <strong style="font-weight: 500">{{user.role}}</strong></h3>
                             <div *ngIf="user.role=='Student'">
-                                <br />
-                                <h4> Grade: <strong>{{user.grade}}</strong></h4>
-                                <h4> State: <strong>{{user.state}}</strong></h4>
+                                <h3> Grade: <strong style="font-weight: 500">{{user.grade}}</strong></h3>
+                                <h3> State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
                             </div>
                             <div *ngIf="user.role=='Teacher'">
-                                <br />
-                                <h4> Grade: <strong>{{user.grade}}</strong></h4>
-                                <h4> State: <strong>{{user.state}}</strong></h4>
-                                <h4> Subject: <strong>{{user.subject}}</strong></h4>
+                                <h3> Grade: <strong style="font-weight: 500">{{user.grade}}</strong></h3>
+                                <h3> State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
+                                <h3> Subject: <strong style="font-weight: 500">{{user.subject}}</strong></h3>
                             </div>
                         </div>
                     </div>
@@ -550,12 +562,22 @@
                             src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
                             alt="{{user.displayName}}">
                         <div *ngIf="user.role == 'Student'" class="card-container">
-                            <div *ngFor="let pic of this.avatars" (click)="edit_profile_pic(pic)" class="avatar-container"
+                            <div *ngFor="let pic of this.avatars" (click)="edit_profile_pic(pic)"
+                                class="avatar-container"
                                 style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 5px">
-                                <img src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                <img *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
+                                    src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
                                     style="width:100%; height: 100%">
+                                <img *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
+                                    src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                    style="width:100%; height: 100%; opacity: 0.3">
                                 <div class="middle">
-                                    <div class="text" style="color: white; background-color: #1976d2; border-radius: 10px">Select</div>
+                                    <div *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'" style="color: white; background-color: #1976d2; border-radius: 10px">Select
+                                    </div>
+                                </div>
+                                <div *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
+                                    class="select-middle">
+                                    <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
                                 </div>
                             </div>
                             <!-- <img *ngFor="let pic of this.avatars" class="select-avatar"
@@ -566,80 +588,71 @@
                             <br />
                             <section
                                 style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Display Name: </h4>
+                                <h3> Display Name: </h3>
                                 <input (change)="edit_profile('displayName', this.userName.value)" type="text"
                                     inputmode="text" value="{{(user.displayName) ? user.displayName : 'User'}}"
                                     maxlength="40"
-                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 250px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                     #userName />
                             </section>
                             <!-- <p>User Role: <strong>{{user.role}}</strong></p> -->
                             <section *ngIf="user.role != 'Student'"
                                 style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> PhotoURL: </h4>
+                                <h3> PhotoURL: </h3>
                                 <input (change)="edit_profile('photoURL', this.userPhotoURL.value)" type="text"
                                     inputmode="text" value="{{user.photoURL}}" maxlength="150"
-                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 250px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                     #userPhotoURL />
                             </section>
-                            <section
-                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> User ID: </h4>
-                                <input type="text" inputmode="text" value="{{user.uid}}" maxlength="40"
-                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 250px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
-                                    disabled #userId />
-                            </section>
                             <!-- <section
-                                style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center; padding: 5px">
-                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Role: </h4>
-                                <input (change)="edit_profile('role', this.userRole.value)" type="text" inputmode="text"
-                                    value="{{user.role}}" maxlength="40"
-                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 300px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
-                                    disabled #userRole />
+                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                <h3> User ID: </h3>
+                                <input type="text" inputmode="text" value="{{user.uid}}" maxlength="40"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    disabled #userId />
                             </section> -->
                             <section
                                 style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Role: </h4>
+                                <h3> Email Address: </h3>
+                                <input (change)="edit_profile('email', this.userEmail.value)" type="text"
+                                    inputmode="email" value="{{user.email}}" maxlength="40"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    #userEmail />
+                            </section>
+                            <section
+                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                <h3> Phone Number: </h3>
+                                <input (change)="edit_profile('phoneNumber', this.userPhone.value)" type="text"
+                                    inputmode="tel" value="{{user.phoneNumber}}" maxlength="40"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    #userPhone />
+                            </section>
+                            <!-- <section
+                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                <h3> Email Verified: </h3>
+                                <input type="text" inputmode="text" value="{{user.emailVerified}}" maxlength="40"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    disabled #userVerified />
+                            </section> -->
+                            <br />
+                            <section
+                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                <h3> Role: </h3>
                                 <select value="{{user.role}}" (change)="edit_profile('role', this.userRole.value)"
-                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 265px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                     disabled #userRole>
                                     <option value="Teacher">Teacher</option>
                                     <option value="Student">Student</option>
                                     <option value="Parent">Parent</option>
                                 </select>
                             </section>
-                            <section
-                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Email Address: </h4>
-                                <input (change)="edit_profile('email', this.userEmail.value)" type="text"
-                                    inputmode="email" value="{{user.email}}" maxlength="40"
-                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 250px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
-                                    #userEmail />
-                            </section>
-                            <section
-                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Phone Number: </h4>
-                                <input (change)="edit_profile('phoneNumber', this.userPhone.value)" type="text"
-                                    inputmode="tel" value="{{user.phoneNumber}}" maxlength="40"
-                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 250px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
-                                    #userPhone />
-                            </section>
-                            <!-- <p>Password: <strong>{{user.password}}</strong></p> -->
-                            <section
-                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Email Verified: </h4>
-                                <input type="text" inputmode="text" value="{{user.emailVerified}}" maxlength="40"
-                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 250px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
-                                    disabled #userVerified />
-                            </section>
                             <div *ngIf="user.role=='Student'">
-                                <br />
                                 <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                    <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Grade: </h4>
+                                    <h3> Grade: </h3>
                                     <select value="{{user.grade}}"
                                         (change)="edit_profile('grade', this.userGrade.value)"
-                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 265px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                         #userGrade>
                                         <option value="Kindergarten">Kindergarten</option>
                                         <option value="Grade 1">Grade 1</option>
@@ -658,10 +671,10 @@
                                 </section>
                                 <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                    <h4 style="margin: auto 5px auto 10px; font-size: 14px"> State: </h4>
+                                    <h3> State: </h3>
                                     <select value="{{user.state}}"
                                         (change)="edit_profile('state', this.userState.value)"
-                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 265px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                         #userState>
                                         <option value="Alabama">Alabama</option>
                                         <option value="Alaska">Alaska</option>
@@ -717,13 +730,12 @@
                                 </section>
                             </div>
                             <div *ngIf="user.role=='Teacher'">
-                                <br />
                                 <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                    <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Grade: </h4>
+                                    <h3> Grade: </h3>
                                     <select value="{{user.grade}}"
                                         (change)="edit_profile('grade', this.userGrade.value)"
-                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 265px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                         #userGrade>
                                         <option value="Kindergarten">Kindergarten</option>
                                         <option value="Grade 1">Grade 1</option>
@@ -742,10 +754,10 @@
                                 </section>
                                 <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                    <h4 style="margin: auto 5px auto 10px; font-size: 14px"> State: </h4>
+                                    <h3> State: </h3>
                                     <select value="{{user.state}}"
                                         (change)="edit_profile('state', this.userState.value)"
-                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 265px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                         #userState>
                                         <option value="Alabama">Alabama</option>
                                         <option value="Alaska">Alaska</option>
@@ -801,10 +813,10 @@
                                 </section>
                                 <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                    <h4 style="margin: auto 5px auto 10px; font-size: 14px"> Subject: </h4>
+                                    <h3> Subject: </h3>
                                     <select value="{{user.subject}}"
                                         (change)="edit_profile('subject', this.userSubject.value)"
-                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 265px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                         #userSubject>
                                         <option value="English Language">English Language</option>
                                         <option value="Math">Math</option>
