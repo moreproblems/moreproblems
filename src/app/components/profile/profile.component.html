@@ -521,9 +521,46 @@
                         'User'}}</strong>!
                 </h2>
             </div>
-            <br />
+            <div *ngIf="!edit" class="card-container" style="align-items: center; margin-top: 25px; margin-bottom: 25px">
+                <label class="switch">
+                  <input type="checkbox" value="information">
+                  <button *ngIf="profile_tab != 'information'" (click)="set_tab('information')"
+                    class="toggle-button-off"
+                    style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
+                    <div style="margin: 0 5px">
+                      <img src="./assets/icons/info.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                    </div>
+                    <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Information </b></div>
+                  </button>
+                  <button *ngIf="profile_tab == 'information'" (click)="set_tab('information')" class="toggle-button-on"
+                    style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
+                    <div style="margin: 0 5px">
+                      <img src="./assets/icons/info.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                    </div>
+                    <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Information </b></div>
+                  </button>
+                </label>
+                <label class="switch">
+                    <input type="checkbox" value="achievements">
+                    <button *ngIf="profile_tab != 'achievements'" (click)="set_tab('achievements')"
+                      class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/icons/results.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Achievements </b></div>
+                    </button>
+                    <button *ngIf="profile_tab == 'achievements'" (click)="set_tab('achievements')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/icons/results.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Achievements </b></div>
+                    </button>
+                  </label>
+            </div>
             <!-- Show user data when logged in -->
-            <div *ngIf="!edit" class="row">
+            <div *ngIf="profile_tab == 'information' && !edit" class="row">
                 <div class="col-md-12">
                     <div class="media">
                         <img class="align-self-start mr-5 img-thumbnail rounded-circle"
@@ -554,14 +591,14 @@
                     </div>
                 </div>
             </div>
-            <div *ngIf="edit" class="row">
+            <div *ngIf="profile_tab == 'information' && edit" class="row">
                 <div class="col-md-12">
                     <div class="media">
                         <img *ngIf="user.role != 'Student'" class="align-self-start mr-5 img-thumbnail rounded-circle"
-                            style="height: 300px; width: 300px; border-radius: 50%"
+                            style="height: 300px; width: 300px; border-radius: 50%; margin-top: 25px; margin-bottom: 25px"
                             src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
                             alt="{{user.displayName}}">
-                        <div *ngIf="user.role == 'Student'" class="card-container">
+                        <div *ngIf="user.role == 'Student'" class="card-container" style="margin-top: 25px; margin-bottom: 25px">
                             <div *ngFor="let pic of this.avatars" (click)="edit_profile_pic(pic)"
                                 class="avatar-container"
                                 style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 5px">
@@ -585,7 +622,6 @@
                                 src="{{'/assets/icons/user/' + pic + '.png'}}"> -->
                         </div>
                         <div class="media-body">
-                            <br />
                             <section
                                 style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
                                 <h3> Display Name: </h3>
@@ -830,9 +866,20 @@
                     </div>
                 </div>
             </div>
+            <div *ngIf="profile_tab == 'achievements' && !edit" class="row">
+                <div class="col-md-12">
+                    <div class="media">
+                        <h3>Total Problems Attempted: <strong style="font-weight: 500">{{user.problems.total}}</strong></h3>
+                        <h3>Total Problems Correct: <strong style="font-weight: 500">{{user.problems.correct}}</strong></h3>
+                        <h3>Percentage Correct: <strong style="font-weight: 500">{{percent_correct}}%</strong></h3>
+                        <!-- <br />
+                        <h3>Total Exams Completed: <strong style="font-weight: 500">{{user.problems.total}}</strong></h3> -->
+                    </div>
+                </div>
+            </div>
         </div>
         <br />
-        <section *ngIf="!edit"
+        <section *ngIf="profile_tab == 'information' && !edit"
             style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
             <button *ngIf="!edit && authService.userData as user" (click)="toggle_edit()" class="grade-button"
                 style="display: flex; flex-direction: row; align-items: center">

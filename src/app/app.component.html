@@ -383,8 +383,8 @@
       </span>
     </div>
     <div class="spacer"></div>
-    <nav style="text-align: right" style="display: block">
-      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/about" routerLinkActive="active"> About </a>&nbsp;&nbsp;
+    <nav style="text-align: right; display: block">
+      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/about" routerLinkActive="active"> About Us </a>&nbsp;&nbsp;
       <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/exams" routerLinkActive="active"> Exams </a>&nbsp;&nbsp;
       <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/problems" routerLinkActive="active"> Problems </a>&nbsp;&nbsp;
       <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/standards" routerLinkActive="active"> Standards </a>&nbsp;&nbsp;
@@ -395,11 +395,15 @@
     <img *ngIf="this.screenWidth <= this.mobileWidth && authService.userData as user" src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}" routerLink="/profile" routerLinkActive="active" style="width: 30px; height: 30px; border-radius: 50%; margin: 0 10px 0 0">
   </div>
   <div *ngIf="this.menuOpen" style="width: 100%">
-    <nav style="text-align: center">
-      <a routerLink="/about" routerLinkActive="active" style="padding: 0 15px; font-size: 16px">About</a>&nbsp;&nbsp;
-      <a routerLink="/exams" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Exams </a>&nbsp;&nbsp;
-      <a routerLink="/problems" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Problems </a>&nbsp;
-      <a routerLink="/standards" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Standards </a>&nbsp;&nbsp;
+    <nav style="width: 100%; text-align: center; display: inline-flexbox">
+      <!-- <a routerLink="/about" routerLinkActive="active" style="padding: 0 10px; font-size: 16px; text-align: center"> <p style="width: 100px; margin: 0; padding: 0">About Us</p></a>&nbsp;&nbsp;
+      <a routerLink="/exams" routerLinkActive="active" style="padding: 0 10px; font-size: 16px; text-align: center"> <p style="width: 100px; margin: 0; padding: 0">Exams</p> </a>&nbsp;&nbsp;
+      <a routerLink="/problems" routerLinkActive="active" style="padding: 0 10px; font-size: 16px; text-align: center"> <p style="width: 100px; margin: 0; padding: 0">Problems</p> </a>&nbsp;
+      <a routerLink="/standards" routerLinkActive="active" style="padding: 0 10px; font-size: 16px; text-align: center"> <p style="width: 100px; margin: 0; padding: 0">Standards</p> </a>&nbsp;&nbsp; -->
+      <a routerLink="/about" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px"> About Us </a>&nbsp;
+      <a routerLink="/exams" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px"> Exams </a>&nbsp;
+      <a routerLink="/problems" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px"> Problems </a>&nbsp;
+      <a routerLink="/standards" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px"> Standards </a>&nbsp;
       <!-- <a routerLink="/contact" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Contact </a>&nbsp; -->
     </nav>
   </div>

@@ -1,4 +1,10 @@
 import { Component, OnInit, Injectable } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
+import { AuthService } from "../../shared/services/auth.service";
+import { WindowService } from '../../shared/services/window.service';
+import { getAuth, RecaptchaVerifier } from 'firebase/auth';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
 import * as examMetadata from "src/assets/problems/exams.json"; 
 import * as problemsData from "src/assets/problems/TX17G3M/TX17G3M-problems.json";
 // import * as fs from 'fs';
@@ -87,16 +93,9 @@ export class TX17G3MExamComponent implements OnInit {
     parent_select = false;
     teacher_select = false;
 
-    constructor() { }
+    db_updates: any = {};
 
-    // public onChange(file: File): void {
-    //   let fileReader: FileReader = new FileReader();
-    //   let self = this;
-    //   fileReader.onloadend = function(x) {
-    //     self.exam_data = fileReader.result;
-    //   }
-    //   fileReader.readAsText(file);
-    // }
+    constructor(public authService: AuthService, public router: Router, private afAuth: AngularFireAuth) { }
 
     width_change2() {
         this.screenWidth = window.innerWidth;
@@ -136,6 +135,12 @@ export class TX17G3MExamComponent implements OnInit {
     begin_exam() {
         if (this.random) {
             this.randomize_problems();
+        }
+        if (this.authService.userData) {
+            this.db_updates['exams/history/' + this.key] = {progress: 0, status: 'Started'};
+            this.db_updates['problems/all/' + this.key + '-' + ""+(this.problem_number+1) + '/status'] = 'Viewed';
+            this.authService.UpdateUserData(this.db_updates);
+            this.db_updates = {};
         }
         for (let num of Object.keys(this.exam_dump)) {
             this.exam_submission[+num] = {
@@ -245,6 +250,36 @@ export class TX17G3MExamComponent implements OnInit {
                 if (this.exam_submission[i].Correct != '✅') {
                     this.wrong_submission_list.push(this.exam_submission[i]);
                 }
+            }
+            if (this.authService.userData) {
+                this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
+                this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
+                if (this.attempt_response == 'Correct') {
+                    this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
+                }
+                this.db_updates['problems/all/' + this.key + '-' + ""+this.problem_number + '/status'] = this.attempt_response;
+                this.authService.UpdateUserData(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/'  + this.key + '-' + ""+this.problem_number] = this.exam_submission[this.problem_number];
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key] = this.exam_submission;
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+            }
+        }
+        else {
+            if (this.authService.userData) {
+                this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
+                this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
+                if (this.attempt_response == 'Correct') {
+                    this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
+                }
+                this.db_updates['problems/all/' + this.key + '-' + ""+this.problem_number + '/status'] = this.attempt_response;
+                this.db_updates['problems/all/' + this.key + '-' + ""+(this.problem_number+1) + '/status'] = 'Viewed';
+                this.authService.UpdateUserData(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/'  + this.key + '-' + ""+this.problem_number] = this.exam_submission[this.problem_number];
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
             }
         }
         this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);

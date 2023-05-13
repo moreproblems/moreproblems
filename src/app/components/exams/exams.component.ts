@@ -48,8 +48,10 @@ export class ExamsComponent implements OnInit {
 
   select_state(st: string) {
     this.favorite_set = [];
-    for (let exm of this.authService.userData.exams.favorites.slice(1)) {
-      this.favorite_set.push(exm as string);
+    if (this.authService.userData) {
+      for (let exm of this.authService.userData.exams.favorites.slice(1)) {
+        this.favorite_set.push(exm as string);
+      }
     }
     if (this.selected_state == st) {
       this.selected_state = '';

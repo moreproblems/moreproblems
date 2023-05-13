@@ -255,8 +255,13 @@ export class AuthService {
       console.log(error.message)
     }).then((result) => {
       updates2['/users/' + user.uid + '/role'] = role;
-      updates2['/users/' + user.uid + '/exams/favorites'] = [""];
-      // updates2['/users/' + user.uid + '/exams/history'] = {};
+      updates2['/users/' + user.uid + '/exams/favorites'] = ["test"];
+      if (role == 'Student') {
+        updates2['/users/' + user.uid + '/exams/history'] = {"test": {status: "", progress: 0, id: ""}};
+        updates2['/users/' + user.uid + '/problems/all'] = {"test": {status: "", id: ""}};
+        updates2['/users/' + user.uid + '/problems/total'] = 0;
+        updates2['/users/' + user.uid + '/problems/correct'] = 0;
+      }
       update(ref(db), updates2);
     });
   }
@@ -278,6 +283,18 @@ export class AuthService {
       }).catch((error) => {
         console.error(error);
       });
+    }).catch(error => {
+      console.log(error.message);
+    });
+  }
+
+  UpdateDatabase(changes: { [index: string]: any }) {
+    const db = getDatabase();
+    const updates: any = {};
+    for (let key in changes) {
+      updates[key] = changes[key];
+    }
+    return update(ref(db), updates).then(() => {
     }).catch(error => {
       console.log(error.message);
     });

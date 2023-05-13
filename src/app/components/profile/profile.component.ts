@@ -23,6 +23,8 @@ export class ProfileComponent implements OnInit {
 
   avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
   photoURL = "";
+  profile_tab = "information";
+  percent_correct = 0;
 
   user: any;
   edit: boolean = false;
@@ -37,6 +39,16 @@ export class ProfileComponent implements OnInit {
   width_change2() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+  }
+
+  set_tab(tb: string) {
+    this.profile_tab = tb;
+    if (this.authService.userData.problems.total == 0) {
+      this.percent_correct = 0;
+    }
+    else {
+      this.percent_correct = Math.round(10000*this.authService.userData.problems.correct/this.authService.userData.problems.total) / 100;
+    }
   }
   
   toggle_edit() {
