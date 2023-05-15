@@ -301,6 +301,58 @@
     width: 100%;
   }
 
+  progress {
+    border-radius: 10px;
+  }
+
+  progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background-color:lightgray;
+    border: 1px solid darkslategrey;
+  }
+
+  progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: limegreen;
+    /* border: 2px solid black; */
+  }
+
+  progress::-moz-progress-bar {
+    border-radius: 10px;
+  }
+
+  /* progress[value] {
+    background-color: lime;
+  }
+
+  progress[value]::-webkit-progress-bar {
+    background-color: lime;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background-color: lime;
+  }
+
+  progress[value]::-moz-progress-bar {
+    background-color: lime;
+  }
+
+  progress:not([value]) {
+    background-color: white;
+  }
+
+  progress:not([value])::-webkit-progress-bar {
+    background-color: white;
+  }
+
+  progress:not([value])::-webkit-progress-value {
+    background-color: white;
+  }
+
+  progress:not([value])::-moz-progress-bar {
+    background-color: white;
+  } */
+
   .terminal {
     position: relative;
     /* width: 100%; */
@@ -526,9 +578,21 @@
   </div>
 </div>
 <div *ngIf="file_source == ''" class="content" role="main">
-  <!-- <br /> -->
-  <!-- Exam Selector -->
-  <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+  <div *ngIf="this.authService.userData.role == 'Student'" class="subcontent">
+    <h2 #favoriteExams>Your In Progress Exams</h2>
+    <br />
+    <!-- <input type="hidden" #selection> -->
+    <div class="card-container">
+      <div *ngFor="let exm of this.inprogress_set" class="card card-medium" style="display: block; text-align: center">
+        <h3> {{exam_names[exm]}} </h3>
+        <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm]}} / 32 </h4>
+        <progress value="{{inprogress_exams[exm]}}" max="32"
+          style="height: 20px; width: 80%; border-radius: 15px; margin: auto; margin-top: 10px" #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+        <button class="grade-button" style="margin: auto; margin-top: 25px; padding: 10px 5px" routerLink="/exam/{{exm}}" routerLinkActive="active"> <b>Resume Exam</b> </button>
+      </div>
+    </div>
+  </div>
+  <div class="subcontent" role="main">
     <h2 #favoriteExams>Your Favorited Exams</h2>
     <br />
     <input type="hidden" #selection>
@@ -538,7 +602,7 @@
         style="display: flex; flex-direction: row; align-items: center">
         <span (click)="toggle_favorite()"
           style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
-        <span> <b>{{this.exam_names[fav]}}</b> </span>
+        <span> <b>{{exam_names[fav]}}</b> </span>
       </button>
     </div>
     <br />

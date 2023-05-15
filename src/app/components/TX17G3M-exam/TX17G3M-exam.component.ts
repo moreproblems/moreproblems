@@ -136,7 +136,7 @@ export class TX17G3MExamComponent implements OnInit {
         if (this.random) {
             this.randomize_problems();
         }
-        if (this.authService.userData) {
+        if (this.authService.userData && this.authService.userData.role == 'Student') {
             this.db_updates['exams/history/' + this.key] = {progress: 0, status: 'Started'};
             this.db_updates['problems/all/' + this.key + '-' + ""+(this.problem_number+1) + '/status'] = 'Viewed';
             this.authService.UpdateUserData(this.db_updates);
@@ -251,7 +251,7 @@ export class TX17G3MExamComponent implements OnInit {
                     this.wrong_submission_list.push(this.exam_submission[i]);
                 }
             }
-            if (this.authService.userData) {
+            if (this.authService.userData && this.authService.userData.role == 'Student') {
                 this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
                 this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
                 if (this.attempt_response == 'Correct') {
@@ -267,7 +267,7 @@ export class TX17G3MExamComponent implements OnInit {
             }
         }
         else {
-            if (this.authService.userData) {
+            if (this.authService.userData && this.authService.userData.role == 'Student') {
                 this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
                 this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
                 if (this.attempt_response == 'Correct') {
@@ -296,6 +296,11 @@ export class TX17G3MExamComponent implements OnInit {
 
     completeExam() {
         this.toggleExamTimer();
+        if (this.authService.userData && this.authService.userData.role == 'Student') {
+            this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';
+            this.authService.UpdateUserData(this.db_updates);
+            this.db_updates = {};
+        }
         this.confetti_pop();
         for (let i: number = 0; i < this.exam_length; i++) {
             if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topic)) {

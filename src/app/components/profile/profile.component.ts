@@ -25,6 +25,7 @@ export class ProfileComponent implements OnInit {
   photoURL = "";
   profile_tab = "information";
   percent_correct = 0;
+  complete_exam_count = 0;
 
   user: any;
   edit: boolean = false;
@@ -48,6 +49,14 @@ export class ProfileComponent implements OnInit {
     }
     else {
       this.percent_correct = Math.round(10000*this.authService.userData.problems.correct/this.authService.userData.problems.total) / 100;
+    }
+    this.complete_exam_count = 0;
+    // const exam_history = this.authService.getExamHistory();
+    const exam_history = this.authService.userData.exams.history;
+    for (const [key, det] of Object.entries(exam_history)) {
+      if ((det as any).status == "Completed") {
+        this.complete_exam_count = this.complete_exam_count + 1;
+      }
     }
   }
   

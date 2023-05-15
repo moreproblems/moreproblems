@@ -4,7 +4,7 @@ import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
-import { getDatabase, ref, set, get, child, update } from "firebase/database";
+import { getDatabase, ref, set, get, child, update, query, equalTo } from "firebase/database";
 // import { UserService } from './user.service';
 import { RecaptchaVerifier } from 'firebase/auth';
 import { WindowService } from './window.service';
@@ -16,6 +16,7 @@ import { WindowService } from './window.service';
 export class AuthService {
   // user: User;
   userData: any; // Save logged in user data
+  exam_history: any;
   avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
   constructor(
     public afs: AngularFirestore, // Inject Firestore service
@@ -257,8 +258,8 @@ export class AuthService {
       updates2['/users/' + user.uid + '/role'] = role;
       updates2['/users/' + user.uid + '/exams/favorites'] = ["test"];
       if (role == 'Student') {
-        updates2['/users/' + user.uid + '/exams/history'] = {"test": {status: "", progress: 0, id: ""}};
-        updates2['/users/' + user.uid + '/problems/all'] = {"test": {status: "", id: ""}};
+        updates2['/users/' + user.uid + '/exams/history'] = { "test": { status: "", progress: 0} };
+        updates2['/users/' + user.uid + '/problems/all'] = { "test": { status: ""} };
         updates2['/users/' + user.uid + '/problems/total'] = 0;
         updates2['/users/' + user.uid + '/problems/correct'] = 0;
       }
@@ -315,6 +316,24 @@ export class AuthService {
       JSON.parse(localStorage.getItem('user') || '{}');
     }
   }
+
+  // getExamHistory() {
+  //   const db = getDatabase();
+  //   const exam_completed_count = 0;
+  //   // const exam_history = query(ref(db, "users/" + this.userData.uid + "/exams/history"), equalTo("status", "Completed"));
+  //   // const exam_history: any = {};
+  //   get(child(ref(db), "users/" + this.userData.uid + "/exams/history")).then((snapshot) => {
+  //     if (snapshot.exists()) {
+  //       console.log(snapshot.val());
+  //       this.exam_history = snapshot.val();
+  //     } else {
+  //       console.log("No data available");
+  //     }
+  //   }).catch((error) => {
+  //     console.error(error);
+  //   });
+  //   return this.exam_history;
+  // }
 
   // Optional: clear localStorage
   clearLocalStorage() {
