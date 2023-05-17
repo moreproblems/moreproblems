@@ -5,7 +5,7 @@ import { WindowService } from '../../shared/services/window.service';
 import { getAuth, RecaptchaVerifier } from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-import * as examMetadata from "src/assets/problems/exams.json"; 
+import * as examMetadata from "src/assets/problems/exams.json";
 import * as problemsData from "src/assets/problems/TX17G3M/TX17G3M-problems.json";
 // import * as fs from 'fs';
 // import * as path from 'path';
@@ -20,8 +20,8 @@ const confetti = require('canvas-confetti');
 
 const confettiCanvas = document.getElementById('confetticanvas');
 const confettiHandler = confetti.create(confettiCanvas, {
-  resize: true,
-  useWorker: true,
+    resize: true,
+    useWorker: true,
 });
 
 @Component({
@@ -37,6 +37,9 @@ export class TX17G3MExamComponent implements OnInit {
     screenWidth = window.innerWidth;
     mobileWidth = 900;
 
+    exam_inprogress = false;
+    progress_number = 0;
+
     et_counter: number = 0;
     et_minutes: number = 0;
     et_timer: any;
@@ -51,7 +54,7 @@ export class TX17G3MExamComponent implements OnInit {
 
     key = 'TX17G3M'
     exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
-  
+
     exam_state = this.exam_attribute_dump[this.key].State;
     exam_grade = this.exam_attribute_dump[this.key].Grade;
     exam_subject = this.exam_attribute_dump[this.key].Subject;
@@ -132,13 +135,46 @@ export class TX17G3MExamComponent implements OnInit {
         }
     }
 
+    resume_exam() {
+        for (let num of Object.keys(this.exam_dump)) {
+            this.exam_submission[+num] = {
+                'Number': 0,
+                'Topic': '',
+                'SubTopic': '',
+                'Choice': '',
+                'Correct': '',
+                'Rationale': '',
+                'Attempts': 0,
+                'Path': [],
+                'Seconds': 0,
+                'Time': ''
+            };
+        }
+        if (this.authService.userData) {
+            const exam_history = this.authService.userData.exams.history;
+            for (const [key, det] of Object.entries(exam_history)) {
+                if ((det as any).status == "Started" && key == this.key) {
+                    this.exam_inprogress = true;
+                    this.progress_number = (det as any).progress + 1;
+                    const db_submission = this.authService.getExamSubmission(this.key).problems;
+                    for (const [key2, det2] of Object.entries(db_submission)) {
+                        this.exam_submission[+key2] = (det2 as any);
+                    }
+                }
+            }
+        }
+        this.toggleExamTimer();
+        this.toggleProblemTimer();
+        this.problem_number = this.progress_number;
+    }
+
     begin_exam() {
         if (this.random) {
             this.randomize_problems();
         }
         if (this.authService.userData) {
-            this.db_updates['exams/history/' + this.key] = {progress: 0, status: 'Started'};
-            this.db_updates['problems/all/' + this.key + '-' + ""+(this.problem_number+1) + '/status'] = 'Viewed';
+            this.db_updates['exams/history/' + this.key] = { progress: 0, status: 'Started' };
+            this.db_updates['problems/all/' + this.key + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
             this.authService.UpdateUserData(this.db_updates);
             this.db_updates = {};
         }
@@ -221,7 +257,7 @@ export class TX17G3MExamComponent implements OnInit {
                             if (choice == ch) {
                                 if (key.Key.Correct == true) {
                                     sub.Correct = '✅';
-                                    this.number_correct += 1;
+                                    // this.number_correct += 1;
                                 }
                                 else {
                                     sub.Correct = this.exam_key[this.problem_number - 1];
@@ -231,7 +267,7 @@ export class TX17G3MExamComponent implements OnInit {
                             else if (prob.Type == 'FR') {
                                 if (choice == key.Choice) {
                                     sub.Correct = '✅';
-                                    this.number_correct += 1;
+                                    // this.number_correct += 1;
                                     sub.Rationale = key.Key.Rationale;
                                 }
                                 else {
@@ -250,17 +286,22 @@ export class TX17G3MExamComponent implements OnInit {
                 if (this.exam_submission[i].Correct != '✅') {
                     this.wrong_submission_list.push(this.exam_submission[i]);
                 }
+                else {
+                    this.number_correct += 1;
+                }
             }
+            this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
             if (this.authService.userData) {
                 this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
                 this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
                 if (this.attempt_response == 'Correct') {
                     this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
                 }
-                this.db_updates['problems/all/' + this.key + '-' + ""+this.problem_number + '/status'] = this.attempt_response;
+                this.db_updates['problems/all/' + this.key + '-' + "" + this.problem_number + '/status'] = this.attempt_response;
                 this.authService.UpdateUserData(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/'  + this.key + '-' + ""+this.problem_number] = this.exam_submission[this.problem_number];
+                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.problem_number] = this.exam_submission[this.problem_number];
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/problems/' + "" + this.problem_number] = this.exam_submission[this.problem_number];
                 // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key] = this.exam_submission;
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
@@ -273,16 +314,16 @@ export class TX17G3MExamComponent implements OnInit {
                 if (this.attempt_response == 'Correct') {
                     this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
                 }
-                this.db_updates['problems/all/' + this.key + '-' + ""+this.problem_number + '/status'] = this.attempt_response;
-                this.db_updates['problems/all/' + this.key + '-' + ""+(this.problem_number+1) + '/status'] = 'Viewed';
+                this.db_updates['problems/all/' + this.key + '-' + "" + this.problem_number + '/status'] = this.attempt_response;
+                this.db_updates['problems/all/' + this.key + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
                 this.authService.UpdateUserData(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/'  + this.key + '-' + ""+this.problem_number] = this.exam_submission[this.problem_number];
+                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.problem_number] = this.exam_submission[this.problem_number];
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/problems/' + "" + this.problem_number] = this.exam_submission[this.problem_number];
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
             }
         }
-        this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
         this.problem_number += 1;
         this.problem_selection = '';
         this.problem_attempts = 0;
@@ -295,6 +336,7 @@ export class TX17G3MExamComponent implements OnInit {
     }
 
     completeExam() {
+        // retreive db sub/exam/problems if auth student, to calculate results & set db sub/exam/...
         this.toggleExamTimer();
         this.confetti_pop();
         for (let i: number = 0; i < this.exam_length; i++) {
@@ -357,18 +399,13 @@ export class TX17G3MExamComponent implements OnInit {
             this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';
             this.authService.UpdateUserData(this.db_updates);
             this.db_updates = {};
-            // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/all-probs'] = {};
-            // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/wrong-probs'] = {};
-            // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/topics'] = {};
-            // this.authService.UpdateDatabase(this.db_updates);
-            // this.db_updates = {};
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/problems'] = this.exam_submission;
+            // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/problems'] = this.exam_submission;
             // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/topics'] = this.topic_breakdown;
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/total'] = this.exam_length;
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/correct'] = this.number_correct;
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/score'] = this.correct_percent;
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/level'] = this.performance_level;
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/time'] = ""+this.et_minutes + 'm ' + ""+(this.et_counter%60) + 's';
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/total'] = this.exam_length;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/correct'] = this.number_correct;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/score'] = this.correct_percent;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/level'] = this.performance_level;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/time'] = "" + this.et_minutes + 'm ' + "" + (this.et_counter % 60) + 's';
             this.authService.UpdateDatabase(this.db_updates);
             this.db_updates = {};
         }
@@ -376,58 +413,58 @@ export class TX17G3MExamComponent implements OnInit {
 
     confetti_pop() {
         confettiHandler({
-          particleCount: 750,
-          startVelocity: 100,
-          scalar: 1.15,
-          ticks: 300,
-          decay: 0.9,
-          angle: 90,
-          spread: 360,
-          origin: { x: 0.25, y: 0.25 }
+            particleCount: 750,
+            startVelocity: 100,
+            scalar: 1.15,
+            ticks: 300,
+            decay: 0.9,
+            angle: 90,
+            spread: 360,
+            origin: { x: 0.25, y: 0.25 }
         });
         confettiHandler({
-          particleCount: 1000,
-          startVelocity: 100,
-          scalar: 1.15,
-          ticks: 300,
-          decay: 0.9,
-          angle: 90,
-          spread: 360,
-          origin: { x: 0.25, y: 0.75 }
+            particleCount: 1000,
+            startVelocity: 100,
+            scalar: 1.15,
+            ticks: 300,
+            decay: 0.9,
+            angle: 90,
+            spread: 360,
+            origin: { x: 0.25, y: 0.75 }
         });
         confettiHandler({
-          particleCount: 1000,
-          startVelocity: 100,
-          scalar: 1.15,
-          ticks: 300,
-          decay: 0.9,
-          angle: 90,
-          spread: 360,
-          origin: { x: 0.75, y: 0.25 }
+            particleCount: 1000,
+            startVelocity: 100,
+            scalar: 1.15,
+            ticks: 300,
+            decay: 0.9,
+            angle: 90,
+            spread: 360,
+            origin: { x: 0.75, y: 0.25 }
         });
         confettiHandler({
-          particleCount: 1000,
-          startVelocity: 100,
-          scalar: 1.15,
-          ticks: 300,
-          decay: 0.9,
-          angle: 90,
-          spread: 360,
-          origin: { x: 0.75, y: 0.75 }
+            particleCount: 1000,
+            startVelocity: 100,
+            scalar: 1.15,
+            ticks: 300,
+            decay: 0.9,
+            angle: 90,
+            spread: 360,
+            origin: { x: 0.75, y: 0.75 }
         });
-        if(this.screenWidth > this.mobileWidth) {
-          confettiHandler({
-            shapes: ['star'],
-            colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
-            particleCount: 100,
-            startVelocity: 250,
-            ticks: 200,
-            decay: 0.45,
-            scalar: 1.5,
-            angle: 270,
-            spread: 180,
-            origin: { x: 0.5, y: 0 }
-          });
+        if (this.screenWidth > this.mobileWidth) {
+            confettiHandler({
+                shapes: ['star'],
+                colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+                particleCount: 100,
+                startVelocity: 250,
+                ticks: 200,
+                decay: 0.45,
+                scalar: 1.5,
+                angle: 270,
+                spread: 180,
+                origin: { x: 0.5, y: 0 }
+            });
         }
     }
 
@@ -478,28 +515,28 @@ export class TX17G3MExamComponent implements OnInit {
     }
 
     scroll(el: HTMLElement) {
-    setTimeout(function(){
-      el.scrollIntoView({behavior: 'smooth'});
-    }, 250);
-  }
+        setTimeout(function () {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }, 250);
+    }
 
     scroll2(el: HTMLElement) {
-    setTimeout(function(){
-      window.scrollTo({left: 0, top: el.getBoundingClientRect().top-120, behavior: 'smooth'});
-    }, 250);
-  }
+        setTimeout(function () {
+            window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 120, behavior: 'smooth' });
+        }, 250);
+    }
 
-  scroll_top() {
-    setTimeout(function(){
-      window.scrollTo({left: 0, top: 0, behavior: 'smooth'});
-    }, 250);
-  }
+    scroll_top() {
+        setTimeout(function () {
+            window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+        }, 250);
+    }
 
-  scroll_bottom() {
-    setTimeout(function(){
-      window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: 'smooth'});
-    }, 250);
-  }
+    scroll_bottom() {
+        setTimeout(function () {
+            window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
+        }, 250);
+    }
 
     ngOnInit() {
         for (const [num, value] of Object.entries(this.TX17G3M_exam_dump)) {
@@ -517,6 +554,33 @@ export class TX17G3MExamComponent implements OnInit {
                 else {
                     if (value2.Key.Correct) {
                         this.exam_key.push(ch);
+                    }
+                }
+            }
+        }
+        for (let num of Object.keys(this.exam_dump)) {
+            this.exam_submission[+num] = {
+                'Number': 0,
+                'Topic': '',
+                'SubTopic': '',
+                'Choice': '',
+                'Correct': '',
+                'Rationale': '',
+                'Attempts': 0,
+                'Path': [],
+                'Seconds': 0,
+                'Time': ''
+            };
+        }
+        if (this.authService.userData) {
+            const exam_history = this.authService.userData.exams.history;
+            for (const [key, det] of Object.entries(exam_history)) {
+                if ((det as any).status == "Started" && key == this.key) {
+                    this.exam_inprogress = true;
+                    this.progress_number = (det as any).progress + 1;
+                    const db_submission = this.authService.getExamSubmission(this.key).problems;
+                    for (const [key2, det2] of Object.entries(db_submission)) {
+                        this.exam_submission[+key2] = (det2 as any);
                     }
                 }
             }

@@ -321,38 +321,6 @@
     border-radius: 10px;
   }
 
-  /* progress[value] {
-    background-color: lime;
-  }
-
-  progress[value]::-webkit-progress-bar {
-    background-color: lime;
-  }
-
-  progress[value]::-webkit-progress-value {
-    background-color: lime;
-  }
-
-  progress[value]::-moz-progress-bar {
-    background-color: lime;
-  }
-
-  progress:not([value]) {
-    background-color: white;
-  }
-
-  progress:not([value])::-webkit-progress-bar {
-    background-color: white;
-  }
-
-  progress:not([value])::-webkit-progress-value {
-    background-color: white;
-  }
-
-  progress:not([value])::-moz-progress-bar {
-    background-color: white;
-  } */
-
   .terminal {
     position: relative;
     /* width: 100%; */
@@ -602,8 +570,7 @@
       <button *ngFor="let fav of this.authService.userData.exams.favorites.slice(1)" class="card card-small"
         (click)="select_exam(fav); scroll_top()" tabindex="0"
         style="display: flex; flex-direction: row; align-items: center">
-        <span (click)="toggle_favorite()"
-          style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+        <span style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
         <span> <b>{{exam_names[fav]}}</b> </span>
       </button>
     </div>

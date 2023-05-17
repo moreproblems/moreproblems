@@ -339,6 +339,26 @@
         opacity: 1;
     }
 
+    progress {
+        border-radius: 10px;
+    }
+
+    progress::-webkit-progress-bar {
+        border-radius: 10px;
+        background-color: lightgray;
+        border: 1px solid darkslategrey;
+    }
+
+    progress::-webkit-progress-value {
+        border-radius: 10px;
+        background-color: limegreen;
+        /* border: 2px solid black; */
+    }
+
+    progress::-moz-progress-bar {
+        border-radius: 10px;
+    }
+
     .terminal {
         position: relative;
         /* width: 100%; */
@@ -512,14 +532,14 @@
         <h2 style="padding-top: 20px; color: darkgrey"> {{exam_names[selected_exam]}} </h2>
         <h2> With {{number_correct}} out of {{exam_length}} problems
             correct, you scored {{correct_percent}}% in {{time_duration}}</h2>
-        <h2 *ngIf="this.performance_level == 'Masters Grade Level Performance'"
-            style="color: green"> {{performance_level}} </h2>
-        <h2 *ngIf="this.performance_level == 'Approaches Grade Level Performance'"
-            style="color: blue"> {{performance_level}} </h2>
-        <h2 *ngIf="this.performance_level == 'Meets Grade Level Performance'"
-            style="color: magenta"> {{performance_level}} </h2>
-        <h2 *ngIf="this.performance_level == 'Does Not Meet Grade Level Performance'"
-            style="color: red"> {{performance_level}} </h2>
+        <h2 *ngIf="this.performance_level == 'Masters Grade Level Performance'" style="color: green">
+            {{performance_level}} </h2>
+        <h2 *ngIf="this.performance_level == 'Approaches Grade Level Performance'" style="color: blue">
+            {{performance_level}} </h2>
+        <h2 *ngIf="this.performance_level == 'Meets Grade Level Performance'" style="color: magenta">
+            {{performance_level}} </h2>
+        <h2 *ngIf="this.performance_level == 'Does Not Meet Grade Level Performance'" style="color: red">
+            {{performance_level}} </h2>
         <br />
         <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableS>
             <thead>
@@ -592,7 +612,8 @@
                 <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
                     <td style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
                         <i>
-                            {{subtopic.key}} </i> </td>
+                            {{subtopic.key}} </i>
+                    </td>
                     <td style="border-top: 1px solid #ddd"> </td>
                     <td style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
                     <td style="border-top: 1px solid #ddd"> {{subtopic.value.Total}} </td>
@@ -1068,7 +1089,8 @@
                         </h3>
                         <h3>Total Problems Correct: <strong style="font-weight: 500">{{user.problems.correct}}</strong>
                         </h3>
-                        <h3>Percentage Correct: <strong style="font-weight: 500">{{total_percent_correct}}%</strong></h3>
+                        <h3>Percentage Correct: <strong style="font-weight: 500">{{total_percent_correct}}%</strong>
+                        </h3>
                         <br />
                         <h3>Total Exams Completed: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
                         </h3>
@@ -1076,7 +1098,11 @@
                             style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 20px">
                             <div>
                                 <h3 style="margin: auto"> {{exam_names[exm]}} </h3>
-                                <h3 style="margin: 1px auto; font-weight: 500"> You scored {{complete_exam_metadata[exm].score}}% in {{complete_exam_metadata[exm].time}} </h3>
+                                <h3 style="margin: 1px auto; font-weight: 500"> You scored
+                                    {{complete_exam_metadata[exm].score}}% in {{complete_exam_metadata[exm].time}} </h3>
+                                <progress value="{{complete_exam_metadata[exm].score}}" max="100"
+                                    style="height: 20px; width: 80%; border-radius: 15px; margin: auto; margin-top: 10px"
+                                    #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
                             </div>
                             <button (click)="this.select_exam(exm)" class="grade-button" inputmode="text"
                                 value="{{(user.displayName) ? user.displayName : 'User'}}" maxlength="40"
