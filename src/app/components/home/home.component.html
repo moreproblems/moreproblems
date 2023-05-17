@@ -588,6 +588,8 @@
         <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm]}} / 32 </h4>
         <progress value="{{inprogress_exams[exm]}}" max="32"
           style="height: 20px; width: 80%; border-radius: 15px; margin: auto; margin-top: 10px" #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+        <!-- time spent on exam so far -->
+        <!-- date/time last problem submitted -->
         <button class="grade-button" style="margin: auto; margin-top: 25px; padding: 10px 5px" routerLink="/exam/{{exm}}" routerLinkActive="active"> <b>Resume Exam</b> </button>
       </div>
     </div>

@@ -136,7 +136,7 @@ export class TX17G3MExamComponent implements OnInit {
         if (this.random) {
             this.randomize_problems();
         }
-        if (this.authService.userData && this.authService.userData.role == 'Student') {
+        if (this.authService.userData) {
             this.db_updates['exams/history/' + this.key] = {progress: 0, status: 'Started'};
             this.db_updates['problems/all/' + this.key + '-' + ""+(this.problem_number+1) + '/status'] = 'Viewed';
             this.authService.UpdateUserData(this.db_updates);
@@ -251,7 +251,7 @@ export class TX17G3MExamComponent implements OnInit {
                     this.wrong_submission_list.push(this.exam_submission[i]);
                 }
             }
-            if (this.authService.userData && this.authService.userData.role == 'Student') {
+            if (this.authService.userData) {
                 this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
                 this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
                 if (this.attempt_response == 'Correct') {
@@ -261,13 +261,13 @@ export class TX17G3MExamComponent implements OnInit {
                 this.authService.UpdateUserData(this.db_updates);
                 this.db_updates = {};
                 this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/'  + this.key + '-' + ""+this.problem_number] = this.exam_submission[this.problem_number];
-                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key] = this.exam_submission;
+                // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key] = this.exam_submission;
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
             }
         }
         else {
-            if (this.authService.userData && this.authService.userData.role == 'Student') {
+            if (this.authService.userData) {
                 this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
                 this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
                 if (this.attempt_response == 'Correct') {
@@ -296,11 +296,6 @@ export class TX17G3MExamComponent implements OnInit {
 
     completeExam() {
         this.toggleExamTimer();
-        if (this.authService.userData && this.authService.userData.role == 'Student') {
-            this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';
-            this.authService.UpdateUserData(this.db_updates);
-            this.db_updates = {};
-        }
         this.confetti_pop();
         for (let i: number = 0; i < this.exam_length; i++) {
             if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topic)) {
@@ -357,6 +352,25 @@ export class TX17G3MExamComponent implements OnInit {
         }
         else {
             this.performance_level = "Does Not Meet Grade Level Performance";
+        }
+        if (this.authService.userData && this.authService.userData.role == 'Student') {
+            this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';
+            this.authService.UpdateUserData(this.db_updates);
+            this.db_updates = {};
+            // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/all-probs'] = {};
+            // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/wrong-probs'] = {};
+            // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/topics'] = {};
+            // this.authService.UpdateDatabase(this.db_updates);
+            // this.db_updates = {};
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/problems'] = this.exam_submission;
+            // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/topics'] = this.topic_breakdown;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/total'] = this.exam_length;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/correct'] = this.number_correct;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/score'] = this.correct_percent;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/level'] = this.performance_level;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/time'] = ""+this.et_minutes + 'm ' + ""+(this.et_counter%60) + 's';
+            this.authService.UpdateDatabase(this.db_updates);
+            this.db_updates = {};
         }
     }
 
