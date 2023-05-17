@@ -21,7 +21,7 @@ export class TX19G5SExamComponent implements OnInit {
     title = 'More Problems';
 
     screenWidth = window.innerWidth;
-    mobileWidth = 900;
+    mobileWidth = 800;
 
     et_counter: number = 0;
     et_minutes: number = 0;

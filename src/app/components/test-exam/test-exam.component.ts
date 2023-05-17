@@ -22,7 +22,7 @@ export class TestExamComponent implements OnInit {
   title = 'More Problems';
 
   screenWidth = window.innerWidth;
-  mobileWidth = 900;
+  mobileWidth = 800;
 
   state_filters: string[] = [];
   grade_filters: string[] = [];

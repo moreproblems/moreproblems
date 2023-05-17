@@ -368,7 +368,7 @@
   <div style="display: flex; flex-direction: row; width: 100%; margin: auto; align-items: center">
     <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 0 20px 0 0" routerLink="/about" routerLinkActive="active">
       <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 65px; height: 65px" #logo />
-      <img *ngIf="this.screenWidth <= this.mobileWidth && this.screenWidth >= 450" src="./assets/media/logo1.png" style="width: 40px; height: 40px" #logo />
+      <img *ngIf="this.screenWidth <= this.mobileWidth && this.screenWidth >= 350" src="./assets/media/logo1.png" style="width: 40px; height: 40px" #logo />
       <span style="padding: 0px; text-align: left">
         <h1 *ngIf="this.screenWidth > this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 26px" #title1> {{ title }} </h1>
         <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 20px" #title1> {{ title }} </h1>
@@ -376,7 +376,7 @@
     </div>
     <div *ngIf="authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 0 20px 0 0" routerLink="/home" routerLinkActive="active">
       <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 65px; height: 65px" #logo />
-      <img *ngIf="this.screenWidth <= this.mobileWidth && this.screenWidth >= 450" src="./assets/media/logo1.png" style="width: 40px; height: 40px" #logo />
+      <img *ngIf="this.screenWidth <= this.mobileWidth && this.screenWidth >= 425" src="./assets/media/logo1.png" style="width: 40px; height: 40px" #logo />
       <span style="padding: 0px; text-align: left">
         <h1 *ngIf="this.screenWidth > this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 26px" #title1> {{ title }} </h1>
         <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 20px" #title1> {{ title }} </h1>
@@ -386,7 +386,7 @@
     <nav style="text-align: right; display: flex; flex-direction: row; align-items: center">
       <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/about" routerLinkActive="active"> About Us </a>&nbsp;&nbsp;
       <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/exams" routerLinkActive="active"> Exams </a>&nbsp;&nbsp;
-      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/problems" routerLinkActive="active"> Problems </a>&nbsp;&nbsp;
+      <!-- <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/problems" routerLinkActive="active"> Problems </a>&nbsp;&nbsp; -->
       <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/standards" routerLinkActive="active"> Standards </a>&nbsp;&nbsp;
       <!-- <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/contact" routerLinkActive="active"> Contact </a>&nbsp; -->
     </nav>
@@ -402,7 +402,7 @@
       <a routerLink="/standards" routerLinkActive="active" style="padding: 0 10px; font-size: 16px; text-align: center"> <p style="width: 100px; margin: 0; padding: 0">Standards</p> </a>&nbsp;&nbsp; -->
       <a routerLink="/about" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px"> About Us </a>&nbsp;
       <a routerLink="/exams" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px"> Exams </a>&nbsp;
-      <a routerLink="/problems" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px"> Problems </a>&nbsp;
+      <!-- <a routerLink="/problems" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px"> Problems </a>&nbsp; -->
       <a routerLink="/standards" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px"> Standards </a>&nbsp;
       <!-- <a routerLink="/contact" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Contact </a>&nbsp; -->
     </nav>

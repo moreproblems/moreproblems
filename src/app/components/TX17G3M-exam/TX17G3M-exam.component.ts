@@ -35,7 +35,7 @@ export class TX17G3MExamComponent implements OnInit {
     title = 'More Problems';
 
     screenWidth = window.innerWidth;
-    mobileWidth = 900;
+    mobileWidth = 800;
 
     exam_inprogress = false;
     progress_number = 0;
@@ -91,6 +91,7 @@ export class TX17G3MExamComponent implements OnInit {
     correct_percent = 0;
     topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
     performance_level = "";
+    total_seconds = 0;
 
     sub_form = '';
     parent_select = false;
@@ -288,6 +289,7 @@ export class TX17G3MExamComponent implements OnInit {
                 }
                 else {
                     this.number_correct += 1;
+                    this.total_seconds += this.exam_submission[i].Seconds;
                 }
             }
             this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
@@ -331,6 +333,8 @@ export class TX17G3MExamComponent implements OnInit {
         this.clearProblemTimer();
         this.toggleProblemTimer();
         if (this.problem_number > this.exam_length) {
+            this.et_counter = this.total_seconds;
+            this.et_minutes = Math.floor(this.total_seconds/60);
             this.completeExam();
         }
     }
@@ -405,7 +409,7 @@ export class TX17G3MExamComponent implements OnInit {
             this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/correct'] = this.number_correct;
             this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/score'] = this.correct_percent;
             this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/level'] = this.performance_level;
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/time'] = "" + this.et_minutes + 'm ' + "" + (this.et_counter % 60) + 's';
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/time'] = "" + ""+(Math.floor(this.total_seconds/60)) + 'm ' + "" + ""+(this.total_seconds%60) + 's';
             this.authService.UpdateDatabase(this.db_updates);
             this.db_updates = {};
         }
