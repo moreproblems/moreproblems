@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   online_set = ['TX22G3M', 'TX21G3M', 'TX19G3M', 'TX18G3M', 'TX17G3M', 'TX21G5S', 'TX19G5S'];
   favorite_set: string[] = [];
   inprogress_set: string[] = [];
-  inprogress_exams: {[key: string] : number} = {};
+  inprogress_exams: {[key: string] : any} = {};
 
   selected_state = '';
   selected_grade = '';
@@ -172,7 +172,7 @@ export class HomeComponent implements OnInit {
     for (const [key, det] of Object.entries(exam_history)) {
       if ((det as any).status == "Started") {
         this.inprogress_set.push(key);
-        this.inprogress_exams[key] = (det as any).progress;
+        this.inprogress_exams[key] = { progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString()} ;
       }
     }
   }

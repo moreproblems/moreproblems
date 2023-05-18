@@ -3,6 +3,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { AuthService } from "../../shared/services/auth.service";
 import { WindowService } from '../../shared/services/window.service';
 import { getAuth, RecaptchaVerifier } from 'firebase/auth';
+import { serverTimestamp } from "firebase/database";
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import * as examMetadata from "src/assets/problems/exams.json";
@@ -39,6 +40,8 @@ export class TX17G3MExamComponent implements OnInit {
 
     exam_inprogress = false;
     progress_number = 0;
+    last_date: any;
+    last_time: any;
 
     et_counter: number = 0;
     et_minutes: number = 0;
@@ -152,6 +155,9 @@ export class TX17G3MExamComponent implements OnInit {
             };
         }
         if (this.authService.userData) {
+            this.db_updates['exams/history/' + this.key + "/lasttimestamp"] = serverTimestamp();
+            this.authService.UpdateUserData(this.db_updates);
+            this.db_updates = {};
             const exam_history = this.authService.userData.exams.history;
             for (const [key, det] of Object.entries(exam_history)) {
                 if ((det as any).status == "Started" && key == this.key) {
@@ -174,9 +180,12 @@ export class TX17G3MExamComponent implements OnInit {
             this.randomize_problems();
         }
         if (this.authService.userData) {
-            this.db_updates['exams/history/' + this.key] = { progress: 0, status: 'Started' };
+            this.db_updates['exams/history/' + this.key] = { progress: 0, status: 'Started', lasttimestamp: serverTimestamp() };
             this.db_updates['problems/all/' + this.key + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
             this.authService.UpdateUserData(this.db_updates);
+            this.db_updates = {};
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/starttimestamp'] = serverTimestamp();
+            this.authService.UpdateDatabase(this.db_updates);
             this.db_updates = {};
         }
         for (let num of Object.keys(this.exam_dump)) {
@@ -295,6 +304,7 @@ export class TX17G3MExamComponent implements OnInit {
             this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
             if (this.authService.userData) {
                 this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
+                this.db_updates['exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
                 this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
                 if (this.attempt_response == 'Correct') {
                     this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
@@ -304,7 +314,11 @@ export class TX17G3MExamComponent implements OnInit {
                 this.db_updates = {};
                 this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.problem_number] = this.exam_submission[this.problem_number];
                 this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/problems/' + "" + this.problem_number] = this.exam_submission[this.problem_number];
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
                 // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key] = this.exam_submission;
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.problem_number + '/timestamp'] = serverTimestamp();
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
             }
@@ -312,6 +326,7 @@ export class TX17G3MExamComponent implements OnInit {
         else {
             if (this.authService.userData) {
                 this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
+                this.db_updates['exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
                 this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
                 if (this.attempt_response == 'Correct') {
                     this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
@@ -322,6 +337,8 @@ export class TX17G3MExamComponent implements OnInit {
                 this.db_updates = {};
                 this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.problem_number] = this.exam_submission[this.problem_number];
                 this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/problems/' + "" + this.problem_number] = this.exam_submission[this.problem_number];
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.problem_number + '/timestamp'] = serverTimestamp();
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
             }
@@ -544,7 +561,7 @@ export class TX17G3MExamComponent implements OnInit {
 
     ngOnInit() {
         for (const [num, value] of Object.entries(this.TX17G3M_exam_dump)) {
-            if (value.Number <= 32) {
+            if (value.Number <= this.exam_length) {
                 this.exam_dump[this.dump_count] = value;
                 this.ordered_dump[this.dump_count] = value;
                 this.dump_count += 1;
@@ -582,6 +599,8 @@ export class TX17G3MExamComponent implements OnInit {
                 if ((det as any).status == "Started" && key == this.key) {
                     this.exam_inprogress = true;
                     this.progress_number = (det as any).progress + 1;
+                    this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
+                    this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
                     const db_submission = this.authService.getExamSubmission(this.key).problems;
                     for (const [key2, det2] of Object.entries(db_submission)) {
                         this.exam_submission[+key2] = (det2 as any);

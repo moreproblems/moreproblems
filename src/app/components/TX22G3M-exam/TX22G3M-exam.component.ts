@@ -1,14 +1,28 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import * as examMetadata from "src/assets/problems/exams.json"; 
+import { Meta, Title } from '@angular/platform-browser';
+import { AuthService } from "../../shared/services/auth.service";
+import { WindowService } from '../../shared/services/window.service';
+import { getAuth, RecaptchaVerifier } from 'firebase/auth';
+import { serverTimestamp } from "firebase/database";
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
+import * as examMetadata from "src/assets/problems/exams.json";
 import * as problemsData from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
+// import * as fs from 'fs';
+// import * as path from 'path';
+
+// function syncReadFile(filename: string) {
+//   const result = fs.readFile(path.join(__dirname, filename), 'utf8');
+//   console.log(result);
+//   return result;
 // }
 
 const confetti = require('canvas-confetti');
 
 const confettiCanvas = document.getElementById('confetticanvas');
 const confettiHandler = confetti.create(confettiCanvas, {
-  resize: true,
-  useWorker: true,
+    resize: true,
+    useWorker: true,
 });
 
 @Component({
@@ -24,6 +38,11 @@ export class TX22G3MExamComponent implements OnInit {
     screenWidth = window.innerWidth;
     mobileWidth = 800;
 
+    exam_inprogress = false;
+    progress_number = 0;
+    last_date: any;
+    last_time: any;
+
     et_counter: number = 0;
     et_minutes: number = 0;
     et_timer: any;
@@ -35,12 +54,10 @@ export class TX22G3MExamComponent implements OnInit {
 
     expand_topics = true;
     show_correct = false;
-    filters: string[] = [];
-    expand_filters = true;
 
     key = 'TX22G3M'
     exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
-  
+
     exam_state = this.exam_attribute_dump[this.key].State;
     exam_grade = this.exam_attribute_dump[this.key].Grade;
     exam_subject = this.exam_attribute_dump[this.key].Subject;
@@ -61,7 +78,7 @@ export class TX22G3MExamComponent implements OnInit {
     random_list: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
     random = false;
 
-    // exam_key: string[] = ['B', 'H', 'A', 'H', '972', 'H', 'A', 'G', 'D', 'J', 'C', 'H', 'D', '20', 'A', 'H', 'A', 'J', 'D', 'G', 'C', 'J', 'B', '13', 'A', 'G', 'D', 'F', 'B', 'F', 'C', 'G']
+    // exam_key: string[] = ['C', 'G', 'A', 'H', '7', 'F', 'D', 'F', 'C', 'G', 'C', 'G', 'D', '96', 'A', 'J', 'B', 'F', 'C', 'J', 'A', 'H', 'D', '18', 'B', 'J', 'B', 'H', 'B', 'F', 'B', 'J'];
     exam_key: string[] = [];
 
     problem_number = 0;
@@ -77,21 +94,15 @@ export class TX22G3MExamComponent implements OnInit {
     correct_percent = 0;
     topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
     performance_level = "";
+    total_seconds = 0;
 
     sub_form = '';
     parent_select = false;
     teacher_select = false;
 
-    constructor() { }
+    db_updates: any = {};
 
-    // public onChange(file: File): void {
-    //   let fileReader: FileReader = new FileReader();
-    //   let self = this;
-    //   fileReader.onloadend = function(x) {
-    //     self.exam_data = fileReader.result;
-    //   }
-    //   fileReader.readAsText(file);
-    // }
+    constructor(public authService: AuthService, public router: Router, private afAuth: AngularFireAuth) { }
 
     width_change2() {
         this.screenWidth = window.innerWidth;
@@ -128,9 +139,54 @@ export class TX22G3MExamComponent implements OnInit {
         }
     }
 
+    resume_exam() {
+        for (let num of Object.keys(this.exam_dump)) {
+            this.exam_submission[+num] = {
+                'Number': 0,
+                'Topic': '',
+                'SubTopic': '',
+                'Choice': '',
+                'Correct': '',
+                'Rationale': '',
+                'Attempts': 0,
+                'Path': [],
+                'Seconds': 0,
+                'Time': ''
+            };
+        }
+        if (this.authService.userData) {
+            this.db_updates['exams/history/' + this.key + "/lasttimestamp"] = serverTimestamp();
+            this.authService.UpdateUserData(this.db_updates);
+            this.db_updates = {};
+            const exam_history = this.authService.userData.exams.history;
+            for (const [key, det] of Object.entries(exam_history)) {
+                if ((det as any).status == "Started" && key == this.key) {
+                    this.exam_inprogress = true;
+                    this.progress_number = (det as any).progress + 1;
+                    const db_submission = this.authService.getExamSubmission(this.key).problems;
+                    for (const [key2, det2] of Object.entries(db_submission)) {
+                        this.exam_submission[+key2] = (det2 as any);
+                    }
+                }
+            }
+        }
+        this.toggleExamTimer();
+        this.toggleProblemTimer();
+        this.problem_number = this.progress_number;
+    }
+
     begin_exam() {
         if (this.random) {
             this.randomize_problems();
+        }
+        if (this.authService.userData) {
+            this.db_updates['exams/history/' + this.key] = { progress: 0, status: 'Started', lasttimestamp: serverTimestamp() };
+            this.db_updates['problems/all/' + this.key + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
+            this.authService.UpdateUserData(this.db_updates);
+            this.db_updates = {};
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/starttimestamp'] = serverTimestamp();
+            this.authService.UpdateDatabase(this.db_updates);
+            this.db_updates = {};
         }
         for (let num of Object.keys(this.exam_dump)) {
             this.exam_submission[+num] = {
@@ -211,7 +267,7 @@ export class TX22G3MExamComponent implements OnInit {
                             if (choice == ch) {
                                 if (key.Key.Correct == true) {
                                     sub.Correct = '✅';
-                                    this.number_correct += 1;
+                                    // this.number_correct += 1;
                                 }
                                 else {
                                     sub.Correct = this.exam_key[this.problem_number - 1];
@@ -221,7 +277,7 @@ export class TX22G3MExamComponent implements OnInit {
                             else if (prob.Type == 'FR') {
                                 if (choice == key.Choice) {
                                     sub.Correct = '✅';
-                                    this.number_correct += 1;
+                                    // this.number_correct += 1;
                                     sub.Rationale = key.Key.Rationale;
                                 }
                                 else {
@@ -240,9 +296,53 @@ export class TX22G3MExamComponent implements OnInit {
                 if (this.exam_submission[i].Correct != '✅') {
                     this.wrong_submission_list.push(this.exam_submission[i]);
                 }
+                else {
+                    this.number_correct += 1;
+                    this.total_seconds += this.exam_submission[i].Seconds;
+                }
+            }
+            this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
+            if (this.authService.userData) {
+                this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
+                this.db_updates['exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
+                this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
+                if (this.attempt_response == 'Correct') {
+                    this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
+                }
+                this.db_updates['problems/all/' + this.key + '-' + "" + this.problem_number + '/status'] = this.attempt_response;
+                this.authService.UpdateUserData(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.problem_number] = this.exam_submission[this.problem_number];
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/problems/' + "" + this.problem_number] = this.exam_submission[this.problem_number];
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
+                // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key] = this.exam_submission;
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.problem_number + '/timestamp'] = serverTimestamp();
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
             }
         }
-        this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
+        else {
+            if (this.authService.userData) {
+                this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
+                this.db_updates['exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
+                this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
+                if (this.attempt_response == 'Correct') {
+                    this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
+                }
+                this.db_updates['problems/all/' + this.key + '-' + "" + this.problem_number + '/status'] = this.attempt_response;
+                this.db_updates['problems/all/' + this.key + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
+                this.authService.UpdateUserData(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.problem_number] = this.exam_submission[this.problem_number];
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/problems/' + "" + this.problem_number] = this.exam_submission[this.problem_number];
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.problem_number + '/timestamp'] = serverTimestamp();
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+            }
+        }
         this.problem_number += 1;
         this.problem_selection = '';
         this.problem_attempts = 0;
@@ -250,11 +350,14 @@ export class TX22G3MExamComponent implements OnInit {
         this.clearProblemTimer();
         this.toggleProblemTimer();
         if (this.problem_number > this.exam_length) {
+            this.et_counter = this.total_seconds;
+            this.et_minutes = Math.floor(this.total_seconds/60);
             this.completeExam();
         }
     }
 
     completeExam() {
+        // retreive db sub/exam/problems if auth student, to calculate results & set db sub/exam/...
         this.toggleExamTimer();
         this.confetti_pop();
         for (let i: number = 0; i < this.exam_length; i++) {
@@ -301,10 +404,10 @@ export class TX22G3MExamComponent implements OnInit {
                 this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
             }
         }
-        if (this.number_correct >= 27) {
+        if (this.number_correct >= 28) {
             this.performance_level = "Masters Grade Level Performance";
         }
-        else if (this.number_correct >= 23) {
+        else if (this.number_correct >= 24) {
             this.performance_level = "Meets Grade Level Performance";
         }
         else if (this.number_correct >= 16) {
@@ -313,62 +416,76 @@ export class TX22G3MExamComponent implements OnInit {
         else {
             this.performance_level = "Does Not Meet Grade Level Performance";
         }
+        if (this.authService.userData && this.authService.userData.role == 'Student') {
+            this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';
+            this.authService.UpdateUserData(this.db_updates);
+            this.db_updates = {};
+            // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/problems'] = this.exam_submission;
+            // this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/'  + this.key + '/topics'] = this.topic_breakdown;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/total'] = this.exam_length;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/correct'] = this.number_correct;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/score'] = this.correct_percent;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/level'] = this.performance_level;
+            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/time'] = "" + ""+(Math.floor(this.total_seconds/60)) + 'm ' + "" + ""+(this.total_seconds%60) + 's';
+            this.authService.UpdateDatabase(this.db_updates);
+            this.db_updates = {};
+        }
     }
 
     confetti_pop() {
         confettiHandler({
-          particleCount: 750,
-          startVelocity: 100,
-          scalar: 1.15,
-          ticks: 300,
-          decay: 0.9,
-          angle: 90,
-          spread: 360,
-          origin: { x: 0.25, y: 0.25 }
+            particleCount: 750,
+            startVelocity: 100,
+            scalar: 1.15,
+            ticks: 300,
+            decay: 0.9,
+            angle: 90,
+            spread: 360,
+            origin: { x: 0.25, y: 0.25 }
         });
         confettiHandler({
-          particleCount: 1000,
-          startVelocity: 100,
-          scalar: 1.15,
-          ticks: 300,
-          decay: 0.9,
-          angle: 90,
-          spread: 360,
-          origin: { x: 0.25, y: 0.75 }
+            particleCount: 1000,
+            startVelocity: 100,
+            scalar: 1.15,
+            ticks: 300,
+            decay: 0.9,
+            angle: 90,
+            spread: 360,
+            origin: { x: 0.25, y: 0.75 }
         });
         confettiHandler({
-          particleCount: 1000,
-          startVelocity: 100,
-          scalar: 1.15,
-          ticks: 300,
-          decay: 0.9,
-          angle: 90,
-          spread: 360,
-          origin: { x: 0.75, y: 0.25 }
+            particleCount: 1000,
+            startVelocity: 100,
+            scalar: 1.15,
+            ticks: 300,
+            decay: 0.9,
+            angle: 90,
+            spread: 360,
+            origin: { x: 0.75, y: 0.25 }
         });
         confettiHandler({
-          particleCount: 1000,
-          startVelocity: 100,
-          scalar: 1.15,
-          ticks: 300,
-          decay: 0.9,
-          angle: 90,
-          spread: 360,
-          origin: { x: 0.75, y: 0.75 }
+            particleCount: 1000,
+            startVelocity: 100,
+            scalar: 1.15,
+            ticks: 300,
+            decay: 0.9,
+            angle: 90,
+            spread: 360,
+            origin: { x: 0.75, y: 0.75 }
         });
-        if(this.screenWidth > this.mobileWidth) {
-          confettiHandler({
-            shapes: ['star'],
-            colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
-            particleCount: 100,
-            startVelocity: 250,
-            ticks: 200,
-            decay: 0.45,
-            scalar: 1.5,
-            angle: 270,
-            spread: 180,
-            origin: { x: 0.5, y: 0 }
-          });
+        if (this.screenWidth > this.mobileWidth) {
+            confettiHandler({
+                shapes: ['star'],
+                colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+                particleCount: 100,
+                startVelocity: 250,
+                ticks: 200,
+                decay: 0.45,
+                scalar: 1.5,
+                angle: 270,
+                spread: 180,
+                origin: { x: 0.5, y: 0 }
+            });
         }
     }
 
@@ -419,32 +536,32 @@ export class TX22G3MExamComponent implements OnInit {
     }
 
     scroll(el: HTMLElement) {
-    setTimeout(function(){
-      el.scrollIntoView({behavior: 'smooth'});
-    }, 250);
-  }
+        setTimeout(function () {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }, 250);
+    }
 
     scroll2(el: HTMLElement) {
-    setTimeout(function(){
-      window.scrollTo({left: 0, top: el.getBoundingClientRect().top-120, behavior: 'smooth'});
-    }, 250);
-  }
+        setTimeout(function () {
+            window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 120, behavior: 'smooth' });
+        }, 250);
+    }
 
-  scroll_top() {
-    setTimeout(function(){
-      window.scrollTo({left: 0, top: 0, behavior: 'smooth'});
-    }, 250);
-  }
+    scroll_top() {
+        setTimeout(function () {
+            window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+        }, 250);
+    }
 
-  scroll_bottom() {
-    setTimeout(function(){
-      window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: 'smooth'});
-    }, 250);
-  }
+    scroll_bottom() {
+        setTimeout(function () {
+            window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
+        }, 250);
+    }
 
     ngOnInit() {
         for (const [num, value] of Object.entries(this.TX22G3M_exam_dump)) {
-            if (value.Number <= 32) {
+            if (value.Number <= this.exam_length) {
                 this.exam_dump[this.dump_count] = value;
                 this.ordered_dump[this.dump_count] = value;
                 this.dump_count += 1;
@@ -458,6 +575,35 @@ export class TX22G3MExamComponent implements OnInit {
                 else {
                     if (value2.Key.Correct) {
                         this.exam_key.push(ch);
+                    }
+                }
+            }
+        }
+        for (let num of Object.keys(this.exam_dump)) {
+            this.exam_submission[+num] = {
+                'Number': 0,
+                'Topic': '',
+                'SubTopic': '',
+                'Choice': '',
+                'Correct': '',
+                'Rationale': '',
+                'Attempts': 0,
+                'Path': [],
+                'Seconds': 0,
+                'Time': ''
+            };
+        }
+        if (this.authService.userData) {
+            const exam_history = this.authService.userData.exams.history;
+            for (const [key, det] of Object.entries(exam_history)) {
+                if ((det as any).status == "Started" && key == this.key) {
+                    this.exam_inprogress = true;
+                    this.progress_number = (det as any).progress + 1;
+                    this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
+                    this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
+                    const db_submission = this.authService.getExamSubmission(this.key).problems;
+                    for (const [key2, det2] of Object.entries(db_submission)) {
+                        this.exam_submission[+key2] = (det2 as any);
                     }
                 }
             }

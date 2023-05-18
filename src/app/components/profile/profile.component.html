@@ -1095,18 +1095,21 @@
                         <h3>Total Exams Completed: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
                         </h3>
                         <div *ngFor="let exm of complete_exam_list" class="card card-medium"
-                            style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 20px">
-                            <div>
-                                <h3 style="margin: auto"> {{exam_names[exm]}} </h3>
-                                <h3 style="margin: 1px auto; font-weight: 500"> You scored
-                                    {{complete_exam_metadata[exm].score}}% in {{complete_exam_metadata[exm].time}} </h3>
-                                <progress value="{{complete_exam_metadata[exm].score}}" max="100"
-                                    style="height: 20px; width: 80%; border-radius: 15px; margin: auto; margin-top: 10px"
-                                    #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+                            style="margin: auto; height: auto; max-height: 200px; max-width: 450px; display: flex; flex-direction: column">
+                            <h3 style="margin: auto"> {{exam_names[exm]}} </h3>
+                            <hr style="width: 50%; height:1px; border-width:0; color:gray; background-color:gray" />
+                            <div style="display: flex; justify-content: space-between; padding: 5px; width: 100%">
+                                <div>
+                                    <h3 style="margin: 1px auto; font-weight: 500"> Score:
+                                        <b>{{complete_exam_metadata[exm].score}}%</b> (<b>{{complete_exam_metadata[exm].time}}</b>) </h3>
+                                    <progress value="{{complete_exam_metadata[exm].score}}" max="100"
+                                        style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto;"
+                                        #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+                                    <h4 style="margin: 1px auto; font-weight: 500"> Completed: <b>{{""+complete_exam_metadata[exm].enddate}}</b> {{""+complete_exam_metadata[exm].endtime}} </h4>
+                                </div>
+                                <button (click)="this.select_exam(exm)" class="grade-button"
+                                    style="margin: auto; padding: 5px"> <b>View Results</b> </button>
                             </div>
-                            <button (click)="this.select_exam(exm)" class="grade-button" inputmode="text"
-                                value="{{(user.displayName) ? user.displayName : 'User'}}" maxlength="40"
-                                style="margin: auto; padding: 5px"> <b>View Results</b> </button>
                         </div>
                     </div>
                 </div>

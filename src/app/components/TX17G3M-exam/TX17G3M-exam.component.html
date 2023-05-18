@@ -533,15 +533,16 @@
             </button>
           </div>
           <div *ngIf="this.authService.userData && this.exam_inprogress" class="card-container"
-            style="display: flex; flex-direction: row; align-items: center; text-align: center; width: 80%">
-            <div class="card-container" style="align-items: center; margin: 10px 20px">
-              <h4 style="margin: auto"> {{32 - progress_number + 1}} / 32 remaining problems </h4>
-              <progress value="{{progress_number-1}}" max="32"
-                style="height: 20px; width: 100%; border-radius: 15px; margin: auto; margin-top: 10px"
+            style="display: flex; flex-direction: row; align-items: center; text-align: center; width: 80%; margin: 0">
+            <div class="card-container" style="align-items: center; margin: 0px 20px">
+              <h4 style="margin: auto"> {{exam_length - progress_number + 1}} / {{exam_length}} remaining problems </h4>
+              <progress value="{{progress_number-1}}" max="{{exam_length}}"
+                style="height: 20px; width: 100%; border-radius: 15px; margin: 10px auto"
                 #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+              <h4 style="margin: 1px auto; font-weight: 500"> Last Submission: <b>{{""+last_date}}</b> {{""+last_time}} </h4>
             </div>
             <button class="grade-button" (click)="resume_exam(); scroll_top()"
-              style="display: block; max-width: 150px; max-height: 100px; margin: 10px 20px">
+              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px; margin-top: 20px">
               <b> Resume Exam </b>
             </button>
           </div>

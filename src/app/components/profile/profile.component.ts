@@ -28,6 +28,7 @@ export class ProfileComponent implements OnInit {
   complete_exam_count = 0;
   complete_exam_list: string[] = [];
   complete_exam_metadata: any = {};
+  // db_submission: any;
 
 
   // exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
@@ -82,8 +83,10 @@ export class ProfileComponent implements OnInit {
         if ((det as any).status == "Completed") {
           this.complete_exam_count = this.complete_exam_count + 1;
           this.complete_exam_list.push(key);
-          const db_submission = this.authService.getExamSubmission(key);
-          this.complete_exam_metadata[key] = { score: db_submission.score, time: db_submission.time };
+          setTimeout(() => {
+            var db_submission = this.authService.getExamSubmission(key);
+            this.complete_exam_metadata[key] = { score: db_submission.score, time: db_submission.time, enddate: new Date(db_submission.endtimestamp).toLocaleDateString(), endtime: new Date(db_submission.endtimestamp).toLocaleTimeString() };
+          }, 250);
         }
       }
     }
@@ -122,6 +125,8 @@ export class ProfileComponent implements OnInit {
       this.correct_percent = this.db_submission.score;
       this.time_duration = this.db_submission.time;
       this.performance_level = this.db_submission.level;
+      this.exam_submission_list = [];
+      this.wrong_submission_list = [];
       for (let i: number = 1; i <= this.exam_length; i++) {
         this.exam_submission_list.push(this.exam_submission[""+i]);
         if (this.exam_submission[""+i].Correct != '✅') {
@@ -233,8 +238,10 @@ export class ProfileComponent implements OnInit {
             if ((det as any).status == "Completed") {
               this.complete_exam_count = this.complete_exam_count + 1;
               this.complete_exam_list.push(key);
-              const db_submission = this.authService.getExamSubmission(key);
-              this.complete_exam_metadata[key] = { score: db_submission.score, time: db_submission.time };
+              setTimeout(() => {
+                var db_submission = this.authService.getExamSubmission(key);
+                this.complete_exam_metadata[key] = { score: db_submission.score, time: db_submission.time, enddate: new Date(db_submission.endtimestamp).toLocaleDateString(), endtime: new Date(db_submission.endtimestamp).toLocaleTimeString() };
+              }, 250);
             }
           }
         }
