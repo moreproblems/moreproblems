@@ -27,7 +27,7 @@ export class ProfileComponent implements OnInit {
   total_percent_correct = 0;
   complete_exam_count = 0;
   complete_exam_list: string[] = [];
-  complete_exam_metadata: any = {};
+  student_exam_metadata: any = {};
   // db_submission: any;
 
 
@@ -46,7 +46,7 @@ export class ProfileComponent implements OnInit {
   performance_level = "";
   time_duration = "";
   topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
-  
+
 
   user: any;
   edit: boolean = false;
@@ -77,20 +77,19 @@ export class ProfileComponent implements OnInit {
       }
       this.complete_exam_count = 0;
       this.complete_exam_list = [];
-      this.complete_exam_metadata = {};
+      this.student_exam_metadata = {};
+      this.student_exam_metadata = this.authService.getExamSubmissions();
       const exam_history = this.authService.userData.exams.history;
       for (const [key, det] of Object.entries(exam_history)) {
         if ((det as any).status == "Completed") {
           this.complete_exam_count = this.complete_exam_count + 1;
           this.complete_exam_list.push(key);
-          setTimeout(() => {
-            var db_submission = this.authService.getExamSubmission(key);
-            this.complete_exam_metadata[key] = { score: db_submission.score, time: db_submission.time, enddate: new Date(db_submission.endtimestamp).toLocaleDateString(), endtime: new Date(db_submission.endtimestamp).toLocaleTimeString() };
-          }, 250);
+          this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+          this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
         }
       }
     }
-    console.log(this.complete_exam_metadata);
+    console.log(this.student_exam_metadata);
   }
 
   toggle_edit() {
@@ -118,7 +117,7 @@ export class ProfileComponent implements OnInit {
 
   select_exam(exm: string) {
     if (this.authService.userData.role == 'Student') {
-      this.db_submission = this.authService.getExamSubmission(exm);
+      this.db_submission = this.student_exam_metadata[exm];
       this.exam_submission = this.db_submission.problems;
       this.exam_length = this.db_submission.total;
       this.number_correct = this.db_submission.correct;
@@ -128,9 +127,9 @@ export class ProfileComponent implements OnInit {
       this.exam_submission_list = [];
       this.wrong_submission_list = [];
       for (let i: number = 1; i <= this.exam_length; i++) {
-        this.exam_submission_list.push(this.exam_submission[""+i]);
-        if (this.exam_submission[""+i].Correct != '✅') {
-          this.wrong_submission_list.push(this.exam_submission[""+i]);
+        this.exam_submission_list.push(this.exam_submission["" + i]);
+        if (this.exam_submission["" + i].Correct != '✅') {
+          this.wrong_submission_list.push(this.exam_submission["" + i]);
         }
       }
       // setTimeout(() => {
@@ -181,10 +180,10 @@ export class ProfileComponent implements OnInit {
         this.topic_breakdown[topic].Percent = Math.round(100 * this.topic_breakdown[topic].Correct / (this.topic_breakdown[topic].Total));
         this.topic_breakdown[topic].Time = (Math.floor(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total % 60)).toString() + 's';
         for (let subtopic of Object.keys(this.topic_breakdown[topic].Subs)) {
-            this.topic_breakdown[topic].Subs[subtopic].Percent = Math.round(100 * this.topic_breakdown[topic].Subs[subtopic].Correct / (this.topic_breakdown[topic].Subs[subtopic].Total));
-            this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
+          this.topic_breakdown[topic].Subs[subtopic].Percent = Math.round(100 * this.topic_breakdown[topic].Subs[subtopic].Correct / (this.topic_breakdown[topic].Subs[subtopic].Total));
+          this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
         }
-    }
+      }
     }
     this.selected_exam = exm;
   }
@@ -232,16 +231,15 @@ export class ProfileComponent implements OnInit {
         if (this.authService.userData.role == 'Student') {
           this.complete_exam_count = 0;
           this.complete_exam_list = [];
-          this.complete_exam_metadata = {};
+          this.student_exam_metadata = {};
+          this.student_exam_metadata = this.authService.getExamSubmissions();
           const exam_history = this.authService.userData.exams.history;
           for (const [key, det] of Object.entries(exam_history)) {
             if ((det as any).status == "Completed") {
               this.complete_exam_count = this.complete_exam_count + 1;
               this.complete_exam_list.push(key);
-              setTimeout(() => {
-                var db_submission = this.authService.getExamSubmission(key);
-                this.complete_exam_metadata[key] = { score: db_submission.score, time: db_submission.time, enddate: new Date(db_submission.endtimestamp).toLocaleDateString(), endtime: new Date(db_submission.endtimestamp).toLocaleTimeString() };
-              }, 250);
+              this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+              this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
             }
           }
         }

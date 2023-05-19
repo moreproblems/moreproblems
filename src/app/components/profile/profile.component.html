@@ -1101,11 +1101,11 @@
                             <div style="display: flex; justify-content: space-between; padding: 5px; width: 100%">
                                 <div>
                                     <h3 style="margin: 1px auto; font-weight: 500"> Score:
-                                        <b>{{complete_exam_metadata[exm].score}}%</b> (<b>{{complete_exam_metadata[exm].time}}</b>) </h3>
-                                    <progress value="{{complete_exam_metadata[exm].score}}" max="100"
+                                        <b>{{student_exam_metadata[exm].score}}%</b> (<b>{{student_exam_metadata[exm].time}}</b>) </h3>
+                                    <progress value="{{student_exam_metadata[exm].score}}" max="100"
                                         style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto;"
                                         #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
-                                    <h4 style="margin: 1px auto; font-weight: 500"> Completed: <b>{{""+complete_exam_metadata[exm].enddate}}</b> {{""+complete_exam_metadata[exm].endtime}} </h4>
+                                    <h4 style="margin: 1px auto; font-weight: 500"> Completed: <b>{{""+student_exam_metadata[exm].enddate}}</b> {{""+student_exam_metadata[exm].endtime}} </h4>
                                 </div>
                                 <button (click)="this.select_exam(exm)" class="grade-button"
                                     style="margin: auto; padding: 5px"> <b>View Results</b> </button>
