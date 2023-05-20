@@ -6,6 +6,7 @@ import * as TX19G3MProblems from "src/assets/problems/TX19G3M/TX19G3M-problems.j
 import * as TX18G3MProblems from "src/assets/problems/TX18G3M/TX18G3M-problems.json";
 import * as TX17G3MProblems from "src/assets/problems/TX17G3M/TX17G3M-problems.json";
 import * as TX22G4MProblems from "src/assets/problems/TX22G4M/TX22G4M-problems.json";
+import * as TX21G4MProblems from "src/assets/problems/TX21G4M/TX21G4M-problems.json";
 import * as TX21G5SProblems from "src/assets/problems/TX21G5S/TX21G5S-problems.json";
 import * as TX19G5SProblems from "src/assets/problems/TX19G5S/TX19G5S-problems.json";
 import { AuthService } from "../../shared/services/auth.service";
@@ -63,13 +64,14 @@ export class ProblemsComponent implements OnInit {
   TX18G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX18G3MProblems;
   TX17G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX17G3MProblems;
   TX22G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX22G4MProblems;
+  TX21G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX21G4MProblems;
   TX21G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX21G5SProblems;
   TX19G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX19G5SProblems;
   exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
   dump_count = 1;
 
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
-  online_set = ["TX22G3M", "TX21G3M", "TX19G3M", "TX18G3M", "TX17G3M", "TX22G4M", "TX21G5S", "TX19G5S"];
+  online_set = ["TX22G3M", "TX21G3M", "TX19G3M", "TX18G3M", "TX17G3M", "TX22G4M", "TX21G4M", "TX21G5S", "TX19G5S"];
   filtered_set: string[] = this.online_set;
   filtered_exam_num = 0;
   filtered_prob_num = 0;
@@ -244,6 +246,15 @@ export class ProblemsComponent implements OnInit {
     }
     if (this.filtered_set.includes('TX22G4M')) {
       for (const [num, value] of Object.entries(this.TX22G4M_exam_dump)) {
+        if (value.Number <= 34) {
+          // this.exam_dump[this.dump_count] = value;
+          this.ordered_dump[this.dump_count] = value;
+          this.dump_count += 1;
+        }
+      }
+    }
+    if (this.filtered_set.includes('TX21G4M')) {
+      for (const [num, value] of Object.entries(this.TX21G4M_exam_dump)) {
         if (value.Number <= 34) {
           // this.exam_dump[this.dump_count] = value;
           this.ordered_dump[this.dump_count] = value;
