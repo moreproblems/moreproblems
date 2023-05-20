@@ -163,9 +163,11 @@ export class TX18G3MExamComponent implements OnInit {
                 if ((det as any).status == "Started" && key == this.key) {
                     this.exam_inprogress = true;
                     this.progress_number = (det as any).progress + 1;
-                    const db_submission = this.authService.getExamSubmission(this.key).problems;
-                    for (const [key2, det2] of Object.entries(db_submission)) {
-                        this.exam_submission[+key2] = (det2 as any);
+                    if ((det as any).progress != 0) {
+                        const db_submission = this.authService.getExamSubmission(this.key).problems;
+                        for (const [key2, det2] of Object.entries(db_submission)) {
+                            this.exam_submission[+key2] = (det2 as any);
+                        }
                     }
                 }
             }
@@ -601,9 +603,11 @@ export class TX18G3MExamComponent implements OnInit {
                     this.progress_number = (det as any).progress + 1;
                     this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
                     this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
-                    const db_submission = this.authService.getExamSubmission(this.key).problems;
-                    for (const [key2, det2] of Object.entries(db_submission)) {
-                        this.exam_submission[+key2] = (det2 as any);
+                    if ((det as any).progress != 0) {
+                        const db_submission = this.authService.getExamSubmission(this.key).problems;
+                        for (const [key2, det2] of Object.entries(db_submission)) {
+                            this.exam_submission[+key2] = (det2 as any);
+                        }
                     }
                 }
             }

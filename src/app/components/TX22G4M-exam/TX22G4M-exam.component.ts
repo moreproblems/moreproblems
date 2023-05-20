@@ -7,7 +7,7 @@ import { serverTimestamp } from "firebase/database";
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import * as examMetadata from "src/assets/problems/exams.json";
-import * as problemsData from "src/assets/problems/TX19G3M/TX19G3M-problems.json";
+import * as problemsData from "src/assets/problems/TX22G4M/TX22G4M-problems.json";
 // import * as fs from 'fs';
 // import * as path from 'path';
 
@@ -26,13 +26,13 @@ const confettiHandler = confetti.create(confettiCanvas, {
 });
 
 @Component({
-    selector: 'app-TX19G3M-exam',
-    templateUrl: './TX19G3M-exam.component.html',
-    styleUrls: ['./TX19G3M-exam.component.css']
+    selector: 'app-TX22G4M-exam',
+    templateUrl: './TX22G4M-exam.component.html',
+    styleUrls: ['./TX22G4M-exam.component.css']
 })
 
 @Injectable()
-export class TX19G3MExamComponent implements OnInit {
+export class TX22G4MExamComponent implements OnInit {
     title = 'More Problems';
 
     screenWidth = window.innerWidth;
@@ -55,7 +55,7 @@ export class TX19G3MExamComponent implements OnInit {
     expand_topics = true;
     show_correct = false;
 
-    key = 'TX19G3M'
+    key = 'TX22G4M'
     exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
 
     exam_state = this.exam_attribute_dump[this.key].State;
@@ -68,7 +68,7 @@ export class TX19G3MExamComponent implements OnInit {
 
     exam_directions = 'Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.';
 
-    TX19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
+    TX22G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
     exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
     dump_count = 1;
 
@@ -562,7 +562,7 @@ export class TX19G3MExamComponent implements OnInit {
     }
 
     ngOnInit() {
-        for (const [num, value] of Object.entries(this.TX19G3M_exam_dump)) {
+        for (const [num, value] of Object.entries(this.TX22G4M_exam_dump)) {
             if (value.Number <= this.exam_length) {
                 this.exam_dump[this.dump_count] = value;
                 this.ordered_dump[this.dump_count] = value;

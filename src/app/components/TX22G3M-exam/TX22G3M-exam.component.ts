@@ -163,9 +163,11 @@ export class TX22G3MExamComponent implements OnInit {
                 if ((det as any).status == "Started" && key == this.key) {
                     this.exam_inprogress = true;
                     this.progress_number = (det as any).progress + 1;
-                    const db_submission = this.authService.getExamSubmission(this.key).problems;
-                    for (const [key2, det2] of Object.entries(db_submission)) {
-                        this.exam_submission[+key2] = (det2 as any);
+                    if ((det as any).progress != 0) {
+                        const db_submission = this.authService.getExamSubmission(this.key).problems;
+                        for (const [key2, det2] of Object.entries(db_submission)) {
+                            this.exam_submission[+key2] = (det2 as any);
+                        }
                     }
                 }
             }
@@ -404,10 +406,10 @@ export class TX22G3MExamComponent implements OnInit {
                 this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
             }
         }
-        if (this.number_correct >= 28) {
+        if (this.number_correct >= 27) {
             this.performance_level = "Masters Grade Level Performance";
         }
-        else if (this.number_correct >= 24) {
+        else if (this.number_correct >= 23) {
             this.performance_level = "Meets Grade Level Performance";
         }
         else if (this.number_correct >= 16) {
@@ -601,9 +603,11 @@ export class TX22G3MExamComponent implements OnInit {
                     this.progress_number = (det as any).progress + 1;
                     this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
                     this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
-                    const db_submission = this.authService.getExamSubmission(this.key).problems;
-                    for (const [key2, det2] of Object.entries(db_submission)) {
-                        this.exam_submission[+key2] = (det2 as any);
+                    if ((det as any).progress != 0) {
+                        const db_submission = this.authService.getExamSubmission(this.key).problems;
+                        for (const [key2, det2] of Object.entries(db_submission)) {
+                            this.exam_submission[+key2] = (det2 as any);
+                        }
                     }
                 }
             }
