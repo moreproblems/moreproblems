@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, Injectable, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { AuthService } from "../../shared/services/auth.service";
 import { WindowService } from '../../shared/services/window.service';
@@ -9,6 +9,9 @@ import { getDatabase, ref, set, get, child, update } from "firebase/database";
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { NgOtpInputModule } from  'ng-otp-input';
+import intlTelInput from 'intl-tel-input';
+
+import 'node_modules/intl-tel-input/build/css/intlTelInput.css';
 
 // import {
 //   SearchCountryField,
@@ -25,22 +28,18 @@ import { NgOtpInputModule } from  'ng-otp-input';
 @Injectable()
 export class LoginComponent implements OnInit {
   // title = 'More Problems';
+  iti: any;
   user: any;
+  phone: string = "";
+  iti_msg: string = "";
   otp: string = '';
   verify: any
   windowRef: any;
   login_method = "";
   win = new WindowService;
 
-  // this.window.recaptchaVerifier = new this.afAuth.RecaptchaVerifier('sign-in-button', {
-  //   'size': 'invisible',
-  //   'callback': (response) => {
-  //     // reCAPTCHA solved, allow signInWithPhoneNumber.
-  //     onSignInSubmit();
-  //   }
-  // }, auth);
+  @ViewChild('userPhone') userPhone: ElementRef;
 
-  // constructor(private titleService: Title, private meta: Meta, public authService: AuthService, private win: WindowService, private afAuth: AngularFireAuth) { }
   constructor(private titleService: Title, private meta: Meta, public authService: AuthService, public router: Router, private afAuth: AngularFireAuth) { }
 
   toggle_login_method(mthd: string) {
@@ -50,6 +49,25 @@ export class LoginComponent implements OnInit {
     else {
       this.login_method = "";
     }
+    setTimeout(() => {
+      this.iti = intlTelInput(this.userPhone.nativeElement, {
+        allowDropdown: true,
+        autoPlaceholder: "aggressive",
+        placeholderNumberType: "FIXED_LINE_OR_MOBILE",
+        // nationalMode: true,
+        formatOnDisplay: true,
+        initialCountry: 'auto',
+        geoIpLookup: callback => {
+          fetch("https://ipapi.co/json")
+            .then(res => res.json())
+            .then(data => callback(data.country_code))
+            .catch(() => callback("us"));
+        },
+        utilsScript: "node_modules/intl-tel-input/build/js/utils.js",
+        // onlyCountries: ['JP'],
+        separateDialCode: true,
+      });
+    }, 10);
   }
 
   scroll_top() {
@@ -86,13 +104,18 @@ export class LoginComponent implements OnInit {
       //   // onSignInSubmit();
       // }
     }, getAuth());
-    this.afAuth
-      .signInWithPhoneNumber(phone, appVerifier)
-      .then(result => {
-        this.windowRef.confirmationResult = result;
-        console.log(result);
-      })
-      .catch((error: any) => window.alert(error.message));
+    if (phone != '') {
+      this.afAuth
+        .signInWithPhoneNumber(phone, appVerifier)
+        .then(result => {
+          this.windowRef.confirmationResult = result;
+          console.log(result);
+        })
+        .catch((error: any) => window.alert(error.message));
+    } else {
+      this.iti_msg = "Please enter a valid number below";
+      window.alert(this.iti_msg);
+    }
   }
 
   verifyLoginCode(code: string) {
@@ -130,6 +153,9 @@ export class LoginComponent implements OnInit {
   //     console.log(response);
   //   })
   // }
+
+  ngAfterViewInit() {
+  }
 
   ngOnInit() {
     this.titleService.setTitle("Log In To MoreProblems.Org | U.S. K-12 State Testing Preparation");

@@ -564,7 +564,7 @@
               <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Email / Password </b></div>
             </button>
           </label>
-          <!-- <label *ngIf="user_role == 'Parent' || user_role == 'Student'" class="switch">
+          <label *ngIf="user_role == 'Parent' || user_role == 'Student'" class="switch">
             <input type="checkbox" value="phone">
             <button *ngIf="login_method != 'phone'" (click)="set_login_method('phone')" class="toggle-button-off"
               style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
@@ -580,7 +580,7 @@
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Phone Number </b></div>
             </button>
-          </label> -->
+          </label>
         </div>
         <br />
         <div *ngIf="login_method=='email'" class="authBlock">
@@ -601,11 +601,12 @@
               style="margin: auto"> <b>Sign Up</b> </button>
           </div>
         </div>
-        <!-- <div *ngIf="login_method=='phone'" class="authBlock">
+        <div *ngIf="login_method=='phone'" class="authBlock">
           <h2 style="padding-bottom: 10px"> Enter Your Number Below </h2>
+          <h4 style="padding-bottom: 10px"> (including the country code) </h4>
           <div class="formGroup">
-            <input type="tel" class="formControl" placeholder="Phone Number"
-              style="width: 95%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
+            <input type="tel" class="formControl" placeholder="+17775554321"
+              style="width: 100%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
               #userPhone required>
           </div>
           <br />
@@ -622,10 +623,10 @@
           </div>
           <br />
           <div class="formGroup">
-            <button class="grade-button" (click)="verifyLoginCode(this.otp)" style="margin: auto"> <b>Log In</b>
+            <button class="grade-button" (click)="verifyLoginCode(phone, this.otp, this.user_role)" style="margin: auto"> <b>Log In</b>
             </button>
           </div>
-        </div> -->
+        </div>
         <br />
         <br />
         <div class="redirectToLogin">
