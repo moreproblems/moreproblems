@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   // user_data: any = null;
 
-  online_set = ['TX22G3M', 'TX21G3M', 'TX19G3M', 'TX18G3M', 'TX17G3M', 'TX22G4M', 'TX21G4M', 'TX19G4M', 'TX21G5S', 'TX19G5S'];
+  online_set = ['TX22G3M', 'TX21G3M', 'TX19G3M', 'TX18G3M', 'TX17G3M', 'TX22G4M', 'TX21G4M', 'TX19G4M', 'TX18G4M', 'TX21G5S', 'TX19G5S'];
   favorite_set: string[] = [];
   inprogress_set: string[] = [];
   inprogress_exams: {[key: string] : any} = {};
