@@ -63,6 +63,16 @@
     opacity: 0.8;
   }
 
+  #confetticanvas {
+    position: fixed;
+    z-index: 50;
+    top: 81px;
+    right: 0px;
+    bottom: 0px;
+    left: 125px;
+    height: 0px;
+  }
+
   .content-menu {
     display: flex;
     margin: 0 auto 32px;
@@ -552,7 +562,7 @@
                   {{choice.value.Choice}}
                 </h3>
                 <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
-                  style="height: 100px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                  style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
               </div>
             </div>
           </div>
