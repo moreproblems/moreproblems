@@ -28,6 +28,8 @@ import { TX19G4MExamComponent } from './components/TX19G4M-exam/TX19G4M-exam.com
 import { TX19G4MKeyComponent } from './components/TX19G4M-key/TX19G4M-key.component';
 import { TX18G4MExamComponent } from './components/TX18G4M-exam/TX18G4M-exam.component';
 import { TX18G4MKeyComponent } from './components/TX18G4M-key/TX18G4M-key.component';
+import { TX17G4MExamComponent } from './components/TX17G4M-exam/TX17G4M-exam.component';
+import { TX17G4MKeyComponent } from './components/TX17G4M-key/TX17G4M-key.component';
 import { TX21G5SExamComponent } from './components/TX21G5S-exam/TX21G5S-exam.component';
 import { TX21G5SKeyComponent } from './components/TX21G5S-key/TX21G5S-key.component';
 import { TX19G5SExamComponent } from './components/TX19G5S-exam/TX19G5S-exam.component';
@@ -82,6 +84,8 @@ const routes: Routes = [
   { path: 'exam/TX19G4M/key', component: TX19G4MKeyComponent },
   { path: 'exam/TX18G4M', component: TX18G4MExamComponent },
   { path: 'exam/TX18G4M/key', component: TX18G4MKeyComponent },
+  { path: 'exam/TX17G4M', component: TX17G4MExamComponent },
+  { path: 'exam/TX17G4M/key', component: TX17G4MKeyComponent },
   { path: 'exam/TX21G5S', component: TX21G5SExamComponent },
   { path: 'exam/TX21G5S/key', component: TX21G5SKeyComponent },
   { path: 'exam/TX19G5S', component: TX19G5SExamComponent },
