@@ -514,7 +514,7 @@
               <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
                 (click)="selection.value = choice.key; attempt_mc_problem(choice.key); scroll_bottom()"
                 style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
-                <label class="switch" style="padding: 0 25px">
+                <label class="switch" style="padding: 0 10px">
                   <input type="checkbox" value="{{choice.key}}">
                   <button *ngIf="problem_selection==choice.key" class="toggle-button-on"> <b> {{choice.key}} </b>
                   </button>
@@ -522,11 +522,11 @@
                   </button>
                 </label>
                 <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                  style="display: block; margin: 0px 20px 0px 20px; margin: auto; white-space: pre-wrap">
+                  style="display: block; margin: auto; white-space: pre-wrap">
                   {{choice.value.Choice}}
                 </h3>
                 <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
-                  style="height: 100px; margin: auto">
+                  style="height: 100px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
               </div>
             </div>
           </div>
