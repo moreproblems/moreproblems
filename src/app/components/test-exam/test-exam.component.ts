@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import * as examMetadata from "src/assets/problems/exams.json";
+import * as downloadData from "src/assets/problems/downloads.json";
 import * as TestProblems from "src/assets/problems/TX18G3M/TX18G3M-problems.json";
 import { HttpClient } from '@angular/common/http';
 
@@ -44,6 +45,10 @@ export class TestExamComponent implements OnInit {
 
   key = 'TX18G3M'
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
+  download_dump: { [key: string]: number } = downloadData;
+  dl_state_breakdown: { [key: string]: number } = {};
+  dl_grade_breakdown: { [key: string]: number } = {};
+  dl_subject_breakdown: { [key: string]: number } = {};
 
   exam_state = this.exam_attribute_dump[this.key].State;
   exam_grade = this.exam_attribute_dump[this.key].Grade;
@@ -510,6 +515,103 @@ export class TestExamComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.dl_state_breakdown = {};
+    this.dl_grade_breakdown = {};
+    this.dl_subject_breakdown = {};
+    for (const [key, val] of Object.entries(this.download_dump)) {
+      // state
+      const dl_state = key.substring(0,2);
+      if (Object.keys(this.dl_state_breakdown).includes(dl_state)) {
+        this.dl_state_breakdown[dl_state] += val;
+      }
+      else {
+        this.dl_state_breakdown[dl_state] = val;
+      }
+      // grade
+      if (['CO', 'IL', 'MA', 'MD', 'MN', 'MO', 'NJ'].includes(dl_state)) {
+        if (key.substring(2,4) == 'G1') {
+          const dl_grade = key.substring(2,5);
+          if (Object.keys(this.dl_grade_breakdown).includes(dl_grade)) {
+            this.dl_grade_breakdown[dl_grade] += val;
+          }
+          else {
+            this.dl_grade_breakdown[dl_grade] = val;
+          }
+        }
+        else {
+          const dl_grade = key.substring(2,4);
+          if (Object.keys(this.dl_grade_breakdown).includes(dl_grade)) {
+            this.dl_grade_breakdown[dl_grade] += val;
+          }
+          else {
+            this.dl_grade_breakdown[dl_grade] = val;
+          }
+        }
+      }
+      else {
+        if (key.substring(4,6) == 'G1') {
+          const dl_grade = key.substring(4,7);
+          if (Object.keys(this.dl_grade_breakdown).includes(dl_grade)) {
+            this.dl_grade_breakdown[dl_grade] += val;
+          }
+          else {
+            this.dl_grade_breakdown[dl_grade] = val;
+          }
+        }
+        else {
+          const dl_grade = key.substring(4,6);
+          if (Object.keys(this.dl_grade_breakdown).includes(dl_grade)) {
+            this.dl_grade_breakdown[dl_grade] += val;
+          }
+          else {
+            this.dl_grade_breakdown[dl_grade] = val;
+          }
+        }
+      }
+      // subject
+      if (['CO', 'IL', 'MA', 'MD', 'MN', 'MO', 'NJ'].includes(dl_state)) {
+        if (key.substring(2,4) == 'G1') {
+          const dl_subject = key.substring(5);
+          if (Object.keys(this.dl_subject_breakdown).includes(dl_subject)) {
+            this.dl_subject_breakdown[dl_subject] += val;
+          }
+          else {
+            this.dl_subject_breakdown[dl_subject] = val;
+          }
+        }
+        else {
+          const dl_subject = key.substring(4);
+          if (Object.keys(this.dl_subject_breakdown).includes(dl_subject)) {
+            this.dl_subject_breakdown[dl_subject] += val;
+          }
+          else {
+            this.dl_subject_breakdown[dl_subject] = val;
+          }
+        }
+      }
+      else {
+        if (key.substring(4,6) == 'G1') {
+          const dl_subject = key.substring(7);
+          if (Object.keys(this.dl_subject_breakdown).includes(dl_subject)) {
+            this.dl_subject_breakdown[dl_subject] += val;
+          }
+          else {
+            this.dl_subject_breakdown[dl_subject] = val;
+          }
+        }
+        else {
+          const dl_subject = key.substring(6);
+          if (Object.keys(this.dl_subject_breakdown).includes(dl_subject)) {
+            this.dl_subject_breakdown[dl_subject] += val;
+          }
+          else {
+            this.dl_subject_breakdown[dl_subject] = val;
+          }
+        }
+      }
+    }
+    console.log(this.dl_state_breakdown);
+    console.log(this.dl_grade_breakdown);
+    console.log(this.dl_subject_breakdown);
   }
 }
