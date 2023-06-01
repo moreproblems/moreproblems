@@ -100,8 +100,8 @@ export class AuthService {
         up and returns promise */
         this.SendVerificationMail();
         this.router.navigate(['profile']);
-        this.WriteUserData(result.user, role);
-        this.SetUserData(result.user);
+        `this.WriteUserData(result.user, role);
+        this.SetUserData(result.user);`
         // this.setUserLoggedIn(result.user);
       })
       .catch((error) => {
@@ -356,6 +356,21 @@ export class AuthService {
   // Optional: clear localStorage
   clearLocalStorage() {
     localStorage.clear();
+  }
+
+  searchUserId(id: string) {
+    const db = getDatabase();
+    get(child(ref(db), "users/" + id)).then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        this.exam_sub = snapshot.val();
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
+    return this.exam_sub;
   }
 
   // Sign out

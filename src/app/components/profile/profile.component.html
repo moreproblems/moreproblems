@@ -165,6 +165,11 @@
         padding: 8px 20px;
     }
 
+    .card.card-large:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
     .card-container .card:not(.highlight-card) {
         cursor: pointer;
     }
@@ -771,6 +776,23 @@
                         <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Achievements </b></div>
                     </button>
                 </label>
+                <label *ngIf="user.role != 'Student'" class="switch">
+                    <input type="checkbox" value="achievements">
+                    <button *ngIf="profile_tab != 'students'" (click)="set_tab('students')" class="toggle-button-off"
+                        style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
+                        <div style="margin: 0 5px">
+                            <img src="./assets/icons/student.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                        </div>
+                        <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Students </b></div>
+                    </button>
+                    <button *ngIf="profile_tab == 'students'" (click)="set_tab('students')" class="toggle-button-on"
+                        style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
+                        <div style="margin: 0 5px">
+                            <img src="./assets/icons/student.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                        </div>
+                        <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Students </b></div>
+                    </button>
+                </label>
             </div>
             <!-- Show user data when logged in -->
             <div *ngIf="profile_tab == 'information' && !edit" class="row">
@@ -1094,23 +1116,91 @@
                         <br />
                         <h3>Total Exams Completed: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
                         </h3>
-                        <div *ngFor="let exm of complete_exam_list" class="card card-medium"
+                        <div *ngFor="let exm of complete_exam_list" class="card card-large"
                             style="margin: auto; height: auto; max-height: 200px; max-width: 450px; display: flex; flex-direction: column">
                             <h3 style="margin: auto"> {{exam_names[exm]}} </h3>
                             <hr style="width: 50%; height:1px; border-width:0; color:gray; background-color:gray" />
                             <div style="display: flex; justify-content: space-between; padding: 5px; width: 100%">
                                 <div>
                                     <h3 style="margin: 1px auto; font-weight: 500"> Score:
-                                        <b>{{student_exam_metadata[exm].score}}%</b> (<b>{{student_exam_metadata[exm].time}}</b>) </h3>
+                                        <b>{{student_exam_metadata[exm].score}}%</b>
+                                        (<b>{{student_exam_metadata[exm].time}}</b>)
+                                    </h3>
                                     <progress value="{{student_exam_metadata[exm].score}}" max="100"
                                         style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto;"
                                         #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
-                                    <h4 style="margin: 1px auto; font-weight: 500"> Completed: <b>{{""+student_exam_metadata[exm].enddate}}</b> {{""+student_exam_metadata[exm].endtime}} </h4>
+                                    <h4 style="margin: 1px auto; font-weight: 500"> Completed:
+                                        <b>{{""+student_exam_metadata[exm].enddate}}</b>
+                                        {{""+student_exam_metadata[exm].endtime}}
+                                    </h4>
                                 </div>
                                 <button (click)="this.select_exam(exm)" class="grade-button"
                                     style="margin: auto; padding: 5px"> <b>View Results</b> </button>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="profile_tab == 'students' && !edit" class="row">
+                <div class="col-md-12">
+                    <div class="media">
+                        <h3> Search for Students by ID </h3>
+                        <section
+                            style="display: flex; flex-direction: row; align-items: center; margin: auto; height: auto; max-height: 150px; max-width: 450px; padding: 5px">
+                            <!-- <img src="./assets/icons/usersearch.png" style="padding: 5px 0 0; height: 30px; width: 30px"> -->
+                            <input type="text" inputmode="text" maxlength="40" (change)="search_id(this.userId.value)"
+                                style="margin: 0 5px 0 auto; padding-left: 10px; width: 275px; height: 40px; font-size: 16px; font-weight: 400; text-align: left; border-radius: 10px;"
+                                #userId />
+                            <input (click)="search_id(this.userId.value); search_user=true" type="image"
+                                src="./assets/icons/usersearch.png" style="margin: 0 auto 0 5px" alt="Search" width="30"
+                                height="30">
+                        </section>
+                        <br />
+                        <div *ngIf="search_user" class="card card-large"
+                            style="margin: auto; height: auto; max-height: 200px; max-width: 90%; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 15px 25px">
+                            <img *ngIf="this.screenWidth > this.mobileWidth"
+                                class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                style="height: 150px; width: 150px; border-radius: 50%"
+                                src="{{(search_user_result.photoURL) ? search_user_result.photoURL : '/assets/icons/user/user.png'}}"
+                                alt="{{search_user_result.displayName}}">
+                            <img *ngIf="this.screenWidth <= this.mobileWidth"
+                                class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                style="height: 75px; width: 75px; border-radius: 50%"
+                                src="{{(search_user_result.photoURL) ? search_user_result.photoURL : '/assets/icons/user/user.png'}}"
+                                alt="{{search_user_result.displayName}}">
+                            <div style="align-items: center; text-align: center;">
+                                <h2>{{(search_user_result.displayName) ?
+                                    search_user_result.displayName :
+                                    'User'}}</h2>
+                                <div
+                                    style="display: flex; flex-direction: row; align-items: center; justify-content: space-between">
+                                    <div class="media-body">
+                                        <h3>{{search_user_result.email}}</h3>
+                                        <h3>{{search_user_result.phoneNumber}}</h3>
+                                        <!-- <h4>Role: <strong style="font-weight: 500">{{search_user_result.role}}</strong></h4>
+                                        <h4>Grade: <strong style="font-weight: 500">{{search_user_result.grade}}</strong></h4>
+                                        <h4>State: <strong style="font-weight: 500">{{search_user_result.state}}</strong></h4> -->
+                                    </div>
+                                    <div *ngIf="this.screenWidth > this.mobileWidth" class="media-body"
+                                        style="text-align: left; padding-left: 30px; line-height: 16px;">
+                                        <h3>{{search_user_result.role}}</h3>
+                                        <h3>{{search_user_result.grade}}</h3>
+                                        <h3>{{search_user_result.state}}</h3>
+                                    </div>
+                                </div>
+                                <button class="grade-button"
+                                    style="margin: 10px auto; display: flex; flex-direction: row; align-items: center; padding: 5px">
+                                    <div style="margin: 0 5px">
+                                        <img src="./assets/icons/link.png"
+                                            style="padding: 5px 0 0; height: 25px; width: 25px">
+                                    </div>
+                                    <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Link Student </b></div>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- <div *ngFor="let exm of complete_exam_list" class="card card-medium"
+                            style="margin: auto; height: auto; max-height: 200px; max-width: 450px; display: flex; flex-direction: column">
+                        </div> -->
                     </div>
                 </div>
             </div>

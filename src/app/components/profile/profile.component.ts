@@ -52,6 +52,14 @@ export class ProfileComponent implements OnInit {
   edit: boolean = false;
   edit_list: { [index: string]: any } = {};
   login_method = "";
+  search_user = false;
+  search_user_result: any = {};
+  SURPhotoURL = "";
+  SURDisplayName = "";
+  SURUid = "";
+  SUREmail = "";
+  SURPhoneNumber = "";
+  SURRole = "";
   windowRef: any;
   win = new WindowService;
 
@@ -186,6 +194,12 @@ export class ProfileComponent implements OnInit {
       }
     }
     this.selected_exam = exm;
+  }
+
+  search_id(id: string) {
+    setTimeout(() => {
+      this.search_user_result = (this.authService.searchUserId(id) as any);
+    }, 250);
   }
 
   expandTopics() {
