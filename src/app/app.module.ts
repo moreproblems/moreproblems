@@ -87,6 +87,8 @@ import { TX22G8SExamComponent } from './components/TX22G8S-exam/TX22G8S-exam.com
 import { TX22G8SKeyComponent } from './components/TX22G8S-key/TX22G8S-key.component';
 import { TX21G8SExamComponent } from './components/TX21G8S-exam/TX21G8S-exam.component';
 import { TX21G8SKeyComponent } from './components/TX21G8S-key/TX21G8S-key.component';
+import { TX19G8SExamComponent } from './components/TX19G8S-exam/TX19G8S-exam.component';
+import { TX19G8SKeyComponent } from './components/TX19G8S-key/TX19G8S-key.component';
 
 // const firebaseUiAuthConfig: firebaseui.auth.Config = {
 //   signInFlow: 'popup',
@@ -167,6 +169,8 @@ import { TX21G8SKeyComponent } from './components/TX21G8S-key/TX21G8S-key.compon
     TX22G8SKeyComponent,
     TX21G8SExamComponent,
     TX21G8SKeyComponent,
+    TX19G8SExamComponent,
+    TX19G8SKeyComponent,
     TestExamComponent
 
   ],

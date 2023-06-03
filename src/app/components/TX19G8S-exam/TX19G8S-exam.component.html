@@ -307,6 +307,26 @@
     width: 100%;
   }
 
+  progress {
+    border-radius: 10px;
+  }
+
+  progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 1px solid darkslategrey;
+  }
+
+  progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: limegreen;
+    /* border: 2px solid black; */
+  }
+
+  progress::-moz-progress-bar {
+    border-radius: 10px;
+  }
+
   .terminal {
     position: relative;
     /* width: 100%; */
@@ -467,369 +487,119 @@
 
 <div class="content" role="main" (window:resize)="width_change2()">
   <canvas id="confetticanvas"></canvas>
-  <div *ngIf="expand_filters" class="content">
-    <h2>Choose your State</h2>
-    <input type="hidden" value="All United States" #state>
-    <div class="card-container">
-      <!-- <label class="switch">
-        <input type="checkbox" value="CO">
-        <button *ngIf="state_filters.includes('Colorado')" (click)="toggle_button('Colorado')" class="toggle-button-on"
-          tabindex="0"> <b>Colorado</b> </button>
-        <button *ngIf="!state_filters.includes('Colorado')" (click)="toggle_button('Colorado')"
-          class="toggle-button-off" tabindex="0"> <b>Colorado</b> </button>
-      </label> -->
-      <label class="switch">
-        <input type="checkbox" value="FL">
-        <button *ngIf="state_filters.includes('Florida')" (click)="toggle_button('Florida')" class="toggle-button-on"
-          tabindex="0"> <b>Florida</b> </button>
-        <button *ngIf="!state_filters.includes('Florida')" (click)="toggle_button('Florida')" class="toggle-button-off"
-          tabindex="0"> <b>Florida</b> </button>
-      </label>
-      <!-- <label class="switch">
-        <input type="checkbox" value="IL">
-        <button *ngIf="state_filters.includes('Illinois')" (click)="toggle_button('Illinois')" class="toggle-button-on"
-          tabindex="0"> <b>Illinois</b> </button>
-        <button *ngIf="!state_filters.includes('Illinois')" (click)="toggle_button('Illinois')"
-          class="toggle-button-off" tabindex="0"> <b>Illinois</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="MD">
-        <button *ngIf="state_filters.includes('Maryland')" (click)="toggle_button('Maryland')" class="toggle-button-on"
-          tabindex="0"> <b>Maryland</b> </button>
-        <button *ngIf="!state_filters.includes('Maryland')" (click)="toggle_button('Maryland')"
-          class="toggle-button-off" tabindex="0"> <b>Maryland</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="MA">
-        <button *ngIf="state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')"
-          class="toggle-button-on" tabindex="0"> <b>Massachusetts</b> </button>
-        <button *ngIf="!state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')"
-          class="toggle-button-off" tabindex="0"> <b>Massachusetts</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="MN">
-        <button *ngIf="state_filters.includes('Minnesota')" (click)="toggle_button('Minnesota')"
-          class="toggle-button-on" tabindex="0"> <b>Minnesota</b> </button>
-        <button *ngIf="!state_filters.includes('Minnesota')" (click)="toggle_button('Minnesota')"
-          class="toggle-button-off" tabindex="0"> <b>Minnesota</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="MI">
-        <button *ngIf="state_filters.includes('Missouri')" (click)="toggle_button('Missouri')" class="toggle-button-on"
-          tabindex="0"> <b>Missouri</b> </button>
-        <button *ngIf="!state_filters.includes('Missouri')" (click)="toggle_button('Missouri')"
-          class="toggle-button-off" tabindex="0"> <b>Missouri</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="NJ">
-        <button *ngIf="state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')"
-          class="toggle-button-on" tabindex="0"> <b>New Jersey</b> </button>
-        <button *ngIf="!state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')"
-          class="toggle-button-off" tabindex="0"> <b>New Jersey</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="NY">
-        <button *ngIf="state_filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button-on"
-          tabindex="0"> <b>New York</b> </button>
-        <button *ngIf="!state_filters.includes('New York')" (click)="toggle_button('New York')"
-          class="toggle-button-off" tabindex="0"> <b>New York</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="NC">
-        <button *ngIf="state_filters.includes('North Carolina')" (click)="toggle_button('North Carolina')"
-          class="toggle-button-on" tabindex="0"> <b>North Carolina</b> </button>
-        <button *ngIf="!state_filters.includes('North Carolina')" (click)="toggle_button('North Carolina')"
-          class="toggle-button-off" tabindex="0"> <b>North Carolina</b> </button>
-      </label> -->
-      <label class="switch">
-        <input type="checkbox" value="PA">
-        <button *ngIf="state_filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')"
-          class="toggle-button-on" tabindex="0"> <b>Pennsylvania</b> </button>
-        <button *ngIf="!state_filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')"
-          class="toggle-button-off" tabindex="0"> <b>Pennsylvania</b> </button>
-      </label>
-      <!-- <label class="switch">
-        <input type="checkbox" value="TN">
-        <button *ngIf="state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')"
-          class="toggle-button-on" tabindex="0"> <b>Tennessee</b> </button>
-        <button *ngIf="!state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')"
-          class="toggle-button-off" tabindex="0"> <b>Tennessee</b> </button>
-      </label> -->
-      <label class="switch">
-        <input type="checkbox" value="TX">
-        <button *ngIf="state_filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button-on"
-          tabindex="0"> <b>Texas</b> </button>
-        <button *ngIf="!state_filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button-off"
-          tabindex="0"> <b>Texas</b> </button>
-      </label>
-    </div>
-    <br />
-
-    <br />
-    <h2>Choose your Grade</h2>
-    <input type="hidden" value="All Grades" #state>
-    <div class="card-container">
-      <label class="switch">
-        <input type="checkbox" value="G3">
-        <button *ngIf="grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button-on"
-          tabindex="0"> <b>Grade 3</b> </button>
-        <button *ngIf="!grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button-off"
-          tabindex="0"> <b>Grade 3</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="G4">
-        <button *ngIf="grade_filters.includes('Grade 4')" (click)="toggle_button('Grade 4')" class="toggle-button-on"
-          tabindex="0"> <b>Grade 4</b> </button>
-        <button *ngIf="!grade_filters.includes('Grade 4')" (click)="toggle_button('Grade 4')" class="toggle-button-off"
-          tabindex="0"> <b>Grade 4</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="G5">
-        <button *ngIf="grade_filters.includes('Grade 5')" (click)="toggle_button('Grade 5')" class="toggle-button-on"
-          tabindex="0"> <b>Grade 5</b> </button>
-        <button *ngIf="!grade_filters.includes('Grade 5')" (click)="toggle_button('Grade 5')" class="toggle-button-off"
-          tabindex="0"> <b>Grade 5</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="G6">
-        <button *ngIf="grade_filters.includes('Grade 6')" (click)="toggle_button('Grade 6')" class="toggle-button-on"
-          tabindex="0"> <b>Grade 6</b> </button>
-        <button *ngIf="!grade_filters.includes('Grade 6')" (click)="toggle_button('Grade 6')" class="toggle-button-off"
-          tabindex="0"> <b>Grade 6</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="G7">
-        <button *ngIf="grade_filters.includes('Grade 7')" (click)="toggle_button('Grade 7')" class="toggle-button-on"
-          tabindex="0"> <b>Grade 7</b> </button>
-        <button *ngIf="!grade_filters.includes('Grade 7')" (click)="toggle_button('Grade 7')" class="toggle-button-off"
-          tabindex="0"> <b>Grade 7</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="G8">
-        <button *ngIf="grade_filters.includes('Grade 8')" (click)="toggle_button('Grade 8')" class="toggle-button-on"
-          tabindex="0"> <b>Grade 8</b> </button>
-        <button *ngIf="!grade_filters.includes('Grade 8')" (click)="toggle_button('Grade 8')" class="toggle-button-off"
-          tabindex="0"> <b>Grade 8</b> </button>
-      </label>
-    </div>
-    <br />
-
-    <br />
-    <h2>Choose your Subject</h2>
-    <input type="hidden" value="All Subjects" #state>
-    <div class="card-container">
-      <label class="switch">
-        <input type="checkbox" value="M">
-        <button *ngIf="subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')"
-          class="toggle-button-on" tabindex="0">
-          <b>Math</b> </button>
-        <button *ngIf="!subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')"
-          class="toggle-button-off" tabindex="0"> <b>Math</b> </button>
-      </label>
-      <!-- <label class="switch">
-        <input type="checkbox" value="ER">
-        <button *ngIf="subject_filters.includes('English Reading')" (click)="toggle_button('English Reading')"
-          class="toggle-button-on" tabindex="0"> <b>English Reading</b> </button>
-        <button *ngIf="!subject_filters.includes('English Reading')" (click)="toggle_button('English Reading')"
-          class="toggle-button-off" tabindex="0"> <b>English Reading</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="EW">
-        <button *ngIf="subject_filters.includes('English Writing')" (click)="toggle_button('English Writing')"
-          class="toggle-button-on" tabindex="0"> <b>English Writing</b> </button>
-        <button *ngIf="!subject_filters.includes('English Writing')" (click)="toggle_button('English Writing')"
-          class="toggle-button-off" tabindex="0"> <b>English Writing</b> </button>
-      </label> -->
-      <label class="switch">
-        <input type="checkbox" value="S">
-        <button *ngIf="subject_filters.includes('Science')" (click)="toggle_button('Science')" class="toggle-button-on"
-          tabindex="0"> <b>Science</b> </button>
-        <button *ngIf="!subject_filters.includes('Science')" (click)="toggle_button('Science')"
-          class="toggle-button-off" tabindex="0"> <b>Science</b> </button>
-      </label>
-      <label class="switch">
-        <input type="checkbox" value="SS">
-        <button *ngIf="subject_filters.includes('Social Studies')" (click)="toggle_button('Social Studies')"
-          class="toggle-button-on" tabindex="0"> <b>Social Studies</b> </button>
-        <button *ngIf="!subject_filters.includes('Social Studies')" (click)="toggle_button('Social Studies')"
-          class="toggle-button-off" tabindex="0"> <b>Social Studies</b> </button>
-      </label>
-    </div>
-    <br />
-
-    <br />
-    <h2>Choose your Settings</h2>
-    <h3 *ngIf="filtered_set.length != 0" style="color: blue; text-align: center"> There are a total of
-      {{filtered_exam_num}} exams with {{filtered_prob_num}} problems matching you selection. </h3>
-    <h3 *ngIf="filtered_set.length == 0" style="color: red; text-align: center"> {{generate_message}} </h3>
-    <div class="card-container" style="display: flex; justify-content: center; align-items: center; max-width: 100%">
-      <div class="slider">
-        <input type="range" min="5" max="50" value="{{exam_length}}" (input)="set_problem_num(+this.probSlider.value)"
-          style="width: 250px" #probSlider>
-        <div class="slider" style="display: flex; justify-content: center; align-items: center">
-          <p style="font-size: 16px"> Total Problems: </p>
-          <input (keyup)="set_problem_num(+this.probEntry.value)" type="text" inputmode="numeric"
-            value="{{exam_length}}" min="5" max="50" maxlength="2"
-            style="margin: auto 0 auto 5px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
-            #probEntry />
-        </div>
-      </div>
-      <label class="switch" style="align-items: center; margin: 15px 0">
-        <input type="checkbox" value="random">
-        <button (click)="toggle_mode()" *ngIf="mode=='explain'" class="toggle-button-on"
-          style="margin: 0px 20px 0px 20px; font-size: 18px"> <b> Assessment </b> Mode
-        </button>
-        <button (click)="toggle_mode()" *ngIf="mode=='assess'" class="toggle-button-off"
-          style="margin: 0px 20px 0px 20px; font-size: 18px"> <b> Explanation </b> Mode
-        </button>
-      </label>
-      <button class="grade-button" (click)="generate_problems()">
-        <h3 (click)="scroll_top()"><b> Create My Test </b></h3>
-      </button>
-    </div>
-  </div>
-
-  <div class="card-container">
-    <div *ngIf="!expand_filters" class="card card-large"
-      style="height: auto; width: auto; margin: auto; text-align: center; max-width: 95%" #problemCard>
+  <div class="card-container" style="padding: 0px">
+    <div class="card card-large" style="height: auto; width: auto; margin: auto; text-align: center; max-width: 95%"
+      #problemCard>
       <div class="content" style="margin: auto; align-items: center">
-        <h3 *ngIf="exam_length >= problem_number" style="margin: auto 0; color: darkgrey; font-size: 18px">
-          (#{{problem_number}}/{{exam_length}}) Time spent solving problem: {{pt_minutes}}m {{pt_counter%60}}s </h3>
-        <h2 *ngIf="this.problem_number > this.exam_length && this.mode == 'assess'"> With {{number_correct}} out of
-          {{exam_length}} problems
+        <h2 *ngIf="this.problem_number > 0" style="padding-top: 20px; color: darkgrey"> {{exam_state}} {{exam_name}}
+          {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
+        <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0"
+          style="color: darkgrey; font-size: 18px"> Problem #{{problem_number}}/{{exam_length}}
+          <hr /> {{et_minutes}}m {{et_counter%60}}s
+        </h3>
+        <h2 *ngIf="this.problem_number > this.exam_length"> With {{number_correct}} out of {{exam_length}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
-        <br />
-        <div *ngIf="problem_number <= exam_length">
-          <section style="height: auto; width: 100%; display: flex; justify-content: center">
-            <div *ngFor="let prob of exam_dump | keyvalue"
-              style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
-              <label *ngIf="problem_number == +prob.key" class="switch"
-                style="max-height: 500px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
-                <input type="checkbox">
-                <button *ngIf="!sub_topic" (click)="toggle_topic()" class="topic-button"
-                  style="width: 100%; font-size: 16px">
-                  <b>{{prob.value.Topic}}</b> </button>
-                <button *ngIf="sub_topic" (click)="toggle_topic()" class="topic-button"
-                  style="width: 100%; font-size: 16px">
-                  {{prob.value.SubTopic}} </button>
-              </label>
-              <!-- <p *ngIf="problem_number == +prob.key"> {{prob.value.Content}} </p> -->
-            </div>
-          </section>
-          <br *ngIf="problem_number <= exam_length" />
-          <div *ngFor="let prob of exam_dump | keyvalue">
-            <div *ngIf="problem_number == +prob.key">
-              <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
-                <h3 *ngIf="!block.endsWith('.jpg')"> {{block}} </h3>
-                <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
-              </div>
-            </div>
+        <h2
+          *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Masters Grade Level Performance'"
+          style="color: green"> {{performance_level}} </h2>
+        <h2
+          *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Approaches Grade Level Performance'"
+          style="color: blue"> {{performance_level}} </h2>
+        <h2 *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Meets Grade Level Performance'"
+          style="color: magenta"> {{performance_level}} </h2>
+        <h2
+          *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Does Not Meet Grade Level Performance'"
+          style="color: red"> {{performance_level}} </h2>
+        <div *ngIf="this.problem_number == 0"
+          style="height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
+          <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_type}} {{exam_grade}}
+            {{exam_subject}} Exam
+          </h2>
+          <p style="font-size: 16px; padding: 20px"> <b>Directions</b> : {{exam_directions}} </p>
+          <br />
+          <div *ngIf="!this.authService.userData || !this.exam_inprogress" class="card-container"
+            style="align-items: center">
+            <label class="switch" style="align-items: center">
+              <input type="checkbox" value="random">
+              <button (click)="toggle_random()" *ngIf="random" class="toggle-button-on"
+                style="margin: 0px 20px 0px 20px"> <b> Order Problems </b>
+              </button>
+              <button (click)="toggle_random()" *ngIf="!random" class="toggle-button-off"
+                style="margin: 0px 20px 0px 20px"> <b> Shuffle Problems </b>
+              </button>
+            </label>
+            <button class="grade-button" (click)="begin_exam(); scroll_top()"
+              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px">
+              <b> Begin Exam </b>
+            </button>
           </div>
-          <br *ngIf="problem_number <= exam_length" />
-          <input type="hidden" #selection>
-          <div *ngFor="let prob of exam_dump | keyvalue">
-            <div *ngIf="problem_number == +prob.key">
-              <div *ngIf="prob.value.Type == 'FR'">
-                <div class="card card-small"
-                  style="min-height: 50px; width: 275px; max-height: 100px; padding: 10px; margin: auto">
-                  <input
-                    style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
-                    inputmode="numeric" #inputFR />
-                  <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value); scroll_bottom()"
-                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
-                    <b> Submit </b> </button>
-                </div>
-              </div>
-              <div *ngIf="prob.value.Type == 'MC'">
-                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
-                  (click)="selection.value = choice.key; attempt_mc_problem(choice.key); scroll_bottom()"
-                  style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
-                  <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
-                    <button *ngIf="problem_selection==choice.key" class="toggle-button-on"> <b> {{choice.key}} </b>
-                    </button>
-                    <button *ngIf="problem_selection!=choice.key" class="toggle-button-off"> <b> {{choice.key}} </b>
-                    </button>
-                  </label>
-                  <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                    style="display: block; margin: 0px 20px 0px 20px; margin: auto; white-space: pre-wrap">
-                    {{choice.value.Choice}}
-                  </h3>
-                  <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
-                  style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                </div>
-              </div>
+          <div *ngIf="this.authService.userData && this.exam_inprogress" class="card-container"
+            style="display: flex; flex-direction: row; align-items: center; text-align: center; width: 80%; margin: 0">
+            <div class="card-container" style="align-items: center; margin: 0px 20px">
+              <h4 style="margin: auto"> {{exam_length - progress_number + 1}} / {{exam_length}} remaining problems </h4>
+              <progress value="{{progress_number-1}}" max="{{exam_length}}"
+                style="height: 20px; width: 100%; border-radius: 15px; margin: 10px auto"
+                #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+              <h4 style="margin: 1px auto; font-weight: 500"> Last Submission: <b>{{""+last_date}}</b> {{""+last_time}} </h4>
             </div>
+            <button class="grade-button" (click)="resume_exam(); scroll_top()"
+              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px; margin-top: 20px">
+              <b> Resume Exam </b>
+            </button>
           </div>
-          <br *ngIf="problem_number <= exam_length" />
-          <div *ngFor="let prob of exam_dump | keyvalue">
-            <div *ngIf="problem_number == +prob.key && problem_attempts > 0 && mode == 'explain'"
-              class="card highlight-card card-small"
-              style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
-              <div *ngIf="prob.value.Type == 'MC'">
-                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
-                  <h3 *ngIf="choice.key == selection.value"
-                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
-                    <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
-                    <br /> <br /> <b>Explanation:</b> {{attempt_explanation}}
-                  </h3>
-                  <br *ngIf="choice.key == selection.value && attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" /> <br *ngIf="choice.key == selection.value && attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
-                  <button *ngIf="choice.key == selection.value && attempt_response.startsWith('Correct') && screenWidth <= mobileWidth"
-                    class="grade-button" (click)="next_problem(); scroll_top()"
-                    style="display: block; max-width: 150px; max-height: 100px; margin: auto">
-                    <b> Next Problem </b>
-                  </button>
-                </div>
-              </div>
-              <div *ngIf="prob.value.Type == 'FR'">
-                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
-                  <h3 *ngIf="attempt_response.startsWith('Correct')"
-                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
-                    <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
-                    <!-- wrong data format, extra KEY -->
-                    <br /> <br /> <b>Explanation:</b> {{attempt_explanation}}
-                  </h3>
-                  <br *ngIf="attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" /> <br *ngIf="attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
-                  <button *ngIf="attempt_response.startsWith('Correct') && screenWidth <= mobileWidth"
-                    class="grade-button" (click)="next_problem(); scroll_top()"
-                    style="display: block; max-width: 150px; max-height: 100px; margin: auto">
-                    <b> Next Problem </b>
-                  </button>
-                  <h3 *ngIf="!attempt_response.startsWith('Correct')"
-                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
-                    <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
-                    <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
-                  </h3>
-                </div>
-              </div>
-              <button *ngIf="attempt_response.startsWith('Correct') && screenWidth > mobileWidth" class="grade-button"
-                (click)="next_problem(); scroll_top()"
-                style="display: block; max-width: 150px; max-height: 100px; margin: auto">
-                <b> Next Problem </b>
-              </button>
-            </div>
-            <div *ngIf="problem_number == +prob.key && problem_attempts > 0 && mode == 'assess'"
-              [ngSwitch]="selection.value"
-              style="height: auto; min-height: 100px;  max-width: 90%; padding-top: 10px; margin: auto; align-items: center; display: inline-flex">
-              <button class="grade-button" (click)="next_problem_a(problem_selection); scroll_top()"
-                style="display: block; max-width: 150px; max-height: 100px; margin: auto">
-                <b> Next Problem </b>
-              </button>
-            </div>
-            <div *ngIf="problem_number == +prob.key && problem_attempts == 0" class="card highlight-card card-small"
-              style="height: auto; min-height: 100px; max-width: 90%; padding-top: 10px; margin: auto; align-items: center; display: inline-flex; background-color: transparent">
-              <button class="grade-button" (click)="next_problem(); scroll_top()"
-                style="display: block; max-width: 150px; max-height: 100px; margin: auto">
-                <b> Skip Problem </b>
-              </button>
+        </div>
+        <div *ngFor="let prob of exam_dump | keyvalue">
+          <div *ngIf="problem_number == +prob.key">
+            <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
+              <h3 *ngIf="!block.endsWith('.jpg')"> {{block}} </h3>
+              <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
             </div>
           </div>
         </div>
-        <div *ngIf="problem_number > exam_length && mode == 'assess'" style="width: 100%;">
-          <button class="grade-button" (click)="resetExam();"
-            style="display: block; max-width: 150px; max-height: 150px; margin: auto">
-            <b> Reset Test </b> </button>
-          <br />
+        <br />
+        <input type="hidden" #selection>
+        <div *ngFor="let prob of exam_dump | keyvalue">
+          <div *ngIf="problem_number == +prob.key">
+            <div *ngIf="prob.value.Type == 'FR'">
+              <div class="card card-small" style="min-height: 50px; width: 275px; max-height: 100px; padding: 10px">
+                <input
+                  style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                  inputmode="numeric" #inputFR />
+                <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value); scroll_bottom()"
+                  style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                  <b> Submit </b> </button>
+              </div>
+            </div>
+            <div *ngIf="prob.value.Type == 'MC'">
+              <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                (click)="selection.value = choice.key; attempt_mc_problem(choice.key); scroll_bottom()"
+                style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                <label class="switch" style="padding: 0 10px">
+                  <input type="checkbox" value="{{choice.key}}">
+                  <button *ngIf="problem_selection==choice.key" class="toggle-button-on"> <b> {{choice.key}} </b>
+                  </button>
+                  <button *ngIf="problem_selection!=choice.key" class="toggle-button-off"> <b> {{choice.key}} </b>
+                  </button>
+                </label>
+                <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                  style="display: block; margin: auto; white-space: pre-wrap">
+                  {{choice.value.Choice}}
+                </h3>
+                <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                  style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div *ngIf="problem_attempts > 0" [ngSwitch]="selection.value"
+          style="height: 75px; max-width: 90%; padding-top: 10px; margin: auto">
+          <button class="grade-button" (click)="next_problem(problem_selection); scroll_top()"
+            style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
+            <b> Next Problem </b>
+          </button>
+        </div>
+        <div *ngIf="problem_number > exam_length" style="width: 100%">
           <!-- <div class="card card-small" style="height: auto; width: auto; max-width: 500px; padding: 10px; margin: auto">
                         <button *ngIf="sub_form == ''" (click)="sub_form = 'adult'" class="grade-button"> <b> Share Your Results With An Adult </b> </button>
                         <button *ngIf="sub_form == ''" (click)="sub_form = 'friend'" class="grade-button"> <b> Invite A Friend To Beat Your Results </b> </button>
