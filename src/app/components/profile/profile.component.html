@@ -1144,6 +1144,48 @@
             <div *ngIf="profile_tab == 'students' && !edit" class="row">
                 <div class="col-md-12">
                     <div class="media">
+                        <div *ngFor="let std of this.student_metadata" class="card card-large"
+                            style="margin: auto; height: auto; max-height: 200px; max-width: 90%; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 15px 25px">
+                            <img *ngIf="this.screenWidth > this.mobileWidth"
+                                class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                style="height: 150px; width: 150px; border-radius: 50%"
+                                src="{{(std.photoURL) ? std.photoURL : '/assets/icons/user/user.png'}}"
+                                alt="{{std.displayName}}">
+                            <img *ngIf="this.screenWidth <= this.mobileWidth"
+                                class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                style="height: 75px; width: 75px; border-radius: 50%"
+                                src="{{(std.photoURL) ?std.photoURL : '/assets/icons/user/user.png'}}"
+                                alt="{{std.displayName}}">
+                            <div style="align-items: center; text-align: center;">
+                                <h2>{{(std.displayName) ?
+                                    std.displayName :
+                                    'User'}}</h2>
+                                <div
+                                    style="display: flex; flex-direction: row; align-items: center; justify-content: space-between">
+                                    <div class="media-body">
+                                        <h3>{{std.email}}</h3>
+                                        <h3>{{std.phoneNumber}}</h3>
+                                        <!-- <h4>Role: <strong style="font-weight: 500">{{search_user_result.role}}</strong></h4>
+                                        <h4>Grade: <strong style="font-weight: 500">{{search_user_result.grade}}</strong></h4>
+                                        <h4>State: <strong style="font-weight: 500">{{search_user_result.state}}</strong></h4> -->
+                                    </div>
+                                    <div *ngIf="this.screenWidth > this.mobileWidth" class="media-body"
+                                        style="text-align: left; padding-left: 30px; line-height: 16px;">
+                                        <h3>{{std.grade}}</h3>
+                                        <h3>{{std.state}}</h3>
+                                    </div>
+                                </div>
+                                <!-- <button (click)="link_student(this.search_user_result.uid)" class="grade-button"
+                                    style="margin: 10px auto; display: flex; flex-direction: row; align-items: center; padding: 5px">
+                                    <div style="margin: 0 5px">
+                                        <img src="./assets/icons/link.png"
+                                            style="padding: 5px 0 0; height: 25px; width: 25px">
+                                    </div>
+                                    <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Link Student </b></div>
+                                </button> -->
+                            </div>
+                        </div>
+                        <br />
                         <h3> Search for Students by ID </h3>
                         <section
                             style="display: flex; flex-direction: row; align-items: center; margin: auto; height: auto; max-height: 150px; max-width: 450px; padding: 5px">
@@ -1151,7 +1193,7 @@
                             <input type="text" inputmode="text" maxlength="40" (change)="search_id(this.userId.value)"
                                 style="margin: 0 5px 0 auto; padding-left: 10px; width: 275px; height: 40px; font-size: 16px; font-weight: 400; text-align: left; border-radius: 10px;"
                                 #userId />
-                            <input (click)="search_id(this.userId.value); search_user=true" type="image"
+                            <input (click)="search_id(this.userId.value)" type="image"
                                 src="./assets/icons/usersearch.png" style="margin: 0 auto 0 5px" alt="Search" width="30"
                                 height="30">
                         </section>
@@ -1188,7 +1230,7 @@
                                         <h3>{{search_user_result.state}}</h3>
                                     </div>
                                 </div>
-                                <button class="grade-button"
+                                <button (click)="link_student(this.search_user_result.uid)" class="grade-button"
                                     style="margin: 10px auto; display: flex; flex-direction: row; align-items: center; padding: 5px">
                                     <div style="margin: 0 5px">
                                         <img src="./assets/icons/link.png"

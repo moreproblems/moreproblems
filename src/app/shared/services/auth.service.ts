@@ -16,6 +16,7 @@ import { WindowService } from './window.service';
 export class AuthService {
   // user: User;
   userData: any; // Save logged in user data
+  user_result: any = {};
   exam_sub: any;
   avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
   constructor(
@@ -256,12 +257,15 @@ export class AuthService {
       console.log(error.message)
     }).then((result) => {
       updates2['/users/' + user.uid + '/role'] = role;
-      updates2['/users/' + user.uid + '/exams/favorites'] = ["test"];
+      updates2['/users/' + user.uid + '/exams/favorites'] = [""];
       if (role == 'Student') {
-        updates2['/users/' + user.uid + '/exams/history'] = { "test": { status: "", progress: 0} };
-        updates2['/users/' + user.uid + '/problems/all'] = { "test": { status: ""} };
+        updates2['/users/' + user.uid + '/exams/history'] = { "": { status: "", progress: 0} };
+        updates2['/users/' + user.uid + '/problems/all'] = { "": { status: ""} };
         updates2['/users/' + user.uid + '/problems/total'] = 0;
         updates2['/users/' + user.uid + '/problems/correct'] = 0;
+      }
+      else {
+        updates2['/users/' + user.uid + '/students'] = [""];
       }
       update(ref(db), updates2);
     });
@@ -353,24 +357,25 @@ export class AuthService {
     return this.exam_sub;
   }
 
-  // Optional: clear localStorage
-  clearLocalStorage() {
-    localStorage.clear();
-  }
-
   searchUserId(id: string) {
     const db = getDatabase();
     get(child(ref(db), "users/" + id)).then((snapshot) => {
       if (snapshot.exists()) {
         console.log(snapshot.val());
-        this.exam_sub = snapshot.val();
+        this.user_result = snapshot.val();
       } else {
         console.log("No data available");
+        this.user_result = {};
       }
     }).catch((error) => {
       console.error(error);
     });
-    return this.exam_sub;
+    return this.user_result;
+  }
+
+  // Optional: clear localStorage
+  clearLocalStorage() {
+    localStorage.clear();
   }
 
   // Sign out
