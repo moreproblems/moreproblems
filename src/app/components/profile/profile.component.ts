@@ -69,6 +69,7 @@ export class ProfileComponent implements OnInit {
   student_list: string[] = [];
   student_metadata: any[] = [];
   student_data: any = {};
+  selected_student = "";
 
   avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
 
@@ -116,7 +117,7 @@ export class ProfileComponent implements OnInit {
       for (const [key, stud] of Object.entries(linked_students)) {
         setTimeout(() => {
           console.log(stud);
-          this.student_data = (this.authService.searchUserId(stud as string));
+          this.student_data = this.authService.searchUserId(stud as string);
           setTimeout(() => {
             console.log(this.student_data);
             this.student_metadata.push(this.student_data as object);
@@ -146,73 +147,73 @@ export class ProfileComponent implements OnInit {
   }
 
   select_exam(exm: string) {
-    if (this.authService.userData.role == 'Student') {
-      this.db_submission = this.student_exam_metadata[exm];
-      this.exam_submission = this.db_submission.problems;
-      this.exam_length = this.db_submission.total;
-      this.number_correct = this.db_submission.correct;
-      this.correct_percent = this.db_submission.score;
-      this.time_duration = this.db_submission.time;
-      this.performance_level = this.db_submission.level;
-      this.exam_submission_list = [];
-      this.wrong_submission_list = [];
-      for (let i: number = 1; i <= this.exam_length; i++) {
-        this.exam_submission_list.push(this.exam_submission["" + i]);
-        if (this.exam_submission["" + i].Correct != '✅') {
-          this.wrong_submission_list.push(this.exam_submission["" + i]);
-        }
+    // if (this.authService.userData.role == 'Student') {
+    this.db_submission = this.student_exam_metadata[exm];
+    this.exam_submission = this.db_submission.problems;
+    this.exam_length = this.db_submission.total;
+    this.number_correct = this.db_submission.correct;
+    this.correct_percent = this.db_submission.score;
+    this.time_duration = this.db_submission.time;
+    this.performance_level = this.db_submission.level;
+    this.exam_submission_list = [];
+    this.wrong_submission_list = [];
+    this.topic_breakdown = {};
+    for (let i: number = 1; i <= this.exam_length; i++) {
+      this.exam_submission_list.push(this.exam_submission["" + i]);
+      if (this.exam_submission["" + i].Correct != '✅') {
+        this.wrong_submission_list.push(this.exam_submission["" + i]);
       }
-      // setTimeout(() => {
-      //   for (let i: number = 1; i <= this.exam_length; i++) {
-      //     this.exam_submission_list.push(this.exam_submission[i]);
-      //     if (this.exam_submission[i].Correct != '✅') {
-      //       this.wrong_submission_list.push(this.exam_submission[i]);
-      //     }
-      //   }
-      // }, 500);
-      for (let i: number = 0; i < this.exam_length; i++) {
-        if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topic)) {
-          this.topic_breakdown[this.exam_submission_list[i].Topic].Total += 1;
-          this.topic_breakdown[this.exam_submission_list[i].Topic].Seconds += +this.exam_submission_list[i].Seconds;
-          if (this.exam_submission_list[i].Correct == '✅') {
-            this.topic_breakdown[this.exam_submission_list[i].Topic].Correct += 1;
-            if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
-              this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
-              this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Correct += 1;
-              this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Seconds += +this.exam_submission_list[i].Seconds;
-            }
-            else {
-              this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' };
-            }
+    }
+    // setTimeout(() => {
+    //   for (let i: number = 1; i <= this.exam_length; i++) {
+    //     this.exam_submission_list.push(this.exam_submission[i]);
+    //     if (this.exam_submission[i].Correct != '✅') {
+    //       this.wrong_submission_list.push(this.exam_submission[i]);
+    //     }
+    //   }
+    // }, 500);
+    for (let i: number = 0; i < this.exam_length; i++) {
+      if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topic)) {
+        this.topic_breakdown[this.exam_submission_list[i].Topic].Total += 1;
+        this.topic_breakdown[this.exam_submission_list[i].Topic].Seconds += +this.exam_submission_list[i].Seconds;
+        if (this.exam_submission_list[i].Correct == '✅') {
+          this.topic_breakdown[this.exam_submission_list[i].Topic].Correct += 1;
+          if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Correct += 1;
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Seconds += +this.exam_submission_list[i].Seconds;
           }
           else {
-            this.topic_breakdown[this.exam_submission_list[i].Topic].Incorrect += 1;
-            if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
-              this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
-              this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Incorrect += 1;
-              this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Seconds += +this.exam_submission_list[i].Seconds;
-            }
-            else {
-              this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' };
-            }
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' };
           }
         }
         else {
-          if (this.exam_submission_list[i].Correct == '✅') {
-            this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
+          this.topic_breakdown[this.exam_submission_list[i].Topic].Incorrect += 1;
+          if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Incorrect += 1;
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Seconds += +this.exam_submission_list[i].Seconds;
           }
           else {
-            this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
+            this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' };
           }
         }
       }
-      for (let topic of Object.keys(this.topic_breakdown)) {
-        this.topic_breakdown[topic].Percent = Math.round(100 * this.topic_breakdown[topic].Correct / (this.topic_breakdown[topic].Total));
-        this.topic_breakdown[topic].Time = (Math.floor(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total % 60)).toString() + 's';
-        for (let subtopic of Object.keys(this.topic_breakdown[topic].Subs)) {
-          this.topic_breakdown[topic].Subs[subtopic].Percent = Math.round(100 * this.topic_breakdown[topic].Subs[subtopic].Correct / (this.topic_breakdown[topic].Subs[subtopic].Total));
-          this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
+      else {
+        if (this.exam_submission_list[i].Correct == '✅') {
+          this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
         }
+        else {
+          this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
+        }
+      }
+    }
+    for (let topic of Object.keys(this.topic_breakdown)) {
+      this.topic_breakdown[topic].Percent = Math.round(100 * this.topic_breakdown[topic].Correct / (this.topic_breakdown[topic].Total));
+      this.topic_breakdown[topic].Time = (Math.floor(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total % 60)).toString() + 's';
+      for (let subtopic of Object.keys(this.topic_breakdown[topic].Subs)) {
+        this.topic_breakdown[topic].Subs[subtopic].Percent = Math.round(100 * this.topic_breakdown[topic].Subs[subtopic].Correct / (this.topic_breakdown[topic].Subs[subtopic].Total));
+        this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
       }
     }
     this.selected_exam = exm;
@@ -238,6 +239,34 @@ export class ProfileComponent implements OnInit {
     }
     this.authService.UpdateUserData({ 'students': {} });
     this.authService.UpdateUserData({ 'students': this.student_list });
+  }
+
+  select_student(std: string) {
+    this.student_exam_metadata = {};
+    this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
+    this.student_data = this.authService.searchUserId(std);
+    setTimeout(() => {
+      if (this.student_data.problems.total == 0) {
+        this.total_percent_correct = 0;
+      }
+      else {
+        this.total_percent_correct = Math.round(10000 * this.student_data.problems.correct / this.student_data.problems.total) / 100;
+      }
+      this.complete_exam_count = 0;
+      this.complete_exam_list = [];
+      const exam_history = this.student_data.exams.history;
+      for (const [key, det] of Object.entries(exam_history)) {
+        if ((det as any).status == "Completed") {
+          this.complete_exam_count = this.complete_exam_count + 1;
+          this.complete_exam_list.push(key);
+          this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+          this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+        }
+      }
+      setTimeout(() => {
+        this.selected_student = std;
+      }, 200);
+    }, 200);
   }
 
   expandTopics() {
@@ -301,7 +330,7 @@ export class ProfileComponent implements OnInit {
           for (const [key, stud] of Object.entries(linked_students)) {
             setTimeout(() => {
               console.log(stud);
-              this.student_data = (this.authService.searchUserId(stud as string));
+              this.student_data = this.authService.searchUserId(stud as string);
               setTimeout(() => {
                 console.log(this.student_data);
                 this.student_metadata.push(this.student_data as object);

@@ -357,6 +357,42 @@ export class AuthService {
     return this.exam_sub;
   }
 
+  getStudExamSubmissions(std: string) {
+    const db = getDatabase();
+    const exam_completed_count = 0;
+    // const exam_history = query(ref(db, "users/" + this.userData.uid + "/exams/history"), equalTo("status", "Completed"));
+    // const exam_history: any = {};
+    get(child(ref(db), "submissions/exams/" + std)).then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        this.exam_sub = snapshot.val();
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
+    return this.exam_sub;
+  }
+
+  getStudExamSubmission(std: string, exm: string) {
+    const db = getDatabase();
+    const exam_completed_count = 0;
+    // const exam_history = query(ref(db, "users/" + this.userData.uid + "/exams/history"), equalTo("status", "Completed"));
+    // const exam_history: any = {};
+    get(child(ref(db), "submissions/exams/" + std + "/" + exm)).then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        this.exam_sub = snapshot.val();
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
+    return this.exam_sub;
+  }
+
   searchUserId(id: string) {
     const db = getDatabase();
     get(child(ref(db), "users/" + id)).then((snapshot) => {
