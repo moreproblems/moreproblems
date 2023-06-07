@@ -5,7 +5,7 @@ import { WindowService } from '../../shared/services/window.service';
 import { getAuth, RecaptchaVerifier } from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-// import * as examMetadata from "src/assets/problems/exams.json";
+import * as examMetadata from "src/assets/problems/exams.json";
 
 const delay = async (ms: number) => new Promise(res => setTimeout(res, ms));
 
@@ -18,7 +18,7 @@ const delay = async (ms: number) => new Promise(res => setTimeout(res, ms));
 @Injectable()
 export class ProfileComponent implements OnInit {
   // title = 'More Problems';
-  
+
 
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
@@ -34,10 +34,11 @@ export class ProfileComponent implements OnInit {
   // db_submission: any;
 
 
-  // exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
+  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
 
   selected_exam = "";
   expand_topics = false;
+  expand_subtopics = false;
   show_correct = false;
   db_submission: any = {};
   exam_submission: { [key: string]: { 'Number': number, 'Topic': string, 'SubTopic': string, 'Choice': string, 'Correct': string, 'Rationale': string, 'Attempts': number, 'Path': string[], 'Seconds': number, 'Time': string } } = {};
@@ -48,6 +49,8 @@ export class ProfileComponent implements OnInit {
   correct_percent = 0;
   performance_level = "";
   time_duration = "";
+  grade_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Tops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } } } = {};
+  subject_breakdown: { [key: string]: { 'Grade': string, 'Subject': string, 'Break': {'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Tops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } } = {};
   topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
 
 
@@ -55,6 +58,7 @@ export class ProfileComponent implements OnInit {
   edit: boolean = false;
   edit_list: { [index: string]: any } = {};
   login_method = "";
+  search: boolean = false;
   search_user = false;
   search_user_result: any = {};
   SURPhotoURL = "";
@@ -68,6 +72,7 @@ export class ProfileComponent implements OnInit {
 
   student_list: string[] = [];
   student_metadata: any[] = [];
+  // linked_student_count = 0;
   student_data: any = {};
   selected_student = "";
 
@@ -121,8 +126,8 @@ export class ProfileComponent implements OnInit {
           setTimeout(() => {
             console.log(this.student_data);
             this.student_metadata.push(this.student_data as object);
-          }, 75);
-        }, +key*150);
+          }, 100);
+        }, +key * 200);
       }
     }
   }
@@ -131,6 +136,12 @@ export class ProfileComponent implements OnInit {
     this.edit = !this.edit;
     this.edit_list = [];
     this.photoURL = this.authService.userData.photoURL;
+  }
+
+  toggle_search() {
+    this.search = !this.search;
+    this.search_user = false;
+    this.search_user_result = {};
   }
 
   edit_profile(field: string, val: string) {
@@ -254,6 +265,7 @@ export class ProfileComponent implements OnInit {
       }
       this.complete_exam_count = 0;
       this.complete_exam_list = [];
+      this.grade_breakdown = {};
       const exam_history = this.student_data.exams.history;
       for (const [key, det] of Object.entries(exam_history)) {
         if ((det as any).status == "Completed") {
@@ -264,13 +276,95 @@ export class ProfileComponent implements OnInit {
         }
       }
       setTimeout(() => {
+        this.subject_break();
         this.selected_student = std;
       }, 200);
     }, 200);
   }
 
+  subject_break() {
+    this.grade_breakdown = {};
+    const exam_history = this.student_data.exams.history;
+    for (const [key, det] of Object.entries(exam_history)) {
+      if ((det as any).status == "Completed") {
+        for (let prob of Object.values(this.student_exam_metadata[key].problems)) {
+          if ((prob as any).Correct == '✅') {
+            if (Object.keys(this.grade_breakdown).includes(this.exam_attribute_dump[key].Grade)) {
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Total += 1;
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Correct += 1;
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Seconds += +(prob as any).Seconds;
+              if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs).includes(this.exam_attribute_dump[key].Subject)) {
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Total += 1;
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Correct += 1;
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Seconds += +(prob as any).Seconds;
+                if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops).includes((prob as any).Topic)) {
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topic].Total += 1;
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topic].Correct += 1;
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topic].Seconds += +(prob as any).Seconds;
+                }
+                else {
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                }
+              }
+              else {
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': { [(prob as any).Topic]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' } } };
+              }
+            }
+            else {
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[key].Subject]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': { [(prob as any).Topic]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' } } } } };
+            }
+          }
+          else {
+            if (Object.keys(this.grade_breakdown).includes(this.exam_attribute_dump[key].Grade)) {
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Total += 1;
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Incorrect += 1;
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Seconds += +(prob as any).Seconds;
+              if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs).includes(this.exam_attribute_dump[key].Subject)) {
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Total += 1;
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Incorrect += 1;
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Seconds += +(prob as any).Seconds;
+                if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops).includes((prob as any).Topic)) {
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topic].Total += 1;
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topic].Incorrect += 1;
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topic].Seconds += +(prob as any).Seconds;
+                }
+                else {
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                }
+              }
+              else {
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': { [(prob as any).Topic]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' } } };
+              }
+            }
+            else {
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[key].Subject]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': { [(prob as any).Topic]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' } } } } };
+            }
+          }
+        }
+      }
+    }
+    for (let grade of Object.keys(this.grade_breakdown)) {
+      this.grade_breakdown[grade].Percent = Math.round(100 * this.grade_breakdown[grade].Correct / (this.grade_breakdown[grade].Total));
+      this.grade_breakdown[grade].Time = (Math.floor(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total % 60)).toString() + 's';
+      for (let subject of Object.keys(this.grade_breakdown[grade].Subs)) {
+        this.grade_breakdown[grade].Subs[subject].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Correct / (this.grade_breakdown[grade].Subs[subject].Total));
+        this.grade_breakdown[grade].Subs[subject].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total % 60)).toString() + 's';
+        for (let topic of Object.keys(this.grade_breakdown[grade].Subs[subject].Tops)) {
+          this.grade_breakdown[grade].Subs[subject].Tops[topic].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Tops[topic].Correct / (this.grade_breakdown[grade].Subs[subject].Tops[topic].Total));
+          this.grade_breakdown[grade].Subs[subject].Tops[topic].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total % 60)).toString() + 's';
+        }
+        this.subject_breakdown[grade + " " + subject] = { 'Grade': grade, 'Subject': subject, 'Break': this.grade_breakdown[grade].Subs[subject] };
+      }
+    }
+    console.log(this.grade_breakdown);
+  }
+
   expandTopics() {
     this.expand_topics = !this.expand_topics;
+  }
+
+  expandSubTopics() {
+    this.expand_subtopics = !this.expand_subtopics;
   }
 
   showCorrect() {
@@ -314,6 +408,7 @@ export class ProfileComponent implements OnInit {
           this.complete_exam_list = [];
           this.student_exam_metadata = {};
           this.student_exam_metadata = this.authService.getExamSubmissions();
+          // this.linked_student_count = Object.keys(this.student_exam_metadata).length;
           const exam_history = this.authService.userData.exams.history;
           for (const [key, det] of Object.entries(exam_history)) {
             if ((det as any).status == "Completed") {
@@ -335,7 +430,7 @@ export class ProfileComponent implements OnInit {
                 console.log(this.student_data);
                 this.student_metadata.push(this.student_data as object);
               }, 75);
-            }, +key*150);
+            }, +key * 150);
           }
         }
       }
