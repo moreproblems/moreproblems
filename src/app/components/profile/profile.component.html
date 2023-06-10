@@ -736,14 +736,50 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="media">
-                    <h3>Total Problems Attempted: <strong
-                            style="font-weight: 500">{{student_data.problems.total}}</strong>
-                    </h3>
-                    <h3>Total Problems Correct: <strong
-                            style="font-weight: 500">{{student_data.problems.correct}}</strong>
-                    </h3>
-                    <h3>Percentage Correct: <strong style="font-weight: 500">{{total_percent_correct}}%</strong>
-                    </h3>
+                    <div class="card card-large"
+                        style="margin: auto; height: auto; max-height: 300px; min-width: 300px; max-width: 50%; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 15px 25px">
+                        <img *ngIf="this.screenWidth > this.mobileWidth"
+                            class="align-self-start mr-5 img-thumbnail rounded-circle"
+                            style="height: 300px; width: 300px; border-radius: 50%"
+                            src="{{(student_data.photoURL) ? student_data.photoURL : '/assets/icons/user/user.png'}}"
+                            alt="{{student_data.displayName}}">
+                        <img *ngIf="this.screenWidth <= this.mobileWidth"
+                            class="align-self-start mr-5 img-thumbnail rounded-circle"
+                            style="height: 75px; width: 75px; border-radius: 50%"
+                            src="{{(student_data.photoURL) ?student_data.photoURL : '/assets/icons/user/user.png'}}"
+                            alt="{{student_data.displayName}}">
+                        <div style="align-items: center; text-align: center;">
+                            <h2>{{(student_data.displayName) ?
+                                student_data.displayName :
+                                'User'}}</h2>
+                            <hr />
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: space-between">
+                                <div class="media-body" style="padding-right: 20px">
+                                    <h3 style="font-weight: 600">{{student_data.email}}</h3>
+                                    <h3 style="font-weight: 600">{{student_data.phoneNumber}}</h3>
+                                    <!-- <h4>Role: <strong style="font-weight: 500">{{search_user_result.role}}</strong></h4>
+                                    <h4>Grade: <strong style="font-weight: 500">{{search_user_result.grade}}</strong></h4>
+                                    <h4>State: <strong style="font-weight: 500">{{search_user_result.state}}</strong></h4> -->
+                                </div>
+                                <div class="media-body" style="padding-left: 20px">
+                                    <h3 style="font-weight: 600">{{student_data.grade}}</h3>
+                                    <h3 style="font-weight: 600">{{student_data.state}}</h3>
+                                </div>
+                            </div>
+                            <hr />
+                            <h3>Total Problems Attempted: <strong
+                                    style="font-weight: 500">{{student_data.problems.total}}</strong>
+                            </h3>
+                            <h3>Total Problems Correct: <strong
+                                    style="font-weight: 500">{{student_data.problems.correct}}</strong>
+                            </h3>
+                            <h3>Percentage Correct: <strong style="font-weight: 500">{{total_percent_correct}}%</strong>
+                            </h3>
+                            <h3>Total Exams Completed: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
+                            </h3>
+                        </div>
+                    </div>
                     <br />
                     <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: 99%"
                         #subjectTableS>
@@ -780,8 +816,7 @@
                                 <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Time}} </b> </td>
                             </tr>
                             <tr *ngFor="let subject of grade.value.Subs | keyvalue">
-                                <td
-                                    style="border-top: 1px solid #ddd; ; text-align: center">
+                                <td style="border-top: 1px solid #ddd; ; text-align: center">
                                     <i> <b> {{subject.key}} </b> </i>
                                 </td>
                                 <td style="border-top: 1px solid #ddd"> {{subject.value.Total}} </td>
@@ -820,7 +855,8 @@
                         </thead>
                         <tbody *ngFor="let subject of subject_breakdown | keyvalue" style="border: 5px solid black">
                             <tr style="background-color: lightgrey">
-                                <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Grade + ": " + subject.value.Subject}} </b> </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Grade + ": " +
+                                        subject.value.Subject}} </b> </td>
                                 <td style="border-top: 1px solid #ddd"> </td>
                                 <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b> </td>
                                 <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}} </b> </td>
@@ -841,9 +877,6 @@
                             </tr>
                         </tbody>
                     </table>
-                    <br />
-                    <h3>Total Exams Completed: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
-                    </h3>
                     <br />
                     <div class="card-container">
                         <div *ngFor="let exm of complete_exam_list" class="card card-large"
@@ -1280,15 +1313,69 @@
             <div *ngIf="profile_tab == 'achievements' && !edit" class="row">
                 <div class="col-md-12">
                     <div class="media">
-                        <h3>Total Problems Attempted: <strong style="font-weight: 500">{{user.problems.total}}</strong>
-                        </h3>
-                        <h3>Total Problems Correct: <strong style="font-weight: 500">{{user.problems.correct}}</strong>
-                        </h3>
-                        <h3>Percentage Correct: <strong style="font-weight: 500">{{total_percent_correct}}%</strong>
-                        </h3>
+                        <div class="card card-large"
+                            style="margin: auto; height: auto; max-height: 200px; max-width: 90%; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 15px 25px">
+                            <img *ngIf="this.screenWidth > this.mobileWidth"
+                                class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                style="height: 150px; width: 150px; border-radius: 50%"
+                                src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
+                                alt="{{user.displayName}}">
+                            <img *ngIf="this.screenWidth <= this.mobileWidth"
+                                class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                style="height: 75px; width: 75px; border-radius: 50%"
+                                src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
+                                alt="{{user.displayName}}">
+                            <div style="align-items: center; text-align: center;">
+                                <h3>Total Problems Attempted: <strong
+                                        style="font-weight: 500">{{user.problems.total}}</strong>
+                                </h3>
+                                <h3>Total Problems Correct: <strong
+                                        style="font-weight: 500">{{user.problems.correct}}</strong>
+                                </h3>
+                                <h3>Percentage Correct: <strong
+                                        style="font-weight: 500">{{total_percent_correct}}%</strong>
+                                </h3>
+                                <hr />
+                                <h3>Total Exams Completed: <strong
+                                        style="font-weight: 500">{{complete_exam_count}}</strong>
+                                </h3>
+                            </div>
+                        </div>
                         <br />
-                        <h3>Total Exams Completed: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
-                        </h3>
+                        <table style="border: 1px solid black; margin: auto; width: 99%"
+                            #subjectTable>
+                            <thead>
+                                <tr>
+                                    <th colspan="5" style="font-size: 18px"> Your Results by Subject </th>
+                                </tr>
+                                <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
+                                    <th> Subject </th>
+                                    <th> Total Problems </th>
+                                    <th> Missed Problems </th>
+                                    <th> Percent Correct </th>
+                                    <th> Average Time </th>
+                                </tr>
+                            </thead>
+                            <tbody *ngFor="let grade of grade_breakdown | keyvalue" style="border: 5px solid black">
+                                <tr style="background-color: lightgrey">
+                                    <td style="border-top: 1px solid #ddd"> <b> {{grade.key}} </b> </td>
+                                    <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Total}} </b> </td>
+                                    <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Incorrect}} </b> </td>
+                                    <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Percent}}% </b> </td>
+                                    <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Time}} </b> </td>
+                                </tr>
+                                <tr *ngFor="let subject of grade.value.Subs | keyvalue">
+                                    <td style="border-top: 1px solid #ddd; ; text-align: center">
+                                        <i> <b> {{subject.key}} </b> </i>
+                                    </td>
+                                    <td style="border-top: 1px solid #ddd"> {{subject.value.Total}} </td>
+                                    <td style="border-top: 1px solid #ddd"> {{subject.value.Incorrect}} </td>
+                                    <td style="border-top: 1px solid #ddd"> {{grade.value.Percent}}% </td>
+                                    <td style="border-top: 1px solid #ddd"> {{subject.value.Time}} </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
                         <div *ngFor="let exm of complete_exam_list" class="card card-large"
                             style="margin: auto; height: auto; max-height: 200px; max-width: 450px; display: flex; flex-direction: column">
                             <h3 style="margin: auto"> {{exam_names[exm]}} </h3>
@@ -1344,6 +1431,7 @@
                                 <h2>{{(std.displayName) ?
                                     std.displayName :
                                     'User'}}</h2>
+                                <hr />
                                 <div
                                     style="display: flex; flex-direction: row; align-items: center; justify-content: space-between">
                                     <div class="media-body">
@@ -1402,6 +1490,7 @@
                                 <h2>{{(search_user_result.displayName) ?
                                     search_user_result.displayName :
                                     'User'}}</h2>
+                                <hr />
                                 <div
                                     style="display: flex; flex-direction: row; align-items: center; justify-content: space-between">
                                     <div class="media-body">

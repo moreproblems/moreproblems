@@ -113,6 +113,10 @@ export class ProfileComponent implements OnInit {
             this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
           }
         }
+        setTimeout(() => {
+          this.student_data = this.authService.userData;
+          this.subject_break();
+        }, 200);
       }
     }
     else if (tb == 'students') {
