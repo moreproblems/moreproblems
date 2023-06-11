@@ -7,7 +7,7 @@ import { serverTimestamp } from "firebase/database";
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import * as examMetadata from "src/assets/problems/exams.json";
-import * as problemsData from "src/assets/problems/TX18G8SS/TX18G8SS-problems.json";
+import * as problemsData from "src/assets/problems/TX19G8SS/TX19G8SS-problems.json";
 
 const confetti = require('canvas-confetti');
 
@@ -18,13 +18,13 @@ const confettiHandler = confetti.create(confettiCanvas, {
 });
 
 @Component({
-    selector: 'app-TX18G8SS-exam',
-    templateUrl: './TX18G8SS-exam.component.html',
-    styleUrls: ['./TX18G8SS-exam.component.css']
+    selector: 'app-TX19G8SS-exam',
+    templateUrl: './TX19G8SS-exam.component.html',
+    styleUrls: ['./TX19G8SS-exam.component.css']
 })
 
 @Injectable()
-export class TX18G8SSExamComponent implements OnInit {
+export class TX19G8SSExamComponent implements OnInit {
     title = 'More Problems';
 
     screenWidth = window.innerWidth;
@@ -47,7 +47,7 @@ export class TX18G8SSExamComponent implements OnInit {
     expand_topics = true;
     show_correct = false;
 
-    key = 'TX18G8SS'
+    key = 'TX19G8SS'
     exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
 
     exam_state = this.exam_attribute_dump[this.key].State;
@@ -60,7 +60,7 @@ export class TX18G8SSExamComponent implements OnInit {
 
     exam_directions = 'Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.';
 
-    TX18G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
+    TX19G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
     exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
     dump_count = 1;
 
@@ -434,13 +434,13 @@ export class TX18G8SSExamComponent implements OnInit {
                 this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
             }
         }
-        if (this.number_correct >= 36) {
+        if (this.number_correct >= 35) {
             this.performance_level = "Masters Grade Level Performance";
         }
-        else if (this.number_correct >= 32) {
+        else if (this.number_correct >= 31) {
             this.performance_level = "Meets Grade Level Performance";
         }
-        else if (this.number_correct >= 23) {
+        else if (this.number_correct >= 22) {
             this.performance_level = "Approaches Grade Level Performance";
         }
         else {
@@ -588,7 +588,7 @@ export class TX18G8SSExamComponent implements OnInit {
     }
 
     ngOnInit() {
-        for (const [num, value] of Object.entries(this.TX18G8SS_exam_dump)) {
+        for (const [num, value] of Object.entries(this.TX19G8SS_exam_dump)) {
             if (value.Number <= this.exam_length) {
                 this.exam_dump[this.dump_count] = value;
                 this.ordered_dump[this.dump_count] = value;
