@@ -101,8 +101,8 @@ export class AuthService {
         up and returns promise */
         this.SendVerificationMail();
         this.router.navigate(['profile']);
-        `this.WriteUserData(result.user, role);
-        this.SetUserData(result.user);`
+        this.WriteUserData(result.user, role);
+        this.SetUserData(result.user);
         // this.setUserLoggedIn(result.user);
       })
       .catch((error) => {
@@ -257,16 +257,42 @@ export class AuthService {
       console.log(error.message)
     }).then((result) => {
       updates2['/users/' + user.uid + '/role'] = role;
-      updates2['/users/' + user.uid + '/exams/favorites'] = [""];
+      updates2['/users/' + user.uid + '/exams/favorites'] = ["test"];
       if (role == 'Student') {
-        updates2['/users/' + user.uid + '/exams/history'] = { "": { status: "", progress: 0} };
-        updates2['/users/' + user.uid + '/problems/all'] = { "": { status: ""} };
+        updates2['/users/' + user.uid + '/exams/history'] = { "test": { status: "", progress: 0} };
+        updates2['/users/' + user.uid + '/problems/all'] = { "test": { status: ""} };
         updates2['/users/' + user.uid + '/problems/total'] = 0;
         updates2['/users/' + user.uid + '/problems/correct'] = 0;
       }
       else {
         updates2['/users/' + user.uid + '/students'] = [""];
       }
+      update(ref(db), updates2);
+    });
+  }
+
+  WriteUserDataList (student: { [index: string]: any }) {
+    const db = getDatabase();
+    const updates: any = {};
+    const updates2: any = {};
+    const studData = {
+      uid: student['uid'],
+      role: 'Student',
+      displayName: student['displayName'],
+      photoURL: student['photoURL'],
+      grade: student['grade'],
+      state: student['state']
+      // exams: {favorites: {}}
+    };
+    updates['/users/' + student['uid']] = studData;
+    return update(ref(db), updates).catch(error => {
+      console.log(error.message)
+    }).then((result) => {
+      updates2['/users/' + student['uid'] + '/exams/favorites'] = ["test"];
+      updates2['/users/' + student['uid'] + '/exams/history'] = { "test": { status: "", progress: 0} };
+      updates2['/users/' + student['uid'] + '/problems/all'] = { "test": { status: ""} };
+      updates2['/users/' + student['uid'] + '/problems/total'] = 0;
+      updates2['/users/' + student['uid'] + '/problems/correct'] = 0;
       update(ref(db), updates2);
     });
   }

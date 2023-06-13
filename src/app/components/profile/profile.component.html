@@ -298,7 +298,7 @@
         background-color: #1976d2;
         color: white;
         border-radius: 12px;
-        border: 1px solid #eee;
+        border: 3px solid #0a1e33;
         padding: 7px 15px;
         margin: 0 2px 10px;
         transition: all 0.2s ease-in-out;
@@ -1018,6 +1018,9 @@
                             <h3>Email Verified: <strong style="font-weight: 500">{{user.emailVerified}}</strong></h3>
                             <br />
                             <h3>Role: <strong style="font-weight: 500">{{user.role}}</strong></h3>
+                            <div *ngIf="user.role=='Parent'">
+                                <h3> State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
+                            </div>
                             <div *ngIf="user.role=='Student'">
                                 <h3> Grade: <strong style="font-weight: 500">{{user.grade}}</strong></h3>
                                 <h3> State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
@@ -1126,6 +1129,67 @@
                                     <option value="Parent">Parent</option>
                                 </select>
                             </section>
+                            <div *ngIf="user.role=='Parent'">
+                                <section
+                                    style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                    <h3> State: </h3>
+                                    <select value="{{user.state}}"
+                                        (change)="edit_profile('state', this.userState.value)"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        #userState>
+                                        <option value="Alabama">Alabama</option>
+                                        <option value="Alaska">Alaska</option>
+                                        <option value="Arizona">Arizona</option>
+                                        <option value="Arkansas">Arkansas</option>
+                                        <option value="California">California</option>
+                                        <option value="Colorado">Colorado</option>
+                                        <option value="Connecticut">Connecticut</option>
+                                        <option value="Delaware">Delaware</option>
+                                        <option value="Florida">Florida</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Hawaii">Hawaii</option>
+                                        <option value="Idaho">Idaho</option>
+                                        <option value="Illinois">Illinois</option>
+                                        <option value="Indiana">Indiana</option>
+                                        <option value="Iowa">Iowa</option>
+                                        <option value="Kansas">Kansas</option>
+                                        <option value="Kentucky">Kentucky</option>
+                                        <option value="Louisiana">Louisiana</option>
+                                        <option value="Maine">Maine</option>
+                                        <option value="Maryland">Maryland</option>
+                                        <option value="Massachusetts">Massachusetts</option>
+                                        <option value="Michigan">Michigan</option>
+                                        <option value="Minnesota">Minnesota</option>
+                                        <option value="Mississippi">Mississippi</option>
+                                        <option value="Missouri">Missouri</option>
+                                        <option value="Montana">Montana</option>
+                                        <option value="Nebraska">Nebraska</option>
+                                        <option value="Nevada">Nevada</option>
+                                        <option value="New Hampshire">New Hampshire</option>
+                                        <option value="New Jersey">New Jersey</option>
+                                        <option value="New Mexico">New Mexico</option>
+                                        <option value="New York">New York</option>
+                                        <option value="North Carolina">North Carolina</option>
+                                        <option value="North Dakota">North Dakota</option>
+                                        <option value="Ohio">Ohio</option>
+                                        <option value="Oklahoma">Oklahoma</option>
+                                        <option value="Oregon">Oregon</option>
+                                        <option value="Pennsylvania">Pennsylvania</option>
+                                        <option value="Rhode Island">Rhode Island</option>
+                                        <option value="South Carolina">South Carolina</option>
+                                        <option value="South Dakota">South Dakota</option>
+                                        <option value="Tennessee">Tennessee</option>
+                                        <option value="Texas">Texas</option>
+                                        <option value="Utah">Utah</option>
+                                        <option value="Vermont">Vermont</option>
+                                        <option value="Virginia">Virginia</option>
+                                        <option value="Washington">Washington</option>
+                                        <option value="West Virginia">West Virginia</option>
+                                        <option value="Wisconsin">Wisconsin</option>
+                                        <option value="Wyoming">Wyoming</option>
+                                    </select>
+                                </section>
+                            </div>
                             <div *ngIf="user.role=='Student'">
                                 <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
@@ -1342,8 +1406,7 @@
                             </div>
                         </div>
                         <br />
-                        <table style="border: 1px solid black; margin: auto; width: 99%"
-                            #subjectTable>
+                        <table style="border: 1px solid black; margin: auto; width: 99%" #subjectTable>
                             <thead>
                                 <tr>
                                     <th colspan="5" style="font-size: 18px"> Your Results by Subject </th>
@@ -1403,18 +1466,36 @@
             </div>
             <div *ngIf="profile_tab == 'students' && !edit" class="row">
                 <div class="col-md-12">
-                    <div *ngIf="!search" class="media" style="">
-                        <h2 style="font-weight: 500"> You have <b>{{""+this.student_metadata.length}}</b> linked
-                            students </h2>
-                        <button *ngIf="!edit && authService.userData as user" (click)="toggle_search()"
-                            class="grade-button"
-                            style="display: flex; flex-direction: row; align-items: center; margin: auto">
-                            <div style="margin: 0 5px">
-                                <img src="./assets/icons/link.png" style="padding: 5px 0 0; height: 30px; width: 30px">
-                            </div>
-                            <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Add Students </b></div>
-                        </button>
-                        <br />
+                    <h2 *ngIf="user.role=='Parent'" style="font-weight: 500"> You have
+                        <b>{{""+this.student_metadata.length}}</b> students in your household
+                    </h2>
+                    <h2 *ngIf="user.role=='Teacher'" style="font-weight: 500"> You have
+                        <b>{{""+this.student_metadata.length}}</b> students in your classroom
+                    </h2>
+                    <div *ngIf="!search && !create" class="media" style="">
+                        <div class="card-container" style="align-items: center; margin-top: 25px; margin-bottom: 25px">
+                            <button *ngIf="!edit && authService.userData as user" (click)="toggle_create()"
+                                class="grade-button"
+                                style="display: flex; flex-direction: row; align-items: center; margin: 0 10px">
+                                <div style="margin: 0 5px">
+                                    <img src="./assets/icons/add.png"
+                                        style="padding: 5px 0 0; height: 25px; width: 25px">
+                                </div>
+                                <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create New Student
+                                    </b></div>
+                            </button>
+                            <button *ngIf="!edit && authService.userData as user" (click)="toggle_search()"
+                                class="grade-button"
+                                style="display: flex; flex-direction: row; align-items: center; margin: 0 10px">
+                                <div style="margin: 0 5px">
+                                    <img src="./assets/icons/usersearch.png"
+                                        style="padding: 5px 0 0; height: 25px; width: 25px">
+                                </div>
+                                <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Find Student by ID
+                                    </b></div>
+                            </button>
+                        </div>
+                        <h2 style="margin: 10px"> Your Students </h2>
                         <div *ngFor="let std of this.student_metadata" class="card card-large"
                             style="margin: auto; height: auto; max-height: 200px; max-width: 90%; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 15px 25px">
                             <img *ngIf="this.screenWidth > this.mobileWidth"
@@ -1461,7 +1542,6 @@
                         <br />
                     </div>
                     <div *ngIf="search" class="media">
-                        <br />
                         <h3> Search for Students by ID </h3>
                         <section
                             style="display: flex; flex-direction: row; align-items: center; margin: auto; height: auto; max-height: 150px; max-width: 450px; padding: 5px">
@@ -1509,7 +1589,7 @@
                                 </div>
                                 <button (click)="link_student(this.search_user_result.uid)" class="grade-button"
                                     style="margin: 10px auto; display: flex; flex-direction: row; align-items: center; padding: 5px">
-                                    <div style="margin: 0 5px">
+                                    <div style="margin: 0 0 0 5px">
                                         <img src="./assets/icons/link.png"
                                             style="padding: 5px 0 0; height: 25px; width: 25px">
                                     </div>
@@ -1531,10 +1611,145 @@
                             <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
                         </button>
                     </div>
+                    <div *ngIf="create" class="media">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="media">
+                                    <div class="card-container"
+                                        style="margin-top: 25px; margin-bottom: 25px">
+                                        <div *ngFor="let pic of this.avatars" (click)="student_profile_pic(pic)"
+                                            class="avatar-container"
+                                            style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 5px">
+                                            <img *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
+                                                src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                                style="width:100%; height: 100%">
+                                            <img *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
+                                                src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                                style="width:100%; height: 100%; opacity: 0.3">
+                                            <div class="middle">
+                                                <div *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
+                                                    style="color: white; background-color: #1976d2; border-radius: 10px">Select
+                                                </div>
+                                            </div>
+                                            <div *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
+                                                class="select-middle">
+                                                <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <br />
+                                        <section
+                                            style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                            <h3> Display Name: </h3>
+                                            <input (change)="create_student('displayName', this.newUserName.value)" type="text"
+                                                inputmode="text" maxlength="40"
+                                                style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                                #newUserName />
+                                        </section>
+                                        <br />
+                                        <!-- <section
+                                            style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                            <h3> Role: </h3>
+                                            <select value="Student" (change)="create_student('role', this.newUserRole.value)"
+                                                style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                                disabled #newUserRole>
+                                                <option value="Teacher">Teacher</option>
+                                                <option value="Student">Student</option>
+                                                <option value="Parent">Parent</option>
+                                            </select>
+                                        </section> -->
+                                        <div>
+                                            <section
+                                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                                <h3> Grade: </h3>
+                                                <select (change)="create_student('grade', this.newUserGrade.value); create_student('state', this.newUserState.value)" 
+                                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                                    #newUserGrade>
+                                                    <option disabled selected value> -- select a grade -- </option>
+                                                    <option value="Kindergarten">Kindergarten</option>
+                                                    <option value="Grade 1">Grade 1</option>
+                                                    <option value="Grade 2">Grade 2</option>
+                                                    <option value="Grade 3">Grade 3</option>
+                                                    <option value="Grade 4">Grade 4</option>
+                                                    <option value="Grade 5">Grade 5</option>
+                                                    <option value="Grade 6">Grade 6</option>
+                                                    <option value="Grade 7">Grade 7</option>
+                                                    <option value="Grade 8">Grade 8</option>
+                                                    <option value="Grade 9">Grade 9</option>
+                                                    <option value="Grade 10">Grade 10</option>
+                                                    <option value="Grade 11">Grade 11</option>
+                                                    <option value="Grade 12">Grade 12</option>
+                                                </select>
+                                            </section>
+                                            <section
+                                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                                <h3> State: </h3>
+                                                <select value="{{authService.userData.state}}" (change)="create_student('state', this.newUserState.value)"
+                                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                                    #newUserState>
+                                                    <option value="Alabama">Alabama</option>
+                                                    <option value="Alaska">Alaska</option>
+                                                    <option value="Arizona">Arizona</option>
+                                                    <option value="Arkansas">Arkansas</option>
+                                                    <option value="California">California</option>
+                                                    <option value="Colorado">Colorado</option>
+                                                    <option value="Connecticut">Connecticut</option>
+                                                    <option value="Delaware">Delaware</option>
+                                                    <option value="Florida">Florida</option>
+                                                    <option value="Georgia">Georgia</option>
+                                                    <option value="Hawaii">Hawaii</option>
+                                                    <option value="Idaho">Idaho</option>
+                                                    <option value="Illinois">Illinois</option>
+                                                    <option value="Indiana">Indiana</option>
+                                                    <option value="Iowa">Iowa</option>
+                                                    <option value="Kansas">Kansas</option>
+                                                    <option value="Kentucky">Kentucky</option>
+                                                    <option value="Louisiana">Louisiana</option>
+                                                    <option value="Maine">Maine</option>
+                                                    <option value="Maryland">Maryland</option>
+                                                    <option value="Massachusetts">Massachusetts</option>
+                                                    <option value="Michigan">Michigan</option>
+                                                    <option value="Minnesota">Minnesota</option>
+                                                    <option value="Mississippi">Mississippi</option>
+                                                    <option value="Missouri">Missouri</option>
+                                                    <option value="Montana">Montana</option>
+                                                    <option value="Nebraska">Nebraska</option>
+                                                    <option value="Nevada">Nevada</option>
+                                                    <option value="New Hampshire">New Hampshire</option>
+                                                    <option value="New Jersey">New Jersey</option>
+                                                    <option value="New Mexico">New Mexico</option>
+                                                    <option value="New York">New York</option>
+                                                    <option value="North Carolina">North Carolina</option>
+                                                    <option value="North Dakota">North Dakota</option>
+                                                    <option value="Ohio">Ohio</option>
+                                                    <option value="Oklahoma">Oklahoma</option>
+                                                    <option value="Oregon">Oregon</option>
+                                                    <option value="Pennsylvania">Pennsylvania</option>
+                                                    <option value="Rhode Island">Rhode Island</option>
+                                                    <option value="South Carolina">South Carolina</option>
+                                                    <option value="South Dakota">South Dakota</option>
+                                                    <option value="Tennessee">Tennessee</option>
+                                                    <option value="Texas">Texas</option>
+                                                    <option value="Utah">Utah</option>
+                                                    <option value="Vermont">Vermont</option>
+                                                    <option value="Virginia">Virginia</option>
+                                                    <option value="Washington">Washington</option>
+                                                    <option value="West Virginia">West Virginia</option>
+                                                    <option value="Wisconsin">Wisconsin</option>
+                                                    <option value="Wyoming">Wyoming</option>
+                                                </select>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <br *ngIf="edit" />
+        <br *ngIf="edit || create" />
         <section *ngIf="edit"
             style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
             <button *ngIf="authService.userData as user" (click)="update_profile(); toggle_edit()" class="grade-button"
@@ -1545,6 +1760,23 @@
                 <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
             </button>
             <button *ngIf="authService.userData as user" (click)="toggle_edit()" class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
+            </button>
+        </section>
+        <section *ngIf="create"
+            style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+            <button *ngIf="authService.userData as user" (click)="update_student(); toggle_create()" class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
+            </button>
+            <button *ngIf="authService.userData as user" (click)="toggle_create()" class="grade-button"
                 style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: 0 5px">
                     <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">

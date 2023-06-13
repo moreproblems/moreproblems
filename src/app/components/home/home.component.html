@@ -303,7 +303,7 @@
     background-color: #1976d2;
     color: white;
     border-radius: 12px;
-    border: 1px solid #eee;
+    border: 3px solid #0a1e33;
     padding: 7px 15px;
     margin: 0 2px 10px;
     transition: all 0.2s ease-in-out;
@@ -522,7 +522,7 @@
       <button *ngIf="file_source != ''" (click)="download_exam()" class="grade-button"
         style="margin: 10px 10px 10px 0; width: auto; height: auto">
         <img *ngIf="this.screenWidth <= this.mobileWidth" src="./assets/icons/download.png"
-          style="height: 25px; filter: invert(100%)">
+          style="height: 25px">
         <b *ngIf="this.screenWidth > this.mobileWidth"> Download </b>
       </button>
       <button *ngIf="online_set.includes(exam_id)" (click)="take_exam()" class="grade-button"

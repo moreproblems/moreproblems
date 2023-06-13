@@ -55,9 +55,12 @@ export class ProfileComponent implements OnInit {
 
 
   user: any;
+  login_method: string = "";
   edit: boolean = false;
   edit_list: { [index: string]: any } = {};
-  login_method = "";
+  create: boolean = false;
+  create_list: { [index: string]: any } = {};
+  student_uid: string = "";
   search: boolean = false;
   search_user = false;
   search_user_result: any = {};
@@ -90,6 +93,9 @@ export class ProfileComponent implements OnInit {
 
   set_tab(tb: string) {
     this.profile_tab = tb;
+    this.edit = false;
+    this.create = false;
+    this.search = false;
     this.search_user = false;
     this.search_user_result = {};
     if (this.authService.userData.role == 'Student') {
@@ -148,6 +154,11 @@ export class ProfileComponent implements OnInit {
     this.search_user_result = {};
   }
 
+  toggle_create() {
+    this.create = !this.create;
+    this.create_list = [];
+  }
+
   edit_profile(field: string, val: string) {
     this.edit_list[field] = val;
   }
@@ -159,6 +170,29 @@ export class ProfileComponent implements OnInit {
 
   update_profile() {
     this.authService.UpdateUserData(this.edit_list);
+  }
+
+  create_student(field: string, val: string) {
+    this.create_list[field] = val;
+  }
+
+  student_profile_pic(avatar: string) {
+    this.photoURL = '/assets/icons/user/' + avatar + '.png';
+    this.create_list['photoURL'] = this.photoURL;
+  }
+
+  update_student() {
+    this.student_uid = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    for (let i: number = 1; i <= 3; i++) {
+      this.student_uid += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    this.create_list['uid'] = this.authService.userData.uid + "-" + this.student_uid;
+    this.authService.WriteUserDataList(this.create_list);
+    setTimeout(() => {
+      this.link_student(this.authService.userData.uid + "-" + this.student_uid);
+    }, 200);
   }
 
   select_exam(exm: string) {
