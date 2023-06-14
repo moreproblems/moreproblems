@@ -297,6 +297,17 @@ export class AuthService {
     });
   }
 
+  WriteUserDataListId (student: { [index: string]: any }, id: string) {
+    const db = getDatabase();
+    const updates: any = {};
+    for (const [key, val] of Object.entries(student)) {
+      updates['/users/' + id + '/' + key] = val
+    }
+    return update(ref(db), updates).catch(error => {
+      console.log(error.message)
+    });
+  }
+
   UpdateUserData(changes: { [index: string]: any }) {
     const db = getDatabase();
     const updates: any = {};

@@ -986,17 +986,17 @@
                 </label>
             </div>
             <!-- Show user data when logged in -->
-            <div *ngIf="profile_tab == 'information' && !edit" class="row">
+            <div *ngIf="profile_tab == 'information' && !edit_p" class="row">
                 <div class="col-md-12">
                     <div class="media">
                         <img class="align-self-start mr-5 img-thumbnail rounded-circle"
                             style="height: 300px; width: 300px; border-radius: 50%"
                             src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
                             alt="{{user.displayName}}">
-                        <section *ngIf="profile_tab == 'information' && !edit"
+                        <section *ngIf="profile_tab == 'information' && !edit_p"
                             style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
                             <br />
-                            <button *ngIf="!edit && authService.userData as user" (click)="toggle_edit()"
+                            <button *ngIf="!edit_p && authService.userData as user" (click)="toggle_edit_profile()"
                                 class="grade-button" style="display: flex; flex-direction: row; align-items: center">
                                 <div style="margin: 0 5px">
                                     <img src="./assets/icons/edit.png"
@@ -1035,7 +1035,7 @@
                     </div>
                 </div>
             </div>
-            <div *ngIf="profile_tab == 'information' && edit" class="row">
+            <div *ngIf="profile_tab == 'information' && edit_p" class="row">
                 <div class="col-md-12">
                     <div class="media">
                         <img *ngIf="user.role != 'Student'" class="align-self-start mr-5 img-thumbnail rounded-circle"
@@ -1374,7 +1374,7 @@
                     </div>
                 </div>
             </div>
-            <div *ngIf="profile_tab == 'achievements' && !edit" class="row">
+            <div *ngIf="profile_tab == 'achievements' && !edit_p" class="row">
                 <div class="col-md-12">
                     <div class="media">
                         <div class="card card-large"
@@ -1464,7 +1464,7 @@
                     </div>
                 </div>
             </div>
-            <div *ngIf="profile_tab == 'students' && !edit" class="row">
+            <div *ngIf="profile_tab == 'students' && !edit_p" class="row">
                 <div class="col-md-12">
                     <h2 *ngIf="user.role=='Parent'" style="font-weight: 500"> You have
                         <b>{{""+this.student_metadata.length}}</b> students in your household
@@ -1472,9 +1472,9 @@
                     <h2 *ngIf="user.role=='Teacher'" style="font-weight: 500"> You have
                         <b>{{""+this.student_metadata.length}}</b> students in your classroom
                     </h2>
-                    <div *ngIf="!search && !create" class="media" style="">
+                    <div *ngIf="!search && !create_s && !edit_s" class="media" style="">
                         <div class="card-container" style="align-items: center; margin-top: 25px; margin-bottom: 25px">
-                            <button *ngIf="!edit && authService.userData as user" (click)="toggle_create()"
+                            <button *ngIf="!edit_p && authService.userData as user" (click)="toggle_create_student()"
                                 class="grade-button"
                                 style="display: flex; flex-direction: row; align-items: center; margin: 0 10px">
                                 <div style="margin: 0 5px">
@@ -1484,7 +1484,7 @@
                                 <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create New Student
                                     </b></div>
                             </button>
-                            <button *ngIf="!edit && authService.userData as user" (click)="toggle_search()"
+                            <button *ngIf="!edit_p && authService.userData as user" (click)="toggle_search()"
                                 class="grade-button"
                                 style="display: flex; flex-direction: row; align-items: center; margin: 0 10px">
                                 <div style="margin: 0 5px">
@@ -1498,44 +1498,53 @@
                         <h2 style="margin: 10px"> Your Students </h2>
                         <div *ngFor="let std of this.student_metadata" class="card card-large"
                             style="margin: auto; height: auto; max-height: 200px; max-width: 90%; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 15px 25px">
-                            <img *ngIf="this.screenWidth > this.mobileWidth"
-                                class="align-self-start mr-5 img-thumbnail rounded-circle"
-                                style="height: 150px; width: 150px; border-radius: 50%"
-                                src="{{(std.photoURL) ? std.photoURL : '/assets/icons/user/user.png'}}"
-                                alt="{{std.displayName}}">
-                            <img *ngIf="this.screenWidth <= this.mobileWidth"
-                                class="align-self-start mr-5 img-thumbnail rounded-circle"
-                                style="height: 75px; width: 75px; border-radius: 50%"
-                                src="{{(std.photoURL) ?std.photoURL : '/assets/icons/user/user.png'}}"
-                                alt="{{std.displayName}}">
-                            <div style="align-items: center; text-align: center;">
+                            <div style="align-items: center; text-align: center">
+                                <img *ngIf="this.screenWidth > this.mobileWidth"
+                                    class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                    style="height: 150px; width: 150px; border-radius: 50%"
+                                    src="{{(std.photoURL) ? std.photoURL : '/assets/icons/user/user.png'}}"
+                                    alt="{{std.displayName}}">
+                                <img *ngIf="this.screenWidth <= this.mobileWidth"
+                                    class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                    style="height: 150x; width: 150px; border-radius: 50%"
+                                    src="{{(std.photoURL) ?std.photoURL : '/assets/icons/user/user.png'}}"
+                                    alt="{{std.displayName}}">
+                                <button *ngIf="std.uid.includes(user.uid)" (click)="toggle_edit_student(std.uid)" class="grade-button"
+                                    style="margin: 10px auto; margin-bottom: 15px; display: flex; flex-direction: row; align-items: center; padding: 5px">
+                                    <!-- <div style="margin: 0 5px">
+                                        <img src="./assets/icons/link.png"
+                                            style="padding: 5px 0 0; height: 25px; width: 25px">
+                                    </div> -->
+                                    <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Edit Profile </b></div>
+                                </button>
+                            </div>
+                            <div style="align-items: center; text-align: center">
                                 <h2>{{(std.displayName) ?
                                     std.displayName :
                                     'User'}}</h2>
                                 <hr />
                                 <div
                                     style="display: flex; flex-direction: row; align-items: center; justify-content: space-between">
-                                    <div class="media-body">
+                                    <div *ngIf="!std.uid.includes(user.uid)" class="media-body">
                                         <h3>{{std.email}}</h3>
                                         <h3>{{std.phoneNumber}}</h3>
                                         <!-- <h4>Role: <strong style="font-weight: 500">{{search_user_result.role}}</strong></h4>
                                         <h4>Grade: <strong style="font-weight: 500">{{search_user_result.grade}}</strong></h4>
                                         <h4>State: <strong style="font-weight: 500">{{search_user_result.state}}</strong></h4> -->
                                     </div>
-                                    <div *ngIf="this.screenWidth > this.mobileWidth" class="media-body"
-                                        style="text-align: left; padding-left: 30px; line-height: 16px;">
+                                    <div *ngIf="this.screenWidth > this.mobileWidth || std.uid.includes(user.uid)" class="media-body"
+                                        style="text-align: center; padding: 20px; line-height: 16px;">
                                         <h3>{{std.grade}}</h3>
                                         <h3>{{std.state}}</h3>
                                     </div>
                                 </div>
                                 <button (click)="select_student(std.uid)" class="grade-button"
-                                    style="margin: 10px auto; display: flex; flex-direction: row; align-items: center; padding: 5px">
+                                    style="margin: 10px auto; margin-bottom: 0; display: flex; flex-direction: row; align-items: center; padding: 5px">
                                     <!-- <div style="margin: 0 5px">
                                         <img src="./assets/icons/link.png"
                                             style="padding: 5px 0 0; height: 25px; width: 25px">
                                     </div> -->
-                                    <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> View Exam
-                                            Results </b></div>
+                                    <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Exam Results </b></div>
                                 </button>
                             </div>
                         </div>
@@ -1611,7 +1620,7 @@
                             <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
                         </button>
                     </div>
-                    <div *ngIf="create" class="media">
+                    <div *ngIf="create_s" class="media">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="media">
@@ -1642,7 +1651,7 @@
                                         <section
                                             style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
                                             <h3> Display Name: </h3>
-                                            <input (change)="create_student('displayName', this.newUserName.value)" type="text"
+                                            <input (change)="edit_student('displayName', this.newUserName.value)" type="text"
                                                 inputmode="text" maxlength="40"
                                                 style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                                 #newUserName />
@@ -1651,7 +1660,7 @@
                                         <!-- <section
                                             style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
                                             <h3> Role: </h3>
-                                            <select value="Student" (change)="create_student('role', this.newUserRole.value)"
+                                            <select value="Student" (change)="edit_student('role', this.newUserRole.value)"
                                                 style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                                 disabled #newUserRole>
                                                 <option value="Teacher">Teacher</option>
@@ -1663,7 +1672,7 @@
                                             <section
                                                 style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
                                                 <h3> Grade: </h3>
-                                                <select (change)="create_student('grade', this.newUserGrade.value); create_student('state', this.newUserState.value)" 
+                                                <select (change)="edit_student('grade', this.newUserGrade.value); edit_student('state', this.newUserState.value)" 
                                                     style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                                     #newUserGrade>
                                                     <option disabled selected value> -- select a grade -- </option>
@@ -1685,9 +1694,144 @@
                                             <section
                                                 style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
                                                 <h3> State: </h3>
-                                                <select value="{{authService.userData.state}}" (change)="create_student('state', this.newUserState.value)"
+                                                <select value="{{authService.userData.state}}" (change)="edit_student('state', this.newUserState.value)"
                                                     style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                                     #newUserState>
+                                                    <option value="Alabama">Alabama</option>
+                                                    <option value="Alaska">Alaska</option>
+                                                    <option value="Arizona">Arizona</option>
+                                                    <option value="Arkansas">Arkansas</option>
+                                                    <option value="California">California</option>
+                                                    <option value="Colorado">Colorado</option>
+                                                    <option value="Connecticut">Connecticut</option>
+                                                    <option value="Delaware">Delaware</option>
+                                                    <option value="Florida">Florida</option>
+                                                    <option value="Georgia">Georgia</option>
+                                                    <option value="Hawaii">Hawaii</option>
+                                                    <option value="Idaho">Idaho</option>
+                                                    <option value="Illinois">Illinois</option>
+                                                    <option value="Indiana">Indiana</option>
+                                                    <option value="Iowa">Iowa</option>
+                                                    <option value="Kansas">Kansas</option>
+                                                    <option value="Kentucky">Kentucky</option>
+                                                    <option value="Louisiana">Louisiana</option>
+                                                    <option value="Maine">Maine</option>
+                                                    <option value="Maryland">Maryland</option>
+                                                    <option value="Massachusetts">Massachusetts</option>
+                                                    <option value="Michigan">Michigan</option>
+                                                    <option value="Minnesota">Minnesota</option>
+                                                    <option value="Mississippi">Mississippi</option>
+                                                    <option value="Missouri">Missouri</option>
+                                                    <option value="Montana">Montana</option>
+                                                    <option value="Nebraska">Nebraska</option>
+                                                    <option value="Nevada">Nevada</option>
+                                                    <option value="New Hampshire">New Hampshire</option>
+                                                    <option value="New Jersey">New Jersey</option>
+                                                    <option value="New Mexico">New Mexico</option>
+                                                    <option value="New York">New York</option>
+                                                    <option value="North Carolina">North Carolina</option>
+                                                    <option value="North Dakota">North Dakota</option>
+                                                    <option value="Ohio">Ohio</option>
+                                                    <option value="Oklahoma">Oklahoma</option>
+                                                    <option value="Oregon">Oregon</option>
+                                                    <option value="Pennsylvania">Pennsylvania</option>
+                                                    <option value="Rhode Island">Rhode Island</option>
+                                                    <option value="South Carolina">South Carolina</option>
+                                                    <option value="South Dakota">South Dakota</option>
+                                                    <option value="Tennessee">Tennessee</option>
+                                                    <option value="Texas">Texas</option>
+                                                    <option value="Utah">Utah</option>
+                                                    <option value="Vermont">Vermont</option>
+                                                    <option value="Virginia">Virginia</option>
+                                                    <option value="Washington">Washington</option>
+                                                    <option value="West Virginia">West Virginia</option>
+                                                    <option value="Wisconsin">Wisconsin</option>
+                                                    <option value="Wyoming">Wyoming</option>
+                                                </select>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="edit_s" class="media">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="media">
+                                    <div class="card-container"
+                                        style="margin-top: 25px; margin-bottom: 25px">
+                                        <div *ngFor="let pic of this.avatars" (click)="student_profile_pic(pic)"
+                                            class="avatar-container"
+                                            style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 5px">
+                                            <img *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
+                                                src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                                style="width:100%; height: 100%">
+                                            <img *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
+                                                src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                                style="width:100%; height: 100%; opacity: 0.3">
+                                            <div class="middle">
+                                                <div *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
+                                                    style="color: white; background-color: #1976d2; border-radius: 10px">Select
+                                                </div>
+                                            </div>
+                                            <div *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
+                                                class="select-middle">
+                                                <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <br />
+                                        <section
+                                            style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                            <h3> Display Name: </h3>
+                                            <input (change)="edit_student('displayName', this.editUserName.value)" value="{{this.student_data.displayName}}" type="text"
+                                                inputmode="text" maxlength="40"
+                                                style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                                #editUserName />
+                                        </section>
+                                        <br />
+                                        <!-- <section
+                                            style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                            <h3> Role: </h3>
+                                            <select value="Student" (change)="edit_student('role', this.newUserRole.value)"
+                                                style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                                disabled #newUserRole>
+                                                <option value="Teacher">Teacher</option>
+                                                <option value="Student">Student</option>
+                                                <option value="Parent">Parent</option>
+                                            </select>
+                                        </section> -->
+                                        <div>
+                                            <section
+                                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                                <h3> Grade: </h3>
+                                                <select (change)="edit_student('grade', this.editUserGrade.value); edit_student('state', this.editUserState.value)" value="{{this.student_data.grade}}" 
+                                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                                    #editUserGrade>
+                                                    <option disabled selected value> -- select a grade -- </option>
+                                                    <option value="Kindergarten">Kindergarten</option>
+                                                    <option value="Grade 1">Grade 1</option>
+                                                    <option value="Grade 2">Grade 2</option>
+                                                    <option value="Grade 3">Grade 3</option>
+                                                    <option value="Grade 4">Grade 4</option>
+                                                    <option value="Grade 5">Grade 5</option>
+                                                    <option value="Grade 6">Grade 6</option>
+                                                    <option value="Grade 7">Grade 7</option>
+                                                    <option value="Grade 8">Grade 8</option>
+                                                    <option value="Grade 9">Grade 9</option>
+                                                    <option value="Grade 10">Grade 10</option>
+                                                    <option value="Grade 11">Grade 11</option>
+                                                    <option value="Grade 12">Grade 12</option>
+                                                </select>
+                                            </section>
+                                            <section
+                                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                                <h3> State: </h3>
+                                                <select value="{{authService.userData.state}}" (change)="edit_student('state', this.editUserState.value)" value="{{this.student_data.state}}"
+                                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                                    #editUserState>
                                                     <option value="Alabama">Alabama</option>
                                                     <option value="Alaska">Alaska</option>
                                                     <option value="Arizona">Arizona</option>
@@ -1749,17 +1893,17 @@
                 </div>
             </div>
         </div>
-        <br *ngIf="edit || create" />
-        <section *ngIf="edit"
+        <br *ngIf="edit_p || create_s || edit_s" />
+        <section *ngIf="edit_p"
             style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
-            <button *ngIf="authService.userData as user" (click)="update_profile(); toggle_edit()" class="grade-button"
+            <button *ngIf="authService.userData as user" (click)="update_profile(); toggle_edit_profile()" class="grade-button"
                 style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: 0 5px">
                     <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
             </button>
-            <button *ngIf="authService.userData as user" (click)="toggle_edit()" class="grade-button"
+            <button *ngIf="authService.userData as user" (click)="toggle_edit_profile()" class="grade-button"
                 style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: 0 5px">
                     <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
@@ -1767,16 +1911,33 @@
                 <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
             </button>
         </section>
-        <section *ngIf="create"
+        <section *ngIf="create_s"
             style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
-            <button *ngIf="authService.userData as user" (click)="update_student(); toggle_create()" class="grade-button"
+            <button *ngIf="authService.userData as user" (click)="create_student(); toggle_create_student()" class="grade-button"
                 style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: 0 5px">
                     <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
             </button>
-            <button *ngIf="authService.userData as user" (click)="toggle_create()" class="grade-button"
+            <button *ngIf="authService.userData as user" (click)="toggle_create_student()" class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
+            </button>
+        </section>
+        <section *ngIf="edit_s"
+            style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+            <button *ngIf="authService.userData as user" (click)="update_student(student_data.uid); toggle_edit_student('')" class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
+            </button>
+            <button *ngIf="authService.userData as user" (click)="toggle_edit_student('')" class="grade-button"
                 style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: 0 5px">
                     <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">

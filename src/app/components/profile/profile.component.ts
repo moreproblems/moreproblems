@@ -56,10 +56,11 @@ export class ProfileComponent implements OnInit {
 
   user: any;
   login_method: string = "";
-  edit: boolean = false;
-  edit_list: { [index: string]: any } = {};
-  create: boolean = false;
-  create_list: { [index: string]: any } = {};
+  edit_p: boolean = false;
+  edit_p_list: { [index: string]: any } = {};
+  create_s: boolean = false;
+  edit_s: boolean = false;
+  edit_s_list: { [index: string]: any } = {};
   student_uid: string = "";
   search: boolean = false;
   search_user = false;
@@ -93,8 +94,8 @@ export class ProfileComponent implements OnInit {
 
   set_tab(tb: string) {
     this.profile_tab = tb;
-    this.edit = false;
-    this.create = false;
+    this.edit_p = false;
+    this.create_s = false;
     this.search = false;
     this.search_user = false;
     this.search_user_result = {};
@@ -142,10 +143,24 @@ export class ProfileComponent implements OnInit {
     }
   }
 
-  toggle_edit() {
-    this.edit = !this.edit;
-    this.edit_list = [];
+  toggle_edit_profile() {
+    this.edit_p = !this.edit_p;
+    this.edit_p_list = [];
     this.photoURL = this.authService.userData.photoURL;
+  }
+
+  toggle_create_student() {
+    this.create_s = !this.create_s;
+    this.edit_s_list = [];
+  }
+
+  toggle_edit_student(id: string) {
+    this.edit_s = !this.edit_s;
+    this.edit_s_list = [];
+    if (this.edit_s) {
+      this.student_data = (this.authService.searchUserId(id) as any);
+      this.photoURL = this.student_data.photoURL;
+    }
   }
 
   toggle_search() {
@@ -154,45 +169,44 @@ export class ProfileComponent implements OnInit {
     this.search_user_result = {};
   }
 
-  toggle_create() {
-    this.create = !this.create;
-    this.create_list = [];
-  }
-
   edit_profile(field: string, val: string) {
-    this.edit_list[field] = val;
+    this.edit_p_list[field] = val;
   }
 
   edit_profile_pic(avatar: string) {
     this.photoURL = '/assets/icons/user/' + avatar + '.png';
-    this.edit_list['photoURL'] = this.photoURL;
+    this.edit_p_list['photoURL'] = this.photoURL;
   }
 
   update_profile() {
-    this.authService.UpdateUserData(this.edit_list);
+    this.authService.UpdateUserData(this.edit_p_list);
   }
 
-  create_student(field: string, val: string) {
-    this.create_list[field] = val;
+  edit_student(field: string, val: string) {
+    this.edit_s_list[field] = val;
   }
 
   student_profile_pic(avatar: string) {
     this.photoURL = '/assets/icons/user/' + avatar + '.png';
-    this.create_list['photoURL'] = this.photoURL;
+    this.edit_s_list['photoURL'] = this.photoURL;
   }
 
-  update_student() {
+  create_student() {
     this.student_uid = '';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const charactersLength = characters.length;
     for (let i: number = 1; i <= 3; i++) {
       this.student_uid += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
-    this.create_list['uid'] = this.authService.userData.uid + "-" + this.student_uid;
-    this.authService.WriteUserDataList(this.create_list);
+    this.edit_s_list['uid'] = this.authService.userData.uid + "-" + this.student_uid;
+    this.authService.WriteUserDataList(this.edit_s_list);
     setTimeout(() => {
       this.link_student(this.authService.userData.uid + "-" + this.student_uid);
     }, 200);
+  }
+
+  update_student(id: string) {
+    this.authService.WriteUserDataListId(this.edit_s_list, id);
   }
 
   select_exam(exm: string) {
