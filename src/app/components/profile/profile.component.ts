@@ -128,7 +128,6 @@ export class ProfileComponent implements OnInit {
     }
     else if (tb == 'students') {
       this.student_metadata = [];
-      // setTimeout(() => {
       const linked_students = this.authService.userData.students.slice(1);
       for (const [key, stud] of Object.entries(linked_students)) {
         setTimeout(() => {
@@ -308,30 +307,30 @@ export class ProfileComponent implements OnInit {
     this.student_exam_metadata = {};
     this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
     this.student_data = this.authService.searchUserId(std);
-    setTimeout(() => {
-      if (this.student_data.problems.total == 0) {
-        this.total_percent_correct = 0;
+    // setTimeout(() => {
+    if (this.student_data.problems.total == 0) {
+      this.total_percent_correct = 0;
+    }
+    else {
+      this.total_percent_correct = Math.round(10000 * this.student_data.problems.correct / this.student_data.problems.total) / 100;
+    }
+    this.complete_exam_count = 0;
+    this.complete_exam_list = [];
+    this.grade_breakdown = {};
+    const exam_history = this.student_data.exams.history;
+    for (const [key, det] of Object.entries(exam_history)) {
+      if ((det as any).status == "Completed") {
+        this.complete_exam_count = this.complete_exam_count + 1;
+        this.complete_exam_list.push(key);
+        this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+        this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
       }
-      else {
-        this.total_percent_correct = Math.round(10000 * this.student_data.problems.correct / this.student_data.problems.total) / 100;
-      }
-      this.complete_exam_count = 0;
-      this.complete_exam_list = [];
-      this.grade_breakdown = {};
-      const exam_history = this.student_data.exams.history;
-      for (const [key, det] of Object.entries(exam_history)) {
-        if ((det as any).status == "Completed") {
-          this.complete_exam_count = this.complete_exam_count + 1;
-          this.complete_exam_list.push(key);
-          this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
-          this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
-        }
-      }
-      setTimeout(() => {
-        this.subject_break();
-        this.selected_student = std;
-      }, 200);
-    }, 200);
+    }
+    // setTimeout(() => {
+    this.subject_break();
+    this.selected_student = std;
+    // }, 200);
+    // }, 500);
   }
 
   subject_break() {

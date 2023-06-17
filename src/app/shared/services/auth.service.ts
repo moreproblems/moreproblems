@@ -4,7 +4,7 @@ import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
-import { getDatabase, ref, set, get, child, update, query, equalTo } from "firebase/database";
+import { getDatabase, ref, set, get, child, update, query, equalTo, onValue } from "firebase/database";
 // import { UserService } from './user.service';
 import { RecaptchaVerifier } from 'firebase/auth';
 import { WindowService } from './window.service';
@@ -397,17 +397,14 @@ export class AuthService {
   getStudExamSubmissions(std: string) {
     const db = getDatabase();
     const exam_completed_count = 0;
-    // const exam_history = query(ref(db, "users/" + this.userData.uid + "/exams/history"), equalTo("status", "Completed"));
-    // const exam_history: any = {};
-    get(child(ref(db), "submissions/exams/" + std)).then((snapshot) => {
+    const stud_ref = ref(db,"submissions/exams/" + std);
+    onValue(stud_ref, (snapshot) => {
       if (snapshot.exists()) {
         console.log(snapshot.val());
         this.exam_sub = snapshot.val();
       } else {
         console.log("No data available");
       }
-    }).catch((error) => {
-      console.error(error);
     });
     return this.exam_sub;
   }
@@ -415,33 +412,29 @@ export class AuthService {
   getStudExamSubmission(std: string, exm: string) {
     const db = getDatabase();
     const exam_completed_count = 0;
-    // const exam_history = query(ref(db, "users/" + this.userData.uid + "/exams/history"), equalTo("status", "Completed"));
-    // const exam_history: any = {};
-    get(child(ref(db), "submissions/exams/" + std + "/" + exm)).then((snapshot) => {
+    const stud_ref = ref(db,"submissions/exams/" + std + "/" + exm);
+    onValue(stud_ref, (snapshot) => {
       if (snapshot.exists()) {
         console.log(snapshot.val());
         this.exam_sub = snapshot.val();
       } else {
         console.log("No data available");
       }
-    }).catch((error) => {
-      console.error(error);
     });
     return this.exam_sub;
   }
 
   searchUserId(id: string) {
     const db = getDatabase();
-    get(child(ref(db), "users/" + id)).then((snapshot) => {
+    const user_ref = ref(db, "users/" + id);
+    onValue(user_ref, (snapshot) => {
       if (snapshot.exists()) {
         console.log(snapshot.val());
         this.user_result = snapshot.val();
+        // return snapshot.val();
       } else {
         console.log("No data available");
-        this.user_result = {};
       }
-    }).catch((error) => {
-      console.error(error);
     });
     return this.user_result;
   }
