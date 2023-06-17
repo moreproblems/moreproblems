@@ -468,6 +468,7 @@ export class TX17G3MExamComponent implements OnInit {
                 this.db_updates = {};
             }
         }
+        this.problem_number += 1;
         if (this.problem_number <= this.exam_length) {
             if (this.authService.userData) {
                 if (this.authService.userData.role == 'Student') {
@@ -495,7 +496,6 @@ export class TX17G3MExamComponent implements OnInit {
                 this.db_updates = {};
             }
         }
-        this.problem_number += 1;
         this.problem_selection = '';
         this.problem_attempts = 0;
         this.attempt_path = [];
