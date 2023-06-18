@@ -84,7 +84,7 @@
 
   .content {
     display: flex;
-    margin: 12px auto 32px;
+    margin: 0 auto 32px;
     padding: 0;
     width: 95%;
     flex-direction: column;
@@ -307,6 +307,44 @@
     width: 100%;
   }
 
+  .select-avatar {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%)
+    }
+
+    .select-middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    .avatar-container:hover .select-avatar {
+        opacity: 0.3;
+    }
+
+    .avatar-container:hover .middle {
+        opacity: 1;
+    }
+
   progress {
     border-radius: 10px;
   }
@@ -485,7 +523,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="content" role="main" (window:resize)="width_change2()">
+<!-- <div class="content" role="main" (window:resize)="width_change2()"> -->
+<div class="content" role="main" (window:resize)="width_change2()"
+  style="min-height: 100%; height: auto; width: 100%; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed;">
   <canvas id="confetticanvas"></canvas>
   <div class="card-container" style="padding: 0px">
     <div class="card card-large" style="height: auto; width: auto; margin: auto; text-align: center; max-width: 95%"
@@ -516,9 +556,34 @@
             {{exam_subject}} Exam
           </h2>
           <p style="font-size: 16px; padding: 20px"> <b>Directions</b> : {{exam_directions}} </p>
-          <br />
+          <!-- <br /> -->
+          <h3 *ngIf="this.authService.userData && this.my_students != []"> Take this exam as: </h3>
+          <div *ngIf="this.authService.userData && this.my_students != []" class="card-container"
+            style="align-items: center; padding-top: 0">
+            <div *ngFor="let std of my_students" (click)="select_student(my_students_data[std].uid)" class="card card-small" style="height: 75px; width: 170px; align-items: center; padding-top: 0">
+              <div class="avatar-container"
+                style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 0">
+                <img *ngIf="this.selected_student != my_students_data[std].uid"
+                    src="{{my_students_data[std].photoURL}}" class="select-avatar"
+                    style="width:100%; height: 100%">
+                <img *ngIf="this.selected_student == my_students_data[std].uid"
+                    src="{{my_students_data[std].photoURL}}" class="select-avatar"
+                    style="width:100%; height: 100%; opacity: 0.3">
+                <div class="middle">
+                    <div *ngIf="this.selected_student != my_students_data[std].uid"
+                        style="color: white; background-color: #1976d2; border-radius: 10px">Select
+                    </div>
+                </div>
+                <div *ngIf="this.selected_student == my_students_data[std].uid"
+                    class="select-middle">
+                    <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
+                </div>
+              </div>
+              <h3 style="font-size: 18px; padding-left: 5px; width: 100px"> {{my_students_data[std].displayName}} </h3>
+            </div>
+          </div>
           <div *ngIf="!this.authService.userData || !this.exam_inprogress" class="card-container"
-            style="align-items: center">
+            style="align-items: center; padding-top: 20px">
             <label class="switch" style="align-items: center">
               <input type="checkbox" value="random">
               <button (click)="toggle_random()" *ngIf="random" class="toggle-button-on"
@@ -543,7 +608,7 @@
               <h4 style="margin: 1px auto; font-weight: 500"> Last Submission: <b>{{""+last_date}}</b> {{""+last_time}} </h4>
             </div>
             <button class="grade-button" (click)="resume_exam(); scroll_top()"
-              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px; margin-top: 20px">
+              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0 20px; margin-top: 40px">
               <b> Resume Exam </b>
             </button>
           </div>

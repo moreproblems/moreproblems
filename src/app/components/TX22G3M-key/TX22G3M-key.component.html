@@ -84,7 +84,7 @@
 
   .content {
     display: flex;
-    margin: 12px auto 32px;
+    margin: 0 auto 32px;
     padding: 0;
     width: 95%;
     flex-direction: column;
@@ -465,7 +465,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="content" role="main" (window:resize)="width_change2()">
+<!-- <div class="content" role="main" (window:resize)="width_change2()"> -->
+<div class="content" role="main" (window:resize)="width_change2()"
+  style="min-height: 100%; height: auto; width: 100%; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed;">
   <canvas id="confetticanvas"></canvas>
   <div class="card-container" style="padding: 0px">
     <div class="card card-large" style="height: auto; width: auto; margin: auto; text-align: center; max-width: 95%"
@@ -478,34 +480,22 @@
             style="margin: 20px 0; margin-right: 20px; width: auto; height: auto">
             <img src="./assets/icons/minus.png" style="height: 30px; width: 30px; filter: invert(100%)">
           </button>
-          <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0"
-            style="margin: auto 0; color: darkgrey; font-size: 18px"> Problem # </h3>
-          <input *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0"
-            (keyup)="go_to_prob(+this.probNum.value)" type="text" inputmode="numeric" value="{{problem_number}}" min="1"
-            maxlength="2"
-            style="margin: auto 3px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
-            #probNum />
-          <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0 && screenWidth > mobileWidth"
-            style="margin: auto 0; color: darkgrey; font-size: 18px"> / {{exam_length}} ({{pt_minutes}}m
-            {{pt_counter%60}}s) </h3>
-          <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0 && screenWidth <= mobileWidth"
-            style="margin: auto 0; color: darkgrey; font-size: 18px"> / {{exam_length}} </h3>
+          <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0" style="margin: auto 0; color: darkgrey; font-size: 18px"> Problem # </h3>
+          <input *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0" (keyup)="go_to_prob(+this.probNum.value)" type="text" inputmode="numeric" value="{{problem_number}}" min="1" maxlength="2" style="margin: auto 3px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center" #probNum />
+          <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0 && screenWidth > mobileWidth" style="margin: auto 0; color: darkgrey; font-size: 18px"> / {{exam_length}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
+          <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0 && screenWidth <= mobileWidth" style="margin: auto 0; color: darkgrey; font-size: 18px"> / {{exam_length}}  </h3>
           <button (click)="next_problem()" class="grade-button"
             style="margin: 20px 0; margin-left: 20px; width: auto; height: auto">
             <img src="./assets/icons/plus.png" style="height: 30px; width: 30px; filter: invert(100%)">
           </button>
         </section>
         <section style="height: auto; width: 100%; display: flex; justify-content: center">
-          <div *ngFor="let prob of exam_dump | keyvalue"
-            style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
-            <label *ngIf="problem_number == prob.value.Number" class="switch"
-              style="max-height: 500px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
+          <div *ngFor="let prob of exam_dump | keyvalue" style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
+            <label *ngIf="problem_number == prob.value.Number" class="switch" style="max-height: 500px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
               <input type="checkbox">
-              <button *ngIf="!expand_topic" (click)="toggle_topic()" class="topic-button"
-                style="width: 100%; font-size: 16px">
+              <button *ngIf="!expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%; font-size: 16px">
                 <b>{{prob.value.Topic}}</b> </button>
-              <button *ngIf="expand_topic" (click)="toggle_topic()" class="topic-button"
-                style="width: 100%; font-size: 16px">
+              <button *ngIf="expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%; font-size: 16px">
                 {{prob.value.SubTopic}} </button>
             </label>
           </div>

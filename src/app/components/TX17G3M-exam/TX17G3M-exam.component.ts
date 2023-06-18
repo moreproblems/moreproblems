@@ -109,25 +109,30 @@ export class TX17G3MExamComponent implements OnInit {
     }
 
     select_student(id: string) {
-        this.selected_student = id;
         this.exam_inprogress = false;
         this.progress_number = 0;
-        const exam_history = this.my_students_data[id].exams.history;
-        for (const [key, det] of Object.entries(exam_history)) {
-            if ((det as any).status == "Started" && key == this.key) {
-                this.exam_inprogress = true;
-                this.progress_number = (det as any).progress + 1;
-                this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
-                this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
-                if ((det as any).progress != 0) {
-                    const db_submission = this.authService.getExamSubmission(this.key).problems;
-                    for (const [key2, det2] of Object.entries(db_submission)) {
-                        if (+key2 != 0) {
-                            this.exam_submission[+(det2 as any).Number] = (det2 as any);
+        if (id != this.selected_student) {
+            this.selected_student = id;
+            const exam_history = this.my_students_data[id].exams.history;
+            for (const [key, det] of Object.entries(exam_history)) {
+                if ((det as any).status == "Started" && key == this.key) {
+                    this.exam_inprogress = true;
+                    this.progress_number = (det as any).progress + 1;
+                    this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
+                    this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
+                    if ((det as any).progress != 0) {
+                        const db_submission = this.authService.getExamSubmission(this.key).problems;
+                        for (const [key2, det2] of Object.entries(db_submission)) {
+                            if (+key2 != 0) {
+                                this.exam_submission[+(det2 as any).Number] = (det2 as any);
+                            }
                         }
                     }
                 }
             }
+        }
+        else {
+            this.selected_student = '';
         }
     }
 

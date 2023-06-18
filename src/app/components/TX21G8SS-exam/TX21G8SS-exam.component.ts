@@ -35,6 +35,11 @@ export class TX21G8SSExamComponent implements OnInit {
     last_date: any;
     last_time: any;
 
+    my_students: string[] = [];
+    my_students_data: any = {};
+    selected_student: string = "";
+    selected_student_data: any = {};
+
     et_counter: number = 0;
     et_minutes: number = 0;
     et_timer: any;
@@ -103,6 +108,34 @@ export class TX21G8SSExamComponent implements OnInit {
         }
     }
 
+    select_student(id: string) {
+        this.exam_inprogress = false;
+        this.progress_number = 0;
+        if (id != this.selected_student) {
+            this.selected_student = id;
+            const exam_history = this.my_students_data[id].exams.history;
+            for (const [key, det] of Object.entries(exam_history)) {
+                if ((det as any).status == "Started" && key == this.key) {
+                    this.exam_inprogress = true;
+                    this.progress_number = (det as any).progress + 1;
+                    this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
+                    this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
+                    if ((det as any).progress != 0) {
+                        const db_submission = this.authService.getExamSubmission(this.key).problems;
+                        for (const [key2, det2] of Object.entries(db_submission)) {
+                            if (+key2 != 0) {
+                                this.exam_submission[+(det2 as any).Number] = (det2 as any);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else {
+            this.selected_student = '';
+        }
+    }
+
     toggle_random() {
         this.random = !this.random;
     }
@@ -149,63 +182,124 @@ export class TX21G8SSExamComponent implements OnInit {
             };
         }
         if (this.authService.userData) {
-            const exam_history = this.authService.userData.exams.history;
-            for (const [key, det] of Object.entries(exam_history)) {
-                if ((det as any).status == "Started" && key == this.key) {
-                    if ((det as any).progress != 0) {
-                        this.db_submission = this.authService.getExamSubmission(this.key).problems;
-                    }
-                    this.exam_inprogress = true;
-                    this.progress_number = (det as any).progress + 1;
-                    if ((det as any).shuffle) {
-                        this.random = true;
-                        this.problems_sequence = Array.from({ length: this.exam_length }, (_, i) => i + 1);
-                        this.random_list = [];
-                    }
-                    if ((det as any).progress != 0) {
-                        console.log(this.db_submission);
-                        for (const [key2, det2] of Object.entries(this.db_submission)) {
-                            if (+key2 != 0) {
-                                this.exam_submission[(det2 as any).Number] = (det2 as any);
+            if (this.authService.userData.role == 'Student') {
+                const exam_history = this.authService.userData.exams.history;
+                for (const [key, det] of Object.entries(exam_history)) {
+                    if ((det as any).status == "Started" && key == this.key) {
+                        if ((det as any).progress != 0) {
+                            this.db_submission = this.authService.getExamSubmission(this.key).problems;
+                        }
+                        this.exam_inprogress = true;
+                        this.progress_number = (det as any).progress + 1;
+                        if ((det as any).shuffle) {
+                            this.random = true;
+                            this.problems_sequence = Array.from({ length: this.exam_length }, (_, i) => i + 1);
+                            this.random_list = [];
+                        }
+                        if ((det as any).progress != 0) {
+                            console.log(this.db_submission);
+                            for (const [key2, det2] of Object.entries(this.db_submission)) {
+                                if (+key2 != 0) {
+                                    this.exam_submission[(det2 as any).Number] = (det2 as any);
+                                }
+                            }
+                            if ((det as any).shuffle) {
+                                for (const [key2, det2] of Object.entries(this.db_submission)) {
+                                    this.problems_sequence.splice(this.problems_sequence.indexOf((det2 as any).Number), 1);
+                                }
                             }
                         }
                         if ((det as any).shuffle) {
-                            for (const [key2, det2] of Object.entries(this.db_submission)) {
-                                this.problems_sequence.splice(this.problems_sequence.indexOf((det2 as any).Number), 1);
+                            const remaining_length = this.problems_sequence.length;
+                            for (let num: number = 0; num < remaining_length; num++) {
+                                this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
+                                this.random_list.push(this.problems_sequence[this.random_index]);
+                                this.problems_sequence.splice(this.random_index, 1);
                             }
-                        }
-                    }
-                    if ((det as any).shuffle) {
-                        const remaining_length = this.problems_sequence.length;
-                        for (let num: number = 0; num < remaining_length; num++) {
-                            this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
-                            this.random_list.push(this.problems_sequence[this.random_index]);
-                            this.problems_sequence.splice(this.random_index, 1);
-                        }
-                        for (let num: number = 0; num < this.random_list.length; num++) {
-                            this.exam_dump[num+(det as any).progress+1] = this.ordered_dump[this.random_list[num]];
-                        }
-                        console.log(this.exam_dump);
-                        console.log(this.exam_submission);
-                        this.exam_key = [];
-                        for (let value of Object.values(this.exam_dump)) {
-                            for (const [ch, value2] of Object.entries(value.AnswerChoices)) {
-                                if (ch == 'Key') {
-                                    this.exam_key.push(value2.Choice);
-                                }
-                                else {
-                                    if (value2.Key.Correct) {
-                                        this.exam_key.push(ch);
+                            for (let num: number = 0; num < this.random_list.length; num++) {
+                                this.exam_dump[num + (det as any).progress + 1] = this.ordered_dump[this.random_list[num]];
+                            }
+                            console.log(this.exam_dump);
+                            console.log(this.exam_submission);
+                            this.exam_key = [];
+                            for (let value of Object.values(this.exam_dump)) {
+                                for (const [ch, value2] of Object.entries(value.AnswerChoices)) {
+                                    if (ch == 'Key') {
+                                        this.exam_key.push(value2.Choice);
+                                    }
+                                    else {
+                                        if (value2.Key.Correct) {
+                                            this.exam_key.push(ch);
+                                        }
                                     }
                                 }
                             }
                         }
                     }
                 }
+                this.db_updates['exams/history/' + this.key + "/lasttimestamp"] = serverTimestamp();
+                this.authService.UpdateUserData(this.db_updates);
+                this.db_updates = {};
             }
-            this.db_updates['exams/history/' + this.key + "/lasttimestamp"] = serverTimestamp();
-            this.authService.UpdateUserData(this.db_updates);
-            this.db_updates = {};
+            else if (this.selected_student != '') {
+                const exam_history = this.my_students_data[this.selected_student].exams.history;
+                for (const [key, det] of Object.entries(exam_history)) {
+                    if ((det as any).status == "Started" && key == this.key) {
+                        if ((det as any).progress != 0) {
+                            this.db_submission = this.authService.getStudExamSubmission(this.selected_student, this.key).problems;
+                        }
+                        this.exam_inprogress = true;
+                        this.progress_number = (det as any).progress + 1;
+                        if ((det as any).shuffle) {
+                            this.random = true;
+                            this.problems_sequence = Array.from({ length: this.exam_length }, (_, i) => i + 1);
+                            this.random_list = [];
+                        }
+                        if ((det as any).progress != 0) {
+                            console.log(this.db_submission);
+                            for (const [key2, det2] of Object.entries(this.db_submission)) {
+                                if (+key2 != 0) {
+                                    this.exam_submission[(det2 as any).Number] = (det2 as any);
+                                }
+                            }
+                            if ((det as any).shuffle) {
+                                for (const [key2, det2] of Object.entries(this.db_submission)) {
+                                    this.problems_sequence.splice(this.problems_sequence.indexOf((det2 as any).Number), 1);
+                                }
+                            }
+                        }
+                        if ((det as any).shuffle) {
+                            const remaining_length = this.problems_sequence.length;
+                            for (let num: number = 0; num < remaining_length; num++) {
+                                this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
+                                this.random_list.push(this.problems_sequence[this.random_index]);
+                                this.problems_sequence.splice(this.random_index, 1);
+                            }
+                            for (let num: number = 0; num < this.random_list.length; num++) {
+                                this.exam_dump[num + (det as any).progress + 1] = this.ordered_dump[this.random_list[num]];
+                            }
+                            console.log(this.exam_dump);
+                            console.log(this.exam_submission);
+                            this.exam_key = [];
+                            for (let value of Object.values(this.exam_dump)) {
+                                for (const [ch, value2] of Object.entries(value.AnswerChoices)) {
+                                    if (ch == 'Key') {
+                                        this.exam_key.push(value2.Choice);
+                                    }
+                                    else {
+                                        if (value2.Key.Correct) {
+                                            this.exam_key.push(ch);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + "/lasttimestamp"] = serverTimestamp();
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+            }
         }
         this.toggleExamTimer();
         this.toggleProblemTimer();
@@ -217,11 +311,18 @@ export class TX21G8SSExamComponent implements OnInit {
             this.randomize_problems();
         }
         if (this.authService.userData) {
-            this.db_updates['exams/history/' + this.key] = { progress: 0, status: 'Started', shuffle: this.random, lasttimestamp: serverTimestamp() };
-            this.db_updates['problems/all/' + this.key + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
-            this.authService.UpdateUserData(this.db_updates);
-            this.db_updates = {};
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/starttimestamp'] = serverTimestamp();
+            if (this.authService.userData.role == 'Student') {
+                this.db_updates['exams/history/' + this.key] = { progress: 0, status: 'Started', shuffle: this.random, lasttimestamp: serverTimestamp() };
+                this.db_updates['problems/all/' + this.key + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
+                this.authService.UpdateUserData(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/starttimestamp'] = serverTimestamp();
+            }
+            else if (this.selected_student != '') {
+                this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key] = { progress: 0, status: 'Started', shuffle: this.random, lasttimestamp: serverTimestamp() };
+                this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/starttimestamp'] = serverTimestamp();
+            }
             this.authService.UpdateDatabase(this.db_updates);
             this.db_updates = {};
         }
@@ -328,37 +429,74 @@ export class TX21G8SSExamComponent implements OnInit {
             }
         }
         if (this.authService.userData) {
-            this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
-            this.db_updates['exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
-            this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
-            if (this.attempt_response == 'Correct') {
-                this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
+            if (this.authService.userData.role == 'Student') {
+                this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
+                this.db_updates['exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
+                this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
+                if (this.attempt_response == 'Correct') {
+                    this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
+                }
+                this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = this.attempt_response;
+                this.authService.UpdateUserData(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                if (this.problem_number == this.exam_length) {
+                    this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
+                }
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/timestamp'] = serverTimestamp();
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
             }
-            this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = this.attempt_response;
-            this.authService.UpdateUserData(this.db_updates);
-            this.db_updates = {};
-            this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
-            if (this.problem_number == this.exam_length) {
-                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
+            else if (this.selected_student != '') {
+                this.selected_student_data = this.authService.searchUserId(this.selected_student);
+                this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/progress'] = this.selected_student_data.exams.history[this.key].progress + 1;
+                this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
+                this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1; //only add if new
+                if (this.attempt_response == 'Correct') {
+                    this.db_updates['users/' + this.selected_student + '/problems/correct'] = this.selected_student_data.problems.correct + 1;
+                }
+                this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = this.attempt_response;
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/problems/' + this.selected_student + '/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                if (this.problem_number == this.exam_length) {
+                    this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/endtimestamp'] = serverTimestamp();
+                }
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/problems/' + this.selected_student + '/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/timestamp'] = serverTimestamp();
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
             }
-            this.authService.UpdateDatabase(this.db_updates);
-            this.db_updates = {};
-            this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/timestamp'] = serverTimestamp();
-            this.authService.UpdateDatabase(this.db_updates);
-            this.db_updates = {};
         }
         this.problem_number += 1;
         if (this.problem_number <= this.exam_length) {
             if (this.authService.userData) {
-                this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = 'Viewed';
-                this.authService.UpdateUserData(this.db_updates);
-                this.db_updates = {};
+                if (this.authService.userData.role == 'Student') {
+                    this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = 'Viewed';
+                    this.authService.UpdateUserData(this.db_updates);
+                    this.db_updates = {};
+                }
+                else if (this.selected_student != '') {
+                    console.log(this.exam_submission[this.exam_dump[this.problem_number].Number].Number);
+                    this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = 'Viewed';
+                    this.authService.UpdateDatabase(this.db_updates);
+                    this.db_updates = {};
+                }
             }
         }
         else {
             if (this.authService.userData) {
-                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
+                if (this.authService.userData.role == 'Student') {
+                    this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
+                }
+                else if (this.selected_student != '') {
+                    this.db_updates['users/' + this.selected_student + '/submissions/exams/' + this.selected_student + '/' + this.key + '/endtimestamp'] = serverTimestamp();
+                }
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
             }
@@ -446,17 +584,31 @@ export class TX21G8SSExamComponent implements OnInit {
         else {
             this.performance_level = "Does Not Meet Grade Level Performance";
         }
-        if (this.authService.userData && this.authService.userData.role == 'Student') {
-            this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';
-            this.authService.UpdateUserData(this.db_updates);
-            this.db_updates = {};
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/total'] = this.exam_length;
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/correct'] = this.number_correct;
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/score'] = this.correct_percent;
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/level'] = this.performance_level;
-            this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
-            this.authService.UpdateDatabase(this.db_updates);
-            this.db_updates = {};
+        if (this.authService.userData) {
+            if (this.authService.userData.role == 'Student') {
+                this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';
+                this.authService.UpdateUserData(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/total'] = this.exam_length;
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/correct'] = this.number_correct;
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/score'] = this.correct_percent;
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/level'] = this.performance_level;
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+            }
+            else if (this.selected_student != '') {
+                this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/status'] = 'Completed';
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/total'] = this.exam_length;
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/correct'] = this.number_correct;
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/score'] = this.correct_percent;
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/level'] = this.performance_level;
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+            }
         }
     }
 
@@ -621,24 +773,44 @@ export class TX21G8SSExamComponent implements OnInit {
                 'Time': ''
             };
         }
-        if (this.authService.userData) {
-            const exam_history = this.authService.userData.exams.history;
-            for (const [key, det] of Object.entries(exam_history)) {
-                if ((det as any).status == "Started" && key == this.key) {
-                    this.exam_inprogress = true;
-                    this.progress_number = (det as any).progress + 1;
-                    this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
-                    this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
-                    if ((det as any).progress != 0) {
-                        const db_submission = this.authService.getExamSubmission(this.key).problems;
-                        for (const [key2, det2] of Object.entries(db_submission)) {
-                            if (+key2 != 0) {
-                                this.exam_submission[+(det2 as any).Number] = (det2 as any);
+        setTimeout(() => {
+            if (this.authService.userData) {
+                if (this.authService.userData.role != 'Student') {
+                    const linked_students = this.authService.userData.students.slice(1);
+                    var count = 0;
+                    for (let stud of linked_students) {
+                        if (stud.includes(this.authService.userData.uid as string)) {
+                            count += 1;
+                            this.my_students.push(stud);
+                            // setTimeout(() => {
+                            const student_data = this.authService.searchUserId(stud);
+                                // setTimeout(() => {
+                            this.my_students_data[(stud)] = (student_data as object);
+                                // }, 500);
+                            // }, count * 250);
+                        }
+                    }
+                }
+                if (this.authService.userData.role == 'Student') {
+                    const exam_history = this.authService.userData.exams.history;
+                    for (const [key, det] of Object.entries(exam_history)) {
+                        if ((det as any).status == "Started" && key == this.key) {
+                            this.exam_inprogress = true;
+                            this.progress_number = (det as any).progress + 1;
+                            this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
+                            this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
+                            if ((det as any).progress != 0) {
+                                const db_submission = this.authService.getExamSubmission(this.key).problems;
+                                for (const [key2, det2] of Object.entries(db_submission)) {
+                                    if (+key2 != 0) {
+                                        this.exam_submission[+(det2 as any).Number] = (det2 as any);
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
-        }
+        }, 500);
     }
 }
