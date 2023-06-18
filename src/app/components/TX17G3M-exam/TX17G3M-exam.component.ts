@@ -810,8 +810,6 @@ export class TX17G3MExamComponent implements OnInit {
                         }
                     }
                 }
-                console.log(this.my_students);
-                console.log(this.my_students_data);
             }
         }, 500);
     }
