@@ -672,7 +672,7 @@
             </label>
           </section>
           <br />
-          <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableS>
+          <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableS>
             <thead>
               <tr style="border: 3px solid black; background-color: grey">
                 <th> Topic </th>
@@ -690,7 +690,7 @@
               </tr>
             </tbody>
           </table>
-          <table *ngIf="this.expand_topics" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableL>
+          <table *ngIf="this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableL>
             <thead>
               <tr style="border: 3px solid black; background-color: grey">
                 <th> Topic </th>
@@ -732,7 +732,7 @@
             </label>
           </section>
           <br />
-          <table *ngIf="!this.show_correct" style="border: 1px solid black; margin: auto; width: 99%" #resultsTableI>
+          <table *ngIf="!this.show_correct" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #resultsTableI>
             <thead>
               <tr style="border: 1px solid black; background-color: grey">
                 <th> Problem Number </th>
@@ -759,7 +759,7 @@
               </tr>
             </tbody>
           </table>
-          <table *ngIf="this.show_correct" style="border: 1px solid black; margin: auto; width: 99%" #resultsTableA>
+          <table *ngIf="this.show_correct" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #resultsTableA>
             <thead>
               <tr style="border: 1px solid black; background-color: grey">
                 <th> Problem Number </th>

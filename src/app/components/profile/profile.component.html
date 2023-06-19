@@ -544,183 +544,193 @@
     </div>
 </section>
 <div *ngIf="selected_exam != ''" style="width: 100%">
-    <h2 style="padding-top: 20px; color: darkgrey"> {{exam_names[selected_exam]}} </h2>
-    <h2> With {{number_correct}} out of {{exam_length}} problems
-        correct, you scored {{correct_percent}}% in {{time_duration}}</h2>
-    <h2 *ngIf="this.performance_level == 'Masters Grade Level Performance'" style="color: green">
-        {{performance_level}} </h2>
-    <h2 *ngIf="this.performance_level == 'Approaches Grade Level Performance'" style="color: blue">
-        {{performance_level}} </h2>
-    <h2 *ngIf="this.performance_level == 'Meets Grade Level Performance'" style="color: magenta">
-        {{performance_level}} </h2>
-    <h2 *ngIf="this.performance_level == 'Does Not Meet Grade Level Performance'" style="color: red">
-        {{performance_level}} </h2>
+    <div class="card card-medium" style="text-align: center; margin: auto; width: fit-content; padding: 20px; display: flex; flex-direction: column">
+        <h2 style="color: darkgrey"> {{exam_names[selected_exam]}} </h2>
+        <h2> With {{number_correct}} out of {{exam_length}} problems
+            correct, you scored {{correct_percent}}% in {{time_duration}}</h2>
+        <h2 *ngIf="this.performance_level == 'Masters Grade Level Performance'" style="color: green">
+            {{performance_level}} </h2>
+        <h2 *ngIf="this.performance_level == 'Approaches Grade Level Performance'" style="color: blue">
+            {{performance_level}} </h2>
+        <h2 *ngIf="this.performance_level == 'Meets Grade Level Performance'" style="color: magenta">
+            {{performance_level}} </h2>
+        <h2 *ngIf="this.performance_level == 'Does Not Meet Grade Level Performance'" style="color: red">
+            {{performance_level}} </h2>
+    </div>
     <br />
-    <table *ngIf="!this.expand_subtopics" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableS>
-        <thead>
-            <tr>
-                <th colspan="3" style="font-size: 18px"> Report: Results by Topic </th>
-                <th colspan="2">
-                    <label class="switch"
-                        style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
-                        <input type="checkbox">
-                        <button *ngIf="!this.expand_subtopics" (click)="expandSubTopics()" class="topic-button"
-                            style="width: 100%; font-size: 14px">
-                            <b>Show Subtopics</b> </button>
-                        <button *ngIf="this.expand_subtopics" (click)="expandSubTopics()" class="topic-button"
-                            style="width: 100%; font-size: 14px">
-                            Hide Subtopics </button>
-                    </label>
-                </th>
-            </tr>
-            <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                <th> Topic </th>
-                <th> Percent Correct </th>
-                <th> Missed Problems </th>
-                <th> Total Problems </th>
-                <th> Average Time </th>
-            </tr>
-        </thead>
-        <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
-            <tr style="background-color: lightgrey">
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
-            </tr>
-        </tbody>
-    </table>
-    <table *ngIf="this.expand_subtopics" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableL>
-        <thead>
-            <tr>
-                <th colspan="3" style="font-size: 18px"> Report: Results by Topic & Skill Tested </th>
-                <th colspan="2">
-                    <label class="switch"
-                        style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
-                        <input type="checkbox">
-                        <button *ngIf="!this.expand_subtopics" (click)="expandSubTopics()" class="topic-button"
-                            style="width: 100%; font-size: 14px">
-                            <b>Show Subtopics</b> </button>
-                        <button *ngIf="this.expand_subtopics" (click)="expandSubTopics()" class="topic-button"
-                            style="width: 100%; font-size: 14px">
-                            Hide Subtopics </button>
-                    </label>
-                </th>
-            </tr>
-            <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                <th> Topic & Skill Tested </th>
-                <th> Percent Correct </th>
-                <th> Missed Problems </th>
-                <th> Total Problems </th>
-                <th> Average Time </th>
-            </tr>
-        </thead>
-        <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
-            <tr style="background-color: lightgrey">
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
-            </tr>
-            <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
-                <td style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
-                    <i>
-                        {{subtopic.key}} </i>
-                </td>
-                <td style="border-top: 1px solid #ddd"> </td>
-                <td style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
-                <td style="border-top: 1px solid #ddd"> {{subtopic.value.Total}} </td>
-                <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}} </td>
-            </tr>
-        </tbody>
-    </table>
+    <div style="overflow: auto">
+        <table *ngIf="!this.expand_subtopics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableS>
+            <thead>
+                <tr>
+                    <th colspan="3" style="font-size: 18px"> Report: Results by Topic </th>
+                    <th colspan="2">
+                        <label class="switch"
+                            style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
+                            <input type="checkbox">
+                            <button *ngIf="!this.expand_subtopics" (click)="expandSubTopics()" class="topic-button"
+                                style="width: 100%; font-size: 14px">
+                                <b>Show Subtopics</b> </button>
+                            <button *ngIf="this.expand_subtopics" (click)="expandSubTopics()" class="topic-button"
+                                style="width: 100%; font-size: 14px">
+                                Hide Subtopics </button>
+                        </label>
+                    </th>
+                </tr>
+                <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
+                    <th> Topic </th>
+                    <th> Percent Correct </th>
+                    <th> Missed Problems </th>
+                    <th> Total Problems </th>
+                    <th> Average Time </th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
+                <tr style="background-color: lightgrey">
+                    <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
+                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
+                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
+                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
+                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="overflow: auto">
+        <table *ngIf="this.expand_subtopics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableL>
+            <thead>
+                <tr>
+                    <th colspan="3" style="font-size: 18px"> Report: Results by Topic & Skill Tested </th>
+                    <th colspan="2">
+                        <label class="switch"
+                            style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
+                            <input type="checkbox">
+                            <button *ngIf="!this.expand_subtopics" (click)="expandSubTopics()" class="topic-button"
+                                style="width: 100%; font-size: 14px">
+                                <b>Show Subtopics</b> </button>
+                            <button *ngIf="this.expand_subtopics" (click)="expandSubTopics()" class="topic-button"
+                                style="width: 100%; font-size: 14px">
+                                Hide Subtopics </button>
+                        </label>
+                    </th>
+                </tr>
+                <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
+                    <th> Topic & Skill Tested </th>
+                    <th> Percent Correct </th>
+                    <th> Missed Problems </th>
+                    <th> Total Problems </th>
+                    <th> Average Time </th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
+                <tr style="background-color: lightgrey">
+                    <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
+                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
+                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
+                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
+                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
+                </tr>
+                <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
+                    <td style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
+                        <i>
+                            {{subtopic.key}} </i>
+                    </td>
+                    <td style="border-top: 1px solid #ddd"> </td>
+                    <td style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
+                    <td style="border-top: 1px solid #ddd"> {{subtopic.value.Total}} </td>
+                    <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <br />
-    <table *ngIf="!this.show_correct" style="border: 1px solid black; margin: auto; width: 99%" #resultsTableI>
-        <thead>
-            <tr>
-                <th colspan="6" style="font-size: 18px"> Report: Details on Incorrect Problems </th>
-                <th colspan="2">
-                    <label class="switch"
-                        style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
-                        <input type="checkbox">
-                        <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
-                            style="width: 100%; font-size: 14px">
-                            <b>Show Correct Responses</b> </button>
-                        <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
-                            style="width: 100%; font-size: 14px">
-                            Hide Correct Responses </button>
-                    </label>
-                </th>
-            </tr>
-            <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
-                <th> Problem Number </th>
-                <th> Problem Topic </th>
-                <th> Correct Response </th>
-                <th> Student Response </th>
-                <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
-                <th> Problem Time </th>
-                <th> Problem Attempts </th>
-                <th> Attempt Path </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let sub of wrong_submission_list">
-                <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Topic}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
-                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                    {{sub.Rationale}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
-            </tr>
-        </tbody>
-    </table>
-    <table *ngIf="this.show_correct" style="border: 1px solid black; margin: auto; width: 99%" #resultsTableA>
-        <thead>
-            <tr>
-                <th colspan="6" style="font-size: 18px"> Report: Details on All Problems </th>
-                <th colspan="2">
-                    <label class="switch"
-                        style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
-                        <input type="checkbox">
-                        <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
-                            style="width: 100%; font-size: 14px">
-                            <b>Show Correct Responses</b> </button>
-                        <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
-                            style="width: 100%; font-size: 14px">
-                            Hide Correct Responses </button>
-                    </label>
-                </th>
-            </tr>
-            <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
-                <th> Problem Number </th>
-                <th> Problem Topic </th>
-                <th> Correct Response </th>
-                <th> Student Response </th>
-                <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
-                <th> Problem Time </th>
-                <th> Problem Attempts </th>
-                <th> Attempt Path </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let sub of exam_submission_list">
-                <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Topic}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
-                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                    {{sub.Rationale}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
-            </tr>
-        </tbody>
-    </table>
+    <div style="overflow: auto">
+        <table *ngIf="!this.show_correct" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #resultsTableI>
+            <thead>
+                <tr>
+                    <th colspan="6" style="font-size: 18px"> Report: Details on Incorrect Problems </th>
+                    <th colspan="2">
+                        <label class="switch"
+                            style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
+                            <input type="checkbox">
+                            <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
+                                style="width: 100%; font-size: 14px">
+                                <b>Show Correct Responses</b> </button>
+                            <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
+                                style="width: 100%; font-size: 14px">
+                                Hide Correct Responses </button>
+                        </label>
+                    </th>
+                </tr>
+                <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
+                    <th> Problem Number </th>
+                    <th> Problem Topic </th>
+                    <th> Correct Response </th>
+                    <th> Student Response </th>
+                    <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
+                    <th> Problem Time </th>
+                    <th> Problem Attempts </th>
+                    <th> Attempt Path </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let sub of wrong_submission_list">
+                    <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
+                    <td style="border-top: 1px solid #ddd"> {{sub.Topic}} </td>
+                    <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
+                    <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
+                    <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
+                        {{sub.Rationale}} </td>
+                    <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
+                    <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
+                    <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="overflow: auto">
+        <table *ngIf="this.show_correct" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #resultsTableA>
+            <thead>
+                <tr>
+                    <th colspan="6" style="font-size: 18px"> Report: Details on All Problems </th>
+                    <th colspan="2">
+                        <label class="switch"
+                            style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
+                            <input type="checkbox">
+                            <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
+                                style="width: 100%; font-size: 14px">
+                                <b>Show Correct Responses</b> </button>
+                            <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
+                                style="width: 100%; font-size: 14px">
+                                Hide Correct Responses </button>
+                        </label>
+                    </th>
+                </tr>
+                <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
+                    <th> Problem Number </th>
+                    <th> Problem Topic </th>
+                    <th> Correct Response </th>
+                    <th> Student Response </th>
+                    <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
+                    <th> Problem Time </th>
+                    <th> Problem Attempts </th>
+                    <th> Attempt Path </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let sub of exam_submission_list">
+                    <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
+                    <td style="border-top: 1px solid #ddd"> {{sub.Topic}} </td>
+                    <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
+                    <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
+                    <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
+                        {{sub.Rationale}} </td>
+                    <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
+                    <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
+                    <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 <section *ngIf="selected_student != '' && selected_exam == ''" style="width: 100%; align-items: left">
     <div (click)="selected_student=''" class="card card-small"
@@ -780,102 +790,106 @@
                     </div>
                 </div>
                 <br />
-                <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: 99%"
-                    #subjectTableS>
-                    <thead>
-                        <tr>
-                            <th colspan="3" style="font-size: 18px"> Placeholder Report Title </th>
-                            <th colspan="2">
-                                <label class="switch"
-                                    style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
-                                    <input type="checkbox">
-                                    <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
-                                        style="width: 100%; font-size: 14px">
-                                        <b>Show Topics</b> </button>
-                                    <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
-                                        style="width: 100%; font-size: 14px">
-                                        Hide Topics </button>
-                                </label>
-                            </th>
-                        </tr>
-                        <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                            <th> Subject </th>
-                            <th> Total Problems </th>
-                            <th> Missed Problems </th>
-                            <th> Percent Correct </th>
-                            <th> Average Time </th>
-                        </tr>
-                    </thead>
-                    <tbody *ngFor="let grade of grade_breakdown | keyvalue" style="border: 5px solid black">
-                        <tr style="background-color: lightgrey">
-                            <td style="border-top: 1px solid #ddd"> <b> {{grade.key}} </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Total}} </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Incorrect}} </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Percent}}% </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Time}} </b> </td>
-                        </tr>
-                        <tr *ngFor="let subject of grade.value.Subs | keyvalue">
-                            <td style="border-top: 1px solid #ddd; ; text-align: center">
-                                <i> <b> {{subject.key}} </b> </i>
-                            </td>
-                            <td style="border-top: 1px solid #ddd"> {{subject.value.Total}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{subject.value.Incorrect}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{grade.value.Percent}}% </td>
-                            <td style="border-top: 1px solid #ddd"> {{subject.value.Time}} </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table *ngIf="this.expand_topics" style="border: 1px solid black; margin: auto; width: 99%"
-                    #subjectTableL>
-                    <thead>
-                        <tr>
-                            <th colspan="3" style="font-size: 18px"> Placeholder Report Title </th>
-                            <th colspan="2">
-                                <label class="switch"
-                                    style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
-                                    <input type="checkbox">
-                                    <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
-                                        style="width: 100%; font-size: 14px">
-                                        <b>Show Topics</b> </button>
-                                    <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
-                                        style="width: 100%; font-size: 14px">
-                                        Hide Topics </button>
-                                </label>
-                            </th>
-                        </tr>
-                        <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                            <th> Subject </th>
-                            <th> Topic </th>
-                            <th> Total Problems </th>
-                            <th> Missed Problems </th>
-                            <th> Percent Correct </th>
-                            <th> Average Time </th>
-                        </tr>
-                    </thead>
-                    <tbody *ngFor="let subject of subject_breakdown | keyvalue" style="border: 5px solid black">
-                        <tr style="background-color: lightgrey">
-                            <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Grade + ": " +
-                                    subject.value.Subject}} </b> </td>
-                            <td style="border-top: 1px solid #ddd"> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}} </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Percent}}% </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Time}} </b> </td>
-                        </tr>
-                        <tr *ngFor="let topic of subject.value.Break.Tops | keyvalue">
-                            <td style="border-top: 1px solid #ddd"> </td>
-                            <td
-                                style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
-                                <i>
-                                    {{topic.key}} </i>
-                            </td>
-                            <td style="border-top: 1px solid #ddd"> {{topic.value.Total}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{topic.value.Incorrect}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{topic.value.Percent}}% </td>
-                            <td style="border-top: 1px solid #ddd"> {{topic.value.Time}} </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div style="overflow: auto">
+                    <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+                        #subjectTableS>
+                        <thead>
+                            <tr>
+                                <th colspan="3" style="font-size: 18px"> Placeholder Report Title </th>
+                                <th colspan="2">
+                                    <label class="switch"
+                                        style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
+                                        <input type="checkbox">
+                                        <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
+                                            style="width: 100%; font-size: 14px">
+                                            <b>Show Topics</b> </button>
+                                        <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
+                                            style="width: 100%; font-size: 14px">
+                                            Hide Topics </button>
+                                    </label>
+                                </th>
+                            </tr>
+                            <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
+                                <th> Subject </th>
+                                <th> Total Problems </th>
+                                <th> Missed Problems </th>
+                                <th> Percent Correct </th>
+                                <th> Average Time </th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let grade of grade_breakdown | keyvalue" style="border: 5px solid black">
+                            <tr style="background-color: lightgrey">
+                                <td style="border-top: 1px solid #ddd"> <b> {{grade.key}} </b> </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Total}} </b> </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Incorrect}} </b> </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Percent}}% </b> </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Time}} </b> </td>
+                            </tr>
+                            <tr *ngFor="let subject of grade.value.Subs | keyvalue">
+                                <td style="border-top: 1px solid #ddd; ; text-align: center">
+                                    <i> <b> {{subject.key}} </b> </i>
+                                </td>
+                                <td style="border-top: 1px solid #ddd"> {{subject.value.Total}} </td>
+                                <td style="border-top: 1px solid #ddd"> {{subject.value.Incorrect}} </td>
+                                <td style="border-top: 1px solid #ddd"> {{grade.value.Percent}}% </td>
+                                <td style="border-top: 1px solid #ddd"> {{subject.value.Time}} </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="overflow: auto">
+                    <table *ngIf="this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+                        #subjectTableL>
+                        <thead>
+                            <tr>
+                                <th colspan="3" style="font-size: 18px"> Placeholder Report Title </th>
+                                <th colspan="2">
+                                    <label class="switch"
+                                        style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
+                                        <input type="checkbox">
+                                        <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
+                                            style="width: 100%; font-size: 14px">
+                                            <b>Show Topics</b> </button>
+                                        <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
+                                            style="width: 100%; font-size: 14px">
+                                            Hide Topics </button>
+                                    </label>
+                                </th>
+                            </tr>
+                            <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
+                                <th> Subject </th>
+                                <th> Topic </th>
+                                <th> Total Problems </th>
+                                <th> Missed Problems </th>
+                                <th> Percent Correct </th>
+                                <th> Average Time </th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let subject of subject_breakdown | keyvalue" style="border: 5px solid black">
+                            <tr style="background-color: lightgrey">
+                                <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Grade + ": " +
+                                        subject.value.Subject}} </b> </td>
+                                <td style="border-top: 1px solid #ddd"> </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b> </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}} </b> </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Percent}}% </b> </td>
+                                <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Time}} </b> </td>
+                            </tr>
+                            <tr *ngFor="let topic of subject.value.Break.Tops | keyvalue">
+                                <td style="border-top: 1px solid #ddd"> </td>
+                                <td
+                                    style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
+                                    <i>
+                                        {{topic.key}} </i>
+                                </td>
+                                <td style="border-top: 1px solid #ddd"> {{topic.value.Total}} </td>
+                                <td style="border-top: 1px solid #ddd"> {{topic.value.Incorrect}} </td>
+                                <td style="border-top: 1px solid #ddd"> {{topic.value.Percent}}% </td>
+                                <td style="border-top: 1px solid #ddd"> {{topic.value.Time}} </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <br />
                 <div class="card-container">
                     <div *ngFor="let exm of complete_exam_list" class="card card-large"
@@ -1392,38 +1406,40 @@
                         </div>
                     </div>
                     <br />
-                    <table style="border: 1px solid black; margin: auto; width: 99%" #subjectTable>
-                        <thead>
-                            <tr>
-                                <th colspan="5" style="font-size: 18px"> Your Results by Subject </th>
-                            </tr>
-                            <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                                <th> Subject </th>
-                                <th> Total Problems </th>
-                                <th> Missed Problems </th>
-                                <th> Percent Correct </th>
-                                <th> Average Time </th>
-                            </tr>
-                        </thead>
-                        <tbody *ngFor="let grade of grade_breakdown | keyvalue" style="border: 5px solid black">
-                            <tr style="background-color: lightgrey">
-                                <td style="border-top: 1px solid #ddd"> <b> {{grade.key}} </b> </td>
-                                <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Total}} </b> </td>
-                                <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Incorrect}} </b> </td>
-                                <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Percent}}% </b> </td>
-                                <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Time}} </b> </td>
-                            </tr>
-                            <tr *ngFor="let subject of grade.value.Subs | keyvalue">
-                                <td style="border-top: 1px solid #ddd; ; text-align: center">
-                                    <i> <b> {{subject.key}} </b> </i>
-                                </td>
-                                <td style="border-top: 1px solid #ddd"> {{subject.value.Total}} </td>
-                                <td style="border-top: 1px solid #ddd"> {{subject.value.Incorrect}} </td>
-                                <td style="border-top: 1px solid #ddd"> {{grade.value.Percent}}% </td>
-                                <td style="border-top: 1px solid #ddd"> {{subject.value.Time}} </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div style="overflow: auto">
+                        <table style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #subjectTable>
+                            <thead>
+                                <tr>
+                                    <th colspan="5" style="font-size: 18px"> Your Results by Subject </th>
+                                </tr>
+                                <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
+                                    <th> Subject </th>
+                                    <th> Total Problems </th>
+                                    <th> Missed Problems </th>
+                                    <th> Percent Correct </th>
+                                    <th> Average Time </th>
+                                </tr>
+                            </thead>
+                            <tbody *ngFor="let grade of grade_breakdown | keyvalue" style="border: 5px solid black">
+                                <tr style="background-color: lightgrey">
+                                    <td style="border-top: 1px solid #ddd"> <b> {{grade.key}} </b> </td>
+                                    <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Total}} </b> </td>
+                                    <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Incorrect}} </b> </td>
+                                    <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Percent}}% </b> </td>
+                                    <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Time}} </b> </td>
+                                </tr>
+                                <tr *ngFor="let subject of grade.value.Subs | keyvalue">
+                                    <td style="border-top: 1px solid #ddd; ; text-align: center">
+                                        <i> <b> {{subject.key}} </b> </i>
+                                    </td>
+                                    <td style="border-top: 1px solid #ddd"> {{subject.value.Total}} </td>
+                                    <td style="border-top: 1px solid #ddd"> {{subject.value.Incorrect}} </td>
+                                    <td style="border-top: 1px solid #ddd"> {{grade.value.Percent}}% </td>
+                                    <td style="border-top: 1px solid #ddd"> {{subject.value.Time}} </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <br />
                     <div *ngFor="let exm of complete_exam_list" class="card card-large"
                         style="margin: auto; height: auto; max-height: 200px; max-width: 450px; display: flex; flex-direction: column">

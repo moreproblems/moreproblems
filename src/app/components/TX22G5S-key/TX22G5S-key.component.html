@@ -493,9 +493,9 @@
           <div *ngFor="let prob of exam_dump | keyvalue" style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
             <label *ngIf="problem_number == prob.value.Number" class="switch" style="max-height: 500px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
               <input type="checkbox">
-              <button *ngIf="!expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%; font-size: 16px">
+              <button *ngIf="!expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%; font-size: 16px; min-width: 150px">
                 <b>{{prob.value.Topic}}</b> </button>
-              <button *ngIf="expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%; font-size: 16px">
+              <button *ngIf="expand_topic" (click)="toggle_topic()" class="topic-button" style="width: 100%; font-size: 16px; min-width: 150px">
                 {{prob.value.SubTopic}} </button>
             </label>
           </div>

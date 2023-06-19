@@ -706,7 +706,7 @@
                             </div>
                         </form>
                     </div> -->
-          <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableS>
+          <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableS>
             <thead>
               <tr>
                 <th colspan="3" style="font-size: 18px"> Report: Results by Topic </th>
@@ -741,7 +741,7 @@
               </tr>
             </tbody>
           </table>
-          <table *ngIf="this.expand_topics" style="border: 1px solid black; margin: auto; width: 99%" #topicsTableL>
+          <table *ngIf="this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableL>
             <thead>
               <tr>
                 <th colspan="3" style="font-size: 18px"> Report: Results by Topic & Skill Tested </th>
@@ -785,7 +785,7 @@
             </tbody>
           </table>
           <br />
-          <table *ngIf="!this.show_correct" style="border: 1px solid black; margin: auto; width: 99%" #resultsTableI>
+          <table *ngIf="!this.show_correct" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #resultsTableI>
             <thead>
               <tr>
                 <th colspan="6" style="font-size: 18px"> Report: Details on Incorrect Problems </th>
@@ -827,7 +827,7 @@
               </tr>
             </tbody>
           </table>
-          <table *ngIf="this.show_correct" style="border: 1px solid black; margin: auto; width: 99%" #resultsTableA>
+          <table *ngIf="this.show_correct" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #resultsTableA>
             <thead>
               <tr>
                 <th colspan="6" style="font-size: 18px"> Report: Details on All Problems </th>
