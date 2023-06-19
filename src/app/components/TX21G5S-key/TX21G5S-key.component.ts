@@ -21,7 +21,7 @@ export class TX21G5SKeyComponent implements OnInit {
     title = 'More Problems';
 
     screenWidth = window.innerWidth;
-    mobileWidth = 800;
+    mobileWidth = 850;
 
     // et_counter: number = 0;
     // et_minutes: number = 0;

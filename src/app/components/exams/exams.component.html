@@ -469,7 +469,7 @@
 
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%+150px; background-attachment: fixed">
-  <div class="content-menu" (window:resize)="width_change2()" role="menu"  style="margin-bottom: 0px">
+  <!-- <div class="content-menu" (window:resize)="width_change2()" role="menu"  style="margin-bottom: 0px"> -->
     <br *ngIf="file_source != ''" />
     <section *ngIf="file_source != ''" style="width: 100%; align-items: left">
       <div (click)="file_source=''; exam_fav=false" class="card card-small" style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -828,7 +828,7 @@
       </div>
       <!-- <br /> -->
     </div>
-  </div>
+  <!-- </div> -->
   <br #chooseGrade />
   <div *ngIf="file_source == ''" class="content" role="main" [ngSwitch]="selected_state">
     <!-- California CAASPP -->

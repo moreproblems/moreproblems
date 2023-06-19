@@ -470,16 +470,16 @@
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%+150px; background-attachment: fixed">
   <canvas id="confetticanvas"></canvas>
   <div *ngIf="expand_filters" class="content">
-    <h2>Choose your State</h2>
+    <!-- <h2>Choose your State</h2>
     <input type="hidden" value="All United States" #state>
     <div class="card-container">
-      <!-- <label class="switch">
+      <label class="switch">
         <input type="checkbox" value="CO">
         <button *ngIf="state_filters.includes('Colorado')" (click)="toggle_button('Colorado')" class="toggle-button-on"
           tabindex="0"> <b>Colorado</b> </button>
         <button *ngIf="!state_filters.includes('Colorado')" (click)="toggle_button('Colorado')"
           class="toggle-button-off" tabindex="0"> <b>Colorado</b> </button>
-      </label> -->
+      </label>
       <label class="switch">
         <input type="checkbox" value="FL">
         <button *ngIf="state_filters.includes('Florida')" (click)="toggle_button('Florida')" class="toggle-button-on"
@@ -487,7 +487,7 @@
         <button *ngIf="!state_filters.includes('Florida')" (click)="toggle_button('Florida')" class="toggle-button-off"
           tabindex="0"> <b>Florida</b> </button>
       </label>
-      <!-- <label class="switch">
+      <label class="switch">
         <input type="checkbox" value="IL">
         <button *ngIf="state_filters.includes('Illinois')" (click)="toggle_button('Illinois')" class="toggle-button-on"
           tabindex="0"> <b>Illinois</b> </button>
@@ -542,7 +542,7 @@
           class="toggle-button-on" tabindex="0"> <b>North Carolina</b> </button>
         <button *ngIf="!state_filters.includes('North Carolina')" (click)="toggle_button('North Carolina')"
           class="toggle-button-off" tabindex="0"> <b>North Carolina</b> </button>
-      </label> -->
+      </label>
       <label class="switch">
         <input type="checkbox" value="PA">
         <button *ngIf="state_filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')"
@@ -550,13 +550,13 @@
         <button *ngIf="!state_filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')"
           class="toggle-button-off" tabindex="0"> <b>Pennsylvania</b> </button>
       </label>
-      <!-- <label class="switch">
+      <label class="switch">
         <input type="checkbox" value="TN">
         <button *ngIf="state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')"
           class="toggle-button-on" tabindex="0"> <b>Tennessee</b> </button>
         <button *ngIf="!state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')"
           class="toggle-button-off" tabindex="0"> <b>Tennessee</b> </button>
-      </label> -->
+      </label>
       <label class="switch">
         <input type="checkbox" value="TX">
         <button *ngIf="state_filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button-on"
@@ -565,9 +565,9 @@
           tabindex="0"> <b>Texas</b> </button>
       </label>
     </div>
-    <br />
+    <br />-->
 
-    <br />
+    <br /> 
     <h2>Choose your Grade</h2>
     <input type="hidden" value="All Grades" #state>
     <div class="card-container">

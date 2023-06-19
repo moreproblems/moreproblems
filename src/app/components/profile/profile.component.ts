@@ -22,7 +22,7 @@ export class ProfileComponent implements OnInit {
 
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
-  mobileWidth = 800;
+  mobileWidth = 850;
   menuOpen = false;
 
   profile_tab = "information";

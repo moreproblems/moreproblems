@@ -489,11 +489,11 @@
 
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%+150px; background-attachment: fixed">
-  <div class="content-menu" role="menu" style="margin-bottom: 0px">
+  <!-- <div class="content-menu" role="menu" style="margin-bottom: 0px"> -->
     <br *ngIf="file_source != ''" />
     <section *ngIf="file_source != ''" style="width: 100%; align-items: left">
       <div (click)="file_source=''; exam_fav=false" class="card card-small"
-        style="width: 300px; border: none; background-color: white">
+        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
         <img src="./assets/icons/caret.png"
           style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
         <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> All favorited exams </a>
@@ -556,7 +556,7 @@
           [attr.height]="viewerHeight"></pdf-viewer>
       </section>
     </div>
-  </div>
+  <!-- </div> -->
   <div *ngIf="file_source == ''" class="content" role="main">
     <div *ngIf="this.authService.userData.role == 'Student'" class="subcontent">
       <h2 #favoriteExams>Your In Progress Exams</h2>
