@@ -19,7 +19,6 @@ const delay = async (ms: number) => new Promise(res => setTimeout(res, ms));
 export class ProfileComponent implements OnInit {
   // title = 'More Problems';
 
-
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
   mobileWidth = 850;
@@ -149,6 +148,8 @@ export class ProfileComponent implements OnInit {
   }
 
   toggle_create_student() {
+    const avatar = this.avatars[Math.floor(Math.random() * this.avatars.length)];
+    this.photoURL = '/assets/icons/user/' + avatar + '.png';
     this.create_s = !this.create_s;
     this.edit_s_list = [];
   }

@@ -19,6 +19,11 @@ import { HttpClient } from '@angular/common/http';
 export class HS1EStandardsComponent implements OnInit {
   title = 'More Problems';
 
+  screenWidth = window.innerWidth;
+  screenHeight = window.innerHeight;
+  mobileWidth = 850;
+  menuOpen = false;
+
   domain_state: {[key: number]: boolean} = {
     1: false,
     2: false,
@@ -27,6 +32,11 @@ export class HS1EStandardsComponent implements OnInit {
   }
 
   constructor() { }
+
+  width_change2() {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+  }
 
   // public onChange(file: File): void {
   //   let fileReader: FileReader = new FileReader();
