@@ -12,7 +12,7 @@ const confettiHandler = confetti.create(confettiCanvas, {
 
 @Component({
     selector: 'app-TX21G5S-key',
-    templateUrl: './TX21G5S-key.component.html',
+    templateUrl: '../template-key/template-key.component.html',
     styleUrls: ['./TX21G5S-key.component.css']
 })
 

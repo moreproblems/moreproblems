@@ -420,7 +420,7 @@
     </nav>
   </div>
 </div>
-<div class="content-box" role="menu" style="width: 100%; padding: 0px" [style.height.px]="screenHeight*.94">
+<div class="content-box" role="menu" style="width: 100%; padding: 0px" [style.height.px]="screenHeight-this.navbar.offsetHeight">
   <router-outlet style="width:100%; padding: Opx; margin: 0px; height: 100%"></router-outlet>
 </div>
 

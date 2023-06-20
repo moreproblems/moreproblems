@@ -19,7 +19,7 @@ const confettiHandler = confetti.create(confettiCanvas, {
 
 @Component({
     selector: 'app-TX22G8SS-exam',
-    templateUrl: './TX22G8SS-exam.component.html',
+    templateUrl: '../template-exam/template-exam.component.html',
     styleUrls: ['./TX22G8SS-exam.component.css']
 })
 
