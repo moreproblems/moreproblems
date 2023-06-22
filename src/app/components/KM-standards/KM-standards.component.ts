@@ -21,7 +21,7 @@ export class KMStandardsComponent implements OnInit {
 
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
-  mobileWidth = 850;
+  mobileWidth = 875;
   menuOpen = false;
 
   domain_state: {[key: number]: boolean} = {

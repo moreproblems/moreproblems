@@ -480,7 +480,7 @@
     <!-- <br *ngIf="file_source != ''" /> -->
     <!-- PDF Viewer -->
     <div *ngIf="file_source != ''" class="card card-large" (window:resize)="width_change()"
-      style="border: 3px solid black; border-radius: 20px; display: block; min-width: 310px; max-width: 1000px; width: 70%; max-height: 800px" [attr.width]="viewerWidth" [attr.height]="viewerHeight" #pdfViewer>
+      style="border: 3px solid black; border-radius: 20px; display: block; min-width: 310px; max-width: 1000px; width: 70%; height: auto; max-height: 90%" [attr.width]="viewerWidth" [attr.height]="viewerHeight" #pdfViewer>
       <section style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
         <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="margin: auto 25px; text-align: center; font-size: 20px"> {{exam_name}} </h1>
         <h1 *ngIf="this.screenWidth > this.mobileWidth" style="margin: auto 25px; text-align: center; font-size: 24px"> {{exam_name}} </h1>
@@ -519,7 +519,7 @@
       <section
         style="border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden" [attr.width]="viewerWidth"  [attr.height]="viewerHeight">
         <pdf-viewer *ngIf="file_source != ''" [src]="file_source" [original-size]="false" [zoom]="0.85" [(page)]="file_page"
-          style="min-height: 500px; max-height: 1000px" [attr.width]="viewerWidth" [attr.height]="viewerHeight"></pdf-viewer>
+          style="height: auto; min-height: 500px; max-height: 1000px" [attr.width]="viewerWidth" [attr.height]="viewerHeight"></pdf-viewer>
       </section>
     </div>
     <div *ngIf="file_source == ''" class="content-menu"  style="margin-bottom: 0px">
@@ -528,7 +528,7 @@
       <h2> Choose your State </h2>
       <br />
       <input type="hidden" value="All United States" #state>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <!-- <label class="switch">
           <input type="checkbox" value="CA">
           <button *ngIf="selected_state == 'CA'" (click)="select_state('CA'); scroll_top()" class="toggle-button-on"
@@ -848,7 +848,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -908,7 +908,7 @@
           <h3>Grade 3</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('COG3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('COG3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('COG3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -928,7 +928,7 @@
           <h3>Grade 4</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('COG4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('COG4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('COG4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -948,7 +948,7 @@
           <h3>Grade 5</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('COG5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('COG5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('COG5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -973,7 +973,7 @@
           <h3>Grade 6</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('COG6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('COG6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('COG6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -993,7 +993,7 @@
           <h3>Grade 7</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('COG7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('COG7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('COG7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1013,7 +1013,7 @@
           <h3>Grade 8</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('COG8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('COG8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('COG8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1037,7 +1037,7 @@
           <h3>High School</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('COHSS'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('COHSS')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('COHSS') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1054,7 +1054,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -1121,7 +1121,7 @@
           <h3>Grade 3</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('FL20G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('FL20G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('FL20G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1141,7 +1141,7 @@
           <h3>Grade 4</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('FL20G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('FL20G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('FL20G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1166,7 +1166,7 @@
           <h3>Grade 5</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('FL20G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('FL20G5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('FL20G5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1196,7 +1196,7 @@
           <h3>Grade 6</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('FL20G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('FL20G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('FL20G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1221,7 +1221,7 @@
           <h3>Grade 7</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('FL20G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('FL20G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('FL20G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1246,7 +1246,7 @@
           <h3>Grade 8</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('FL20G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('FL20G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('FL20G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1276,7 +1276,7 @@
           <h3>Grade 9</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('FL20G9R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('FL20G9R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('FL20G9R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1296,7 +1296,7 @@
           <h3>Grade 10</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('FL20G10R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('FL20G10R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('FL20G10R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1328,7 +1328,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -1381,7 +1381,7 @@
           <h3>Grade 3</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('ILG3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('ILG3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('ILG3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1401,7 +1401,7 @@
           <h3>Grade 4</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('ILG4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('ILG4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('ILG4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1421,7 +1421,7 @@
           <h3>Grade 5</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('ILG5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('ILG5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('ILG5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1441,7 +1441,7 @@
           <h3>Grade 6</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('ILG6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('ILG6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('ILG6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1461,7 +1461,7 @@
           <h3>Grade 7</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('ILG7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('ILG7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('ILG7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1481,7 +1481,7 @@
           <h3>Grade 8</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('ILG8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('ILG8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('ILG8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1503,7 +1503,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -1563,7 +1563,7 @@
           <h3>Grade 3</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MDG3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MDG3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MDG3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1583,7 +1583,7 @@
           <h3>Grade 4</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MDG4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MDG4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MDG4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1603,7 +1603,7 @@
           <h3>Grade 5</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MDG5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MDG5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MDG5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1628,7 +1628,7 @@
           <h3>Grade 6</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MDG6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MDG6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MDG6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1648,7 +1648,7 @@
           <h3>Grade 7</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MDG7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MDG7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MDG7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1668,7 +1668,7 @@
           <h3>Grade 8</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MDG8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MDG8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MDG8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1697,7 +1697,7 @@
           <h3>Grade 10</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MDG10E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MDG10E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MDG10E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1714,7 +1714,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -1774,7 +1774,7 @@
           <h3>Grade 3</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MAG3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MAG3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MAG3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1794,7 +1794,7 @@
           <h3>Grade 4</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MAG4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MAG4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MAG4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1814,7 +1814,7 @@
           <h3>Grade 5</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MAG5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MAG5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MAG5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1839,7 +1839,7 @@
           <h3>Grade 6</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MAG6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MAG6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MAG6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1859,7 +1859,7 @@
           <h3>Grade 7</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MAG7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MAG7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MAG7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1879,7 +1879,7 @@
           <h3>Grade 8</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MAG8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MAG8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MAG8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1903,7 +1903,7 @@
           <h3>Grade 10</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MAG10M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MAG10M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MAG10M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -1925,7 +1925,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -1999,7 +1999,7 @@
           <h3>Grade 3</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MNG3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MNG3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MNG3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2019,7 +2019,7 @@
           <h3>Grade 4</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MNG4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MNG4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MNG4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2039,7 +2039,7 @@
           <h3>Grade 5</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MNG5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MNG5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MNG5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2064,7 +2064,7 @@
           <h3>Grade 6</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MNG6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MNG6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MNG6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2084,7 +2084,7 @@
           <h3>Grade 7</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MNG7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MNG7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MNG7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2104,7 +2104,7 @@
           <h3>Grade 8</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MNG8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MNG8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MNG8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2128,7 +2128,7 @@
           <h3>Grade 10</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MNG10R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MNG10R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MNG10R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2142,7 +2142,7 @@
           <h3>Grade 11</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MNG11M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MNG11M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MNG11M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2156,7 +2156,7 @@
           <h3>High School</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MNHSS'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MNHSS')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MNHSS') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2173,7 +2173,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -2226,7 +2226,7 @@
           <h3>Grade 3</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MOG3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MOG3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MOG3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2246,7 +2246,7 @@
           <h3>Grade 4</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MOG4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MOG4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MOG4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2266,7 +2266,7 @@
           <h3>Grade 5</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MOG5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MOG5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MOG5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2291,7 +2291,7 @@
           <h3>Grade 6</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MOG6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MOG6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MOG6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2311,7 +2311,7 @@
           <h3>Grade 7</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MOG7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MOG7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MOG7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2331,7 +2331,7 @@
           <h3>Grade 8</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('MOG8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('MOG8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('MOG8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2370,7 +2370,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -2437,7 +2437,7 @@
           <h3>Grade 3</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NJG3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NJG3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NJG3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2457,7 +2457,7 @@
           <h3>Grade 4</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NJG4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NJG4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NJG4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2477,7 +2477,7 @@
           <h3>Grade 5</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NJG5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NJG5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NJG5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2502,7 +2502,7 @@
           <h3>Grade 6</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NJG6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NJG6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NJG6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2522,7 +2522,7 @@
           <h3>Grade 7</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NJG7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NJG7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NJG7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2542,7 +2542,7 @@
           <h3>Grade 8</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NJG8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NJG8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NJG8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2566,7 +2566,7 @@
           <h3>Grade 10</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NJG9E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NJG9E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NJG9E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2580,7 +2580,7 @@
           <h3>Grade 11</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NJG11S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NJG11S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NJG11S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2597,7 +2597,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -2650,7 +2650,7 @@
           <h3>Grade 3 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2692,7 +2692,7 @@
           <h3>Grade 3 English Language Arts</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G3E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G3E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G3E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2736,7 +2736,7 @@
           <h3>Grade 4 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2778,7 +2778,7 @@
           <h3>Grade 4 English Language Arts</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G4E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G4E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G4E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2820,7 +2820,7 @@
           <h3>Grade 4 Science</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G4S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G4S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G4S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2864,7 +2864,7 @@
           <h3>Grade 5 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2906,7 +2906,7 @@
           <h3>Grade 5 English Language Arts</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G5E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G5E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G5E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2950,7 +2950,7 @@
           <h3>Grade 6 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -2992,7 +2992,7 @@
           <h3>Grade 6 English Language Arts</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G6E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G6E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G6E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3036,7 +3036,7 @@
           <h3>Grade 7 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3078,7 +3078,7 @@
           <h3>Grade 7 English Language Arts</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G7E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G7E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G7E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3122,7 +3122,7 @@
           <h3>Grade 8 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3164,7 +3164,7 @@
           <h3>Grade 8 English Language Arts</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G8E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G8E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G8E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3206,7 +3206,7 @@
           <h3>Grade 8 Science</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NY22G8S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NY22G8S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NY22G8S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3252,7 +3252,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -3305,7 +3305,7 @@
           <h3>Grade 3</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NC18G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NC18G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NC18G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3325,7 +3325,7 @@
           <h3>Grade 4</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NC18G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NC18G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NC18G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3345,7 +3345,7 @@
           <h3>Grade 5</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NC18G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NC18G5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NC18G5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3370,7 +3370,7 @@
           <h3>Grade 6</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NC18G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NC18G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NC18G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3390,7 +3390,7 @@
           <h3>Grade 7</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NC18G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NC18G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NC18G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3410,7 +3410,7 @@
           <h3>Grade 8</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('NC18G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('NC18G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NC18G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3448,7 +3448,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -3501,7 +3501,7 @@
           <h3>Grade 3 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('PA22G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('PA22G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3538,7 +3538,7 @@
           <h3>Grade 3 English Language Arts</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G3E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('PA22G3E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('PA22G3E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3578,7 +3578,7 @@
           <h3>Grade 4 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('PA22G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('PA22G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3615,7 +3615,7 @@
           <h3>Grade 4 English Language Arts</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G4E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('PA22G4E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('PA22G4E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3652,7 +3652,7 @@
           <h3>Grade 4 Science</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G4S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('PA22G4S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('PA22G4S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3692,7 +3692,7 @@
           <h3>Grade 5 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3729,7 +3729,7 @@
           <h3>Grade 5 English Language Arts</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G5E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3768,7 +3768,7 @@
           <h3>Grade 6 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('PA22G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('PA22G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3805,7 +3805,7 @@
           <h3>Grade 6 English Language Arts</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G6E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('PA22G6E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('PA22G6E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3845,7 +3845,7 @@
           <h3>Grade 7 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('PA22G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('PA22G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3882,7 +3882,7 @@
           <h3>Grade 7 English Language Arts</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G7E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('PA22G7E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('PA22G7E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3922,7 +3922,7 @@
           <h3>Grade 8 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('PA22G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('PA22G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3959,7 +3959,7 @@
           <h3>Grade 8 English Language Arts</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G8E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('PA22G8E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('PA22G8E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -3996,7 +3996,7 @@
           <h3>Grade 8 Science</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('PA22G8S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('PA22G8S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('PA22G8S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4038,7 +4038,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -4091,7 +4091,7 @@
           <h3>Grade 3</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TN20G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TN20G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TN20G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4116,7 +4116,7 @@
           <h3>Grade 4</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TN20G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TN20G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TN20G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4141,7 +4141,7 @@
           <h3>Grade 5</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TN20G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TN20G5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TN20G5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4166,7 +4166,7 @@
           <h3>Grade 6</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TN20G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TN20G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TN20G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4196,7 +4196,7 @@
           <h3>Grade 7</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TN20G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TN20G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TN20G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4226,7 +4226,7 @@
           <h3>Grade 8</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TN20G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TN20G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TN20G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4258,7 +4258,7 @@
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
@@ -4311,7 +4311,7 @@
           <h3>Grade 3 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4343,7 +4343,7 @@
           <h3>Grade 3 Reading</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G3R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G3R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G3R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4377,7 +4377,7 @@
           <h3>Grade 4 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4409,7 +4409,7 @@
           <h3>Grade 4 Reading</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G4R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G4R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G4R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4443,7 +4443,7 @@
           <h3>Grade 5 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4475,7 +4475,7 @@
           <h3>Grade 5 Reading</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G5R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G5R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G5R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4507,7 +4507,7 @@
           <h3>Grade 5 Science</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G5S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G5S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G5S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4536,7 +4536,7 @@
           <h3>Grade 6 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4568,7 +4568,7 @@
           <h3>Grade 6 Reading</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G6R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G6R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G6R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4602,7 +4602,7 @@
           <h3>Grade 7 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4634,7 +4634,7 @@
           <h3>Grade 7 Reading</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G7R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G7R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G7R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4668,7 +4668,7 @@
           <h3>Grade 8 Math</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4700,7 +4700,7 @@
           <h3>Grade 8 Reading</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G8R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G8R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G8R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4732,7 +4732,7 @@
           <h3>Grade 8 Science</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G8S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G8S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G8S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
@@ -4759,7 +4759,7 @@
           <h3>Grade 8 Social Studies</h3>
           <br />
           <input type="hidden" #selection>
-          <div class="card-container">
+          <div class="card-container" style="max-width: 100%">
             <button class="card card-small" (click)="select_exam('TX22G8SS'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
               <img *ngIf="!authService.userData || !favorite_set.includes('TX22G8SS')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX22G8SS') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>

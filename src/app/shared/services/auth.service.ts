@@ -119,17 +119,17 @@ export class AuthService {
     //   });
   }
 
-  // Reset Forggot password
-  //   ForgotPassword(passwordResetEmail: string) {
-  //     return this.afAuth
-  //       .sendPasswordResetEmail(passwordResetEmail)
-  //       .then(() => {
-  //         window.alert('Password reset email sent, check your inbox.');
-  //       })
-  //       .catch((error) => {
-  //         window.alert(error);
-  //       });
-  //   }
+  // Reset Forgotten password
+  ResetPassword(passwordResetEmail: string) {
+    return this.afAuth
+      .sendPasswordResetEmail(passwordResetEmail)
+      .then(() => {
+        window.alert('Password reset email sent, check your inbox.');
+      })
+      .catch((error) => {
+        window.alert(error);
+      });
+  }
 
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
@@ -227,6 +227,9 @@ export class AuthService {
     }).catch((error) => {
       console.error(error);
     });
+    // if (this.userData.emailVerified != user.emailVerified) {
+    //   this.UpdateUserData({'emailVerified' : user.emailVerified});
+    // }
     // this.WriteUserData(user);
     return userRef.set(userDataFS, {
       merge: true,

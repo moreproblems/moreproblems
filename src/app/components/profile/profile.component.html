@@ -909,7 +909,7 @@
                         </table>
                     </div>
                     <br />
-                    <div class="card-container">
+                    <div class="card-container" style="max-width: 100%">
                         <div *ngFor="let exm of complete_exam_list" class="card card-large"
                             style="height: auto; max-height: 200px; max-width: 450px; display: flex; flex-direction: column; align-items: center">
                             <h3 style="margin: auto"> {{exam_names[exm]}} </h3>
@@ -1043,10 +1043,11 @@
                                     'User'}}</strong></h3>
                             <!-- <p>User Role: <strong>{{user.role}}</strong></p> -->
                             <h3>User ID: <strong style="font-weight: 500">{{user.uid}}</strong></h3>
-                            <h3>Email: <strong style="font-weight: 500">{{user.email}}</strong></h3>
-                            <h3>Phone Number: <strong style="font-weight: 500">{{user.phoneNumber}}</strong></h3>
+                            <h3 *ngIf="(user.email)">Email: <strong style="font-weight: 500">{{user.email}}</strong></h3>
+                            <h3 *ngIf="(user.email) && user.emailVerified">Email Verified: <strong style="font-weight: 500"> ✅ </strong></h3>
+                            <button *ngIf="(user.email) && !user.emailVerified" (click)="authService.SendVerificationMail()" style="margin-bottom: 30px; font-size: 16px"><b> Resend Verification Email </b></button>
+                            <h3 *ngIf="(user.phoneNumber)">Phone Number: <strong style="font-weight: 500">{{user.phoneNumber}}</strong></h3>
                             <!-- <p>Password: <strong>{{user.password}}</strong></p> -->
-                            <h3>Email Verified: <strong style="font-weight: 500">{{user.emailVerified}}</strong></h3>
                             <br />
                             <h3>Role: <strong style="font-weight: 500">{{user.role}}</strong></h3>
                             <div *ngIf="user.role=='Parent'">

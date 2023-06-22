@@ -562,7 +562,7 @@
       <h2 #favoriteExams>Your In Progress Exams</h2>
       <br />
       <!-- <input type="hidden" #selection> -->
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <div *ngFor="let exm of this.inprogress_set" class="card card-medium" style="display: block; text-align: center; max-width: 350px">
           <h3> {{exam_names[exm]}} </h3>
           <!-- resolve hand code exam length -->
@@ -579,7 +579,7 @@
       <h2 #favoriteExams>Your Favorited Exams</h2>
       <br />
       <input type="hidden" #selection>
-      <div class="card-container">
+      <div class="card-container" style="max-width: 100%">
         <button *ngFor="let fav of this.authService.userData.exams.favorites.slice(1)" class="card card-small"
           (click)="select_exam(fav); scroll_top()" tabindex="0"
           style="display: flex; flex-direction: row; align-items: center">

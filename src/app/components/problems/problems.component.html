@@ -472,7 +472,7 @@
   <div *ngIf="expand_filters" class="content">
     <!-- <h2>Choose your State</h2>
     <input type="hidden" value="All United States" #state>
-    <div class="card-container">
+    <div class="card-container" style="max-width: 100%">
       <label class="switch">
         <input type="checkbox" value="CO">
         <button *ngIf="state_filters.includes('Colorado')" (click)="toggle_button('Colorado')" class="toggle-button-on"
@@ -570,7 +570,7 @@
     <br /> 
     <h2>Choose your Grade</h2>
     <input type="hidden" value="All Grades" #state>
-    <div class="card-container">
+    <div class="card-container" style="max-width: 100%">
       <label class="switch">
         <input type="checkbox" value="G3">
         <button *ngIf="grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button-on"
@@ -619,7 +619,7 @@
     <br />
     <h2>Choose your Subject</h2>
     <input type="hidden" value="All Subjects" #state>
-    <div class="card-container">
+    <div class="card-container" style="max-width: 100%">
       <label class="switch">
         <input type="checkbox" value="M">
         <button *ngIf="subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')"
@@ -691,7 +691,7 @@
     </div>
   </div>
 
-  <div class="card-container">
+  <div class="card-container" style="max-width: 100%">
     <div *ngIf="!expand_filters" class="card card-large"
       style="height: auto; width: auto; margin: auto; text-align: center; max-width: 95%" #problemCard>
       <div class="content" style="margin: auto; align-items: center">

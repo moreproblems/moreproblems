@@ -63,7 +63,7 @@ export class SignupComponent implements OnInit, AfterViewInit {
         allowDropdown: true,
         autoPlaceholder: "aggressive",
         placeholderNumberType: "FIXED_LINE_OR_MOBILE",
-        // nationalMode: true,
+        nationalMode: true,
         formatOnDisplay: true,
         initialCountry: 'auto',
         geoIpLookup: callback => {
@@ -127,9 +127,10 @@ export class SignupComponent implements OnInit, AfterViewInit {
       //   // onSignInSubmit();
       // }
     }, getAuth());
+    const intlPhone = '+' + ""+this.iti.getSelectedCountryData().dialCode + phone;
     if (phone != '') {
       this.afAuth
-        .signInWithPhoneNumber(phone, appVerifier)
+        .signInWithPhoneNumber(intlPhone, appVerifier)
         .then(result => {
           this.windowRef.confirmationResult = result;
           console.log(result);

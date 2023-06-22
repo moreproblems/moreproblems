@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
   verify: any
   windowRef: any;
   login_method = "";
+  pw_reset = false;
   win = new WindowService;
 
   @ViewChild('userPhone') userPhone: ElementRef;
@@ -49,25 +50,31 @@ export class LoginComponent implements OnInit {
     else {
       this.login_method = "";
     }
-    setTimeout(() => {
-      this.iti = intlTelInput(this.userPhone.nativeElement, {
-        allowDropdown: true,
-        autoPlaceholder: "aggressive",
-        placeholderNumberType: "FIXED_LINE_OR_MOBILE",
-        // nationalMode: true,
-        formatOnDisplay: true,
-        initialCountry: 'auto',
-        geoIpLookup: callback => {
-          fetch("https://ipapi.co/json")
-            .then(res => res.json())
-            .then(data => callback(data.country_code))
-            .catch(() => callback("us"));
-        },
-        utilsScript: "node_modules/intl-tel-input/build/js/utils.js",
-        // onlyCountries: ['JP'],
-        separateDialCode: true,
-      });
-    }, 10);
+    if (this.login_method == 'phone') {
+      setTimeout(() => {
+        this.iti = intlTelInput(this.userPhone.nativeElement, {
+          allowDropdown: true,
+          autoPlaceholder: "aggressive",
+          placeholderNumberType: "FIXED_LINE_OR_MOBILE",
+          nationalMode: true,
+          formatOnDisplay: true,
+          initialCountry: 'auto',
+          geoIpLookup: callback => {
+            fetch("https://ipapi.co/json")
+              .then(res => res.json())
+              .then(data => callback(data.country_code))
+              .catch(() => callback("us"));
+          },
+          utilsScript: "node_modules/intl-tel-input/build/js/utils.js",
+          // onlyCountries: ['JP'],
+          separateDialCode: true,
+        });
+      }, 25);
+    }
+  }
+
+  reset_password() {
+    this.pw_reset = true;
   }
 
   scroll_top() {
@@ -104,9 +111,10 @@ export class LoginComponent implements OnInit {
       //   // onSignInSubmit();
       // }
     }, getAuth());
+    const intlPhone = '+' + ""+this.iti.getSelectedCountryData().dialCode + phone;
     if (phone != '') {
       this.afAuth
-        .signInWithPhoneNumber(phone, appVerifier)
+        .signInWithPhoneNumber(intlPhone, appVerifier)
         .then(result => {
           this.windowRef.confirmationResult = result;
           console.log(result);

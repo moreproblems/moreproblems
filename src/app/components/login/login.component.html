@@ -538,30 +538,41 @@
         <br />
         <div *ngIf="login_method=='email'" class="authBlock">
           <h2 style="padding-bottom: 10px"> Enter Your Email Below </h2>
-          <div class="formGroup">
-            <input type="text" class="formControl" placeholder="Username (Email)"
-              style="width: 95%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
-              #userName required>
+          <div *ngIf="!pw_reset">
+            <div class="formGroup">
+              <input type="text" class="formControl" placeholder="Username (Email)"
+                style="width: 95%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
+                #userName required>
+            </div>
+            <div class="formGroup">
+              <input type="password" class="formControl" placeholder="Password"
+                style="width: 95%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
+                #userPassword required>
+            </div>
+            <p><span (click)="reset_password()">Can't remember your login? <b>Reset Password</b></span></p>
+            <br />
+            <div class="formGroup">
+              <button class="grade-button" (click)="authService.SignIn(userName.value, userPassword.value)"
+                style="margin: auto"> <b>Log In</b> </button>
+            </div>
           </div>
-          <div class="formGroup">
-            <input type="password" class="formControl" placeholder="Password"
-              style="width: 95%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
-              #userPassword required>
+          <div *ngIf="pw_reset">
+            <div class="formGroup">
+              <input type="text" class="formControl" placeholder="Username (Email)"
+                style="width: 95%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
+                #userName required>
+            </div>
+            <br />
+            <div class="formGroup">
+              <button class="grade-button" (click)="authService.ResetPassword(userName.value); pw_reset=false"
+                style="margin: auto"> <b>Reset Password</b> </button>
+            </div>
           </div>
-          <br />
-          <div class="formGroup">
-            <button class="grade-button" (click)="authService.SignIn(userName.value, userPassword.value)"
-              style="margin: auto"> <b>Log In</b> </button>
-          </div>
-          <!-- <div class="forgotPassword">
-                <span routerLink="/forgot-password">Forgot Password?</span>
-                </div> -->
         </div>
         <div *ngIf="login_method=='phone'" class="authBlock">
           <h2 style="padding-bottom: 10px"> Enter Your Number Below </h2>
-          <h4 style="padding-bottom: 10px"> (including the country code) </h4>
           <div class="formGroup">
-            <input type="tel" class="formControl" placeholder="+17775554321"
+            <input type="tel" class="formControl" placeholder="777 555 4321"
               style="width: 100%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
               #userPhone required>
           </div>
@@ -588,6 +599,7 @@
         <div class="redirectToLogin">
           <p><span class="redirect" routerLink="/signup">Don't have an account? <b>Sign Up</b></span></p>
         </div>
+        <br />
       </div>
     </div>
   </div>

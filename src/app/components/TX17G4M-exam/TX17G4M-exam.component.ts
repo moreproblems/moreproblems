@@ -28,7 +28,7 @@ export class TX17G4MExamComponent implements OnInit {
     title = 'More Problems';
 
     screenWidth = window.innerWidth;
-    mobileWidth = 850;
+    mobileWidth = 875;
 
     exam_inprogress = false;
     progress_number = 0;

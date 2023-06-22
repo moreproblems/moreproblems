@@ -16,7 +16,7 @@ export class ExamsComponent implements OnInit {
 
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
-  mobileWidth = 850;
+  mobileWidth = 875;
   menuOpen = false;
 
   // user_data: any = null;
@@ -85,12 +85,14 @@ export class ExamsComponent implements OnInit {
     this.exam_url = '/exam/' + ex;
     this.file_source = "./assets/exams/" + ex + ".pdf";
     this.file_page = 1;
-    for (let exm of this.authService.userData.exams.favorites) {
-      if (ex == exm) {
-        this.exam_fav = true;
+    this.exam_name = this.exam_names[ex];
+    if (this.authService.userData) {
+      for (let exm of this.authService.userData.exams.favorites) {
+        if (ex == exm) {
+          this.exam_fav = true;
+        }
       }
     }
-    this.exam_name = this.exam_names[ex];
   }
 
   toggle_favorite() {
