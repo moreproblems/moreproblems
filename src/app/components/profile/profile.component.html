@@ -567,7 +567,7 @@
                 #topicsTableS>
                 <thead>
                     <tr>
-                        <th colspan="3" style="font-size: 18px"> Report: Results by Topic </th>
+                        <th colspan="3" style="font-size: 18px"> Exam Results by Topic </th>
                         <th colspan="2">
                             <label class="switch"
                                 style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
@@ -606,7 +606,7 @@
                 #topicsTableL>
                 <thead>
                     <tr>
-                        <th colspan="3" style="font-size: 18px"> Report: Results by Topic & Skill Tested </th>
+                        <th colspan="3" style="font-size: 18px"> Exam Results by Topic & Skill Tested </th>
                         <th colspan="2">
                             <label class="switch"
                                 style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
@@ -657,7 +657,7 @@
                 #resultsTableI>
                 <thead>
                     <tr>
-                        <th colspan="6" style="font-size: 18px"> Report: Details on Incorrect Problems </th>
+                        <th colspan="6" style="font-size: 18px"> Submission Details on Incorrect Problems </th>
                         <th colspan="2">
                             <label class="switch"
                                 style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
@@ -704,7 +704,7 @@
                 #resultsTableA>
                 <thead>
                     <tr>
-                        <th colspan="6" style="font-size: 18px"> Report: Details on All Problems </th>
+                        <th colspan="6" style="font-size: 18px"> Submission Details on All Problems </th>
                         <th colspan="2">
                             <label class="switch"
                                 style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
@@ -767,7 +767,7 @@
                             alt="{{student_data.displayName}}">
                         <img *ngIf="this.screenWidth <= this.mobileWidth"
                             class="align-self-start mr-5 img-thumbnail rounded-circle"
-                            style="height: 200px; width: 200px; border-radius: 50%"
+                            style="height: 175px; width: 175px; border-radius: 50%"
                             src="{{(student_data.photoURL) ?student_data.photoURL : '/assets/icons/user/user.png'}}"
                             alt="{{student_data.displayName}}">
                         <div style="align-items: center; text-align: center;">
@@ -777,7 +777,7 @@
                             <hr />
                             <div
                                 style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-                                <div *ngIf="!student_data.uid.includes(authService.userData.uid)" class="media-body"
+                                <div *ngIf="!student_data.uid.includes(authService.userData.uid) && screenWidth > mobileWidth" class="media-body"
                                     style="padding: 0 20px">
                                     <h3 style="font-weight: 600">{{student_data.email}}</h3>
                                     <h3 style="font-weight: 600">{{student_data.phoneNumber}}</h3>
@@ -791,15 +791,12 @@
                                 </div>
                             </div>
                             <hr />
-                            <h3>Total Problems Attempted: <strong
-                                    style="font-weight: 500">{{student_data.problems.total}}</strong>
+                            <h3>Total Problems: <strong
+                                    style="font-weight: 500">{{student_data.problems.correct}} / {{student_data.problems.total}}</strong>
                             </h3>
-                            <h3>Total Problems Correct: <strong
-                                    style="font-weight: 500">{{student_data.problems.correct}}</strong>
+                            <h3>Percent Correct: <strong style="font-weight: 500">{{total_percent_correct}}%</strong>
                             </h3>
-                            <h3>Percentage Correct: <strong style="font-weight: 500">{{total_percent_correct}}%</strong>
-                            </h3>
-                            <h3>Total Exams Completed: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
+                            <h3>Total Exams: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
                             </h3>
                         </div>
                     </div>
@@ -810,7 +807,7 @@
                             #subjectTableS>
                             <thead>
                                 <tr>
-                                    <th colspan="3" style="font-size: 18px"> Placeholder Report Title </th>
+                                    <th colspan="3" style="font-size: 18px"> Exam Results by Subject </th>
                                     <th colspan="2">
                                         <label class="switch"
                                             style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
@@ -858,7 +855,7 @@
                             #subjectTableL>
                             <thead>
                                 <tr>
-                                    <th colspan="3" style="font-size: 18px"> Placeholder Report Title </th>
+                                    <th colspan="3" style="font-size: 18px"> Exam Results by Subject & Topic </th>
                                     <th colspan="2">
                                         <label class="switch"
                                             style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
@@ -946,7 +943,7 @@
         </div>
     </section>
     <div *ngIf="selected_exam == '' && selected_student == ''" class="card card-large"
-        style="border: 3px solid black; border-radius: 20px; display: block; min-width: 300px; max-width: 650px; width: 70%; max-height: 2400px">
+        style="border: 3px solid black; border-radius: 20px; display: block; min-width: 300px; max-width: 85%; width: auto; max-height: 2400px">
         <!-- <br /> -->
         <div class="inner-adjust" *ngIf="authService.userData as user" style="padding-top: 10px">
             <div class="pt-3 pb-2 mb-3 border-bottom">
@@ -1043,10 +1040,10 @@
                                     'User'}}</strong></h3>
                             <!-- <p>User Role: <strong>{{user.role}}</strong></p> -->
                             <h3>User ID: <strong style="font-weight: 500">{{user.uid}}</strong></h3>
+                            <h3 *ngIf="(user.phoneNumber)">Phone Number: <strong style="font-weight: 500">{{user.phoneNumber}}</strong></h3>
                             <h3 *ngIf="(user.email)">Email: <strong style="font-weight: 500">{{user.email}}</strong></h3>
                             <h3 *ngIf="(user.email) && user.emailVerified">Email Verified: <strong style="font-weight: 500"> ✅ </strong></h3>
                             <button *ngIf="(user.email) && !user.emailVerified" (click)="authService.SendVerificationMail()" style="margin-bottom: 30px; font-size: 16px"><b> Resend Verification Email </b></button>
-                            <h3 *ngIf="(user.phoneNumber)">Phone Number: <strong style="font-weight: 500">{{user.phoneNumber}}</strong></h3>
                             <!-- <p>Password: <strong>{{user.password}}</strong></p> -->
                             <br />
                             <h3>Role: <strong style="font-weight: 500">{{user.role}}</strong></h3>
@@ -1127,20 +1124,20 @@
                                     disabled #userId />
                             </section> -->
                             <section
+                            style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                            <h3> Phone Number: </h3>
+                            <input (change)="edit_profile('phoneNumber', this.userPhone.value)" type="text"
+                                inputmode="tel" value="{{user.phoneNumber}}" maxlength="40"
+                                style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                #userPhone />
+                        </section>
+                            <section
                                 style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
                                 <h3> Email Address: </h3>
                                 <input (change)="edit_profile('email', this.userEmail.value)" type="text"
                                     inputmode="email" value="{{user.email}}" maxlength="40"
                                     style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                     #userEmail />
-                            </section>
-                            <section
-                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                <h3> Phone Number: </h3>
-                                <input (change)="edit_profile('phoneNumber', this.userPhone.value)" type="text"
-                                    inputmode="tel" value="{{user.phoneNumber}}" maxlength="40"
-                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
-                                    #userPhone />
                             </section>
                             <!-- <section
                                 style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
@@ -1444,7 +1441,7 @@
                                 #subjectTable>
                                 <thead>
                                     <tr>
-                                        <th colspan="5" style="font-size: 18px"> Your Results by Subject </th>
+                                        <th colspan="5" style="font-size: 18px"> Your Exam Results by Subject </th>
                                     </tr>
                                     <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
                                         <th> Subject </th>

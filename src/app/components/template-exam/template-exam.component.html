@@ -557,8 +557,8 @@
             </h2>
             <p style="font-size: 16px; padding: 20px"> <b>Directions</b> : {{exam_directions}} </p>
             <!-- <br /> -->
-            <h3 *ngIf="this.authService.userData && this.my_students != []"> Take this exam as: </h3>
-            <div *ngIf="this.authService.userData && this.my_students != []" class="card-container"
+            <h3 *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.my_students != []"> Take this exam as: </h3>
+            <div *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.my_students != []" class="card-container"
               style="align-items: center; padding-top: 0">
               <div *ngFor="let std of my_students" (click)="select_student(my_students_data[std].uid)" class="card card-small" style="height: 75px; width: 170px; align-items: center; padding-top: 0">
                 <div class="avatar-container"
