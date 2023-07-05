@@ -556,6 +556,25 @@
           </button>
         </label>
         <label class="switch">
+          <input type="checkbox" value="DE">
+          <button *ngIf="selected_state == 'DE'" (click)="select_state('DE'); scroll_top()" class="toggle-button-on"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/DE.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>Delaware</b> <br /> (DeSSA) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Delaware</b> <br /> (DeSSA) </div>
+          </button>
+          <button *ngIf="selected_state != 'DE'" (click)="select_state('DE'); scroll(chooseGrade)" class="toggle-button-off"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/DE.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>Delaware</b> <br /> (DeSSA) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Delaware</b> <br /> (DeSSA) </div>
+          </button>
+        </label>
+        <label class="switch">
           <input type="checkbox" value="FL">
           <button *ngIf="selected_state == 'FL'" (click)="select_state('FL'); scroll_top()" class="toggle-button-on"
             tabindex="0" style="display: flex; flex-direction: row; align-items: center">
@@ -607,6 +626,25 @@
           <button *ngIf="selected_state != 'IN'" (click)="select_state('IN'); scroll(chooseGrade)" class="toggle-button-off"
             tabindex="0"><b>Indiana</b> <br /> (ISTEP)</button>
         </label> -->
+        <label class="switch">
+          <input type="checkbox" value="ME">
+          <button *ngIf="selected_state == 'ME'" (click)="select_state('ME'); scroll_top()" class="toggle-button-on"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/ME.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>Maine</b> <br /> (MEA) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Maine</b> <br /> (MEA) </div>
+          </button>
+          <button *ngIf="selected_state != 'ME'" (click)="select_state('ME'); scroll(chooseGrade)" class="toggle-button-off"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/ME.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>Maine</b> <br /> (MEA) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Maine</b> <br /> (MEA) </div>
+          </button>
+        </label>
         <label class="switch">
           <input type="checkbox" value="MD">
           <button *ngIf="selected_state == 'MD'" (click)="select_state('MD'); scroll_top()" class="toggle-button-on"
@@ -672,6 +710,25 @@
           </button>
         </label>
         <label class="switch">
+          <input type="checkbox" value="MS">
+          <button *ngIf="selected_state == 'MS'" (click)="select_state('MS'); scroll_top()" class="toggle-button-on"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/MS.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>Mississippi</b> <br /> (MAAP) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Mississippi</b> <br /> (MAAP) </div>
+          </button>
+          <button *ngIf="selected_state != 'MS'" (click)="select_state('MS'); scroll(chooseGrade)" class="toggle-button-off"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/MS.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>Mississippi</b> <br /> (MAAP) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Mississippi</b> <br /> (MAAP) </div>
+          </button>
+        </label>
+        <label class="switch">
           <input type="checkbox" value="MO">
           <button *ngIf="selected_state == 'MO'" (click)="select_state('MO'); scroll_top()" class="toggle-button-on"
             tabindex="0" style="display: flex; flex-direction: row; align-items: center">
@@ -691,6 +748,25 @@
           </button>
         </label>
         <label class="switch">
+          <input type="checkbox" value="NE">
+          <button *ngIf="selected_state == 'NE'" (click)="select_state('NE'); scroll_top()" class="toggle-button-on"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/NE.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>Nebraska</b> <br /> (NSCAS) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Nebraska</b> <br /> (NSCAS) </div>
+          </button>
+          <button *ngIf="selected_state != 'NE'" (click)="select_state('NE'); scroll(chooseGrade)" class="toggle-button-off"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/NE.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>Nebraska</b> <br /> (NSCAS) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Nebraska</b> <br /> (NSCAS) </div>
+          </button>
+        </label>
+        <label class="switch">
           <input type="checkbox" value="NJ">
           <button *ngIf="selected_state == 'NJ'" (click)="select_state('NJ'); scroll_top()" class="toggle-button-on"
             tabindex="0" style="display: flex; flex-direction: row; align-items: center">
@@ -707,6 +783,25 @@
             </div>
             <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>New Jersey</b> <br /> (NJSLA) </div>
             <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>New Jersey</b> <br /> (NJSLA) </div>
+          </button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="NM">
+          <button *ngIf="selected_state == 'NM'" (click)="select_state('NM'); scroll_top()" class="toggle-button-on"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/NM.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>New Mexico</b> <br /> (NM-MSSA) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>New Mexico</b> <br /> (NM-MSSA) </div>
+          </button>
+          <button *ngIf="selected_state != 'NM'" (click)="select_state('NM'); scroll(chooseGrade)" class="toggle-button-off"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/NM.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>New Mexico</b> <br /> (NM-MSSA) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>New Mexico</b> <br /> (NM-MSSA) </div>
           </button>
         </label>
         <label class="switch">
@@ -774,6 +869,44 @@
           </button>
         </label>
         <label class="switch">
+          <input type="checkbox" value="RI">
+          <button *ngIf="selected_state == 'RI'" (click)="select_state('RI'); scroll_top()" class="toggle-button-on"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/RI.svg" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>Rhode Island</b> <br /> (RICAS) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Rhode Island</b> <br /> (RICAS) </div>
+          </button>
+          <button *ngIf="selected_state != 'RI'" (click)="select_state('RI'); scroll(chooseGrade)" class="toggle-button-off"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/RI.svg" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>Rhode Island</b> <br /> (RICAS) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Rhode Island</b> <br /> (RICAS) </div>
+          </button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="SC">
+          <button *ngIf="selected_state == 'SC'" (click)="select_state('SC'); scroll_top()" class="toggle-button-on"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/SC.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>South Carolina</b> <br /> (SC READY) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>South Carolina</b> <br /> (SC READY) </div>
+          </button>
+          <button *ngIf="selected_state != 'SC'" (click)="select_state('SC'); scroll(chooseGrade)" class="toggle-button-off"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/SC.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>South Carolina</b> <br /> (SC READY) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>South Carolina</b> <br /> (SC READY) </div>
+          </button>
+        </label>
+        <label class="switch">
           <input type="checkbox" value="TN">
           <button *ngIf="selected_state == 'TN'" (click)="select_state('TN'); scroll_top()" class="toggle-button-on"
             tabindex="0" style="display: flex; flex-direction: row; align-items: center">
@@ -825,6 +958,25 @@
           <button *ngIf="selected_state != 'WA'" (click)="select_state('WA'); scroll(chooseGrade)" class="toggle-button-off"
             tabindex="0"><b>Washingtong</b> <br /> (WCAP)</button>
         </label> -->
+        <label class="switch">
+          <input type="checkbox" value="WI">
+          <button *ngIf="selected_state == 'WI'" (click)="select_state('WI'); scroll_top()" class="toggle-button-on"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">ß
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/WI.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>Wisconsin</b> <br /> (WFE) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Wisconsin</b> <br /> (WFE) </div>
+          </button>
+          <button *ngIf="selected_state != 'WI'" (click)="select_state('WI'); scroll(chooseGrade)" class="toggle-button-off"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 5px">
+              <img src="./assets/flags/WI.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px"> <b>Wisconsin</b> <br /> (WFE) </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Wisconsin</b> <br /> (WFE) </div>
+          </button>
+        </label>
       </div>
       <!-- <br /> -->
     </div>
@@ -840,6 +992,128 @@
       <br />
       <br />
       <br />
+    </div>
+
+    <!-- Delaware DeSSA -->
+    <div *ngSwitchCase="'DE'" class="content">
+      <!-- Grade Selector -->
+      <h2>Choose your Grade</h2>
+      <br />
+      <input type="hidden" #grade>
+      <div class="card-container" style="max-width: 100%">
+        <label class="switch">
+          <input type="checkbox" value="G4">
+          <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>4</b></button>
+          <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>4</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G5">
+          <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>5</b></button>
+          <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>5</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G7">
+          <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>7</b></button>
+          <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>7</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G8">
+          <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>8</b></button>
+          <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>8</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G11">
+          <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>11</b></button>
+          <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>11</b></button>
+        </label>
+      </div>
+      <br #chooseExam />
+      <!-- Exam Selector -->
+      <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+        <div *ngSwitchCase="'G4'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade4 />
+          <h3>Grade 4</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('DEG4SS'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('DEG4SS')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('DEG4SS') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Delaware DeSSA Grade 4 <b>Social Studies</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G5'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade5 />
+          <h3>Grade 5</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('DEG5S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('DEG5S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('DEG5S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Delaware DeSSA Grade 5 <b>Science</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G7'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade7 />
+          <h3>Grade 7</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('DEG7SS'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('DEG7SS')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('DEG7SS') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Delaware DeSSA Grade 7 <b>Social Studies</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G8'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade8 />
+          <h3>Grade 8</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('DEG8S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('DEG8S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('DEG8S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Delaware DeSSA Grade 8 <b>Science</b> Practice Exam</span>
+            </button>
+          </div>
+        </div>
+        <div *ngSwitchCase="'G11'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #highSchool />
+          <h3>Grade 11</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('DEG11SS'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('DEG11SS')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('COHSS') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Delaware DeSSA Grade 11 <b>Social Studies</b> Practice Exam</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Colorado CMAS -->
@@ -1497,6 +1771,207 @@
       </div>
     </div>
 
+    <!-- Maine MEA -->
+    <div *ngSwitchCase="'ME'" class="content">
+      <!-- Grade Selector -->
+      <h2>Choose your Grade</h2>
+      <br />
+      <input type="hidden" #grade>
+      <div class="card-container" style="max-width: 100%">
+        <label class="switch">
+          <input type="checkbox" value="G3">
+          <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>3</b></button>
+          <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>3</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G4">
+          <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>4</b></button>
+          <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>4</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G5">
+          <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>5</b></button>
+          <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>5</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G6">
+          <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>6</b></button>
+          <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>6</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G7">
+          <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>7</b></button>
+          <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>7</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G8">
+          <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>8</b></button>
+          <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>8</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="HS">
+          <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>10</b></button>
+          <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>10</b></button>
+        </label>
+      </div>
+      <br #chooseExam />
+      <!-- Exam Selector -->
+      <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+        <div *ngSwitchCase="'G3'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade3 />
+          <h3>Grade 3</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MEG3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 3 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MEG35R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG35R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG35R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 3 <b>Reading</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G4'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade4 />
+          <h3>Grade 4</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MEG4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 4 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MEG35R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG35R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG35R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 4 <b>Reading</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G5'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade5 />
+          <h3>Grade 5</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MEG5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 5 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MEG35R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG35R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG35R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 5 <b>Reading</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G6'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade6 />
+          <h3>Grade 6</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MEG6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 6 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MEG68R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG68R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG68R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 6 <b>Reading</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G7'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade7 />
+          <h3>Grade 7</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MEG7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 7 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MEG68R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG68R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG68R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 7 <b>Reading</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G8'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade8 />
+          <h3>Grade 8</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MEG8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 8 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MEG68R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG68R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG68R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 8 <b>Reading</b> Practice Exam</span>
+            </button>
+          </div>
+        </div>
+        <div *ngSwitchCase="'G10'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #highSchool />
+          <h3>High School</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MEG10M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG10M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG10M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 10 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MEG10R'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MEG10R')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MEG10R') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Maine MEA Grade 10 <b>Reading</b> Practice Exam</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Maryland MCAP -->
     <div *ngSwitchCase="'MD'" class="content">
       <!-- Grade Selector -->
@@ -1919,6 +2394,18 @@
       </div>
     </div>
 
+    <!-- Michigan M-STEP -->
+    <div *ngSwitchCase="'MI'" class="content">
+      <h2>Assessments for this state are coming soon. Stay tuned!</h2>
+      <br />
+      <h2><a
+          href="https://wbte.drcedirect.com/MI/portals/mi/ott1?displayOTT=M-STEP+-+OTTS&display=M-STEP&adminId=523377&index=1&audioConfiguration=%7B%22onDemandTTS%22%3A%7B%22playTestDirectionsView%22%3Atrue%7D%7D"
+          download>Find & Take Online Practice Exams</a></h2>
+      <br />
+      <br />
+      <br />
+    </div>
+
     <!-- Minnesota MCA -->
     <div *ngSwitchCase="'MN'" class="content">
       <!-- Grade Selector -->
@@ -2166,6 +2653,283 @@
         </div>
       </div>
     </div>
+
+    <!-- Mississippi MAAP -->
+    <div *ngSwitchCase="'MS'" class="content">
+      <!-- Grade Selector -->
+      <h2>Choose your Grade</h2>
+      <br />
+      <input type="hidden" #grade>
+      <div class="card-container" style="max-width: 100%">
+        <label class="switch">
+          <input type="checkbox" value="G3">
+          <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>3</b></button>
+          <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>3</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G4">
+          <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>4</b></button>
+          <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>4</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G5">
+          <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>5</b></button>
+          <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>5</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G6">
+          <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>6</b></button>
+          <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>6</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G7">
+          <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>7</b></button>
+          <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>7</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G8">
+          <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>8</b></button>
+          <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>8</b></button>
+        </label>
+      </div>
+      <br #chooseExam />
+      <!-- Exam Selector -->
+      <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+        <div *ngSwitchCase="'G3'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade3 />
+          <h3>Grade 3 Math</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MS23G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS23G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS23G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2023</b> Grade 3 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MS22G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS22G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS22G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2022</b> Grade 3 <b>Math</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+          <br />
+          <h3>Grade 3 English Language Arts</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MS23G3E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS23G3E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS23G3E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2023</b> Grade 3 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MS22G3E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS22G3E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS22G3E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2022</b> Grade 3 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G4'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade4 />
+          <h3>Grade 4 Math</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MS23G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS23G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS23G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2023</b> Grade 4 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MS22G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS22G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS22G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2022</b> Grade 4 <b>Math</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+          <br />
+          <h3>Grade 4 English Language Arts</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MS23G4E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS23G4E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS23G4E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2023</b> Grade 4 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MS22G4E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS22G4E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS22G4E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2022</b> Grade 4 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G5'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade5 />
+          <h3>Grade 5 Math</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MS23G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS23G5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS23G5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2023</b> Grade 5 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MS22G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS22G5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS22G5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2022</b> Grade 5 <b>Math</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+          <br />
+          <h3>Grade 5 English Language Arts</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MS23G5E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS23G5E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS23G5E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2023</b> Grade 5 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MS22G5E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS22G5E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS22G5E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2022</b> Grade 5 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G6'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade6 />
+          <h3>Grade 6 Math</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MS23G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS23G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS23G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2023</b> Grade 6 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MS22G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS22G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS22G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2022</b> Grade 6 <b>Math</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+          <br />
+          <h3>Grade 6 English Language Arts</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MS23G6E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS23G6E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS23G6E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2023</b> Grade 6 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MS22G6E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS22G6E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS22G6E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2022</b> Grade 6 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G7'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade7 />
+          <h3>Grade 7 Math</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MS23G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS23G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS23G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2023</b> Grade 7 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MS22G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS22G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS22G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2022</b> Grade 7 <b>Math</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+          <br />
+          <h3>Grade 7 English Language Arts</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MS23G7E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS23G7E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS23G7E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2023</b> Grade 7 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MS22G7E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS22G7E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS22G7E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2022</b> Grade 7 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G8'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade8 />
+          <h3>Grade 8 Math</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MS23G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS23G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS23G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2023</b> Grade 8 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MS22G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS22G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS22G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2022</b> Grade 8 <b>Math</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+          <br />
+          <h3>Grade 8 English Language Arts</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('MS23G8E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS23G8E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS23G8E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2023</b> Grade 8 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('MS22G8E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('MS22G8E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('MS22G8E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Mississippi MAAP <b>2022</b> Grade 8 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <!-- Missouri MAP -->
     <div *ngSwitchCase="'MO'" class="content">
@@ -2352,16 +3116,189 @@
       </div>
     </div>
 
-    <!-- Michigan M-STEP -->
-    <div *ngSwitchCase="'MI'" class="content">
-      <h2>Assessments for this state are coming soon. Stay tuned!</h2>
+    <!-- Nebraska NSCAS -->
+    <div *ngSwitchCase="'NE'" class="content">
+      <!-- Grade Selector -->
+      <h2>Choose your Grade</h2>
       <br />
-      <h2><a
-          href="https://wbte.drcedirect.com/MI/portals/mi/ott1?displayOTT=M-STEP+-+OTTS&display=M-STEP&adminId=523377&index=1&audioConfiguration=%7B%22onDemandTTS%22%3A%7B%22playTestDirectionsView%22%3Atrue%7D%7D"
-          download>Find & Take Online Practice Exams</a></h2>
-      <br />
-      <br />
-      <br />
+      <input type="hidden" #grade>
+      <div class="card-container" style="max-width: 100%">
+        <label class="switch">
+          <input type="checkbox" value="G3">
+          <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>3</b></button>
+          <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>3</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G4">
+          <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>4</b></button>
+          <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>4</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G5">
+          <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>5</b></button>
+          <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>5</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G6">
+          <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>6</b></button>
+          <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>6</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G7">
+          <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>7</b></button>
+          <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>7</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G8">
+          <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>8</b></button>
+          <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>8</b></button>
+        </label>
+      </div>
+      <br #chooseExam />
+      <!-- Exam Selector -->
+      <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+        <div *ngSwitchCase="'G3'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade3 />
+          <h3>Grade 3</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NEG3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 3 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NEG3E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG3E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG3E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 3 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G4'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade4 />
+          <h3>Grade 4</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NEG4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 4 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NEG4E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG4E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG4E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 4 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G5'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade5 />
+          <h3>Grade 5</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NEG5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 5 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NEG5E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG5E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG5E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 5 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NEG5S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG5S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG5S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 5 <b>Science</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G6'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade6 />
+          <h3>Grade 6</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NEG6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 6 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NEG6E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG6E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG6E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 6 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G7'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade7 />
+          <h3>Grade 7</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NEG7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 7 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NEG7E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('CNEE')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG7E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 7 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G8'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade8 />
+          <h3>Grade 8</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NEG8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 8 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NEG8E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG8E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG8E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 8 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NEG8S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NEG8S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NEG8S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Nebraska NSCAS Grade 8 <b>Science</b> Practice Exam</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- New Jersey NJSLA -->
@@ -2585,6 +3522,212 @@
               <img *ngIf="!authService.userData || !favorite_set.includes('NJG11S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('NJG11S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
               <span>New Jersey NJSLA Grade 11 <b>Science</b> Practice Exam</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Mexico NM-MSSA -->
+    <div *ngSwitchCase="'NM'" class="content">
+      <!-- Grade Selector -->
+      <h2>Choose your Grade</h2>
+      <br />
+      <input type="hidden" #grade>
+      <div class="card-container" style="max-width: 100%">
+        <label class="switch">
+          <input type="checkbox" value="G3">
+          <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>3</b></button>
+          <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>3</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G4">
+          <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>4</b></button>
+          <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>4</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G5">
+          <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>5</b></button>
+          <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>5</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G6">
+          <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>6</b></button>
+          <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>6</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G7">
+          <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>7</b></button>
+          <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>7</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G8">
+          <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>8</b></button>
+          <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>8</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G11">
+          <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>11</b></button>
+          <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>11</b></button>
+        </label>
+      </div>
+      <br #chooseExam />
+      <!-- Exam Selector -->
+      <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+        <div *ngSwitchCase="'G3'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade3 />
+          <h3>Grade 3</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NMG3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-MSSA Grade 3 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NMG3E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG3E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG3E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-MSSA Grade 3 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G4'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade4 />
+          <h3>Grade 4</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NMG4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-MSSA Grade 4 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NMG4E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG4E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG4E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-MSSA Grade 4 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G5'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade5 />
+          <h3>Grade 5</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NMG5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-MSSA Grade 5 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NMG5E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG5E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG5E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-MSSA Grade 5 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NMG5S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG5S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG5S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-ASR Grade 5 <b>Science</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G6'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade6 />
+          <h3>Grade 6</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NMG6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-MSSA Grade 6 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NMG6E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG6E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG6E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-MSSA Grade 6 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G7'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade7 />
+          <h3>Grade 7</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NMG7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-MSSA Grade 7 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NMG7E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG7E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG7E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-MSSA Grade 7 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G8'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade8 />
+          <h3>Grade 8</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NMG8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-MSSA Grade 8 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NMG8E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG8E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG8E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-MSSA Grade 8 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('NMG8S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG8S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG8S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-ASR Grade 8 <b>Science</b> Practice Exam</span>
+            </button>
+          </div>
+        </div>
+        <div *ngSwitchCase="'G11'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #highSchool />
+          <h3>Grade 11</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('NMG11S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('NMG11S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('NMG11S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>New Mexico NM-ASR Grade 11 <b>Science</b> Practice Exam</span>
             </button>
           </div>
         </div>
@@ -3246,6 +4389,7 @@
         </div>
       </div>
     </div>
+
     <!-- North Carolina EOG -->
     <div *ngSwitchCase="'NC'" class="content">
       <!-- Grade Selector -->
@@ -4032,6 +5176,583 @@
       </div>
     </div>
 
+    <!-- Rhode Island RICAS -->
+    <div *ngSwitchCase="'RI'" class="content">
+      <!-- Grade Selector -->
+      <h2>Choose your Grade</h2>
+      <br />
+      <input type="hidden" #grade>
+      <div class="card-container" style="max-width: 100%">
+        <label class="switch">
+          <input type="checkbox" value="G3">
+          <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>3</b></button>
+          <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>3</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G4">
+          <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>4</b></button>
+          <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>4</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G5">
+          <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>5</b></button>
+          <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>5</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G6">
+          <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>6</b></button>
+          <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>6</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G7">
+          <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>7</b></button>
+          <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>7</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G8">
+          <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>8</b></button>
+          <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>8</b></button>
+        </label>
+      </div>
+      <br #chooseExam />
+      <!-- Exam Selector -->
+      <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+        <div *ngSwitchCase="'G3'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade3 />
+          <h3>Grade 3 Math</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('RI22G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI22G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI22G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2022</b> Grade 3 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI21G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI21G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI21G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2021</b> Grade 3 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI19G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI19G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI19G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2019</b> Grade 3 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI18G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI18G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI18G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2018</b> Grade 3 Math Exam</span>
+            </button>
+          </div>
+          <br />
+          <br />
+          <h3>Grade 3 English Language Arts</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('RI22G3E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI22G3E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI22G3E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2022</b> Grade 3 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI21G3E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI21G3E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI21G3E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2021</b> Grade 3 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI19G3E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI19G3E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI19G3E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2019</b> Grade 3 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI18G3E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI18G3E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI18G3E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2018</b> Grade 3 English Exam</span>
+            </button>
+          </div>
+        </div>
+        <div *ngSwitchCase="'G4'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade4 />
+          <h3>Grade 4 Math</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('RI22G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI22G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI22G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2022</b> Grade 4 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI21G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI21G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI21G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2021</b> Grade 4 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI19G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI19G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI19G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2019</b> Grade 4 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI18G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI18G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI18G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2018</b> Grade 4 Math Exam</span>
+            </button>
+          </div>
+          <br />
+          <br />
+          <h3>Grade 4 English Language Arts</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('RI22G4E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI22G4E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI22G4E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2022</b> Grade 4 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI21G4E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI21G4E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI21G4E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2021</b> Grade 4 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI19G4E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI19G4E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI19G4E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2019</b> Grade 4 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI18G4E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI18G4E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI18G4E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2018</b> Grade 4 English Exam</span>
+            </button>
+          </div>
+        </div>
+        <div *ngSwitchCase="'G5'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade5 />
+          <h3>Grade 5 Math</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('RI22G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI22G5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI22G5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2022</b> Grade 5 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI21G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI21G5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI21G5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2021</b> Grade 5 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI19G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI19G5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI19G5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2019</b> Grade 5 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI18G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI18G5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI18G5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2018</b> Grade 5 Math Exam</span>
+            </button>
+          </div>
+          <br />
+          <br />
+          <h3>Grade 5 English Language Arts</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('RI22G5E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI22G5E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI22G5E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2022</b> Grade 5 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI21G5E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI21G5E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI21G5E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2021</b> Grade 5 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI19G5E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI19G5E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI19G5E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2019</b> Grade 5 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI18G5E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI18G5E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI18G5E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2018</b> Grade 5 English Exam</span>
+            </button>
+          </div>
+        </div>
+        <div *ngSwitchCase="'G6'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade6 />
+          <h3>Grade 6 Math</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('RI22G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI22G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI22G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2022</b> Grade 6 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI21G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI21G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI21G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2021</b> Grade 6 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI19G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI19G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI19G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2019</b> Grade 6 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI18G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI18G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI18G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2018</b> Grade 6 Math Exam</span>
+            </button>
+          </div>
+          <br />
+          <br />
+          <h3>Grade 6 English Language Arts</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('RI22G6E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI22G6E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI22G6E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2022</b> Grade 6 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI21G6E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI21G6E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI21G6E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2021</b> Grade 6 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI19G6E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI19G6E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI19G6E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2019</b> Grade 6 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI18G6E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI18G6E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI18G6E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2018</b> Grade 6 English Exam</span>
+            </button>
+          </div>
+        </div>
+        <div *ngSwitchCase="'G7'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade7 />
+          <h3>Grade 7 Math</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('RI22G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI22G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI22G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2022</b> Grade 7 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI21G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI21G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI21G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2021</b> Grade 7 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI19G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI19G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI19G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2019</b> Grade 7 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI18G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI18G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI18G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2018</b> Grade 7 Math Exam</span>
+            </button>
+          </div>
+          <br />
+          <br />
+          <h3>Grade 7 English Language Arts</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('RI22G7E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI22G7E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI22G7E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2022</b> Grade 7 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI21G7E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI21G7E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI21G7E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2021</b> Grade 7 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI19G7E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI19G7E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI19G7E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2019</b> Grade 7 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI18G7E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI18G7E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI18G7E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2018</b> Grade 7 English Exam</span>
+            </button>
+          </div>
+        </div>
+        <div *ngSwitchCase="'G8'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade8 />
+          <h3>Grade 8 Math</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('RI22G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI22G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI22G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2022</b> Grade 8 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI21G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI21G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI21G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2021</b> Grade 8 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI19G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI19G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI19G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2019</b> Grade 8 Math Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI18G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI18G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI18G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2018</b> Grade 8 Math Exam</span>
+            </button>
+          </div>
+          <br />
+          <br />
+          <h3>Grade 8 English Language Arts</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('RI22G8E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI22G8E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI22G8E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2022</b> Grade 8 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI21G8E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI21G8E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI21G8E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2021</b> Grade 8 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI19G8E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI19G8E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI19G8E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2019</b> Grade 8 English Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('RI18G8E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('RI18G8E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('RI18G8E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Rhode Island RICAS <b>2018</b> Grade 8 English Exam</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- South Carolina SC READY -->
+    <div *ngSwitchCase="'SC'" class="content">
+      <!-- Grade Selector -->
+      <h2>Choose your Grade</h2>
+      <br />
+      <input type="hidden" #grade>
+      <div class="card-container" style="max-width: 100%">
+        <label class="switch">
+          <input type="checkbox" value="G3">
+          <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>3</b></button>
+          <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>3</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G4">
+          <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>4</b></button>
+          <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>4</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G5">
+          <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>5</b></button>
+          <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>5</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G6">
+          <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>6</b></button>
+          <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>6</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G7">
+          <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>7</b></button>
+          <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>7</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G8">
+          <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>8</b></button>
+          <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>8</b></button>
+        </label>
+      </div>
+      <br #chooseExam />
+      <!-- Exam Selector -->
+      <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+        <div *ngSwitchCase="'G3'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade3 />
+          <h3>Grade 3</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('SC18G3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC READY Grade 3 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('SC18G3E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G3E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G3E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC READY Grade 3 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G4'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade4 />
+          <h3>Grade 4</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('SC18G4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC READY Grade 4 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('SC18G4E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G4E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G4E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC READY Grade 4 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('SC18G4S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G4S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G4S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC PASS Grade 4 <b>Science</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G5'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade5 />
+          <h3>Grade 5</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('SC18G5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC READY Grade 5 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('SC18G5E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G5E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G5E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC READY Grade 5 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G6'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade6 />
+          <h3>Grade 6</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('SC18G6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC READY Grade 6 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('SC18G6E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G6E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G6E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC READY Grade 6 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('SC18G6S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G6S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G6S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC PASS Grade 6 <b>Science</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G7'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade7 />
+          <h3>Grade 7</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('SC18G7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC READY Grade 7 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('SC18G7E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G7E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G7E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC READY Grade 7 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G8'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade8 />
+          <h3>Grade 8</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('SC18G8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC READY Grade 8 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('SC18G8E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('SC18G8E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('SC18G8E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>South Carolina SC READY Grade 8 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Tennessee TCAP -->
     <div *ngSwitchCase="'TN'" class="content">
       <!-- Grade Selector -->
@@ -4779,6 +6500,222 @@
               <img *ngIf="!authService.userData || !favorite_set.includes('TX18G8SS')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
               <span *ngIf="favorite_set.includes('TX18G8SS') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
               <span>Texas STAAR <b>2018</b> Grade 8 Social Studies Exam</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wisconsin WFE -->
+    <div *ngSwitchCase="'WI'" class="content">
+      <!-- Grade Selector -->
+      <h2>Choose your Grade</h2>
+      <br />
+      <input type="hidden" #grade>
+      <div class="card-container" style="max-width: 100%">
+        <label class="switch">
+          <input type="checkbox" value="G3">
+          <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>3</b></button>
+          <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>3</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G4">
+          <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>4</b></button>
+          <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>4</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G5">
+          <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>5</b></button>
+          <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>5</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G6">
+          <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>6</b></button>
+          <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>6</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G7">
+          <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>7</b></button>
+          <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>7</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G8">
+          <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>8</b></button>
+          <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>8</b></button>
+        </label>
+        <label class="switch">
+          <input type="checkbox" value="G10">
+          <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10'); scroll(chooseExam)" class="toggle-button-on" tabindex="0">Grade
+            <b>10</b></button>
+          <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseExam)" class="toggle-button-off" tabindex="0">Grade
+            <b>10</b></button>
+        </label>
+      </div>
+      <br #chooseExam />
+      <!-- Exam Selector -->
+      <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+        <div *ngSwitchCase="'G3'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade3 />
+          <h3>Grade 3</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('WIG3M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG3M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG3M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 3 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('WIG3E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG3E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG3E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 3 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G4'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade4 />
+          <h3>Grade 4</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('WIG4M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG4M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG4M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 4 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('WIG4E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG4E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG4E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 4 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('WIG4S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG4S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG4S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 4 <b>Science</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('WIG4SS'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG4SS')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG4SS') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 4 <b>Social Studies</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G5'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade5 />
+          <h3>Grade 5</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('WIG5M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG5M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG5M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 5 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('WIG5E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG5E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG5E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 5 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G6'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade6 />
+          <h3>Grade 6</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('WIG6M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG6M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG6M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 6 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('WIG6E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG6E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG6E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 6 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G7'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade7 />
+          <h3>Grade 7</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('WIG7M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG7M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG7M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 7 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('WIG7E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG7E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG7E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 7 <b>English</b> Practice Exam</span>
+            </button>
+          </div>
+          <br />
+        </div>
+        <div *ngSwitchCase="'G8'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade8 />
+          <h3>Grade 8</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('WIG8M'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG8M')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG8M') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 8 <b>Math</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('WIG8E'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG8E')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG8E') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 8 <b>English</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('WIG8S'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG8S')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG8S') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 8 <b>Science</b> Practice Exam</span>
+            </button>
+            <button class="card card-small" (click)="select_exam('WIG8SS'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG8SS')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG8SS') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 8 <b>Social Studies</b> Practice Exam</span>
+            </button>
+          </div>
+        </div>
+        <div *ngSwitchCase="'G10'" class="subcontent">
+          <h2>Choose your Exam</h2>
+          <br #grade10 />
+          <h3>Grade 10</h3>
+          <br />
+          <input type="hidden" #selection>
+          <div class="card-container" style="max-width: 100%">
+            <button class="card card-small" (click)="select_exam('WIG10SS'); scroll_top()" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              <img *ngIf="!authService.userData || !favorite_set.includes('WIG10SS')" src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+              <span *ngIf="favorite_set.includes('WIG10SS') && authService.userData as user" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+              <span>Wisconsin WFE Grade 10 <b>Social Studies</b> Practice Exam</span>
             </button>
           </div>
         </div>
