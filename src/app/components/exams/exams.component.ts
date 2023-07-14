@@ -21,7 +21,7 @@ export class ExamsComponent implements OnInit {
 
   // user_data: any = null;
 
-  online_set = ['TX22G3M', 'TX21G3M', 'TX19G3M', 'TX18G3M', 'TX17G3M', 'TX22G4M', 'TX21G4M', 'TX19G4M', 'TX18G4M', 'TX17G4M', 'TX22G5M', 'TX21G5M', 'TX19G5M', 'TX17G5M', 'TX22G5S','TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS'];
+  online_set = ['TX22G3M', 'TX21G3M', 'TX19G3M', 'TX18G3M', 'TX17G3M', 'TX22G4M', 'TX21G4M', 'TX19G4M', 'TX18G4M', 'TX17G4M', 'TX22G5M', 'TX21G5M', 'TX19G5M', 'TX18G5M', 'TX17G5M', 'TX22G5S','TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS'];
   favorite_set: string[] = [];
 
   selected_state = '';
