@@ -119,6 +119,8 @@ import { TX19G8MExamComponent } from './components/TX19G8M-exam/TX19G8M-exam.com
 import { TX19G8MKeyComponent } from './components/TX19G8M-key/TX19G8M-key.component';
 import { TX18G8MExamComponent } from './components/TX18G8M-exam/TX18G8M-exam.component';
 import { TX18G8MKeyComponent } from './components/TX18G8M-key/TX18G8M-key.component';
+import { TX17G8MExamComponent } from './components/TX17G8M-exam/TX17G8M-exam.component';
+import { TX17G8MKeyComponent } from './components/TX17G8M-key/TX17G8M-key.component';
 import { TX22G8SExamComponent } from './components/TX22G8S-exam/TX22G8S-exam.component';
 import { TX22G8SKeyComponent } from './components/TX22G8S-key/TX22G8S-key.component';
 import { TX21G8SExamComponent } from './components/TX21G8S-exam/TX21G8S-exam.component';
@@ -247,6 +249,8 @@ import { TX18G8SSKeyComponent } from './components/TX18G8SS-key/TX18G8SS-key.com
     TX19G8MKeyComponent,
     TX18G8MExamComponent,
     TX18G8MKeyComponent,
+    TX17G8MExamComponent,
+    TX17G8MKeyComponent,
     TX22G8SExamComponent,
     TX22G8SKeyComponent,
     TX21G8SExamComponent,
