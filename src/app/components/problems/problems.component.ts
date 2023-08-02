@@ -661,7 +661,7 @@ export class ProblemsComponent implements OnInit {
     }
     for (const [num, val] of Object.entries(this.exam_dump)) {
       for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-        if (ch == 'Key') {
+        if (ch == 'KEY') {
           this.exam_key.push(val2.Choice);
         }
         else {
@@ -671,6 +671,7 @@ export class ProblemsComponent implements OnInit {
         }
       }
     }
+    console.log(this.exam_key);
   }
 
   toggle_filters() {
@@ -1012,14 +1013,15 @@ export class ProblemsComponent implements OnInit {
   }
 
   resetExam() {
-    this.problem_number = 0;
     this.expand_filters = true;
     this.exam_dump = {};
+    this.exam_key = [];
     this.attempt_path = [];
     this.exam_submission = {};
     this.exam_submission_list = [];
     this.wrong_submission_list = [];
     this.topic_breakdown = {};
+    this.problem_number = 0;
   }
 
   expandTopics() {
