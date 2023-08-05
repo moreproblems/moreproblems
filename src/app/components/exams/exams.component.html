@@ -524,6 +524,13 @@
     </div>
     <div *ngIf="file_source == ''" class="content-menu"  style="margin-bottom: 0px">
       <br />
+      <div *ngIf="selected_state == ''" class="card card-large" style="height: auto; width: auto; margin: auto; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+        <h2 *ngIf="screenWidth > mobileWidth" style="font-weight: 400; font-size: 24.5px; line-height: 30px"> Explore our library of released end-of-year exams. Find standardized practice problems for any student - with answer keys and explanations for teachers and parents. Just pick your state and grade then download or print available exams for math, English language, or science. </h2>
+        <h2 *ngIf="screenWidth <= mobileWidth" style="font-weight: 400; font-size: 20.5px; line-height: 26px"> Explore our library of released end-of-year exams. Find standardized practice problems for any student - with answer keys and explanations for teachers and parents. Just pick your state and grade then download or print available exams for math, English language, or science. </h2>
+        <!-- <br /> -->
+        <!-- <h3 style="font-weight: 600; font-size: 18px"> Don't see your state? Click here to choose your grade instead.</h3> -->
+      </div>
+      <br />
       <!-- State Selector -->
       <div class="card card-large" style="height: auto; width: auto; margin: auto; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
         #stateSelectorCard>
