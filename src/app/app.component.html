@@ -383,7 +383,7 @@
 <!-- Toolbar --> 
 <div class="toolbar" role="banner" (window:resize)="width_change()" #navbar>
   <div style="display: flex; flex-direction: row; width: 100%; margin: auto; align-items: center; justify-content: space-between;">
-    <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 0 20px 0 0" routerLink="/about" routerLinkActive="active">
+    <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 0 20px 0 0" routerLink="/exams" routerLinkActive="active">
       <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 50px; height: 50px" #logo />
       <img *ngIf="this.screenWidth <= this.mobileWidth && this.screenWidth >= 435" src="./assets/media/logo1.png" style="width: 35px; height: 35px" #logo />
       <span style="padding: 0px; text-align: left">
@@ -415,7 +415,7 @@
       <button *ngIf="this.screenWidth <= this.mobileWidth && !authService.userData" class="grade-button" routerLink="/signup" routerLinkActive="active" style="font-size: 15px; line-height: 16px; font-weight: 700; padding: 7px; border-radius: 7px"> Sign Up </button>
     </div>
   </div>
-  <div *ngIf="this.menuOpen" style="width: 100%">
+  <div *ngIf="this.menuOpen && this.screenWidth <= this.mobileWidth" style="width: 100%">
     <nav style="width: 100%; text-align: center; display: inline-flexbox">
       <!-- <a routerLink="/about" routerLinkActive="active" style="padding: 0 10px; font-size: 16px; text-align: center"> <p style="width: 100px; margin: 0; padding: 0">About Us</p></a>&nbsp;&nbsp;
       <a routerLink="/exams" routerLinkActive="active" style="padding: 0 10px; font-size: 16px; text-align: center"> <p style="width: 100px; margin: 0; padding: 0">Exams</p> </a>&nbsp;&nbsp;

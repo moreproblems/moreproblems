@@ -872,6 +872,9 @@ export class ProfileComponent implements OnInit {
   }
 
   select_student(std: string) {
+    this.grade_breakdown = {};
+    this.subject_breakdown = {};
+    this.topic_breakdown = {};
     this.student_exam_metadata = {};
     this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
     this.student_data = this.authService.searchUserId(std);

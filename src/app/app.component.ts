@@ -17,7 +17,7 @@ export class AppComponent{
   public screenHeight = window.innerHeight;
   // public toolbarHeight = this.navbar.nativeElement.offsetWidth;
   public mobileWidth = 875;
-  public menuOpen = false;
+  public menuOpen = true;
   
   constructor(public authService: AuthService) { }
 
@@ -29,7 +29,7 @@ export class AppComponent{
       this.menuOpen = false;
     }
     if (this.screenWidth <= this.mobileWidth) {
-      this.menuOpen = false;
+      this.menuOpen = true;
     }
   }
 

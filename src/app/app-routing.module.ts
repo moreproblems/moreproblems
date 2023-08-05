@@ -122,7 +122,7 @@ import { HSMGStandardsComponent } from './components/HSM-G-standards/HSM-G-stand
 import { HSMSPStandardsComponent } from './components/HSM-SP-standards/HSM-SP-standards.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'exams', pathMatch: 'full' },
+  { path: '', redirectTo: 'about', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'exams', component: ExamsComponent },
   { path: 'exam/test', component: TestExamComponent },
