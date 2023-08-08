@@ -26,6 +26,7 @@ export class ExamsComponent implements OnInit {
 
   selected_state = '';
   selected_grade = '';
+  selected_subject = '';
 
 exam_names: {[key: string]: string} = {
   "COG3M": "Colorado CMAS Grade 3 Math Practice Exam",
@@ -639,6 +640,20 @@ exam_names: {[key: string]: string} = {
     }
     else {
       this.selected_grade = gr;
+    }
+    this.exam_id = '';
+    this.exam_name = '';
+    this.exam_url = '';
+    this.file_source = '';
+    this.file_page = 1;
+  }
+
+  select_subject(sb: string) {
+    if (this.selected_subject == sb) {
+      this.selected_subject = '';
+    }
+    else {
+      this.selected_subject = sb;
     }
     this.exam_id = '';
     this.exam_name = '';

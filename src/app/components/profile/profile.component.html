@@ -943,7 +943,7 @@
         </div>
     </section>
     <div *ngIf="selected_exam == '' && selected_student == ''" class="card card-large"
-        style="border: 3px solid black; border-radius: 20px; display: block; min-width: 300px; max-width: 85%; width: auto; max-height: 2400px">
+        style="border: 3px solid black; border-radius: 20px; display: block; min-width: 300px; max-width: min(1075px, 90%); width: auto; max-height: 2400px">
         <!-- <br /> -->
         <div class="inner-adjust" *ngIf="authService.userData as user" style="padding-top: 10px">
             <div class="pt-3 pb-2 mb-3 border-bottom">
