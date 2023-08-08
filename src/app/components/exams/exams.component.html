@@ -542,8 +542,8 @@
         [attr.height]="viewerHeight"></pdf-viewer>
     </section>
   </div>
-  <div *ngIf="file_source == ''" class="content-menu" style="margin: auto; align-items: center">
-    <br />
+  <div *ngIf="file_source == ''" class="content-menu" style="margin-bottom: 0; align-items: center">
+    <br *ngIf="selected_state == ''" />
     <div *ngIf="selected_state == ''" class="card card-large"
       style="height: auto; margin: auto; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <h2 *ngIf="screenWidth > mobileWidth" style="font-weight: 400; font-size: 24.5px; line-height: 30px"> Explore our
@@ -1170,7 +1170,7 @@
     </div>
   </div>
   <br #chooseGrade />
-  <div *ngIf="file_source == ''" class="content-menu" role="main" [ngSwitch]="selected_state" style="margin: auto; align-items: center">
+  <div *ngIf="file_source == ''" class="content-menu" role="main" [ngSwitch]="selected_state" style="margin-bottom: 0; align-items: center">
     <!-- All Exams -->
     <div *ngSwitchCase="'All'" class="card card-large"
       style="height: auto; margin: auto; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
