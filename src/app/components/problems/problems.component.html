@@ -571,6 +571,7 @@
     <div class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2>Choose your Grade</h2>
+      <br />
       <input type="hidden" value="All Grades" #state>
       <div class="card-container" style="max-width: 100%">
         <label class="switch">
@@ -618,6 +619,7 @@
       </div>
       <br />
       <h2>Choose your Subject</h2>
+      <br />
       <input type="hidden" value="All Subjects" #state>
       <div class="card-container" style="max-width: 100%">
         <label class="switch">
@@ -664,11 +666,10 @@
       <br />
     </div>
     <br />
-
-    <br />
     <div class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2>Choose your Settings</h2>
+      <br />
       <div class="card-container" style="display: flex; justify-content: center; align-items: center; max-width: 100%">
         <div class="slider">
           <input type="range" min="5" max="50" value="{{exam_length}}" (input)="set_problem_num(+this.probSlider.value)"

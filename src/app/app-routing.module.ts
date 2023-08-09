@@ -122,9 +122,16 @@ import { HSMGStandardsComponent } from './components/HSM-G-standards/HSM-G-stand
 import { HSMSPStandardsComponent } from './components/HSM-SP-standards/HSM-SP-standards.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'about', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: 'exams', pathMatch: 'full' },
+  { path: 'about', component: AboutComponent },
+  // { path: 'contact', component: ContactComponent },
   { path: 'exams', component: ExamsComponent },
+  { path: 'problems', component: ProblemsComponent },
+  { path: 'standards', component: StandardsComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: 'exam/test', component: TestExamComponent },
   { path: 'exam/TX22G3M', component: TX22G3MExamComponent },
   { path: 'exam/TX22G3M/key', component: TX22G3MKeyComponent },
@@ -210,7 +217,6 @@ const routes: Routes = [
   { path: 'exam/TX19G8SS/key', component: TX19G8SSKeyComponent },
   { path: 'exam/TX18G8SS', component: TX18G8SSExamComponent },
   { path: 'exam/TX18G8SS/key', component: TX18G8SSKeyComponent },
-  { path: 'standards', component: StandardsComponent },
   { path: 'standards/K-Math', component: KMStandardsComponent },
   { path: 'standards/K-English', component: KEStandardsComponent },
   { path: 'standards/G1-Math', component: G1MStandardsComponent },
@@ -235,13 +241,7 @@ const routes: Routes = [
   { path: 'standards/HS-Math-Algebra', component: HSMAStandardsComponent },
   { path: 'standards/HS-Math-Functions', component: HSMFStandardsComponent },
   { path: 'standards/HS-Math-Geometry', component: HSMGStandardsComponent },
-  { path: 'standards/HS-Math-Statistics-Probability', component: HSMSPStandardsComponent },
-  { path: 'problems', component: ProblemsComponent },
-  { path: 'about', component: AboutComponent },
-  // { path: 'contact', component: ContactComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'profile', component: ProfileComponent }
+  { path: 'standards/HS-Math-Statistics-Probability', component: HSMSPStandardsComponent }
 ];
 
 @NgModule({
