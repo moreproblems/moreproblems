@@ -523,200 +523,329 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main" (window:resize)="width_change2()"
-  style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
-    <br />
-    <section style="width: 100%; align-items: left">
-        <div routerLink="/standards" routerLinkActive="active" class="card card-small" style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-          <img src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
-        </div>
-    </section>
-    <br />
-    <h2> High School Mathematics - Geometry (Common Core) Learning Standards </h2>
-    <br />
-    <div class="card-container" style="max-width: 100%">
-        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
-                </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSG.CO : Congruence </h4>
-                </div>
+    style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
+    <div class="content-menu" role="menu" style="margin-bottom: 0px; max-width: 95%; width: auto">
+        <br />
+        <section style="width: 100%; align-items: left">
+            <div routerLink="/standards" routerLinkActive="active" class="card card-small"
+                style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+                <img src="./assets/icons/caret.png"
+                    style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
             </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[1]" style="font-size: 15px">
-                    <li> <b> A : Experiment with transformations in the plane. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Know precise definitions of angle, circle, perpendicular line, parallel line, and line segment, based on the undefined notions of point, line, distance along a line, and distance around a circular arc. </li>
-                            <li> <b> 2 </b> : Represent transformations in the plane using, e.g., transparencies and geometry software; describe transformations as functions that take points in the plane as inputs and give other points as outputs. Compare transformations that preserve distance and angle to those that do not (e.g., translation versus horizontal stretch). </li>
-                            <li> <b> 3 </b> : Given a rectangle, parallelogram, trapezoid, or regular polygon, describe the rotations and reflections that carry it onto itself. </li>
-                            <li> <b> 4 </b> : Develop definitions of rotations, reflections, and translations in terms of angles, circles, perpendicular lines, parallel lines, and line segments. </li>
-                            <li> <b> 5 </b> : Given a geometric figure and a rotation, reflection, or translation, draw the transformed figure using, e.g., graph paper, tracing paper, or geometry software. Specify a sequence of transformations that will carry a given figure onto another. </li>
+        </section>
+        <br />
+        <div class="card card-large"
+            style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+            <br />
+            <h2 style="text-align: center; margin-bottom: 10px"> High School Mathematics - Geometry (Common Core)
+                Learning Standards </h2>
+            <br />
+            <div class="card-container" style="max-width: 100%">
+                <div class="card card-medium" (click)="toggle_domain(1)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSG.CO : Congruence </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[1]" style="font-size: 15px">
+                            <li> <b> A : Experiment with transformations in the plane. </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Know precise definitions of angle, circle, perpendicular line,
+                                    parallel
+                                    line, and line segment, based on the undefined notions of point, line, distance
+                                    along a
+                                    line, and distance around a circular arc. </li>
+                                <li> <b> 2 </b> : Represent transformations in the plane using, e.g., transparencies and
+                                    geometry software; describe transformations as functions that take points in the
+                                    plane
+                                    as inputs and give other points as outputs. Compare transformations that preserve
+                                    distance and angle to those that do not (e.g., translation versus horizontal
+                                    stretch).
+                                </li>
+                                <li> <b> 3 </b> : Given a rectangle, parallelogram, trapezoid, or regular polygon,
+                                    describe
+                                    the rotations and reflections that carry it onto itself. </li>
+                                <li> <b> 4 </b> : Develop definitions of rotations, reflections, and translations in
+                                    terms
+                                    of angles, circles, perpendicular lines, parallel lines, and line segments. </li>
+                                <li> <b> 5 </b> : Given a geometric figure and a rotation, reflection, or translation,
+                                    draw
+                                    the transformed figure using, e.g., graph paper, tracing paper, or geometry
+                                    software.
+                                    Specify a sequence of transformations that will carry a given figure onto another.
+                                </li>
+                            </ul>
+                            <li> <b> B : Understand congruence in terms of rigid motions. </b> </li>
+                            <ul>
+                                <li> <b> 6 </b> : Use geometric descriptions of rigid motions to transform figures and
+                                    to
+                                    predict the effect of a given rigid motion on a given figure; given two figures, use
+                                    the
+                                    definition of congruence in terms of rigid motions to decide if they are congruent.
+                                </li>
+                                <li> <b> 7 </b> : Use the definition of congruence in terms of rigid motions to show
+                                    that
+                                    two triangles are congruent if and only if corresponding pairs of sides and
+                                    corresponding pairs of angles are congruent. </li>
+                                <li> <b> 8 </b> : Explain how the criteria for triangle congruence (ASA, SAS, and SSS)
+                                    follow from the definition of congruence in terms of rigid motions. </li>
+                            </ul>
+                            <li> <b> C : Prove geometric theorems. </b> </li>
+                            <ul>
+                                <li> <b> 9 </b> : Prove theorems about lines and angles. </li>
+                                <li> <b> 10 </b> : Prove theorems about triangles. </li>
+                                <li> <b> 11 </b> : Prove theorems about parallelograms. </li>
+                            </ul>
+                            <li> <b> D : Make geometric constructions. </b> </li>
+                            <ul>
+                                <li> <b> 12 </b> : Make formal geometric constructions with a variety of tools and
+                                    methods
+                                    (compass and straightedge, string, reflective devices, paper folding, dynamic
+                                    geometric
+                                    software, etc.). </li>
+                                <li> <b> 13 </b> : Construct an equilateral triangle, a square, and a regular hexagon
+                                    inscribed in a circle. </li>
+                            </ul>
                         </ul>
-                    <li> <b> B : Understand congruence in terms of rigid motions. </b> </li>
-                        <ul>
-                            <li> <b> 6 </b> : Use geometric descriptions of rigid motions to transform figures and to predict the effect of a given rigid motion on a given figure; given two figures, use the definition of congruence in terms of rigid motions to decide if they are congruent. </li>
-                            <li> <b> 7 </b> : Use the definition of congruence in terms of rigid motions to show that two triangles are congruent if and only if corresponding pairs of sides and corresponding pairs of angles are congruent. </li>
-                            <li> <b> 8 </b> : Explain how the criteria for triangle congruence (ASA, SAS, and SSS) follow from the definition of congruence in terms of rigid motions. </li>
-                        </ul>
-                    <li> <b> C : Prove geometric theorems. </b> </li>
-                        <ul>
-                            <li> <b> 9 </b> : Prove theorems about lines and angles. </li>
-                            <li> <b> 10 </b> : Prove theorems about triangles. </li>
-                            <li> <b> 11 </b> : Prove theorems about parallelograms. </li>
-                        </ul>
-                    <li> <b> D : Make geometric constructions. </b> </li>
-                        <ul>
-                            <li> <b> 12 </b> : Make formal geometric constructions with a variety of tools and methods (compass and straightedge, string, reflective devices, paper folding, dynamic geometric software, etc.). </li>
-                            <li> <b> 13 </b> : Construct an equilateral triangle, a square, and a regular hexagon inscribed in a circle. </li>
-                        </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                    </div>
                 </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSG.SRT : Similarity, Right Triangles, and Trigonometry </h4>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[2]" style="font-size: 15px">
-                    <li> <b> A : Understand similarity in terms of similarity transformations. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Verify experimentally the properties of dilations given by a center and a scale factor: </li>
+                <div class="card card-medium" (click)="toggle_domain(2)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSG.SRT : Similarity, Right Triangles, and Trigonometry
+                            </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[2]" style="font-size: 15px">
+                            <li> <b> A : Understand similarity in terms of similarity transformations. </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Verify experimentally the properties of dilations given by a center
+                                    and a
+                                    scale factor: </li>
                                 <ul>
-                                    <li> <b> a </b> : A dilation takes a line not passing through the center of the dilation to a parallel line, and leaves a line passing through the center unchanged. </li>
-                                    <li> <b> b </b> : The dilation of a line segment is longer or shorter in the ratio given by the scale factor. </li>
+                                    <li> <b> a </b> : A dilation takes a line not passing through the center of the
+                                        dilation
+                                        to a parallel line, and leaves a line passing through the center unchanged.
+                                    </li>
+                                    <li> <b> b </b> : The dilation of a line segment is longer or shorter in the ratio
+                                        given
+                                        by the scale factor. </li>
                                 </ul>
-                            <li> <b> 2 </b> : Given two figures, use the definition of similarity in terms of similarity transformations to decide if they are similar; explain using similarity transformations the meaning of similarity for triangles as the equality of all corresponding pairs of angles and the proportionality of all corresponding pairs of sides. </li>
-                            <li> <b> 3 </b> : Use the properties of similarity transformations to establish the AA criterion for two triangles to be similar. </li>
+                                <li> <b> 2 </b> : Given two figures, use the definition of similarity in terms of
+                                    similarity
+                                    transformations to decide if they are similar; explain using similarity
+                                    transformations
+                                    the meaning of similarity for triangles as the equality of all corresponding pairs
+                                    of
+                                    angles and the proportionality of all corresponding pairs of sides. </li>
+                                <li> <b> 3 </b> : Use the properties of similarity transformations to establish the AA
+                                    criterion for two triangles to be similar. </li>
+                            </ul>
+                            <li> <b> B : Prove theorems involving similarity. </b> </li>
+                            <ul>
+                                <li> <b> 4 </b> : Prove theorems about triangles. </li>
+                                <li> <b> 5 </b> : Use congruence and similarity criteria for triangles to solve problems
+                                    and
+                                    to prove relationships in geometric figures. </li>
+                            </ul>
+                            <li> <b> C : Define trigonometric ratios and solve problems involving right triangles. </b>
+                            </li>
+                            <ul>
+                                <li> <b> 6 </b> : Understand that by similarity, side ratios in right triangles are
+                                    properties of the angles in the triangle, leading to definitions of trigonometric
+                                    ratios
+                                    for acute angles. </li>
+                                <li> <b> 7 </b> : Explain and use the relationship between the sine and cosine of
+                                    complementary angles. </li>
+                                <li> <b> 8 </b> : Use trigonometric ratios and the Pythagorean Theorem to solve right
+                                    triangles in applied problems. </li>
+                            </ul>
+                            <li> <b> D : Apply trigonometry to general triangles. </b> </li>
+                            <ul>
+                                <li> <b> 9 </b> : Derive the formula A = 1/2 ab sin(C) for the area of a triangle by
+                                    drawing
+                                    an auxiliary line from a vertex perpendicular to the opposite side. </li>
+                                <li> <b> 10 </b> : Prove the Laws of Sines and Cosines and use them to solve problems.
+                                </li>
+                                <li> <b> 11 </b> : Understand and apply the Law of Sines and the Law of Cosines to find
+                                    unknown measurements in right and non-right triangles (e.g., surveying problems,
+                                    resultant forces). </li>
+                            </ul>
                         </ul>
-                    <li> <b> B : Prove theorems involving similarity. </b> </li>
-                        <ul>
-                            <li> <b> 4 </b> : Prove theorems about triangles. </li>
-                            <li> <b> 5 </b> : Use congruence and similarity criteria for triangles to solve problems and to prove relationships in geometric figures. </li>
+                    </div>
+                </div>
+                <div class="card card-medium" (click)="toggle_domain(3)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSG.C : Circles </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[3]" style="font-size: 15px">
+                            <li> <b> A : Understand and apply theorems about circles. </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Prove that all circles are similar. </li>
+                                <li> <b> 2 </b> : Identify and describe relationships among inscribed angles, radii, and
+                                    chords. </li>
+                                <li> <b> 3 </b> : Construct the inscribed and circumscribed circles of a triangle, and
+                                    prove
+                                    properties of angles for a quadrilateral inscribed in a circle. </li>
+                                <li> <b> 4 </b> : Construct a tangent line from a point outside a given circle to the
+                                    circle. </li>
+                            </ul>
+                            <li> <b> B : Find arc lengths and areas of sectors of circles. </b> </li>
+                            <ul>
+                                <li> <b> 5 </b> : Derive using similarity the fact that the length of the arc
+                                    intercepted by
+                                    an angle is proportional to the radius, and define the radian measure of the angle
+                                    as
+                                    the constant of proportionality; derive the formula for the area of a sector. </li>
+                            </ul>
                         </ul>
-                    <li> <b> C : Define trigonometric ratios and solve problems involving right triangles. </b> </li>
-                        <ul>
-                            <li> <b> 6 </b> : Understand that by similarity, side ratios in right triangles are properties of the angles in the triangle, leading to definitions of trigonometric ratios for acute angles. </li>
-                            <li> <b> 7 </b> : Explain and use the relationship between the sine and cosine of complementary angles. </li>
-                            <li> <b> 8 </b> : Use trigonometric ratios and the Pythagorean Theorem to solve right triangles in applied problems. </li>
+                    </div>
+                </div>
+                <div class="card card-medium" (click)="toggle_domain(4)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[4]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSG.GPE : Expressing Geometric Properties with Equations
+                            </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[4]" style="font-size: 15px">
+                            <li> <b> A : Translate between the geometric description and the equation for a conic
+                                    section.
+                                </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Derive the equation of a circle of given center and radius using the
+                                    Pythagorean Theorem; complete the square to find the center and radius of a circle
+                                    given
+                                    by an equation. </li>
+                                <li> <b> 2 </b> : Derive the equation of a parabola given a focus and directrix. </li>
+                                <li> <b> 3 </b> : Derive the equations of ellipses and hyperbolas given the foci, using
+                                    the
+                                    fact that the sum or difference of distances from the foci is constant. </li>
+                            </ul>
+                            <li> <b> B : Use coordinates to prove simple geometric theorems algebraically. </b> </li>
+                            <ul>
+                                <li> <b> 4 </b> : Use coordinates to prove simple geometric theorems algebraically.
+                                </li>
+                                <li> <b> 5 </b> : Prove the slope criteria for parallel and perpendicular lines and use
+                                    them
+                                    to solve geometric problems (e.g., find the equation of a line parallel or
+                                    perpendicular
+                                    to a given line that passes through a given point). </li>
+                                <li> <b> 6 </b> : Find the point on a directed line segment between two given points
+                                    that
+                                    partitions the segment in a given ratio. </li>
+                                <li> <b> 7 </b> : Use coordinates to compute perimeters of polygons and areas of
+                                    triangles
+                                    and rectangles, e.g., using the distance formula. </li>
+                            </ul>
                         </ul>
-                    <li> <b> D : Apply trigonometry to general triangles. </b> </li>
-                        <ul>
-                            <li> <b> 9 </b> : Derive the formula A = 1/2 ab sin(C) for the area of a triangle by drawing an auxiliary line from a vertex perpendicular to the opposite side. </li>
-                            <li> <b> 10 </b> : Prove the Laws of Sines and Cosines and use them to solve problems. </li>
-                            <li> <b> 11 </b> : Understand and apply the Law of Sines and the Law of Cosines to find unknown measurements in right and non-right triangles (e.g., surveying problems, resultant forces). </li>
+                    </div>
+                </div>
+                <div class="card card-medium" (click)="toggle_domain(5)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[5]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[5]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSG.GMD : Geometric Measurement and Dimension </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[5]" style="font-size: 15px">
+                            <li> <b> A : Explain volume formulas and use them to solve problems. </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Give an informal argument for the formulas for the circumference of a
+                                    circle, area of a circle, volume of a cylinder, pyramid, and cone. </li>
+                                <li> <b> 2 </b> : Give an informal argument using Cavalieri's principle for the formulas
+                                    for
+                                    the volume of a sphere and other solid figures. </li>
+                                <li> <b> 3 </b> : Use volume formulas for cylinders, pyramids, cones, and spheres to
+                                    solve
+                                    problems. </li>
+                            </ul>
+                            <li> <b> B : Visualize relationships between two-dimensional and three-dimensional objects.
+                                </b>
+                            </li>
+                            <ul>
+                                <li> <b> 4 </b> : Identify the shapes of two-dimensional cross-sections of
+                                    three-dimensional
+                                    objects, and identify three-dimensional objects generated by rotations of
+                                    two-dimensional objects. </li>
+                            </ul>
                         </ul>
-                </ul>
+                    </div>
+                </div>
+                <div class="card card-medium" (click)="toggle_domain(6)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[6]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[6]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSG.MG : Modeling with Geometry </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[6]" style="font-size: 15px">
+                            <li> <b> A : Apply geometric concepts in modeling situations. </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Use geometric shapes, their measures, and their properties to describe
+                                    objects (e.g., modeling a tree trunk or a human torso as a cylinder). </li>
+                                <li> <b> 2 </b> : Apply concepts of density based on area and volume in modeling
+                                    situations
+                                    (e.g., persons per square mile, BTUs per cubic foot). </li>
+                                <li> <b> 3 </b> : Apply geometric methods to solve design problems (e.g., designing an
+                                    object or structure to satisfy physical constraints or minimize cost; working with
+                                    typographic grid systems based on ratios). </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <br />
         </div>
-        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
-                </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSG.C : Circles </h4>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[3]" style="font-size: 15px">
-                    <li> <b> A : Understand and apply theorems about circles. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Prove that all circles are similar. </li>
-                            <li> <b> 2 </b> : Identify and describe relationships among inscribed angles, radii, and chords. </li>
-                            <li> <b> 3 </b> : Construct the inscribed and circumscribed circles of a triangle, and prove properties of angles for a quadrilateral inscribed in a circle. </li>
-                            <li> <b> 4 </b> : Construct a tangent line from a point outside a given circle to the circle. </li>
-                        </ul>
-                    <li> <b> B : Find arc lengths and areas of sectors of circles. </b> </li>
-                        <ul>
-                            <li> <b> 5 </b> : Derive using similarity the fact that the length of the arc intercepted by an angle is proportional to the radius, and define the radian measure of the angle as the constant of proportionality; derive the formula for the area of a sector. </li>
-                        </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
-                </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSG.GPE : Expressing Geometric Properties with Equations </h4>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[4]" style="font-size: 15px">
-                    <li> <b> A : Translate between the geometric description and the equation for a conic section. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Derive the equation of a circle of given center and radius using the Pythagorean Theorem; complete the square to find the center and radius of a circle given by an equation. </li>
-                            <li> <b> 2 </b> : Derive the equation of a parabola given a focus and directrix. </li>
-                            <li> <b> 3 </b> : Derive the equations of ellipses and hyperbolas given the foci, using the fact that the sum or difference of distances from the foci is constant. </li>
-                        </ul>
-                    <li> <b> B : Use coordinates to prove simple geometric theorems algebraically. </b> </li>
-                        <ul>
-                            <li> <b> 4 </b> : Use coordinates to prove simple geometric theorems algebraically. </li>
-                            <li> <b> 5 </b> : Prove the slope criteria for parallel and perpendicular lines and use them to solve geometric problems (e.g., find the equation of a line parallel or perpendicular to a given line that passes through a given point). </li>
-                            <li> <b> 6 </b> : Find the point on a directed line segment between two given points that partitions the segment in a given ratio. </li>
-                            <li> <b> 7 </b> : Use coordinates to compute perimeters of polygons and areas of triangles and rectangles, e.g., using the distance formula. </li>
-                        </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(5)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[5]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[5]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
-                </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSG.GMD : Geometric Measurement and Dimension </h4>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[5]" style="font-size: 15px">
-                    <li> <b> A : Explain volume formulas and use them to solve problems. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Give an informal argument for the formulas for the circumference of a circle, area of a circle, volume of a cylinder, pyramid, and cone. </li>
-                            <li> <b> 2 </b> : Give an informal argument using Cavalieri's principle for the formulas for the volume of a sphere and other solid figures. </li>
-                            <li> <b> 3 </b> : Use volume formulas for cylinders, pyramids, cones, and spheres to solve problems. </li>
-                        </ul>
-                    <li> <b> B : Visualize relationships between two-dimensional and three-dimensional objects. </b> </li>
-                        <ul>
-                            <li> <b> 4 </b> : Identify the shapes of two-dimensional cross-sections of three-dimensional objects, and identify three-dimensional objects generated by rotations of two-dimensional objects. </li>
-                        </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(6)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[6]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[6]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
-                </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSG.MG : Modeling with Geometry </h4>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[6]" style="font-size: 15px">
-                    <li> <b> A : Apply geometric concepts in modeling situations. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Use geometric shapes, their measures, and their properties to describe objects (e.g., modeling a tree trunk or a human torso as a cylinder). </li>
-                            <li> <b> 2 </b> : Apply concepts of density based on area and volume in modeling situations (e.g., persons per square mile, BTUs per cubic foot). </li>
-                            <li> <b> 3 </b> : Apply geometric methods to solve design problems (e.g., designing an object or structure to satisfy physical constraints or minimize cost; working with typographic grid systems based on ratios). </li>
-                        </ul>
-                </ul>
-            </div>
-        </div>
+        <br />
     </div>
-    <br />
 </div>

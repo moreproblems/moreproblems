@@ -523,151 +523,265 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main" (window:resize)="width_change2()"
-  style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
-    <br />
-    <section style="width: 100%; align-items: left">
-        <div routerLink="/standards" routerLinkActive="active" class="card card-small" style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-          <img src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
-        </div>
-    </section>
-    <br />
-    <h2> High School Mathematics - Algebra (Common Core) Learning Standards </h2>
-    <br />
-    <div class="card-container" style="max-width: 100%">
-        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
-                </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSA.SSE : Seeing Structure in Expressions </h4>
-                </div>
+    style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
+    <div class="content-menu" role="menu" style="margin-bottom: 0px; max-width: 95%; width: auto">
+        <br />
+        <section style="width: 100%; align-items: left">
+            <div routerLink="/standards" routerLinkActive="active" class="card card-small"
+                style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+                <img src="./assets/icons/caret.png"
+                    style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
             </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[1]" style="font-size: 15px">
-                    <li> <b> A : Interpret the structure of expressions. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Interpret expressions that represent a quantity in terms of its context. </li>
+        </section>
+        <br />
+        <div class="card card-large"
+            style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+            <br />
+            <h2 style="text-align: center; margin-bottom: 10px"> High School Mathematics - Algebra (Common Core)
+                Learning Standards </h2>
+            <br />
+            <div class="card-container" style="max-width: 100%">
+                <div class="card card-medium" (click)="toggle_domain(1)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSA.SSE : Seeing Structure in Expressions </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[1]" style="font-size: 15px">
+                            <li> <b> A : Interpret the structure of expressions. </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Interpret expressions that represent a quantity in terms of its
+                                    context.
+                                </li>
                                 <ul>
-                                    <li> <b> a </b> : Interpret parts of an expression, such as terms, factors, and coefficients. </li>
-                                    <li> <b> b </b> : Interpret complicated expressions by viewing one or more of their parts as a single entity. </li>
+                                    <li> <b> a </b> : Interpret parts of an expression, such as terms, factors, and
+                                        coefficients. </li>
+                                    <li> <b> b </b> : Interpret complicated expressions by viewing one or more of their
+                                        parts as a single entity. </li>
                                 </ul>
-                            <li> <b> 2 </b> : Use the structure of an expression to identify ways to rewrite it. </li>
-                        </ul>
-                    <li> <b> B : Write expressions in equivalent forms to solve problems. </b> </li>
-                        <ul>
-                            <li> <b> 3 </b> : Choose and produce an equivalent form of an expression to reveal and explain properties of the quantity represented by the expression. </li>
+                                <li> <b> 2 </b> : Use the structure of an expression to identify ways to rewrite it.
+                                </li>
+                            </ul>
+                            <li> <b> B : Write expressions in equivalent forms to solve problems. </b> </li>
+                            <ul>
+                                <li> <b> 3 </b> : Choose and produce an equivalent form of an expression to reveal and
+                                    explain properties of the quantity represented by the expression. </li>
                                 <ul>
-                                    <li> <b> a </b> : Factor a quadratic expression to reveal the zeros of the function it defines. </li>
-                                    <li> <b> b </b> : Complete the square in a quadratic expression to reveal the maximum or minimum value of the function it defines. </li>
-                                    <li> <b> c </b> : Use the properties of exponents to transform expressions for exponential functions. </li>
+                                    <li> <b> a </b> : Factor a quadratic expression to reveal the zeros of the function
+                                        it
+                                        defines. </li>
+                                    <li> <b> b </b> : Complete the square in a quadratic expression to reveal the
+                                        maximum or
+                                        minimum value of the function it defines. </li>
+                                    <li> <b> c </b> : Use the properties of exponents to transform expressions for
+                                        exponential functions. </li>
                                 </ul>
-                            <li> <b> 4 </b> : Derive the formula for the sum of a finite geometric series (when the common ratio is not 1), and use the formula to solve problems. </li>
+                                <li> <b> 4 </b> : Derive the formula for the sum of a finite geometric series (when the
+                                    common ratio is not 1), and use the formula to solve problems. </li>
+                            </ul>
                         </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                    </div>
                 </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSA.APR : Arithmetic with Polynomials and Rational Expressions </h4>
+                <div class="card card-medium" (click)="toggle_domain(2)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSA.APR : Arithmetic with Polynomials and Rational
+                                Expressions
+                            </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[2]" style="font-size: 15px">
+                            <li> <b> A : Perform arithmetic operations on polynomials. </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Use units as a way to understand problems and to guide the solution of
+                                    multi-step problems; choose and interpret units consistently in formulas; choose and
+                                    interpret the scale and the origin in graphs and data displays. </li>
+                            </ul>
+                            <li> <b> B : Understand the relationship between zeros and factors of polynomials. </b>
+                            </li>
+                            <ul>
+                                <li> <b> 2 </b> : Know and apply the Remainder Theorem: For a polynomial p(x) and a
+                                    number
+                                    a, the remainder on division by x — a is p(a), so p(a) = 0 if and only if (x — a) is
+                                    a
+                                    factor of p(x). </li>
+                                <li> <b> 3 </b> : Identify zeros of polynomials when suitable factorizations are
+                                    available,
+                                    and use the zeros to construct a rough graph of the function defined by the
+                                    polynomial.
+                                </li>
+                            </ul>
+                            <li> <b> C : Use polynomial identities to solve problems. </b> </li>
+                            <ul>
+                                <li> <b> 4 </b> : Prove polynomial identities and use them to describe numerical
+                                    relationships. </li>
+                                <li> <b> 5 </b> : Know and apply the Binomial Theorem for the expansion of (x + y) to
+                                    the n
+                                    power in powers of x and y for a positive integer n, where x and y are any numbers,
+                                    with
+                                    coefficients determined for example by Pascal's Triangle. </li>
+                            </ul>
+                            <li> <b> D : Rewrite rational expressions. </b> </li>
+                            <ul>
+                                <li> <b> 6 </b> : Rewrite simple rational expressions in different forms; write
+                                    a(x)/b(x) in
+                                    the form q(x) + r(x)/b(x), where a(x), b(x), q(x), and r(x) are polynomials with the
+                                    degree of r(x) less than the degree of b(x), using inspection, long division, or,
+                                    for
+                                    the more complicated examples, a computer algebra system. </li>
+                                <li> <b> 7 </b> : Understand that rational expressions form a system analogous to the
+                                    rational numbers, closed under addition, subtraction, multiplication, and division
+                                    by a
+                                    nonzero rational expression; add, subtract, multiply, and divide rational
+                                    expressions.
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[2]" style="font-size: 15px">
-                    <li> <b> A : Perform arithmetic operations on polynomials. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Use units as a way to understand problems and to guide the solution of multi-step problems; choose and interpret units consistently in formulas; choose and interpret the scale and the origin in graphs and data displays. </li>
+                <div class="card card-medium" (click)="toggle_domain(3)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSA.CED : Creating Equations </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[3]" style="font-size: 15px">
+                            <li> <b> A : Create equations that describe numbers or relationships. </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Create equations and inequalities in one variable and use them to
+                                    solve
+                                    problems. </li>
+                                <li> <b> 2 </b> : Create equations in two or more variables to represent relationships
+                                    between quantities; graph equations on coordinate axes with labels and scales. </li>
+                                <li> <b> 3 </b> : Represent constraints by equations or inequalities, and by systems of
+                                    equations and/or inequalities, and interpret solutions as viable or non-viable
+                                    options
+                                    in a modeling context. </li>
+                                <li> <b> 4 </b> : Rearrange formulas to highlight a quantity of interest, using the same
+                                    reasoning as in solving equations. </li>
+                            </ul>
                         </ul>
-                    <li> <b> B : Understand the relationship between zeros and factors of polynomials. </b> </li>
-                        <ul>
-                            <li> <b> 2 </b> : Know and apply the Remainder Theorem: For a polynomial p(x) and a number a, the remainder on division by x — a is p(a), so p(a) = 0 if and only if (x — a) is a factor of p(x). </li>
-                            <li> <b> 3 </b> : Identify zeros of polynomials when suitable factorizations are available, and use the zeros to construct a rough graph of the function defined by the polynomial. </li>
-                        </ul>
-                    <li> <b> C : Use polynomial identities to solve problems. </b> </li>
-                        <ul>
-                            <li> <b> 4 </b> : Prove polynomial identities and use them to describe numerical relationships. </li>
-                            <li> <b> 5 </b> : Know and apply the Binomial Theorem for the expansion of (x + y) to the n power in powers of x and y for a positive integer n, where x and y are any numbers, with coefficients determined for example by Pascal's Triangle. </li>
-                        </ul>
-                    <li> <b> D : Rewrite rational expressions. </b> </li>
-                        <ul>
-                            <li> <b> 6 </b> : Rewrite simple rational expressions in different forms; write a(x)/b(x) in the form q(x) + r(x)/b(x), where a(x), b(x), q(x), and r(x) are polynomials with the degree of r(x) less than the degree of b(x), using inspection, long division, or, for the more complicated examples, a computer algebra system. </li>
-                            <li> <b> 7 </b> : Understand that rational expressions form a system analogous to the rational numbers, closed under addition, subtraction, multiplication, and division by a nonzero rational expression; add, subtract, multiply, and divide rational expressions. </li>
-                        </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                    </div>
                 </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSA.CED : Creating Equations </h4>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[3]" style="font-size: 15px">
-                    <li> <b> A : Create equations that describe numbers or relationships. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Create equations and inequalities in one variable and use them to solve problems. </li>
-                            <li> <b> 2 </b> : Create equations in two or more variables to represent relationships between quantities; graph equations on coordinate axes with labels and scales. </li>
-                            <li> <b> 3 </b> : Represent constraints by equations or inequalities, and by systems of equations and/or inequalities, and interpret solutions as viable or non-viable options in a modeling context. </li>
-                            <li> <b> 4 </b> : Rearrange formulas to highlight a quantity of interest, using the same reasoning as in solving equations. </li>
-                        </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
-                </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSA.REI : Reasoning with Equations and Inequalities </h4>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[4]" style="font-size: 15px">
-                    <li> <b> A : Understand solving equations as a process of reasoning and explain the reasoning. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Explain each step in solving a simple equation as following from the equality of numbers asserted at the previous step, starting from the assumption that the original equation has a solution. Construct a viable argument to justify a solution method. </li>
-                            <li> <b> 2 </b> : Solve simple rational and radical equations in one variable, and give examples showing how extraneous solutions may arise. </li>
-                        </ul>
-                    <li> <b> B : Solve equations and inequalities in one variable. </b> </li>
-                        <ul>
-                            <li> <b> 3 </b> : Solve linear equations and inequalities in one variable, including equations with coefficients represented by letters. </li>
-                            <li> <b> 4 </b> : Solve quadratic equations in one variable. </li>
+                <div class="card card-medium" (click)="toggle_domain(4)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[4]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSA.REI : Reasoning with Equations and Inequalities </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[4]" style="font-size: 15px">
+                            <li> <b> A : Understand solving equations as a process of reasoning and explain the
+                                    reasoning.
+                                </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Explain each step in solving a simple equation as following from the
+                                    equality of numbers asserted at the previous step, starting from the assumption that
+                                    the
+                                    original equation has a solution. Construct a viable argument to justify a solution
+                                    method. </li>
+                                <li> <b> 2 </b> : Solve simple rational and radical equations in one variable, and give
+                                    examples showing how extraneous solutions may arise. </li>
+                            </ul>
+                            <li> <b> B : Solve equations and inequalities in one variable. </b> </li>
+                            <ul>
+                                <li> <b> 3 </b> : Solve linear equations and inequalities in one variable, including
+                                    equations with coefficients represented by letters. </li>
+                                <li> <b> 4 </b> : Solve quadratic equations in one variable. </li>
                                 <ul>
-                                    <li> <b> a </b> : Use the method of completing the square to transform any quadratic equation in x into an equation of the form (x - p)² = q that has the same solutions. Derive the quadratic formula from this form. </li>
-                                    <li> <b> b </b> : Solve quadratic equations by inspection (e.g., for x² = 49), taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when the quadratic formula gives complex solutions and write them as a ± bi for real numbers a and b. </li>
+                                    <li> <b> a </b> : Use the method of completing the square to transform any quadratic
+                                        equation in x into an equation of the form (x - p)² = q that has the same
+                                        solutions.
+                                        Derive the quadratic formula from this form. </li>
+                                    <li> <b> b </b> : Solve quadratic equations by inspection (e.g., for x² = 49),
+                                        taking
+                                        square roots, completing the square, the quadratic formula and factoring, as
+                                        appropriate to the initial form of the equation. Recognize when the quadratic
+                                        formula gives complex solutions and write them as a ± bi for real numbers a and
+                                        b.
+                                    </li>
                                 </ul>
+                            </ul>
+                            <li> <b> C : Perform operations on matrices and use matrices in applications. </b> </li>
+                            <ul>
+                                <li> <b> 5 </b> : Prove that, given a system of two equations in two variables,
+                                    replacing
+                                    one equation by the sum of that equation and a multiple of the other produces a
+                                    system
+                                    with the same solutions. </li>
+                                <li> <b> 6 </b> : Solve systems of linear equations exactly and approximately (e.g.,
+                                    with
+                                    graphs), focusing on pairs of linear equations in two variables. </li>
+                                <li> <b> 7 </b> : Solve a simple system consisting of a linear equation and a quadratic
+                                    equation in two variables algebraically and graphically. </li>
+                                <li> <b> 8 </b> : Represent a system of linear equations as a single matrix equation in
+                                    a
+                                    vector variable. </li>
+                                <li> <b> 9 </b> : Find the inverse of a matrix if it exists and use it to solve systems
+                                    of
+                                    linear equations (using technology for matrices of dimension 3 × 3 or greater).
+                                </li>
+                            </ul>
+                            <li> <b> D : Represent and solve equations and inequalities graphically. </b> </li>
+                            <ul>
+                                <li> <b> 10 </b> : Understand that the graph of an equation in two variables is the set
+                                    of
+                                    all its solutions plotted in the coordinate plane, often forming a curve (which
+                                    could be
+                                    a line). </li>
+                                <li> <b> 11 </b> : Explain why the x-coordinates of the points where the graphs of the
+                                    equations y = f(x) and y = g(x) intersect are the solutions of the equation f(x) =
+                                    g(x);
+                                    find the solutions approximately, e.g., using technology to graph the functions,
+                                    make
+                                    tables of values, or find successive approximations. Include cases where f(x) and/or
+                                    g(x) are linear, polynomial, rational, absolute value, exponential, and logarithmic
+                                    functions. </li>
+                                <li> <b> 12 </b> : Graph the solutions to a linear inequality in two variables as a
+                                    half-plane (excluding the boundary in the case of a strict inequality), and graph
+                                    the
+                                    solution set to a system of linear inequalities in two variables as the intersection
+                                    of
+                                    the corresponding half-planes. </li>
+                            </ul>
                         </ul>
-                    <li> <b> C : Perform operations on matrices and use matrices in applications. </b> </li>
-                        <ul>
-                            <li> <b> 5 </b> : Prove that, given a system of two equations in two variables, replacing one equation by the sum of that equation and a multiple of the other produces a system with the same solutions. </li>
-                            <li> <b> 6 </b> : Solve systems of linear equations exactly and approximately (e.g., with graphs), focusing on pairs of linear equations in two variables. </li>
-                            <li> <b> 7 </b> : Solve a simple system consisting of a linear equation and a quadratic equation in two variables algebraically and graphically. </li>
-                            <li> <b> 8 </b> : Represent a system of linear equations as a single matrix equation in a vector variable. </li>
-                            <li> <b> 9 </b> : Find the inverse of a matrix if it exists and use it to solve systems of linear equations (using technology for matrices of dimension 3 × 3 or greater). </li>
-                        </ul>
-                    <li> <b> D : Represent and solve equations and inequalities graphically. </b> </li>
-                        <ul>
-                            <li> <b> 10 </b> : Understand that the graph of an equation in two variables is the set of all its solutions plotted in the coordinate plane, often forming a curve (which could be a line). </li>
-                            <li> <b> 11 </b> : Explain why the x-coordinates of the points where the graphs of the equations y = f(x) and y = g(x) intersect are the solutions of the equation f(x) = g(x); find the solutions approximately, e.g., using technology to graph the functions, make tables of values, or find successive approximations. Include cases where f(x) and/or g(x) are linear, polynomial, rational, absolute value, exponential, and logarithmic functions. </li>
-                            <li> <b> 12 </b> : Graph the solutions to a linear inequality in two variables as a half-plane (excluding the boundary in the case of a strict inequality), and graph the solution set to a system of linear inequalities in two variables as the intersection of the corresponding half-planes. </li>
-                        </ul>
-                </ul>
+                    </div>
+                </div>
             </div>
+            <br />
         </div>
+        <br />
     </div>
-    <br />
 </div>

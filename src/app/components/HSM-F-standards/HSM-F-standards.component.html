@@ -523,163 +523,290 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main" (window:resize)="width_change2()"
-  style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
-    <br />
-    <section style="width: 100%; align-items: left">
-        <div routerLink="/standards" routerLinkActive="active" class="card card-small" style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-          <img src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
-        </div>
-    </section>
-    <br />
-    <h2> High School Mathematics - Functions (Common Core) Learning Standards </h2>
-    <br />
-    <div class="card-container" style="max-width: 100%">
-        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
-                </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSF.IF : Interpreting Functions </h4>
-                </div>
+    style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
+    <div class="content-menu" role="menu" style="margin-bottom: 0px; max-width: 95%; width: auto">
+        <br />
+        <section style="width: 100%; align-items: left">
+            <div routerLink="/standards" routerLinkActive="active" class="card card-small"
+                style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+                <img src="./assets/icons/caret.png"
+                    style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
             </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[1]" style="font-size: 15px">
-                    <li> <b> A : Understand the concept of a function and use function notation. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Understand that a function from one set (called the domain) to another set (called the range) assigns to each element of the domain exactly one element of the range. If f is a function and x is an element of its domain, then f(x) denotes the output of f corresponding to the input x. The graph of f is the graph of the equation y = f(x). </li>
-                            <li> <b> 2 </b> : Use function notation, evaluate functions for inputs in their domains, and interpret statements that use function notation in terms of a context. </li>
-                            <li> <b> 3 </b> : Recognize that sequences are functions, sometimes defined recursively, whose domain is a subset of the integers. </li>
-                        </ul>
-                    <li> <b> B : Interpret functions that arise in applications in terms of the context. </b> </li>
-                        <ul>
-                            <li> <b> 4 </b> : For a function that models a relationship between two quantities, interpret key features of graphs and tables in terms of the quantities, and sketch graphs showing key features given a verbal description of the relationship. </li>
-                            <li> <b> 5 </b> : Relate the domain of a function to its graph and, where applicable, to the quantitative relationship it describes. </li>
-                            <li> <b> 6 </b> : Calculate and interpret the average rate of change of a function (presented symbolically or as a table) over a specified interval. Estimate the rate of change from a graph. </li>
-                        </ul>
-                    <li> <b> C : Analyze functions using different representations. </b> </li>
-                        <ul>
-                            <li> <b> 7 </b> : Graph functions expressed symbolically and show key features of the graph, by hand in simple cases and using technology for more complicated cases. </li>
+        </section>
+        <br />
+        <div class="card card-large"
+            style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+            <br />
+            <h2 style="text-align: center; margin-bottom: 10px"> High School Mathematics - Functions (Common Core)
+                Learning Standards </h2>
+            <br />
+            <div class="card-container" style="max-width: 100%">
+                <div class="card card-medium" (click)="toggle_domain(1)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSF.IF : Interpreting Functions </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[1]" style="font-size: 15px">
+                            <li> <b> A : Understand the concept of a function and use function notation. </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Understand that a function from one set (called the domain) to another
+                                    set
+                                    (called the range) assigns to each element of the domain exactly one element of the
+                                    range. If f is a function and x is an element of its domain, then f(x) denotes the
+                                    output of f corresponding to the input x. The graph of f is the graph of the
+                                    equation y
+                                    = f(x). </li>
+                                <li> <b> 2 </b> : Use function notation, evaluate functions for inputs in their domains,
+                                    and
+                                    interpret statements that use function notation in terms of a context. </li>
+                                <li> <b> 3 </b> : Recognize that sequences are functions, sometimes defined recursively,
+                                    whose domain is a subset of the integers. </li>
+                            </ul>
+                            <li> <b> B : Interpret functions that arise in applications in terms of the context. </b>
+                            </li>
+                            <ul>
+                                <li> <b> 4 </b> : For a function that models a relationship between two quantities,
+                                    interpret key features of graphs and tables in terms of the quantities, and sketch
+                                    graphs showing key features given a verbal description of the relationship. </li>
+                                <li> <b> 5 </b> : Relate the domain of a function to its graph and, where applicable, to
+                                    the
+                                    quantitative relationship it describes. </li>
+                                <li> <b> 6 </b> : Calculate and interpret the average rate of change of a function
+                                    (presented symbolically or as a table) over a specified interval. Estimate the rate
+                                    of
+                                    change from a graph. </li>
+                            </ul>
+                            <li> <b> C : Analyze functions using different representations. </b> </li>
+                            <ul>
+                                <li> <b> 7 </b> : Graph functions expressed symbolically and show key features of the
+                                    graph,
+                                    by hand in simple cases and using technology for more complicated cases. </li>
                                 <ul>
-                                    <li> <b> a </b> : Graph linear and quadratic functions and show intercepts, maxima, and minima. </li>
-                                    <li> <b> b </b> : Graph square root, cube root, and piecewise-defined functions, including step functions and absolute value functions. </li>
-                                    <li> <b> c </b> : Graph polynomial functions, identifying zeros when suitable factorizations are available, and showing end behavior. </li>
-                                    <li> <b> d </b> : Graph rational functions, identifying zeros and asymptotes when suitable factorizations are available, and showing end behavior. </li>
-                                    <li> <b> e </b> : Graph exponential and logarithmic functions, showing intercepts and end behavior, and trigonometric functions, showing period, midline, and amplitude. </li>
+                                    <li> <b> a </b> : Graph linear and quadratic functions and show intercepts, maxima,
+                                        and
+                                        minima. </li>
+                                    <li> <b> b </b> : Graph square root, cube root, and piecewise-defined functions,
+                                        including step functions and absolute value functions. </li>
+                                    <li> <b> c </b> : Graph polynomial functions, identifying zeros when suitable
+                                        factorizations are available, and showing end behavior. </li>
+                                    <li> <b> d </b> : Graph rational functions, identifying zeros and asymptotes when
+                                        suitable factorizations are available, and showing end behavior. </li>
+                                    <li> <b> e </b> : Graph exponential and logarithmic functions, showing intercepts
+                                        and
+                                        end behavior, and trigonometric functions, showing period, midline, and
+                                        amplitude.
+                                    </li>
                                 </ul>
-                            <li> <b> 8 </b> : Write a function defined by an expression in different but equivalent forms to reveal and explain different properties of the function. </li>
+                                <li> <b> 8 </b> : Write a function defined by an expression in different but equivalent
+                                    forms to reveal and explain different properties of the function. </li>
                                 <ul>
-                                    <li> <b> a </b> : Use the process of factoring and completing the square in a quadratic function to show zeros, extreme values, and symmetry of the graph, and interpret these in terms of a context. </li>
-                                    <li> <b> b </b> : Use the properties of exponents to interpret expressions for exponential functions. </li>
+                                    <li> <b> a </b> : Use the process of factoring and completing the square in a
+                                        quadratic
+                                        function to show zeros, extreme values, and symmetry of the graph, and interpret
+                                        these in terms of a context. </li>
+                                    <li> <b> b </b> : Use the properties of exponents to interpret expressions for
+                                        exponential functions. </li>
                                 </ul>
-                            <li> <b> 9 </b> : Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions). </li>
+                                <li> <b> 9 </b> : Compare properties of two functions each represented in a different
+                                    way
+                                    (algebraically, graphically, numerically in tables, or by verbal descriptions).
+                                </li>
+                            </ul>
                         </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                    </div>
                 </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSF.BF : Building Functions </h4>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[2]" style="font-size: 15px">
-                    <li> <b> A : Build a function that models a relationship between two quantities. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Write a function that describes a relationship between two quantities. </li>
+                <div class="card card-medium" (click)="toggle_domain(2)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSF.BF : Building Functions </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[2]" style="font-size: 15px">
+                            <li> <b> A : Build a function that models a relationship between two quantities. </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Write a function that describes a relationship between two quantities.
+                                </li>
                                 <ul>
-                                    <li> <b> a </b> : Determine an explicit expression, a recursive process, or steps for calculation from a context. </li>
+                                    <li> <b> a </b> : Determine an explicit expression, a recursive process, or steps
+                                        for
+                                        calculation from a context. </li>
                                     <li> <b> b </b> : Combine standard function types using arithmetic operations. </li>
                                     <li> <b> c </b> : Compose functions. </li>
                                 </ul>
-                            <li> <b> 2 </b> : Write arithmetic and geometric sequences both recursively and with an explicit formula, use them to model situations, and translate between the two forms. </li>
-                        </ul>
-                    <li> <b> B : Build new functions from existing functions. </b> </li>
-                        <ul>
-                            <li> <b> 3 </b> : Identify the effect on the graph of replacing f(x) by f(x) + k, k f(x), f(kx), and f(x + k) for specific values of k (both positive and negative); find the value of k given the graphs. Experiment with cases and illustrate an explanation of the effects on the graph using technology. </li>
-                            <li> <b> 4 </b> : Find inverse functions. </li>
+                                <li> <b> 2 </b> : Write arithmetic and geometric sequences both recursively and with an
+                                    explicit formula, use them to model situations, and translate between the two forms.
+                                </li>
+                            </ul>
+                            <li> <b> B : Build new functions from existing functions. </b> </li>
+                            <ul>
+                                <li> <b> 3 </b> : Identify the effect on the graph of replacing f(x) by f(x) + k, k
+                                    f(x),
+                                    f(kx), and f(x + k) for specific values of k (both positive and negative); find the
+                                    value of k given the graphs. Experiment with cases and illustrate an explanation of
+                                    the
+                                    effects on the graph using technology. </li>
+                                <li> <b> 4 </b> : Find inverse functions. </li>
                                 <ul>
-                                    <li> <b> a </b> : Solve an equation of the form f(x) = c for a simple function f that has an inverse and write an expression for the inverse. </li>
-                                    <li> <b> b </b> : Verify by composition that one function is the inverse of another. </li>
-                                    <li> <b> c </b> : Read values of an inverse function from a graph or a table, given that the function has an inverse. </li>
-                                    <li> <b> d </b> : Produce an invertible function from a non-invertible function by restricting the domain. </li>
+                                    <li> <b> a </b> : Solve an equation of the form f(x) = c for a simple function f
+                                        that
+                                        has an inverse and write an expression for the inverse. </li>
+                                    <li> <b> b </b> : Verify by composition that one function is the inverse of another.
+                                    </li>
+                                    <li> <b> c </b> : Read values of an inverse function from a graph or a table, given
+                                        that
+                                        the function has an inverse. </li>
+                                    <li> <b> d </b> : Produce an invertible function from a non-invertible function by
+                                        restricting the domain. </li>
                                 </ul>
-                            <li> <b> 5 </b> : Understand the inverse relationship between exponents and logarithms and use this relationship to solve problems involving logarithms and exponents. </li>
+                                <li> <b> 5 </b> : Understand the inverse relationship between exponents and logarithms
+                                    and
+                                    use this relationship to solve problems involving logarithms and exponents. </li>
+                            </ul>
                         </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                    </div>
                 </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSF.LE : Linear, Quadratic, and Exponential Models </h4>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[3]" style="font-size: 15px">
-                    <li> <b> A : Construct and compare linear, quadratic, and exponential models and solve problems. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Distinguish between situations that can be modeled with linear functions and with exponential functions. </li>
+                <div class="card card-medium" (click)="toggle_domain(3)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSF.LE : Linear, Quadratic, and Exponential Models </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[3]" style="font-size: 15px">
+                            <li> <b> A : Construct and compare linear, quadratic, and exponential models and solve
+                                    problems.
+                                </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Distinguish between situations that can be modeled with linear
+                                    functions
+                                    and with exponential functions. </li>
                                 <ul>
-                                    <li> <b> a </b> : Prove that linear functions grow by equal differences over equal intervals, and that exponential functions grow by equal factors over equal intervals. </li>
-                                    <li> <b> b </b> : Recognize situations in which one quantity changes at a constant rate per unit interval relative to another. </li>
-                                    <li> <b> c </b> : Recognize situations in which a quantity grows or decays by a constant percent rate per unit interval relative to another. </li>
+                                    <li> <b> a </b> : Prove that linear functions grow by equal differences over equal
+                                        intervals, and that exponential functions grow by equal factors over equal
+                                        intervals. </li>
+                                    <li> <b> b </b> : Recognize situations in which one quantity changes at a constant
+                                        rate
+                                        per unit interval relative to another. </li>
+                                    <li> <b> c </b> : Recognize situations in which a quantity grows or decays by a
+                                        constant
+                                        percent rate per unit interval relative to another. </li>
                                 </ul>
-                            <li> <b> 2 </b> : Construct linear and exponential functions, including arithmetic and geometric sequences, given a graph, a description of a relationship, or two input-output pairs (include reading these from a table). </li>
-                            <li> <b> 3 </b> : Observe using graphs and tables that a quantity increasing exponentially eventually exceeds a quantity increasing linearly, quadratically, or (more generally) as a polynomial function. </li>
-                            <li> <b> 4 </b> : For exponential models, express as a logarithm the solution to ab to the ct power = d where a, c, and d are numbers and the base b is 2, 10, or e; evaluate the logarithm using technology. </li>
+                                <li> <b> 2 </b> : Construct linear and exponential functions, including arithmetic and
+                                    geometric sequences, given a graph, a description of a relationship, or two
+                                    input-output
+                                    pairs (include reading these from a table). </li>
+                                <li> <b> 3 </b> : Observe using graphs and tables that a quantity increasing
+                                    exponentially
+                                    eventually exceeds a quantity increasing linearly, quadratically, or (more
+                                    generally) as
+                                    a polynomial function. </li>
+                                <li> <b> 4 </b> : For exponential models, express as a logarithm the solution to ab to
+                                    the
+                                    ct power = d where a, c, and d are numbers and the base b is 2, 10, or e; evaluate
+                                    the
+                                    logarithm using technology. </li>
+                            </ul>
+                            <li> <b> B : Interpret expressions for functions in terms of the situation they model. </b>
+                            </li>
+                            <ul>
+                                <li> <b> 5 </b> : Interpret the parameters in a linear or exponential function in terms
+                                    of a
+                                    context. </li>
+                            </ul>
                         </ul>
-                    <li> <b> B : Interpret expressions for functions in terms of the situation they model. </b> </li>
-                        <ul>
-                            <li> <b> 5 </b> : Interpret the parameters in a linear or exponential function in terms of a context. </li>
-                        </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                    </div>
                 </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 9-12.HSF.TF : Trigonometric Functions </h4>
+                <div class="card card-medium" (click)="toggle_domain(4)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[4]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 9-12.HSF.TF : Trigonometric Functions </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[4]" style="font-size: 15px">
+                            <li> <b> A : Extend the domain of trigonometric functions using the unit circle. </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Understand radian measure of an angle as the length of the arc on the
+                                    unit
+                                    circle subtended by the angle. </li>
+                                <li> <b> 2 </b> : Explain how the unit circle in the coordinate plane enables the
+                                    extension
+                                    of trigonometric functions to all real numbers, interpreted as radian measures of
+                                    angles
+                                    traversed counterclockwise around the unit circle. </li>
+                                <li> <b> 3 </b> : Use special triangles to determine geometrically the values of sine,
+                                    cosine, tangent for pi/3, pi/4 and pi/6, and use the unit circle to express the
+                                    values
+                                    of sine, cosine, and tangent for pi-x, pi+x, and 2pi-x in terms of their values for
+                                    x,
+                                    where x is any real number. </li>
+                                <li> <b> 4 </b> : Use the unit circle to explain symmetry (odd and even) and periodicity
+                                    of
+                                    trigonometric functions. </li>
+                            </ul>
+                            <li> <b> B : Model periodic phenomena with trigonometric functions. </b> </li>
+                            <ul>
+                                <li> <b> 5 </b> : Choose trigonometric functions to model periodic phenomena with
+                                    specified
+                                    amplitude, frequency, and midline. </li>
+                                <li> <b> 6 </b> : Understand that restricting a trigonometric function to a domain on
+                                    which
+                                    it is always increasing or always decreasing allows its inverse to be constructed.
+                                </li>
+                                <li> <b> 7 </b> : Use inverse functions to solve trigonometric equations that arise in
+                                    modeling contexts; evaluate the solutions using technology, and interpret them in
+                                    terms
+                                    of the context. </li>
+                            </ul>
+                            <li> <b> C : Prove and apply trigonometric identities. </b> </li>
+                            <ul>
+                                <li> <b> 8 </b> : Prove the Pythagorean identity sin²(theta) + cos²(theta) = 1 and use
+                                    it to
+                                    find sin(theta), cos(theta), or tan(theta) given sin(theta), cos(theta), or
+                                    tan(theta)
+                                    and the quadrant of the angle. </li>
+                                <li> <b> 9 </b> : Prove the addition and subtraction formulas for sine, cosine, and
+                                    tangent
+                                    and use them to solve problems. </li>
+                            </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[4]" style="font-size: 15px">
-                    <li> <b> A : Extend the domain of trigonometric functions using the unit circle. </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Understand radian measure of an angle as the length of the arc on the unit circle subtended by the angle. </li>
-                            <li> <b> 2 </b> : Explain how the unit circle in the coordinate plane enables the extension of trigonometric functions to all real numbers, interpreted as radian measures of angles traversed counterclockwise around the unit circle. </li>
-                            <li> <b> 3 </b> : Use special triangles to determine geometrically the values of sine, cosine, tangent for pi/3, pi/4 and pi/6, and use the unit circle to express the values of sine, cosine, and tangent for pi-x, pi+x, and 2pi-x in terms of their values for x, where x is any real number. </li>
-                            <li> <b> 4 </b> : Use the unit circle to explain symmetry (odd and even) and periodicity of trigonometric functions. </li>
-                        </ul>
-                    <li> <b> B : Model periodic phenomena with trigonometric functions. </b> </li>
-                        <ul>
-                            <li> <b> 5 </b> : Choose trigonometric functions to model periodic phenomena with specified amplitude, frequency, and midline. </li>
-                            <li> <b> 6 </b> : Understand that restricting a trigonometric function to a domain on which it is always increasing or always decreasing allows its inverse to be constructed. </li>
-                            <li> <b> 7 </b> : Use inverse functions to solve trigonometric equations that arise in modeling contexts; evaluate the solutions using technology, and interpret them in terms of the context. </li>
-                        </ul>
-                    <li> <b> C : Prove and apply trigonometric identities. </b> </li>
-                        <ul>
-                            <li> <b> 8 </b> : Prove the Pythagorean identity sin²(theta) + cos²(theta) = 1 and use it to find sin(theta), cos(theta), or tan(theta) given sin(theta), cos(theta), or tan(theta) and the quadrant of the angle. </li>
-                            <li> <b> 9 </b> : Prove the addition and subtraction formulas for sine, cosine, and tangent and use them to solve problems. </li>
-                        </ul>
-                </ul>
-            </div>
+            <br />
         </div>
+        <br />
     </div>
-    <br />
 </div>

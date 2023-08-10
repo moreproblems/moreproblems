@@ -523,241 +523,363 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main" (window:resize)="width_change2()"
-  style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
-    <br />
-    <section style="width: 100%; align-items: left">
-        <div routerLink="/standards" routerLinkActive="active" class="card card-small" style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-          <img src="./assets/icons/caret.png" style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
-        </div>
-    </section>
-    <br />
-    <h2 style="text-align: center; margin-bottom: 10px"> Fifth Grade English Language Arts (Common Core) Learning Standards </h2>
-    <br />
-    <div class="card-container" style="max-width: 100%">
-        <div class="card card-medium" (click)="toggle_domain(1)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[1]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
-                </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 5.L : Language </h4>
-                </div>
+    style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
+    <div class="content-menu" role="menu" style="margin-bottom: 0px; max-width: 95%; width: auto">
+        <br />
+        <section style="width: 100%; align-items: left">
+            <div routerLink="/standards" routerLinkActive="active" class="card card-small"
+                style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+                <img src="./assets/icons/caret.png"
+                    style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
             </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[1]" style="font-size: 15px">
-                    <li> <b> A : Conventions of Standard English </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Demonstrate command of the conventions of standard English grammar and usage when writing or speaking. </li>
+        </section>
+        <br />
+        <div class="card card-large"
+            style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+            <br />
+            <h2 style="text-align: center; margin-bottom: 10px"> Fifth Grade English Language Arts (Common Core)
+                Learning Standards </h2>
+            <br />
+            <div class="card-container" style="max-width: 100%">
+                <div class="card card-medium" (click)="toggle_domain(1)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[1]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 5.L : Language </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[1]" style="font-size: 15px">
+                            <li> <b> A : Conventions of Standard English </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Demonstrate command of the conventions of standard English grammar and
+                                    usage when writing or speaking. </li>
                                 <ul>
-                                    <li> <b> a </b> : Explain the function of conjunctions, prepositions, and interjections in general and their function in particular sentences. </li>
-                                    <li> <b> b </b> : Form and use the perfect (e.g., I had walked; I have walked; I will have walked) verb tenses. </li>
-                                    <li> <b> c </b> : Use verb tense to convey various times, sequences, states, and conditions. </li>
+                                    <li> <b> a </b> : Explain the function of conjunctions, prepositions, and
+                                        interjections in general and their function in particular sentences. </li>
+                                    <li> <b> b </b> : Form and use the perfect (e.g., I had walked; I have walked; I
+                                        will have walked) verb tenses. </li>
+                                    <li> <b> c </b> : Use verb tense to convey various times, sequences, states, and
+                                        conditions. </li>
                                     <li> <b> d </b> : Recognize and correct inappropriate shifts in verb tense. </li>
                                     <li> <b> e </b> : Use correlative conjunctions (e.g., either/or, neither/nor). </li>
                                 </ul>
-                            <li> <b> 2 </b> : Demonstrate command of the conventions of standard English capitalization, punctuation, and spelling when writing. </li>
+                                <li> <b> 2 </b> : Demonstrate command of the conventions of standard English
+                                    capitalization, punctuation, and spelling when writing. </li>
                                 <ul>
                                     <li> <b> a </b> : Use punctuation to separate items in a series. </li>
-                                    <li> <b> b </b> : Use a comma to separate an introductory element from the rest of the sentence. </li>
-                                    <li> <b> c </b> : Use a comma to set off the words yes and no (e.g., Yes, thank you), to set off a tag question from the rest of the sentence (e.g., It's true, isn't it?), and to indicate direct address (e.g., Is that you, Steve?). </li>
-                                    <li> <b> d </b> : Use underlining, quotation marks, or italics to indicate titles of works. </li>
-                                    <li> <b> e </b> : Spell grade-appropriate words correctly, consulting references as needed. </li>
+                                    <li> <b> b </b> : Use a comma to separate an introductory element from the rest of
+                                        the sentence. </li>
+                                    <li> <b> c </b> : Use a comma to set off the words yes and no (e.g., Yes, thank
+                                        you), to set off a tag question from the rest of the sentence (e.g., It's true,
+                                        isn't it?), and to indicate direct address (e.g., Is that you, Steve?). </li>
+                                    <li> <b> d </b> : Use underlining, quotation marks, or italics to indicate titles of
+                                        works. </li>
+                                    <li> <b> e </b> : Spell grade-appropriate words correctly, consulting references as
+                                        needed. </li>
                                 </ul>
-                        </ul>
-                    <li> <b> B : Knowledge of Language </b> </li>
-                        <ul>
-                            <li> <b> 3 </b> : Use knowledge of language and its conventions when writing, speaking, reading, or listening. </li>
+                            </ul>
+                            <li> <b> B : Knowledge of Language </b> </li>
+                            <ul>
+                                <li> <b> 3 </b> : Use knowledge of language and its conventions when writing, speaking,
+                                    reading, or listening. </li>
                                 <ul>
-                                    <li> <b> a </b> : Expand, combine, and reduce sentences for meaning, reader/listener interest, and style. </li>
-                                    <li> <b> b </b> : Compare and contrast the varieties of English (e.g., dialects, registers) used in stories, dramas, or poems. </li>
+                                    <li> <b> a </b> : Expand, combine, and reduce sentences for meaning, reader/listener
+                                        interest, and style. </li>
+                                    <li> <b> b </b> : Compare and contrast the varieties of English (e.g., dialects,
+                                        registers) used in stories, dramas, or poems. </li>
                                 </ul>
-                        </ul>
-                    <li> <b> C : Vocabulary Acquisition and Use </b> </li>
-                        <ul>
-                            <li> <b> 4 </b> : Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on grade 5 reading and content, choosing flexibly from a range of strategies. </li>
+                            </ul>
+                            <li> <b> C : Vocabulary Acquisition and Use </b> </li>
+                            <ul>
+                                <li> <b> 4 </b> : Determine or clarify the meaning of unknown and multiple-meaning words
+                                    and phrases based on grade 5 reading and content, choosing flexibly from a range of
+                                    strategies. </li>
                                 <ul>
-                                    <li> <b> a </b> : Use context (e.g., cause/effect relationships and comparisons in text) as a clue to the meaning of a word or phrase. </li>
-                                    <li> <b> b </b> : Use common, grade-appropriate Greek and Latin affixes and roots as clues to the meaning of a word (e.g., photograph, photosynthesis). </li>
-                                    <li> <b> c </b> : Consult reference materials (e.g., dictionaries, glossaries, thesauruses), both print and digital, to find the pronunciation and determine or clarify the precise meaning of key words and phrases. </li>
+                                    <li> <b> a </b> : Use context (e.g., cause/effect relationships and comparisons in
+                                        text) as a clue to the meaning of a word or phrase. </li>
+                                    <li> <b> b </b> : Use common, grade-appropriate Greek and Latin affixes and roots as
+                                        clues to the meaning of a word (e.g., photograph, photosynthesis). </li>
+                                    <li> <b> c </b> : Consult reference materials (e.g., dictionaries, glossaries,
+                                        thesauruses), both print and digital, to find the pronunciation and determine or
+                                        clarify the precise meaning of key words and phrases. </li>
                                 </ul>
-                            <li> <b> 5 </b> : Demonstrate understanding of figurative language, word relationships, and nuances in word meanings. </li>
+                                <li> <b> 5 </b> : Demonstrate understanding of figurative language, word relationships,
+                                    and nuances in word meanings. </li>
                                 <ul>
-                                    <li> <b> a </b> : Interpret figurative language, including similes and metaphors, in context. </li>
-                                    <li> <b> b </b> : Recognize and explain the meaning of common idioms, adages, and proverbs. </li>
-                                    <li> <b> c </b> : Use the relationship between particular words (e.g., synonyms, antonyms, homographs) to better understand each of the words. </li>
+                                    <li> <b> a </b> : Interpret figurative language, including similes and metaphors, in
+                                        context. </li>
+                                    <li> <b> b </b> : Recognize and explain the meaning of common idioms, adages, and
+                                        proverbs. </li>
+                                    <li> <b> c </b> : Use the relationship between particular words (e.g., synonyms,
+                                        antonyms, homographs) to better understand each of the words. </li>
                                 </ul>
-                            <li> <b> 6 </b> : Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships (e.g., however, although, nevertheless, similarly, moreover, in addition). </li>
+                                <li> <b> 6 </b> : Acquire and use accurately grade-appropriate general academic and
+                                    domain-specific words and phrases, including those that signal contrast, addition,
+                                    and other logical relationships (e.g., however, although, nevertheless, similarly,
+                                    moreover, in addition). </li>
+                            </ul>
                         </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(2)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[2]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                    </div>
                 </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 5.RF : Reading - Foundational Skills </h4>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[2]" style="font-size: 15px">
-                    <li> <b> A : Phonics and Word Recognition </b> </li>
-                        <ul>
-                            <li> <b> 3 </b> : Know and apply grade-level phonics and word analysis skills in decoding words. </li>
+                <div class="card card-medium" (click)="toggle_domain(2)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[2]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 5.RF : Reading - Foundational Skills </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[2]" style="font-size: 15px">
+                            <li> <b> A : Phonics and Word Recognition </b> </li>
+                            <ul>
+                                <li> <b> 3 </b> : Know and apply grade-level phonics and word analysis skills in
+                                    decoding words. </li>
                                 <ul>
-                                    <li> <b> a </b> : Use combined knowledge of all letter-sound correspondences, syllabication patterns, and morphology (e.g., roots and affixes) to read accurately unfamiliar multisyllabic words in context and out of context. </li>
+                                    <li> <b> a </b> : Use combined knowledge of all letter-sound correspondences,
+                                        syllabication patterns, and morphology (e.g., roots and affixes) to read
+                                        accurately unfamiliar multisyllabic words in context and out of context. </li>
                                 </ul>
-                        </ul>
-                    <li> <b> B : Fluency </b> </li>
-                        <ul>
-                            <li> <b> 4 </b> : Read with sufficient accuracy and fluency to support comprehension. </li>
+                            </ul>
+                            <li> <b> B : Fluency </b> </li>
+                            <ul>
+                                <li> <b> 4 </b> : Read with sufficient accuracy and fluency to support comprehension.
+                                </li>
                                 <ul>
                                     <li> <b> a </b> : Read on-level text with purpose and understanding. </li>
-                                    <li> <b> b </b> : Read on-level prose and poetry orally with accuracy, appropriate rate, and expression on successive readings. </li>
-                                    <li> <b> c </b> : Use context to confirm or self-correct word recognition and understanding, rereading as necessary. </li>
+                                    <li> <b> b </b> : Read on-level prose and poetry orally with accuracy, appropriate
+                                        rate, and expression on successive readings. </li>
+                                    <li> <b> c </b> : Use context to confirm or self-correct word recognition and
+                                        understanding, rereading as necessary. </li>
                                 </ul>
+                            </ul>
                         </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(3)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[3]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                    </div>
                 </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 5.RI : Reading - Informational Text </h4>
+                <div class="card card-medium" (click)="toggle_domain(3)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[3]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 5.RI : Reading - Informational Text </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[3]" style="font-size: 15px">
+                            <li> <b> A : Key Ideas and Details </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Quote accurately from a text when explaining what the text says
+                                    explicitly and when drawing inferences from the text. </li>
+                                <li> <b> 2 </b> : Determine two or more main ideas of a text and explain how they are
+                                    supported by key details; summarize the text. </li>
+                                <li> <b> 3 </b> : Explain the relationships or interactions between two or more
+                                    individuals, events, ideas, or concepts in a historical, scientific, or technical
+                                    text based on specific information in the text. </li>
+                            </ul>
+                            <li> <b> B : Craft and Structure </b> </li>
+                            <ul>
+                                <li> <b> 4 </b> : Determine the meaning of general academic and domain-specific words
+                                    and phrases in a text relevant to a grade 5 topic or subject area. </li>
+                                <li> <b> 5 </b> : Compare and contrast the overall structure (e.g., chronology,
+                                    comparison, cause/effect, problem/solution) of events, ideas, concepts, or
+                                    information in two or more texts. </li>
+                                <li> <b> 6 </b> : Analyze multiple accounts of the same event or topic, noting important
+                                    similarities and differences in the point of view they represent. </li>
+                            </ul>
+                            <li> <b> C : Integration of Knowledge and Ideas </b> </li>
+                            <ul>
+                                <li> <b> 7 </b> : Draw on information from multiple print or digital sources,
+                                    demonstrating the ability to locate an answer to a question quickly or to solve a
+                                    problem efficiently. </li>
+                                <li> <b> 8 </b> : Explain how an author uses reasons and evidence to support particular
+                                    points in a text, identifying which reasons and evidence support which point(s).
+                                </li>
+                                <li> <b> 9 </b> : Integrate information from several texts on the same topic in order to
+                                    write or speak about the subject knowledgeably. </li>
+                            </ul>
+                            <li> <b> D : Range of Reading and Level of Text Complexity </b> </li>
+                            <ul>
+                                <li> <b> 10 </b> : By the end of the year, read and comprehend informational texts,
+                                    including history/social studies, science, and technical texts, at the high end of
+                                    the grades 4–5 text complexity band independently and proficiently. </li>
+                            </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[3]" style="font-size: 15px">
-                    <li> <b> A : Key Ideas and Details </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Quote accurately from a text when explaining what the text says explicitly and when drawing inferences from the text. </li>
-                            <li> <b> 2 </b> : Determine two or more main ideas of a text and explain how they are supported by key details; summarize the text. </li>
-                            <li> <b> 3 </b> : Explain the relationships or interactions between two or more individuals, events, ideas, or concepts in a historical, scientific, or technical text based on specific information in the text. </li>
+                <div class="card card-medium" (click)="toggle_domain(4)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[4]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 5.RL : Reading - Literature </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[4]" style="font-size: 15px">
+                            <li> <b> A : Key Ideas and Details </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Quote accurately from a text when explaining what the text says
+                                    explicitly and when drawing inferences from the text. </li>
+                                <li> <b> 2 </b> : Determine a theme of a story, drama, or poem from details in the text,
+                                    including how characters in a story or drama respond to challenges or how the
+                                    speaker in a poem reflects upon a topic; summarize the text. </li>
+                                <li> <b> 3 </b> : Compare and contrast two or more characters, settings, or events in a
+                                    story or drama, drawing on specific details in the text (e.g., how characters
+                                    interact). </li>
+                            </ul>
+                            <li> <b> B : Craft and Structure </b> </li>
+                            <ul>
+                                <li> <b> 4 </b> : Determine the meaning of words and phrases as they are used in a text,
+                                    including figurative language such as metaphors and similes. </li>
+                                <li> <b> 5 </b> : Explain how a series of chapters, scenes, or stanzas fits together to
+                                    provide the overall structure of a particular story, drama, or poem. </li>
+                                <li> <b> 6 </b> : Describe how a narrator's or speaker's point of view influences how
+                                    events are described. </li>
+                            </ul>
+                            <li> <b> C : Integration of Knowledge and Ideas </b> </li>
+                            <ul>
+                                <li> <b> 7 </b> : Analyze how visual and multimedia elements contribute to the meaning,
+                                    tone, or beauty of a text (e.g., graphic novel, multimedia presentation of fiction,
+                                    folktale, myth, poem). </li>
+                                <li> <b> 9 </b> : Compare and contrast stories in the same genre (e.g., mysteries and
+                                    adventure stories) on their approaches to similar themes and topics. </li>
+                            </ul>
+                            <li> <b> D : Range of Reading and Level of Text Complexity </b> </li>
+                            <ul>
+                                <li> <b> 10 </b> : By the end of the year, read and comprehend literature, including
+                                    stories, dramas, and poetry, at the high end of the grades 4–5 text complexity band
+                                    independently and proficiently. </li>
+                            </ul>
                         </ul>
-                    <li> <b> B : Craft and Structure </b> </li>
-                        <ul>
-                            <li> <b> 4 </b> : Determine the meaning of general academic and domain-specific words and phrases in a text relevant to a grade 5 topic or subject area. </li>
-                            <li> <b> 5 </b> : Compare and contrast the overall structure (e.g., chronology, comparison, cause/effect, problem/solution) of events, ideas, concepts, or information in two or more texts. </li>
-                            <li> <b> 6 </b> : Analyze multiple accounts of the same event or topic, noting important similarities and differences in the point of view they represent. </li>
-                        </ul>
-                    <li> <b> C : Integration of Knowledge and Ideas </b> </li>
-                        <ul>
-                            <li> <b> 7 </b> : Draw on information from multiple print or digital sources, demonstrating the ability to locate an answer to a question quickly or to solve a problem efficiently. </li>
-                            <li> <b> 8 </b> : Explain how an author uses reasons and evidence to support particular points in a text, identifying which reasons and evidence support which point(s). </li>
-                            <li> <b> 9 </b> : Integrate information from several texts on the same topic in order to write or speak about the subject knowledgeably. </li>
-                        </ul>
-                    <li> <b> D : Range of Reading and Level of Text Complexity </b> </li>
-                        <ul>
-                            <li> <b> 10 </b> : By the end of the year, read and comprehend informational texts, including history/social studies, science, and technical texts, at the high end of the grades 4–5 text complexity band independently and proficiently. </li>
-                        </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(4)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[4]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[4]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                    </div>
                 </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 5.RL : Reading - Literature </h4>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[4]" style="font-size: 15px">
-                    <li> <b> A : Key Ideas and Details </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Quote accurately from a text when explaining what the text says explicitly and when drawing inferences from the text. </li>
-                            <li> <b> 2 </b> : Determine a theme of a story, drama, or poem from details in the text, including how characters in a story or drama respond to challenges or how the speaker in a poem reflects upon a topic; summarize the text. </li>
-                            <li> <b> 3 </b> : Compare and contrast two or more characters, settings, or events in a story or drama, drawing on specific details in the text (e.g., how characters interact). </li>
-                        </ul>
-                    <li> <b> B : Craft and Structure </b> </li>
-                        <ul>
-                            <li> <b> 4 </b> : Determine the meaning of words and phrases as they are used in a text, including figurative language such as metaphors and similes. </li>
-                            <li> <b> 5 </b> : Explain how a series of chapters, scenes, or stanzas fits together to provide the overall structure of a particular story, drama, or poem. </li>
-                            <li> <b> 6 </b> : Describe how a narrator's or speaker's point of view influences how events are described. </li>
-                        </ul>
-                    <li> <b> C : Integration of Knowledge and Ideas </b> </li>
-                        <ul>
-                            <li> <b> 7 </b> : Analyze how visual and multimedia elements contribute to the meaning, tone, or beauty of a text (e.g., graphic novel, multimedia presentation of fiction, folktale, myth, poem). </li>
-                            <li> <b> 9 </b> : Compare and contrast stories in the same genre (e.g., mysteries and adventure stories) on their approaches to similar themes and topics. </li>
-                        </ul>
-                    <li> <b> D : Range of Reading and Level of Text Complexity </b> </li>
-                        <ul>
-                            <li> <b> 10 </b> : By the end of the year, read and comprehend literature, including stories, dramas, and poetry, at the high end of the grades 4–5 text complexity band independently and proficiently. </li>
-                        </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="card card-medium" (click)="toggle_domain(5)" style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
-            <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: 0 10px">
-                    <img *ngIf="domain_state[5]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px">
-                    <img *ngIf="!domain_state[5]" src="./assets/icons/caret.png" style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
-                </div>
-                <div style="margin: 0 10px; text-align: left">
-                    <h4 style="font-size: 18px"> 5.W : Writing </h4>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: row; text-align: left">
-                <ul *ngIf="domain_state[5]" style="font-size: 15px">
-                    <li> <b> A : Text Types and Purposes </b> </li>
-                        <ul>
-                            <li> <b> 1 </b> : Write opinion pieces on topics or texts, supporting a point of view with reasons and information. </li>
+                <div class="card card-medium" (click)="toggle_domain(5)"
+                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="margin: 0 10px">
+                            <img *ngIf="domain_state[5]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px">
+                            <img *ngIf="!domain_state[5]" src="./assets/icons/caret.png"
+                                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+                        </div>
+                        <div style="margin: 0 10px; text-align: left">
+                            <h4 style="font-size: 18px"> 5.W : Writing </h4>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; text-align: left">
+                        <ul *ngIf="domain_state[5]" style="font-size: 15px">
+                            <li> <b> A : Text Types and Purposes </b> </li>
+                            <ul>
+                                <li> <b> 1 </b> : Write opinion pieces on topics or texts, supporting a point of view
+                                    with reasons and information. </li>
                                 <ul>
-                                    <li> <b> a </b> : Introduce a topic or text clearly, state an opinion, and create an organizational structure in which ideas are logically grouped to support the writer's purpose. </li>
-                                    <li> <b> b </b> : Provide logically ordered reasons that are supported by facts and details. </li>
-                                    <li> <b> c </b> : Link opinion and reasons using words, phrases, and clauses (e.g., consequently, specifically). </li>
-                                    <li> <b> d </b> : Provide a concluding statement or section related to the opinion presented. </li>
+                                    <li> <b> a </b> : Introduce a topic or text clearly, state an opinion, and create an
+                                        organizational structure in which ideas are logically grouped to support the
+                                        writer's purpose. </li>
+                                    <li> <b> b </b> : Provide logically ordered reasons that are supported by facts and
+                                        details. </li>
+                                    <li> <b> c </b> : Link opinion and reasons using words, phrases, and clauses (e.g.,
+                                        consequently, specifically). </li>
+                                    <li> <b> d </b> : Provide a concluding statement or section related to the opinion
+                                        presented. </li>
                                 </ul>
-                            <li> <b> 2 </b> : Write informative/explanatory texts to examine a topic and convey ideas and information clearly. </li>
+                                <li> <b> 2 </b> : Write informative/explanatory texts to examine a topic and convey
+                                    ideas and information clearly. </li>
                                 <ul>
-                                    <li> <b> a </b> : Introduce a topic clearly and group related information in paragraphs and sections; include formatting (e.g., headings), illustrations, and multimedia when useful to aid comprehension. </li>
-                                    <li> <b> b </b> : Develop the topic with facts, definitions, concrete details, quotations, or other information and examples related to the topic. </li>
-                                    <li> <b> c </b> : Link ideas within and across categories of information using words, phrases, and clauses (e.g., in contrast, especially). </li>
-                                    <li> <b> d </b> : Use precise language and domain-specific vocabulary to inform about or explain the topic. </li>
-                                    <li> <b> e </b> : Provide a concluding statement or section related to the information or explanation presented. </li>
+                                    <li> <b> a </b> : Introduce a topic clearly and group related information in
+                                        paragraphs and sections; include formatting (e.g., headings), illustrations, and
+                                        multimedia when useful to aid comprehension. </li>
+                                    <li> <b> b </b> : Develop the topic with facts, definitions, concrete details,
+                                        quotations, or other information and examples related to the topic. </li>
+                                    <li> <b> c </b> : Link ideas within and across categories of information using
+                                        words, phrases, and clauses (e.g., in contrast, especially). </li>
+                                    <li> <b> d </b> : Use precise language and domain-specific vocabulary to inform
+                                        about or explain the topic. </li>
+                                    <li> <b> e </b> : Provide a concluding statement or section related to the
+                                        information or explanation presented. </li>
                                 </ul>
-                            <li> <b> 3 </b> : Write narratives to develop real or imagined experiences or events using effective technique, descriptive details, and clear event sequences. </li>
+                                <li> <b> 3 </b> : Write narratives to develop real or imagined experiences or events
+                                    using effective technique, descriptive details, and clear event sequences. </li>
                                 <ul>
-                                    <li> <b> a </b> : Orient the reader by establishing a situation and introducing a narrator and/or characters; organize an event sequence that unfolds naturally. </li>
-                                    <li> <b> b </b> : Use narrative techniques, such as dialogue, description, and pacing, to develop experiences and events or show the responses of characters to situations. </li>
-                                    <li> <b> c </b> : Use a variety of transitional words, phrases, and clauses to manage the sequence of events. </li>
-                                    <li> <b> d </b> : Use concrete words and phrases and sensory details to convey experiences and events precisely. </li>
-                                    <li> <b> e </b> : Provide a conclusion that follows from the narrated experiences or events. </li>
+                                    <li> <b> a </b> : Orient the reader by establishing a situation and introducing a
+                                        narrator and/or characters; organize an event sequence that unfolds naturally.
+                                    </li>
+                                    <li> <b> b </b> : Use narrative techniques, such as dialogue, description, and
+                                        pacing, to develop experiences and events or show the responses of characters to
+                                        situations. </li>
+                                    <li> <b> c </b> : Use a variety of transitional words, phrases, and clauses to
+                                        manage the sequence of events. </li>
+                                    <li> <b> d </b> : Use concrete words and phrases and sensory details to convey
+                                        experiences and events precisely. </li>
+                                    <li> <b> e </b> : Provide a conclusion that follows from the narrated experiences or
+                                        events. </li>
                                 </ul>
-                        </ul>
-                    <li> <b> B : Production and Distribution of Writing </b> </li>
-                        <ul>
-                            <li> <b> 4 </b> : Produce clear and coherent writing in which the development and organization are appropriate to task, purpose, and audience. </li>
-                            <li> <b> 5 </b> : With guidance and support from peers and adults, develop and strengthen writing as needed by planning, revising, editing, rewriting, or trying a new approach. </li>
-                            <li> <b> 6 </b> : With some guidance and support from adults, use technology, including the Internet, to produce and publish writing as well as to interact and collaborate with others; demonstrate sufficient command of keyboarding skills to type a minimum of two pages in a single sitting. </li>
-                        </ul>
-                    <li> <b> C : Research to Build and Present Knowledge </b> </li>
-                        <ul>
-                            <li> <b> 7 </b> : Conduct short research projects that use several sources to build knowledge through investigation of different aspects of a topic. </li>
-                            <li> <b> 8 </b> : Recall relevant information from experiences or gather relevant information from print and digital sources; summarize or paraphrase information in notes and finished work, and provide a list of sources. </li>
-                            <li> <b> 9 </b> : Draw evidence from literary or informational texts to support analysis, reflection, and research. </li>
+                            </ul>
+                            <li> <b> B : Production and Distribution of Writing </b> </li>
+                            <ul>
+                                <li> <b> 4 </b> : Produce clear and coherent writing in which the development and
+                                    organization are appropriate to task, purpose, and audience. </li>
+                                <li> <b> 5 </b> : With guidance and support from peers and adults, develop and
+                                    strengthen writing as needed by planning, revising, editing, rewriting, or trying a
+                                    new approach. </li>
+                                <li> <b> 6 </b> : With some guidance and support from adults, use technology, including
+                                    the Internet, to produce and publish writing as well as to interact and collaborate
+                                    with others; demonstrate sufficient command of keyboarding skills to type a minimum
+                                    of two pages in a single sitting. </li>
+                            </ul>
+                            <li> <b> C : Research to Build and Present Knowledge </b> </li>
+                            <ul>
+                                <li> <b> 7 </b> : Conduct short research projects that use several sources to build
+                                    knowledge through investigation of different aspects of a topic. </li>
+                                <li> <b> 8 </b> : Recall relevant information from experiences or gather relevant
+                                    information from print and digital sources; summarize or paraphrase information in
+                                    notes and finished work, and provide a list of sources. </li>
+                                <li> <b> 9 </b> : Draw evidence from literary or informational texts to support
+                                    analysis, reflection, and research. </li>
                                 <ul>
-                                    <li> <b> a </b> : Apply grade 5 Reading standards to literature (e.g., "Compare and contrast two or more characters, settings, or events in a story or a drama, drawing on specific details in the text [e.g., how characters interact]"). </li>
-                                    <li> <b> b </b> : Apply grade 5 Reading standards to informational texts (e.g., "Explain how an author uses reasons and evidence to support particular points in a text, identifying which reasons and evidence support which point[s]"). </li>
+                                    <li> <b> a </b> : Apply grade 5 Reading standards to literature (e.g., "Compare and
+                                        contrast two or more characters, settings, or events in a story or a drama,
+                                        drawing on specific details in the text [e.g., how characters interact]"). </li>
+                                    <li> <b> b </b> : Apply grade 5 Reading standards to informational texts (e.g.,
+                                        "Explain how an author uses reasons and evidence to support particular points in
+                                        a text, identifying which reasons and evidence support which point[s]"). </li>
                                 </ul>
+                            </ul>
+                            <li> <b> D : Range of Writing </b> </li>
+                            <ul>
+                                <li> <b> 10 </b> : Write routinely over extended time frames (time for research,
+                                    reflection, and revision) and shorter time frames (a single sitting or a day or two)
+                                    for a range of discipline-specific tasks, purposes, and audiences. </li>
+                            </ul>
                         </ul>
-                    <li> <b> D : Range of Writing </b> </li>
-                        <ul>
-                            <li> <b> 10 </b> : Write routinely over extended time frames (time for research, reflection, and revision) and shorter time frames (a single sitting or a day or two) for a range of discipline-specific tasks, purposes, and audiences. </li>
-                        </ul>
-                </ul>
+                    </div>
+                </div>
             </div>
+            <br />
         </div>
+        <br />
     </div>
-    <br />
 </div>
