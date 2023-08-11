@@ -484,7 +484,7 @@
       *ngIf="(selected_subject != '' && selected_subject != 'G9M' && selected_subject != 'G10M' && selected_subject != 'G11M' && selected_subject != 'G12M') || selected_category != ''" />
     <div
       *ngIf="(selected_subject != '' && selected_subject != 'G9M' && selected_subject != 'G10M' && selected_subject != 'G11M' && selected_subject != 'G12M') || selected_category != ''"
-      class="card card-large" [ngSwitch]="selected_subject" style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+      class="card card-large" [ngSwitch]="selected_subject" style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2 style="margin-bottom: 10px" #subjectTitle> {{subject_name}} (Common Core) Learning Goals </h2>
       <!-- <br *ngIf="selected_subject != ''" /> -->
@@ -1811,7 +1811,7 @@
     <br *ngIf="selected_subject == '' || (selected_subject == 'G9M' && selected_category == '') || (selected_subject == 'G10M' && selected_category == '') || (selected_subject == 'G11M' && selected_category == '') || (selected_subject == 'G12M' && selected_category == '')" />
     <div
       *ngIf="selected_subject == '' || (selected_subject == 'G9M' && selected_category == '') || (selected_subject == 'G10M' && selected_category == '') || (selected_subject == 'G11M' && selected_category == '') || (selected_subject == 'G12M' && selected_category == '')"
-      class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+      class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
       <!-- Standards Selector -->
       <br />
       <h2> Choose your Grade </h2>
@@ -2246,7 +2246,7 @@
       </div>
     </div>
     <br />
-    <div *ngIf="(selected_category != '' && selected_category != 'HSM-NQ' && selected_category != 'HSM-A' && selected_category != 'HSM-F' && selected_category != 'HSM-G' && selected_category != 'HSM-SP' && selected_category != 'HSM-M') || (selected_subject == 'G9M' && selected_category == '') || (selected_subject == 'G10M' && selected_category == '') || (selected_subject == 'G11M' && selected_category == '') || (selected_subject == 'G12M' && selected_category == '')" class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+    <div *ngIf="(selected_category != '' && selected_category != 'HSM-NQ' && selected_category != 'HSM-A' && selected_category != 'HSM-F' && selected_category != 'HSM-G' && selected_category != 'HSM-SP' && selected_category != 'HSM-M') || (selected_subject == 'G9M' && selected_category == '') || (selected_subject == 'G10M' && selected_category == '') || (selected_subject == 'G11M' && selected_category == '') || (selected_subject == 'G12M' && selected_category == '')" class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <div *ngIf="selected_subject == 'G9M'" class="subcontent" style="text-align: center">
         <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 30px"> The high school standards specify the

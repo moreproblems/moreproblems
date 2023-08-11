@@ -546,7 +546,8 @@
             </div>
         </section>
         <br *ngIf="selected_exam != ''" />
-        <div *ngIf="selected_exam != ''" style="width: 100%">
+        <div *ngIf="selected_exam != ''" class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+            <br />
             <div class="card card-medium"
                 style="text-align: center; margin: auto; width: fit-content; padding: 20px; display: flex; flex-direction: column">
                 <h2 style="color: darkgrey"> {{exam_names[selected_exam]}} </h2>
@@ -601,6 +602,7 @@
                     </tbody>
                 </table>
             </div>
+            <br />
             <div style="overflow: auto">
                 <table *ngIf="this.expand_subtopics"
                     style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
@@ -746,6 +748,7 @@
                     </tbody>
                 </table>
             </div>
+            <br />
         </div>
         <section *ngIf="selected_student != '' && selected_exam == ''" style="width: 100%; align-items: left">
             <div (click)="selected_student=''" class="card card-small"
@@ -756,7 +759,8 @@
             </div>
         </section>
         <br *ngIf="selected_student != '' && selected_exam == ''" />
-        <div *ngIf="selected_student != '' && selected_exam == ''" style="width: 100%">
+        <div *ngIf="selected_student != '' && selected_exam == ''" class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+            <br />
             <div class="row">
                 <div class="col-md-12">
                     <div class="media">
@@ -935,6 +939,7 @@
                     </div>
                 </div>
             </div>
+            <br />
         </div>
         <section *ngIf="selected_exam == '' && selected_student == ''"
             style="width: 100%; align-itmes: left">
@@ -946,7 +951,7 @@
         </section>
         <br *ngIf="selected_exam == '' && selected_student == ''" />
         <div *ngIf="selected_exam == '' && selected_student == ''" class="card card-large"
-            style="border: 3px solid black; border-radius: 20px; width: auto; height: auto; margin: auto; padding: 0 5%; display: flex; flex-direction: column; min-width: 300px; max-width: min(1075px, 90%); max-height: 2400px">
+            style="border: 2px solid black; border-radius: 20px; width: auto; height: auto; margin: auto; padding: 0 5%; display: flex; flex-direction: column; min-width: 300px; max-width: min(1075px, 90%); max-height: 2400px">
             <!-- <br /> -->
             <div class="inner-adjust" *ngIf="authService.userData as user" style="padding-top: 10px">
                 <div class="pt-3 pb-2 mb-3 border-bottom">
