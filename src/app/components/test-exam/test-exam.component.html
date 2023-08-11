@@ -499,7 +499,7 @@
 
   <div class="card-container" style="max-width: 100%">
     <div *ngIf="!expand_filters" class="card card-large"
-      style="height: auto; width: auto; margin: auto; text-align: center; max-width: 95%" #problemCard>
+      style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1350px, 95%); border: 3px solid black; border-radius: 20px" #problemCard>
       <div class="content" style="margin: auto; align-items: center">
         <h2 *ngIf="this.problem_number > 0" style="padding-top: 20px; color: darkgrey"> {{exam_state}} {{exam_name}}
           {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
