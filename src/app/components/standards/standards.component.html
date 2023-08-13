@@ -484,7 +484,7 @@
       *ngIf="(selected_subject != '' && selected_subject != 'G9M' && selected_subject != 'G10M' && selected_subject != 'G11M' && selected_subject != 'G12M') || selected_category != ''" />
     <div
       *ngIf="(selected_subject != '' && selected_subject != 'G9M' && selected_subject != 'G10M' && selected_subject != 'G11M' && selected_subject != 'G12M') || selected_category != ''"
-      class="card card-large" [ngSwitch]="selected_subject" style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+      class="card card-large" [ngSwitch]="selected_subject" style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2 style="margin-bottom: 10px" #subjectTitle> {{subject_name}} (Common Core) Learning Goals </h2>
       <!-- <br *ngIf="selected_subject != ''" /> -->
@@ -1808,10 +1808,23 @@
       </div>
       <br />
     </div>
+    <br *ngIf="selected_grade == '' && selected_subject == ''" />
+    <div *ngIf="selected_grade == '' && selected_subject == ''" class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <br />
+      <h2 *ngIf="screenWidth > mobileWidth" style="font-weight: 400; font-size: 24.5px; line-height: 30px"> Find out what to expect from your learner's curriculum, all the way down to standards. Subjects include Math & English Language Arts from Kindergarten through High School - as they are outlined by the Common Core state standards adopted by most states in America. </h2>
+      <h2 *ngIf="screenWidth <= mobileWidth" style="font-weight: 400; font-size: 18.5px; line-height: 24px"> Find out what to expect from your learner's curriculum, all the way down to standards. Subjects include Math & English Language Arts from Kindergarten through High School - as they are outlined by the Common Core state standards adopted by most states in America. </h2>
+      <br />
+      <!-- <h3 *ngIf="screenWidth > mobileWidth" (click)="scroll(chooseGrade)" style="font-weight: 600; font-size: 20px"><a>
+          Don't see your state? Click here to choose your grade and subject instead. </a></h3>
+      <h3 *ngIf="screenWidth <= mobileWidth" (click)="scroll(chooseGrade)" style="font-weight: 600; font-size: 16px"><a>
+          Don't see your state? Click here to choose your grade and subject instead. </a></h3>
+      <br /> -->
+    </div>
     <br *ngIf="selected_subject == '' || (selected_subject == 'G9M' && selected_category == '') || (selected_subject == 'G10M' && selected_category == '') || (selected_subject == 'G11M' && selected_category == '') || (selected_subject == 'G12M' && selected_category == '')" />
     <div
       *ngIf="selected_subject == '' || (selected_subject == 'G9M' && selected_category == '') || (selected_subject == 'G10M' && selected_category == '') || (selected_subject == 'G11M' && selected_category == '') || (selected_subject == 'G12M' && selected_category == '')"
-      class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+      class="card card-large" style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <!-- Standards Selector -->
       <br />
       <h2> Choose your Grade </h2>
@@ -2246,7 +2259,7 @@
       </div>
     </div>
     <br />
-    <div *ngIf="(selected_category != '' && selected_category != 'HSM-NQ' && selected_category != 'HSM-A' && selected_category != 'HSM-F' && selected_category != 'HSM-G' && selected_category != 'HSM-SP' && selected_category != 'HSM-M') || (selected_subject == 'G9M' && selected_category == '') || (selected_subject == 'G10M' && selected_category == '') || (selected_subject == 'G11M' && selected_category == '') || (selected_subject == 'G12M' && selected_category == '')" class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+    <div *ngIf="(selected_category != '' && selected_category != 'HSM-NQ' && selected_category != 'HSM-A' && selected_category != 'HSM-F' && selected_category != 'HSM-G' && selected_category != 'HSM-SP' && selected_category != 'HSM-M') || (selected_subject == 'G9M' && selected_category == '') || (selected_subject == 'G10M' && selected_category == '') || (selected_subject == 'G11M' && selected_category == '') || (selected_subject == 'G12M' && selected_category == '')" class="card card-large" style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <div *ngIf="selected_subject == 'G9M'" class="subcontent" style="text-align: center">
         <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 30px"> The high school standards specify the

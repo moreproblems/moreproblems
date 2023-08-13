@@ -470,6 +470,25 @@
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
   <canvas id="confetticanvas"></canvas>
   <div *ngIf="expand_filters" class="content">
+    <br *ngIf="grade_filters.length == 0 && subject_filters.length == 0" />
+    <div *ngIf="grade_filters.length == 0 && subject_filters.length == 0" class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <br />
+      <h2 *ngIf="screenWidth > mobileWidth" style="font-weight: 400; font-size: 24.5px; line-height: 30px"> Create your
+        own quiz from our library of standardized test items. Find relevant practice problems for every student - with
+        real-time feedback for learners or reports to share with teachers and parents. Just pick your grade and subject
+        along with quiz length, then test understanding against curriculum standards. </h2>
+      <h2 *ngIf="screenWidth <= mobileWidth" style="font-weight: 400; font-size: 18.5px; line-height: 24px"> Create your
+        own quiz from our library of standardized test items. Find relevant practice problems for every student - with
+        real-time feedback for learners or reports to share with teachers and parents. Just pick your grade and subject
+        along with quiz length, then test understanding against curriculum standards. </h2>
+      <br />
+      <!-- <h3 *ngIf="screenWidth > mobileWidth" (click)="scroll(chooseGrade)" style="font-weight: 600; font-size: 20px"><a>
+          Don't see your state? Click here to choose your grade and subject instead. </a></h3>
+      <h3 *ngIf="screenWidth <= mobileWidth" (click)="scroll(chooseGrade)" style="font-weight: 600; font-size: 16px"><a>
+          Don't see your state? Click here to choose your grade and subject instead. </a></h3>
+      <br /> -->
+    </div>
     <!-- <h2>Choose your State</h2>
     <input type="hidden" value="All United States" #state>
     <div class="card-container" style="max-width: 100%">
@@ -567,9 +586,10 @@
     </div>
     <br />-->
 
-    <br /> 
-    <div class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
-      <br />
+    <br />
+    <div class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <br #chooseGrade />
       <h2>Choose your Grade</h2>
       <br />
       <input type="hidden" value="All Grades" #state>
@@ -578,43 +598,43 @@
           <input type="checkbox" value="G3">
           <button *ngIf="grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button-on"
             tabindex="0"> <b>Grade 3</b> </button>
-          <button *ngIf="!grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button-off"
-            tabindex="0"> <b>Grade 3</b> </button>
+          <button *ngIf="!grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3')"
+            class="toggle-button-off" tabindex="0"> <b>Grade 3</b> </button>
         </label>
         <label class="switch">
           <input type="checkbox" value="G4">
           <button *ngIf="grade_filters.includes('Grade 4')" (click)="toggle_button('Grade 4')" class="toggle-button-on"
             tabindex="0"> <b>Grade 4</b> </button>
-          <button *ngIf="!grade_filters.includes('Grade 4')" (click)="toggle_button('Grade 4')" class="toggle-button-off"
-            tabindex="0"> <b>Grade 4</b> </button>
+          <button *ngIf="!grade_filters.includes('Grade 4')" (click)="toggle_button('Grade 4')"
+            class="toggle-button-off" tabindex="0"> <b>Grade 4</b> </button>
         </label>
         <label class="switch">
           <input type="checkbox" value="G5">
           <button *ngIf="grade_filters.includes('Grade 5')" (click)="toggle_button('Grade 5')" class="toggle-button-on"
             tabindex="0"> <b>Grade 5</b> </button>
-          <button *ngIf="!grade_filters.includes('Grade 5')" (click)="toggle_button('Grade 5')" class="toggle-button-off"
-            tabindex="0"> <b>Grade 5</b> </button>
+          <button *ngIf="!grade_filters.includes('Grade 5')" (click)="toggle_button('Grade 5')"
+            class="toggle-button-off" tabindex="0"> <b>Grade 5</b> </button>
         </label>
         <label class="switch">
           <input type="checkbox" value="G6">
           <button *ngIf="grade_filters.includes('Grade 6')" (click)="toggle_button('Grade 6')" class="toggle-button-on"
             tabindex="0"> <b>Grade 6</b> </button>
-          <button *ngIf="!grade_filters.includes('Grade 6')" (click)="toggle_button('Grade 6')" class="toggle-button-off"
-            tabindex="0"> <b>Grade 6</b> </button>
+          <button *ngIf="!grade_filters.includes('Grade 6')" (click)="toggle_button('Grade 6')"
+            class="toggle-button-off" tabindex="0"> <b>Grade 6</b> </button>
         </label>
         <label class="switch">
           <input type="checkbox" value="G7">
           <button *ngIf="grade_filters.includes('Grade 7')" (click)="toggle_button('Grade 7')" class="toggle-button-on"
             tabindex="0"> <b>Grade 7</b> </button>
-          <button *ngIf="!grade_filters.includes('Grade 7')" (click)="toggle_button('Grade 7')" class="toggle-button-off"
-            tabindex="0"> <b>Grade 7</b> </button>
+          <button *ngIf="!grade_filters.includes('Grade 7')" (click)="toggle_button('Grade 7')"
+            class="toggle-button-off" tabindex="0"> <b>Grade 7</b> </button>
         </label>
         <label class="switch">
           <input type="checkbox" value="G8">
           <button *ngIf="grade_filters.includes('Grade 8')" (click)="toggle_button('Grade 8')" class="toggle-button-on"
             tabindex="0"> <b>Grade 8</b> </button>
-          <button *ngIf="!grade_filters.includes('Grade 8')" (click)="toggle_button('Grade 8')" class="toggle-button-off"
-            tabindex="0"> <b>Grade 8</b> </button>
+          <button *ngIf="!grade_filters.includes('Grade 8')" (click)="toggle_button('Grade 8')"
+            class="toggle-button-off" tabindex="0"> <b>Grade 8</b> </button>
         </label>
       </div>
       <br />
@@ -646,8 +666,8 @@
         </label> -->
         <label class="switch">
           <input type="checkbox" value="S">
-          <button *ngIf="subject_filters.includes('Science')" (click)="toggle_button('Science')" class="toggle-button-on"
-            tabindex="0"> <b>Science</b> </button>
+          <button *ngIf="subject_filters.includes('Science')" (click)="toggle_button('Science')"
+            class="toggle-button-on" tabindex="0"> <b>Science</b> </button>
           <button *ngIf="!subject_filters.includes('Science')" (click)="toggle_button('Science')"
             class="toggle-button-off" tabindex="0"> <b>Science</b> </button>
         </label>
@@ -666,7 +686,8 @@
       <br />
     </div>
     <br />
-    <div class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+    <div class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2>Choose your Settings</h2>
       <br />
@@ -701,7 +722,8 @@
   <br />
   <div class="card-container" style="max-width: 100%">
     <div *ngIf="!expand_filters" class="card card-large"
-      style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1350px, 95%); border: 3px solid black; border-radius: 20px" #problemCard>
+      style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1350px, 95%); border: 3px solid black; border-radius: 20px"
+      #problemCard>
       <div class="content" style="margin: auto; align-items: center">
         <h3 *ngIf="exam_length >= problem_number" style="margin: auto 0; color: darkgrey; font-size: 18px">
           (#{{problem_number}}/{{exam_length}}) Time spent solving problem: {{pt_minutes}}m {{pt_counter%60}}s </h3>
@@ -766,7 +788,7 @@
                     {{choice.value.Choice}}
                   </h3>
                   <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
-                  style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                 </div>
               </div>
             </div>
@@ -783,8 +805,12 @@
                     <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                     <br /> <br /> <b>Explanation:</b> {{attempt_explanation}}
                   </h3>
-                  <br *ngIf="choice.key == selection.value && attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" /> <br *ngIf="choice.key == selection.value && attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
-                  <button *ngIf="choice.key == selection.value && attempt_response.startsWith('Correct') && screenWidth <= mobileWidth"
+                  <br
+                    *ngIf="choice.key == selection.value && attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                  <br
+                    *ngIf="choice.key == selection.value && attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                  <button
+                    *ngIf="choice.key == selection.value && attempt_response.startsWith('Correct') && screenWidth <= mobileWidth"
                     class="grade-button" (click)="next_problem(); scroll_top()"
                     style="display: block; max-width: 150px; max-height: 100px; margin: auto">
                     <b> Next Problem </b>
@@ -799,7 +825,8 @@
                     <!-- wrong data format, extra KEY -->
                     <br /> <br /> <b>Explanation:</b> {{attempt_explanation}}
                   </h3>
-                  <br *ngIf="attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" /> <br *ngIf="attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                  <br *ngIf="attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" /> <br
+                    *ngIf="attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
                   <button *ngIf="attempt_response.startsWith('Correct') && screenWidth <= mobileWidth"
                     class="grade-button" (click)="next_problem(); scroll_top()"
                     style="display: block; max-width: 150px; max-height: 100px; margin: auto">
@@ -882,7 +909,9 @@
                         </form>
                     </div> -->
           <div style="overflow: auto">
-            <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableS>
+            <table *ngIf="!this.expand_topics"
+              style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+              #topicsTableS>
               <thead>
                 <tr>
                   <th colspan="3" style="font-size: 18px"> Report: Results by Topic </th>
@@ -919,7 +948,9 @@
             </table>
           </div>
           <div style="overflow: auto">
-            <table *ngIf="this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableL>
+            <table *ngIf="this.expand_topics"
+              style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+              #topicsTableL>
               <thead>
                 <tr>
                   <th colspan="3" style="font-size: 18px"> Report: Results by Topic & Skill Tested </th>
@@ -953,7 +984,8 @@
                   <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
                 </tr>
                 <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
-                  <td style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px"> <i>
+                  <td style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
+                    <i>
                       {{subtopic.key}} </i> </td>
                   <td style="border-top: 1px solid #ddd"> </td>
                   <td style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
@@ -965,7 +997,9 @@
           </div>
           <br />
           <div style="overflow: auto">
-            <table *ngIf="!this.show_correct" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #resultsTableI>
+            <table *ngIf="!this.show_correct"
+              style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+              #resultsTableI>
               <thead>
                 <tr>
                   <th colspan="6" style="font-size: 18px"> Report: Details on Incorrect Problems </th>
@@ -1009,7 +1043,9 @@
             </table>
           </div>
           <div style="overflow: auto">
-            <table *ngIf="this.show_correct" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #resultsTableA>
+            <table *ngIf="this.show_correct"
+              style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+              #resultsTableA>
               <thead>
                 <tr>
                   <th colspan="6" style="font-size: 18px"> Report: Details on All Problems </th>

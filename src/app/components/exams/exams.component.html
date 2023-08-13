@@ -551,15 +551,15 @@
   <div *ngIf="file_source == ''" class="content-menu" style="margin-bottom: 0; align-items: center">
     <br *ngIf="selected_state == ''" />
     <div *ngIf="selected_state == ''" class="card card-large"
-      style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2 *ngIf="screenWidth > mobileWidth" style="font-weight: 400; font-size: 24.5px; line-height: 30px"> Explore our
-        library of released end-of-year exams. Find standardized practice problems for any student - with answer keys
-        and explanations for teachers and parents. Just pick your state and grade then download or print available exams
+        library of released end-of-year exams. Find standardized practice problems for every student - with answer keys
+        and explanations for teachers and parents. Just pick your state and grade, then download or print available exams
         for math, English language, or science. </h2>
       <h2 *ngIf="screenWidth <= mobileWidth" style="font-weight: 400; font-size: 18.5px; line-height: 24px"> Explore our
-        library of released end-of-year exams. Find standardized practice problems for any student - with answer keys
-        and explanations for teachers and parents. Just pick your state and grade then download or print available exams
+        library of released end-of-year exams. Find standardized practice problems for every student - with answer keys
+        and explanations for teachers and parents. Just pick your state and grade, then download or print available exams
         for math, English language, or science. </h2>
       <br />
       <h3 *ngIf="screenWidth > mobileWidth" (click)="select_state('All'); scroll(chooseGrade)" style="font-weight: 600; font-size: 20px"><a> Don't see your state? Click here to choose your grade and subject instead. </a></h3>
@@ -569,7 +569,7 @@
     <br />
     <!-- State Selector -->
     <div class="card card-large"
-      style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
       #stateSelectorCard>
       <br />
       <h2> Choose your State </h2>
@@ -1181,7 +1181,7 @@
   <div *ngIf="file_source == ''" class="content-menu" role="main" [ngSwitch]="selected_state" style="margin-bottom: 0; align-items: center">
     <!-- All Exams -->
     <div *ngSwitchCase="'All'" class="card card-large"
-      style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
       #USGradeSelectorCard>
       <!-- Grade Selector -->
       <br />
@@ -1649,7 +1649,7 @@
     </div>
     <br *ngIf="selected_state == 'All'" />
     <div *ngIf="selected_state == 'All' && selected_grade != '' && selected_grade != 'HS' && selected_subject != ''" class="card card-large"
-      style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
       #USExamSelectorCard>
       <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
         <div *ngSwitchCase="'G3'" class="subcontent" style="margin-top: 0">
@@ -7108,7 +7108,7 @@
     <!-- Colorado CMAS -->
     <div *ngSwitchCase="'CO'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #COGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -7184,7 +7184,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #COExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -7398,7 +7398,7 @@
     <!-- Delaware DeSSA -->
     <div *ngSwitchCase="'DE'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #DEGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -7456,7 +7456,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #DEExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -7560,7 +7560,7 @@
     <!-- Florida FSA -->
     <div *ngSwitchCase="'FL'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #FLGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -7643,7 +7643,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #FLExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -7950,7 +7950,7 @@
     <!-- Illinois IAR -->
     <div *ngSwitchCase="'IL'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #ILGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -8017,7 +8017,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #ILExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -8195,7 +8195,7 @@
     <!-- Maine MEA -->
     <div *ngSwitchCase="'ME'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MEGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -8271,7 +8271,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MEExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -8476,7 +8476,7 @@
     <!-- Maryland MCAP -->
     <div *ngSwitchCase="'MD'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MDGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -8552,7 +8552,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MDExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -8775,7 +8775,7 @@
     <!-- Massachusetts MCAS -->
     <div *ngSwitchCase="'MA'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MAGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -8851,7 +8851,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MAExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -9086,7 +9086,7 @@
     <!-- Minnesota MCA -->
     <div *ngSwitchCase="'MN'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MNGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -9180,7 +9180,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MNExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -9430,7 +9430,7 @@
     <!-- Mississippi MAAP -->
     <div *ngSwitchCase="'MS'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MSGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -9497,7 +9497,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MSExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -9825,7 +9825,7 @@
     <!-- Missouri MAP -->
     <div *ngSwitchCase="'MO'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MOGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -9892,7 +9892,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MOExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -10088,7 +10088,7 @@
     <!-- Nebraska NSCAS -->
     <div *ngSwitchCase="'NE'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NEGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -10155,7 +10155,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NEExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -10351,7 +10351,7 @@
     <!-- New Jersey NJSLA -->
     <div *ngSwitchCase="'NJ'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NJGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -10436,7 +10436,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NJExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -10668,7 +10668,7 @@
     <!-- New Mexico NM-MSSA -->
     <div *ngSwitchCase="'NM'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NMGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -10744,7 +10744,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NMExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -10958,7 +10958,7 @@
     <!-- New York NYSTP -->
     <div *ngSwitchCase="'NY'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NYGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -11025,7 +11025,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NYExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -12028,7 +12028,7 @@
     <!-- North Carolina EOG -->
     <div *ngSwitchCase="'NC'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NCGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -12095,7 +12095,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NCExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -12302,7 +12302,7 @@
     <!-- Pennsylvania PSSA -->
     <div *ngSwitchCase="'PA'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #PAGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -12369,7 +12369,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #PAExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -13250,7 +13250,7 @@
     <!-- Rhode Island RICAS -->
     <div *ngSwitchCase="'RI'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #RIGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -13317,7 +13317,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #RIExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -13856,7 +13856,7 @@
     <!-- South Carolina SC READY -->
     <div *ngSwitchCase="'SC'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #SCGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -13923,7 +13923,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #SCExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -14119,7 +14119,7 @@
     <!-- Tennessee TCAP -->
     <div *ngSwitchCase="'TN'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #TNGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -14186,7 +14186,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #TNExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -14445,7 +14445,7 @@
     <!-- Texas STAAR -->
     <div *ngSwitchCase="'TX'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #TXGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -14512,7 +14512,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #TXExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
@@ -15288,7 +15288,7 @@
     <!-- Wisconsin WFE -->
     <div *ngSwitchCase="'WI'">
       <div class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #WIGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
@@ -15364,7 +15364,7 @@
       </div>
       <br #chooseExam />
       <div *ngIf="selected_grade != ''" class="card card-large"
-        style="height: auto; width: auto; margin: auto; padding: 0 5%; border: 2px solid black; border-radius: 20px; text-align: center; max-width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #WIExamSelectorCard>
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
