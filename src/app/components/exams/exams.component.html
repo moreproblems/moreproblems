@@ -476,7 +476,8 @@
 
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
-  <div *ngIf="file_source != ''" class="content-menu" role="menu" style="margin-bottom: 0px; max-width: 95%; width: auto">
+  <div *ngIf="file_source != ''" class="content-menu" role="menu"
+    style="margin-bottom: 0px; align-items: center">
     <br />
     <section style="width: 100%; align-items: left">
       <div (click)="file_source=''; exam_fav=false" class="card card-small"
@@ -488,12 +489,9 @@
     </section>
     <br />
     <!-- PDF Viewer -->
-    <!-- <div class="card card-large" (window:resize)="width_change()"
-      style="border: 3px solid black; border-radius: 20px; display: block; min-width: 310px; max-width: 1000px; width: 70%; height: auto; max-height: 90%"
-      [attr.width]="viewerWidth" [attr.height]="viewerHeight" #pdfViewer> -->
     <div class="card card-large" (window:resize)="width_change()"
-      style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-height: 90%; max-width: min(1075px, 95%); display: flex; flex-direction: column; border: 3px solid black; border-radius: 20px"
-      [attr.width]="viewerWidth" [attr.height]="viewerHeight" #pdfViewer>
+      style="margin: auto; height: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); display: flex; flex-direction: column; border: 3px solid black; border-radius: 20px"
+      #pdfViewer>
       <br />
       <section
         style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
@@ -538,17 +536,18 @@
           <!-- <b>PU</b> -->
         </button>
       </section>
-      <section
-        style="border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden"
-        [attr.width]="viewerWidth" [attr.height]="viewerHeight">
-        <pdf-viewer *ngIf="file_source != ''" [src]="file_source" [original-size]="false" [zoom]="0.85"
-          [(page)]="file_page" style="height: auto; min-height: 500px; max-height: 1000px" [attr.width]="viewerWidth"
-          [attr.height]="viewerHeight"></pdf-viewer>
+      <br />
+      <section *ngIf="file_source != ''"
+        style="height: 90%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden">
+        <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
+          [(page)]="file_page" style="min-height: 550px; height: 100%"></pdf-viewer>
+        <pdf-viewer *ngIf="this.screenWidth > 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
+          [(page)]="file_page" style="min-height: 625px; height: 100%"></pdf-viewer>
       </section>
       <br />
     </div>
   </div>
-  <div *ngIf="file_source == ''" class="content-menu" style="margin-bottom: 0; align-items: center">
+  <div *ngIf="file_source == ''" class="content-menu" role="menu" style="margin-bottom: 0; align-items: center">
     <br *ngIf="selected_state == ''" />
     <div *ngIf="selected_state == ''" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
@@ -7106,7 +7105,7 @@
     </div>
 
     <!-- Colorado CMAS -->
-    <div *ngSwitchCase="'CO'">
+    <div *ngSwitchCase="'CO'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #COGradeSelectorCard>
@@ -7396,7 +7395,7 @@
     </div>
 
     <!-- Delaware DeSSA -->
-    <div *ngSwitchCase="'DE'">
+    <div *ngSwitchCase="'DE'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #DEGradeSelectorCard>
@@ -7558,7 +7557,7 @@
     </div>
 
     <!-- Florida FSA -->
-    <div *ngSwitchCase="'FL'">
+    <div *ngSwitchCase="'FL'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #FLGradeSelectorCard>
@@ -7948,7 +7947,7 @@
     </div>
 
     <!-- Illinois IAR -->
-    <div *ngSwitchCase="'IL'">
+    <div *ngSwitchCase="'IL'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #ILGradeSelectorCard>
@@ -8193,7 +8192,7 @@
     </div>
 
     <!-- Maine MEA -->
-    <div *ngSwitchCase="'ME'">
+    <div *ngSwitchCase="'ME'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MEGradeSelectorCard>
@@ -8474,7 +8473,7 @@
     </div>
 
     <!-- Maryland MCAP -->
-    <div *ngSwitchCase="'MD'">
+    <div *ngSwitchCase="'MD'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MDGradeSelectorCard>
@@ -8773,7 +8772,7 @@
     </div>
 
     <!-- Massachusetts MCAS -->
-    <div *ngSwitchCase="'MA'">
+    <div *ngSwitchCase="'MA'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MAGradeSelectorCard>
@@ -9084,7 +9083,7 @@
     </div>
 
     <!-- Minnesota MCA -->
-    <div *ngSwitchCase="'MN'">
+    <div *ngSwitchCase="'MN'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MNGradeSelectorCard>
@@ -9428,7 +9427,7 @@
     </div>
 
     <!-- Mississippi MAAP -->
-    <div *ngSwitchCase="'MS'">
+    <div *ngSwitchCase="'MS'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MSGradeSelectorCard>
@@ -9823,7 +9822,7 @@
     </div>
 
     <!-- Missouri MAP -->
-    <div *ngSwitchCase="'MO'">
+    <div *ngSwitchCase="'MO'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #MOGradeSelectorCard>
@@ -10086,7 +10085,7 @@
     </div>
 
     <!-- Nebraska NSCAS -->
-    <div *ngSwitchCase="'NE'">
+    <div *ngSwitchCase="'NE'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NEGradeSelectorCard>
@@ -10349,7 +10348,7 @@
     </div>
 
     <!-- New Jersey NJSLA -->
-    <div *ngSwitchCase="'NJ'">
+    <div *ngSwitchCase="'NJ'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NJGradeSelectorCard>
@@ -10666,7 +10665,7 @@
     </div>
 
     <!-- New Mexico NM-MSSA -->
-    <div *ngSwitchCase="'NM'">
+    <div *ngSwitchCase="'NM'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NMGradeSelectorCard>
@@ -10956,7 +10955,7 @@
     </div>
 
     <!-- New York NYSTP -->
-    <div *ngSwitchCase="'NY'">
+    <div *ngSwitchCase="'NY'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NYGradeSelectorCard>
@@ -12026,7 +12025,7 @@
     </div>
 
     <!-- North Carolina EOG -->
-    <div *ngSwitchCase="'NC'">
+    <div *ngSwitchCase="'NC'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #NCGradeSelectorCard>
@@ -12300,7 +12299,7 @@
     </div>
 
     <!-- Pennsylvania PSSA -->
-    <div *ngSwitchCase="'PA'">
+    <div *ngSwitchCase="'PA'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #PAGradeSelectorCard>
@@ -13248,7 +13247,7 @@
     </div>
 
     <!-- Rhode Island RICAS -->
-    <div *ngSwitchCase="'RI'">
+    <div *ngSwitchCase="'RI'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #RIGradeSelectorCard>
@@ -13854,7 +13853,7 @@
     </div>
 
     <!-- South Carolina SC READY -->
-    <div *ngSwitchCase="'SC'">
+    <div *ngSwitchCase="'SC'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #SCGradeSelectorCard>
@@ -14117,7 +14116,7 @@
     </div>
 
     <!-- Tennessee TCAP -->
-    <div *ngSwitchCase="'TN'">
+    <div *ngSwitchCase="'TN'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #TNGradeSelectorCard>
@@ -14443,7 +14442,7 @@
     </div>
 
     <!-- Texas STAAR -->
-    <div *ngSwitchCase="'TX'">
+    <div *ngSwitchCase="'TX'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #TXGradeSelectorCard>
@@ -15286,7 +15285,7 @@
     </div>
 
     <!-- Wisconsin WFE -->
-    <div *ngSwitchCase="'WI'">
+    <div *ngSwitchCase="'WI'" class="content" style="margin-bottom: 0; align-items: center; width: 100%">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #WIGradeSelectorCard>

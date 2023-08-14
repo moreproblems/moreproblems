@@ -469,9 +469,12 @@
   <div class="content" role="main" (window:resize)="width_change2()"
     style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
     <canvas id="confetticanvas"></canvas>
-    <div class="card-container" style="padding: 0px">
-      <div class="card card-large" style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1350px, 95%); border: 3px solid black; border-radius: 20px"
+    <br />
+    <div class="content-menu" style="margin-bottom: 0; align-items: center">
+      <div class="card card-large"
+        style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
         #problemCard>
+        <br />
         <div class="content" style="margin: auto; align-items: center">
           <h2 *ngIf="this.problem_number > 0" style="padding-top: 20px; color: darkgrey"> {{exam_state}} {{exam_name}}
             {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>

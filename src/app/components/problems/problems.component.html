@@ -469,7 +469,7 @@
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
   <canvas id="confetticanvas"></canvas>
-  <div *ngIf="expand_filters" class="content">
+  <div *ngIf="expand_filters" class="content-menu" role="menu" style="margin-bottom: 0; align-items: center">
     <br *ngIf="grade_filters.length == 0 && subject_filters.length == 0" />
     <div *ngIf="grade_filters.length == 0 && subject_filters.length == 0" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
@@ -477,11 +477,11 @@
       <h2 *ngIf="screenWidth > mobileWidth" style="font-weight: 400; font-size: 24.5px; line-height: 30px"> Create your
         own quiz from our library of standardized test items. Find relevant practice problems for every student - with
         real-time feedback for learners or reports to share with teachers and parents. Just pick your grade and subject
-        along with quiz length, then test understanding against curriculum standards. </h2>
+        along with quiz length, then test your understanding of curriculum standards. </h2>
       <h2 *ngIf="screenWidth <= mobileWidth" style="font-weight: 400; font-size: 18.5px; line-height: 24px"> Create your
         own quiz from our library of standardized test items. Find relevant practice problems for every student - with
         real-time feedback for learners or reports to share with teachers and parents. Just pick your grade and subject
-        along with quiz length, then test understanding against curriculum standards. </h2>
+        along with quiz length, then test your understanding of curriculum standards. </h2>
       <br />
       <!-- <h3 *ngIf="screenWidth > mobileWidth" (click)="scroll(chooseGrade)" style="font-weight: 600; font-size: 20px"><a>
           Don't see your state? Click here to choose your grade and subject instead. </a></h3>
@@ -719,11 +719,12 @@
       <br />
     </div>
   </div>
-  <br />
-  <div class="card-container" style="max-width: 100%">
-    <div *ngIf="!expand_filters" class="card card-large"
-      style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1350px, 95%); border: 3px solid black; border-radius: 20px"
+  <br *ngIf="!expand_filters" />
+  <div *ngIf="!expand_filters" class="content-menu" style="margin-bottom: 0; align-items: center">
+    <div class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
       #problemCard>
+      <br />
       <div class="content" style="margin: auto; align-items: center">
         <h3 *ngIf="exam_length >= problem_number" style="margin: auto 0; color: darkgrey; font-size: 18px">
           (#{{problem_number}}/{{exam_length}}) Time spent solving problem: {{pt_minutes}}m {{pt_counter%60}}s </h3>

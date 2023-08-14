@@ -317,7 +317,7 @@
 
   progress::-webkit-progress-bar {
     border-radius: 10px;
-    background-color:lightgray;
+    background-color: lightgray;
     border: 1px solid darkslategrey;
   }
 
@@ -489,8 +489,9 @@
 
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
-  <!-- <div class="content-menu" role="menu" style="margin-bottom: 0px"> -->
-    <br *ngIf="file_source != ''" />
+  <div *ngIf="file_source != ''" class="content-menu" role="menu"
+    style="margin-bottom: 0px; align-items: center">
+    <br />
     <section *ngIf="file_source != ''" style="width: 100%; align-items: left">
       <div (click)="file_source=''; exam_fav=false" class="card card-small"
         style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -499,11 +500,12 @@
         <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> All favorited exams </a>
       </div>
     </section>
-    <!-- <br *ngIf="file_source != ''" /> -->
+    <br />
     <!-- PDF Viewer -->
-    <div *ngIf="file_source != ''" class="card card-large" (window:resize)="width_change()"
-      style="border: 3px solid black; border-radius: 20px; display: block; min-width: 310px; max-width: 1000px; width: 70%; max-height: 800px"
-      [attr.width]="viewerWidth" [attr.height]="viewerHeight" #pdfViewer>
+    <div class="card card-large" (window:resize)="width_change()"
+      style="margin: auto; height: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); display: flex; flex-direction: column; border: 3px solid black; border-radius: 20px"
+      #pdfViewer>
+      <br />
       <section
         style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
         <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="margin: auto 25px; text-align: center; font-size: 20px">
@@ -523,8 +525,7 @@
         </button>
         <button *ngIf="file_source != ''" (click)="download_exam()" class="grade-button"
           style="margin: 10px 10px 10px 0; width: auto; height: auto">
-          <img *ngIf="this.screenWidth <= this.mobileWidth" src="./assets/icons/download.png"
-            style="height: 25px">
+          <img *ngIf="this.screenWidth <= this.mobileWidth" src="./assets/icons/download.png" style="height: 25px">
           <b *ngIf="this.screenWidth > this.mobileWidth"> Download </b>
         </button>
         <button *ngIf="online_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
@@ -548,30 +549,38 @@
           <!-- <b>PU</b> -->
         </button>
       </section>
-      <section
-        style="border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden"
-        [attr.width]="viewerWidth" [attr.height]="viewerHeight">
-        <pdf-viewer *ngIf="file_source != ''" [src]="file_source" [original-size]="false" [zoom]="0.85"
-          [(page)]="file_page" style="min-height: 500px; max-height: 1000px" [attr.width]="viewerWidth"
-          [attr.height]="viewerHeight"></pdf-viewer>
+      <br />
+      <section *ngIf="file_source != ''"
+        style="height: 90%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden">
+        <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
+          [(page)]="file_page" style="min-height: 550px; height: 100%"></pdf-viewer>
+        <pdf-viewer *ngIf="this.screenWidth > 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
+          [(page)]="file_page" style="min-height: 625px; height: 100%"></pdf-viewer>
       </section>
+      <br />
     </div>
-  <!-- </div> -->
+    <br />
+  </div>
   <div *ngIf="file_source == ''" class="content" role="main">
     <div *ngIf="this.authService.userData.role == 'Student'" class="subcontent">
       <h2 #favoriteExams>Your In Progress Exams</h2>
       <br />
       <!-- <input type="hidden" #selection> -->
       <div class="card-container" style="max-width: 100%">
-        <div *ngFor="let exm of this.inprogress_set" class="card card-medium" style="display: block; text-align: center; max-width: 350px">
+        <div *ngFor="let exm of this.inprogress_set" class="card card-medium"
+          style="display: block; text-align: center; max-width: 350px">
           <h3> {{exam_names[exm]}} </h3>
           <!-- resolve hand code exam length -->
           <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} / 32 </h4>
           <progress value="{{inprogress_exams[exm].progress}}" max="32"
-            style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto" #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+            style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
+            #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           <!-- time spent on exam so far -->
-          <h4 style="margin: 1px auto; font-weight: 500"> Last Submission: <b>{{""+inprogress_exams[exm].lastdate}}</b> {{""+inprogress_exams[exm].lasttime}} </h4>
-          <button class="grade-button" style="margin: auto; margin-top: 25px; padding: 10px 5px" routerLink="/exam/{{exm}}" routerLinkActive="active"> <b>Resume Exam</b> </button>
+          <h4 style="margin: 1px auto; font-weight: 500"> Last Submission:
+            <b>{{""+inprogress_exams[exm].lastdate}}</b> {{""+inprogress_exams[exm].lasttime}}
+          </h4>
+          <button class="grade-button" style="margin: auto; margin-top: 25px; padding: 10px 5px"
+            routerLink="/exam/{{exm}}" routerLinkActive="active"> <b>Resume Exam</b> </button>
         </div>
       </div>
     </div>
@@ -583,7 +592,8 @@
         <button *ngFor="let fav of this.authService.userData.exams.favorites.slice(1)" class="card card-small"
           (click)="select_exam(fav); scroll_top()" tabindex="0"
           style="display: flex; flex-direction: row; align-items: center">
-          <span style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf; </span>
+          <span style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+          </span>
           <span> <b>{{exam_names[fav]}}</b> </span>
         </button>
       </div>

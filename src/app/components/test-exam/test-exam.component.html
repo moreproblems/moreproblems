@@ -497,9 +497,11 @@
     <h3 style="color: red"> {{generate_message}} </h3>
   </div>
 
-  <div class="card-container" style="max-width: 100%">
-    <div *ngIf="!expand_filters" class="card card-large"
-      style="height: auto; width: auto; margin: auto; padding: 0 5%; text-align: center; max-width: min(1350px, 95%); border: 3px solid black; border-radius: 20px" #problemCard>
+  <div *ngIf="!expand_filters" class="content-menu" style="margin-bottom: 0; align-items: center">
+    <div class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+      #problemCard>
+      <br />
       <div class="content" style="margin: auto; align-items: center">
         <h2 *ngIf="this.problem_number > 0" style="padding-top: 20px; color: darkgrey"> {{exam_state}} {{exam_name}}
           {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
