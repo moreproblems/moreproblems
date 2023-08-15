@@ -1,530 +1,473 @@
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
-    :host {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: 14px;
-        color: #333;
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin: 8px 0;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
 
-    p {
-        margin: 0;
-    }
+  p {
+    margin: 0;
+  }
 
-    .spacer {
-        flex: 1;
-    }
+  .spacer {
+    flex: 1;
+  }
 
-    .toolbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 85px;
-        display: flex;
-        align-items: center;
-        background-color: #0a1e33;
-        color: white;
-        font-weight: 600;
-        padding: 5px 10px 2px 20px;
-    }
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    background-color: #0a1e33;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px 2px 20px;
+  }
 
-    .toolbar img {
-        /* margin: 0 16px; */
-        position: absolute;
-        left: -10px;
-        top: -18px;
-    }
+  .toolbar img {
+    /* margin: 0 16px; */
+    position: absolute;
+    left: -10px;
+    top: -18px;
+  }
 
-    .toolbar #twitter-logo {
-        height: 40px;
-        margin: 0 8px;
-    }
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
 
-    .toolbar #youtube-logo {
-        height: 40px;
-        margin: 0 16px;
-    }
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
 
-    .toolbar #twitter-logo:hover,
-    .toolbar #youtube-logo:hover {
-        opacity: 0.8;
-    }
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
 
-    .content-menu {
-        display: flex;
-        margin: 0 auto 32px;
-        padding: 0 16px;
-        width: 90%;
-        flex-direction: column;
-        align-items: center;
-    }
+  #confetticanvas {
+    position: fixed;
+    z-index: 50;
+    top: 81px;
+    right: 0px;
+    bottom: 0px;
+    left: 125px;
+    height: 0px;
+  }
 
-    .content {
-        display: flex;
-        margin: 0 auto 32px;
-        padding: 0;
-        width: 95%;
-        flex-direction: column;
-        align-items: center;
-    }
+  .content-menu {
+    display: flex;
+    margin: 0 auto 32px;
+    padding: 0 16px;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .subcontent {
-        display: flex;
-        margin: 12px auto;
-        padding: 0px;
-        width: 95%;
-        flex-direction: column;
-        align-items: center;
-    }
+  .content {
+    display: flex;
+    margin: 0 auto 32px;
+    padding: 0;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    svg.material-icons {
-        height: 24px;
-        width: auto;
-    }
+  .subcontent {
+    display: flex;
+    margin: 12px auto;
+    padding: 0px;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    svg.material-icons:not(:last-child) {
-        margin-right: 8px;
-    }
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
 
-    .card svg.material-icons path {
-        fill: #888;
-    }
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
 
-    .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 16px;
-    }
+  .card svg.material-icons path {
+    fill: #888;
+  }
 
-    .card {
-        all: unset;
-        border-radius: 4px;
-        border: 1px solid #eee;
-        background-color: #fafafa;
-        /* height: 40px;
-          width: 200px; */
-        margin: 0 8px 16px;
-        padding: 8px 8px;
-        display: flex;
-        flex-direction: row;
-        /* justify-content: center; */
-        /* align-items: center; */
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
 
-    /* .card-container .card:not(:last-child) {
-        margin-right: 0;
-      }
-    
-      .card-container .switch:not(:last-child) {
-        margin-right: 0;
-      } */
+  .card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    /* height: 40px;
+      width: 200px; */
+    margin: 0 8px 16px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
 
-    .card.card-small {
-        min-height: 16px;
-        width: 210px;
-        border-radius: 8px;
-    }
+  /* .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
 
-    .card.card-small span {
-        text-align: center;
-    }
+  .card-container .switch:not(:last-child) {
+    margin-right: 0;
+  } */
 
-    .card.card-medium {
-        height: auto;
-        width: 80%;
-        border-radius: 8px;
-        padding: 20px;
-    }
+  .card.card-small {
+    min-height: 16px;
+    width: 210px;
+    border-radius: 8px;
+  }
 
-    .card.card-medium:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
+  .card.card-medium {
+    height: auto;
+    width: 80%;
+    border-radius: 8px;
+    padding: 20px;
+  }
 
-    .card.card-large {
-        /* width: auto;
-        height: auto; */
-        border-radius: 8px;
-        margin: 8px 8px;
-        padding: 8px 20px;
-    }
+  .card.card-medium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
 
-    .card.card-large:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
+  .card.card-large {
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    margin: 8px 8px;
+    padding: 8px 0;
+  }
 
-    .card-container .card:not(.highlight-card) {
-        cursor: pointer;
-    }
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
 
-    .card-container .card:not(.highlight-card):hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
 
-    /* .card-container .card:not(.highlight-card):hover .material-icons path {
-        fill: rgb(105, 103, 103);
-      } */
+  /* .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  } */
 
-    .card.highlight-card {
-        background-color: #0a1e33;
-        color: white;
-        font-weight: 600;
-        border: none;
-        width: auto;
-        min-width: 30%;
-        position: relative;
-    }
+  .card.highlight-card {
+    background-color: #0a1e33;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
 
-    .card.card.highlight-card span {
-        margin-left: 60px;
-    }
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
 
-    svg#rocket {
-        width: 80px;
-        position: absolute;
-        left: -10px;
-        top: -24px;
-    }
+  svg#rocket {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+  }
 
-    svg#rocket-smoke {
-        height: calc(100vh - 95px);
-        position: absolute;
-        top: 10px;
-        right: 180px;
-        z-index: -10;
-    }
+  svg#rocket-smoke {
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+  }
 
-    a,
-    a:visited,
-    a:hover {
-        color: #1976d2;
-        text-decoration: none;
-    }
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
 
-    a:hover {
-        color: #125699;
-    }
+  a:hover {
+    color: #125699;
+  }
 
-    button.grade-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        margin: 8px;
-        padding: 8px 8px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
+  button.grade-button {
+    font-size: 18px;
+    color: white;
+    background-color: #1976d2;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin: 8px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
 
-    button.grade-button:hover {
-        background-color: #0a1e33;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
+  button.grade-button:hover {
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
 
-    button.grade-button-gray {
-        font-size: 18px;
-        color: white;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
+  button.grade-button-gray {
+    font-size: 18px;
+    color: white;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
 
-    button.grade-button-gray:hover {
-        background-color: #0a1e33;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
+  button.grade-button-gray:hover {
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
 
-    button.toggle-button {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
+  button.toggle-button {
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
 
-    .toggle-button:before {
-        background-color: #1976d2;
-        color: white;
-    }
+  .toggle-button:before {
+    background-color: #1976d2;
+    color: white;
+  }
 
-    button.toggle-button-off {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-        width: 100%;
-    }
+  button.toggle-button-off {
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
+  }
 
-    button.toggle-button-on {
-        font-size: 18px;
-        background-color: #1976d2;
-        color: white;
-        border-radius: 12px;
-        border: 3px solid #0a1e33;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-        width: 100%;
-    }
+  button.toggle-button-on {
+    font-size: 18px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 12px;
+    border: 3px solid #0a1e33;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
+  }
 
-    .select-avatar {
-        opacity: 1;
-        display: block;
-        width: 100%;
-        height: auto;
-        transition: .5s ease;
-        backface-visibility: hidden;
-    }
+  .terminal {
+    position: relative;
+    /* width: 100%; */
+    max-width: 625px;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+    color: #c2c3c4;
+  }
 
-    .middle {
-        transition: .5s ease;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%)
-    }
+  .terminal::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: rgb(58, 58, 58);
+    color: #c2c3c4;
+    width: 100%;
+    line-height: 0;
+    padding: 14px 0;
+    font-size: 2rem;
+    text-indent: 4px;
+  }
 
-    .select-middle {
-        transition: .5s ease;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        opacity: 1;
-    }
+  .terminal pre {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+    text-align: center;
+  }
 
-    .avatar-container:hover .select-avatar {
-        opacity: 0.3;
-    }
+  .circle-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+  }
 
-    .avatar-container:hover .middle {
-        opacity: 1;
-    }
+  .circle-link:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
 
-    progress {
-        border-radius: 10px;
-    }
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
 
-    progress::-webkit-progress-bar {
-        border-radius: 10px;
-        background-color: lightgray;
-        border: 1px solid darkslategrey;
-    }
+  footer a {
+    display: flex;
+    align-items: center;
+  }
 
-    progress::-webkit-progress-value {
-        border-radius: 10px;
-        background-color: limegreen;
-        /* border: 2px solid black; */
-    }
+  .github-star-badge {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27, 31, 35, .2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
+  }
 
-    progress::-moz-progress-bar {
-        border-radius: 10px;
-    }
+  .github-star-badge:hover {
+    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+    border-color: rgba(27, 31, 35, .35);
+    background-position: -.5em;
+  }
 
+  .github-star-badge .material-icons {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 75px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  input:checked+.toggle-button-on {
+    background-color: #1976d2;
+    color: white
+  }
+
+  input:hover+.toggle-button-on {
+    background-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  input:checked+.toggle-button-off {
+    background-color: #ccc;
+    color: black;
+  }
+
+  input:hover+.toggle-button-off {
+    background-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+
+    .card-container>*:not(.circle-link),
     .terminal {
-        position: relative;
-        /* width: 100%; */
-        max-width: 625px;
-        border-radius: 6px;
-        padding-top: 45px;
-        margin-top: 8px;
-        overflow: hidden;
-        background-color: rgb(15, 15, 16);
-        color: #c2c3c4;
+      /* width: 100%; */
     }
 
-    .terminal::before {
-        content: "\2022 \2022 \2022";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 4px;
-        background: rgb(58, 58, 58);
-        color: #c2c3c4;
-        width: 100%;
-        line-height: 0;
-        padding: 14px 0;
-        font-size: 2rem;
-        text-indent: 4px;
+    .card:not(.highlight-card) {
+      /* height: 16px; */
+      margin: 8px 0;
     }
 
-    .terminal pre {
-        font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-        color: white;
-        padding: 0 1rem 1rem;
-        margin: 0;
-        text-align: center;
+    .card.highlight-card span {
+      margin-left: 72px;
     }
 
-    .circle-link {
-        height: 40px;
-        width: 40px;
-        border-radius: 40px;
-        margin: 8px;
-        background-color: white;
-        border: 1px solid #eeeeee;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        transition: 1s ease-out;
-    }
-
-    .circle-link:hover {
-        transform: translateY(-0.25rem);
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    footer {
-        margin-top: 8px;
-        display: flex;
-        align-items: center;
-        line-height: 20px;
-    }
-
-    footer a {
-        display: flex;
-        align-items: center;
-    }
-
-    .github-star-badge {
-        color: #24292e;
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        padding: 3px 10px;
-        border: 1px solid rgba(27, 31, 35, .2);
-        border-radius: 3px;
-        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-        margin-left: 4px;
-        font-weight: 600;
-    }
-
-    .github-star-badge:hover {
-        background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-        border-color: rgba(27, 31, 35, .35);
-        background-position: -.5em;
-    }
-
-    .github-star-badge .material-icons {
-        height: 16px;
-        width: 16px;
-        margin-right: 4px;
-    }
-
-    /* The switch - the box around the slider */
-    .switch {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-        height: auto;
-        max-width: 250px;
-        max-height: 75px;
-        transition: all 0.2s ease-in-out;
-    }
-
-    /* Hide default HTML checkbox */
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-
-    input:checked+.toggle-button-on {
-        background-color: #1976d2;
-        color: white
-    }
-
-    input:hover+.toggle-button-on {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
-    input:checked+.toggle-button-off {
-        background-color: #ccc;
-        color: black;
-    }
-
-    input:hover+.toggle-button-off {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
-    /* Responsive Styles */
-    @media screen and (max-width: 767px) {
-
-        .card-container>*:not(.circle-link),
-        .terminal {
-            /* width: 100%; */
-        }
-
-        .card:not(.highlight-card) {
-            /* height: 16px; */
-            margin: 8px 0;
-        }
-
-        .card.highlight-card span {
-            margin-left: 72px;
-        }
-
-    }
+  }
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main" (window:resize)="width_change2()"
     style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
-    <div class="content-menu" role="menu" style="margin-bottom: 0px; max-width: 95%; width: auto">
+    <div class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
         <br />
         <section style="width: 100%; align-items: left">
             <div routerLink="/standards" routerLinkActive="active" class="card card-small"
@@ -536,14 +479,14 @@
         </section>
         <br />
         <div class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1350px, 95%); display: flex; flex-direction: column">
             <br />
             <h2 style="text-align: center; margin-bottom: 10px"> Ninth & Tenth Grade English Language Arts (Common Core)
                 Learning Standards </h2>
             <br />
-            <div class="card-container" style="max-width: 100%">
+            <div class="card-container" style="width: 100%">
                 <div class="card card-medium" (click)="toggle_domain(1)"
-                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    style="width: 95%; text-align: center; flex-direction: column">
                     <div style="display: flex; flex-direction: row; align-items: center">
                         <div style="margin: 0 10px">
                             <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -626,7 +569,7 @@
                     </div>
                 </div>
                 <div class="card card-medium" (click)="toggle_domain(2)"
-                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    style="width: 95%; text-align: center; flex-direction: column">
                     <div style="display: flex; flex-direction: row; align-items: center">
                         <div style="margin: 0 10px">
                             <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -689,7 +632,7 @@
                     </div>
                 </div>
                 <div class="card card-medium" (click)="toggle_domain(3)"
-                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    style="width: 95%; text-align: center; flex-direction: column">
                     <div style="display: flex; flex-direction: row; align-items: center">
                         <div style="margin: 0 10px">
                             <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
@@ -750,7 +693,7 @@
                     </div>
                 </div>
                 <div class="card card-medium" (click)="toggle_domain(4)"
-                    style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+                    style="width: 95%; text-align: center; flex-direction: column">
                     <div style="display: flex; flex-direction: row; align-items: center">
                         <div style="margin: 0 10px">
                             <img *ngIf="domain_state[4]" src="./assets/icons/caret.png"

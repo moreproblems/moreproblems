@@ -10,6 +10,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { TestExamComponent } from './components/test-exam/test-exam.component';
+import { PA22G3MExamComponent } from './components/PA22G3M-exam/PA22G3M-exam.component';
+import { PA22G3MKeyComponent } from './components/PA22G3M-key/PA22G3M-key.component';
 import { TX22G3MExamComponent } from './components/TX22G3M-exam/TX22G3M-exam.component';
 import { TX22G3MKeyComponent } from './components/TX22G3M-key/TX22G3M-key.component';
 import { TX21G3MExamComponent } from './components/TX21G3M-exam/TX21G3M-exam.component';
@@ -133,6 +135,8 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'exam/test', component: TestExamComponent },
+  { path: 'exam/PA22G3M', component: PA22G3MExamComponent },
+  { path: 'exam/PA22G3M/key', component: PA22G3MKeyComponent },
   { path: 'exam/TX22G3M', component: TX22G3MExamComponent },
   { path: 'exam/TX22G3M/key', component: TX22G3MKeyComponent },
   { path: 'exam/TX21G3M', component: TX21G3MExamComponent },

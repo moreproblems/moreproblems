@@ -55,6 +55,8 @@ import { HSMFStandardsComponent } from './components/HSM-F-standards/HSM-F-stand
 import { HSMGStandardsComponent } from './components/HSM-G-standards/HSM-G-standards.component';
 import { HSMSPStandardsComponent } from './components/HSM-SP-standards/HSM-SP-standards.component';
 import { TestExamComponent } from './components/test-exam/test-exam.component';
+import { PA22G3MExamComponent } from './components/PA22G3M-exam/PA22G3M-exam.component';
+import { PA22G3MKeyComponent } from './components/PA22G3M-key/PA22G3M-key.component';
 import { TX22G3MExamComponent } from './components/TX22G3M-exam/TX22G3M-exam.component';
 import { TX22G3MKeyComponent } from './components/TX22G3M-key/TX22G3M-key.component';
 import { TX21G3MExamComponent } from './components/TX21G3M-exam/TX21G3M-exam.component';
@@ -187,6 +189,8 @@ import { TX18G8SSKeyComponent } from './components/TX18G8SS-key/TX18G8SS-key.com
     HSMFStandardsComponent,
     HSMGStandardsComponent,
     HSMSPStandardsComponent,
+    PA22G3MExamComponent,
+    PA22G3MKeyComponent,
     TX22G3MExamComponent,
     TX22G3MKeyComponent,
     TX21G3MExamComponent,

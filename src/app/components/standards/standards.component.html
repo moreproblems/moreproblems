@@ -488,7 +488,7 @@
       <br />
       <h2 style="margin-bottom: 10px" #subjectTitle> {{subject_name}} (Common Core) Learning Goals </h2>
       <!-- <br *ngIf="selected_subject != ''" /> -->
-      <div *ngSwitchCase="'KM'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'KM'" class="card-container" style="width: 100%">
         <a routerLink="/standards/K-Math" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this subject </a>
@@ -499,7 +499,7 @@
           other topics. </h4>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -525,7 +525,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -548,7 +548,7 @@
         </div>
         <br />
       </div>
-      <div *ngSwitchCase="'G1M'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'G1M'" class="card-container" style="width: 100%">
         <a routerLink="/standards/G1-Math" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this subject </a>
@@ -560,7 +560,7 @@
           length units; and (4) reasoning about attributes of, and composing and decomposing geometric shapes. </h4>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -587,7 +587,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -610,7 +610,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(3)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
@@ -631,7 +631,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(4)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[4]" src="./assets/icons/caret.png"
@@ -654,7 +654,7 @@
           </div>
         </div>
       </div>
-      <div *ngSwitchCase="'G2M'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'G2M'" class="card-container" style="width: 100%">
         <a routerLink="/standards/G2-Math" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this subject </a>
@@ -664,7 +664,7 @@
           subtraction; (3) using standard units of measure; and (4) describing and analyzing shapes. </h4>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -685,7 +685,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -708,7 +708,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(3)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
@@ -728,7 +728,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(4)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[4]" src="./assets/icons/caret.png"
@@ -749,7 +749,7 @@
           </div>
         </div>
       </div>
-      <div *ngSwitchCase="'G3M'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'G3M'" class="card-container" style="width: 100%">
         <a routerLink="/standards/G3-Math" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this subject </a>
@@ -761,7 +761,7 @@
           and (4) describing and analyzing two-dimensional shapes. </h4>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -786,7 +786,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -812,7 +812,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(3)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
@@ -835,7 +835,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(4)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[4]" src="./assets/icons/caret.png"
@@ -855,7 +855,7 @@
           </div>
         </div>
       </div>
-      <div *ngSwitchCase="'G4M'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'G4M'" class="card-container" style="width: 100%">
         <a routerLink="/standards/G4-Math" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this subject </a>
@@ -869,7 +869,7 @@
         </h4>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -899,7 +899,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -922,7 +922,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(3)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
@@ -944,7 +944,7 @@
           </div>
         </div>
       </div>
-      <div *ngSwitchCase="'G5M'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'G5M'" class="card-container" style="width: 100%">
         <a routerLink="/standards/G5-Math" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this subject </a>
@@ -958,7 +958,7 @@
           understanding of volume. </h4>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -983,7 +983,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -1010,7 +1010,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(3)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
@@ -1034,7 +1034,7 @@
           </div>
         </div>
       </div>
-      <div *ngSwitchCase="'G6M'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'G6M'" class="card-container" style="width: 100%">
         <a routerLink="/standards/G6-Math" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this subject </a>
@@ -1047,7 +1047,7 @@
         </h4>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -1071,7 +1071,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -1095,7 +1095,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(3)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
@@ -1120,7 +1120,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(4)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[4]" src="./assets/icons/caret.png"
@@ -1147,7 +1147,7 @@
           </div>
         </div>
       </div>
-      <div *ngSwitchCase="'G7M'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'G7M'" class="card-container" style="width: 100%">
         <a routerLink="/standards/G7-Math" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this subject </a>
@@ -1160,7 +1160,7 @@
           about populations based on samples. </h4>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -1184,7 +1184,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -1210,7 +1210,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(3)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
@@ -1236,7 +1236,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(4)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[4]" src="./assets/icons/caret.png"
@@ -1256,7 +1256,7 @@
           </div>
         </div>
       </div>
-      <div *ngSwitchCase="'G8M'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'G8M'" class="card-container" style="width: 100%">
         <a routerLink="/standards/G8-Math" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this subject </a>
@@ -1269,7 +1269,7 @@
           and understanding and applying the Pythagorean Theorem. </h4>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -1305,7 +1305,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -1327,7 +1327,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(3)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
@@ -1354,13 +1354,13 @@
           </div>
         </div>
       </div>
-      <div *ngSwitchCase="'HSM-NQ'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'HSM-NQ'" class="card-container" style="width: 100%">
         <a routerLink="/standards/HS-Math-Number-Quantity" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this category </a>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -1399,7 +1399,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -1427,13 +1427,13 @@
           </div>
         </div>
       </div>
-      <div *ngSwitchCase="'HSM-A'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'HSM-A'" class="card-container" style="width: 100%">
         <a routerLink="/standards/HS-Math-Algebra" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this category </a>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -1468,7 +1468,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -1509,7 +1509,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(3)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[3]" src="./assets/icons/caret.png"
@@ -1530,13 +1530,13 @@
           </div>
         </div>
       </div>
-      <div *ngSwitchCase="'HSM-F'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'HSM-F'" class="card-container" style="width: 100%">
         <a routerLink="/standards/HS-Math-Functions" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this category </a>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -1576,7 +1576,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -1602,7 +1602,7 @@
       <div *ngSwitchCase="'HSM-M'" class="card-container" style="max-width: 100%">
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -1638,13 +1638,13 @@
           </div>
         </div>
       </div>
-      <div *ngSwitchCase="'HSM-G'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'HSM-G'" class="card-container" style="width: 100%">
         <a routerLink="/standards/HS-Math-Geometry" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this category </a>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -1711,7 +1711,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
@@ -1732,13 +1732,13 @@
           </div>
         </div>
       </div>
-      <div *ngSwitchCase="'HSM-SP'" class="card-container" style="max-width: 100%">
+      <div *ngSwitchCase="'HSM-SP'" class="card-container" style="width: 100%">
         <a routerLink="/standards/HS-Math-Statistics-Probability" routerLinkActive="active"
           style="font-size: 20px; font-weight: 600; padding-left: 10px; margin-bottom: 25px"> Click here to see learning
           standards for this category </a>
         <br />
         <div class="card card-medium" (click)="toggle_domain(1)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[1]" src="./assets/icons/caret.png"
@@ -1787,7 +1787,7 @@
           </div>
         </div>
         <div class="card card-medium" (click)="toggle_domain(2)"
-          style="margin: auto; text-align: center; margin: 5px auto; flex-direction: column">
+          style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
             <div style="margin: 0 10px">
               <img *ngIf="domain_state[2]" src="./assets/icons/caret.png"
