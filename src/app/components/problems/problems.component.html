@@ -737,14 +737,10 @@
             <div *ngFor="let prob of exam_dump | keyvalue"
               style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
               <label *ngIf="problem_number == +prob.key" class="switch"
-                style="max-height: 500px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
+                style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: auto">
                 <input type="checkbox">
-                <button *ngIf="!sub_topic" (click)="toggle_topic()" class="topic-button"
-                  style="width: 100%; font-size: 16px; min-width: 150px">
-                  <b>{{prob.value.Topic}}</b> </button>
-                <button *ngIf="sub_topic" (click)="toggle_topic()" class="topic-button"
-                  style="width: 100%; font-size: 16px; min-width: 150px">
-                  {{prob.value.SubTopic}} </button>
+                <button class="topic-button" style="width: 100%; font-size: 16px; min-width: 150px">
+                  <b>{{prob.value.Topic}}:</b> {{prob.value.SubTopic}} </button>
               </label>
               <!-- <p *ngIf="problem_number == +prob.key"> {{prob.value.Content}} </p> -->
             </div>

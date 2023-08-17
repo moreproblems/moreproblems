@@ -572,18 +572,18 @@ export class PA22G3MExamComponent implements OnInit {
                 this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
             }
         }
-        if (this.number_correct >= 27) {
-            this.performance_level = "Masters Grade Level Performance";
-        }
-        else if (this.number_correct >= 23) {
-            this.performance_level = "Meets Grade Level Performance";
-        }
-        else if (this.number_correct >= 16) {
-            this.performance_level = "Approaches Grade Level Performance";
-        }
-        else {
-            this.performance_level = "Does Not Meet Grade Level Performance";
-        }
+        // if (this.number_correct >= 27) {
+        //     this.performance_level = "Masters Grade Level Performance";
+        // }
+        // else if (this.number_correct >= 23) {
+        //     this.performance_level = "Meets Grade Level Performance";
+        // }
+        // else if (this.number_correct >= 16) {
+        //     this.performance_level = "Approaches Grade Level Performance";
+        // }
+        // else {
+        //     this.performance_level = "Does Not Meet Grade Level Performance";
+        // }
         if (this.authService.userData) {
             if (this.authService.userData.role == 'Student') {
                 this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';

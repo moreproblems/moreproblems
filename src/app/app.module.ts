@@ -57,6 +57,14 @@ import { HSMSPStandardsComponent } from './components/HSM-SP-standards/HSM-SP-st
 import { TestExamComponent } from './components/test-exam/test-exam.component';
 import { PA22G3MExamComponent } from './components/PA22G3M-exam/PA22G3M-exam.component';
 import { PA22G3MKeyComponent } from './components/PA22G3M-key/PA22G3M-key.component';
+import { PA21G3MExamComponent } from './components/PA21G3M-exam/PA21G3M-exam.component';
+import { PA21G3MKeyComponent } from './components/PA21G3M-key/PA21G3M-key.component';
+import { PA19G3MExamComponent } from './components/PA19G3M-exam/PA19G3M-exam.component';
+import { PA19G3MKeyComponent } from './components/PA19G3M-key/PA19G3M-key.component';
+import { PA18G3MExamComponent } from './components/PA18G3M-exam/PA18G3M-exam.component';
+import { PA18G3MKeyComponent } from './components/PA18G3M-key/PA18G3M-key.component';
+import { PA16G3MExamComponent } from './components/PA16G3M-exam/PA16G3M-exam.component';
+import { PA16G3MKeyComponent } from './components/PA16G3M-key/PA16G3M-key.component';
 import { TX22G3MExamComponent } from './components/TX22G3M-exam/TX22G3M-exam.component';
 import { TX22G3MKeyComponent } from './components/TX22G3M-key/TX22G3M-key.component';
 import { TX21G3MExamComponent } from './components/TX21G3M-exam/TX21G3M-exam.component';
@@ -191,6 +199,14 @@ import { TX18G8SSKeyComponent } from './components/TX18G8SS-key/TX18G8SS-key.com
     HSMSPStandardsComponent,
     PA22G3MExamComponent,
     PA22G3MKeyComponent,
+    PA21G3MExamComponent,
+    PA21G3MKeyComponent,
+    PA19G3MExamComponent,
+    PA19G3MKeyComponent,
+    PA18G3MExamComponent,
+    PA18G3MKeyComponent,
+    PA16G3MExamComponent,
+    PA16G3MKeyComponent,
     TX22G3MExamComponent,
     TX22G3MKeyComponent,
     TX21G3MExamComponent,
