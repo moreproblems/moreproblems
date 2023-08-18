@@ -20,6 +20,8 @@ import { PA18G3MExamComponent } from './components/PA18G3M-exam/PA18G3M-exam.com
 import { PA18G3MKeyComponent } from './components/PA18G3M-key/PA18G3M-key.component';
 import { PA16G3MExamComponent } from './components/PA16G3M-exam/PA16G3M-exam.component';
 import { PA16G3MKeyComponent } from './components/PA16G3M-key/PA16G3M-key.component';
+import { PA15G3MExamComponent } from './components/PA15G3M-exam/PA15G3M-exam.component';
+import { PA15G3MKeyComponent } from './components/PA15G3M-key/PA15G3M-key.component';
 import { TX22G3MExamComponent } from './components/TX22G3M-exam/TX22G3M-exam.component';
 import { TX22G3MKeyComponent } from './components/TX22G3M-key/TX22G3M-key.component';
 import { TX21G3MExamComponent } from './components/TX21G3M-exam/TX21G3M-exam.component';
@@ -153,6 +155,8 @@ const routes: Routes = [
   { path: 'exam/PA18G3M/key', component: PA18G3MKeyComponent },
   { path: 'exam/PA16G3M', component: PA16G3MExamComponent },
   { path: 'exam/PA16G3M/key', component: PA16G3MKeyComponent },
+  { path: 'exam/PA15G3M', component: PA15G3MExamComponent },
+  { path: 'exam/PA15G3M/key', component: PA15G3MKeyComponent },
   { path: 'exam/TX22G3M', component: TX22G3MExamComponent },
   { path: 'exam/TX22G3M/key', component: TX22G3MKeyComponent },
   { path: 'exam/TX21G3M', component: TX21G3MExamComponent },

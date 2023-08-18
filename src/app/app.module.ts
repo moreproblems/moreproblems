@@ -65,6 +65,8 @@ import { PA18G3MExamComponent } from './components/PA18G3M-exam/PA18G3M-exam.com
 import { PA18G3MKeyComponent } from './components/PA18G3M-key/PA18G3M-key.component';
 import { PA16G3MExamComponent } from './components/PA16G3M-exam/PA16G3M-exam.component';
 import { PA16G3MKeyComponent } from './components/PA16G3M-key/PA16G3M-key.component';
+import { PA15G3MExamComponent } from './components/PA15G3M-exam/PA15G3M-exam.component';
+import { PA15G3MKeyComponent } from './components/PA15G3M-key/PA15G3M-key.component';
 import { TX22G3MExamComponent } from './components/TX22G3M-exam/TX22G3M-exam.component';
 import { TX22G3MKeyComponent } from './components/TX22G3M-key/TX22G3M-key.component';
 import { TX21G3MExamComponent } from './components/TX21G3M-exam/TX21G3M-exam.component';
@@ -207,6 +209,8 @@ import { TX18G8SSKeyComponent } from './components/TX18G8SS-key/TX18G8SS-key.com
     PA18G3MKeyComponent,
     PA16G3MExamComponent,
     PA16G3MKeyComponent,
+    PA15G3MExamComponent,
+    PA15G3MKeyComponent,
     TX22G3MExamComponent,
     TX22G3MKeyComponent,
     TX21G3MExamComponent,
