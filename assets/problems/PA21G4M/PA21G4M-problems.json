@@ -4,43 +4,41 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Numbers & Operations - Fractions",
-        "SubTopic": "Demonstrate that when a whole or set is partitioned into y equal parts, the fraction 1/y represents 1 part of the whole and/or the fraction x/y represents x equal parts of the whole (limit denominators to 2, 3, 4, 6, and 8; limit numerators to whole numbers less than the denominator; and no simplification necessary).",
+        "SubTopic": " Add and subtract mixed numbers with a common denominator (denominators limited to 2, 3, 4, 5, 6, 8, 10, 12, and 100; no regrouping with subtraction; fractions do not need to be simplified; and no improper fractions as the final answers).",
         "Content": [
-            "Alex is painting the chairs in a classroom.",
-            "So far he has painted 3 of the 8 chairs in the classroom.",
-            "Which statement correctly compares the fraction of painted chairs to the fraction of unpainted chairs?"
+            "Add: 6 2/5 + 3 4/5"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3/8 < 5/8",
+                "Choice": "4 4/5",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Identifies the comparison symbol as “less than” and orders the fractions based on the numerators (3 and 5) while identifying the common denominator to represent the whole (8 chairs in the classroom).",
-                    "Percent": 68
+                    "Correct": false,
+                    "Rationale": "Multiplies the whole number by the numerator of each fraction and then adds 12/5 + 12/5.",
+                    "Percent": 4
                 }
             },
             "B": {
-                "Choice": "5/8 < 3/8",
+                "Choice": "9 1/5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sets up the fractions correctly but reverses the comparison.",
-                    "Percent": 16
+                    "Rationale": "Does not add the additional 1 to the whole number when changing 6/5 to 1/5.",
+                    "Percent": 37
                 }
             },
             "C": {
-                "Choice": "8/3 < 8/5",
+                "Choice": "10 1/5",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Uses reciprocals of the fractions and compares denominators.",
-                    "Percent": 10
+                    "Correct": true,
+                    "Rationale": "Converts each mixed number to an improper fraction by multiplying the whole part by the denominator (5) and then adding the product to the numerator to get 32/5 + 19/5 = 51/5, and then converts 51/5 back to a mixed number by dividing 51 by 5 for the whole part and leaving the remainder as the new numerator OR adds the whole parts and the fractional parts separately to get 9 and 6/5, converts the 6/5 to 1 1/5, and then adds 9 to 1 1/5.",
+                    "Percent": 57
                 }
             },
             "D": {
-                "Choice": "8/5 < 8/3",
+                "Choice": "21 1/5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses reciprocals of the fractions but compares correctly.",
-                    "Percent": 6
+                    "Rationale": "Solves the problem as 62/5 + 34/5 and then incorrectly converts 96/5 to 21 1/5.",
+                    "Percent": 2
                 }
             }
         }
@@ -49,44 +47,42 @@
         "Number": 2,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Numbers & Operations - Fractions",
-        "SubTopic": " Represent fractions on a number line (limit denominators to 2, 3, 4, 6, and 8; limit numerators to whole numbers less than the denominator; and no simplification necessary).",
+        "Topic": "Numbers & Operations In Base Ten",
+        "SubTopic": "Demonstrate an understanding that in a multi-digit whole number (through 1,000,000), a digit in one place represents ten times what it represents in the place to its right.",
         "Content": [
-            "Matt measured a peg from one of his games.",
-            "The peg was 3/4 inch in length.",
-            "Which number line shows the length, in inches, of Matt’s peg?"
+            "There are 49,528 people living in a city. What is the value of the 4 in the number of people living in the city?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA21G3M/media/2a.jpg",
+                "Choice": "two times the two in the tens place",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Plots a point at the third mark of a number line divided into twelfths (3 × 4).",
+                    "Rationale": "Does not consider place value.",
                     "Percent": 15
                 }
             },
             "B": {
-                "Choice": "problems/PA21G3M/media/2b.jpg",
+                "Choice": "twenty times the two in the tens place",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Plots a point so there are 3 marks before and 4 marks after.",
-                    "Percent": 16
+                    "Rationale": "Uses concept of “10 times the value” but only for 1 place value.",
+                    "Percent": 17
                 }
             },
             "C": {
-                "Choice": "problems/PA21G3M/media/2c.jpg",
+                "Choice": "two hundred times the two in the tens place",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Plots a point so there are 4 marks before and 3 marks after.",
-                    "Percent": 10
+                    "Rationale": "Uses concept of “100 times the value” since there are two digits between the 2 and the 4.",
+                    "Percent": 20
                 }
             },
             "D": {
-                "Choice": "problems/PA21G3M/media/2d.jpg",
+                "Choice": "two thousand times the two in the tens place",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Plots a point at the third mark of a number line divided into fourths.",
-                    "Percent": 59
+                    "Rationale": "Identifies the value of the 4 as 40,000, identifies the value of the 2 as 20, and recognizes that 40,000 is 2,000 times 20.",
+                    "Percent": 48
                 }
             }
         }
@@ -95,43 +91,42 @@
         "Number": 3,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Numbers & Operations - Fractions",
-        "SubTopic": "Recognize and generate simple equivalent fractions (limit the denominators to 1, 2, 3, 4, 6, and 8 and limit numerators to whole numbers less than the denominator).",
+        "Topic": "Numbers & Operations In Base Ten",
+        "SubTopic": "Round multi-digit whole numbers (through 1,000,000) to any place.",
         "Content": [
-            "Maddox has a jar with 2/6 ounce of peanut butter in it.",
-            "Which fraction is equal to the amount of peanut butter in the jar?"
+            "The average distance from Earth to the moon is 238,855 miles. What is this distance rounded to the nearest thousand?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/3 ounce",
+                "Choice": "200,000",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Divides both numerator and denominator by 2.",
-                    "Percent": 41
+                    "Correct": false,
+                    "Rationale": "Rounds to the highest place value.",
+                    "Percent": 11
                 }
             },
             "B": {
-                "Choice": "2/3 ounce",
+                "Choice": "238,000",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Divides only the denominator by 2.",
-                    "Percent": 22
+                    "Rationale": "Rounds down (truncates).",
+                    "Percent": 10
                 }
             },
             "C": {
-                "Choice": "1/6 ounce",
+                "Choice": "238,900",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Divides only the numerator by 2.",
-                    "Percent": 20
+                    "Rationale": "Rounds to the nearest hundred.",
+                    "Percent": 12
                 }
             },
             "D": {
-                "Choice": "2/12 ounce",
+                "Choice": "239,000",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Multiplies denominator by numerator OR doubles denominator without doubling numerator.",
-                    "Percent": 17
+                    "Correct": true,
+                    "Rationale": "Looks at the digit to the right of the thousands place, recognizes it as 5 or greater, and rounds the thousands place up from 8 to 9.",
+                    "Percent": 67
                 }
             }
         }
@@ -140,44 +135,42 @@
         "Number": 4,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Interpret and/or describe whole-number quotients of whole numbers (limit dividends through 50 and limit divisors and quotients through 10).",
+        "Topic": "Numbers & Operations In Base Ten",
+        "SubTopic": "Divide up to four-digit dividends by one-digit divisors with answers written as whole-number quotients and remainders.",
         "Content": [
-            "Tim put 12 pictures into his scrapbook.",
-            "He filled each page with 3 pictures.",
-            "Which expression shows the number of pages Tim filled?"
+            "A theater sold $1,048 worth of tickets on Saturday and $424 worth of tickets on Sunday. Each ticket cost $8. How many tickets were sold altogether on Saturday and Sunday?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 ÷ 12",
+                "Choice": "53",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Reverses the numbers.",
-                    "Percent": 15
+                    "Rationale": "Divides $424 by $8 (determines the number of tickets sold on Sunday).",
+                    "Percent": 7
                 }
             },
             "B": {
-                "Choice": "4 ÷ 12",
+                "Choice": "78",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Reverses the numbers and uses the number of pages instead of the number of pictures per page.",
-                    "Percent": 4
+                    "Rationale": "Subtracts $424 from $1,048 and then divides the difference by $8.",
+                    "Percent": 8
                 }
             },
             "C": {
-                "Choice": "12 ÷ 4",
+                "Choice": "131",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses the number of pages as the divisor instead of the number of pictures per page.",
-                    "Percent": 6
+                    "Rationale": "Divides $1,048 by $8 (determines the number of tickets sold on Saturday).",
+                    "Percent": 14
                 }
             },
             "D": {
-                "Choice": "12 ÷ 3",
+                "Choice": "184",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Writes an expression to divide the number of pictures (12) by the number of pictures per page (3).",
-                    "Percent": 75
+                    "Rationale": "Adds $1,048 to $424 and then divides the sum by $8 OR divides $1,048 by $8, divides $424 by $8, and then adds the quotients.",
+                    "Percent": 71
                 }
             }
         }
@@ -186,44 +179,42 @@
         "Number": 5,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Solve mathematical and realworld problems using multiplication and division, including determining the missing number in a multiplication and/or division equation.",
+        "Topic": "Numbers & Operations In Base Ten",
+        "SubTopic": "Estimate the answer to addition, subtraction, and multiplication problems using whole numbers through six digits (for multiplication, no more than 2 digits × 1 digit, excluding powers of 10).",
         "Content": [
-            "The town of Smithville has 5 fire stations.",
-            "Each fire station has 4 fire trucks.",
-            "How many fire trucks does the town of Smithville have?"
+            "Cheryl keeps her marbles in two containers. She has between 177 and 203 marbles in one container. She has between 157 and 163 marbles in the other container. Which estimate could be the total number of marbles Cheryl has in both containers?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "9",
+                "Choice": "300",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds the values.",
-                    "Percent": 15
+                    "Rationale": "Rounds the highest numbers down to the nearest hundred and then adds 100 to 200.",
+                    "Percent": 10
                 }
             },
             "B": {
-                "Choice": "16",
+                "Choice": "320",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies 4 by 4.",
-                    "Percent": 4
+                    "Rationale": "Rounds the lowest numbers down to the nearest ten and then adds 170 to 150.",
+                    "Percent": 20
                 }
             },
             "C": {
-                "Choice": "20",
+                "Choice": "360",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplies the number of fire stations (5) by the number of fire trucks (4) at each station.",
-                    "Percent": 78
+                    "Rationale": "Determines the lowest possible total by adding 177 and 157, determines the greatest possible total by adding 203 and 163, and selects a number between these two sums OR selects an “easy” number between 177 and 203 (e.g., 200), selects an “easy” number between 157 and 163 (e.g., 160), adds these numbers together, and selects a value close to this sum.",
+                    "Percent": 44
                 }
             },
             "D": {
-                "Choice": "25",
+                "Choice": "400",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies 5 by 5.",
-                    "Percent": 3
+                    "Rationale": "Rounds both numbers to the nearest hundred and then adds 200 to 200.",
+                    "Percent": 26
                 }
             }
         }
@@ -232,45 +223,42 @@
         "Number": 6,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Apply the commutative property of multiplication (not identification or definition of the property).",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Find equivalencies and compare fractions.",
         "Content": [
-            "Ethan has 2 pencil boxes.",
-            "Each pencil box has 7 pencils in it.",
-            "The total number of pencils Ethan has can be expressed as 2 × 7.",
-            "What is another way to show the number of pencils Ethan has?"
+            "On a vocabulary list, 5/10 of the words are nouns and 6/12 of the words are verbs. Which pair of statements correctly compares the fraction of the words on the vocabulary list that are nouns to the fraction that are verbs?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "7 ÷ 2",
+                "Choice": "Since 5 < 6, then 5/10 < 6/12. \n So, there are fewer nouns than verbs on the vocabulary list.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects division instead of multiplication.",
-                    "Percent": 14
+                    "Rationale": "Only compares numerators and does not consider denominators.",
+                    "Percent": 25
                 }
             },
             "B": {
-                "Choice": "7 × 2",
+                "Choice": "Since 1/10 > 1/12, then 5/10 > 6/12. \n So, there are more nouns than verbs on the vocabulary list.",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Recognizes that, when multiplying, numbers may be switched without changing the value of the expression (commutative property of multiplication).",
-                    "Percent": 79
+                    "Correct": false,
+                    "Rationale": "Only compares denominators and does not consider numerators.",
+                    "Percent": 13
                 }
             },
             "C": {
-                "Choice": " 7 + 2",
+                "Choice": "Since 5/10 = 7/12 and 7 > 6, then 5/10 > 6/12. \n So, there are more nouns than verbs on the vocabulary list.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects addition (which is also commutative) instead of multiplication.",
-                    "Percent": 6
+                    "Rationale": "Incorrectly creates an equivalent fraction by adding 2 to both the numerator and denominator of 5/10.",
+                    "Percent": 8
                 }
             },
             "D": {
-                "Choice": " 7 – 2",
+                "Choice": "Since 5/10 = 1/2 and 6/12 = 1/2, then 5/10 = 6/12. \n So, there are equal numbers of nouns and verbs on the vocabulary list.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Selects subtraction instead of multiplication.",
-                    "Percent": 1
+                    "Correct": true,
+                    "Rationale": "Creates equivalent fractions by dividing the numerator and denominator of 5/10 by 5 and by dividing the numerator and denominator of 6/12 by 6.",
+                    "Percent": 54
                 }
             }
         }
@@ -279,46 +267,42 @@
         "Number": 7,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Interpret and/or model division as a multiplication equation with an unknown factor.",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Add and subtract fractions with a common denominator (denominators limited to 2, 3, 4, 5, 6, 8, 10, 12, and 100; answers do not need to be simplified; and no improper fractions as the final answer).",
         "Content": [
-            "Joan puts 42 cherries into 6 bowls.",
-            "She puts the same number of cherries into each bowl.",
-            "The number of cherries in each bowl can be found using the equation shown below.",
-            "6 × ? = 42",
-            "How many cherries are in each bowl?"
+            "In September, Mrs. Jones had a full set of pencils. In October, she had 7/12 of the full set remaining. In November, she gave away 2/12 of the full set. What fraction of the full set of pencils did Mrs. Jones have remaining at the end of November?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4",
+                "Choice": "5/24",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Mixes up 42 with 24 (4 × 6 = 24).",
+                    "Rationale": "Subtracts the numerators but adds the denominators.",
                     "Percent": 6
                 }
             },
             "B": {
-                "Choice": "5",
+                "Choice": "5/12",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Thinks 5 × 6 = 42; wrong multiple of 6.",
-                    "Percent": 4
+                    "Correct": true,
+                    "Rationale": "Subtracts the numerators while leaving the common denominator.",
+                    "Percent": 86
                 }
             },
             "C": {
-                "Choice": "6",
+                "Choice": "5/6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks 6 × 6 = 42; wrong multiple of 6.",
-                    "Percent": 10
+                    "Rationale": "Subtracts the numerators but “reduces” the 12 to 6 by dividing the 12 by 2.",
+                    "Percent": 5
                 }
             },
             "D": {
-                "Choice": "7",
+                "Choice": "5/0",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Recalls that 6 × 7 = 42 OR relates the missing number equation to the division problem 42 ÷ 6.",
-                    "Percent": 80
+                    "Correct": false,
+                    "Rationale": "Subtracts the numerators and the denominators.",
+                    "Percent": 3
                 }
             }
         }
@@ -327,46 +311,42 @@
         "Number": 8,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Solve two-step word problems using the four operations (expressions are not explicitly stated). Limit to problems with whole numbers and having whole-number answers.",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Decompose a fraction or a mixed number into a sum of fractions with the same denominator (denominators limited to 2, 3, 4, 5, 6, 8, 10, 12, and 100), recording the decomposition by an equation. Justify decompositions (e.g., by using a visual fraction model).",
         "Content": [
-            "Some friends are having a picnic at a park.",
-            "They take 5 cars to the park.",
-            "There are 4 people in each car.",
-            "Each person will eat 2 sandwiches at the picnic.",
-            "How many sandwiches in total will the friends eat at the picnic?"
+            "Mikalya rode her bike on 4 days last week. She rode her bike a total of 2 2/3 miles. Which equation shows how many miles Mikalya could have ridden her bike each day?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "11",
+                "Choice": "1/3 + 1/3 + 1 + 1 = 2 2/3",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Adds numbers in the problem.",
-                    "Percent": 17
+                    "Correct": true,
+                    "Rationale": "Uses 1/3 + 1/3 = 2/3 to get 2/3 + 1 + 1 = 2 2/3.",
+                    "Percent": 79
                 }
             },
             "B": {
-                "Choice": "20",
+                "Choice": "2/3 + 2/3 + 1 + 1 = 2 2/3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects number of people going to the park.",
-                    "Percent": 16
+                    "Rationale": "Adds only one of the 2/3 fractions to 1 + 1.",
+                    "Percent": 7
                 }
             },
             "C": {
-                "Choice": "22",
+                "Choice": "1/3 + 1/3 + 2/3 + 1 = 2 2/3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies 5 by 4, then adds 2 instead of multiplying by 2.",
-                    "Percent": 9
+                    "Rationale": "Uses 1/3 + 1/3 = 1 to get 1 + 2/3 + 1 = 2 2/3.",
+                    "Percent": 7
                 }
             },
             "D": {
-                "Choice": "40",
+                "Choice": "2/3 + 2/3 + 2/3 + 1 = 2 2/3",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Finds the number of people by multiplying 5 by 4 and then finds the number of sandwiches by multiplying the number of people (20) by 2.",
-                    "Percent": 58
+                    "Correct": false,
+                    "Rationale": "Uses 2/3 + 2/3 = 1 to get either 2/3 + 1 + 1 = 2 2/3 or 1 + 2/3 + 1 = 2 2/3.",
+                    "Percent": 7
                 }
             }
         }
@@ -375,42 +355,42 @@
         "Number": 9,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Create or match a story to a given combination of symbols (+, –, ×, ÷, <, >, and =) and numbers.",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Solve word problems involving multiplication of a whole number by a fraction (denominators limited to 2, 3, 4, 5, 6, 8, 10, 12, and 100).",
         "Content": [
-            "Which story matches the equation 3 × 12 – 4 = □?"
+            "In each box of bananas, 2/10 of the bananas are already ripe. How many bananas are already ripe in a box of 30 bananas?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Kelsey buys 3 pieces of gum. \n She buys 12 more pieces of gum. \n She gives away 4 pieces of gum. \n How many pieces of gum does Kelsey have now?",
+                "Choice": "2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects a story that matches 3 + 12 – 4 = ?.",
-                    "Percent": 24
+                    "Rationale": "Uses only the value of the numerator.",
+                    "Percent": 9
                 }
             },
             "B": {
-                "Choice": "Kelsey buys 3 packs of gum. \n Each pack has 4 pieces of gum. \n She gives away 12 pieces of gum. \n How many pieces of gum does Kelsey have now?",
+                "Choice": "6",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Selects a story that matches 3 × 4 – 12 = ?.",
-                    "Percent": 5
+                    "Correct": true,
+                    "Rationale": "Multiplies the numerator by the number of bananas (2 × 30) and then divides the product by the denominator (60 ÷ 10) OR converts 30 to 30/1, multiplies 2/10 by 30/1 to get (2 × 30)/(10 × 1) = 60/10, and then converts 60/10 to 6.",
+                    "Percent": 50
                 }
             },
             "C": {
-                "Choice": "Kelsey buys 3 packs of gum. \n Each pack has 12 pieces of gum. \n She gives away 4 pieces of gum. \n How many pieces of gum does Kelsey have now?",
+                "Choice": "12",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Selects a story that matches multiplying 3 by 12 before subtracting 4.",
-                    "Percent": 67
+                    "Correct": false,
+                    "Rationale": "Adds the numerator to the denominator (2 + 10).",
+                    "Percent": 15
                 }
             },
             "D": {
-                "Choice": "Kelsey buys 12 packs of gum. \n Each pack has 4 pieces of gum. \n She gives away 3 pieces of gum. \n How many pieces of gum does Kelsey have now?",
+                "Choice": "20",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects a story that matches 12 × 4 – 3 = ?.",
-                    "Percent": 4
+                    "Rationale": "Multiplies the numerator by the denominator (2 × 10) OR subtracts the denominator from the number of bananas (30 – 10).",
+                    "Percent": 26
                 }
             }
         }
@@ -419,44 +399,42 @@
         "Number": 10,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Measurement & Data",
-        "SubTopic": "Calculate elapsed time to the minute in a given situation (total elapsed time limited to 60 minutes or less).",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": " Use decimal notation for fractions with denominators 10 or 100.",
         "Content": [
-            "Chris went outside to play at 3:20 p.m.",
-            "He came back inside at 4:05 p.m.",
-            "How many minutes was Chris outside?"
+            "Pauline has two sticks. One is 4/10 meter long. The other is 9/100 meter long. Which statement correctly compares the two lengths when written as decimals?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "15",
+                "Choice": "0.04 < 0.09",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts 5 from 20.",
-                    "Percent": 8
+                    "Rationale": "Incorrectly converts 4/10.",
+                    "Percent": 32
                 }
             },
             "B": {
-                "Choice": "25",
+                "Choice": "0.04 < 0.90",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 5 to 20.",
-                    "Percent": 13
+                    "Rationale": "Incorrectly converts both fractions.",
+                    "Percent": 17
                 }
             },
             "C": {
-                "Choice": "45",
+                "Choice": "0.90 < 0.40",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Identifies the time from 3:20 to 4:00 as 40 minutes and the time from 4:00 to 4:05 as 5 more minutes, and then adds 5 to 40.",
-                    "Percent": 67
+                    "Correct": false,
+                    "Rationale": "Incorrectly converts 9/100 and uses the wrong inequality sign for the given decimals.",
+                    "Percent": 8
                 }
             },
             "D": {
-                "Choice": "60",
+                "Choice": "0.09 < 0.40",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Looks only at the hour.",
-                    "Percent": 12
+                    "Correct": true,
+                    "Rationale": "Converts 4/10 to 0.4 and includes a 0 placeholder in the hundredths place to get 0.40, converts 9/100 to 0.09, identifies the comparison symbol as “less than,” and orders the decimals by comparing place values OR creates an equivalent fraction of 4/10 by multiplying the numerator and denominator by 10, converts 40/100 to 0.40, converts 9/100 to 0.09, identifies the comparison symbol as “less than,” and orders the decimals by comparing place values.",
+                    "Percent": 43
                 }
             }
         }
@@ -465,45 +443,42 @@
         "Number": 11,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Measurement & Data",
-        "SubTopic": "Use a ruler to measure lengths to the nearest quarter inch or centimeter.",
+        "Topic": "Operations & Algebraic Thinking",
+        "SubTopic": "Find all factor pairs for a whole number in the interval 1 through 100. Recognize that a whole number is a multiple of each of its factors. Determine whether a given whole number in the interval 1 through 100 is a multiple of a given one-digit number. Determine whether a given whole number in the interval 1 through 100 is prime or composite.",
         "Content": [
-            "Maria’s house key is shown below.",
-            "problems/PA21G3M/media/11a.jpg",
-            "Use your ruler to measure the length of Maria’s house key.",
-            "Which measurement is closest to the length of Maria’s house key?"
+            "Jesse has 4 rows of rocks. There are 6 rocks in each row. Which description shows another way Jesse can organize all of his rocks?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3/4 inch",
+                "Choice": "2 rows with 5 rocks in each row",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects only the fractional part of the measurement.",
-                    "Percent": 6
+                    "Rationale": "Incorrectly uses 4 + 6 = 10 as the total number of rocks and matches with 2 × 5 = 10.",
+                    "Percent": 8
                 }
             },
             "B": {
-                "Choice": "1 inch",
+                "Choice": "3 rows with 8 rocks in each row",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Selects only the whole number part of the measurement.",
-                    "Percent": 3
+                    "Correct": true,
+                    "Rationale": "Determines 4 × 6 = 24 and recognizes that 3 × 8 also equals 24.",
+                    "Percent": 67
                 }
             },
             "C": {
-                "Choice": "1 3/4 inches",
+                "Choice": "5 rows with 5 rocks in each row",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Measures the length as 3/4 inch beyond 1 inch.",
-                    "Percent": 49
+                    "Correct": false,
+                    "Rationale": "Incorrectly uses 4 × 6 = 25 as the total number of rocks.",
+                    "Percent": 11
                 }
             },
             "D": {
-                "Choice": "2 inches",
+                "Choice": "2 rows with 24 rocks in each row",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects the whole number closest to the actual length.",
-                    "Percent": 42
+                    "Rationale": "Uses the total number of rocks (24) as the number of rocks in each row.",
+                    "Percent": 14
                 }
             }
         }
@@ -512,43 +487,44 @@
         "Number": 12,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Measurement & Data",
-        "SubTopic": "Round amounts of money to the nearest dollar.",
+        "Topic": "Operations & Algebraic Thinking",
+        "SubTopic": "Recognize, describe, extend, create, and replicate a variety of patterns.",
         "Content": [
-            "Rounded to the nearest dollar, Aziza spent $12.00 on snacks while visiting the zoo.",
-            "Which could be the exact amount of money Aziza spent on snacks?"
+            "The shapes below show a pattern.",
+            "problems/PA21G4M/media/12a.jpg",
+            "The pattern continues. How many sides will shape 10 have?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$11.47",
+                "Choice": "16",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Looks at hundredths place (last digit) to decide whether to round up or down.",
-                    "Percent": 13
+                    "Rationale": "Adds 6 to the shape number because 4 + 6 = 10 in shape 4.",
+                    "Percent": 18
                 }
             },
             "B": {
-                "Choice": "$11.58",
+                "Choice": "22",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Looks at the digit to the right of the dollars place (5) and recognizes that the value should be rounded up to the next dollar OR identifies a dollar amount in the interval $11.50–$12.49 (all the values that round to $12) OR recognizes that, among the four choices, $11.58 is closest to $12.",
-                    "Percent": 61
+                    "Rationale": "Recognizes that each shape has 2 more sides than the previous shape, so extends the pattern by adding 2 each time OR determines the rule to be “multiply the shape number by 2 and then add 2,” so multiplies 10 by 2 and then adds 2 to 20.",
+                    "Percent": 60
                 }
             },
             "C": {
-                "Choice": "$12.54",
+                "Choice": "30",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses “if 5 or less, then round down” as the rounding rule instead of “if 5 or greater, then round up”.",
-                    "Percent": 16
+                    "Rationale": "Multiplies 3 by the shape number because 2 × 3 = 6 in shape 2.",
+                    "Percent": 10
                 }
             },
             "D": {
-                "Choice": "$12.61",
+                "Choice": "40",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds down.",
-                    "Percent": 10
+                    "Rationale": "Multiplies 4 by the shape number because 1 × 4 = 4 in shape 1.",
+                    "Percent": 12
                 }
             }
         }
@@ -557,45 +533,44 @@
         "Number": 13,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Measurement & Data",
-        "SubTopic": "Solve one- and two-step problems using information to interpret data presented in scaled pictographs and scaled bar graphs (scales limited to 1, 2, 5, and 10).",
+        "Topic": "Geometry",
+        "SubTopic": " Draw points, lines, line segments, rays, angles (right, acute, and obtuse), and perpendicular and parallel lines. Identify these in twodimensional figures.",
         "Content": [
-            "Workers at an apple orchard picked four different types of apples.",
-            "They recorded the numbers of bushels of apples picked in the graph below.",
-            "problems/PA21G3M/media/13a.jpg",
-            "How many fewer bushels of Empire apples than York apples were picked?"
+            "The shape of Nepal’s flag is shown below.",
+            "problems/PA21G4M/media/13a.jpg",
+            "Which statement about the shape of Nepal’s flag is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3",
+                "Choice": "Angle N is a right angle.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds the difference between the number of “apples” but does not apply the key.",
-                    "Percent": 24
+                    "Rationale": "Incorrectly describes the angle (angle is acute, not right).",
+                    "Percent": 18
                 }
             },
             "B": {
-                "Choice": "5",
+                "Choice": "Angle J is an obtuse angle.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not apply the key and counts the “apples” for Empire.",
-                    "Percent": 9
+                    "Rationale": "Incorrectly describes the angle (angle is acute, not obtuse).",
+                    "Percent": 10
                 }
             },
             "C": {
-                "Choice": "8",
+                "Choice": "Line segment ML and line segment KJ are parallel.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Does not apply the key and counts the “apples” for York.",
-                    "Percent": 5
+                    "Correct": true,
+                    "Rationale": "Identifies that line segments ML and KJ are both horizontal, which means they are parallel.",
+                    "Percent": 52
                 }
             },
             "D": {
-                "Choice": "15",
+                "Choice": "Line segment ML and line segment KL are perpendicular.",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Applies the key to determine the number of bushels of Empire apples (5 × 5 = 25) and subtracts that value from the number of bushels of York apples (8 × 5 = 40) OR finds the difference between the number of “apples” (8 – 5 = 3) and applies the key to the difference (3 × 5 = 15).",
-                    "Percent": 62
+                    "Correct": false,
+                    "Rationale": "Misidentifies angle KLM as a right angle or does not know that perpendicular line segments should form a right angle.",
+                    "Percent": 20
                 }
             }
         }
@@ -604,45 +579,44 @@
         "Number": 14,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Measurement & Data",
-        "SubTopic": "Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Display the data by making a line plot, where the horizontal scale is marked in appropriate units—whole numbers, halves, or quarters.",
+        "Topic": "Geometry",
+        "SubTopic": "Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines or the presence or absence of angles of a specified size. Recognize right triangles as a category, and identify right triangles.",
         "Content": [
-            "Jonathan measured the lengths of his pencils.",
-            "problems/PA21G3M/media/14a.jpg",
-            "Use your ruler to measure the lengths, in inches, of the pencils.",
-            "Which line plot shows the lengths of Jonathan’s pencils?"
+            "The shape of a window in Neal’s house is shown below.",
+            "problems/PA21G4M/media/14a.jpg",
+            "The opposite sides of the window are parallel. No pair of sides is perpendicular. Which term describes the shape of the window?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA21G3M/media/14b.jpg",
+                "Choice": "parallelogram",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Marks 3 1/3 as 2 3/4, does not include the second pencil of this length.",
-                    "Percent": 11
+                    "Correct": true,
+                    "Rationale": "Identifies a quadrilateral with opposite sides parallel as a parallelogram.",
+                    "Percent": 63
                 }
             },
             "B": {
-                "Choice": "problems/PA21G3M/media/14c.jpg",
+                "Choice": "rectangle",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Marks 3 1/4 as 2 3/4.",
-                    "Percent": 23
+                    "Rationale": "Does not associate “perpendicular” with right angles.",
+                    "Percent": 4
                 }
             },
             "C": {
-                "Choice": "problems/PA21G3M/media/14d.jpg",
+                "Choice": "square",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not include the second 3 1/3 -inch pencil.",
-                    "Percent": 14
+                    "Rationale": "Thinks parallel sides mean all sides are equal length; does not associate “perpendicular” with right angles.",
+                    "Percent": 15
                 }
             },
             "D": {
-                "Choice": "problems/PA21G3M/media/14e.jpg",
+                "Choice": "trapezoid",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Measures the shortest pencils as 3 1/3 inches and includes both measurements.",
-                    "Percent": 52
+                    "Correct": false,
+                    "Rationale": "Thinks only one pair of opposite sides are parallel.",
+                    "Percent": 18
                 }
             }
         }
@@ -651,44 +625,44 @@
         "Number": 15,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Measurement & Data",
-        "SubTopic": "Translate information from one type of display to another. Limit to pictographs, tally charts, bar graphs, and tables.",
+        "Topic": "Geometry",
+        "SubTopic": "Recognize a line of symmetry for a twodimensional figure as a line across the figure such that the figure can be folded along the line into mirroring parts. Identify line-symmetric figures and draw lines of symmetry (up to two lines of symmetry).",
         "Content": [
-            "The tally chart below shows the number of students who chose each type of seed for a science experiment.",
-            "problems/PA21G3M/media/15a.jpg",
-            "Which pictograph also shows the number of students who chose each type of seed for the science experiment?"
+            "Erin sorted some shapes based on the number of lines of symmetry each shape has.",
+            "problems/PA21G4M/media/15a.jpg",
+            "Which shape belongs in Group B?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA21G3M/media/15b.jpg",
+                "Choice": "problems/PA21G4M/media/15b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Switches amounts for bean and sunflower.",
-                    "Percent": 3
+                    "Rationale": "Identifies a shape with only one line of symmetry.",
+                    "Percent": 25
                 }
             },
             "B": {
-                "Choice": "problems/PA21G3M/media/15c.jpg",
+                "Choice": "problems/PA21G4M/media/15c.jpg",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Applies the key to each row, using a half figure for the odd tally.",
-                    "Percent": 62
+                    "Correct": false,
+                    "Rationale": "Identifies a shape with only one line of symmetry.",
+                    "Percent": 12
                 }
             },
             "C": {
-                "Choice": "problems/PA21G3M/media/15d.jpg",
+                "Choice": "problems/PA21G4M/media/15d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not apply key (uses 1 figure = 1 student).",
-                    "Percent": 33
+                    "Rationale": "Identifies a shape with no lines of symmetry.",
+                    "Percent": 7
                 }
             },
             "D": {
-                "Choice": "problems/PA21G3M/media/15e.jpg",
+                "Choice": "problems/PA21G4M/media/15e.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Uses only whole figures (does not use the half figure for mustard).",
-                    "Percent": 2
+                    "Correct": true,
+                    "Rationale": "Recognizes that the shapes in Group B each have 2 lines of symmetry, so identifies a shape with 2 lines of symmetry.",
+                    "Percent": 56
                 }
             }
         }
@@ -698,43 +672,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Measurement & Data",
-        "SubTopic": "Solve real-world and mathematical problems involving perimeters of polygons, including finding the perimeter given the side lengths, finding an unknown side length, exhibiting rectangles with the same perimeter and different areas, and exhibiting rectangles with the same area and different perimeters. Use the same units throughout the problem.",
+        "SubTopic": "Solve addition and subtraction problems to find unknown angles on a diagram in real-world and mathematical problems. (Angles must be adjacent and non-overlapping.)",
         "Content": [
-            "Jill’s driveway is in the shape of the rectangle shown below.",
-            "problems/PA21G3M/media/16a.jpg",
-            "What is the perimeter of Jill’s driveway?"
+            "On the street map shown below, Elm Street and Oak Street meet at a right angle.",
+            "problems/PA21G4M/media/16a.jpg",
+            "Which equation shows how to find the measure of the angle formed by Maple Street and Oak Street?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "29 feet",
+                "Choice": "90° – 50° = 40°",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Adds the side lengths that are labeled but does not double the sum.",
-                    "Percent": 26
+                    "Correct": true,
+                    "Rationale": "Recognizes that a right angle is 90° and uses subtraction since the unknown angle and the labeled angle form the right angle.",
+                    "Percent": 63
                 }
             },
             "B": {
-                "Choice": "58 feet",
+                "Choice": "180° – 50° = 130°",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Adds all four side lengths (20 + 9 + 20 + 9) OR adds the side lengths that are labeled and then doubles the sum.",
-                    "Percent": 60
+                    "Correct": false,
+                    "Rationale": "Uses 180° as the sum of the two angles (straight angle) instead of 90° (right angle).",
+                    "Percent": 14
                 }
             },
             "C": {
-                "Choice": "180 feet",
+                "Choice": "90° + 50° = 140°",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies the side lengths that are labeled OR confuses the rules for area and for perimeter.",
-                    "Percent": 12
+                    "Rationale": "Uses addition instead of subtraction.",
+                    "Percent": 17
                 }
             },
             "D": {
-                "Choice": "360 feet",
+                "Choice": "180° + 50° = 230°",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses multiplication (instead of addition) before doubling the result.",
-                    "Percent": 2
+                    "Rationale": "Uses 180° instead of 90° and uses addition instead of subtraction.",
+                    "Percent": 6
                 }
             }
         }

@@ -4,44 +4,41 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Numbers & Operations In Base Ten",
-        "SubTopic": "Round two- and three-digit whole numbers to the nearest ten or hundred, respectively.",
+        "SubTopic": "Divide up to four-digit dividends by one-digit divisors with answers written as whole-number quotients and remainders.",
         "Content": [
-            "Alden and his family go bowling.",
-            "Alden’s scores are listed below.",
-            "55 \t 79 \t 92",
-            "Which expression can be used to find Alden’s total score when each score is rounded to the nearest ten?"
+            "Divide: 5,917 ÷ 4"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "50 + 70 + 90",
+                "Choice": "1,201",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds each number down.",
-                    "Percent": 19
+                    "Rationale": "Divides straight across without subtracting.",
+                    "Percent": 11
                 }
             },
             "B": {
-                "Choice": "50 + 80 + 90",
+                "Choice": "1,254 R1",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds 55 down.",
-                    "Percent": 14
+                    "Rationale": "Subtracts 49 from the dividend instead of 4 in the first step.",
+                    "Percent": 13
                 }
             },
             "C": {
-                "Choice": "60 + 80 + 90",
+                "Choice": "1,319 R1",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Correct.",
-                    "Percent": 60
+                    "Correct": false,
+                    "Rationale": "Incorrectly divides 19 by 4 in the second step and skips bringing down the 1 from the tens place.",
+                    "Percent": 11
                 }
             },
             "D": {
-                "Choice": "60 + 80 + 100",
+                "Choice": "1,479 R1",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Rounds each number up.",
-                    "Percent": 7
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 65
                 }
             }
         }
@@ -50,44 +47,42 @@
         "Number": 2,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Numbers & Operations In Base Ten",
-        "SubTopic": "Multiply one-digit whole numbers by two-digit multiples of 10 (from 10 through 90).",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Recognize and generate equivalent fractions.",
         "Content": [
-            "Esther makes 40 bags of granola mix.",
-            "Each bag has 3 ounces of raisins.",
-            "How many ounces of raisins, in total, does Esther use to make 40 bags of granola mix?"
+            "Angie has a box that is 3/4 foot long. Which fraction is equal to the length, in feet, of the box?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "37",
+                "Choice": "6/12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts 40 – 3.",
-                    "Percent": 9
+                    "Rationale": "Divides to find the conversion factor of 3, but adds 3 to numerator.",
+                    "Percent": 25
                 }
             },
             "B": {
-                "Choice": "43",
+                "Choice": "8/12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 40 + 3.",
-                    "Percent": 26
+                    "Rationale": "Uses change in the denominator (8) as the numerator.",
+                    "Percent": 11
                 }
             },
             "C": {
-                "Choice": "80",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Doubles 40 + 40.",
-                    "Percent": 7
-                }
-            },
-            "D": {
-                "Choice": "120",
+                "Choice": "9/12",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 58
+                    "Percent": 55
+                }
+            },
+            "D": {
+                "Choice": "11/12",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds 8 to both numerator and denominator.",
+                    "Percent": 9
                 }
             }
         }
@@ -96,46 +91,42 @@
         "Number": 3,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Numbers & Operations In Base Ten",
-        "SubTopic": "Order a set of whole numbers from least to greatest or greatest to least (up through 9,999, and limit sets to no more than four numbers).",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Multiply a whole number by a non-unit fraction (denominators limited to 2, 3, 4, 5, 6, 8, 10, 12, and 100 and final answers do not need to be simplified or written as a mixed number).",
         "Content": [
-            "Pablo lives in Hershey, Pennsylvania.",
-            "The distances to four cities from Hershey are listed in the table shown below.",
-            "problems/PA18G3M/media/3a.jpg",
-            "Pablo visits the cities in order from the greatest distance from Hershey to the least distance.",
-            "Which city will Pablo visit second?"
+            "In a mixture of paint, 2/6 of the paint is red. The mixture contains 5 gallons of paint. How many gallons of red paint are in the mixture?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Beaver Falls",
+                "Choice": "2/30",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Correct.",
-                    "Percent": 58
+                    "Correct": false,
+                    "Rationale": "Multiplies the denominator by 5.",
+                    "Percent": 21
                 }
             },
             "B": {
-                "Choice": "Bradford",
+                "Choice": "2/11",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects fewest miles away.",
+                    "Rationale": "Adds 5 to the denominator.",
                     "Percent": 17
                 }
             },
             "C": {
-                "Choice": "Butler",
+                "Choice": "7/6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects city visited third.",
-                    "Percent": 11
+                    "Rationale": "Adds 5 to the numerator.",
+                    "Percent": 25
                 }
             },
             "D": {
-                "Choice": "Erie",
+                "Choice": "10/6",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Selects city visited first.",
-                    "Percent": 14
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 37
                 }
             }
         }
@@ -145,43 +136,41 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Numbers & Operations - Fractions",
-        "SubTopic": " Demonstrate that when a whole or set is partitioned into y equal parts, the fraction 1/y represents 1 part of the whole and/or the fraction x/y represents x equal parts of the whole (limit denominators to 2, 3, 4, 6, and 8; limit numerators to whole numbers less than the denominator; and no simplification necessary).",
+        "SubTopic": "Use operations to solve problems involving decimals, including converting between fractions and decimals (may include word problems).",
         "Content": [
-            "Craig has 8 flowers and 2 vases.",
-            "He puts the same number of flowers into each vase.",
-            "What fraction of the flowers does Craig put into each vase?"
+            "Kim has a ribbon that is 0.45 meter long. Which expression is equal to the length, in meters, of Kim’s ribbon?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/8",
+                "Choice": "4/100 + 5/100",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses the total number of flowers as the denominator.",
-                    "Percent": 29
+                    "Rationale": "Uses one hundred for both denominators.",
+                    "Percent": 26
                 }
             },
             "B": {
-                "Choice": "1/6",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Solves 8 – 2 and uses the answer as the denominator.",
-                    "Percent": 6
-                }
-            },
-            "C": {
-                "Choice": "1/4",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Solves 8 ÷ 2 and uses the answer as the denominator.",
-                    "Percent": 32
-                }
-            },
-            "D": {
-                "Choice": "1/2",
+                "Choice": "4/10 + 5/100",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 33
+                    "Percent": 49
+                }
+            },
+            "C": {
+                "Choice": "4/10 + 5/10",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses ten for both denominators.",
+                    "Percent": 15
+                }
+            },
+            "D": {
+                "Choice": "4/100 + 5/10",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Switches denominators.",
+                    "Percent": 10
                 }
             }
         }
@@ -191,42 +180,41 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Numbers & Operations - Fractions",
-        "SubTopic": "Recognize and generate simple equivalent fractions (limit the denominators to 1, 2, 3, 4, 6, and 8 and limit numerators to whole numbers less than the denominator).",
+        "SubTopic": "Compare two decimals to hundredths using the symbols >, =, or <, and justify the conclusions.",
         "Content": [
-            "Ben notices that 6/8 of the shoes in a store window have laces.",
-            "Which also shows the fraction of the shoes that have laces?"
+            "Kate walks 0.65 kilometer to school each day. Jane walks 0.47 kilometer to school each day. Which statement comparing the distance each girl walks to school is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2/8",
+                "Choice": "Kate walks a longer distance to school than Jane walks because 0.05 > 0.07.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses number of shoes without laces used for numerator.",
-                    "Percent": 24
+                    "Rationale": "Compares hundredths and confuses symbols.",
+                    "Percent": 9
                 }
             },
             "B": {
-                "Choice": "4/6",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Subtracts two for the two without laces from both numerator and denominator.",
-                    "Percent": 27
-                }
-            },
-            "C": {
-                "Choice": "3/4",
+                "Choice": "Kate walks a longer distance to school than Jane walks because 0.6 > 0.4.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 36
+                    "Percent": 69
+                }
+            },
+            "C": {
+                "Choice": "Kate walks a shorter distance to school than Jane walks because 0.05 < 0.07.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Compares hundredths.",
+                    "Percent": 16
                 }
             },
             "D": {
-                "Choice": "12/8",
+                "Choice": "Kate walks a shorter distance to school than Jane walks because 0.6 < 0.4.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Doubles the numerator.",
-                    "Percent": 13
+                    "Rationale": "Confuses symbols.",
+                    "Percent": 6
                 }
             }
         }
@@ -235,44 +223,42 @@
         "Number": 6,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Numbers & Operations - Fractions",
-        "SubTopic": "Compare two fractions with the same denominator (limit denominators to 1, 2, 3, 4, 6, and 8), using the symbols >, =, or <, and/or justify the conclusions.",
+        "Topic": "Operations & Algebraic Thinking",
+        "SubTopic": "Gain familiarity with factors and multiples.",
         "Content": [
-            "The table below lists the amounts of time, in hours, it takes three students to go to school each morning.",
-            "problems/PA18G3M/media/6a.jpg",
-            "Which statement correctly compares the amounts of time, in hours, it takes two of the students to go to school?"
+            "Jordan and Sara are reading different books. Jordan’s book has 70 pages. The number of pages in Sara’s book is a factor of the number of pages in Jordan’s book. How many pages could be in Sara’s book?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/6 > 3/6 because 1 is less than 3.",
+                "Choice": "17",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses the incorrect comparison symbol.",
-                    "Percent": 18
+                    "Rationale": "Chooses the number because it has a 7 in it.",
+                    "Percent": 7
                 }
             },
             "B": {
-                "Choice": "4/6 > 3/6 because 4 is greater than 3.",
+                "Choice": "35",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 56
+                    "Percent": 52
                 }
             },
             "C": {
-                "Choice": "1/6 < 4/6 because the numerators are less than the denominators.",
+                "Choice": "140",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Compares a numerator to a denominator.",
-                    "Percent": 20
+                    "Rationale": "Confuses a multiple with a factor.",
+                    "Percent": 28
                 }
             },
             "D": {
-                "Choice": "Compares denominators instead of numerators.",
+                "Choice": "170",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "4/6 < 3/6 because both fractions have the same denominator.",
-                    "Percent": 6
+                    "Rationale": "Confuses a multiple with a factor, and thinks 170 is a multiple.",
+                    "Percent": 13
                 }
             }
         }
@@ -282,43 +268,41 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Understand various meanings of multiplication and division.",
+        "SubTopic": " Recognize, describe, extend, create, and replicate a variety of patterns.",
         "Content": [
-            "At a park, Calvin sees a total of 27 birds sitting in 3 trees.",
-            "He sees the same number of birds in each tree.",
-            "Which number sentence correctly shows how many birds Calvin sees in each tree?"
+            "Kelly made a number pattern. Each number in her pattern is a multiple of 3. Which rule could describe Kelly’s pattern?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 × 3 = 27",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Chooses an incorrect sentence.",
-                    "Percent": 10
-                }
-            },
-            "B": {
-                "Choice": "3 + 27 = 30",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Chooses a correct sentence, but one that shows the sum of the number of birds and the number of trees.",
-                    "Percent": 16
-                }
-            },
-            "C": {
-                "Choice": "27 ÷ 3 = 9",
+                "Choice": "start at 0 and add 6",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 70
+                    "Percent": 36
+                }
+            },
+            "B": {
+                "Choice": "start at 1 and add 3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks the +3 will result in multiples of 3.",
+                    "Percent": 35
+                }
+            },
+            "C": {
+                "Choice": "start at 2 and add 1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Chooses option with the first number in the pattern of 3.",
+                    "Percent": 15
                 }
             },
             "D": {
-                "Choice": "27 – 3 = 24",
+                "Choice": "start at 3 and add 10",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Chooses a correct number sentence, but one that shows the difference between the number of birds and the number of trees.",
-                    "Percent": 4
+                    "Rationale": "Thinks numbers ending in 3 are multiples of 3.",
+                    "Percent": 14
                 }
             }
         }
@@ -328,43 +312,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Use multiplication (up to and including 10 × 10) and/or division (limit dividends through 50 and limit divisors and quotients through 10) to solve word problems in situations involving equal groups, arrays, and/or measurement quantities.",
+        "SubTopic": "Determine the rule for a function given a table (limit to +, –, or × and to whole numbers).",
         "Content": [
-            "Mrs. Harris rode her bike 40 miles.",
-            "She biked 8 miles each day.",
-            "How many days did Mrs. Harris ride her bike?"
+            "The table below shows the amounts of oats, in tablespoons, in different numbers of servings of granola bars.",
+            "problems/PA18G4M/media/8a.jpg",
+            "The pattern continues. Which rule describes the amount of oats, in tablespoons, in any number of servings of granola bars?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5",
+                "Choice": "Multiply the number of servings of granola bars by 2.",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Correct.",
-                    "Percent": 64
+                    "Correct": false,
+                    "Rationale": "Finds the difference in the number of servings.",
+                    "Percent": 15
                 }
             },
             "B": {
-                "Choice": "6",
+                "Choice": "Multiply the number of servings of granola bars by 4.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks that 40/8 = 6.",
-                    "Percent": 7
+                    "Rationale": "Uses the first number in the number of servings column.",
+                    "Percent": 12
                 }
             },
             "C": {
-                "Choice": "7",
+                "Choice": "Multiply the number of servings of granola bars by 8.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Thinks 40/8 = 7.",
-                    "Percent": 10
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 60
                 }
             },
             "D": {
-                "Choice": "8",
+                "Choice": "Multiply the number of servings of granola bars by 16.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks 40/8 = 8.",
-                    "Percent": 19
+                    "Rationale": "Finds the difference between the numbers in the oats column.",
+                    "Percent": 13
                 }
             }
         }
@@ -373,42 +357,42 @@
         "Number": 9,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Use properties to simplify and solve multiplication problems.",
+        "Topic": "Geometry",
+        "SubTopic": "Draw points, lines, line segments, rays, angles (right, acute, and obtuse), and perpendicular and parallel lines. Identify these in twodimensional figures.",
         "Content": [
-            "Which expression is equal to 10 × 6?"
+            "Reed draws a straight line. He then draws a ray starting from a point on the straight line. Drawing the ray creates two separate angles. One of the angles is an obtuse angle. Which term describes the other angle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2 × 5 × 6",
+                "Choice": "acute",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 70
+                    "Percent": 49
                 }
             },
             "B": {
-                "Choice": "10 + 2 × 3",
+                "Choice": "obtuse",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses addition instead of multiplication.",
-                    "Percent": 14
+                    "Rationale": "Assumes the two angles are the same type.",
+                    "Percent": 11
                 }
             },
             "C": {
-                "Choice": "2 + 5 + 2 + 3",
+                "Choice": "right",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds the correct factors, but adds instead of multiplies.",
-                    "Percent": 4
+                    "Rationale": "Picks a common angle type.",
+                    "Percent": 18
                 }
             },
             "D": {
-                "Choice": "6 × 2 × 6 × 5",
+                "Choice": "straight",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Distributes the 6 and multiplies.",
-                    "Percent": 12
+                    "Rationale": "Picks based on the straight line.",
+                    "Percent": 22
                 }
             }
         }
@@ -417,45 +401,42 @@
         "Number": 10,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Interpret and/or model division as a multiplication equation with an unknown factor.",
+        "Topic": "Geometry",
+        "SubTopic": "Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines or the presence or absence of angles of a specified size. Recognize right triangles as a category, and identify right triangles.",
         "Content": [
-            "Jason puts 28 cans of food into 4 bags.",
-            "The equation below can be used to find the number of cans he puts into each bag.",
-            "28 ÷ 4 = ?",
-            "Which equation can also be used to find the number of cans Jason puts into each bag?"
+            "A city park is in the shape of a right triangle. A path runs through the middle of the park, creating two symmetrical halves. Which picture could be the shape of the park?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4 + ? = 28",
+                "Choice": "problems/PA18G4M/media/10a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses addition instead of multiplication.",
-                    "Percent": 4
+                    "Rationale": "Chooses a triangle with multiple lines of symmetry",
+                    "Percent": 25
                 }
             },
             "B": {
-                "Choice": "4 × ? = 28",
+                "Choice": "problems/PA18G4M/media/10b.jpg",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Correct.",
-                    "Percent": 67
+                    "Correct": false,
+                    "Rationale": "Chooses a symmetric but non-right triangle.",
+                    "Percent": 10
                 }
             },
             "C": {
-                "Choice": "4 × 28 = ?",
+                "Choice": "problems/PA18G4M/media/10c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Changes the order and sign.",
-                    "Percent": 15
+                    "Rationale": "Chooses a right triangle but one without symmetry.",
+                    "Percent": 19
                 }
             },
             "D": {
-                "Choice": "4 ÷ ? = 28",
+                "Choice": "problems/PA18G4M/media/10d.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Keeps division and rearranges the numbers.",
-                    "Percent": 14
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 46
                 }
             }
         }
@@ -464,45 +445,42 @@
         "Number": 11,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Solve problems involving the four operations, and identify and explain patterns in arithmetic.",
+        "Topic": "Geometry",
+        "SubTopic": "Recognize a line of symmetry for a twodimensional figure as a line across the figure such that the figure can be folded along the line into mirroring parts. Identify line-symmetric figures and draw lines of symmetry (up to two lines of symmetry).",
         "Content": [
-            "Anya buys 6 packs of cards.",
-            "There are 35 cards in each pack.",
-            "Anya has a total of 210 cards.",
-            "Which sentence explains how many cards Anya would have if she had bought 12 packs of cards instead of 6 packs of cards?"
+            "Dina drew a figure that has at least one line of symmetry and at least one right angle. Which shape could be the figure Dina drew?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Anya would have 6 more cards because 6 + 6 = 12.",
+                "Choice": "problems/PA18G4M/media/11a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses an additive comparison.",
-                    "Percent": 15
+                    "Rationale": "Chooses option where lines of symmetry cross at right angles.",
+                    "Percent": 8
                 }
             },
             "B": {
-                "Choice": "Anya would have half as many cards because 12 ÷ 2 = 6.",
+                "Choice": "problems/PA18G4M/media/11b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Compares in the wrong direction.",
-                    "Percent": 18
+                    "Rationale": "Chooses option where lines of symmetry create right angles with edges of shape.",
+                    "Percent": 8
                 }
             },
             "C": {
-                "Choice": "Anya would have twice as many cards because 6 × 2 = 12.",
+                "Choice": "problems/PA18G4M/media/11c.jpg",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 54
+                    "Percent": 72
                 }
             },
             "D": {
-                "Choice": "Anya would have 6 times as many cards because 6 + 6 = 12.",
+                "Choice": "problems/PA18G4M/media/11d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Combines an additive and multiplicative comparison.",
-                    "Percent": 13
+                    "Rationale": "Chooses option with right angles, but no lines of symmetry.",
+                    "Percent": 12
                 }
             }
         }
@@ -511,44 +489,42 @@
         "Number": 12,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Solve two-step word problems using the four operations (expressions are not explicitly stated). Limit to problems with whole numbers and having whole-number answers.",
+        "Topic": "Measurement & Data",
+        "SubTopic": "Use the four operations to solve word problems involving distances, intervals of time (such as elapsed time), liquid volumes, masses of objects; money, including problems involving simple fractions or decimals; and problems that require expressing measurements given in a larger unit in terms of a smaller unit.",
         "Content": [
-            "Rosa bought 42 cups to use at her lemonade stand.",
-            "She used 17 cups for lemonade on Monday and 18 cups on Tuesday.",
-            "How many cups does Rosa have remaining?"
+            "Paul had 3 pints of vegetable oil. He used 1 cup of the vegetable oil in a recipe. How many cups of vegetable oil does Paul still have?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "7",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "Correct.",
-                    "Percent": 59
-                }
-            },
-            "B": {
-                "Choice": "13",
+                "Choice": "1 cup",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts in the wrong direction.",
-                    "Percent": 12
-                }
-            },
-            "C": {
-                "Choice": "24",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Subtracts number sold on Tuesday.",
+                    "Rationale": "Uses 1 from the stem.",
                     "Percent": 10
                 }
             },
-            "D": {
-                "Choice": "25",
+            "B": {
+                "Choice": "2 cups",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts number sold on Monday.",
-                    "Percent": 19
+                    "Rationale": "Does not convert the 3 pints to cups before subtracting.",
+                    "Percent": 25
+                }
+            },
+            "C": {
+                "Choice": "4 cups",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds the 3 and 1 from the stem.",
+                    "Percent": 17
+                }
+            },
+            "D": {
+                "Choice": "5 cups",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 48
                 }
             }
         }
@@ -557,45 +533,42 @@
         "Number": 13,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Identify arithmetic patterns (including patterns in the addition table or multiplication table) and/or explain them using properties of operations.",
+        "Topic": "Measurement & Data",
+        "SubTopic": "Apply the area and perimeter formulas for rectangles in real-world and mathematical problems (may include finding a missing side length). Whole numbers only.",
         "Content": [
-            "Mr. Hernandez is training for a race.",
-            "The table below shows the numbers of times he ran around a track on four different days.",
-            "problems/PA18G3M/media/13a.jpg",
-            "Which statement describes the pattern shown by the numbers of times Mr. Hernandez ran around the track?"
+            "Which rectangle has the greatest area?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "add 1",
+                "Choice": "problems/PA18G4M/media/13a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds the pattern in the days column.",
-                    "Percent": 7
+                    "Rationale": "Chooses option with the greatest length/perimeter.",
+                    "Percent": 34
                 }
             },
             "B": {
-                "Choice": "add 3",
+                "Choice": "problems/PA18G4M/media/13b.jpg",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Correct.",
-                    "Percent": 70
+                    "Correct": false,
+                    "Rationale": "Chooses option with the least area.",
+                    "Percent": 5
                 }
             },
             "C": {
-                "Choice": "add 4",
+                "Choice": "problems/PA18G4M/media/13c.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Adds 4 to day 2 to get 6 laps.",
-                    "Percent": 11
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 54
                 }
             },
             "D": {
-                "Choice": "add 10",
+                "Choice": "problems/PA18G4M/media/13d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 10 to day 5 to get 15 laps.",
-                    "Percent": 12
+                    "Rationale": "Chooses option with the greatest width.",
+                    "Percent": 7
                 }
             }
         }
@@ -605,42 +578,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Measurement & Data",
-        "SubTopic": "Tell, show, and/or write time (analog) to the nearest minute.",
+        "SubTopic": " Make a line plot to display a data set of measurements in fractions of a unit (e.g., intervals of 1/2, 1/4, or 1/8).",
         "Content": [
-            "Terra leaves her house for soccer practice at 10 minutes to 5:00.",
-            "Which clock shows the time Terra leaves her house for soccer practice?"
+            "The table below shows the numbers of batches of different types of muffins made at a bakery and the amount of flour, in cups, used per batch for each type of muffin.",
+            "problems/PA18G4M/media/14a.jpg",
+            "Which line plot represents the information in the table?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA18G3M/media/14a.jpg",
+                "Choice": "problems/PA18G4M/media/14b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds 5:10; ten minutes after 5:00.",
-                    "Percent": 26
+                    "Rationale": "Marks only 1 ‘×’ per measurement.",
+                    "Percent": 11
                 }
             },
             "B": {
-                "Choice": "problems/PA18G3M/media/14b.jpg",
+                "Choice": "problems/PA18G4M/media/14c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds 2:25; ten minutes after 5:00 and reverses hands.",
-                    "Percent": 7
+                    "Rationale": "Marks the correct total, but the incorrect average for each measurement.",
+                    "Percent": 8
                 }
             },
             "C": {
-                "Choice": "problems/PA18G3M/media/14c.jpg",
+                "Choice": "problems/PA18G4M/media/14d.jpg",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 58
+                    "Percent": 69
                 }
             },
             "D": {
-                "Choice": "problems/PA18G3M/media/14d.jpg",
+                "Choice": "problems/PA18G4M/media/14e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds 10:20; reverses hands.",
-                    "Percent": 9
+                    "Rationale": "Marks the line plot to match the table.",
+                    "Percent": 12
                 }
             }
         }
@@ -650,43 +624,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Measurement & Data",
-        "SubTopic": "Solve one- and two-step problems using information to interpret data presented in scaled pictographs and scaled bar graphs (scales limited to 1, 2, 5, and 10).",
+        "SubTopic": "Measure angles in whole-number degrees using a protractor. With the aid of a protractor, sketch angles of specified measure.",
         "Content": [
-            "The graph shows the favorite lunch menu choices of Tamara’s third-grade class.",
-            "problems/PA18G3M/media/15a.jpg",
-            "How many students chose chicken nuggets or hot dog as their favorite lunch menu choices?"
+            "Jillian drew the angle shown below.",
+            "problems/PA18G4M/media/15a.jpg",
+            "Using your protractor, what is the measure of Jillian’s angle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1",
+                "Choice": "80°",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds how many more students prefer chicken nuggets than hot dogs.",
-                    "Percent": 9
+                    "Rationale": "Reads the measurement for an acute angle.",
+                    "Percent": 25
                 }
             },
             "B": {
-                "Choice": "3",
+                "Choice": "90°",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds number of hot dogs.",
-                    "Percent": 6
+                    "Rationale": "Estimates the angle without looking at the protractor.",
+                    "Percent": 8
                 }
             },
             "C": {
-                "Choice": "4",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Finds number of chicken nuggets.",
-                    "Percent": 28
-                }
-            },
-            "D": {
-                "Choice": "7",
+                "Choice": "100°",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 57
+                    "Percent": 58
+                }
+            },
+            "D": {
+                "Choice": "180°",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Reads the measurement of the horizontal ray.",
+                    "Percent": 9
                 }
             }
         }
