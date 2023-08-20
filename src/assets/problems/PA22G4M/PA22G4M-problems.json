@@ -3,43 +3,42 @@
         "Number": 1,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Numbers & Operations In Base Ten",
-        "SubTopic": "Apply place-value strategies to solve problems.",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Add and subtract mixed numbers with a common denominator (denominators limited to 2, 3, 4, 5, 6, 8, 10, 12, and 100; no regrouping with subtraction; fractions do not need to be simplified; and no improper fractions as the final answers).",
         "Content": [
-            "The Liberty Bell weighs 2,080 pounds.",
-            "What is the value of the 8 in 2,080?"
+            "Subtract: 5 2/5 – 2 1/5"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8 ones",
+                "Choice": "3 1/10",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses tens with ones.",
-                    "Percent": 4
+                    "Rationale": "Adds the denominators together when subtracting.",
+                    "Percent": 5
                 }
             },
             "B": {
-                "Choice": "8 tens",
+                "Choice": "3 1/5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes the 8 is in the tens place.",
-                    "Percent": 79
+                    "Rationale": "Subtracts the whole parts as 5 – 2 = 3 and subtracts the fractional parts as 2/5 – 1/5 = 1/5 by subtracting the numerators.",
+                    "Percent": 89
                 }
             },
             "C": {
-                "Choice": "8 hundreds",
+                "Choice": "3 2/5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses tens with hundreds.",
-                    "Percent": 7
+                    "Rationale": "Subtracts only the whole numbers and keeps the original fractional part.",
+                    "Percent": 3
                 }
             },
             "D": {
-                "Choice": "8 thousands",
+                "Choice": "3 3/5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses tens with thousands.",
-                    "Percent": 10
+                    "Rationale": "Subtracts 5 – 2 but then adds 2/5 + 1/5.",
+                    "Percent": 3
                 }
             }
         }
@@ -49,43 +48,41 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Numbers & Operations In Base Ten",
-        "SubTopic": "Round two- and three-digit whole numbers to the nearest ten or hundred, respectively.",
+        "SubTopic": "Demonstrate an understanding that in a multi-digit whole number (through 1,000,000), a digit in one place represents ten times what it represents in the place to its right.",
         "Content": [
-            "A number sentence is shown below.",
-            "35 < 42",
-            "Which statement would require the symbol to change?"
+            "Which number, when written in standard form, shows a digit with a value that is 10 times the 4 in the tens place?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Add 150 to each number.",
+                "Choice": "four thousand, three hundred forty-two",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not recognize that addition of the same number does not change the relationship.",
-                    "Percent": 7
+                    "Rationale": "Selects a number with a digit that is 100 times the value of the 4 in the tens place.",
+                    "Percent": 24
                 }
             },
             "B": {
-                "Choice": "Divide each number by 7.",
+                "Choice": "four thousand, four hundred thirty-two",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not recognize that division by the same number does not change the relationship.",
-                    "Percent": 14
+                    "Rationale": "Selects a number with a 4 that is 10 times the value of the other 4 but does not consider that the other 4 is not in the tens place.",
+                    "Percent": 24
                 }
             },
             "C": {
-                "Choice": "Subtract 10 from each number.",
+                "Choice": "five thousand, four hundred forty-three",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Does not recognize that subtraction by the same number does not change the relationship.",
-                    "Percent": 8
+                    "Correct": true,
+                    "Rationale": "Translates the word form to 5,443, identifies the value of the 4 in the hundreds place as 400, identifies the value of the 4 in the tens place as 40, and recognizes that 400 is 10 times 40.",
+                    "Percent": 33
                 }
             },
             "D": {
-                "Choice": "Round each number to the nearest 10.",
+                "Choice": "five thousand, five hundred forty-four",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Rounds the 35 up to 40, rounds the 42 down to 40, and recognizes the inequality symbol (<) would change to an equal sign (=).",
-                    "Percent": 71
+                    "Correct": false,
+                    "Rationale": "selects a number with a digit that is 1/10 the value of the 4 in the tens place.",
+                    "Percent": 19
                 }
             }
         }
@@ -95,43 +92,41 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Numbers & Operations In Base Ten",
-        "SubTopic": "Order a set of whole numbers from least to greatest or greatest to least (up through 9,999, and limit sets to no more than four numbers).",
+        "SubTopic": "Compare two multi-digit numbers through 1,000,000 based on meanings of the digits in each place, using >, =, and < symbols.",
         "Content": [
-            "Four numbers are shown below.",
-            "1,991 \t 1,199 \t 1,919 \t 1,999",
-            "Which list shows the numbers in order from greatest to least?"
+            "When Diana bought her car, it had been driven a total of 42,753 miles. Now her car has been driven a total of 85,437 miles. Which number sentence correctly compares the number of miles the car had been driven when Diana bought it to the number of miles it has been driven since she bought it?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1,999 \t 1,991 \t 1,199 \t 1,919",
+                "Choice": "42,753 < 42,684",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Compares the tens place but not the hundreds place in the last two numbers in the answer choice.",
-                    "Percent": 19
+                    "Rationale": "Determines the correct difference but either uses the wrong inequality sign (considers < to mean “greater than”) OR compares the numbers starting with the ones place (3 < 4).",
+                    "Percent": 11
                 }
             },
             "B": {
-                "Choice": "1,991 \t 1,999 \t 1,919 \t 1,199",
+                "Choice": "42,753 > 42,684",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Makes an error comparing the ones place in the first two numbers in the answer choice.",
-                    "Percent": 9
+                    "Correct": true,
+                    "Rationale": "Subtracts 42,753 from 85,437 to get 42,684 and then identifies 42,753 as greater than 42,684 by comparing the digits in the ten thousands place (4 = 4), then the digits in the thousands place (2 = 2), and then the digits in the hundreds place (7 > 6).",
+                    "Percent": 61
                 }
             },
             "C": {
-                "Choice": "1,999 \t 1,991 \t 1,919 \t 1,199",
+                "Choice": "42,753 < 43,324",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Orders the numbers by comparing the digits in the thousands place, then the digits in the hundreds place, then the digits in the tens place, and then the digits in the ones place.",
-                    "Percent": 60
+                    "Correct": false,
+                    "Rationale": "Determines the difference by subtracting the low digit from the high digit for each place value and either uses the wrong inequality sign (considers < to mean “greater than”) OR compares the numbers starting with the ones place (3 < 4).",
+                    "Percent": 19
                 }
             },
             "D": {
-                "Choice": "1,999 \t 1,919 \t 1,991 \t 1,199",
+                "Choice": "42,753 > 43,324",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Makes an error in the tens place for the two middle numbers in the answer choice.",
-                    "Percent": 12
+                    "Rationale": "Determines the difference by subtracting the low digit from the high digit for each place value (but uses the correct inequality sign).",
+                    "Percent": 9
                 }
             }
         }
@@ -140,47 +135,42 @@
         "Number": 4,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Use multiplication (up to and including 10 × 10) and/or division (limit dividends through 50 and limit divisors and quotients through 10) to solve word problems in situations involving equal groups, arrays, and/or measurement quantities.",
+        "Topic": "Numbers & Operations In Base Ten",
+        "SubTopic": "Use operations to solve problems.",
         "Content": [
-            "Gary pours all his milk into 4 glasses.",
-            "He fills each glass with 6 ounces of milk.",
-            "Sara has the same amount of milk as Gary has.",
-            "She also has the same number of glasses as Gary has.",
-            "She pours the same amount of milk into each of her glasses as Gary pours into each of his glasses.",
-            "Which statement is true?"
+            "There were 1,289 people who attended a concert on Saturday. This is 306 more than the number of people who attended the concert on Wednesday. Which expression can be used to determine the number of people who attended the concert on Wednesday?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Sara pours a total of 24 ounces of milk into 4 glasses.",
+                "Choice": "1,289 + 306",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Multiplies 4 by 6 to get 24 ounces of milk, and then identifies 4 as the divisor.",
-                    "Percent": 61
+                    "Correct": false,
+                    "Rationale": "Selects operation based on the phrase “306 more”.",
+                    "Percent": 34
                 }
             },
             "B": {
-                "Choice": " Sara pours a total of 24 ounces of milk into 6 glasses.",
+                "Choice": "1,289 ÷ 306",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Misunderstands the amount of milk in each glass.",
-                    "Percent": 15
+                    "Rationale": "Selects incorrect “reduction” operation.",
+                    "Percent": 5
                 }
             },
             "C": {
-                "Choice": "Sara pours a total of 10 ounces of milk into 4 glasses.",
+                "Choice": "1,289 × 306",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Interprets 4 as a divisor but does not find the correct product.",
-                    "Percent": 17
+                    "Rationale": "Selects operation based on the word “more”.",
+                    "Percent": 8
                 }
             },
             "D": {
-                "Choice": "Sara pours a total of 10 ounces of milk into 6 glasses.",
+                "Choice": "1,289 – 306",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Does not find the correct product and confuses the amounts.",
-                    "Percent": 7
+                    "Correct": true,
+                    "Rationale": "Recognizes that since 306 more people attended Saturday’s concert than Wednesday’s concert, 306 must be subtracted from 1,289 to determine the number of people who attended Wednesday’s concert.",
+                    "Percent": 53
                 }
             }
         }
@@ -189,46 +179,44 @@
         "Number": 5,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Understand properties of multiplication and the relationship between multiplication and division.",
+        "Topic": "Numbers & Operations In Base Ten",
+        "SubTopic": "Multiply a whole number of up to four digits by a one-digit whole number and multiply 2 two-digit numbers.",
         "Content": [
-            "Corey made a design using rectangles that are all the same size.",
-            "One of the rectangles is shown below.",
-            "problems/PA22G3M/media/5a.jpg",
-            "Corey’s design has a total area of 48 square inches.",
-            "How many rectangles are in Corey’s design?"
+            "Ms. Smith wants to replace the floors in her kitchen and her living room. The area of her kitchen floor is 120 square feet, and the area of her living room floor is 98 square feet. The table below shows the prices for different types of floor material Ms. Smith can buy.",
+            "problems/PA22G4M/media/5a.jpg",
+            "Ms. Smith decides to put a cork floor in her kitchen and a bamboo floor in her living room. What is the total price for the floor material Ms. Smith decides to buy?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6",
+                "Choice": "$1,504",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Selects the area of one rectangle.",
-                    "Percent": 34
+                    "Correct": true,
+                    "Rationale": "Multiplies 120 (area of kitchen) by $6 (price for cork), multiplies 98 (area of living room) by $8 (price for bamboo), and then adds the products $720 and $784.",
+                    "Percent": 65
                 }
             },
             "B": {
-                "Choice": "8",
+                "Choice": "$1,526",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Finds the area of one rectangle by multiplying side lengths (3 inches and 2 inches), and then divides 48 square inches by the area of one rectangle (6 square inches).",
-                    "Percent": 38
+                    "Correct": false,
+                    "Rationale": "Multiplies the average of the costs (6 + 8 = 14, 14 ÷ 2 = 7) by the sum of the areas (120 + 98 = 218).",
+                    "Percent": 10
                 }
             },
             "C": {
-                "Choice": "12",
+                "Choice": "$1,548",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Chooses a divisor of 48.",
-                    "Percent": 20
+                    "Rationale": "Switches the cost of the two materials.",
+                    "Percent": 15
                 }
             },
             "D": {
-                "Choice": "42",
+                "Choice": "$3,052",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts the area of one rectangle from the total area.",
-                    "Percent": 8
+                    "Rationale": "Adds the costs (6 + 8 = 14) and the areas (120 + 98 = 218) before multiplying the two sums.",
+                    "Percent": 10
                 }
             }
         }
@@ -237,45 +225,44 @@
         "Number": 6,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Apply the associative property of multiplication (not identification or definition of the property).",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Find equivalencies and compare fractions.",
         "Content": [
-            "Emma buys 7 packages of toy rings.",
-            "Each package contains 2 bags with 5 rings in each.",
-            "Emma uses the expression (7 × 2) × 5 to find the total number of rings.",
-            "Which expression shows another way to find the total number of rings?"
+            "The point plotted on the number line below represents a fraction with a denominator of 8.",
+            "problems/PA22G4M/media/6a.jpg",
+            "The fraction is less than 3/4. What fraction is represented by the point on the number line?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(7 + 2) × 5",
+                "Choice": "1/8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses addition instead of multiplication.",
-                    "Percent": 11
+                    "Rationale": "Selects a unit fraction with a denominator of 8 but does not consider that the fraction shown on the number line is greater than 1/2.",
+                    "Percent": 32
                 }
             },
             "B": {
-                "Choice": "(7 × 2) + 5",
+                "Choice": "3/8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses addition instead of multiplication.",
-                    "Percent": 13
+                    "Rationale": "Sselects a fraction less than 3/4 but does not consider that the fraction shown on the number line is greater than 1/2.",
+                    "Percent": 20
                 }
             },
             "C": {
-                "Choice": "7 × (2 × 5)",
+                "Choice": "5/8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that, when multiplying, grouping symbols may be moved without changing the value of the expression (associative property of multiplication).",
-                    "Percent": 68
+                    "Rationale": "Recognizes that 5/8 is greater than 1/2 and less than 3/4 by first converting 1/2 to 4/8 (by multiplying the numerator and denominator by 4) and by converting 3/4 to 6/8 (by multiplying the numerator and denominator by 2) and then comparing the numerators (5 > 4 and 5 < 6).",
+                    "Percent": 37
                 }
             },
             "D": {
-                "Choice": "7 × (5 × 10)",
+                "Choice": "6/8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies 2 by 5 to get 10 but introduces a second 5.",
-                    "Percent": 8
+                    "Rationale": "Selects a fraction that falls between 1/2 and 1 but does not consider that it is equivalent to 3/4.",
+                    "Percent": 11
                 }
             }
         }
@@ -284,44 +271,44 @@
         "Number": 7,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Geometry",
-        "SubTopic": "Reason with shapes and their attributes.",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Recognize and generate equivalent fractions.",
         "Content": [
-            "A shape is shown below.",
-            "problems/PA22G3M/media/7a.jpg",
-            "Which statement best explains whether the shape is a polygon?"
+            "Rosa and four of her friends each have some coins. The table below shows the fraction of each friend’s coins that are pennies.",
+            "problems/PA22G4M/media/7a.jpg",
+            "Rosa has 6 pennies out of a total of 10 coins. Which friend has an equivalent fraction of coins that are pennies to the fraction Rosa has?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Because it has many sides, the shape is a polygon.",
+                "Choice": "Greg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Knows a polygon has sides but overlooks the curved side.",
-                    "Percent": 13
+                    "Rationale": "Considers that the sum of the numerator and the denominator is the same for both Greg (4 + 12 = 16) and Rosa (6 + 10 = 16).",
+                    "Percent": 14
                 }
             },
             "B": {
-                "Choice": "Because one side is curved, the shape is not a polygon.",
+                "Choice": "Helen",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that polygons cannot have any curved sides.",
-                    "Percent": 54
+                    "Rationale": "Converts 3/5 to 6/10 by multiplying the numerator and denominator by 2 (3 × 2 = 6 and 5 × 2 = 10).",
+                    "Percent": 52
                 }
             },
             "C": {
-                "Choice": "Because it has an inside and an outside, the shape is a polygon.",
+                "Choice": "Isaac",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Knows a polygon is closed but overlooks the curved side.",
-                    "Percent": 10
+                    "Rationale": "Considers that the difference between the denominator and the numerator is the same for both Isaac (8 – 4 = 4) and Rosa (10 – 6 = 4).",
+                    "Percent": 14
                 }
             },
             "D": {
-                "Choice": "Because the sides have different lengths, the shape is not a polygon.",
+                "Choice": "Josie",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks of only regular polygons.",
-                    "Percent": 23
+                    "Rationale": "Considers that the denominators are the same for both Josie and Rosa.",
+                    "Percent": 20
                 }
             }
         }
@@ -330,45 +317,42 @@
         "Number": 8,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Geometry",
-        "SubTopic": "Analyze characteristics of polygons.",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Decompose a fraction or a mixed number into a sum of fractions with the same denominator (denominators limited to 2, 3, 4, 5, 6, 8, 10, 12, and 100), recording the decomposition by an equation. Justify decompositions (e.g., by using a visual fraction model).",
         "Content": [
-            "Keenan makes a cardboard polygon.",
-            "Then he cuts it straight from one corner to another corner.",
-            "The result is two trapezoids.",
-            "Which polygon could be Keenan’s original polygon?"
+            "Some fourth-grade students ate a total of 3/4 of a bag of sunflower seeds. Each student ate the same amount. Which pair of equations could show how the sunflower seeds were equally shared by the students?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA22G3M/media/8a.jpg",
+                "Choice": "6/8 + 6/8 + 6/8 = 18/24 and 18/24 = 3/4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Focuses on one trapezoid but does not realize the other part would be a triangle.",
-                    "Percent": 25
+                    "Rationale": "Adds numerators and denominators.",
+                    "Percent": 22
                 }
             },
             "B": {
-                "Choice": "problems/PA22G3M/media/8b.jpg",
+                "Choice": "3/12 + 3/12 + 3/12 = 9/12 and 9/12 = 3/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that a cut from one corner to its opposite corner would result in two trapezoids.",
-                    "Percent": 45
+                    "Rationale": "Adds the numerators while leaving the common denominator and then finds an equivalent fraction by dividing the numerator and denominator by 3 (9 ÷ 3 = 3 and 12 ÷ 3 = 4).",
+                    "Percent": 49
                 }
             },
             "C": {
-                "Choice": "problems/PA22G3M/media/8c.jpg",
+                "Choice": "6/8 + 6/8 + 6/8 + 6/8 = 24/32 and 24/32 = 3/4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Focuses on one trapezoid but does not realize the other part would have 5 sides.",
-                    "Percent": 11
+                    "Rationale": "Adds numerators and denominators.",
+                    "Percent": 16
                 }
             },
             "D": {
-                "Choice": "problems/PA22G3M/media/8d.jpg",
+                "Choice": "3/12 + 3/12 + 3/12 + 3/12 = 12/13 and 12/13 = 3/4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Recognizes that a trapezoid can be taken from the top and bottom but neglects the third piece.",
-                    "Percent": 19
+                    "Rationale": "Adds numerators to get 12; adds 1 more to common denominator to get a “proper” fraction; subtracts 9 from both numerator and denominator to “reduce” the fraction to 3/4.",
+                    "Percent": 13
                 }
             }
         }
@@ -377,43 +361,42 @@
         "Number": 9,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Geometry",
-        "SubTopic": "Recognize rhombi, rectangles, and squares as examples of quadrilaterals and/or draw examples of quadrilaterals that do not belong to any of these subcategories.",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Use operations to solve problems involving decimals, including converting between fractions and decimals (may include word problems).",
         "Content": [
-            "Paula makes a quilt using only quadrilateral shapes.",
-            "Which group of shapes could Paula use to make her quilt?"
+            "Dominic drank 1 2/10 cups of juice for breakfast and 0.4 cup of juice for lunch. How many cups of juice did Dominic drink in all?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA22G3M/media/9a.jpg",
+                "Choice": "0.55",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks that a shape is a quadrilateral as long as it has 4 or more sides.",
-                    "Percent": 9
-                }
-            },
-            "B": {
-                "Choice": "problems/PA22G3M/media/9b.jpg",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Thinks that a shape is a quadrilateral as long as it has no more than 4 sides.",
+                    "Rationale": "Converts the fraction to an incorrect decimal equivalent (0.15) and omits the whole number.",
                     "Percent": 7
                 }
             },
-            "C": {
-                "Choice": "problems/PA22G3M/media/9c.jpg",
+            "B": {
+                "Choice": "0.6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses “quadrilateral” and “polygon”.",
-                    "Percent": 8
+                    "Rationale": "Omits the whole number in the conversion and adds 0.2 and 0.4.",
+                    "Percent": 10
+                }
+            },
+            "C": {
+                "Choice": "1.55",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Converts the fraction to an incorrect decimal equivalent (1.15).",
+                    "Percent": 12
                 }
             },
             "D": {
-                "Choice": "problems/PA22G3M/media/9d.jpg",
+                "Choice": "1.6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that each shape has exactly 4 sides.",
-                    "Percent": 76
+                    "Rationale": "Converts 1 2/10 to 1.2 and then adds 1.2 and 0.4 OR converts 0.4 to 4/10, adds 1 2/10 to 4/10 by adding the whole parts (1 + 0 = 1) and the fractional parts (2/10 + 4/10 = 6/10), and then converts 1 6/10 to a decimal.",
+                    "Percent": 71
                 }
             }
         }
@@ -422,43 +405,44 @@
         "Number": 10,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Measurement & Data",
-        "SubTopic": "Tell, show, and/or write time (analog) to the nearest minute.",
+        "Topic": "Operations & Algebraic Thinking",
+        "SubTopic": "Identify the missing symbol (+, –, ×, ÷, =, <, and >) that makes a number sentence true (single-digit divisor only).",
         "Content": [
-            "The television weather report begins at 7:23 each day.",
-            "Which clock shows the time when the weather report begins?"
+            "A number sentence comparing two expressions is shown below.",
+            "0.4 + 0.09 + 0.6 □ 0.4 + 0.9 + 0.6",
+            "Which symbol should go in the box to correctly complete the number sentence?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA22G3M/media/10a.jpg",
+                "Choice": "+",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Counts minutes counterclockwise.",
-                    "Percent": 2
+                    "Rationale": "Assumes since the other numbers are separated by plus signs, the answer is +.",
+                    "Percent": 20
                 }
             },
             "B": {
-                "Choice": "problems/PA22G3M/media/10b.jpg",
+                "Choice": "=",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Places the minute hand between 2 and 3 instead of at 23.",
-                    "Percent": 9
+                    "Rationale": "Does not note the difference in the second term in each expression OR finds the value of each expression (1.09 and 1.9) but compares the digits after the decimal point as 09 = 9.",
+                    "Percent": 24
                 }
             },
             "C": {
-                "Choice": "problems/PA22G3M/media/10c.jpg",
+                "Choice": "<",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes the hour (shorter) hand should be almost halfway between the 7 and the 8 and the minute (longer) hand should be a little over halfway between the 4 and the 5.",
-                    "Percent": 73
+                    "Rationale": "Finds the value of each expression (1.09 and 1.9) and then identifies that 1.09 is less than 1.9 either by comparing the digits in the ones place (1 = 1) and then the digits in the tenths place (0 < 9) OR by expanding 1.9 to 1.90 and then comparing the digits after the decimal point (09 < 90).",
+                    "Percent": 35
                 }
             },
             "D": {
-                "Choice": "problems/PA22G3M/media/10d.jpg",
+                "Choice": ">",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Reverses the places of the hour and minute hands.",
-                    "Percent": 16
+                    "Rationale": "Considers > to mean “less than”.",
+                    "Percent": 212
                 }
             }
         }
@@ -467,44 +451,44 @@
         "Number": 11,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Measurement & Data",
-        "SubTopic": "Add, subtract, multiply, and divide to solve one-step word problems involving masses or liquid volumes that are given in the same units.",
+        "Topic": "Operations & Algebraic Thinking",
+        "SubTopic": " Recognize, describe, extend, create, and replicate a variety of patterns.",
         "Content": [
-            "Arianna used 16 gallons of water taking a shower.",
-            "The shower lasted for 8 minutes.",
-            "How many gallons of water were used each minute?"
+            "Tiles are placed into rows. Each tile is 1/4 foot long. The pattern below shows the total length, in feet, of each row of tiles.",
+            "1/4, 2/4, 3/4, 1, 1 1/4, 1 1/2",
+            "The pattern continues. How would the pattern be different if each tile was 1/2 foot long?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2",
+                "Choice": "The pattern would not be different at all.",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Divides the number of gallons (16) by the number of minutes (8) the shower lasted.",
-                    "Percent": 57
+                    "Correct": false,
+                    "Rationale": "Does not see any difference between the two patterns.",
+                    "Percent": 14
                 }
             },
             "B": {
-                "Choice": "4",
+                "Choice": "Each term in the pattern would be twice as great as it is now.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Divides incorrectly.",
-                    "Percent": 7
+                    "Correct": true,
+                    "Rationale": "Recognizes that 1/2 is twice as great as 1/4 and that both the starting number and the rule would be twice as great, which would result in each term being twice as great.",
+                    "Percent": 47
                 }
             },
             "C": {
-                "Choice": "8",
+                "Choice": "The pattern would start with the same first term and then skip every other term.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts.",
-                    "Percent": 18
+                    "Rationale": "Intends to skip every other term but starts at the wrong term.",
+                    "Percent": 17
                 }
             },
             "D": {
-                "Choice": "24",
+                "Choice": "The pattern would follow the same rule, except it would start at 1 instead of 1/4.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds.",
-                    "Percent": 18
+                    "Rationale": "Does not change the rule and starts with the second term.",
+                    "Percent": 22
                 }
             }
         }
@@ -514,44 +498,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Measurement & Data",
-        "SubTopic": "Use a ruler to measure lengths to the nearest quarter inch or centimeter.",
+        "SubTopic": "Solve problems involving length, weight (mass), liquid volume, time, area, and perimeter.",
         "Content": [
-            "A rectangle is shown below.",
-            "problems/PA22G3M/media/12a.jpg",
-            "Use your ruler to measure the lengths of the sides of the rectangle to the nearest centimeter.",
-            "Which measurement is closest to the area, in square centimeters, of the rectangle?"
+            "The total weight, in pounds, of two bunches of bananas is shown on the scale in the picture below.",
+            "problems/PA22G4M/media/12a.jpg",
+            "One of the bunches of bananas weighs 2 1/4 pounds. How many pounds does the other bunch of bananas weigh?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "12",
+                "Choice": "2/4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds both measurements down to 2 cm and to 6 cm.",
-                    "Percent": 34
+                    "Rationale": "Does not consider the whole number parts of the mixed numbers.",
+                    "Percent": 14
                 }
             },
             "B": {
-                "Choice": "14",
+                "Choice": "2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds the shorter side down to 2 cm and the longer side up to 7 cm.",
-                    "Percent": 11
+                    "Rationale": "Does not consider the fractional parts of the mixed numbers.",
+                    "Percent": 8
                 }
             },
             "C": {
-                "Choice": "18",
+                "Choice": "2 2/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Measures the shorter side as closer to 3 cm than to 2 cm, measures the longer side as closer to 6 cm than to 7 cm, and then multiplies the side lengths (3 cm and 6 cm).",
-                    "Percent": 39
+                    "Rationale": "Reads the scale as showing 4 3/4 pounds and then subtracts 2 1/4 from 4 3/4 by subtracting the whole parts (4 – 2 = 2) and the fractional parts (3/4 – 1/4 = 2/4).",
+                    "Percent": 73
                 }
             },
             "D": {
-                "Choice": "21",
+                "Choice": "7",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds both measurements up to 3 cm and to 7 cm.",
-                    "Percent": 16
+                    "Rationale": "Adds the two amounts.",
+                    "Percent": 5
                 }
             }
         }
@@ -561,43 +544,41 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Measurement & Data",
-        "SubTopic": "Round amounts of money to the nearest dollar.",
+        "SubTopic": "Use the four operations to solve word problems involving distances, intervals of time (such as elapsed time), liquid volumes, masses of objects; money, including problems involving simple fractions or decimals; and problems that require expressing measurements given in a larger unit in terms of a smaller unit.",
         "Content": [
-            "Cordelia and Reanna have different amounts of money.",
-            "When rounded to the nearest dollar, the amount they each have rounds to $4.",
-            "Which amounts of money could Cordelia and Reanna each have?"
+            "Luisa started reading at 12:30. She read for 1 hour and 20 minutes. At what time did Luisa stop reading?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$3.49 and $4.49",
+                "Choice": "10 minutes after 1:00",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly rounds $3.49 up to $4.",
-                    "Percent": 19
+                    "Rationale": "Does not change the hour or gets 1:50 and assumes 1:00 must be in the answer.",
+                    "Percent": 21
                 }
             },
             "B": {
-                "Choice": "$3.49 and $4.50",
+                "Choice": "10 minutes before 2:00",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Incorrectly rounds $3.49 up to $4 and incorrectly rounds $4.50 down to $4.",
-                    "Percent": 11
+                    "Correct": true,
+                    "Rationale": "Recognizes that 1 hour after 12:00 is 1:00 and adds 20 minutes to :30 to get 1:50, and then recognizes this as 10 minutes before 2:00 since there are 60 minutes in an hour (60 – 50 = 10 minutes) and that the time has not yet reached 2:00.",
+                    "Percent": 65
                 }
             },
             "C": {
-                "Choice": "$3.50 and $4.50",
+                "Choice": "10 minutes after 2:00",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly rounds $4.50 down to $4.",
-                    "Percent": 22
+                    "Rationale": "Confuses before and after 2:00.",
+                    "Percent": 8
                 }
             },
             "D": {
-                "Choice": " $3.50 and $4.49",
+                "Choice": "10 minutes before 3:00",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Identifies that $3.50 rounds up to $4 and that $4.49 rounds down to $4.",
-                    "Percent": 48
+                    "Correct": false,
+                    "Rationale": "Counts an additional hour.",
+                    "Percent": 6
                 }
             }
         }
@@ -607,43 +588,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Measurement & Data",
-        "SubTopic": "Translate information from one type of display to another. Limit to pictographs, tally charts, bar graphs, and tables.",
+        "SubTopic": "Make a line plot to display a data set of measurements in fractions of a unit (e.g., intervals of 1/2, 1/4, or 1/8).",
         "Content": [
-            "The bar graph below shows the numbers of rocks collected by three friends at a lake.",
-            "problems/PA22G3M/media/14a.jpg",
-            "Which pictograph shows the same information as the bar graph?"
+            "The lengths, in inches, of five crayons are listed below.",
+            "2 3/4 \t 2 1/8 \t 2 1/2 \t 2 1/2 \t 2 3/8",
+            "Which line plot shows the lengths, in inches, of the five crayons?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA22G3M/media/14b.jpg",
+                "Choice": "problems/PA22G4M/media/14a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not apply the key (uses 1 “rock” = 1 rock).",
-                    "Percent": 35
+                    "Rationale": "Uses just one × for each unique value.",
+                    "Percent": 8
                 }
             },
             "B": {
-                "Choice": "problems/PA22G3M/media/14c.jpg",
+                "Choice": "problems/PA22G4M/media/14b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not apply the key for Susan.",
-                    "Percent": 3
+                    "Rationale": "Uses the numerators of the fractions in the list and does not find equivalent fractions.",
+                    "Percent": 19
                 }
             },
             "C": {
-                "Choice": "problems/PA22G3M/media/14d.jpg",
+                "Choice": "problems/PA22G4M/media/14c.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Uses only whole “rocks” (does not use the half “rock” for Hannah).",
-                    "Percent": 3
+                    "Correct": true,
+                    "Rationale": "Converts 2 3/4 to 2 6/8 by multiplying the numerator and denominator by 2 (3 × 2 = 6 and 4 × 2 = 8), converts 2 1/2 to 2 4/8 by multiplying the numerator and denominator by 4 (1 × 4 = 4 and 2 × 4 = 8), and then uses one × for each number, including two ×s for 2 4/8.",
+                    "Percent": 46
                 }
             },
             "D": {
-                "Choice": "problems/PA22G3M/media/14e.jpg",
+                "Choice": "problems/PA22G4M/media/14d.jpg",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Applies the key to each bar height, using a half “rock” for the odd height (5).",
-                    "Percent": 59
+                    "Correct": false,
+                    "Rationale": "Incorrectly converts 2 3/4 to 2 7/8 (adds 4 to the numerator and denominator).",
+                    "Percent": 27
                 }
             }
         }
@@ -653,44 +634,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Measurement & Data",
-        "SubTopic": "Geometric measurement: recognize perimeter as an attribute of plane figures and distinguish between linear and area measures.",
+        "SubTopic": "Geometric measurement: understand concepts of angle; measure and create angles.",
         "Content": [
-            "Grady is taking swimming lessons in the swimming pool shown below.",
-            "problems/PA22G3M/media/15a.jpg",
-            "He is going to swim the perimeter of the pool.",
-            "Which diagram could show the path Grady swims?"
+            "Ryan and Tom are standing next to each other. Ryan walks north in a straight line. Tom walks east in a straight line.",
+            "problems/PA22G4M/media/15a.jpg",
+            "What angle is formed by their walking paths?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA22G3M/media/15b.jpg",
+                "Choice": "acute",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses perimeter with length.",
-                    "Percent": 11
+                    "Rationale": "Confuses acute for a right angle.",
+                    "Percent": 6
                 }
             },
             "B": {
-                "Choice": "problems/PA22G3M/media/15c.jpg",
+                "Choice": "obtuse",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Recognizes that the perimeter is the distance around the pool.",
-                    "Percent": 75
+                    "Correct": false,
+                    "Rationale": "Confuses obtuse for a right angle.",
+                    "Percent": 6
                 }
             },
             "C": {
-                "Choice": "problems/PA22G3M/media/15d.jpg",
+                "Choice": "right",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Confuses perimeter with diagonal.",
-                    "Percent": 5
+                    "Correct": true,
+                    "Rationale": "Identifies an angle as a right angle when one ray is horizontal and the other ray is vertical.",
+                    "Percent": 84
                 }
             },
             "D": {
-                "Choice": "problems/PA22G3M/media/15e.jpg",
+                "Choice": "straight",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses perimeter with area.",
-                    "Percent": 9
+                    "Rationale": "Confuses a straight angle for a right angle.",
+                    "Percent": 4
                 }
             }
         }
@@ -700,41 +680,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Measurement & Data",
-        "SubTopic": "Solve real-world and mathematical problems involving perimeters of polygons, including finding the perimeter given the side lengths, finding an unknown side length, exhibiting rectangles with the same perimeter and different areas, and exhibiting rectangles with the same area and different perimeters. Use the same units throughout the problem.",
+        "SubTopic": "Measure angles in whole-number degrees using a protractor. With the aid of a protractor, sketch angles of specified measure.",
         "Content": [
-            "Which rectangle has an area of 24 square feet and a perimeter less than 25 feet?"
+            "The diagram below shows three line segments that meet at one point.",
+            "problems/PA22G4M/media/16a.jpg",
+            "Using your protractor, what is the measure of the obtuse angle created by two of the line segments?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA22G3M/media/16a.jpg",
+                "Choice": "50°",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Switches the target values and identifies a rectangle with an area of 25 feet and a perimeter less than 24 feet.",
+                    "Rationale": "Measures the smallest angle.",
                     "Percent": 15
                 }
             },
             "B": {
-                "Choice": "problems/PA22G3M/media/16b.jpg",
+                "Choice": "75°",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies a rectangle with an area of 24 feet but determines the perimeter by adding the side lengths that are labeled without doubling the sum (12 + 2 < 25).",
-                    "Percent": 26
+                    "Rationale": "Associates “obtuse” with “larger” and measures the larger of the two acute angles.",
+                    "Percent": 13
                 }
             },
             "C": {
-                "Choice": "problems/PA22G3M/media/16c.jpg",
+                "Choice": "105°",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Multiplies the side lengths to determine the area (8 × 3 = 24) and either adds all four side lengths (8 + 3 + 8 + 3 = 22) or adds the side lengths that are labeled and then doubles the sum (8 + 3 = 11, 11 × 2 = 22) to determine the perimeter is less than 25 feet.",
-                    "Percent": 46
+                    "Correct": false,
+                    "Rationale": "Measures the larger acute angle and reads the protractor incorrectly, knowing the answer must be greater than 90.",
+                    "Percent": 17
                 }
             },
             "D": {
-                "Choice": "problems/PA22G3M/media/16d.jpg",
+                "Choice": "125°",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Switches the target values, determines the area using the formula for the area of a triangle (1/2 × 10 × 5 = 25), and determines the perimeter by adding the side lengths that are labeled without doubling the sum (10 + 5 < 24).",
-                    "Percent": 13
+                    "Correct": true,
+                    "Rationale": "Lines up the 0° line on the protractor with the vertical line segment, placing the center of the protractor at the point of intersection, and then reads the outer number that the lower right line segment passes through OR lines up the 0° line on the protractor with the lower right line segment, placing the center of the protractor at the point of intersection, and then reads the inner number that the vertical line segment passes through.",
+                    "Percent": 55
                 }
             }
         }

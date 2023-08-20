@@ -67,6 +67,16 @@ import { PA16G3MExamComponent } from './components/PA16G3M-exam/PA16G3M-exam.com
 import { PA16G3MKeyComponent } from './components/PA16G3M-key/PA16G3M-key.component';
 import { PA15G3MExamComponent } from './components/PA15G3M-exam/PA15G3M-exam.component';
 import { PA15G3MKeyComponent } from './components/PA15G3M-key/PA15G3M-key.component';
+import { PA22G4MExamComponent } from './components/PA22G4M-exam/PA22G4M-exam.component';
+import { PA22G4MKeyComponent } from './components/PA22G4M-key/PA22G4M-key.component';
+import { PA21G4MExamComponent } from './components/PA21G4M-exam/PA21G4M-exam.component';
+import { PA21G4MKeyComponent } from './components/PA21G4M-key/PA21G4M-key.component';
+import { PA19G4MExamComponent } from './components/PA19G4M-exam/PA19G4M-exam.component';
+import { PA19G4MKeyComponent } from './components/PA19G4M-key/PA19G4M-key.component';
+import { PA18G4MExamComponent } from './components/PA18G4M-exam/PA18G4M-exam.component';
+import { PA18G4MKeyComponent } from './components/PA18G4M-key/PA18G4M-key.component';
+import { PA16G4MExamComponent } from './components/PA16G4M-exam/PA16G4M-exam.component';
+import { PA16G4MKeyComponent } from './components/PA16G4M-key/PA16G4M-key.component';
 import { PA15G4MExamComponent } from './components/PA15G4M-exam/PA15G4M-exam.component';
 import { PA15G4MKeyComponent } from './components/PA15G4M-key/PA15G4M-key.component';
 import { TX22G3MExamComponent } from './components/TX22G3M-exam/TX22G3M-exam.component';
@@ -213,6 +223,16 @@ import { TX18G8SSKeyComponent } from './components/TX18G8SS-key/TX18G8SS-key.com
     PA16G3MKeyComponent,
     PA15G3MExamComponent,
     PA15G3MKeyComponent,
+    PA22G4MExamComponent,
+    PA22G4MKeyComponent,
+    PA21G4MExamComponent,
+    PA21G4MKeyComponent,
+    PA19G4MExamComponent,
+    PA19G4MKeyComponent,
+    PA18G4MExamComponent,
+    PA18G4MKeyComponent,
+    PA16G4MExamComponent,
+    PA16G4MKeyComponent,
     PA15G4MExamComponent,
     PA15G4MKeyComponent,
     TX22G3MExamComponent,

@@ -3,47 +3,42 @@
         "Number": 1,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Numbers & Operations In Base Ten",
-        "SubTopic": "Apply place-value strategies to solve problems.",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Use decimal notation for fractions with denominators 10 or 100.",
         "Content": [
-            "Mario picks a whole number from 2 to 6.",
-            "He multiplies the number by 10.",
-            "He adds 20 to the product.",
-            "Mario then completes one more step.",
-            "The result of Mario completing this last step is a 5 in the ones place.",
-            "Which step could be the last step Mario completes?"
+            "Which decimal number is equal to 79/100?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Mario adds 60 to the sum.",
+                "Choice": "0.079",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Starts with 7 and ends with a 5 in the tens place.",
-                    "Percent": 17
+                    "Rationale": "Misplaces decimal.",
+                    "Percent": 15
                 }
             },
             "B": {
-                "Choice": "Mario subtracts 5 from the sum.",
+                "Choice": "0.709",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Correct.",
-                    "Percent": 38
+                    "Correct": false,
+                    "Rationale": "Misplaces a 0 after the decimal.",
+                    "Percent": 5
                 }
             },
             "C": {
-                "Choice": " Mario multiplies the sum by 5.",
+                "Choice": "0.79",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Thinks an operation involving 5 would give the result.",
-                    "Percent": 31
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 75
                 }
             },
             "D": {
-                "Choice": "Mario divides the sum by 6.",
+                "Choice": "7.9",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Tries 1 as the first number without realizing this is not in the initial interval and saw that the result was 5.",
-                    "Percent": 14
+                    "Rationale": "Misplaces decimal.",
+                    "Percent": 5
                 }
             }
         }
@@ -53,42 +48,41 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Numbers & Operations In Base Ten",
-        "SubTopic": "Round two- and three-digit whole numbers to the nearest ten or hundred, respectively.",
+        "SubTopic": "Use place-value understanding and properties of operations to perform multi-digit arithmetic.",
         "Content": [
-            "David correctly rounded the number of stickers he has to 300.",
-            "Which could be the number of stickers David has?"
+            "Greg buys 21 bags of nails. Each bag has 85 nails in it. Greg rounds both numbers to the nearest ten to find an estimate of the total number of nails. What is the difference between Greg’s estimate of the total number of nails and the actual total number of nails?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "34",
+                "Choice": "4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses tens and hundreds place values.",
-                    "Percent": 4
+                    "Rationale": "Compares the sum of 21 + 85 with the sum of 20 + 90.",
+                    "Percent": 18
                 }
             },
             "B": {
-                "Choice": "203",
+                "Choice": "6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Looks at ones digit only.",
-                    "Percent": 8
+                    "Rationale": "Compares the sum of 21 + 85 with the sum of 20 + 80.",
+                    "Percent": 12
                 }
             },
             "C": {
-                "Choice": "257",
+                "Choice": "15",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 72
+                    "Percent": 37
                 }
             },
             "D": {
-                "Choice": "364",
+                "Choice": "185",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Looks at hundreds digit only.",
-                    "Percent": 16
+                    "Rationale": "Rounds to 20 and 80.",
+                    "Percent": 33
                 }
             }
         }
@@ -97,45 +91,42 @@
         "Number": 3,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Numbers & Operations In Base Ten",
-        "SubTopic": "Add two- and three-digit whole numbers (limit sums from 100 through 1,000) and/or subtract two- and three-digit numbers from three-digit whole numbers.",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Compare two fractions with different numerators and different denominators (denominators limited to 2, 3, 4, 5, 6, 8, 10, 12, and 100) using the symbols >, =, or < and justify the conclusions.",
         "Content": [
-            "Pat wins 209 tickets at a school fair.",
-            "Adam wins 253 tickets at the school fair.",
-            "They combine their tickets to buy a prize that costs 395 tickets.",
-            "How many tickets do they have remaining?"
+            "Amanda ate 5/8 of her chocolate bar. cody ate more of his chocolate bar than Amanda ate of hers. Which fraction could represent the amount of Cody’s chocolate bar that he ate?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "57",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Does not regroup the 1 when adding 209 and 253.",
-                    "Percent": 15
-                }
-            },
-            "B": {
-                "Choice": "67",
+                "Choice": "2/3",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 55
+                    "Percent": 42
+                }
+            },
+            "B": {
+                "Choice": "3/5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Confuses the value of 3/5 with the vlaue of 3/4.",
+                    "Percent": 16
                 }
             },
             "C": {
-                "Choice": "133",
+                "Choice": "5/10",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts 2 from 5 and 6 from 9 when subtracting 395 from 462.",
-                    "Percent": 15
+                    "Rationale": "Thinks a larger denominator is a larger amount.",
+                    "Percent": 21
                 }
             },
             "D": {
-                "Choice": "143",
+                "Choice": "7/12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not regroup the 1 when adding 209 and 253 and subtracts the 2 from 5 and 5 from 9 when subtracting 395 from 452.",
-                    "Percent": 15
+                    "Rationale": "Thinks a larger denominator is a larger amount.",
+                    "Percent": 21
                 }
             }
         }
@@ -144,45 +135,42 @@
         "Number": 4,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Numbers & Operations In Base Ten",
-        "SubTopic": "Multiply one-digit whole numbers by two-digit multiples of 10 (from 10 through 90).",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Solve word problems involving addition and subtraction of fractions referring to the same whole or set and having like denominators (denominators limited to 2, 3, 4, 5, 6, 8, 10, 12, and 100).",
         "Content": [
-            "Frank took 3 piano lessons at school.",
-            "Each lesson was 90 minutes long.",
-            "He also took a guitar lesson that was 40 minutes long.",
-            "What was the total length of time, in minutes, of Frank’s music lessons?"
+            "In Ms. Lassiter’s class, 1/8 of the students have blue eyes and 5/8 of the students have brown eyes. What fraction of the students in Ms. Lassiter’s class have neither blue eyes nor brown eyes?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "130",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Adds 90 and 40.",
-                    "Percent": 32
-                }
-            },
-            "B": {
-                "Choice": "133",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Adds all three values.",
-                    "Percent": 12
-                }
-            },
-            "C": {
-                "Choice": "210",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Does not regroup when adding.",
-                    "Percent": 10
-                }
-            },
-            "D": {
-                "Choice": "310",
+                "Choice": "2/8",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 46
+                    "Percent": 50
+                }
+            },
+            "B": {
+                "Choice": "4/8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Subtracts the fraction of blue-eyed students from the fraction of brown-eyed students.",
+                    "Percent": 18
+                }
+            },
+            "C": {
+                "Choice": "5/8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds the numerators and denominators of the fractions before finding the difference from the whole and reducing.",
+                    "Percent": 7
+                }
+            },
+            "D": {
+                "Choice": "6/8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Finds the fraction of students with either blue or brown eyes.",
+                    "Percent": 25
                 }
             }
         }
@@ -192,43 +180,41 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Numbers & Operations - Fractions",
-        "SubTopic": "Compare two fractions with the same denominator (limit denominators to 1, 2, 3, 4, 6, and 8), using the symbols >, =, or <, and/or justify the conclusions.",
+        "SubTopic": "Solve word problems involving multiplication of a whole number by a fraction (denominators limited to 2, 3, 4, 5, 6, 8, 10, 12, and 100).",
         "Content": [
-            "The table below lists the amounts of time, in hours, it takes three students to go to school each morning.",
-            "problems/PA19G3M/media/5a.jpg",
-            "Which statement correctly compares the amounts of time, in hours, it takes two of the students to go to school?"
+            "A store sold 6 sandwiches. Each sandwich contained between 1/3 and 1/2 pound of meat. How much meat did the 6 sandwiches contain?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/6 > 3/6 because 1 is less than 3.",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Uses the incorrect comparison symbol.",
-                    "Percent": 18
-                }
-            },
-            "B": {
-                "Choice": "4/6 > 3/6 because 4 is greater than 3.",
+                "Choice": "between 2 and 3 pounds",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 56
+                    "Percent": 52
+                }
+            },
+            "B": {
+                "Choice": "between 3 and 4 pounds",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates 6 × 1/2 and thinks that 6 × 1/3 is a little greater than 6 × 1/2.",
+                    "Percent": 15
                 }
             },
             "C": {
-                "Choice": "1/6 < 4/6 because the numerators are less than the denominators.",
+                "Choice": "between 5 and 6 pounds",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Compares a numerator to a denominator.",
-                    "Percent": 20
+                    "Rationale": "Calculates 6(1/3 + 1/2).",
+                    "Percent": 22
                 }
             },
             "D": {
-                "Choice": "4/6 = 3/6 because both fractions have the same denominator.",
+                "Choice": "between 6 and 7 pounds",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Compares denominators instead of numerators.",
-                    "Percent": 6
+                    "Rationale": "Calculates 6 + 1/3 + 1/2.",
+                    "Percent": 11
                 }
             }
         }
@@ -237,45 +223,42 @@
         "Number": 6,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Interpret and/or describe products of whole numbers (up to and including 10 × 10).",
+        "Topic": "Numbers & Operations - Fractions",
+        "SubTopic": "Add two fractions with respective denominators 10 and 100.",
         "Content": [
-            "Harsha has 48 toy cars.",
-            "She puts the toy cars on shelves.",
-            "She puts the same number of toy cars on each shelf.",
-            "Which sentence about the toy cars could be true?"
+            "In Chang’s garden, 7/10 of the plants are tomato plants and 12/100 of the plants are cucumber plants. Which decimal is equal to the fraction of the plants in Chang’s garden that are either tomato plants or cucumber plants?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "There are 6 shelves and 7 toy cars on each shelf.",
+                "Choice": "0.19",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies incorrectly.",
-                    "Percent": 14
+                    "Rationale": "Adds 12 and 7 and then converts to decimal.",
+                    "Percent": 29
                 }
             },
             "B": {
-                "Choice": "There are 6 shelves and 8 toy cars on each shelf.",
+                "Choice": "0.50",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Correct.",
-                    "Percent": 59
+                    "Correct": false,
+                    "Rationale": "Subtracts 7 from 12 and then converts to decimal form incorrectly.",
+                    "Percent": 10
                 }
             },
             "C": {
-                "Choice": "There are 7 shelves and 7 toy cars on each shelf.",
+                "Choice": "0.58",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies incorrectly.",
-                    "Percent": 14
+                    "Rationale": "Converts 7/10 to 70/100 and then subtracts 12/100.",
+                    "Percent": 9
                 }
             },
             "D": {
-                "Choice": "There are 7 shelves and 8 toy cars on each shelf.",
+                "Choice": "0.82",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Multiplies incorrectly.",
-                    "Percent": 13
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 52
                 }
             }
         }
@@ -285,44 +268,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Determine the unknown whole number in a multiplication (up to and including 10 × 10) or division (limit dividends through 50 and limit divisors and quotients through 10) equation relating three whole numbers.",
+        "SubTopic": "Use numbers and symbols to model the concepts of expressions and equations.",
         "Content": [
-            "Curt uses 42 pencils to make groups of pencils.",
-            "Each group has 7 pencils.",
-            "The equation 42 ÷ The □  = 7 describes this story.",
-            "Which sentence correctly explains what the □ equals?"
+            "In the equation below, each shape stands for a different whole number.",
+            "∆ + ○ = □",
+            "Which expression has the same value as ∆?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The □ equals the 6 groups Curt made.",
+                "Choice": "□ – ○",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 56
+                    "Percent": 59
                 }
             },
             "B": {
-                "Choice": "The □ equals the 6 pencils Curt has remaining.",
+                "Choice": "□ + ○",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Picks the right number but does not know what it represents.",
-                    "Percent": 16
+                    "Rationale": "Adds instead of subtracts.",
+                    "Percent": 23
                 }
             },
             "C": {
-                "Choice": "The □ equals the 7 groups Curt made.",
+                "Choice": "□ ÷ ○",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Picks another interpretation for the number 7.",
-                    "Percent": 19
+                    "Rationale": "Divides instead of subtracts.",
+                    "Percent": 11
                 }
             },
             "D": {
-                "Choice": "The □ equals the 7 pencils Curt has remaining.",
+                "Choice": "□ × ○",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Picks a correct interpretation of 7 in the problem but doesn’t realize that 7 does not go in the box.",
-                    "Percent": 9
+                    "Rationale": "Multiplies instead of subtracts.",
+                    "Percent": 7
                 }
             }
         }
@@ -332,43 +314,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Interpret and/or model division as a multiplication equation with an unknown factor.",
+        "SubTopic": "Develop and apply number theory concepts to represent numbers in various ways.",
         "Content": [
-            "An equation is shown below.",
-            "48 ÷ 12 = ?",
-            "Which number sentence shows another way to find the value of the unknown number?"
+            "The bar graph below shows the numbers of four types of fish available at a pet store.",
+            "problems/PA19G4M/media/8a.jpg",
+            "The store owner wants to place an equal number of each type of fish into 4 tanks. For which type of fish will the store owner not be able to place an equal number of fish into 4 tanks?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "12 × ? = 48",
+                "Choice": "goldfish",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Correct.",
-                    "Percent": 66
+                    "Correct": false,
+                    "Rationale": "Finds a factor of 4.",
+                    "Percent": 6
                 }
             },
             "B": {
-                "Choice": "12 × 48 = ?",
+                "Choice": "guppy",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Knows that the problem could be solved with multiplication but confuses the factors.",
-                    "Percent": 10
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 42
                 }
             },
             "C": {
-                "Choice": "? ÷ 12 = 48",
+                "Choice": "platy",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Knows that the problem could be solved with division but confuses the quotient and dividend.",
-                    "Percent": 11
+                    "Rationale": "Finds a factor of 4.",
+                    "Percent": 23
                 }
             },
             "D": {
-                "Choice": "12 ÷ 48 = ?",
+                "Choice": "tetra",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Knows that the problem could be solved with division but confuses the divisor and dividend.",
-                    "Percent": 13
+                    "Rationale": "Finds a factor of 4.",
+                    "Percent": 29
                 }
             }
         }
@@ -378,44 +360,41 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Use operations, patterns, and estimation strategies to solve problems (may include word problems).",
+        "SubTopic": "Find all factor pairs for a whole number in the interval 1 through 100. Recognize that a whole number is a multiple of each of its factors. Determine whether a given whole number in the interval 1 through 100 is a multiple of a given onedigit number. Determine whether a given whole number in the interval 1 through 100 is prime or composite.",
         "Content": [
-            "Bre puts 22 chocolate chip cookies onto a plate for her friends.",
-            "She puts 18 oatmeal cookies onto another plate.",
-            "Her friends eat 8 cookies.",
-            "Which estimate is closest to the number of cookies Bre still has?"
+            "Claire packages 42 T-shirts for an order. She puts the same number of T-shirts in each package. How many T-shirts could be in each package?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "10",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Rounds correctly but then subtracts 20 from 20 and rounds 8 cookies to 10.",
-                    "Percent": 24
-                }
-            },
-            "B": {
-                "Choice": "30",
+                "Choice": "6",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 56
+                    "Percent": 72
+                }
+            },
+            "B": {
+                "Choice": "8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks 8 is a factor of 42.",
+                    "Percent": 9
                 }
             },
             "C": {
-                "Choice": "40",
+                "Choice": "9",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds 22 to 30 and then finds 30 + 20 – 10.",
-                    "Percent": 14
+                    "Rationale": "Thinks 9 is a factor of 42.",
+                    "Percent": 6
                 }
             },
             "D": {
-                "Choice": "50",
+                "Choice": "12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Accurately rounds all the numbers but then adds them together.",
-                    "Percent": 6
+                    "Rationale": "Thinks 12 is a factor of 42.",
+                    "Percent": 13
                 }
             }
         }
@@ -425,45 +404,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Represent two-step word problems using equations with a symbol standing for the unknown quantity. Limit to problems with whole numbers and having whole-number answers.",
+        "SubTopic": "Generate and analyze patterns.",
         "Content": [
-            "The graph below shows the number of each animal in a pet store.",
-            "problems/PA19G3M/media/10a.jpg",
-            "Maya is feeding the cats and dogs at the pet store.",
-            "She already gave food to 4 of the cats and none of the dogs.",
-            "Which number sentence can be used to find the total number of cats and dogs (□) Maya still needs to feed?"
+            "Emmett makes a shape pattern. He starts with shape 1. He turns the shape 90° clockwise to create the next shape in the pattern. The first five shapes of the pattern are shown below.",
+            "problems/PA19G4M/media/10a.jpg",
+            "The pattern continues. Which list shows only the shape numbers that will be in the same position as shape 2 in Emmett’s pattern?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4 + □ = 11",
+                "Choice": "4, 6, 8, 10",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Correct.",
-                    "Percent": 47
+                    "Correct": false,
+                    "Rationale": "Counts by 2, not noticing that 1 and 3 are reflections.",
+                    "Percent": 28
                 }
             },
             "B": {
-                "Choice": "5 + 6 = □",
+                "Choice": "4, 8, 12, 16",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds the cats and dogs but does not subtract those fed.",
-                    "Percent": 34
+                    "Rationale": "Correctly counts by 4 but starts at 4.",
+                    "Percent": 21
                 }
             },
             "C": {
-                "Choice": "13 – □ = 4",
+                "Choice": "6, 8, 10, 12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses dogs and birds (two tallest bars) as the total to be fed.",
-                    "Percent": 11
+                    "Rationale": "Starts counting at the right number, but counts by 2 and not 4.",
+                    "Percent": 16
                 }
             },
             "D": {
-                "Choice": "27 – 4 = □",
+                "Choice": "6, 10, 14, 18",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Uses all animals as the total.",
-                    "Percent": 8
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 35
                 }
             }
         }
@@ -473,44 +450,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Operations & Algebraic Thinking",
-        "SubTopic": "Create or match a story to a given combination of symbols (+, –, ×, ÷, <, >, and =) and numbers.",
+        "SubTopic": "Determine the missing elements in a function table (limit to +, –, or × and to whole numbers or money).",
         "Content": [
-            "A family bought 8 gallons of orange juice this year.",
-            "The family also bought 1 gallon of apple juice this year.",
-            "The price of each gallon of juice was $4.00.",
-            "Which expression correctly shows how to find the total price of the juice the family bought this year?"
+            "Oscar runs the same number of miles each week. The table below shows the total number of miles he had run through the end of some of the weeks.",
+            "problems/PA19G4M/media/11a.jpg",
+            "The pattern continues. Which number sentence could be used to find the total number of miles Oscar had run through the end of week 5?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8 × 4 + 4",
+                "Choice": "52 + 5 = 57",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Correct.",
-                    "Percent": 53
+                    "Correct": false,
+                    "Rationale": "Adds 5 to the previous total.",
+                    "Percent": 11
                 }
             },
             "B": {
-                "Choice": "8 + 4 + 4",
+                "Choice": "5 × 13 = 65",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "Adds all the numbers together.",
-                    "Percent": 14
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 61
                 }
             },
             "C": {
-                "Choice": "8 × 4 – 4",
+                "Choice": "91 – 5 = 86",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts 4 instead of adding 4.",
-                    "Percent": 12
+                    "Rationale": "Subtracts 5 from week 7 total.",
+                    "Percent": 19
                 }
             },
             "D": {
-                "Choice": " 8 × 4 × 4",
+                "Choice": "5 × 26 = 130",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies all the numbers.",
-                    "Percent": 21
+                    "Rationale": "Multiplies 5 by the first total in the table.",
+                    "Percent": 9
                 }
             }
         }
@@ -519,44 +495,42 @@
         "Number": 12,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Geometry",
-        "SubTopic": "Analyze characteristics of polygons.",
+        "Topic": "Measurement & Data",
+        "SubTopic": "Know relative sizes of measurement units within one system of units including standard units (in., ft, yd, mi; oz., lb; and c, pt, qt, gal), metric units (cm, m, km; g, kg; and mL, L), and time (sec, min, hr, day, wk, mo, and yr). Within a single system of measurement, express measurements in a larger unit in terms of a smaller unit.",
         "Content": [
-            "Some shapes are shown below.",
-            "problems/PA19G3M/media/12a.jpg",
-            "Which statement about the shapes is most likely true?"
+            "A wheel of cheddar cheese weighs 22 pounds. How many ounces does the cheese wheel weigh?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Each shape is a pentagon.",
+                "Choice": "220 ounces",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses the terms pentagon and polygon.",
-                    "Percent": 12
+                    "Rationale": "Uses 10 ounces as a conversion factor.",
+                    "Percent": 24
                 }
             },
             "B": {
-                "Choice": "Each shape has an even number of sides.",
+                "Choice": "320 ounces",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Overlooks that the pentagon has an odd number of sides.",
-                    "Percent": 15
+                    "Rationale": "Finds the number of ounces for 20 pounds.",
+                    "Percent": 8
                 }
             },
             "C": {
-                "Choice": "In each shape, every angle is equal in size.",
+                "Choice": "342 ounces",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees that each shape has at least one pair of equal-sized angles.",
-                    "Percent": 25
+                    "Rationale": "Does not regroup when multiplying.",
+                    "Percent": 6
                 }
             },
             "D": {
-                "Choice": "In each shape, every side is equal in length.",
+                "Choice": "352 ounces",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 48
+                    "Percent": 62
                 }
             }
         }
@@ -565,42 +539,42 @@
         "Number": 13,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Geometry",
-        "SubTopic": "Recognize rhombi, rectangles, and squares as examples of quadrilaterals and/or draw examples of quadrilaterals that do not belong to any of these subcategories.",
+        "Topic": "Measurement & Data",
+        "SubTopic": "Identify time (analog or digital) as the amount of minutes before or after the hour.",
         "Content": [
-            "Which shape is not a quadrilateral?"
+            "Gertrude practices the piano on Monday from a quarter past 3:00 until 5 minutes before 4:00. On Tuesday, she practices the piano from 5 minutes after 3:00 until a quarter to 4:00. How many minutes does Gertrude practice the piano in all?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA19G3M/media/13a.jpg",
+                "Choice": "80",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 65
+                    "Percent": 41
                 }
             },
             "B": {
-                "Choice": "problems/PA19G3M/media/13b.jpg",
+                "Choice": "90",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Picks a shape that meets the criteria for a quadrilateral.",
-                    "Percent": 21
+                    "Rationale": "Finds 50 + 40, thinking Gertrude stopped on Monday at 5 minutes after 4.",
+                    "Percent": 19
                 }
             },
             "C": {
-                "Choice": "problems/PA19G3M/media/13c.jpg",
+                "Choice": "110",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Picks a shape that meets the criteria for a quadrilateral.",
-                    "Percent": 8
+                    "Rationale": "Finds 40 + 70, thinking Gertrude stopped on Tuesday at a quarter after 4.",
+                    "Percent": 21
                 }
             },
             "D": {
-                "Choice": "problems/PA19G3M/media/13d.jpg",
+                "Choice": "120",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Picks a shape that meets the criteria for a quadrilateral.",
-                    "Percent": 6
+                    "Rationale": "Finds 50 + 70, thinking Gertrude stopped on Monday at 5 minutes after 4 and on Tuesday at a quarter after 4.",
+                    "Percent": 19
                 }
             }
         }
@@ -609,44 +583,44 @@
         "Number": 14,
         "Type": "MC",
         "NumChoices": 4,
-        "Topic": "Geometry",
-        "SubTopic": "Partition shapes into parts with equal areas. Express the area of each part as a unit fraction of the whole.",
+        "Topic": "Measurement & Data",
+        "SubTopic": "Solve problems involving addition and subtraction of fractions by using information presented in line plots (line plots must be labeled with common denominators, such as 1/4, 2/4, 3/4).",
         "Content": [
-            "Steve shaded a fraction of a shape’s area as shown below.",
-            "problems/PA19G3M/media/14a.jpg",
-            "Which shape has the same fraction of its area shaded as the shape Steve shaded?"
+            "Deb and Kendal each walked five times in a week. The line plots below show the distance of each of their walks.",
+            "problems/PA19G4M/media/14a.jpg",
+            "How many miles farther is Deb’s longest walk than Kendal’s longest walk?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA19G3M/media/14b.jpg",
+                "Choice": "1/40",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees that the same actual area was shaded.",
-                    "Percent": 20
+                    "Rationale": "Creates a unit fraction with 80 – 40.",
+                    "Percent": 10
                 }
             },
             "B": {
-                "Choice": "problems/PA19G3M/media/14c.jpg",
+                "Choice": "1/4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees that the same size rectangle was used.",
-                    "Percent": 9
+                    "Rationale": "Creates a unit fraction with 8 – 4.",
+                    "Percent": 11
                 }
             },
             "C": {
-                "Choice": "problems/PA19G3M/media/14d.jpg",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Sees that the circle is also divided vertically into 3 parts.",
-                    "Percent": 6
-                }
-            },
-            "D": {
-                "Choice": "problems/PA19G3M/media/14e.jpg",
+                "Choice": "4/10",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 65
+                    "Percent": 55
+                }
+            },
+            "D": {
+                "Choice": "4/100",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Combines both scales.",
+                    "Percent": 24
                 }
             }
         }
@@ -656,45 +630,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Measurement & Data",
-        "SubTopic": "Calculate elapsed time to the minute in a given situation (total elapsed time limited to 60 minutes or less).",
+        "SubTopic": "Measure angles in whole-number degrees using a protractor. With the aid of a protractor, sketch angles of specified measure.",
         "Content": [
-            "When Edwin left his home, he glanced at the clock.",
-            "He saw the minute hand pointing at the 9.",
-            "Edwin returned home less than one hour later.",
-            "When he walked in, he saw the minute hand pointing at the 6.",
-            "How many minutes was Edwin gone?"
+            "The bottom of a clothes hanger and its side form an angle as shown below.",
+            "problems/PA19G4M/media/15a.jpg",
+            "Using your protractor, what is the measure of angle 1 formed by the clothes hanger?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Subtracts 6 from 9 (the numbers the minute hand was pointing to).",
-                    "Percent": 14
-                }
-            },
-            "B": {
-                "Choice": "9",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Considers the hours between the numbers the minute hand was pointing to (from 9 to 12 is 3 and from 12 to 6 is 6, for a total of 9).",
-                    "Percent": 15
-                }
-            },
-            "C": {
-                "Choice": "15",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Switches the start and finish.",
-                    "Percent": 22
-                }
-            },
-            "D": {
-                "Choice": "45",
+                "Choice": "25°",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 49
+                    "Percent": 52
+                }
+            },
+            "B": {
+                "Choice": "35°",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Starts at 30° and counts “up” 5 degrees.",
+                    "Percent": 27
+                }
+            },
+            "C": {
+                "Choice": "155°",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Reads obtuse measure instead of acute.",
+                    "Percent": 13
+                }
+            },
+            "D": {
+                "Choice": "165°",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Starts at 160° and counts “up” 5 degrees.",
+                    "Percent": 8
                 }
             }
         }
@@ -704,88 +676,43 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topic": "Measurement & Data",
-        "SubTopic": "Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Display the data by making a line plot, where the horizontal scale is marked in appropriate units—whole numbers, halves, or quarters.",
+        "SubTopic": "Solve addition and subtraction problems to find unknown angles on a diagram in real-world and mathematical problems. (Angles must be adjacent and non-overlapping.)",
         "Content": [
-            "Sabrina measured the lengths of all the paper clips shown below.",
-            "problems/PA19G3M/media/16a.jpg",
-            "Use your ruler to measure the lengths, in inches, of the paper clips.",
-            "Which line plot shows the lengths, in inches, of all the paper clips?"
+            "A picture of a right angle is shown below.",
+            "problems/PA19G4M/media/16a.jpg",
+            "Which expression can be used to find the measure, in degrees, of angle p?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "problems/PA19G3M/media/16b.jpg",
+                "Choice": "80 + 28",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Places the lengths for 1 1/4 inches at 1 inch.",
-                    "Percent": 22
+                    "Rationale": "Incorrectly identifies a right angle as 80 degrees, and then adds to the 28.",
+                    "Percent": 12
                 }
             },
             "B": {
-                "Choice": "problems/PA19G3M/media/16c.jpg",
+                "Choice": "80 – 28",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "Correct.",
-                    "Percent": 46
+                    "Correct": false,
+                    "Rationale": "Incorrectly identifies a right angle as 80 degrees.",
+                    "Percent": 12
                 }
             },
             "C": {
-                "Choice": "problems/PA19G3M/media/16d.jpg",
+                "Choice": "90 + 28",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Places all the measures at 1/4 inch less than the actual lengths.",
-                    "Percent": 21
+                    "Rationale": "Adds the measurements.",
+                    "Percent": 17
                 }
             },
             "D": {
-                "Choice": "problems/PA19G3M/media/16e.jpg",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Identifies only one instance of each measure.",
-                    "Percent": 11
-                }
-            }
-        }
-    },
-    "17": {
-        "Number": 17,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topic": "Measurement & Data",
-        "SubTopic": "Solve real-world and mathematical problems involving perimeters of polygons, including finding the perimeter given the side lengths, finding an unknown side length, exhibiting rectangles with the same perimeter and different areas, and exhibiting rectangles with the same area and different perimeters. Use the same units throughout the problem.",
-        "Content": [
-            "In which pair do the figures have the same perimeter?"
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "problems/PA19G3M/media/17a.jpg",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Confuses area and perimeter.",
-                    "Percent": 19
-                }
-            },
-            "B": {
-                "Choice": "problems/PA19G3M/media/17b.jpg",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Chooses the two figures that are rectangles.",
-                    "Percent": 19
-                }
-            },
-            "C": {
-                "Choice": "problems/PA19G3M/media/17c.jpg",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "Splits the second figure into a square and a rectangle, finds the perimeters of each, and adds to get 8 + 6 = 14.",
-                    "Percent": 10
-                }
-            },
-            "D": {
-                "Choice": "problems/PA19G3M/media/17d.jpg",
+                "Choice": "90 – 28",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
-                    "Percent": 52
+                    "Percent": 59
                 }
             }
         }

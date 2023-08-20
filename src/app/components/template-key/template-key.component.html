@@ -506,7 +506,7 @@
           <div *ngFor="let prob of exam_dump | keyvalue">
             <div *ngIf="problem_number == prob.value.Number">
               <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
-                <h3 *ngIf="!block.endsWith('.jpg')"> {{block}} </h3>
+                <h3 *ngIf="!block.endsWith('.jpg')" style="display: block; white-space: pre-wrap"> {{block}} </h3>
                 <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
               </div>
             </div>
