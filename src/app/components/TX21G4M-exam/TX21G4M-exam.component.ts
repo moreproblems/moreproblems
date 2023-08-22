@@ -530,7 +530,7 @@ export class TX21G4MExamComponent implements OnInit {
         this.confetti_pop();
         for (let i: number = 0; i < this.exam_length; i++) {
             for (let num: number = 0; num < this.exam_submission_list[i].Topics.length; num++) {
-                if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[num][num])) {
+                if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[num])) {
                 this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Total += 1;
                 this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Seconds += this.exam_submission_list[i].Seconds;
                 if (this.exam_submission_list[i].Correct == '✅') {
