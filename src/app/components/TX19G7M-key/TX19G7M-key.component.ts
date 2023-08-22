@@ -46,7 +46,7 @@ export class TX19G7MKeyComponent implements OnInit {
     exam_type = this.exam_attribute_dump[this.key].ExamType;
     exam_length = this.exam_attribute_dump[this.key].NumQuestions;
 
-    exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
+    exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
 
     problem_number = 1;
     problem_selection = '';

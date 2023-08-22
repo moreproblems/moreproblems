@@ -517,10 +517,10 @@
               <input type="checkbox">
               <button *ngIf="!sub_topic" (click)="toggle_topic()" class="topic-button"
                 style="width: 100%; font-size: 16px">
-                <b>{{prob.value.Topic}}</b> </button>
+                <b>{{prob.value.Topics}}</b> </button>
               <button *ngIf="sub_topic" (click)="toggle_topic()" class="topic-button"
                 style="width: 100%; font-size: 16px">
-                {{prob.value.SubTopic}} </button>
+                {{prob.value.SubTopics}} </button>
             </label>
             <!-- <p *ngIf="problem_number == +prob.key"> {{prob.value.Content}} </p> -->
           </div>
@@ -665,10 +665,10 @@
             <label class="switch"
               style="max-height: 100px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
               <input type="checkbox">
-              <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
+              <button *ngIf="!this.expand_topics" (click)="expandTopicss()" class="topic-button"
                 style="width: 100%; font-size: 16px">
                 <b>Show Subtopics</b> </button>
-              <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
+              <button *ngIf="this.expand_topics" (click)="expandTopicss()" class="topic-button"
                 style="width: 100%; font-size: 16px">
                 Hide Subtopics </button>
             </label>
@@ -677,7 +677,7 @@
           <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableS>
             <thead>
               <tr style="border: 3px solid black; background-color: grey">
-                <th> Topic </th>
+                <th> Topics </th>
                 <th> Percent Correct </th>
                 <th> Missed Problems </th>
                 <th> Total Problems </th>
@@ -695,7 +695,7 @@
           <table *ngIf="this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableL>
             <thead>
               <tr style="border: 3px solid black; background-color: grey">
-                <th> Topic </th>
+                <th> Topics </th>
                 <th> Percent Correct </th>
                 <th> Missed Problems </th>
                 <th> Total Problems </th>
@@ -738,7 +738,7 @@
             <thead>
               <tr style="border: 1px solid black; background-color: grey">
                 <th> Problem Number </th>
-                <th> Problem Topic </th>
+                <th> Problem Topics </th>
                 <th> Correct Response </th>
                 <th> Student Response </th>
                 <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
@@ -750,7 +750,7 @@
             <tbody>
               <tr *ngFor="let sub of wrong_submission_list">
                 <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Topic}} </td>
+                <td style="border-top: 1px solid #ddd"> {{sub.Topics}} </td>
                 <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
                 <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
                 <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
@@ -765,7 +765,7 @@
             <thead>
               <tr style="border: 1px solid black; background-color: grey">
                 <th> Problem Number </th>
-                <th> Problem Topic </th>
+                <th> Problem Topics </th>
                 <th> Correct Response </th>
                 <th> Student Response </th>
                 <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
@@ -777,7 +777,7 @@
             <tbody>
               <tr *ngFor="let sub of exam_submission_list">
                 <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Topic}} </td>
+                <td style="border-top: 1px solid #ddd"> {{sub.Topics}} </td>
                 <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
                 <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
                 <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">

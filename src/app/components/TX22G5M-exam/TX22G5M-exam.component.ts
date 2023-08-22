@@ -65,12 +65,12 @@ export class TX22G5MExamComponent implements OnInit {
 
     exam_directions = 'Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.';
 
-    TX22G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
-    exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
+    TX22G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
+    exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
     dump_count = 1;
 
     problems_sequence: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
-    ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topic': string, 'SubTopic': string, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
+    ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
     random_index = 0
     random_list: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
     random = false;
@@ -82,7 +82,7 @@ export class TX22G5MExamComponent implements OnInit {
     problem_attempts = 0;
     attempt_path: string[] = [];
     attempt_response = '';
-    exam_submission: { [key: number]: { 'Number': number, 'Topic': string, 'SubTopic': string, 'Choice': string, 'Correct': string, 'Rationale': string, 'Attempts': number, 'Path': string[], 'Seconds': number, 'Time': string } } = {};
+    exam_submission: { [key: number]: { 'Number': number, 'Topics': string[], 'SubTopics': string[], 'Choice': string, 'Correct': string, 'Rationale': string, 'Attempts': number, 'Path': string[], 'Seconds': number, 'Time': string } } = {};
 
     exam_submission_list: any[] = [];
     wrong_submission_list: any[] = [];
@@ -170,8 +170,8 @@ export class TX22G5MExamComponent implements OnInit {
         for (let num of Object.keys(this.exam_dump)) {
             this.exam_submission[+num] = {
                 'Number': 0,
-                'Topic': '',
-                'SubTopic': '',
+                'Topics': [],
+                'SubTopics': [],
                 'Choice': '',
                 'Correct': '',
                 'Rationale': '',
@@ -329,8 +329,8 @@ export class TX22G5MExamComponent implements OnInit {
         for (let num of Object.keys(this.exam_dump)) {
             this.exam_submission[+num] = {
                 'Number': 0,
-                'Topic': '',
-                'SubTopic': '',
+                'Topics': [],
+                'SubTopics': [],
                 'Choice': '',
                 'Correct': '',
                 'Rationale': '',
@@ -396,8 +396,8 @@ export class TX22G5MExamComponent implements OnInit {
                         sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
                         sub.Seconds = this.pt_counter;
                         sub.Number = prob.Number;
-                        sub.Topic = prob.Topic;
-                        sub.SubTopic = prob.SubTopic;
+                        sub.Topics = prob.Topics;
+                        sub.SubTopics = prob.SubTopics;
                         sub.Choice = choice;
                         sub.Attempts = this.problem_attempts;
                         sub.Path = this.attempt_path;
@@ -529,38 +529,39 @@ export class TX22G5MExamComponent implements OnInit {
         this.correct_percent = Math.round(this.number_correct / (this.problem_number-1) * 100);
         this.confetti_pop();
         for (let i: number = 0; i < this.exam_length; i++) {
-            if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topic)) {
-                this.topic_breakdown[this.exam_submission_list[i].Topic].Total += 1;
-                this.topic_breakdown[this.exam_submission_list[i].Topic].Seconds += this.exam_submission_list[i].Seconds;
+            for (let num: number = 0; num < this.exam_submission_list[i].Topics.length; num++) {
+                if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[num][num])) {
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Total += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Seconds += this.exam_submission_list[i].Seconds;
                 if (this.exam_submission_list[i].Correct == '✅') {
-                    this.topic_breakdown[this.exam_submission_list[i].Topic].Correct += 1;
-                    if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
-                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
-                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Correct += 1;
-                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Seconds += this.exam_submission_list[i].Seconds;
+                    this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Correct += 1;
+                    if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs).includes(this.exam_submission_list[i].SubTopics[num])) {
+                        this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Total += 1;
+                        this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Correct += 1;
+                        this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Seconds += this.exam_submission_list[i].Seconds;
                     }
                     else {
-                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
+                        this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
                     }
                 }
                 else {
-                    this.topic_breakdown[this.exam_submission_list[i].Topic].Incorrect += 1;
-                    if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topic].Subs).includes(this.exam_submission_list[i].SubTopic)) {
-                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Total += 1;
-                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Incorrect += 1;
-                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic].Seconds += this.exam_submission_list[i].Seconds;
+                    this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Incorrect += 1;
+                    if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs).includes(this.exam_submission_list[i].SubTopics[num])) {
+                        this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Total += 1;
+                        this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Incorrect += 1;
+                        this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Seconds += this.exam_submission_list[i].Seconds;
                     }
                     else {
-                        this.topic_breakdown[this.exam_submission_list[i].Topic].Subs[this.exam_submission_list[i].SubTopic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
+                        this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
                     }
                 }
             }
             else {
                 if (this.exam_submission_list[i].Correct == '✅') {
-                    this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
+                    this.topic_breakdown[this.exam_submission_list[i].Topics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[num]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
                 }
                 else {
-                    this.topic_breakdown[this.exam_submission_list[i].Topic] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopic]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
+                    this.topic_breakdown[this.exam_submission_list[i].Topics[num]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[num]]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
                 }
             }
         }
@@ -606,8 +607,9 @@ export class TX22G5MExamComponent implements OnInit {
                 this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/score'] = this.correct_percent;
                 this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/level'] = this.performance_level;
                 this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
-                this.authService.UpdateDatabase(this.db_updates);
-                this.db_updates = {};
+                    this.authService.UpdateDatabase(this.db_updates);
+                    this.db_updates = {};
+                }
             }
         }
     }
@@ -707,7 +709,7 @@ export class TX22G5MExamComponent implements OnInit {
         clearInterval(this.pt_timer);
     }
 
-    expandTopics() {
+    expandTopicss() {
         this.expand_topics = !this.expand_topics;
     }
 
@@ -762,8 +764,8 @@ export class TX22G5MExamComponent implements OnInit {
         for (let num of Object.keys(this.exam_dump)) {
             this.exam_submission[+num] = {
                 'Number': 0,
-                'Topic': '',
-                'SubTopic': '',
+                'Topics': [],
+                'SubTopics': [],
                 'Choice': '',
                 'Correct': '',
                 'Rationale': '',

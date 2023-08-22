@@ -494,12 +494,13 @@
           </section>
           <section style="height: auto; width: 100%; display: flex; justify-content: center">
             <div *ngFor="let prob of exam_dump | keyvalue" style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
-              <label *ngIf="problem_number == +prob.key" class="switch"
-                style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: auto">
-                <input type="checkbox">
-                <button class="topic-button" style="width: 100%; font-size: 16px; min-width: 150px">
-                  <b>{{prob.value.Topic}}:</b> {{prob.value.SubTopic}} </button>
-              </label>
+              <div *ngIf="problem_number == +prob.key">
+                <label *ngFor="let num of prob.value.SubTopics | keyvalue" class="switch"
+                  style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: auto; padding: 5px">
+                  <button class="topic-button" style="width: 100%; font-size: 16px; min-width: 150px">
+                    <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </button>
+                </label>
+              </div>
             </div>
           </section>
           <br />
