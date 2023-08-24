@@ -18,6 +18,12 @@ import * as PA19G4SProblems from "src/assets/problems/PA19G4S/PA19G4S-problems.j
 import * as PA18G4SProblems from "src/assets/problems/PA18G4S/PA18G4S-problems.json";
 import * as PA16G4SProblems from "src/assets/problems/PA16G4S/PA16G4S-problems.json";
 import * as PA15G4SProblems from "src/assets/problems/PA15G4S/PA15G4S-problems.json";
+import * as PA22G5MProblems from "src/assets/problems/PA22G5M/PA22G5M-problems.json";
+import * as PA21G5MProblems from "src/assets/problems/PA21G5M/PA21G5M-problems.json";
+import * as PA19G5MProblems from "src/assets/problems/PA19G5M/PA19G5M-problems.json";
+import * as PA18G5MProblems from "src/assets/problems/PA18G5M/PA18G5M-problems.json";
+import * as PA16G5MProblems from "src/assets/problems/PA16G5M/PA16G5M-problems.json";
+import * as PA15G5MProblems from "src/assets/problems/PA15G5M/PA15G5M-problems.json";
 import * as TX22G3MProblems from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
 import * as TX21G3MProblems from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
 import * as TX19G3MProblems from "src/assets/problems/TX19G3M/TX19G3M-problems.json";
@@ -127,6 +133,12 @@ export class ProblemsComponent implements OnInit {
   PA18G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G4SProblems;
   PA16G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G4SProblems;
   PA15G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G4SProblems;
+  PA22G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G5MProblems;
+  PA21G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G5MProblems;
+  PA19G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G5MProblems;
+  PA18G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G5MProblems;
+  PA16G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G5MProblems;
+  PA15G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = PA15G5MProblems;
   TX22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX22G3MProblems;
   TX21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX21G3MProblems;
   TX19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = TX19G3MProblems;
@@ -173,7 +185,7 @@ export class ProblemsComponent implements OnInit {
   dump_count = 1;
 
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
-  online_set = ["PA22G3M", "PA21G3M", "PA19G3M", "PA18G3M", "PA16G3M", "PA15G3M", "PA22G4M", "PA21G4M", "PA19G4M", "PA18G4M", "PA16G4M", "PA15G4M", "PA22G4S", "PA21G4S", "PA19G4S", "PA18G4S", "PA16G4S", "PA15G4S", "TX22G3M", "TX21G3M", "TX19G3M", "TX18G3M", "TX17G3M", "TX22G4M", "TX21G4M", "TX19G4M", "TX18G4M", "TX17G4M", "TX22G5M", "TX21G5M", "TX19G5M", "TX18G5M", "TX17G5M", "TX22G5S", "TX21G5S", "TX19G5S", "TX18G5S", "TX22G6M", "TX21G6M", "TX19G6M", "TX18G6M", "TX17G6M", "TX22G7M", "TX21G7M", "TX19G7M", "TX18G7M", "TX17G7M", "TX22G8M", "TX21G8M", "TX19G8M", "TX18G8M", "TX17G8M", "TX22G8S", "TX21G8S", "TX19G8S", "TX18G8S", "TX22G8SS", "TX21G8SS", "TX19G8SS", "TX18G8SS"];
+  online_set = ["PA22G3M", "PA21G3M", "PA19G3M", "PA18G3M", "PA16G3M", "PA15G3M", "PA22G4M", "PA21G4M", "PA19G4M", "PA18G4M", "PA16G4M", "PA15G4M", "PA22G4S", "PA21G4S", "PA19G4S", "PA18G4S", "PA16G4S", "PA15G4S", "PA22G5M", "PA21G5M", "PA19G5M", "PA18G5M", "PA16G5M", "PA15G5M", "TX22G3M", "TX21G3M", "TX19G3M", "TX18G3M", "TX17G3M", "TX22G4M", "TX21G4M", "TX19G4M", "TX18G4M", "TX17G4M", "TX22G5M", "TX21G5M", "TX19G5M", "TX18G5M", "TX17G5M", "TX22G5S", "TX21G5S", "TX19G5S", "TX18G5S", "TX22G6M", "TX21G6M", "TX19G6M", "TX18G6M", "TX17G6M", "TX22G7M", "TX21G7M", "TX19G7M", "TX18G7M", "TX17G7M", "TX22G8M", "TX21G8M", "TX19G8M", "TX18G8M", "TX17G8M", "TX22G8S", "TX21G8S", "TX19G8S", "TX18G8S", "TX22G8SS", "TX21G8SS", "TX19G8SS", "TX18G8SS"];
   filtered_set: string[] = this.online_set;
   filtered_exam_num = 0;
   filtered_prob_num = 0;
@@ -457,6 +469,60 @@ export class ProblemsComponent implements OnInit {
     if (this.filtered_set.includes('PA15G4S')) {
       for (const [num, value] of Object.entries(this.PA15G4S_exam_dump)) {
         if (value.Number <= 16) {
+          // this.exam_dump[this.dump_count] = value;
+          this.ordered_dump[this.dump_count] = value;
+          this.dump_count += 1;
+        }
+      }
+    }
+    if (this.filtered_set.includes('PA22G5M')) {
+      for (const [num, value] of Object.entries(this.PA22G5M_exam_dump)) {
+        if (value.Number <= 15) {
+          // this.exam_dump[this.dump_count] = value;
+          this.ordered_dump[this.dump_count] = value;
+          this.dump_count += 1;
+        }
+      }
+    }
+    if (this.filtered_set.includes('PA21G5M')) {
+      for (const [num, value] of Object.entries(this.PA21G5M_exam_dump)) {
+        if (value.Number <= 16) {
+          // this.exam_dump[this.dump_count] = value;
+          this.ordered_dump[this.dump_count] = value;
+          this.dump_count += 1;
+        }
+      }
+    }
+    if (this.filtered_set.includes('PA19G5M')) {
+      for (const [num, value] of Object.entries(this.PA19G5M_exam_dump)) {
+        if (value.Number <= 16) {
+          // this.exam_dump[this.dump_count] = value;
+          this.ordered_dump[this.dump_count] = value;
+          this.dump_count += 1;
+        }
+      }
+    }
+    if (this.filtered_set.includes('PA18G5M')) {
+      for (const [num, value] of Object.entries(this.PA18G5M_exam_dump)) {
+        if (value.Number <= 16) {
+          // this.exam_dump[this.dump_count] = value;
+          this.ordered_dump[this.dump_count] = value;
+          this.dump_count += 1;
+        }
+      }
+    }
+    if (this.filtered_set.includes('PA16G5M')) {
+      for (const [num, value] of Object.entries(this.PA16G5M_exam_dump)) {
+        if (value.Number <= 16) {
+          // this.exam_dump[this.dump_count] = value;
+          this.ordered_dump[this.dump_count] = value;
+          this.dump_count += 1;
+        }
+      }
+    }
+    if (this.filtered_set.includes('PA15G5M')) {
+      for (const [num, value] of Object.entries(this.PA15G5M_exam_dump)) {
+        if (value.Number <= 45) {
           // this.exam_dump[this.dump_count] = value;
           this.ordered_dump[this.dump_count] = value;
           this.dump_count += 1;

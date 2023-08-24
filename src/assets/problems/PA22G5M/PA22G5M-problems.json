@@ -1,0 +1,749 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Numbers & Operations In Base Ten"
+        ],
+        "SubTopics": [
+            "Multiply multi-digit whole numbers (not to exceed three-digit by three-digit)."
+        ],
+        "Content": [
+            "Multiply: 372 × 108"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "6,696",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Aligns partial products incorrectly (2,976 + 3,720).",
+                    "Percent": 21
+                }
+            },
+            "B": {
+                "Choice": "39,666",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not regroup when multiplying (2,466 + 37,200).",
+                    "Percent": 11
+                }
+            },
+            "C": {
+                "Choice": "40,176",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Using the standard algorithm, multiplies 372 by 8 and 372 by 100, and then adds the partial products (2,976 + 37,200).",
+                    "Percent": 64
+                }
+            },
+            "D": {
+                "Choice": "282,816",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Strings products together when multiplying 372 by 8 (245,616 + 37,200).",
+                    "Percent": 5
+                }
+            }
+        }
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Numbers & Operations In Base Ten"
+        ],
+        "SubTopics": [
+            "Demonstrate understanding of place-value of whole numbers and decimals, and compare quantities or magnitudes of numbers."
+        ],
+        "Content": [
+            "The 10-by-10 grid shown below represents one whole.",
+            "problems/PA22G5M/media/2a.jpg",
+            "The decimal number q is represented by the shaded part of the grid. Which statement correctly compares the value of q with two other numbers?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The value of q is greater than 0.1 and less than 0.305.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses 0.34 as the value of q, but thinks 0.34 < 0.305 because 34 < 305.",
+                    "Percent": 31
+                }
+            },
+            "B": {
+                "Choice": "The value of q is greater than 0.305 and less than 0.35.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Identifies 0.34 as the value of q since 34 of 100 squares are shaded, compares 0.34 to 0.305 either by comparing the digits in the tenths place (3 = 3) and then the digits in the hundredths place (4 > 0) OR by expanding 0.34 to 0.340 and then comparing the digits after the decimal point (340 > 305), and compares 0.34 to 0.35 either by comparing the digits in the tenths place (3 = 3) and then the digits in the hundredths place (4 < 5) OR by comparing the digits after the decimal point (34 < 35).",
+                    "Percent": 39
+                }
+            },
+            "C": {
+                "Choice": "The value of q is greater than 0.35 and less than 0.675.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Counts unshaded instead of shaded and uses 0.66 as decimal.",
+                    "Percent": 18
+                }
+            },
+            "D": {
+                "Choice": "The value of q is greater than 0.675 and less than 3.5.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Interprets shaded as 3.4.",
+                    "Percent": 12
+                }
+            }
+        }
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Numbers & Operations In Base Ten",
+            "Numbers & Operations In Base Ten"
+        ],
+        "SubTopics": [
+            "Round decimals to any place (limit rounding to ones, tenths, hundredths, or thousandths place).",
+            "Compare two decimals to thousandths based on meanings of the digits in each place using >, =, and < symbols."
+        ],
+        "Content": [
+            "Four number sentences are shown below, some of which are not true.",
+            "436.04 = 444.03",
+            "236.76 = 235.84",
+            "505.64 > 505.55",
+            "325.64 > 325.54",
+            "Each number is rounded to the nearest tenth. The comparison symbol in each number sentence remains the same. Which number sentence is rounded correctly and is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The number sentence 436.04 = 444.03 becomes 440 = 440.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Rounds to the nearest ten instead of to the nearest tenth.",
+                    "Percent": 23
+                }
+            },
+            "B": {
+                "Choice": "The number sentence 236.76 = 235.84 becomes 236.8 = 235.8.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "After rounding correctly, compares only the digits in the tenths place and does not compare the whole number parts of the numbers.",
+                    "Percent": 17
+                }
+            },
+            "C": {
+                "Choice": "The number sentence 505.64 > 505.55 becomes 505.6 > 505.5.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Rounds both numbers down.",
+                    "Percent": 21
+                }
+            },
+            "D": {
+                "Choice": "The number sentence 325.64 > 325.54 becomes 325.6 > 325.5.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Rounds 325.64 down to 325.6 based on the 4 in the hundredths place, rounds 325.54 down to 325.5 based on the 4 in the hundredths place, and then compares 325.6 to 325.5 by comparing the digits in the hundreds place (3 = 3), then the digits in the tens place (2 = 2), then the digits in the ones place (5 = 5), and then the digits in the tenths place (6 > 5).",
+                    "Percent": 39
+                }
+            }
+        }
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Numbers & Operations In Base Ten"
+        ],
+        "SubTopics": [
+            "Use whole numbers and decimals to compute accurately (straight computation or word problems)."
+        ],
+        "Content": [
+            "Serena has one large and one small beehive. Information about the hives and the bees living in each hive is listed below.",
+            "• There are 1,050 bees living in the large hive.",
+            "• The number of bees living in the small hive is 0.7 times the number of bees living in the large hive.",
+            "• The bees living in the small hive visit 2,500 flowers each day.",
+            "• The bees living in the large hive visit 0.8 times the number of flowers visited each day",
+            "by the bees living in the small hive.",
+            "Which statement about the bees is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "There are 8,400 bees living in the two hives.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates 1,050 × 7 + 1,050.",
+                    "Percent": 13
+                }
+            },
+            "B": {
+                "Choice": "There are 1,057 bees living in the small hive.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates 1,050 + 7.",
+                    "Percent": 13
+                }
+            },
+            "C": {
+                "Choice": "The bees living in the two hives visit 2,508 flowers each day.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates 2,500 + 8.",
+                    "Percent": 16
+                }
+            },
+            "D": {
+                "Choice": "The bees living in the large hive visit 2,000 flowers each day.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Determines the number of flowers the bees living in the large hive visit each day by multiplying the number of flowers the bees living in the small hive visit each day by 0.8 (2,500 × 0.8).",
+                    "Percent": 58
+                }
+            }
+        }
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Numbers & Operations - Fractions"
+        ],
+        "SubTopics": [
+            "Use equivalent fractions as a strategy to add and subtract fractions."
+        ],
+        "Content": [
+            "Which step should be performed first when subtracting 1/5 from 5/7?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Subtract 1 from 5.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Subtracts the numerators without finding a common denominator.",
+                    "Percent": 7
+                }
+            },
+            "B": {
+                "Choice": "Invert the fraction 1/5.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Confuses the process with division.",
+                    "Percent": 9
+                }
+            },
+            "C": {
+                "Choice": "Find a common denominator by adding 5 and 7.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds the given denominators.",
+                    "Percent": 10
+                }
+            },
+            "D": {
+                "Choice": "Find a common denominator by multiplying 5 and 7.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that fractions cannot be subtracted without first finding a common denominator and that a common denominator can be found by multiplying the two given denominators.",
+                    "Percent": 74
+                }
+            }
+        }
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Numbers & Operations - Fractions"
+        ],
+        "SubTopics": [
+            "Add and subtract fractions (including mixed numbers) with unlike denominators. (May include multiple methods and representations.) "
+        ],
+        "Content": [
+            "Aaron’s fish bowl contains 2 3/5 gallons of water. Bryan’s fish bowl contains 1 7/8 gallons of water. How many more gallons of water does Aaron’s fish bowl contain than Bryan’s fish bowl?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "11/40",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Subtracts 3/5 from 7/8.",
+                    "Percent": 12
+                }
+            },
+            "B": {
+                "Choice": "2/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Changes to improper fractions and subtracts without a common denominator (15/8 – 13/5).",
+                    "Percent": 9
+                }
+            },
+            "C": {
+                "Choice": "29/40",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Converts 2 3/5 to an improper fraction by multiplying 2 by 5 and then adding 3 for the numerator (2 3/5 = (2 × 5 + 3)/5 = 13/5) , converts 1 7/8 to an improper fraction by multiplying 1 by 8 and then adding 7 for the numerator (1 7/8 = (1 × 8 + 7)/8 = 15/8), multiplies 13/5 by 8/8 and multiplies 15/8 by 5/5 to get equivalent fractions with a common denominator ((13 × 8)/(5 × 8) = 104/40 and (15 × 5)/(8 × 5)) = 75/40), and then subtracts 75/40 from 104/40.",
+                    "Percent": 71
+                }
+            },
+            "D": {
+                "Choice": "4/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates 7/8 – 3/5.",
+                    "Percent": 8
+                }
+            }
+        }
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Operations & Algebraic Thinking "
+        ],
+        "SubTopics": [
+            "Write and interpret numerical expressions."
+        ],
+        "Content": [
+            "Which story matches the expression (18 – 3 × 4) ÷ 2?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Ed had $18. He bought a pen for $3 and 4 pencils for $2 each.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Misinterprets the operation of the multiplication and division symbols.",
+                    "Percent": 18
+                }
+            },
+            "B": {
+                "Choice": "Ed had $18. He bought 3 pens for $4 each and gave $2 to his sister.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Misinterprets the operation of the division symbol.",
+                    "Percent": 19
+                }
+            },
+            "C": {
+                "Choice": "Ed had $18. He gave half the money away and then bought 3 pens for $4 each.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Tries to apply the division symbol first, then the multiplication symbol.",
+                    "Percent": 9
+                }
+            },
+            "D": {
+                "Choice": "Ed had $18. He bought 3 pens for $4 each and then shared the rest of the money equally with his sister.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Identifies a story in which 3 is multiplied by 4 (“3 pens for $4 each”) before subtracting the product from 18 (“Ed had $18 ... the rest of the money”), with the difference being divided by 2 (“shared ... equally with his sister”).",
+                    "Percent": 54
+                }
+            }
+        }
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Operations & Algebraic Thinking "
+        ],
+        "SubTopics": [
+            "Use multiple grouping symbols (parentheses, brackets, or braces) in numerical expressions and evaluate expressions containing these symbols."
+        ],
+        "Content": [
+            "When finding the value of the expression 81 – (24 ÷ 3 × 2) + 18, which operation should be completed first?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "81 – 24",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Performs the operations from left to right and does not consider the grouping symbols.",
+                    "Percent": 9
+                }
+            },
+            "B": {
+                "Choice": "24 ÷ 3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that the operations inside the grouping symbols should be completed first, identifies that division and multiplication are equal in the order of operations, and performs the operations from left to right within the grouping symbols, starting with division.",
+                    "Percent": 61
+                }
+            },
+            "C": {
+                "Choice": "3 × 2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Incorrectly considers that multiplication should be performed prior to division.",
+                    "Percent": 27
+                }
+            },
+            "D": {
+                "Choice": "2 + 18",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Reverses the order of operations (adds/subtracts first) and does not consider the grouping symbols.",
+                    "Percent": 3
+                }
+            }
+        }
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Operations & Algebraic Thinking "
+        ],
+        "SubTopics": [
+            "Write simple expressions that model calculations with numbers and interpret numerical expressions without evaluating them."
+        ],
+        "Content": [
+            "Andrew has 3 1/2 liters of juice. For a party, he needs 1 1/2 times the amount of juice he has already. The expression shown below represents the total amount of juice, in liters, Andrew needs, but one number is missing.",
+            "(3 + 1/2)(□ + 1/2)",
+            "What number should go into the box so the expression represents the total amount of juice, in liters, Andrew needs?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1/4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Finds the product of the two fractional parts of the mixed numbers.",
+                    "Percent": 8
+                }
+            },
+            "B": {
+                "Choice": "1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that a mixed number is the sum of the whole part and the fractional part, identifying the second factor as 1 + 1/2.",
+                    "Percent": 68
+                }
+            },
+            "C": {
+                "Choice": "1 1/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not notice that the 3 1/2 has been rewritten as a sum and selects the other mixed number.",
+                    "Percent": 13
+                }
+            },
+            "D": {
+                "Choice": "3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Sees the two 1/2s and thinks there should be two 3s as well.",
+                    "Percent": 11
+                }
+            }
+        }
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Operations & Algebraic Thinking "
+        ],
+        "SubTopics": [
+            "Create, extend, and analyze patterns."
+        ],
+        "Content": [
+            "The first five values in a number pattern are represented by the expressions below.",
+            "4 × 1 \t 4 × 2 \t 4 × 3 \t 4 × 4 \t 4 × 5",
+            "The pattern continues. How many values in the pattern are less than 100?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "19",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Focuses on 4 × 5 in last expression and uses “the term number times 5” rather than “4 times the term number,” identifies the value of the 20th term as 20 × 5 = 100, and determines that 19 values in the pattern are less than 100.",
+                    "Percent": 16
+                }
+            },
+            "B": {
+                "Choice": "24",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that each term is 4 times the term number, identifies the value of the 25th term as 4 × 25 = 100, and determines that 24 values in the pattern are less than 100.",
+                    "Percent": 51
+                }
+            },
+            "C": {
+                "Choice": "25",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Identifies the value of the 25th term as 4 × 25 = 100 but does not consider “less than 100”.",
+                    "Percent": 23
+                }
+            },
+            "D": {
+                "Choice": "99",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Recognizes that 99 values from 1–99 are less than 100 and does not consider the pattern expressions and focuses on term 1, term 2, term 3, etc.",
+                    "Percent": 10
+                }
+            }
+        }
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Measurement & Data "
+        ],
+        "SubTopics": [
+            "Convert between different-sized measurement units within a given measurement system."
+        ],
+        "Content": [
+            "Julian has 4 videos. Each video is the same length. The total time for all of the videos is 300 seconds. How many minutes long is each video?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "0.8 minute",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates 4 × 60 ÷ 300.",
+                    "Percent": 6
+                }
+            },
+            "B": {
+                "Choice": "1.25 minutes",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Determines the number of seconds per video by dividing the total time by the number of videos (300 ÷ 4 = 75) and then converts from seconds to minutes by dividing the time per video by 60 (75 ÷ 60 = 1.25) OR converts the total time from seconds to minutes by dividing the number of seconds by 60 (300 ÷ 60 = 5) and then determines the number of minutes per video by dividing the converted time by the number of videos (5 ÷ 4 = 1.25).",
+                    "Percent": 36
+                }
+            },
+            "C": {
+                "Choice": "20 minutes",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates 4 × 300 ÷ 60.",
+                    "Percent": 23
+                }
+            },
+            "D": {
+                "Choice": "75 minutes",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Divides 300 by 4 but does not convert from seconds to minutes.",
+                    "Percent": 35
+                }
+            }
+        }
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Measurement & Data "
+        ],
+        "SubTopics": [
+            "Convert between different-sized measurement units within a given measurement system."
+        ],
+        "Content": [
+            "A runner drinks 1/2 pint of water during a race. How many gallons of water does the runner drink during the race?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1/16 gallon",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Converts the amount of water from pints to quarts by dividing the number of pints by 2 (1/2 ÷ 2 = 1/4)and then converts the amount of water from quarts to gallons by dividing the number of quarts by 4 (1/4 ÷ 4 = 1/16) OR uses the reference sheet to identify that 2 pints = 1 quart and 4 quarts = 1 gallon to determine that 8 pints = 1 gallon and then converts the amount of water from pints to gallons by dividing the number of pints by 8 (1/2 ÷ 8 = 1/16).",
+                    "Percent": 34
+                }
+            },
+            "B": {
+                "Choice": "1/10 gallon",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Determines that 8 pints = 1 gallon, which means 1 pint = 1/8 gallon, but converts from pints to gallons by adding the denominators (1/2 + 1/8 = 1/(2 + 8)).",
+                    "Percent": 8
+                }
+            },
+            "C": {
+                "Choice": "1/8 gallon",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Divides by 4 (converts from quarts to gallons or converts using 1/2 for each conversion).",
+                    "Percent": 29
+                }
+            },
+            "D": {
+                "Choice": "1/4 gallon",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Divides by 2 (converts from pints to quarts).",
+                    "Percent": 29
+                }
+            }
+        }
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Measurement & Data "
+        ],
+        "SubTopics": [
+            "Display and interpret data shown in tallies, tables, charts, pictographs, bar graphs, and line graphs, and use a title, appropriate scale, and labels. A grid will be provided to display data on bar graphs or line graphs."
+        ],
+        "Content": [
+            "The table below shows the recorded height of a bamboo plant after several days of growth.",
+            "problems/PA22G5M/media/13a.jpg",
+            "The line graph below was made to display the data from the table, but not all the data fit on the graph.",
+            "problems/PA22G5M/media/13b.jpg",
+            "Which change would allow all the data from the table to fit on the graph without changing the size of the grid?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "for the x-axis, using a scale of 1 instead of a scale of 2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not realize that less of the data would be displayed (the graph would not extend past day 5).",
+                    "Percent": 15
+                }
+            },
+            "B": {
+                "Choice": "for the x-axis, using a scale of 3 instead of a scale of 2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not realize that this would not change the amount of data displayed on the graph (the graph would extend to day 15, which is not necessary).",
+                    "Percent": 17
+                }
+            },
+            "C": {
+                "Choice": "for the y-axis, using a scale of 15 instead of a scale of 25",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Recognizes that the y-axis should change but does not realize that less of the data would be displayed.",
+                    "Percent": 20
+                }
+            },
+            "D": {
+                "Choice": "for the y-axis, using a scale of 35 instead of a scale of 25",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that using a scale of 35 for the y-axis would change the values from 0, 25, 50, ... , 250 to 0, 35, 70, ... , 350, which would allow the greatest height from the table (348 cm) to be displayed on the graph without changing the size of the grid.",
+                    "Percent": 48
+                }
+            }
+        }
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Measurement & Data "
+        ],
+        "SubTopics": [
+            "Display and interpret data shown in tallies, tables, charts, pictographs, bar graphs, and line graphs, and use a title, appropriate scale, and labels. A grid will be provided to display data on bar graphs or line graphs."
+        ],
+        "Content": [
+            "The table below shows the number of pizzas served during lunch at a school cafeteria over three days.",
+            "problems/PA22G5M/media/14a.jpg",
+            "Which pictograph represents the data shown in the table?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/PA22G5M/media/14b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not apply the key (uses 1 “pizza” = 1 pizza).",
+                    "Percent": 28
+                }
+            },
+            "B": {
+                "Choice": "problems/PA22G5M/media/14c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses a half “pizza” for both the odd number of pizzas (3) and the half pizza (2 1/2).",
+                    "Percent": 8
+                }
+            },
+            "C": {
+                "Choice": "problems/PA22G5M/media/14d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Switches the number of pizzas for Wednesday and Thursday.",
+                    "Percent": 18
+                }
+            },
+            "D": {
+                "Choice": "problems/PA22G5M/media/14e.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Applies the key to each value in the table, using a half “pizza” for the odd number of pizzas (3) and a quarter “pizza” for the half pizza (2 1/2).",
+                    "Percent": 46
+                }
+            }
+        }
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Measurement & Data "
+        ],
+        "SubTopics": [
+            "Find volumes of solid figures composed of two non-overlapping right rectangular prisms."
+        ],
+        "Content": [
+            "A set of stairs is being made from concrete. A picture of the stairs is shown below.",
+            "problems/PA22G5M/media/15a.jpg",
+            "What is the volume, in cubic feet, of the set of stairs?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "21",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Finds the sum of the numbers shown.",
+                    "Percent": 29
+                }
+            },
+            "B": {
+                "Choice": "65",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Uses a half “pizza” for both the odd number of pizzas (3) and the half pizza (2 1/2).",
+                    "Percent": 36
+                }
+            },
+            "C": {
+                "Choice": "80",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Determines the volume of the “greater” rectangular prism (2 × 8 × 5).",
+                    "Percent": 22
+                }
+            },
+            "D": {
+                "Choice": "120",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates (8 × 2 × 5) + (8 × 1 × 5), using 8 as the length for both parts.",
+                    "Percent": 13
+                }
+            }
+        }
+    }
+}
