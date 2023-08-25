@@ -58,6 +58,18 @@ import { PA16G5MExamComponent } from './components/PA16G5M-exam/PA16G5M-exam.com
 import { PA16G5MKeyComponent } from './components/PA16G5M-key/PA16G5M-key.component';
 import { PA15G5MExamComponent } from './components/PA15G5M-exam/PA15G5M-exam.component';
 import { PA15G5MKeyComponent } from './components/PA15G5M-key/PA15G5M-key.component';
+import { PA22G6MExamComponent } from './components/PA22G6M-exam/PA22G6M-exam.component';
+import { PA22G6MKeyComponent } from './components/PA22G6M-key/PA22G6M-key.component';
+import { PA21G6MExamComponent } from './components/PA21G6M-exam/PA21G6M-exam.component';
+import { PA21G6MKeyComponent } from './components/PA21G6M-key/PA21G6M-key.component';
+import { PA19G6MExamComponent } from './components/PA19G6M-exam/PA19G6M-exam.component';
+import { PA19G6MKeyComponent } from './components/PA19G6M-key/PA19G6M-key.component';
+import { PA18G6MExamComponent } from './components/PA18G6M-exam/PA18G6M-exam.component';
+import { PA18G6MKeyComponent } from './components/PA18G6M-key/PA18G6M-key.component';
+import { PA16G6MExamComponent } from './components/PA16G6M-exam/PA16G6M-exam.component';
+import { PA16G6MKeyComponent } from './components/PA16G6M-key/PA16G6M-key.component';
+import { PA15G6MExamComponent } from './components/PA15G6M-exam/PA15G6M-exam.component';
+import { PA15G6MKeyComponent } from './components/PA15G6M-key/PA15G6M-key.component';
 import { TX22G3MExamComponent } from './components/TX22G3M-exam/TX22G3M-exam.component';
 import { TX22G3MKeyComponent } from './components/TX22G3M-key/TX22G3M-key.component';
 import { TX21G3MExamComponent } from './components/TX21G3M-exam/TX21G3M-exam.component';
@@ -229,6 +241,18 @@ const routes: Routes = [
   { path: 'exam/PA16G5M/key', component: PA16G5MKeyComponent },
   { path: 'exam/PA15G5M', component: PA15G5MExamComponent },
   { path: 'exam/PA15G5M/key', component: PA15G5MKeyComponent },
+  { path: 'exam/PA22G6M', component: PA22G6MExamComponent },
+  { path: 'exam/PA22G6M/key', component: PA22G6MKeyComponent },
+  { path: 'exam/PA21G6M', component: PA21G6MExamComponent },
+  { path: 'exam/PA21G6M/key', component: PA21G6MKeyComponent },
+  { path: 'exam/PA19G6M', component: PA19G6MExamComponent },
+  { path: 'exam/PA19G6M/key', component: PA19G6MKeyComponent },
+  { path: 'exam/PA18G6M', component: PA18G6MExamComponent },
+  { path: 'exam/PA18G6M/key', component: PA18G6MKeyComponent },
+  { path: 'exam/PA16G6M', component: PA16G6MExamComponent },
+  { path: 'exam/PA16G6M/key', component: PA16G6MKeyComponent },
+  { path: 'exam/PA15G6M', component: PA15G6MExamComponent },
+  { path: 'exam/PA15G6M/key', component: PA15G6MKeyComponent },
   { path: 'exam/TX22G3M', component: TX22G3MExamComponent },
   { path: 'exam/TX22G3M/key', component: TX22G3MKeyComponent },
   { path: 'exam/TX21G3M', component: TX21G3MExamComponent },
