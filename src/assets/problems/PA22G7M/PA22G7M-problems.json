@@ -1,0 +1,802 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Apply properties of operations to add and subtract rational numbers, including real-world contexts."
+        ],
+        "Content": [
+            "Add: 7 5/6 + 4 1/3 + 1 3/5"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "12 3/10",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Finds a correct common denominator but does not apply conversions to the numerators and simplifies 9/30 to 3/10.",
+                    "Percent": 7
+                }
+            },
+            "B": {
+                "Choice": "12 9/14",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds the whole parts (7 + 4 + 1), the numerators (5 + 1 + 3), and the denominators (6 + 3 + 5) separately.",
+                    "Percent": 35
+                }
+            },
+            "C": {
+                "Choice": "13 23/30",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Converts 7 5/6 to an improper fraction (7 5/6 = (7 × 6 + 5) = 47/6), converts 4 1/3 to an improper fraction (4 1/3 = (4 × 3 + 1)/3 = 13/3), converts 1 3/5 to an improper fraction (1 3/5 = (1 × 5 + 3)/5 = 8/5); finds equivalent fractions using a common denominator of 30 ((47 × 5)/(6 × 5) = 235/30, (13 × 10)/(3 × 10) = 130/30, and (8 × 6)/(5 × 6) = 48/30), adds the numerators (235 + 130 + 48 = 413), and then converts 413/30 to a mixed number by dividing 413 by 30, using the quotient as the whole part and the remainder as the numerator OR finds equivalent fractions using a common denominator of 30 (7 (5 × 5)/(6 × 5) = 7 25/30, 4 (1 × 10)/(3 × 10) = 4 10/30, and (3 × 6)/(5 × 6) = 1 18/30), adds the whole parts and the numerators separately (7 + 4 + 1 = 12, 25 + 10 + 18 = 53), and then simplifies 12 53/30 (12 53/30 = 12 + 30/30 + 23/30 = 12 + 1 + 23/30 = 13 23/30).",
+                    "Percent": 49
+                }
+            },
+            "D": {
+                "Choice": "13 5/6",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses 6 as the common denominator, correctly converts 1/3 to 2/6, but incorrectly converts 3/5 to 4/6 before correctly converting 12 11/6 to 13 5/6.",
+                    "Percent": 9
+                }
+            }
+        }
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Ratios & Proportional Relationships"
+        ],
+        "SubTopics": [
+            "Compute unit rates associated with ratios of fractions, including ratios of lengths, areas, and other quantities measured in like or different units."
+        ],
+        "Content": [
+            "Mandy is walking in the woods. She completes 70% of her walk in 3 1/2 hours. She continues walking at that same rate. How much time, in hours, will Mandy’s entire walk take?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "3 4/5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds 3/10 (for 30%) to 3 1/2.",
+                    "Percent": 20
+                }
+            },
+            "B": {
+                "Choice": "5",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Converts 3 1/2 to an improper fraction (3 1/2 = (3 × 2 + 1)/2 = 7/2), converts 70% to 7/10, and then divides 7/2 by 7/10 by inverting 7/10 and multiplying 7/2 by 10/7 to get 10/2, which simplifies to 5.",
+                    "Percent": 56
+                }
+            },
+            "C": {
+                "Choice": "6",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Multiplies 7/2 and 7/10, rounds the answer to 2.5, and adds it to 3.5.",
+                    "Percent": 12
+                }
+            },
+            "D": {
+                "Choice": "6 1/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds 3 (for 30%) to 3 1/2.",
+                    "Percent": 12
+                }
+            }
+        }
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Ratios & Proportional Relationships",
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Identify the constant of proportionality (unit rate) in tables, graphs, equations, diagrams, and verbal descriptions of proportional relationships.",
+            "Solve word problems leading to inequalities of the form px + q > r or px + q < r, where p, q, and r are specific rational numbers, and graph the solution set of the inequality."
+        ],
+        "Content": [
+            "The table below shows the relationship between the amount of electricity used by a customer in different months and the cost shown on the customer’s electric bill.",
+            "problems/PA22G7M/media/3a.jpg",
+            "Based on the information shown in the table, which inequality could be used to determine all the numbers of kilowatt-hours (x) of electricity a customer could use in a month for the cost to be less than $65.00?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "0.095x < 65.00",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Determines the rate by dividing the cost of electricity by the amount used for any given month (e.g., 33.25 ÷ 350 = 0.095), uses the rate (0.095) for the coefficient of x, and uses the “less than” symbol (<) for the comparison.",
+                    "Percent": 43
+                }
+            },
+            "B": {
+                "Choice": "0.095x > 65.00",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Reverses the direction of the inequality.",
+                    "Percent": 22
+                }
+            },
+            "C": {
+                "Choice": "0.92x < 65.00",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Divides the month 3 kilowatt-hours (460) by the month 4 kilowatt- hours (500) OR divides the month 3 cost ($43.70) by the month 4 cost ($47.50).",
+                    "Percent": 24
+                }
+            },
+            "D": {
+                "Choice": "0.92x > 65.00",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Divides the month 3 kilowatt-hours (460) by the month 4 kilowatt- hours (500) and reverses the direction of the inequality OR divides the month 3 cost ($43.70) by the month 4 cost ($47.50) and reverses the direction of the inequality.",
+                    "Percent": 11
+                }
+            }
+        }
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Ratios & Proportional Relationships"
+        ],
+        "SubTopics": [
+            "Explain what a point (x, y) on the graph of a proportional relationship means in terms of the situation, with special attention to the points (0, 0) and (1, r), where r is the unit rate."
+        ],
+        "Content": [
+            "The table below shows the numbers of pages Lenny can read in certain amounts of time.",
+            "problems/PA22G7M/media/4a.jpg",
+            "Based on the table, which equation can be used to determine the number of pages (p) Lenny can read in t minutes?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "p = 1.5t",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Determines the rate either by dividing the second output by the first output (162 ÷ 108 = 1.5) OR by dividing the second input by the first input (90 ÷ 60 = 1.5).",
+                    "Percent": 12
+                }
+            },
+            "B": {
+                "Choice": "p = 1.8t",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Determines the rate by dividing the number of pages read by the time, in minutes, for any given row of the table (e.g., 162 ÷ 90 = 1.8) and recognizes that the rate (1.8) should be multiplied by the amount of time (t), with the product being equal to the number of pages read (p).",
+                    "Percent": 53
+                }
+            },
+            "C": {
+                "Choice": "t = 1.5p",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Reverses t and p and determines the rate either by dividing the second output by the first output (162 ÷ 108 = 1.5) OR by dividing the second input by the first input (90 ÷ 60 = 1.5).",
+                    "Percent": 10
+                }
+            },
+            "D": {
+                "Choice": "t = 1.8p",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Reverses t and p.",
+                    "Percent": 25
+                }
+            }
+        }
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Ratios & Proportional Relationships"
+        ],
+        "SubTopics": [
+            "Explain what a point (x, y) on the graph of a proportional relationship means in terms of the situation, with special attention to the points (0, 0) and (1, r), where r is the unit rate."
+        ],
+        "Content": [
+            "Erin completes an exercise program at a fitness center. The graph shown below represents the percentage of her exercise program (y) Erin has completed when she has exercised for x minutes.",
+            "problems/PA22G7M/media/5a.jpg",
+            "Based on the graph, what does the value of the y-coordinate represent when x = 15?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Erin has completed 9% of her exercise program.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Identifies the x-coordinate when y = 15 but uses the units for the y-axis.",
+                    "Percent": 10
+                }
+            },
+            "B": {
+                "Choice": "Erin has completed 25% of her exercise program.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Determines the rate by setting up and simplifying the fraction as “rise” over “run” ((100 – 0)/(60 – 0) = 100/60 = 5/3), multiplies the rate by 15 to determine the y-value (5/ • 15 = 25), and interprets the y-value as the percentage completed.",
+                    "Percent": 70
+                }
+            },
+            "C": {
+                "Choice": "Erin has completed 9 minutes of her exercise program.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Identifies the meaning of the x-coordinate when y = 15.",
+                    "Percent": 9
+                }
+            },
+            "D": {
+                "Choice": "Erin has completed 25 minutes of her exercise program.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Identifies the correct y-value but pairs it with the units for the x-axis.",
+                    "Percent": 11
+                }
+            }
+        }
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Ratios & Proportional Relationships",
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Use proportional relationships to solve multi-step ratio and percent problems.",
+            " Solve problems involving scale drawings of geometric figures, including finding length and area."
+        ],
+        "Content": [
+            "A stone with a triangular face is used in a water fountain. Lennox made a scale drawing of the triangular face. He labels the vertices of his triangle as P, Q, and R. The sides of triangle PQR are described below.",
+            "• Side PQ is 12 inches long.",
+            "• Side QR is 25% longer than side PQ.",
+            "• Side PR is 2/3 the length of side QR.",
+            "Each inch of Lennox’s scale drawing represents 1/2 foot of the actual triangular face. What is the perimeter, in feet, of the actual triangular face of the stone?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "8 1/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Finds 25% of PQ rather than 125% of PQ.",
+                    "Percent": 21
+                }
+            },
+            "B": {
+                "Choice": "18 1/2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Determines the length of side QR by multiplying the length of side PQ by 0.25 and then adding this to the length of side PQ (0.25 • 12 + 12 = 3 + 12 = 15 inches), determines the length of side PR by multiplying the length of side QR by 2/3 (2/3 • 15 = 10 inches), determines the perimeter of the scale drawing by adding the three side lengths (12 + 15 + 10 = 37 inches), and then converts the scale drawing perimeter to the actual perimeter by multiplying the scale drawing perimeter by 1/2 and changing the units from inches to feet (1/2 • 37 = 18 1/2 feet)OR converts the length of PQ to the actual length by multiplying the length of PQ by 1/2 and changing the units from inches to feet (1/2 • 12 = 6 feet), determines the actual length of side QR by multiplying the actual length of side PQ by 0.25 and then adding this to the actual length of side PQ (0.25 • 6 + 6 = 1 1/2 + 6 = 7 1/2 feet), determines the actual length of side PR by multiplying the actual length of side QR by 2/3 (2/3 • 7 1/2 = 5 feet), and then determines the perimeter by adding the three side lengths (6 + 7 1/2 + 5 = 18 1/2 feet).",
+                    "Percent": 44
+                }
+            },
+            "C": {
+                "Choice": "34",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Finds 25% of PQ and incorrectly applies the scale by dividing by 1/2.",
+                    "Percent": 20
+                }
+            },
+            "D": {
+                "Choice": "74",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Incorrectly applies the scale by dividing by 1/2 rather than multiplying by 1/2.",
+                    "Percent": 15
+                }
+            }
+        }
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Use properties of operations to generate equivalent expressions."
+        ],
+        "Content": [
+            "Which expression is equivalent to 24(807)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "20(8) + 4(8) + 20(7) + 4(7)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses the digits and not the place values.",
+                    "Percent": 8
+                }
+            },
+            "B": {
+                "Choice": "20(80) + 4(80) + 20(7) + 4(7)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses 80 instead of 800.",
+                    "Percent": 13
+                }
+            },
+            "C": {
+                "Choice": "20(800) + 4(800) + 20(7) + 4(7)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Identifies 24 = 20 + 4, identifies 807 = 800 + 7, and then multiplies each term of 20 + 4 by each term of 800 + 7 before adding the products.",
+                    "Percent": 71
+                }
+            },
+            "D": {
+                "Choice": "20(800) + 4(800) + 20(70) + 4(70)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses 70 instead of 7.",
+                    "Percent": 8
+                }
+            }
+        }
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Apply properties of operations to add, subtract, factor, and expand linear expressions with rational coefficients."
+        ],
+        "Content": [
+            "Simplify: x(2.25 + 1.25 + 0.75)"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "2.25x + 1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not distribute and adds 1.25 to 0.75 and gets 1.",
+                    "Percent": 4
+                }
+            },
+            "B": {
+                "Choice": "2.25x + 2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not distribute.",
+                    "Percent": 9
+                }
+            },
+            "C": {
+                "Choice": "3.25x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not carry when adding 0.75 + 1.25.",
+                    "Percent": 4
+                }
+            },
+            "D": {
+                "Choice": "4.25x",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Adds the three values within the grouping symbols and then multiplies the sum by x OR distributes the x to each term within the grouping symbols and then combines like terms by adding the coefficients.",
+                    "Percent": 83
+                }
+            }
+        }
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Describe the two-dimensional figures that result from slicing three-dimensional figures."
+        ],
+        "Content": [
+            "A square pyramid is cut into two pieces with a single straight cut. The cut passes through the vertex of the pyramid and is perpendicular to the base. What shape is created by the cross section of the cut?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "an isosceles triangle",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that the cut would pass through the base and either through two lateral faces or through two lateral edges of the pyramid, resulting in a triangle, recognizes that the cut through the two lateral faces (or through the two lateral edges) would result in equal side lengths and identifies a triangle with two equal sides as an isosceles triangle.",
+                    "Percent": 43
+                }
+            },
+            "B": {
+                "Choice": "a rectangle that is not a square",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Identifies the shape of the new base and not the cross section.",
+                    "Percent": 15
+                }
+            },
+            "C": {
+                "Choice": "a scalene right triangle",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Identifies the shape of the two triangular faces that were cut and not the cross section.",
+                    "Percent": 26
+                }
+            },
+            "D": {
+                "Choice": "a square",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks about a cut parallel to the base and not perpendicular to the base.",
+                    "Percent": 16
+                }
+            }
+        }
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Identify, use, and describe properties of angles and their measures."
+        ],
+        "Content": [
+            "The figure below shows three intersecting lines.",
+            "problems/PA22G7M/media/10a.jpg",
+            "Which statement best describes all the possible measures for the angle labeled y°?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The measure of the angle is x°, and it is between 0° and 70°.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks the angles labeled x° and y° must be the same.",
+                    "Percent": 22
+                }
+            },
+            "B": {
+                "Choice": "The measure of the angle is x°, and it is between 110° and 180°.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not realize that the angle labeled x° must be between 0° and 70°.",
+                    "Percent": 23
+                }
+            },
+            "C": {
+                "Choice": "The measure of the angle is 110° + x°, and it is between 0° and 70°.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Selects the correct expression but uses the inequality describing all possible values for x.",
+                    "Percent": 20
+                }
+            },
+            "D": {
+                "Choice": "The measure of the angle is 110° + x°, and it is between 110° and 180°.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Identifies that the lower portion of the angle labeled y° has a measure of x° since it is opposite the angle labeled x°, identifies that the upper portion of the angle labeled y° has a measure of y° – x°, recognizes that the upper portion of the angle labeled y° and the angle labeled 70° are supplementary and sets up the equation 70° + y° – x° = 180°, determines the measure of the angle labeled y° by solving the equation for y° to get 110° + x°, recognizes that the angle labeled x° must be between 0° and 70° (since it is part of the angle labeled 70°), and uses this information to determine that the measure of the angle labeled y° must be between 110° and 180° (110° + 0° = 110°, 110° + 70° = 180°).",
+                    "Percent": 35
+                }
+            }
+        }
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Identify and use properties of angles formed when two parallel lines are cut by a transversal (e.g., angles may include alternate interior, alternate exterior, vertical, corresponding)."
+        ],
+        "Content": [
+            "A rectangle is shown below.",
+            "problems/PA22G7M/media/11a.jpg",
+            "Which term describes the relationship between angle 1 and angle 2?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "alternate exterior angles",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Incorrectly identifies the pair of angles.",
+                    "Percent": 18
+                }
+            },
+            "B": {
+                "Choice": "corresponding angles",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Incorrectly identifies the pair of angles.",
+                    "Percent": 23
+                }
+            },
+            "C": {
+                "Choice": "alternate interior angles",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that opposite sides of a rectangle are parallel, identifies the slanted line segment as a transversal, identifies the two labeled angles as “alternate” since they appear on opposite sides (i.e., “alternate” sides) of the transversal, and identifies the two labeled angles as “interior” since they appear between the two parallel sides of the rectangle (i.e., they appear in the “interior” of the rectangle).",
+                    "Percent": 40
+                }
+            },
+            "D": {
+                "Choice": "vertical angles",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Incorrectly identifies the pair of angles.",
+                    "Percent": 19
+                }
+            }
+        }
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Determine circumference, area, surface area, and volume."
+        ],
+        "Content": [
+            "A design for a Do-Not-Disturb sign is made up of a rectangle with a circle cut out.",
+            "problems/PA22G7M/media/12a.jpg",
+            "Paper is used to make the sign. Which measurement is closest to the area of the paper surface of the Do-Not-Disturb sign once the circle has been cut out?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "121 cm^2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Determines the area of the rectangle by multiplying the side lengths (17 • 8 = 136 cm^2), determines the approximate area of the small circle by multiplying the square of the radius by π and rounding to the nearest whole number (2.2^2 • π ≈ 15 cm^2), and then subtracts the approximate area of the circle from the area of the rectangle (136 – 15 = 121 cm^2).",
+                    "Percent": 38
+                }
+            },
+            "B": {
+                "Choice": "122 cm^2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Subtracts the circumference of the circle from the area of the rectangle.",
+                    "Percent": 14
+                }
+            },
+            "C": {
+                "Choice": "129 cm^2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not square the radius.",
+                    "Percent": 14
+                }
+            },
+            "D": {
+                "Choice": "136 cm^2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Determines the area of the rectangle only.",
+                    "Percent": 34
+                }
+            }
+        }
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Use data from a random sample to draw inferences about a population with an unknown characteristic of interest."
+        ],
+        "Content": [
+            "A town has a population of 7,500. The mayor asked two different employees to conduct a survey to determine whether residents of the town are in favor of the construction of a new baseball stadium.",
+            "• Denise surveyed 150 randomly selected residents at a recent baseball game.",
+            "• Tamira surveyed 150 randomly selected residents living in different sections of town.",
+            "The table below shows the results of the two surveys.",
+            "problems/PA22G7M/media/13a.jpg",
+            "Which statement identifies the more reliable survey and provides a valid conclusion based on that survey?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Denise’s survey is more reliable than Tamira’s survey, and approximately 6,250 residents of the town would likely be in favor of the construction of a new baseball stadium.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Selects the less reliable survey but makes a valid prediction based on that survey.",
+                    "Percent": 26
+                }
+            },
+            "B": {
+                "Choice": "Denise’s survey is more reliable than Tamira’s survey, and approximately 1,250 residents of the town would likely be opposed to the construction of a new baseball stadium.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Selects the less reliable survey and adds the “no opinion” to the opposed.",
+                    "Percent": 21
+                }
+            },
+            "C": {
+                "Choice": "Tamira’s survey is more reliable than Denise’s survey, and approximately 1,500 residents of the town would likely be in favor of the construction of a new baseball stadium.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Identifies Tamira’s survey as the more reliable survey since Tamira collected data from people all across town and not just people who attend a baseball game, determines the percentage of people who would likely be in favor of a new stadium by dividing the number in favor by the total number of people surveyed (30 ÷ 150 = 0.2), and then multiplies the percentage by the population (0.2 • 7,500 = 1,500).",
+                    "Percent": 33
+                }
+            },
+            "D": {
+                "Choice": "Tamira’s survey is more reliable than Denise’s survey, and approximately 6,000 residents of the town would likely be opposed to the construction of a new baseball stadium.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Selects the more reliable survey but adds the “no opinion” to the opposed.",
+                    "Percent": 20
+                }
+            }
+        }
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Use probability to predict outcomes."
+        ],
+        "Content": [
+            "Mr. Eliaz randomly selects a student from his algebra class each day. Each student is equally likely to be selected. There is an equal number of male and female students in his class. On Monday, Tuesday, Wednesday, and Thursday of this week, the randomly selected student is a male student. Which statement best describes the probability Mr. Eliaz selects a male student on Friday?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The probability Mr. Eliaz selects a male student on Friday is the same as it was on each of the other days.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that the probability a male student is selected does not change from day to day since each student is equally likely to be selected on any given day.",
+                    "Percent": 44
+                }
+            },
+            "B": {
+                "Choice": "The probability Mr. Eliaz selects a male student on Friday is less than it was on other days because he has already selected a male student 4 days in a row.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Considers that the previous results influence Friday’s result.",
+                    "Percent": 26
+                }
+            },
+            "C": {
+                "Choice": "The probability Mr. Eliaz selects a male student on Friday is greater than it was on other days because he has already selected a male student 4 days in a row.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Considers that the previous results influence Friday’s result.",
+                    "Percent": 12
+                }
+            },
+            "D": {
+                "Choice": "The probability Mr. Eliaz selects a male student on Friday is impossible to determine without knowing how many students are in his class.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Considers that the actual numbers (rather than the ratio) are needed.",
+                    "Percent": 18
+                }
+            }
+        }
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Find the probability of a simple event, including the probability of a simple event not occurring."
+        ],
+        "Content": [
+            "A nursery sells tulip plants. Each plant has 1 tulip. The tulips come in 4 different colors. The tulip plants available at the nursery are listed below.",
+            "• 22 plants with a red tulip",
+            "• 30 plants with a pink tulip",
+            "• 28 plants with a yellow tulip",
+            "• 20 plants with a white tulip",
+            "Amy purchases one tulip plant at random. What is the probability that Amy’s tulip plant has a tulip that is not pink?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1/4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Finds the probability it will have pink flowers by noting that pink is 1 of 4 colors.",
+                    "Percent": 16
+                }
+            },
+            "B": {
+                "Choice": "3/10",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Finds the probability it will have pink flowers.",
+                    "Percent": 21
+                }
+            },
+            "C": {
+                "Choice": "7/10",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Determines the probability by writing a fraction with the total number of tulips that are not pink (70) as the numerator and the total number of tulips (100) as the denominator, and then simplifies the fraction OR first determines the probability the tulip is pink by writing a fraction using the number of tulips that are pink (30) as the numerator and the total number of tulips (100) as the denominator, simplifies the fraction (3/10), and then determines the probability that the tulip is not pink by subtracting the probability the tulip is pink from 1.",
+                    "Percent": 49
+                }
+            },
+            "D": {
+                "Choice": "3/4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Reasons that there are 3 nonpink options out of a total of 4 options.",
+                    "Percent": 14
+                }
+            }
+        }
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Find probabilities of independent compound events using organized lists, tables, tree diagrams, and simulation."
+        ],
+        "Content": [
+            "The table below shows the number of each color of paper clip in a container.",
+            "problems/PA22G7M/media/16a.jpg",
+            "A paper clip is randomly selected from the container three times and is replaced each time. What is the approximate probability of first selecting a blue paper clip and then 2 green paper clips?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "0.00397",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Determines the probability without replacement.",
+                    "Percent": 18
+                }
+            },
+            "B": {
+                "Choice": "0.00485",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Determines the probability by multiplying the probability of selecting blue by the probability of selecting green twice (13/35 • 4/35 • 4/35); the denominator does not change because the selected paper clip is replaced each time; since the order matters (first blue, then green twice), only one permutation of the probability is needed.",
+                    "Percent": 36
+                }
+            },
+            "C": {
+                "Choice": "0.04245",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Determines the probability of the first two events (1 blue, then 1 green).",
+                    "Percent": 24
+                }
+            },
+            "D": {
+                "Choice": "0.08571",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates 3/35 because 3 paper clips are selected out of 35 paper clips.",
+                    "Percent": 22
+                }
+            }
+        }
+    }
+}
