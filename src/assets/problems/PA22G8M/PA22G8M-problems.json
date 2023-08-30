@@ -1,0 +1,751 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Estimate the value of irrational numbers without a calculator (limit whole number radicand to less than 144)."
+        ],
+        "Content": [
+            "Which value is closest to 5(∛26)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Approximates the value as cube root of (5 • 26).",
+                    "Percent": 13
+                }
+            },
+            "B": {
+                "Choice": "15",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that 26 is close to 27, identifies the cube root of 27 as 3, and then multiplies 5 by 3.",
+                    "Percent": 46
+                }
+            },
+            "C": {
+                "Choice": "25",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Approximates the value using 5 • √25.",
+                    "Percent": 23
+                }
+            },
+            "D": {
+                "Choice": "45",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Approximates the value using 5(27 ÷ 3).",
+                    "Percent": 18
+                }
+            }
+        }
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Apply concepts of rational and irrational numbers."
+        ],
+        "Content": [
+            "Which statement about non-zero real numbers is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The sum of two rational numbers is not always rational.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Miscalculates a case where two rational numbers have a sum that is irrational OR considers the sum of a repeating decimal and a terminating decimal to be irrational.",
+                    "Percent": 19
+                }
+            },
+            "B": {
+                "Choice": "The product of two irrational numbers is always rational.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Confuses the product of two irrational numbers with the product of two rational numbers OR considers only situations such as √2 • √2.",
+                    "Percent": 14
+                }
+            },
+            "C": {
+                "Choice": "The product of a rational number and an irrational number is always irrational.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that when a number that can be written as a fraction (i.e., a rational number) is multiplied by a number that cannot be written as a fraction (i.e., an irrational number), the product cannot be written as a fraction.",
+                    "Percent": 41
+                }
+            },
+            "D": {
+                "Choice": "The sum of a rational number and an irrational number is sometimes irrational.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Miscalculates a case where a rational number and irrational number have a sum that is rational OR considers a negative number to be irrational and thinks the sum of a number and its opposite is 0.",
+                    "Percent": 26
+                }
+            }
+        }
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Represent and use expressions and equations to solve problems involving radicals and integer exponents."
+        ],
+        "Content": [
+            "A city has approximately 1,000,000 residents. The city has approximately 1 library for every 5,000 residents. Which expression represents the approximate number of libraries in the city?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "(5 × 10³)/(1 × 10⁶)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Divides in the wrong order.",
+                    "Percent": 26
+                }
+            },
+            "B": {
+                "Choice": "(5 × 10⁴)/(1 × 10⁶)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Misrepresents 5,000 and divides in the wrong order.",
+                    "Percent": 10
+                }
+            },
+            "C": {
+                "Choice": "(1 × 10⁶)/(5 × 10⁴)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Misrepresents 5,000.",
+                    "Percent": 12
+                }
+            },
+            "D": {
+                "Choice": "(1 × 10⁶)/(5 × 10³)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Interprets the situation as 1,000,000 ÷ 5,000, writes this division as a fraction, and converts 1,000,000 as 1 × 10⁶ and 5,000 as 5 × 10³.",
+                    "Percent": 52
+                }
+            }
+        }
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Perform operations with numbers expressed in scientific notation, including problems where both decimal and scientific notation are used. Express answers in scientific notation and choose units of appropriate size for measurements of very large or very small quantities (e.g., use millimeters per year for seafloor spreading). Interpret scientific notation that has been generated by technology (e.g., interpret 4.7EE9 displayed on a calculator as 4.7 × 10⁹)."
+        ],
+        "Content": [
+            "A cubic meter of water has a mass of (1 × 10³) kilograms. A large swimming pool at a community center holds a mass of approximately (3 × 10⁶) kilograms of water when it is completely full. What is the approximate volume, in cubic meters, of water the large swimming pool holds when it is completely full?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "2 × 10²",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Subtracts the coefficients (3 – 1 = 2) and divides the exponents (6 ÷ 3 = 2).",
+                    "Percent": 7
+                }
+            },
+            "B": {
+                "Choice": "3 × 10²",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Divides the coefficients (3 ÷ 1 = 3) and exponents (6 ÷ 3 = 2).",
+                    "Percent": 15
+                }
+            },
+            "C": {
+                "Choice": "2 × 10³",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Subtracts the coefficients (3 – 1 = 2) and exponents (6 – 3 = 3).",
+                    "Percent": 19
+                }
+            },
+            "D": {
+                "Choice": "3 × 10³",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Interprets the situation as (3 × 10⁶) ÷ (1 × 10³), divides the coefficients (3 ÷ 1 = 3), and divides the powers of 10 by subtracting the exponents (6 – 3 = 3).",
+                    "Percent": 59
+                }
+            }
+        }
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations",
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Graph proportional relationships, interpreting the unit rate as the slope of the graph. Compare two different proportional relationships represented in different ways.",
+            "Interpret solutions to a system of two linear equations in two variables as points of intersection of their graphs because points of intersection satisfy both equations simultaneously."
+        ],
+        "Content": [
+            "Eva and Rafael are each tutors. The graph below shows the amount (y), in dollars, Eva charges based on the number of hours she tutors.",
+            "problems/PA22G8M/media/5a.jpg",
+            "The equation y = 35x represents the amount (y), in dollars, Rafael charges when he tutors for x hours. His equation will be graphed on the same coordinate grid as Eva’s graph. Based on this information, which statement is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Eva charges $5 more per hour than Rafael, and she has a higher initial fee, so their graphs will never intersect.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Finds conditions for lines that never intersect.",
+                    "Percent": 17
+                }
+            },
+            "B": {
+                "Choice": "Eva and Rafael each charge the same amount per hour, but Rafael also charges an initial fee, so their graphs are parallel.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Assumes the graphs never intersect so the lines are parallel.",
+                    "Percent": 14
+                }
+            },
+            "C": {
+                "Choice": "Eva charges $5 more per hour than Rafael, and neither charges an initial fee, so the only place their graphs will intersect is at (0, 0).",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Interprets (1.0, 40) on the graph as Eva charging $40 per hour and the rate of change (i.e., the coefficient of x) in the equation as Rafael charging $35 per hour, determines that Eva charges $5 more per hour by subtracting the two rates ($40 – $35), interprets (0, 0) on the graph and the lack of a constant term in the equation as Eva and Rafael not charging an initial fee, and recognizes that linear relations with different slopes will have only one point of intersection.",
+                    "Percent": 56
+                }
+            },
+            "D": {
+                "Choice": "Eva and Rafael each charge the same amount per hour and do not charge an initial fee, so the only place their graphs will intersect is at (0, 0).",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not realize the conditions that would make them have the same line OR realizes (0, 0) is a point on both lines but does not recognize that they represent different lines.",
+                    "Percent": 13
+                }
+            }
+        }
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations",
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Use similar right triangles to show and explain why the slope m is the same between any two distinct points on a non-vertical line in the coordinate plane.",
+            "Write, solve, graph, and interpret linear equations in one or two variables, using various methods."
+        ],
+        "Content": [
+            "Similar triangles JKL and TSR are graphed on the coordinate grid shown below.",
+            "problems/PA22G8M/media/6a.jpg",
+            "The slope of JL is m/2. The slope of RT is q. Which equation describes the relationship between m and q?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "m = –2q",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Recognizes that the slopes are negative but does not consider that m and q can be negative numbers.",
+                    "Percent": 18
+                }
+            },
+            "B": {
+                "Choice": "m = q/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks q needs to be divided by 2 since m was divided by 2 in the stem.",
+                    "Percent": 28
+                }
+            },
+            "C": {
+                "Choice": "m = q",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Understands that the slopes of line segments JL and RT must be equal but represents the slope of line segment JL as m.",
+                    "Percent": 17
+                }
+            },
+            "D": {
+                "Choice": "m = 2q",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that the slopes are equal, sets up the equation m/2 = q, and then solves for m by multiplying both sides of the equation by 2.",
+                    "Percent": 37
+                }
+            }
+        }
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Analyze and solve linear equations and pairs of simultaneous linear equations."
+        ],
+        "Content": [
+            "A system of two linear equations has no solution. Which statement about the two lines representing the system of equations is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The two lines must have the same slope and the same y-intercept.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Considers only the same slope and does not recognize that the lines are colinear OR confuses “infinitely many solutions” for “no solutions”.",
+                    "Percent": 21
+                }
+            },
+            "B": {
+                "Choice": "The two lines must have different slopes but the same y-intercept.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not recognize that lines with the same y-intercept will have a solution at the y-intercept.",
+                    "Percent": 15
+                }
+            },
+            "C": {
+                "Choice": "The two lines must have the same slope but different y-intercepts.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that two lines with the same slope but different y-intercepts will be parallel (i.e., they will never intersect) and, therefore, will have no solutions.",
+                    "Percent": 44
+                }
+            },
+            "D": {
+                "Choice": "The two lines must have different slopes and different y-intercepts.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Considers only the different y-intercepts and does not recognize that lines with different slopes will always have a solution.",
+                    "Percent": 20
+                }
+            }
+        }
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Solve systems of two linear equations in two variables algebraically and estimate solutions by graphing the equations. Solve simple cases by inspection."
+        ],
+        "Content": [
+            "A system of linear equations is shown below.",
+            "x+ 2 = 7",
+            "2x + 3y = 8",
+            "Which statement describes one method to find the solution of the system of linear equations?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Determine the point at which 2x + 3y = 8 crosses the vertical line x = 5.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that the solution will occur at the point where the second equation crosses the first equation and solves the first equation by subtracting 2 from both sides to get x = 5.",
+                    "Percent": 55
+                }
+            },
+            "B": {
+                "Choice": "Determine the point at which 2x + 3y = 8 crosses the vertical line x = 6.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Combines the solving of the two equations and subtracts 2 from 8.",
+                    "Percent": 13
+                }
+            },
+            "C": {
+                "Choice": "Determine the point at which 2x + 3y = 8 crosses the vertical line x = 7.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not consider the “+ 2” in the first equation and simplifies it as x = 7.",
+                    "Percent": 24
+                }
+            },
+            "D": {
+                "Choice": "Determine the point at which 2x + 3y = 8 crosses the vertical line x = 9.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds 2 to 7 in the first equation.",
+                    "Percent": 8
+                }
+            }
+        }
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Solve real-world and mathematical problems leading to two linear equations in two variables."
+        ],
+        "Content": [
+            "Ms. Martin and Mrs. Tyler each have a car. They each park at a coin-operated parking meter.",
+            "problems/PA22G8M/media/9a.jpg",
+            "Ms. Martin and Mrs. Tyler each insert the same number of coins into the meters. They are able to park their cars for the same amount of time before their meters expire. For what amount of time are Ms. Martin and Mrs. Tyler able to park their cars?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "75 minutes",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Sets up Ms. Martin’s equation as y = 15x by using “each quarter... 15 minutes” as the slope, while recognizing that “0 minutes of time remaining” means the equation has no initial value; sets up Mrs. Tyler’s equation as y = 8x + 35 by using “each dime... 8 minutes” as the slope and “35 minutes of time remaining” as the initial value; solves the equations by setting up 15x = 8x + 35 (since both expressions are equal to y), subtracting 8x from each side to get 7x = 35, dividing each side by 7 to get x = 5; and then substitutes x into either equation to determine y (either 15(5) OR 8(5) + 35).",
+                    "Percent": 60
+                }
+            },
+            "B": {
+                "Choice": "85 minutes",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates (15 × 8) – 35 = 85 and uses 85 as the number of minutes.",
+                    "Percent": 15
+                }
+            },
+            "C": {
+                "Choice": "90 minutes",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Determines a possible amount of time for Ms. Martin’s meter but not a possible amount of time for both meters.",
+                    "Percent": 17
+                }
+            },
+            "D": {
+                "Choice": "110 minutes",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Determines that 75 is a possible amount of time for each meter but then adds the 35 minutes that is already on Mrs. Tyler’s meter.",
+                    "Percent": 8
+                }
+            }
+        }
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Fractions"
+        ],
+        "SubTopics": [
+            "Compare properties of two functions, each represented in a different way (i.e., algebraically, graphically, numerically in tables, or by verbal descriptions)."
+        ],
+        "Content": [
+            "Beth and Phil each have gift cards for a local coffee shop. Beth has $50 on her gift card, and Phil has $30 on his gift card. Every time they go to the coffee shop, each buys his or her favorite drink. The table and graph shown below model the amount remaining on each person’s gift card based on the number of drinks purchased.",
+            "problems/PA22G8M/media/10a.jpg",
+            "What are the prices of Beth’s favorite drink and Phil’s favorite drink?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Beth’s favorite drink: $2.75 \n Phil’s favorite drink: $3.75",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates Beth’s drink correctly but Phil’s drink as 30/8.",
+                    "Percent": 19
+                }
+            },
+            "B": {
+                "Choice": "Beth’s favorite drink: $2.75 \n Phil’s favorite drink: $3.25",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Determines the rate of change in the table by dividing the difference between two remaining balances (e.g., $33.50 – $50.00 = –$16.50) by the difference between the respective number of drinks purchased (e.g., 6 – 0 = 6), determines the rate of change in the graph by dividing the difference between the y-coordinates of two points (e.g., $4.00 – $30.00 = –$26.00) by the difference between the x-coordinates of the same two points (e.g., 8 – 0 = 8), and interprets the negative rates as the costs of the drinks.",
+                    "Percent": 64
+                }
+            },
+            "C": {
+                "Choice": "Beth’s favorite drink: $2.81 \n Phil’s favorite drink: $3.25",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates Beth’s drink as 25.25 ÷ 9.",
+                    "Percent": 9
+                }
+            },
+            "D": {
+                "Choice": "Beth’s favorite drink: $2.81 \n Phil’s favorite drink: $3.75",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates Beth’s drink as 25.25 ÷ 9 and Phil’s drink as 30/8.",
+                    "Percent": 8
+                }
+            }
+        }
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Fractions"
+        ],
+        "SubTopics": [
+            "Describe qualitatively the functional relationship between two quantities by analyzing a graph (e.g., where the function is increasing or decreasing, linear or nonlinear). Sketch or determine a graph that exhibits the qualitative features of a function that has been described verbally."
+        ],
+        "Content": [
+            "The graph below shows the total snowfall (y), in inches, during a day in February, based on the time, in hours, since the snowfall began.",
+            "problems/PA22G8M/media/11a.jpg",
+            "Based on the graph, which statement about the snowfall is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The snowfall increased the fastest from hour 3 to hour 4.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Interprets “increased the fastest” as the interval with the steepest slope and recognizes that the interval with the steepest slope is from hour 3 to hour 4.",
+                    "Percent": 76
+                }
+            },
+            "B": {
+                "Choice": "The snowfall increased the fastest from hour 4 to hour 6.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Selects the interval that ends with the greatest amount of snowfall.",
+                    "Percent": 9
+                }
+            },
+            "C": {
+                "Choice": "From hour 2 to hour 3, the snowfall increased by 1.5 inches.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Incorrectly considers that the y-value represents the hourly rate.",
+                    "Percent": 9
+                }
+            },
+            "D": {
+                "Choice": "From hour 0 to hour 6, the snowfall increased at a constant rate.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Considers “constant rate” to mean “constantly increasing” instead of “increasing at a steady rate”.",
+                    "Percent": 6
+                }
+            }
+        }
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Given two congruent figures, describe a sequence of transformations that exhibits the congruence between them."
+        ],
+        "Content": [
+            "Congruent quadrilaterals PRST and P'R'S'T' are graphed on the coordinate grid shown below.",
+            "problems/PA22G8M/media/12a.jpg",
+            "Which transformation or sequence of transformations could be used to show the congruence between the quadrilaterals?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "a 180° clockwise rotation about point S",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Produces a figure that appears in quadrant I but has an incorrect orientation.",
+                    "Percent": 14
+                }
+            },
+            "B": {
+                "Choice": "a reflection across the line y = x, followed by a reflection across the x-axis",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Knows that two reflections result in a rotation and uses a pair of reflections that will produce a figure that appears in quadrant I but has an incorrect orientation.",
+                    "Percent": 16
+                }
+            },
+            "C": {
+                "Choice": "a translation 8 units right, followed by a 90° counterclockwise rotation about the origin",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses a translation to map point R to point R', recognizes that a rotation occurred, but considers that all rotations need to be centered at the origin.",
+                    "Percent": 20
+                }
+            },
+            "D": {
+                "Choice": "a 90° counterclockwise rotation about point R, followed by a reflection across the y-axis",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Identifies a set of transformations that moves point P to point P' by rotating point P from (–5, 4) to (–6, 1) and then reflecting it from 6 units to the left of the y-axis to 6 units to the right of the y-axis, moves point R to point R' by rotating point R onto itself (since it is the center of rotation) and then reflecting it from 4 units to the left of the y-axis to 4 units to the right of the y-axis, moves point S to point S' by rotating point S from (0, 4) to (–5, 6) and then reflecting it from 5 units to the left of the y-axis to 5 units to the right of the y-axis, moves point T to point T' by rotating point T from (–5, 0) to (–2, 1) and then reflecting it from 2 units to the left of the y-axis to 2 units to the right of the y-axis.",
+                    "Percent": 50
+                }
+            }
+        }
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Investigate patterns of association in bivariate data."
+        ],
+        "Content": [
+            "A random sample of students who ride the bus or walk from home to school are surveyed. Two scatter plots are created from the data. The conclusions below are based on those scatter plots.",
+            "• As the distance from home increases, the number of times a week a student rides the bus to school increases.",
+            "• As the distance from home increases, the number of times a week a student walks to school decreases.",
+            "Which set of statements about one of the scatter plots is most likely true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The x-axis represents the number of times a week a student walks to school, and the y-axis represents the distance from home. The line of best fit has a positive slope.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses a relation in which the distance from home is dependent upon the number of times a week a student walks to school.",
+                    "Percent": 24
+                }
+            },
+            "B": {
+                "Choice": "The x-axis represents the number of times a week a student rides the bus to school, and the y-axis represents the distance from home. The line of best fit has a negative slope.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses a relation in which the distance from home is dependent upon the number of times a week a student rides the bus to school.",
+                    "Percent": 20
+                }
+            },
+            "C": {
+                "Choice": "The x-axis represents the distance from home, and the y-axis represents the number of times a week a student walks to school. The line of best fit has a negative slope.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Recognizes that the x-axis should represent the distance from home since it is the independent variable and recognizes that the slope would be negative (as the distance from home increases, the number of times walking should decrease).",
+                    "Percent": 42
+                }
+            },
+            "D": {
+                "Choice": "The x-axis represents the distance from home, and the y-axis represents the number of times a week a student rides the bus to school. The line of best fit has a negative slope.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not recognize that this situation would have a positive slope (as the distance from home increases, the number of times riding the bus should also increase).",
+                    "Percent": 14
+                }
+            }
+        }
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Analyze and interpret bivariate data displayed in multiple representations."
+        ],
+        "Content": [
+            "A researcher analyzes a bivariate data set and determines that the data set is closely, but not exactly, modeled by a function. The researcher’s description of the function is given below.",
+            "Each y-value in the data set is about 3 more than 4 times the corresponding x-value in the data set.",
+            "Based on the description, which table most likely contains values in the data set?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/PA22G8M/media/14a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Identifies a relationship that models y = (1/4)x exactly.",
+                    "Percent": 22
+                }
+            },
+            "B": {
+                "Choice": "problems/PA22G8M/media/14b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Identifies a relationship that is close to, but not exactly, y = 4x (i.e., does not apply the “3 more”).",
+                    "Percent": 17
+                }
+            },
+            "C": {
+                "Choice": "problems/PA22G8M/media/14c.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Identifies a relationship that is close to, but not exactly, y = 4x + 3 by multiplying each x-value by 4 before adding 3, and then comparing the result to the y-value (e.g., 4(5) + 3 = 23, which is close to, but not exactly, 23.60).",
+                    "Percent": 51
+                }
+            },
+            "D": {
+                "Choice": "problems/PA22G8M/media/14d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Identifies a relationship that models y = (1/4)x + 3 exactly.",
+                    "Percent": 10
+                }
+            }
+        }
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Construct and interpret a two-way table summarizing data on two categorical variables collected from the same subjects. Use relative frequencies calculated for rows or columns to describe possible associations between the two variables."
+        ],
+        "Content": [
+            "Sandra interviewed 250 adults for a survey. She asked each adult the two questions listed below.",
+            "• What is your age?",
+            "• Do you rent or own your home?",
+            "Her survey results are shown in the frequency table below.",
+            "problems/PA22G8M/media/15a.jpg",
+            "Based on the information in the frequency table, which statement is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "There is no linear association between adults who rent a home and their age.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not interpret the differences in relative frequencies.",
+                    "Percent": 9
+                }
+            },
+            "B": {
+                "Choice": "As age increases, adults typically move from renting to owning a home.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Only compares the first two age groups.",
+                    "Percent": 14
+                }
+            },
+            "C": {
+                "Choice": "Adults aged 36 to 55 are 7.2% less likely to rent a home than any other age group.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Determines the relative frequency of people aged 36–55 who rent a home (18/250 = 7.2%)but interprets this incorrectly.",
+                    "Percent": 12
+                }
+            },
+            "D": {
+                "Choice": "Adults aged 18 to 35 are more likely to rent a home than those aged 36 to 55.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Determines that about 70.9% of people aged 18–35 rent a home (56/(56 + 23) = 56/79), while only about 17.5% of people aged 36–55  rent a home (18/(18 + 85) = 18/103).",
+                    "Percent": 65
+                }
+            }
+        }
+    }
+}

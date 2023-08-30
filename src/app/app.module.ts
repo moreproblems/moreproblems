@@ -127,6 +127,18 @@ import { PA16G7MExamComponent } from './components/PA16G7M-exam/PA16G7M-exam.com
 import { PA16G7MKeyComponent } from './components/PA16G7M-key/PA16G7M-key.component';
 import { PA15G7MExamComponent } from './components/PA15G7M-exam/PA15G7M-exam.component';
 import { PA15G7MKeyComponent } from './components/PA15G7M-key/PA15G7M-key.component';
+import { PA22G8MExamComponent } from './components/PA22G8M-exam/PA22G8M-exam.component';
+import { PA22G8MKeyComponent } from './components/PA22G8M-key/PA22G8M-key.component';
+import { PA21G8MExamComponent } from './components/PA21G8M-exam/PA21G8M-exam.component';
+import { PA21G8MKeyComponent } from './components/PA21G8M-key/PA21G8M-key.component';
+import { PA19G8MExamComponent } from './components/PA19G8M-exam/PA19G8M-exam.component';
+import { PA19G8MKeyComponent } from './components/PA19G8M-key/PA19G8M-key.component';
+import { PA18G8MExamComponent } from './components/PA18G8M-exam/PA18G8M-exam.component';
+import { PA18G8MKeyComponent } from './components/PA18G8M-key/PA18G8M-key.component';
+import { PA16G8MExamComponent } from './components/PA16G8M-exam/PA16G8M-exam.component';
+import { PA16G8MKeyComponent } from './components/PA16G8M-key/PA16G8M-key.component';
+import { PA15G8MExamComponent } from './components/PA15G8M-exam/PA15G8M-exam.component';
+import { PA15G8MKeyComponent } from './components/PA15G8M-key/PA15G8M-key.component';
 import { PA22G8SExamComponent } from './components/PA22G8S-exam/PA22G8S-exam.component';
 import { PA22G8SKeyComponent } from './components/PA22G8S-key/PA22G8S-key.component';
 import { PA21G8SExamComponent } from './components/PA21G8S-exam/PA21G8S-exam.component';
@@ -343,6 +355,18 @@ import { TX18G8SSKeyComponent } from './components/TX18G8SS-key/TX18G8SS-key.com
     PA16G7MKeyComponent,
     PA15G7MExamComponent,
     PA15G7MKeyComponent,
+    PA22G8MExamComponent,
+    PA22G8MKeyComponent,
+    PA21G8MExamComponent,
+    PA21G8MKeyComponent,
+    PA19G8MExamComponent,
+    PA19G8MKeyComponent,
+    PA18G8MExamComponent,
+    PA18G8MKeyComponent,
+    PA16G8MExamComponent,
+    PA16G8MKeyComponent,
+    PA15G8MExamComponent,
+    PA15G8MKeyComponent,
     PA22G8SExamComponent,
     PA22G8SKeyComponent,
     PA21G8SExamComponent,

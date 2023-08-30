@@ -1,0 +1,799 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Apply one or more properties of integer exponents to generate equivalent numerical expressions without a calculator (with final answers expressed in exponential form with positive exponents)."
+        ],
+        "Content": [
+            "Which expression is equivalent to (4⁴)² • (4⁷)⁻²?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1/4⁶",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 42
+                }
+            },
+            "B": {
+                "Choice": "1/4³",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses negative exponent on second factor to move (4⁷)² to denominator, but then “cancels” exponents of 2; evaluates as (4⁴)²/(4⁷)² = (4⁴)/(4⁷).",
+                    "Percent": 13
+                }
+            },
+            "C": {
+                "Choice": "4¹¹",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds exponents throughout; evaluates as (4⁶)(4⁵) and then 4⁽⁶⁺⁵⁾.",
+                    "Percent": 32
+                }
+            },
+            "D": {
+                "Choice": "4³⁰",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds exponents then multiplies exponents; evaluates as (4⁶)(4⁵) then 4⁽⁶ˣ⁵⁾",
+                    "Percent": 13
+                }
+            }
+        }
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Apply concepts of rational and irrational numbers."
+        ],
+        "Content": [
+            "Which statement describes values of x and y such that x/y could be an irrational number?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The value of x is zero, and the value of y is an integer less than zero.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks zero in numerator makes number irrational.",
+                    "Percent": 22
+                }
+            },
+            "B": {
+                "Choice": "The value of x is the square root of an integer, and the value of y is an integer greater than zero.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 37
+                }
+            },
+            "C": {
+                "Choice": "The value of x is an integer less than zero, and the value of y is an integer greater than zero.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Describes a rational number.",
+                    "Percent": 20
+                }
+            },
+            "D": {
+                "Choice": "The value of x is a square root that can be simplified to an integer, and the value of y is an integer less than zero.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks square root in numerator makes number irrational.",
+                    "Percent": 21
+                }
+            }
+        }
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System",
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Determine whether a number is rational or irrational. For rational numbers, show that the decimal expansion terminates or repeats (limit repeating decimals to thousandths).",
+            "Use rational approximations of irrational numbers to compare and order irrational numbers."
+        ],
+        "Content": [
+            "Which number is positive, rational, and has a value between 0 and 1?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "–0.222...",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks repeating would mean irrational; disregards negative sign.",
+                    "Percent": 8
+                }
+            },
+            "B": {
+                "Choice": "π – 3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Finds a number between 0 and 1; disregards the fact that it is irrational.",
+                    "Percent": 14
+                }
+            },
+            "C": {
+                "Choice": "√(1/4)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 65
+                }
+            },
+            "D": {
+                "Choice": "3/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Finds a rational number; disregards the fact that it is not between 0 and 1.",
+                    "Percent": 13
+                }
+            }
+        }
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System",
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Convert a terminating or repeating decimal to a rational number (limit repeating decimals to thousandths).",
+            "Determine whether a number is rational or irrational. For rational numbers, show that the decimal expansion terminates or repeats (limit repeating decimals to thousandths)."
+        ],
+        "Content": [
+            "A number is shown below.",
+            "0.565656...",
+            "Which statement about the number is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The number is rational and equivalent to 56/99.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 50
+                }
+            },
+            "B": {
+                "Choice": "The number is rational and equivalent to 56/100.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Ignores the repeating portion of the decimal.",
+                    "Percent": 91
+                }
+            },
+            "C": {
+                "Choice": "The number is irrational and equivalent to 1/56.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Assumes a repeating decimal is irrational and selects an incorrect rational representation.",
+                    "Percent": 9
+                }
+            },
+            "D": {
+                "Choice": "The number is irrational and cannot be represented as a fraction written with integers.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Assumes a repeating decimal cannot be written as a rational number.",
+                    "Percent": 22
+                }
+            }
+        }
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Demonstrate an understanding of expressions and equations with radicals and integer exponents."
+        ],
+        "Content": [
+            "In the expression below, c is an integer.",
+            "9ᶜ • 9⁻ᶜ",
+            "Which value is equivalent to the expression?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "0",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Notes c + (–c) = 0, so assumes expression value is 0.",
+                    "Percent": 14
+                }
+            },
+            "B": {
+                "Choice": "1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 37
+                }
+            },
+            "C": {
+                "Choice": "1/9²ᶜ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Combines c and –c into –2c; writes as a fraction with a positive exponent.",
+                    "Percent": 28
+                }
+            },
+            "D": {
+                "Choice": "9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Notes c + (–c) = 0, so leaves 9.",
+                    "Percent": 21
+                }
+            }
+        }
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Derive the equation y = mx for a line through the origin and the equation y = mx + b for a line intercepting the vertical axis at b."
+        ],
+        "Content": [
+            "Fran buys used DVDs. She pays $2.75 for each DVD she buys. She graphs a line to show the total amount (y), in dollars, she pays to buy x used DVDs. Which equation correctly describes Fran’s line?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "y = 2.75",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Interprets 2.75 as a constant instead of as a rate.",
+                    "Percent": 5
+                }
+            },
+            "B": {
+                "Choice": "y = 2.75x",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 77
+                }
+            },
+            "C": {
+                "Choice": "y = x + 2.75",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses the rate as the y-intercept.",
+                    "Percent": 14
+                }
+            },
+            "D": {
+                "Choice": "y = 2.75x + 2.75",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses 2.75 as the slope and y-intercept.",
+                    "Percent": 4
+                }
+            }
+        }
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Write and identify linear equations in one variable with one solution, infinitely many solutions, or no solutions. Show which of these possibilities is the case by successively transforming the given equation into simpler forms until an equivalent equation of the form x = a, a = a, or a = b results (where a and b are different numbers)."
+        ],
+        "Content": [
+            "Hank’s Bicycle Rentals charges an initial fee of $15 and an hourly rate of $5 to rent a bicycle. Maria’s Bicycle Rentals has the same hourly rate but charges an initial fee of $12. To find the number of hours for which the two rental companies would charge the same amount to rent a bicycle, Cindy writes and solves the equation shown below.",
+            "15 + 5x = 12 + 5x",
+            "Which statement describes the number of hours for which the two rental companies charge the same amount to rent a bicycle?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The two companies charge the same amount to rent a bicycle for 3/5 hour.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Eliminates one of the 5x terms and gets 15 = 12 + 5x.",
+                    "Percent": 10
+                }
+            },
+            "B": {
+                "Choice": "The two companies charge the same amount to rent a bicycle for 3 hours.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Gets 0 = 3 and thinks the solution is 3.",
+                    "Percent": 18
+                }
+            },
+            "C": {
+                "Choice": "The two companies never charge the same amount to rent a bicycle for the same number of hours.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 62
+                }
+            },
+            "D": {
+                "Choice": "The two companies always charge the same amount to rent a bicycle for the same number of hours.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Gets 0 = 3 and thinks that means there are infinite solutions.",
+                    "Percent": 10
+                }
+            }
+        }
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Functions",
+            "Functions"
+        ],
+        "SubTopics": [
+            "Interpret the equation y = mx + b as defining a linear function whose graph is a straight line; give examples of functions that are not linear.",
+            "Compare properties of two functions, each represented in a different way (i.e., algebraically, graphically, numerically in tables, or by verbal descriptions)."
+        ],
+        "Content": [
+            "Which statement describing a function of x is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The graph of y = 3x + 9 is linear and has a y-intercept of 9.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 61
+                }
+            },
+            "B": {
+                "Choice": "The graph of y = 3x is nonlinear and passes through the origin.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Notes correctly that y = 3x passes through the origin, but misses that it is linear.",
+                    "Percent": 14
+                }
+            },
+            "C": {
+                "Choice": "The graph of y = 3x² is linear and passes through the point (0, 0).",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Notes correctly that y = 3x² passes through the origin, but misses that it is nonlinear.",
+                    "Percent": 13
+                }
+            },
+            "D": {
+                "Choice": "The graph of y = 3²x + 9 is nonlinear and passes through the point (0, 9).",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Sees that y = 3²x + 9 has a squared term, so assumes that it is nonlinear.",
+                    "Percent": 12
+                }
+            }
+        }
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Identify and apply properties of rotations, reflections, and translations."
+        ],
+        "Content": [
+            "Triangle PQR is graphed on the coordinate grid shown below.",
+            "problems/PA19G8M/media/9a.jpg",
+            "To form triangle P'Q'R', triangle PQR will be rotated 90° clockwise about the origin. What will be the slope of side Q'R'?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "–3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks the slope will not change.",
+                    "Percent": 25
+                }
+            },
+            "B": {
+                "Choice": "–1/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks the slope will be inverted.",
+                    "Percent": 19
+                }
+            },
+            "C": {
+                "Choice": "1/3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 34
+                }
+            },
+            "D": {
+                "Choice": "3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks the slope will be the opposite.",
+                    "Percent": 22
+                }
+            }
+        }
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Given two similar two-dimensional figures, describe a sequence of transformations that exhibits the similarity between them."
+        ],
+        "Content": [
+            "Quadrilateral ABCD and quadrilateral A'B'C'D' are shown on the coordinate grid below.",
+            "problems/PA19G8M/media/10a.jpg",
+            "Which sequence of transformations could be used to map quadrilateral ABCD onto quadrilateral A'B'C'D'?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "a reflection across the x-axis, followed by a dilation centered at the origin with a scale factor of 0.5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Selects the wrong axis for the reflection.",
+                    "Percent": 20
+                }
+            },
+            "B": {
+                "Choice": "a dilation centered at the origin with a scale factor of 0.5, followed by a reflection across the y-axis",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 52
+                }
+            },
+            "C": {
+                "Choice": "a translation 4 units to the right, followed by a dilation centered at the origin with a scale factor of 0.5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not notice the misalignment of A to B', B to A', C to D', and D to C'.",
+                    "Percent": 15
+                }
+            },
+            "D": {
+                "Choice": "a rotation of 180° about the point (0, –0.5), followed by a dilation centered at the origin with a scale factor of 0.5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not notice that the rotation causes the misalignment of A to D', B to C', C to B', and D to A'.",
+                    "Percent": 13
+                }
+            }
+        }
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Apply the converse of the Pythagorean theorem to show a triangle is a right triangle."
+        ],
+        "Content": [
+            "The side lengths of triangle ABC are listed below.",
+            "• AB = 7 mm",
+            "• AC = 12 mm",
+            "• BC = 6 mm",
+            "Which statement about triangle ABC is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Angle A is a right angle.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Incorrectly assumes that triangle ABC is a right triangle and that the right angle is always opposite the shortest side.",
+                    "Percent": 10
+                }
+            },
+            "B": {
+                "Choice": "Angle B is a right angle.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Incorrectly assumes that triangle ABC is a right triangle but knows that the right angle is always opposite the longest side.",
+                    "Percent": 19
+                }
+            },
+            "C": {
+                "Choice": "Angle C is a right angle.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Incorrectly assumes that triangle ABC is a right triangle and that angle C is always the right angle (a² + b² = c²).",
+                    "Percent": 10
+                }
+            },
+            "D": {
+                "Choice": "Triangle ABC is not a right triangle.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 61
+                }
+            }
+        }
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Apply the Pythagorean theorem to find the distance between two points in a coordinate system."
+        ],
+        "Content": [
+            "Point R is located at (1, 2) on a coordinate grid. Point S is located at (4, –5) on the same coordinate grid. What is the distance from point R to point S, rounded to the nearest tenth?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "3.2 units",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds 7 + 3 = 10 and then determines the square root of 10.",
+                    "Percent": 21
+                }
+            },
+            "B": {
+                "Choice": "4.6 units",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Multiplies 7 × 3 = 21 and then determines the square root of 21.",
+                    "Percent": 17
+                }
+            },
+            "C": {
+                "Choice": "7.6 units",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 45
+                }
+            },
+            "D": {
+                "Choice": "10.0 units",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds 7 + 3 = 10.",
+                    "Percent": 17
+                }
+            }
+        }
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Apply formulas for the volumes of cones, cylinders, and spheres to solve real-world and mathematical problems."
+        ],
+        "Content": [
+            "Michael stacks 14 identical disks to form a cylinder.",
+            "• Each disk is 1/4 inch thick.",
+            "• The diameter of each disk is 3 inches.",
+            "Which measurement is closest to the volume, in cubic inches, of the stack of disks?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "7",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates the volume of only 1 disk using the diameter instead of the radius.",
+                    "Percent": 24
+                }
+            },
+            "B": {
+                "Choice": "25",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 57
+                }
+            },
+            "C": {
+                "Choice": "99",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates the volume using the diameter instead of the radius OR does not multiply by 1/4.",
+                    "Percent": 14
+                }
+            },
+            "D": {
+                "Choice": "296",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Calculates the volume using the diameter instead of the radius and does not multiply by 1/4.",
+                    "Percent": 5
+                }
+            }
+        }
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Construct and interpret scatter plots for bivariate measurement data to investigate patterns of association between two quantities. Describe patterns such as clustering, outliers, positive or negative correlation, linear association, and nonlinear association."
+        ],
+        "Content": [
+            "The scatter plot below shows the rainfall, in millimeters, recorded each day during a 20-day period.",
+            "problems/PA19G8M/media/14a.jpg",
+            "On which day was the rainfall recorded an outlier?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Selects the first day.",
+                    "Percent": 3
+                }
+            },
+            "B": {
+                "Choice": "7",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 84
+                }
+            },
+            "C": {
+                "Choice": "17",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Selects the day on which the amount of rainfall was the lowest.",
+                    "Percent": 7
+                }
+            },
+            "D": {
+                "Choice": "20",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Selects the last day.",
+                    "Percent": 6
+                }
+            }
+        }
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "For scatter plots that suggest a linear association, identify a line of best fit by judging the closeness of the data points to the line."
+        ],
+        "Content": [
+            "A scatter plot is graphed on the coordinate grid shown below.",
+            "problems/PA19G8M/media/15a.jpg",
+            "Which equation best describes a line of best fit for the data?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "y = 0.8x + 8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses the opposite of the slope.",
+                    "Percent": 17
+                }
+            },
+            "B": {
+                "Choice": "y = 8x + 0.8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses the opposite of the slope and switches the slope and y-intercept.",
+                    "Percent": 18
+                }
+            },
+            "C": {
+                "Choice": "y = –0.8x + 8",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 52
+                }
+            },
+            "D": {
+                "Choice": "y = –8x + 0.8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Switches the slope and y-intercept and switches their signs.",
+                    "Percent": 13
+                }
+            }
+        }
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Understand that patterns of association can be seen in bivariate categorical data by displaying frequencies and relative frequencies in a two-way table."
+        ],
+        "Content": [
+            "Amy surveyed some families about whether they have cats and whether they have dogs. The results of her survey are shown in the two-way table below.",
+            "problems/PA19G8M/media/16a.jpg",
+            "Based on the information shown in the two-way table, which statement about the families surveyed is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Of all the families surveyed, more than 1/2 have neither a cat nor a dog.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Incorrectly uses 9/14 as the fraction of families who do not have a cat and 9/12 as the fraction of families who do not have a dog, and both are more than 1/2.",
+                    "Percent": 19
+                }
+            },
+            "B": {
+                "Choice": "Of all the families surveyed who do not have a dog, 3/4 do have a cat.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Misreads as “do not have a cat”.",
+                    "Percent": 19
+                }
+            },
+            "C": {
+                "Choice": "Of all the families surveyed who do have a cat, 12% do not have a dog.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Correctly identifies 3 as number of families who have a cat and not a dog, but uses 3/25 instead of 3/11 to determine percent.",
+                    "Percent": 24
+                }
+            },
+            "D": {
+                "Choice": "Of all the families surveyed, 32% have either a cat or a dog, but not both a cat and a dog.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 38
+                }
+            }
+        }
+    }
+}
