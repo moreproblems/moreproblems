@@ -1,0 +1,798 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Estimate the value of irrational numbers without a calculator (limit whole number radicand to less than 144)."
+        ],
+        "Content": [
+            "Which number is the closest approximation of √39?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "6.2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 50
+                }
+            },
+            "B": {
+                "Choice": "6.5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Selects a number half way between 6 and 7.",
+                    "Percent": 33
+                }
+            },
+            "C": {
+                "Choice": "7.5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Estimates √39 as √36 + √3, and calculates 5/2 instead of √3.",
+                    "Percent": 10
+                }
+            },
+            "D": {
+                "Choice": "7.7",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Estimates √39 as √36 + √3.",
+                    "Percent": 7
+                }
+            }
+        }
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Determine whether a number is rational or irrational. For rational numbers, show that the decimal expansion terminates or repeats (limit repeating decimals to thousandths)."
+        ],
+        "Content": [
+            "Which number is irrational?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "3√9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not recognize value of radical as rational.",
+                    "Percent": 9
+                }
+            },
+            "B": {
+                "Choice": "9√3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 77
+                }
+            },
+            "C": {
+                "Choice": "4√9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not recognize value of radical as rational.",
+                    "Percent": 8
+                }
+            },
+            "D": {
+                "Choice": "9√4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not recognize value of radical as rational.",
+                    "Percent": 6
+                }
+            }
+        }
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Use rational approximations of irrational numbers to compare and order irrational numbers."
+        ],
+        "Content": [
+            "Four numbers are shown below.",
+            "π \t √π \t √3 \t √8",
+            "What is the order of the four numbers from least to greatest?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "π \t √π \t √3 \t √8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses the order given.",
+                    "Percent": 8
+                }
+            },
+            "B": {
+                "Choice": "√3 \t √π \t π \t √8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Bases their choices on the numbers, regardless of the square roots involved.",
+                    "Percent": 11
+                }
+            },
+            "C": {
+                "Choice": "√π \t √3 \t π \t √8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does square roots by halving the number.",
+                    "Percent": 8
+                }
+            },
+            "D": {
+                "Choice": "√3 \t √π \t √8 \t π",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 73
+                }
+            }
+        }
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Locate/identify rational and irrational numbers at their approximate locations on a number line."
+        ],
+        "Content": [
+            "Four points are graphed on the number line below.",
+            "problems/PA18G8M/media/4a.jpg",
+            "Which point is located closest to the value of –√5?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "point W",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not take the square root of 5.",
+                    "Percent": 10
+                }
+            },
+            "B": {
+                "Choice": "point X",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses –√4 as –2, then since 5 is 1 more than 4 subtracts almost 1 from –2.",
+                    "Percent": 6
+                }
+            },
+            "C": {
+                "Choice": "point Y",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 64
+                }
+            },
+            "D": {
+                "Choice": "point Z",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Estimates –√5 as less than –2, but chooses point on the incorrect side of –2.",
+                    "Percent": 20
+                }
+            }
+        }
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Perform operations with numbers expressed in scientific notation, including problems where both decimal and scientific notation are used. Express answers in scientific notation and choose units of appropriate size for measurements of very large or very small quantities (e.g., use millimeters per year for seafloor spreading). Interpret scientific notation that has been generated by technology (e.g., interpret 4.7EE9 displayed on a calculator as 4.7 × 10⁹)."
+        ],
+        "Content": [
+            "The average distances between some objects in our solar system are described below.",
+            "• The average distance from Earth to the Moon is 3.844 × 10⁵ kilometers (km).",
+            "• The average distance from Jupiter to the Sun is approximately 2 × 10³ times the average distance from Earth to the Moon.",
+            "Based on this information, what is the average distance from Jupiter to the Sun?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "7.688 × 10² km",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Subtracts exponents.",
+                    "Percent": 10
+                }
+            },
+            "B": {
+                "Choice": "7.688 × 10⁵ km",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Forgets × 10³.",
+                    "Percent": 16
+                }
+            },
+            "C": {
+                "Choice": "7.688 × 10⁸ km",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 65
+                }
+            },
+            "D": {
+                "Choice": "7.688 × 10¹⁵ km",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Multiplies the exponents.",
+                    "Percent": 9
+                }
+            }
+        }
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Interpret solutions to a system of two linear equations in two variables as points of intersection of their graphs because points of intersection satisfy both equations simultaneously."
+        ],
+        "Content": [
+            "A system of two linear equations is represented by the graph below.",
+            "problems/PA18G8M/media/6a.jpg",
+            "Which statement about the solution of the system of equations is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "(0, 0) is the only solution.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Understands there is just one solution, but thinks it is origin.",
+                    "Percent": 5
+                }
+            },
+            "B": {
+                "Choice": "(3, 2) is the only solution.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 66
+                }
+            },
+            "C": {
+                "Choice": "(0, 0) and (3, 2) are both solutions.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Knows point of intersection is solution, but thinks origin is also solution.",
+                    "Percent": 15
+                }
+            },
+            "D": {
+                "Choice": "(0, 0), (0, 6), and (3, 2) are all solutions.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Knows point of intersection is solution, but thinks y-intercepts are also solutions.",
+                    "Percent": 14
+                }
+            }
+        }
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Solve real-world and mathematical problems leading to two linear equations in two variables."
+        ],
+        "Content": [
+            "Paul and Jacklyn are on a swim team.",
+            "• Paul has completed 140 laps so far this season. He completes an additional 12 laps during each practice.",
+            "• Jacklyn has completed 56 laps so far this season. She completes an additional 16 laps during each practice.",
+            "Paul and Jacklyn each attend the same number of practices. After how many more practices will Paul and Jacklyn have completed the same number of laps?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses 140 + 12x and 56 + 16x, but solves as 28x = 84.",
+                    "Percent": 9
+                }
+            },
+            "B": {
+                "Choice": "7",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses 140 + 12x and 56 + 16x, but solves as 28x = 196.",
+                    "Percent": 15
+                }
+            },
+            "C": {
+                "Choice": "21",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 66
+                }
+            },
+            "D": {
+                "Choice": "49",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses 140 + 12x and 56 + 16x, but solves as 4x = 196.",
+                    "Percent": 10
+                }
+            }
+        }
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Functions"
+        ],
+        "SubTopics": [
+            "Define, evaluate, and compare functions displayed algebraically, graphically, or numerically in tables or by verbal descriptions."
+        ],
+        "Content": [
+            "Three functions of x are represented below.",
+            "problems/PA18G8M/media/8a.jpg",
+            "For the function with the greatest rate of change, what is its value when x = 10?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "13",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Determines function 1 has greatest rate of change; adds y-intercept to 10.",
+                    "Percent": 14
+                }
+            },
+            "B": {
+                "Choice": "17",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks function 3 has greatest rate of change; evaluates for x = 10.",
+                    "Percent": 15
+                }
+            },
+            "C": {
+                "Choice": "25",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Determines function 1 has greatest rate of change; multiplies that value by 10.",
+                    "Percent": 18
+                }
+            },
+            "D": {
+                "Choice": "28",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 53
+                }
+            }
+        }
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Functions"
+        ],
+        "SubTopics": [
+            "Determine whether a relation is a function."
+        ],
+        "Content": [
+            "The set of ordered pairs below represents a relation.",
+            "{(0, 2), (1, 3), (1, 4), (2, 5), (3, 5)}",
+            "Which statement about the relation is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The relation is a function.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not see the repeated x-value.",
+                    "Percent": 17
+                }
+            },
+            "B": {
+                "Choice": "The relation is not a function, but removing (1, 3) and replacing it with (2, 6) would make the new relation a function.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Notices that 1 is repeated as an x-value, but the replacement also results in a repeated x-value.",
+                    "Percent": 9
+                }
+            },
+            "C": {
+                "Choice": "The relation is not a function, but removing (1, 4) and replacing it with (4, 1) would make the new relation a function.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 48
+                }
+            },
+            "D": {
+                "Choice": "The relation is not a function, but removing (3, 5) and replacing it with (3, 6) would make the new relation a function.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks a repeated y-value makes the set of ordered pairs not a function.",
+                    "Percent": 26
+                }
+            }
+        }
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Functions"
+        ],
+        "SubTopics": [
+            "Compare properties of two functions, each represented in a different way (i.e., algebraically, graphically, numerically in tables, or by verbal descriptions)."
+        ],
+        "Content": [
+            "A carpenter is building cabinets. For each cabinet, she needs 8 sets of supplies. At store A, each set of supplies costs $3.75. The total cost (y), in dollars, of the supplies she needs to buy at store A to build x cabinets is represented by the equation shown below.",
+            "y = 8(3.75x)",
+            "At store B, the total cost (y), in dollars, of the supplies she needs to buy to build x cabinets is represented by the graph shown below.",
+            "problems/PA18G8M/media/10a.jpg",
+            "The carpenter spends a total of $180 on supplies. To which store did the carpenter go for supplies, and how many cabinets can she build?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The carpenter went to store A, and she can build 6 cabinets.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 15
+                }
+            },
+            "B": {
+                "Choice": "The carpenter went to store A, and she can build 15 cabinets.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Distributes only to 1.25.",
+                    "Percent": 12
+                }
+            },
+            "C": {
+                "Choice": "The carpenter went to store B, and she can build 5 cabinets.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Continued the graph to one more place.",
+                    "Percent": 20
+                }
+            },
+            "D": {
+                "Choice": "The carpenter went to store B, and she can build 6 cabinets.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Thinks the graph goes over 2 and up 2 more places.",
+                    "Percent": 13
+                }
+            }
+        }
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Functions"
+        ],
+        "SubTopics": [
+            "Construct a function to model a linear relationship between two quantities. Determine the rate of change and initial value of the function from a description of a relationship or from two (x, y) values, including reading these from a table or from a graph. Interpret the rate of change and initial value of a linear function in terms of the situation it models and in terms of its graph or a table of values."
+        ],
+        "Content": [
+            "A linear function of x is graphed on a coordinate grid. The points (6, 34) and (18, 26) lie on the graph of the function. What are the rate of change of the function and the value of the function when x = 24?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "rate of change: –3/2 \n value: –100 1/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Inverts rate of change; (–3/2)(24 + 43) as value of the function.",
+                    "Percent": 13
+                }
+            },
+            "B": {
+                "Choice": "rate of change: –3/2 \n value: 7",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Inverts rate of change; uses y = (–3/2)x + 43 to model the function.",
+                    "Percent": 24
+                }
+            },
+            "C": {
+                "Choice": "rate of change: –2/3 \n value: –41 1/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses correct rate of change; (–2/3)(24 + 38) as value of the function.",
+                    "Percent": 28
+                }
+            },
+            "D": {
+                "Choice": "rate of change: –2/3 \n value: 22",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 45
+                }
+            }
+        }
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Functions"
+        ],
+        "SubTopics": [
+            "Describe qualitatively the functional relationship between two quantities by analyzing a graph (e.g., where the function is increasing or decreasing, linear or nonlinear). Sketch or determine a graph that exhibits the qualitative features of a function that has been described verbally."
+        ],
+        "Content": [
+            "The graph shown below represents the rate at which water drains from a tank once the drain is opened.",
+            "problems/PA18G8M/media/12a.jpg",
+            "Which statement correctly describes the graph?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The water is draining at a constant rate of 1/2 gallon per minute, and the tank contained exactly 14 gallons when the drain was opened.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 78
+                }
+            },
+            "B": {
+                "Choice": "The water is draining at a constant rate of 2 gallons per minute, and the tank contained exactly 14 gallons when the drain was opened.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Confuses the slope as –2.",
+                    "Percent": 12
+                }
+            },
+            "C": {
+                "Choice": "The water is draining at a constant rate of 5 gallons per minute, and the tank contained exactly 14 gallons when the drain was opened.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Confuses where m and b go and confuses slope.",
+                    "Percent": 5
+                }
+            },
+            "D": {
+                "Choice": "The water is draining at a constant rate of 14 gallons per minute, and the tank contained exactly 1/2 gallon when the drain was opened.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Confuses where m and b go in an equation.",
+                    "Percent": 5
+                }
+            }
+        }
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Apply properties of geometric transformations to verify congruence or similarity."
+        ],
+        "Content": [
+            "Triangle ABC has vertices located at A(1, –4), B(4, –5), and C(2, –1) on a coordinate grid. Triangle ABC undergoes a transformation, resulting in triangle DEF with vertices located at D(–1, –4), E(–4, –5), and F(–2, –1). Which pair of expressions describes a transformation of triangle ABC to triangle DEF and identifies the correct relationship between the two triangles?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "transformation: reflection across the y-axis \n relationship: similar and congruent",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 54
+                }
+            },
+            "B": {
+                "Choice": "transformation: reflection across the y-axis \n relationship: similar, but not congruent",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Confuses congruency with similarity.",
+                    "Percent": 20
+                }
+            },
+            "C": {
+                "Choice": "transformation: reflection across the line y = x \n relationship: similar and congruent",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Sees that x-coordinate and y-coordinate in going from triangle ABC to DEF are “same,” so interprets to mean reflection across y = x.",
+                    "Percent": 17
+                }
+            },
+            "D": {
+                "Choice": "transformation: reflection across the line y = x \n relationship: similar, but not congruent",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Sees that x-coordinate and y-coordinate in going from triangle ABC to DEF are “same,” so interprets to mean reflection across y = x; confuses congruency with similarity.",
+                    "Percent": 9
+                }
+            }
+        }
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Given two congruent figures, describe a sequence of transformations that exhibits the congruence between them."
+        ],
+        "Content": [
+            "Triangle RST and triangle R'S'T' are congruent. Both triangles are graphed on the coordinate grid shown below.",
+            "problems/PA18G8M/media/14a.jpg",
+            "Which sequence of transformations could be used to show the congruence between the triangles?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "a translation 3 units up and then a translation 5 units to the right",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Selects translations that only align T and T'.",
+                    "Percent": 16
+                }
+            },
+            "B": {
+                "Choice": "a translation 2 units to the right and then a reflection across the y-axis",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Aligns R with S'.",
+                    "Percent": 11
+                }
+            },
+            "C": {
+                "Choice": "a reflection across the y-axis and then a translation 1 unit to the right and 3 units up",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Selects first translation in wrong direction after reflection.",
+                    "Percent": 23
+                }
+            },
+            "D": {
+                "Choice": "a translation 1 unit to the right and 3 units up and then a reflection across the y-axis",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 50
+                }
+            }
+        }
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Apply the Pythagorean theorem to determine unknown side lengths in right triangles in real-world and mathematical problems in two and three dimensions."
+        ],
+        "Content": [
+            "Jen walks straight across a rectangular park to school each morning. The dimensions of the park are shown below.",
+            "problems/PA18G8M/media/15a.jpg",
+            "Which measurement is closest to the distance Jen walks to school each morning?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "86 yards",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 58
+                }
+            },
+            "B": {
+                "Choice": "120 yards",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds dimensions.",
+                    "Percent": 21
+                }
+            },
+            "C": {
+                "Choice": "3,500 yards",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Multiplies dimensions.",
+                    "Percent": 14
+                }
+            },
+            "D": {
+                "Choice": "7,400 yards",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Does not take square root.",
+                    "Percent": 7
+                }
+            }
+        }
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry",
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Apply formulas for the volumes of cones, cylinders, and spheres to solve real-world and mathematical problems.",
+            "Apply the Pythagorean theorem to find the distance between two points in a coordinate system."
+        ],
+        "Content": [
+            "A line segment is graphed on a coordinate grid. The endpoints of the line segment are located at (–2, 1) and (10, –4). The length, in units, of the line segment is equivalent to the height, in centimeters, of a cone. The radius of the circular base of the cone is 5 centimeters. Which approximation is closest to the volume, in cubic centimeters, of the cone?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "183",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Subtracts lengths of legs instead of using Pythagorean theorem, so determines height to be 7 and uses 5 as radius in volume calculation.",
+                    "Percent": 23
+                }
+            },
+            "B": {
+                "Choice": "340",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Correct.",
+                    "Percent": 49
+                }
+            },
+            "C": {
+                "Choice": "497",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adds lengths of legs instead of using Pythagorean theorem; uses 19 as height in volume calculation, and uses 5 as radius.",
+                    "Percent": 21
+                }
+            },
+            "D": {
+                "Choice": "1,361",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Uses Pythagorean theorem correctly and determines height of cone is 13, but uses diameter of 10 in volume calculation.",
+                    "Percent": 7
+                }
+            }
+        }
+    }
+}

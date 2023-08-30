@@ -313,7 +313,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2^2 × 3^4 × 7^2",
+                "Choice": "2² × 3⁴ × 7²",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses 2 as the exponent of base 2 instead of 3.",
@@ -321,15 +321,15 @@
                 }
             },
             "B": {
-                "Choice": "2^3 × 3^4 × 7^2",
+                "Choice": "2³ × 3⁴ × 7²",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Counts three 2s and rewrites 2 × 2 × 2 as 2^3, counts four 3s and rewrites 3 × 3 × 3 × 3 as 3^4, and counts two 7s and rewrites 7 × 7 as 7^2.",
+                    "Rationale": "Counts three 2s and rewrites 2 × 2 × 2 as 2³, counts four 3s and rewrites 3 × 3 × 3 × 3 as 3⁴, and counts two 7s and rewrites 7 × 7 as 7².",
                     "Percent": 89
                 }
             },
             "C": {
-                "Choice": "3^2 × 4^3 × 2^7",
+                "Choice": "3² × 4³ × 2⁷",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Switches the bases and the exponents.",
@@ -337,7 +337,7 @@
                 }
             },
             "D": {
-                "Choice": "8^3 × 81^4 × 49^2",
+                "Choice": "8³ × 81⁴ × 49²",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Multiplies the bases while also including the exponents.",
@@ -423,7 +423,7 @@
                 }
             },
             "B": {
-                "Choice": "x = 3^3 – 7",
+                "Choice": "x = 3³ – 7",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Identifies an equation with a solution that is equal to 20 instead of less than 20.",
@@ -439,10 +439,10 @@
                 }
             },
             "D": {
-                "Choice": "x = 2.2 • 6 + 2^3",
+                "Choice": "x = 2.2 • 6 + 2³",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Simplifies 2^3 as 2 • 3 and then adds the result to 2.2 • 6 (13.2 + 6).",
+                    "Rationale": "Simplifies 2³ as 2 • 3 and then adds the result to 2.2 • 6 (13.2 + 6).",
                     "Percent": 14
                 }
             }
