@@ -1,143 +1,143 @@
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
-  :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+    :host {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 14px;
+        color: #333;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 8px 0;
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 8px 0;
+    }
 
-  p {
-    margin: 0;
-  }
+    p {
+        margin: 0;
+    }
 
-  .spacer {
-    flex: 1;
-  }
+    .spacer {
+        flex: 1;
+    }
 
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 85px;
-    display: flex;
-    align-items: center;
-    background-color: #0a1e33;
-    color: white;
-    font-weight: 600;
-    padding: 5px 10px 2px 20px;
-  }
+    .toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        background-color: #0a1e33;
+        color: white;
+        font-weight: 600;
+        padding: 5px 10px 2px 20px;
+    }
 
-  .toolbar img {
-    /* margin: 0 16px; */
-    position: absolute;
-    left: -10px;
-    top: -18px;
-  }
+    .toolbar img {
+        /* margin: 0 16px; */
+        position: absolute;
+        left: -10px;
+        top: -18px;
+    }
 
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 8px;
-  }
+    .toolbar #twitter-logo {
+        height: 40px;
+        margin: 0 8px;
+    }
 
-  .toolbar #youtube-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
+    .toolbar #youtube-logo {
+        height: 40px;
+        margin: 0 16px;
+    }
 
-  .toolbar #twitter-logo:hover,
-  .toolbar #youtube-logo:hover {
-    opacity: 0.8;
-  }
+    .toolbar #twitter-logo:hover,
+    .toolbar #youtube-logo:hover {
+        opacity: 0.8;
+    }
 
-  #confetticanvas {
-    position: fixed;
-    z-index: 50;
-    top: 81px;
-    right: 0px;
-    bottom: 0px;
-    left: 125px;
-    height: 0px;
-  }
+    #confetticanvas {
+        position: fixed;
+        z-index: 50;
+        top: 81px;
+        right: 0px;
+        bottom: 0px;
+        left: 125px;
+        height: 0px;
+    }
 
-  .content-menu {
-    display: flex;
-    margin: 0 auto 32px;
-    padding: 0 16px;
-    width: 90%;
-    flex-direction: column;
-    align-items: center;
-  }
+    .content-menu {
+        display: flex;
+        margin: 0 auto 32px;
+        padding: 0 16px;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .content {
-    display: flex;
-    margin: 0 auto 32px;
-    padding: 0;
-    width: 95%;
-    flex-direction: column;
-    align-items: center;
-  }
+    .content {
+        display: flex;
+        margin: 0 auto 32px;
+        padding: 0;
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .subcontent {
-    display: flex;
-    margin: 12px auto;
-    padding: 0px;
-    width: 95%;
-    flex-direction: column;
-    align-items: center;
-  }
+    .subcontent {
+        display: flex;
+        margin: 12px auto;
+        padding: 0px;
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  svg.material-icons {
-    height: 24px;
-    width: auto;
-  }
+    svg.material-icons {
+        height: 24px;
+        width: auto;
+    }
 
-  svg.material-icons:not(:last-child) {
-    margin-right: 8px;
-  }
+    svg.material-icons:not(:last-child) {
+        margin-right: 8px;
+    }
 
-  .card svg.material-icons path {
-    fill: #888;
-  }
+    .card svg.material-icons path {
+        fill: #888;
+    }
 
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
-  }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 16px;
+    }
 
-  .card {
-    all: unset;
-    border-radius: 4px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    /* height: 40px;
+    .card {
+        all: unset;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        /* height: 40px;
       width: 200px; */
-    margin: 0 8px 16px;
-    padding: 8px 8px;
-    display: flex;
-    flex-direction: row;
-    /* justify-content: center; */
-    /* align-items: center; */
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
+        margin: 0 8px 16px;
+        padding: 8px 8px;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        /* align-items: center; */
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
 
-  /* .card-container .card:not(:last-child) {
+    /* .card-container .card:not(:last-child) {
     margin-right: 0;
   }
 
@@ -145,322 +145,345 @@
     margin-right: 0;
   } */
 
-  .card.card-small {
-    min-height: 16px;
-    width: 210px;
-    border-radius: 8px;
-  }
+    .card.card-small {
+        min-height: 16px;
+        width: 210px;
+        border-radius: 8px;
+    }
 
-  .card.card-medium {
-    height: auto;
-    width: 80%;
-    border-radius: 8px;
-    padding: 20px;
-  }
+    .card.card-medium {
+        height: auto;
+        width: 80%;
+        border-radius: 8px;
+        padding: 20px;
+    }
 
-  .card.card-medium:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
+    .card.card-medium:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
 
-  .card.card-large {
-    width: auto;
-    height: auto;
-    border-radius: 8px;
-    margin: 8px 8px;
-    padding: 8px 0;
-  }
+    .card.card-large {
+        width: auto;
+        height: auto;
+        border-radius: 8px;
+        margin: 8px 8px;
+        padding: 8px 0;
+    }
 
-  .card-container .card:not(.highlight-card) {
-    cursor: pointer;
-  }
+    .card-container .card:not(.highlight-card) {
+        cursor: pointer;
+    }
 
-  .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
+    .card-container .card:not(.highlight-card):hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
 
-  /* .card-container .card:not(.highlight-card):hover .material-icons path {
+    /* .card-container .card:not(.highlight-card):hover .material-icons path {
     fill: rgb(105, 103, 103);
   } */
 
-  .card.highlight-card {
-    background-color: #0a1e33;
-    color: white;
-    font-weight: 600;
-    border: none;
-    width: auto;
-    min-width: 30%;
-    position: relative;
-  }
-
-  .card.card.highlight-card span {
-    margin-left: 60px;
-  }
-
-  svg#rocket {
-    width: 80px;
-    position: absolute;
-    left: -10px;
-    top: -24px;
-  }
-
-  svg#rocket-smoke {
-    height: calc(100vh - 95px);
-    position: absolute;
-    top: 10px;
-    right: 180px;
-    z-index: -10;
-  }
-
-  a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #125699;
-  }
-
-  button.grade-button {
-    font-size: 18px;
-    color: white;
-    background-color: #1976d2;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    margin: 8px;
-    padding: 8px 8px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
-
-  button.grade-button:hover {
-    background-color: #0a1e33;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
-
-  button.grade-button-gray {
-    font-size: 18px;
-    color: white;
-    background-color: #ccc;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    padding: 7px 15px;
-    margin: 0 2px 10px;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
-
-  button.grade-button-gray:hover {
-    background-color: #0a1e33;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
-
-  button.toggle-button {
-    font-size: 18px;
-    color: black;
-    background-color: #ccc;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    padding: 7px 15px;
-    margin: 0 2px 10px;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
-
-  .toggle-button:before {
-    background-color: #1976d2;
-    color: white;
-  }
-
-  button.toggle-button-off {
-    font-size: 18px;
-    color: black;
-    background-color: #ccc;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    padding: 7px 15px;
-    margin: 0 2px 10px;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-    width: 100%;
-  }
-
-  button.toggle-button-on {
-    font-size: 18px;
-    background-color: #1976d2;
-    color: white;
-    border-radius: 12px;
-    border: 3px solid #0a1e33;
-    padding: 7px 15px;
-    margin: 0 2px 10px;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-    width: 100%;
-  }
-
-  .terminal {
-    position: relative;
-    /* width: 100%; */
-    max-width: 625px;
-    border-radius: 6px;
-    padding-top: 45px;
-    margin-top: 8px;
-    overflow: hidden;
-    background-color: rgb(15, 15, 16);
-    color: #c2c3c4;
-  }
-
-  .terminal::before {
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: rgb(58, 58, 58);
-    color: #c2c3c4;
-    width: 100%;
-    line-height: 0;
-    padding: 14px 0;
-    font-size: 2rem;
-    text-indent: 4px;
-  }
-
-  .terminal pre {
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-    margin: 0;
-    text-align: center;
-  }
-
-  .circle-link {
-    height: 40px;
-    width: 40px;
-    border-radius: 40px;
-    margin: 8px;
-    background-color: white;
-    border: 1px solid #eeeeee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: 1s ease-out;
-  }
-
-  .circle-link:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
-  }
-
-  footer a {
-    display: flex;
-    align-items: center;
-  }
-
-  .github-star-badge {
-    color: #24292e;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    padding: 3px 10px;
-    border: 1px solid rgba(27, 31, 35, .2);
-    border-radius: 3px;
-    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-    margin-left: 4px;
-    font-weight: 600;
-  }
-
-  .github-star-badge:hover {
-    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-    border-color: rgba(27, 31, 35, .35);
-    background-position: -.5em;
-  }
-
-  .github-star-badge .material-icons {
-    height: 16px;
-    width: 16px;
-    margin-right: 4px;
-  }
-
-  /* The switch - the box around the slider */
-  .switch {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: auto;
-    max-width: 250px;
-    max-height: 75px;
-    transition: all 0.2s ease-in-out;
-  }
-
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-  input:checked+.toggle-button-on {
-    background-color: #1976d2;
-    color: white
-  }
-
-  input:hover+.toggle-button-on {
-    background-color: #0a1e33;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
-
-  input:checked+.toggle-button-off {
-    background-color: #ccc;
-    color: black;
-  }
-
-  input:hover+.toggle-button-off {
-    background-color: #0a1e33;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
-
-  /* Responsive Styles */
-  @media screen and (max-width: 767px) {
-
-    .card-container>*:not(.circle-link),
-    .terminal {
-      /* width: 100%; */
+    .card.highlight-card {
+        background-color: #0a1e33;
+        color: white;
+        font-weight: 600;
+        border: none;
+        width: auto;
+        min-width: 30%;
+        position: relative;
     }
 
-    .card:not(.highlight-card) {
-      /* height: 16px; */
-      margin: 8px 0;
+    .card.card.highlight-card span {
+        margin-left: 60px;
     }
 
-    .card.highlight-card span {
-      margin-left: 72px;
+    svg#rocket {
+        width: 80px;
+        position: absolute;
+        left: -10px;
+        top: -24px;
     }
 
-  }
+    svg#rocket-smoke {
+        height: calc(100vh - 95px);
+        position: absolute;
+        top: 10px;
+        right: 180px;
+        z-index: -10;
+    }
+
+    a,
+    a:visited,
+    a:hover {
+        color: #1976d2;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #125699;
+    }
+
+    button.grade-button {
+        font-size: 18px;
+        color: white;
+        background-color: #1976d2;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        margin: 8px;
+        padding: 8px 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.grade-button:hover {
+        background-color: #0a1e33;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    button.grade-button-gray {
+        font-size: 18px;
+        color: white;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.grade-button-gray:hover {
+        background-color: #0a1e33;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    button.toggle-button {
+        font-size: 18px;
+        color: black;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    .toggle-button:before {
+        background-color: #1976d2;
+        color: white;
+    }
+
+    button.toggle-button-off {
+        font-size: 18px;
+        color: black;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+        width: 100%;
+    }
+
+    button.toggle-button-on {
+        font-size: 18px;
+        background-color: #1976d2;
+        color: white;
+        border-radius: 12px;
+        border: 3px solid #0a1e33;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+        width: 100%;
+    }
+
+    .select-avatar {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%)
+    }
+
+    .select-middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    .avatar-container:hover .select-avatar {
+        opacity: 0.3;
+    }
+
+    .avatar-container:hover .middle {
+        opacity: 1;
+    }
+
+    progress {
+        border-radius: 10px;
+    }
+
+    progress::-webkit-progress-bar {
+        border-radius: 10px;
+        background-color: lightgray;
+        border: 1px solid darkslategrey;
+    }
+
+    progress::-webkit-progress-value {
+        border-radius: 10px;
+        background-color: limegreen;
+        /* border: 2px solid black; */
+    }
+
+    progress::-moz-progress-bar {
+        border-radius: 10px;
+    }
+
+    .circle-link {
+        height: 40px;
+        width: 40px;
+        border-radius: 40px;
+        margin: 8px;
+        background-color: white;
+        border: 1px solid #eeeeee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: 1s ease-out;
+    }
+
+    .circle-link:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        line-height: 20px;
+    }
+
+    footer a {
+        display: flex;
+        align-items: center;
+    }
+
+    .github-star-badge {
+        color: #24292e;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        padding: 3px 10px;
+        border: 1px solid rgba(27, 31, 35, .2);
+        border-radius: 3px;
+        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+        margin-left: 4px;
+        font-weight: 600;
+    }
+
+    .github-star-badge:hover {
+        background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+        border-color: rgba(27, 31, 35, .35);
+        background-position: -.5em;
+    }
+
+    .github-star-badge .material-icons {
+        height: 16px;
+        width: 16px;
+        margin-right: 4px;
+    }
+
+    /* The switch - the box around the slider */
+    .switch {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        max-width: 250px;
+        max-height: 75px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    input:checked+.toggle-button-on {
+        background-color: #1976d2;
+        color: white
+    }
+
+    input:hover+.toggle-button-on {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    input:checked+.toggle-button-off {
+        background-color: #ccc;
+        color: black;
+    }
+
+    input:hover+.toggle-button-off {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 767px) {
+
+        .card-container>*:not(.circle-link),
+        .terminal {
+            /* width: 100%; */
+        }
+
+        .card:not(.highlight-card) {
+            /* height: 16px; */
+            margin: 8px 0;
+        }
+
+        .card.highlight-card span {
+            margin-left: 72px;
+        }
+
+    }
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -489,7 +512,8 @@
             </div>
         </section>
         <br *ngIf="selected_exam != ''" />
-        <div *ngIf="selected_exam != ''" class="card card-large" style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+        <div *ngIf="selected_exam != ''" class="card card-large"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
             <br />
             <div class="card card-medium"
                 style="text-align: center; margin: auto; width: fit-content; padding: 20px; display: flex; flex-direction: column">
@@ -517,11 +541,11 @@
                                 <label class="switch"
                                     style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
                                     <input type="checkbox">
-                                    <button *ngIf="!this.expand_subtopics" (click)="expandSubTopicss()" class="topic-button"
-                                        style="width: 100%; font-size: 14px">
+                                    <button *ngIf="!this.expand_subtopics" (click)="expandSubTopics()"
+                                        class="topic-button" style="width: 100%; font-size: 14px">
                                         <b>Show Subtopics</b> </button>
-                                    <button *ngIf="this.expand_subtopics" (click)="expandSubTopicss()" class="topic-button"
-                                        style="width: 100%; font-size: 14px">
+                                    <button *ngIf="this.expand_subtopics" (click)="expandSubTopics()"
+                                        class="topic-button" style="width: 100%; font-size: 14px">
                                         Hide Subtopics </button>
                                 </label>
                             </th>
@@ -557,11 +581,11 @@
                                 <label class="switch"
                                     style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
                                     <input type="checkbox">
-                                    <button *ngIf="!this.expand_subtopics" (click)="expandSubTopicss()" class="topic-button"
-                                        style="width: 100%; font-size: 14px">
+                                    <button *ngIf="!this.expand_subtopics" (click)="expandSubTopics()"
+                                        class="topic-button" style="width: 100%; font-size: 14px">
                                         <b>Show Subtopics</b> </button>
-                                    <button *ngIf="this.expand_subtopics" (click)="expandSubTopicss()" class="topic-button"
-                                        style="width: 100%; font-size: 14px">
+                                    <button *ngIf="this.expand_subtopics" (click)="expandSubTopics()"
+                                        class="topic-button" style="width: 100%; font-size: 14px">
                                         Hide Subtopics </button>
                                 </label>
                             </th>
@@ -702,7 +726,8 @@
             </div>
         </section>
         <br *ngIf="selected_student != '' && selected_exam == ''" />
-        <div *ngIf="selected_student != '' && selected_exam == ''" class="card card-large" style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+        <div *ngIf="selected_student != '' && selected_exam == ''" class="card card-large"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
             <br />
             <div class="row">
                 <div class="col-md-12">
@@ -726,8 +751,8 @@
                                 <hr />
                                 <div
                                     style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-                                    <div *ngIf="!student_data.uid.includes(authService.userData.uid) && screenWidth > mobileWidth" class="media-body"
-                                        style="padding: 0 20px">
+                                    <div *ngIf="!student_data.uid.includes(authService.userData.uid) && screenWidth > mobileWidth"
+                                        class="media-body" style="padding: 0 20px">
                                         <h3 style="font-weight: 600">{{student_data.email}}</h3>
                                         <h3 style="font-weight: 600">{{student_data.phoneNumber}}</h3>
                                         <!-- <h4>Role: <strong style="font-weight: 500">{{search_user_result.role}}</strong></h4>
@@ -740,10 +765,11 @@
                                     </div>
                                 </div>
                                 <hr />
-                                <h3>Total Problems: <strong
-                                        style="font-weight: 500">{{student_data.problems.correct}} / {{student_data.problems.total}}</strong>
+                                <h3>Total Problems: <strong style="font-weight: 500">{{student_data.problems.correct}} /
+                                        {{student_data.problems.total}}</strong>
                                 </h3>
-                                <h3>Percent Correct: <strong style="font-weight: 500">{{total_percent_correct}}%</strong>
+                                <h3>Percent Correct: <strong
+                                        style="font-weight: 500">{{total_percent_correct}}%</strong>
                                 </h3>
                                 <h3>Total Exams: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
                                 </h3>
@@ -761,12 +787,12 @@
                                             <label class="switch"
                                                 style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
                                                 <input type="checkbox">
-                                                <button *ngIf="!this.expand_topics" (click)="expandTopicss()"
+                                                <button *ngIf="!this.expand_topics" (click)="expandTopics()"
                                                     class="topic-button" style="width: 100%; font-size: 14px">
-                                                    <b>Show Topicss</b> </button>
-                                                <button *ngIf="this.expand_topics" (click)="expandTopicss()"
+                                                    <b>Show Topics</b> </button>
+                                                <button *ngIf="this.expand_topics" (click)="expandTopics()"
                                                     class="topic-button" style="width: 100%; font-size: 14px">
-                                                    Hide Topicss </button>
+                                                    Hide Topics </button>
                                             </label>
                                         </th>
                                     </tr>
@@ -809,12 +835,12 @@
                                             <label class="switch"
                                                 style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
                                                 <input type="checkbox">
-                                                <button *ngIf="!this.expand_topics" (click)="expandTopicss()"
+                                                <button *ngIf="!this.expand_topics" (click)="expandTopics()"
                                                     class="topic-button" style="width: 100%; font-size: 14px">
-                                                    <b>Show Topicss</b> </button>
-                                                <button *ngIf="this.expand_topics" (click)="expandTopicss()"
+                                                    <b>Show Topics</b> </button>
+                                                <button *ngIf="this.expand_topics" (click)="expandTopics()"
                                                     class="topic-button" style="width: 100%; font-size: 14px">
-                                                    Hide Topicss </button>
+                                                    Hide Topics </button>
                                             </label>
                                         </th>
                                     </tr>
@@ -827,17 +853,22 @@
                                         <th> Average Time </th>
                                     </tr>
                                 </thead>
-                                <tbody *ngFor="let subject of subject_breakdown | keyvalue" style="border: 5px solid black">
+                                <tbody *ngFor="let subject of subject_breakdown | keyvalue"
+                                    style="border: 5px solid black">
                                     <tr style="background-color: lightgrey">
                                         <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Grade + ": " +
                                                 subject.value.Subject}} </b> </td>
                                         <td style="border-top: 1px solid #ddd"> </td>
-                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b> </td>
-                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}} </b>
+                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b>
                                         </td>
-                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Percent}}% </b>
+                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}}
+                                            </b>
                                         </td>
-                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Time}} </b> </td>
+                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Percent}}%
+                                            </b>
+                                        </td>
+                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Time}} </b>
+                                        </td>
                                     </tr>
                                     <tr *ngFor="let topic of subject.value.Break.Tops | keyvalue">
                                         <td style="border-top: 1px solid #ddd"> </td>
@@ -884,8 +915,7 @@
             </div>
             <br />
         </div>
-        <section *ngIf="selected_exam == '' && selected_student == ''"
-            style="width: 100%; align-itmes: left">
+        <section *ngIf="selected_exam == '' && selected_student == ''" style="width: 100%; align-itmes: left">
             <div (click)="authService.SignOut()" class="card card-small"
                 style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
                 <img src="./assets/icons/logout.png" style="width: 25px; height: 25px; transform: scaleX(-1)">
@@ -916,7 +946,8 @@
                             <div style="margin: 0 5px">
                                 <img src="./assets/icons/info.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
-                            <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Information </b></div>
+                            <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Information </b>
+                            </div>
                         </button>
                         <button *ngIf="profile_tab == 'information'" (click)="set_tab('information')"
                             class="toggle-button-on"
@@ -924,7 +955,8 @@
                             <div style="margin: 0 5px">
                                 <img src="./assets/icons/info.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
-                            <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Information </b></div>
+                            <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Information </b>
+                            </div>
                         </button>
                     </label>
                     <label *ngIf="user.role == 'Student'" class="switch">
@@ -933,7 +965,8 @@
                             class="toggle-button-off"
                             style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
                             <div style="margin: 0 5px">
-                                <img src="./assets/icons/results.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                                <img src="./assets/icons/results.png"
+                                    style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
                             <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Results </b></div>
                         </button>
@@ -941,24 +974,28 @@
                             class="toggle-button-on"
                             style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
                             <div style="margin: 0 5px">
-                                <img src="./assets/icons/results.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                                <img src="./assets/icons/results.png"
+                                    style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
                             <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Results </b></div>
                         </button>
                     </label>
                     <label *ngIf="user.role != 'Student'" class="switch">
                         <input type="checkbox" value="achievements">
-                        <button *ngIf="profile_tab != 'students'" (click)="set_tab('students')" class="toggle-button-off"
+                        <button *ngIf="profile_tab != 'students'" (click)="set_tab('students')"
+                            class="toggle-button-off"
                             style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
                             <div style="margin: 0 5px">
-                                <img src="./assets/icons/student.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                                <img src="./assets/icons/student.png"
+                                    style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
                             <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Students </b></div>
                         </button>
                         <button *ngIf="profile_tab == 'students'" (click)="set_tab('students')" class="toggle-button-on"
                             style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
                             <div style="margin: 0 5px">
-                                <img src="./assets/icons/student.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                                <img src="./assets/icons/student.png"
+                                    style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
                             <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Students </b></div>
                         </button>
@@ -976,25 +1013,34 @@
                                 style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
                                 <br />
                                 <button *ngIf="!edit_p && authService.userData as user" (click)="toggle_edit_profile()"
-                                    class="grade-button" style="display: flex; flex-direction: row; align-items: center">
+                                    class="grade-button"
+                                    style="display: flex; flex-direction: row; align-items: center">
                                     <div style="margin: 0 5px">
                                         <img src="./assets/icons/edit.png"
                                             style="padding: 5px 0 0; height: 30px; width: 30px">
                                     </div>
-                                    <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Edit Profile </b>
+                                    <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Edit Profile
+                                        </b>
                                     </div>
                                 </button>
                             </section>
                             <div class="media-body">
                                 <br />
-                                <h3>Display Name: <strong style="font-weight: 500">{{(user.displayName) ? user.displayName :
+                                <h3>Display Name: <strong style="font-weight: 500">{{(user.displayName) ?
+                                        user.displayName :
                                         'User'}}</strong></h3>
                                 <!-- <p>User Role: <strong>{{user.role}}</strong></p> -->
                                 <h3>User ID: <strong style="font-weight: 500">{{user.uid}}</strong></h3>
-                                <h3 *ngIf="(user.phoneNumber)">Phone Number: <strong style="font-weight: 500">{{user.phoneNumber}}</strong></h3>
-                                <h3 *ngIf="(user.email)">Email: <strong style="font-weight: 500">{{user.email}}</strong></h3>
-                                <h3 *ngIf="(user.email) && user.emailVerified">Email Verified: <strong style="font-weight: 500"> ✅ </strong></h3>
-                                <button *ngIf="(user.email) && !user.emailVerified" (click)="authService.SendVerificationMail()" style="margin-bottom: 30px; font-size: 16px"><b> Resend Verification Email </b></button>
+                                <h3 *ngIf="(user.phoneNumber)">Phone Number: <strong
+                                        style="font-weight: 500">{{user.phoneNumber}}</strong></h3>
+                                <h3 *ngIf="(user.email)">Email: <strong style="font-weight: 500">{{user.email}}</strong>
+                                </h3>
+                                <h3 *ngIf="(user.email) && user.emailVerified">Email Verified: <strong
+                                        style="font-weight: 500"> ✅ </strong></h3>
+                                <button *ngIf="(user.email) && !user.emailVerified"
+                                    (click)="authService.SendVerificationMail()"
+                                    style="margin-bottom: 30px; font-size: 16px"><b> Resend Verification Email
+                                    </b></button>
                                 <!-- <p>Password: <strong>{{user.password}}</strong></p> -->
                                 <br />
                                 <h3>Role: <strong style="font-weight: 500">{{user.role}}</strong></h3>
@@ -1018,7 +1064,8 @@
                 <div *ngIf="profile_tab == 'information' && edit_p" class="row">
                     <div class="col-md-12">
                         <div class="media">
-                            <img *ngIf="user.role != 'Student'" class="align-self-start mr-5 img-thumbnail rounded-circle"
+                            <img *ngIf="user.role != 'Student'"
+                                class="align-self-start mr-5 img-thumbnail rounded-circle"
                                 style="height: 300px; width: 300px; border-radius: 50%"
                                 src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
                                 alt="{{user.displayName}}">
@@ -1075,13 +1122,13 @@
                                         disabled #userId />
                                 </section> -->
                                 <section
-                                style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                <h3> Phone Number: </h3>
-                                <input (change)="edit_profile('phoneNumber', this.userPhone.value)" type="text"
-                                    inputmode="tel" value="{{user.phoneNumber}}" maxlength="40"
-                                    style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
-                                    #userPhone />
-                            </section>
+                                    style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
+                                    <h3> Phone Number: </h3>
+                                    <input (change)="edit_profile('phoneNumber', this.userPhone.value)" type="text"
+                                        inputmode="tel" value="{{user.phoneNumber}}" maxlength="40"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        #userPhone />
+                                </section>
                                 <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
                                     <h3> Email Address: </h3>
@@ -1402,12 +1449,15 @@
                                             <th> Average Time </th>
                                         </tr>
                                     </thead>
-                                    <tbody *ngFor="let grade of grade_breakdown | keyvalue" style="border: 5px solid black">
+                                    <tbody *ngFor="let grade of grade_breakdown | keyvalue"
+                                        style="border: 5px solid black">
                                         <tr style="background-color: lightgrey">
                                             <td style="border-top: 1px solid #ddd"> <b> {{grade.key}} </b> </td>
                                             <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Total}} </b> </td>
-                                            <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Incorrect}} </b> </td>
-                                            <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Percent}}% </b> </td>
+                                            <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Incorrect}} </b>
+                                            </td>
+                                            <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Percent}}% </b>
+                                            </td>
                                             <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Time}} </b> </td>
                                         </tr>
                                         <tr *ngFor="let subject of grade.value.Subs | keyvalue">
@@ -1457,15 +1507,17 @@
                             <b>{{""+this.student_metadata.length}}</b> students in your classroom
                         </h2>
                         <div *ngIf="!search && !create_s && !edit_s" class="media" style="">
-                            <div class="card-container" style="align-items: center; margin-top: 25px; margin-bottom: 25px">
-                                <button *ngIf="!edit_p && authService.userData as user" (click)="toggle_create_student()"
-                                    class="grade-button"
+                            <div class="card-container"
+                                style="align-items: center; margin-top: 25px; margin-bottom: 25px">
+                                <button *ngIf="!edit_p && authService.userData as user"
+                                    (click)="toggle_create_student()" class="grade-button"
                                     style="display: flex; flex-direction: row; align-items: center; margin: 0 10px">
                                     <div style="margin: 0 5px">
                                         <img src="./assets/icons/add.png"
                                             style="padding: 5px 0 0; height: 25px; width: 25px">
                                     </div>
-                                    <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create New Student
+                                    <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create New
+                                            Student
                                         </b></div>
                                 </button>
                                 <button *ngIf="!edit_p && authService.userData as user" (click)="toggle_search()"
@@ -1475,7 +1527,8 @@
                                         <img src="./assets/icons/usersearch.png"
                                             style="padding: 5px 0 0; height: 25px; width: 25px">
                                     </div>
-                                    <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Find Student by ID
+                                    <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Find Student by
+                                            ID
                                         </b></div>
                                 </button>
                             </div>
@@ -1509,7 +1562,8 @@
                                     <h2>{{(std.displayName) ?
                                         std.displayName :
                                         'User'}}</h2>
-                                    <h4 *ngIf="this.screenWidth > this.mobileWidth" style="font-weight: 300"> ({{std.uid}})
+                                    <h4 *ngIf="this.screenWidth > this.mobileWidth" style="font-weight: 300">
+                                        ({{std.uid}})
                                     </h4>
                                     <hr />
                                     <div
@@ -1534,7 +1588,8 @@
                                             <img src="./assets/icons/link.png"
                                                 style="padding: 5px 0 0; height: 25px; width: 25px">
                                         </div> -->
-                                        <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Exams </b></div>
+                                        <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Exams </b>
+                                        </div>
                                     </button>
                                 </div>
                             </div>
@@ -1545,12 +1600,13 @@
                             <section
                                 style="display: flex; flex-direction: row; align-items: center; margin: auto; height: auto; max-height: 150px; max-width: 450px; padding: 5px">
                                 <!-- <img src="./assets/icons/usersearch.png" style="padding: 5px 0 0; height: 30px; width: 30px"> -->
-                                <input type="text" inputmode="text" maxlength="40" (change)="search_id(this.userId.value)"
+                                <input type="text" inputmode="text" maxlength="40"
+                                    (change)="search_id(this.userId.value)"
                                     style="margin: 0 5px 0 auto; padding-left: 10px; width: 275px; height: 40px; font-size: 16px; font-weight: 400; text-align: left; border-radius: 10px;"
                                     #userId />
                                 <input (click)="search_id(this.userId.value)" type="image"
-                                    src="./assets/icons/usersearch.png" style="margin: 0 auto 0 5px" alt="Search" width="30"
-                                    height="30">
+                                    src="./assets/icons/usersearch.png" style="margin: 0 auto 0 5px" alt="Search"
+                                    width="30" height="30">
                             </section>
                             <br />
                             <div *ngIf="search_user" class="card card-large"
@@ -1633,7 +1689,8 @@
                                                 </div>
                                                 <div *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
                                                     class="select-middle">
-                                                    <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
+                                                    <img src="/assets/icons/save.png"
+                                                        style="height: 30px; width: 30px" />
                                                 </div>
                                             </div>
                                         </div>
@@ -1770,7 +1827,8 @@
                                                 </div>
                                                 <div *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
                                                     class="select-middle">
-                                                    <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
+                                                    <img src="/assets/icons/save.png"
+                                                        style="height: 30px; width: 30px" />
                                                 </div>
                                             </div>
                                         </div>
@@ -1780,8 +1838,8 @@
                                                 style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
                                                 <h3> Display Name: </h3>
                                                 <input (change)="edit_student('displayName', this.editUserName.value)"
-                                                    value="{{this.student_data.displayName}}" type="text" inputmode="text"
-                                                    maxlength="40"
+                                                    value="{{this.student_data.displayName}}" type="text"
+                                                    inputmode="text" maxlength="40"
                                                     style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                                     #editUserName />
                                             </section>

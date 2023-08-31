@@ -981,11 +981,11 @@ export class ProfileComponent implements OnInit {
     console.log(this.grade_breakdown);
   }
 
-  expandTopicss() {
+  expandTopics() {
     this.expand_topics = !this.expand_topics;
   }
 
-  expandSubTopicss() {
+  expandSubTopics() {
     this.expand_subtopics = !this.expand_subtopics;
   }
 

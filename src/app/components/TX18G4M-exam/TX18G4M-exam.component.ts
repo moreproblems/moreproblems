@@ -495,7 +495,7 @@ export class TX18G4MExamComponent implements OnInit {
                     this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
                 }
                 else if (this.selected_student != '') {
-                    this.db_updates['users/' + this.selected_student + '/submissions/exams/' + this.selected_student + '/' + this.key + '/endtimestamp'] = serverTimestamp();
+                    this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/endtimestamp'] = serverTimestamp();
                 }
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
@@ -709,7 +709,7 @@ export class TX18G4MExamComponent implements OnInit {
         clearInterval(this.pt_timer);
     }
 
-    expandTopicss() {
+    expandTopics() {
         this.expand_topics = !this.expand_topics;
     }
 

@@ -484,7 +484,7 @@ export class TestExamComponent implements OnInit {
     });
   }
 
-  expandTopicss() {
+  expandTopics() {
     this.expand_topics = !this.expand_topics;
   }
 

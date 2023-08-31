@@ -1554,7 +1554,7 @@ export class ProblemsComponent implements OnInit {
     this.problem_number = 0;
   }
 
-  expandTopicss() {
+  expandTopics() {
     this.expand_topics = !this.expand_topics;
   }
 

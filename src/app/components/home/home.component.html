@@ -513,43 +513,44 @@
         <h1 *ngIf="this.screenWidth > this.mobileWidth" style="margin: auto 25px; text-align: center; font-size: 24px">
           {{exam_name}} </h1>
         <span *ngIf="!this.exam_fav && authService.userData as user" (click)="toggle_favorite()"
-          style="font-size: 32px; font-weight: 800; color:rgba(255, 217, 0, 0.757)"> &star; </span>
+          style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &star; </span>
         <span *ngIf="this.exam_fav && authService.userData as user" (click)="toggle_favorite()"
-          style="font-size: 32px; font-weight: 800; color:rgba(255, 217, 0, 0.757)"> &starf; </span>
+          style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &starf; </span>
       </section>
-      <section style="height: auto; max-height: 75px; width: 100%; display: flex; justify-content: center">
+      <h3 *ngIf="online_set.includes(exam_id) && screenWidth > mobileWidth" (click)="take_exam()"
+        style="font-weight: 600; font-size: 20px; margin-top: 20px"><a> Take the full exam from your device now! </a></h3>
+      <h3 *ngIf="online_set.includes(exam_id) && screenWidth <= mobileWidth" (click)="take_exam()"
+        style="font-weight: 600; font-size: 16px; margin-top: 15px"><a> Take the full exam from your device now! </a></h3>
+      <br />
+      <section style="height: auto; max-height: 75px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
         <button *ngIf="file_source != '' && this.screenWidth > this.mobileWidth" (click)="print_exam()"
           class="grade-button" style="margin: 10px 10px 10px 0; width: auto; height: auto">
-          <!-- <img src="./assets/icons/print.png" style="height: 30px; width: 30px; filter: invert(100%)"> -->
-          <b> Print </b>
+          <img src="./assets/icons/print.png" style="height: 25px">
+          <b style="margin-left: 10px"> Print </b>
         </button>
         <button *ngIf="file_source != ''" (click)="download_exam()" class="grade-button"
           style="margin: 10px 10px 10px 0; width: auto; height: auto">
-          <img *ngIf="this.screenWidth <= this.mobileWidth" src="./assets/icons/download.png" style="height: 25px">
-          <b *ngIf="this.screenWidth > this.mobileWidth"> Download </b>
-        </button>
-        <button *ngIf="online_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
-          style="margin: 10px 10px 10px 0; width: auto; height: auto">
-          <!-- <img src="./assets/icons/download.png" style="height: 30px; width: 30px; filter: invert(100%)"> -->
-          <b>Online Exam</b>
+          <img src="./assets/icons/download.png" style="height: 25px">
+          <b style="margin-left: 10px"> Download </b>
         </button>
         <button *ngIf="file_source != ''" (click)="prev_page()" class="grade-button"
           style="margin: 20px 0; margin-left: 10px; width: auto; height: auto">
           <img src="./assets/icons/minus.png" style="height: 25px; filter: invert(100%)">
           <!-- <b>PD</b> -->
         </button>
-        <p style="margin: auto 5px auto 10px; font-size: 14px">Page </p>
-        <input (keyup)="go_to_page(+this.pageNum.value)" type="text" inputmode="numeric" value="{{file_page}}" min="1"
-          maxlength="3"
-          style="margin: auto 10px auto 0; width: 40px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
-          #pageNum />
+        <div>
+          <p style="margin: auto 10px; font-size: 18px; font-weight: 600">Page </p>
+          <input (keyup)="go_to_page(+this.pageNum.value)" type="text" inputmode="numeric" value="{{file_page}}" min="1"
+            maxlength="3"
+            style="margin: auto 10px; width: 40px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
+            #pageNum />
+        </div>
         <button *ngIf="file_source != ''" (click)="next_page()" class="grade-button"
           style="margin: 20px 0; width: auto; height: auto">
           <img src="./assets/icons/plus.png" style="height: 25px; filter: invert(100%)">
           <!-- <b>PU</b> -->
         </button>
       </section>
-      <br />
       <section *ngIf="file_source != ''"
         style="height: 90%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden">
         <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
