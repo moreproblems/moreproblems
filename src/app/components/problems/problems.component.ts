@@ -117,8 +117,10 @@ export class ProblemsComponent implements OnInit {
   state_filters: string[] = [];
   grade_filters: string[] = [];
   subject_filters: string[] = [];
+  topic_filters: string[] = [];
+  topics: string[] = [];
   expand_filters = true;
-  sub_topic = false;
+  // sub_topic = false;
   expand_topics = true;
   show_correct = false;
   mode = 'assess';
@@ -321,6 +323,22 @@ export class ProblemsComponent implements OnInit {
     this.filter_exams();
   }
 
+  toggle_topic(val: string) {
+    console.log(val)
+    if (!this.topic_filters.includes(val)) {
+      this.topic_filters.push(val)
+    }
+    else {
+      if (this.topic_filters.indexOf(val) != -1) {
+        this.topic_filters.splice(this.topic_filters.indexOf(val), 1);
+      }
+      else {
+        this.topic_filters.pop()
+      }
+    }
+    console.log(this.topic_filters)
+  }
+
   toggle_mode() {
     if (this.mode == 'assess') {
       this.mode = 'explain';
@@ -344,6 +362,7 @@ export class ProblemsComponent implements OnInit {
 
   filter_exams() {
     this.filtered_set = [];
+    this.topics = [];
     for (let i = 0; i < this.online_set.length; i++) {
       if ((this.state_filters.includes(this.exam_attribute_dump[this.online_set[i]].State) || this.state_filters.length == 0) && (this.grade_filters.includes(this.exam_attribute_dump[this.online_set[i]].Grade) || this.grade_filters.length == 0) && (this.subject_filters.includes(this.exam_attribute_dump[this.online_set[i]].Subject) || this.subject_filters.length == 0)) {
         this.filtered_set.push(this.online_set[i]);
@@ -356,6 +375,127 @@ export class ProblemsComponent implements OnInit {
     }
     if (this.filtered_set.length == 0) {
       this.generate_message = "There are no problems based on your selection.";
+    }
+    else {
+      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 3') || this.grade_filters.length == 0)) {
+        for (let topic of ['Numbers & Operations In Base Ten', 'Numbers & Operations - Fractions', 'Operations & Algebraic Thinking', 'Geometry', 'Measurement & Data']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 4') || this.grade_filters.length == 0)) {
+        for (let topic of ['Numbers & Operations In Base Ten', 'Numbers & Operations - Fractions', 'Operations & Algebraic Thinking', 'Geometry', 'Measurement & Data']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 5') || this.grade_filters.length == 0)) {
+        for (let topic of ['Numbers & Operations In Base Ten', 'Numbers & Operations - Fractions', 'Operations & Algebraic Thinking', 'Geometry', 'Measurement & Data']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 6') || this.grade_filters.length == 0)) {
+        for (let topic of ['The Number System', 'Ratios & Proportional Relationships', 'Expressions & Equations', 'Geometry', 'Statistics & Probability']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 7') || this.grade_filters.length == 0)) {
+        for (let topic of ['The Number System', 'Ratios & Proportional Relationships', 'Expressions & Equations', 'Geometry', 'Statistics & Probability']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 8') || this.grade_filters.length == 0)) {
+        for (let topic of ['The Number System', 'Expressions & Equations', 'Functions', 'Geometry', 'Statistics & Probability']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Science') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 4') || this.grade_filters.length == 0)) {
+        for (let topic of ['The Nature Of Science', 'Biological Sciences', 'Physical Sciences', 'Earth & Space Sciences']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Science') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 8') || this.grade_filters.length == 0)) {
+        for (let topic of ['The Nature Of Science', 'Biological Sciences', 'Physical Sciences', 'Earth & Space Sciences']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 3') || this.grade_filters.length == 0)) {
+        for (let topic of ['Number & Operations', 'Algebraic Reasoning', 'Geometry & Measurement', 'Data Analysis', 'Personal Financial Literacy']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 4') || this.grade_filters.length == 0)) {
+        for (let topic of ['Number & Operations', 'Algebraic Reasoning', 'Geometry & Measurement', 'Data Analysis', 'Personal Financial Literacy']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 5') || this.grade_filters.length == 0)) {
+        for (let topic of ['Number & Operations', 'Algebraic Reasoning', 'Geometry & Measurement', 'Data Analysis', 'Personal Financial Literacy']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 6') || this.grade_filters.length == 0)) {
+        for (let topic of ['Number & Operations', 'Proportionality', 'Expressions, Equations & Relationships', 'Measurement & Data', 'Personal Financial Literacy']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 7') || this.grade_filters.length == 0)) {
+        for (let topic of ['Number & Operations', 'Proportionality', 'Expressions, Equations & Relationships', 'Measurement & Data', 'Personal Financial Literacy']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 8') || this.grade_filters.length == 0)) {
+        for (let topic of ['Number & Operations', 'Proportionality', 'Expressions, Equations & Relationships', 'Measurement & Data', 'Personal Financial Literacy', 'Two-Dimensional Shapes']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Science') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 5') || this.grade_filters.length == 0)) {
+        for (let topic of ['Matter & Energy', 'Force, Motion & Energy', 'Earth & Space', 'Organisms & Environments']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Science') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 8') || this.grade_filters.length == 0)) {
+        for (let topic of ['Matter & Energy', 'Force, Motion & Energy', 'Earth & Space', 'Organisms & Environments']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
+      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Social Studies') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 8') || this.grade_filters.length == 0)) {
+        for (let topic of ['History', 'Geography', 'Culture', 'Government', 'Citizenship', 'Economics', 'Science, Technology & Society']) {
+          if (!this.topics.includes(topic)) {
+            this.topics.push(topic);
+          }
+        }
+      }
     }
   }
 
@@ -1223,10 +1363,6 @@ export class ProblemsComponent implements OnInit {
     }
     this.toggleProblemTimer();
     this.problem_number = 1;
-  }
-
-  toggle_topic() {
-    this.sub_topic = !this.sub_topic;
   }
 
   attempt_mc_problem(ch: string) {

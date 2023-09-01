@@ -572,10 +572,10 @@
       style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
       #stateSelectorCard>
       <br />
-      <h2> Choose your State </h2>
+      <h2 style="margin-bottom: 0px"> Choose your State </h2>
       <br />
       <input type="hidden" value="" #state>
-      <div class="card-container" style="max-width: 100%">
+      <div class="card-container" style="max-width: 100%; margin-top: 0px">
         <!-- <label class="switch">
             <input type="checkbox" value="CA">
             <button *ngIf="selected_state == 'CA'" (click)="select_state('CA'); scroll_top()" class="toggle-button-on"
@@ -1185,10 +1185,10 @@
       #USGradeSelectorCard>
       <!-- Grade Selector -->
       <br />
-      <h2> Choose your Grade </h2>
+      <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
       <br />
       <input type="hidden" #grade>
-      <div class="card-container" style="max-width: 100%">
+      <div class="card-container" style="max-width: 100%; margin-top: 0px">
         <label class="switch">
           <input type="checkbox" value="G3">
           <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)"
@@ -1273,12 +1273,12 @@
       </div>
       <br #chooseSubject />
       <!-- Subject Selector -->
-      <div class="subcontent" role="main" [ngSwitch]="selected_grade">
+      <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0px">
         <div *ngSwitchCase="'G3'" class="subcontent">
-          <h2> Choose your Subject </h2>
+          <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose your Subject </h2>
           <br #grade3 />
           <input type="hidden" #grade>
-          <div class="card-container" style="max-width: 100%">
+          <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
               <input type="checkbox" value="EnglishLanguage">
               <button *ngIf="selected_subject == 'EnglishLanguage'" (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)"
@@ -1310,10 +1310,10 @@
           </div>
         </div>
         <div *ngSwitchCase="'G4'" class="subcontent">
-          <h2> Choose your Subject </h2>
+          <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose your Subject </h2>
           <br #grade4 />
           <input type="hidden" #grade>
-          <div class="card-container" style="max-width: 100%">
+          <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
               <input type="checkbox" value="EnglishLanguage">
               <button *ngIf="selected_subject == 'EnglishLanguage'" (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)"
@@ -1359,10 +1359,10 @@
           </div>
         </div>
         <div *ngSwitchCase="'G5'" class="subcontent">
-          <h2> Choose your Subject </h2>
+          <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose your Subject </h2>
           <br #grade5 />
           <input type="hidden" #grade>
-          <div class="card-container" style="max-width: 100%">
+          <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
               <input type="checkbox" value="EnglishLanguage">
               <button *ngIf="selected_subject == 'EnglishLanguage'" (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)"
@@ -1401,10 +1401,10 @@
           </div>
         </div>
         <div *ngSwitchCase="'G6'" class="subcontent">
-          <h2> Choose your Subject </h2>
+          <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose your Subject </h2>
           <br #grade6 />
           <input type="hidden" #grade>
-          <div class="card-container" style="max-width: 100%">
+          <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
               <input type="checkbox" value="EnglishLanguage">
               <button *ngIf="selected_subject == 'EnglishLanguage'" (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)"
@@ -1450,10 +1450,10 @@
           </div>
         </div>
         <div *ngSwitchCase="'G7'" class="subcontent">
-          <h2> Choose your Subject </h2>
+          <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose your Subject </h2>
           <br #grade7 />
           <input type="hidden" #grade>
-          <div class="card-container" style="max-width: 100%">
+          <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
               <input type="checkbox" value="EnglishLanguage">
               <button *ngIf="selected_subject == 'EnglishLanguage'" (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)"
@@ -1499,10 +1499,10 @@
           </div>
         </div>
         <div *ngSwitchCase="'G8'" class="subcontent">
-          <h2> Choose your Subject </h2>
+          <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose your Subject </h2>
           <br #grade8 />
           <input type="hidden" #grade>
-          <div class="card-container" style="max-width: 100%">
+          <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
               <input type="checkbox" value="EnglishLanguage">
               <button *ngIf="selected_subject == 'EnglishLanguage'" (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)"
@@ -1548,10 +1548,10 @@
           </div>
         </div>
         <div *ngSwitchCase="'G9'" class="subcontent">
-          <h2> Choose your Subject </h2>
+          <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose your Subject </h2>
           <br #grade9 />
           <input type="hidden" #grade>
-          <div class="card-container" style="max-width: 100%">
+          <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
               <input type="checkbox" value="EnglishLanguage">
               <button *ngIf="selected_subject == 'EnglishLanguage'" (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)"
@@ -1576,10 +1576,10 @@
           </div>
         </div>
         <div *ngSwitchCase="'G10'" class="subcontent">
-          <h2> Choose your Subject </h2>
+          <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose your Subject </h2>
           <br #grade10 />
           <input type="hidden" #grade>
-          <div class="card-container" style="max-width: 100%">
+          <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
               <input type="checkbox" value="EnglishLanguage">
               <button *ngIf="selected_subject == 'EnglishLanguage'" (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)"
@@ -1618,10 +1618,10 @@
           </div>
         </div>
         <div *ngSwitchCase="'G11'" class="subcontent">
-          <h2> Choose your Subject </h2>
+          <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose your Subject </h2>
           <br #grade11 />
           <input type="hidden" #grade>
-          <div class="card-container" style="max-width: 100%">
+          <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
               <input type="checkbox" value="Math">
               <button *ngIf="selected_subject == 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
@@ -1655,8 +1655,8 @@
         <div *ngSwitchCase="'G3'" class="subcontent" style="margin-top: 0">
           <!-- Exam Selector -->
           <br #chooseExam />
-          <h2> Choose your Exam </h2>
-          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0">
+          <h2 style="margin-bottom: 0px"> Choose your Exam </h2>
+          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0px">
             <div *ngSwitchCase="'EnglishLanguage'" class="subcontent" style="margin-top: 0">
               <br #englishLanguage />
               <input type="hidden" #selection>
@@ -2397,8 +2397,8 @@
         <div *ngSwitchCase="'G4'" class="subcontent" style="margin-top: 0">
           <!-- Exam Selector -->
           <br #chooseExam />
-          <h2> Choose your Exam </h2>
-          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0">
+          <h2 style="margin-bottom: 0px"> Choose your Exam </h2>
+          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0px">
             <div *ngSwitchCase="'EnglishLanguage'" class="subcontent" style="margin-top: 0">
               <br #englishLanguage />
               <input type="hidden" #selection>
@@ -3304,8 +3304,8 @@
         <div *ngSwitchCase="'G5'" class="subcontent" style="margin-top: 0">
           <!-- Exam Selector -->
           <br #chooseExam />
-          <h2> Choose your Exam </h2>
-          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0">
+          <h2 style="margin-bottom: 0px"> Choose your Exam </h2>
+          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0px">
             <div *ngSwitchCase="'EnglishLanguage'" class="subcontent" style="margin-top: 0">
               <br #englishLanguage />
               <input type="hidden" #selection>
@@ -4195,8 +4195,8 @@
         <div *ngSwitchCase="'G6'" class="subcontent" style="margin-top: 0">
           <!-- Exam Selector -->
           <br #chooseExam />
-          <h2> Choose your Exam </h2>
-          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0">
+          <h2 style="margin-bottom: 0px"> Choose your Exam </h2>
+          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0px">
             <div *ngSwitchCase="'EnglishLanguage'" class="subcontent" style="margin-top: 0">
               <br #englishLanguage />
               <input type="hidden" #selection>
@@ -4976,8 +4976,8 @@
         <div *ngSwitchCase="'G7'" class="subcontent" style="margin-top: 0">
           <!-- Exam Selector -->
           <br #chooseExam />
-          <h2> Choose your Exam </h2>
-          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0">
+          <h2 style="margin-bottom: 0px"> Choose your Exam </h2>
+          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0px">
             <div *ngSwitchCase="'EnglishLanguage'" class="subcontent" style="margin-top: 0">
               <br #englishLanguage />
               <input type="hidden" #selection>
@@ -5757,8 +5757,8 @@
         <div *ngSwitchCase="'G8'" class="subcontent" style="margin-top: 0">
           <!-- Exam Selector -->
           <br #chooseExam />
-          <h2> Choose your Exam </h2>
-          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0">
+          <h2 style="margin-bottom: 0px"> Choose your Exam </h2>
+          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0px">
             <div *ngSwitchCase="'EnglishLanguage'" class="subcontent" style="margin-top: 0">
               <br #englishLanguage />
               <input type="hidden" #selection>
@@ -6844,8 +6844,8 @@
         <div *ngSwitchCase="'G9'" class="subcontent" style="margin-top: 0">
           <!-- Exam Selector -->
           <br #chooseExam />
-          <h2> Choose your Exam </h2>
-          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0">
+          <h2 style="margin-bottom: 0px"> Choose your Exam </h2>
+          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0px">
             <div *ngSwitchCase="'EnglishLanguage'" class="subcontent" style="margin-top: 0">
               <br #englishLanguage />
               <input type="hidden" #selection>
@@ -6896,8 +6896,8 @@
         <div *ngSwitchCase="'G10'" class="subcontent" style="margin-top: 0">
           <!-- Exam Selector -->
           <br #chooseExam />
-          <h2> Choose your Exam </h2>
-          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0">
+          <h2 style="margin-bottom: 0px"> Choose your Exam </h2>
+          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0px">
             <div *ngSwitchCase="'EnglishLanguage'" class="subcontent" style="margin-top: 0">
               <br #englishLanguage />
               <input type="hidden" #selection>
@@ -7014,8 +7014,8 @@
         <div *ngSwitchCase="'G11'" class="subcontent" style="margin-top: 0">
           <!-- Exam Selector -->
           <br #chooseExam />
-          <h2> Choose your Exam </h2>
-          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0">
+          <h2 style="margin-bottom: 0px"> Choose your Exam </h2>
+          <div class="subcontent" role="main" [ngSwitch]="selected_subject" style="margin-top: 0px">
             <div *ngSwitchCase="'Math'" class="subcontent" style="margin-top: 0">
               <br #math />
               <input type="hidden" #selection>
@@ -7112,10 +7112,10 @@
         #COGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -7189,7 +7189,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -7217,7 +7217,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -7245,7 +7245,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -7282,7 +7282,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -7310,7 +7310,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -7338,7 +7338,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -7374,7 +7374,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'HS'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #highSchool />
             <h3>High School</h3>
             <br />
@@ -7402,10 +7402,10 @@
         #DEGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G4">
             <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
@@ -7461,7 +7461,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -7480,7 +7480,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -7499,7 +7499,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -7518,7 +7518,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -7536,7 +7536,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G11'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #highSchool />
             <h3>Grade 11</h3>
             <br />
@@ -7564,10 +7564,10 @@
         #FLGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -7648,7 +7648,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -7676,7 +7676,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -7713,7 +7713,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -7759,7 +7759,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -7796,7 +7796,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -7833,7 +7833,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -7879,7 +7879,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G9'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade9 />
             <h3>Grade 9</h3>
             <br />
@@ -7907,7 +7907,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G10'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade10 />
             <h3>Grade 10</h3>
             <br />
@@ -7954,10 +7954,10 @@
         #ILGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -8022,7 +8022,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -8050,7 +8050,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -8078,7 +8078,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -8106,7 +8106,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -8134,7 +8134,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -8162,7 +8162,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -8199,10 +8199,10 @@
         #MEGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -8276,7 +8276,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -8304,7 +8304,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -8332,7 +8332,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -8360,7 +8360,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -8388,7 +8388,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -8416,7 +8416,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -8443,7 +8443,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G10'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #highSchool />
             <h3>High School</h3>
             <br />
@@ -8480,10 +8480,10 @@
         #MDGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -8557,7 +8557,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -8585,7 +8585,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -8613,7 +8613,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -8650,7 +8650,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -8678,7 +8678,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -8706,7 +8706,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -8751,7 +8751,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G10'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade10 />
             <h3>Grade 10</h3>
             <br />
@@ -8779,10 +8779,10 @@
         #MAGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -8856,7 +8856,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -8884,7 +8884,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -8912,7 +8912,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -8949,7 +8949,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -8977,7 +8977,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -9005,7 +9005,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -9041,7 +9041,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G10'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade10 />
             <h3>Grade 10</h3>
             <br />
@@ -9090,10 +9090,10 @@
         #MNGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -9185,7 +9185,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -9213,7 +9213,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -9241,7 +9241,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -9278,7 +9278,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -9306,7 +9306,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -9334,7 +9334,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -9370,7 +9370,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G10'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 10</h3>
             <br />
@@ -9388,7 +9388,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G11'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 11</h3>
             <br />
@@ -9406,7 +9406,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'HS'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>High School</h3>
             <br />
@@ -9434,10 +9434,10 @@
         #MSGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -9502,7 +9502,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3 Math</h3>
             <br />
@@ -9555,7 +9555,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4 Math</h3>
             <br />
@@ -9608,7 +9608,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5 Math</h3>
             <br />
@@ -9661,7 +9661,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6 Math</h3>
             <br />
@@ -9714,7 +9714,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7 Math</h3>
             <br />
@@ -9767,7 +9767,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8 Math</h3>
             <br />
@@ -9829,10 +9829,10 @@
         #MOGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -9897,7 +9897,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -9925,7 +9925,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -9953,7 +9953,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -9990,7 +9990,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -10018,7 +10018,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -10046,7 +10046,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -10092,10 +10092,10 @@
         #NEGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -10160,7 +10160,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -10188,7 +10188,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -10216,7 +10216,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -10253,7 +10253,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -10281,7 +10281,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -10309,7 +10309,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -10355,10 +10355,10 @@
         #NJGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -10441,7 +10441,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -10469,7 +10469,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -10497,7 +10497,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -10534,7 +10534,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -10562,7 +10562,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -10590,7 +10590,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -10626,7 +10626,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G9'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 10</h3>
             <br />
@@ -10644,7 +10644,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G11'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 11</h3>
             <br />
@@ -10672,10 +10672,10 @@
         #NMGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -10749,7 +10749,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -10777,7 +10777,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -10805,7 +10805,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -10842,7 +10842,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -10870,7 +10870,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -10898,7 +10898,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -10934,7 +10934,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G11'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #highSchool />
             <h3>Grade 11</h3>
             <br />
@@ -10962,10 +10962,10 @@
         #NYGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -11030,7 +11030,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3 Math</h3>
             <br />
@@ -11172,7 +11172,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4 Math</h3>
             <br />
@@ -11384,7 +11384,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5 Math</h3>
             <br />
@@ -11526,7 +11526,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6 Math</h3>
             <br />
@@ -11668,7 +11668,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7 Math</h3>
             <br />
@@ -11810,7 +11810,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8 Math</h3>
             <br />
@@ -12032,10 +12032,10 @@
         #NCGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -12100,7 +12100,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -12128,7 +12128,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -12156,7 +12156,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -12193,7 +12193,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -12221,7 +12221,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -12249,7 +12249,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -12306,10 +12306,10 @@
         #PAGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -12374,7 +12374,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3 Math</h3>
             <br />
@@ -12499,7 +12499,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4 Math</h3>
             <br />
@@ -12685,7 +12685,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5 Math</h3>
             <br />
@@ -12809,7 +12809,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6 Math</h3>
             <br />
@@ -12934,7 +12934,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7 Math</h3>
             <br />
@@ -13059,7 +13059,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8 Math</h3>
             <br />
@@ -13254,10 +13254,10 @@
         #RIGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -13322,7 +13322,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3 Math</h3>
             <br />
@@ -13410,7 +13410,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4 Math</h3>
             <br />
@@ -13498,7 +13498,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5 Math</h3>
             <br />
@@ -13586,7 +13586,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6 Math</h3>
             <br />
@@ -13674,7 +13674,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7 Math</h3>
             <br />
@@ -13762,7 +13762,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8 Math</h3>
             <br />
@@ -13860,10 +13860,10 @@
         #SCGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -13928,7 +13928,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -13956,7 +13956,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -13993,7 +13993,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -14021,7 +14021,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -14058,7 +14058,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -14086,7 +14086,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -14123,10 +14123,10 @@
         #TNGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -14191,7 +14191,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -14228,7 +14228,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -14265,7 +14265,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -14302,7 +14302,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -14348,7 +14348,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -14394,7 +14394,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -14449,10 +14449,10 @@
         #TXGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -14517,7 +14517,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3 Math</h3>
             <br />
@@ -14623,7 +14623,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4 Math</h3>
             <br />
@@ -14729,7 +14729,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5 Math</h3>
             <br />
@@ -14878,7 +14878,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6 Math</h3>
             <br />
@@ -14984,7 +14984,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7 Math</h3>
             <br />
@@ -15090,7 +15090,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8 Math</h3>
             <br />
@@ -15292,10 +15292,10 @@
         #WIGradeSelectorCard>
         <!-- Grade Selector -->
         <br />
-        <h2> Choose your Grade </h2>
+        <h2 style="margin-bottom: 0px"> Choose your Grade </h2>
         <br />
         <input type="hidden" #grade>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
@@ -15369,7 +15369,7 @@
         <!-- Exam Selector -->
         <div class="subcontent" role="main" [ngSwitch]="selected_grade" style="margin-top: 0">
           <div *ngSwitchCase="'G3'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade3 />
             <h3>Grade 3</h3>
             <br />
@@ -15397,7 +15397,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G4'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade4 />
             <h3>Grade 4</h3>
             <br />
@@ -15443,7 +15443,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G5'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade5 />
             <h3>Grade 5</h3>
             <br />
@@ -15471,7 +15471,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G6'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade6 />
             <h3>Grade 6</h3>
             <br />
@@ -15499,7 +15499,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G7'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade7 />
             <h3>Grade 7</h3>
             <br />
@@ -15527,7 +15527,7 @@
             <br />
           </div>
           <div *ngSwitchCase="'G8'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade8 />
             <h3>Grade 8</h3>
             <br />
@@ -15572,7 +15572,7 @@
             </div>
           </div>
           <div *ngSwitchCase="'G10'" class="subcontent">
-            <h2>Choose your Exam</h2>
+            <h2 style="margin-bottom: 0px">Choose your Exam</h2>
             <br #grade10 />
             <h3>Grade 10</h3>
             <br />
