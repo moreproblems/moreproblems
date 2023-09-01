@@ -53,7 +53,7 @@ export class TX19G8MExamComponent implements OnInit {
     show_correct = false;
 
     key = 'TX19G8M'
-    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
+    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Topics': { [key: string]: number } } } = examMetadata;
 
     exam_state = this.exam_attribute_dump[this.key].State;
     exam_grade = this.exam_attribute_dump[this.key].Grade;
@@ -66,6 +66,7 @@ export class TX19G8MExamComponent implements OnInit {
     exam_directions = 'Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.';
 
     TX19G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = problemsData;
+    topics_count: { [key: string] : number } = {}
     exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
     dump_count = 1;
 
@@ -744,11 +745,20 @@ export class TX19G8MExamComponent implements OnInit {
     ngOnInit() {
         for (const [num, value] of Object.entries(this.TX19G8M_exam_dump)) {
             if (value.Number <= this.exam_length) {
+                for (let topic of value.Topics) {
+                    if (!Object.keys(this.topics_count).includes(topic)) {
+                        this.topics_count[topic] = 1;
+                    }
+                    else {
+                        this.topics_count[topic] += 1;
+                    }
+                }
                 this.exam_dump[this.dump_count] = value;
                 this.ordered_dump[this.dump_count] = value;
                 this.dump_count += 1;
             }
         }
+        console.log(this.topics_count);
         for (let value of Object.values(this.exam_dump)) {
             for (const [ch, value2] of Object.entries(value.AnswerChoices)) {
                 if (ch == 'Key') {

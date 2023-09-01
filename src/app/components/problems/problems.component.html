@@ -680,24 +680,27 @@
             tabindex="0"> <b>Texas</b> </button>
         </label>
       </div>
-      <div *ngIf="grade_filters.length != 0 || subject_filters.length != 0">
-        <br #chooseTopic />
+      <br />
+      <h3 *ngIf="filtered_set.length != 0" style="color: blue; text-align: center"> There are a total of
+        {{filtered_exam_num}} exams with {{filtered_prob_num}} problems matching you selection. </h3>
+      <h3 *ngIf="filtered_set.length == 0" style="color: red; text-align: center"> {{generate_message}} </h3>
+      <br />
+    </div>
+    <br *ngIf="grade_filters.length != 0 || subject_filters.length != 0" />
+    <div class="card card-large" *ngIf="grade_filters.length != 0 || subject_filters.length != 0"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <br #chooseTopic />
         <h2 style="margin-bottom: 0px">Choose your Topic(s)</h2>
         <br />
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <div *ngFor="let topic of topics.sort()" (click)="toggle_topic(topic)" style="display: flex; flex-direction: row; align-items: center; margin: 0 15px; height: 36px">
             <input *ngIf="topic_filters.includes(topic)" type="checkbox" checked />
             <input *ngIf="!topic_filters.includes(topic)" type="checkbox" unchecked />
-            <div *ngIf="topic_filters.includes(topic)" style="margin-left: 5px; font-size: 16px; font-weight: 600"> {{topic}} </div>
-            <div *ngIf="!topic_filters.includes(topic)" style="margin-left: 5px; font-size: 16px"> {{topic}} </div>
+            <div *ngIf="topic_filters.includes(topic)" style="margin-left: 5px; font-size: 16px; font-weight: 600"> {{topic}} ({{topics_count[topic]}}) </div>
+            <div *ngIf="!topic_filters.includes(topic)" style="margin-left: 5px; font-size: 16px"> {{topic}} ({{topics_count[topic]}}) </div>
           </div>
         </div>
-      </div>
-      <br />
-      <h3 *ngIf="filtered_set.length != 0" style="color: blue; text-align: center"> There are a total of
-        {{filtered_exam_num}} exams with {{filtered_prob_num}} problems matching you selection. </h3>
-      <h3 *ngIf="filtered_set.length == 0" style="color: red; text-align: center"> {{generate_message}} </h3>
-      <br />
+        <br />
     </div>
     <br />
     <div class="card card-large"

@@ -114,12 +114,13 @@ export class ProblemsComponent implements OnInit {
   screenWidth = window.innerWidth;
   mobileWidth = 875;
 
+  expand_filters = true;
+  topics: string[] = [];
+  topics_count: { [key: string]: number }
   state_filters: string[] = [];
   grade_filters: string[] = [];
   subject_filters: string[] = [];
   topic_filters: string[] = [];
-  topics: string[] = [];
-  expand_filters = true;
   // sub_topic = false;
   expand_topics = true;
   show_correct = false;
@@ -234,14 +235,14 @@ export class ProblemsComponent implements OnInit {
   exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
   dump_count = 1;
 
-  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
+  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Topics': { [key: string]: number } } } = examMetadata;
   online_set = ["PA22G3M", "PA21G3M", "PA19G3M", "PA18G3M", "PA16G3M", "PA15G3M", "PA22G4M", "PA21G4M", "PA19G4M", "PA18G4M", "PA16G4M", "PA15G4M", "PA22G4S", "PA21G4S", "PA19G4S", "PA18G4S", "PA16G4S", "PA15G4S", "PA22G5M", "PA21G5M", "PA19G5M", "PA18G5M", "PA16G5M", "PA15G5M", "PA22G6M", "PA21G6M", "PA19G6M", "PA18G6M", "PA16G6M", "PA15G6M", "PA22G7M", "PA21G7M", "PA19G7M", "PA18G7M", "PA16G7M", "PA15G7M", "PA22G8M", "PA21G8M", "PA19G8M", "PA18G8M", "PA16G8M", "PA15G8M", "PA22G8S", "PA21G8S", "PA19G8S", "PA18G8S", "PA16G8S", "PA15G8S", "TX22G3M", "TX21G3M", "TX19G3M", "TX18G3M", "TX17G3M", "TX22G4M", "TX21G4M", "TX19G4M", "TX18G4M", "TX17G4M", "TX22G5M", "TX21G5M", "TX19G5M", "TX18G5M", "TX17G5M", "TX22G5S", "TX21G5S", "TX19G5S", "TX18G5S", "TX22G6M", "TX21G6M", "TX19G6M", "TX18G6M", "TX17G6M", "TX22G7M", "TX21G7M", "TX19G7M", "TX18G7M", "TX17G7M", "TX22G8M", "TX21G8M", "TX19G8M", "TX18G8M", "TX17G8M", "TX22G8S", "TX21G8S", "TX19G8S", "TX18G8S", "TX22G8SS", "TX21G8SS", "TX19G8SS", "TX18G8SS"];
   filtered_set: string[] = this.online_set;
   filtered_exam_num = 0;
   filtered_prob_num = 0;
   generate_message = "";
 
-  problems_sequence: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
+  problems_sequence: number[] = [];
   ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string } } } } } = {};
   random_index = 0
   random_list: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
@@ -324,7 +325,6 @@ export class ProblemsComponent implements OnInit {
   }
 
   toggle_topic(val: string) {
-    console.log(val)
     if (!this.topic_filters.includes(val)) {
       this.topic_filters.push(val)
     }
@@ -336,7 +336,7 @@ export class ProblemsComponent implements OnInit {
         this.topic_filters.pop()
       }
     }
-    console.log(this.topic_filters)
+    this.filter_exams();
   }
 
   toggle_mode() {
@@ -363,6 +363,7 @@ export class ProblemsComponent implements OnInit {
   filter_exams() {
     this.filtered_set = [];
     this.topics = [];
+    this.topics_count = {};
     for (let i = 0; i < this.online_set.length; i++) {
       if ((this.state_filters.includes(this.exam_attribute_dump[this.online_set[i]].State) || this.state_filters.length == 0) && (this.grade_filters.includes(this.exam_attribute_dump[this.online_set[i]].Grade) || this.grade_filters.length == 0) && (this.subject_filters.includes(this.exam_attribute_dump[this.online_set[i]].Subject) || this.subject_filters.length == 0)) {
         this.filtered_set.push(this.online_set[i]);
@@ -372,942 +373,1653 @@ export class ProblemsComponent implements OnInit {
     this.filtered_prob_num = 0;
     for (let i = 0; i < this.filtered_set.length; i++) {
       this.filtered_prob_num += this.exam_attribute_dump[this.filtered_set[i]].NumQuestions;
+      for (const [key, val] of Object.entries(this.exam_attribute_dump[this.filtered_set[i]].Topics)) {
+        if (!this.topics.includes(key)) {
+          this.topics.push(key);
+        }
+        if (!Object.keys(this.topics_count).includes(key)) {
+          this.topics_count[key] = val;
+        }
+        else {
+          this.topics_count[key] += val;
+        }
+      }
+    }
+    for (let topic of this.topic_filters) {
+      if (!this.topics.includes(topic)) {
+        this.toggle_topic(topic);
+      }
+    }
+    if (this.grade_filters.length == 0 && this.subject_filters.length == 0) {
+      this.topics = [];
+      this.topics_count = {};
+      this.topic_filters = []
     }
     if (this.filtered_set.length == 0) {
       this.generate_message = "There are no problems based on your selection.";
-    }
-    else {
-      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 3') || this.grade_filters.length == 0)) {
-        for (let topic of ['Numbers & Operations In Base Ten', 'Numbers & Operations - Fractions', 'Operations & Algebraic Thinking', 'Geometry', 'Measurement & Data']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 4') || this.grade_filters.length == 0)) {
-        for (let topic of ['Numbers & Operations In Base Ten', 'Numbers & Operations - Fractions', 'Operations & Algebraic Thinking', 'Geometry', 'Measurement & Data']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 5') || this.grade_filters.length == 0)) {
-        for (let topic of ['Numbers & Operations In Base Ten', 'Numbers & Operations - Fractions', 'Operations & Algebraic Thinking', 'Geometry', 'Measurement & Data']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 6') || this.grade_filters.length == 0)) {
-        for (let topic of ['The Number System', 'Ratios & Proportional Relationships', 'Expressions & Equations', 'Geometry', 'Statistics & Probability']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 7') || this.grade_filters.length == 0)) {
-        for (let topic of ['The Number System', 'Ratios & Proportional Relationships', 'Expressions & Equations', 'Geometry', 'Statistics & Probability']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 8') || this.grade_filters.length == 0)) {
-        for (let topic of ['The Number System', 'Expressions & Equations', 'Functions', 'Geometry', 'Statistics & Probability']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Science') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 4') || this.grade_filters.length == 0)) {
-        for (let topic of ['The Nature Of Science', 'Biological Sciences', 'Physical Sciences', 'Earth & Space Sciences']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Pennsylvania') || this.state_filters.length == 0) && (this.subject_filters.includes('Science') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 8') || this.grade_filters.length == 0)) {
-        for (let topic of ['The Nature Of Science', 'Biological Sciences', 'Physical Sciences', 'Earth & Space Sciences']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 3') || this.grade_filters.length == 0)) {
-        for (let topic of ['Number & Operations', 'Algebraic Reasoning', 'Geometry & Measurement', 'Data Analysis', 'Personal Financial Literacy']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 4') || this.grade_filters.length == 0)) {
-        for (let topic of ['Number & Operations', 'Algebraic Reasoning', 'Geometry & Measurement', 'Data Analysis', 'Personal Financial Literacy']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 5') || this.grade_filters.length == 0)) {
-        for (let topic of ['Number & Operations', 'Algebraic Reasoning', 'Geometry & Measurement', 'Data Analysis', 'Personal Financial Literacy']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 6') || this.grade_filters.length == 0)) {
-        for (let topic of ['Number & Operations', 'Proportionality', 'Expressions, Equations & Relationships', 'Measurement & Data', 'Personal Financial Literacy']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 7') || this.grade_filters.length == 0)) {
-        for (let topic of ['Number & Operations', 'Proportionality', 'Expressions, Equations & Relationships', 'Measurement & Data', 'Personal Financial Literacy']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Mathematics') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 8') || this.grade_filters.length == 0)) {
-        for (let topic of ['Number & Operations', 'Proportionality', 'Expressions, Equations & Relationships', 'Measurement & Data', 'Personal Financial Literacy', 'Two-Dimensional Shapes']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Science') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 5') || this.grade_filters.length == 0)) {
-        for (let topic of ['Matter & Energy', 'Force, Motion & Energy', 'Earth & Space', 'Organisms & Environments']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Science') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 8') || this.grade_filters.length == 0)) {
-        for (let topic of ['Matter & Energy', 'Force, Motion & Energy', 'Earth & Space', 'Organisms & Environments']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
-      if ((this.state_filters.includes('Texas') || this.state_filters.length == 0) && (this.subject_filters.includes('Social Studies') || this.subject_filters.length == 0) && (this.grade_filters.includes('Grade 8') || this.grade_filters.length == 0)) {
-        for (let topic of ['History', 'Geography', 'Culture', 'Government', 'Citizenship', 'Economics', 'Science, Technology & Society']) {
-          if (!this.topics.includes(topic)) {
-            this.topics.push(topic);
-          }
-        }
-      }
     }
   }
 
   generate_problems() {
     this.filter_exams();
+    this.dump_count = 0;
     if (this.filtered_set.includes('PA22G3M')) {
       for (const [num, value] of Object.entries(this.PA22G3M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA21G3M')) {
       for (const [num, value] of Object.entries(this.PA21G3M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA19G3M')) {
       for (const [num, value] of Object.entries(this.PA19G3M_exam_dump)) {
         if (value.Number <= 17) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA18G3M')) {
       for (const [num, value] of Object.entries(this.PA18G3M_exam_dump)) {
         if (value.Number <= 15) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA16G3M')) {
       for (const [num, value] of Object.entries(this.PA16G3M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA15G3M')) {
       for (const [num, value] of Object.entries(this.PA15G3M_exam_dump)) {
         if (value.Number <= 45) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA22G4M')) {
       for (const [num, value] of Object.entries(this.PA22G4M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA21G4M')) {
       for (const [num, value] of Object.entries(this.PA21G4M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA19G4M')) {
       for (const [num, value] of Object.entries(this.PA19G4M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA18G4M')) {
       for (const [num, value] of Object.entries(this.PA18G4M_exam_dump)) {
         if (value.Number <= 15) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA16G4M')) {
       for (const [num, value] of Object.entries(this.PA16G4M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA15G4M')) {
       for (const [num, value] of Object.entries(this.PA15G4M_exam_dump)) {
         if (value.Number <= 45) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA22G4S')) {
       for (const [num, value] of Object.entries(this.PA22G4S_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA21G4S')) {
       for (const [num, value] of Object.entries(this.PA21G4S_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA19G4S')) {
       for (const [num, value] of Object.entries(this.PA19G4S_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA18G4S')) {
       for (const [num, value] of Object.entries(this.PA18G4S_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA16G4S')) {
       for (const [num, value] of Object.entries(this.PA16G4S_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA15G4S')) {
       for (const [num, value] of Object.entries(this.PA15G4S_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA22G5M')) {
       for (const [num, value] of Object.entries(this.PA22G5M_exam_dump)) {
         if (value.Number <= 15) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA21G5M')) {
       for (const [num, value] of Object.entries(this.PA21G5M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA19G5M')) {
       for (const [num, value] of Object.entries(this.PA19G5M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA18G5M')) {
       for (const [num, value] of Object.entries(this.PA18G5M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA16G5M')) {
       for (const [num, value] of Object.entries(this.PA16G5M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA15G5M')) {
       for (const [num, value] of Object.entries(this.PA15G5M_exam_dump)) {
         if (value.Number <= 45) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA22G6M')) {
       for (const [num, value] of Object.entries(this.PA22G6M_exam_dump)) {
         if (value.Number <= 15) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA21G6M')) {
       for (const [num, value] of Object.entries(this.PA21G6M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA19G6M')) {
       for (const [num, value] of Object.entries(this.PA19G6M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA18G6M')) {
       for (const [num, value] of Object.entries(this.PA18G6M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA16G6M')) {
       for (const [num, value] of Object.entries(this.PA16G6M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA15G6M')) {
       for (const [num, value] of Object.entries(this.PA15G6M_exam_dump)) {
         if (value.Number <= 45) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA22G7M')) {
       for (const [num, value] of Object.entries(this.PA22G7M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA21G7M')) {
       for (const [num, value] of Object.entries(this.PA21G7M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA19G7M')) {
       for (const [num, value] of Object.entries(this.PA19G7M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA18G7M')) {
       for (const [num, value] of Object.entries(this.PA18G7M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA16G7M')) {
       for (const [num, value] of Object.entries(this.PA16G7M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA15G7M')) {
       for (const [num, value] of Object.entries(this.PA15G7M_exam_dump)) {
         if (value.Number <= 45) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA22G8M')) {
       for (const [num, value] of Object.entries(this.PA22G8M_exam_dump)) {
         if (value.Number <= 15) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA21G8M')) {
       for (const [num, value] of Object.entries(this.PA21G8M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA19G8M')) {
       for (const [num, value] of Object.entries(this.PA19G8M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA18G8M')) {
       for (const [num, value] of Object.entries(this.PA18G8M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA16G8M')) {
       for (const [num, value] of Object.entries(this.PA16G8M_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA15G8M')) {
       for (const [num, value] of Object.entries(this.PA15G8M_exam_dump)) {
         if (value.Number <= 45) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA22G8S')) {
       for (const [num, value] of Object.entries(this.PA22G8S_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA21G8S')) {
       for (const [num, value] of Object.entries(this.PA21G8S_exam_dump)) {
         if (value.Number <= 12) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA19G8S')) {
       for (const [num, value] of Object.entries(this.PA19G8S_exam_dump)) {
         if (value.Number <= 12) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA18G8S')) {
       for (const [num, value] of Object.entries(this.PA18G8S_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA16G8S')) {
       for (const [num, value] of Object.entries(this.PA16G8S_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('PA15G8S')) {
       for (const [num, value] of Object.entries(this.PA15G8S_exam_dump)) {
         if (value.Number <= 16) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX22G3M')) {
       for (const [num, value] of Object.entries(this.TX22G3M_exam_dump)) {
         if (value.Number <= 32) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX21G3M')) {
       for (const [num, value] of Object.entries(this.TX21G3M_exam_dump)) {
         if (value.Number <= 32) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX19G3M')) {
       for (const [num, value] of Object.entries(this.TX19G3M_exam_dump)) {
         if (value.Number <= 32) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX18G3M')) {
       for (const [num, value] of Object.entries(this.TX18G3M_exam_dump)) {
         if (value.Number <= 32) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX17G3M')) {
       for (const [num, value] of Object.entries(this.TX17G3M_exam_dump)) {
         if (value.Number <= 32) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX22G4M')) {
       for (const [num, value] of Object.entries(this.TX22G4M_exam_dump)) {
         if (value.Number <= 34) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX21G4M')) {
       for (const [num, value] of Object.entries(this.TX21G4M_exam_dump)) {
         if (value.Number <= 34) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX19G4M')) {
       for (const [num, value] of Object.entries(this.TX19G4M_exam_dump)) {
         if (value.Number <= 34) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX18G4M')) {
       for (const [num, value] of Object.entries(this.TX18G4M_exam_dump)) {
         if (value.Number <= 34) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX17G4M')) {
       for (const [num, value] of Object.entries(this.TX17G4M_exam_dump)) {
         if (value.Number <= 34) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX22G5M')) {
       for (const [num, value] of Object.entries(this.TX22G5M_exam_dump)) {
         if (value.Number <= 36) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX21G5M')) {
       for (const [num, value] of Object.entries(this.TX21G5M_exam_dump)) {
         if (value.Number <= 36) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX19G5M')) {
       for (const [num, value] of Object.entries(this.TX19G5M_exam_dump)) {
         if (value.Number <= 36) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX18G5M')) {
       for (const [num, value] of Object.entries(this.TX18G5M_exam_dump)) {
         if (value.Number <= 36) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX17G5M')) {
       for (const [num, value] of Object.entries(this.TX17G5M_exam_dump)) {
         if (value.Number <= 36) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX22G5S')) {
       for (const [num, value] of Object.entries(this.TX22G5S_exam_dump)) {
         if (value.Number <= 36) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX21G5S')) {
       for (const [num, value] of Object.entries(this.TX21G5S_exam_dump)) {
         if (value.Number <= 36) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX19G5S')) {
       for (const [num, value] of Object.entries(this.TX19G5S_exam_dump)) {
         if (value.Number <= 36) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX18G5S')) {
       for (const [num, value] of Object.entries(this.TX18G5S_exam_dump)) {
         if (value.Number <= 36) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX22G6M')) {
       for (const [num, value] of Object.entries(this.TX22G6M_exam_dump)) {
         if (value.Number <= 38) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX21G6M')) {
       for (const [num, value] of Object.entries(this.TX21G6M_exam_dump)) {
         if (value.Number <= 38) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX19G6M')) {
       for (const [num, value] of Object.entries(this.TX19G6M_exam_dump)) {
         if (value.Number <= 38) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX18G6M')) {
       for (const [num, value] of Object.entries(this.TX18G6M_exam_dump)) {
         if (value.Number <= 38) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX17G6M')) {
       for (const [num, value] of Object.entries(this.TX17G6M_exam_dump)) {
         if (value.Number <= 38) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX22G7M')) {
       for (const [num, value] of Object.entries(this.TX22G7M_exam_dump)) {
         if (value.Number <= 40) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX21G7M')) {
       for (const [num, value] of Object.entries(this.TX21G7M_exam_dump)) {
         if (value.Number <= 40) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX19G7M')) {
       for (const [num, value] of Object.entries(this.TX19G7M_exam_dump)) {
         if (value.Number <= 40) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX18G7M')) {
       for (const [num, value] of Object.entries(this.TX18G7M_exam_dump)) {
         if (value.Number <= 40) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX17G7M')) {
       for (const [num, value] of Object.entries(this.TX17G7M_exam_dump)) {
         if (value.Number <= 40) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX22G8M')) {
       for (const [num, value] of Object.entries(this.TX22G8M_exam_dump)) {
         if (value.Number <= 42) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX21G8M')) {
       for (const [num, value] of Object.entries(this.TX21G8M_exam_dump)) {
         if (value.Number <= 42) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX19G8M')) {
       for (const [num, value] of Object.entries(this.TX19G8M_exam_dump)) {
         if (value.Number <= 42) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX18G8M')) {
       for (const [num, value] of Object.entries(this.TX18G8M_exam_dump)) {
         if (value.Number <= 42) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX17G8M')) {
       for (const [num, value] of Object.entries(this.TX17G8M_exam_dump)) {
         if (value.Number <= 42) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX22G8S')) {
       for (const [num, value] of Object.entries(this.TX22G8S_exam_dump)) {
         if (value.Number <= 42) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX21G8S')) {
       for (const [num, value] of Object.entries(this.TX21G8S_exam_dump)) {
         if (value.Number <= 42) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX19G8S')) {
       for (const [num, value] of Object.entries(this.TX19G8S_exam_dump)) {
         if (value.Number <= 42) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX18G8S')) {
       for (const [num, value] of Object.entries(this.TX18G8S_exam_dump)) {
         if (value.Number <= 42) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX22G8SS')) {
       for (const [num, value] of Object.entries(this.TX22G8SS_exam_dump)) {
         if (value.Number <= 44) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX21G8SS')) {
       for (const [num, value] of Object.entries(this.TX21G8SS_exam_dump)) {
         if (value.Number <= 44) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX19G8SS')) {
       for (const [num, value] of Object.entries(this.TX19G8SS_exam_dump)) {
         if (value.Number <= 44) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
     if (this.filtered_set.includes('TX18G8SS')) {
       for (const [num, value] of Object.entries(this.TX18G8SS_exam_dump)) {
         if (value.Number <= 44) {
-          // this.exam_dump[this.dump_count] = value;
-          this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+              }
+            }
+          }
         }
       }
     }
@@ -1319,14 +2031,19 @@ export class ProblemsComponent implements OnInit {
   }
 
   randomize_problems(total: number) {
-    this.problems_sequence = Array.from({ length: Object.keys(this.ordered_dump).length }, (_, i) => i + 1);
+    console.log(Object.keys(this.ordered_dump).length);
+    console.log(this.ordered_dump);
+    this.problems_sequence = Array.from({ length: Object.keys(this.ordered_dump).length }, (_, i) => i);
     this.random_list = []
-    for (let i = 1; i <= this.exam_length; i++) {
+    for (let i = 1; i <= total; i++) {
       this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
       this.random_list.push(this.problems_sequence[this.random_index]);
       this.exam_dump[i] = this.ordered_dump[this.problems_sequence[this.random_index]];
       this.problems_sequence.splice(this.random_index, 1);
     }
+    console.log(this.random_list);
+    console.log(Object.keys(this.exam_dump).length);
+    console.log(this.exam_dump);
     for (const [num, val] of Object.entries(this.exam_dump)) {
       for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
         if (ch == 'KEY') {
@@ -1681,6 +2398,7 @@ export class ProblemsComponent implements OnInit {
   resetExam() {
     this.expand_filters = true;
     this.exam_dump = {};
+    this.ordered_dump = {};
     this.exam_key = [];
     this.attempt_path = [];
     this.exam_submission = {};
@@ -1688,6 +2406,7 @@ export class ProblemsComponent implements OnInit {
     this.wrong_submission_list = [];
     this.topic_breakdown = {};
     this.problem_number = 0;
+    // this.filter_exams();
   }
 
   expandTopics() {

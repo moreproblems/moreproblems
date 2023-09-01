@@ -36,7 +36,7 @@ export class PA15G4SKeyComponent implements OnInit {
     expand_topic = false;
 
     key = 'PA15G4S'
-    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number } } = examMetadata;
+    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Topics': { [key: string]: number } } } = examMetadata;
 
     exam_state = this.exam_attribute_dump[this.key].State;
     exam_grade = this.exam_attribute_dump[this.key].Grade;
