@@ -746,7 +746,6 @@
   </div>
   <br *ngIf="!expand_filters" />
   <div *ngIf="!expand_filters" class="content-menu" role="menu" style="margin-bottom: 0; align-items: center">
-    <br *ngIf="selected_subtopic != ''" />
     <section *ngIf="selected_subtopic != ''" style="width: 100%; align-items: left">
       <div (click)="selected_subtopic=''" class="card card-small"
         style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -755,6 +754,7 @@
         <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back to all problems </a>
       </div>
     </section>
+    <br *ngIf="selected_subtopic != ''" />
     <div *ngIf="selected_subtopic != ''" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
       #subtopicCard>
