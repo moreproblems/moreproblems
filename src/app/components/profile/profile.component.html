@@ -493,7 +493,7 @@
     style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
     <div class="content-menu" role="menu" style="margin-bottom: 0px; text-align: center">
         <br />
-        <section *ngIf="selected_exam != '' && this.authService.userData.role == 'Student'"
+        <section *ngIf="selected_exam != '' && selected_subtopic == '' && this.authService.userData.role == 'Student'"
             style="width: 100%; align-items: left">
             <div (click)="selected_exam=''" class="card card-small"
                 style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -502,7 +502,7 @@
                 <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back to Profile </a>
             </div>
         </section>
-        <section *ngIf="selected_exam != '' && this.authService.userData.role != 'Student'"
+        <section *ngIf="selected_exam != '' && selected_subtopic == '' && this.authService.userData.role != 'Student'"
             style="width: 100%; align-items: left">
             <div (click)="selected_exam=''" class="card card-small"
                 style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -511,8 +511,163 @@
                 <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back to Student </a>
             </div>
         </section>
-        <br *ngIf="selected_exam != ''" />
-        <div *ngIf="selected_exam != ''" class="card card-large"
+        <section *ngIf="selected_subtopic != ''" style="width: 100%; align-items: left">
+            <div (click)="selected_subtopic=''" class="card card-small"
+                style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+                <img src="./assets/icons/caret.png"
+                    style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back to all problems </a>
+            </div>
+        </section>
+        <br *ngIf="selected_exam != '' || selected_subtopic != ''" />
+        <div *ngIf="selected_subtopic != ''" class="card card-large"
+            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            #subtopicCard>
+            <br />
+            <div class="content" style="margin: auto; align-items: center">
+                <h2 *ngIf="screenWidth > mobileWidth"
+                    style="padding-top: 20px; font-weight: 400; font-size: 24.5px; line-height: 30px">
+                    <b>{{selected_topic}}:</b> {{selected_subtopic}} </h2>
+                <h2 *ngIf="screenWidth <= mobileWidth"
+                    style="padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px">
+                    <b>{{selected_topic}}:</b> {{selected_subtopic}} </h2>
+                <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px">
+                    <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a>
+                </h3>
+                <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px">
+                    <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a>
+                </h3>
+                <br />
+                <section style="height: auto; width: 100%; display: flex; justify-content: center">
+                    <div *ngFor="let prob of subtopic_search_dump | keyvalue"
+                        style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
+                        <div *ngIf="subtopic_problem_number == +prob.key">
+                            <label *ngFor="let num of prob.value.SubTopics | keyvalue"
+                                (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
+                                class="switch"
+                                style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: auto; padding: 5px">
+                                <button class="topic-button" style="width: 100%; font-size: 16px; min-width: 150px">
+                                    <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </button>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                <br />
+                <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+                    <div *ngIf="subtopic_problem_number == +prob.key">
+                        <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
+                            <h3 *ngIf="!block.endsWith('.jpg')"> {{block}} </h3>
+                            <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <input type="hidden" #selection>
+                <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+                    <div *ngIf="subtopic_problem_number == +prob.key">
+                        <div *ngIf="prob.value.Type == 'FR'">
+                            <div class="card card-small"
+                                style="min-height: 50px; width: 275px; max-height: 100px; padding: 10px; margin: auto">
+                                <input
+                                    style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                                    inputmode="numeric" #inputFRST />
+                                <button class="grade-button"
+                                    (click)="attempt_fr_st_problem(this.inputFRST.value); scroll_bottom()"
+                                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                                    <b> Submit </b> </button>
+                            </div>
+                        </div>
+                        <div *ngIf="prob.value.Type == 'MC'">
+                            <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                                (click)="selection.value = choice.key; attempt_mc_st_problem(choice.key); scroll_bottom()"
+                                style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                                <label class="switch" style="padding: 0 10px">
+                                    <input type="checkbox" value="{{choice.key}}">
+                                    <button *ngIf="subtopic_problem_selection==choice.key" class="toggle-button-on"> <b>
+                                            {{choice.key}} </b>
+                                    </button>
+                                    <button *ngIf="subtopic_problem_selection!=choice.key" class="toggle-button-off">
+                                        <b> {{choice.key}} </b>
+                                    </button>
+                                </label>
+                                <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                                    style="display: block; margin: 0px 20px 0px 20px; margin: auto; white-space: pre-wrap">
+                                    {{choice.value.Choice}}
+                                </h3>
+                                <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+                    <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts > 0"
+                        class="card highlight-card card-small"
+                        style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+                        <div *ngIf="prob.value.Type == 'MC'">
+                            <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
+                                <h3 *ngIf="choice.key == selection.value"
+                                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                                    <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
+                                    <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation}}
+                                </h3>
+                                <br
+                                    *ngIf="choice.key == selection.value && subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                                <br
+                                    *ngIf="choice.key == selection.value && subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                                <button
+                                    *ngIf="choice.key == selection.value && subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth"
+                                    class="grade-button" (click)="next_problem_st(); scroll_top()"
+                                    style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                                    <b> Next Problem </b>
+                                </button>
+                            </div>
+                        </div>
+                        <div *ngIf="prob.value.Type == 'FR'">
+                            <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
+                                <h3 *ngIf="subtopic_attempt_response.startsWith('Correct')"
+                                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                                    <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
+                                    <!-- wrong data format, extra KEY -->
+                                    <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation}}
+                                </h3>
+                                <br
+                                    *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                                <br
+                                    *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                                <button
+                                    *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth"
+                                    class="grade-button" (click)="next_problem_st(); scroll_top()"
+                                    style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                                    <b> Next Problem </b>
+                                </button>
+                                <h3 *ngIf="!subtopic_attempt_response.startsWith('Correct')"
+                                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                                    <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
+                                    <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was
+                                    not right.
+                                </h3>
+                            </div>
+                        </div>
+                        <button *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth > mobileWidth"
+                            class="grade-button" (click)="next_problem_st(); scroll_top()"
+                            style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                            <b> Next Problem </b>
+                        </button>
+                    </div>
+                    <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts == 0"
+                        class="card highlight-card card-small"
+                        style="height: auto; min-height: 100px; max-width: 90%; padding-top: 10px; margin: auto; align-items: center; display: inline-flex; background-color: transparent">
+                        <button class="grade-button" (click)="next_problem_st(); scroll_top()"
+                            style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                            <b> Skip Problem </b>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="selected_exam != '' && selected_subtopic == ''" class="card card-large"
             style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
             <br />
             <div class="card card-medium"
@@ -531,39 +686,40 @@
             </div>
             <br />
             <div style="overflow: auto">
-                <table *ngIf="!this.expand_subtopics"
+                <table *ngIf="!this.expand_topics"
                     style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
                     #topicsTableS>
                     <thead>
                         <tr>
-                            <th colspan="3" style="font-size: 18px"> Exam Results by Topics </th>
-                            <th colspan="2">
+                            <th colspan="2" style="font-size: 18px"> Topic Results </th>
+                            <th colspan="1.5">
                                 <label class="switch"
                                     style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
                                     <input type="checkbox">
-                                    <button *ngIf="!this.expand_subtopics" (click)="expandSubTopics()"
-                                        class="topic-button" style="width: 100%; font-size: 14px">
+                                    <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
+                                        style="width: 100%; font-size: 14px">
                                         <b>Show Subtopics</b> </button>
-                                    <button *ngIf="this.expand_subtopics" (click)="expandSubTopics()"
-                                        class="topic-button" style="width: 100%; font-size: 14px">
+                                    <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
+                                        style="width: 100%; font-size: 14px">
                                         Hide Subtopics </button>
                                 </label>
                             </th>
                         </tr>
                         <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                            <th> Topics </th>
-                            <th> Percent Correct </th>
-                            <th> Missed Problems </th>
-                            <th> Total Problems </th>
-                            <th> Average Time </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Topics </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Percent Correct </th>
+                            <th *ngIf="this.screenWidth > this.mobileWidth"
+                                style="padding-right: 5px; padding-left: 5px"> Missed Problems </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Average Time </th>
                         </tr>
                     </thead>
                     <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
                         <tr style="background-color: lightgrey">
                             <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
+                            <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}%
+                                    ({{topic.value.Correct}}/{{topic.value.Total}}) </b> </td>
+                            <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"> <b>
+                                    {{topic.value.Incorrect}} </b> </td>
                             <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
                         </tr>
                     </tbody>
@@ -571,50 +727,50 @@
             </div>
             <br />
             <div style="overflow: auto">
-                <table *ngIf="this.expand_subtopics"
+                <table *ngIf="this.expand_topics"
                     style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
                     #topicsTableL>
                     <thead>
                         <tr>
-                            <th colspan="3" style="font-size: 18px"> Exam Results by Topics & Skill Tested </th>
-                            <th colspan="2">
+                            <th colspan="2" style="font-size: 18px"> Subtopic Results </th>
+                            <th colspan="1.5">
                                 <label class="switch"
                                     style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
                                     <input type="checkbox">
-                                    <button *ngIf="!this.expand_subtopics" (click)="expandSubTopics()"
-                                        class="topic-button" style="width: 100%; font-size: 14px">
+                                    <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
+                                        style="width: 100%; font-size: 14px">
                                         <b>Show Subtopics</b> </button>
-                                    <button *ngIf="this.expand_subtopics" (click)="expandSubTopics()"
-                                        class="topic-button" style="width: 100%; font-size: 14px">
+                                    <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
+                                        style="width: 100%; font-size: 14px">
                                         Hide Subtopics </button>
                                 </label>
                             </th>
                         </tr>
                         <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                            <th> Topics & Skill Tested </th>
-                            <th> Percent Correct </th>
-                            <th> Missed Problems </th>
-                            <th> Total Problems </th>
-                            <th> Average Time </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Topics & Subtopics </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Percent Correct </th>
+                            <th *ngIf="this.screenWidth > this.mobileWidth"
+                                style="padding-right: 5px; padding-left: 5px"> Missed Problems </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Average Time </th>
                         </tr>
                     </thead>
                     <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
                         <tr style="background-color: lightgrey">
                             <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
+                            <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}%
+                                    ({{topic.value.Correct}}/{{topic.value.Total}}) </b> </td>
+                            <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"> <b>
+                                    {{topic.value.Incorrect}} </b> </td>
                             <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
                         </tr>
                         <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
-                            <td
+                            <td colspan="2"
                                 style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
-                                <i>
-                                    {{subtopic.key}} </i>
+                                <a (click)="searchSubTopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
+                                        {{subtopic.key}} </i> </a>
                             </td>
-                            <td style="border-top: 1px solid #ddd"> </td>
-                            <td style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{subtopic.value.Total}} </td>
+                            <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"
+                                style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
                             <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}} </td>
                         </tr>
                     </tbody>
@@ -627,7 +783,7 @@
                     #resultsTableI>
                     <thead>
                         <tr>
-                            <th colspan="6" style="font-size: 18px"> Submission Details on Incorrect Problems </th>
+                            <th colspan="4.5" style="font-size: 18px"> Incorrect Submission Results </th>
                             <th colspan="2">
                                 <label class="switch"
                                     style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
@@ -642,28 +798,31 @@
                             </th>
                         </tr>
                         <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
-                            <th> Problem Number </th>
-                            <th> Problem Topics </th>
-                            <th> Correct Response </th>
-                            <th> Student Response </th>
-                            <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
-                            <th> Problem Time </th>
-                            <th> Problem Attempts </th>
-                            <th> Attempt Path </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> # </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Topics </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Key </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Submission </th>
+                            <th *ngIf="this.screenWidth > this.mobileWidth"
+                                style="padding-right: 5px; padding-left: 5px"> Submission Explanation </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Time </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Attempts </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let sub of wrong_submission_list">
                             <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                            <td style="border-top: 1px solid #ddd"> {{sub.Topics}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
+                            <td style="border-top: 1px solid #ddd">
+                                <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
+                            </td>
+                            <td style="border-top: 1px solid #ddd"> {{(sub.Correct == '✅') ? sub.Choice : sub.Correct}}
+                            </td>
+                            <td style="border-top: 1px solid #ddd"> <b> {{(sub.Correct == '✅') ? sub.Correct :
+                                    sub.Choice}} </b> </td>
                             <td *ngIf="this.screenWidth > this.mobileWidth"
                                 style="border-top: 1px solid #ddd; max-width: 750px">
                                 {{sub.Rationale}} </td>
                             <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
+                            <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} ({{sub.Path}}) </td>
                         </tr>
                     </tbody>
                 </table>
@@ -674,7 +833,7 @@
                     #resultsTableA>
                     <thead>
                         <tr>
-                            <th colspan="6" style="font-size: 18px"> Submission Details on All Problems </th>
+                            <th colspan="4.5" style="font-size: 18px"> All Submission Results </th>
                             <th colspan="2">
                                 <label class="switch"
                                     style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
@@ -689,28 +848,31 @@
                             </th>
                         </tr>
                         <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
-                            <th> Problem Number </th>
-                            <th> Problem Topics </th>
-                            <th> Correct Response </th>
-                            <th> Student Response </th>
-                            <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
-                            <th> Problem Time </th>
-                            <th> Problem Attempts </th>
-                            <th> Attempt Path </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> # </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Topics </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Key </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Submission </th>
+                            <th *ngIf="this.screenWidth > this.mobileWidth"
+                                style="padding-right: 5px; padding-left: 5px"> Submission Explanation </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Time </th>
+                            <th style="padding-right: 5px; padding-left: 5px"> Attempts </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let sub of exam_submission_list">
                             <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                            <td style="border-top: 1px solid #ddd"> {{sub.Topics}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
+                            <td style="border-top: 1px solid #ddd">
+                                <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
+                            </td>
+                            <td style="border-top: 1px solid #ddd"> {{(sub.Correct == '✅') ? sub.Choice : sub.Correct}}
+                            </td>
+                            <td style="border-top: 1px solid #ddd"> <b> {{(sub.Correct == '✅') ? sub.Correct :
+                                    sub.Choice}} </b> </td>
                             <td *ngIf="this.screenWidth > this.mobileWidth"
                                 style="border-top: 1px solid #ddd; max-width: 750px">
                                 {{sub.Rationale}} </td>
                             <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
+                            <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} ({{sub.Path}}) </td>
                         </tr>
                     </tbody>
                 </table>
@@ -782,7 +944,7 @@
                                 #subjectTableS>
                                 <thead>
                                     <tr>
-                                        <th colspan="3" style="font-size: 18px"> Exam Results by Subject </th>
+                                        <th colspan="3" style="font-size: 18px"> Subject Results </th>
                                         <th colspan="2">
                                             <label class="switch"
                                                 style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
@@ -797,7 +959,7 @@
                                         </th>
                                     </tr>
                                     <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                                        <th> Subject </th>
+                                        <th> Subjects </th>
                                         <th> Total Problems </th>
                                         <th> Missed Problems </th>
                                         <th> Percent Correct </th>
@@ -830,7 +992,7 @@
                                 #subjectTableL>
                                 <thead>
                                     <tr>
-                                        <th colspan="3" style="font-size: 18px"> Exam Results by Subject & Topics </th>
+                                        <th colspan="3" style="font-size: 18px"> Topic Results </th>
                                         <th colspan="2">
                                             <label class="switch"
                                                 style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
@@ -845,8 +1007,7 @@
                                         </th>
                                     </tr>
                                     <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                                        <th> Subject </th>
-                                        <th> Topics </th>
+                                        <th> Subjects & Topics </th>
                                         <th> Total Problems </th>
                                         <th> Missed Problems </th>
                                         <th> Percent Correct </th>
@@ -858,7 +1019,6 @@
                                     <tr style="background-color: lightgrey">
                                         <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Grade + ": " +
                                                 subject.value.Subject}} </b> </td>
-                                        <td style="border-top: 1px solid #ddd"> </td>
                                         <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b>
                                         </td>
                                         <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}}
@@ -871,7 +1031,6 @@
                                         </td>
                                     </tr>
                                     <tr *ngFor="let topic of subject.value.Break.Tops | keyvalue">
-                                        <td style="border-top: 1px solid #ddd"> </td>
                                         <td
                                             style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
                                             <i>

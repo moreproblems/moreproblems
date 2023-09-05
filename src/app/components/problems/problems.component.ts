@@ -324,7 +324,7 @@ export class ProblemsComponent implements OnInit {
     "TX21G8SS": this.TX21G8SS_exam_dump,
     "TX19G8SS": this.TX19G8SS_exam_dump,
     "TX18G8SS": this.TX18G8SS_exam_dump,
-  }; 
+  };
   dump_count = 0;
 
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Topics': { [key: string]: number } } } = examMetadata;
@@ -337,7 +337,7 @@ export class ProblemsComponent implements OnInit {
   problems_sequence: number[] = [];
   ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
   random_index = 0
-  random_list: number[] = Array.from({ length: this.exam_length }, (_, i) => i + 1);
+  random_list: number[] = [];
 
   exam_key: string[] = [];
 
@@ -2133,8 +2133,6 @@ export class ProblemsComponent implements OnInit {
   }
 
   randomize_problems(total: number) {
-    console.log(Object.keys(this.ordered_dump).length);
-    console.log(this.ordered_dump);
     this.problems_sequence = Array.from({ length: Object.keys(this.ordered_dump).length }, (_, i) => i);
     this.random_list = []
     for (let i = 1; i <= total; i++) {
@@ -2143,9 +2141,7 @@ export class ProblemsComponent implements OnInit {
       this.exam_dump[i] = this.ordered_dump[this.problems_sequence[this.random_index]];
       this.problems_sequence.splice(this.random_index, 1);
     }
-    console.log(this.random_list);
-    console.log(Object.keys(this.exam_dump).length);
-    console.log(this.exam_dump);
+    this.exam_key = [];
     for (const [num, val] of Object.entries(this.exam_dump)) {
       for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
         if (ch == 'KEY') {
@@ -2196,7 +2192,7 @@ export class ProblemsComponent implements OnInit {
               this.attempt_explanation = key.Key.Rationale;
               if (key.Key.Correct == true) {
                 if (this.mode == 'explain') {
-                  this.confetti_light();
+                  this.confetti_light(this.problem_attempts);
                 }
                 if (this.problem_attempts == 1) {
                   this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
@@ -2225,7 +2221,7 @@ export class ProblemsComponent implements OnInit {
             if (choice == ch) {
               this.subtopic_attempt_explanation = key.Key.Rationale;
               if (key.Key.Correct == true) {
-                this.confetti_light();
+                this.confetti_light(this.subtopic_problem_attempts);
                 if (this.subtopic_problem_attempts == 1) {
                   this.subtopic_attempt_response = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts.toString() + ' try.';
                 }
@@ -2252,7 +2248,7 @@ export class ProblemsComponent implements OnInit {
         if (this.problem_number == +num) {
           for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
             if (ch == key.Choice) {
-              this.confetti_light();
+              this.confetti_light(this.problem_attempts);
               this.attempt_explanation = key.Key.Rationale;
               if (this.problem_attempts == 1) {
                 this.attempt_response = 'Correct! You got the right answer in ' + this.problem_attempts.toString() + ' try.';
@@ -2278,9 +2274,9 @@ export class ProblemsComponent implements OnInit {
         if (this.subtopic_problem_number == +num) {
           for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
             if (ch == key.Choice) {
-              this.confetti_light();
+              this.confetti_light(this.subtopic_problem_attempts);
               this.subtopic_attempt_explanation = key.Key.Rationale;
-              if (this.problem_attempts == 1) {
+              if (this.subtopic_problem_attempts == 1) {
                 this.subtopic_attempt_response = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts.toString() + ' try.';
               }
               else {
@@ -2547,9 +2543,9 @@ export class ProblemsComponent implements OnInit {
     }
   }
 
-  confetti_light() {
+  confetti_light(attempts: number) {
     confettiHandler({
-      particleCount: Math.round(250 / this.problem_attempts),
+      particleCount: Math.round(250 / attempts),
       startVelocity: 125,
       scalar: 1.15,
       ticks: 150,

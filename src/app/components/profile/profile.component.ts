@@ -5,7 +5,104 @@ import { WindowService } from '../../shared/services/window.service';
 import { getAuth, RecaptchaVerifier } from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-import * as examMetadata from "src/assets/problems/exams.json";
+import * as examMetadata from "src/assets/problems/exams.json"; import * as PA22G3MProblems from "src/assets/problems/PA22G3M/PA22G3M-problems.json";
+import * as PA21G3MProblems from "src/assets/problems/PA21G3M/PA21G3M-problems.json";
+import * as PA19G3MProblems from "src/assets/problems/PA19G3M/PA19G3M-problems.json";
+import * as PA18G3MProblems from "src/assets/problems/PA18G3M/PA18G3M-problems.json";
+import * as PA16G3MProblems from "src/assets/problems/PA16G3M/PA16G3M-problems.json";
+import * as PA15G3MProblems from "src/assets/problems/PA15G3M/PA15G3M-problems.json";
+import * as PA22G4MProblems from "src/assets/problems/PA22G4M/PA22G4M-problems.json";
+import * as PA21G4MProblems from "src/assets/problems/PA21G4M/PA21G4M-problems.json";
+import * as PA19G4MProblems from "src/assets/problems/PA19G4M/PA19G4M-problems.json";
+import * as PA18G4MProblems from "src/assets/problems/PA18G4M/PA18G4M-problems.json";
+import * as PA16G4MProblems from "src/assets/problems/PA16G4M/PA16G4M-problems.json";
+import * as PA15G4MProblems from "src/assets/problems/PA15G4M/PA15G4M-problems.json";
+import * as PA22G4SProblems from "src/assets/problems/PA22G4S/PA22G4S-problems.json";
+import * as PA21G4SProblems from "src/assets/problems/PA21G4S/PA21G4S-problems.json";
+import * as PA19G4SProblems from "src/assets/problems/PA19G4S/PA19G4S-problems.json";
+import * as PA18G4SProblems from "src/assets/problems/PA18G4S/PA18G4S-problems.json";
+import * as PA16G4SProblems from "src/assets/problems/PA16G4S/PA16G4S-problems.json";
+import * as PA15G4SProblems from "src/assets/problems/PA15G4S/PA15G4S-problems.json";
+import * as PA22G5MProblems from "src/assets/problems/PA22G5M/PA22G5M-problems.json";
+import * as PA21G5MProblems from "src/assets/problems/PA21G5M/PA21G5M-problems.json";
+import * as PA19G5MProblems from "src/assets/problems/PA19G5M/PA19G5M-problems.json";
+import * as PA18G5MProblems from "src/assets/problems/PA18G5M/PA18G5M-problems.json";
+import * as PA16G5MProblems from "src/assets/problems/PA16G5M/PA16G5M-problems.json";
+import * as PA15G5MProblems from "src/assets/problems/PA15G5M/PA15G5M-problems.json";
+import * as PA22G6MProblems from "src/assets/problems/PA22G6M/PA22G6M-problems.json";
+import * as PA21G6MProblems from "src/assets/problems/PA21G6M/PA21G6M-problems.json";
+import * as PA19G6MProblems from "src/assets/problems/PA19G6M/PA19G6M-problems.json";
+import * as PA18G6MProblems from "src/assets/problems/PA18G6M/PA18G6M-problems.json";
+import * as PA16G6MProblems from "src/assets/problems/PA16G6M/PA16G6M-problems.json";
+import * as PA15G6MProblems from "src/assets/problems/PA15G6M/PA15G6M-problems.json";
+import * as PA22G7MProblems from "src/assets/problems/PA22G7M/PA22G7M-problems.json";
+import * as PA21G7MProblems from "src/assets/problems/PA21G7M/PA21G7M-problems.json";
+import * as PA19G7MProblems from "src/assets/problems/PA19G7M/PA19G7M-problems.json";
+import * as PA18G7MProblems from "src/assets/problems/PA18G7M/PA18G7M-problems.json";
+import * as PA16G7MProblems from "src/assets/problems/PA16G7M/PA16G7M-problems.json";
+import * as PA15G7MProblems from "src/assets/problems/PA15G7M/PA15G7M-problems.json";
+import * as PA22G8MProblems from "src/assets/problems/PA22G8M/PA22G8M-problems.json";
+import * as PA21G8MProblems from "src/assets/problems/PA21G8M/PA21G8M-problems.json";
+import * as PA19G8MProblems from "src/assets/problems/PA19G8M/PA19G8M-problems.json";
+import * as PA18G8MProblems from "src/assets/problems/PA18G8M/PA18G8M-problems.json";
+import * as PA16G8MProblems from "src/assets/problems/PA16G8M/PA16G8M-problems.json";
+import * as PA15G8MProblems from "src/assets/problems/PA15G8M/PA15G8M-problems.json";
+import * as PA22G8SProblems from "src/assets/problems/PA22G8S/PA22G8S-problems.json";
+import * as PA21G8SProblems from "src/assets/problems/PA21G8S/PA21G8S-problems.json";
+import * as PA19G8SProblems from "src/assets/problems/PA19G8S/PA19G8S-problems.json";
+import * as PA18G8SProblems from "src/assets/problems/PA18G8S/PA18G8S-problems.json";
+import * as PA16G8SProblems from "src/assets/problems/PA16G8S/PA16G8S-problems.json";
+import * as PA15G8SProblems from "src/assets/problems/PA15G8S/PA15G8S-problems.json";
+import * as TX22G3MProblems from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
+import * as TX21G3MProblems from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
+import * as TX19G3MProblems from "src/assets/problems/TX19G3M/TX19G3M-problems.json";
+import * as TX18G3MProblems from "src/assets/problems/TX18G3M/TX18G3M-problems.json";
+import * as TX17G3MProblems from "src/assets/problems/TX17G3M/TX17G3M-problems.json";
+import * as TX22G4MProblems from "src/assets/problems/TX22G4M/TX22G4M-problems.json";
+import * as TX21G4MProblems from "src/assets/problems/TX21G4M/TX21G4M-problems.json";
+import * as TX19G4MProblems from "src/assets/problems/TX19G4M/TX19G4M-problems.json";
+import * as TX18G4MProblems from "src/assets/problems/TX18G4M/TX18G4M-problems.json";
+import * as TX17G4MProblems from "src/assets/problems/TX17G4M/TX17G4M-problems.json";
+import * as TX22G5MProblems from "src/assets/problems/TX22G5M/TX22G5M-problems.json";
+import * as TX21G5MProblems from "src/assets/problems/TX21G5M/TX21G5M-problems.json";
+import * as TX19G5MProblems from "src/assets/problems/TX19G5M/TX19G5M-problems.json";
+import * as TX18G5MProblems from "src/assets/problems/TX18G5M/TX18G5M-problems.json";
+import * as TX17G5MProblems from "src/assets/problems/TX17G5M/TX17G5M-problems.json";
+import * as TX22G5SProblems from "src/assets/problems/TX22G5S/TX22G5S-problems.json";
+import * as TX21G5SProblems from "src/assets/problems/TX21G5S/TX21G5S-problems.json";
+import * as TX19G5SProblems from "src/assets/problems/TX19G5S/TX19G5S-problems.json";
+import * as TX18G5SProblems from "src/assets/problems/TX18G5S/TX18G5S-problems.json";
+import * as TX22G6MProblems from "src/assets/problems/TX22G6M/TX22G6M-problems.json";
+import * as TX21G6MProblems from "src/assets/problems/TX21G6M/TX21G6M-problems.json";
+import * as TX19G6MProblems from "src/assets/problems/TX19G6M/TX19G6M-problems.json";
+import * as TX18G6MProblems from "src/assets/problems/TX18G6M/TX18G6M-problems.json";
+import * as TX17G6MProblems from "src/assets/problems/TX17G6M/TX17G6M-problems.json";
+import * as TX22G7MProblems from "src/assets/problems/TX22G7M/TX22G7M-problems.json";
+import * as TX21G7MProblems from "src/assets/problems/TX21G7M/TX21G7M-problems.json";
+import * as TX19G7MProblems from "src/assets/problems/TX19G7M/TX19G7M-problems.json";
+import * as TX18G7MProblems from "src/assets/problems/TX18G7M/TX18G7M-problems.json";
+import * as TX17G7MProblems from "src/assets/problems/TX17G7M/TX17G7M-problems.json";
+import * as TX22G8MProblems from "src/assets/problems/TX22G8M/TX22G8M-problems.json";
+import * as TX21G8MProblems from "src/assets/problems/TX21G8M/TX21G8M-problems.json";
+import * as TX19G8MProblems from "src/assets/problems/TX19G8M/TX19G8M-problems.json";
+import * as TX18G8MProblems from "src/assets/problems/TX18G8M/TX18G8M-problems.json";
+import * as TX17G8MProblems from "src/assets/problems/TX17G8M/TX17G8M-problems.json";
+import * as TX22G8SProblems from "src/assets/problems/TX22G8S/TX22G8S-problems.json";
+import * as TX21G8SProblems from "src/assets/problems/TX21G8S/TX21G8S-problems.json";
+import * as TX19G8SProblems from "src/assets/problems/TX19G8S/TX19G8S-problems.json";
+import * as TX18G8SProblems from "src/assets/problems/TX19G8S/TX19G8S-problems.json";
+import * as TX22G8SSProblems from "src/assets/problems/TX22G8SS/TX22G8SS-problems.json";
+import * as TX21G8SSProblems from "src/assets/problems/TX21G8SS/TX21G8SS-problems.json";
+import * as TX19G8SSProblems from "src/assets/problems/TX19G8SS/TX19G8SS-problems.json";
+import * as TX18G8SSProblems from "src/assets/problems/TX18G8SS/TX18G8SS-problems.json";
+
+const confetti = require('canvas-confetti');
+
+const confettiCanvas = document.getElementById('confetticanvas');
+const confettiHandler = confetti.create(confettiCanvas, {
+  resize: true,
+  useWorker: true,
+});
 
 const delay = async (ms: number) => new Promise(res => setTimeout(res, ms));
 
@@ -49,7 +146,7 @@ export class ProfileComponent implements OnInit {
   performance_level = "";
   time_duration = "";
   grade_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Tops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } } } = {};
-  subject_breakdown: { [key: string]: { 'Grade': string, 'Subject': string, 'Break': {'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Tops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } } = {};
+  subject_breakdown: { [key: string]: { 'Grade': string, 'Subject': string, 'Break': { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Tops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } } = {};
   topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
 
 
@@ -81,7 +178,190 @@ export class ProfileComponent implements OnInit {
 
   avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
 
-  exam_names: {[key: string]: string} = {
+  PA22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G3MProblems;
+  PA21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G3MProblems;
+  PA19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G3MProblems;
+  PA18G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G3MProblems;
+  PA16G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G3MProblems;
+  PA15G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G3MProblems;
+  PA22G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G4MProblems;
+  PA21G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G4MProblems;
+  PA19G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G4MProblems;
+  PA18G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G4MProblems;
+  PA16G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G4MProblems;
+  PA15G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G4MProblems;
+  PA22G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G4SProblems;
+  PA21G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G4SProblems;
+  PA19G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G4SProblems;
+  PA18G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G4SProblems;
+  PA16G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G4SProblems;
+  PA15G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G4SProblems;
+  PA22G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G5MProblems;
+  PA21G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G5MProblems;
+  PA19G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G5MProblems;
+  PA18G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G5MProblems;
+  PA16G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G5MProblems;
+  PA15G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G5MProblems;
+  PA22G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G6MProblems;
+  PA21G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G6MProblems;
+  PA19G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G6MProblems;
+  PA18G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G6MProblems;
+  PA16G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G6MProblems;
+  PA15G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G6MProblems;
+  PA22G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G7MProblems;
+  PA21G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G7MProblems;
+  PA19G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G7MProblems;
+  PA18G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G7MProblems;
+  PA16G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G7MProblems;
+  PA15G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G7MProblems;
+  PA22G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G8MProblems;
+  PA21G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G8MProblems;
+  PA19G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G8MProblems;
+  PA18G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G8MProblems;
+  PA16G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G8MProblems;
+  PA15G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G8MProblems;
+  PA22G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G8SProblems;
+  PA21G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G8SProblems;
+  PA19G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G8SProblems;
+  PA18G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G8SProblems;
+  PA16G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G8SProblems;
+  PA15G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G8SProblems;
+  TX22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G3MProblems;
+  TX21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G3MProblems;
+  TX19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G3MProblems;
+  TX18G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G3MProblems;
+  TX17G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G3MProblems;
+  TX22G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G4MProblems;
+  TX21G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G4MProblems;
+  TX19G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G4MProblems;
+  TX18G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G4MProblems;
+  TX17G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G4MProblems;
+  TX22G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G5MProblems;
+  TX21G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G5MProblems;
+  TX19G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G5MProblems;
+  TX18G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G5MProblems;
+  TX17G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G5MProblems;
+  TX22G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G5SProblems;
+  TX21G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G5SProblems;
+  TX19G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G5SProblems;
+  TX18G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G5SProblems;
+  TX22G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G6MProblems;
+  TX21G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G6MProblems;
+  TX19G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G6MProblems;
+  TX18G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G6MProblems;
+  TX17G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G6MProblems;
+  TX22G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G7MProblems;
+  TX21G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G7MProblems;
+  TX19G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G7MProblems;
+  TX18G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G7MProblems;
+  TX17G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G7MProblems;
+  TX22G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G8MProblems;
+  TX21G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G8MProblems;
+  TX19G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G8MProblems;
+  TX18G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G8MProblems;
+  TX17G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G8MProblems;
+  TX22G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G8SProblems;
+  TX21G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G8SProblems;
+  TX19G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G8SProblems;
+  TX18G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G8SProblems;
+  TX22G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G8SSProblems;
+  TX21G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G8SSProblems;
+  TX19G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G8SSProblems;
+  TX18G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G8SSProblems;
+  dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } = {
+    "PA22G3M": this.PA22G3M_exam_dump,
+    "PA21G3M": this.PA21G3M_exam_dump,
+    "PA19G3M": this.PA19G3M_exam_dump,
+    "PA18G3M": this.PA18G3M_exam_dump,
+    "PA16G3M": this.PA16G3M_exam_dump,
+    "PA15G3M": this.PA15G3M_exam_dump,
+    "PA22G4M": this.PA22G4M_exam_dump,
+    "PA21G4M": this.PA21G4M_exam_dump,
+    "PA19G4M": this.PA19G4M_exam_dump,
+    "PA18G4M": this.PA18G4M_exam_dump,
+    "PA16G4M": this.PA16G4M_exam_dump,
+    "PA15G4M": this.PA15G4M_exam_dump,
+    "PA22G4S": this.PA22G4S_exam_dump,
+    "PA21G4S": this.PA21G4S_exam_dump,
+    "PA19G4S": this.PA19G4S_exam_dump,
+    "PA18G4S": this.PA18G4S_exam_dump,
+    "PA16G4S": this.PA16G4S_exam_dump,
+    "PA15G4S": this.PA15G4S_exam_dump,
+    "PA22G5M": this.PA22G5M_exam_dump,
+    "PA21G5M": this.PA21G5M_exam_dump,
+    "PA19G5M": this.PA19G5M_exam_dump,
+    "PA18G5M": this.PA18G5M_exam_dump,
+    "PA16G5M": this.PA16G5M_exam_dump,
+    "PA15G5M": this.PA15G5M_exam_dump,
+    "PA22G6M": this.PA22G6M_exam_dump,
+    "PA21G6M": this.PA21G6M_exam_dump,
+    "PA19G6M": this.PA19G6M_exam_dump,
+    "PA18G6M": this.PA18G6M_exam_dump,
+    "PA16G6M": this.PA16G6M_exam_dump,
+    "PA15G6M": this.PA15G6M_exam_dump,
+    "PA22G7M": this.PA22G7M_exam_dump,
+    "PA21G7M": this.PA21G7M_exam_dump,
+    "PA19G7M": this.PA19G7M_exam_dump,
+    "PA18G7M": this.PA18G7M_exam_dump,
+    "PA16G7M": this.PA16G7M_exam_dump,
+    "PA15G7M": this.PA15G7M_exam_dump,
+    "PA22G8M": this.PA22G8M_exam_dump,
+    "PA21G8M": this.PA21G8M_exam_dump,
+    "PA19G8M": this.PA19G8M_exam_dump,
+    "PA18G8M": this.PA18G8M_exam_dump,
+    "PA16G8M": this.PA16G8M_exam_dump,
+    "PA15G8M": this.PA15G8M_exam_dump,
+    "PA22G8S": this.PA22G8S_exam_dump,
+    "PA21G8S": this.PA21G8S_exam_dump,
+    "PA19G8S": this.PA19G8S_exam_dump,
+    "PA18G8S": this.PA18G8S_exam_dump,
+    "PA16G8S": this.PA16G8S_exam_dump,
+    "PA15G8S": this.PA15G8S_exam_dump,
+    "TX22G3M": this.TX22G3M_exam_dump,
+    "TX21G3M": this.TX21G3M_exam_dump,
+    "TX19G3M": this.TX19G3M_exam_dump,
+    "TX18G3M": this.TX18G3M_exam_dump,
+    "TX17G3M": this.TX17G3M_exam_dump,
+    "TX22G4M": this.TX22G4M_exam_dump,
+    "TX21G4M": this.TX21G4M_exam_dump,
+    "TX19G4M": this.TX19G4M_exam_dump,
+    "TX18G4M": this.TX18G4M_exam_dump,
+    "TX17G4M": this.TX17G4M_exam_dump,
+    "TX22G5M": this.TX22G5M_exam_dump,
+    "TX21G5M": this.TX21G5M_exam_dump,
+    "TX19G5M": this.TX19G5M_exam_dump,
+    "TX18G5M": this.TX18G5M_exam_dump,
+    "TX17G5M": this.TX17G5M_exam_dump,
+    "TX22G5S": this.TX22G5S_exam_dump,
+    "TX21G5S": this.TX21G5S_exam_dump,
+    "TX19G5S": this.TX19G5S_exam_dump,
+    "TX18G5S": this.TX18G5S_exam_dump,
+    "TX22G6M": this.TX22G6M_exam_dump,
+    "TX21G6M": this.TX21G6M_exam_dump,
+    "TX19G6M": this.TX19G6M_exam_dump,
+    "TX18G6M": this.TX18G6M_exam_dump,
+    "TX17G6M": this.TX17G6M_exam_dump,
+    "TX22G7M": this.TX22G7M_exam_dump,
+    "TX21G7M": this.TX21G7M_exam_dump,
+    "TX19G7M": this.TX19G7M_exam_dump,
+    "TX18G7M": this.TX18G7M_exam_dump,
+    "TX17G7M": this.TX17G7M_exam_dump,
+    "TX22G8M": this.TX22G8M_exam_dump,
+    "TX21G8M": this.TX21G8M_exam_dump,
+    "TX19G8M": this.TX19G8M_exam_dump,
+    "TX18G8M": this.TX18G8M_exam_dump,
+    "TX17G8M": this.TX17G8M_exam_dump,
+    "TX22G8S": this.TX22G8S_exam_dump,
+    "TX21G8S": this.TX21G8S_exam_dump,
+    "TX19G8S": this.TX19G8S_exam_dump,
+    "TX18G8S": this.TX18G8S_exam_dump,
+    "TX22G8SS": this.TX22G8SS_exam_dump,
+    "TX21G8SS": this.TX21G8SS_exam_dump,
+    "TX19G8SS": this.TX19G8SS_exam_dump,
+    "TX18G8SS": this.TX18G8SS_exam_dump,
+  };
+
+  exam_names: { [key: string]: string } = {
     "COG3M": "Colorado CMAS Grade 3 Math Practice Exam",
     "COG3E": "Colorado CMAS Grade 3 English Language Arts Practice Exam",
     "COG4M": "Colorado CMAS Grade 4 Math Practice Exam",
@@ -649,7 +929,17 @@ export class ProfileComponent implements OnInit {
     "WIG8SS": "Wisconsin WFE Grade 8 Social Studies Practice Exam",
     "WIG10SS": "Wisconsin WFE Grade 10 Social Studies Practice Exam"
   };
-  
+
+  selected_topic = "";
+  selected_subtopic = "";
+  subtopic_problem_count = 0;
+  subtopic_problem_number = 0;
+  subtopic_search_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
+  subtopic_problem_selection = '';
+  subtopic_problem_attempts = 0;
+  subtopic_attempt_response = '';
+  subtopic_attempt_explanation = '';
+
   // constructor(private titleService: Title, private meta: Meta, public authService: AuthService, private win: WindowService, private afAuth: AngularFireAuth) { }
   constructor(private titleService: Title, private meta: Meta, public authService: AuthService, public router: Router, private afAuth: AngularFireAuth) { }
 
@@ -803,38 +1093,40 @@ export class ProfileComponent implements OnInit {
     //   }
     // }, 500);
     for (let i: number = 0; i < this.exam_length; i++) {
-      if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics)) {
-        this.topic_breakdown[this.exam_submission_list[i].Topics].Total += 1;
-        this.topic_breakdown[this.exam_submission_list[i].Topics].Seconds += +this.exam_submission_list[i].Seconds;
-        if (this.exam_submission_list[i].Correct == '✅') {
-          this.topic_breakdown[this.exam_submission_list[i].Topics].Correct += 1;
-          if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics].Subs).includes(this.exam_submission_list[i].SubTopics)) {
-            this.topic_breakdown[this.exam_submission_list[i].Topics].Subs[this.exam_submission_list[i].SubTopics].Total += 1;
-            this.topic_breakdown[this.exam_submission_list[i].Topics].Subs[this.exam_submission_list[i].SubTopics].Correct += 1;
-            this.topic_breakdown[this.exam_submission_list[i].Topics].Subs[this.exam_submission_list[i].SubTopics].Seconds += +this.exam_submission_list[i].Seconds;
+      for (let n: number = 0; n < this.exam_submission_list[i].SubTopics.length; n++) {
+        if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[n])) {
+          this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Total += 1;
+          this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Seconds += +this.exam_submission_list[i].Seconds;
+          if (this.exam_submission_list[i].Correct == '✅') {
+            this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Correct += 1;
+            if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs).includes(this.exam_submission_list[i].SubTopics[n])) {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]].Total += 1;
+              this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]].Correct += 1;
+              this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]].Seconds += +this.exam_submission_list[i].Seconds;
+            }
+            else {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' };
+            }
           }
           else {
-            this.topic_breakdown[this.exam_submission_list[i].Topics].Subs[this.exam_submission_list[i].SubTopics] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' };
+            this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Incorrect += 1;
+            if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs).includes(this.exam_submission_list[i].SubTopics[n])) {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]].Total += 1;
+              this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]].Incorrect += 1;
+              this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]].Seconds += +this.exam_submission_list[i].Seconds;
+            }
+            else {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' };
+            }
           }
         }
         else {
-          this.topic_breakdown[this.exam_submission_list[i].Topics].Incorrect += 1;
-          if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics].Subs).includes(this.exam_submission_list[i].SubTopics)) {
-            this.topic_breakdown[this.exam_submission_list[i].Topics].Subs[this.exam_submission_list[i].SubTopics].Total += 1;
-            this.topic_breakdown[this.exam_submission_list[i].Topics].Subs[this.exam_submission_list[i].SubTopics].Incorrect += 1;
-            this.topic_breakdown[this.exam_submission_list[i].Topics].Subs[this.exam_submission_list[i].SubTopics].Seconds += +this.exam_submission_list[i].Seconds;
+          if (this.exam_submission_list[i].Correct == '✅') {
+            this.topic_breakdown[this.exam_submission_list[i].Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[n]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
           }
           else {
-            this.topic_breakdown[this.exam_submission_list[i].Topics].Subs[this.exam_submission_list[i].SubTopics] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' };
+            this.topic_breakdown[this.exam_submission_list[i].Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[n]]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
           }
-        }
-      }
-      else {
-        if (this.exam_submission_list[i].Correct == '✅') {
-          this.topic_breakdown[this.exam_submission_list[i].Topics] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
-        }
-        else {
-          this.topic_breakdown[this.exam_submission_list[i].Topics] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
         }
       }
     }
@@ -847,6 +1139,7 @@ export class ProfileComponent implements OnInit {
       }
     }
     this.selected_exam = exm;
+    console.log(this.topic_breakdown);
   }
 
   search_id(id: string) {
@@ -919,151 +1212,263 @@ export class ProfileComponent implements OnInit {
                 this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Total += 1;
                 this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Correct += 1;
                 this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Seconds += +(prob as any).Seconds;
-                if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops).includes((prob as any).Topics)) {
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics].Total += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics].Correct += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics].Seconds += +(prob as any).Seconds;
-                }
-                else {
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                  if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops).includes((prob as any).Topics[n])) {
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Total += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Correct += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
+                  }
+                  else {
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                  }
                 }
               }
               else {
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': { [(prob as any).Topics]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' } } };
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
+                for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                }
               }
             }
             else {
-              this.grade_breakdown[this.exam_attribute_dump[key].Grade] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[key].Subject]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': { [(prob as any).Topics]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' } } } } };
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[key].Subject]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
+              for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+              }
             }
           }
           else {
-            if (Object.keys(this.grade_breakdown).includes(this.exam_attribute_dump[key].Grade)) {
-              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Total += 1;
-              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Incorrect += 1;
-              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Seconds += +(prob as any).Seconds;
-              if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs).includes(this.exam_attribute_dump[key].Subject)) {
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Total += 1;
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Incorrect += 1;
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Seconds += +(prob as any).Seconds;
-                if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops).includes((prob as any).Topics)) {
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics].Total += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics].Incorrect += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics].Seconds += +(prob as any).Seconds;
+          if (Object.keys(this.grade_breakdown).includes(this.exam_attribute_dump[key].Grade)) {
+            this.grade_breakdown[this.exam_attribute_dump[key].Grade].Total += 1;
+            this.grade_breakdown[this.exam_attribute_dump[key].Grade].Incorrect += 1;
+            this.grade_breakdown[this.exam_attribute_dump[key].Grade].Seconds += +(prob as any).Seconds;
+            if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs).includes(this.exam_attribute_dump[key].Subject)) {
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Total += 1;
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Incorrect += 1;
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Seconds += +(prob as any).Seconds;
+              for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops).includes((prob as any).Topics[n])) {
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Total += 1;
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Incorrect += 1;
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
                 }
                 else {
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
                 }
-              }
-              else {
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': { [(prob as any).Topics]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' } } };
               }
             }
             else {
-              this.grade_breakdown[this.exam_attribute_dump[key].Grade] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[key].Subject]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': { [(prob as any).Topics]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' } } } } };
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
+                for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                }
+            }
+          }
+          else {
+            this.grade_breakdown[this.exam_attribute_dump[key].Grade] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[key].Subject]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
+              for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+              }
+          }
+        }
+      }
+    }
+  }
+  for(let grade of Object.keys(this.grade_breakdown)) {
+  this.grade_breakdown[grade].Percent = Math.round(100 * this.grade_breakdown[grade].Correct / (this.grade_breakdown[grade].Total));
+  this.grade_breakdown[grade].Time = (Math.floor(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total % 60)).toString() + 's';
+  for (let subject of Object.keys(this.grade_breakdown[grade].Subs)) {
+    this.grade_breakdown[grade].Subs[subject].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Correct / (this.grade_breakdown[grade].Subs[subject].Total));
+    this.grade_breakdown[grade].Subs[subject].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total % 60)).toString() + 's';
+    for (let topic of Object.keys(this.grade_breakdown[grade].Subs[subject].Tops)) {
+      this.grade_breakdown[grade].Subs[subject].Tops[topic].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Tops[topic].Correct / (this.grade_breakdown[grade].Subs[subject].Tops[topic].Total));
+      this.grade_breakdown[grade].Subs[subject].Tops[topic].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total % 60)).toString() + 's';
+    }
+    this.subject_breakdown[grade + " " + subject] = { 'Grade': grade, 'Subject': subject, 'Break': this.grade_breakdown[grade].Subs[subject] };
+  }
+}
+console.log(this.grade_breakdown);
+  }
+
+searchSubTopic(topic: string, subtopic: string) {
+  this.subtopic_problem_count = 0;
+  this.subtopic_search_dump = {};
+  for (const [ex, dump] of Object.entries(this.dump_dict)) {
+    for (const [num, prob] of Object.entries(dump)) {
+      if (typeof prob.SubTopics != 'undefined') {
+        if (prob.SubTopics.includes(subtopic)) {
+          this.subtopic_problem_count += 1;
+          this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+        }
+      }
+    }
+  }
+  this.selected_topic = topic;
+  this.selected_subtopic = subtopic;
+  this.subtopic_problem_number = 1;
+}
+
+attempt_mc_st_problem(ch: string) {
+  if (ch != this.subtopic_problem_selection) {
+    this.subtopic_problem_attempts += 1;
+    this.subtopic_problem_selection = ch;
+    for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+      if (this.subtopic_problem_number == +num) {
+        for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
+          if (choice == ch) {
+            this.subtopic_attempt_explanation = key.Key.Rationale;
+            if (key.Key.Correct == true) {
+              this.confetti_light(this.subtopic_problem_attempts);
+              if (this.subtopic_problem_attempts == 1) {
+                this.subtopic_attempt_response = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts.toString() + ' try.';
+              }
+              else {
+                this.subtopic_attempt_response = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts.toString() + ' tries.';
+              }
+            }
+            else {
+              this.subtopic_attempt_response = 'That is not the correct answer - have another try.';
             }
           }
         }
       }
     }
-    for (let grade of Object.keys(this.grade_breakdown)) {
-      this.grade_breakdown[grade].Percent = Math.round(100 * this.grade_breakdown[grade].Correct / (this.grade_breakdown[grade].Total));
-      this.grade_breakdown[grade].Time = (Math.floor(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total % 60)).toString() + 's';
-      for (let subject of Object.keys(this.grade_breakdown[grade].Subs)) {
-        this.grade_breakdown[grade].Subs[subject].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Correct / (this.grade_breakdown[grade].Subs[subject].Total));
-        this.grade_breakdown[grade].Subs[subject].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total % 60)).toString() + 's';
-        for (let topic of Object.keys(this.grade_breakdown[grade].Subs[subject].Tops)) {
-          this.grade_breakdown[grade].Subs[subject].Tops[topic].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Tops[topic].Correct / (this.grade_breakdown[grade].Subs[subject].Tops[topic].Total));
-          this.grade_breakdown[grade].Subs[subject].Tops[topic].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total % 60)).toString() + 's';
+  }
+}
+
+attempt_fr_st_problem(ch: string) {
+  if (ch != this.subtopic_problem_selection) {
+    this.subtopic_problem_attempts += 1;
+    this.subtopic_problem_selection = ch;
+    for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+      if (this.subtopic_problem_number == +num) {
+        for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
+          if (ch == key.Choice) {
+            this.confetti_light(this.subtopic_problem_attempts);
+            this.subtopic_attempt_explanation = key.Key.Rationale;
+            if (this.subtopic_problem_attempts == 1) {
+              this.subtopic_attempt_response = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts.toString() + ' try.';
+            }
+            else {
+              this.subtopic_attempt_response = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts.toString() + ' tries.';
+            }
+          }
+          else {
+            this.subtopic_attempt_response = 'That is not the correct answer - have another try.';
+          }
         }
-        this.subject_breakdown[grade + " " + subject] = { 'Grade': grade, 'Subject': subject, 'Break': this.grade_breakdown[grade].Subs[subject] };
       }
     }
-    console.log(this.grade_breakdown);
   }
+}
 
-  expandTopics() {
-    this.expand_topics = !this.expand_topics;
+next_problem_st() {
+  this.subtopic_problem_number += 1;
+  this.subtopic_problem_selection = '';
+  this.subtopic_problem_attempts = 0;
+  this.subtopic_attempt_response = '';
+  this.subtopic_attempt_explanation = '';
+  if (this.subtopic_problem_number > this.subtopic_problem_count) {
+    this.selected_subtopic = '';
   }
+}
 
-  expandSubTopics() {
-    this.expand_subtopics = !this.expand_subtopics;
-  }
+confetti_light(attempts: number) {
+  confettiHandler({
+    particleCount: Math.round(250 / attempts),
+    startVelocity: 125,
+    scalar: 1.15,
+    ticks: 150,
+    decay: 0.8,
+    angle: 90,
+    spread: 60,
+    origin: { x: 0.5, y: 1 }
+  });
+}
 
-  showCorrect() {
-    this.show_correct = !this.show_correct;
-  }
+expandTopics() {
+  this.expand_topics = !this.expand_topics;
+}
 
-  scroll_top() {
-    setTimeout(function () {
-      window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
-    }, 250);
-  }
+expandSubTopics() {
+  this.expand_subtopics = !this.expand_subtopics;
+}
 
-  scroll_bottom() {
-    setTimeout(function () {
-      window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
-    }, 250);
-  }
+showCorrect() {
+  this.show_correct = !this.show_correct;
+}
 
-  scroll(el: HTMLElement) {
-    setTimeout(function () {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }, 250);
-  }
+scroll_top() {
+  setTimeout(function () {
+    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+  }, 250);
+}
 
-  scroll2(el: HTMLElement) {
-    setTimeout(function () {
-      window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 120, behavior: 'smooth' });
-    }, 250);
-  }
+scroll_bottom() {
+  setTimeout(function () {
+    window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
+  }, 250);
+}
 
-  ngOnInit() {
-    this.titleService.setTitle("Your Profile On MoreProblems.Org | U.S. K-12 State Testing Preparation");
-    // this.meta.updateTag({ name: 'description', content: "" });
-    setTimeout(() => {
-      if (!this.authService.userData) {
-        this.router.navigate(['login']);
+scroll(el: HTMLElement) {
+  setTimeout(function () {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }, 250);
+}
+
+scroll2(el: HTMLElement) {
+  setTimeout(function () {
+    window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 120, behavior: 'smooth' });
+  }, 250);
+}
+
+ngOnInit() {
+  this.titleService.setTitle("Your Profile On MoreProblems.Org | U.S. K-12 State Testing Preparation");
+  // this.meta.updateTag({ name: 'description', content: "" });
+  setTimeout(() => {
+    if (!this.authService.userData) {
+      this.router.navigate(['login']);
+    }
+    else {
+      if (this.authService.userData.role == 'Student') {
+        this.complete_exam_count = 0;
+        this.complete_exam_list = [];
+        this.student_exam_metadata = {};
+        this.student_exam_metadata = this.authService.getExamSubmissions();
+        // this.linked_student_count = Object.keys(this.student_exam_metadata).length;
+        const exam_history = this.authService.userData.exams.history;
+        for (const [key, det] of Object.entries(exam_history)) {
+          if ((det as any).status == "Completed") {
+            this.complete_exam_count = this.complete_exam_count + 1;
+            this.complete_exam_list.push(key);
+            this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+            this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+          }
+        }
       }
       else {
-        if (this.authService.userData.role == 'Student') {
-          this.complete_exam_count = 0;
-          this.complete_exam_list = [];
-          this.student_exam_metadata = {};
-          this.student_exam_metadata = this.authService.getExamSubmissions();
-          // this.linked_student_count = Object.keys(this.student_exam_metadata).length;
-          const exam_history = this.authService.userData.exams.history;
-          for (const [key, det] of Object.entries(exam_history)) {
-            if ((det as any).status == "Completed") {
-              this.complete_exam_count = this.complete_exam_count + 1;
-              this.complete_exam_list.push(key);
-              this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
-              this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
-            }
-          }
-        }
-        else {
-          this.student_metadata = [];
-          const linked_students = this.authService.userData.students.slice(1);
-          for (const [key, stud] of Object.entries(linked_students)) {
+        this.student_metadata = [];
+        const linked_students = this.authService.userData.students.slice(1);
+        for (const [key, stud] of Object.entries(linked_students)) {
+          setTimeout(() => {
+            console.log(stud);
+            this.student_data = this.authService.searchUserId(stud as string);
             setTimeout(() => {
-              console.log(stud);
-              this.student_data = this.authService.searchUserId(stud as string);
-              setTimeout(() => {
-                console.log(this.student_data);
-                this.student_metadata.push(this.student_data as object);
-              }, 75);
-            }, +key * 150);
-          }
+              console.log(this.student_data);
+              this.student_metadata.push(this.student_data as object);
+            }, 75);
+          }, +key * 150);
         }
       }
-    }, 250);
-    this.windowRef = this.win.windowRef;
-    this.windowRef.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
-      'size': 'invisible',
-      // 'callback': (response) => {
-      //   // reCAPTCHA solved, allow signInWithPhoneNumber.
-      //   // onSignInSubmit();
-      // }
-    }, getAuth());
-  }
+    }
+  }, 250);
+  this.windowRef = this.win.windowRef;
+  this.windowRef.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
+    'size': 'invisible',
+    // 'callback': (response) => {
+    //   // reCAPTCHA solved, allow signInWithPhoneNumber.
+    //   // onSignInSubmit();
+    // }
+  }, getAuth());
+}
 }

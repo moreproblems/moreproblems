@@ -1,674 +1,824 @@
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-  
-    :host {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      font-size: 14px;
-      color: #333;
-      box-sizing: border-box;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-  
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin: 8px 0;
-    }
-  
-    p {
-      margin: 0;
-    }
-  
-    .spacer {
-      flex: 1;
-    }
-  
-    .toolbar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 85px;
-      display: flex;
-      align-items: center;
-      background-color: #0a1e33;
-      color: white;
-      font-weight: 600;
-      padding: 5px 10px 2px 20px;
-    }
-  
-    .toolbar img {
-      /* margin: 0 16px; */
-      position: absolute;
-      left: -10px;
-      top: -18px;
-    }
-  
-    .toolbar #twitter-logo {
-      height: 40px;
-      margin: 0 8px;
-    }
-  
-    .toolbar #youtube-logo {
-      height: 40px;
-      margin: 0 16px;
-    }
-  
-    .toolbar #twitter-logo:hover,
-    .toolbar #youtube-logo:hover {
-      opacity: 0.8;
-    }
-  
-    #confetticanvas {
-      position: fixed;
-      z-index: 50;
-      top: 81px;
-      right: 0px;
-      bottom: 0px;
-      left: 125px;
-      height: 0px;
-    }
-  
-    .content-menu {
-      display: flex;
-      margin: 0 auto 32px;
-      padding: 0 16px;
-      width: 90%;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .content {
-      display: flex;
-      margin: 0 auto 32px;
-      padding: 0;
-      width: 95%;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .subcontent {
-      display: flex;
-      margin: 12px auto;
-      padding: 0px;
-      width: 95%;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    svg.material-icons {
-      height: 24px;
-      width: auto;
-    }
-  
-    svg.material-icons:not(:last-child) {
-      margin-right: 8px;
-    }
-  
-    .card svg.material-icons path {
-      fill: #888;
-    }
-  
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 16px;
-    }
-  
-    .card {
-      all: unset;
-      border-radius: 4px;
-      border: 1px solid #eee;
-      background-color: #fafafa;
-      /* height: 40px;
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    background-color: #0a1e33;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px 2px 20px;
+  }
+
+  .toolbar img {
+    /* margin: 0 16px; */
+    position: absolute;
+    left: -10px;
+    top: -18px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+  #confetticanvas {
+    position: fixed;
+    z-index: 50;
+    top: 81px;
+    right: 0px;
+    bottom: 0px;
+    left: 125px;
+    height: 0px;
+  }
+
+  .content-menu {
+    display: flex;
+    margin: 0 auto 32px;
+    padding: 0 16px;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    margin: 0 auto 32px;
+    padding: 0;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subcontent {
+    display: flex;
+    margin: 12px auto;
+    padding: 0px;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    /* height: 40px;
         width: 200px; */
-      margin: 0 8px 16px;
-      padding: 8px 8px;
-      display: flex;
-      flex-direction: row;
-      /* justify-content: center; */
-      /* align-items: center; */
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-    }
-  
-    /* .card-container .card:not(:last-child) {
+    margin: 0 8px 16px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  /* .card-container .card:not(:last-child) {
       margin-right: 0;
     }
   
     .card-container .switch:not(:last-child) {
       margin-right: 0;
     } */
-  
-    .card.card-small {
-      height: 16px;
-      width: 190px;
-      border-radius: 8px;
-    }
-  
-    .card.card-medium {
-      height: auto;
-      width: 80%;
-      border-radius: 8px;
-      padding: 20px;
-    }
-  
-    .card.card-medium:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    .card.card-large {
-      width: auto;
-      height: auto;
-      border-radius: 8px;
-      margin: 8px 8px;
-      padding: 8px 0;
-    }
-  
-    .card-container .card:not(.highlight-card) {
-      cursor: pointer;
-    }
-  
-    .card-container .card:not(.highlight-card):hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    /* .card-container .card:not(.highlight-card):hover .material-icons path {
+
+  .card.card-small {
+    height: 16px;
+    width: 190px;
+    border-radius: 8px;
+  }
+
+  .card.card-medium {
+    height: auto;
+    width: 80%;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .card.card-medium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card.card-large {
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    margin: 8px 8px;
+    padding: 8px 0;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  /* .card-container .card:not(.highlight-card):hover .material-icons path {
       fill: rgb(105, 103, 103);
     } */
-  
-    .card.highlight-card {
-      background-color: #0a1e33;
-      color: white;
-      font-weight: 600;
-      border: none;
-      width: auto;
-      min-width: 30%;
-      position: relative;
-    }
-  
-    .card.card.highlight-card span {
-      margin-left: 60px;
-    }
-  
-    svg#rocket {
-      width: 80px;
-      position: absolute;
-      left: -10px;
-      top: -24px;
-    }
-  
-    svg#rocket-smoke {
-      height: calc(100vh - 95px);
-      position: absolute;
-      top: 10px;
-      right: 180px;
-      z-index: -10;
-    }
-  
-    a,
-    a:visited,
-    a:hover {
-      color: #1976d2;
-      text-decoration: none;
-    }
-  
-    a:hover {
-      color: #125699;
-    }
-  
-    button.grade-button {
-      font-size: 18px;
-      color: white;
-      background-color: #1976d2;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      margin: 8px;
-      padding: 8px 8px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-    }
-  
-    button.grade-button:hover {
-      background-color: #0a1e33;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    button.grade-button-gray {
-      font-size: 18px;
-      color: white;
-      background-color: #ccc;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      padding: 7px 15px;
-      margin: 0 2px 10px;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-    }
-  
-    button.grade-button-gray:hover {
-      background-color: #0a1e33;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    button.toggle-button {
-      font-size: 18px;
-      color: black;
-      background-color: #ccc;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      padding: 7px 15px;
-      margin: 0 2px 10px;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-    }
-  
-    .toggle-button:before {
-      background-color: #1976d2;
-      color: white;
-    }
-  
-    button.toggle-button-off {
-      font-size: 18px;
-      color: black;
-      background-color: #ccc;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      padding: 7px 15px;
-      margin: 0 2px 10px;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-      width: 100%;
-    }
-  
-    button.toggle-button-on {
-      font-size: 18px;
-      background-color: #1976d2;
-      color: white;
-      border-radius: 12px;
-      border: 3px solid #0a1e33;
-      padding: 7px 15px;
-      margin: 0 2px 10px;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-      width: 100%;
-    }
-  
-    .select-avatar {
-          opacity: 1;
-          display: block;
-          width: 100%;
-          height: auto;
-          transition: .5s ease;
-          backface-visibility: hidden;
-      }
-  
-      .middle {
-          transition: .5s ease;
-          opacity: 0;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%)
-      }
-  
-      .select-middle {
-          transition: .5s ease;
-          opacity: 0;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          opacity: 1;
-      }
-  
-      .avatar-container:hover .select-avatar {
-          opacity: 0.3;
-      }
-  
-      .avatar-container:hover .middle {
-          opacity: 1;
-      }
-  
-    progress {
-      border-radius: 10px;
-    }
-  
-    progress::-webkit-progress-bar {
-      border-radius: 10px;
-      background-color: lightgray;
-      border: 1px solid darkslategrey;
-    }
-  
-    progress::-webkit-progress-value {
-      border-radius: 10px;
-      background-color: limegreen;
-      /* border: 2px solid black; */
-    }
-  
-    progress::-moz-progress-bar {
-      border-radius: 10px;
-    }
-  
+
+  .card.highlight-card {
+    background-color: #0a1e33;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+  svg#rocket {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+  }
+
+  svg#rocket-smoke {
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+  button.grade-button {
+    font-size: 18px;
+    color: white;
+    background-color: #1976d2;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin: 8px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  button.grade-button:hover {
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  button.grade-button-gray {
+    font-size: 18px;
+    color: white;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  button.grade-button-gray:hover {
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  button.toggle-button {
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .toggle-button:before {
+    background-color: #1976d2;
+    color: white;
+  }
+
+  button.toggle-button-off {
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  button.toggle-button-on {
+    font-size: 18px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 12px;
+    border: 3px solid #0a1e33;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  .select-avatar {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+
+  .select-middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  .avatar-container:hover .select-avatar {
+    opacity: 0.3;
+  }
+
+  .avatar-container:hover .middle {
+    opacity: 1;
+  }
+
+  progress {
+    border-radius: 10px;
+  }
+
+  progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 1px solid darkslategrey;
+  }
+
+  progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: limegreen;
+    /* border: 2px solid black; */
+  }
+
+  progress::-moz-progress-bar {
+    border-radius: 10px;
+  }
+
+  .terminal {
+    position: relative;
+    /* width: 100%; */
+    max-width: 625px;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+    color: #c2c3c4;
+  }
+
+  .terminal::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: rgb(58, 58, 58);
+    color: #c2c3c4;
+    width: 100%;
+    line-height: 0;
+    padding: 14px 0;
+    font-size: 2rem;
+    text-indent: 4px;
+  }
+
+  .terminal pre {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .circle-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+  }
+
+  .circle-link:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
+  .github-star-badge {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27, 31, 35, .2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
+  }
+
+  .github-star-badge:hover {
+    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+    border-color: rgba(27, 31, 35, .35);
+    background-position: -.5em;
+  }
+
+  .github-star-badge .material-icons {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 75px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  input:checked+.toggle-button-on {
+    background-color: #1976d2;
+    color: white
+  }
+
+  input:hover+.toggle-button-on {
+    background-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  input:checked+.toggle-button-off {
+    background-color: #ccc;
+    color: black;
+  }
+
+  input:hover+.toggle-button-off {
+    background-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+
+    .card-container>*:not(.circle-link),
     .terminal {
-      position: relative;
       /* width: 100%; */
-      max-width: 625px;
-      border-radius: 6px;
-      padding-top: 45px;
-      margin-top: 8px;
-      overflow: hidden;
-      background-color: rgb(15, 15, 16);
-      color: #c2c3c4;
     }
-  
-    .terminal::before {
-      content: "\2022 \2022 \2022";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 4px;
-      background: rgb(58, 58, 58);
-      color: #c2c3c4;
-      width: 100%;
-      line-height: 0;
-      padding: 14px 0;
-      font-size: 2rem;
-      text-indent: 4px;
+
+    .card:not(.highlight-card) {
+      /* height: 16px; */
+      margin: 8px 0;
     }
-  
-    .terminal pre {
-      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-      color: white;
-      padding: 0 1rem 1rem;
-      margin: 0;
-      text-align: center;
+
+    .card.highlight-card span {
+      margin-left: 72px;
     }
-  
-    .circle-link {
-      height: 40px;
-      width: 40px;
-      border-radius: 40px;
-      margin: 8px;
-      background-color: white;
-      border: 1px solid #eeeeee;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      transition: 1s ease-out;
-    }
-  
-    .circle-link:hover {
-      transform: translateY(-0.25rem);
-      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-    }
-  
-    footer {
-      margin-top: 8px;
-      display: flex;
-      align-items: center;
-      line-height: 20px;
-    }
-  
-    footer a {
-      display: flex;
-      align-items: center;
-    }
-  
-    .github-star-badge {
-      color: #24292e;
-      display: flex;
-      align-items: center;
-      font-size: 12px;
-      padding: 3px 10px;
-      border: 1px solid rgba(27, 31, 35, .2);
-      border-radius: 3px;
-      background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-      margin-left: 4px;
-      font-weight: 600;
-    }
-  
-    .github-star-badge:hover {
-      background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-      border-color: rgba(27, 31, 35, .35);
-      background-position: -.5em;
-    }
-  
-    .github-star-badge .material-icons {
-      height: 16px;
-      width: 16px;
-      margin-right: 4px;
-    }
-  
-    /* The switch - the box around the slider */
-    .switch {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: auto;
-      height: auto;
-      max-width: 250px;
-      max-height: 75px;
-      transition: all 0.2s ease-in-out;
-    }
-  
-    /* Hide default HTML checkbox */
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-  
-    input:checked+.toggle-button-on {
-      background-color: #1976d2;
-      color: white
-    }
-  
-    input:hover+.toggle-button-on {
-      background-color: #0a1e33;
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    input:checked+.toggle-button-off {
-      background-color: #ccc;
-      color: black;
-    }
-  
-    input:hover+.toggle-button-off {
-      background-color: #0a1e33;
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    /* Responsive Styles */
-    @media screen and (max-width: 767px) {
-  
-      .card-container>*:not(.circle-link),
-      .terminal {
-        /* width: 100%; */
-      }
-  
-      .card:not(.highlight-card) {
-        /* height: 16px; */
-        margin: 8px 0;
-      }
-  
-      .card.highlight-card span {
-        margin-left: 72px;
-      }
-  
-    }
-  </style>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-  <!-- <div class="content" role="main" (window:resize)="width_change2()"> -->
-  <div class="content" role="main" (window:resize)="width_change2()"
-    style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
-    <canvas id="confetticanvas"></canvas>
-    <br />
-    <div class="content-menu" style="margin-bottom: 0; align-items: center">
-      <div class="card card-large"
-        style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
-        #problemCard>
+
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- <div class="content" role="main" (window:resize)="width_change2()"> -->
+<div class="content" role="main" (window:resize)="width_change2()"
+  style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
+  <canvas id="confetticanvas"></canvas>
+  <br />
+  <div class="content-menu" style="margin-bottom: 0; align-items: center">
+    <section *ngIf="selected_subtopic != ''" style="width: 100%; align-items: left">
+      <div (click)="selected_subtopic=''" class="card card-small"
+        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+        <img src="./assets/icons/caret.png"
+          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back to all problems </a>
+      </div>
+    </section>
+    <br *ngIf="selected_subtopic != ''" />
+    <div *ngIf="selected_subtopic != ''" class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+      #subtopicCard>
+      <br />
+      <div class="content" style="margin: auto; align-items: center">
+        <h2 *ngIf="screenWidth > mobileWidth"
+          style="padding-top: 20px; font-weight: 400; font-size: 24.5px; line-height: 30px"> <b>{{selected_topic}}:</b>
+          {{selected_subtopic}} </h2>
+        <h2 *ngIf="screenWidth <= mobileWidth"
+          style="padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px"> <b>{{selected_topic}}:</b>
+          {{selected_subtopic}} </h2>
+        <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px"> <a>#{{subtopic_problem_number}}
+            of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
+        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px">
+          <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
         <br />
-        <div class="content" style="margin: auto; align-items: center">
-          <h2 *ngIf="this.problem_number > 0" style="padding-top: 20px; color: darkgrey"> {{exam_state}} {{exam_name}}
-            {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
-          <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0"
-            style="color: darkgrey; font-size: 18px"> Problem #{{problem_number}}/{{exam_length}}
-            <hr /> {{et_minutes}}m {{et_counter%60}}s
-          </h3>
-          <h2 *ngIf="this.problem_number > this.exam_length"> With {{number_correct}} out of {{exam_length}} problems
-            correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
-          <h2
-            *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Masters Grade Level Performance'"
-            style="color: green"> {{performance_level}} </h2>
-          <h2
-            *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Approaches Grade Level Performance'"
-            style="color: blue"> {{performance_level}} </h2>
-          <h2 *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Meets Grade Level Performance'"
-            style="color: magenta"> {{performance_level}} </h2>
-          <h2
-            *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Does Not Meet Grade Level Performance'"
-            style="color: red"> {{performance_level}} </h2>
-          <div *ngIf="this.problem_number == 0"
-            style="height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
-            <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_type}} {{exam_grade}}
-              {{exam_subject}} Exam
-            </h2>
-            <p style="font-size: 16px; padding: 20px"> <b>Directions</b> : {{exam_directions}} </p>
-            <!-- <br /> -->
-            <h3 *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.my_students != []"> Take this exam as: </h3>
-            <div *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.my_students != []" class="card-container"
-              style="align-items: center; padding-top: 0">
-              <div *ngFor="let std of my_students" (click)="select_student(my_students_data[std].uid)" class="card card-small" style="height: 75px; width: 170px; align-items: center; padding-top: 0">
-                <div class="avatar-container"
-                  style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 0">
-                  <img *ngIf="this.selected_student != my_students_data[std].uid"
-                      src="{{my_students_data[std].photoURL}}" class="select-avatar"
-                      style="width:100%; height: 100%">
-                  <img *ngIf="this.selected_student == my_students_data[std].uid"
-                      src="{{my_students_data[std].photoURL}}" class="select-avatar"
-                      style="width:100%; height: 100%; opacity: 0.3">
-                  <div class="middle">
-                      <div *ngIf="this.selected_student != my_students_data[std].uid"
-                          style="color: white; background-color: #1976d2; border-radius: 10px">Select
-                      </div>
-                  </div>
-                  <div *ngIf="this.selected_student == my_students_data[std].uid"
-                      class="select-middle">
-                      <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
-                  </div>
-                </div>
-                <h3 style="font-size: 18px; padding-left: 5px; width: 100px"> {{my_students_data[std].displayName}} </h3>
-              </div>
-            </div>
-            <div *ngIf="!this.authService.userData || !this.exam_inprogress" class="card-container"
-              style="align-items: center; padding-top: 20px">
-              <label class="switch" style="align-items: center">
-                <input type="checkbox" value="random">
-                <button (click)="toggle_random()" *ngIf="random" class="toggle-button-on"
-                  style="margin: 0px 20px 0px 20px"> <b> Order Problems </b>
-                </button>
-                <button (click)="toggle_random()" *ngIf="!random" class="toggle-button-off"
-                  style="margin: 0px 20px 0px 20px"> <b> Shuffle Problems </b>
-                </button>
+        <section style="height: auto; width: 100%; display: flex; justify-content: center">
+          <div *ngFor="let prob of subtopic_search_dump | keyvalue"
+            style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
+            <div *ngIf="subtopic_problem_number == +prob.key">
+              <label *ngFor="let num of prob.value.SubTopics | keyvalue"
+                (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
+                style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: auto; padding: 5px">
+                <button class="topic-button" style="width: 100%; font-size: 16px; min-width: 150px">
+                  <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </button>
               </label>
-              <button class="grade-button" (click)="begin_exam(); scroll_top()"
-                style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px">
-                <b> Begin Exam </b>
-              </button>
-            </div>
-            <div *ngIf="this.authService.userData && this.exam_inprogress" class="card-container"
-              style="display: flex; flex-direction: row; align-items: center; text-align: center; width: 80%; margin: 0">
-              <div class="card-container" style="align-items: center; margin: 0px 20px">
-                <h4 style="margin: auto"> {{exam_length - progress_number + 1}} / {{exam_length}} remaining problems </h4>
-                <progress value="{{progress_number-1}}" max="{{exam_length}}"
-                  style="height: 20px; width: 100%; border-radius: 15px; margin: 10px auto"
-                  #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
-                <h4 style="margin: 1px auto; font-weight: 500"> Last Submission: <b>{{""+last_date}}</b> {{""+last_time}} </h4>
-              </div>
-              <button class="grade-button" (click)="resume_exam(); scroll_top()"
-                style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0 20px; margin-top: 40px">
-                <b> Resume Exam </b>
-              </button>
             </div>
           </div>
-          <div *ngFor="let prob of exam_dump | keyvalue">
-            <div *ngIf="problem_number == +prob.key">
-              <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
-                <h3 *ngIf="!block.endsWith('.jpg')" style="display: block; white-space: pre-wrap"> {{block}} </h3>
-                <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
-              </div>
+        </section>
+        <br />
+        <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+          <div *ngIf="subtopic_problem_number == +prob.key">
+            <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
+              <h3 *ngIf="!block.endsWith('.jpg')"> {{block}} </h3>
+              <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
             </div>
           </div>
-          <br />
-          <input type="hidden" #selection>
-          <div *ngFor="let prob of exam_dump | keyvalue">
-            <div *ngIf="problem_number == +prob.key">
-              <div *ngIf="prob.value.Type == 'FR'">
-                <div class="card card-small" style="min-height: 50px; width: 275px; max-height: 100px; padding: 10px">
-                  <input
-                    style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
-                    inputmode="numeric" #inputFR />
-                  <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value); scroll_bottom()"
-                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
-                    <b> Submit </b> </button>
-                </div>
+        </div>
+        <br />
+        <input type="hidden" #selection>
+        <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+          <div *ngIf="subtopic_problem_number == +prob.key">
+            <div *ngIf="prob.value.Type == 'FR'">
+              <div class="card card-small"
+                style="min-height: 50px; width: 275px; max-height: 100px; padding: 10px; margin: auto">
+                <input
+                  style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                  inputmode="numeric" #inputFRST />
+                <button class="grade-button" (click)="attempt_fr_st_problem(this.inputFRST.value); scroll_bottom()"
+                  style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                  <b> Submit </b> </button>
               </div>
-              <div *ngIf="prob.value.Type == 'MC'">
-                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
-                  (click)="selection.value = choice.key; attempt_mc_problem(choice.key); scroll_bottom()"
-                  style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
-                  <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
-                    <button *ngIf="problem_selection==choice.key" class="toggle-button-on"> <b> {{choice.key}} </b>
-                    </button>
-                    <button *ngIf="problem_selection!=choice.key" class="toggle-button-off"> <b> {{choice.key}} </b>
-                    </button>
-                  </label>
-                  <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                    style="display: block; margin: auto; white-space: pre-wrap">
-                    {{choice.value.Choice}}
-                  </h3>
-                  <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
-                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                </div>
+            </div>
+            <div *ngIf="prob.value.Type == 'MC'">
+              <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                (click)="selection.value = choice.key; attempt_mc_st_problem(choice.key); scroll_bottom()"
+                style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                <label class="switch" style="padding: 0 10px">
+                  <input type="checkbox" value="{{choice.key}}">
+                  <button *ngIf="subtopic_problem_selection==choice.key" class="toggle-button-on"> <b> {{choice.key}}
+                    </b>
+                  </button>
+                  <button *ngIf="subtopic_problem_selection!=choice.key" class="toggle-button-off"> <b> {{choice.key}}
+                    </b>
+                  </button>
+                </label>
+                <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                  style="display: block; margin: 0px 20px 0px 20px; margin: auto; white-space: pre-wrap">
+                  {{choice.value.Choice}}
+                </h3>
+                <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                  style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
               </div>
             </div>
           </div>
-          <br />
-          <div *ngIf="problem_attempts > 0" [ngSwitch]="selection.value"
-            style="height: 75px; max-width: 90%; padding-top: 10px; margin: auto">
-            <button class="grade-button" (click)="next_problem(problem_selection); scroll_top()"
-              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
+        </div>
+        <br />
+        <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+          <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts > 0"
+            class="card highlight-card card-small"
+            style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+            <div *ngIf="prob.value.Type == 'MC'">
+              <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
+                <h3 *ngIf="choice.key == selection.value"
+                  style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                  <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
+                  <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation}}
+                </h3>
+                <br
+                  *ngIf="choice.key == selection.value && subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                <br
+                  *ngIf="choice.key == selection.value && subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                <button
+                  *ngIf="choice.key == selection.value && subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth"
+                  class="grade-button" (click)="next_problem_st(); scroll_top()"
+                  style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                  <b> Next Problem </b>
+                </button>
+              </div>
+            </div>
+            <div *ngIf="prob.value.Type == 'FR'">
+              <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
+                <h3 *ngIf="subtopic_attempt_response.startsWith('Correct')"
+                  style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                  <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
+                  <!-- wrong data format, extra KEY -->
+                  <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation}}
+                </h3>
+                <br *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" /> <br
+                  *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                <button *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth"
+                  class="grade-button" (click)="next_problem_st(); scroll_top()"
+                  style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                  <b> Next Problem </b>
+                </button>
+                <h3 *ngIf="!subtopic_attempt_response.startsWith('Correct')"
+                  style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                  <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
+                  <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
+                </h3>
+              </div>
+            </div>
+            <button *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth > mobileWidth"
+              class="grade-button" (click)="next_problem_st(); scroll_top()"
+              style="display: block; max-width: 150px; max-height: 100px; margin: auto">
               <b> Next Problem </b>
             </button>
           </div>
-          <div *ngIf="problem_number > exam_length" style="width: 100%">
-            <!-- <div class="card card-small" style="height: auto; width: auto; max-width: 500px; padding: 10px; margin: auto">
+          <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts == 0"
+            class="card highlight-card card-small"
+            style="height: auto; min-height: 100px; max-width: 90%; padding-top: 10px; margin: auto; align-items: center; display: inline-flex; background-color: transparent">
+            <button class="grade-button" (click)="next_problem_st(); scroll_top()"
+              style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+              <b> Skip Problem </b>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="selected_subtopic == ''" class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+      #problemCard>
+      <br />
+      <div class="content" style="margin: auto; align-items: center">
+        <h2 *ngIf="this.problem_number > 0" style="padding-top: 20px; color: darkgrey"> {{exam_state}} {{exam_name}}
+          {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
+        <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0"
+          style="color: darkgrey; font-size: 18px"> Problem #{{problem_number}}/{{exam_length}}
+          <hr /> {{et_minutes}}m {{et_counter%60}}s
+        </h3>
+        <h2 *ngIf="this.problem_number > this.exam_length"> With {{number_correct}} out of {{exam_length}} problems
+          correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
+        <h2
+          *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Masters Grade Level Performance'"
+          style="color: green"> {{performance_level}} </h2>
+        <h2
+          *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Approaches Grade Level Performance'"
+          style="color: blue"> {{performance_level}} </h2>
+        <h2 *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Meets Grade Level Performance'"
+          style="color: magenta"> {{performance_level}} </h2>
+        <h2
+          *ngIf="this.problem_number > this.exam_length && this.performance_level == 'Does Not Meet Grade Level Performance'"
+          style="color: red"> {{performance_level}} </h2>
+        <div *ngIf="this.problem_number == 0"
+          style="height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
+          <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_type}} {{exam_grade}}
+            {{exam_subject}} Exam
+          </h2>
+          <p style="font-size: 16px; padding: 20px"> <b>Directions</b> : {{exam_directions}} </p>
+          <!-- <br /> -->
+          <h3
+            *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.my_students != []">
+            Take this exam as: </h3>
+          <div
+            *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.my_students != []"
+            class="card-container" style="align-items: center; padding-top: 0">
+            <div *ngFor="let std of my_students" (click)="select_student(my_students_data[std].uid)"
+              class="card card-small" style="height: 75px; width: 170px; align-items: center; padding-top: 0">
+              <div class="avatar-container"
+                style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 0">
+                <img *ngIf="this.selected_student != my_students_data[std].uid" src="{{my_students_data[std].photoURL}}"
+                  class="select-avatar" style="width:100%; height: 100%">
+                <img *ngIf="this.selected_student == my_students_data[std].uid" src="{{my_students_data[std].photoURL}}"
+                  class="select-avatar" style="width:100%; height: 100%; opacity: 0.3">
+                <div class="middle">
+                  <div *ngIf="this.selected_student != my_students_data[std].uid"
+                    style="color: white; background-color: #1976d2; border-radius: 10px">Select
+                  </div>
+                </div>
+                <div *ngIf="this.selected_student == my_students_data[std].uid" class="select-middle">
+                  <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
+                </div>
+              </div>
+              <h3 style="font-size: 18px; padding-left: 5px; width: 100px"> {{my_students_data[std].displayName}} </h3>
+            </div>
+          </div>
+          <div *ngIf="!this.authService.userData || !this.exam_inprogress" class="card-container"
+            style="align-items: center; padding-top: 20px">
+            <label class="switch" style="align-items: center">
+              <input type="checkbox" value="random">
+              <button (click)="toggle_random()" *ngIf="random" class="toggle-button-on"
+                style="margin: 0px 20px 0px 20px"> <b> Order Problems </b>
+              </button>
+              <button (click)="toggle_random()" *ngIf="!random" class="toggle-button-off"
+                style="margin: 0px 20px 0px 20px"> <b> Shuffle Problems </b>
+              </button>
+            </label>
+            <button class="grade-button" (click)="begin_exam(); scroll_top()"
+              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px">
+              <b> Begin Exam </b>
+            </button>
+          </div>
+          <div *ngIf="this.authService.userData && this.exam_inprogress" class="card-container"
+            style="display: flex; flex-direction: row; align-items: center; text-align: center; width: 80%; margin: 0">
+            <div class="card-container" style="align-items: center; margin: 0px 20px">
+              <h4 style="margin: auto"> {{exam_length - progress_number + 1}} / {{exam_length}} remaining problems </h4>
+              <progress value="{{progress_number-1}}" max="{{exam_length}}"
+                style="height: 20px; width: 100%; border-radius: 15px; margin: 10px auto"
+                #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+              <h4 style="margin: 1px auto; font-weight: 500"> Last Submission: <b>{{""+last_date}}</b> {{""+last_time}}
+              </h4>
+            </div>
+            <button class="grade-button" (click)="resume_exam(); scroll_top()"
+              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0 20px; margin-top: 40px">
+              <b> Resume Exam </b>
+            </button>
+          </div>
+        </div>
+        <div *ngFor="let prob of exam_dump | keyvalue">
+          <div *ngIf="problem_number == +prob.key">
+            <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
+              <h3 *ngIf="!block.endsWith('.jpg')" style="display: block; white-space: pre-wrap"> {{block}} </h3>
+              <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
+            </div>
+          </div>
+        </div>
+        <br />
+        <input type="hidden" #selection>
+        <div *ngFor="let prob of exam_dump | keyvalue">
+          <div *ngIf="problem_number == +prob.key">
+            <div *ngIf="prob.value.Type == 'FR'">
+              <div class="card card-small" style="min-height: 50px; width: 275px; max-height: 100px; padding: 10px">
+                <input
+                  style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                  inputmode="numeric" #inputFR />
+                <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value); scroll_bottom()"
+                  style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                  <b> Submit </b> </button>
+              </div>
+            </div>
+            <div *ngIf="prob.value.Type == 'MC'">
+              <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                (click)="selection.value = choice.key; attempt_mc_problem(choice.key); scroll_bottom()"
+                style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                <label class="switch" style="padding: 0 10px">
+                  <input type="checkbox" value="{{choice.key}}">
+                  <button *ngIf="problem_selection==choice.key" class="toggle-button-on"> <b> {{choice.key}} </b>
+                  </button>
+                  <button *ngIf="problem_selection!=choice.key" class="toggle-button-off"> <b> {{choice.key}} </b>
+                  </button>
+                </label>
+                <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                  style="display: block; margin: auto; white-space: pre-wrap">
+                  {{choice.value.Choice}}
+                </h3>
+                <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                  style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div *ngIf="problem_attempts > 0" [ngSwitch]="selection.value"
+          style="height: 75px; max-width: 90%; padding-top: 10px; margin: auto">
+          <button class="grade-button" (click)="next_problem(problem_selection); scroll_top()"
+            style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
+            <b> Next Problem </b>
+          </button>
+        </div>
+        <div *ngIf="problem_number > exam_length" style="width: 100%">
+          <!-- <div class="card card-small" style="height: auto; width: auto; max-width: 500px; padding: 10px; margin: auto">
                           <button *ngIf="sub_form == ''" (click)="sub_form = 'adult'" class="grade-button"> <b> Share Your Results With An Adult </b> </button>
                           <button *ngIf="sub_form == ''" (click)="sub_form = 'friend'" class="grade-button"> <b> Invite A Friend To Beat Your Results </b> </button>
                           <form *ngIf="sub_form == 'adult'" action="https://getform.io/f/38254f36-dac8-42c4-b228-265b2112682b" method="POST" style="width: 100%; align-items: center">
@@ -709,181 +859,197 @@
                               </div>
                           </form>
                       </div> -->
-            <div style="overflow: auto">
-              <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableS>
-                <thead>
-                  <tr>
-                    <th colspan="3" style="font-size: 18px"> Report: Results by Topics </th>
-                    <th colspan="2">
-                      <label class="switch"
-                        style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
-                        <input type="checkbox">
-                        <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
-                          style="width: 100%; font-size: 14px">
-                          <b>Show Subtopics</b> </button>
-                        <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
-                          style="width: 100%; font-size: 14px">
-                          Hide Subtopics </button>
-                      </label>
-                    </th>
-                  </tr>
-                  <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                    <th> Topics </th>
-                    <th> Percent Correct </th>
-                    <th> Missed Problems </th>
-                    <th> Total Problems </th>
-                    <th> Average Time </th>
-                  </tr>
-                </thead>
-                <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
-                  <tr style="background-color: lightgrey">
-                    <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div style="overflow: auto">
-              <table *ngIf="this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableL>
-                <thead>
-                  <tr>
-                    <th colspan="3" style="font-size: 18px"> Report: Results by Topics & Skill Tested </th>
-                    <th colspan="2">
-                      <label class="switch"
-                        style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
-                        <input type="checkbox">
-                        <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
-                          style="width: 100%; font-size: 14px">
-                          <b>Show Subtopics</b> </button>
-                        <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
-                          style="width: 100%; font-size: 14px">
-                          Hide Subtopics </button>
-                      </label>
-                    </th>
-                  </tr>
-                  <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                    <th> Topics & Skill Tested </th>
-                    <th> Percent Correct </th>
-                    <th> Missed Problems </th>
-                    <th> Total Problems </th>
-                    <th> Average Time </th>
-                  </tr>
-                </thead>
-                <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
-                  <tr style="background-color: lightgrey">
-                    <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
-                  </tr>
-                  <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
-                    <td style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px"> <i>
-                        {{subtopic.key}} </i> </td>
-                    <td style="border-top: 1px solid #ddd"> </td>
-                    <td style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{subtopic.value.Total}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}} </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <br />
-            <div style="overflow: auto">
-              <table *ngIf="!this.show_correct" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #resultsTableI>
-                <thead>
-                  <tr>
-                    <th colspan="6" style="font-size: 18px"> Report: Details on Incorrect Problems </th>
-                    <th colspan="2">
-                      <label class="switch"
-                        style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
-                        <input type="checkbox">
-                        <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
-                          style="width: 100%; font-size: 14px">
-                          <b>Show Correct Responses</b> </button>
-                        <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
-                          style="width: 100%; font-size: 14px">
-                          Hide Correct Responses </button>
-                      </label>
-                    </th>
-                  </tr>
-                  <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
-                    <th> Problem Number </th>
-                    <th> Problem Topics </th>
-                    <th> Correct Response </th>
-                    <th> Student Response </th>
-                    <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
-                    <th> Problem Time </th>
-                    <th> Problem Attempts </th>
-                    <th> Attempt Path </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let sub of wrong_submission_list">
-                    <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                    <td style="border-top: 1px solid #ddd"> {{sub.Topics}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
-                    <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                      {{sub.Rationale}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div style="overflow: auto">
-              <table *ngIf="this.show_correct" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #resultsTableA>
-                <thead>
-                  <tr>
-                    <th colspan="6" style="font-size: 18px"> Report: Details on All Problems </th>
-                    <th colspan="2">
-                      <label class="switch"
-                        style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
-                        <input type="checkbox">
-                        <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
-                          style="width: 100%; font-size: 14px">
-                          <b>Show Correct Responses</b> </button>
-                        <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
-                          style="width: 100%; font-size: 14px">
-                          Hide Correct Responses </button>
-                      </label>
-                    </th>
-                  </tr>
-                  <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
-                    <th> Problem Number </th>
-                    <th> Problem Topics </th>
-                    <th> Correct Response </th>
-                    <th> Student Response </th>
-                    <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
-                    <th> Problem Time </th>
-                    <th> Problem Attempts </th>
-                    <th> Attempt Path </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let sub of exam_submission_list">
-                    <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                    <td style="border-top: 1px solid #ddd"> {{sub.Topics}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
-                    <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                      {{sub.Rationale}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <br />
+          <div style="overflow: auto">
+            <table *ngIf="!this.expand_topics"
+              style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+              #topicsTableS>
+              <thead>
+                <tr>
+                  <th colspan="2" style="font-size: 18px"> Topic Results </th>
+                  <th colspan="1.5">
+                    <label class="switch"
+                      style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
+                      <input type="checkbox">
+                      <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
+                        style="width: 100%; font-size: 14px">
+                        <b>Show Subtopics</b> </button>
+                      <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
+                        style="width: 100%; font-size: 14px">
+                        Hide Subtopics </button>
+                    </label>
+                  </th>
+                </tr>
+                <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
+                  <th style="padding-right: 5px; padding-left: 5px"> Topics </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Percent Correct </th>
+                  <th *ngIf="this.screenWidth > this.mobileWidth" style="padding-right: 5px; padding-left: 5px"> Missed
+                    Problems </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Average Time </th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
+                <tr style="background-color: lightgrey">
+                  <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
+                  <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}%
+                      ({{topic.value.Correct}}/{{topic.value.Total}}) </b> </td>
+                  <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"> <b>
+                      {{topic.value.Incorrect}} </b> </td>
+                  <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+          <div style="overflow: auto">
+            <table *ngIf="this.expand_topics"
+              style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+              #topicsTableL>
+              <thead>
+                <tr>
+                  <th colspan="2" style="font-size: 18px"> Subtopic Results </th>
+                  <th colspan="1.5">
+                    <label class="switch"
+                      style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
+                      <input type="checkbox">
+                      <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
+                        style="width: 100%; font-size: 14px">
+                        <b>Show Subtopics</b> </button>
+                      <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
+                        style="width: 100%; font-size: 14px">
+                        Hide Subtopics </button>
+                    </label>
+                  </th>
+                </tr>
+                <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
+                  <th style="padding-right: 5px; padding-left: 5px"> Topics & Subtopics </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Percent Correct </th>
+                  <th *ngIf="this.screenWidth > this.mobileWidth" style="padding-right: 5px; padding-left: 5px"> Missed
+                    Problems </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Average Time </th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
+                <tr style="background-color: lightgrey">
+                  <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
+                  <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}%
+                      ({{topic.value.Correct}}/{{topic.value.Total}}) </b> </td>
+                  <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"> <b>
+                      {{topic.value.Incorrect}} </b> </td>
+                  <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
+                </tr>
+                <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
+                  <td colspan="2"
+                    style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
+                    <a (click)="searchSubTopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
+                        {{subtopic.key}} </i> </a>
+                  </td>
+                  <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"
+                    style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
+                  <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}} </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br />
+          <div style="overflow: auto">
+            <table *ngIf="!this.show_correct"
+              style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+              #resultsTableI>
+              <thead>
+                <tr>
+                  <th colspan="4.5" style="font-size: 18px"> Incorrect Submission Results </th>
+                  <th colspan="2">
+                    <label class="switch"
+                      style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
+                      <input type="checkbox">
+                      <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
+                        style="width: 100%; font-size: 14px">
+                        <b>Show Correct Responses</b> </button>
+                      <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
+                        style="width: 100%; font-size: 14px">
+                        Hide Correct Responses </button>
+                    </label>
+                  </th>
+                </tr>
+                <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
+                  <th style="padding-right: 5px; padding-left: 5px"> # </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Topics </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Key </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Submission </th>
+                  <th *ngIf="this.screenWidth > this.mobileWidth" style="padding-right: 5px; padding-left: 5px">
+                    Submission Explanation </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Time </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Attempts </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let sub of wrong_submission_list">
+                  <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
+                  <td style="border-top: 1px solid #ddd">
+                    <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
+                  </td>
+                  <td style="border-top: 1px solid #ddd"> {{(sub.Correct == '✅') ? sub.Choice : sub.Correct}} </td>
+                  <td style="border-top: 1px solid #ddd"> <b> {{(sub.Correct == '✅') ? sub.Correct : sub.Choice}} </b>
+                  </td>
+                  <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
+                    {{sub.Rationale}} </td>
+                  <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
+                  <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} ({{sub.Path}}) </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="overflow: auto">
+            <table *ngIf="this.show_correct"
+              style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+              #resultsTableA>
+              <thead>
+                <tr>
+                  <th colspan="4.5" style="font-size: 18px"> All Submission Results </th>
+                  <th colspan="2">
+                    <label class="switch"
+                      style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
+                      <input type="checkbox">
+                      <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
+                        style="width: 100%; font-size: 14px">
+                        <b>Show Correct Responses</b> </button>
+                      <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
+                        style="width: 100%; font-size: 14px">
+                        Hide Correct Responses </button>
+                    </label>
+                  </th>
+                </tr>
+                <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
+                  <th style="padding-right: 5px; padding-left: 5px"> # </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Topics </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Key </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Submission </th>
+                  <th *ngIf="this.screenWidth > this.mobileWidth" style="padding-right: 5px; padding-left: 5px">
+                    Submission Explanation </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Time </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Attempts </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let sub of exam_submission_list">
+                  <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
+                  <td style="border-top: 1px solid #ddd">
+                    <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
+                  </td>
+                  <td style="border-top: 1px solid #ddd"> {{(sub.Correct == '✅') ? sub.Choice : sub.Correct}} </td>
+                  <td style="border-top: 1px solid #ddd"> <b> {{(sub.Correct == '✅') ? sub.Correct : sub.Choice}} </b>
+                  </td>
+                  <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
+                    {{sub.Rationale}} </td>
+                  <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
+                  <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} ({{sub.Path}}) </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br />
         </div>
       </div>
     </div>
-    <br />
   </div>
+  <br />
+</div>
