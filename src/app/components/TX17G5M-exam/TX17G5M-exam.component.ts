@@ -516,7 +516,24 @@ export class TX17G5MExamComponent implements OnInit {
                             }
                         }
                         else {
-                            this.exam_dump = this.ordered_dump;
+                            for (let i = 1; i <= this.exam_length; i++) {
+                                this.exam_dump[i] = this.ordered_dump[i];
+                            }
+                            this.exam_key = {};
+                            for (const [num , val] of Object.entries(this.exam_dump)) {
+                                for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                                    if (ch == 'KEY') {
+                                        this.exam_key[+num] = val2.Choice;
+                                    }
+                                    else {
+                                        if (val2.Key.Correct) {
+                                            this.exam_key[+num] = ch;
+                                        }
+                                    }
+                                }
+                            }
+                            console.log(this.exam_dump);
+                            console.log(this.exam_key);
                         }
                     }
                 }
@@ -577,7 +594,24 @@ export class TX17G5MExamComponent implements OnInit {
                             }
                         }
                         else {
-                            this.exam_dump = this.ordered_dump;
+                            for (let i = 1; i <= this.exam_length; i++) {
+                                this.exam_dump[i] = this.ordered_dump[i];
+                            }
+                            this.exam_key = {};
+                            for (const [num , val] of Object.entries(this.exam_dump)) {
+                                for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                                    if (ch == 'KEY') {
+                                        this.exam_key[+num] = val2.Choice;
+                                    }
+                                    else {
+                                        if (val2.Key.Correct) {
+                                            this.exam_key[+num] = ch;
+                                        }
+                                    }
+                                }
+                            }
+                            console.log(this.exam_dump);
+                            console.log(this.exam_key);
                         }
                     }
                 }
@@ -596,8 +630,24 @@ export class TX17G5MExamComponent implements OnInit {
             this.randomize_problems();
         }
         else {
-            this.exam_dump = this.ordered_dump;
+            for (let i = 1; i <= this.exam_length; i++) {
+                this.exam_dump[i] = this.ordered_dump[i];
+            }
+            for (const [num , val] of Object.entries(this.exam_dump)) {
+                for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                    if (ch == 'KEY') {
+                        this.exam_key[+num] = val2.Choice;
+                    }
+                    else {
+                        if (val2.Key.Correct) {
+                            this.exam_key[+num] = ch;
+                        }
+                    }
+                }
+            }
         }
+        console.log(this.exam_dump);
+        console.log(this.exam_key);
         if (this.authService.userData) {
             if (this.authService.userData.role == 'Student') {
                 this.db_updates['exams/history/' + this.key] = { progress: 0, status: 'Started', shuffle: this.random, lasttimestamp: serverTimestamp() };
@@ -1131,6 +1181,20 @@ export class TX17G5MExamComponent implements OnInit {
     }
 
     ngOnInit() {
+        for (let num of Object.keys(this.ordered_dump)) {
+            this.exam_submission[+num] = {
+                'Number': 0,
+                'Topics': [],
+                'SubTopics': [],
+                'Choice': '',
+                'Correct': '',
+                'Rationale': '',
+                'Attempts': 0,
+                'Path': [],
+                'Seconds': 0,
+                'Time': ''
+            };
+        }
         setTimeout(() => {
             if (this.authService.userData) {
                 if (this.authService.userData.role != 'Student') {
@@ -1186,7 +1250,7 @@ export class TX17G5MExamComponent implements OnInit {
             }
         }
         console.log(this.topics_count);
-        for (const [num , val] of Object.entries(this.exam_dump)) {
+        for (const [num , val] of Object.entries(this.ordered_dump)) {
             for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
                 if (ch == 'KEY') {
                     this.exam_key[+num] = val2.Choice;
@@ -1197,20 +1261,6 @@ export class TX17G5MExamComponent implements OnInit {
                     }
                 }
             }
-        }
-        for (let num of Object.keys(this.ordered_dump)) {
-            this.exam_submission[+num] = {
-                'Number': 0,
-                'Topics': [],
-                'SubTopics': [],
-                'Choice': '',
-                'Correct': '',
-                'Rationale': '',
-                'Attempts': 0,
-                'Path': [],
-                'Seconds': 0,
-                'Time': ''
-            };
         }
     }
 }
