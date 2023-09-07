@@ -19,6 +19,7 @@ export class AuthService {
   user_result: any = {};
   exam_sub: any;
   avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
+  
   constructor(
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
@@ -316,6 +317,9 @@ export class AuthService {
     const updates: any = {};
     for (let key in changes) {
       updates['/users/' + this.userData.uid + '/' + key] = changes[key];
+      if (key == 'email' && auth.getAuth().currentUser != null) {
+        auth.updateEmail((auth.getAuth().currentUser as auth.User), changes[key]);
+      }
     }
     return update(ref(db), updates).then(() => {
       get(child(ref(db), '/users/' + this.userData.uid)).then((snapshot) => {
