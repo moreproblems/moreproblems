@@ -563,7 +563,10 @@
     <br />
   </div>
   <div *ngIf="file_source == ''" class="content" role="main">
-    <div *ngIf="this.authService.userData.role == 'Student'" class="subcontent">
+    <br />
+    <div *ngIf="this.authService.userData.role == 'Student'" class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <br />
       <h2 #favoriteExams>Your In Progress Exams</h2>
       <br />
       <!-- <input type="hidden" #selection> -->
@@ -584,9 +587,63 @@
             routerLink="/exam/{{exm}}" routerLinkActive="active"> <b>Resume Exam</b> </button>
         </div>
       </div>
+      <br />
     </div>
-    <div class="subcontent" role="main">
-      <h2 #favoriteExams>Your Favorited Exams</h2>
+    <br />
+    <div *ngIf="this.authService.userData.role != 'Student'" class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <br />
+      <h2 #yourStudents> Your Students </h2>
+      <br />
+      <div class="card-container" style="max-width: 100%">
+        <div *ngFor="let stud of student_metadata" class="card card-large"
+            style="margin: auto; height: auto; max-height: 300px; min-width: 40%; max-width: 500px; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 15px 25px">
+            <img *ngIf="this.screenWidth > this.mobileWidth"
+                class="align-self-start mr-5 img-thumbnail rounded-circle"
+                style="height: 200px; width: 200px; border-radius: 50%"
+                src="{{(stud.photoURL) ? stud.photoURL : '/assets/icons/user/user.png'}}"
+                alt="{{stud.displayName}}">
+            <img *ngIf="this.screenWidth <= this.mobileWidth"
+                class="align-self-start mr-5 img-thumbnail rounded-circle"
+                style="height: 150px; width: 150px; border-radius: 50%"
+                src="{{(stud.photoURL) ?stud.photoURL : '/assets/icons/user/user.png'}}"
+                alt="{{stud.displayName}}">
+            <div style="align-items: center; text-align: center;">
+                <h2>{{(stud.displayName) ?
+                    stud.displayName :
+                    'User'}}</h2>
+                <hr />
+                <div
+                    style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+                    <div *ngIf="!stud.uid.includes(authService.userData.uid) && screenWidth > mobileWidth"
+                        class="media-body" style="padding: 0 20px">
+                        <h3 style="font-weight: 600">{{stud.email}}</h3>
+                        <h3 style="font-weight: 600">{{stud.phoneNumber}}</h3>
+                    </div>
+                    <div class="media-body" style="padding: 0 20px">
+                        <h3 style="font-weight: 600">{{stud.grade}}</h3>
+                        <h3 style="font-weight: 600">{{stud.state}}</h3>
+                    </div>
+                </div>
+                <hr />
+                <h3>Total Problems: <strong style="font-weight: 500">{{stud.problems.correct}} /
+                        {{student_data.problems.total}}</strong>
+                </h3>
+                <h3>Percent Correct: <strong
+                        style="font-weight: 500">{{get_percent_correct(stud)}}%</strong>
+                </h3>
+                <h3>Total Exams: <strong style="font-weight: 500">{{get_exam_count(stud)}}</strong>
+                </h3>
+            </div>
+        </div>
+      </div>
+      <br />
+    </div>
+    <br />
+    <div class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <br />
+      <h2 #favoriteExams> Your Favorited Exams </h2>
       <br />
       <input type="hidden" #selection>
       <div class="card-container" style="max-width: 100%">
@@ -600,5 +657,6 @@
       </div>
       <br />
     </div>
+    <br />
   </div>
 </div>

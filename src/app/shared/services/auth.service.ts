@@ -16,6 +16,7 @@ import { WindowService } from './window.service';
 export class AuthService {
   // user: User;
   userData: any; // Save logged in user data
+  userCredential: any;
   user_result: any = {};
   exam_sub: any;
   avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
@@ -65,6 +66,7 @@ export class AuthService {
     return this.afAuth
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
+        this.userCredential = result;
         this.SetUserData(result.user);
         // this.WriteUserData(result.user);
         // this.setUserLoggedIn(result.user);
@@ -156,6 +158,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then((result) => {
         this.router.navigate(['profile']);
+        this.userCredential = result;
         this.SetUserData(result.user);
         // this.WriteUserData(result.user, role);
         // this.setUserLoggedIn(result.user);
@@ -257,10 +260,9 @@ export class AuthService {
       this.userData.photoURL = '/assets/icons/user/' + avatar + '.png';
     }
     updates['/users/' + user.uid] = this.userData;
-    return update(ref(db), updates).catch(error => {
-      console.log(error.message)
-    }).then((result) => {
+    return update(ref(db), updates).then(() => {
       updates2['/users/' + user.uid + '/role'] = role;
+      // updates2['/users/' + user.uid + '/standards/favorites'] = ["test"];
       updates2['/users/' + user.uid + '/exams/favorites'] = ["test"];
       if (role == 'Student') {
         updates2['/users/' + user.uid + '/exams/history'] = { "test": { status: "", progress: 0} };
@@ -272,6 +274,8 @@ export class AuthService {
         updates2['/users/' + user.uid + '/students'] = [""];
       }
       update(ref(db), updates2);
+    }).catch(error => {
+      console.log(error.message)
     });
   }
 
@@ -289,15 +293,15 @@ export class AuthService {
       // exams: {favorites: {}}
     };
     updates['/users/' + student['uid']] = studData;
-    return update(ref(db), updates).catch(error => {
-      console.log(error.message)
-    }).then((result) => {
+    return update(ref(db), updates).then(() => {
       updates2['/users/' + student['uid'] + '/exams/favorites'] = ["test"];
       updates2['/users/' + student['uid'] + '/exams/history'] = { "test": { status: "", progress: 0} };
       updates2['/users/' + student['uid'] + '/problems/all'] = { "test": { status: ""} };
       updates2['/users/' + student['uid'] + '/problems/total'] = 0;
       updates2['/users/' + student['uid'] + '/problems/correct'] = 0;
       update(ref(db), updates2);
+    }).catch(error => {
+      console.log(error.message)
     });
   }
 
@@ -305,10 +309,16 @@ export class AuthService {
     const db = getDatabase();
     const updates: any = {};
     for (const [key, val] of Object.entries(student)) {
-      updates['/users/' + id + '/' + key] = val
+      updates['/users/' + id + '/' + key] = val;
     }
-    return update(ref(db), updates).catch(error => {
-      console.log(error.message)
+    update(ref(db), updates).then(() => {
+      // Data saved successfully!
+      return;
+      // setTimeout(function () {
+      //   return;
+      // }, 200);
+    }).catch(error => {
+      console.log(error.message);
     });
   }
 
@@ -319,6 +329,7 @@ export class AuthService {
       updates['/users/' + this.userData.uid + '/' + key] = changes[key];
       if (key == 'email' && auth.getAuth().currentUser != null) {
         auth.updateEmail((auth.getAuth().currentUser as auth.User), changes[key]);
+        // auth.reauthenticateWithCredential((auth.getAuth().currentUser as auth.User), this.userCredential)
       }
     }
     return update(ref(db), updates).then(() => {
@@ -438,7 +449,6 @@ export class AuthService {
       if (snapshot.exists()) {
         console.log(snapshot.val());
         this.user_result = snapshot.val();
-        // return snapshot.val();
       } else {
         console.log("No data available");
       }

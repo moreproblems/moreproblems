@@ -1219,10 +1219,9 @@ export class TemplateExamComponent implements OnInit {
                             this.my_students.push(stud);
                             // setTimeout(() => {
                             const student_data = this.authService.searchUserId(stud);
-                                // setTimeout(() => {
-                            this.my_students_data[(stud)] = (student_data as object);
-                                // }, 500);
-                            // }, count * 250);
+                            if (student_data != null) {
+                                this.my_students_data[(stud)] = (student_data as object);
+                            }
                         }
                     }
                 }

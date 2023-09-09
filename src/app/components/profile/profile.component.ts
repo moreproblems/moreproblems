@@ -120,6 +120,7 @@ export class ProfileComponent implements OnInit {
   screenHeight = window.innerHeight;
   mobileWidth = 875;
   menuOpen = false;
+  temp_count = 0;
 
   profile_tab = "information";
   photoURL = "";
@@ -989,12 +990,22 @@ export class ProfileComponent implements OnInit {
         setTimeout(() => {
           console.log(stud);
           this.student_data = this.authService.searchUserId(stud as string);
+          console.log(this.student_data);
+          this.student_metadata.push(this.student_data as object);
+        }, +key * 10);
+      }
+      setTimeout(() => {
+        this.student_metadata = [];
+        const linked_students2 = this.authService.userData.students.slice(1);
+        for (const [key, stud] of Object.entries(linked_students2)) {
           setTimeout(() => {
+            console.log(stud);
+            this.student_data = this.authService.searchUserId(stud as string);
             console.log(this.student_data);
             this.student_metadata.push(this.student_data as object);
-          }, 100);
-        }, +key * 200);
-      }
+          }, +key * 10);
+        }
+      }, (linked_students.length + 1) * 10);
     }
   }
 
@@ -1009,6 +1020,7 @@ export class ProfileComponent implements OnInit {
     this.photoURL = '/assets/icons/user/' + avatar + '.png';
     this.create_s = !this.create_s;
     this.edit_s_list = [];
+    this.edit_s_list['photoURL'] = this.photoURL;
   }
 
   toggle_edit_student(id: string) {
@@ -1057,9 +1069,22 @@ export class ProfileComponent implements OnInit {
     }
     this.edit_s_list['uid'] = this.authService.userData.uid + "-" + this.student_uid;
     this.authService.WriteUserDataList(this.edit_s_list);
+    this.link_student(this.authService.userData.uid + "-" + this.student_uid);
     setTimeout(() => {
-      this.link_student(this.authService.userData.uid + "-" + this.student_uid);
+      this.set_tab("information");
+      this.set_tab("students");
     }, 200);
+    // const linked_students = this.authService.userData.students.slice(1);
+    // for (const [key, stud] of Object.entries(linked_students)) {
+    //   setTimeout(() => {
+    //     console.log(stud);
+    //     this.student_data = this.authService.searchUserId(stud as string);
+    //     setTimeout(() => {
+    //       console.log(this.student_data);
+    //       this.student_metadata.push(this.student_data as object);
+    //     }, 100);
+    //   }, +key * 200);
+    // }
   }
 
   update_student(id: string) {
@@ -1154,6 +1179,7 @@ export class ProfileComponent implements OnInit {
 
   link_student(id: string) {
     this.student_list = [];
+    // this.student_metadata = [];
     for (let std of this.authService.userData.students) {
       this.student_list.push(std as string);
     }
@@ -1162,6 +1188,17 @@ export class ProfileComponent implements OnInit {
     }
     this.authService.UpdateUserData({ 'students': {} });
     this.authService.UpdateUserData({ 'students': this.student_list });
+    // const linked_students = this.authService.userData.students.slice(1);
+    // for (const [key, stud] of Object.entries(linked_students)) {
+    //   setTimeout(() => {
+    //     console.log(stud);
+    //     this.student_data = this.authService.searchUserId(stud as string);
+    //     setTimeout(() => {
+    //       console.log(this.student_data);
+    //       this.student_metadata.push(this.student_data as object);
+    //     }, 100);
+    //   }, +key * 200);
+    // }
   }
 
   select_student(std: string) {
@@ -1169,8 +1206,8 @@ export class ProfileComponent implements OnInit {
     this.subject_breakdown = {};
     this.topic_breakdown = {};
     this.student_exam_metadata = {};
-    this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
     this.student_data = this.authService.searchUserId(std);
+    this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
     // setTimeout(() => {
     if (this.student_data.problems.total == 0) {
       this.total_percent_correct = 0;
@@ -1181,20 +1218,39 @@ export class ProfileComponent implements OnInit {
     this.complete_exam_count = 0;
     this.complete_exam_list = [];
     this.grade_breakdown = {};
+    this.temp_count = 1;
     const exam_history = this.student_data.exams.history;
     for (const [key, det] of Object.entries(exam_history)) {
-      if ((det as any).status == "Completed") {
-        this.complete_exam_count = this.complete_exam_count + 1;
-        this.complete_exam_list.push(key);
-        this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
-        this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
-      }
+      setTimeout(() => {
+        if ((det as any).status == "Completed") {
+          this.complete_exam_count = this.complete_exam_count + 1;
+          this.complete_exam_list.push(key);
+          this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+          this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+        }
+      }, this.temp_count * 10);
+      this.temp_count += 1;
     }
-    // setTimeout(() => {
+    setTimeout(() => {
+      this.complete_exam_count = 0;
+      this.complete_exam_list = [];
+      this.temp_count = 1;
+      const exam_history2 = this.student_data.exams.history;
+      for (const [key, det] of Object.entries(exam_history2)) {
+        setTimeout(() => {
+          if ((det as any).status == "Completed") {
+            this.complete_exam_count = this.complete_exam_count + 1;
+            this.complete_exam_list.push(key);
+            this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+            this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+          }
+        }, this.temp_count * 10);
+        this.temp_count += 1;
+      }
+    }, (this.temp_count + 1) * 10);
     this.subject_break();
     this.selected_student = std;
-    // }, 200);
-    // }, 500);
+    // }, 50);
   }
 
   subject_break() {
@@ -1453,15 +1509,13 @@ ngOnInit() {
           setTimeout(() => {
             console.log(stud);
             this.student_data = this.authService.searchUserId(stud as string);
-            setTimeout(() => {
-              console.log(this.student_data);
-              this.student_metadata.push(this.student_data as object);
-            }, 75);
-          }, +key * 150);
+            console.log(this.student_data);
+            this.student_metadata.push(this.student_data as object);
+          }, +key * 10);
         }
       }
     }
-  }, 250);
+  }, 50);
   this.windowRef = this.win.windowRef;
   this.windowRef.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
     'size': 'invisible',

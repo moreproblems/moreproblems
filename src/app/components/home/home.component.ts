@@ -29,6 +29,11 @@ export class HomeComponent implements OnInit {
   selected_state = '';
   selected_grade = '';
 
+  student_list: string[] = [];
+  student_metadata: any[] = [];
+  student_data: any = {};
+  complete_exam_count = 0;
+
   exam_names: {[key: string]: string} = {
     "COG3M": "Colorado CMAS Grade 3 Math Practice Exam",
     "COG3E": "Colorado CMAS Grade 3 English Language Arts Practice Exam",
@@ -615,6 +620,21 @@ export class HomeComponent implements OnInit {
     this.screenHeight = window.innerHeight;
   }
 
+  get_percent_correct(stud: any) {
+    return Math.round(10000 * stud.problems.correct / stud.problems.total) / 100;
+  }
+
+  get_exam_count(stud: any) {
+    this.complete_exam_count = 0;
+    const exam_history = stud.exams.history;
+    for (const [key, det] of Object.entries(exam_history)) {
+      if ((det as any).status == "Completed") {
+        this.complete_exam_count += 1;
+      }
+    }
+    return this.complete_exam_count;
+  }
+
   select_exam(ex: string) {
     this.exam_id = ex;
     this.exam_url = '/exam/' + ex;
@@ -734,13 +754,40 @@ export class HomeComponent implements OnInit {
       if (!this.authService.userData) {
         this.router.navigate(['exams']);
       }
-    }, 250);
+    }, 50);
     const exam_history = this.authService.userData.exams.history;
-    for (const [key, det] of Object.entries(exam_history)) {
-      if ((det as any).status == "Started") {
-        this.inprogress_set.push(key);
-        this.inprogress_exams[key] = { progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString()} ;
+    if (this.authService.userData.role == 'Student') {
+      for (const [key, det] of Object.entries(exam_history)) {
+        if ((det as any).status == "Started") {
+          this.inprogress_set.push(key);
+          this.inprogress_exams[key] = { progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString()} ;
+        }
       }
+    }
+    if (this.authService.userData.role != 'Student') {
+      this.student_metadata = [];
+      const linked_students = this.authService.userData.students.slice(1);
+      for (const [key, stud] of Object.entries(linked_students)) {
+        setTimeout(() => {
+          console.log(stud);
+          this.student_data = this.authService.searchUserId(stud as string);
+          console.log(this.student_data);
+          this.student_metadata.push(this.student_data as object);
+        }, +key * 10);
+      }
+      console.log(this.student_metadata)
+      setTimeout(() => {
+        this.student_metadata = [];
+        const linked_students2 = this.authService.userData.students.slice(1);
+        for (const [key, stud] of Object.entries(linked_students2)) {
+          setTimeout(() => {
+            console.log(stud);
+            this.student_data = this.authService.searchUserId(stud as string);
+            console.log(this.student_data);
+            this.student_metadata.push(this.student_data as object);
+          }, +key * 10);
+        }
+      }, (linked_students.length + 1) * 20);
     }
   }
 }
