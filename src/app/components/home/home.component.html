@@ -423,49 +423,49 @@
     margin-right: 4px;
   }
 
-  /* The switch - the box around the slider */
-  .switch {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: auto;
-    max-width: 250px;
-    max-height: 75px;
-    transition: all 0.2s ease-in-out;
-  }
+/* The switch - the box around the slider */
+.switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  max-width: 250px;
+  max-height: 75px;
+  transition: all 0.2s ease-in-out;
+}
 
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
-  input:checked+.toggle-button-on {
-    background-color: #1976d2;
-    color: white
-  }
+input:checked+.toggle-button-on {
+  background-color: #1976d2;
+  color: white
+}
 
-  input:hover+.toggle-button-on {
-    background-color: #0a1e33;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
+input:hover+.toggle-button-on {
+  background-color: #0a1e33;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
 
-  input:checked+.toggle-button-off {
-    background-color: #ccc;
-    color: black;
-  }
+input:checked+.toggle-button-off {
+  background-color: #ccc;
+  color: black;
+}
 
-  input:hover+.toggle-button-off {
-    background-color: #0a1e33;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
+input:hover+.toggle-button-off {
+  background-color: #0a1e33;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
@@ -564,19 +564,98 @@
   </div>
   <div *ngIf="file_source == ''" class="content" role="main">
     <br />
-    <div *ngIf="this.authService.userData.role == 'Student'" class="card card-large"
+    <div *ngIf="this.authService.userData.role != 'Student'" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
-      <h2 #favoriteExams>Your In Progress Exams</h2>
+      <h2 #yourStudents> My Students </h2>
+      <br />
+      <div class="card-container" style="max-width: 100%">
+        <div *ngFor="let stud of my_student_metadata" class="card card-medium"
+          style="display: block; text-align: center; min-width: 40%; max-width: 500px; max-height: 300px; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+            <div style="align-items: center; text-align: center; margin-right: 10px">
+              <h2 style="padding-bottom: 10px">{{(stud.displayName) ?
+                  stud.displayName :
+                  'User'}}</h2>
+              <img *ngIf="this.screenWidth > this.mobileWidth"
+                  class="align-self-start mr-5 img-thumbnail rounded-circle"
+                  style="height: 160px; width: 160px; border-radius: 50%"
+                  src="{{(stud.photoURL) ? stud.photoURL : '/assets/icons/user/user.png'}}"
+                  alt="{{stud.displayName}}">
+              <img *ngIf="this.screenWidth <= this.mobileWidth"
+                  class="align-self-start mr-5 img-thumbnail rounded-circle"
+                  style="height: 120px; width: 120px; border-radius: 50%"
+                  src="{{(stud.photoURL) ?stud.photoURL : '/assets/icons/user/user.png'}}"
+                  alt="{{stud.displayName}}">
+              <label class="switch">
+                  <input type="checkbox">
+                  <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud != stud.uid" (click)="select_student(stud.uid)" class="toggle-button-off" style="margin-top: 10px">
+                      <b> View Exams </b>
+                  </button>
+                  <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud == stud.uid" (click)="select_student(stud.uid)" class="toggle-button-on" style="margin-top: 10px">
+                      <b> View Exams </b>
+                  </button>
+              </label>
+            </div>
+            <div style="align-items: center; text-align: center; margin-left: 10px">
+                <div
+                    style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+                    <div class="media-body" style="padding: 0 20px">
+                        <h3 style="font-weight: 600">{{stud.grade}}</h3>
+                        <h3 style="font-weight: 600">{{stud.state}}</h3>
+                    </div>
+                    <div *ngIf="!stud.uid.includes(authService.userData.uid) && screenWidth > mobileWidth"
+                        class="media-body" style="padding: 0 20px">
+                        <h3 style="font-weight: 600">{{stud.email}}</h3>
+                        <h3 style="font-weight: 600">{{stud.phoneNumber}}</h3>
+                    </div>
+                </div>
+                <hr style="width: 90%" />
+                <h3> {{stud.problems.total}} <strong style="font-weight: 500">problems total</strong>
+                </h3>
+                <h3> {{stud.problems.correct}} <strong style="font-weight: 500">problems correct{{(get_percent_correct(stud)) ?', or ' : ""}}</strong> {{(get_percent_correct(stud)) ?get_percent_correct(stud) + '%' : ""}}
+                </h3>
+                <hr style="width: 90%" />
+                <h3> {{get_exam_count(stud)[0]}} <strong style="font-weight: 500">exams complete</strong>
+                </h3>
+                <h3> {{get_exam_count(stud)[1]}} <strong style="font-weight: 500">exams in progress</strong>
+                </h3>
+            </div>
+        </div>
+      </div>
+      <br />
+    </div>
+    <br *ngIf="this.authService.userData.role != 'Student'" />
+    <div *ngIf="this.authService.userData.role == 'Student' || selected_stud != ''" class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <br />
+      <h2 *ngIf="this.authService.userData.role == 'Student'" #myFavoriteExams>My In Progress Exams</h2>
+      <h2 *ngIf="this.authService.userData.role != 'Student'" #studFavoriteExams>{{student_data.displayName}}'s In Progress Exams</h2>
       <br />
       <!-- <input type="hidden" #selection> -->
-      <div class="card-container" style="max-width: 100%">
+      <div *ngIf="this.authService.userData.role == 'Student'" class="card-container" style="max-width: 100%">
         <div *ngFor="let exm of this.inprogress_set" class="card card-medium"
           style="display: block; text-align: center; max-width: 350px">
           <h3> {{exam_names[exm]}} </h3>
-          <!-- resolve hand code exam length -->
-          <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} / 32 </h4>
-          <progress value="{{inprogress_exams[exm].progress}}" max="32"
+          <!-- resolve hard code exam length -->
+          <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} / {{""+exam_attribute_dump[exm].NumQuestions}} </h4>
+          <progress value="{{inprogress_exams[exm].progress}}" max="{{exam_attribute_dump[exm].NumQuestions}}"
+            style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
+            #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+          <!-- time spent on exam so far -->
+          <h4 style="margin: 1px auto; font-weight: 500"> Last Submission:
+            <b>{{""+inprogress_exams[exm].lastdate}}</b> {{""+inprogress_exams[exm].lasttime}}
+          </h4>
+          <button class="grade-button" style="margin: auto; margin-top: 25px; padding: 10px 5px"
+            routerLink="/exam/{{exm}}" routerLinkActive="active"> <b>Resume Exam</b> </button>
+        </div>
+      </div>
+      <div *ngIf="this.authService.userData.role != 'Student'" class="card-container" style="max-width: 100%">
+        <div *ngFor="let exm of this.inprogress_set" class="card card-medium"
+          style="display: block; text-align: center; max-width: 350px">
+          <h3> {{exam_names[exm]}} </h3>
+          <!-- resolve hard code exam length -->
+          <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} / {{""+exam_attribute_dump[exm].NumQuestions}} </h4>
+          <progress value="{{inprogress_exams[exm].progress}}" max="{{exam_attribute_dump[exm].NumQuestions}}"
             style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           <!-- time spent on exam so far -->
@@ -589,61 +668,11 @@
       </div>
       <br />
     </div>
-    <br />
-    <div *ngIf="this.authService.userData.role != 'Student'" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
-      <br />
-      <h2 #yourStudents> Your Students </h2>
-      <br />
-      <div class="card-container" style="max-width: 100%">
-        <div *ngFor="let stud of student_metadata" class="card card-large"
-            style="margin: auto; height: auto; max-height: 300px; min-width: 40%; max-width: 500px; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 15px 25px">
-            <img *ngIf="this.screenWidth > this.mobileWidth"
-                class="align-self-start mr-5 img-thumbnail rounded-circle"
-                style="height: 200px; width: 200px; border-radius: 50%"
-                src="{{(stud.photoURL) ? stud.photoURL : '/assets/icons/user/user.png'}}"
-                alt="{{stud.displayName}}">
-            <img *ngIf="this.screenWidth <= this.mobileWidth"
-                class="align-self-start mr-5 img-thumbnail rounded-circle"
-                style="height: 150px; width: 150px; border-radius: 50%"
-                src="{{(stud.photoURL) ?stud.photoURL : '/assets/icons/user/user.png'}}"
-                alt="{{stud.displayName}}">
-            <div style="align-items: center; text-align: center;">
-                <h2>{{(stud.displayName) ?
-                    stud.displayName :
-                    'User'}}</h2>
-                <hr />
-                <div
-                    style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-                    <div *ngIf="!stud.uid.includes(authService.userData.uid) && screenWidth > mobileWidth"
-                        class="media-body" style="padding: 0 20px">
-                        <h3 style="font-weight: 600">{{stud.email}}</h3>
-                        <h3 style="font-weight: 600">{{stud.phoneNumber}}</h3>
-                    </div>
-                    <div class="media-body" style="padding: 0 20px">
-                        <h3 style="font-weight: 600">{{stud.grade}}</h3>
-                        <h3 style="font-weight: 600">{{stud.state}}</h3>
-                    </div>
-                </div>
-                <hr />
-                <h3>Total Problems: <strong style="font-weight: 500">{{stud.problems.correct}} /
-                        {{student_data.problems.total}}</strong>
-                </h3>
-                <h3>Percent Correct: <strong
-                        style="font-weight: 500">{{get_percent_correct(stud)}}%</strong>
-                </h3>
-                <h3>Total Exams: <strong style="font-weight: 500">{{get_exam_count(stud)}}</strong>
-                </h3>
-            </div>
-        </div>
-      </div>
-      <br />
-    </div>
-    <br />
+    <br *ngIf="this.authService.userData.role == 'Student' || selected_stud != ''" />
     <div class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
-      <h2 #favoriteExams> Your Favorited Exams </h2>
+      <h2 #favoriteExams> My Favorited Exams </h2>
       <br />
       <input type="hidden" #selection>
       <div class="card-container" style="max-width: 100%">

@@ -18,6 +18,8 @@ export class AuthService {
   userData: any; // Save logged in user data
   userCredential: any;
   user_result: any = {};
+  inprog_exams: any = {};
+  mystud_inprog_exams: any = {};
   exam_sub: any;
   avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
   
@@ -454,6 +456,28 @@ export class AuthService {
       }
     });
     return this.user_result;
+  }
+
+  getInProgExams(id: string) {
+    const usr = this.searchUserId(id);
+    this.inprog_exams = {};
+    for (const [key, xm] of Object.entries((usr as any).exams.history)) {
+      if ((xm as any).status == "Started" && (key as string) != 'test') {
+        this.inprog_exams[(key as string)] = (xm as any);
+      }
+    }
+    return this.inprog_exams;
+  }
+
+  getMyStudInProgExams(studs: string[]) {
+    this.mystud_inprog_exams = {};
+    for (let stud of studs) {
+      this.inprog_exams = this.getInProgExams(stud);
+      for (const [key, xm] of Object.entries(this.inprog_exams)) {
+        this.mystud_inprog_exams[stud][key as string] = (xm as any) 
+      }
+    }
+    return this.mystud_inprog_exams;
   }
 
   // Optional: clear localStorage

@@ -1208,7 +1208,6 @@ export class ProfileComponent implements OnInit {
     this.student_exam_metadata = {};
     this.student_data = this.authService.searchUserId(std);
     this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
-    // setTimeout(() => {
     if (this.student_data.problems.total == 0) {
       this.total_percent_correct = 0;
     }
@@ -1217,7 +1216,6 @@ export class ProfileComponent implements OnInit {
     }
     this.complete_exam_count = 0;
     this.complete_exam_list = [];
-    this.grade_breakdown = {};
     this.temp_count = 1;
     const exam_history = this.student_data.exams.history;
     for (const [key, det] of Object.entries(exam_history)) {
@@ -1228,29 +1226,79 @@ export class ProfileComponent implements OnInit {
           this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
           this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
         }
-      }, this.temp_count * 10);
+      }, this.temp_count * 50);
       this.temp_count += 1;
     }
-    setTimeout(() => {
-      this.complete_exam_count = 0;
-      this.complete_exam_list = [];
-      this.temp_count = 1;
-      const exam_history2 = this.student_data.exams.history;
-      for (const [key, det] of Object.entries(exam_history2)) {
-        setTimeout(() => {
-          if ((det as any).status == "Completed") {
-            this.complete_exam_count = this.complete_exam_count + 1;
-            this.complete_exam_list.push(key);
-            this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
-            this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
-          }
-        }, this.temp_count * 10);
-        this.temp_count += 1;
-      }
-    }, (this.temp_count + 1) * 10);
     this.subject_break();
+    // setTimeout(() => {
+    //   this.complete_exam_count = 0;
+    //   this.complete_exam_list = [];
+    //   this.temp_count = 1;
+    //   const exam_history2 = this.student_data.exams.history;
+    //   for (const [key, det] of Object.entries(exam_history2)) {
+    //     setTimeout(() => {
+    //       if ((det as any).status == "Completed") {
+    //         this.complete_exam_count = this.complete_exam_count + 1;
+    //         this.complete_exam_list.push(key);
+    //         this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+    //         this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+    //       }
+    //     }, this.temp_count * 100);
+    //     this.temp_count += 1;
+    //   }
+    //   this.subject_break();
+    // }, 500);
     this.selected_student = std;
-    // }, 50);
+  }
+
+  select_student_copy(std: string) {
+    this.grade_breakdown = {};
+    this.subject_breakdown = {};
+    this.topic_breakdown = {};
+    this.student_exam_metadata = {};
+    this.student_data = this.authService.searchUserId(std);
+    this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
+    if (this.student_data.problems.total == 0) {
+      this.total_percent_correct = 0;
+    }
+    else {
+      this.total_percent_correct = Math.round(10000 * this.student_data.problems.correct / this.student_data.problems.total) / 100;
+    }
+    this.complete_exam_count = 0;
+    this.complete_exam_list = [];
+    this.temp_count = 1;
+    const exam_history = this.student_data.exams.history;
+    for (const [key, det] of Object.entries(exam_history)) {
+      setTimeout(() => {
+        if ((det as any).status == "Completed") {
+          this.complete_exam_count = this.complete_exam_count + 1;
+          this.complete_exam_list.push(key);
+          this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+          this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+        }
+      }, this.temp_count * 50);
+      this.temp_count += 1;
+    }
+    this.subject_break();
+    // setTimeout(() => {
+    //   this.complete_exam_count = 0;
+    //   this.complete_exam_list = [];
+    //   this.temp_count = 1;
+    //   const exam_history2 = this.student_data.exams.history;
+    //   for (const [key, det] of Object.entries(exam_history2)) {
+    //     setTimeout(() => {
+    //       if ((det as any).status == "Completed") {
+    //         this.complete_exam_count = this.complete_exam_count + 1;
+    //         this.complete_exam_list.push(key);
+    //         this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+    //         this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+    //       }
+    //     }, this.temp_count * 100);
+    //     this.temp_count += 1;
+    //   }
+    //   this.subject_break();
+    // }, 500);
+    this.selected_student = std;
   }
 
   subject_break() {

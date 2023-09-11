@@ -1213,16 +1213,18 @@ export class TemplateExamComponent implements OnInit {
                 if (this.authService.userData.role != 'Student') {
                     const linked_students = this.authService.userData.students.slice(1);
                     var count = 0;
-                    for (let stud of linked_students) {
-                        if (stud.includes(this.authService.userData.uid as string)) {
-                            count += 1;
-                            this.my_students.push(stud);
-                            // setTimeout(() => {
-                            const student_data = this.authService.searchUserId(stud);
-                            if (student_data != null) {
-                                this.my_students_data[(stud)] = (student_data as object);
+                    for (const [key, stud] of Object.entries(linked_students)) {
+                        setTimeout(() => {
+                            if ((stud as string).includes(this.authService.userData.uid as string)) {
+                                count += 1;
+                                this.my_students.push(stud as string);
+                                // setTimeout(() => {
+                                const student_data = this.authService.searchUserId(stud as string);
+                                if (student_data != null) {
+                                    this.my_students_data[(stud as string)] = (student_data as object);
+                                }
                             }
-                        }
+                        }, +key * 10);
                     }
                 }
                 if (this.authService.userData.role == 'Student') {
@@ -1245,8 +1247,8 @@ export class TemplateExamComponent implements OnInit {
                     }
                 }
             }
-        }, 500);
-        for (const [num, value] of Object.entries(this.PA15G3M_exam_dump)) {
+        }, 50);
+        for (const [num, value] of Object.entries(this.ordered_dump)) {
             if (value.Number <= this.exam_length) {
                 for (let topic of value.Topics) {
                     if (!Object.keys(this.topics_count).includes(topic)) {
