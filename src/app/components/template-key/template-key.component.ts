@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from "../../shared/services/auth.service";
 import * as examMetadata from "src/assets/problems/exams.json";
 import * as PA22G3MProblems from "src/assets/problems/PA22G3M/PA22G3M-problems.json";
 import * as PA21G3MProblems from "src/assets/problems/PA21G3M/PA21G3M-problems.json";
@@ -124,6 +125,8 @@ export class TemplateKeyComponent implements OnInit {
 
     expand_filters = true;
     expand_topic = false;
+
+    favorite_std_set: string[][] = [];
 
     key = "";
     exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Topics': { [key: string]: number } } } = examMetadata;
@@ -328,6 +331,9 @@ export class TemplateKeyComponent implements OnInit {
 
     selected_topic = "";
     selected_subtopic = "";
+    standard_id = '';
+    standard_fav = false;
+    includes_standard = false;
     subtopic_problem_count = 0;
     subtopic_problem_number = 0;
     subtopic_search_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
@@ -336,7 +342,7 @@ export class TemplateKeyComponent implements OnInit {
     subtopic_attempt_response = '';
     subtopic_attempt_explanation = '';
 
-    constructor(public router: Router, private aRoute: ActivatedRoute) { }
+    constructor(public router: Router, private aRoute: ActivatedRoute, public authService: AuthService) { }
 
     sub: any;
 
@@ -525,6 +531,54 @@ export class TemplateKeyComponent implements OnInit {
         this.attempt_response = '';
     }
 
+    toggle_favorite_std() {
+        this.favorite_std_set = [];
+        for (let std of this.authService.userData.standards.favorites) {
+            this.favorite_std_set.push(std as string[]);
+        }
+        this.includes_standard = false;
+        if (this.favorite_std_set.length != 0) {
+            for (const [key, std] of Object.entries(this.favorite_std_set)) {
+                if (std[0] == this.selected_topic && std[1] == this.selected_subtopic) {
+                    this.includes_standard = true;
+                    if (+key != this.favorite_std_set.length - 1) {
+                        this.favorite_std_set.splice(+key, 1);
+                    }
+                    else {
+                        this.favorite_std_set.pop();
+                    }
+                }
+            }
+        }
+        if (!this.includes_standard) {
+            this.favorite_std_set.push([this.selected_topic, this.selected_subtopic]);
+        }
+        this.authService.UpdateUserData({ 'standards/favorites': {} });
+        this.authService.UpdateUserData({ 'standards/favorites': this.favorite_std_set });
+        this.standard_fav = !this.standard_fav;
+    }
+
+    assert_favorite_std() {
+        this.favorite_std_set = [];
+        for (let std of this.authService.userData.standards.favorites) {
+            this.favorite_std_set.push(std as string[]);
+        }
+        this.includes_standard = false;
+        if (this.favorite_std_set.length != 0) {
+            for (const [key, std] of Object.entries(this.favorite_std_set)) {
+                if (std[0] == this.selected_topic && std[1] == this.selected_subtopic) {
+                    this.includes_standard = true;
+                }
+            }
+        }
+        if (!this.includes_standard) {
+            this.favorite_std_set.push([this.selected_topic, this.selected_subtopic]);
+        }
+        this.authService.UpdateUserData({ 'standards/favorites': {} });
+        this.authService.UpdateUserData({ 'standards/favorites': this.favorite_std_set });
+        this.standard_fav = true;
+    }
+
     confetti_light() {
         confettiHandler({
             particleCount: Math.round(250 / this.problem_attempts),
@@ -554,6 +608,29 @@ export class TemplateKeyComponent implements OnInit {
         this.selected_topic = topic;
         this.selected_subtopic = subtopic;
         this.subtopic_problem_number = 1;
+        this.standard_id = topic + ": " + subtopic;
+        this.standard_fav = false;
+        for (let fav of this.authService.userData.standards.favorites) {
+            if (topic == fav[0] && subtopic == fav[1]) {
+                this.standard_fav = true;
+            }
+        }
+    }
+
+    fav_std_includes(topic: string, subtopic: string) {
+      this.favorite_std_set = [];
+      for (let std of this.authService.userData.standards.favorites) {
+        this.favorite_std_set.push(std as string[]);
+      }
+      this.includes_standard = false;
+      if (this.favorite_std_set.length != 0) {
+        for (const [key, std] of Object.entries(this.favorite_std_set)) {
+          if (std[0] == topic && std[1] == subtopic) {
+            this.includes_standard = true;
+          }
+        }
+      }
+      return this.includes_standard;
     }
 
     scroll(el: HTMLElement) {

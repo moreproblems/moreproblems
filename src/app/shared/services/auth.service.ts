@@ -264,7 +264,7 @@ export class AuthService {
     updates['/users/' + user.uid] = this.userData;
     return update(ref(db), updates).then(() => {
       updates2['/users/' + user.uid + '/role'] = role;
-      // updates2['/users/' + user.uid + '/standards/favorites'] = ["test"];
+      updates2['/users/' + user.uid + '/standards/favorites'] = ["test"];
       updates2['/users/' + user.uid + '/exams/favorites'] = ["test"];
       if (role == 'Student') {
         updates2['/users/' + user.uid + '/exams/history'] = { "test": { status: "", progress: 0} };
@@ -296,6 +296,7 @@ export class AuthService {
     };
     updates['/users/' + student['uid']] = studData;
     return update(ref(db), updates).then(() => {
+      updates2['/users/' + student['uid'] + '/standards/favorites'] = ["test"];
       updates2['/users/' + student['uid'] + '/exams/favorites'] = ["test"];
       updates2['/users/' + student['uid'] + '/exams/history'] = { "test": { status: "", progress: 0} };
       updates2['/users/' + student['uid'] + '/problems/all'] = { "test": { status: ""} };

@@ -329,6 +329,7 @@ export class ProblemsComponent implements OnInit {
 
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Topics': { [key: string]: number } } } = examMetadata;
   online_set = ["PA22G3M", "PA21G3M", "PA19G3M", "PA18G3M", "PA16G3M", "PA15G3M", "PA22G4M", "PA21G4M", "PA19G4M", "PA18G4M", "PA16G4M", "PA15G4M", "PA22G4S", "PA21G4S", "PA19G4S", "PA18G4S", "PA16G4S", "PA15G4S", "PA22G5M", "PA21G5M", "PA19G5M", "PA18G5M", "PA16G5M", "PA15G5M", "PA22G6M", "PA21G6M", "PA19G6M", "PA18G6M", "PA16G6M", "PA15G6M", "PA22G7M", "PA21G7M", "PA19G7M", "PA18G7M", "PA16G7M", "PA15G7M", "PA22G8M", "PA21G8M", "PA19G8M", "PA18G8M", "PA16G8M", "PA15G8M", "PA22G8S", "PA21G8S", "PA19G8S", "PA18G8S", "PA16G8S", "PA15G8S", "TX22G3M", "TX21G3M", "TX19G3M", "TX18G3M", "TX17G3M", "TX22G4M", "TX21G4M", "TX19G4M", "TX18G4M", "TX17G4M", "TX22G5M", "TX21G5M", "TX19G5M", "TX18G5M", "TX17G5M", "TX22G5S", "TX21G5S", "TX19G5S", "TX18G5S", "TX22G6M", "TX21G6M", "TX19G6M", "TX18G6M", "TX17G6M", "TX22G7M", "TX21G7M", "TX19G7M", "TX18G7M", "TX17G7M", "TX22G8M", "TX21G8M", "TX19G8M", "TX18G8M", "TX17G8M", "TX22G8S", "TX21G8S", "TX19G8S", "TX18G8S", "TX22G8SS", "TX21G8SS", "TX19G8SS", "TX18G8SS"];
+  favorite_std_set: string[][] = [];
   filtered_set: string[] = this.online_set;
   filtered_exam_num = 0;
   filtered_prob_num = 0;
@@ -357,6 +358,9 @@ export class ProblemsComponent implements OnInit {
 
   selected_topic = "";
   selected_subtopic = "";
+  standard_id = '';
+  standard_fav = false;
+  includes_standard = false;
   subtopic_problem_count = 0;
   subtopic_problem_number = 0;
   subtopic_search_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
@@ -2486,6 +2490,54 @@ export class ProblemsComponent implements OnInit {
     // }
   }
 
+  toggle_favorite_std() {
+    this.favorite_std_set = [];
+    for (let std of this.authService.userData.standards.favorites) {
+      this.favorite_std_set.push(std as string[]);
+    }
+    this.includes_standard = false;
+    if (this.favorite_std_set.length != 0) {
+      for (const [key, std] of Object.entries(this.favorite_std_set)) {
+        if (std[0] == this.selected_topic && std[1] == this.selected_subtopic) {
+          this.includes_standard = true;
+          if (+key != this.favorite_std_set.length - 1) {
+            this.favorite_std_set.splice(+key, 1);
+          }
+          else {
+            this.favorite_std_set.pop();
+          }
+        }
+      }
+    }
+    if (!this.includes_standard) {
+      this.favorite_std_set.push([this.selected_topic, this.selected_subtopic]);
+    }
+    this.authService.UpdateUserData({ 'standards/favorites': {} });
+    this.authService.UpdateUserData({ 'standards/favorites': this.favorite_std_set });
+    this.standard_fav = !this.standard_fav;
+  }
+
+  assert_favorite_std() {
+    this.favorite_std_set = [];
+    for (let std of this.authService.userData.standards.favorites) {
+      this.favorite_std_set.push(std as string[]);
+    }
+    this.includes_standard = false;
+    if (this.favorite_std_set.length != 0) {
+      for (const [key, std] of Object.entries(this.favorite_std_set)) {
+        if (std[0] == this.selected_topic && std[1] == this.selected_subtopic) {
+          this.includes_standard = true;
+        }
+      }
+    }
+    if (!this.includes_standard) {
+      this.favorite_std_set.push([this.selected_topic, this.selected_subtopic]);
+    }
+    this.authService.UpdateUserData({ 'standards/favorites': {} });
+    this.authService.UpdateUserData({ 'standards/favorites': this.favorite_std_set });
+    this.standard_fav = true;
+  }
+
   confetti_pop() {
     confettiHandler({
       particleCount: 750,
@@ -2586,6 +2638,29 @@ export class ProblemsComponent implements OnInit {
     this.selected_topic = topic;
     this.selected_subtopic = subtopic;
     this.subtopic_problem_number = 1;
+    this.standard_id = topic + ": " + subtopic;
+    this.standard_fav = false;
+    for (let fav of this.authService.userData.standards.favorites) {
+      if (topic == fav[0] && subtopic == fav[1]) {
+        this.standard_fav = true;
+      }
+    }
+  }
+
+  fav_std_includes(topic: string, subtopic: string) {
+    this.favorite_std_set = [];
+    for (let std of this.authService.userData.standards.favorites) {
+      this.favorite_std_set.push(std as string[]);
+    }
+    this.includes_standard = false;
+    if (this.favorite_std_set.length != 0) {
+      for (const [key, std] of Object.entries(this.favorite_std_set)) {
+        if (std[0] == topic && std[1] == subtopic) {
+          this.includes_standard = true;
+        }
+      }
+    }
+    return this.includes_standard;
   }
 
   expandTopics() {
@@ -2621,6 +2696,10 @@ export class ProblemsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.favorite_std_set = [];
     this.filter_exams();
+    for (let std of this.authService.userData.standards.favorites.slice(1)) {
+      this.favorite_std_set.push(std as string[]);
+    }
   }
 }

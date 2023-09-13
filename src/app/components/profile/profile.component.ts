@@ -128,6 +128,7 @@ export class ProfileComponent implements OnInit {
   complete_exam_count = 0;
   complete_exam_list: string[] = [];
   student_exam_metadata: any = {};
+  favorite_std_set: string[][] = [];
   // db_submission: any;
 
 
@@ -933,6 +934,9 @@ export class ProfileComponent implements OnInit {
 
   selected_topic = "";
   selected_subtopic = "";
+  standard_id = '';
+  standard_fav = false;
+  includes_standard = false;
   subtopic_problem_count = 0;
   subtopic_problem_number = 0;
   subtopic_search_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
@@ -1342,87 +1346,137 @@ export class ProfileComponent implements OnInit {
             }
           }
           else {
-          if (Object.keys(this.grade_breakdown).includes(this.exam_attribute_dump[key].Grade)) {
-            this.grade_breakdown[this.exam_attribute_dump[key].Grade].Total += 1;
-            this.grade_breakdown[this.exam_attribute_dump[key].Grade].Incorrect += 1;
-            this.grade_breakdown[this.exam_attribute_dump[key].Grade].Seconds += +(prob as any).Seconds;
-            if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs).includes(this.exam_attribute_dump[key].Subject)) {
-              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Total += 1;
-              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Incorrect += 1;
-              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Seconds += +(prob as any).Seconds;
-              for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops).includes((prob as any).Topics[n])) {
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Total += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Incorrect += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
+            if (Object.keys(this.grade_breakdown).includes(this.exam_attribute_dump[key].Grade)) {
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Total += 1;
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Incorrect += 1;
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Seconds += +(prob as any).Seconds;
+              if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs).includes(this.exam_attribute_dump[key].Subject)) {
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Total += 1;
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Incorrect += 1;
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Seconds += +(prob as any).Seconds;
+                for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                  if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops).includes((prob as any).Topics[n])) {
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Total += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Incorrect += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
+                  }
+                  else {
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                  }
                 }
-                else {
+              }
+              else {
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
+                for (let n: number = 0; n < (prob as any).Topics.length; n++) {
                   this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
                 }
               }
             }
             else {
-              this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
-                for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                }
-            }
-          }
-          else {
-            this.grade_breakdown[this.exam_attribute_dump[key].Grade] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[key].Subject]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
+              this.grade_breakdown[this.exam_attribute_dump[key].Grade] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[key].Subject]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
               for (let n: number = 0; n < (prob as any).Topics.length; n++) {
                 this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
               }
+            }
+          }
+        }
+      }
+    }
+    for (let grade of Object.keys(this.grade_breakdown)) {
+      this.grade_breakdown[grade].Percent = Math.round(100 * this.grade_breakdown[grade].Correct / (this.grade_breakdown[grade].Total));
+      this.grade_breakdown[grade].Time = (Math.floor(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total % 60)).toString() + 's';
+      for (let subject of Object.keys(this.grade_breakdown[grade].Subs)) {
+        this.grade_breakdown[grade].Subs[subject].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Correct / (this.grade_breakdown[grade].Subs[subject].Total));
+        this.grade_breakdown[grade].Subs[subject].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total % 60)).toString() + 's';
+        for (let topic of Object.keys(this.grade_breakdown[grade].Subs[subject].Tops)) {
+          this.grade_breakdown[grade].Subs[subject].Tops[topic].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Tops[topic].Correct / (this.grade_breakdown[grade].Subs[subject].Tops[topic].Total));
+          this.grade_breakdown[grade].Subs[subject].Tops[topic].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total % 60)).toString() + 's';
+        }
+        this.subject_breakdown[grade + " " + subject] = { 'Grade': grade, 'Subject': subject, 'Break': this.grade_breakdown[grade].Subs[subject] };
+      }
+    }
+    console.log(this.grade_breakdown);
+  }
+
+  searchSubTopic(topic: string, subtopic: string) {
+    this.subtopic_problem_count = 0;
+    this.subtopic_search_dump = {};
+    for (const [ex, dump] of Object.entries(this.dump_dict)) {
+      for (const [num, prob] of Object.entries(dump)) {
+        if (typeof prob.SubTopics != 'undefined') {
+          if (prob.SubTopics.includes(subtopic)) {
+            this.subtopic_problem_count += 1;
+            this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+          }
+        }
+      }
+    }
+    this.selected_topic = topic;
+    this.selected_subtopic = subtopic;
+    this.subtopic_problem_number = 1;
+    this.standard_id = topic + ": " + subtopic;
+    this.standard_fav = false;
+    for (let fav of this.authService.userData.standards.favorites) {
+      if (topic == fav[0] && subtopic == fav[1]) {
+        this.standard_fav = true;
+      }
+    }
+  }
+
+  fav_std_includes(topic: string, subtopic: string) {
+    this.favorite_std_set = [];
+    for (let std of this.authService.userData.standards.favorites) {
+      this.favorite_std_set.push(std as string[]);
+    }
+    this.includes_standard = false;
+    if (this.favorite_std_set.length != 0) {
+      for (const [key, std] of Object.entries(this.favorite_std_set)) {
+        if (std[0] == topic && std[1] == subtopic) {
+          this.includes_standard = true;
+        }
+      }
+    }
+    return this.includes_standard;
+  }
+
+  attempt_mc_st_problem(ch: string) {
+    if (ch != this.subtopic_problem_selection) {
+      this.subtopic_problem_attempts += 1;
+      this.subtopic_problem_selection = ch;
+      for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+        if (this.subtopic_problem_number == +num) {
+          for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
+            if (choice == ch) {
+              this.subtopic_attempt_explanation = key.Key.Rationale;
+              if (key.Key.Correct == true) {
+                this.confetti_light(this.subtopic_problem_attempts);
+                if (this.subtopic_problem_attempts == 1) {
+                  this.subtopic_attempt_response = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts.toString() + ' try.';
+                }
+                else {
+                  this.subtopic_attempt_response = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts.toString() + ' tries.';
+                }
+              }
+              else {
+                this.subtopic_attempt_response = 'That is not the correct answer - have another try.';
+              }
+            }
           }
         }
       }
     }
   }
-  for(let grade of Object.keys(this.grade_breakdown)) {
-  this.grade_breakdown[grade].Percent = Math.round(100 * this.grade_breakdown[grade].Correct / (this.grade_breakdown[grade].Total));
-  this.grade_breakdown[grade].Time = (Math.floor(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total % 60)).toString() + 's';
-  for (let subject of Object.keys(this.grade_breakdown[grade].Subs)) {
-    this.grade_breakdown[grade].Subs[subject].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Correct / (this.grade_breakdown[grade].Subs[subject].Total));
-    this.grade_breakdown[grade].Subs[subject].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total % 60)).toString() + 's';
-    for (let topic of Object.keys(this.grade_breakdown[grade].Subs[subject].Tops)) {
-      this.grade_breakdown[grade].Subs[subject].Tops[topic].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Tops[topic].Correct / (this.grade_breakdown[grade].Subs[subject].Tops[topic].Total));
-      this.grade_breakdown[grade].Subs[subject].Tops[topic].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total % 60)).toString() + 's';
-    }
-    this.subject_breakdown[grade + " " + subject] = { 'Grade': grade, 'Subject': subject, 'Break': this.grade_breakdown[grade].Subs[subject] };
-  }
-}
-console.log(this.grade_breakdown);
-  }
 
-searchSubTopic(topic: string, subtopic: string) {
-  this.subtopic_problem_count = 0;
-  this.subtopic_search_dump = {};
-  for (const [ex, dump] of Object.entries(this.dump_dict)) {
-    for (const [num, prob] of Object.entries(dump)) {
-      if (typeof prob.SubTopics != 'undefined') {
-        if (prob.SubTopics.includes(subtopic)) {
-          this.subtopic_problem_count += 1;
-          this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-        }
-      }
-    }
-  }
-  this.selected_topic = topic;
-  this.selected_subtopic = subtopic;
-  this.subtopic_problem_number = 1;
-}
-
-attempt_mc_st_problem(ch: string) {
-  if (ch != this.subtopic_problem_selection) {
-    this.subtopic_problem_attempts += 1;
-    this.subtopic_problem_selection = ch;
-    for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
-      if (this.subtopic_problem_number == +num) {
-        for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
-          if (choice == ch) {
-            this.subtopic_attempt_explanation = key.Key.Rationale;
-            if (key.Key.Correct == true) {
+  attempt_fr_st_problem(ch: string) {
+    if (ch != this.subtopic_problem_selection) {
+      this.subtopic_problem_attempts += 1;
+      this.subtopic_problem_selection = ch;
+      for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+        if (this.subtopic_problem_number == +num) {
+          for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
+            if (ch == key.Choice) {
               this.confetti_light(this.subtopic_problem_attempts);
+              this.subtopic_attempt_explanation = key.Key.Rationale;
               if (this.subtopic_problem_attempts == 1) {
                 this.subtopic_attempt_response = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts.toString() + ' try.';
               }
@@ -1438,139 +1492,160 @@ attempt_mc_st_problem(ch: string) {
       }
     }
   }
-}
 
-attempt_fr_st_problem(ch: string) {
-  if (ch != this.subtopic_problem_selection) {
-    this.subtopic_problem_attempts += 1;
-    this.subtopic_problem_selection = ch;
-    for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
-      if (this.subtopic_problem_number == +num) {
-        for (const [choice, key] of Object.entries(prob.AnswerChoices)) {
-          if (ch == key.Choice) {
-            this.confetti_light(this.subtopic_problem_attempts);
-            this.subtopic_attempt_explanation = key.Key.Rationale;
-            if (this.subtopic_problem_attempts == 1) {
-              this.subtopic_attempt_response = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts.toString() + ' try.';
-            }
-            else {
-              this.subtopic_attempt_response = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts.toString() + ' tries.';
-            }
+  next_problem_st() {
+    this.subtopic_problem_number += 1;
+    this.subtopic_problem_selection = '';
+    this.subtopic_problem_attempts = 0;
+    this.subtopic_attempt_response = '';
+    this.subtopic_attempt_explanation = '';
+    if (this.subtopic_problem_number > this.subtopic_problem_count) {
+      this.selected_subtopic = '';
+    }
+  }
+
+  toggle_favorite_std() {
+    this.favorite_std_set = [];
+    for (let std of this.authService.userData.standards.favorites) {
+      this.favorite_std_set.push(std as string[]);
+    }
+    this.includes_standard = false;
+    if (this.favorite_std_set.length != 0) {
+      for (const [key, std] of Object.entries(this.favorite_std_set)) {
+        if (std[0] == this.selected_topic && std[1] == this.selected_subtopic) {
+          this.includes_standard = true;
+          if (+key != this.favorite_std_set.length - 1) {
+            this.favorite_std_set.splice(+key, 1);
           }
           else {
-            this.subtopic_attempt_response = 'That is not the correct answer - have another try.';
+            this.favorite_std_set.pop();
           }
         }
       }
     }
-  }
-}
-
-next_problem_st() {
-  this.subtopic_problem_number += 1;
-  this.subtopic_problem_selection = '';
-  this.subtopic_problem_attempts = 0;
-  this.subtopic_attempt_response = '';
-  this.subtopic_attempt_explanation = '';
-  if (this.subtopic_problem_number > this.subtopic_problem_count) {
-    this.selected_subtopic = '';
-  }
-}
-
-confetti_light(attempts: number) {
-  confettiHandler({
-    particleCount: Math.round(250 / attempts),
-    startVelocity: 125,
-    scalar: 1.15,
-    ticks: 150,
-    decay: 0.8,
-    angle: 90,
-    spread: 60,
-    origin: { x: 0.5, y: 1 }
-  });
-}
-
-expandTopics() {
-  this.expand_topics = !this.expand_topics;
-}
-
-expandSubTopics() {
-  this.expand_subtopics = !this.expand_subtopics;
-}
-
-showCorrect() {
-  this.show_correct = !this.show_correct;
-}
-
-scroll_top() {
-  setTimeout(function () {
-    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
-  }, 250);
-}
-
-scroll_bottom() {
-  setTimeout(function () {
-    window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
-  }, 250);
-}
-
-scroll(el: HTMLElement) {
-  setTimeout(function () {
-    el.scrollIntoView({ behavior: 'smooth' });
-  }, 250);
-}
-
-scroll2(el: HTMLElement) {
-  setTimeout(function () {
-    window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 120, behavior: 'smooth' });
-  }, 250);
-}
-
-ngOnInit() {
-  this.titleService.setTitle("Your Profile On MoreProblems.Org | U.S. K-12 State Testing Preparation");
-  // this.meta.updateTag({ name: 'description', content: "" });
-  setTimeout(() => {
-    if (!this.authService.userData) {
-      this.router.navigate(['login']);
+    if (!this.includes_standard) {
+      this.favorite_std_set.push([this.selected_topic, this.selected_subtopic]);
     }
-    else {
-      if (this.authService.userData.role == 'Student') {
-        this.complete_exam_count = 0;
-        this.complete_exam_list = [];
-        this.student_exam_metadata = {};
-        this.student_exam_metadata = this.authService.getExamSubmissions();
-        // this.linked_student_count = Object.keys(this.student_exam_metadata).length;
-        const exam_history = this.authService.userData.exams.history;
-        for (const [key, det] of Object.entries(exam_history)) {
-          if ((det as any).status == "Completed") {
-            this.complete_exam_count = this.complete_exam_count + 1;
-            this.complete_exam_list.push(key);
-            this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
-            this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
-          }
+    this.authService.UpdateUserData({ 'standards/favorites': {} });
+    this.authService.UpdateUserData({ 'standards/favorites': this.favorite_std_set });
+    this.standard_fav = !this.standard_fav;
+  }
+
+  assert_favorite_std() {
+    this.favorite_std_set = [];
+    for (let std of this.authService.userData.standards.favorites) {
+      this.favorite_std_set.push(std as string[]);
+    }
+    this.includes_standard = false;
+    if (this.favorite_std_set.length != 0) {
+      for (const [key, std] of Object.entries(this.favorite_std_set)) {
+        if (std[0] == this.selected_topic && std[1] == this.selected_subtopic) {
+          this.includes_standard = true;
         }
+      }
+    }
+    if (!this.includes_standard) {
+      this.favorite_std_set.push([this.selected_topic, this.selected_subtopic]);
+    }
+    this.authService.UpdateUserData({ 'standards/favorites': {} });
+    this.authService.UpdateUserData({ 'standards/favorites': this.favorite_std_set });
+    this.standard_fav = true;
+  }
+
+  confetti_light(attempts: number) {
+    confettiHandler({
+      particleCount: Math.round(250 / attempts),
+      startVelocity: 125,
+      scalar: 1.15,
+      ticks: 150,
+      decay: 0.8,
+      angle: 90,
+      spread: 60,
+      origin: { x: 0.5, y: 1 }
+    });
+  }
+
+  expandTopics() {
+    this.expand_topics = !this.expand_topics;
+  }
+
+  expandSubTopics() {
+    this.expand_subtopics = !this.expand_subtopics;
+  }
+
+  showCorrect() {
+    this.show_correct = !this.show_correct;
+  }
+
+  scroll_top() {
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+    }, 250);
+  }
+
+  scroll_bottom() {
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
+    }, 250);
+  }
+
+  scroll(el: HTMLElement) {
+    setTimeout(function () {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }, 250);
+  }
+
+  scroll2(el: HTMLElement) {
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: el.getBoundingClientRect().top - 120, behavior: 'smooth' });
+    }, 250);
+  }
+
+  ngOnInit() {
+    this.titleService.setTitle("Your Profile On MoreProblems.Org | U.S. K-12 State Testing Preparation");
+    // this.meta.updateTag({ name: 'description', content: "" });
+    setTimeout(() => {
+      if (!this.authService.userData) {
+        this.router.navigate(['login']);
       }
       else {
-        this.student_metadata = [];
-        const linked_students = this.authService.userData.students.slice(1);
-        for (const [key, stud] of Object.entries(linked_students)) {
-          setTimeout(() => {
-            console.log(stud);
-            this.student_data = this.authService.searchUserId(stud as string);
-            console.log(this.student_data);
-            this.student_metadata.push(this.student_data as object);
-          }, +key * 10);
+        if (this.authService.userData.role == 'Student') {
+          this.complete_exam_count = 0;
+          this.complete_exam_list = [];
+          this.student_exam_metadata = {};
+          this.student_exam_metadata = this.authService.getExamSubmissions();
+          // this.linked_student_count = Object.keys(this.student_exam_metadata).length;
+          const exam_history = this.authService.userData.exams.history;
+          for (const [key, det] of Object.entries(exam_history)) {
+            if ((det as any).status == "Completed") {
+              this.complete_exam_count = this.complete_exam_count + 1;
+              this.complete_exam_list.push(key);
+              this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+              this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+            }
+          }
+        }
+        else {
+          this.student_metadata = [];
+          const linked_students = this.authService.userData.students.slice(1);
+          for (const [key, stud] of Object.entries(linked_students)) {
+            setTimeout(() => {
+              console.log(stud);
+              this.student_data = this.authService.searchUserId(stud as string);
+              console.log(this.student_data);
+              this.student_metadata.push(this.student_data as object);
+            }, +key * 10);
+          }
         }
       }
-    }
-  }, 50);
-  this.windowRef = this.win.windowRef;
-  this.windowRef.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
-    'size': 'invisible',
-    // 'callback': (response) => {
-    //   // reCAPTCHA solved, allow signInWithPhoneNumber.
-    //   // onSignInSubmit();
-    // }
-  }, getAuth());
-}
+    }, 50);
+    this.windowRef = this.win.windowRef;
+    this.windowRef.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
+      'size': 'invisible',
+      // 'callback': (response) => {
+      //   // reCAPTCHA solved, allow signInWithPhoneNumber.
+      //   // onSignInSubmit();
+      // }
+    }, getAuth());
+  }
 }
