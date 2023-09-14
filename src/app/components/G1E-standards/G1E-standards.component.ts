@@ -21,7 +21,7 @@ export class G1EStandardsComponent implements OnInit {
 
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
-  mobileWidth = 875;
+  mobileWidth = 1200;
   menuOpen = false;
 
   domain_state: {[key: number]: boolean} = {

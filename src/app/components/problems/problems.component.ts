@@ -112,7 +112,7 @@ export class ProblemsComponent implements OnInit {
   title = 'More Problems';
 
   screenWidth = window.innerWidth;
-  mobileWidth = 875;
+  mobileWidth = 1200;
 
   expand_filters = true;
   topics: string[] = [];

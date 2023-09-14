@@ -60,13 +60,13 @@
 
   .toolbar img {
     margin: auto;
-    padding-left: 10px;
-    margin-right: 0;
+    /* padding-left: 10px; */
+    margin-right: 0px;
   }
 
   .toolbar span {
     margin: auto;
-    margin-left: 0;
+    margin-left: 0px;
   }
 
   .content-box {
@@ -383,33 +383,39 @@
 <!-- Toolbar --> 
 <div class="toolbar" role="banner" (window:resize)="width_change()" #navbar>
   <div style="display: flex; flex-direction: row; width: 100%; margin: auto; align-items: center; justify-content: space-between;">
-    <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 0 20px 0 0" routerLink="/exams" routerLinkActive="active">
-      <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 50px; height: 50px" #logo />
-      <img *ngIf="this.screenWidth <= this.mobileWidth && this.screenWidth >= 435" src="./assets/media/logo1.png" style="width: 35px; height: 35px" #logo />
-      <span style="padding: 0px; text-align: left">
-        <h1 *ngIf="this.screenWidth > this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 24px; font-weight: 800" #titleUD> {{ title }} </h1>
-        <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 20px; font-weight: 800" #titleUM> {{ title }} </h1>
+    <div *ngIf="this.screenWidth <= this.mobileWidth" style="display: flex; align-items: center; margin-left: 10px">
+      <img (click)="menu_toggle()" src="./assets/icons/menu.png" style="height: 30px; width: 30px; margin: auto; filter: invert(100%)">
+    </div>
+    <nav *ngIf="this.screenWidth > this.mobileWidth" style="text-align: right; display: flex; flex-direction: row; align-items: center; margin-left: 10px">
+      <a routerLink="/about" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> About Us </a>&nbsp;&nbsp;
+      <a routerLink="/exams" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> Exams </a>&nbsp;&nbsp;
+      <a routerLink="/problems" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> Problems </a>&nbsp;&nbsp;
+      <a routerLink="/standards" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> Standards </a>
+      <!-- <a routerLink="/contact" routerLinkActive="active"> Contact </a>&nbsp; -->
+    </nav>
+    <div class="spacer"></div>
+    <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: auto 10px" routerLink="/exams" routerLinkActive="active">
+      <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 45px; height: 45px" #logo />
+      <img *ngIf="this.screenWidth <= this.mobileWidth && this.screenWidth >= 400" src="./assets/media/logo1.png" style="width: 35px; height: 35px" #logo />
+      <span style="padding: 0px; text-align: left; margin: auto">
+        <h1 *ngIf="this.screenWidth > this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 22px; font-weight: 800; margin-left: 10px" #titleUD> {{ title }} </h1>
+        <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 20px; font-weight: 800; margin-left: 5px" #titleUM> {{ title }} </h1>
       </span>
     </div>
-    <div *ngIf="authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 0 20px 0 0" routerLink="/home" routerLinkActive="active">
-      <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 50px; height: 50px" #logo />
-      <img *ngIf="this.screenWidth <= this.mobileWidth && this.screenWidth >= 410" src="./assets/media/logo1.png" style="width: 35px; height: 35px" #logo />
-      <span style="padding: 0px; text-align: left">
-        <h1 *ngIf="this.screenWidth > this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 24px; font-weight: 1000" #titleAD> {{ title }} </h1>
-        <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 20px; font-weight: 800" #titleAM> {{ title }} </h1>
+    <div *ngIf="authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: auto 10px" routerLink="/home" routerLinkActive="active">
+      <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 45px; height: 45px" #logo />
+      <img *ngIf="this.screenWidth <= this.mobileWidth && this.screenWidth >= 400" src="./assets/media/logo1.png" style="width: 35px; height: 35px" #logo />
+      <span style="padding: 0px; text-align: left; margin: auto">
+        <h1 *ngIf="this.screenWidth > this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 22px; font-weight: 1000; margin-left: 10px" #titleAD> {{ title }} </h1>
+        <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 20px; font-weight: 800; margin-left: 5px" #titleAM> {{ title }} </h1>
       </span>
     </div>
     <div class="spacer"></div>
-    <nav style="text-align: right; display: flex; flex-direction: row; align-items: center">
-      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/about" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> About Us </a>&nbsp;&nbsp;
-      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/exams" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> Exams </a>&nbsp;&nbsp;
-      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/problems" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> Problems </a>&nbsp;&nbsp;
-      <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/standards" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> Standards </a>&nbsp;&nbsp;
-      <!-- <a *ngIf="this.screenWidth > this.mobileWidth" routerLink="/contact" routerLinkActive="active"> Contact </a>&nbsp; -->
-    </nav>
     <div style="display: flex; align-items: center">
+      <h2 *ngIf="this.screenWidth > this.mobileWidth && authService.userData as user" style="font-size: 17px; font-weight: 400; margin-right: 10px; font-family: 'Orbitron'"> Good to see you again, {{user.displayName}}! </h2>
+      <h2 *ngIf="this.screenWidth > this.mobileWidth && !authService.userData" style="font-size: 17px; font-weight: 400; margin-right: 10px; font-family: 'Orbitron'"> Create your free account today! </h2>
       <img *ngIf="this.screenWidth > this.mobileWidth && authService.userData as user" src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}" routerLink="/profile" routerLinkActive="active" style="width: 50px; height: 50px; border-radius: 50%; margin: 0 10px 0 0">
-      <img *ngIf="this.screenWidth <= this.mobileWidth" (click)="menu_toggle()" src="./assets/icons/menu.png" style="height: 30px; width: 30px; margin: 0 10px 0 0; filter: invert(100%)">
+      <!-- <img *ngIf="this.screenWidth <= this.mobileWidth" (click)="menu_toggle()" src="./assets/icons/menu.png" style="height: 30px; width: 30px; margin: 0 10px 0 0; filter: invert(100%)"> -->
       <img *ngIf="this.screenWidth <= this.mobileWidth && authService.userData as user" src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}" routerLink="/profile" routerLinkActive="active" style="width: 30px; height: 30px; border-radius: 50%; margin: 0 10px 0 0">
       <button *ngIf="this.screenWidth > this.mobileWidth && !authService.userData" class="grade-button" routerLink="/signup" routerLinkActive="active" style="font-size: 18px; font-weight: 800"> Sign Up </button>
       <button *ngIf="this.screenWidth <= this.mobileWidth && !authService.userData" class="grade-button" routerLink="/signup" routerLinkActive="active" style="font-size: 15px; line-height: 16px; font-weight: 700; padding: 7px; border-radius: 7px"> Sign Up </button>
@@ -424,7 +430,7 @@
       <a routerLink="/about" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px; font-weight: 300"> About Us </a>&nbsp;
       <a routerLink="/exams" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px; font-weight: 300"> Exams </a>&nbsp;
       <a routerLink="/problems" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px; font-weight: 300"> Problems </a>&nbsp;
-      <a routerLink="/standards" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px; font-weight: 300"> Standards </a>&nbsp;
+      <a routerLink="/standards" routerLinkActive="active" style="padding: 0px 15px; font-size: 16px; font-weight: 300"> Standards </a>
       <!-- <a routerLink="/contact" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Contact </a>&nbsp; -->
     </nav>
   </div>

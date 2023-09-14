@@ -117,7 +117,7 @@ export class TemplateExamComponent implements OnInit {
     title = 'More Problems';
 
     screenWidth = window.innerWidth;
-    mobileWidth = 875;
+    mobileWidth = 1200;
 
     exam_inprogress = false;
     progress_number = 0;

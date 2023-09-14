@@ -118,7 +118,7 @@ export class ProfileComponent implements OnInit {
 
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
-  mobileWidth = 875;
+  mobileWidth = 1200;
   menuOpen = false;
   temp_count = 0;
 

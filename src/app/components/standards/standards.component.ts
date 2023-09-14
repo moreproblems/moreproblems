@@ -14,7 +14,7 @@ export class StandardsComponent implements OnInit{
   // title = 'More Problems';
 
   screenWidth = window.innerWidth;
-  mobileWidth = 875;
+  mobileWidth = 1200;
   menuOpen = false;
 
   selected_grade = '';

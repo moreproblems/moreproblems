@@ -112,7 +112,7 @@ export class TemplateKeyComponent implements OnInit {
     title = 'More Problems';
 
     screenWidth = window.innerWidth;
-    mobileWidth = 875;
+    mobileWidth = 1200;
 
     // et_counter: number = 0;
     // et_minutes: number = 0;

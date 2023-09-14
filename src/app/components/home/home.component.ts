@@ -116,7 +116,7 @@ export class HomeComponent implements OnInit {
 
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
-  mobileWidth = 875;
+  mobileWidth = 1200;
   menuOpen = false;
   count = 0;
 
