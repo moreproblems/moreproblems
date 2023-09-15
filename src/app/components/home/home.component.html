@@ -497,7 +497,7 @@ input:hover+.toggle-button-off {
         style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
         <img src="./assets/icons/caret.png"
           style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back to home page </a>
+        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back to Home </a>
       </div>
     </section>
     <br *ngIf="selected_subtopic != ''" />
@@ -588,7 +588,7 @@ input:hover+.toggle-button-off {
             <div *ngIf="prob.value.Type == 'MC'">
               <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                 <h3 *ngIf="choice.key == selection.value"
-                  style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                  style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                   <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
                   <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation}}
                 </h3>
@@ -607,7 +607,7 @@ input:hover+.toggle-button-off {
             <div *ngIf="prob.value.Type == 'FR'">
               <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                 <h3 *ngIf="subtopic_attempt_response.startsWith('Correct')"
-                  style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                  style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                   <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
                   <!-- wrong data format, extra KEY -->
                   <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation}}
@@ -620,7 +620,7 @@ input:hover+.toggle-button-off {
                   <b> Next Problem </b>
                 </button>
                 <h3 *ngIf="!subtopic_attempt_response.startsWith('Correct')"
-                  style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400">
+                  style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                   <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
                   <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                 </h3>
@@ -744,10 +744,10 @@ input:hover+.toggle-button-off {
               <label class="switch">
                   <input type="checkbox">
                   <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud != stud.uid" (click)="select_student(stud.uid)" class="toggle-button-off" style="margin-top: 10px">
-                      <b> View Exams </b>
+                      <b> Exams </b>
                   </button>
                   <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud == stud.uid" (click)="select_student(stud.uid)" class="toggle-button-on" style="margin-top: 10px">
-                      <b> View Exams </b>
+                      <b> Exams </b>
                   </button>
               </label>
             </div>
