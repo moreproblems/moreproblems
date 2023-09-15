@@ -382,17 +382,21 @@
 
 <!-- Toolbar --> 
 <div class="toolbar" role="banner" (window:resize)="width_change()" #navbar>
-  <div style="display: flex; flex-direction: row; width: 100%; margin: auto; align-items: center; justify-content: space-between;">
-    <div *ngIf="this.screenWidth <= this.mobileWidth" style="display: flex; align-items: center; margin-left: 10px">
-      <img (click)="menu_toggle()" src="./assets/icons/menu.png" style="height: 30px; width: 30px; margin: auto; filter: invert(100%)">
+  <div style="display: flex; flex-direction: row; width: 100%; margin: auto; align-items: center; justify-content: space-between">
+    <div *ngIf="this.screenWidth <= this.mobileWidth" style="width:18%">
+      <div style="display: flex; align-items: center; margin-left: 10px; float: left">
+        <img (click)="menu_toggle()" src="./assets/icons/menu.png" style="height: 30px; width: 30px; margin: auto; filter: invert(100%)">
+      </div>
     </div>
-    <nav *ngIf="this.screenWidth > this.mobileWidth" style="text-align: right; display: flex; flex-direction: row; align-items: center; margin-left: 10px">
-      <a routerLink="/about" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> About Us </a>&nbsp;&nbsp;
-      <a routerLink="/exams" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> Exams </a>&nbsp;&nbsp;
-      <a routerLink="/problems" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> Problems </a>&nbsp;&nbsp;
-      <a routerLink="/standards" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> Standards </a>
-      <!-- <a routerLink="/contact" routerLinkActive="active"> Contact </a>&nbsp; -->
-    </nav>
+    <div *ngIf="this.screenWidth > this.mobileWidth" style="width:37%">
+      <nav style="text-align: right; display: flex; flex-direction: row; align-items: center; margin-left: 10px; float: left">
+        <a routerLink="/about" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> About Us </a>&nbsp;&nbsp;
+        <a routerLink="/exams" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> Exams </a>&nbsp;&nbsp;
+        <a routerLink="/problems" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> Problems </a>&nbsp;&nbsp;
+        <a routerLink="/standards" routerLinkActive="active" style="font-size: 17px; font-weight: 400"> Standards </a>
+        <!-- <a routerLink="/contact" routerLinkActive="active"> Contact </a>&nbsp; -->
+      </nav>
+    </div>
     <div class="spacer"></div>
     <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: auto 10px" routerLink="/exams" routerLinkActive="active">
       <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 45px; height: 45px" #logo />
@@ -411,14 +415,20 @@
       </span>
     </div>
     <div class="spacer"></div>
-    <div style="display: flex; align-items: center">
-      <h2 *ngIf="this.screenWidth > this.mobileWidth && authService.userData as user" style="font-size: 17px; font-weight: 400; margin-right: 10px; font-family: 'Orbitron'"> Good to see you again, {{user.displayName}}! </h2>
-      <h2 *ngIf="this.screenWidth > this.mobileWidth && !authService.userData" style="font-size: 17px; font-weight: 400; margin-right: 10px; font-family: 'Orbitron'"> Create your free account today! </h2>
-      <img *ngIf="this.screenWidth > this.mobileWidth && authService.userData as user" src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}" routerLink="/profile" routerLinkActive="active" style="width: 50px; height: 50px; border-radius: 50%; margin: 0 10px 0 0">
-      <!-- <img *ngIf="this.screenWidth <= this.mobileWidth" (click)="menu_toggle()" src="./assets/icons/menu.png" style="height: 30px; width: 30px; margin: 0 10px 0 0; filter: invert(100%)"> -->
-      <img *ngIf="this.screenWidth <= this.mobileWidth && authService.userData as user" src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}" routerLink="/profile" routerLinkActive="active" style="width: 30px; height: 30px; border-radius: 50%; margin: 0 10px 0 0">
-      <button *ngIf="this.screenWidth > this.mobileWidth && !authService.userData" class="grade-button" routerLink="/signup" routerLinkActive="active" style="font-size: 18px; font-weight: 800"> Sign Up </button>
-      <button *ngIf="this.screenWidth <= this.mobileWidth && !authService.userData" class="grade-button" routerLink="/signup" routerLinkActive="active" style="font-size: 15px; line-height: 16px; font-weight: 700; padding: 7px; border-radius: 7px"> Sign Up </button>
+    <div *ngIf="this.screenWidth <= this.mobileWidth" style="width:18%">
+      <div style="display: flex; align-items: center; float: right">
+        <!-- <img *ngIf="this.screenWidth <= this.mobileWidth" (click)="menu_toggle()" src="./assets/icons/menu.png" style="height: 30px; width: 30px; margin: 0 10px 0 0; filter: invert(100%)"> -->
+        <img *ngIf="authService.userData as user" src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}" routerLink="/profile" routerLinkActive="active" style="width: 35px; height: 35px; border-radius: 50%; margin: 0 10px 0 0">
+        <button *ngIf="!authService.userData" class="grade-button" routerLink="/signup" routerLinkActive="active" style="font-size: 15px; line-height: 16px; font-weight: 700; padding: 7px; border-radius: 7px"> Sign Up </button>
+      </div>
+    </div>
+    <div *ngIf="this.screenWidth > this.mobileWidth" style="width:37%">
+      <div style="display: flex; align-items: center; float: right">
+        <h2 *ngIf="authService.userData as user" style="font-size: 17px; font-weight: 400; margin-right: 10px; font-family: 'Orbitron'"> Welcome back, {{user.displayName}}! </h2>
+        <h2 *ngIf="!authService.userData" style="font-size: 17px; font-weight: 400; margin-right: 10px; font-family: 'Orbitron'"> Create your free account today! </h2>
+        <img *ngIf="authService.userData as user" src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}" routerLink="/profile" routerLinkActive="active" style="width: 50px; height: 50px; border-radius: 50%; margin: 0 10px 0 0">
+        <button *ngIf="!authService.userData" class="grade-button" routerLink="/signup" routerLinkActive="active" style="font-size: 18px; font-weight: 800"> Sign Up </button>
+      </div>
     </div>
   </div>
   <div *ngIf="this.menuOpen && this.screenWidth <= this.mobileWidth" style="width: 100%">

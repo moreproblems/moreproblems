@@ -2353,6 +2353,7 @@ export class ProblemsComponent implements OnInit {
     this.problem_number += 1;
     this.problem_selection = '';
     this.problem_attempts = 0;
+    this.attempt_path = [];
     this.attempt_response = '';
     this.clearProblemTimer();
     this.toggleProblemTimer();
