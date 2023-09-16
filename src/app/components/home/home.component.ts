@@ -911,6 +911,7 @@ export class HomeComponent implements OnInit {
   subtopic_search_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
   subtopic_problem_selection = '';
   subtopic_problem_attempts = 0;
+  subtopic_attempt_path: string[] = [];
   subtopic_attempt_response = '';
   subtopic_attempt_explanation = '';
 
@@ -998,6 +999,11 @@ export class HomeComponent implements OnInit {
     this.selected_topic = topic;
     this.selected_subtopic = subtopic;
     this.subtopic_problem_number = 1;
+    this.subtopic_problem_selection = '';
+    this.subtopic_problem_attempts = 0;
+    this.subtopic_attempt_path = [];
+    this.subtopic_attempt_response = '';
+    this.subtopic_attempt_explanation = '';
     this.standard_id = topic + ": " + subtopic;
     this.standard_fav = false;
     for (let fav of this.authService.userData.standards.favorites) {
@@ -1141,6 +1147,7 @@ export class HomeComponent implements OnInit {
   attempt_mc_st_problem(ch: string) {
     if (ch != this.subtopic_problem_selection) {
       this.subtopic_problem_attempts += 1;
+      this.subtopic_attempt_path.push(ch);
       this.subtopic_problem_selection = ch;
       for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
         if (this.subtopic_problem_number == +num) {
@@ -1169,6 +1176,7 @@ export class HomeComponent implements OnInit {
   attempt_fr_st_problem(ch: string) {
     if (ch != this.subtopic_problem_selection) {
       this.subtopic_problem_attempts += 1;
+      this.subtopic_attempt_path.push(ch);
       this.subtopic_problem_selection = ch;
       for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
         if (this.subtopic_problem_number == +num) {
@@ -1196,6 +1204,7 @@ export class HomeComponent implements OnInit {
     this.subtopic_problem_number += 1;
     this.subtopic_problem_selection = '';
     this.subtopic_problem_attempts = 0;
+    this.subtopic_attempt_path = [];
     this.subtopic_attempt_response = '';
     this.subtopic_attempt_explanation = '';
     if (this.subtopic_problem_number > this.subtopic_problem_count) {
