@@ -124,6 +124,7 @@ export class ProfileComponent implements OnInit {
 
   profile_tab = "information";
   photoURL = "";
+  profileUploadURL: any = null;
   total_percent_correct = 0;
   complete_exam_count = 0;
   complete_exam_list: string[] = [];
@@ -1012,12 +1013,15 @@ export class ProfileComponent implements OnInit {
         }
       }, (linked_students.length + 1) * 10);
     }
+    else {
+      this.profileUploadURL = this.authService.pp_url;}
   }
 
   toggle_edit_profile() {
     this.edit_p = !this.edit_p;
     this.edit_p_list = [];
     this.photoURL = this.authService.userData.photoURL;
+    this.profileUploadURL = this.authService.pp_url;
   }
 
   toggle_create_student() {
@@ -1054,6 +1058,14 @@ export class ProfileComponent implements OnInit {
 
   update_profile() {
     this.authService.UpdateUserData(this.edit_p_list);
+  }
+
+  upload_profile_pic(user: any, images: any) {
+    this.authService.UploadProfilePic(user, images[0]);
+    // setTimeout(() => {
+    //   this.authService.getProfilePic(user);
+    //   this.profileUploadURL = this.authService.pp_url;
+    // }, 150);
   }
 
   edit_student(field: string, val: string) {
@@ -1635,6 +1647,11 @@ export class ProfileComponent implements OnInit {
           }
         }
         else {
+          this.authService.getProfilePic(this.authService.userData);
+          setTimeout(() => {
+            console.log(this.authService.pp_url);
+            this.profileUploadURL = this.authService.pp_url;
+          }, 150);
           this.student_metadata = [];
           const linked_students = this.authService.userData.students.slice(1);
           for (const [key, stud] of Object.entries(linked_students)) {

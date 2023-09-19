@@ -1,6 +1,7 @@
 import { Injectable, NgZone } from '@angular/core';
 import { User } from './user';
 import * as auth from 'firebase/auth';
+import * as stor from "firebase/storage";
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
@@ -17,6 +18,7 @@ export class AuthService {
   // user: User;
   userData: any; // Save logged in user data
   userCredential: any;
+  pp_url: any;
   user_result: any = {};
   inprog_exams: any = {};
   mystud_inprog_exams: any = {};
@@ -43,6 +45,7 @@ export class AuthService {
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         const db = getDatabase();
+        const strg = stor.getStorage();
         // this.userData = user;
         get(child(ref(db), '/users/' + user.uid)).then((snapshot) => {
           if (snapshot.exists()) {
@@ -360,6 +363,20 @@ export class AuthService {
     return update(ref(db), updates).then(() => {
     }).catch(error => {
       console.log(error.message);
+    });
+  }
+
+  UploadProfilePic(user: any, images: any) {
+    const strg = stor.getStorage();
+    const pref = stor.ref(strg, 'profile/' + ""+user.uid + '/pic');
+    return stor.uploadBytes(pref, images[0]);
+  }
+  
+  getProfilePic(user: any) {
+    const strg = stor.getStorage();
+    return stor.getDownloadURL(stor.ref(strg, 'profile/' + ""+user.uid + '/pic')).then((url) => {
+      this.pp_url = url;
+      console.log(this.pp_url);
     });
   }
 

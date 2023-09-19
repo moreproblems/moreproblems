@@ -18,6 +18,8 @@ export class AppComponent{
   // public toolbarHeight = this.navbar.nativeElement.offsetWidth;
   public mobileWidth = 1200;
   public menuOpen = true;
+
+  profileUploadURL: any = null;
   
   constructor(public authService: AuthService) { }
 
@@ -40,5 +42,6 @@ export class AppComponent{
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: 'smooth'});
   }
+
 
 }

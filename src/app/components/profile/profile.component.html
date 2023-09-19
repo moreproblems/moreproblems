@@ -224,6 +224,28 @@
         color: #125699;
     }
 
+    label.grade-button {
+        font-size: 18px;
+        color: white;
+        background-color: #1976d2;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        margin: 8px;
+        padding: 8px 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    label.grade-button:hover {
+        background-color: #0a1e33;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
     button.grade-button {
         font-size: 18px;
         color: white;
@@ -343,6 +365,12 @@
 
     .avatar-container:hover .middle {
         opacity: 1;
+    }
+
+    .avatar-container:hover .grade-button {
+        background-color: #0a1e33;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);   
     }
 
     progress {
@@ -1183,7 +1211,7 @@
                         <div class="media">
                             <img class="align-self-start mr-5 img-thumbnail rounded-circle"
                                 style="height: 300px; width: 300px; border-radius: 50%"
-                                src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
+                                src="{{(authService.pp_url) ? authService.pp_url : (user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
                                 alt="{{user.displayName}}">
                             <section *ngIf="profile_tab == 'information' && !edit_p"
                                 style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
@@ -1240,11 +1268,25 @@
                 <div *ngIf="profile_tab == 'information' && edit_p" class="row">
                     <div class="col-md-12">
                         <div class="media">
-                            <img *ngIf="user.role != 'Student'"
+                            <!-- <img *ngIf="user.role != 'Student'"
                                 class="align-self-start mr-5 img-thumbnail rounded-circle"
                                 style="height: 300px; width: 300px; border-radius: 50%"
                                 src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
-                                alt="{{user.displayName}}">
+                                alt="{{user.displayName}}"> -->
+                            <div *ngIf="user.role != 'Student'" class="avatar-container" style="margin: auto; position: relative; height: 300px; width: 300px; border-radius: 50%; padding: 5px">
+                                <form method="post" enctype="multipart/form-data">
+                                    <label for="actual-btn" style="height: 100%; width: 100%; border-radius: 50%"> 
+                                        <img class="select-avatar" src="{{(authService.pp_url) ? authService.pp_url : (user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}" 
+                                            style="height: 100%; width: 100%; border-radius: 50%" alt="{{user.displayName}}">
+                                        <input type="file" (change)="authService.UploadProfilePic(user, this.userProfilePic.files); profileUploadURL = authService.pp_url" id="actual-btn" name="profile-upload" accept="image/*" hidden #userProfilePic />
+                                        <div class="select-middle" style="top: 85%">
+                                            <label for="actual-btn" class="grade-button">
+                                                <b> Edit Photo </b>
+                                            </label>
+                                        </div>
+                                    </label>
+                                </form>
+                            </div>
                             <div *ngIf="user.role == 'Student'" class="card-container"
                                 style="margin-top: 25px; margin-bottom: 25px">
                                 <div *ngFor="let pic of this.avatars" (click)="edit_profile_pic(pic)"
@@ -1262,7 +1304,7 @@
                                         </div>
                                     </div>
                                     <div *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
-                                        class="select-middle">
+                                        class="middle">
                                         <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
                                     </div>
                                 </div>
@@ -1282,14 +1324,14 @@
                                         #userName />
                                 </section>
                                 <!-- <p>User Role: <strong>{{user.role}}</strong></p> -->
-                                <section *ngIf="user.role != 'Student'"
+                                <!-- <section *ngIf="user.role != 'Student'"
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
                                     <h3> PhotoURL: </h3>
                                     <input (change)="edit_profile('photoURL', this.userPhotoURL.value)" type="text"
                                         inputmode="text" value="{{user.photoURL}}" maxlength="150"
                                         style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                         #userPhotoURL />
-                                </section>
+                                </section> -->
                                 <!-- <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
                                     <h3> User ID: </h3>
