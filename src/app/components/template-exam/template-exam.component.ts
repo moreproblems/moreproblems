@@ -143,7 +143,7 @@ export class TemplateExamComponent implements OnInit {
     show_correct = false;
 
     key = "";
-    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Topics': { [key: string]: number } } } = examMetadata;
+    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
     exam_state = "";
     exam_grade = "";
     exam_subject = "";
@@ -990,18 +990,15 @@ export class TemplateExamComponent implements OnInit {
                     this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
                 }
             }
-            // if (this.number_correct >= 27) {
-            //     this.performance_level = "Masters Grade Level Performance";
-            // }
-            // else if (this.number_correct >= 23) {
-            //     this.performance_level = "Meets Grade Level Performance";
-            // }
-            // else if (this.number_correct >= 16) {
-            //     this.performance_level = "Approaches Grade Level Performance";
-            // }
-            // else {
-            //     this.performance_level = "Does Not Meet Grade Level Performance";
-            // }
+            for (const [level, floor] of Object.entries(this.exam_attribute_dump[this.key].Levels)) {
+                if (level == "") {
+                    break;
+                }
+                else if (this.number_correct >= floor) {
+                    this.performance_level = level;
+                    break;
+                }
+            }
             if (this.authService.userData) {
                 if (this.authService.userData.role == 'Student') {
                     this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';
