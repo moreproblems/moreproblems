@@ -54,6 +54,7 @@ import { HSMAStandardsComponent } from './components/HSM-A-standards/HSM-A-stand
 import { HSMFStandardsComponent } from './components/HSM-F-standards/HSM-F-standards.component';
 import { HSMGStandardsComponent } from './components/HSM-G-standards/HSM-G-standards.component';
 import { HSMSPStandardsComponent } from './components/HSM-SP-standards/HSM-SP-standards.component';
+import { TemplateClassComponent } from './components/template-class/template-class.component';
 import { TemplateExamComponent } from './components/template-exam/template-exam.component';
 import { TemplateKeyComponent } from './components/template-key/template-key.component';
 import { TestExamComponent } from './components/test-exam/test-exam.component';
@@ -105,6 +106,7 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
     HSMFStandardsComponent,
     HSMGStandardsComponent,
     HSMSPStandardsComponent,
+    TemplateClassComponent,
     TemplateExamComponent,
     TemplateKeyComponent,
     TestExamComponent

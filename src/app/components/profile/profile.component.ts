@@ -120,6 +120,8 @@ export class ProfileComponent implements OnInit {
   screenHeight = window.innerHeight;
   mobileWidth = 1200;
   menuOpen = false;
+  data_loaded = false;
+  stud_data_loaded = false;
   temp_count = 0;
 
   profile_tab = "information";
@@ -1014,30 +1016,69 @@ export class ProfileComponent implements OnInit {
       }, (linked_students.length + 1) * 10);
     }
     else {
-      this.profileUploadURL = this.authService.pp_url;}
+      this.profileUploadURL = this.authService.pp_url;
+      setTimeout(() => {
+        this.profileUploadURL = this.authService.pp_url;
+      }, 500);
+    }
   }
 
   toggle_edit_profile() {
-    this.edit_p = !this.edit_p;
     this.edit_p_list = [];
     this.photoURL = this.authService.userData.photoURL;
     this.profileUploadURL = this.authService.pp_url;
+    setTimeout(() => {
+      this.photoURL = this.authService.userData.photoURL;
+      this.profileUploadURL = this.authService.pp_url;
+      this.edit_p = !this.edit_p;
+    }, 500);
   }
 
   toggle_create_student() {
-    const avatar = this.avatars[Math.floor(Math.random() * this.avatars.length)];
-    this.photoURL = '/assets/icons/user/' + avatar + '.png';
-    this.create_s = !this.create_s;
     this.edit_s_list = [];
-    this.edit_s_list['photoURL'] = this.photoURL;
+    if (!this.create_s) {
+      const avatar = this.avatars[Math.floor(Math.random() * this.avatars.length)];
+      this.photoURL = '/assets/icons/user/' + avatar + '.png';
+      this.edit_s_list['photoURL'] = this.photoURL;
+    }
+    this.create_s = !this.create_s;
   }
 
   toggle_edit_student(id: string) {
-    this.edit_s = !this.edit_s;
     this.edit_s_list = [];
-    if (this.edit_s) {
+    if (!this.edit_s) {
       this.student_data = (this.authService.searchUserId(id) as any);
       this.photoURL = this.student_data.photoURL;
+      setTimeout(() => {
+        this.student_data = (this.authService.searchUserId(id) as any);
+        this.photoURL = this.student_data.photoURL;
+        this.edit_s = !this.edit_s;
+      }, 500);
+    }
+    else {
+      this.student_metadata = [];
+      const linked_students = this.authService.userData.students.slice(1);
+      for (const [key, stud] of Object.entries(linked_students)) {
+        setTimeout(() => {
+          console.log(stud);
+          this.student_data = this.authService.searchUserId(stud as string);
+          console.log(this.student_data);
+          this.student_metadata.push(this.student_data as object);
+        }, +key * 10);
+      }
+      setTimeout(() => {
+        this.student_metadata = [];
+        const linked_students2 = this.authService.userData.students.slice(1);
+        for (const [key, stud] of Object.entries(linked_students2)) {
+          setTimeout(() => {
+            console.log(stud);
+            this.student_data = this.authService.searchUserId(stud as string);
+            console.log(this.student_data);
+            this.student_metadata.push(this.student_data as object);
+          }, +key * 10);
+        }
+        this.edit_s = !this.edit_s;
+      }, (linked_students.length + 1) * 10);
     }
   }
 
@@ -1062,6 +1103,10 @@ export class ProfileComponent implements OnInit {
 
   upload_profile_pic(user: any, images: any) {
     this.authService.UploadProfilePic(user, images[0]);
+    setTimeout(() => {
+      this.photoURL = this.authService.userData.photoURL;
+      this.profileUploadURL = this.authService.pp_url;
+    }, 500);
     // setTimeout(() => {
     //   this.authService.getProfilePic(user);
     //   this.profileUploadURL = this.authService.pp_url;
@@ -1225,97 +1270,34 @@ export class ProfileComponent implements OnInit {
     this.student_exam_metadata = {};
     this.student_data = this.authService.searchUserId(std);
     this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
-    if (this.student_data.problems.total == 0) {
-      this.total_percent_correct = 0;
-    }
-    else {
-      this.total_percent_correct = Math.round(10000 * this.student_data.problems.correct / this.student_data.problems.total) / 100;
-    }
-    this.complete_exam_count = 0;
-    this.complete_exam_list = [];
-    this.temp_count = 1;
-    const exam_history = this.student_data.exams.history;
-    for (const [key, det] of Object.entries(exam_history)) {
-      setTimeout(() => {
-        if ((det as any).status == "Completed") {
-          this.complete_exam_count = this.complete_exam_count + 1;
-          this.complete_exam_list.push(key);
-          this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
-          this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
-        }
-      }, this.temp_count * 50);
-      this.temp_count += 1;
-    }
-    this.subject_break();
-    // setTimeout(() => {
-    //   this.complete_exam_count = 0;
-    //   this.complete_exam_list = [];
-    //   this.temp_count = 1;
-    //   const exam_history2 = this.student_data.exams.history;
-    //   for (const [key, det] of Object.entries(exam_history2)) {
-    //     setTimeout(() => {
-    //       if ((det as any).status == "Completed") {
-    //         this.complete_exam_count = this.complete_exam_count + 1;
-    //         this.complete_exam_list.push(key);
-    //         this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
-    //         this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
-    //       }
-    //     }, this.temp_count * 100);
-    //     this.temp_count += 1;
-    //   }
-    //   this.subject_break();
-    // }, 500);
-    this.selected_student = std;
-  }
-
-  select_student_copy(std: string) {
-    this.grade_breakdown = {};
-    this.subject_breakdown = {};
-    this.topic_breakdown = {};
-    this.student_exam_metadata = {};
-    this.student_data = this.authService.searchUserId(std);
-    this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
-    if (this.student_data.problems.total == 0) {
-      this.total_percent_correct = 0;
-    }
-    else {
-      this.total_percent_correct = Math.round(10000 * this.student_data.problems.correct / this.student_data.problems.total) / 100;
-    }
-    this.complete_exam_count = 0;
-    this.complete_exam_list = [];
-    this.temp_count = 1;
-    const exam_history = this.student_data.exams.history;
-    for (const [key, det] of Object.entries(exam_history)) {
-      setTimeout(() => {
-        if ((det as any).status == "Completed") {
-          this.complete_exam_count = this.complete_exam_count + 1;
-          this.complete_exam_list.push(key);
-          this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
-          this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
-        }
-      }, this.temp_count * 50);
-      this.temp_count += 1;
-    }
-    this.subject_break();
-    // setTimeout(() => {
-    //   this.complete_exam_count = 0;
-    //   this.complete_exam_list = [];
-    //   this.temp_count = 1;
-    //   const exam_history2 = this.student_data.exams.history;
-    //   for (const [key, det] of Object.entries(exam_history2)) {
-    //     setTimeout(() => {
-    //       if ((det as any).status == "Completed") {
-    //         this.complete_exam_count = this.complete_exam_count + 1;
-    //         this.complete_exam_list.push(key);
-    //         this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
-    //         this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
-    //       }
-    //     }, this.temp_count * 100);
-    //     this.temp_count += 1;
-    //   }
-    //   this.subject_break();
-    // }, 500);
-    this.selected_student = std;
+    setTimeout(() => {
+      this.student_data = this.authService.searchUserId(std);
+      this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
+      if (this.student_data.problems.total == 0) {
+        this.total_percent_correct = 0;
+      }
+      else {
+        this.total_percent_correct = Math.round(10000 * this.student_data.problems.correct / this.student_data.problems.total) / 100;
+      }
+      this.complete_exam_count = 0;
+      this.complete_exam_list = [];
+      this.temp_count = 1;
+      const exam_history = this.student_data.exams.history;
+      for (const [key, det] of Object.entries(exam_history)) {
+        setTimeout(() => {
+          if ((det as any).status == "Completed") {
+            this.complete_exam_count = this.complete_exam_count + 1;
+            this.complete_exam_list.push(key);
+            this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+            this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+          }
+        }, this.temp_count * 50);
+        this.temp_count += 1;
+      }
+      this.subject_break();
+      this.selected_student = std;
+      this.stud_data_loaded = true;
+    }, 500);
   }
 
   subject_break() {
@@ -1664,7 +1646,10 @@ export class ProfileComponent implements OnInit {
           }
         }
       }
-    }, 50);
+      setTimeout(() => {
+        this.data_loaded = true;
+      }, 500);
+    }, 1000);
     this.windowRef = this.win.windowRef;
     this.windowRef.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
       'size': 'invisible',

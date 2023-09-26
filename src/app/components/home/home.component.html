@@ -2,12 +2,12 @@
   @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
   :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
   }
 
   h1,
@@ -16,481 +16,507 @@
   h4,
   h5,
   h6 {
-    margin: 8px 0;
+      margin: 8px 0;
   }
 
   p {
-    margin: 0;
+      margin: 0;
   }
 
   .spacer {
-    flex: 1;
+      flex: 1;
   }
 
   .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 85px;
-    display: flex;
-    align-items: center;
-    background-color: #0a1e33;
-    color: white;
-    font-weight: 600;
-    padding: 5px 10px 2px 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      padding: 5px 10px 2px 20px;
   }
 
   .toolbar img {
-    /* margin: 0 16px; */
-    position: absolute;
-    left: -10px;
-    top: -18px;
+      /* margin: 0 16px; */
+      position: absolute;
+      left: -10px;
+      top: -18px;
   }
 
   .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 8px;
+      height: 40px;
+      margin: 0 8px;
   }
 
   .toolbar #youtube-logo {
-    height: 40px;
-    margin: 0 16px;
+      height: 40px;
+      margin: 0 16px;
   }
 
   .toolbar #twitter-logo:hover,
   .toolbar #youtube-logo:hover {
-    opacity: 0.8;
+      opacity: 0.8;
   }
 
   #confetticanvas {
-    position: fixed;
-    z-index: 50;
-    top: 81px;
-    right: 0px;
-    bottom: 0px;
-    left: 125px;
-    height: 0px;
+      position: fixed;
+      z-index: 50;
+      top: 81px;
+      right: 0px;
+      bottom: 0px;
+      left: 125px;
+      height: 0px;
   }
 
   .content-menu {
-    display: flex;
-    margin: 0 auto 32px;
-    padding: 0 16px;
-    width: 90%;
-    flex-direction: column;
-    align-items: center;
+      display: flex;
+      margin: 0 auto 32px;
+      padding: 0 16px;
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
   }
 
   .content {
-    display: flex;
-    margin: 0 auto 32px;
-    padding: 0;
-    width: 95%;
-    flex-direction: column;
-    align-items: center;
+      display: flex;
+      margin: 0 auto 32px;
+      padding: 0;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
   }
 
   .subcontent {
-    display: flex;
-    margin: 12px auto;
-    padding: 0px;
-    width: 95%;
-    flex-direction: column;
-    align-items: center;
+      display: flex;
+      margin: 12px auto;
+      padding: 0px;
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
   }
 
   svg.material-icons {
-    height: 24px;
-    width: auto;
+      height: 24px;
+      width: auto;
   }
 
   svg.material-icons:not(:last-child) {
-    margin-right: 8px;
+      margin-right: 8px;
   }
 
   .card svg.material-icons path {
-    fill: #888;
+      fill: #888;
   }
 
   .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 16px;
   }
 
   .card {
-    all: unset;
-    border-radius: 4px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    /* height: 40px;
-        width: 200px; */
-    margin: 0 8px 16px;
-    padding: 8px 8px;
-    display: flex;
-    flex-direction: row;
-    /* justify-content: center; */
-    /* align-items: center; */
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
+      all: unset;
+      border-radius: 4px;
+      border: 1px solid #eee;
+      background-color: #fafafa;
+      /* height: 40px;
+    width: 200px; */
+      margin: 0 8px 16px;
+      padding: 8px 8px;
+      display: flex;
+      flex-direction: row;
+      /* justify-content: center; */
+      /* align-items: center; */
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
   }
 
   /* .card-container .card:not(:last-child) {
-      margin-right: 0;
-    }
-  
-    .card-container .switch:not(:last-child) {
-      margin-right: 0;
-    } */
+  margin-right: 0;
+}
+
+.card-container .switch:not(:last-child) {
+  margin-right: 0;
+} */
 
   .card.card-small {
-    min-height: 16px;
-    width: 210px;
-    border-radius: 8px;
-  }
-
-  .card.card-small span {
-    text-align: center;
+      min-height: 16px;
+      width: 210px;
+      border-radius: 8px;
   }
 
   .card.card-medium {
-    height: auto;
-    width: 80%;
-    border-radius: 8px;
-    padding: 20px;
+      height: auto;
+      width: 80%;
+      border-radius: 8px;
+      padding: 20px;
   }
 
   .card.card-medium:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   .card.card-large {
-    /* width: auto;
-      height: auto; */
-    border-radius: 8px;
-    margin: 8px 8px;
-    padding: 8px 20px;
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      margin: 8px 8px;
+      padding: 8px 0;
   }
 
   .card-container .card:not(.highlight-card) {
-    cursor: pointer;
+      cursor: pointer;
   }
 
   .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   /* .card-container .card:not(.highlight-card):hover .material-icons path {
-      fill: rgb(105, 103, 103);
-    } */
+  fill: rgb(105, 103, 103);
+} */
 
   .card.highlight-card {
-    background-color: #0a1e33;
-    color: white;
-    font-weight: 600;
-    border: none;
-    width: auto;
-    min-width: 30%;
-    position: relative;
+      background-color: #0a1e33;
+      color: white;
+      font-weight: 600;
+      border: none;
+      width: auto;
+      min-width: 30%;
+      position: relative;
   }
 
   .card.card.highlight-card span {
-    margin-left: 60px;
+      margin-left: 60px;
   }
 
   svg#rocket {
-    width: 80px;
-    position: absolute;
-    left: -10px;
-    top: -24px;
+      width: 80px;
+      position: absolute;
+      left: -10px;
+      top: -24px;
   }
 
   svg#rocket-smoke {
-    height: calc(100vh - 95px);
-    position: absolute;
-    top: 10px;
-    right: 180px;
-    z-index: -10;
+      height: calc(100vh - 95px);
+      position: absolute;
+      top: 10px;
+      right: 180px;
+      z-index: -10;
   }
 
   a,
   a:visited,
   a:hover {
-    color: #1976d2;
-    text-decoration: none;
+      color: #1976d2;
+      text-decoration: none;
   }
 
   a:hover {
-    color: #125699;
+      color: #125699;
+  }
+
+  label.grade-button {
+      font-size: 18px;
+      color: white;
+      background-color: #1976d2;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      margin: 8px;
+      padding: 8px 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+  }
+
+  label.grade-button:hover {
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   button.grade-button {
-    font-size: 18px;
-    color: white;
-    background-color: #1976d2;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    margin: 8px;
-    padding: 8px 8px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #1976d2;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      margin: 8px;
+      padding: 8px 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
   }
 
   button.grade-button:hover {
-    background-color: #0a1e33;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   button.grade-button-gray {
-    font-size: 18px;
-    color: white;
-    background-color: #ccc;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    padding: 7px 15px;
-    margin: 0 2px 10px;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
   }
 
   button.grade-button-gray:hover {
-    background-color: #0a1e33;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   button.toggle-button {
-    font-size: 18px;
-    color: black;
-    background-color: #ccc;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    padding: 7px 15px;
-    margin: 0 2px 10px;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
   }
 
   .toggle-button:before {
-    background-color: #1976d2;
-    color: white;
+      background-color: #1976d2;
+      color: white;
   }
 
   button.toggle-button-off {
-    font-size: 18px;
-    color: black;
-    background-color: #ccc;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    padding: 7px 15px;
-    margin: 0 2px 10px;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-    width: 100%;
+      font-size: 18px;
+      color: black;
+      background-color: #ccc;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
   }
 
   button.toggle-button-on {
-    font-size: 18px;
-    background-color: #1976d2;
-    color: white;
-    border-radius: 12px;
-    border: 3px solid #0a1e33;
-    padding: 7px 15px;
-    margin: 0 2px 10px;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-    width: 100%;
+      font-size: 18px;
+      background-color: #1976d2;
+      color: white;
+      border-radius: 12px;
+      border: 3px solid #0a1e33;
+      padding: 7px 15px;
+      margin: 0 2px 10px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      width: 100%;
+  }
+
+  .select-avatar {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+  }
+
+  .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%)
+  }
+
+  .select-middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      opacity: 1;
+  }
+
+  .avatar-container:hover .select-avatar {
+      opacity: 0.3;
+  }
+
+  .avatar-container:hover .middle {
+      opacity: 1;
+  }
+
+  .avatar-container:hover .grade-button {
+      background-color: #0a1e33;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);   
   }
 
   progress {
-    border-radius: 10px;
+      border-radius: 10px;
   }
 
   progress::-webkit-progress-bar {
-    border-radius: 10px;
-    background-color: lightgray;
-    border: 1px solid darkslategrey;
+      border-radius: 10px;
+      background-color: lightgray;
+      border: 1px solid darkslategrey;
   }
 
   progress::-webkit-progress-value {
-    border-radius: 10px;
-    background-color: limegreen;
-    /* border: 2px solid black; */
+      border-radius: 10px;
+      background-color: limegreen;
+      /* border: 2px solid black; */
   }
 
   progress::-moz-progress-bar {
-    border-radius: 10px;
-  }
-
-  .terminal {
-    position: relative;
-    /* width: 100%; */
-    max-width: 625px;
-    border-radius: 6px;
-    padding-top: 45px;
-    margin-top: 8px;
-    overflow: hidden;
-    background-color: rgb(15, 15, 16);
-    color: #c2c3c4;
-  }
-
-  .terminal::before {
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: rgb(58, 58, 58);
-    color: #c2c3c4;
-    width: 100%;
-    line-height: 0;
-    padding: 14px 0;
-    font-size: 2rem;
-    text-indent: 4px;
-  }
-
-  .terminal pre {
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-    margin: 0;
-    text-align: center;
+      border-radius: 10px;
   }
 
   .circle-link {
-    height: 40px;
-    width: 40px;
-    border-radius: 40px;
-    margin: 8px;
-    background-color: white;
-    border: 1px solid #eeeeee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: 1s ease-out;
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      margin: 8px;
+      background-color: white;
+      border: 1px solid #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: 1s ease-out;
   }
 
   .circle-link:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-0.25rem);
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
   footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      line-height: 20px;
   }
 
   footer a {
-    display: flex;
-    align-items: center;
+      display: flex;
+      align-items: center;
   }
 
   .github-star-badge {
-    color: #24292e;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    padding: 3px 10px;
-    border: 1px solid rgba(27, 31, 35, .2);
-    border-radius: 3px;
-    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-    margin-left: 4px;
-    font-weight: 600;
+      color: #24292e;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      padding: 3px 10px;
+      border: 1px solid rgba(27, 31, 35, .2);
+      border-radius: 3px;
+      background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+      margin-left: 4px;
+      font-weight: 600;
   }
 
   .github-star-badge:hover {
-    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-    border-color: rgba(27, 31, 35, .35);
-    background-position: -.5em;
+      background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+      border-color: rgba(27, 31, 35, .35);
+      background-position: -.5em;
   }
 
   .github-star-badge .material-icons {
-    height: 16px;
-    width: 16px;
-    margin-right: 4px;
+      height: 16px;
+      width: 16px;
+      margin-right: 4px;
   }
 
-/* The switch - the box around the slider */
-.switch {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
-  max-width: 250px;
-  max-height: 75px;
-  transition: all 0.2s ease-in-out;
-}
+  /* The switch - the box around the slider */
+  .switch {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      max-width: 250px;
+      max-height: 75px;
+      transition: all 0.2s ease-in-out;
+  }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+  /* Hide default HTML checkbox */
+  .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+  }
 
-input:checked+.toggle-button-on {
-  background-color: #1976d2;
-  color: white
-}
+  input:checked+.toggle-button-on {
+      background-color: #1976d2;
+      color: white
+  }
 
-input:hover+.toggle-button-on {
-  background-color: #0a1e33;
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-}
+  input:hover+.toggle-button-on {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
 
-input:checked+.toggle-button-off {
-  background-color: #ccc;
-  color: black;
-}
+  input:checked+.toggle-button-off {
+      background-color: #ccc;
+      color: black;
+  }
 
-input:hover+.toggle-button-off {
-  background-color: #0a1e33;
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-}
+  input:hover+.toggle-button-off {
+      background-color: #0a1e33;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
 
-    .card-container>*:not(.circle-link),
-    .terminal {
-      /* width: 100%; */
-    }
+      .card-container>*:not(.circle-link),
+      .terminal {
+          /* width: 100%; */
+      }
 
-    .card:not(.highlight-card) {
-      /* height: 16px; */
-      margin: 8px 0;
-    }
+      .card:not(.highlight-card) {
+          /* height: 16px; */
+          margin: 8px 0;
+      }
 
-    .card.highlight-card span {
-      margin-left: 72px;
-    }
+      .card.highlight-card span {
+          margin-left: 72px;
+      }
 
   }
 </style>
 
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
-  <div *ngIf="standard_id != ''" class="content-menu" role="menu"
-    style="margin-bottom: 0px; align-items: center">
+  <div *ngIf="standard_id != ''" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
     <br />
     <section *ngIf="standard_id != ''" style="width: 100%; align-items: left">
       <div (click)="standard_id=''" class="card card-small"
@@ -508,16 +534,24 @@ input:hover+.toggle-button-off {
       <div class="content" style="margin: auto; align-items: center">
         <section
           style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
-          <h2 *ngIf="screenWidth > mobileWidth" style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 24.5px; line-height: 30px"> <b>{{selected_topic}}:</b> {{selected_subtopic}} </h2>
-          <h2 *ngIf="screenWidth <= mobileWidth" style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px"> <b>{{selected_topic}}:</b> {{selected_subtopic}} </h2>
+          <h2 *ngIf="screenWidth > mobileWidth"
+            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 24.5px; line-height: 30px">
+            <b>{{selected_topic}}:</b> {{selected_subtopic}} </h2>
+          <h2 *ngIf="screenWidth <= mobileWidth"
+            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px">
+            <b>{{selected_topic}}:</b> {{selected_subtopic}} </h2>
           <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-            style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &star; </span>
+            style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &star;
+          </span>
           <span *ngIf="this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-            style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &starf; </span>
+            style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &starf;
+          </span>
         </section>
         <br />
-        <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px"> <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
-        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px"> <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
+        <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px"> <a>#{{subtopic_problem_number}}
+            of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
+        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px">
+          <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
         <br />
         <section style="height: auto; width: 100%; display: flex; justify-content: center">
           <div *ngFor="let prob of subtopic_search_dump | keyvalue"
@@ -526,9 +560,12 @@ input:hover+.toggle-button-off {
               <label *ngFor="let num of prob.value.SubTopics | keyvalue"
                 (click)="select_standard(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
                 style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
-                <button class="topic-button" style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px">
+                <button class="topic-button"
+                  style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px">
                   <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
-                  <span *ngIf="fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px"> &starf;
+                  <span *ngIf="fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
+                    style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
+                    &starf;
                   </span>
                 </button>
               </label>
@@ -565,13 +602,19 @@ input:hover+.toggle-button-off {
                 style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                 <label class="switch" style="padding: 0 10px">
                   <input type="checkbox" value="{{choice.key}}">
-                  <button *ngIf="subtopic_problem_selection==choice.key && !subtopic_attempt_response.startsWith('Correct')" class="toggle-button-on"> <b> {{choice.key}} </b>
+                  <button
+                    *ngIf="subtopic_problem_selection==choice.key && !subtopic_attempt_response.startsWith('Correct')"
+                    class="toggle-button-on"> <b> {{choice.key}} </b>
                   </button>
-                  <button *ngIf="subtopic_problem_selection==choice.key && subtopic_attempt_response.startsWith('Correct')" class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                  <button
+                    *ngIf="subtopic_problem_selection==choice.key && subtopic_attempt_response.startsWith('Correct')"
+                    class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
                   </button>
-                  <button *ngIf="subtopic_problem_selection!=choice.key && !subtopic_attempt_path.includes(choice.key)" class="toggle-button-off"> <b> {{choice.key}} </b>
+                  <button *ngIf="subtopic_problem_selection!=choice.key && !subtopic_attempt_path.includes(choice.key)"
+                    class="toggle-button-off"> <b> {{choice.key}} </b>
                   </button>
-                  <button *ngIf="subtopic_problem_selection!=choice.key && subtopic_attempt_path.includes(choice.key)" class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                  <button *ngIf="subtopic_problem_selection!=choice.key && subtopic_attempt_path.includes(choice.key)"
+                    class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                   </button>
                 </label>
                 <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
@@ -630,13 +673,14 @@ input:hover+.toggle-button-off {
                 </h3>
               </div>
             </div>
-            <button *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth > mobileWidth" class="grade-button"
-              (click)="next_problem_st(); scroll_top()"
+            <button *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth > mobileWidth"
+              class="grade-button" (click)="next_problem_st(); scroll_top()"
               style="display: block; max-width: 150px; max-height: 100px; margin: auto">
               <b> Next Problem </b>
             </button>
           </div>
-          <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts == 0" class="card highlight-card card-small"
+          <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts == 0"
+            class="card highlight-card card-small"
             style="height: auto; min-height: 100px; max-width: 90%; padding-top: 10px; margin: auto; align-items: center; display: inline-flex; background-color: transparent">
             <button class="grade-button" (click)="next_problem_st(); scroll_top()"
               style="display: block; max-width: 150px; max-height: 100px; margin: auto">
@@ -647,8 +691,7 @@ input:hover+.toggle-button-off {
       </div>
     </div>
   </div>
-  <div *ngIf="file_source != ''" class="content-menu" role="menu"
-    style="margin-bottom: 0px; align-items: center">
+  <div *ngIf="file_source != ''" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
     <br />
     <section *ngIf="file_source != ''" style="width: 100%; align-items: left">
       <div (click)="file_source=''; exam_fav=false" class="card card-small"
@@ -676,11 +719,14 @@ input:hover+.toggle-button-off {
           style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &starf; </span>
       </section>
       <h3 *ngIf="online_set.includes(exam_id) && screenWidth > mobileWidth" (click)="take_exam()"
-        style="font-weight: 600; font-size: 20px; margin-top: 20px"><a> Take the full exam from your device now! </a></h3>
+        style="font-weight: 600; font-size: 20px; margin-top: 20px"><a> Take the full exam from your device now! </a>
+      </h3>
       <h3 *ngIf="online_set.includes(exam_id) && screenWidth <= mobileWidth" (click)="take_exam()"
-        style="font-weight: 600; font-size: 16px; margin-top: 15px"><a> Take the full exam from your device now! </a></h3>
+        style="font-weight: 600; font-size: 16px; margin-top: 15px"><a> Take the full exam from your device now! </a>
+      </h3>
       <br />
-      <section style="height: auto; max-height: 75px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+      <section
+        style="height: auto; max-height: 75px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
         <button *ngIf="file_source != '' && this.screenWidth > this.mobileWidth" (click)="print_exam()"
           class="grade-button" style="margin: 10px 10px 10px 0; width: auto; height: auto">
           <img src="./assets/icons/print.png" style="height: 25px">
@@ -720,67 +766,432 @@ input:hover+.toggle-button-off {
     </div>
     <br />
   </div>
-  <div *ngIf="file_source == '' && standard_id ==''" class="content" role="main">
+  <br *ngIf="create_s || create_c" />
+  <div *ngIf="create_s" class="card card-large"
+    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+    <br />
+    <h1 style="font-size: 24px"> Create Your New Student's Profile </h1>
+    <div class="media">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="media">
+            <div class="card-container" style="margin-top: 25px; margin-bottom: 25px">
+              <div *ngFor="let pic of this.avatars" (click)="student_profile_pic(pic)" class="avatar-container"
+                style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 5px">
+                <img *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
+                  src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar" style="width:100%; height: 100%">
+                <img *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
+                  src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                  style="width:100%; height: 100%; opacity: 0.3">
+                <div class="middle">
+                  <div *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
+                    style="color: white; background-color: #1976d2; border-radius: 10px">
+                    Select
+                  </div>
+                </div>
+                <div *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'" class="select-middle">
+                  <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
+                </div>
+              </div>
+            </div>
+            <div class="media-body">
+              <section
+                style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px">
+                <h3 style="width: min(25%, 400px); text-align: center"> Student Name: </h3>
+                <input (change)="edit_student('displayName', this.newUserName.value)" type="text" inputmode="text"
+                  maxlength="40"
+                  style="margin: auto 10px; padding-left: 10px; width: 59%; height: 40px; font-size: 16px; font-weight: 400; text-align: left"
+                  #newUserName />
+              </section>
+              <br />
+              <div>
+                <section
+                  style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                  <h3 style="width: min(25%, 400px); text-align: center"> Grade: </h3>
+                  <select
+                    (change)="edit_student('grade', this.newUserGrade.value); edit_student('state', this.newUserState.value)"
+                    style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
+                    #newUserGrade>
+                    <option disabled selected value> -- select a grade -- </option>
+                    <option value="Kindergarten">Kindergarten</option>
+                    <option value="Grade 1">Grade 1</option>
+                    <option value="Grade 2">Grade 2</option>
+                    <option value="Grade 3">Grade 3</option>
+                    <option value="Grade 4">Grade 4</option>
+                    <option value="Grade 5">Grade 5</option>
+                    <option value="Grade 6">Grade 6</option>
+                    <option value="Grade 7">Grade 7</option>
+                    <option value="Grade 8">Grade 8</option>
+                    <option value="Grade 9">Grade 9</option>
+                    <option value="Grade 10">Grade 10</option>
+                    <option value="Grade 11">Grade 11</option>
+                    <option value="Grade 12">Grade 12</option>
+                  </select>
+                </section>
+                <section
+                  style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                  <h3 style="width: min(25%, 400px); text-align: center"> State: </h3>
+                  <select value="{{authService.userData.state}}" (change)="edit_student('state', this.newUserState.value)"
+                  style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
+                    #newUserState>
+                    <option disabled selected value> -- select a state -- </option>
+                    <option value="Alabama">Alabama</option>
+                    <option value="Alaska">Alaska</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="Arkansas">Arkansas</option>
+                    <option value="California">California</option>
+                    <option value="Colorado">Colorado</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="Delaware">Delaware</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Idaho">Idaho</option>
+                    <option value="Illinois">Illinois</option>
+                    <option value="Indiana">Indiana</option>
+                    <option value="Iowa">Iowa</option>
+                    <option value="Kansas">Kansas</option>
+                    <option value="Kentucky">Kentucky</option>
+                    <option value="Louisiana">Louisiana</option>
+                    <option value="Maine">Maine</option>
+                    <option value="Maryland">Maryland</option>
+                    <option value="Massachusetts">Massachusetts</option>
+                    <option value="Michigan">Michigan</option>
+                    <option value="Minnesota">Minnesota</option>
+                    <option value="Mississippi">Mississippi</option>
+                    <option value="Missouri">Missouri</option>
+                    <option value="Montana">Montana</option>
+                    <option value="Nebraska">Nebraska</option>
+                    <option value="Nevada">Nevada</option>
+                    <option value="New Hampshire">New Hampshire</option>
+                    <option value="New Jersey">New Jersey</option>
+                    <option value="New Mexico">New Mexico</option>
+                    <option value="New York">New York</option>
+                    <option value="North Carolina">North Carolina</option>
+                    <option value="North Dakota">North Dakota</option>
+                    <option value="Ohio">Ohio</option>
+                    <option value="Oklahoma">Oklahoma</option>
+                    <option value="Oregon">Oregon</option>
+                    <option value="Pennsylvania">Pennsylvania</option>
+                    <option value="Rhode Island">Rhode Island</option>
+                    <option value="South Carolina">South Carolina</option>
+                    <option value="South Dakota">South Dakota</option>
+                    <option value="Tennessee">Tennessee</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Utah">Utah</option>
+                    <option value="Vermont">Vermont</option>
+                    <option value="Virginia">Virginia</option>
+                    <option value="Washington">Washington</option>
+                    <option value="West Virginia">West Virginia</option>
+                    <option value="Wisconsin">Wisconsin</option>
+                    <option value="Wyoming">Wyoming</option>
+                  </select>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+          <button *ngIf="authService.userData as user" (click)="create_student(); toggle_create_student()"
+              class="grade-button" style="display: flex; flex-direction: row; align-items: center">
+              <div style="margin: 0 5px">
+                  <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+              </div>
+              <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
+          </button>
+          <button *ngIf="authService.userData as user" (click)="toggle_create_student()" class="grade-button"
+              style="display: flex; flex-direction: row; align-items: center">
+              <div style="margin: 0 5px">
+                  <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+              </div>
+              <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
+          </button>
+      </section>
+    </div>
+    <br />
+  </div>
+  <div *ngIf="create_c" class="card card-large"
+    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 2%; display: flex; flex-direction: column">
+    <br />
+    <h1> Create Your New Class </h1>
+    <div class="media">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="media">
+            <br />
+            <div class="media-body">
+              <div>
+                <section
+                  style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                  <h3 style="width: min(25%, 400px); text-align: center"> Class Name: </h3>
+                  <input (change)="edit_class('classes/' + this.class_uid + '/displayName', this.newClassName.value)" type="text" inputmode="text"
+                    maxlength="40"
+                    style="margin: auto 10px; padding-left: 10px; width: 59%; height: 40px; font-size: 17px; font-weight: 600; text-align: left"
+                    #newClassName />
+                </section>
+                <section
+                  style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                  <h3 style="width: min(25%, 400px); text-align: center"> Class Overview: </h3>
+                  <textarea (change)="edit_class('classes/' + this.class_uid + '/description', this.newClassOverview.value)" rows="5"
+                    maxlength="400"
+                    style="margin: auto 10px auto 0; padding-top: 10px; padding-left: 10px; width: 59%; height: 100px; font-size: 16px; line-height: 18px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                    #newClassOverview > </textarea>
+                </section>
+              </div>
+              <br />
+              <div>
+                <section
+                  style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                  <h3 style="width: min(25%, 400px); text-align: center"> Grade: </h3>
+                  <select value="{{authService.userData.grade}}"
+                    (change)="edit_class('classes/' + this.class_uid + '/grade', this.newClassGrade.value)"
+                    style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
+                    #newClassGrade>
+                    <option disabled selected value> -- select a grade -- </option>
+                    <option value="Kindergarten">Kindergarten</option>
+                    <option value="Grade 1">Grade 1</option>
+                    <option value="Grade 2">Grade 2</option>
+                    <option value="Grade 3">Grade 3</option>
+                    <option value="Grade 4">Grade 4</option>
+                    <option value="Grade 5">Grade 5</option>
+                    <option value="Grade 6">Grade 6</option>
+                    <option value="Grade 7">Grade 7</option>
+                    <option value="Grade 8">Grade 8</option>
+                    <option value="Grade 9">Grade 9</option>
+                    <option value="Grade 10">Grade 10</option>
+                    <option value="Grade 11">Grade 11</option>
+                    <option value="Grade 12">Grade 12</option>
+                  </select>
+                </section>
+                <section
+                    style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                    <h3 style="width: min(25%, 400px); text-align: center"> Subject: </h3>
+                    <select value="{{authService.userData.subject}}"
+                        (change)="edit_class('classes/' + this.class_uid + '/subject', this.newClassSubject.value)"
+                        style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
+                        #newClassSubject>
+                        <option disabled selected value> -- select a subject -- </option>
+                        <option value="English Language">English Language</option>
+                        <option value="Math">Math</option>
+                        <option value="Reading">Reading</option>
+                        <option value="Science">Science</option>
+                        <option value="Writing">Writing</option>
+                    </select>
+                </section>
+                <section
+                  style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                  <h3 style="width: min(25%, 400px); text-align: center"> State: </h3>
+                  <select value="{{authService.userData.state}}" (change)="edit_class('classes/' + this.class_uid + '/state', this.newClassState.value)"
+                    style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
+                    #newClassState>
+                    <option disabled selected value> -- select a state -- </option>
+                    <option value="Alabama">Alabama</option>
+                    <option value="Alaska">Alaska</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="Arkansas">Arkansas</option>
+                    <option value="California">California</option>
+                    <option value="Colorado">Colorado</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="Delaware">Delaware</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Idaho">Idaho</option>
+                    <option value="Illinois">Illinois</option>
+                    <option value="Indiana">Indiana</option>
+                    <option value="Iowa">Iowa</option>
+                    <option value="Kansas">Kansas</option>
+                    <option value="Kentucky">Kentucky</option>
+                    <option value="Louisiana">Louisiana</option>
+                    <option value="Maine">Maine</option>
+                    <option value="Maryland">Maryland</option>
+                    <option value="Massachusetts">Massachusetts</option>
+                    <option value="Michigan">Michigan</option>
+                    <option value="Minnesota">Minnesota</option>
+                    <option value="Mississippi">Mississippi</option>
+                    <option value="Missouri">Missouri</option>
+                    <option value="Montana">Montana</option>
+                    <option value="Nebraska">Nebraska</option>
+                    <option value="Nevada">Nevada</option>
+                    <option value="New Hampshire">New Hampshire</option>
+                    <option value="New Jersey">New Jersey</option>
+                    <option value="New Mexico">New Mexico</option>
+                    <option value="New York">New York</option>
+                    <option value="North Carolina">North Carolina</option>
+                    <option value="North Dakota">North Dakota</option>
+                    <option value="Ohio">Ohio</option>
+                    <option value="Oklahoma">Oklahoma</option>
+                    <option value="Oregon">Oregon</option>
+                    <option value="Pennsylvania">Pennsylvania</option>
+                    <option value="Rhode Island">Rhode Island</option>
+                    <option value="South Carolina">South Carolina</option>
+                    <option value="South Dakota">South Dakota</option>
+                    <option value="Tennessee">Tennessee</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Utah">Utah</option>
+                    <option value="Vermont">Vermont</option>
+                    <option value="Virginia">Virginia</option>
+                    <option value="Washington">Washington</option>
+                    <option value="West Virginia">West Virginia</option>
+                    <option value="Wisconsin">Wisconsin</option>
+                    <option value="Wyoming">Wyoming</option>
+                  </select>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+          <button *ngIf="authService.userData as user" (click)="create_class(); toggle_create_class()"
+              class="grade-button" style="display: flex; flex-direction: row; align-items: center">
+              <div style="margin: 0 5px">
+                  <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+              </div>
+              <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
+          </button>
+          <button *ngIf="authService.userData as user" (click)="toggle_create_class()" class="grade-button"
+              style="display: flex; flex-direction: row; align-items: center">
+              <div style="margin: 0 5px">
+                  <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+              </div>
+              <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
+          </button>
+      </section>
+    </div>
+    <br />
+  </div>
+  <br *ngIf="create_s || create_c" />
+  <div *ngIf="file_source == '' && standard_id =='' && !create_s && !create_c && data_loaded" class="content" role="main" style="margin-bottom: 0px;">
+    <br />
+    <div *ngIf="this.authService.userData.role != 'Student' && this.authService.userData.role != 'Parent'"
+      class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <br />
+      <h2 #yourStudents> My Classes </h2>
+      <br />
+      <h3 *ngIf="my_class_metadata.length == 0" style="font-size: 18px"> You haven't created any classes under this account yet. </h3>
+      <div *ngIf="my_class_metadata.length != 0" class="card-container" style="max-width: 100%">
+        <div *ngFor="let clss of my_class_metadata" class="card card-medium"
+          style="display: block; text-align: center; min-width: 40%; max-width: 500px; max-height: 300px; width: auto; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+          <h2 style="padding-bottom: 10px">{{(clss.displayName) ?
+            clss.displayName :
+            'Class'}}</h2>
+          <h4> {{clss.description}} </h4>
+          <hr style="width: 50%" />
+          <div style="display: block; text-align: center; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+            <div style="align-items: center; text-align: center; margin-right: 10px">
+              <section style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
+                <div style="margin: 0 5px">
+                  <img src="{{this.authService.searchUserId(clss.teacher).photoURL}}" style="padding: 5px 0 0; height: 35px; width: 35px; border-radius: 50%">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-weight: 500; font-size: 16px">
+                  <h3 style="padding-bottom: 10px"> {{this.authService.searchUserId(clss.teacher).displayName}} </h3>
+                </div>
+              </section>
+              <label class="switch">
+                <input type="checkbox">
+                <button (click)="select_class(clss.uid)" class="toggle-button-off" style="margin: auto; margin-top: 10px">
+                  <b> Enter Classroom </b>
+                </button>
+              </label>
+            </div>
+            <div style="align-items: center; text-align: center; margin-left: 10px">
+              <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+                <div class="media-body" style="padding: 0 20px">
+                  <h3 style="font-weight: 600">{{clss.grade}}</h3>
+                  <h3 style="font-weight: 600">{{clss.subject}}</h3>
+                  <h3 style="font-weight: 600">{{clss.state}}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <button *ngIf="authService.userData as user" (click)="toggle_create_class()" class="grade-button"
+        style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
+        <div style="margin: 0 5px">
+          <img src="./assets/icons/add.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+        </div>
+        <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create New Class
+          </b>
+        </div>
+      </button>
+      <br />
+    </div>
     <br />
     <div *ngIf="this.authService.userData.role != 'Student'" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2 #yourStudents> My Students </h2>
       <br />
-      <h3 *ngIf="my_student_metadata.length == 0" > You haven't created any students under this account yet. </h3>
+      <h3 *ngIf="my_student_metadata.length == 0"> You haven't created any students under this account yet. </h3>
       <div *ngIf="my_student_metadata.length != 0" class="card-container" style="max-width: 100%">
         <div *ngFor="let stud of my_student_metadata" class="card card-medium"
           style="display: block; text-align: center; min-width: 40%; max-width: 500px; max-height: 300px; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-            <div style="align-items: center; text-align: center; margin-right: 10px">
-              <h2 style="padding-bottom: 10px">{{(stud.displayName) ?
-                  stud.displayName :
-                  'User'}}</h2>
-              <img *ngIf="this.screenWidth > this.mobileWidth"
-                  class="align-self-start mr-5 img-thumbnail rounded-circle"
-                  style="height: 160px; width: 160px; border-radius: 50%"
-                  src="{{(stud.photoURL) ? stud.photoURL : '/assets/icons/user/user.png'}}"
-                  alt="{{stud.displayName}}">
-              <img *ngIf="this.screenWidth <= this.mobileWidth"
-                  class="align-self-start mr-5 img-thumbnail rounded-circle"
-                  style="height: 120px; width: 120px; border-radius: 50%"
-                  src="{{(stud.photoURL) ?stud.photoURL : '/assets/icons/user/user.png'}}"
-                  alt="{{stud.displayName}}">
-              <label class="switch">
-                  <input type="checkbox">
-                  <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud != stud.uid" (click)="select_student(stud.uid)" class="toggle-button-off" style="margin-top: 10px">
-                      <b> Exams </b>
-                  </button>
-                  <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud == stud.uid" (click)="select_student(stud.uid)" class="toggle-button-on" style="margin-top: 10px">
-                      <b> Exams </b>
-                  </button>
-              </label>
+          <div style="align-items: center; text-align: center; margin-right: 10px">
+            <h2 style="padding-bottom: 10px">{{(stud.displayName) ?
+              stud.displayName :
+              'User'}}</h2>
+            <img *ngIf="this.screenWidth > this.mobileWidth" class="align-self-start mr-5 img-thumbnail rounded-circle"
+              style="height: 160px; width: 160px; border-radius: 50%"
+              src="{{(stud.photoURL) ? stud.photoURL : '/assets/icons/user/user.png'}}" alt="{{stud.displayName}}">
+            <img *ngIf="this.screenWidth <= this.mobileWidth" class="align-self-start mr-5 img-thumbnail rounded-circle"
+              style="height: 120px; width: 120px; border-radius: 50%"
+              src="{{(stud.photoURL) ?stud.photoURL : '/assets/icons/user/user.png'}}" alt="{{stud.displayName}}">
+            <label class="switch">
+              <input type="checkbox">
+              <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud != stud.uid"
+                (click)="select_student(stud.uid)" class="toggle-button-off" style="margin-top: 10px">
+                <b> Exams </b>
+              </button>
+              <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud == stud.uid"
+                (click)="select_student(stud.uid)" class="toggle-button-on" style="margin-top: 10px">
+                <b> Exams </b>
+              </button>
+            </label>
+          </div>
+          <div style="align-items: center; text-align: center; margin-left: 10px">
+            <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+              <div class="media-body" style="padding: 0 20px">
+                <h3 style="font-weight: 600">{{stud.grade}}</h3>
+                <h3 style="font-weight: 600">{{stud.state}}</h3>
+              </div>
+              <div *ngIf="!stud.uid.includes(authService.userData.uid) && screenWidth > mobileWidth" class="media-body"
+                style="padding: 0 20px">
+                <h3 style="font-weight: 600">{{stud.email}}</h3>
+                <h3 style="font-weight: 600">{{stud.phoneNumber}}</h3>
+              </div>
             </div>
-            <div style="align-items: center; text-align: center; margin-left: 10px">
-                <div
-                    style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-                    <div class="media-body" style="padding: 0 20px">
-                        <h3 style="font-weight: 600">{{stud.grade}}</h3>
-                        <h3 style="font-weight: 600">{{stud.state}}</h3>
-                    </div>
-                    <div *ngIf="!stud.uid.includes(authService.userData.uid) && screenWidth > mobileWidth"
-                        class="media-body" style="padding: 0 20px">
-                        <h3 style="font-weight: 600">{{stud.email}}</h3>
-                        <h3 style="font-weight: 600">{{stud.phoneNumber}}</h3>
-                    </div>
-                </div>
-                <hr style="width: 90%" />
-                <h3> {{stud.problems.total}} <strong style="font-weight: 500">problems total</strong>
-                </h3>
-                <h3> {{stud.problems.correct}} <strong style="font-weight: 500">problems correct{{(get_percent_correct(stud)) ?', or ' : ""}}</strong> {{(get_percent_correct(stud)) ?get_percent_correct(stud) + '%' : ""}}
-                </h3>
-                <hr style="width: 90%" />
-                <h3> {{get_exam_count(stud)[0]}} <strong style="font-weight: 500">exams complete</strong>
-                </h3>
-                <h3> {{get_exam_count(stud)[1]}} <strong style="font-weight: 500">exams in progress</strong>
-                </h3>
-            </div>
+            <hr style="width: 90%" />
+            <h3> {{stud.problems.total}} <strong style="font-weight: 500">problems total</strong>
+            </h3>
+            <h3> {{stud.problems.correct}} <strong style="font-weight: 500">problems
+                correct{{(get_percent_correct(stud)) ?', or ' : ""}}</strong> {{(get_percent_correct(stud))
+              ?get_percent_correct(stud) + '%' : ""}}
+            </h3>
+            <hr style="width: 90%" />
+            <h3> {{get_exam_count(stud)[0]}} <strong style="font-weight: 500">exams complete</strong>
+            </h3>
+            <h3> {{get_exam_count(stud)[1]}} <strong style="font-weight: 500">exams in progress</strong>
+            </h3>
+          </div>
         </div>
       </div>
+      <br />
+      <button *ngIf="authService.userData as user" (click)="toggle_create_student()" class="grade-button"
+        style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
+        <div style="margin: 0 5px">
+          <img src="./assets/icons/add.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+        </div>
+        <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create New Student
+          </b>
+        </div>
+      </button>
       <br />
     </div>
     <br *ngIf="this.authService.userData.role != 'Student'" />
@@ -788,7 +1199,8 @@ input:hover+.toggle-button-off {
       style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2 *ngIf="this.authService.userData.role == 'Student'" #myFavoriteExams>My In Progress Exams</h2>
-      <h2 *ngIf="this.authService.userData.role != 'Student'" #studFavoriteExams>{{student_data.displayName}}'s In Progress Exams</h2>
+      <h2 *ngIf="this.authService.userData.role != 'Student'" #studFavoriteExams>{{student_data.displayName}}'s In
+        Progress Exams</h2>
       <br />
       <!-- <input type="hidden" #selection> -->
       <div *ngIf="this.authService.userData.role == 'Student'" class="card-container" style="max-width: 100%">
@@ -796,7 +1208,8 @@ input:hover+.toggle-button-off {
           style="display: block; text-align: center; max-width: 350px">
           <h3> {{exam_names[exm]}} </h3>
           <!-- resolve hard code exam length -->
-          <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} / {{""+exam_attribute_dump[exm].NumQuestions}} </h4>
+          <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
+            {{""+exam_attribute_dump[exm].NumQuestions}} </h4>
           <progress value="{{inprogress_exams[exm].progress}}" max="{{exam_attribute_dump[exm].NumQuestions}}"
             style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
@@ -813,7 +1226,8 @@ input:hover+.toggle-button-off {
           style="display: block; text-align: center; max-width: 350px">
           <h3> {{exam_names[exm]}} </h3>
           <!-- resolve hard code exam length -->
-          <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} / {{""+exam_attribute_dump[exm].NumQuestions}} </h4>
+          <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
+            {{""+exam_attribute_dump[exm].NumQuestions}} </h4>
           <progress value="{{inprogress_exams[exm].progress}}" max="{{exam_attribute_dump[exm].NumQuestions}}"
             style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>

@@ -1,0 +1,871 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+    :host {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 14px;
+        color: #333;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 8px 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .spacer {
+        flex: 1;
+    }
+
+    .toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        background-color: #0a1e33;
+        color: white;
+        font-weight: 600;
+        padding: 5px 10px 2px 20px;
+    }
+
+    .toolbar img {
+        /* margin: 0 16px; */
+        position: absolute;
+        left: -10px;
+        top: -18px;
+    }
+
+    .toolbar #twitter-logo {
+        height: 40px;
+        margin: 0 8px;
+    }
+
+    .toolbar #youtube-logo {
+        height: 40px;
+        margin: 0 16px;
+    }
+
+    .toolbar #twitter-logo:hover,
+    .toolbar #youtube-logo:hover {
+        opacity: 0.8;
+    }
+
+    #confetticanvas {
+        position: fixed;
+        z-index: 50;
+        top: 81px;
+        right: 0px;
+        bottom: 0px;
+        left: 125px;
+        height: 0px;
+    }
+
+    .content-menu {
+        display: flex;
+        margin: 0 auto 32px;
+        padding: 0 16px;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        display: flex;
+        margin: 0 auto 32px;
+        padding: 0;
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subcontent {
+        display: flex;
+        margin: 12px auto;
+        padding: 0px;
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    svg.material-icons {
+        height: 24px;
+        width: auto;
+    }
+
+    svg.material-icons:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    .card svg.material-icons path {
+        fill: #888;
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 16px;
+    }
+
+    .card {
+        all: unset;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        /* height: 40px;
+      width: 200px; */
+        margin: 0 8px 16px;
+        padding: 8px 8px;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: center; */
+        /* align-items: center; */
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    /* .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+  
+  .card-container .switch:not(:last-child) {
+    margin-right: 0;
+  } */
+
+    .card.card-small {
+        min-height: 16px;
+        width: 210px;
+        border-radius: 8px;
+    }
+
+    .card.card-medium {
+        height: auto;
+        width: 80%;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    .card.card-medium:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    .card.card-large {
+        width: auto;
+        height: auto;
+        border-radius: 8px;
+        margin: 8px 8px;
+        padding: 8px 0;
+    }
+
+    .card-container .card:not(.highlight-card) {
+        cursor: pointer;
+    }
+
+    .card-container .card:not(.highlight-card):hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    /* .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  } */
+
+    .card.highlight-card {
+        background-color: #0a1e33;
+        color: white;
+        font-weight: 600;
+        border: none;
+        width: auto;
+        min-width: 30%;
+        position: relative;
+    }
+
+    .card.card.highlight-card span {
+        margin-left: 60px;
+    }
+
+    svg#rocket {
+        width: 80px;
+        position: absolute;
+        left: -10px;
+        top: -24px;
+    }
+
+    svg#rocket-smoke {
+        height: calc(100vh - 95px);
+        position: absolute;
+        top: 10px;
+        right: 180px;
+        z-index: -10;
+    }
+
+    a,
+    a:visited,
+    a:hover {
+        color: #1976d2;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #125699;
+    }
+
+    label.grade-button {
+        font-size: 18px;
+        color: white;
+        background-color: #1976d2;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        margin: 8px;
+        padding: 8px 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    label.grade-button:hover {
+        background-color: #0a1e33;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    button.grade-button {
+        font-size: 18px;
+        color: white;
+        background-color: #1976d2;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        margin: 8px;
+        padding: 8px 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.grade-button:hover {
+        background-color: #0a1e33;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    button.grade-button-gray {
+        font-size: 18px;
+        color: white;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    button.grade-button-gray:hover {
+        background-color: #0a1e33;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    button.toggle-button {
+        font-size: 18px;
+        color: black;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+    }
+
+    .toggle-button:before {
+        background-color: #1976d2;
+        color: white;
+    }
+
+    button.toggle-button-off {
+        font-size: 18px;
+        color: black;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+        width: 100%;
+    }
+
+    button.toggle-button-on {
+        font-size: 18px;
+        background-color: #1976d2;
+        color: white;
+        border-radius: 12px;
+        border: 3px solid #0a1e33;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+        width: 100%;
+    }
+
+    .select-avatar {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%)
+    }
+
+    .select-middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    .avatar-container:hover .select-avatar {
+        opacity: 0.3;
+    }
+
+    .avatar-container:hover .middle {
+        opacity: 1;
+    }
+
+    .avatar-container:hover .grade-button {
+        background-color: #0a1e33;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    progress {
+        border-radius: 10px;
+    }
+
+    progress::-webkit-progress-bar {
+        border-radius: 10px;
+        background-color: lightgray;
+        border: 1px solid darkslategrey;
+    }
+
+    progress::-webkit-progress-value {
+        border-radius: 10px;
+        background-color: limegreen;
+        /* border: 2px solid black; */
+    }
+
+    progress::-moz-progress-bar {
+        border-radius: 10px;
+    }
+
+    .circle-link {
+        height: 40px;
+        width: 40px;
+        border-radius: 40px;
+        margin: 8px;
+        background-color: white;
+        border: 1px solid #eeeeee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: 1s ease-out;
+    }
+
+    .circle-link:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        line-height: 20px;
+    }
+
+    footer a {
+        display: flex;
+        align-items: center;
+    }
+
+    .github-star-badge {
+        color: #24292e;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        padding: 3px 10px;
+        border: 1px solid rgba(27, 31, 35, .2);
+        border-radius: 3px;
+        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+        margin-left: 4px;
+        font-weight: 600;
+    }
+
+    .github-star-badge:hover {
+        background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+        border-color: rgba(27, 31, 35, .35);
+        background-position: -.5em;
+    }
+
+    .github-star-badge .material-icons {
+        height: 16px;
+        width: 16px;
+        margin-right: 4px;
+    }
+
+    /* The switch - the box around the slider */
+    .switch {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        max-width: 250px;
+        max-height: 75px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    input:checked+.toggle-button-on {
+        background-color: #1976d2;
+        color: white
+    }
+
+    input:hover+.toggle-button-on {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    input:checked+.toggle-button-off {
+        background-color: #ccc;
+        color: black;
+    }
+
+    input:hover+.toggle-button-off {
+        background-color: #0a1e33;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 767px) {
+
+        .card-container>*:not(.circle-link),
+        .terminal {
+            /* width: 100%; */
+        }
+
+        .card:not(.highlight-card) {
+            /* height: 16px; */
+            margin: 8px 0;
+        }
+
+        .card.highlight-card span {
+            margin-left: 72px;
+        }
+
+    }
+</style>
+
+<div class="content" role="main" (window:resize)="width_change2()"
+    style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
+    <br />
+    <div *ngIf="data_loaded && !edit_c" style="width: 100%; margin: auto">
+        <div class="card card-large"
+            style="border: 2px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+            <br />
+            <h1 style="line-height: 28px"> {{class_data.displayName}} </h1>
+            <br />
+            <section style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
+                <div style="margin: 0 5px">
+                    <img src="{{this.authService.searchUserId(class_data.teacher).photoURL}}"
+                        style="padding: 5px 0 0; height: 35px; width: 35px; border-radius: 50%">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-weight: 500; font-size: 16px">
+                    <h3 style="padding-bottom: 10px"> {{this.authService.searchUserId(class_data.teacher).displayName}}
+                    </h3>
+                </div>
+            </section>
+            <div class="media">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="media">
+                            <div class="media-body">
+                                <h3 style="text-align: center"> Class Overview: <strong
+                                        style="font-weight: 500">{{class_data.description}}</strong> </h3>
+                                <br />
+                                <h3 style="text-align: center"> Grade: <strong
+                                        style="font-weight: 500">{{class_data.grade}}</strong> </h3>
+                                <h3 style="text-align: center"> Subject: <strong
+                                        style="font-weight: 500">{{class_data.subject}}</strong> </h3>
+                                <h3 style="text-align: center"> State: <strong
+                                        style="font-weight: 500">{{class_data.state}}</strong> </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <br />
+            <button *ngIf="is_auth && assignments_title == 'Assignments for Your Class'"
+                (click)="toggle_edit_class()" class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/edit.png" style="padding: 5px 0 0; height: 30px; width: 30px">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Edit Class
+                    </b>
+                </div>
+            </button>
+            <button *ngIf="is_auth && authService.userData.role == 'Student'"
+                (click)="enroll_student(authService.userData.uid)" class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/edit.png" style="padding: 5px 0 0; height: 30px; width: 30px">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Enroll in Class
+                    </b>
+                </div>
+            </button>
+            <br *ngIf="(assignments_title == 'Assignments for Your Class' || is_student) && is_auth" />
+        </div>
+        <br />
+        <div class="card card-large"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+            <br />
+            <h2 #classAssignments> {{assignments_title}} </h2>
+            <br />
+            <h3 *ngIf="!class_student_metadata.length"> No practice problems or exams have been assigned to this class yet.
+            </h3>
+            <div *ngIf="class_student_metadata.length" class="card-container" style="max-width: 100%">
+                <!-- <div *ngFor="let stud of class_student_metadata" class="card card-medium"
+                    style="display: block; text-align: center; min-width: 40%; max-width: 500px; max-height: 300px; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+                    <div style="align-items: center; text-align: center; margin-right: 10px">
+                        <h2 style="padding-bottom: 10px">{{(stud.displayName) ?
+                            stud.displayName :
+                            'User'}}</h2>
+                        <img *ngIf="this.screenWidth > this.mobileWidth"
+                            class="align-self-start mr-5 img-thumbnail rounded-circle"
+                            style="height: 160px; width: 160px; border-radius: 50%"
+                            src="{{(stud.photoURL) ? stud.photoURL : '/assets/icons/user/user.png'}}"
+                            alt="{{stud.displayName}}">
+                        <img *ngIf="this.screenWidth <= this.mobileWidth"
+                            class="align-self-start mr-5 img-thumbnail rounded-circle"
+                            style="height: 120px; width: 120px; border-radius: 50%"
+                            src="{{(stud.photoURL) ?stud.photoURL : '/assets/icons/user/user.png'}}"
+                            alt="{{stud.displayName}}">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud != stud.uid"
+                                (click)="select_student(stud.uid)" class="toggle-button-off" style="margin-top: 10px">
+                                <b> Exams </b>
+                            </button>
+                            <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud == stud.uid"
+                                (click)="select_student(stud.uid)" class="toggle-button-on" style="margin-top: 10px">
+                                <b> Exams </b>
+                            </button>
+                        </label>
+                    </div>
+                    <div style="align-items: center; text-align: center; margin-left: 10px">
+                        <div
+                            style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+                            <div class="media-body" style="padding: 0 20px">
+                                <h3 style="font-weight: 600">{{stud.grade}}</h3>
+                                <h3 style="font-weight: 600">{{stud.state}}</h3>
+                            </div>
+                            <div *ngIf="!stud.uid.includes(authService.userData.uid) && screenWidth > mobileWidth"
+                                class="media-body" style="padding: 0 20px">
+                                <h3 style="font-weight: 600">{{stud.email}}</h3>
+                                <h3 style="font-weight: 600">{{stud.phoneNumber}}</h3>
+                            </div>
+                        </div>
+                        <hr style="width: 90%" />
+                        <h3> {{stud.problems.total}} <strong style="font-weight: 500">problems total</strong>
+                        </h3>
+                        <h3> {{stud.problems.correct}} <strong style="font-weight: 500">problems
+                                correct{{(get_percent_correct(stud)) ?', or ' : ""}}</strong>
+                            {{(get_percent_correct(stud))
+                            ?get_percent_correct(stud) + '%' : ""}}
+                        </h3>
+                        <hr style="width: 90%" />
+                        <h3> {{get_exam_count(stud)[0]}} <strong style="font-weight: 500">exams complete</strong>
+                        </h3>
+                        <h3> {{get_exam_count(stud)[1]}} <strong style="font-weight: 500">exams in progress</strong>
+                        </h3>
+                    </div>
+                </div> -->
+            </div>
+            <br />
+        </div>
+        <br *ngIf="assignments_title == 'Assignments for Your Class' && is_auth" />
+        <div *ngIf="assignments_title == 'Assignments for Your Class' && is_auth" class="card card-large"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+            <br />
+            <h2 #classStudents> Students in Your Class </h2>
+            <br />
+            <h3 *ngIf="!class_student_metadata.length"> No students have been enrolled in this class yet.
+            </h3>
+            <div *ngIf="class_student_metadata.length" class="card-container" style="max-width: 100%">
+                <!-- <div *ngFor="let stud of class_student_metadata" class="card card-medium"
+                    style="display: block; text-align: center; min-width: 40%; max-width: 500px; max-height: 300px; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+                    <div style="align-items: center; text-align: center; margin-right: 10px">
+                        <h2 style="padding-bottom: 10px">{{(stud.displayName) ?
+                            stud.displayName :
+                            'User'}}</h2>
+                        <img *ngIf="this.screenWidth > this.mobileWidth"
+                            class="align-self-start mr-5 img-thumbnail rounded-circle"
+                            style="height: 160px; width: 160px; border-radius: 50%"
+                            src="{{(stud.photoURL) ? stud.photoURL : '/assets/icons/user/user.png'}}"
+                            alt="{{stud.displayName}}">
+                        <img *ngIf="this.screenWidth <= this.mobileWidth"
+                            class="align-self-start mr-5 img-thumbnail rounded-circle"
+                            style="height: 120px; width: 120px; border-radius: 50%"
+                            src="{{(stud.photoURL) ?stud.photoURL : '/assets/icons/user/user.png'}}"
+                            alt="{{stud.displayName}}">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud != stud.uid"
+                                (click)="select_student(stud.uid)" class="toggle-button-off" style="margin-top: 10px">
+                                <b> Exams </b>
+                            </button>
+                            <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud == stud.uid"
+                                (click)="select_student(stud.uid)" class="toggle-button-on" style="margin-top: 10px">
+                                <b> Exams </b>
+                            </button>
+                        </label>
+                    </div>
+                    <div style="align-items: center; text-align: center; margin-left: 10px">
+                        <div
+                            style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+                            <div class="media-body" style="padding: 0 20px">
+                                <h3 style="font-weight: 600">{{stud.grade}}</h3>
+                                <h3 style="font-weight: 600">{{stud.state}}</h3>
+                            </div>
+                            <div *ngIf="!stud.uid.includes(authService.userData.uid) && screenWidth > mobileWidth"
+                                class="media-body" style="padding: 0 20px">
+                                <h3 style="font-weight: 600">{{stud.email}}</h3>
+                                <h3 style="font-weight: 600">{{stud.phoneNumber}}</h3>
+                            </div>
+                        </div>
+                        <hr style="width: 90%" />
+                        <h3> {{stud.problems.total}} <strong style="font-weight: 500">problems total</strong>
+                        </h3>
+                        <h3> {{stud.problems.correct}} <strong style="font-weight: 500">problems
+                                correct{{(get_percent_correct(stud)) ?', or ' : ""}}</strong>
+                            {{(get_percent_correct(stud))
+                            ?get_percent_correct(stud) + '%' : ""}}
+                        </h3>
+                        <hr style="width: 90%" />
+                        <h3> {{get_exam_count(stud)[0]}} <strong style="font-weight: 500">exams complete</strong>
+                        </h3>
+                        <h3> {{get_exam_count(stud)[1]}} <strong style="font-weight: 500">exams in progress</strong>
+                        </h3>
+                    </div>
+                </div> -->
+            </div>
+            <br />
+        </div>
+    </div>
+    <div *ngIf="edit_c" class="card card-large"
+        style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+        <br />
+        <h1> Edit Your Class Details </h1>
+        <div class="media">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="media">
+                        <br />
+                        <div class="media-body">
+                            <div>
+                                <section
+                                    style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                                    <h3 style="width: min(25%, 400px); text-align: center"> Class Name: </h3>
+                                    <b></b><input
+                                        (change)="edit_class('classes/' + this.class_uid + '/displayName', this.newClassName.value)"
+                                        value="{{class_data.displayName}}" type="text" inputmode="text" maxlength="40"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 59%; height: 40px; font-size: 17px; font-weight: 600; text-align: left"
+                                        #newClassName />
+                                </section>
+                                <section
+                                    style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                                    <h3 style="width: min(25%, 400px); text-align: center"> Class Overview: </h3>
+                                    <textarea
+                                        (change)="edit_class('classes/' + this.class_uid + '/description', this.newClassOverview.value)"
+                                        value="{{class_data.description}}" rows="5" maxlength="400"
+                                        style="margin: auto 10px auto 0; padding-top: 10px; padding-left: 10px; width: 59%; height: 100px; font-size: 16px; line-height: 18px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                                        #newClassOverview> </textarea>
+                                </section>
+                            </div>
+                            <br />
+                            <div>
+                                <section
+                                    style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                                    <h3 style="width: min(25%, 400px); text-align: center"> Grade: </h3>
+                                    <select value="{{class_data.grade}}"
+                                        (change)="edit_class('classes/' + this.class_uid + '/grade', this.newClassGrade.value)"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
+                                        #newClassGrade>
+                                        <option disabled selected value> -- select a grade -- </option>
+                                        <option value="Kindergarten">Kindergarten</option>
+                                        <option value="Grade 1">Grade 1</option>
+                                        <option value="Grade 2">Grade 2</option>
+                                        <option value="Grade 3">Grade 3</option>
+                                        <option value="Grade 4">Grade 4</option>
+                                        <option value="Grade 5">Grade 5</option>
+                                        <option value="Grade 6">Grade 6</option>
+                                        <option value="Grade 7">Grade 7</option>
+                                        <option value="Grade 8">Grade 8</option>
+                                        <option value="Grade 9">Grade 9</option>
+                                        <option value="Grade 10">Grade 10</option>
+                                        <option value="Grade 11">Grade 11</option>
+                                        <option value="Grade 12">Grade 12</option>
+                                    </select>
+                                </section>
+                                <section
+                                    style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                                    <h3 style="width: min(25%, 400px); text-align: center"> Subject: </h3>
+                                    <select value="{{class_data.subject}}"
+                                        (change)="edit_class('classes/' + this.class_uid + '/subject', this.newClassSubject.value)"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
+                                        #newClassSubject>
+                                        <option disabled selected value> -- select a subject -- </option>
+                                        <option value="English Language">English Language</option>
+                                        <option value="Math">Math</option>
+                                        <option value="Reading">Reading</option>
+                                        <option value="Science">Science</option>
+                                        <option value="Writing">Writing</option>
+                                    </select>
+                                </section>
+                                <section
+                                    style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                                    <h3 style="width: min(25%, 400px); text-align: center"> State: </h3>
+                                    <select value="{{class_data.state}}"
+                                        (change)="edit_class('classes/' + this.class_uid + '/state', this.newClassState.value)"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
+                                        #newClassState>
+                                        <option disabled selected value> -- select a state -- </option>
+                                        <option value="Alabama">Alabama</option>
+                                        <option value="Alaska">Alaska</option>
+                                        <option value="Arizona">Arizona</option>
+                                        <option value="Arkansas">Arkansas</option>
+                                        <option value="California">California</option>
+                                        <option value="Colorado">Colorado</option>
+                                        <option value="Connecticut">Connecticut</option>
+                                        <option value="Delaware">Delaware</option>
+                                        <option value="Florida">Florida</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Hawaii">Hawaii</option>
+                                        <option value="Idaho">Idaho</option>
+                                        <option value="Illinois">Illinois</option>
+                                        <option value="Indiana">Indiana</option>
+                                        <option value="Iowa">Iowa</option>
+                                        <option value="Kansas">Kansas</option>
+                                        <option value="Kentucky">Kentucky</option>
+                                        <option value="Louisiana">Louisiana</option>
+                                        <option value="Maine">Maine</option>
+                                        <option value="Maryland">Maryland</option>
+                                        <option value="Massachusetts">Massachusetts</option>
+                                        <option value="Michigan">Michigan</option>
+                                        <option value="Minnesota">Minnesota</option>
+                                        <option value="Mississippi">Mississippi</option>
+                                        <option value="Missouri">Missouri</option>
+                                        <option value="Montana">Montana</option>
+                                        <option value="Nebraska">Nebraska</option>
+                                        <option value="Nevada">Nevada</option>
+                                        <option value="New Hampshire">New Hampshire</option>
+                                        <option value="New Jersey">New Jersey</option>
+                                        <option value="New Mexico">New Mexico</option>
+                                        <option value="New York">New York</option>
+                                        <option value="North Carolina">North Carolina</option>
+                                        <option value="North Dakota">North Dakota</option>
+                                        <option value="Ohio">Ohio</option>
+                                        <option value="Oklahoma">Oklahoma</option>
+                                        <option value="Oregon">Oregon</option>
+                                        <option value="Pennsylvania">Pennsylvania</option>
+                                        <option value="Rhode Island">Rhode Island</option>
+                                        <option value="South Carolina">South Carolina</option>
+                                        <option value="South Dakota">South Dakota</option>
+                                        <option value="Tennessee">Tennessee</option>
+                                        <option value="Texas">Texas</option>
+                                        <option value="Utah">Utah</option>
+                                        <option value="Vermont">Vermont</option>
+                                        <option value="Virginia">Virginia</option>
+                                        <option value="Washington">Washington</option>
+                                        <option value="West Virginia">West Virginia</option>
+                                        <option value="Wisconsin">Wisconsin</option>
+                                        <option value="Wyoming">Wyoming</option>
+                                    </select>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+                <button *ngIf="authService.userData as user" (click)="save_class(); toggle_edit_class()"
+                    class="grade-button" style="display: flex; flex-direction: row; align-items: center">
+                    <div style="margin: 0 5px">
+                        <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                    </div>
+                    <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
+                </button>
+                <button *ngIf="authService.userData as user" (click)="toggle_edit_class()" class="grade-button"
+                    style="display: flex; flex-direction: row; align-items: center">
+                    <div style="margin: 0 5px">
+                        <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                    </div>
+                    <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
+                </button>
+            </section>
+        </div>
+        <br />
+    </div>
+</div>

@@ -519,7 +519,7 @@
 
 <div class="content" role="main" (window:resize)="width_change2()"
     style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
-    <div class="content-menu" role="menu" style="margin-bottom: 0px; text-align: center">
+    <div *ngIf="data_loaded" class="content-menu" role="menu" style="margin-bottom: 0px; text-align: center">
         <br />
         <section *ngIf="selected_exam != '' && selected_subtopic == '' && this.authService.userData.role == 'Student'"
             style="width: 100%; align-items: left">
@@ -932,7 +932,7 @@
             </div>
         </section>
         <br *ngIf="selected_student != '' && selected_exam == ''" />
-        <div *ngIf="selected_student != '' && selected_exam == ''" class="card card-large"
+        <div *ngIf="selected_student != '' && selected_exam == '' && stud_data_loaded" class="card card-large"
             style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
             <br />
             <div class="row">
@@ -1128,20 +1128,19 @@
         </section>
         <br *ngIf="selected_exam == '' && selected_student == ''" />
         <div *ngIf="selected_exam == '' && selected_student == ''" class="card card-large"
-            style="border: 3px solid black; border-radius: 20px; width: auto; height: auto; margin: auto; padding: 0 5%; display: flex; flex-direction: column; min-width: 300px; max-width: min(1075px, 90%); max-height: 2400px">
+            style="border: 3px solid black; border-radius: 20px; width: 70%; height: auto; margin: auto; padding: 0 5%; display: flex; flex-direction: column; min-width: 300px; max-width: min(1075px, 90%); max-height: 2400px">
             <!-- <br /> -->
             <div class="inner-adjust" *ngIf="authService.userData as user" style="padding-top: 10px">
                 <div class="pt-3 pb-2 mb-3 border-bottom">
-                    <h1 *ngIf="this.screenWidth > this.mobileWidth" class="h2">Welcome to your profile,
+                    <h1 *ngIf="edit_p" style="font-size: 24px"> Edit Your Profile </h1>
+                    <h1 *ngIf="edit_s" style="font-size: 24px"> Edit {{this.student_data.displayName}}'s Profile </h1>
+                    <h1 *ngIf="create_s" style="font-size: 24px"> Create Your New Student's Profile </h1>
+                    <h1 *ngIf="!edit_p && !edit_s && !create_s" style="font-size: 24px">Welcome to your profile,
                         <strong>{{(user.displayName) ? user.displayName :
                             'User'}}</strong>!
                     </h1>
-                    <h2 *ngIf="this.screenWidth <= this.mobileWidth" class="h3">Welcome to your profile,
-                        <strong>{{(user.displayName) ? user.displayName :
-                            'User'}}</strong>!
-                    </h2>
                 </div>
-                <div class="card-container" style="align-items: center; margin-top: 25px; margin-bottom: 25px">
+                <div *ngIf="!edit_p && !edit_s && !create_s" class="card-container" style="align-items: center; margin-top: 25px; margin-bottom: 25px">
                     <label class="switch">
                         <input type="checkbox" value="information">
                         <button *ngIf="profile_tab != 'information'" (click)="set_tab('information')"
@@ -1230,14 +1229,14 @@
                             </section>
                             <div class="media-body">
                                 <br />
-                                <h3>Display Name: <strong style="font-weight: 500">{{(user.displayName) ?
+                                <h3>Your Name: <strong style="font-weight: 500">{{(user.displayName) ?
                                         user.displayName :
                                         'User'}}</strong></h3>
                                 <!-- <p>User Role: <strong>{{user.role}}</strong></p> -->
-                                <h3>User ID: <strong style="font-weight: 500">{{user.uid}}</strong></h3>
+                                <h3>Unique ID: <strong style="font-weight: 500">{{user.uid}}</strong></h3>
                                 <h3 *ngIf="(user.phoneNumber)">Phone Number: <strong
                                         style="font-weight: 500">{{user.phoneNumber}}</strong></h3>
-                                <h3 *ngIf="(user.email)">Email: <strong style="font-weight: 500">{{user.email}}</strong>
+                                <h3 *ngIf="(user.email)">Email Address: <strong style="font-weight: 500">{{user.email}}</strong>
                                 </h3>
                                 <h3 *ngIf="(user.email) && user.emailVerified">Email Verified: <strong
                                         style="font-weight: 500"> ✅ </strong></h3>
@@ -1247,18 +1246,18 @@
                                     </b></button>
                                 <!-- <p>Password: <strong>{{user.password}}</strong></p> -->
                                 <br />
-                                <h3>Role: <strong style="font-weight: 500">{{user.role}}</strong></h3>
+                                <h3>Your Role: <strong style="font-weight: 500">{{user.role}}</strong></h3>
                                 <div *ngIf="user.role=='Parent'">
-                                    <h3> State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
+                                    <h3> Your State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
                                 </div>
                                 <div *ngIf="user.role=='Student'">
-                                    <h3> Grade: <strong style="font-weight: 500">{{user.grade}}</strong></h3>
-                                    <h3> State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
+                                    <h3> Your Grade: <strong style="font-weight: 500">{{user.grade}}</strong></h3>
+                                    <h3> Your State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
                                 </div>
                                 <div *ngIf="user.role=='Teacher'">
-                                    <h3> Grade: <strong style="font-weight: 500">{{user.grade}}</strong></h3>
-                                    <h3> State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
-                                    <h3> Subject: <strong style="font-weight: 500">{{user.subject}}</strong></h3>
+                                    <h3> Your Grade: <strong style="font-weight: 500">{{user.grade}}</strong></h3>
+                                    <h3> Your State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
+                                    <h3> Your Subject: <strong style="font-weight: 500">{{user.subject}}</strong></h3>
                                 </div>
                                 <br />
                             </div>
@@ -1273,6 +1272,7 @@
                                 style="height: 300px; width: 300px; border-radius: 50%"
                                 src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
                                 alt="{{user.displayName}}"> -->
+                            <br *ngIf="user.role != 'Student'" />
                             <div *ngIf="user.role != 'Student'" class="avatar-container" style="margin: auto; position: relative; height: 300px; width: 300px; border-radius: 50%; padding: 5px">
                                 <form method="post" enctype="multipart/form-data">
                                     <label for="actual-btn" style="height: 100%; width: 100%; border-radius: 50%"> 
@@ -1287,6 +1287,7 @@
                                     </label>
                                 </form>
                             </div>
+                            <br *ngIf="user.role != 'Student'" />
                             <div *ngIf="user.role == 'Student'" class="card-container"
                                 style="margin-top: 25px; margin-bottom: 25px">
                                 <div *ngFor="let pic of this.avatars" (click)="edit_profile_pic(pic)"
@@ -1316,7 +1317,7 @@
                                 <br />
                                 <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                    <h3> Display Name: </h3>
+                                    <h3> Your Name: </h3>
                                     <input (change)="edit_profile('displayName', this.userName.value)" type="text"
                                         inputmode="text" value="{{(user.displayName) ? user.displayName : 'User'}}"
                                         maxlength="40"
@@ -1334,7 +1335,7 @@
                                 </section> -->
                                 <!-- <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                    <h3> User ID: </h3>
+                                    <h3> Unique ID: </h3>
                                     <input type="text" inputmode="text" value="{{user.uid}}" maxlength="40"
                                         style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                         disabled #userId />
@@ -1365,7 +1366,7 @@
                                 <br />
                                 <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                    <h3> Role: </h3>
+                                    <h3> Your Role: </h3>
                                     <select value="{{user.role}}" (change)="edit_profile('role', this.userRole.value)"
                                         style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                         disabled #userRole>
@@ -1377,7 +1378,7 @@
                                 <div *ngIf="user.role=='Parent'">
                                     <section
                                         style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                        <h3> State: </h3>
+                                        <h3> Your State: </h3>
                                         <select value="{{user.state}}"
                                             (change)="edit_profile('state', this.userState.value)"
                                             style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
@@ -1438,7 +1439,7 @@
                                 <div *ngIf="user.role=='Student'">
                                     <section
                                         style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                        <h3> Grade: </h3>
+                                        <h3> Your Grade: </h3>
                                         <select value="{{user.grade}}"
                                             (change)="edit_profile('grade', this.userGrade.value)"
                                             style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
@@ -1460,7 +1461,7 @@
                                     </section>
                                     <section
                                         style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                        <h3> State: </h3>
+                                        <h3> Your State: </h3>
                                         <select value="{{user.state}}"
                                             (change)="edit_profile('state', this.userState.value)"
                                             style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
@@ -1521,7 +1522,7 @@
                                 <div *ngIf="user.role=='Teacher'">
                                     <section
                                         style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                        <h3> Grade: </h3>
+                                        <h3> Your Grade: </h3>
                                         <select value="{{user.grade}}"
                                             (change)="edit_profile('grade', this.userGrade.value)"
                                             style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
@@ -1543,7 +1544,7 @@
                                     </section>
                                     <section
                                         style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                        <h3> State: </h3>
+                                        <h3> Your State: </h3>
                                         <select value="{{user.state}}"
                                             (change)="edit_profile('state', this.userState.value)"
                                             style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
@@ -1602,7 +1603,7 @@
                                     </section>
                                     <section
                                         style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                        <h3> Subject: </h3>
+                                        <h3> Your Subject: </h3>
                                         <select value="{{user.subject}}"
                                             (change)="edit_profile('subject', this.userSubject.value)"
                                             style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
@@ -1717,12 +1718,12 @@
                         </div>
                     </div>
                 </div>
-                <div *ngIf="profile_tab == 'students' && !edit_p" class="row">
+                <div *ngIf="profile_tab == 'students'" class="row">
                     <div class="col-md-12">
-                        <h2 *ngIf="user.role=='Parent'" style="font-weight: 500"> You have
+                        <h2 *ngIf="user.role=='Parent' && !edit_s && !create_s && !search" style="font-weight: 500"> You have
                             <b>{{""+this.student_metadata.length}}</b> students in your household
                         </h2>
-                        <h2 *ngIf="user.role=='Teacher'" style="font-weight: 500"> You have
+                        <h2 *ngIf="user.role!='Parent' && user.role!='Student' && !edit_s && !create_s && !search" style="font-weight: 500"> You have
                             <b>{{""+this.student_metadata.length}}</b> students in your classroom
                         </h2>
                         <div *ngIf="!search && !create_s && !edit_s" class="media" style="">
@@ -1914,10 +1915,9 @@
                                             </div>
                                         </div>
                                         <div class="media-body">
-                                            <br />
                                             <section
                                                 style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                                <h3> Display Name: </h3>
+                                                <h3> Student Name: </h3>
                                                 <input (change)="edit_student('displayName', this.newUserName.value)"
                                                     type="text" inputmode="text" maxlength="40"
                                                     style="margin: auto 10px auto 0; padding-left: 10px; width: 200px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
@@ -2052,10 +2052,9 @@
                                             </div>
                                         </div>
                                         <div class="media-body">
-                                            <br />
                                             <section
                                                 style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                                <h3> Display Name: </h3>
+                                                <h3> Student Name: </h3>
                                                 <input (change)="edit_student('displayName', this.editUserName.value)"
                                                     value="{{this.student_data.displayName}}" type="text"
                                                     inputmode="text" maxlength="40"

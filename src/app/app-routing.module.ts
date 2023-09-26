@@ -9,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { TemplateClassComponent } from './components/template-class/template-class.component';
 import { TemplateExamComponent } from './components/template-exam/template-exam.component';
 import { TemplateKeyComponent } from './components/template-key/template-key.component';
 import { TestExamComponent } from './components/test-exam/test-exam.component';
@@ -50,6 +51,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'class/:classKey', component: TemplateClassComponent },
   { path: 'exam/test', component: TestExamComponent },
   { path: 'exam/:examKey', component: TemplateExamComponent },
   { path: 'exam/:examKey/key', component: TemplateKeyComponent },

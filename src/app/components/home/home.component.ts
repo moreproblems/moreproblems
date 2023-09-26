@@ -118,6 +118,7 @@ export class HomeComponent implements OnInit {
   screenHeight = window.innerHeight;
   mobileWidth = 1200;
   menuOpen = false;
+  data_loaded = false;
   count = 0;
 
   // user_data: any = null;
@@ -139,8 +140,13 @@ export class HomeComponent implements OnInit {
   student_metadata: any[] = [];
   my_student_metadata: any[] = [];
   student_data: any = {};
+  class_list: string[] = [];
+  my_class_metadata: any[] = [];
+  class_data: any = {};
   complete_exam_count = 0;
   inprog_exam_count = 0;
+
+  avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
 
   PA22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G3MProblems;
   PA21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G3MProblems;
@@ -894,6 +900,14 @@ export class HomeComponent implements OnInit {
     "WIG10SS": "Wisconsin WFE Grade 10 Social Studies Practice Exam"
   };
 
+  photoURL = "";
+  create_s: boolean = false;
+  edit_s_list: { [index: string]: any } = {};
+  student_uid: string = "";
+  create_c: boolean = false;
+  edit_c_list: { [index: string]: any } = {};
+  class_uid: string = "";
+
   exam_name = '';
   exam_url = '';
   exam_id = '';
@@ -944,6 +958,10 @@ export class HomeComponent implements OnInit {
       }
     }
     return [this.complete_exam_count, this.inprog_exam_count];
+  }
+
+  select_class(uid: string) {
+    this.router.navigateByUrl('class/' + uid);
   }
   
   select_student(id: string) {
@@ -1027,6 +1045,84 @@ export class HomeComponent implements OnInit {
       }
     }
     return this.includes_standard;
+  }
+
+  toggle_create_student() {
+    const avatar = this.avatars[Math.floor(Math.random() * this.avatars.length)];
+    this.photoURL = '/assets/icons/user/' + avatar + '.png';
+    this.create_s = !this.create_s;
+    this.edit_s_list = [];
+    this.edit_s_list['photoURL'] = this.photoURL;
+  }
+
+  edit_student(field: string, val: string) {
+    this.edit_s_list[field] = val;
+  }
+
+  student_profile_pic(avatar: string) {
+    this.photoURL = '/assets/icons/user/' + avatar + '.png';
+    this.edit_s_list['photoURL'] = this.photoURL;
+  }
+
+  create_student() {
+    this.student_uid = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    for (let i: number = 1; i <= 3; i++) {
+      this.student_uid += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    this.edit_s_list['uid'] = this.authService.userData.uid + "-" + this.student_uid;
+    this.authService.WriteUserDataList(this.edit_s_list);
+    this.link_student(this.authService.userData.uid + "-" + this.student_uid);
+    // setTimeout(() => {
+    //   this.set_tab("information");
+    //   this.set_tab("students");
+    // }, 200);
+  }
+
+  link_student(id: string) {
+    this.student_list = [];
+    // this.student_metadata = [];
+    for (let std of this.authService.userData.students) {
+      this.student_list.push(std as string);
+    }
+    if (!this.student_list.includes(id)) {
+      this.student_list.push(id);
+    }
+    this.authService.UpdateUserData({ 'students': {} });
+    this.authService.UpdateUserData({ 'students': this.student_list });
+  }
+
+  toggle_create_class() {
+    this.create_c = !this.create_c;
+    this.edit_c_list = [];
+    this.class_uid = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    for (let i: number = 1; i <= 10; i++) {
+      this.class_uid += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+  }
+
+  edit_class(field: string, val: string) {
+    this.edit_c_list[field] = val;
+  }
+
+  create_class() {
+    this.edit_c_list['classes/' + this.class_uid + '/uid'] = this.class_uid;
+    this.edit_c_list['classes/' + this.class_uid + '/teacher'] = this.authService.userData.uid;
+    this.authService.UpdateDatabase(this.edit_c_list);
+    this.class_list = [];
+    for (let clss of this.authService.userData.classes) {
+      this.class_list.push(clss as string);
+    }
+    this.class_list.push(this.class_uid);
+    this.authService.UpdateUserData({ 'classes': {} });
+    this.authService.UpdateUserData({ 'classes': this.class_list });
+    // setTimeout(() => {
+    //   this.set_tab("information");
+    //   this.set_tab("students");
+    // }, 200);
   }
 
   toggle_favorite_exm() {
@@ -1129,7 +1225,7 @@ export class HomeComponent implements OnInit {
 
   take_exam() {
     this.assert_favorite_exm();
-    this.router.navigateByUrl(this.exam_url)
+    this.router.navigateByUrl(this.exam_url);
   }
 
   prev_page() {
@@ -1266,63 +1362,92 @@ export class HomeComponent implements OnInit {
       if (!this.authService.userData) {
         this.router.navigate(['exams']);
       }
-    }, 50);
-    if (this.authService.userData.role == 'Student') {
-      const exam_history = this.authService.userData.exams.history;
-      for (const [key, det] of Object.entries(exam_history)) {
-        if ((det as any).status == "Started") {
-          this.inprogress_set.push(key);
-          this.inprogress_exams[key] = { progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString()};
-        }
-      }
-    }
-    if (this.authService.userData.role != 'Student') {
-      this.student_metadata = [];
-      this.my_student_metadata = [];
-      const linked_students = this.authService.userData.students.slice(1);
-      for (const [key, stud] of Object.entries(linked_students)) {
-        setTimeout(() => {
-          console.log(stud);
-          this.student_data = this.authService.searchUserId(stud as string);
-          console.log(this.student_data);
-          this.student_metadata.push(this.student_data as object);
-          if (this.student_data.uid.includes(this.authService.userData.uid)) {
-            this.my_student_metadata.push(this.student_data as object);
+      else {
+        if (this.authService.userData.role == 'Student') {
+          const exam_history = this.authService.userData.exams.history;
+          for (const [key, det] of Object.entries(exam_history)) {
+            if ((det as any).status == "Started") {
+              this.inprogress_set.push(key);
+              this.inprogress_exams[key] = { progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString()};
+            }
           }
-        }, +key * 10);
+        }
+        if (this.authService.userData.role != 'Student') {
+          this.student_metadata = [];
+          this.my_student_metadata = [];
+          const linked_students = this.authService.userData.students.slice(1);
+          for (const [key, stud] of Object.entries(linked_students)) {
+            setTimeout(() => {
+              console.log(stud);
+              this.student_data = this.authService.searchUserId(stud as string);
+              console.log(this.student_data);
+              this.student_metadata.push(this.student_data as object);
+              if (this.student_data.uid.includes(this.authService.userData.uid)) {
+                this.my_student_metadata.push(this.student_data as object);
+              }
+            }, +key * 10);
+          }
+          setTimeout(() => {
+            this.student_metadata = [];
+            this.my_student_metadata = [];
+            const linked_students = this.authService.userData.students.slice(1);
+            for (const [key, stud] of Object.entries(linked_students)) {
+              setTimeout(() => {
+                console.log(stud);
+                this.student_data = this.authService.searchUserId(stud as string);
+                console.log(this.student_data);
+                this.student_metadata.push(this.student_data as object);
+                if (this.student_data.uid.includes(this.authService.userData.uid)) {
+                  this.my_student_metadata.push(this.student_data as object);
+                }
+              }, +key * 10);
+            }
+            if (this.authService.userData.role != 'Parent') {
+              this.my_class_metadata = [];
+              const linked_classes = this.authService.userData.classes.slice(1);
+              for (const [key, clss] of Object.entries(linked_classes)) {
+                setTimeout(() => {
+                  console.log(clss);
+                  this.class_data = this.authService.searchClassId(clss as string);
+                  console.log(this.class_data);
+                  this.my_class_metadata.push(this.class_data as object);
+                }, +key * 10);
+              }
+              setTimeout(() => {
+                this.my_class_metadata = [];
+                const linked_classes = this.authService.userData.classes.slice(1);
+                for (const [key, clss] of Object.entries(linked_classes)) {
+                  setTimeout(() => {
+                    console.log(clss);
+                    this.class_data = this.authService.searchClassId(clss as string);
+                    console.log(this.class_data);
+                    this.my_class_metadata.push(this.class_data as object);
+                  }, +key * 10);
+                }
+              }, 100);
+            }
+          }, 100);
+          // setTimeout(() => {
+          //   const all_inprog_exams = this.authService.getMyStudInProgExams(linked_students);
+          //   setTimeout(() => {
+          //     for (const [key, stud] of Object.entries(all_inprog_exams)) {
+          //       for (const [key2, xm] of Object.entries(stud as any)) {
+          //         if (key != undefined && key2 != undefined) {
+          //           this.my_stud_inprogress_set.push([(key as string), (key2 as string)]);
+          //           this.my_stud_inprogress_exams[(key as string)][(key2 as string)] = { progress: (xm as any).progress, lastdate: new Date((xm as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((xm as any).lasttimestamp).toLocaleTimeString()};
+          //         }
+          //       }
+          //     }
+          //   }, 200);
+          // }, 200);
+          // setTimeout(() => {
+          //   this.router.navigate(['home']);
+          // }, 1000);
+        }
       }
       setTimeout(() => {
-        this.student_metadata = [];
-        this.my_student_metadata = [];
-        const linked_students = this.authService.userData.students.slice(1);
-        for (const [key, stud] of Object.entries(linked_students)) {
-          setTimeout(() => {
-            console.log(stud);
-            this.student_data = this.authService.searchUserId(stud as string);
-            console.log(this.student_data);
-            this.student_metadata.push(this.student_data as object);
-            if (this.student_data.uid.includes(this.authService.userData.uid)) {
-              this.my_student_metadata.push(this.student_data as object);
-            }
-          }, +key * 10);
-        }
-      }, 100);
-      // setTimeout(() => {
-      //   const all_inprog_exams = this.authService.getMyStudInProgExams(linked_students);
-      //   setTimeout(() => {
-      //     for (const [key, stud] of Object.entries(all_inprog_exams)) {
-      //       for (const [key2, xm] of Object.entries(stud as any)) {
-      //         if (key != undefined && key2 != undefined) {
-      //           this.my_stud_inprogress_set.push([(key as string), (key2 as string)]);
-      //           this.my_stud_inprogress_exams[(key as string)][(key2 as string)] = { progress: (xm as any).progress, lastdate: new Date((xm as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((xm as any).lasttimestamp).toLocaleTimeString()};
-      //         }
-      //       }
-      //     }
-      //   }, 200);
-      // }, 200);
-      // setTimeout(() => {
-      //   this.router.navigate(['home']);
-      // }, 1000);
-    }
+        this.data_loaded = true;
+      }, 500);
+    }, 1000);
   }
 }

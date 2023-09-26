@@ -20,6 +20,7 @@ export class AuthService {
   userCredential: any;
   pp_url: any;
   user_result: any = {};
+  class_result: any = {};
   inprog_exams: any = {};
   mystud_inprog_exams: any = {};
   exam_sub: any;
@@ -474,6 +475,20 @@ export class AuthService {
       }
     });
     return this.user_result;
+  }
+
+  searchClassId(id: string) {
+    const db = getDatabase();
+    const class_ref = ref(db, "classes/" + id);
+    onValue(class_ref, (snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        this.class_result = snapshot.val();
+      } else {
+        console.log("No data available");
+      }
+    });
+    return this.class_result;
   }
 
   getInProgExams(id: string) {
