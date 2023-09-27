@@ -24,12 +24,15 @@ export class TemplateClassComponent implements OnInit {
   edit_c_list: { [index: string]: any } = {};
   class_uid: string = "";
   class_data: any = {};
+  class_stud_set: string[] = [];
   class_student_metadata: any = {};
   user_data: any = {};
+  stud_class_set: string[] = [];
   is_auth = false;
   is_student = false;
+  is_enrolled = false;
 
-  assignments_title: string = "Assignments for Thisf Class";
+  assignments_title: string = "Assignments for This Class";
 
   constructor(public authService: AuthService, public router: Router, private aRoute: ActivatedRoute, private afAuth: AngularFireAuth) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;}
@@ -74,7 +77,28 @@ export class TemplateClassComponent implements OnInit {
   }
 
   enroll_student(stud: string) {
-    console.log();
+    this.stud_class_set = [];
+    this.class_stud_set = [];
+    this.edit_c_list = {};
+    const class_stud_ref = 'classes/' + this.class_uid + '/students';
+    for (let clss of this.authService.userData.classes) {
+      this.stud_class_set.push(clss as string);
+    }
+    for (let std of this.class_data.students) {
+      this.class_stud_set.push(std as string);
+    }
+    if (!this.stud_class_set.includes(this.class_uid)) {
+      this.stud_class_set.push(this.class_uid);
+    }
+    if (!this.class_stud_set.includes(stud)) {
+      this.class_stud_set.push(stud);
+    }
+    this.edit_c_list[class_stud_ref] = this.class_stud_set;
+    this.authService.UpdateUserData({ 'classes': {} });
+    this.authService.UpdateUserData({ 'classes': this.stud_class_set });
+    this.authService.UpdateDatabase({ class_stud_ref: {} });
+    this.authService.UpdateDatabase(this.edit_c_list);
+    this.is_enrolled = true;
   }
 
   scroll_top() {
@@ -119,6 +143,9 @@ export class TemplateClassComponent implements OnInit {
         }
         if (this.authService.userData.role == 'Student')  {
           this.is_student = true;
+          if (this.class_data.students.includes(this.authService.userData.uid)) {
+            this.is_enrolled = true;
+          }
         }
         console.log(this.user_data);
       }

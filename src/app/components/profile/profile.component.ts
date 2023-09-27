@@ -1617,16 +1617,41 @@ export class ProfileComponent implements OnInit {
           this.complete_exam_list = [];
           this.student_exam_metadata = {};
           this.student_exam_metadata = this.authService.getExamSubmissions();
-          // this.linked_student_count = Object.keys(this.student_exam_metadata).length;
-          const exam_history = this.authService.userData.exams.history;
-          for (const [key, det] of Object.entries(exam_history)) {
-            if ((det as any).status == "Completed") {
-              this.complete_exam_count = this.complete_exam_count + 1;
-              this.complete_exam_list.push(key);
-              this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
-              this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+          setTimeout(() => {
+            this.student_exam_metadata = this.authService.getExamSubmissions();
+            // if (this.student_data.problems.total == 0) {
+            //   this.total_percent_correct = 0;
+            // }
+            // else {
+            //   this.total_percent_correct = Math.round(10000 * this.student_data.problems.correct / this.student_data.problems.total) / 100;
+            // }
+            this.complete_exam_count = 0;
+            this.complete_exam_list = [];
+            this.temp_count = 1;
+            const exam_history = this.student_data.exams.history;
+            for (const [key, det] of Object.entries(exam_history)) {
+              setTimeout(() => {
+                if ((det as any).status == "Completed") {
+                  this.complete_exam_count = this.complete_exam_count + 1;
+                  this.complete_exam_list.push(key);
+                  this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+                  this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+                }
+              }, this.temp_count * 50);
+              this.temp_count += 1;
             }
-          }
+          }, 500);
+          // this.student_exam_metadata = this.authService.getExamSubmissions();
+          // // this.linked_student_count = Object.keys(this.student_exam_metadata).length;
+          // const exam_history = this.authService.userData.exams.history;
+          // for (const [key, det] of Object.entries(exam_history)) {
+          //   if ((det as any).status == "Completed") {
+          //     this.complete_exam_count = this.complete_exam_count + 1;
+          //     this.complete_exam_list.push(key);
+          //     this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+          //     this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+          //   }
+          // }
         }
         else {
           this.authService.getProfilePic(this.authService.userData);
