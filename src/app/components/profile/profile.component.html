@@ -1119,7 +1119,7 @@
             </div>
             <br />
         </div>
-        <section *ngIf="selected_exam == '' && selected_student == ''" style="width: 100%; align-itmes: left">
+        <section *ngIf="selected_exam == '' && selected_student == ''" style="width: 100%; align-items: left">
             <div (click)="authService.SignOut()" class="card card-small"
                 style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
                 <img src="./assets/icons/logout.png" style="width: 25px; height: 25px">
@@ -1132,10 +1132,10 @@
             <!-- <br /> -->
             <div class="inner-adjust" *ngIf="authService.userData as user" style="padding-top: 10px">
                 <div class="pt-3 pb-2 mb-3 border-bottom">
-                    <h1 *ngIf="edit_p" style="font-size: 24px"> Edit Your Profile </h1>
-                    <h1 *ngIf="edit_s" style="font-size: 24px"> Edit {{this.student_data.displayName}}'s Profile </h1>
-                    <h1 *ngIf="create_s" style="font-size: 24px"> Create Your New Student's Profile </h1>
-                    <h1 *ngIf="!edit_p && !edit_s && !create_s" style="font-size: 24px">Welcome to your profile,
+                    <h1 *ngIf="edit_p" style="font-size: 24px; line-height: 28px"> Edit Your Profile </h1>
+                    <h1 *ngIf="edit_s" style="font-size: 24px; line-height: 28px"> Edit {{this.student_data.displayName}}'s Profile </h1>
+                    <h1 *ngIf="create_s" style="font-size: 24px; line-height: 28px"> Create Your New Student's Profile </h1>
+                    <h1 *ngIf="!edit_p && !edit_s && !create_s" style="font-size: 24px; line-height: 28px">Welcome to your profile,
                         <strong>{{(user.displayName) ? user.displayName :
                             'User'}}</strong>!
                     </h1>

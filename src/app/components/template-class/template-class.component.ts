@@ -5,6 +5,14 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from "../../shared/services/auth.service";
 import printJS from 'print-js';
 
+const confetti = require('canvas-confetti');
+
+const confettiCanvas = document.getElementById('confetticanvas');
+const confettiHandler = confetti.create(confettiCanvas, {
+    resize: true,
+    useWorker: true,
+});
+
 @Component({
   selector: 'app-template-class',
   templateUrl: './template-class.component.html',
@@ -25,7 +33,7 @@ export class TemplateClassComponent implements OnInit {
   class_uid: string = "";
   class_data: any = {};
   class_stud_set: string[] = [];
-  class_student_metadata: any = {};
+  class_student_metadata: any[] = [];
   user_data: any = {};
   stud_class_set: string[] = [];
   is_auth = false;
@@ -99,6 +107,20 @@ export class TemplateClassComponent implements OnInit {
     this.authService.UpdateDatabase({ class_stud_ref: {} });
     this.authService.UpdateDatabase(this.edit_c_list);
     this.is_enrolled = true;
+    this.confetti_light();
+  }
+
+  confetti_light() {
+      confettiHandler({
+          particleCount: 250,
+          startVelocity: 125,
+          scalar: 1.15,
+          ticks: 150,
+          decay: 0.8,
+          angle: 90,
+          spread: 60,
+          origin: { x: 0.5, y: 1 }
+      });
   }
 
   scroll_top() {
@@ -140,6 +162,21 @@ export class TemplateClassComponent implements OnInit {
         this.user_data = this.authService.userData;
         if (this.authService.userData.uid == this.class_data.teacher)  {
           this.assignments_title = "Assignments for Your Class";
+          for (const [key, stud] of Object.entries(this.class_data.students.slice(1))) {
+            setTimeout(() => {
+              console.log(stud);
+              this.class_student_metadata.push(this.authService.searchUserId(stud as string));
+            }, +key * 10);
+          }
+          setTimeout(() => {
+            this.class_student_metadata = [];
+            for (const [key, stud] of Object.entries(this.class_data.students.slice(1))) {
+              setTimeout(() => {
+                console.log(stud);
+                this.class_student_metadata.push(this.authService.searchUserId(stud as string));
+              }, +key * 10);
+            }
+          }, 250);
         }
         if (this.authService.userData.role == 'Student')  {
           this.is_student = true;

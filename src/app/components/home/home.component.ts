@@ -1075,10 +1075,30 @@ export class HomeComponent implements OnInit {
     this.edit_s_list['uid'] = this.authService.userData.uid + "-" + this.student_uid;
     this.authService.WriteUserDataList(this.edit_s_list);
     this.link_student(this.authService.userData.uid + "-" + this.student_uid);
-    // setTimeout(() => {
-    //   this.set_tab("information");
-    //   this.set_tab("students");
-    // }, 200);
+    this.student_metadata = [];
+    this.my_student_metadata = [];
+    for (const [key, stud] of Object.entries(this.student_list.slice(1))) {
+      setTimeout(() => {
+        console.log(stud);
+        this.student_data = this.authService.searchUserId(stud as string);
+        console.log(this.student_data);
+        this.student_metadata.push(this.student_data as object);
+        this.my_student_metadata.push(this.student_data as object);
+      }, +key * 10);
+    }
+    setTimeout(() => {
+      this.student_metadata = [];
+      this.my_student_metadata = [];
+      for (const [key, stud] of Object.entries(this.student_list.slice(1))) {
+        setTimeout(() => {
+          console.log(stud);
+          this.student_data = this.authService.searchUserId(stud as string);
+          console.log(this.student_data);
+          this.student_metadata.push(this.student_data as object);
+          this.my_student_metadata.push(this.student_data as object);
+        }, +key * 10);
+      }
+    }, 500);
   }
 
   link_student(id: string) {
@@ -1112,6 +1132,8 @@ export class HomeComponent implements OnInit {
   create_class() {
     this.edit_c_list['classes/' + this.class_uid + '/uid'] = this.class_uid;
     this.edit_c_list['classes/' + this.class_uid + '/teacher'] = this.authService.userData.uid;
+    this.edit_c_list['classes/' + this.class_uid + '/students'] = [""];
+    this.edit_c_list['classes/' + this.class_uid + '/assignments'] = [""];
     this.authService.UpdateDatabase(this.edit_c_list);
     this.class_list = [];
     for (let clss of this.authService.userData.classes) {
@@ -1120,6 +1142,30 @@ export class HomeComponent implements OnInit {
     this.class_list.push(this.class_uid);
     this.authService.UpdateUserData({ 'classes': {} });
     this.authService.UpdateUserData({ 'classes': this.class_list });
+    this.my_class_metadata = [];
+    for (const [key, clss] of Object.entries(this.class_list.slice(1))) {
+      setTimeout(() => {
+        console.log(clss);
+        this.class_data = this.authService.searchClassId(clss as string);
+        console.log(this.class_data);
+        this.my_class_metadata.push(this.class_data as object);
+      }, +key * 10);
+    }
+    setTimeout(() => {
+      this.my_class_metadata = [];
+      for (const [key, clss] of Object.entries(this.class_list.slice(1))) {
+        setTimeout(() => {
+          console.log(clss);
+          this.class_data = this.authService.searchClassId(clss as string);
+          console.log(this.class_data);
+          this.my_class_metadata.push(this.class_data as object);
+        }, +key * 10);
+      }
+      if (this.class_list.slice(1).length > 0) {
+        this.has_classes = true;
+      }
+      this.toggle_create_class();
+    }, 500);
     // setTimeout(() => {
     //   this.set_tab("information");
     //   this.set_tab("students");
@@ -1428,7 +1474,6 @@ export class HomeComponent implements OnInit {
                 }
               }, +key * 10);
             }
-            // if (this.authService.userData.role != 'Parent') {
             this.my_class_metadata = [];
             const linked_classes = this.authService.userData.classes.slice(1);
             for (const [key, clss] of Object.entries(linked_classes)) {
@@ -1451,7 +1496,6 @@ export class HomeComponent implements OnInit {
                 }, +key * 10);
               }
             }, 100);
-            // }
           }, 100);
           // setTimeout(() => {
           //   const all_inprog_exams = this.authService.getMyStudInProgExams(linked_students);
