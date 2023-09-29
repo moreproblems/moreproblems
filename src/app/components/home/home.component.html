@@ -523,7 +523,7 @@
         style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
         <img src="./assets/icons/caret.png"
           style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back to Home </a>
+        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Home </a>
       </div>
     </section>
     <br *ngIf="selected_subtopic != ''" />
@@ -1094,7 +1094,7 @@
               </section>
               <label class="switch">
                 <input type="checkbox">
-                <button (click)="select_class(clss.uid)" class="toggle-button-off" style="margin: auto; margin-top: 10px">
+                <button (click)="select_class(clss.uid)" class="toggle-button-off" style="margin: auto; margin-top: 10px; padding: 10px 5px; width: auto">
                   <b> Enter Classroom </b>
                 </button>
               </label>
@@ -1113,11 +1113,11 @@
       </div>
       <br />
       <button *ngIf="authService.userData as user" (click)="toggle_create_class()" class="grade-button"
-        style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
+        style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
         <div style="margin: 0 5px">
           <img src="./assets/icons/add.png" style="padding: 5px 0 0; height: 25px; width: 25px">
         </div>
-        <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create New Class
+        <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create Class
           </b>
         </div>
       </button>
@@ -1146,11 +1146,11 @@
             <label class="switch">
               <input type="checkbox">
               <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud != stud.uid"
-                (click)="select_student(stud.uid)" class="toggle-button-off" style="margin-top: 10px">
+                (click)="select_student(stud.uid)" class="toggle-button-off" style="margin-top: 10px; padding: 10px 5px; width: auto">
                 <b> Exams </b>
               </button>
               <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud == stud.uid"
-                (click)="select_student(stud.uid)" class="toggle-button-on" style="margin-top: 10px">
+                (click)="select_student(stud.uid)" class="toggle-button-on" style="margin-top: 10px; padding: 10px 5px; width: auto">
                 <b> Exams </b>
               </button>
             </label>
@@ -1184,11 +1184,11 @@
       </div>
       <br />
       <button *ngIf="authService.userData as user" (click)="toggle_create_student()" class="grade-button"
-        style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
+        style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
         <div style="margin: 0 5px">
           <img src="./assets/icons/add.png" style="padding: 5px 0 0; height: 25px; width: 25px">
         </div>
-        <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create New Student
+        <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create Student
           </b>
         </div>
       </button>
@@ -1207,7 +1207,6 @@
         <div *ngFor="let exm of this.inprogress_set" class="card card-medium"
           style="display: block; text-align: center; max-width: 350px">
           <h3> {{exam_names[exm]}} </h3>
-          <!-- resolve hard code exam length -->
           <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
             {{""+exam_attribute_dump[exm].NumQuestions}} </h4>
           <progress value="{{inprogress_exams[exm].progress}}" max="{{exam_attribute_dump[exm].NumQuestions}}"
@@ -1217,8 +1216,12 @@
           <h4 style="margin: 1px auto; font-weight: 500"> Last Submission:
             <b>{{""+inprogress_exams[exm].lastdate}}</b> {{""+inprogress_exams[exm].lasttime}}
           </h4>
-          <button class="grade-button" style="margin: auto; margin-top: 25px; padding: 10px 5px"
-            routerLink="/exam/{{exm}}" routerLinkActive="active"> <b>Resume Exam</b> </button>
+          <label class="switch">
+            <input type="checkbox" style="margin: auto; margin-top: 25px">
+            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto" routerLink="/exam/{{exm}}" routerLinkActive="active">
+              <b> Resume Exam </b>
+            </button>
+          </label>
         </div>
       </div>
       <div *ngIf="this.authService.userData.role != 'Student'" class="card-container" style="max-width: 100%">
@@ -1235,8 +1238,14 @@
           <h4 style="margin: 1px auto; font-weight: 500"> Last Submission:
             <b>{{""+inprogress_exams[exm].lastdate}}</b> {{""+inprogress_exams[exm].lasttime}}
           </h4>
-          <button class="grade-button" style="margin: auto; margin-top: 25px; padding: 10px 5px"
-            routerLink="/exam/{{exm}}" routerLinkActive="active"> <b>Resume Exam</b> </button>
+          <label class="switch" style="margin: auto; margin-top: 25px">
+            <input type="checkbox">
+            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto" routerLink="/exam/{{exm}}" routerLinkActive="active">
+              <b> Resume Exam </b>
+            </button>
+          </label>
+          <!-- <button class="grade-button" style="margin: auto; margin-top: 25px; padding: 10px 5px"
+            routerLink="/exam/{{exm}}" routerLinkActive="active"> <b>Resume Exam</b> </button> -->
         </div>
       </div>
       <br />

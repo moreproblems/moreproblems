@@ -157,8 +157,9 @@ export class ProfileComponent implements OnInit {
 
   user: any;
   login_method: string = "";
-  edit_p: boolean = false;
+  edit_p = false;
   edit_p_list: { [index: string]: any } = {};
+  photo_upload = false;
   create_s: boolean = false;
   edit_s: boolean = false;
   edit_s_list: { [index: string]: any } = {};
@@ -1106,6 +1107,7 @@ export class ProfileComponent implements OnInit {
     setTimeout(() => {
       this.photoURL = this.authService.userData.photoURL;
       this.profileUploadURL = this.authService.pp_url;
+      this.photo_upload = true;
     }, 500);
     // setTimeout(() => {
     //   this.authService.getProfilePic(user);

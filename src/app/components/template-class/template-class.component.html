@@ -518,202 +518,284 @@
 
 <div class="content" role="main" (window:resize)="width_change2()"
     style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
-    <br />
-    <div class="content-menu" style="margin-bottom: 0; align-items: center">
-        <div *ngIf="data_loaded && !edit_c" style="width: 100%; margin: auto">
-            <div class="card card-large"
-                style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
-                <br />
-                <h1 style="line-height: 28px; font-weight: 700"> {{class_data.displayName}} </h1>
-                <section style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px auto">
-                    <div style="margin: 0 5px">
-                        <img src="{{this.authService.searchUserId(class_data.teacher).photoURL}}"
-                            style="padding: 5px 0 0; height: 35px; width: 35px; border-radius: 50%">
-                    </div>
-                    <div style="margin: 0 5px; text-align: center; font-weight: 500; font-size: 20px">
-                        <h3 style="padding-bottom: 10px"> {{this.authService.searchUserId(class_data.teacher).displayName}}
-                        </h3>
-                    </div>
-                </section>
-                <div class="media">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="media">
-                                <div class="media-body" style="padding-left: 15px; padding-right: 15px">
-                                    <h3 style="text-align: center; font-size: 20px"> Class Overview: <strong
-                                            style="font-weight: 500">{{class_data.description}}</strong> </h3>
-                                    <br />
-                                    <h3 style="text-align: center; font-size: 18px"> Grade: <strong
-                                            style="font-weight: 500">{{class_data.grade}}</strong> </h3>
-                                    <h3 style="text-align: center; font-size: 18px"> Subject: <strong
-                                            style="font-weight: 500">{{class_data.subject}}</strong> </h3>
-                                    <h3 style="text-align: center; font-size: 18px"> State: <strong
-                                            style="font-weight: 500">{{class_data.state}}</strong> </h3>
-                                </div>
+    <div *ngIf="file_source != ''" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
+      <br />
+      <section *ngIf="file_source != ''" style="width: 100%; align-items: left">
+        <div (click)="file_source=''; exam_fav=false" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Class </a>
+        </div>
+      </section>
+      <br />
+      <!-- PDF Viewer -->
+      <div class="card card-large" (window:resize)="width_change()"
+        style="margin: auto; height: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); display: flex; flex-direction: column; border: 3px solid black; border-radius: 20px"
+        #pdfViewer>
+        <br />
+        <section
+          style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+          <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="margin: auto 25px; text-align: center; font-size: 20px">
+            {{exam_name}} </h1>
+          <h1 *ngIf="this.screenWidth > this.mobileWidth" style="margin: auto 25px; text-align: center; font-size: 24px">
+            {{exam_name}} </h1>
+          <span *ngIf="!this.exam_fav && authService.userData as user" (click)="toggle_favorite_exm()"
+            style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &star; </span>
+          <span *ngIf="this.exam_fav && authService.userData as user" (click)="toggle_favorite_exm()"
+            style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &starf; </span>
+        </section>
+        <h3 *ngIf="online_set.includes(exam_id) && screenWidth > mobileWidth" (click)="take_exam()"
+          style="font-weight: 600; font-size: 20px; margin-top: 20px"><a> Take the full exam from your device now! </a>
+        </h3>
+        <h3 *ngIf="online_set.includes(exam_id) && screenWidth <= mobileWidth" (click)="take_exam()"
+          style="font-weight: 600; font-size: 16px; margin-top: 15px"><a> Take the full exam from your device now! </a>
+        </h3>
+        <br />
+        <section
+          style="height: auto; max-height: 75px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+          <button *ngIf="file_source != '' && this.screenWidth > this.mobileWidth" (click)="print_exam()"
+            class="grade-button" style="margin: 10px 10px 10px 0; width: auto; height: auto">
+            <img src="./assets/icons/print.png" style="height: 25px">
+            <b style="margin-left: 10px"> Print </b>
+          </button>
+          <button *ngIf="file_source != ''" (click)="download_exam()" class="grade-button"
+            style="margin: 10px 10px 10px 0; width: auto; height: auto">
+            <img src="./assets/icons/download.png" style="height: 25px">
+            <b style="margin-left: 10px"> Download </b>
+          </button>
+          <button *ngIf="file_source != ''" (click)="prev_page()" class="grade-button"
+            style="margin: 20px 0; margin-left: 10px; width: auto; height: auto">
+            <img src="./assets/icons/minus.png" style="height: 25px; filter: invert(100%)">
+            <!-- <b>PD</b> -->
+          </button>
+          <div>
+            <p style="margin: auto 10px; font-size: 18px; font-weight: 600">Page </p>
+            <input (keyup)="go_to_page(+this.pageNum.value)" type="text" inputmode="numeric" value="{{file_page}}" min="1"
+              maxlength="3"
+              style="margin: auto 10px; width: 40px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
+              #pageNum />
+          </div>
+          <button *ngIf="file_source != ''" (click)="next_page()" class="grade-button"
+            style="margin: 20px 0; width: auto; height: auto">
+            <img src="./assets/icons/plus.png" style="height: 25px; filter: invert(100%)">
+            <!-- <b>PU</b> -->
+          </button>
+        </section>
+        <section *ngIf="file_source != ''"
+          style="height: 90%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden">
+          <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
+            [(page)]="file_page" style="min-height: 550px; height: 100%"></pdf-viewer>
+          <pdf-viewer *ngIf="this.screenWidth > 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
+            [(page)]="file_page" style="min-height: 625px; height: 100%"></pdf-viewer>
+        </section>
+        <br />
+      </div>
+      <br />
+    </div>
+    <div *ngIf="data_loaded && !edit_c && !add_s && !add_a && file_source == ''" class="content-menu" style="margin-bottom: 0; align-items: center">
+        <br />
+        <div class="card card-large"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+            <br />
+            <h1 style="line-height: 28px; font-weight: 700"> {{class_data.displayName}} </h1>
+            <section
+                style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px auto">
+                <div style="margin: 0 5px">
+                    <img src="{{this.authService.searchUserId(class_data.teacher).photoURL}}"
+                        style="padding: 5px 0 0; height: 35px; width: 35px; border-radius: 50%">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-weight: 500; font-size: 20px">
+                    <h3 style="padding-bottom: 10px">
+                        {{this.authService.searchUserId(class_data.teacher).displayName}}
+                    </h3>
+                </div>
+            </section>
+            <div class="media">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="media">
+                            <div class="media-body" style="padding-left: 15px; padding-right: 15px">
+                                <h3 style="text-align: center; font-size: 20px"> Class Overview: <strong
+                                        style="font-weight: 500">{{class_data.description}}</strong> </h3>
+                                <br />
+                                <h3 style="text-align: center; font-size: 18px"> Grade: <strong
+                                        style="font-weight: 500">{{class_data.grade}}</strong> </h3>
+                                <h3 style="text-align: center; font-size: 18px"> Subject: <strong
+                                        style="font-weight: 500">{{class_data.subject}}</strong> </h3>
+                                <h3 style="text-align: center; font-size: 18px"> State: <strong
+                                        style="font-weight: 500">{{class_data.state}}</strong> </h3>
                             </div>
                         </div>
                     </div>
-                    <br />
                 </div>
                 <br />
-                <button *ngIf="is_auth && assignments_title == 'Assignments for Your Class'"
-                    (click)="toggle_edit_class()" class="grade-button"
-                    style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
-                    <div style="margin: 0 5px">
-                        <img src="./assets/icons/edit.png" style="padding: 5px 0 0; height: 30px; width: 30px">
-                    </div>
-                    <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Edit Class
-                        </b>
-                    </div>
-                </button>
-                <button *ngIf="is_auth && is_student && !is_enrolled"
-                    (click)="enroll_student(authService.userData.uid)" class="grade-button"
-                    style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
-                    <div style="margin: 0 5px">
-                        <img src="./assets/icons/edit.png" style="padding: 5px 0 0; height: 30px; width: 30px">
-                    </div>
-                    <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Enroll in Class
-                        </b>
-                    </div>
-                </button>
-                <h2 *ngIf="is_auth && is_student && is_enrolled" style="color: green"> You're enrolled in this class! </h2>
-                <br *ngIf="(assignments_title == 'Assignments for Your Class' || is_student) && is_auth" />
             </div>
             <br />
-            <div class="card card-large"
-                style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
-                <br />
-                <h2 #classAssignments> {{assignments_title}} (<b *ngIf="class_data.assignments.slice(1).length < 1" style="color: darkslategray">0</b> <b *ngIf="class_data.assignments.slice(1).length >= 1" style="color: darkgreen">{{class_data.assignments.slice(1).length}}</b>) </h2>
-                <br />
-                <h3 *ngIf="this.class_data.assignments.slice(1).length < 1" style="font-size: 18px"> No practice problems or exams have been assigned to this class yet.
-                </h3>
-                <div *ngIf="this.class_data.assignments.slice(1).length >= 1" class="card-container" style="max-width: 100%">
-                    <!-- <div *ngFor="let stud of class_student_metadata" class="card card-medium"
-                        style="display: block; text-align: center; min-width: 40%; max-width: 500px; max-height: 300px; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-                        <div style="align-items: center; text-align: center; margin-right: 10px">
-                            <h2 style="padding-bottom: 10px">{{(stud.displayName) ?
-                                stud.displayName :
-                                'User'}}</h2>
-                            <img *ngIf="this.screenWidth > this.mobileWidth"
-                                class="align-self-start mr-5 img-thumbnail rounded-circle"
-                                style="height: 160px; width: 160px; border-radius: 50%"
-                                src="{{(stud.photoURL) ? stud.photoURL : '/assets/icons/user/user.png'}}"
-                                alt="{{stud.displayName}}">
-                            <img *ngIf="this.screenWidth <= this.mobileWidth"
-                                class="align-self-start mr-5 img-thumbnail rounded-circle"
-                                style="height: 120px; width: 120px; border-radius: 50%"
-                                src="{{(stud.photoURL) ?stud.photoURL : '/assets/icons/user/user.png'}}"
-                                alt="{{stud.displayName}}">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud != stud.uid"
-                                    (click)="select_student(stud.uid)" class="toggle-button-off" style="margin-top: 10px">
-                                    <b> Exams </b>
-                                </button>
-                                <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud == stud.uid"
-                                    (click)="select_student(stud.uid)" class="toggle-button-on" style="margin-top: 10px">
-                                    <b> Exams </b>
-                                </button>
-                            </label>
-                        </div>
-                        <div style="align-items: center; text-align: center; margin-left: 10px">
-                            <div
-                                style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-                                <div class="media-body" style="padding: 0 20px">
-                                    <h3 style="font-weight: 600">{{stud.grade}}</h3>
-                                    <h3 style="font-weight: 600">{{stud.state}}</h3>
-                                </div>
-                                <div *ngIf="!stud.uid.includes(authService.userData.uid) && screenWidth > mobileWidth"
-                                    class="media-body" style="padding: 0 20px">
-                                    <h3 style="font-weight: 600">{{stud.email}}</h3>
-                                    <h3 style="font-weight: 600">{{stud.phoneNumber}}</h3>
-                                </div>
-                            </div>
-                            <hr style="width: 90%" />
-                            <h3> {{stud.problems.total}} <strong style="font-weight: 500">problems total</strong>
-                            </h3>
-                            <h3> {{stud.problems.correct}} <strong style="font-weight: 500">problems
-                                    correct{{(get_percent_correct(stud)) ?', or ' : ""}}</strong>
-                                {{(get_percent_correct(stud))
-                                ?get_percent_correct(stud) + '%' : ""}}
-                            </h3>
-                            <hr style="width: 90%" />
-                            <h3> {{get_exam_count(stud)[0]}} <strong style="font-weight: 500">exams complete</strong>
-                            </h3>
-                            <h3> {{get_exam_count(stud)[1]}} <strong style="font-weight: 500">exams in progress</strong>
-                            </h3>
-                        </div>
-                    </div> -->
+            <button *ngIf="is_auth && assignments_title == 'Assignments for Your Class'"
+                (click)="toggle_edit_class()" class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/edit.png" style="padding: 5px 0 0; height: 30px; width: 30px">
                 </div>
-                <br />
+                <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Edit Class
+                    </b>
+                </div>
+            </button>
+            <button *ngIf="is_auth && is_student && !is_enrolled" (click)="enroll_student(authService.userData.uid)"
+                class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/link.png" style="padding: 5px 0 0; height: 30px; width: 30px">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Enroll in Class
+                    </b>
+                </div>
+            </button>
+            <h2 *ngIf="is_auth && is_student && is_enrolled" style="color: green"> You're enrolled in this class!
+            </h2>
+            <br *ngIf="(assignments_title == 'Assignments for Your Class' || is_student) && is_auth" />
+        </div>
+        <br />
+        <div class="card card-large"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+            <br />
+            <h2 #classAssignments> {{assignments_title}} (<b *ngIf="class_data.assignments.slice(1).length < 1"
+                    style="color: darkslategray">0</b> <b *ngIf="class_data.assignments.slice(1).length >= 1"
+                    style="color: darkgreen">{{class_data.assignments.slice(1).length}}</b>) </h2>
+            <br />
+            <h3 *ngIf="this.class_data.assignments.slice(1).length < 1" style="font-size: 18px"> No practice
+                problems or exams have been assigned to this class yet.
+            </h3>
+            <!-- <input type="hidden" #selection> -->
+            <div *ngIf="this.class_data.assignments.slice(1).length >= 1" class="card-container"
+                style="max-width: 100%">
+                <div *ngFor="let ass of this.class_data.assignments.slice(1)"
+                    (click)="select_assignment(ass); scroll_top()" class="card card-medium"
+                    style="display: block; text-align: center; max-width: 350px">
+                    <h2> {{exam_names[ass]}} </h2>
+                    <h3 *ngIf="online_set.includes(ass)" style="margin: auto; margin: 25px auto"> Total Questions:
+                        {{""+exam_attribute_dump[ass].NumQuestions}} </h3>
+                    <h3 *ngIf="!online_set.includes(ass)" style="margin: auto; margin: 25px auto"> This exam is not online yet. </h3>
+                    <!-- <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
+                        {{""+exam_attribute_dump[exm].NumQuestions}} </h4>
+                    <progress value="{{inprogress_exams[exm].progress}}" max="{{exam_attribute_dump[exm].NumQuestions}}"
+                        style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
+                        #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+                    <h4 style="margin: 1px auto; font-weight: 500"> Last Submission:
+                        <b>{{""+inprogress_exams[exm].lastdate}}</b> {{""+inprogress_exams[exm].lasttime}}
+                    </h4> -->
+                    <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+                        <label *ngIf="online_set.includes(ass)" class="switch" style="margin: auto">
+                            <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
+                            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto"
+                                routerLink="/exam/{{ass}}" routerLinkActive="active">
+                                <b> Take Exam </b>
+                            </button>
+                        </label>
+                        <label class="switch" style="margin: auto">
+                            <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
+                            <button (click)="select_exam(ass); scroll_top()" class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto">
+                                <b> View PDF </b>
+                            </button>
+                        </label>
+                    </section>
+                </div>
             </div>
-            <br *ngIf="assignments_title == 'Assignments for Your Class' && is_auth" />
-            <div *ngIf="assignments_title == 'Assignments for Your Class' && is_auth" class="card card-large"
-                style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
-                <br />
-                <h2 #classStudents> Students in Your Class (<b *ngIf="class_student_metadata.length < 1" style="color: darkslategray">0</b> <b *ngIf="class_student_metadata.length >= 1" style="color: darkgreen">{{class_student_metadata.length}}</b>) </h2>
-                <br />
-                <h3 *ngIf="class_student_metadata.length < 1" style="font-size: 18px"> No students have been enrolled in this class yet.
-                </h3>
-                <div *ngIf="class_student_metadata.length >= 1" class="card-container" style="max-width: 100%">
-                    <div *ngFor="let std of this.class_student_metadata" class="card card-large"
-                        style="margin: auto; margin-top: 5px; height: auto; max-height: 200px; max-width: 90%; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 10px">
-                        <div style="align-items: center; text-align: center; padding: 5px">
-                            <img *ngIf="this.screenWidth > this.mobileWidth"
-                                class="align-self-start mr-5 img-thumbnail rounded-circle"
-                                style="height: 150px; width: 150px; border-radius: 50%"
-                                src="{{(std.photoURL) ? std.photoURL : '/assets/icons/user/user.png'}}"
-                                alt="{{std.displayName}}">
-                            <img *ngIf="this.screenWidth <= this.mobileWidth"
-                                class="align-self-start mr-5 img-thumbnail rounded-circle"
-                                style="height: 110x; width: 110px; border-radius: 50%"
-                                src="{{(std.photoURL) ?std.photoURL : '/assets/icons/user/user.png'}}"
-                                alt="{{std.displayName}}">
-                            <!-- <button *ngIf="std.uid.includes(user.uid)" (click)="toggle_edit_student(std.uid)"
-                                class="grade-button"
-                                style="margin: 15px auto 0; margin-bottom: 15px; display: flex; flex-direction: row; align-items: center; padding: 5px">
-                                <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Profile
-                                    </b>
-                                </div>
-                            </button> -->
-                        </div>
-                        <div style="align-items: center; text-align: center; padding: 5px">
-                            <h2>{{(std.displayName) ?
-                                std.displayName :
-                                'User'}}</h2>
-                            <h4 *ngIf="this.screenWidth > this.mobileWidth" style="font-weight: 300">
-                                ({{std.uid}})
-                            </h4>
-                            <hr />
-                            <div
-                                style="display: flex; flex-direction: row; align-items: center; justify-content:space-evenly">
-                                <div *ngIf="!std.uid.includes(authService.userData.uid)" class="media-body">
-                                    <h3>{{std.email}}</h3>
-                                    <h3>{{std.phoneNumber}}</h3>
-                                </div>
-                                <div *ngIf="this.screenWidth > this.mobileWidth || std.uid.includes(authService.userData.uid)"
-                                    class="media-body"
-                                    style="text-align: center; padding: 0 20px 10px; line-height: 16px;">
-                                    <h3>{{std.grade}}</h3>
-                                    <h3>{{std.state}}</h3>
-                                </div>
+            <br />
+            <button *ngIf="is_auth && assignments_title == 'Assignments for Your Class'"
+                (click)="toggle_add_assignments()" class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/add.png" style="padding: 5px 0 0; height: 30px; width: 30px">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Add Assignment(s)
+                    </b>
+                </div>
+            </button>
+            <br *ngIf="is_auth && assignments_title == 'Assignments for Your Class'" />
+        </div>
+        <br *ngIf="assignments_title == 'Assignments for Your Class' && is_auth" />
+        <div *ngIf="assignments_title == 'Assignments for Your Class' && is_auth" class="card card-large"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+            <br />
+            <h2 #classStudents> Students In Your Class (<b *ngIf="class_student_metadata.length < 1"
+                    style="color: darkslategray">0</b> <b *ngIf="class_student_metadata.length >= 1"
+                    style="color: darkgreen">{{class_student_metadata.length}}</b>) </h2>
+            <br />
+            <h3 *ngIf="class_student_metadata.length < 1" style="font-size: 18px"> No students have been enrolled in
+                this class yet.
+            </h3>
+            <div *ngIf="class_student_metadata.length >= 1" class="card-container" style="max-width: 100%">
+                <div *ngFor="let std of this.class_student_metadata" class="card card-large"
+                    style="margin: auto; margin-top: 5px; height: auto; max-height: 200px; max-width: 90%; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 10px">
+                    <div style="align-items: center; text-align: center; padding: 5px">
+                        <img *ngIf="this.screenWidth > this.mobileWidth"
+                            class="align-self-start mr-5 img-thumbnail rounded-circle"
+                            style="height: 150px; width: 150px; border-radius: 50%"
+                            src="{{(std.photoURL) ? std.photoURL : '/assets/icons/user/user.png'}}"
+                            alt="{{std.displayName}}">
+                        <img *ngIf="this.screenWidth <= this.mobileWidth"
+                            class="align-self-start mr-5 img-thumbnail rounded-circle"
+                            style="height: 110x; width: 110px; border-radius: 50%"
+                            src="{{(std.photoURL) ?std.photoURL : '/assets/icons/user/user.png'}}"
+                            alt="{{std.displayName}}">
+                        <!-- <button *ngIf="std.uid.includes(user.uid)" (click)="toggle_edit_student(std.uid)"
+                            class="grade-button"
+                            style="margin: 15px auto 0; margin-bottom: 15px; display: flex; flex-direction: row; align-items: center; padding: 5px">
+                            <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Profile
+                                </b>
                             </div>
-                            <!-- <button (click)="select_student(std.uid)" class="grade-button"
-                                style="margin: 10px auto; margin-bottom: 0; display: flex; flex-direction: row; align-items: center; padding: 5px">
-                                <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Exams </b>
-                                </div>
-                            </button> -->
+                        </button> -->
+                    </div>
+                    <div style="align-items: center; text-align: center; padding: 5px">
+                        <h2>{{(std.displayName) ?
+                            std.displayName :
+                            'User'}}</h2>
+                        <h4 *ngIf="this.screenWidth > this.mobileWidth" style="font-weight: 300">
+                            ({{std.uid}})
+                        </h4>
+                        <hr />
+                        <div
+                            style="display: flex; flex-direction: row; align-items: center; justify-content:space-evenly">
+                            <div *ngIf="!std.uid.includes(authService.userData.uid)" class="media-body">
+                                <h3>{{std.email}}</h3>
+                                <h3>{{std.phoneNumber}}</h3>
+                            </div>
+                            <div *ngIf="this.screenWidth > this.mobileWidth || std.uid.includes(authService.userData.uid)"
+                                class="media-body"
+                                style="text-align: center; padding: 0 20px 10px; line-height: 16px;">
+                                <h3>{{std.grade}}</h3>
+                                <h3>{{std.state}}</h3>
+                            </div>
                         </div>
+                        <!-- <button (click)="select_student(std.uid)" class="grade-button"
+                            style="margin: 10px auto; margin-bottom: 0; display: flex; flex-direction: row; align-items: center; padding: 5px">
+                            <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Exams </b>
+                            </div>
+                        </button> -->
                     </div>
                 </div>
-                <br />
             </div>
+            <br />
+            <button *ngIf="is_auth && assignments_title == 'Assignments for Your Class'"
+                (click)="toggle_add_students()" class="grade-button"
+                style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
+                <div style="margin: 0 5px">
+                    <img src="./assets/icons/add.png" style="padding: 5px 0 0; height: 30px; width: 30px">
+                </div>
+                <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Add Student(s)
+                    </b>
+                </div>
+            </button>
+            <br *ngIf="is_auth && assignments_title == 'Assignments for Your Class'" />
         </div>
+        <!-- </div> -->
     </div>
     <div *ngIf="edit_c" class="card card-large"
         style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
         <br />
-        <h1> Edit Your Class Details </h1>
+        <h1 style="line-height: 28px"> Edit Your Class Details </h1>
         <div class="media">
             <div class="row">
                 <div class="col-md-12">
@@ -856,6 +938,82 @@
                 </button>
                 <button *ngIf="authService.userData as user" (click)="toggle_edit_class()" class="grade-button"
                     style="display: flex; flex-direction: row; align-items: center">
+                    <div style="margin: 0 5px">
+                        <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                    </div>
+                    <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
+                </button>
+            </section>
+        </div>
+        <br />
+    </div>
+    <div *ngIf="add_a" class="card card-large"
+        style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 2200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+        <br />
+        <h1 style="line-height: 28px"> Add Assignments To Your Class </h1>
+        <div class="media">
+            <br />
+            <h2> Favorited Exams </h2>
+            <div class="card-container" style="width: 100%">
+                <div *ngFor="let fav of this.authService.userData.exams.favorites.slice(1)" class="card card-small"
+                    (click)="toggle_new_assignment(fav)" tabindex="0"
+                    style="display: flex; flex-direction: row; align-items: center; width: 250px">
+                    <!-- <span style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                  </span> -->
+                    <label class="switch">
+                        <input type="checkbox">
+                        <button *ngIf="!new_assignments.includes(fav)" (click)="toggle_new_assignment(fav)"
+                            class="toggle-button-off" style="margin: auto; padding: 5px; width: auto; height: auto">
+                            <!-- <b> Select </b> -->
+                            <img src="./assets/icons/add.png"
+                                style="height: 30px; width: 30px; margin: auto; filter: grayscale(100%)">
+                        </button>
+                        <button *ngIf="new_assignments.includes(fav)" (click)="toggle_new_assignment(fav)"
+                            class="toggle-button-on" style="margin: auto; padding: 5px; width: auto; height: auto">
+                            <!-- <b> Unselect </b> -->
+                            <img src="./assets/icons/add.png" style="height: 30px; width: 30px; margin: auto">
+                        </button>
+                    </label>
+                    <span> <b style="padding: 2px 5px">{{exam_names[fav]}}</b> </span>
+                </div>
+            </div>
+            <br />
+            <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+                <button *ngIf="authService.userData as user" (click)="add_assignments(); toggle_add_assignments()"
+                    class="grade-button"
+                    style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
+                    <div style="margin: 0 5px">
+                        <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                    </div>
+                    <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
+                </button>
+                <button *ngIf="authService.userData as user" (click)="toggle_add_assignments()" class="grade-button"
+                    style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
+                    <div style="margin: 0 5px">
+                        <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                    </div>
+                    <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
+                </button>
+            </section>
+        </div>
+        <br />
+    </div>
+    <div *ngIf="add_s" class="card card-large"
+        style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+        <br />
+        <h1 style="line-height: 28px"> Add Students To Your Class </h1>
+        <div class="media">
+            <br />
+            <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+                <button *ngIf="authService.userData as user" (click)="toggle_add_students()" class="grade-button"
+                    style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
+                    <div style="margin: 0 5px">
+                        <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                    </div>
+                    <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
+                </button>
+                <button *ngIf="authService.userData as user" (click)="toggle_add_students()" class="grade-button"
+                    style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
                         <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>

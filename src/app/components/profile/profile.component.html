@@ -246,6 +246,32 @@
         box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
 
+    label.toggle-button-off {
+        font-size: 18px;
+        color: black;
+        background-color: #ccc;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+        width: 100%;
+    }
+
+    label.toggle-button-on {
+        font-size: 18px;
+        background-color: #1976d2;
+        color: white;
+        border-radius: 12px;
+        border: 3px solid #0a1e33;
+        padding: 7px 15px;
+        margin: 0 2px 10px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+        width: 100%;
+    }
+
     button.grade-button {
         font-size: 18px;
         color: white;
@@ -370,7 +396,7 @@
     .avatar-container:hover .grade-button {
         background-color: #0a1e33;
         transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);   
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
     }
 
     progress {
@@ -527,7 +553,7 @@
                 style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
                 <img src="./assets/icons/caret.png"
                     style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back to Profile </a>
+                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Profile </a>
             </div>
         </section>
         <section *ngIf="selected_exam != '' && selected_subtopic == '' && this.authService.userData.role != 'Student'"
@@ -536,7 +562,7 @@
                 style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
                 <img src="./assets/icons/caret.png"
                     style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back to Student </a>
+                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Student </a>
             </div>
         </section>
         <section *ngIf="selected_subtopic != ''" style="width: 100%; align-items: left">
@@ -544,7 +570,7 @@
                 style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
                 <img src="./assets/icons/caret.png"
                     style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back to Exam </a>
+                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Exam </a>
             </div>
         </section>
         <br *ngIf="selected_exam != '' || selected_subtopic != ''" />
@@ -554,13 +580,19 @@
             <br />
             <div class="content" style="margin: auto; align-items: center">
                 <section
-                  style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
-                  <h2 *ngIf="screenWidth > mobileWidth" style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 24.5px; line-height: 30px"> <b>{{selected_topic}}:</b> {{selected_subtopic}} </h2>
-                  <h2 *ngIf="screenWidth <= mobileWidth" style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px"> <b>{{selected_topic}}:</b> {{selected_subtopic}} </h2>
-                  <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-                    style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &star; </span>
-                  <span *ngIf="this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-                    style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &starf; </span>
+                    style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+                    <h2 *ngIf="screenWidth > mobileWidth"
+                        style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 24.5px; line-height: 30px">
+                        <b>{{selected_topic}}:</b> {{selected_subtopic}} </h2>
+                    <h2 *ngIf="screenWidth <= mobileWidth"
+                        style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px">
+                        <b>{{selected_topic}}:</b> {{selected_subtopic}} </h2>
+                    <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
+                        style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)">
+                        &star; </span>
+                    <span *ngIf="this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
+                        style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)">
+                        &starf; </span>
                 </section>
                 <br />
                 <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px">
@@ -575,13 +607,19 @@
                         style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
                         <div *ngIf="subtopic_problem_number == +prob.key">
                             <label *ngFor="let num of prob.value.SubTopics | keyvalue"
-                              (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
-                              style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
-                              <button class="topic-button" style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px">
-                                <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
-                                <span *ngIf="fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px"> &starf;
-                                </span>
-                              </button>
+                                (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
+                                class="switch"
+                                style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
+                                <button class="topic-button"
+                                    style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px">
+                                    <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}}
+                                    </span>
+                                    <span
+                                        *ngIf="fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
+                                        style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
+                                        &starf;
+                                    </span>
+                                </button>
                             </label>
                         </div>
                     </div>
@@ -617,13 +655,23 @@
                                 style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                                 <label class="switch" style="padding: 0 10px">
                                     <input type="checkbox" value="{{choice.key}}">
-                                    <button *ngIf="subtopic_problem_selection==choice.key && !subtopic_attempt_response.startsWith('Correct')" class="toggle-button-on"> <b> {{choice.key}} </b>
+                                    <button
+                                        *ngIf="subtopic_problem_selection==choice.key && !subtopic_attempt_response.startsWith('Correct')"
+                                        class="toggle-button-on"> <b> {{choice.key}} </b>
                                     </button>
-                                    <button *ngIf="subtopic_problem_selection==choice.key && subtopic_attempt_response.startsWith('Correct')" class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                                    <button
+                                        *ngIf="subtopic_problem_selection==choice.key && subtopic_attempt_response.startsWith('Correct')"
+                                        class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b>
+                                            {{choice.key}} </b>
                                     </button>
-                                    <button *ngIf="subtopic_problem_selection!=choice.key && !subtopic_attempt_path.includes(choice.key)" class="toggle-button-off"> <b> {{choice.key}} </b>
+                                    <button
+                                        *ngIf="subtopic_problem_selection!=choice.key && !subtopic_attempt_path.includes(choice.key)"
+                                        class="toggle-button-off"> <b> {{choice.key}} </b>
                                     </button>
-                                    <button *ngIf="subtopic_problem_selection!=choice.key && subtopic_attempt_path.includes(choice.key)" class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                                    <button
+                                        *ngIf="subtopic_problem_selection!=choice.key && subtopic_attempt_path.includes(choice.key)"
+                                        class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b>
+                                            {{choice.key}} </b>
                                     </button>
                                 </label>
                                 <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
@@ -709,7 +757,8 @@
             <div class="card card-medium"
                 style="text-align: center; margin: auto; width: fit-content; padding: 20px; display: flex; flex-direction: column">
                 <h2> {{exam_names[selected_exam]}} </h2>
-                <h3 style="font-size: 18px; color: rgb(94, 104, 113)"> With {{number_correct}} out of {{exam_length}} problems
+                <h3 style="font-size: 18px; color: rgb(94, 104, 113)"> With {{number_correct}} out of {{exam_length}}
+                    problems
                     correct, you scored {{correct_percent}}% in {{time_duration}}</h3>
                 <h3 *ngIf="this.performance_level == 'Masters Grade Level Performance'" style="color: green">
                     {{performance_level}} </h3>
@@ -722,8 +771,7 @@
                 <button (click)="router.navigate(['exam/' + selected_exam + '/key'])" class="grade-button"
                     style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content;">
                     <div style="margin: 0 5px">
-                        <img src="./assets/icons/key.png"
-                            style="padding: 5px 0 0; height: 20px; width: 20px">
+                        <img src="./assets/icons/key.png" style="padding: 5px 0 0; height: 20px; width: 20px">
                     </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Answer Key </b></div>
                 </button>
@@ -928,7 +976,7 @@
                 style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
                 <img src="./assets/icons/caret.png"
                     style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back to Profile </a>
+                <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Profile </a>
             </div>
         </section>
         <br *ngIf="selected_student != '' && selected_exam == ''" />
@@ -1133,19 +1181,23 @@
             <div class="inner-adjust" *ngIf="authService.userData as user" style="padding-top: 10px">
                 <div class="pt-3 pb-2 mb-3 border-bottom">
                     <h1 *ngIf="edit_p" style="font-size: 24px; line-height: 28px"> Edit Your Profile </h1>
-                    <h1 *ngIf="edit_s" style="font-size: 24px; line-height: 28px"> Edit {{this.student_data.displayName}}'s Profile </h1>
-                    <h1 *ngIf="create_s" style="font-size: 24px; line-height: 28px"> Create Your New Student's Profile </h1>
-                    <h1 *ngIf="!edit_p && !edit_s && !create_s" style="font-size: 24px; line-height: 28px">Welcome to your profile,
+                    <h1 *ngIf="edit_s" style="font-size: 24px; line-height: 28px"> Edit
+                        {{this.student_data.displayName}}'s Profile </h1>
+                    <h1 *ngIf="create_s" style="font-size: 24px; line-height: 28px"> Create Your New Student's Profile
+                    </h1>
+                    <h1 *ngIf="!edit_p && !edit_s && !create_s" style="font-size: 24px; line-height: 28px">Welcome to
+                        your profile,
                         <strong>{{(user.displayName) ? user.displayName :
                             'User'}}</strong>!
                     </h1>
                 </div>
-                <div *ngIf="!edit_p && !edit_s && !create_s" class="card-container" style="align-items: center; margin-top: 25px; margin-bottom: 25px">
+                <div *ngIf="!edit_p && !edit_s && !create_s" class="card-container"
+                    style="align-items: center; margin-top: 25px; margin-bottom: 25px">
                     <label class="switch">
                         <input type="checkbox" value="information">
                         <button *ngIf="profile_tab != 'information'" (click)="set_tab('information')"
                             class="toggle-button-off"
-                            style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
+                            style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                             <div style="margin: 0 5px">
                                 <img src="./assets/icons/info.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
@@ -1154,7 +1206,7 @@
                         </button>
                         <button *ngIf="profile_tab == 'information'" (click)="set_tab('information')"
                             class="toggle-button-on"
-                            style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
+                            style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                             <div style="margin: 0 5px">
                                 <img src="./assets/icons/info.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
@@ -1166,7 +1218,7 @@
                         <input type="checkbox" value="achievements">
                         <button *ngIf="profile_tab != 'achievements'" (click)="set_tab('achievements')"
                             class="toggle-button-off"
-                            style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
+                            style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                             <div style="margin: 0 5px">
                                 <img src="./assets/icons/results.png"
                                     style="padding: 5px 0 0; height: 25px; width: 25px">
@@ -1175,7 +1227,7 @@
                         </button>
                         <button *ngIf="profile_tab == 'achievements'" (click)="set_tab('achievements')"
                             class="toggle-button-on"
-                            style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
+                            style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                             <div style="margin: 0 5px">
                                 <img src="./assets/icons/results.png"
                                     style="padding: 5px 0 0; height: 25px; width: 25px">
@@ -1187,7 +1239,7 @@
                         <input type="checkbox" value="achievements">
                         <button *ngIf="profile_tab != 'students'" (click)="set_tab('students')"
                             class="toggle-button-off"
-                            style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
+                            style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                             <div style="margin: 0 5px">
                                 <img src="./assets/icons/student.png"
                                     style="padding: 5px 0 0; height: 25px; width: 25px">
@@ -1195,7 +1247,7 @@
                             <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Students </b></div>
                         </button>
                         <button *ngIf="profile_tab == 'students'" (click)="set_tab('students')" class="toggle-button-on"
-                            style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px">
+                            style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                             <div style="margin: 0 5px">
                                 <img src="./assets/icons/student.png"
                                     style="padding: 5px 0 0; height: 25px; width: 25px">
@@ -1217,7 +1269,7 @@
                                 <br />
                                 <button *ngIf="!edit_p && authService.userData as user" (click)="toggle_edit_profile()"
                                     class="grade-button"
-                                    style="display: flex; flex-direction: row; align-items: center">
+                                    style="display: flex; flex-direction: row; align-items: center; margin: auto; padding: 2px 5px">
                                     <div style="margin: 0 5px">
                                         <img src="./assets/icons/edit.png"
                                             style="padding: 5px 0 0; height: 30px; width: 30px">
@@ -1236,7 +1288,8 @@
                                 <h3>Unique ID: <strong style="font-weight: 500">{{user.uid}}</strong></h3>
                                 <h3 *ngIf="(user.phoneNumber)">Phone Number: <strong
                                         style="font-weight: 500">{{user.phoneNumber}}</strong></h3>
-                                <h3 *ngIf="(user.email)">Email Address: <strong style="font-weight: 500">{{user.email}}</strong>
+                                <h3 *ngIf="(user.email)">Email Address: <strong
+                                        style="font-weight: 500">{{user.email}}</strong>
                                 </h3>
                                 <h3 *ngIf="(user.email) && user.emailVerified">Email Verified: <strong
                                         style="font-weight: 500"> ✅ </strong></h3>
@@ -1273,16 +1326,33 @@
                                 src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
                                 alt="{{user.displayName}}"> -->
                             <br *ngIf="user.role != 'Student'" />
-                            <div *ngIf="user.role != 'Student'" class="avatar-container" style="margin: auto; position: relative; height: 300px; width: 300px; border-radius: 50%; padding: 5px">
+                            <div *ngIf="user.role != 'Student'" class="avatar-container"
+                                style="margin: auto; position: relative; height: 300px; width: 300px; border-radius: 50%; padding: 5px">
                                 <form method="post" enctype="multipart/form-data">
-                                    <label for="actual-btn" style="height: 100%; width: 100%; border-radius: 50%"> 
-                                        <img class="select-avatar" src="{{(authService.pp_url) ? authService.pp_url : (user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}" 
-                                            style="height: 100%; width: 100%; border-radius: 50%" alt="{{user.displayName}}">
-                                        <input type="file" (change)="authService.UploadProfilePic(user, this.userProfilePic.files); profileUploadURL = authService.pp_url" id="actual-btn" name="profile-upload" accept="image/*" hidden #userProfilePic />
+                                    <label for="actual-btn" style="height: 100%; width: 100%; border-radius: 50%">
+                                        <img class="select-avatar"
+                                            src="{{(authService.pp_url) ? authService.pp_url : (user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
+                                            style="height: 100%; width: 100%; border-radius: 50%"
+                                            alt="{{user.displayName}}">
+                                        <input type="file"
+                                            (change)="authService.UploadProfilePic(user, this.userProfilePic.files); profileUploadURL = authService.pp_url"
+                                            id="actual-btn" name="profile-upload" accept="image/*" hidden
+                                            #userProfilePic />
                                         <div class="select-middle" style="top: 85%">
-                                            <label for="actual-btn" class="grade-button">
-                                                <b> Edit Photo </b>
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <label for="actual-btn" *ngIf="!photo_upload" class="toggle-button-off"
+                                                    style="margin-top: 10px; padding: 10px 5px; width: auto">
+                                                    <b> Edit Photo </b>
+                                                </label>
+                                                <label for="actual-btn" *ngIf="photo_upload" class="toggle-button-on"
+                                                    style="margin-top: 10px; padding: 10px 5px; width: auto">
+                                                    <b> Edit Photo </b>
+                                                </label>
                                             </label>
+                                            <!-- <label for="actual-btn" class="grade-button">
+                                                <b> Edit Photo </b>
+                                            </label> -->
                                         </div>
                                     </label>
                                 </form>
@@ -1304,8 +1374,7 @@
                                             style="color: white; background-color: #1976d2; border-radius: 10px">Select
                                         </div>
                                     </div>
-                                    <div *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
-                                        class="middle">
+                                    <div *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'" class="middle">
                                         <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
                                     </div>
                                 </div>
@@ -1720,10 +1789,12 @@
                 </div>
                 <div *ngIf="profile_tab == 'students'" class="row">
                     <div class="col-md-12">
-                        <h2 *ngIf="user.role=='Parent' && !edit_s && !create_s && !search" style="font-weight: 500"> You have
+                        <h2 *ngIf="user.role=='Parent' && !edit_s && !create_s && !search" style="font-weight: 500"> You
+                            have
                             <b>{{""+this.student_metadata.length}}</b> students in your household
                         </h2>
-                        <h2 *ngIf="user.role!='Parent' && user.role!='Student' && !edit_s && !create_s && !search" style="font-weight: 500"> You have
+                        <h2 *ngIf="user.role!='Parent' && user.role!='Student' && !edit_s && !create_s && !search"
+                            style="font-weight: 500"> You have
                             <b>{{""+this.student_metadata.length}}</b> students in your classroom
                         </h2>
                         <div *ngIf="!search && !create_s && !edit_s" class="media" style="">
@@ -1731,24 +1802,22 @@
                                 style="align-items: center; margin-top: 25px; margin-bottom: 25px">
                                 <button *ngIf="!edit_p && authService.userData as user"
                                     (click)="toggle_create_student()" class="grade-button"
-                                    style="display: flex; flex-direction: row; align-items: center; margin: 0 10px">
+                                    style="display: flex; flex-direction: row; align-items: center; margin: 0 10px; padding: 2px 5px">
                                     <div style="margin: 0 5px">
                                         <img src="./assets/icons/add.png"
                                             style="padding: 5px 0 0; height: 25px; width: 25px">
                                     </div>
-                                    <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create New
-                                            Student
+                                    <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create Student
                                         </b></div>
                                 </button>
                                 <button *ngIf="!edit_p && authService.userData as user" (click)="toggle_search()"
                                     class="grade-button"
-                                    style="display: flex; flex-direction: row; align-items: center; margin: 0 10px">
+                                    style="display: flex; flex-direction: row; align-items: center; margin: 0 10px; padding: 2px 5px">
                                     <div style="margin: 0 5px">
                                         <img src="./assets/icons/usersearch.png"
                                             style="padding: 5px 0 0; height: 25px; width: 25px">
                                     </div>
-                                    <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Find Student by
-                                            ID
+                                    <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Search Students
                                         </b></div>
                                 </button>
                             </div>
@@ -2171,14 +2240,14 @@
             <section *ngIf="edit_p"
                 style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
                 <button *ngIf="authService.userData as user" (click)="update_profile(); toggle_edit_profile()"
-                    class="grade-button" style="display: flex; flex-direction: row; align-items: center">
+                    class="grade-button" style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
                         <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
                 </button>
                 <button *ngIf="authService.userData as user" (click)="toggle_edit_profile()" class="grade-button"
-                    style="display: flex; flex-direction: row; align-items: center">
+                    style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
                         <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>
@@ -2188,14 +2257,14 @@
             <section *ngIf="create_s"
                 style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
                 <button *ngIf="authService.userData as user" (click)="create_student(); toggle_create_student()"
-                    class="grade-button" style="display: flex; flex-direction: row; align-items: center">
+                    class="grade-button" style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
                         <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
                 </button>
                 <button *ngIf="authService.userData as user" (click)="toggle_create_student()" class="grade-button"
-                    style="display: flex; flex-direction: row; align-items: center">
+                    style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
                         <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>
@@ -2206,14 +2275,14 @@
                 style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
                 <button *ngIf="authService.userData as user"
                     (click)="update_student(student_data.uid); toggle_edit_student('')" class="grade-button"
-                    style="display: flex; flex-direction: row; align-items: center">
+                    style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
                         <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
                 </button>
                 <button *ngIf="authService.userData as user" (click)="toggle_edit_student('')" class="grade-button"
-                    style="display: flex; flex-direction: row; align-items: center">
+                    style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
                         <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>
