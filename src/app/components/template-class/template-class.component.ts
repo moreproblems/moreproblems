@@ -54,7 +54,11 @@ export class TemplateClassComponent implements OnInit {
   is_student = false;
   is_enrolled = false;
 
-  assignments_title: string = "Assignments for This Class";
+  my_students: string[] = [];
+  my_students_data: any = {};
+  // selected_students: string[] = [];
+
+  assignments_title: string = "Assignments For This Class";
   
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
   online_set = ['PA22G3M', 'PA21G3M', 'PA19G3M', 'PA18G3M', 'PA16G3M', 'PA15G3M', 'PA22G4M', 'PA21G4M', 'PA19G4M', 'PA18G4M', 'PA16G4M', 'PA15G4M', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA22G5M', 'PA21G5M', 'PA19G5M', 'PA18G5M', 'PA16G5M', 'PA15G5M', 'PA22G6M', 'PA21G6M', 'PA19G6M', 'PA18G6M', 'PA16G6M', 'PA15G6M', 'PA22G7M', 'PA21G7M', 'PA19G7M', 'PA18G7M', 'PA16G7M', 'PA15G7M', 'PA22G8M', 'PA21G8M', 'PA19G8M', 'PA18G8M', 'PA16G8M', 'PA15G8M', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S', 'TX22G3M', 'TX21G3M', 'TX19G3M', 'TX18G3M', 'TX17G3M', 'TX22G4M', 'TX21G4M', 'TX19G4M', 'TX18G4M', 'TX17G4M', 'TX22G5M', 'TX21G5M', 'TX19G5M', 'TX18G5M', 'TX17G5M', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX21G6M', 'TX19G6M', 'TX18G6M', 'TX17G6M', 'TX22G7M', 'TX21G7M', 'TX19G7M', 'TX18G7M', 'TX17G7M', 'TX22G8M', 'TX21G8M', 'TX19G8M', 'TX18G8M', 'TX17G8M', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS'];
@@ -735,8 +739,57 @@ export class TemplateClassComponent implements OnInit {
 
   toggle_add_students() {
     this.class_data = (this.authService.searchClassId(this.class_uid) as any);
+    if (!this.add_s) {
+      this.my_students = [];
+      const linked_students = this.authService.userData.students.slice(1);
+      var count = 0;
+      for (const [key, stud] of Object.entries(linked_students)) {
+          setTimeout(() => {
+              if ((stud as string).includes(this.authService.userData.uid as string)) {
+                  count += 1;
+                  this.my_students.push(stud as string);
+                  // setTimeout(() => {
+                  const student_data = this.authService.searchUserId(stud as string);
+                  if (student_data != null) {
+                      this.my_students_data[(stud as string)] = (student_data as object);
+                  }
+              }
+          }, +key * 10);
+      }
+    }
     this.add_s = !this.add_s;
     // this.edit_c_list = [];
+  }
+
+  toggle_new_student(stud: string) {
+      if (!this.new_students.includes(stud)) {
+          this.new_students.push(stud);
+      }
+      else {
+        if (this.new_students.indexOf(stud) !== -1) {
+          this.new_students.splice(this.new_students.indexOf(stud), 1);
+        }
+        else {
+          this.new_students.pop()
+        }
+      }
+  }
+
+  add_students() {
+    this.class_stud_set = [];
+    this.edit_c_list = {};
+    const class_stud_ref = 'classes/' + this.class_uid + '/students';
+    for (let stud of this.class_data.students) {
+      this.class_stud_set.push(stud as string);
+    }
+    for (let stud of this.new_students) {
+      if (!this.class_stud_set.includes(stud)) {
+        this.class_stud_set.push(stud);
+      }
+    }
+    this.edit_c_list[class_stud_ref] = this.class_stud_set;
+    this.authService.UpdateDatabase({ class_stud_ref: {} });
+    this.authService.UpdateDatabase(this.edit_c_list);
   }
 
   toggle_add_assignments() {
@@ -875,7 +928,7 @@ export class TemplateClassComponent implements OnInit {
         this.is_auth = true;
         this.user_data = this.authService.userData;
         if (this.authService.userData.uid == this.class_data.teacher)  {
-          this.assignments_title = "Assignments for Your Class";
+          this.assignments_title = "Assignments For Your Class";
           for (const [key, stud] of Object.entries(this.class_data.students.slice(1))) {
             setTimeout(() => {
               console.log(stud);
@@ -891,6 +944,23 @@ export class TemplateClassComponent implements OnInit {
               }, +key * 10);
             }
           }, 250);
+        }
+        if (this.authService.userData.role != 'Student') {
+            const linked_students = this.authService.userData.students.slice(1);
+            var count = 0;
+            for (const [key, stud] of Object.entries(linked_students)) {
+                setTimeout(() => {
+                    if ((stud as string).includes(this.authService.userData.uid as string)) {
+                        count += 1;
+                        this.my_students.push(stud as string);
+                        // setTimeout(() => {
+                        const student_data = this.authService.searchUserId(stud as string);
+                        if (student_data != null) {
+                            this.my_students_data[(stud as string)] = (student_data as object);
+                        }
+                    }
+                }, +key * 10);
+            }
         }
         if (this.authService.userData.role == 'Student')  {
           this.is_student = true;

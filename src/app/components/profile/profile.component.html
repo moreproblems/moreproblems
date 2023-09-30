@@ -1176,7 +1176,7 @@
         </section>
         <br *ngIf="selected_exam == '' && selected_student == ''" />
         <div *ngIf="selected_exam == '' && selected_student == ''" class="card card-large"
-            style="border: 3px solid black; border-radius: 20px; width: 70%; height: auto; margin: auto; padding: 0 5%; display: flex; flex-direction: column; min-width: 300px; max-width: min(1075px, 90%); max-height: 2400px">
+            style="border: 3px solid black; border-radius: 20px; width: 70%; height: auto; margin: auto; padding: 0 5%; display: flex; flex-direction: column; min-width: 300px; max-width: min(1075px, 95%); max-height: 2400px">
             <!-- <br /> -->
             <div class="inner-adjust" *ngIf="authService.userData as user" style="padding-top: 10px">
                 <div class="pt-3 pb-2 mb-3 border-bottom">
@@ -1256,6 +1256,7 @@
                         </button>
                     </label>
                 </div>
+                <hr style="width: 80%; border-width: 3px; margin-bottom: 20px" />
                 <!-- Show user data when logged in -->
                 <div *ngIf="profile_tab == 'information' && !edit_p" class="row">
                     <div class="col-md-12">
@@ -1281,17 +1282,18 @@
                             </section>
                             <div class="media-body">
                                 <br />
-                                <h3>Your Name: <strong style="font-weight: 500">{{(user.displayName) ?
+                                <h3 style="font-size: 18px">Your Name: <strong style="font-weight: 500">{{(user.displayName) ?
                                         user.displayName :
                                         'User'}}</strong></h3>
                                 <!-- <p>User Role: <strong>{{user.role}}</strong></p> -->
-                                <h3>Unique ID: <strong style="font-weight: 500">{{user.uid}}</strong></h3>
-                                <h3 *ngIf="(user.phoneNumber)">Phone Number: <strong
+                                <h3 style="font-size: 15px" >ID: <strong style="font-weight: 500">{{user.uid}}</strong></h3>
+                                <br />
+                                <h3 *ngIf="(user.phoneNumber)" style="font-size: 18px"> Phone: <strong
                                         style="font-weight: 500">{{user.phoneNumber}}</strong></h3>
-                                <h3 *ngIf="(user.email)">Email Address: <strong
+                                <h3 *ngIf="(user.email)" style="font-size: 18px"> Email: <strong
                                         style="font-weight: 500">{{user.email}}</strong>
                                 </h3>
-                                <h3 *ngIf="(user.email) && user.emailVerified">Email Verified: <strong
+                                <h3 *ngIf="(user.email) && user.emailVerified" style="font-size: 18px">Email Verified: <strong
                                         style="font-weight: 500"> ✅ </strong></h3>
                                 <button *ngIf="(user.email) && !user.emailVerified"
                                     (click)="authService.SendVerificationMail()"
@@ -1299,18 +1301,18 @@
                                     </b></button>
                                 <!-- <p>Password: <strong>{{user.password}}</strong></p> -->
                                 <br />
-                                <h3>Your Role: <strong style="font-weight: 500">{{user.role}}</strong></h3>
+                                <h3 style="font-size: 18px">Your Role: <strong style="font-weight: 500">{{user.role}}</strong></h3>
                                 <div *ngIf="user.role=='Parent'">
-                                    <h3> Your State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
+                                    <h3 style="font-size: 18px"> Your State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
                                 </div>
                                 <div *ngIf="user.role=='Student'">
-                                    <h3> Your Grade: <strong style="font-weight: 500">{{user.grade}}</strong></h3>
-                                    <h3> Your State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
+                                    <h3 style="font-size: 18px"> Your Grade: <strong style="font-weight: 500">{{user.grade}}</strong></h3>
+                                    <h3 style="font-size: 18px"> Your State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
                                 </div>
                                 <div *ngIf="user.role=='Teacher'">
-                                    <h3> Your Grade: <strong style="font-weight: 500">{{user.grade}}</strong></h3>
-                                    <h3> Your State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
-                                    <h3> Your Subject: <strong style="font-weight: 500">{{user.subject}}</strong></h3>
+                                    <h3 style="font-size: 18px"> Your Grade: <strong style="font-weight: 500">{{user.grade}}</strong></h3>
+                                    <h3 style="font-size: 18px"> Your State: <strong style="font-weight: 500">{{user.state}}</strong></h3>
+                                    <h3 style="font-size: 18px"> Your Subject: <strong style="font-weight: 500">{{user.subject}}</strong></h3>
                                 </div>
                                 <br />
                             </div>
