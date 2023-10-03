@@ -44,7 +44,7 @@ export class TestExamComponent implements OnInit {
   pt_running: boolean = false;
 
   key = 'TX18G3M'
-  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
+  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Directions': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
   download_dump: { [key: string]: number } = downloadData;
   dl_state_breakdown: { [key: string]: number } = {};
   dl_grade_breakdown: { [key: string]: number } = {};

@@ -715,7 +715,7 @@
           <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_type}} {{exam_grade}}
             {{exam_subject}} Exam
           </h2>
-          <p style="font-size: 16px; padding: 20px"> <b>Directions</b> : {{exam_directions}} </p>
+          <p style="font-size: 18px; padding: 10px; white-space: pre-wrap"> <b>Directions</b> : {{exam_directions}} </p>
           <!-- <br /> -->
           <h3
             *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.my_students != []">

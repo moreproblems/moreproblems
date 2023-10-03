@@ -129,7 +129,7 @@ export class TemplateKeyComponent implements OnInit {
     favorite_std_set: string[][] = [];
 
     key = "";
-    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
+    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Directions': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
     exam_state = "";
     exam_grade = "";
     exam_subject = "";
