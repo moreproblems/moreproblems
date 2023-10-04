@@ -782,7 +782,7 @@
                 style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
                 <button class="topic-button" style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px">
                   <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
-                  <span *ngIf="fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px"> &starf;
+                  <span *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px"> &starf;
                   </span>
                 </button>
               </label>
@@ -921,7 +921,7 @@
                   style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
                   <button class="topic-button" style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px">
                     <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
-                    <span *ngIf="fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px"> &starf;
+                    <span *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px"> &starf;
                     </span>
                   </button>
                 </label>
