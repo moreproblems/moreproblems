@@ -615,7 +615,7 @@
                                     <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}}
                                     </span>
                                     <span
-                                        *ngIf="fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
+                                        *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
                                         style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
                                         &starf;
                                     </span>

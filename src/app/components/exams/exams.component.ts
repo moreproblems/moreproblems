@@ -619,7 +619,15 @@ exam_names: {[key: string]: string} = {
   "WIG8E": "Wisconsin WFE Grade 8 English Language Arts Practice Exam",
   "WIG8S": "Wisconsin WFE Grade 8 Science Practice Exam",
   "WIG8SS": "Wisconsin WFE Grade 8 Social Studies Practice Exam",
-  "WIG10SS": "Wisconsin WFE Grade 10 Social Studies Practice Exam"
+  "WIG10SS": "Wisconsin WFE Grade 10 Social Studies Practice Exam",
+  "SAT1": "The SAT Practice Test #1",
+  "SAT3": "The SAT Practice Test #3",
+  "SAT5": "The SAT Practice Test #5",
+  "SAT6": "The SAT Practice Test #6",
+  "SAT7": "The SAT Practice Test #7",
+  "SAT8": "The SAT Practice Test #8",
+  "SAT9": "The SAT Practice Test #9",
+  "SAT10": "The SAT Practice Test #10"
 };
 
   exam_id = '';
