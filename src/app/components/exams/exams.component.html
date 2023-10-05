@@ -1804,6 +1804,13 @@
                 class="toggle-button-off" tabindex="0"><b> English II </b></button>
             </label>
             <label class="switch">
+              <input type="checkbox" value="PSAT">
+              <button *ngIf="selected_subject == 'PSAT'" (click)="select_subject('PSAT'); scroll(chooseSubject)"
+                class="toggle-button-on" tabindex="0"><b> PSAT </b></button>
+              <button *ngIf="selected_subject != 'PSAT'" (click)="select_subject('PSAT'); scroll(chooseSubject)"
+                class="toggle-button-off" tabindex="0"><b> PSAT </b></button>
+            </label>
+            <label class="switch">
               <input type="checkbox" value="SAT">
               <button *ngIf="selected_subject == 'SAT'" (click)="select_subject('SAT'); scroll(chooseSubject)"
                 class="toggle-button-on" tabindex="0"><b> SAT </b></button>
@@ -8045,6 +8052,54 @@
                   </span>
                   <span><b>Texas STAAR 2017</b> English II Exam</span>
                 </button>
+              </div>
+            </div>
+            <div *ngSwitchCase="'PSAT'" class="subcontent" style="margin-top: 0px">
+              <br #science />
+              <input type="hidden" #selection>
+              <div class="card-container" style="max-width: 100%">
+                <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('PSAT1'); scroll_top()" tabindex="0"
+                    style="display: flex; flex-direction: row; align-items: center">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('PSAT1')" src="./assets/media/PSAT.png"
+                      style="height: 20px; margin: 0 10px 0 5px;">
+                    <span *ngIf="favorite_set.includes('PSAT1') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                      &starf;
+                    </span>
+                    <span>PSAT/NMSQT <b>Practice Test #1</b></span>
+                  </button>
+                  <button class="card card-small" (click)="select_exam('PSAT101'); scroll_top()" tabindex="0"
+                    style="display: flex; flex-direction: row; align-items: center">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('PSAT101')" src="./assets/media/PSAT.png"
+                      style="height: 20px; margin: 0 10px 0 5px;">
+                    <span *ngIf="favorite_set.includes('PSAT101') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                      &starf;
+                    </span>
+                    <span>PSAT <b>10 Practice Test #1</b></span>
+                  </button>
+                  <button class="card card-small" (click)="select_exam('PSAT102'); scroll_top()" tabindex="0"
+                    style="display: flex; flex-direction: row; align-items: center">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('PSAT102')" src="./assets/media/PSAT.png"
+                      style="height: 20px; margin: 0 10px 0 5px;">
+                    <span *ngIf="favorite_set.includes('PSAT102') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                      &starf;
+                    </span>
+                    <span>PSAT <b>10 Practice Test #2</b></span>
+                  </button>
+                  <button class="card card-small" (click)="select_exam('PSAT891'); scroll_top()" tabindex="0"
+                    style="display: flex; flex-direction: row; align-items: center">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('PSAT891')" src="./assets/media/PSAT.png"
+                      style="height: 20px; margin: 0 10px 0 5px;">
+                    <span *ngIf="favorite_set.includes('PSAT891') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                      &starf;
+                    </span>
+                    <span>PSAT <b>8/9 Practice Test #1</b></span>
+                  </button>
+                </div>
               </div>
             </div>
             <div *ngSwitchCase="'SAT'" class="subcontent" style="margin-top: 0px">
