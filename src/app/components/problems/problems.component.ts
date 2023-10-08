@@ -1,4 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import * as examMetadata from "src/assets/problems/exams.json";
 import * as PA22G3MProblems from "src/assets/problems/PA22G3M/PA22G3M-problems.json";
 import * as PA21G3MProblems from "src/assets/problems/PA21G3M/PA21G3M-problems.json";
@@ -49,7 +50,9 @@ import * as PA18G8SProblems from "src/assets/problems/PA18G8S/PA18G8S-problems.j
 import * as PA16G8SProblems from "src/assets/problems/PA16G8S/PA16G8S-problems.json";
 import * as PA15G8SProblems from "src/assets/problems/PA15G8S/PA15G8S-problems.json";
 import * as TX22G3MProblems from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
+import * as TX22G3RProblems from "src/assets/problems/TX22G3R/TX22G3R-problems.json";
 import * as TX21G3MProblems from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
+import * as TX21G3RProblems from "src/assets/problems/TX21G3R/TX21G3R-problems.json";
 import * as TX19G3MProblems from "src/assets/problems/TX19G3M/TX19G3M-problems.json";
 import * as TX18G3MProblems from "src/assets/problems/TX18G3M/TX18G3M-problems.json";
 import * as TX17G3MProblems from "src/assets/problems/TX17G3M/TX17G3M-problems.json";
@@ -91,7 +94,6 @@ import * as TX21G8SSProblems from "src/assets/problems/TX21G8SS/TX21G8SS-problem
 import * as TX19G8SSProblems from "src/assets/problems/TX19G8SS/TX19G8SS-problems.json";
 import * as TX18G8SSProblems from "src/assets/problems/TX18G8SS/TX18G8SS-problems.json";
 import { AuthService } from "../../shared/services/auth.service";
-import { HttpClient } from '@angular/common/http';
 
 const confetti = require('canvas-confetti');
 
@@ -142,98 +144,100 @@ export class ProblemsComponent implements OnInit {
   // exam_year = '2021';
   exam_length = 10;
 
-  PA22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G3MProblems;
-  PA21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G3MProblems;
-  PA19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G3MProblems;
-  PA18G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G3MProblems;
-  PA16G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G3MProblems;
-  PA15G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G3MProblems;
-  PA22G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G4MProblems;
-  PA21G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G4MProblems;
-  PA19G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G4MProblems;
-  PA18G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G4MProblems;
-  PA16G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G4MProblems;
-  PA15G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G4MProblems;
-  PA22G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G4SProblems;
-  PA21G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G4SProblems;
-  PA19G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G4SProblems;
-  PA18G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G4SProblems;
-  PA16G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G4SProblems;
-  PA15G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G4SProblems;
-  PA22G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G5MProblems;
-  PA21G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G5MProblems;
-  PA19G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G5MProblems;
-  PA18G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G5MProblems;
-  PA16G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G5MProblems;
-  PA15G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G5MProblems;
-  PA22G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G6MProblems;
-  PA21G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G6MProblems;
-  PA19G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G6MProblems;
-  PA18G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G6MProblems;
-  PA16G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G6MProblems;
-  PA15G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G6MProblems;
-  PA22G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G7MProblems;
-  PA21G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G7MProblems;
-  PA19G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G7MProblems;
-  PA18G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G7MProblems;
-  PA16G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G7MProblems;
-  PA15G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G7MProblems;
-  PA22G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G8MProblems;
-  PA21G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G8MProblems;
-  PA19G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G8MProblems;
-  PA18G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G8MProblems;
-  PA16G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G8MProblems;
-  PA15G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G8MProblems;
-  PA22G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G8SProblems;
-  PA21G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G8SProblems;
-  PA19G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G8SProblems;
-  PA18G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G8SProblems;
-  PA16G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G8SProblems;
-  PA15G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G8SProblems;
-  TX22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G3MProblems;
-  TX21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G3MProblems;
-  TX19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G3MProblems;
-  TX18G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G3MProblems;
-  TX17G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G3MProblems;
-  TX22G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G4MProblems;
-  TX21G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G4MProblems;
-  TX19G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G4MProblems;
-  TX18G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G4MProblems;
-  TX17G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G4MProblems;
-  TX22G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G5MProblems;
-  TX21G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G5MProblems;
-  TX19G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G5MProblems;
-  TX18G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G5MProblems;
-  TX17G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G5MProblems;
-  TX22G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G5SProblems;
-  TX21G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G5SProblems;
-  TX19G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G5SProblems;
-  TX18G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G5SProblems;
-  TX22G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G6MProblems;
-  TX21G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G6MProblems;
-  TX19G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G6MProblems;
-  TX18G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G6MProblems;
-  TX17G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G6MProblems;
-  TX22G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G7MProblems;
-  TX21G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G7MProblems;
-  TX19G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G7MProblems;
-  TX18G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G7MProblems;
-  TX17G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G7MProblems;
-  TX22G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G8MProblems;
-  TX21G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G8MProblems;
-  TX19G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G8MProblems;
-  TX18G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G8MProblems;
-  TX17G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G8MProblems;
-  TX22G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G8SProblems;
-  TX21G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G8SProblems;
-  TX19G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G8SProblems;
-  TX18G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G8SProblems;
-  TX22G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G8SSProblems;
-  TX21G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G8SSProblems;
-  TX19G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G8SSProblems;
-  TX18G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G8SSProblems;
-  exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
-  dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } = {
+  PA22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G3MProblems;
+  PA21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G3MProblems;
+  PA19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G3MProblems;
+  PA18G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G3MProblems;
+  PA16G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G3MProblems;
+  PA15G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G3MProblems;
+  PA22G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G4MProblems;
+  PA21G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G4MProblems;
+  PA19G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G4MProblems;
+  PA18G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G4MProblems;
+  PA16G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G4MProblems;
+  PA15G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G4MProblems;
+  PA22G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G4SProblems;
+  PA21G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G4SProblems;
+  PA19G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G4SProblems;
+  PA18G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G4SProblems;
+  PA16G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G4SProblems;
+  PA15G4S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G4SProblems;
+  PA22G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G5MProblems;
+  PA21G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G5MProblems;
+  PA19G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G5MProblems;
+  PA18G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G5MProblems;
+  PA16G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G5MProblems;
+  PA15G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G5MProblems;
+  PA22G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G6MProblems;
+  PA21G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G6MProblems;
+  PA19G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G6MProblems;
+  PA18G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G6MProblems;
+  PA16G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G6MProblems;
+  PA15G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G6MProblems;
+  PA22G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G7MProblems;
+  PA21G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G7MProblems;
+  PA19G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G7MProblems;
+  PA18G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G7MProblems;
+  PA16G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G7MProblems;
+  PA15G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G7MProblems;
+  PA22G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G8MProblems;
+  PA21G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G8MProblems;
+  PA19G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G8MProblems;
+  PA18G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G8MProblems;
+  PA16G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G8MProblems;
+  PA15G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G8MProblems;
+  PA22G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA22G8SProblems;
+  PA21G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA21G8SProblems;
+  PA19G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA19G8SProblems;
+  PA18G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA18G8SProblems;
+  PA16G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA16G8SProblems;
+  PA15G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = PA15G8SProblems;
+  TX22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G3MProblems;
+  TX22G3R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G3RProblems;
+  TX21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G3MProblems;
+  TX21G3R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G3RProblems;
+  TX19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G3MProblems;
+  TX18G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G3MProblems;
+  TX17G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G3MProblems;
+  TX22G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G4MProblems;
+  TX21G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G4MProblems;
+  TX19G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G4MProblems;
+  TX18G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G4MProblems;
+  TX17G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G4MProblems;
+  TX22G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G5MProblems;
+  TX21G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G5MProblems;
+  TX19G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G5MProblems;
+  TX18G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G5MProblems;
+  TX17G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G5MProblems;
+  TX22G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G5SProblems;
+  TX21G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G5SProblems;
+  TX19G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G5SProblems;
+  TX18G5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G5SProblems;
+  TX22G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G6MProblems;
+  TX21G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G6MProblems;
+  TX19G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G6MProblems;
+  TX18G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G6MProblems;
+  TX17G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G6MProblems;
+  TX22G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G7MProblems;
+  TX21G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G7MProblems;
+  TX19G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G7MProblems;
+  TX18G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G7MProblems;
+  TX17G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G7MProblems;
+  TX22G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G8MProblems;
+  TX21G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G8MProblems;
+  TX19G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G8MProblems;
+  TX18G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G8MProblems;
+  TX17G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G8MProblems;
+  TX22G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G8SProblems;
+  TX21G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G8SProblems;
+  TX19G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G8SProblems;
+  TX18G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G8SProblems;
+  TX22G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G8SSProblems;
+  TX21G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G8SSProblems;
+  TX19G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G8SSProblems;
+  TX18G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G8SSProblems;
+  exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
+  dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } = {
     "PA22G3M": this.PA22G3M_exam_dump,
     "PA21G3M": this.PA21G3M_exam_dump,
     "PA19G3M": this.PA19G3M_exam_dump,
@@ -283,7 +287,9 @@ export class ProblemsComponent implements OnInit {
     "PA16G8S": this.PA16G8S_exam_dump,
     "PA15G8S": this.PA15G8S_exam_dump,
     "TX22G3M": this.TX22G3M_exam_dump,
+    "TX22G3R": this.TX22G3R_exam_dump,
     "TX21G3M": this.TX21G3M_exam_dump,
+    "TX21G3R": this.TX21G3R_exam_dump,
     "TX19G3M": this.TX19G3M_exam_dump,
     "TX18G3M": this.TX18G3M_exam_dump,
     "TX17G3M": this.TX17G3M_exam_dump,
@@ -328,7 +334,7 @@ export class ProblemsComponent implements OnInit {
   dump_count = 0;
 
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Directions': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
-  online_set = ["PA22G3M", "PA21G3M", "PA19G3M", "PA18G3M", "PA16G3M", "PA15G3M", "PA22G4M", "PA21G4M", "PA19G4M", "PA18G4M", "PA16G4M", "PA15G4M", "PA22G4S", "PA21G4S", "PA19G4S", "PA18G4S", "PA16G4S", "PA15G4S", "PA22G5M", "PA21G5M", "PA19G5M", "PA18G5M", "PA16G5M", "PA15G5M", "PA22G6M", "PA21G6M", "PA19G6M", "PA18G6M", "PA16G6M", "PA15G6M", "PA22G7M", "PA21G7M", "PA19G7M", "PA18G7M", "PA16G7M", "PA15G7M", "PA22G8M", "PA21G8M", "PA19G8M", "PA18G8M", "PA16G8M", "PA15G8M", "PA22G8S", "PA21G8S", "PA19G8S", "PA18G8S", "PA16G8S", "PA15G8S", "TX22G3M", "TX21G3M", "TX19G3M", "TX18G3M", "TX17G3M", "TX22G4M", "TX21G4M", "TX19G4M", "TX18G4M", "TX17G4M", "TX22G5M", "TX21G5M", "TX19G5M", "TX18G5M", "TX17G5M", "TX22G5S", "TX21G5S", "TX19G5S", "TX18G5S", "TX22G6M", "TX21G6M", "TX19G6M", "TX18G6M", "TX17G6M", "TX22G7M", "TX21G7M", "TX19G7M", "TX18G7M", "TX17G7M", "TX22G8M", "TX21G8M", "TX19G8M", "TX18G8M", "TX17G8M", "TX22G8S", "TX21G8S", "TX19G8S", "TX18G8S", "TX22G8SS", "TX21G8SS", "TX19G8SS", "TX18G8SS"];
+  online_set = ["PA22G3M", "PA21G3M", "PA19G3M", "PA18G3M", "PA16G3M", "PA15G3M", "PA22G4M", "PA21G4M", "PA19G4M", "PA18G4M", "PA16G4M", "PA15G4M", "PA22G4S", "PA21G4S", "PA19G4S", "PA18G4S", "PA16G4S", "PA15G4S", "PA22G5M", "PA21G5M", "PA19G5M", "PA18G5M", "PA16G5M", "PA15G5M", "PA22G6M", "PA21G6M", "PA19G6M", "PA18G6M", "PA16G6M", "PA15G6M", "PA22G7M", "PA21G7M", "PA19G7M", "PA18G7M", "PA16G7M", "PA15G7M", "PA22G8M", "PA21G8M", "PA19G8M", "PA18G8M", "PA16G8M", "PA15G8M", "PA22G8S", "PA21G8S", "PA19G8S", "PA18G8S", "PA16G8S", "PA15G8S", "TX22G3M", "TX22G3R", "TX21G3M", "TX21G3R", "TX19G3M", "TX18G3M", "TX17G3M", "TX22G4M", "TX21G4M", "TX19G4M", "TX18G4M", "TX17G4M", "TX22G5M", "TX21G5M", "TX19G5M", "TX18G5M", "TX17G5M", "TX22G5S", "TX21G5S", "TX19G5S", "TX18G5S", "TX22G6M", "TX21G6M", "TX19G6M", "TX18G6M", "TX17G6M", "TX22G7M", "TX21G7M", "TX19G7M", "TX18G7M", "TX17G7M", "TX22G8M", "TX21G8M", "TX19G8M", "TX18G8M", "TX17G8M", "TX22G8S", "TX21G8S", "TX19G8S", "TX18G8S", "TX22G8SS", "TX21G8SS", "TX19G8SS", "TX18G8SS"];
   favorite_std_set: string[][] = [];
   filtered_set: string[] = this.online_set;
   filtered_exam_num = 0;
@@ -336,7 +342,12 @@ export class ProblemsComponent implements OnInit {
   generate_message = "";
 
   problems_sequence: number[] = [];
-  ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
+  ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
+  supp_dump: any = {};
+  supp_dump_list: string[] = [];
+  supp_dump_labels: string[] = [];
+  supp_content_list: string[][] = [];
+  supp_content_labels: string[][] = [];
   random_index = 0
   random_list: number[] = [];
 
@@ -363,14 +374,14 @@ export class ProblemsComponent implements OnInit {
   includes_standard = false;
   subtopic_problem_count = 0;
   subtopic_problem_number = 0;
-  subtopic_search_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
+  subtopic_search_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
   subtopic_problem_selection = '';
   subtopic_problem_attempts = 0;
   subtopic_attempt_path: string[] = [];
   subtopic_attempt_response = '';
   subtopic_attempt_explanation = '';
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService, private http: HttpClient) { }
 
   // public onChange(file: File): void {
   //   let fileReader: FileReader = new FileReader();
@@ -387,6 +398,22 @@ export class ProblemsComponent implements OnInit {
       this.expand_topics = false;
     }
   }
+
+  read_supp_json(path: string) {
+    this.supp_dump_list = [];
+    this.supp_dump_labels = [];
+    this.http.get("./assets/" + path).subscribe(res => {
+        console.log(res);
+        console.log(JSON.stringify(res));
+        this.supp_dump[path] = res;
+        for (let val of this.supp_dump[path].Content) {
+            this.supp_dump_list.push(val[1]);
+            this.supp_dump_labels.push(val[0]);
+        }
+        this.supp_content_list.push(this.supp_dump_list);
+        this.supp_content_labels.push(this.supp_dump_labels);
+    });
+}
 
   toggle_button(val: string) {
     if (['Mathematics', 'English Reading', 'English Writing', 'Science', 'Social Studies'].includes(val)) {
@@ -521,7 +548,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -539,7 +566,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -557,7 +584,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -575,7 +602,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -593,7 +620,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -611,7 +638,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -629,7 +656,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -647,7 +674,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -665,7 +692,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -683,7 +710,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -701,7 +728,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -719,7 +746,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -737,7 +764,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -755,7 +782,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -773,7 +800,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -791,7 +818,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -809,7 +836,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -827,7 +854,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -845,7 +872,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -863,7 +890,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -881,7 +908,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -899,7 +926,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -917,7 +944,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -935,7 +962,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -953,7 +980,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -971,7 +998,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -989,7 +1016,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1007,7 +1034,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1025,7 +1052,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1043,7 +1070,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1061,7 +1088,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1079,7 +1106,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1097,7 +1124,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1115,7 +1142,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1133,7 +1160,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1151,7 +1178,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1169,7 +1196,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1187,7 +1214,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1205,7 +1232,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1223,7 +1250,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1241,7 +1268,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1259,7 +1286,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1277,7 +1304,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1295,7 +1322,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1313,7 +1340,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1331,7 +1358,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1349,7 +1376,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1367,7 +1394,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1385,7 +1412,25 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
+                this.dump_count += 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    if (this.filtered_set.includes('TX22G3R')) {
+      for (const [num, value] of Object.entries(this.TX22G3R_exam_dump)) {
+        if (value.Number <= 34) {
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+                this.dump_count += 1;
               }
             }
           }
@@ -1403,7 +1448,25 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
+                this.dump_count += 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    if (this.filtered_set.includes('TX21G3R')) {
+      for (const [num, value] of Object.entries(this.TX21G3R_exam_dump)) {
+        if (value.Number <= 34) {
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+                this.dump_count += 1;
               }
             }
           }
@@ -1421,7 +1484,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1439,7 +1502,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1457,7 +1520,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1475,7 +1538,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1493,7 +1556,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1511,7 +1574,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1529,7 +1592,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1547,7 +1610,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1565,7 +1628,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1583,7 +1646,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1601,7 +1664,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1619,7 +1682,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1637,7 +1700,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1655,7 +1718,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1673,7 +1736,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1691,7 +1754,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1709,7 +1772,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1727,7 +1790,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1745,7 +1808,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1763,7 +1826,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1781,7 +1844,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1799,7 +1862,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1817,7 +1880,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1835,7 +1898,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1853,7 +1916,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1871,7 +1934,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1889,7 +1952,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1907,7 +1970,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1925,7 +1988,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1943,7 +2006,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1961,7 +2024,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1979,7 +2042,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -1997,7 +2060,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -2015,7 +2078,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -2033,7 +2096,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -2051,7 +2114,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -2069,7 +2132,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -2087,7 +2150,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -2105,7 +2168,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -2123,7 +2186,7 @@ export class ProblemsComponent implements OnInit {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
-            this.dump_count += 1;
+                this.dump_count += 1;
               }
             }
           }
@@ -2183,6 +2246,11 @@ export class ProblemsComponent implements OnInit {
     }
     this.toggleProblemTimer();
     this.problem_number = 1;
+    for (let supp of this.exam_dump[1].SuppContent) {
+        setTimeout(() => {
+            this.read_supp_json(supp);
+        }, 100*(1+this.exam_dump[1].SuppContent.indexOf(supp)));
+    }
   }
 
   attempt_mc_problem(ch: string) {
@@ -2353,6 +2421,18 @@ export class ProblemsComponent implements OnInit {
         }
       }
     }
+    if (this.problem_number+1 > this.exam_length) {
+      this.completeExam();
+    }
+    else {
+      this.supp_content_list = [];
+      this.supp_content_labels = [];
+      for (let supp of this.exam_dump[this.problem_number+1].SuppContent) {
+          setTimeout(() => {
+              this.read_supp_json(supp);
+          }, 100*(1+this.exam_dump[this.problem_number+1].SuppContent.indexOf(supp)));
+      }
+    }
     this.problem_number += 1;
     this.problem_selection = '';
     this.problem_attempts = 0;
@@ -2360,9 +2440,6 @@ export class ProblemsComponent implements OnInit {
     this.attempt_response = '';
     this.clearProblemTimer();
     this.toggleProblemTimer();
-    if (this.problem_number > this.exam_length) {
-      this.completeExam();
-    }
   }
 
   next_problem_st() {
@@ -2374,6 +2451,9 @@ export class ProblemsComponent implements OnInit {
     this.subtopic_attempt_explanation = '';
     if (this.subtopic_problem_number > this.subtopic_problem_count) {
       this.selected_subtopic = '';
+    }
+    else {
+      this.read_supp_json(this.subtopic_search_dump[this.subtopic_problem_number].SuppContent[0]);
     }
   }
 
@@ -2426,15 +2506,24 @@ export class ProblemsComponent implements OnInit {
       }
     }
     this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
+    if (this.problem_number+1 > this.exam_length) {
+      this.completeExam();
+    }
+    else {
+      this.supp_content_list = [];
+      this.supp_content_labels = [];
+      for (let supp of this.exam_dump[this.problem_number+1].SuppContent) {
+          setTimeout(() => {
+              this.read_supp_json(supp);
+          }, 100*(1+this.exam_dump[this.problem_number+1].SuppContent.indexOf(supp)));
+      }
+    }
     this.problem_number += 1;
     this.problem_selection = '';
     this.problem_attempts = 0;
     this.attempt_path = [];
     this.clearProblemTimer();
     this.toggleProblemTimer();
-    if (this.problem_number > this.exam_length) {
-      this.completeExam();
-    }
   }
 
   completeExam() {
@@ -2489,7 +2578,7 @@ export class ProblemsComponent implements OnInit {
         this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
       }
     }
-    this.authService.UpdateUserData({'problems': this.exam_submission});
+    this.authService.UpdateUserData({ 'problems': this.exam_submission });
     // if (this.mode == 'explain') {
     //   this.resetExam();
     // }
@@ -2650,6 +2739,7 @@ export class ProblemsComponent implements OnInit {
     this.subtopic_attempt_explanation = '';
     this.standard_id = topic + ": " + subtopic;
     this.standard_fav = false;
+    this.read_supp_json(this.subtopic_search_dump[this.subtopic_problem_number].SuppContent[0]);
     for (let fav of this.authService.userData.standards.favorites) {
       if (topic == fav[0] && subtopic == fav[1]) {
         this.standard_fav = true;
