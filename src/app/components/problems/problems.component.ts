@@ -344,10 +344,13 @@ export class ProblemsComponent implements OnInit {
   problems_sequence: number[] = [];
   ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
   supp_dump: any = {};
+  supp_st_dump: any = {};
   supp_dump_list: string[] = [];
   supp_dump_labels: string[] = [];
   supp_content_list: string[][] = [];
   supp_content_labels: string[][] = [];
+  supp_st_content_list: string[][] = [];
+  supp_st_content_labels: string[][] = [];
   random_index = 0
   random_list: number[] = [];
 
@@ -403,17 +406,33 @@ export class ProblemsComponent implements OnInit {
     this.supp_dump_list = [];
     this.supp_dump_labels = [];
     this.http.get("./assets/" + path).subscribe(res => {
-        console.log(res);
-        console.log(JSON.stringify(res));
-        this.supp_dump[path] = res;
-        for (let val of this.supp_dump[path].Content) {
-            this.supp_dump_list.push(val[1]);
-            this.supp_dump_labels.push(val[0]);
-        }
-        this.supp_content_list.push(this.supp_dump_list);
-        this.supp_content_labels.push(this.supp_dump_labels);
+      console.log(res);
+      console.log(JSON.stringify(res));
+      this.supp_dump[path] = res;
+      for (let val of this.supp_dump[path].Content) {
+        this.supp_dump_list.push(val[1]);
+        this.supp_dump_labels.push(val[0]);
+      }
+      this.supp_content_list.push(this.supp_dump_list);
+      this.supp_content_labels.push(this.supp_dump_labels);
     });
-}
+  }
+
+  read_supp_st_json(path: string) {
+    this.supp_dump_list = [];
+    this.supp_dump_labels = [];
+    this.http.get("./assets/" + path).subscribe(res => {
+      console.log(res);
+      console.log(JSON.stringify(res));
+      this.supp_st_dump[path] = res;
+      for (let val of this.supp_st_dump[path].Content) {
+        this.supp_dump_list.push(val[1]);
+        this.supp_dump_labels.push(val[0]);
+      }
+      this.supp_st_content_list.push(this.supp_dump_list);
+      this.supp_st_content_labels.push(this.supp_dump_labels);
+    });
+  }
 
   toggle_button(val: string) {
     if (['Mathematics', 'English Reading', 'English Writing', 'Science', 'Social Studies'].includes(val)) {
@@ -2246,10 +2265,12 @@ export class ProblemsComponent implements OnInit {
     }
     this.toggleProblemTimer();
     this.problem_number = 1;
-    for (let supp of this.exam_dump[1].SuppContent) {
-        setTimeout(() => {
-            this.read_supp_json(supp);
-        }, 100*(1+this.exam_dump[1].SuppContent.indexOf(supp)));
+    this.supp_content_list = [];
+    this.supp_content_labels = [];
+    for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+      setTimeout(() => {
+        this.read_supp_json(supp);
+      }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
     }
   }
 
@@ -2421,23 +2442,23 @@ export class ProblemsComponent implements OnInit {
         }
       }
     }
-    if (this.problem_number+1 > this.exam_length) {
-      this.completeExam();
-    }
-    else {
-      this.supp_content_list = [];
-      this.supp_content_labels = [];
-      for (let supp of this.exam_dump[this.problem_number+1].SuppContent) {
-          setTimeout(() => {
-              this.read_supp_json(supp);
-          }, 100*(1+this.exam_dump[this.problem_number+1].SuppContent.indexOf(supp)));
-      }
-    }
     this.problem_number += 1;
     this.problem_selection = '';
     this.problem_attempts = 0;
     this.attempt_path = [];
     this.attempt_response = '';
+    if (this.problem_number > this.exam_length) {
+      this.completeExam();
+    }
+    else {
+      this.supp_content_list = [];
+      this.supp_content_labels = [];
+      for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_json(supp);
+        }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+      }
+    }
     this.clearProblemTimer();
     this.toggleProblemTimer();
   }
@@ -2453,7 +2474,13 @@ export class ProblemsComponent implements OnInit {
       this.selected_subtopic = '';
     }
     else {
-      this.read_supp_json(this.subtopic_search_dump[this.subtopic_problem_number].SuppContent[0]);
+      this.supp_st_content_list = [];
+      this.supp_st_content_labels = [];
+      for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_st_json(supp);
+        }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+      }
     }
   }
 
@@ -2506,22 +2533,22 @@ export class ProblemsComponent implements OnInit {
       }
     }
     this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
-    if (this.problem_number+1 > this.exam_length) {
+    this.problem_number += 1;
+    this.problem_selection = '';
+    this.problem_attempts = 0;
+    this.attempt_path = [];
+    if (this.problem_number > this.exam_length) {
       this.completeExam();
     }
     else {
       this.supp_content_list = [];
       this.supp_content_labels = [];
-      for (let supp of this.exam_dump[this.problem_number+1].SuppContent) {
-          setTimeout(() => {
-              this.read_supp_json(supp);
-          }, 100*(1+this.exam_dump[this.problem_number+1].SuppContent.indexOf(supp)));
+      for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_json(supp);
+        }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
       }
     }
-    this.problem_number += 1;
-    this.problem_selection = '';
-    this.problem_attempts = 0;
-    this.attempt_path = [];
     this.clearProblemTimer();
     this.toggleProblemTimer();
   }
@@ -2739,7 +2766,13 @@ export class ProblemsComponent implements OnInit {
     this.subtopic_attempt_explanation = '';
     this.standard_id = topic + ": " + subtopic;
     this.standard_fav = false;
-    this.read_supp_json(this.subtopic_search_dump[this.subtopic_problem_number].SuppContent[0]);
+    this.supp_st_content_list = [];
+    this.supp_st_content_labels = [];
+    for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
+      setTimeout(() => {
+        this.read_supp_st_json(supp);
+      }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+    }
     for (let fav of this.authService.userData.standards.favorites) {
       if (topic == fav[0] && subtopic == fav[1]) {
         this.standard_fav = true;

@@ -506,6 +506,7 @@
         <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px">
           <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
         <br />
+        <h3 style="margin: auto 0; color: slategrey; font-size: 18px"> Addressed Curriculum Standards:</h3>
         <section style="height: auto; width: 100%; display: flex; justify-content: center">
           <div *ngFor="let prob of subtopic_search_dump | keyvalue"
             style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
@@ -530,7 +531,50 @@
       </div>
     </div>
     <br *ngIf="selected_subtopic != ''" />
-    <div *ngIf="selected_subtopic != ''" class="card card-large"
+    <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+      <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != ''">
+        <div *ngFor="let supp of prob.value.SuppContent">
+          <div class="card card-large"
+            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            #subtopicSuppCard>
+            <br />
+            <div class="content" style="margin: auto; align-items: center">
+              <h3 *ngIf="supp_st_dump[supp].Directions != ''" style="font-weight: 500; font-size: 18px">
+                {{supp_st_dump[supp].Directions}}
+              </h3>
+              <br />
+              <h2 *ngIf="supp_st_dump[supp].Title != ''"> {{supp_st_dump[supp].Title}} </h2>
+              <h3 *ngIf="supp_st_dump[supp].Subtitle != ''" style="font-size: 18px"> {{supp_st_dump[supp].Subtitle}} </h3>
+              <h3 *ngIf="supp_st_dump[supp].Author != ''" style="font-size: 18px"> <i
+                  style="font-weight: 400">{{supp_st_dump[supp].Author}}</i> </h3>
+              <br />
+              <section style="width:fit-content">
+                <div *ngFor="let block of supp_st_content_list[prob.value.SuppContent.indexOf(supp)]"
+                  style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                  <h3 *ngIf="!block.endsWith('.jpg')"
+                    style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
+                    {{supp_st_content_labels[prob.value.SuppContent.indexOf(supp)][supp_st_content_list[prob.value.SuppContent.indexOf(supp)].indexOf(block)]}}
+                  </h3>
+                  <h3
+                    *ngIf="!block.endsWith('.jpg') && (supp_st_content_labels[prob.value.SuppContent.indexOf(supp)][supp_st_content_list[prob.value.SuppContent.indexOf(supp)].indexOf(block)] != '' || supp_st_dump[supp].LabelType == 'L')"
+                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
+                    {{block}} </h3>
+                  <h3
+                    *ngIf="!block.endsWith('.jpg') && supp_st_content_labels[prob.value.SuppContent.indexOf(supp)][supp_st_content_list[prob.value.SuppContent.indexOf(supp)].indexOf(block)] == '' && supp_st_dump[supp].LabelType == 'P'"
+                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
+                    <b>{{block}}</b>
+                  </h3>
+                  <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px; margin: auto">
+                </div>
+              </section>
+            </div>
+            <br />
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+    <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
       #subtopicCard>
       <br />
@@ -581,7 +625,7 @@
                   </button>
                 </label>
                 <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                  style="display: block; margin: 0px 20px 0px 20px; margin: auto; white-space: pre-wrap; font-size: 18px">
+                  style="display: block; margin: 0px 20px 0px 20px; margin: auto; white-space: pre-wrap">
                   {{choice.value.Choice}}
                 </h3>
                 <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
@@ -709,7 +753,7 @@
       </div>
       <br />
       <div *ngFor="let prob of exam_dump | keyvalue">
-        <div *ngIf="problem_number == prob.value.Number">
+        <div *ngIf="problem_number == +prob.key">
           <div *ngFor="let supp of prob.value.SuppContent">
             <div class="card card-large"
               style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
@@ -754,7 +798,7 @@
         <br />
         <div class="content" style="margin: auto; align-items: center">
           <div *ngFor="let prob of exam_dump | keyvalue">
-            <div *ngIf="problem_number == prob.value.Number">
+            <div *ngIf="problem_number == +prob.key">
               <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
                 <h3 *ngIf="!block.endsWith('.jpg')" style="display: block; white-space: pre-wrap; font-size: 18px">
                   {{block}} </h3>
