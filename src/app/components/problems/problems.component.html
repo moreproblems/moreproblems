@@ -780,9 +780,11 @@
             of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
         <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px">
           <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
-        <br />
-        <h3 style="margin: auto 0; color: slategrey; font-size: 18px"> Addressed Curriculum Standards:</h3>
-        <section style="height: auto; width: 100%; display: flex; justify-content: center">
+          <br />
+          <hr *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="width: max(50%, 250px)">
+          <br *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" />
+          <h3 *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="margin: auto 0; color: slategrey; font-size: 18px"> Addressed Curriculum Standards:</h3>
+          <section *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="height: auto; width: 100%; display: flex; justify-content: center">
           <div *ngFor="let prob of subtopic_search_dump | keyvalue"
             style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
             <div *ngIf="subtopic_problem_number == +prob.key">
@@ -807,7 +809,7 @@
     </div>
     <br *ngIf="selected_subtopic != ''" />
     <div *ngFor="let prob of subtopic_search_dump | keyvalue">
-      <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != ''">
+      <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp">
         <div *ngFor="let supp of prob.value.SuppContent">
           <div class="card card-large"
             style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
@@ -852,6 +854,18 @@
     <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
       #subtopicCard>
+      <br />
+      <section *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0" style="height: auto; width: 100%; display: flex; justify-content: center">
+        <label class="switch" style="padding: 0 10px">
+          <input type="checkbox" value="{{expand_supp}}">
+          <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp"
+            class="toggle-button-on"> <b> Show Supplement(s) </b>
+          </button>
+          <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp"
+            class="toggle-button-off"> <b> Hide Supplement(s) </b>
+          </button>
+        </label>
+      </section>
       <br />
       <div class="content" style="margin: auto; align-items: center">
         <div *ngFor="let prob of subtopic_search_dump | keyvalue">
@@ -984,8 +998,10 @@
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
         <br />
         <div *ngIf="problem_number <= exam_length">
-          <h3 style="margin: auto 0; color: slategrey; font-size: 18px"> Addressed Curriculum Standards:</h3>
-          <section style="height: auto; width: 100%; display: flex; justify-content: center">
+          <hr *ngIf="exam_dump[problem_number].Topics.length > 0" style="width: max(50%, 250px)">
+          <br *ngIf="exam_dump[problem_number].Topics.length > 0" />
+          <h3 *ngIf="exam_dump[problem_number].Topics.length > 0" style="margin: auto 0; color: slategrey; font-size: 18px"> Addressed Curriculum Standards:</h3>
+          <section *ngIf="exam_dump[problem_number].Topics.length > 0" style="height: auto; width: 100%; display: flex; justify-content: center">
             <div *ngFor="let prob of exam_dump | keyvalue"
               style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
               <div *ngIf="problem_number == +prob.key">
@@ -1247,7 +1263,7 @@
     </div>
     <br *ngIf="selected_subtopic == ''" />
     <div *ngFor="let prob of exam_dump | keyvalue">
-      <div *ngIf="problem_number == +prob.key && selected_subtopic == ''">
+      <div *ngIf="problem_number == +prob.key && selected_subtopic == '' && expand_supp">
         <div *ngFor="let supp of prob.value.SuppContent">
           <div class="card card-large"
             style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
@@ -1292,6 +1308,18 @@
     <div *ngIf="selected_subtopic == '' && exam_length >= problem_number" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
       #problemCard>
+      <br />
+      <section *ngIf="exam_dump[problem_number].SuppContent.length > 0" style="height: auto; width: 100%; display: flex; justify-content: center">
+        <label class="switch" style="padding: 0 10px">
+          <input type="checkbox" value="{{expand_supp}}">
+          <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp"
+            class="toggle-button-on"> <b> Show Supplement(s) </b>
+          </button>
+          <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp"
+            class="toggle-button-off"> <b> Hide Supplement(s) </b>
+          </button>
+        </label>
+      </section>
       <br />
       <div class="content" style="margin: auto; align-items: center">
         <div *ngFor="let prob of exam_dump | keyvalue">
