@@ -127,6 +127,7 @@ export class ProfileComponent implements OnInit {
   screenHeight = window.innerHeight;
   mobileWidth = 1200;
   menuOpen = false;
+  expand_supp = true;
   data_loaded = false;
   stud_data_loaded = false;
   temp_count = 0;

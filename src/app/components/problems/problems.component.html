@@ -780,11 +780,11 @@
             of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
         <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px">
           <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
-          <br />
-          <hr *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="width: max(50%, 250px)">
-          <br *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" />
-          <h3 *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="margin: auto 0; color: slategrey; font-size: 18px"> Addressed Curriculum Standards:</h3>
-          <section *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="height: auto; width: 100%; display: flex; justify-content: center">
+        <br />
+        <hr *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="width: max(50%, 250px)">
+        <br *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" />
+        <h3 *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="margin: auto 0; color: slategrey; font-size: 18px"> Addressed Curriculum Standards:</h3>
+        <section *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="height: auto; width: 100%; display: flex; justify-content: center">
           <div *ngFor="let prob of subtopic_search_dump | keyvalue"
             style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
             <div *ngIf="subtopic_problem_number == +prob.key">
@@ -820,6 +820,8 @@
                 {{supp_st_dump[supp].Directions}}
               </h3>
               <br />
+              <h3 *ngIf="supp_st_dump[supp].Context != ''" style="font-size: 18px"> <i
+                  style="font-weight: 400">{{supp_st_dump[supp].Context}}</i> </h3>
               <h2 *ngIf="supp_st_dump[supp].Title != ''"> {{supp_st_dump[supp].Title}} </h2>
               <h3 *ngIf="supp_st_dump[supp].Subtitle != ''" style="font-size: 18px"> {{supp_st_dump[supp].Subtitle}} </h3>
               <h3 *ngIf="supp_st_dump[supp].Author != ''" style="font-size: 18px"> <i
@@ -871,8 +873,10 @@
         <div *ngFor="let prob of subtopic_search_dump | keyvalue">
           <div *ngIf="subtopic_problem_number == +prob.key">
             <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
-              <h3 *ngIf="!block.endsWith('.jpg')" style="display: block; white-space: pre-wrap; font-size: 18px">
-                {{block}} </h3>
+              <div *ngIf="block.startsWith(':box:')" style="border: 1px solid black; width: fit-content; margin: auto; padding: 5px">
+                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left"> {{block.slice(5)}} </h3>
+              </div>
+              <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:')" style="display: block; white-space: pre-wrap; font-size: 18px"> {{block}} </h3>
               <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
             </div>
           </div>
@@ -1325,8 +1329,10 @@
         <div *ngFor="let prob of exam_dump | keyvalue">
           <div *ngIf="problem_number == +prob.key">
             <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
-              <h3 *ngIf="!block.endsWith('.jpg')" style="display: block; white-space: pre-wrap; font-size: 18px">
-                {{block}} </h3>
+              <div *ngIf="block.startsWith(':box:')" style="border: 1px solid black; width: fit-content; margin: auto; padding: 5px">
+                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left"> {{block.slice(5)}} </h3>
+              </div>
+              <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:')" style="display: block; white-space: pre-wrap; font-size: 18px"> {{block}} </h3>
               <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
             </div>
           </div>

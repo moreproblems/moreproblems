@@ -147,6 +147,7 @@ export class TemplateExamComponent implements OnInit {
 
     expand_topics = true;
     show_correct = false;
+    expand_supp = true;
 
     key = "";
     exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Directions': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
