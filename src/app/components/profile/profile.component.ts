@@ -68,6 +68,7 @@ import * as TX17G3RProblems from "src/assets/problems/TX17G3R/TX17G3R-problems.j
 import * as TX22G4MProblems from "src/assets/problems/TX22G4M/TX22G4M-problems.json";
 import * as TX22G4RProblems from "src/assets/problems/TX22G4R/TX22G4R-problems.json";
 import * as TX21G4MProblems from "src/assets/problems/TX21G4M/TX21G4M-problems.json";
+import * as TX21G4RProblems from "src/assets/problems/TX21G4R/TX21G4R-problems.json";
 import * as TX19G4MProblems from "src/assets/problems/TX19G4M/TX19G4M-problems.json";
 import * as TX18G4MProblems from "src/assets/problems/TX18G4M/TX18G4M-problems.json";
 import * as TX17G4MProblems from "src/assets/problems/TX17G4M/TX17G4M-problems.json";
@@ -254,6 +255,7 @@ export class ProfileComponent implements OnInit {
   TX22G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G4MProblems;
   TX22G4R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G4RProblems;
   TX21G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G4MProblems;
+  TX21G4R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G4RProblems;
   TX19G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G4MProblems;
   TX18G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G4MProblems;
   TX17G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G4MProblems;
@@ -351,6 +353,7 @@ export class ProfileComponent implements OnInit {
     "TX22G4M": this.TX22G4M_exam_dump,
     "TX22G4R": this.TX22G4R_exam_dump,
     "TX21G4M": this.TX21G4M_exam_dump,
+    "TX21G4R": this.TX21G4R_exam_dump,
     "TX19G4M": this.TX19G4M_exam_dump,
     "TX18G4M": this.TX18G4M_exam_dump,
     "TX17G4M": this.TX17G4M_exam_dump,

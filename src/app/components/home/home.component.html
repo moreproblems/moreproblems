@@ -2,12 +2,12 @@
   @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
   :host {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      font-size: 14px;
-      color: #333;
-      box-sizing: border-box;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1,
@@ -16,125 +16,125 @@
   h4,
   h5,
   h6 {
-      margin: 8px 0;
+    margin: 8px 0;
   }
 
   p {
-      margin: 0;
+    margin: 0;
   }
 
   .spacer {
-      flex: 1;
+    flex: 1;
   }
 
   .toolbar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 85px;
-      display: flex;
-      align-items: center;
-      background-color: #0a1e33;
-      color: white;
-      font-weight: 600;
-      padding: 5px 10px 2px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    background-color: #0a1e33;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px 2px 20px;
   }
 
   .toolbar img {
-      /* margin: 0 16px; */
-      position: absolute;
-      left: -10px;
-      top: -18px;
+    /* margin: 0 16px; */
+    position: absolute;
+    left: -10px;
+    top: -18px;
   }
 
   .toolbar #twitter-logo {
-      height: 40px;
-      margin: 0 8px;
+    height: 40px;
+    margin: 0 8px;
   }
 
   .toolbar #youtube-logo {
-      height: 40px;
-      margin: 0 16px;
+    height: 40px;
+    margin: 0 16px;
   }
 
   .toolbar #twitter-logo:hover,
   .toolbar #youtube-logo:hover {
-      opacity: 0.8;
+    opacity: 0.8;
   }
 
   #confetticanvas {
-      position: fixed;
-      z-index: 50;
-      top: 81px;
-      right: 0px;
-      bottom: 0px;
-      left: 125px;
-      height: 0px;
+    position: fixed;
+    z-index: 50;
+    top: 81px;
+    right: 0px;
+    bottom: 0px;
+    left: 125px;
+    height: 0px;
   }
 
   .content-menu {
-      display: flex;
-      margin: 0 auto 32px;
-      padding: 0 16px;
-      width: 90%;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    margin: 0 auto 32px;
+    padding: 0 16px;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
   }
 
   .content {
-      display: flex;
-      margin: 0 auto 32px;
-      padding: 0;
-      width: 95%;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    margin: 0 auto 32px;
+    padding: 0;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
   }
 
   .subcontent {
-      display: flex;
-      margin: 12px auto;
-      padding: 0px;
-      width: 95%;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    margin: 12px auto;
+    padding: 0px;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
   }
 
   svg.material-icons {
-      height: 24px;
-      width: auto;
+    height: 24px;
+    width: auto;
   }
 
   svg.material-icons:not(:last-child) {
-      margin-right: 8px;
+    margin-right: 8px;
   }
 
   .card svg.material-icons path {
-      fill: #888;
+    fill: #888;
   }
 
   .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
   }
 
   .card {
-      all: unset;
-      border-radius: 4px;
-      border: 1px solid #eee;
-      background-color: #fafafa;
-      /* height: 40px;
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    /* height: 40px;
     width: 200px; */
-      margin: 0 8px 16px;
-      padding: 8px 8px;
-      display: flex;
-      flex-direction: row;
-      /* justify-content: center; */
-      /* align-items: center; */
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
+    margin: 0 8px 16px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
   }
 
   /* .card-container .card:not(:last-child) {
@@ -146,38 +146,38 @@
 } */
 
   .card.card-small {
-      min-height: 16px;
-      width: 220px;
-      border-radius: 8px;
+    min-height: 16px;
+    width: 220px;
+    border-radius: 8px;
   }
 
   .card.card-medium {
-      height: auto;
-      width: 80%;
-      border-radius: 8px;
-      padding: 20px;
+    height: auto;
+    width: 80%;
+    border-radius: 8px;
+    padding: 20px;
   }
 
   .card.card-medium:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   .card.card-large {
-      width: auto;
-      height: auto;
-      border-radius: 8px;
-      margin: 8px 8px;
-      padding: 8px 0;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    margin: 8px 8px;
+    padding: 8px 0;
   }
 
   .card-container .card:not(.highlight-card) {
-      cursor: pointer;
+    cursor: pointer;
   }
 
   .card-container .card:not(.highlight-card):hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   /* .card-container .card:not(.highlight-card):hover .material-icons path {
@@ -185,331 +185,331 @@
 } */
 
   .card.highlight-card {
-      background-color: #0a1e33;
-      color: white;
-      font-weight: 600;
-      border: none;
-      width: auto;
-      min-width: 30%;
-      position: relative;
+    background-color: #0a1e33;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
   }
 
   .card.card.highlight-card span {
-      margin-left: 60px;
+    margin-left: 60px;
   }
 
   svg#rocket {
-      width: 80px;
-      position: absolute;
-      left: -10px;
-      top: -24px;
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
   }
 
   svg#rocket-smoke {
-      height: calc(100vh - 95px);
-      position: absolute;
-      top: 10px;
-      right: 180px;
-      z-index: -10;
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
   }
 
   a,
   a:visited,
   a:hover {
-      color: #1976d2;
-      text-decoration: none;
+    color: #1976d2;
+    text-decoration: none;
   }
 
   a:hover {
-      color: #125699;
+    color: #125699;
   }
 
   label.grade-button {
-      font-size: 18px;
-      color: white;
-      background-color: #1976d2;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      margin: 8px;
-      padding: 8px 8px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
+    font-size: 18px;
+    color: white;
+    background-color: #1976d2;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin: 8px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
   }
 
   label.grade-button:hover {
-      background-color: #0a1e33;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   button.grade-button {
-      font-size: 18px;
-      color: white;
-      background-color: #1976d2;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      margin: 8px;
-      padding: 8px 8px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
+    font-size: 18px;
+    color: white;
+    background-color: #1976d2;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin: 8px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
   }
 
   button.grade-button:hover {
-      background-color: #0a1e33;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   button.grade-button-gray {
-      font-size: 18px;
-      color: white;
-      background-color: #ccc;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      padding: 7px 15px;
-      margin: 0 2px 10px;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
+    font-size: 18px;
+    color: white;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
   }
 
   button.grade-button-gray:hover {
-      background-color: #0a1e33;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   button.toggle-button {
-      font-size: 18px;
-      color: black;
-      background-color: #ccc;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      padding: 7px 15px;
-      margin: 0 2px 10px;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
   }
 
   .toggle-button:before {
-      background-color: #1976d2;
-      color: white;
+    background-color: #1976d2;
+    color: white;
   }
 
   button.toggle-button-off {
-      font-size: 18px;
-      color: black;
-      background-color: #ccc;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      padding: 7px 15px;
-      margin: 0 2px 10px;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-      width: 100%;
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
   }
 
   button.toggle-button-on {
-      font-size: 18px;
-      background-color: #1976d2;
-      color: white;
-      border-radius: 12px;
-      border: 3px solid #0a1e33;
-      padding: 7px 15px;
-      margin: 0 2px 10px;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-      width: 100%;
+    font-size: 18px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 12px;
+    border: 3px solid #0a1e33;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
   }
 
   .select-avatar {
-      opacity: 1;
-      display: block;
-      width: 100%;
-      height: auto;
-      transition: .5s ease;
-      backface-visibility: hidden;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
   }
 
   .middle {
-      transition: .5s ease;
-      opacity: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%)
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
   }
 
   .select-middle {
-      transition: .5s ease;
-      opacity: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      opacity: 1;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity: 1;
   }
 
   .avatar-container:hover .select-avatar {
-      opacity: 0.3;
+    opacity: 0.3;
   }
 
   .avatar-container:hover .middle {
-      opacity: 1;
+    opacity: 1;
   }
 
   .avatar-container:hover .grade-button {
-      background-color: #0a1e33;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);   
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   progress {
-      border-radius: 10px;
+    border-radius: 10px;
   }
 
   progress::-webkit-progress-bar {
-      border-radius: 10px;
-      background-color: lightgray;
-      border: 1px solid darkslategrey;
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 1px solid darkslategrey;
   }
 
   progress::-webkit-progress-value {
-      border-radius: 10px;
-      background-color: limegreen;
-      /* border: 2px solid black; */
+    border-radius: 10px;
+    background-color: limegreen;
+    /* border: 2px solid black; */
   }
 
   progress::-moz-progress-bar {
-      border-radius: 10px;
+    border-radius: 10px;
   }
 
   .circle-link {
-      height: 40px;
-      width: 40px;
-      border-radius: 40px;
-      margin: 8px;
-      background-color: white;
-      border: 1px solid #eeeeee;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      transition: 1s ease-out;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
   }
 
   .circle-link:hover {
-      transform: translateY(-0.25rem);
-      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
   footer {
-      margin-top: 8px;
-      display: flex;
-      align-items: center;
-      line-height: 20px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
   }
 
   footer a {
-      display: flex;
-      align-items: center;
+    display: flex;
+    align-items: center;
   }
 
   .github-star-badge {
-      color: #24292e;
-      display: flex;
-      align-items: center;
-      font-size: 12px;
-      padding: 3px 10px;
-      border: 1px solid rgba(27, 31, 35, .2);
-      border-radius: 3px;
-      background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-      margin-left: 4px;
-      font-weight: 600;
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27, 31, 35, .2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
   }
 
   .github-star-badge:hover {
-      background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-      border-color: rgba(27, 31, 35, .35);
-      background-position: -.5em;
+    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+    border-color: rgba(27, 31, 35, .35);
+    background-position: -.5em;
   }
 
   .github-star-badge .material-icons {
-      height: 16px;
-      width: 16px;
-      margin-right: 4px;
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
   }
 
   /* The switch - the box around the slider */
   .switch {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: auto;
-      height: auto;
-      max-width: 250px;
-      max-height: 75px;
-      transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 75px;
+    transition: all 0.2s ease-in-out;
   }
 
   /* Hide default HTML checkbox */
   .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
   }
 
   input:checked+.toggle-button-on {
-      background-color: #1976d2;
-      color: white
+    background-color: #1976d2;
+    color: white
   }
 
   input:hover+.toggle-button-on {
-      background-color: #0a1e33;
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    background-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   input:checked+.toggle-button-off {
-      background-color: #ccc;
-      color: black;
+    background-color: #ccc;
+    color: black;
   }
 
   input:hover+.toggle-button-off {
-      background-color: #0a1e33;
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    background-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
 
-      .card-container>*:not(.circle-link),
-      .terminal {
-          /* width: 100%; */
-      }
+    .card-container>*:not(.circle-link),
+    .terminal {
+      /* width: 100%; */
+    }
 
-      .card:not(.highlight-card) {
-          /* height: 16px; */
-          margin: 8px 0;
-      }
+    .card:not(.highlight-card) {
+      /* height: 16px; */
+      margin: 8px 0;
+    }
 
-      .card.highlight-card span {
-          margin-left: 72px;
-      }
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
 
   }
 </style>
@@ -536,10 +536,12 @@
           style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
           <h2 *ngIf="screenWidth > mobileWidth"
             style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 24.5px; line-height: 30px; color: slategrey">
-            <b>{{selected_topic}}:</b> {{selected_subtopic}} </h2>
+            <b>{{selected_topic}}:</b> {{selected_subtopic}}
+          </h2>
           <h2 *ngIf="screenWidth <= mobileWidth"
             style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px; color: slategrey">
-            <b>{{selected_topic}}:</b> {{selected_subtopic}} </h2>
+            <b>{{selected_topic}}:</b> {{selected_subtopic}}
+          </h2>
           <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
             style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &star;
           </span>
@@ -551,12 +553,15 @@
         <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px"> <a>#{{subtopic_problem_number}}
             of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
         <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px">
-          <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
+          <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a>
+        </h3>
         <br />
         <hr *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="width: max(50%, 250px)">
         <br *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" />
-        <h3 *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="margin: auto 0; color: slategrey; font-size: 18px"> Addressed Curriculum Standards:</h3>
-        <section *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="height: auto; width: 100%; display: flex; justify-content: center">
+        <h3 *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0"
+          style="margin: auto 0; color: slategrey; font-size: 18px"> Addressed Curriculum Standards:</h3>
+        <section *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0"
+          style="height: auto; width: 100%; display: flex; justify-content: center">
           <div *ngFor="let prob of subtopic_search_dump | keyvalue"
             style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
             <div *ngIf="subtopic_problem_number == +prob.key">
@@ -592,10 +597,13 @@
                 {{supp_st_dump[supp].Directions}}
               </h3>
               <br />
-              <h3 *ngIf="supp_st_dump[supp].Context != ''" style="font-size: 18px"> <i
-                  style="font-weight: 400">{{supp_st_dump[supp].Context}}</i> </h3>
+              <h3 *ngIf="supp_st_dump[supp].Context != '' && !supp_st_dump[supp].Context.endsWith('.jpg')"
+                style="font-size: 18px"> <i style="font-weight: 400">{{supp_st_dump[supp].Context}}</i> </h3>
+              <img *ngIf="supp_st_dump[supp].Context != ''&& supp_st_dump[supp].Context.endsWith('.jpg')"
+                src="./assets/{{supp_st_dump[supp].Context}}" style="max-width: 300px; margin: auto">
               <h2 *ngIf="supp_st_dump[supp].Title != ''"> {{supp_st_dump[supp].Title}} </h2>
-              <h3 *ngIf="supp_st_dump[supp].Subtitle != ''" style="font-size: 18px"> {{supp_st_dump[supp].Subtitle}} </h3>
+              <h3 *ngIf="supp_st_dump[supp].Subtitle != ''" style="font-size: 18px"> {{supp_st_dump[supp].Subtitle}}
+              </h3>
               <h3 *ngIf="supp_st_dump[supp].Author != ''" style="font-size: 18px"> <i
                   style="font-weight: 400">{{supp_st_dump[supp].Author}}</i> </h3>
               <br />
@@ -606,12 +614,17 @@
                     style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
                     {{supp_st_content_labels[prob.value.SuppContent.indexOf(supp)][supp_st_content_list[prob.value.SuppContent.indexOf(supp)].indexOf(block)]}}
                   </h3>
+                  <div *ngIf="block.startsWith(':box:')"
+                    style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      {{block.slice(5)}} </h3>
+                  </div>
                   <h3
-                    *ngIf="!block.endsWith('.jpg') && (supp_st_content_labels[prob.value.SuppContent.indexOf(supp)][supp_st_content_list[prob.value.SuppContent.indexOf(supp)].indexOf(block)] != '' || supp_st_dump[supp].LabelType == 'L')"
+                    *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && (supp_st_content_labels[prob.value.SuppContent.indexOf(supp)][supp_st_content_list[prob.value.SuppContent.indexOf(supp)].indexOf(block)] != '' || supp_st_dump[supp].LabelType == 'L')"
                     style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
                     {{block}} </h3>
                   <h3
-                    *ngIf="!block.endsWith('.jpg') && supp_st_content_labels[prob.value.SuppContent.indexOf(supp)][supp_st_content_list[prob.value.SuppContent.indexOf(supp)].indexOf(block)] == '' && supp_st_dump[supp].LabelType == 'P'"
+                    *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && supp_st_content_labels[prob.value.SuppContent.indexOf(supp)][supp_st_content_list[prob.value.SuppContent.indexOf(supp)].indexOf(block)] == '' && supp_st_dump[supp].LabelType == 'P'"
                     style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
                     <b>{{block}}</b>
                   </h3>
@@ -629,14 +642,15 @@
       style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
       #subtopicCard>
       <br />
-      <section *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0" style="height: auto; width: 100%; display: flex; justify-content: center">
+      <section *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0"
+        style="height: auto; width: 100%; display: flex; justify-content: center">
         <label class="switch" style="padding: 0 10px">
           <input type="checkbox" value="{{expand_supp}}">
-          <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp"
-            class="toggle-button-on"> <b> Show Supplement(s) </b>
+          <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
+              Supplement(s) </b>
           </button>
-          <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp"
-            class="toggle-button-off"> <b> Hide Supplement(s) </b>
+          <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp" class="toggle-button-off"> <b> Hide
+              Supplement(s) </b>
           </button>
         </label>
       </section>
@@ -645,10 +659,13 @@
         <div *ngFor="let prob of subtopic_search_dump | keyvalue">
           <div *ngIf="subtopic_problem_number == +prob.key">
             <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
-              <div *ngIf="block.startsWith(':box:')" style="border: 1px solid black; width: fit-content; margin: auto; padding: 5px">
-                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left"> {{block.slice(5)}} </h3>
+              <div *ngIf="block.startsWith(':box:')"
+                style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
+                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left"> {{block.slice(5)}}
+                </h3>
               </div>
-              <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:')" style="display: block; white-space: pre-wrap; font-size: 18px"> {{block}} </h3>
+              <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:')"
+                style="display: block; white-space: pre-wrap; font-size: 18px"> {{block}} </h3>
               <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
             </div>
           </div>
@@ -903,8 +920,9 @@
                 <section
                   style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
                   <h3 style="width: min(25%, 400px); text-align: center"> State: </h3>
-                  <select value="{{authService.userData.state}}" (change)="edit_student('state', this.newUserState.value)"
-                  style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
+                  <select value="{{authService.userData.state}}"
+                    (change)="edit_student('state', this.newUserState.value)"
+                    style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
                     #newUserState>
                     <option disabled selected value> -- select a state -- </option>
                     <option value="Alabama">Alabama</option>
@@ -966,20 +984,20 @@
       </div>
       <br />
       <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
-          <button *ngIf="authService.userData as user" (click)="create_student(); toggle_create_student()"
-              class="grade-button" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
-                  <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
-              </div>
-              <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
-          </button>
-          <button *ngIf="authService.userData as user" (click)="toggle_create_student()" class="grade-button"
-              style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
-                  <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
-              </div>
-              <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
-          </button>
+        <button *ngIf="authService.userData as user" (click)="create_student(); toggle_create_student()"
+          class="grade-button" style="display: flex; flex-direction: row; align-items: center">
+          <div style="margin: 0 5px">
+            <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+          </div>
+          <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
+        </button>
+        <button *ngIf="authService.userData as user" (click)="toggle_create_student()" class="grade-button"
+          style="display: flex; flex-direction: row; align-items: center">
+          <div style="margin: 0 5px">
+            <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+          </div>
+          <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
+        </button>
       </section>
     </div>
     <br />
@@ -998,18 +1016,20 @@
                 <section
                   style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
                   <h3 style="width: min(25%, 400px); text-align: center"> Class Name: </h3>
-                  <input (change)="edit_class('classes/' + this.class_uid + '/displayName', this.newClassName.value); edit_class('classes/' + this.class_uid + '/grade', this.newClassGrade.value); edit_class('classes/' + this.class_uid + '/subject', this.newClassSubject.value); edit_class('classes/' + this.class_uid + '/state', this.newClassState.value)" type="text" inputmode="text"
-                    maxlength="40"
+                  <input
+                    (change)="edit_class('classes/' + this.class_uid + '/displayName', this.newClassName.value); edit_class('classes/' + this.class_uid + '/grade', this.newClassGrade.value); edit_class('classes/' + this.class_uid + '/subject', this.newClassSubject.value); edit_class('classes/' + this.class_uid + '/state', this.newClassState.value)"
+                    type="text" inputmode="text" maxlength="40"
                     style="margin: auto 10px; padding-left: 10px; width: 59%; height: 40px; font-size: 17px; font-weight: 600; text-align: left"
                     #newClassName />
                 </section>
                 <section
                   style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
                   <h3 style="width: min(25%, 400px); text-align: center"> Class Overview: </h3>
-                  <textarea (change)="edit_class('classes/' + this.class_uid + '/description', this.newClassOverview.value); edit_class('classes/' + this.class_uid + '/grade', this.newClassGrade.value); edit_class('classes/' + this.class_uid + '/subject', this.newClassSubject.value); edit_class('classes/' + this.class_uid + '/state', this.newClassState.value)" rows="5"
-                    maxlength="400"
+                  <textarea
+                    (change)="edit_class('classes/' + this.class_uid + '/description', this.newClassOverview.value); edit_class('classes/' + this.class_uid + '/grade', this.newClassGrade.value); edit_class('classes/' + this.class_uid + '/subject', this.newClassSubject.value); edit_class('classes/' + this.class_uid + '/state', this.newClassState.value)"
+                    rows="5" maxlength="400"
                     style="margin: auto 10px auto 0; padding-top: 10px; padding-left: 10px; width: 59%; height: 100px; font-size: 16px; line-height: 18px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                    #newClassOverview > </textarea>
+                    #newClassOverview> </textarea>
                 </section>
               </div>
               <br />
@@ -1038,24 +1058,25 @@
                   </select>
                 </section>
                 <section
-                    style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
-                    <h3 style="width: min(25%, 400px); text-align: center"> Subject: </h3>
-                    <select value="{{authService.userData.subject}}"
-                        (change)="edit_class('classes/' + this.class_uid + '/subject', this.newClassSubject.value)"
-                        style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
-                        #newClassSubject>
-                        <option disabled selected value> -- select a subject -- </option>
-                        <option value="English Language">English Language</option>
-                        <option value="Math">Math</option>
-                        <option value="Reading">Reading</option>
-                        <option value="Science">Science</option>
-                        <option value="Writing">Writing</option>
-                    </select>
+                  style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
+                  <h3 style="width: min(25%, 400px); text-align: center"> Subject: </h3>
+                  <select value="{{authService.userData.subject}}"
+                    (change)="edit_class('classes/' + this.class_uid + '/subject', this.newClassSubject.value)"
+                    style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
+                    #newClassSubject>
+                    <option disabled selected value> -- select a subject -- </option>
+                    <option value="English Language">English Language</option>
+                    <option value="Math">Math</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Science">Science</option>
+                    <option value="Writing">Writing</option>
+                  </select>
                 </section>
                 <section
                   style="margin: auto; height: auto; max-height: 150px; max-width: 600px; display: flex; justify-content: space-between; padding: 5px; align-items: center">
                   <h3 style="width: min(25%, 400px); text-align: center"> State: </h3>
-                  <select value="{{authService.userData.state}}" (change)="edit_class('classes/' + this.class_uid + '/state', this.newClassState.value)"
+                  <select value="{{authService.userData.state}}"
+                    (change)="edit_class('classes/' + this.class_uid + '/state', this.newClassState.value)"
                     style="margin: auto 10px auto 0; padding-left: 10px; width: calc(59% + 15px); height: 40px; font-size: 16px; font-weight: 400; text-align: center"
                     #newClassState>
                     <option disabled selected value> -- select a state -- </option>
@@ -1118,34 +1139,37 @@
       </div>
       <br />
       <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
-          <button *ngIf="authService.userData as user" (click)="create_class()"
-              class="grade-button" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
-                  <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
-              </div>
-              <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
-          </button>
-          <button *ngIf="authService.userData as user" (click)="toggle_create_class()" class="grade-button"
-              style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
-                  <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
-              </div>
-              <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
-          </button>
+        <button *ngIf="authService.userData as user" (click)="create_class()" class="grade-button"
+          style="display: flex; flex-direction: row; align-items: center">
+          <div style="margin: 0 5px">
+            <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+          </div>
+          <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
+        </button>
+        <button *ngIf="authService.userData as user" (click)="toggle_create_class()" class="grade-button"
+          style="display: flex; flex-direction: row; align-items: center">
+          <div style="margin: 0 5px">
+            <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+          </div>
+          <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
+        </button>
       </section>
     </div>
     <br />
   </div>
   <br *ngIf="create_s || create_c" />
-  <div *ngIf="file_source == '' && standard_id =='' && !create_s && !create_c && data_loaded" class="content" role="main" style="margin-bottom: 0px;">
+  <div *ngIf="file_source == '' && standard_id =='' && !create_s && !create_c && data_loaded" class="content"
+    role="main" style="margin-bottom: 0px;">
     <br />
-    <div *ngIf="(this.authService.userData.role != 'Student' && this.authService.userData.role != 'Parent') || this.has_classes"
+    <div
+      *ngIf="(this.authService.userData.role != 'Student' && this.authService.userData.role != 'Parent') || this.has_classes"
       class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2 #yourStudents> My Classes </h2>
       <br />
-      <h3 *ngIf="my_class_metadata.length == 0" style="font-size: 18px"> You haven't created any classes under this account yet. </h3>
+      <h3 *ngIf="my_class_metadata.length == 0" style="font-size: 18px"> You haven't created any classes under this
+        account yet. </h3>
       <div *ngIf="my_class_metadata.length != 0" class="card-container" style="max-width: 100%">
         <div *ngFor="let clss of my_class_metadata" class="card card-medium"
           style="display: block; text-align: center; min-width: 40%; max-width: 500px; max-height: 300px; width: auto; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
@@ -1154,11 +1178,14 @@
             'Class'}}</h2>
           <h4> {{clss.description}} </h4>
           <hr style="width: 50%" />
-          <div style="display: block; text-align: center; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+          <div
+            style="display: block; text-align: center; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
             <div style="align-items: center; text-align: center; margin-right: 10px">
-              <section style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
+              <section
+                style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
                 <div style="margin: 0 5px">
-                  <img src="{{this.authService.searchUserId(clss.teacher).photoURL}}" style="padding: 5px 0 0; height: 35px; width: 35px; border-radius: 50%">
+                  <img src="{{this.authService.searchUserId(clss.teacher).photoURL}}"
+                    style="padding: 5px 0 0; height: 35px; width: 35px; border-radius: 50%">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-weight: 500; font-size: 16px">
                   <h3 style="padding-bottom: 10px"> {{this.authService.searchUserId(clss.teacher).displayName}} </h3>
@@ -1166,7 +1193,8 @@
               </section>
               <label class="switch">
                 <input type="checkbox">
-                <button (click)="select_class(clss.uid)" class="toggle-button-off" style="margin: auto; margin-top: 10px; padding: 10px 5px; width: auto">
+                <button (click)="select_class(clss.uid)" class="toggle-button-off"
+                  style="margin: auto; margin-top: 10px; padding: 10px 5px; width: auto">
                   <b> Enter Classroom </b>
                 </button>
               </label>
@@ -1218,11 +1246,13 @@
             <label class="switch">
               <input type="checkbox">
               <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud != stud.uid"
-                (click)="select_student(stud.uid)" class="toggle-button-off" style="margin-top: 10px; padding: 10px 5px; width: auto">
+                (click)="select_student(stud.uid)" class="toggle-button-off"
+                style="margin-top: 10px; padding: 10px 5px; width: auto">
                 <b> Exams </b>
               </button>
               <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud == stud.uid"
-                (click)="select_student(stud.uid)" class="toggle-button-on" style="margin-top: 10px; padding: 10px 5px; width: auto">
+                (click)="select_student(stud.uid)" class="toggle-button-on"
+                style="margin-top: 10px; padding: 10px 5px; width: auto">
                 <b> Exams </b>
               </button>
             </label>
@@ -1290,7 +1320,8 @@
           </h4>
           <label class="switch">
             <input type="checkbox" style="margin: auto; margin-top: 25px">
-            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto" routerLink="/exam/{{exm}}" routerLinkActive="active">
+            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto"
+              routerLink="/exam/{{exm}}" routerLinkActive="active">
               <b> Resume Exam </b>
             </button>
           </label>
@@ -1312,7 +1343,8 @@
           </h4>
           <label class="switch" style="margin: auto; margin-top: 25px">
             <input type="checkbox">
-            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto" routerLink="/exam/{{exm}}" routerLinkActive="active">
+            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto"
+              routerLink="/exam/{{exm}}" routerLinkActive="active">
               <b> Resume Exam </b>
             </button>
           </label>
