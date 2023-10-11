@@ -67,6 +67,7 @@ import * as TX19G4MProblems from "src/assets/problems/TX19G4M/TX19G4M-problems.j
 import * as TX18G4MProblems from "src/assets/problems/TX18G4M/TX18G4M-problems.json";
 import * as TX17G4MProblems from "src/assets/problems/TX17G4M/TX17G4M-problems.json";
 import * as TX22G5MProblems from "src/assets/problems/TX22G5M/TX22G5M-problems.json";
+import * as TX22G5RProblems from "src/assets/problems/TX22G5R/TX22G5R-problems.json";
 import * as TX21G5MProblems from "src/assets/problems/TX21G5M/TX21G5M-problems.json";
 import * as TX19G5MProblems from "src/assets/problems/TX19G5M/TX19G5M-problems.json";
 import * as TX18G5MProblems from "src/assets/problems/TX18G5M/TX18G5M-problems.json";
@@ -216,6 +217,7 @@ export class ProblemsComponent implements OnInit {
   TX18G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G4MProblems;
   TX17G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G4MProblems;
   TX22G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G5MProblems;
+  TX22G5R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G5RProblems;
   TX21G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G5MProblems;
   TX19G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G5MProblems;
   TX18G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G5MProblems;
@@ -315,6 +317,7 @@ export class ProblemsComponent implements OnInit {
     "TX18G4M": this.TX18G4M_exam_dump,
     "TX17G4M": this.TX17G4M_exam_dump,
     "TX22G5M": this.TX22G5M_exam_dump,
+    "TX22G5R": this.TX22G5R_exam_dump,
     "TX21G5M": this.TX21G5M_exam_dump,
     "TX19G5M": this.TX19G5M_exam_dump,
     "TX18G5M": this.TX18G5M_exam_dump,
@@ -350,7 +353,7 @@ export class ProblemsComponent implements OnInit {
   dump_count = 0;
 
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Directions': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
-  online_set = ["PA22G3M", "PA21G3M", "PA19G3M", "PA18G3M", "PA16G3M", "PA15G3M", "PA22G4M", "PA21G4M", "PA19G4M", "PA18G4M", "PA16G4M", "PA15G4M", "PA22G4S", "PA21G4S", "PA19G4S", "PA18G4S", "PA16G4S", "PA15G4S", "PA22G5M", "PA21G5M", "PA19G5M", "PA18G5M", "PA16G5M", "PA15G5M", "PA22G6M", "PA21G6M", "PA19G6M", "PA18G6M", "PA16G6M", "PA15G6M", "PA22G7M", "PA21G7M", "PA19G7M", "PA18G7M", "PA16G7M", "PA15G7M", "PA22G8M", "PA21G8M", "PA19G8M", "PA18G8M", "PA16G8M", "PA15G8M", "PA22G8S", "PA21G8S", "PA19G8S", "PA18G8S", "PA16G8S", "PA15G8S", "TX22G3M", "TX22G3R", "TX21G3M", "TX21G3R", "TX19G3M", "TX19G3R", "TX18G3M", "TX18G3R", "TX17G3M", "TX17G3R", "TX22G4M", "TX22G4R", "TX21G4M", "TX21G4R", "TX19G4M", "TX18G4M", "TX17G4M", "TX22G5M", "TX21G5M", "TX19G5M", "TX18G5M", "TX17G5M", "TX22G5S", "TX21G5S", "TX19G5S", "TX18G5S", "TX22G6M", "TX21G6M", "TX19G6M", "TX18G6M", "TX17G6M", "TX22G7M", "TX21G7M", "TX19G7M", "TX18G7M", "TX17G7M", "TX22G8M", "TX21G8M", "TX19G8M", "TX18G8M", "TX17G8M", "TX22G8S", "TX21G8S", "TX19G8S", "TX18G8S", "TX22G8SS", "TX21G8SS", "TX19G8SS", "TX18G8SS"];
+  online_set = ["PA22G3M", "PA21G3M", "PA19G3M", "PA18G3M", "PA16G3M", "PA15G3M", "PA22G4M", "PA21G4M", "PA19G4M", "PA18G4M", "PA16G4M", "PA15G4M", "PA22G4S", "PA21G4S", "PA19G4S", "PA18G4S", "PA16G4S", "PA15G4S", "PA22G5M", "PA21G5M", "PA19G5M", "PA18G5M", "PA16G5M", "PA15G5M", "PA22G6M", "PA21G6M", "PA19G6M", "PA18G6M", "PA16G6M", "PA15G6M", "PA22G7M", "PA21G7M", "PA19G7M", "PA18G7M", "PA16G7M", "PA15G7M", "PA22G8M", "PA21G8M", "PA19G8M", "PA18G8M", "PA16G8M", "PA15G8M", "PA22G8S", "PA21G8S", "PA19G8S", "PA18G8S", "PA16G8S", "PA15G8S", "TX22G3M", "TX22G3R", "TX21G3M", "TX21G3R", "TX19G3M", "TX19G3R", "TX18G3M", "TX18G3R", "TX17G3M", "TX17G3R", "TX22G4M", "TX22G4R", "TX21G4M", "TX21G4R", "TX19G4M", "TX18G4M", "TX17G4M", "TX22G5M", "TX22G5R", "TX21G5M", "TX19G5M", "TX18G5M", "TX17G5M", "TX22G5S", "TX21G5S", "TX19G5S", "TX18G5S", "TX22G6M", "TX21G6M", "TX19G6M", "TX18G6M", "TX17G6M", "TX22G7M", "TX21G7M", "TX19G7M", "TX18G7M", "TX17G7M", "TX22G8M", "TX21G8M", "TX19G8M", "TX18G8M", "TX17G8M", "TX22G8S", "TX21G8S", "TX19G8S", "TX18G8S", "TX22G8SS", "TX21G8SS", "TX19G8SS", "TX18G8SS"];
   favorite_std_set: string[][] = [];
   filtered_set: string[] = this.online_set;
   filtered_exam_num = 0;
@@ -1745,6 +1748,24 @@ export class ProblemsComponent implements OnInit {
     if (this.filtered_set.includes('TX22G5M')) {
       for (const [num, value] of Object.entries(this.TX22G5M_exam_dump)) {
         if (value.Number <= 36) {
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+                this.dump_count += 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    if (this.filtered_set.includes('TX22G5R')) {
+      for (const [num, value] of Object.entries(this.TX22G5R_exam_dump)) {
+        if (value.Number <= 38) {
           if (this.topic_filters.length == 0) {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
