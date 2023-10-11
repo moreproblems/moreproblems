@@ -113,12 +113,12 @@
         "SuppContent": [],
         "Content": [
             "Four numbers are shown below.",
-            "1,991 \t 1,199 \t 1,919 \t 1,999",
+            "1,991\t1,199\t1,919\t1,999",
             "Which list shows the numbers in order from greatest to least?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1,999 \t 1,991 \t 1,199 \t 1,919",
+                "Choice": "1,999\t1,991\t1,199\t1,919",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Compares the tens place but not the hundreds place in the last two numbers in the answer choice.",
@@ -126,7 +126,7 @@
                 }
             },
             "B": {
-                "Choice": "1,991 \t 1,999 \t 1,919 \t 1,199",
+                "Choice": "1,991\t1,999\t1,919\t1,199",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Makes an error comparing the ones place in the first two numbers in the answer choice.",
@@ -134,7 +134,7 @@
                 }
             },
             "C": {
-                "Choice": "1,999 \t 1,991 \t 1,919 \t 1,199",
+                "Choice": "1,999\t1,991\t1,919\t1,199",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Orders the numbers by comparing the digits in the thousands place, then the digits in the hundreds place, then the digits in the tens place, and then the digits in the ones place.",
@@ -142,7 +142,7 @@
                 }
             },
             "D": {
-                "Choice": "1,999 \t 1,919 \t 1,991 \t 1,199",
+                "Choice": "1,999\t1,919\t1,991\t1,199",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Makes an error in the tens place for the two middle numbers in the answer choice.",
