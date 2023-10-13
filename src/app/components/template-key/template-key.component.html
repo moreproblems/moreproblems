@@ -550,10 +550,13 @@
                 {{supp_st_dump[supp].Directions}}
               </h3>
               <br />
-              <h3 *ngIf="supp_st_dump[supp].Context != '' && !supp_st_dump[supp].Context.endsWith('.jpg')"
-                style="font-size: 18px"> <i style="font-weight: 400">{{supp_st_dump[supp].Context}}</i> </h3>
-              <img *ngIf="supp_st_dump[supp].Context != ''&& supp_st_dump[supp].Context.endsWith('.jpg')"
-                src="./assets/{{supp_st_dump[supp].Context}}" style="max-width: 300px; margin: auto">
+              <div *ngFor="let block of supp_st_dump[supp].Context"
+                style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                <h3 *ngIf="!block.endsWith('.jpg')"
+                  style="font-size: 18px"> <i style="font-weight: 400">{{block}}</i> </h3>
+                <img *ngIf="block.endsWith('.jpg')"
+                  src="./assets/{{block}}" style="max-width: 300px; margin: auto">
+              </div>
               <h2 *ngIf="supp_st_dump[supp].Title != ''"> {{supp_st_dump[supp].Title}} </h2>
               <h3 *ngIf="supp_st_dump[supp].Subtitle != ''" style="font-size: 18px"> {{supp_st_dump[supp].Subtitle}}
               </h3>
@@ -803,10 +806,13 @@
                   {{supp_dump[supp].Directions}}
                 </h3>
                 <br />
-                <h3 *ngIf="supp_dump[supp].Context != '' && !supp_dump[supp].Context.endsWith('.jpg')"
-                  style="font-size: 18px"> <i style="font-weight: 400">{{supp_dump[supp].Context}}</i> </h3>
-                <img *ngIf="supp_dump[supp].Context != ''&& supp_dump[supp].Context.endsWith('.jpg')"
-                  src="./assets/{{supp_dump[supp].Context}}" style="max-width: 300px; margin: auto">
+                <div *ngFor="let block of supp_dump[supp].Context"
+                  style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                  <h3 *ngIf="!block.endsWith('.jpg')"
+                    style="font-size: 18px"> <i style="font-weight: 400">{{block}}</i> </h3>
+                  <img *ngIf="block.endsWith('.jpg')"
+                    src="./assets/{{block}}" style="max-width: 300px; margin: auto">
+                </div>
                 <h2 *ngIf="supp_dump[supp].Title != ''"> {{supp_dump[supp].Title}} </h2>
                 <h3 *ngIf="supp_dump[supp].Subtitle != ''" style="font-size: 18px"> {{supp_dump[supp].Subtitle}} </h3>
                 <h3 *ngIf="supp_dump[supp].Author != ''" style="font-size: 18px"> <i
