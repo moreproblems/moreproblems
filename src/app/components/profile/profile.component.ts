@@ -91,7 +91,9 @@ import * as TX19G6MProblems from "src/assets/problems/TX19G6M/TX19G6M-problems.j
 import * as TX18G6MProblems from "src/assets/problems/TX18G6M/TX18G6M-problems.json";
 import * as TX17G6MProblems from "src/assets/problems/TX17G6M/TX17G6M-problems.json";
 import * as TX22G7MProblems from "src/assets/problems/TX22G7M/TX22G7M-problems.json";
+import * as TX22G7RProblems from "src/assets/problems/TX22G7R/TX22G7R-problems.json";
 import * as TX21G7MProblems from "src/assets/problems/TX21G7M/TX21G7M-problems.json";
+import * as TX21G7RProblems from "src/assets/problems/TX21G7R/TX21G7R-problems.json";
 import * as TX19G7MProblems from "src/assets/problems/TX19G7M/TX19G7M-problems.json";
 import * as TX18G7MProblems from "src/assets/problems/TX18G7M/TX18G7M-problems.json";
 import * as TX17G7MProblems from "src/assets/problems/TX17G7M/TX17G7M-problems.json";
@@ -282,7 +284,9 @@ export class ProfileComponent implements OnInit {
   TX18G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G6MProblems;
   TX17G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G6MProblems;
   TX22G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G7MProblems;
+  TX22G7R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX22G7RProblems;
   TX21G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G7MProblems;
+  TX21G7R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX21G7RProblems;
   TX19G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX19G7MProblems;
   TX18G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX18G7MProblems;
   TX17G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = TX17G7MProblems;
@@ -384,7 +388,9 @@ export class ProfileComponent implements OnInit {
     "TX18G6M": this.TX18G6M_exam_dump,
     "TX17G6M": this.TX17G6M_exam_dump,
     "TX22G7M": this.TX22G7M_exam_dump,
+    "TX22G7R": this.TX22G7R_exam_dump,
     "TX21G7M": this.TX21G7M_exam_dump,
+    "TX21G7R": this.TX21G7R_exam_dump,
     "TX19G7M": this.TX19G7M_exam_dump,
     "TX18G7M": this.TX18G7M_exam_dump,
     "TX17G7M": this.TX17G7M_exam_dump,
