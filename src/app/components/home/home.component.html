@@ -611,27 +611,36 @@
                   style="font-weight: 400">{{supp_st_dump[supp].Author}}</i> </h3>
               <br />
               <section style="width:fit-content">
-                <div *ngFor="let block of supp_st_content_list[prob.value.SuppContent.indexOf(supp)]"
+                <div *ngFor="let block of supp_st_dump[supp].Content"
                   style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
-                  <h3 *ngIf="!block.endsWith('.jpg')"
+                  <h3 *ngIf="!block[1].endsWith('.jpg')"
                     style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
-                    {{supp_st_content_labels[prob.value.SuppContent.indexOf(supp)][supp_st_content_list[prob.value.SuppContent.indexOf(supp)].indexOf(block)]}}
+                    {{block[0]}}
                   </h3>
-                  <div *ngIf="block.startsWith(':box:')"
+                  <div *ngIf="block[1].startsWith(':box:')"
                     style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
                     <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
-                      {{block.slice(5)}} </h3>
+                      {{block[1].slice(5)}} </h3>
                   </div>
                   <h3
-                    *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && (supp_st_content_labels[prob.value.SuppContent.indexOf(supp)][supp_st_content_list[prob.value.SuppContent.indexOf(supp)].indexOf(block)] != '' || supp_st_dump[supp].LabelType == 'L')"
+                    *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_st_dump[supp].LabelType == 'L')"
                     style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                    {{block}} </h3>
+                    {{block[1]}} </h3>
                   <h3
-                    *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && supp_st_content_labels[prob.value.SuppContent.indexOf(supp)][supp_st_content_list[prob.value.SuppContent.indexOf(supp)].indexOf(block)] == '' && supp_st_dump[supp].LabelType == 'P'"
+                    *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] == '' && supp_st_dump[supp].LabelType == 'P'"
                     style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                    <b>{{block}}</b>
+                    <b>{{block[1]}}</b>
                   </h3>
-                  <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px; margin: auto">
+                  <img *ngIf="block[1].endsWith('.jpg')" src="./assets/{{block[1]}}" style="max-width: 300px; margin: auto">
+                </div>
+                <br *ngIf="supp_st_dump[supp].References.length > 0"/> 
+                <hr *ngIf="supp_st_dump[supp].References.length > 0" style="width: 95%">
+                <div *ngFor="let block of supp_st_dump[supp].References"
+                  style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                  <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
+                    {{block[0]}} </h3>
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
+                    {{block[1]}} </h3>
                 </div>
               </section>
             </div>

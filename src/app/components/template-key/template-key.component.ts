@@ -373,12 +373,6 @@ export class TemplateKeyComponent implements OnInit {
     exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } = {};
     supp_dump: any = {};
     supp_st_dump: any = {};
-    supp_dump_list: string[] = [];
-    supp_dump_labels: string[] = [];
-    supp_content_list: string[][] = [];
-    supp_content_labels: string[][] = [];
-    supp_st_content_list: string[][] = [];
-    supp_st_content_labels: string[][] = [];
 
     problem_number = 1;
     problem_selection = '';
@@ -410,34 +404,18 @@ export class TemplateKeyComponent implements OnInit {
     }
 
     read_supp_json(path: string) {
-        this.supp_dump_list = [];
-        this.supp_dump_labels = [];
         this.http.get("./assets/" + path).subscribe(res => {
             console.log(res);
             console.log(JSON.stringify(res));
             this.supp_dump[path] = res;
-            for (let val of this.supp_dump[path].Content) {
-                this.supp_dump_list.push(val[1]);
-                this.supp_dump_labels.push(val[0]);
-            }
-            this.supp_content_list.push(this.supp_dump_list);
-            this.supp_content_labels.push(this.supp_dump_labels);
         });
     }
 
     read_supp_st_json(path: string) {
-      this.supp_dump_list = [];
-      this.supp_dump_labels = [];
       this.http.get("./assets/" + path).subscribe(res => {
         console.log(res);
         console.log(JSON.stringify(res));
         this.supp_st_dump[path] = res;
-        for (let val of this.supp_st_dump[path].Content) {
-          this.supp_dump_list.push(val[1]);
-          this.supp_dump_labels.push(val[0]);
-        }
-        this.supp_st_content_list.push(this.supp_dump_list);
-        this.supp_st_content_labels.push(this.supp_dump_labels);
       });
     }
 
@@ -582,8 +560,6 @@ export class TemplateKeyComponent implements OnInit {
             this.problem_attempts = 0;
             this.attempt_path = [];
             this.attempt_response = '';
-            this.supp_content_list = [];
-            this.supp_content_labels = [];
             for (let supp of this.exam_dump[this.problem_number].SuppContent) {
                 setTimeout(() => {
                     this.read_supp_json(supp);
@@ -605,8 +581,6 @@ export class TemplateKeyComponent implements OnInit {
             this.selected_subtopic = '';
         }
         else {
-            this.supp_st_content_list = [];
-            this.supp_st_content_labels = [];
             for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
               setTimeout(() => {
                 this.read_supp_st_json(supp);
@@ -622,8 +596,6 @@ export class TemplateKeyComponent implements OnInit {
             this.problem_attempts = 0;
             this.attempt_path = [];
             this.attempt_response = '';
-            this.supp_content_list = [];
-            this.supp_content_labels = [];
             for (let supp of this.exam_dump[this.problem_number].SuppContent) {
                 setTimeout(() => {
                     this.read_supp_json(supp);
@@ -650,8 +622,6 @@ export class TemplateKeyComponent implements OnInit {
         this.problem_selection = '';
         this.problem_attempts = 0;
         this.attempt_response = '';
-        this.supp_content_list = [];
-        this.supp_content_labels = [];
         for (let supp of this.exam_dump[this.problem_number].SuppContent) {
             setTimeout(() => {
                 this.read_supp_json(supp);
@@ -745,8 +715,6 @@ export class TemplateKeyComponent implements OnInit {
         this.subtopic_attempt_explanation = '';
         this.standard_id = topic + ": " + subtopic;
         this.standard_fav = false;
-        this.supp_st_content_list = [];
-        this.supp_st_content_labels = [];
         for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
           setTimeout(() => {
             this.read_supp_st_json(supp);
