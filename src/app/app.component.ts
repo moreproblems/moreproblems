@@ -16,7 +16,7 @@ export class AppComponent{
   public screenWidth = window.innerWidth;
   public screenHeight = window.innerHeight;
   // public toolbarHeight = this.navbar.nativeElement.offsetWidth;
-  public mobileWidth = 1200;
+  public mobileWidth = 1000;
   public menuOpen = true;
 
   profileUploadURL: any = null;

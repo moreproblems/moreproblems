@@ -16,7 +16,7 @@ export class ExamsComponent implements OnInit {
 
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
-  mobileWidth = 1200;
+  mobileWidth = 1000;
   menuOpen = false;
 
   // user_data: any = null;

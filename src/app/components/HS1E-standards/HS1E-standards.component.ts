@@ -21,7 +21,7 @@ export class HS1EStandardsComponent implements OnInit {
 
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
-  mobileWidth = 1200;
+  mobileWidth = 1000;
   menuOpen = false;
 
   domain_state: {[key: number]: boolean} = {
