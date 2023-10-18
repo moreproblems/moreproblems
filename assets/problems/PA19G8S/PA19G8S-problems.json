@@ -592,5 +592,209 @@
                 }
             }
         }
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Nature Of Science"
+        ],
+        "SubTopics": [
+            "Use evidence, observations, or a variety of scales (e.g., mass, distance, volume, temperature) to describe relationships."
+        ],
+        "SuppContent": [
+            "problems/PA19G8S/supps/PA19G8S-S1.json"
+        ],
+        "Content": [
+            "Scientists have observed that the American cockroach can run up to 1.5 m/sec. The average body length of the American cockroach is around 38 mm. Which statement best describes its speed relative to its body length?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The cockroach runs 10 times its body length per second.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The ratio is much greater than 10 times its body length per second.",
+                    "Percent": 30
+                }
+            },
+            "B": {
+                "Choice": "The cockroach runs 40 times its body length per second.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "1.5 m/s / 0.038 m = 39.47 times (about 40 times)",
+                    "Percent": 36
+                }
+            },
+            "C": {
+                "Choice": "The cockroach runs 10 times its body length per minute.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The ratio would be larger on a “per minute” scale. The units in the item are provided in meters per second, not meters per minute.",
+                    "Percent": 19
+                }
+            },
+            "D": {
+                "Choice": "The cockroach runs 40 times its body length per minute.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The ratio would be larger on a “per minute” scale. The units in the item are provided in meters per second, not meters per minute.",
+                    "Percent": 15
+                }
+            }
+        }
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Nature Of Science"
+        ],
+        "SubTopics": [
+            "Describe how engineers use models to develop new and improved technologies to solve problems."
+        ],
+        "SuppContent": [
+            "problems/PA19G8S/supps/PA19G8S-S1.json"
+        ],
+        "Content": [
+            "Using cockroaches as living models, what technology are engineers trying to improve?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "miniaturized robotics",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The scientists are trying to improve the technological design of tools or vehicles that require fast and efficient movements.",
+                    "Percent": 61
+                }
+            },
+            "B": {
+                "Choice": "disease control methods",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The work of the scientists is not related to disease control.",
+                    "Percent": 10
+                }
+            },
+            "C": {
+                "Choice": "alternative power sources",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The scientists are not using the cockroaches as an energy or power source.",
+                    "Percent": 10
+                }
+            },
+            "D": {
+                "Choice": "audio and visual recording devices",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The scientists are not testing out the effectiveness of their audio and visual recording devices.",
+                    "Percent": 19
+                }
+            }
+        }
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Biological Sciences"
+        ],
+        "SubTopics": [
+            "Explain how inherited structures or behaviors help organisms survive and reproduce in different environments."
+        ],
+        "SuppContent": [
+            "problems/PA19G8S/supps/PA19G8S-S1.json"
+        ],
+        "Content": [
+            "How do the sensory spines most likely help the cockroach survive in its environment?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "They improve the cockroach’s vision so it can see predators sooner.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The sensory spines do not provide the cockroach with improved vision.",
+                    "Percent": 12
+                }
+            },
+            "B": {
+                "Choice": "They allow the cockroach to change its body shape to confuse predators.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The sensory spines do not change the body shape of the cockroach.",
+                    "Percent": 11
+                }
+            },
+            "C": {
+                "Choice": "They reduce the friction along the top of the cockroach so it can move faster than predators.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The sensory spines are located on the cockroach’s legs. Their main purpose is not to reduce friction along the top of the cockroach.",
+                    "Percent": 17
+                }
+            },
+            "D": {
+                "Choice": "They allow the cockroach to move through small spaces where it is unable to use its feet to escape predators.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The sensory spines provide extra surfaces on the cockroach to push or spring off of objects without using its feet.",
+                    "Percent": 60
+                }
+            }
+        }
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Physical Sciences"
+        ],
+        "SubTopics": [
+            "Describe forces acting on objects (e.g., friction, gravity, balanced versus unbalanced)."
+        ],
+        "SuppContent": [
+            "problems/PA19G8S/supps/PA19G8S-S1.json"
+        ],
+        "Content": [
+            "A scientist was studying cockroach movement through a small passage. The scientist attached sandpaper to the inside surfaces of the passage. Which variable was the scientist most likely trying to investigate?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "weight",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Attaching sandpaper inside the passage would not affect cockroach weight measurements.",
+                    "Percent": 8
+                }
+            },
+            "B": {
+                "Choice": "friction",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Sandpaper has a coarse surface that would provide added friction against the cockroach’s body.",
+                    "Percent": 75
+                }
+            },
+            "C": {
+                "Choice": "temperature",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The sandpaper would have the same temperature as its surroundings.",
+                    "Percent": 6
+                }
+            },
+            "D": {
+                "Choice": "energy transfer",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The presence of sandpaper inside the passage is not likely to help with tests on energy transfer.",
+                    "Percent": 11
+                }
+            }
+        }
     }
 }
