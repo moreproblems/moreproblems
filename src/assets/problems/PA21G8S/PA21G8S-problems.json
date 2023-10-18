@@ -597,5 +597,213 @@
                 }
             }
         }
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Nature Of Science"
+        ],
+        "SubTopics": [
+            "Use evidence, such as observations or experimental results, to support inferences about a relationship."
+        ],
+        "SuppContent": [
+            "problems/PA21G8S/supps/PA21G8S-S1.json"
+        ],
+        "Content": [
+            "Use the data table below to answer the question.",
+            "problems/PA21G8S/media/13a.jpg",
+            "Which inference about the process of making maple syrup from maple tree sap is best supported by these data?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "As the concentration of sugar in the liquid increases, the boiling point increases.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "As the concentration of sugar increases in a liquid (maple syrup is simply sap without most of the water), the boiling point increases.",
+                    "Percent": 60
+                }
+            },
+            "B": {
+                "Choice": "As the concentration of sugar in the liquid increases, the boiling point decreases.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Boiling point increases as the concentration of sugar in a liquid increases.",
+                    "Percent": 14
+                }
+            },
+            "C": {
+                "Choice": "A decrease in the boiling point of the liquid causes a decrease in sugar concentration.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Boiling point is the dependent variable; sugar concentration is independent.",
+                    "Percent": 16
+                }
+            },
+            "D": {
+                "Choice": "A decrease in the boiling point of the liquid causes an increase in sugar concentration.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Boiling point is the dependent variable; sugar concentration is independent.",
+                    "Percent": 10
+                }
+            }
+        }
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Nature Of Science"
+        ],
+        "SubTopics": [
+            "Use ratio to describe change (e.g., percents, parts per million, grams per cubic centimeter, mechanical advantage)."
+        ],
+        "SuppContent": [
+            "problems/PA21G8S/supps/PA21G8S-S1.json"
+        ],
+        "Content": [
+            "Use the graphs below to answer the question.",
+            "problems/PA21G8S/media/14a.jpg",
+            "What is the approximate percent change in water content after maple tree sap becomes maple syrup?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Maple tree sap has 2% less water than maple syrup.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Maple tree sap has 2% sugar.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Maple tree sap has 34% less water than maple syrup.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This response incorrectly compares percentages in maple syrup.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Maple tree sap has 31% more water than maple syrup.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This response incorrectly compares percent water in maple syrup with percent sugar in maple tree sap.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Maple tree sap has 65% more water than maple syrup.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "At 98% water, maple tree sap has 65% more water than maple syrup.",
+                    "Percent": 0
+                }
+            }
+        }
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Biological Sciences"
+        ],
+        "SubTopics": [
+            "Compare similarities and differences in internal structures of organisms (e.g., invertebrate/vertebrate, vascular/nonvascular, singlecelled/multi-celled) and external structures (e.g., appendages, body segments, type of covering, size, shape)."
+        ],
+        "SuppContent": [
+            "problems/PA21G8S/supps/PA21G8S-S1.json"
+        ],
+        "Content": [
+            "Which internal structures in humans have the most similar functions to that of xylem in maple trees?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "lungs and skin, since they are involved in gas exchange",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Xylem moves water and minerals; it is not involved in gas exchange.",
+                    "Percent": 13
+                }
+            },
+            "B": {
+                "Choice": "lungs and skin, since they are involved in gas exchange",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Xylem moves water and minerals upward through a tree.",
+                    "Percent": 13
+                }
+            },
+            "C": {
+                "Choice": "bones and muscles, since they are responsible for movement",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Xylem provides some structural support, but it does not allow trees to move.",
+                    "Percent": 16
+                }
+            },
+            "D": {
+                "Choice": "veins and arteries, since they transport blood throughout the body",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Similar to the movement of blood through veins and arteries, xylem helps move water and minerals upward through a tree.",
+                    "Percent": 58
+                }
+            }
+        }
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Biological Sciences"
+        ],
+        "SubTopics": [
+            "Identify and explain differences between inherited and acquired traits."
+        ],
+        "SuppContent": [
+            "problems/PA21G8S/supps/PA21G8S-S1.json"
+        ],
+        "Content": [
+            "Tapholes for collecting maple syrup can scar the tree’s trunk . Why do the offspring of tapped maple trees, called saplings, have unscarred trunks?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Scars are inherited traits, and saplings will develop scars as they age.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Scars are acquired traits, not inherited.",
+                    "Percent": 13
+                }
+            },
+            "B": {
+                "Choice": "Scars are acquired traits, and saplings are unable to inherit acquired traits.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Scars are acquired traits, which cannot be inherited.",
+                    "Percent": 61
+                }
+            },
+            "C": {
+                "Choice": "Scars are dominant traits, so a mutation must have occurred in saplings with unscarred trunks.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Scars are acquired traits; they are neither dominant nor recessive.",
+                    "Percent": 15
+                }
+            },
+            "D": {
+                "Choice": "Scars are recessive traits, so a sapling must receive the traits from both parents to exhibit the trait.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Scars are acquired traits; they are neither dominant nor recessive.",
+                    "Percent": 11
+                }
+            }
+        }
     }
 }

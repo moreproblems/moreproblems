@@ -11,6 +11,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { TemplateClassComponent } from './components/template-class/template-class.component';
 import { TemplateExamComponent } from './components/template-exam/template-exam.component';
+import { TemplateCExamComponent } from './components/template-c-exam/template-c-exam.component';
 import { TemplateKeyComponent } from './components/template-key/template-key.component';
 import { TestExamComponent } from './components/test-exam/test-exam.component';
 import { StandardsComponent } from './components/standards/standards.component';
@@ -55,6 +56,7 @@ const routes: Routes = [
   { path: 'exam/test', component: TestExamComponent },
   { path: 'exam/:examKey', component: TemplateExamComponent },
   { path: 'exam/:examKey/key', component: TemplateKeyComponent },
+  { path: 'exam/:examKey/:classKey', component: TemplateCExamComponent },
   { path: 'standards/K-Math', component: KMStandardsComponent },
   { path: 'standards/K-English', component: KEStandardsComponent },
   { path: 'standards/G1-Math', component: G1MStandardsComponent },

@@ -1190,7 +1190,7 @@ export class HomeComponent implements OnInit {
     this.class_uid = '';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const charactersLength = characters.length;
-    for (let i: number = 1; i <= 10; i++) {
+    for (let i: number = 1; i <= 5; i++) {
       this.class_uid += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
   }

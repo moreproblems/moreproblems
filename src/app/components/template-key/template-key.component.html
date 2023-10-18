@@ -586,6 +586,9 @@
                   </h3>
                   <img *ngIf="block[1].endsWith('.jpg')" src="./assets/{{block[1]}}" style="max-width: 300px; margin: auto">
                 </div>
+                <br *ngIf="supp_st_dump[supp].Copyright != ''"/>
+                <h4 *ngIf="supp_st_dump[supp].Copyright != ''" style="font-size: 14px; white-space: pre-wrap; text-align: left"> <i
+                    style="font-weight: 300">{{supp_st_dump[supp].Copyright}}</i> </h4>
                 <br *ngIf="supp_st_dump[supp].References.length > 0"/> 
                 <hr *ngIf="supp_st_dump[supp].References.length > 0" style="width: 95%">
                 <div *ngFor="let block of supp_st_dump[supp].References"
@@ -850,6 +853,9 @@
                     </h3>
                     <img *ngIf="block[1].endsWith('.jpg')" src="./assets/{{block[1]}}" style="max-width: 300px; margin: auto">
                   </div>
+                  <br *ngIf="supp_dump[supp].Copyright != ''"/>
+                  <h4 *ngIf="supp_dump[supp].Copyright != ''" style="font-size: 14px; white-space: pre-wrap; text-align: left"> <i
+                      style="font-weight: 300">{{supp_dump[supp].Copyright}}</i> </h4>
                   <br *ngIf="supp_dump[supp].References.length > 0"/> 
                   <hr *ngIf="supp_dump[supp].References.length > 0" style="width: 95%">
                   <div *ngFor="let block of supp_dump[supp].References"
