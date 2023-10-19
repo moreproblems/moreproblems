@@ -1350,7 +1350,7 @@ export class ProblemsComponent implements OnInit {
     }
     if (this.filtered_set.includes('PA21G8S')) {
       for (const [num, value] of Object.entries(this.PA21G8S_exam_dump)) {
-        if (value.Number <= 12) {
+        if (value.Number <= 16) {
           if (this.topic_filters.length == 0) {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
@@ -1368,7 +1368,7 @@ export class ProblemsComponent implements OnInit {
     }
     if (this.filtered_set.includes('PA19G8S')) {
       for (const [num, value] of Object.entries(this.PA19G8S_exam_dump)) {
-        if (value.Number <= 12) {
+        if (value.Number <= 16) {
           if (this.topic_filters.length == 0) {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;

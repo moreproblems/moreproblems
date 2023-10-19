@@ -406,15 +406,15 @@ button.grade-button-l:hover {
 
 <!-- Toolbar --> 
 <div class="toolbar" role="banner" (window:resize)="width_change()" #navbar>
-  <div style="display: flex; flex-direction: row; width: 100%; margin: auto; align-items: center; justify-content: space-between">
+  <div style="display: flex; flex-direction: row; width: 100%; margin: auto; align-items: center; justify-content: space-between; height: fit-content">
     <div *ngIf="this.screenWidth <= this.mobileWidth" style="width: fit-content; display: flex; flex-direction: row">
-      <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 10px" routerLink="/exams" routerLinkActive="active">
-        <img *ngIf="this.screenWidth <= this.mobileWidth && this.screenWidth >= 525" src="./assets/media/logo1.png" style="width: 35px; height: 35px" #logo />
+      <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 5px 10px" routerLink="/exams" routerLinkActive="active">
+        <img *ngIf="this.screenWidth <= this.mobileWidth && (this.screenWidth >= 525  || (440 <= this.screenWidth && this.screenWidth < 490) || (330 <= this.screenWidth && this.screenWidth < 400))" src="./assets/media/logo1.png" style="width: 35px; height: 35px" #logo />
         <span style="padding: 0px; text-align: left; margin: auto">
           <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 21.5px; font-weight: 800; margin-left: 5px" #titleUM> {{ title }} </h1>
         </span>
       </div>
-      <div *ngIf="authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 10px" routerLink="/home" routerLinkActive="active">
+      <div *ngIf="authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 5px 10px" routerLink="/home" routerLinkActive="active">
         <img *ngIf="this.screenWidth <= this.mobileWidth && this.screenWidth >= 400" src="./assets/media/logo1.png" style="width: 35px; height: 35px" #logo />
         <span style="padding: 0px; text-align: left; margin: auto">
           <h1 *ngIf="this.screenWidth <= this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 21.5px; font-weight: 800; margin-left: 5px" #titleAM> {{ title }} </h1>
@@ -422,13 +422,13 @@ button.grade-button-l:hover {
       </div>
     </div>
     <div *ngIf="this.screenWidth > this.mobileWidth" style="width: fit-content; display: flex; flex-direction: row">
-      <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 10px" routerLink="/exams" routerLinkActive="active">
+      <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 5px 10px" routerLink="/exams" routerLinkActive="active">
         <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 45px; height: 45px" #logo />
         <span style="padding: 0px; text-align: left; margin: auto">
           <h1 *ngIf="this.screenWidth > this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 23px; font-weight: 1000; margin-left: 10px" #titleUD> {{ title }} </h1>
         </span>
       </div>
-      <div *ngIf="authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 10px" routerLink="/home" routerLinkActive="active">
+      <div *ngIf="authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)" style="margin: 5px 10px" routerLink="/home" routerLinkActive="active">
         <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 45px; height: 45px" #logo />
         <span style="padding: 0px; text-align: left; margin: auto">
           <h1 *ngIf="this.screenWidth > this.mobileWidth" style="display: block; font-family: 'Orbitron'; font-size: 23px; font-weight: 1000; margin-left: 10px" #titleAD> {{ title }} </h1>
@@ -467,6 +467,7 @@ button.grade-button-l:hover {
       </div>
     </div>
   </div>
+  <hr *ngIf="this.menuOpen && this.screenWidth <= this.mobileWidth" style="width: 100%; border-width: 2px" >
   <div *ngIf="this.menuOpen && this.screenWidth <= this.mobileWidth" style="width: 100%">
     <nav style="width: 100%; text-align: center; display: inline-flexbox">
       <!-- <a routerLink="/about" routerLinkActive="active" style="padding: 0 10px; font-size: 16px; text-align: center"> <p style="width: 100px; margin: 0; padding: 0">About Us</p></a>&nbsp;&nbsp;
