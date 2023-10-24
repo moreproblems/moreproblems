@@ -553,7 +553,7 @@
               <div *ngFor="let block of supp_st_dump[supp].Context"
                 style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
                 <h3 *ngIf="!block.endsWith('.jpg')"
-                  style="font-size: 18px"> <i style="font-weight: 400">{{block}}</i> </h3>
+                  style="font-size: 18px"><i style="font-weight: 400">{{block}}</i></h3>
                 <img *ngIf="block.endsWith('.jpg')"
                   src="./assets/{{block}}" style="max-width: 300px; margin: auto">
               </div>
@@ -567,23 +567,17 @@
                 <div *ngFor="let block of supp_st_dump[supp].Content"
                   style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
                   <h3 *ngIf="!block[1].endsWith('.jpg')"
-                    style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
-                    {{block[0]}}
-                  </h3>
+                    style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block[0]}}</h3>
                   <div *ngIf="block[1].startsWith(':box:')"
-                    style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
-                      {{block[1].slice(5)}} </h3>
+                    style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block[1].slice(5)}}</h3>
                   </div>
                   <h3
                     *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_st_dump[supp].LabelType == 'L')"
-                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                    {{block[1]}} </h3>
+                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
                   <h3
                     *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] == '' && supp_st_dump[supp].LabelType == 'P'"
-                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                    <b>{{block[1]}}</b>
-                  </h3>
+                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)"><b>{{block[1]}}</b></h3>
                   <img *ngIf="block[1].endsWith('.jpg')" src="./assets/{{block[1]}}" style="max-width: 300px; margin: auto">
                 </div>
                 <br *ngIf="supp_st_dump[supp].Copyright != ''"/>
@@ -593,10 +587,8 @@
                 <hr *ngIf="supp_st_dump[supp].References.length > 0" style="width: 95%">
                 <div *ngFor="let block of supp_st_dump[supp].References"
                   style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
-                  <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
-                    {{block[0]}} </h3>
-                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                    {{block[1]}} </h3>
+                  <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block[0]}}</h3>
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
                 </div>
               </section>
             </div>
@@ -628,12 +620,11 @@
           <div *ngIf="subtopic_problem_number == +prob.key">
             <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
               <div *ngIf="block.startsWith(':box:')"
-                style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left"> {{block.slice(5)}}
-                </h3>
+                style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(5)}}</h3>
               </div>
               <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:')"
-                style="display: block; white-space: pre-wrap; font-size: 18px"> {{block}} </h3>
+                style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
               <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
             </div>
           </div>
@@ -821,7 +812,7 @@
                 <div *ngFor="let block of supp_dump[supp].Context"
                   style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
                   <h3 *ngIf="!block.endsWith('.jpg')"
-                    style="font-size: 18px"> <i style="font-weight: 400">{{block}}</i> </h3>
+                    style="font-size: 18px"><i style="font-weight: 400">{{block}}</i></h3>
                   <img *ngIf="block.endsWith('.jpg')"
                     src="./assets/{{block}}" style="max-width: 300px; margin: auto">
                 </div>
@@ -834,23 +825,17 @@
                   <div *ngFor="let block of supp_dump[supp].Content"
                     style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
                     <h3 *ngIf="!block[1].endsWith('.jpg')"
-                      style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
-                      {{block[0]}}
-                    </h3>
+                      style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block[0]}}</h3>
                     <div *ngIf="block[1].startsWith(':box:')"
-                      style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
-                        {{block[1].slice(5)}} </h3>
+                      style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block[1].slice(5)}}</h3>
                     </div>
                     <h3
                       *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_dump[supp].LabelType == 'L')"
-                      style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                      {{block[1]}} </h3>
+                      style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
                     <h3
                       *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] == '' && supp_dump[supp].LabelType == 'P'"
-                      style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                      <b>{{block[1]}}</b>
-                    </h3>
+                      style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)"><b>{{block[1]}}</b></h3>
                     <img *ngIf="block[1].endsWith('.jpg')" src="./assets/{{block[1]}}" style="max-width: 300px; margin: auto">
                   </div>
                   <br *ngIf="supp_dump[supp].Copyright != ''"/>
@@ -860,10 +845,8 @@
                   <hr *ngIf="supp_dump[supp].References.length > 0" style="width: 95%">
                   <div *ngFor="let block of supp_dump[supp].References"
                     style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
-                    <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
-                      {{block[0]}} </h3>
-                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                      {{block[1]}} </h3>
+                    <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block[0]}}</h3>
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
                   </div>
                 </section>
               </div>
@@ -895,12 +878,11 @@
             <div *ngIf="problem_number == +prob.key">
               <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
                 <div *ngIf="block.startsWith(':box:')"
-                  style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
-                    {{block.slice(5)}} </h3>
+                  style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(5)}}</h3>
                 </div>
                 <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:')"
-                  style="display: block; white-space: pre-wrap; font-size: 18px"> {{block}} </h3>
+                  style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
                 <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
               </div>
             </div>

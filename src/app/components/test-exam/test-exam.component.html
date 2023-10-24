@@ -84,7 +84,7 @@
 
   .content {
     display: flex;
-    margin: 12px auto 32px;
+    margin: 0 auto 32px;
     padding: 0;
     width: 95%;
     flex-direction: column;
@@ -126,7 +126,7 @@
     border: 1px solid #eee;
     background-color: #fafafa;
     /* height: 40px;
-      width: 200px; */
+          width: 200px; */
     margin: 0 8px 16px;
     padding: 8px 8px;
     display: flex;
@@ -138,15 +138,15 @@
   }
 
   /* .card-container .card:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .card-container .switch:not(:last-child) {
-    margin-right: 0;
-  } */
+        margin-right: 0;
+      }
+    
+      .card-container .switch:not(:last-child) {
+        margin-right: 0;
+      } */
 
   .card.card-small {
-    height: 16px;
+    min-height: 16px;
     width: 190px;
     border-radius: 8px;
   }
@@ -181,8 +181,8 @@
   }
 
   /* .card-container .card:not(.highlight-card):hover .material-icons path {
-    fill: rgb(105, 103, 103);
-  } */
+        fill: rgb(105, 103, 103);
+      } */
 
   .card.highlight-card {
     background-color: #0a1e33;
@@ -292,6 +292,7 @@
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
+    min-height: 50px;
   }
 
   button.toggle-button-on {
@@ -305,6 +306,7 @@
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
+    min-height: 50px;
   }
 
   .terminal {
@@ -465,102 +467,208 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="content" role="main" (window:resize)="width_change2()">
-  <div *ngIf="expand_filters" class="content">
-    <br />
-    <h2>Choose Your Settings</h2>
-    <div class="card-container" style="display: flex; justify-content: center; align-items: center; max-width: 100%">
-      <div class="slider">
-        <input type="range" min="5" max="50" value="{{exam_length}}" (input)="set_problem_num(+this.probSlider.value)"
-          style="width: 250px" #probSlider>
-        <div class="slider" style="display: flex; justify-content: center; align-items: center">
-          <p style="font-size: 16px"> Total Problems: </p>
-          <input (keyup)="set_problem_num(+this.probEntry.value)" type="text" inputmode="numeric"
-            value="{{exam_length}}" min="5" max="50" maxlength="2"
-            style="margin: auto 0 auto 5px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
-            #probEntry />
-        </div>
+<!-- <div class="content" role="main" (window:resize)="width_change2()"> -->
+<div class="content" role="main" (window:resize)="width_change2()"
+  style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
+  <canvas id="confetticanvas"></canvas>
+  <br />
+  <div class="content-menu" style="margin-bottom: 0; align-items: center">
+    <section *ngIf="selected_subtopic != ''" style="width: 100%; align-items: left">
+      <div (click)="selected_subtopic=''" class="card card-small"
+        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+        <img src="./assets/icons/caret.png"
+          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Problems </a>
       </div>
-      <label class="switch" style="align-items: center; margin: 15px 0">
-        <input type="checkbox" value="random">
-        <button (click)="toggle_mode()" *ngIf="mode=='explain'" class="toggle-button-on"
-          style="margin: 0px 20px 0px 20px; font-size: 18px"> <b> Assessment </b> Mode
-        </button>
-        <button (click)="toggle_mode()" *ngIf="mode=='assess'" class="toggle-button-off"
-          style="margin: 0px 20px 0px 20px; font-size: 18px"> <b> Explanation </b> Mode
-        </button>
-      </label>
-      <button class="grade-button" (click)="generate_problems()">
-        <h3><b>Generate Problems!</b></h3>
-      </button>
-    </div>
-    <h3 style="color: red"> {{generate_message}} </h3>
-  </div>
-
-  <div *ngIf="!expand_filters" class="content-menu" style="margin-bottom: 0; align-items: center">
-    <div class="card card-large"
+    </section>
+    <br *ngIf="selected_subtopic != ''" />
+    <div *ngIf="selected_subtopic != ''" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
-      #problemCard>
+      #subtopicSummaryCard>
       <br />
       <div class="content" style="margin: auto; align-items: center">
-        <h2 *ngIf="this.problem_number > 0" style="padding-top: 20px; color: darkgrey"> {{exam_state}} {{exam_name}}
-          {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
-        <h3 *ngIf="exam_length >= problem_number" style="margin: auto 0; color: darkgrey; font-size: 18px"> (#{{problem_number}}/{{exam_length}}) Time spent solving problem: {{pt_minutes}}m {{pt_counter%60}}s </h3>
-        <h2 *ngIf="this.problem_number > this.exam_length && this.mode == 'assess'"> With {{number_correct}} out of {{exam_length}} problems
-          correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
+        <section
+          style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+          <h2 *ngIf="screenWidth > mobileWidth"
+            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 24.5px; line-height: 30px; color: slategrey">
+            <b>{{selected_topic}}:</b> {{selected_subtopic}}
+          </h2>
+          <h2 *ngIf="screenWidth <= mobileWidth"
+            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px; color: slategrey">
+            <b>{{selected_topic}}:</b> {{selected_subtopic}}
+          </h2>
+          <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
+            style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &star;
+          </span>
+          <span *ngIf="this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
+            style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &starf;
+          </span>
+        </section>
         <br />
-        <section style="height: auto; width: 100%; display: flex; justify-content: center">
-          <div *ngFor="let prob of exam_dump | keyvalue"
+        <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px"> <a>#{{subtopic_problem_number}}
+            of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
+        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px">
+          <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a>
+        </h3>
+        <br />
+        <hr *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="width: max(50%, 250px)">
+        <br *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" />
+        <h3 *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0"
+          style="margin: auto 0; color: slategrey; font-size: 18px"> Addressed Curriculum Standards:</h3>
+        <section *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0"
+          style="height: auto; width: 100%; display: flex; justify-content: center">
+          <div *ngFor="let prob of subtopic_search_dump | keyvalue"
             style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
-            <label *ngIf="problem_number == +prob.key" class="switch"
-              style="max-height: 500px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
-              <input type="checkbox">
-              <button *ngIf="!sub_topic" (click)="toggle_topic()" class="topic-button"
-                style="width: 100%; font-size: 16px">
-                <b>{{prob.value.Topics}}</b> </button>
-              <button *ngIf="sub_topic" (click)="toggle_topic()" class="topic-button"
-                style="width: 100%; font-size: 16px">
-                {{prob.value.SubTopics}} </button>
-            </label>
-            <!-- <p *ngIf="problem_number == +prob.key"> {{prob.value.Content}} </p> -->
+            <div *ngIf="subtopic_problem_number == +prob.key">
+              <label *ngFor="let num of prob.value.SubTopics | keyvalue"
+                (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
+                style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
+                <button class="topic-button"
+                  style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey">
+                  <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
+                  <span
+                    *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
+                    style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
+                    &starf;
+                  </span>
+                </button>
+              </label>
+            </div>
           </div>
         </section>
-        <br *ngIf="problem_number <= exam_length" />
-        <div *ngFor="let prob of exam_dump | keyvalue">
-          <div *ngIf="problem_number == +prob.key">
+        <br />
+      </div>
+    </div>
+    <br *ngIf="selected_subtopic != ''" />
+    <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+      <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp">
+        <div *ngFor="let supp of prob.value.SuppContent">
+          <div class="card card-large"
+            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            #subtopicSuppCard>
+            <br />
+            <div class="content" style="margin: auto; align-items: center">
+              <h3 *ngIf="supp_st_dump[supp].Directions != ''" style="font-weight: 500; font-size: 18px">
+                {{supp_st_dump[supp].Directions}}
+              </h3>
+              <br />
+              <div *ngFor="let block of supp_st_dump[supp].Context"
+                style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                <h3 *ngIf="!block.endsWith('.jpg')"
+                  style="font-size: 18px"><i style="font-weight: 400">{{block}}</i></h3>
+                <img *ngIf="block.endsWith('.jpg')"
+                  src="./assets/{{block}}" style="max-width: 300px; margin: auto">
+              </div>
+              <h2 *ngIf="supp_st_dump[supp].Title != ''"> {{supp_st_dump[supp].Title}} </h2>
+              <h3 *ngIf="supp_st_dump[supp].Subtitle != ''" style="font-size: 18px"> {{supp_st_dump[supp].Subtitle}}
+              </h3>
+              <h3 *ngIf="supp_st_dump[supp].Author != ''" style="font-size: 18px"> <i
+                  style="font-weight: 400">{{supp_st_dump[supp].Author}}</i> </h3>
+              <br />
+              <section style="width:fit-content">
+                <div *ngFor="let block of supp_st_dump[supp].Content"
+                  style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                  <h3 *ngIf="!block[1].endsWith('.jpg')"
+                    style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block[0]}}</h3>
+                  <div *ngIf="block[1].startsWith(':box:')"
+                    style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block[1].slice(5)}}</h3>
+                  </div>
+                  <h3
+                    *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_st_dump[supp].LabelType == 'L')"
+                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
+                  <h3
+                    *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] == '' && supp_st_dump[supp].LabelType == 'P'"
+                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)"><b>{{block[1]}}</b></h3>
+                  <img *ngIf="block[1].endsWith('.jpg')" src="./assets/{{block[1]}}" style="max-width: 300px; margin: auto">
+                </div>
+                <br *ngIf="supp_st_dump[supp].Copyright != ''"/>
+                <h4 *ngIf="supp_st_dump[supp].Copyright != ''" style="font-size: 14px; white-space: pre-wrap; text-align: left"> <i
+                    style="font-weight: 300">{{supp_st_dump[supp].Copyright}}</i> </h4>
+                <br *ngIf="supp_st_dump[supp].References.length > 0"/> 
+                <hr *ngIf="supp_st_dump[supp].References.length > 0" style="width: 95%">
+                <div *ngFor="let block of supp_st_dump[supp].References"
+                  style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                  <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block[0]}}</h3>
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
+                </div>
+              </section>
+            </div>
+            <br />
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+    <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number" class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+      #subtopicCard>
+      <br />
+      <section *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0"
+        style="height: auto; width: 100%; display: flex; justify-content: center">
+        <label class="switch" style="padding: 0 10px">
+          <input type="checkbox" value="{{expand_supp}}">
+          <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
+              Supplement(s) </b>
+          </button>
+          <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp" class="toggle-button-off"> <b> Hide
+              Supplement(s) </b>
+          </button>
+        </label>
+      </section>
+      <br />
+      <div class="content" style="margin: auto; align-items: center">
+        <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+          <div *ngIf="subtopic_problem_number == +prob.key">
             <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
-              <h3 *ngIf="!block.endsWith('.jpg')" style="display: block; white-space: pre-wrap; font-size: 18px"> {{block}} </h3>
+              <div *ngIf="block.startsWith(':box:')"
+                style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(5)}}</h3>
+              </div>
+              <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:')"
+                style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
               <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
             </div>
           </div>
         </div>
-        <br *ngIf="problem_number <= exam_length" />
+        <br />
         <input type="hidden" #selection>
-        <div *ngFor="let prob of exam_dump | keyvalue">
-          <div *ngIf="problem_number == +prob.key">
+        <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+          <div *ngIf="subtopic_problem_number == +prob.key">
             <div *ngIf="prob.value.Type == 'FR'">
-              <div class="card card-small" style="min-height: 50px; width: 275px; max-height: 100px; padding: 10px">
+              <div class="card card-small"
+                style="min-height: 50px; width: 275px; max-height: 100px; padding: 10px; margin: auto">
                 <input
                   style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
-                  inputmode="numeric" #inputFR />
-                <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value); scroll_bottom()"
+                  inputmode="numeric" #inputFRST />
+                <button class="grade-button" (click)="attempt_fr_st_problem(this.inputFRST.value); scroll_bottom()"
                   style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                   <b> Submit </b> </button>
               </div>
             </div>
             <div *ngIf="prob.value.Type == 'MC'">
               <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
-                (click)="selection.value = choice.key; attempt_mc_problem(choice.key); scroll_bottom()"
+                (click)="selection.value = choice.key; attempt_mc_st_problem(choice.key); scroll_bottom()"
                 style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                 <label class="switch" style="padding: 0 10px">
                   <input type="checkbox" value="{{choice.key}}">
-                  <button *ngIf="problem_selection==choice.key" class="toggle-button-on"> <b> {{choice.key}} </b>
+                  <button
+                    *ngIf="subtopic_problem_selection==choice.key && !subtopic_attempt_response.startsWith('Correct')"
+                    class="toggle-button-on"> <b> {{choice.key}} </b>
                   </button>
-                  <button *ngIf="problem_selection!=choice.key" class="toggle-button-off"> <b> {{choice.key}} </b>
+                  <button
+                    *ngIf="subtopic_problem_selection==choice.key && subtopic_attempt_response.startsWith('Correct')"
+                    class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                  </button>
+                  <button *ngIf="subtopic_problem_selection!=choice.key && !subtopic_attempt_path.includes(choice.key)"
+                    class="toggle-button-off"> <b> {{choice.key}} </b>
+                  </button>
+                  <button *ngIf="subtopic_problem_selection!=choice.key && subtopic_attempt_path.includes(choice.key)"
+                    class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                   </button>
                 </label>
                 <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
-                  style="display: block; margin: auto; white-space: pre-wrap">
+                  style="display: block; margin: 0px 20px 0px 20px; margin: auto; white-space: pre-wrap">
                   {{choice.value.Choice}}
                 </h3>
                 <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
@@ -569,225 +677,581 @@
             </div>
           </div>
         </div>
-        <br *ngIf="problem_number <= exam_length" />
-        <div *ngFor="let prob of exam_dump | keyvalue">
-          <div *ngIf="problem_number == +prob.key && problem_attempts > 0 && mode == 'explain'"
+        <br />
+        <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+          <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts > 0"
             class="card highlight-card card-small"
             style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
             <div *ngIf="prob.value.Type == 'MC'">
               <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                 <h3 *ngIf="choice.key == selection.value"
                   style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                  <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
-                  <br /> <br /> <b>Explanation:</b> {{attempt_explanation}}
+                  <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
+                  <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation}}
                 </h3>
+                <br
+                  *ngIf="choice.key == selection.value && subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                <br
+                  *ngIf="choice.key == selection.value && subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                <button
+                  *ngIf="choice.key == selection.value && subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth"
+                  class="grade-button" (click)="next_problem_st(); scroll_top()"
+                  style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                  <b> Next Problem </b>
+                </button>
               </div>
             </div>
             <div *ngIf="prob.value.Type == 'FR'">
               <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
-                <h3 *ngIf="attempt_response.startsWith('Correct')"
+                <h3 *ngIf="subtopic_attempt_response.startsWith('Correct')"
                   style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                  <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
+                  <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
                   <!-- wrong data format, extra KEY -->
-                  <br /> <br /> <b>Explanation:</b> {{attempt_explanation}}
+                  <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation}}
                 </h3>
-                <h3 *ngIf="!attempt_response.startsWith('Correct')"
+                <br *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" /> <br
+                  *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth" />
+                <button *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth <= mobileWidth"
+                  class="grade-button" (click)="next_problem_st(); scroll_top()"
+                  style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                  <b> Next Problem </b>
+                </button>
+                <h3 *ngIf="!subtopic_attempt_response.startsWith('Correct')"
                   style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                  <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
+                  <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
                   <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                 </h3>
               </div>
             </div>
-            <button *ngIf="attempt_response.startsWith('Correct')" class="grade-button"
-              (click)="next_problem(); scroll_top()"
-              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
+            <button *ngIf="subtopic_attempt_response.startsWith('Correct') && screenWidth > mobileWidth"
+              class="grade-button" (click)="next_problem_st(); scroll_top()"
+              style="display: block; max-width: 150px; max-height: 100px; margin: auto">
               <b> Next Problem </b>
             </button>
           </div>
-          <div *ngIf="problem_number == +prob.key && problem_attempts > 0 && mode == 'assess'" [ngSwitch]="selection.value"
-            style="height: 75px; max-width: 90%; padding-top: 10px; margin: auto">
-            <button class="grade-button" (click)="next_problem_a(problem_selection); scroll_top()"
-              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
-              <b> Next Problem </b>
-            </button>
-          </div>
-          <div *ngIf="problem_number == +prob.key && problem_attempts == 0" class="card highlight-card card-small"
-            style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white; padding: 10px">
-            <button class="grade-button" (click)="next_problem(); scroll_top()"
-              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
+          <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts == 0"
+            class="card highlight-card card-small"
+            style="height: auto; min-height: 100px; max-width: 90%; padding-top: 10px; margin: auto; align-items: center; display: inline-flex; background-color: transparent">
+            <button class="grade-button" (click)="next_problem_st(); scroll_top()"
+              style="display: block; max-width: 150px; max-height: 100px; margin: auto">
               <b> Skip Problem </b>
             </button>
           </div>
         </div>
-        <div *ngIf="problem_number > exam_length && mode == 'assess'" style="width: 100%">
-          <!-- <div class="card card-small" style="height: auto; width: auto; max-width: 500px; padding: 10px; margin: auto">
-                        <button *ngIf="sub_form == ''" (click)="sub_form = 'adult'" class="grade-button"> <b> Share Your Results With An Adult </b> </button>
-                        <button *ngIf="sub_form == ''" (click)="sub_form = 'friend'" class="grade-button"> <b> Invite A Friend To Beat Your Results </b> </button>
-                        <form *ngIf="sub_form == 'adult'" action="https://getform.io/f/38254f36-dac8-42c4-b228-265b2112682b" method="POST" style="width: 100%; align-items: center">
-                            <h2> Share Your Results With An Adult </h2>
-                            <div style="text-align: right">
-                                <b> Your Name </b>
-                                <input type="text" name="name"
-                                    style="width: 250px; height: 50px; padding: 0px; font-size: 20px; margin: 10px; text-indent: 10px">
-                            </div>
-                            <div style="text-align: center; align-items: center; margin: auto">
-                                <label class="switch" style="margin: 0 25px">
-                                    <input type="checkbox" value="Parent">
-                                    <button *ngIf="parent_select" (click)="parent_select = !parent_select" class="toggle-button-on" tabindex="0"> <b> Parent </b> </button>
-                                    <button *ngIf="!parent_select" (click)="parent_select = !parent_select" class="toggle-button-off" tabindex="0"> <b> Parent </b> </button>
-                                </label>
-                                <label class="switch" style="margin: 0 25px">
-                                    <input type="checkbox" value="Teacher">
-                                    <button *ngIf="teacher_select" (click)="teacher_select = !teacher_select" class="toggle-button-on" tabindex="0"> <b> Teacher </b> </button>
-                                    <button *ngIf="!teacher_select" (click)="teacher_select = !teacher_select" class="toggle-button-off" tabindex="0"> <b> Teacher </b> </button>
-                                </label>
-                            </div>
-                            <div *ngIf="parent_select" style="text-align: right">
-                                <b> Parent Email </b>
-                                <input type="email" name="email"
-                                    style="width: 250px; height: 50px; padding: 0px; font-size: 20px; margin: 10px; text-indent: 10px">
-                            </div>
-                            <div *ngIf="teacher_select" style="text-align: right">
-                                <b> Teacher Email </b>
-                                <input type="email" name="email"
-                                    style="width: 250px; height: 50px; padding: 0px; font-size: 20px; margin: 10px; text-indent: 10px">
-                            </div>
-                            <br />
-                            <div>
-                                <button class="grade-button" type="submit"
-                                    style="display: block; max-width: 150px; max-height: 100px; margin: auto; padding: 20px">
-                                    <b> Send </b>
-                                </button>
-                            </div>
-                        </form>
-                    </div> -->
+      </div>
+    </div>
+    <div *ngIf="selected_subtopic == ''">
+      <div class="card card-large"
+        style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+        #problemSummaryCard>
+        <br />
+        <div class="content" style="margin: auto; align-items: center">
+          <h2 *ngIf="this.problem_number > 0" style="color: slategrey"> {{exam_state}} {{exam_name}}
+            {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
           <section style="height: auto; width: 100%; display: flex; justify-content: center">
-            <label class="switch"
-              style="max-height: 100px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
-              <input type="checkbox">
-              <button *ngIf="!this.expand_topics" (click)="expandTopics()" class="topic-button"
-                style="width: 100%; font-size: 16px">
-                <b>Show Subtopics</b> </button>
-              <button *ngIf="this.expand_topics" (click)="expandTopics()" class="topic-button"
-                style="width: 100%; font-size: 16px">
-                Hide Subtopics </button>
-            </label>
+            <button (click)="prev_problem()" class="grade-button"
+              style="margin: 20px 0; margin-right: 20px; width: auto; height: auto">
+              <img src="./assets/icons/minus.png" style="height: 30px; width: 30px; filter: invert(100%)">
+            </button>
+            <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0"
+              style="margin: auto 0; color: slategrey; font-size: 18px"> Problem # </h3>
+            <input *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0"
+              (keyup)="go_to_prob(+this.probNum.value)" type="text" inputmode="numeric" value="{{problem_number}}"
+              min="1" maxlength="2"
+              style="margin: auto 3px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
+              #probNum />
+            <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0 && screenWidth > mobileWidth"
+              style="margin: auto 0; color: slategrey; font-size: 18px"> / {{exam_length}} ({{pt_minutes}}m
+              {{pt_counter%60}}s) </h3>
+            <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0 && screenWidth <= mobileWidth"
+              style="margin: auto 0; color: slategrey; font-size: 18px"> / {{exam_length}} </h3>
+            <button (click)="next_problem()" class="grade-button"
+              style="margin: 20px 0; margin-left: 20px; width: auto; height: auto">
+              <img src="./assets/icons/plus.png" style="height: 30px; width: 30px; filter: invert(100%)">
+            </button>
+          </section>
+          <hr *ngIf="exam_dump[problem_number].Topics.length > 0" style="width: max(50%, 250px)">
+          <br *ngIf="exam_dump[problem_number].Topics.length > 0" />
+          <h3 *ngIf="exam_dump[problem_number].Topics.length > 0"
+            style="margin: auto 0; color: slategrey; font-size: 18px"> Addressed Curriculum Standards:</h3>
+          <section *ngIf="exam_dump[problem_number].Topics.length > 0"
+            style="height: auto; width: 100%; display: flex; justify-content: center">
+            <div *ngFor="let prob of exam_dump | keyvalue"
+              style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
+              <div *ngIf="problem_number == +prob.key">
+                <label *ngFor="let num of prob.value.SubTopics | keyvalue"
+                  (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
+                  style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
+                  <button class="topic-button"
+                    style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey">
+                    <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
+                    <span
+                      *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
+                      style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
+                      &starf;
+                    </span>
+                  </button>
+                </label>
+              </div>
+            </div>
           </section>
           <br />
-          <table *ngIf="!this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableS>
-            <thead>
-              <tr style="border: 3px solid black; background-color: grey">
-                <th> Topics </th>
-                <th> Percent Correct </th>
-                <th> Missed Problems </th>
-                <th> Total Problems </th>
-              </tr>
-            </thead>
-            <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
-              <tr style="background-color: lightgrey">
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
-              </tr>
-            </tbody>
-          </table>
-          <table *ngIf="this.expand_topics" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #topicsTableL>
-            <thead>
-              <tr style="border: 3px solid black; background-color: grey">
-                <th> Topics </th>
-                <th> Percent Correct </th>
-                <th> Missed Problems </th>
-                <th> Total Problems </th>
-                <th> Skill Tested </th>
-              </tr>
-            </thead>
-            <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
-              <tr style="background-color: lightgrey">
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}% </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Incorrect}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Total}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> </td>
-              </tr>
-              <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
-                <td style="border-top: 1px solid #ddd"> </td>
-                <td style="border-top: 1px solid #ddd"> </td>
-                <td style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
-                <td style="border-top: 1px solid #ddd"> {{subtopic.value.Total}} </td>
-                <td style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px"> <i>
-                    {{subtopic.key}} </i> </td>
-              </tr>
-            </tbody>
-          </table>
+        </div>
+      </div>
+      <br />
+      <div *ngFor="let prob of exam_dump | keyvalue">
+        <div *ngIf="problem_number == +prob.key && expand_supp">
+          <div *ngFor="let supp of prob.value.SuppContent">
+            <div class="card card-large"
+              style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+              #problemSuppCard>
+              <br />
+              <div class="content" style="margin: auto; align-items: center">
+                <h3 *ngIf="supp_dump[supp].Directions != ''" style="font-weight: 500; font-size: 18px">
+                  {{supp_dump[supp].Directions}}
+                </h3>
+                <br />
+                <div *ngFor="let block of supp_dump[supp].Context"
+                  style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                  <h3 *ngIf="!block.endsWith('.jpg')"
+                    style="font-size: 18px"><i style="font-weight: 400">{{block}}</i></h3>
+                  <img *ngIf="block.endsWith('.jpg')"
+                    src="./assets/{{block}}" style="max-width: 300px; margin: auto">
+                </div>
+                <h2 *ngIf="supp_dump[supp].Title != ''"> {{supp_dump[supp].Title}} </h2>
+                <h3 *ngIf="supp_dump[supp].Subtitle != ''" style="font-size: 18px"> {{supp_dump[supp].Subtitle}} </h3>
+                <h3 *ngIf="supp_dump[supp].Author != ''" style="font-size: 18px"> <i
+                    style="font-weight: 400">{{supp_dump[supp].Author}}</i> </h3>
+                <br />
+                <section style="width:fit-content">
+                  <div *ngFor="let block of supp_dump[supp].Content"
+                    style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                    <h3 *ngIf="!block[1].endsWith('.jpg')"
+                      style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block[0]}}</h3>
+                    <div *ngIf="block[1].startsWith(':box:')"
+                      style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block[1].slice(5)}}</h3>
+                    </div>
+                    <h3
+                      *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_dump[supp].LabelType == 'L')"
+                      style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
+                    <h3
+                      *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] == '' && supp_dump[supp].LabelType == 'P'"
+                      style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)"><b>{{block[1]}}</b></h3>
+                    <img *ngIf="block[1].endsWith('.jpg')" src="./assets/{{block[1]}}" style="max-width: 300px; margin: auto">
+                  </div>
+                  <br *ngIf="supp_dump[supp].Copyright != ''"/>
+                  <h4 *ngIf="supp_dump[supp].Copyright != ''" style="font-size: 14px; white-space: pre-wrap; text-align: left"> <i
+                      style="font-weight: 300">{{supp_dump[supp].Copyright}}</i> </h4>
+                  <br *ngIf="supp_dump[supp].References.length > 0"/> 
+                  <hr *ngIf="supp_dump[supp].References.length > 0" style="width: 95%">
+                  <div *ngFor="let block of supp_dump[supp].References"
+                    style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                    <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block[0]}}</h3>
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
+                  </div>
+                </section>
+              </div>
+              <br />
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+      <div *ngIf="selected_subtopic == ''" class="card card-large"
+        style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+        #problemCard>
+        <br />
+        <section *ngIf="exam_dump[problem_number].SuppContent.length > 0"
+          style="height: auto; width: 100%; display: flex; justify-content: center">
+          <label class="switch" style="padding: 0 10px">
+            <input type="checkbox" value="{{expand_supp}}">
+            <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
+                Supplement(s) </b>
+            </button>
+            <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp" class="toggle-button-off"> <b> Hide
+                Supplement(s) </b>
+            </button>
+          </label>
+        </section>
+        <br *ngIf="exam_dump[problem_number].SuppContent.length > 0" />
+        <div class="content" style="margin: auto; align-items: center">
+          <div *ngFor="let prob of exam_dump | keyvalue">
+            <div *ngIf="problem_number == +prob.key">
+              <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
+                <div *ngIf="block.startsWith(':box:')"
+                  style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(5)}}</h3>
+                </div>
+                <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:')"
+                  style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
+                <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
+              </div>
+            </div>
+          </div>
           <br />
-          <section style="height: auto; width: 100%; display: flex; justify-content: center">
-            <label class="switch"
-              style="max-height: 100px; height: auto; max-width: 80%; align-items: center; text-align: center; margin: auto">
-              <input type="checkbox">
-              <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
-                style="width: 100%; font-size: 16px">
-                <b>Show Correct Responses</b> </button>
-              <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
-                style="width: 100%; font-size: 16px">
-                Hide Correct Responses </button>
-            </label>
-          </section>
+          <input type="hidden" #selection>
+          <div *ngFor="let prob of exam_dump | keyvalue">
+            <div *ngIf="prob.value.Number == problem_number && (prob.value.Parts | keys).length == 0">
+              <div *ngIf="prob.value.Type == 'FR'" style="width: 90%">
+                <div *ngIf="prob.value.Explain" class="card card-small" style="min-height: 100px; width: auto; padding: 10px; margin: auto; align-items: center; flex-direction: column;">
+                  <!-- <h3 style="font-size: 18px"> Your Work: </h3> -->
+                  <textarea
+                      rows="2" maxlength="400" placeholder="Show Your Work Here"
+                      style="margin: auto; padding-top: 10px; padding-left: 10px; width: 90%; height: 75px; font-size: 18px; line-height: 22px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputFRE></textarea>
+                  <br *ngIf="prob.value.Explain" />
+                  <!-- <h3 style="font-size: 18px"> Your Answer: </h3> -->
+                  <div style="display: flex; flex-direction: row; align-items: center;">
+                    <input
+                      style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                      inputmode="numeric" placeholder="Answer" #inputFR />
+                    <h3 *ngIf="prob.value.Content[prob.value.Content.length-1].startsWith(':unit:')" style="font-size: 18px; font-weight: 400"> {{prob.value.Content[prob.value.Content.length-1].slice(6)}} </h3>
+                  </div>
+                  <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value, prob.key); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 10px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+              </div>
+              <div *ngIf="prob.value.Type == 'LR'" style="width: 90%">
+                <div class="card card-small" style="min-height: 250px; width: auto; padding: 10px; margin: auto; align-items: center; flex-direction: column">
+                  <!-- <h3 style="font-size: 18px"> Your Answer <b style="font-weight: 400">({{this.inputLR.value.length}}/{{this.inputLR.maxLength}})</b>: </h3> -->
+                  <textarea
+                      rows="5" maxlength="1000" placeholder="Write Your Answer Here"
+                      style="margin: auto; padding-top: 10px; padding-left: 10px; width: 90%; height: 250px; font-size: 18px; line-height: 22px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputLR></textarea>
+                  <button class="grade-button" (click)="attempt_lr_problem(this.inputLR.value, prob.key); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 10px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+              </div>
+              <div *ngIf="prob.value.Type == 'MC'">
+                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                  (click)="selection.value = choice.key; attempt_mc_problem(choice.key, prob.key); scroll_bottom()"
+                  style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                  <label class="switch" style="padding: 0 10px">
+                    <input type="checkbox" value="{{choice.key}}">
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(prob.key)][0]==choice.key && !attempt_response[(prob.value.Parts | keys).indexOf(prob.key)].startsWith('Correct')"
+                      class="toggle-button-on"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(prob.key)][0]==choice.key && attempt_response[(prob.value.Parts | keys).indexOf(prob.key)].startsWith('Correct')"
+                      class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(prob.key)][0]!=choice.key && !attempt_path[(prob.value.Parts | keys).indexOf(prob.key)].includes(choice.key)"
+                      class="toggle-button-off"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(prob.key)][0]!=choice.key && attempt_path[(prob.value.Parts | keys).indexOf(prob.key)].includes(choice.key)"
+                      class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                    </button>
+                  </label>
+                  <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                    style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">
+                    {{choice.value.Choice}}
+                  </h3>
+                  <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                </div>
+              </div>
+              <div *ngIf="prob.value.Type == 'MS'">
+                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                  (click)="attempt_ms_problem(choice.key, prob.key); scroll_bottom()"
+                  style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                  <label class="switch" style="padding: 0 10px">
+                    <input type="checkbox" value="{{choice.key}}">
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(prob.key)].includes(choice.key) && !choice.value.Key.Correct"
+                      class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(prob.key)].includes(choice.key) && choice.value.Key.Correct"
+                      class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="!problem_selection[(prob.value.Parts | keys).indexOf(prob.key)].includes(choice.key)"
+                      class="toggle-button-off"> <b> {{choice.key}} </b>
+                    </button>
+                  </label>
+                  <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                    style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">
+                    {{choice.value.Choice}}
+                  </h3>
+                  <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                </div>
+              </div>
+              <!-- <div *ngIf="prob.value.Type == 'FR'">
+                <div class="card card-small" style="min-height: 50px; width: 275px; max-height: 100px; padding: 10px">
+                  <input
+                    style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                    inputmode="numeric" #inputFR />
+                  <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value, ''); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+              </div>
+              <div *ngIf="prob.value.Type == 'MC'">
+                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                  (click)="selection.value = choice.key; attempt_mc_problem(choice.key, ''); scroll_bottom()"
+                  style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                  <label class="switch" style="padding: 0 10px">
+                    <input type="checkbox" value="{{choice.key}}">
+                    <button *ngIf="problem_selection[0][0]==choice.key && !attempt_response[0].startsWith('Correct')"
+                      class="toggle-button-on"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[0][0]==choice.key && attempt_response[0].startsWith('Correct')"
+                      class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[0][0]!=choice.key && !attempt_path[0].includes(choice.key)"
+                      class="toggle-button-off"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[0][0]!=choice.key && attempt_path[0].includes(choice.key)"
+                      class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                    </button>
+                  </label>
+                  <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                    style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">
+                    {{choice.value.Choice}}
+                  </h3>
+                  <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                </div>
+              </div> -->
+            </div>
+          </div>
           <br />
-          <table *ngIf="!this.show_correct" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #resultsTableI>
-            <thead>
-              <tr style="border: 1px solid black; background-color: grey">
-                <th> Problem Number </th>
-                <th> Problem Topics </th>
-                <th> Correct Response </th>
-                <th> Student Response </th>
-                <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
-                <th> Problem Time </th>
-                <th> Problem Attempts </th>
-                <th> Attempt Path </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let sub of wrong_submission_list">
-                <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Topics}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
-                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                  {{sub.Rationale}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
-              </tr>
-            </tbody>
-          </table>
-          <table *ngIf="this.show_correct" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white" #resultsTableA>
-            <thead>
-              <tr style="border: 1px solid black; background-color: grey">
-                <th> Problem Number </th>
-                <th> Problem Topics </th>
-                <th> Correct Response </th>
-                <th> Student Response </th>
-                <th *ngIf="this.screenWidth > this.mobileWidth"> Student Response Explanation </th>
-                <th> Problem Time </th>
-                <th> Problem Attempts </th>
-                <th> Attempt Path </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let sub of exam_submission_list">
-                <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Topics}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Correct}} </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{sub.Choice}} </b> </td>
-                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                  {{sub.Rationale}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Path}} </td>
-              </tr>
-            </tbody>
-          </table>
+          <div *ngFor="let prob of exam_dump | keyvalue">
+            <div *ngIf="prob.value.Number == problem_number && problem_attempts > 0 && (prob.value.Parts | keys).length == 0"
+              class="card highlight-card card-small"
+              style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+              <div *ngIf="prob.value.Type == 'MC'">
+                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
+                  <h3 *ngIf="choice.key == selection.value"
+                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                    <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
+                    <br /> <br /> <b>Explanation:</b> {{attempt_explanation[0]}}
+                  </h3>
+                  <br
+                    *ngIf="choice.key == selection.value && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                  <br
+                    *ngIf="choice.key == selection.value && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                  <button
+                    *ngIf="choice.key == selection.value && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
+                    class="grade-button" (click)="next_problem(); scroll_top()"
+                    style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                    <b> Next Problem </b>
+                  </button>
+                </div>
+              </div>
+              <div *ngIf="prob.value.Type == 'FR'">
+                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
+                  <h3 *ngIf="attempt_response[0].startsWith('Correct')"
+                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                    <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
+                    <!-- wrong data format, extra KEY -->
+                    <br /> <br /> <b>Explanation:</b> {{attempt_explanation[0]}}
+                  </h3>
+                  <br *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" /> <br
+                    *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                  <button *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
+                    class="grade-button" (click)="next_problem(); scroll_top()"
+                    style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                    <b> Next Problem </b>
+                  </button>
+                  <h3 *ngIf="!attempt_response[0].startsWith('Correct')"
+                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                    <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
+                    <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
+                  </h3>
+                </div>
+              </div>
+              <button *ngIf="attempt_response[0].startsWith('Correct') && screenWidth > mobileWidth" class="grade-button"
+                (click)="next_problem(); scroll_top()"
+                style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
+                <b> Next Problem </b>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div *ngFor="let prob of exam_dump | keyvalue">
+        <div *ngIf="prob.value.Number == problem_number">
+          <div *ngFor="let part of prob.value.Parts | keyvalue" class="card card-large"
+            style="height: auto; margin: auto; margin-bottom: 20px; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            #problemPartCard>
+            <br />
+            <h2>Part {{part.key}}</h2>
+            <br />
+            <div class="content" style="margin: auto; align-items: center">
+              <div *ngFor="let block of part.value.Content" style="align-items: center; text-align: center">
+                <div *ngIf="block.startsWith(':box:')"
+                  style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(5)}}</h3>
+                </div>
+                <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':unit:')"
+                  style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
+                <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: 300px">
+              </div>
+              <br />
+              <input type="hidden" #selection>
+              <div *ngIf="part.value.Type == 'O'">
+                <div class="card card-small" style="min-height: 100px; width: auto; max-height: 500px; padding: 10px; align-items: center">
+                  <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices)" class="switch" style="padding: 0 10px; min-width: 100px; margin: auto">
+                    <input type="checkbox">
+                    <button (click)="select_m_choice('', 0)" *ngIf="m_selection[0] == choice" class="toggle-button-on"> <b>{{choice}}</b> </button>
+                    <button (click)="select_m_choice(choice, 0)" *ngIf="!is_matched(choice, 0) && m_selection[0] != choice" class="toggle-button-off"> <b>{{choice}}</b> </button>
+                    <button *ngIf="is_matched(choice, 0)" class="toggle-button-off"></button>
+                  </label>
+                </div>
+                <br />
+                <div class="card card-small" style="min-height: 100px; width: auto; max-height: 500px; padding: 10px; align-items: center">
+                  <div *ngFor="let choice of part.value.AnswerChoices | keyvalue" style="margin: auto; margin-top: 0px; align-items: center; flex-direction: column">
+                    <label class="switch" style="padding: 0 10px; min-width: 100px">
+                      <input type="checkbox">
+                      <button (click)="select_m_choice('', 1)" *ngIf="!is_matched(choice.key[0], 1) && m_selection[1] == choice.key[0]" class="toggle-button-on"></button>
+                      <button (click)="remove_m_choice(choice.key[0]); select_m_choice(choice.key[0], 1)" *ngIf="is_matched(choice.key[0], 1) && m_submission[choice.key[0]] == choice.value.Choice" class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{m_submission[choice.key[0]]}} </b>
+                      </button>
+                      <button (click)="remove_m_choice(choice.key[0]); select_m_choice(choice.key[0], 1)" *ngIf="is_matched(choice.key[0], 1) && m_submission[choice.key[0]] != choice.value.Choice" class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{m_submission[choice.key[0]]}} </b>
+                      </button>
+                      <button (click)="select_m_choice(choice.key[0], 1)" *ngIf="!is_matched(choice.key[0], 1) && m_selection[1] != choice.key[0]" class="toggle-button-off"></button>
+                    </label>
+                    <h3> {{choice.key.slice(2)}} </h3>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="part.value.Type == 'FR'" style="width: 90%">
+                <div *ngIf="part.value.Explain" class="card card-small" style="min-height: 100px; width: auto; padding: 10px; margin: auto; align-items: center; flex-direction: column;">
+                  <!-- <h3 style="font-size: 18px"> Your Work: </h3> -->
+                  <textarea
+                      rows="2" maxlength="400" placeholder="Show Your Work Here"
+                      style="margin: auto; padding-top: 10px; padding-left: 10px; width: 90%; height: 75px; font-size: 18px; line-height: 22px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputFRE></textarea>
+                  <br *ngIf="part.value.Explain" />
+                  <!-- <h3 style="font-size: 18px"> Your Answer: </h3> -->
+                  <div style="display: flex; flex-direction: row; align-items: center;">
+                    <input
+                      style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                      inputmode="numeric" placeholder="Answer" #inputFR />
+                    <h3 *ngIf="part.value.Content[part.value.Content.length-1].startsWith(':unit:')" style="font-size: 18px; font-weight: 400"> {{part.value.Content[part.value.Content.length-1].slice(6)}} </h3>
+                  </div>
+                  <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value, part.key); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 10px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+              </div>
+              <div *ngIf="part.value.Type == 'LR'" style="width: 90%">
+                <div class="card card-small" style="min-height: 250px; width: auto; padding: 10px; margin: auto; align-items: center; flex-direction: column">
+                  <!-- <h3 style="font-size: 18px"> Your Answer <b style="font-weight: 400">({{this.inputLR.value.length}}/{{this.inputLR.maxLength}})</b>: </h3> -->
+                  <textarea
+                      rows="5" maxlength="1000" placeholder="Write Your Answer Here"
+                      style="margin: auto; padding-top: 10px; padding-left: 10px; width: 90%; height: 250px; font-size: 18px; line-height: 22px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputLR></textarea>
+                  <button class="grade-button" (click)="attempt_lr_problem(this.inputLR.value, part.key); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 10px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+              </div>
+              <div *ngIf="part.value.Type == 'MC'">
+                <div *ngFor="let choice of part.value.AnswerChoices | keyvalue" class="card card-small"
+                  (click)="selection.value = choice.key; attempt_mc_problem(choice.key, part.key); scroll_bottom()"
+                  style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                  <label class="switch" style="padding: 0 10px">
+                    <input type="checkbox" value="{{choice.key}}">
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && !attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
+                      class="toggle-button-on"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
+                      class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && !attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key)"
+                      class="toggle-button-off"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key)"
+                      class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                    </button>
+                  </label>
+                  <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                    style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">
+                    {{choice.value.Choice}}
+                  </h3>
+                  <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                </div>
+              </div>
+              <div *ngIf="part.value.Type == 'MS'">
+                <div *ngFor="let choice of part.value.AnswerChoices | keyvalue" class="card card-small"
+                  (click)="attempt_ms_problem(choice.key, part.key); scroll_bottom()"
+                  style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                  <label class="switch" style="padding: 0 10px">
+                    <input type="checkbox" value="{{choice.key}}">
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && !choice.value.Key.Correct"
+                      class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && choice.value.Key.Correct"
+                      class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="!problem_selection[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key)"
+                      class="toggle-button-off"> <b> {{choice.key}} </b>
+                    </button>
+                  </label>
+                  <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                    style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">
+                    {{choice.value.Choice}}
+                  </h3>
+                  <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                </div>
+              </div>
+              <br />
+              <div *ngIf="problem_attempts > 0"
+                class="card highlight-card card-small"
+                style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+                <div *ngIf="part.value.Type == 'MC'">
+                  <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
+                    <h3 *ngIf="choice.key == selection.value"
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <br /> <br /> <b>Explanation:</b> {{attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
+                    </h3>
+                    <br
+                      *ngIf="choice.key == selection.value && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && screenWidth <= mobileWidth" />
+                    <br
+                      *ngIf="choice.key == selection.value && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && screenWidth <= mobileWidth" />
+                    <button
+                      *ngIf="choice.key == selection.value && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && screenWidth <= mobileWidth"
+                      class="grade-button" (click)="next_problem(); scroll_top()"
+                      style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                      <b> Next Problem </b>
+                    </button>
+                  </div>
+                </div>
+                <div *ngIf="part.value.Type == 'FR'">
+                  <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
+                    <h3 *ngIf="attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <!-- wrong data format, extra KEY -->
+                      <br /> <br /> <b>Explanation:</b> {{attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
+                    </h3>
+                    <br *ngIf="attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && screenWidth <= mobileWidth" /> <br
+                      *ngIf="attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && screenWidth <= mobileWidth" />
+                    <button *ngIf="attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && screenWidth <= mobileWidth"
+                      class="grade-button" (click)="next_problem(); scroll_top()"
+                      style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                      <b> Next Problem </b>
+                    </button>
+                    <h3 *ngIf="!attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
+                    </h3>
+                  </div>
+                </div>
+                <button *ngIf="attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && screenWidth > mobileWidth" class="grade-button"
+                  (click)="next_problem(); scroll_top()"
+                  style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
+                  <b> Next Problem </b>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
