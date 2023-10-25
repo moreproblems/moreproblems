@@ -112,6 +112,8 @@ import * as TX22G8SSProblems from "src/assets/problems/TX22G8SS/TX22G8SS-problem
 import * as TX21G8SSProblems from "src/assets/problems/TX21G8SS/TX21G8SS-problems.json";
 import * as TX19G8SSProblems from "src/assets/problems/TX19G8SS/TX19G8SS-problems.json";
 import * as TX18G8SSProblems from "src/assets/problems/TX18G8SS/TX18G8SS-problems.json";
+import * as TX22HSBProblems from "src/assets/problems/TX22HSB/TX22HSB-problems.json";
+import * as TX21HSBProblems from "src/assets/problems/TX21HSB/TX21HSB-problems.json";
 import * as TX22HSUSHProblems from "src/assets/problems/TX22HSUSH/TX22HSUSH-problems.json";
 
 const confetti = require('canvas-confetti');
@@ -308,6 +310,8 @@ export class ProfileComponent implements OnInit {
   TX21G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX21G8SSProblems;
   TX19G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX19G8SSProblems;
   TX18G8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX18G8SSProblems;
+  TX22HSB_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX22HSBProblems;
+  TX21HSB_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX21HSBProblems;
   TX22HSUSH_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX22HSUSHProblems;
   dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } } = {
     "PA22G3M": this.PA22G3M_exam_dump,
@@ -415,6 +419,8 @@ export class ProfileComponent implements OnInit {
     "TX21G8SS": this.TX21G8SS_exam_dump,
     "TX19G8SS": this.TX19G8SS_exam_dump,
     "TX18G8SS": this.TX18G8SS_exam_dump,
+    "TX22HSB": this.TX22HSB_exam_dump,
+    "TX21HSB": this.TX21HSB_exam_dump,
     "TX22HSUSH": this.TX22HSUSH_exam_dump
   };
 
@@ -968,6 +974,31 @@ export class ProfileComponent implements OnInit {
     "TX21G8SS": "Texas STAAR 2021 Grade 8 Social Studies Exam",
     "TX19G8SS": "Texas STAAR 2019 Grade 8 Social Studies Exam",
     "TX18G8SS": "Texas STAAR 2018 Grade 8 Social Studies Exam",
+    "TX22HSA1": "Texas STAAR 2022 Algebra I Exam",
+    "TX21HSA1": "Texas STAAR 2021 Algebra I Exam",
+    "TX19HSA1": "Texas STAAR 2019 Algebra I Exam",
+    "TX18HSA1": "Texas STAAR 2018 Algebra I Exam",
+    "TX17HSA1": "Texas STAAR 2017 Algebra I Exam",
+    "TX22HSB": "Texas STAAR 2022 Biology Exam",
+    "TX21HSB": "Texas STAAR 2021 Biology Exam",
+    "TX19HSB": "Texas STAAR 2019 Biology Exam",
+    "TX18HSB": "Texas STAAR 2018 Biology Exam",
+    "TX17HSB": "Texas STAAR 2017 Biology Exam",
+    "TX22HSE1": "Texas STAAR 2022 English I Exam",
+    "TX21HSE1": "Texas STAAR 2021 English I Exam",
+    "TX19HSE1": "Texas STAAR 2019 English I Exam",
+    "TX18HSE1": "Texas STAAR 2018 English I Exam",
+    "TX17HSE1": "Texas STAAR 2017 English I Exam",
+    "TX22HSE2": "Texas STAAR 2022 English II Exam",
+    "TX21HSE2": "Texas STAAR 2021 English II Exam",
+    "TX19HSE2": "Texas STAAR 2019 English II Exam",
+    "TX18HSE2": "Texas STAAR 2018 English II Exam",
+    "TX17HSE2": "Texas STAAR 2017 English II Exam",
+    "TX22HSUSH": "Texas STAAR 2022 U.S. History Exam",
+    "TX21HSUSH": "Texas STAAR 2021 U.S. History Exam",
+    "TX19HSUSH": "Texas STAAR 2019 U.S. History Exam",
+    "TX18HSUSH": "Texas STAAR 2018 U.S. History Exam",
+    "TX17HSUSH": "Texas STAAR 2017 U.S. History Exam",
     "WIG3M": "Wisconsin WFE Grade 3 Math Practice Exam",
     "WIG3E": "Wisconsin WFE Grade 3 English Language Arts Practice Exam",
     "WIG4M": "Wisconsin WFE Grade 4 Math Practice Exam",
@@ -984,7 +1015,15 @@ export class ProfileComponent implements OnInit {
     "WIG8E": "Wisconsin WFE Grade 8 English Language Arts Practice Exam",
     "WIG8S": "Wisconsin WFE Grade 8 Science Practice Exam",
     "WIG8SS": "Wisconsin WFE Grade 8 Social Studies Practice Exam",
-    "WIG10SS": "Wisconsin WFE Grade 10 Social Studies Practice Exam"
+    "WIG10SS": "Wisconsin WFE Grade 10 Social Studies Practice Exam",
+    "SAT1": "The SAT Practice Test #1",
+    "SAT3": "The SAT Practice Test #3",
+    "SAT5": "The SAT Practice Test #5",
+    "SAT6": "The SAT Practice Test #6",
+    "SAT7": "The SAT Practice Test #7",
+    "SAT8": "The SAT Practice Test #8",
+    "SAT9": "The SAT Practice Test #9",
+    "SAT10": "The SAT Practice Test #10"
   };
 
   supp_dump: any = {};

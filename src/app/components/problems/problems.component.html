@@ -559,12 +559,12 @@
       <input type="hidden" value="All Subjects" #state>
       <div class="card-container" style="max-width: 100%; margin-top: 0px">
         <label class="switch">
-          <input type="checkbox" value="M">
-          <button *ngIf="subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')"
+          <input type="checkbox" value="B">
+          <button *ngIf="subject_filters.includes('Biology')" (click)="toggle_button('Biology')"
             class="toggle-button-on" tabindex="0">
-            <b>Math</b> </button>
-          <button *ngIf="!subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')"
-            class="toggle-button-off" tabindex="0"> <b>Math</b> </button>
+            <b>Biology</b> </button>
+          <button *ngIf="!subject_filters.includes('Biology')" (click)="toggle_button('Biology')"
+            class="toggle-button-off" tabindex="0"> <b>Biology</b> </button>
         </label>
         <label class="switch">
           <input type="checkbox" value="ER">
@@ -580,6 +580,14 @@
           <button *ngIf="!subject_filters.includes('English Writing')" (click)="toggle_button('English Writing')"
             class="toggle-button-off" tabindex="0"> <b>English Writing</b> </button>
         </label> -->
+        <label class="switch">
+          <input type="checkbox" value="M">
+          <button *ngIf="subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')"
+            class="toggle-button-on" tabindex="0">
+            <b>Math</b> </button>
+          <button *ngIf="!subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')"
+            class="toggle-button-off" tabindex="0"> <b>Math</b> </button>
+        </label>
         <label class="switch">
           <input type="checkbox" value="S">
           <button *ngIf="subject_filters.includes('Science')" (click)="toggle_button('Science')"
@@ -917,7 +925,7 @@
           <div *ngIf="subtopic_problem_number == +prob.key">
             <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
               <div *ngIf="block.startsWith(':box:')"
-                style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                style="border: 1px solid black; width: fit-content; max-width: 600px; margin: auto; padding: 15px">
                 <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left"> {{block.slice(5)}}
                 </h3>
               </div>
@@ -1403,7 +1411,7 @@
           <div *ngIf="problem_number == +prob.key">
             <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
               <div *ngIf="block.startsWith(':box:')"
-                style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                style="border: 1px solid black; width: fit-content; max-width: 600px; margin: auto; padding: 15px">
                 <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left"> {{block.slice(5)}}
                 </h3>
               </div>
