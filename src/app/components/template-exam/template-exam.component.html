@@ -731,10 +731,14 @@
                     class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                   </button>
                 </label>
-                <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                <h3 *ngIf="!choice.value.Choice.endsWith('.jpg') && !choice.value.Choice.startsWith(':box:')"
                   style="display: block; margin: 0px 20px 0px 20px; margin: auto; white-space: pre-wrap">
                   {{choice.value.Choice}}
                 </h3>
+                <div *ngIf="choice.value.Choice.startsWith(':box:')"
+                  style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{choice.value.Choice.slice(5)}}</h3>
+                </div>
                 <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                   style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
               </div>
@@ -1021,10 +1025,14 @@
                   <button *ngIf="problem_selection!=choice.key" class="toggle-button-off"> <b> {{choice.key}} </b>
                   </button>
                 </label>
-                <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                <h3 *ngIf="!choice.value.Choice.endsWith('.jpg') && !choice.value.Choice.startsWith(':box:')"
                   style="display: block; margin: auto; white-space: pre-wrap">
                   {{choice.value.Choice}}
                 </h3>
+                <div *ngIf="choice.value.Choice.startsWith(':box:')"
+                  style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{choice.value.Choice.slice(5)}}</h3>
+                </div>
                 <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                   style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
               </div>
