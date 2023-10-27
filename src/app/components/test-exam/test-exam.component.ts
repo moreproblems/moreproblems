@@ -147,7 +147,7 @@ export class TestExamComponent implements OnInit {
     favorite_std_set: string[][] = [];
 
     key = "";
-    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Directions': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
+    exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'HideTopics': boolean, 'Directions': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
     exam_state = "";
     exam_grade = "";
     exam_subject = "";
@@ -913,7 +913,7 @@ export class TestExamComponent implements OnInit {
         this.subtopic_search_dump = {};
         for (const [ex, dump] of Object.entries(this.dump_dict)) {
             for (const [num, prob] of Object.entries(dump)) {
-                if (typeof prob.SubTopics != 'undefined') {
+                if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
                     if (prob.SubTopics.includes(subtopic)) {
                         this.subtopic_problem_count += 1;
                         this.subtopic_search_dump[this.subtopic_problem_count] = prob;

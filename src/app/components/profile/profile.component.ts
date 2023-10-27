@@ -117,6 +117,7 @@ import * as TX21HSBProblems from "src/assets/problems/TX21HSB/TX21HSB-problems.j
 import * as TX19HSBProblems from "src/assets/problems/TX19HSB/TX19HSB-problems.json";
 import * as TX22HSUSHProblems from "src/assets/problems/TX22HSUSH/TX22HSUSH-problems.json";
 import * as TX21HSUSHProblems from "src/assets/problems/TX21HSUSH/TX21HSUSH-problems.json";
+import * as TX19HSUSHProblems from "src/assets/problems/TX19HSUSH/TX19HSUSH-problems.json";
 
 const confetti = require('canvas-confetti');
 
@@ -158,7 +159,7 @@ export class ProfileComponent implements OnInit {
   // db_submission: any;
 
 
-  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Directions': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
+  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'HideTopics': boolean, 'Directions': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
 
   selected_exam = "";
   expand_topics = false;
@@ -317,6 +318,7 @@ export class ProfileComponent implements OnInit {
   TX19HSB_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX19HSBProblems;
   TX22HSUSH_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX22HSUSHProblems;
   TX21HSUSH_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX21HSUSHProblems;
+  TX19HSUSH_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX19HSUSHProblems;
   dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } } = {
     "PA22G3M": this.PA22G3M_exam_dump,
     "PA21G3M": this.PA21G3M_exam_dump,
@@ -427,7 +429,8 @@ export class ProfileComponent implements OnInit {
     "TX21HSB": this.TX21HSB_exam_dump,
     "TX19HSB": this.TX19HSB_exam_dump,
     "TX22HSUSH": this.TX22HSUSH_exam_dump,
-    "TX21HSUSH": this.TX21HSUSH_exam_dump
+    "TX21HSUSH": this.TX21HSUSH_exam_dump,
+    "TX19HSUSH": this.TX19HSUSH_exam_dump
   };
 
   exam_names: { [key: string]: string } = {
@@ -1515,7 +1518,7 @@ export class ProfileComponent implements OnInit {
     this.subtopic_search_dump = {};
     for (const [ex, dump] of Object.entries(this.dump_dict)) {
       for (const [num, prob] of Object.entries(dump)) {
-        if (typeof prob.SubTopics != 'undefined') {
+        if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
           if (prob.SubTopics.includes(subtopic)) {
             this.subtopic_problem_count += 1;
             this.subtopic_search_dump[this.subtopic_problem_count] = prob;

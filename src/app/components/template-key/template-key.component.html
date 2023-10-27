@@ -774,9 +774,9 @@
           </section>
           <hr *ngIf="exam_dump[problem_number].Topics.length > 0" style="width: max(50%, 250px)">
           <br *ngIf="exam_dump[problem_number].Topics.length > 0" />
-          <h3 *ngIf="exam_dump[problem_number].Topics.length > 0"
+          <h3 *ngIf="exam_dump[problem_number].Topics.length > 0 && !exam_attribute_dump[key].HideTopics"
             style="margin: auto 0; color: slategrey; font-size: 18px"> Addressed Curriculum Standards:</h3>
-          <section *ngIf="exam_dump[problem_number].Topics.length > 0"
+          <section *ngIf="exam_dump[problem_number].Topics.length > 0 && !exam_attribute_dump[key].HideTopics"
             style="height: auto; width: 100%; display: flex; justify-content: center">
             <div *ngFor="let prob of exam_dump | keyvalue"
               style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">

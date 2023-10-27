@@ -111,6 +111,7 @@ import * as TX21HSBProblems from "src/assets/problems/TX21HSB/TX21HSB-problems.j
 import * as TX19HSBProblems from "src/assets/problems/TX19HSB/TX19HSB-problems.json";
 import * as TX22HSUSHProblems from "src/assets/problems/TX22HSUSH/TX22HSUSH-problems.json";
 import * as TX21HSUSHProblems from "src/assets/problems/TX21HSUSH/TX21HSUSH-problems.json";
+import * as TX19HSUSHProblems from "src/assets/problems/TX19HSUSH/TX19HSUSH-problems.json";
 import { AuthService } from "../../shared/services/auth.service";
 
 const confetti = require('canvas-confetti');
@@ -273,6 +274,7 @@ export class ProblemsComponent implements OnInit {
   TX19HSB_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX19HSBProblems;
   TX22HSUSH_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX22HSUSHProblems;
   TX21HSUSH_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX21HSUSHProblems;
+  TX19HSUSH_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX19HSUSHProblems;
   exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
   dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } } = {
     "PA22G3M": this.PA22G3M_exam_dump,
@@ -384,12 +386,13 @@ export class ProblemsComponent implements OnInit {
     "TX21HSB": this.TX21HSB_exam_dump,
     "TX19HSB": this.TX19HSB_exam_dump,
     "TX22HSUSH": this.TX22HSUSH_exam_dump,
-    "TX21HSUSH": this.TX21HSUSH_exam_dump
+    "TX21HSUSH": this.TX21HSUSH_exam_dump,
+    "TX19HSUSH": this.TX19HSUSH_exam_dump
   };
   dump_count = 0;
 
-  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Directions': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
-  online_set = ["PA22G3M", "PA21G3M", "PA19G3M", "PA18G3M", "PA16G3M", "PA15G3M", "PA22G4M", "PA21G4M", "PA19G4M", "PA18G4M", "PA16G4M", "PA15G4M", "PA22G4S", "PA21G4S", "PA19G4S", "PA18G4S", "PA16G4S", "PA15G4S", "PA22G5M", "PA21G5M", "PA19G5M", "PA18G5M", "PA16G5M", "PA15G5M", "PA22G6M", "PA21G6M", "PA19G6M", "PA18G6M", "PA16G6M", "PA15G6M", "PA22G7M", "PA21G7M", "PA19G7M", "PA18G7M", "PA16G7M", "PA15G7M", "PA22G8M", "PA21G8M", "PA19G8M", "PA18G8M", "PA16G8M", "PA15G8M", "PA22G8S", "PA21G8S", "PA19G8S", "PA18G8S", "PA16G8S", "PA15G8S", "TX22G3M", "TX22G3R", "TX21G3M", "TX21G3R", "TX19G3M", "TX19G3R", "TX18G3M", "TX18G3R", "TX17G3M", "TX17G3R", "TX22G4M", "TX22G4R", "TX21G4M", "TX21G4R", "TX19G4M", "TX18G4M", "TX17G4M", "TX22G5M", "TX22G5R", "TX21G5M", "TX21G5R", "TX19G5M", "TX18G5M", "TX17G5M", "TX22G5S", "TX21G5S", "TX19G5S", "TX18G5S", "TX22G6M","TX22G6R", "TX21G6M", "TX21G6R", "TX19G6M", "TX18G6M", "TX17G6M", "TX22G7M", "TX22G7R", "TX21G7M", "TX21G7R", "TX19G7M", "TX18G7M", "TX17G7M", "TX22G8M", "TX22G8R", "TX21G8M", "TX21G8R", "TX19G8M", "TX18G8M", "TX17G8M", "TX22G8S", "TX21G8S", "TX19G8S", "TX18G8S", "TX22G8SS", "TX21G8SS", "TX19G8SS", "TX18G8SS", "TX22HSB", "TX21HSB", "TX19HSB", "TX22HSUSH", "TX21HSUSH"];
+  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'HideTopics': boolean, 'Directions': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
+  online_set = ["PA22G3M", "PA21G3M", "PA19G3M", "PA18G3M", "PA16G3M", "PA15G3M", "PA22G4M", "PA21G4M", "PA19G4M", "PA18G4M", "PA16G4M", "PA15G4M", "PA22G4S", "PA21G4S", "PA19G4S", "PA18G4S", "PA16G4S", "PA15G4S", "PA22G5M", "PA21G5M", "PA19G5M", "PA18G5M", "PA16G5M", "PA15G5M", "PA22G6M", "PA21G6M", "PA19G6M", "PA18G6M", "PA16G6M", "PA15G6M", "PA22G7M", "PA21G7M", "PA19G7M", "PA18G7M", "PA16G7M", "PA15G7M", "PA22G8M", "PA21G8M", "PA19G8M", "PA18G8M", "PA16G8M", "PA15G8M", "PA22G8S", "PA21G8S", "PA19G8S", "PA18G8S", "PA16G8S", "PA15G8S", "TX22G3M", "TX22G3R", "TX21G3M", "TX21G3R", "TX19G3M", "TX19G3R", "TX18G3M", "TX18G3R", "TX17G3M", "TX17G3R", "TX22G4M", "TX22G4R", "TX21G4M", "TX21G4R", "TX19G4M", "TX18G4M", "TX17G4M", "TX22G5M", "TX22G5R", "TX21G5M", "TX21G5R", "TX19G5M", "TX18G5M", "TX17G5M", "TX22G5S", "TX21G5S", "TX19G5S", "TX18G5S", "TX22G6M","TX22G6R", "TX21G6M", "TX21G6R", "TX19G6M", "TX18G6M", "TX17G6M", "TX22G7M", "TX22G7R", "TX21G7M", "TX21G7R", "TX19G7M", "TX18G7M", "TX17G7M", "TX22G8M", "TX22G8R", "TX21G8M", "TX21G8R", "TX19G8M", "TX18G8M", "TX17G8M", "TX22G8S", "TX21G8S", "TX19G8S", "TX18G8S", "TX22G8SS", "TX21G8SS", "TX19G8SS", "TX18G8SS", "TX22HSB", "TX21HSB", "TX19HSB", "TX22HSUSH", "TX21HSUSH", "TX19HSUSH"];
   favorite_std_set: string[][] = [];
   filtered_set: string[] = this.online_set;
   filtered_exam_num = 0;
@@ -559,15 +562,17 @@ export class ProblemsComponent implements OnInit {
     this.filtered_prob_num = 0;
     for (let i = 0; i < this.filtered_set.length; i++) {
       this.filtered_prob_num += this.exam_attribute_dump[this.filtered_set[i]].NumQuestions;
-      for (const [key, val] of Object.entries(this.exam_attribute_dump[this.filtered_set[i]].Topics)) {
-        if (!this.topics.includes(key)) {
-          this.topics.push(key);
-        }
-        if (!Object.keys(this.topics_count).includes(key)) {
-          this.topics_count[key] = val;
-        }
-        else {
-          this.topics_count[key] += val;
+      if (!this.exam_attribute_dump[this.filtered_set[i]].HideTopics) {
+        for (const [key, val] of Object.entries(this.exam_attribute_dump[this.filtered_set[i]].Topics)) {
+          if (!this.topics.includes(key)) {
+            this.topics.push(key);
+          }
+          if (!Object.keys(this.topics_count).includes(key)) {
+            this.topics_count[key] = val;
+          }
+          else {
+            this.topics_count[key] += val;
+          }
         }
       }
     }
@@ -596,7 +601,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA22G3M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -614,7 +619,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA21G3M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -632,7 +637,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA19G3M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -650,7 +655,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA18G3M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -668,7 +673,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA16G3M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -686,7 +691,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA15G3M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -704,7 +709,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA22G4M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -722,7 +727,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA21G4M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -740,7 +745,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA19G4M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -758,7 +763,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA18G4M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -776,7 +781,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA16G4M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -794,7 +799,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA15G4M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -812,7 +817,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA22G4S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -830,7 +835,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA21G4S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -848,7 +853,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA19G4S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -866,7 +871,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA18G4S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -884,7 +889,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA16G4S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -902,7 +907,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA15G4S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -920,7 +925,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA22G5M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -938,7 +943,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA21G5M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -956,7 +961,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA19G5M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -974,7 +979,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA18G5M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -992,7 +997,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA16G5M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1010,7 +1015,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA15G5M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1028,7 +1033,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA22G6M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1046,7 +1051,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA21G6M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1064,7 +1069,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA19G6M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1082,7 +1087,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA18G6M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1100,7 +1105,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA16G6M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1118,7 +1123,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA15G6M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1136,7 +1141,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA22G7M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1154,7 +1159,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA21G7M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1172,7 +1177,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA19G7M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1190,7 +1195,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA18G7M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1208,7 +1213,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA16G7M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1226,7 +1231,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA15G7M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1244,7 +1249,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA22G8M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1262,7 +1267,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA21G8M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1280,7 +1285,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA19G8M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1298,7 +1303,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA18G8M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1316,7 +1321,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA16G8M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1334,7 +1339,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA15G8M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1352,7 +1357,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA22G8S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1370,7 +1375,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA21G8S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1388,7 +1393,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA19G8S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1406,7 +1411,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA18G8S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1424,7 +1429,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA16G8S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1442,7 +1447,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['PA15G8S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1460,7 +1465,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G3M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1478,7 +1483,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G3R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1496,7 +1501,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G3M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1514,7 +1519,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G3R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1532,7 +1537,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX19G3M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1550,7 +1555,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX19G3R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1568,7 +1573,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX18G3M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1586,7 +1591,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX18G3R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1604,7 +1609,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX17G3M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1622,7 +1627,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX17G3R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1640,7 +1645,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G4M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1658,7 +1663,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G4R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1676,7 +1681,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G4M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1694,7 +1699,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G4R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1712,7 +1717,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX19G4M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1730,7 +1735,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX18G4M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1748,7 +1753,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX17G4M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1766,7 +1771,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G5M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1784,7 +1789,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G5R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1802,7 +1807,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G5M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1820,7 +1825,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G5R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1838,7 +1843,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX19G5M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1856,7 +1861,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX18G5M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1874,7 +1879,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX17G5M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1892,7 +1897,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G5S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1910,7 +1915,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G5S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1928,7 +1933,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX19G5S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1946,7 +1951,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX18G5S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1964,7 +1969,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G6M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -1982,7 +1987,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G6R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2000,7 +2005,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G6M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2018,7 +2023,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G6R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2036,7 +2041,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX19G6M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2054,7 +2059,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX18G6M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2072,7 +2077,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX17G6M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2090,7 +2095,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G7M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2108,7 +2113,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G7R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2126,7 +2131,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G7M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2144,7 +2149,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G7R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2162,7 +2167,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX19G7M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2180,7 +2185,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX18G7M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2198,7 +2203,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX17G7M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2216,7 +2221,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G8M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2234,7 +2239,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G8R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2252,7 +2257,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G8M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2270,7 +2275,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G8R'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2288,7 +2293,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX19G8M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2306,7 +2311,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX18G8M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2324,7 +2329,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX17G8M'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2342,7 +2347,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G8S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2360,7 +2365,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G8S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2378,7 +2383,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX19G8S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2396,7 +2401,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX18G8S'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2414,7 +2419,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22G8SS'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2432,7 +2437,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21G8SS'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2450,7 +2455,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX19G8SS'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2468,7 +2473,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX18G8SS'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2486,7 +2491,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22HSB'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2504,7 +2509,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21HSB'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2522,7 +2527,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX19HSB'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2540,7 +2545,7 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX22HSUSH'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -2558,7 +2563,25 @@ export class ProblemsComponent implements OnInit {
             this.ordered_dump[this.dump_count] = value;
             this.dump_count += 1;
           }
-          else {
+          else if (!this.exam_attribute_dump['TX21HSUSH'].HideTopics) {
+            for (let topic of value.Topics) {
+              if (this.topic_filters.includes(topic)) {
+                this.ordered_dump[this.dump_count] = value;
+                this.dump_count += 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    if (this.filtered_set.includes('TX19HSUSH')) {
+      for (const [num, value] of Object.entries(this.TX19HSUSH_exam_dump)) {
+        if (value.Number <= 68) {
+          if (this.topic_filters.length == 0) {
+            this.ordered_dump[this.dump_count] = value;
+            this.dump_count += 1;
+          }
+          else if (!this.exam_attribute_dump['TX19HSUSH'].HideTopics) {
             for (let topic of value.Topics) {
               if (this.topic_filters.includes(topic)) {
                 this.ordered_dump[this.dump_count] = value;
@@ -3097,7 +3120,7 @@ export class ProblemsComponent implements OnInit {
     this.subtopic_search_dump = {};
     for (const [ex, dump] of Object.entries(this.dump_dict)) {
       for (const [num, prob] of Object.entries(dump)) {
-        if (typeof prob.SubTopics != 'undefined') {
+        if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
           if (prob.SubTopics.includes(subtopic)) {
             this.subtopic_problem_count += 1;
             this.subtopic_search_dump[this.subtopic_problem_count] = prob;
