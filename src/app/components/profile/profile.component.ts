@@ -1789,13 +1789,11 @@ export class ProfileComponent implements OnInit {
           // }
         }
         else {
-          this.authService.getProfilePic(this.authService.userData);
-          setTimeout(() => {
-            console.log(this.authService.pp_url);
-            this.profileUploadURL = this.authService.pp_url;
-          }, 150);
           this.student_metadata = [];
-          const linked_students = this.authService.userData.students.slice(1);
+          var linked_students = {};
+          if (this.authService.userData.students) {
+            linked_students = this.authService.userData.students.slice(1);
+          }
           for (const [key, stud] of Object.entries(linked_students)) {
             setTimeout(() => {
               console.log(stud);
@@ -1804,6 +1802,11 @@ export class ProfileComponent implements OnInit {
               this.student_metadata.push(this.student_data as object);
             }, +key * 10);
           }
+          this.authService.getProfilePic(this.authService.userData);
+          setTimeout(() => {
+            console.log(this.authService.pp_url);
+            this.profileUploadURL = this.authService.pp_url;
+          }, 150);
         }
       }
       setTimeout(() => {

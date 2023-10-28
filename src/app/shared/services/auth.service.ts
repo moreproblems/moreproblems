@@ -199,9 +199,9 @@ export class AuthService {
       //   });
       .signInWithPopup(provider)
       .then((result) => {
-        this.router.navigate(['profile']);
         this.WriteUserData(result.user, role);
         this.SetUserData(result.user);
+        this.router.navigate(['profile']);
         // this.setUserLoggedIn(result.user);
       })
       .catch((error) => {
@@ -382,6 +382,8 @@ export class AuthService {
     return stor.getDownloadURL(stor.ref(strg, 'profile/' + ""+user.uid + '/pic')).then((url) => {
       this.pp_url = url;
       console.log(this.pp_url);
+    }).catch(error => {
+      console.log(error.message);
     });
   }
 

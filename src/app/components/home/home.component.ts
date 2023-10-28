@@ -1578,7 +1578,10 @@ export class HomeComponent implements OnInit {
         if (this.authService.userData.role != 'Student') {
           this.student_metadata = [];
           this.my_student_metadata = [];
-          const linked_students = this.authService.userData.students.slice(1);
+          var linked_students = {};
+          if (this.authService.userData.students) {
+            linked_students = this.authService.userData.students.slice(1);
+          }
           for (const [key, stud] of Object.entries(linked_students)) {
             setTimeout(() => {
               console.log(stud);
