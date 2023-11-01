@@ -850,7 +850,7 @@
               <div *ngFor="let block of supp_st_dump[supp].Context"
                 style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
                 <h3 *ngIf="!block.endsWith('.jpg')"
-                  style="font-size: 18px"> <i style="font-weight: 400">{{block}}</i> </h3>
+                  style="font-size: 18px"><i style="font-weight: 400">{{block}}</i></h3>
                 <img *ngIf="block.endsWith('.jpg')"
                   src="./assets/{{block}}" style="max-width: 300px; margin: auto">
               </div>
@@ -863,39 +863,52 @@
               <section style="width:fit-content">
                 <div *ngFor="let block of supp_st_dump[supp].Content"
                   style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
-                  <h3 *ngIf="!block[1].endsWith('.jpg')"
-                    style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
-                    {{block[0]}}
-                  </h3>
+                  <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block[0]}}</h3>
+                    <div *ngIf="block[1].endsWith('.json')" style="border: 1px solid black; width: fit-content; max-width: 750px; margin: auto; padding: 25px">
+                      <h2 *ngIf="supp_st_dump[supp].Title != ''"> {{supp_st_dump[block[1]].Title}} </h2>
+                      <br />
+                      <section style="width:fit-content">
+                        <div *ngFor="let block2 of supp_st_dump[block[1]].Content"
+                          style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                          <h3 *ngIf="!block2[1].endsWith('.jpg')"
+                            style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block2[0]}}</h3>
+                          <div *ngIf="block2[1].startsWith(':box:')"
+                            style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block2[1].slice(5)}}</h3>
+                          </div>
+                          <h3
+                            *ngIf="!block2[1].endsWith('.jpg') && !block2[1].startsWith(':box:') && (block2[0] != '' || supp_st_dump[block[1]].LabelType == 'L')"
+                            style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block2[1]}}</h3>
+                          <h3
+                            *ngIf="!block2[1].endsWith('.jpg') && !block2[1].startsWith(':box:') && block2[0] == '' && supp_st_dump[block[1]].LabelType == 'P'"
+                            style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)"><b>{{block2[1]}}</b></h3>
+                          <img *ngIf="block2[1].endsWith('.jpg')" src="./assets/{{block2[1]}}" style="max-width: 300px; margin: auto">
+                        </div>
+                      </section>
+                    </div>
                   <div *ngIf="block[1].startsWith(':box:')"
                     style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
-                      {{block[1].slice(5)}} </h3>
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block[1].slice(5)}}</h3>
                   </div>
                   <h3
                     *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_st_dump[supp].LabelType == 'L')"
-                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                    {{block[1]}} </h3>
+                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
                   <h3
                     *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] == '' && supp_st_dump[supp].LabelType == 'P'"
-                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                    <b>{{block[1]}}</b>
-                  </h3>
+                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)"><b>{{block[1]}}</b></h3>
                   <img *ngIf="block[1].endsWith('.jpg')" src="./assets/{{block[1]}}" style="max-width: 300px; margin: auto">
                 </div>
-                <br *ngIf="supp_st_dump[supp].Copyright != ''"/>
-                <h4 *ngIf="supp_st_dump[supp].Copyright != ''" style="font-size: 14px; white-space: pre-wrap; text-align: left"> <i
-                    style="font-weight: 300">{{supp_st_dump[supp].Copyright}}</i> </h4>
-                <br *ngIf="supp_st_dump[supp].References.length > 0"/> 
-                <hr *ngIf="supp_st_dump[supp].References.length > 0" style="width: 95%">
-                <div *ngFor="let block of supp_st_dump[supp].References"
-                  style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
-                  <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
-                    {{block[0]}} </h3>
-                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                    {{block[1]}} </h3>
-                </div>
               </section>
+              <br *ngIf="supp_st_dump[supp].Copyright != ''"/>
+              <h4 *ngIf="supp_st_dump[supp].Copyright != ''" style="font-size: 14px; white-space: pre-wrap; text-align: left"> <i
+                  style="font-weight: 300">{{supp_st_dump[supp].Copyright}}</i> </h4>
+              <br *ngIf="supp_st_dump[supp].References.length > 0"/> 
+              <hr *ngIf="supp_st_dump[supp].References.length > 0" style="width: 95%">
+              <div *ngFor="let block of supp_st_dump[supp].References"
+                style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block[0]}}</h3>
+                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
+              </div>
             </div>
             <br />
           </div>
@@ -1341,7 +1354,7 @@
               <div *ngFor="let block of supp_dump[supp].Context"
                 style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
                 <h3 *ngIf="!block.endsWith('.jpg')"
-                  style="font-size: 18px"> <i style="font-weight: 400">{{block}}</i> </h3>
+                  style="font-size: 18px"><i style="font-weight: 400">{{block}}</i></h3>
                 <img *ngIf="block.endsWith('.jpg')"
                   src="./assets/{{block}}" style="max-width: 300px; margin: auto">
               </div>
@@ -1353,39 +1366,52 @@
               <section style="width:fit-content">
                 <div *ngFor="let block of supp_dump[supp].Content"
                   style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
-                  <h3 *ngIf="!block[1].endsWith('.jpg')"
-                    style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
-                    {{block[0]}}
-                  </h3>
+                  <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block[0]}}</h3>
+                  <div *ngIf="block[1].endsWith('.json')" style="border: 1px solid black; width: fit-content; max-width: 750px; margin: auto; padding: 25px">
+                    <h2 *ngIf="supp_dump[supp].Title != ''"> {{supp_dump[block[1]].Title}} </h2>
+                    <br />
+                    <section style="width:fit-content">
+                      <div *ngFor="let block2 of supp_dump[block[1]].Content"
+                        style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                        <h3 *ngIf="!block2[1].endsWith('.jpg')"
+                          style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block2[0]}}</h3>
+                        <div *ngIf="block2[1].startsWith(':box:')"
+                          style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block2[1].slice(5)}}</h3>
+                        </div>
+                        <h3
+                          *ngIf="!block2[1].endsWith('.jpg') && !block2[1].startsWith(':box:') && (block2[0] != '' || supp_dump[block[1]].LabelType == 'L')"
+                          style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block2[1]}}</h3>
+                        <h3
+                          *ngIf="!block2[1].endsWith('.jpg') && !block2[1].startsWith(':box:') && block2[0] == '' && supp_dump[block[1]].LabelType == 'P'"
+                          style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)"><b>{{block2[1]}}</b></h3>
+                        <img *ngIf="block2[1].endsWith('.jpg')" src="./assets/{{block2[1]}}" style="max-width: 300px; margin: auto">
+                      </div>
+                    </section>
+                  </div>
                   <div *ngIf="block[1].startsWith(':box:')"
                     style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
-                      {{block[1].slice(5)}} </h3>
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block[1].slice(5)}}</h3>
                   </div>
                   <h3
-                    *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_dump[supp].LabelType == 'L')"
-                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                    {{block[1]}} </h3>
+                    *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_dump[supp].LabelType == 'L')"
+                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
                   <h3
-                    *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] == '' && supp_dump[supp].LabelType == 'P'"
-                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                    <b>{{block[1]}}</b>
-                  </h3>
+                    *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] == '' && supp_dump[supp].LabelType == 'P'"
+                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)"><b>{{block[1]}}</b></h3>
                   <img *ngIf="block[1].endsWith('.jpg')" src="./assets/{{block[1]}}" style="max-width: 300px; margin: auto">
                 </div>
-                <br *ngIf="supp_dump[supp].Copyright != ''"/>
-                <h4 *ngIf="supp_dump[supp].Copyright != ''" style="font-size: 14px; white-space: pre-wrap; text-align: left"> <i
-                    style="font-weight: 300">{{supp_dump[supp].Copyright}}</i> </h4>
-                <br *ngIf="supp_dump[supp].References.length > 0"/> 
-                <hr *ngIf="supp_dump[supp].References.length > 0" style="width: 95%">
-                <div *ngFor="let block of supp_dump[supp].References"
-                  style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
-                  <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
-                    {{block[0]}} </h3>
-                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                    {{block[1]}} </h3>
-                </div>
               </section>
+              <br *ngIf="supp_dump[supp].Copyright != ''"/>
+              <h4 *ngIf="supp_dump[supp].Copyright != ''" style="font-size: 14px; white-space: pre-wrap; text-align: left"> <i
+                  style="font-weight: 300">{{supp_dump[supp].Copyright}}</i> </h4>
+              <br *ngIf="supp_dump[supp].References.length > 0"/> 
+              <hr *ngIf="supp_dump[supp].References.length > 0" style="width: 95%">
+              <div *ngFor="let block of supp_dump[supp].References"
+                style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
+                <h3 style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block[0]}}</h3>
+                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
+              </div>
             </div>
             <br />
           </div>

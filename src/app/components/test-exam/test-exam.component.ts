@@ -417,6 +417,11 @@ export class TestExamComponent implements OnInit {
             console.log(res);
             console.log(JSON.stringify(res));
             this.supp_dump[path] = res;
+            for (let block of this.supp_dump[path].Content) {
+                if (block[1].endsWith('.json')) {
+                    this.read_supp_json(block[1]);
+                }
+            }
         });
     }
 
@@ -425,6 +430,11 @@ export class TestExamComponent implements OnInit {
         console.log(res);
         console.log(JSON.stringify(res));
         this.supp_st_dump[path] = res;
+        for (let block of this.supp_st_dump[path].Content) {
+            if (block[1].endsWith('.json')) {
+                this.read_supp_st_json(block[1]);
+            }
+        }
       });
     }
 
