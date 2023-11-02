@@ -833,14 +833,15 @@
                 <h3 *ngIf="supp_dump[supp].Directions != ''" style="font-weight: 500; font-size: 18px">
                   {{supp_dump[supp].Directions}}
                 </h3>
-                <br />
+                <br *ngIf="supp_dump[supp].Directions != ''" />
                 <div *ngFor="let block of supp_dump[supp].Context"
                   style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
                   <h3 *ngIf="!block.endsWith('.jpg')"
-                    style="font-size: 18px"><i style="font-weight: 400">{{block}}</i></h3>
+                    style="font-size: 18px; margin: auto"><i style="font-weight: 400">{{block}}</i></h3>
                   <img *ngIf="block.endsWith('.jpg')"
                     src="./assets/{{block}}" style="max-width: 300px; margin: auto">
                 </div>
+                <br *ngIf="supp_dump[supp].Context.length > 0" />
                 <h2 *ngIf="supp_dump[supp].Title != ''"> {{supp_dump[supp].Title}} </h2>
                 <h3 *ngIf="supp_dump[supp].Subtitle != ''" style="font-size: 18px"> {{supp_dump[supp].Subtitle}} </h3>
                 <h3 *ngIf="supp_dump[supp].Author != ''" style="font-size: 18px"> <i
