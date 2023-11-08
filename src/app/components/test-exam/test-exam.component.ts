@@ -632,6 +632,13 @@ export class TestExamComponent implements OnInit {
         }
     }
 
+    attempt_lr_st_problem(response: string) {
+        if (response != this.subtopic_problem_selection) {
+            this.subtopic_problem_selection = response;
+            this.subtopic_problem_attempts += 1;
+        }
+    }
+
     shuffle_m(choices: any) {
         if (!this.m_shuffled) {
             this.choices_sequence = Array.from(Object.keys(choices));
