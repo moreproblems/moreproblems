@@ -467,7 +467,7 @@ export class TestExamComponent implements OnInit {
                                     }
                                 }
                                 else {
-                                    this.attempt_response[part_num] = 'That is not the correct answer - have another try.';
+                                    this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
                                 }
                             }
                         }
@@ -485,7 +485,7 @@ export class TestExamComponent implements OnInit {
                                     }
                                 }
                                 else {
-                                    this.attempt_response[part_num] = 'That is not the correct answer - have another try.';
+                                    this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
                                 }
                             }
                         }
@@ -515,7 +515,7 @@ export class TestExamComponent implements OnInit {
                                 }
                             }
                             else {
-                                this.subtopic_attempt_response = 'That is not the correct answer - have another try.';
+                                this.subtopic_attempt_response = 'That is not the correct answer - review the question again and submit a different response.';
                             }
                         }
                     }
@@ -545,7 +545,7 @@ export class TestExamComponent implements OnInit {
             //                     }
             //                 }
             //                 else {
-            //                     this.attempt_response = 'That is not the correct answer - have another try.';
+            //                     this.attempt_response = 'That is not the correct answer - review the question again and submit a different response.';
             //                 }
             //             }
             //         }
@@ -587,7 +587,7 @@ export class TestExamComponent implements OnInit {
                             }
                         }
                         else {
-                            this.attempt_response[part_num] = 'That is not the correct answer - have another try.';
+                            this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
                         }
                     }
                 }
@@ -614,7 +614,7 @@ export class TestExamComponent implements OnInit {
                             }
                         }
                         else {
-                            this.subtopic_attempt_response = 'That is not the correct answer - have another try.';
+                            this.subtopic_attempt_response = 'That is not the correct answer - review the question again and submit a different response.';
                         }
                     }
                 }
