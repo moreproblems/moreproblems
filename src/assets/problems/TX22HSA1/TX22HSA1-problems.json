@@ -1,0 +1,2696 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Quadratic Functions & Equations"
+        ],
+        "SubTopics": [
+            "Graph quadratic functions on the coordinate plane and use the graph to identify key attributes, if possible, including x-intercept, y-intercept, zeros, maximum value, minimum values, vertex, and the equation of the axis of symmetry."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The graph of quadratic function r is shown on the grid.",
+            "problems/TX22HSA1/media/1a.jpg",
+            "Which answer choice best represents the intercepts of the graph of r?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "x-intercept: (5, 0)\ny-intercepts: (0, 10) and (0, −2)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student switched the values of the x- and y-intercepts and reversed the signs of the intercepts, likely because of confusion about the relationship between the intercepts and the factored form of a quadratic equation. In addition, the student switched the x- and y-coordinates of the ordered pairs. In choosing (5, 0) as the x-intercept, the student confused the x-intercept with the y-intercept (y = −5), reversed the sign, and placed the intercept in the x-coordinate position. In choosing (0, 10) and (0, −2) as y-intercepts, the student confused the y-intercept (y = −5) with the x-intercepts (x = −10 and x = 2), reversed the signs, and placed the intercepts int he y-coordinate positions. The student needs to focus on understanding how to identify the intercepts of a quadratic function when given a graph.",
+                    "Percent": 4
+                }
+            },
+            "B": {
+                "Choice": "x-intercepts: (0, −10) and (0, 2)\ny-intercept: (−5, 0)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student chose the correct values for the intercepts but switched the x- and y-coordinates of the ordered pairs. The x-intercepts are located at −10 and 2, but the correct ordered pairs are (−10, 0) and (2, 0) instead of (0, −10) and (0, 2). Similarly, the student chose the correct location of the y-intercept but transposed the values of the coordinates; the correct ordered pair is (0, −5) instead of (−5, 0). The student needs to focus on understanding the correct order of the values in an ordered pair.",
+                    "Percent": 20
+                }
+            },
+            "C": {
+                "Choice": "x-intercept: (0, 5)\ny-intercepts: (10, 0) and (−2, 0)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student switched the values of the x- and y-intercepts and reversed the signs of the intercepts, likely because of confusion about the relationship between the intercepts and the factored form of a quadratic equation. In choosing (0, 5) as the x-intercept, the student confused the x-intercept with the y-intercept and reversed the sign. In choosing (10, 0) and (−2, 0) as y-intercepts, the student confused the y-intercept with the x-intercepts and reversed the signs. The student needs to focus on understanding how to identify the intercepts of a quadratic function when given a graph and on understanding the correct order of the values in an ordered pair.",
+                    "Percent": 5
+                }
+            },
+            "D": {
+                "Choice": "x-intercepts: (−10, 0) and (2, 0)\ny-intercept: (0, −5)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the x-intercepts (values where a graph crosses the x-axis [horizontal axis]) from the graph of a quadratic function, the student should have determined that the graph of function r intersects (crosses) the x-axis where x = −10 and x = 2, so the x-intercepts are (−10, 0) and (2, 0). To find the y-intercept (value where a graph crosses the y-axis [vertical axis]), the student should have determined that the graph of function r intersects the y-axis where y = −5, so the y-intercept is at (0, −5).",
+                    "Percent": 70
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Describing & Graphing Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Calculate the rate of change of a linear function represented tabularly, graphically, or algebraically in context of mathematical and real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A worker is packing items in boxes. The table shows the linear relationship between the number of items the worker has packed in boxes after different amounts of time.",
+            "problems/TX22HSA1/media/2a.jpg",
+            "Which statement describes the rate of change of the number of items the worker packed in boxes with respect to the number of minutes the worker has been packing items in boxes?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "The worker packed 8 items in boxes per minute.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely subtracted the first two values in the “Number of Items Packed” column (28 – 20 = 8), disregarding the corresponding change in the number of minutes. The student needs to focus on understanding that the rate of change of a linear relationship is equal to the change in the values of the dependent variable divided by the corresponding change in the values of the independent variable.",
+                    "Percent": 6
+                }
+            },
+            "G": {
+                "Choice": "The worker packed 37 items in boxes per minute.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely found the average of the values in the “Number of Items Packed” column, (20 + 28 + 44 + 56)/4 = 148/4 = 37. The student needs to focus on understanding that the rate of change of a linear relationship is equal to the change in the values of the dependent variable divided by the corresponding change in the values of the independent variable.",
+                    "Percent": 4
+                }
+            },
+            "H": {
+                "Choice": "The worker packed 4 items in boxes per minute.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the rate of change (constant rate of increase or decrease) of the number of items the worker packed in boxes with respect to the number of minutes the worker has been packing items in boxes, the student could have chosen two points from the table and calculated the amount of change. The student could have used the first two sets of values in the table and applied the slope formula, m = (y₂ − y₁)/(x₂ − x₁),resulting in m = (28 − 20)/(7 − 5) = 8/2 = 4. Therefore, the rate of change is 4 items packed per minute. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 87
+                }
+            },
+            "J": {
+                "Choice": "The worker packed 15 items in boxes per minute.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used the first row of values from the table and subtracted 5 from 20 (20 – 5 = 15). The student needs to focus on understanding that the rate of change of a linear relationship is equal to the change in the values of the dependent variable divided by the corresponding change in the values of the independent variable.",
+                    "Percent": 4
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Write systems of two linear equations given a table of values, a graph, and a verbal description."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A system of equations is graphed on the grid.",
+            "problems/TX22HSA1/media/3a.jpg",
+            "Which system of equations is best represented by the graph?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "y = (2/5)x − 8\ny = (−3/5)x − 3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely found the correct slope of each line but reversed the values of the y-intercepts, using −8 for the value of b in the line that is increasing and −3 for the value of b in the line that is decreasing. The student needs to focus on correctly identifying the y-intercept of a linear equation when given a graph.",
+                    "Percent": 8
+                }
+            },
+            "B": {
+                "Choice": "y = (2/5)x − 3\ny = (−3/5)x − 8",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the system of equations that is best represented by the graph, the student could have found the equation of each line shown in the graph in slope-intercept form (y = mx + b, where m = (y₂ − y₁)/(x₂ − x₁) represents the slope of the line and b represents the value of the y-intercept). To find the equation of the line that is increasing from left to right, the student could have recognized that the graph intersects the y-axis at (0, −3), so the value of the y-intercept, b, is −3. The student could have substituted the x- and y-coordinates of (0, −3) and (−5, −5) into the slope formula, resulting in m = (−5 − (−3))/(−5 − 0) = −2/(−5) = 2/5. Since b = −3 and m = 2/5, the equation for the line that is increasing from left to right is y = (2/5)x − 3 . Similarly, to find the equation of the line that is decreasing from left to right, the student could recognize that the graph intersects the y-axis at (0, −8), so the value of the y-intercept, b, is −8. The student could have substituted the x- and y-coordinates of (0, −8) and (−5, −5) into the slope formula, resulting in m = (−5 − (−8))/(−5 − 0) = 3/(−5) = −3/5. Since b = −8 and m = −3/5, the equation for the line that is increasing from left to right is y = (−3/5)x − 8. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 76
+                }
+            },
+            "C": {
+                "Choice": "y = (5/2)x − 8\ny = (−5/3)x − 3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used the reciprocal of the slope formula, m = (x₂ − x₁)/(y₂ − y₁), to calculate the slopes as m = (−5 − 0)/(−5 − (−3)) = (−5)/(−2) = 5/2 for the line that is increasing and m = (−5 − 0)/(−5 − (−8)) = (−5)/3 = −5/3 for the line that is decreasing. In addition, the student likely switched the values of the y-intercepts, using −8 for the value of b in the line that is increasing and −3 for the value of b in the line that is decreasing. The student needs to focus on correctly applying the slope formula and correctly identifying the y-intercept of a linear equation when given a graph.",
+                    "Percent": 9
+                }
+            },
+            "D": {
+                "Choice": "y = (5/2)x − 3\ny = (−5/3)x − 8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used the reciprocal of the slope formula, m = (x₂ − x₁)/(y₂ − y₁), to calculate the slopes as m = (−5 − 0)/(−5 − (−3)) = (−5)/(−2) = 5/2 for the line that is increasing and m = (−5 − 0)/(−5 − (−8)) = (−5)/3 = −5/3 for the line that is decreasing. The student correctly identified the values of the y-intercepts. The student needs to focus on correctly applying the slope formula.",
+                    "Percent": 6
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Algebraic Methods"
+        ],
+        "SubTopics": [
+            "Decide whether relations represented verbally, tabularly, graphically, and symbolically define a function."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which graph represents y as a function of x?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "problems/TX22HSA1/media/4a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely concluded that any parabola represents a function. A parabola represents a function only when it opens vertically, either up or down. The student needs to focus on understanding whether a relation (relationship between the x- and y-values of ordered pairs) represented in a graph defines a function.",
+                    "Percent": 23
+                }
+            },
+            "G": {
+                "Choice": "problems/TX22HSA1/media/4b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely concluded that any parabola represents a function. A parabola represents a function only if it opens vertically, either up or down. The student needs to focus on understanding whether a relation (relationship between the x- and y-values of ordered pairs) represented in a graph defines a function.",
+                    "Percent": 17
+                }
+            },
+            "H": {
+                "Choice": "problems/TX22HSA1/media/4c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely concluded that any continuous graph represents a function, failing to observe that, for example, when x = 0, there are three corresponding values of y at y = 6, y = 0, and y = −6. The student needs to focus on understanding whether a relation (relationship between the x- and y-values of ordered pairs) represented in a graph defines a function.",
+                    "Percent": 9
+                }
+            },
+            "J": {
+                "Choice": "problems/TX22HSA1/media/4d.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine whether a graph represents y as a function of x, the student could have recalled that a function represents a relationship where each input, x, has a single output, y. Also, the student could have recalled that a function could have repeated output values if all the input values are different. The student could have analyzed the graph and noticed that each value of x on the continuous function has only one corresponding value of y. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 52
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Solve systems of two linear equations with two variables for mathematical and real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "What is the solution to this system of equations?",
+            "2x + y = 40",
+            "x − 2y = −20"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "(12, 16)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the solution to the system of linear equations, the student could have used the elimination method. Multiplying the first equation by 2 results in the equation 4x + 2y = 80. The student could have added this to the second equation, x – 2y = −20, to get the result 5x = 60. The student then could have divided both sides of the resulting equation by 5, obtaining x = 12. Next, to find the corresponding value of y, the student could have substituted x = 12 into the second equation, resulting in 12 – 2y = −20. Subtracting 12 from both sides results in −2y = −32. Finally, the student could have divided both sides of the equation by −2, resulting in y = 16. Since x = 12 and y = 16, the ordered pair that is a solution to the system of equations is (12, 16). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 56
+                }
+            },
+            "B": {
+                "Choice": "(15, 17.5)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely switched the coefficient of y in the second equation with the coefficient of x to solve the system using the elimination method, resulting in the equations 2x + y = 40 and 2x – y = −20. Next, the student likely found the sum of the two equations, but when adding 40 + (−20), the student likely ignored the negative sign and found the sum to be 60, resulting in the equation 4x = 60. Next, the student likely divided both sides of the equation by 4 to isolate the x, resulting in x = 15. Finally, the student likely substituted 15 for x in the second equation to solve for y, resulting in x – 2y = −20; (15) – 2y = −20; −2y = −35; y = 17.5. The student needs to focus on correctly using the elimination method to solve a system of equations.",
+                    "Percent": 9
+                }
+            },
+            "C": {
+                "Choice": "There is no solution.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used the elimination method incorrectly by multiplying the y-term in the first equation by 2 and multiplying the x-term in the second equation by −2, understanding that the coefficients must be opposites of each other. The student likely obtained 2x + 2y = 40 and −2x – 2y = −20 and added these equations together to obtain the result 0 = 20 and concluded that there was no solution. The student needs to focus on correctly using the elimination method to solve a system of equations.",
+                    "Percent": 22
+                }
+            },
+            "D": {
+                "Choice": "There are an infinite number of solutions.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used the elimination method incorrectly by multiplying the y-term in the first equation by 2 and by multiplying the x-term and the constant term in the second equation by −2, understanding that the coefficients must be opposites of each other. The student likely obtained 2x + 2y = 40 and −2x – 2y = 40. Next, the student likely added x- and y-terms together but subtracted the constant terms, resulting in 0 = 0. The student then concluded that there are an infinite number of solutions to the system of equations. The student needs to focus on correctly using the elimination method to solve a system of equations.",
+                    "Percent": 13
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Quadratic Functions & Equations"
+        ],
+        "SubTopics": [
+            "Determine the domain and range of quadratic functions and represent the domain and range using inequalities."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which graph best represents a quadratic function with a range of all real numbers greater than or equal to 3?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "problems/TX22HSA1/media/6a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely analyzed the graph and determined that it represents a parabola with vertex at (2, −3). The student likely reversed the sign of the y-coordinate and concluded that 3 is the least y-value instead of the greatest, perhaps because it is a negative number. The student needs to focus on identifying the correct graph when given the range of a quadratic function.",
+                    "Percent": 4
+                }
+            },
+            "G": {
+                "Choice": "problems/TX22HSA1/media/6b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely analyzed the graph and determined that the graph represents a parabola with vertex at (−2, 3). The student then likely incorrectly concluded that since 3 is the greatest y-value, the range must be all numbers greater than 3. The student needs to focus on identifying the correct graph when given the range of a quadratic function.",
+                    "Percent": 13
+                }
+            },
+            "H": {
+                "Choice": "problems/TX22HSA1/media/6c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely analyzed the graph and determined that the graph represents a parabola with vertex at (2, −3). The student then likely reversed the sign of the y-coordinate and concluded that since the parabola opens in an upward direction, the graph must represent a quadratic function with a range of all real numbers greater than or equal to 3. The student needs to focus on identifying the correct graph when given the range of a quadratic function.",
+                    "Percent": 17
+                }
+            },
+            "J": {
+                "Choice": "problems/TX22HSA1/media/6d.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the graph that best represents a quadratic function with a range (all possible y-values) of all real numbers greater than or equal to 3, the student could have analyzed the graph and determined that it represents a parabola with vertex at (−2, 3). The student could have observed that the parabola opens upward and that the least y-value occurs at 3 and that all other y-values on the parabola are greater than 3. The student then could have concluded that the range of the quadratic function represented in this graph is all real numbers greater than or equal to 3. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 66
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Write and solve equations involving direct variation."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The value of y is directly proportional to the value of x. When x = 512, y = 128.",
+            "What is the value of y when x = 64?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "256",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely transposed the values of x and y when substituting into the direct variation equation y = kx, resulting in 512 = 128k. The student then likely divided both sides by 128, obtaining k = 4. Finally, the student likely multiplied k, the constant of proportionality, by x = 64, resulting in y = 256. The student needs to focus on understanding how to set up and solve direct variation problems.",
+                    "Percent": 13
+                }
+            },
+            "B": {
+                "Choice": "32",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly solved the variation equation y = kx by substituting x = 512 and y = 128 into the equation and solving for k, resulting in k = 1/4. Next, the student likely rewrote the equation as y = (1/4)x. Finally, the student likely incorrectly multiplied the constant of proportionality by 128 instead of 64, resulting in y = (1/4)(128) = 32 . The student needs to focus on understanding how to set up and solve direct variation problems.",
+                    "Percent": 17
+                }
+            },
+            "C": {
+                "Choice": "16",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the value of y when x = 64 in a directly proportional relationship, the student could have recognized that the relation can be represented by the equation y = kx, where k is the constant of proportionality. To determine the value of k, the student could have substituted x = 512 and y = 128 into the equation and solved for k. The result would be 128 = 512k. Then the student could have divided both sides by 512, obtaining k = 1/4. Next, the student could have rewritten the equation as y = (1/4)x. Finally, the student could have substituted x = 64 into the equation and solved for y, resulting in y = (1/4)(64) = 16 . This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 57
+                }
+            },
+            "D": {
+                "Choice": "8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely calculated the answer by incorrectly dividing the two given values of x, resulting in y = 512/64 = 8 . The student needs to focus on understanding how to set up and solve direct variation problems.",
+                    "Percent": 12
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Describing & Graphing Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Graph the solution set of linear inequalities in two variables on the coordinate plane."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A customer is buying bath towels and hand towels and can spend no more than $100. Each bath towel costs $8, and each hand towel costs $5. The inequality 8x + 5y ≤ 100 represents all possible combinations of x, the number of bath towels, and y, the number of hand towels the customer can buy.",
+            "Which graph best represents the solution set for this inequality?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "problems/TX22HSA1/media/8a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified the correct boundary line in slope-intercept form, y = (−8/5)x + 20 , with correct slope, −8/5, and y-intercept, 20. The student likely interpreted the inequality symbol “≤” as meaning “greater than” instead of “less than or equal to,” which would be represented by a dashed line instead of a solid line, and a shaded region that would not include the origin. The student needs to focus on understanding how the inequality symbol affects the graph of the solution set of a linear inequality.",
+                    "Percent": 12
+                }
+            },
+            "G": {
+                "Choice": "problems/TX22HSA1/media/8b.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which graph best represents the solution set for the inequality 8x + 5y ≤ 100 in the given context, the student could have recognized that the “≤” symbol represents an inclusive inequality and would be represented by a solid boundary line on the graph. To graph the boundary line, the student could have rewritten the equation of the boundary line in slope-intercept form, y = mx + b, where m represents the slope of the boundary line and b represents the y-intercept. First, the student could have subtracted 8x from both sides of the equation of the boundary line, obtaining 5y = −8x + 100. Next, the student could have divided both sides of the equation by 5, with the result y = (−8/5)x + 20. The student could then have recognized that the slope of the boundary line is m = − 58 and the y-intercept would be located at the point represented by the ordered pair (0, 20). The student could have determined the correct region to be shaded by substituting the ordered pair (0, 0) into the inequality y ≤ (−8/5)x + 20 to test for a true statement. Since 0 ≤ (−8/5)(0) + 20 is equivalent to 0 ≤ 20, which is a true statement, the ordered pair (0, 0) should be included in the shaded region of the graph. Therefore, the student should have shaded the part of the graph that contains the origin. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 53
+                }
+            },
+            "H": {
+                "Choice": "problems/TX22HSA1/media/8c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified the correct boundary line in slope-intercept form, y = (−8/5)x + 20 , with correct slope, −8/5, and y-intercept, 20. The student likely interpreted the inequality symbol “≤” as meaning “greater than or equal to” instead of “less than or equal to,” which could be represented by a solid line, and identified the shaded region of the graph as not including the ordered pair (0, 0), since 0 ≥ 20 is not a true statement. The student needs to focus on understanding how the inequality symbol affects the graph of the solution set of a linear inequality.",
+                    "Percent": 22
+                }
+            },
+            "J": {
+                "Choice": "problems/TX22HSA1/media/8d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified the correct boundary line in slope-intercept form, y = (−8/5)x + 20 , with correct slope, −8/5, and y-intercept, 20. The student likely interpreted the inequality symbol “≤” as meaning “less than” instead of “less than or equal to,” which would be represented by a dashed line instead of a solid line. The student needs to focus on understanding how the inequality symbol affects the graph of the solution set of a linear inequality.",
+                    "Percent": 13
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Exponential Functions & Equations"
+        ],
+        "SubTopics": [
+            "Write exponential functions in the form f(x) = abˣ (where b is a rational number) to describe problems arising from mathematical and real-world situations, including growth and decay."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "An exponential function is graphed on the grid.",
+            "problems/TX22HSA1/media/9a.jpg",
+            "Which function is best represented by the graph?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "p(x) = (0.25)ˣ",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which function best represents the graph of an exponential function, the student could have recognized that an exponential function is in the form p(x) = abˣ, where a is the y-intercept (value where the graph crosses the y-axis), b is the decay factor (constant rate by which successive values decrease), and x is the variable (symbol used to represent an unknown number). From the graph, the student could have interpreted that the y-intercept at (0, 1) means that the value of a is 1. To write the exponential function, the student could have substituted the values from the ordered pair (−1, 4) into the equation p(x) = abˣ, using a = 1, x = −1, and p(−1) = 4, obtaining 4 = (1)(b)⁻¹. To solve for b, the student could have rewritten the equation as 4 = 1/b and then multiplied both sides of the equation by b, obtaining 4b = 1. Next, the student could have divided both sides of the equation by 4, resulting in the solution b = 0.25. Substituting a = 1 and b = 0.25 into the exponential equation p(x) = abˣ, the student could have obtained p(x) = (1)(0.25)ˣ = (0.25)ˣ. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 68
+                }
+            },
+            "B": {
+                "Choice": "p(x) = 2(0.5)ˣ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely interpreted the ordered pair near (2, 0) as the y-intercept, using 2 for the initial value (a). Then the student likely determined that the value of the common factor was 0.25 but multiplied 0.25 by the initial value to obtain b = (0.25)(2) = 0.5. Using a = 2 and b = 0.5 in the exponential equation p(x) = abˣ, the student likely obtained p(x) = (2)(0.5)ˣ = 2(0.5)ˣ. The student needs to focus on understanding how to determine the initial value of an exponential function when given a graph.",
+                    "Percent": 14
+                }
+            },
+            "C": {
+                "Choice": "p(x) = (1.25)ˣ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly identified the initial value from the graph as 1 and the decay factor as 0.25. The student likely interpreted the value of b in the exponential equation p(x) = abˣ as the sum of the initial value and the decay factor and used b = 1 + 0.25 = 1.25. Substituting b = 1.25 into the exponential equation, the student likely obtained p(x) = (1.25)ˣ. The student needs to focus on understanding how to determine the decay factor of an exponential function when given a graph.",
+                    "Percent": 15
+                }
+            },
+            "D": {
+                "Choice": "p(x) = (25)ˣ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly identified the initial value from the graph as being 1 and the decay factor as being 0.25. When substituting these values into the exponential equation p(x) = abˣ, the student likely neglected the decimal point in the decay factor and obtained p(x) = (1)(25)ˣ = (25)ˣ. The student needs to focus on understanding how to correctly write the value of the decay factor of an exponential function when given a graph.",
+                    "Percent": 3
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Algebraic Methods"
+        ],
+        "SubTopics": [
+            "Multiply polynomials of degree one and degree two."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which expression is equivalent to (n − 4)(2n + 7)?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "3n + 3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely found the sum of the binomials instead of the product, adding the terms containing the variable n and the terms that are constants to obtain n + 2n + (−4) + 7 = 3n + 3. The student needs to focus on understanding how to find the product of two binomials.",
+                    "Percent": 12
+                }
+            },
+            "G": {
+                "Choice": "n − 28",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely multiplied each term in the factor (n – 4) by each term in the factor (2n + 7) but determined the product of n and 2n to be 2n instead of 2n². The student likely multiplied n(2n + 7) – 4(2n + 7) to get a result of 2n + 7n – 8n – 28 and then combined like terms get as a result the expression 1n – 28, which is equivalent to n – 28. The student needs to focus on understanding how to find the product of two binomials.",
+                    "Percent": 12
+                }
+            },
+            "H": {
+                "Choice": "2n² − 15n − 28",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely multiplied each term in the factor (n – 4) by each term in the factor (2n + 7) to obtain n(2n + 7) – 4(2n + 7) = 2n² + 7n – 8n – 28. Next, the student likely combined the like terms 7n and −8n incorrectly to get a result of −15n instead of −n. The student needs to focus on understanding how to find the product of two binomials.",
+                    "Percent": 14
+                }
+            },
+            "J": {
+                "Choice": "2n² − n − 28",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which expression is equivalent to (n – 4)(2n + 7), the student could have multiplied each term in the factor (n – 4) by each term in the factor (2n + 7) and then combined like terms (terms that contain the same variables raised to the same powers or constant terms). The multiplication steps are n(2n + 7) – 4(2n + 7), resulting in 2n² + 7n – 8n – 28. The student could have combined like terms to obtain 2n² – 1n – 28, which is equivalent to 2n² – n – 28. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 62
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Describing & Graphing Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Compare and contrast association and causation in real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which situation shows causation?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "When the number of people in a bus increases, the number of animals in a zoo also increases.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely did not realize that the two events are not related and that the number of people on a bus has no effect on the number of animals in a zoo. The student needs to focus on understanding causation in real-world problems.",
+                    "Percent": 5
+                }
+            },
+            "B": {
+                "Choice": "When the number of hours worked each week by an hourly employee decreases, the amount of money earned by the employee also decreases.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the situation that best shows causation (in which an event is the result of the occurrence of another event), the student should have recognized that the number of hours an employee works causes the amount of money an employee earns to change. If the number of hours an employee works decreases, the amount of money the employee earns will also decrease.",
+                    "Percent": 74
+                }
+            },
+            "C": {
+                "Choice": "When the amount of a discount for a sale increases, the number of items sold during the sale decreases.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified a situation that shows possible association (relationship) but not causation. The student likely did not realize that if the amount of a discount for a sale increases, the number of items sold may or may not decrease. The student needs to focus on understanding causation in real-world problems.",
+                    "Percent": 17
+                }
+            },
+            "D": {
+                "Choice": "When the number of bike trails in a city decreases, the amount of rainfall in the city increases.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely did not realize that the two events are not related and that the number of bike trails in a city has no effect on the amount of rainfall in the city. The student needs to focus on understanding causation in real-world problems.",
+                    "Percent": 4
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Write systems of two linear equations given a table of values, a graph, and a verbal description."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A system of linear equations is represented by line h and line j. A table representing some points on line h and the graph of line j are shown.",
+            "problems/TX22HSA1/media/12a.jpg",
+            "problems/TX22HSA1/media/12b.jpg",
+            "Which system of equations is best represented by lines h and j?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "y = (4/3)x − 5\ny = (4/5)x + 1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined the correct y-intercepts for both line h and line j but incorrectly applied the slope formula, using m = (x₂ − x₁)/(y₂ −y₁) instead of m = (y₂ − y₁)/(x₂ −x₁). For line h, the student likely calculated the slope using the first two ordered pairs represented in the table and then made a sign error, resulting in m = (x₂ − x₁)/(y₂ −y₁) = (−8 − (−16))/(1 − 7) = (−8)/(−6) = 4/3. The student likely substituted m = 4/3 and b = −5 into y = mx + b to get the result y = (4/3)x − 5. For line j, the student likely calculated the slope using the ordered pairs (4, −4) and (−4, 6) and then made a sign error, resulting in m = (x₂ − x₁)/(y₂ −y₁) = (−4 − 4)/(6 − (−4)) = (−8)/(−10) = 4/5. Next, the student likely substituted m = 4/5 and b = 1 into y = mx + b to obtain y = (4/5)x + 1. The student needs to focus on understanding how to identify the slope and y-intercept of a line when given a table of values or a graph.",
+                    "Percent": 8
+                }
+            },
+            "G": {
+                "Choice": "y = (3/4)x − 5\ny = (5/4)x + 1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined the correct y-intercepts for both line h and line j but incorrectly used the opposite of the value of each slope. For line h, the student likely substituted m = 3/4 and b = −5 into y = mx + b, resulting in y = (3/4)x − 5 . For line j, the student likely substituted m = 5/4 and b = 1 into y = mx + b, obtaining y = (5/4)x + 1 . The student needs to focus on understanding how to identify the slope and y-intercept of a line when given a table of values or a graph.",
+                    "Percent": 12
+                }
+            },
+            "H": {
+                "Choice": "y = (−4/3)x − 5\ny = (−4/5)x + 1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined the correct y-intercepts for both line h and line j but incorrectly applied the slope formula, using m = (x₂ − x₁)/(y₂ −y₁) instead of m = (y₂ − y₁)/(x₂ −x₁). For line h, the student likely calculated the slope using the first two ordered pairs represented in the table, resulting in m = (x₂ − x₁)/(y₂ −y₁) = (−8 − (−16))/(1 − 7) = 8/(−6) = −4/3. Next, the student likely substituted m = −4/3 and b = −5 into y = mx + b, resulting in y = (−4/3)x − 5 . For line j, the student likely calculated the slope using the ordered pairs (4, −4) and (−4, 6), resulting in m = (x₂ − x₁)/(y₂ −y₁) = (−4 − 4)/(6 − (−4)) = −8/10 = − 4/5. Next, the student likely substituted m = (−4/5) and b = 1 into y = mx + b, obtaining y = (−4/5)x + 1 . The student needs to focus on understanding how to identify the slope and y-intercept of a line when given a table of values or a graph.",
+                    "Percent": 21
+                }
+            },
+            "J": {
+                "Choice": "y = (−3/4)x − 5\ny = (−5/4)x + 1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which system of equations (two or more equations containing the same set of variables [symbols used to represent unknown numbers]) can be used to represent line h, represented in a table, and line j, represented by a graph, the student could write each equation in slope-intercept form, y = mx + b, where m represents the slope of each line and b represents the y-intercept of each line. To find the equation for line h, the student could have used the first two sets of values in the table and applied the slope formula m = (y₂ − y₁)/(x₂ −x₁), resulting in m = (1 − 7)/(−8 − (−16)) = (−6)/8 = −3/4. To determine the y-intercept of line h, the student could have substituted the slope and one of the ordered pairs from the table, (−16, 7), into the point-slope equation, y – y₁ = m(x – x₁), where m represents the slope of the line and (x₁, y₁) represents a point on the line. The student could have obtained y − 7 = (−3/4)(x − (−16)) and then solved for y, by first distributing the −3/4, resulting in y − 7 = (−3/4)x − 12 . Next, the student could have added 7 to both sides to isolate the y, resulting in the equation y = (−3/4)x − 5 . To find the equation of line j, which is represented by a graph, the student could have used the slope-intercept form of a line, y = mx + b. The student could have first located the y-intercept at (0, 1) and identified that b = 1. The student could then have applied the slope formula, m = (y₂ − y₁)/(x₂ −x₁), using the ordered pairs (4, −4) and (−4, 6), to get the result m = (6 − (−4))/(−4 − 4) = 10/(−8) = −5/4. Next, the student could have substituted m = −5/4 and b = 1 into y = mx + b to obtain y = (−5/4)x + 1. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 59
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Quadratic Functions & Equations"
+        ],
+        "SubTopics": [
+            "Determine the effects on the graph of the parent function f(x) = x² when f(x) is replaced by af(x), f(x) + d, f(x – c), f(bx) for specific values of a, b, c, and d."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which answer choice describes how the graph of f(x) = x² was transformed to create the graph of n(x) = x² − 1?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "A vertical shift up",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined that the “−1” in n(x) would cause the graph to translate up 1 unit instead of down. The student needs to focus on understanding how changes to a function affect the graph of the function.",
+                    "Percent": 11
+                }
+            },
+            "B": {
+                "Choice": "A horizontal shift to the left",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined that the “−1” in n(x) would cause the graph to translate left 1 unit instead of down. The student needs to focus on understanding how changes to a function affect the graph of the function.",
+                    "Percent": 13
+                }
+            },
+            "C": {
+                "Choice": "A vertical shift down",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which answer choice best describes the transformation of the graph of f(x) = x² to the graph of n(x) = x² – 1, the student could have recognized that subtracting 1 from x² causes the vertex of the parabola to shift from the origin, (0, 0), down 1 unit to (0, −1). The student then could have realized that all the y-values on the parabola would also shift down 1 unit, representing a vertical translation down of the entire parabola. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 67
+                }
+            },
+            "D": {
+                "Choice": "A horizontal shift to the right",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined that the “−1” in n(x) would cause the graph to translate right 1 unit instead of down. The student needs to focus on understanding how changes to a function affect the graph of the function.",
+                    "Percent": 8
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            "Number & Algebraic Methods"
+        ],
+        "SubTopics": [
+            "Factor, if possible, trinomials with real factors in the form ax² + bx + c, including perfect square trinomials of degree two."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The expression d² − d − 6 can be written in factored form as (d + 2)(d + k), where k represents a number. What is the value of k?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "-3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the value of k represented in the binomial factor (d + k), the student could have recognized the need to find the factors (numbers or expressions that can be multiplied to get another number or expression) of d² – d – 6. The student could have determined that d² is equal to d ∙ d and written d as the first term in each factor. The student could have determined that the second terms in the two factors are 2 and −3 because their product (answer when multiplying) is −6 (the last term in the given expression) and that their sum is −1 (the coefficient of the middle term in the expression given). The student then could have written the factors as (d + 2)(d – 3). Finally, the student could have compared (d + 2)(d – 3) to the given factored form, (d + 2)(d + k) and recognized that the value of k must be −3. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 26
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Write linear equations in two variables given a table of values, a graph, and a verbal description."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The graph of a linear function is shown on the grid.",
+            "problems/TX22HSA1/media/15a.jpg",
+            "Which equation is best represented by this graph?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "y = (−7/4)x + 4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely calculated the slope correctly but then determined that the x-intercept is at (4, 0) and concluded that the value of b is 4. Next, the student likely substituted m = −7/4 and b = 4 into y = mx + b, with the result y = (−7/4)x + 4 . The student needs to focus on understanding how to determine the y-intercept of a linear function when given a graph.",
+                    "Percent": 15
+                }
+            },
+            "B": {
+                "Choice": "y = (−7/4)x + 7",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the equation that is best represented by the graph, the student could have found the equation of the line shown in the graph by using the slope-intercept form of a linear equation (y = mx + b, where m = (y₂ − y₁)/(x₂ −x₁) represents the slope of the line and b represents the value of the y-intercept). The student could have recognized from the graph that the line intersects the y-axis at (0, 7) and concluded that the value of b is 7. Then the student could have used the ordered pairs (4, 0) and (8, −7) from the graph and applied the slope formula, m = (y₂ − y₁)/(x₂ −x₁), resulting in m = (−7 − 0)/(8 − 4) = (−7)/4 = −7/4. Next, the student could have substituted m = −7/4 and b = 7 into y = mx + b, obtaining y = (−7/4)x + 7 . This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 71
+                }
+            },
+            "C": {
+                "Choice": "y = (−4/7)x + 4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely concluded that the value of b is 4 by using the x-intercept of the line at (4, 0) and then incorrectly applied the slope formula, using m = (x₂ −x₁)/(y₂ − y₁) instead of m = (y₂ − y₁)/(x₂ −x₁). The student likely substituted the ordered pairs (4, 0) and (8, −7) from the graph into m = (x₂ −x₁)/(y₂ − y₁), resulting in m = (x₂ −x₁)/(y₂ − y₁) = (8 − 4)/(−7 − 0) = 4/(−7) = −4/7. Finally, the student likely substituted b = 4 and m = −4/7 into y = mx + b, resulting in y = (−4/7)x + 4. The student needs to focus on understanding how to write a linear function in slope-intercept form when given a graph.",
+                    "Percent": 8
+                }
+            },
+            "D": {
+                "Choice": "y = (−4/7)x + 7",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely recognized from the graph that the line intersects the y-axis at (0, 7) and correctly concluded that the value of b is 7. Next, the student likely applied the slope formula incorrectly, using m = (x₂ −x₁)/(y₂ − y₁) instead of m = (y₂ − y₁)/(x₂ −x₁). The student likely substituted the ordered pairs (4, 0) and (8, −7) from the graph into m = (x₂ −x₁)/(y₂ − y₁), resulting in m =(x₂ −x₁)/(y₂ − y₁) = (8 − 4)/(−7 − 0) = 4/(−7) = −4/7. Finally, the student likely substituted b = 7 and m = −4/7 into y = mx + b, resulting in y = (−4/7)x + 7 . The student needs to focus on understanding how to find the slope of a linear function when given a graph.",
+                    "Percent": 6
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Algebraic Methods"
+        ],
+        "SubTopics": [
+            "Simplify numeric and algebraic expressions using the laws of exponents, including integral and rational exponents."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which expression is equivalent to (c⁸(d⁶)³)/(c²) for all values of c for which the expression is defined?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "c⁴d⁹",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely applied the properties of exponents incorrectly by dividing the exponents of the factors containing c and adding the exponents of the factor containing d, obtaining c⁸/²d⁶⁺³ = c⁴d⁹. The student needs to focus on understanding how to apply the power of a power property and the quotient of powers property when simplifying expressions.",
+                    "Percent": 14
+                }
+            },
+            "G": {
+                "Choice": "c⁴d¹⁸",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely applied the quotient of powers property incorrectly by dividing the exponents of the factors containing c instead of subtracting, obtaining c⁸/²d⁶⁽³⁾ = c⁴d¹⁸. The student needs to focus on understanding how to apply the quotient of powers property when simplifying expressions.",
+                    "Percent": 25
+                }
+            },
+            "H": {
+                "Choice": "c⁶d⁹",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely applied the power of a power property incorrectly by adding the exponents of the factor containing d, obtaining c⁸⁻²d⁶⁺³ =c⁶d⁹. The student needs to focus on understanding how to apply the power of a power property when simplifying expressions.",
+                    "Percent": 15
+                }
+            },
+            "J": {
+                "Choice": "c⁶d¹⁸",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the expression equivalent to (c⁸(d⁶)³)/(c²), the student could have applied the power of a power property, (aᵐ)ⁿ = aᵐⁿ, to the factor (d⁶)³, obtaining (c⁸d⁽⁶⁾⁽³⁾)/(c²) = (c⁸d¹⁸)(c²). Next, the student could have applied the quotient of powers property, (aᵐ)/(aⁿ) = aᵐ⁻ⁿ, to the factors containing c, obtaining (c⁸d¹⁸)/(c²) = c⁸⁻²d¹⁸ = c⁶d1¹⁸. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 46
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Quadratic Functions & Equations"
+        ],
+        "SubTopics": [
+            "Solve quadratic equations having real solutions by factoring, taking square roots, completing the square, and applying the quadratic formula."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which value of x is the solution to this equation?",
+            "5x² = 30x − 45"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "x = 3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which value of x is a solution to the equation, the student could have first recognized that one side of the equation must be set equal to 0. The student could have subtracted 30x and added 45 to both sides of the equation, resulting in 5x² – 30x + 45 = 0. Next, the student could have found the factors (numbers or expressions that can be multiplied to get another number or expression) of 5x² – 30x + 45 = 0 and solved for the value of x. The student could have factored out a 5 from the equation, resulting in 5(x² – 6x + 9) = 0. The student could have then found the factors of x² – 6x + 9. The student could have recognized that x² and 9 represent perfect squares (numbers made by squaring whole numbers). Using this, the student could have noticed that x² – 6x + 9 has the form of a perfect square trinomial, a² – 2ab + b², which factors as (a – b)². In this case, a² – 2ab + b² = x² – 2(3)x + 3², which makes a = x and b = 3, so the factors can be written as (x – 3)². Finally, the student could have set the factor (x – 3) equal to 0 and solved for x, obtaining x = 3. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 59
+                }
+            },
+            "B": {
+                "Choice": "x = −3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used x² – 6x + 9 and identified the equation as a perfect square trinomial but wrote the factored form as (x + 3)² instead of (x – 3)². The student then likely set the factor (x + 3) equal to 0 and solved for x, obtaining x = −3. The student needs to focus on understanding how to find the factors and solutions of a quadratic equation.",
+                    "Percent": 15
+                }
+            },
+            "C": {
+                "Choice": "x = 5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely factored out a 5 from the equation, resulting in 5(x² – 6x + 9) = 0, and concluded that the solution to the quadratic equation is x = 5 instead of continuing to factor the expression. The student needs to focus on understanding how to find the factors and solutions of a quadratic equation.",
+                    "Percent": 18
+                }
+            },
+            "D": {
+                "Choice": "x = −5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely factored out a 5 from the equation, resulting in 5(x² – 6x + 9) = 0, and concluded that the solution to the quadratic equation is x = −5 instead of continuing to factor the expression. The student needs to focus on understanding how to find the factors and solutions of a quadratic equation.",
+                    "Percent": 11
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "18": {
+        "Number": 18,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Determine the domain and range of a linear function in mathematical problems; determine reasonable domain and range values for realworld situations, both continuous and discrete; and represent domain and range using inequalities."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A florist is making bouquets of flowers for a wedding. Each bouquet will have 9 flowers. The graph shows the linear relationship between y, the number of flowers used, and x, the number of bouquets.",
+            "problems/TX22HSA1/media/18a.jpg",
+            "The florist will use no more than 8 bouquets for the wedding. Which set best represents the domain of the function for this situation?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "{0, 2, 4, 6, 8, 10}",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used the values on the scale of the x-axis as the values of the domain. The student needs to focus on understanding how to identify the domain of a discrete function from its graph and express the domain using set notation.",
+                    "Percent": 9
+                }
+            },
+            "G": {
+                "Choice": "{0, 1, 2, 3, 4, 5, 6, 7, 8}",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the domain (all possible x-values) of the part of the discrete linear function shown, the student could have identified all the x-values for which the graph has a corresponding y-value. The x-values for the ordered pairs represented on the graph are {0, 1, 2, 3, 4, 5, 6, 7, 8}. Therefore, the domain is the set of these numbers, which is {0, 1, 2, 3, 4, 5, 6, 7, 8}. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 64
+                }
+            },
+            "H": {
+                "Choice": "{0, 18, 36, 54, 72, 90}",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely switched the values of the domain and range and then used the values on the scale of the y-axis as the values of the domain. The student needs to focus on understanding how to identify the domain of a discrete function from its graph and express the domain using set notation.",
+                    "Percent": 6
+                }
+            },
+            "J": {
+                "Choice": "{0, 9, 18, 27, 36, 45, 54, 63, 72}",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely switched the values of the domain and range and listed the y-values for the ordered pairs instead of the x-values. The student needs to focus on understanding how to identify the domain of a discrete function from its graph and express the domain using set notation.",
+                    "Percent": 21
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "19": {
+        "Number": 19,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Describing & Graphing Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Calculate the rate of change of a linear function represented tabularly, graphically, or algebraically in context of mathematical and real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The graph of a line is shown on the grid. The coordinates of both points indicated on the graph of the line are integers.",
+            "problems/TX22HSA1/media/19a.jpg",
+            "What is the rate of change of y with respect to x for this line?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "5/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified the y-intercept of the line as the rate of change. The student needs to focus on understanding the meaning of the rate of change and how to find it when given a graph.",
+                    "Percent": 15
+                }
+            },
+            "B": {
+                "Choice": "−6/5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely calculated the rate of change as the change in x divided by the change in y, using m = m = (x₂ −x₁)/(y₂ − y₁) instead of m = (y₂ − y₁)/(x₂ −x₁). The student likely used values from the ordered pairs (−3, 5) and (9, −5), resulting in m = (9 − (−3))/(−5 − 5) = 12/(−10) = −6/5. The student needs to focus on correctly applying the slope formula to find the rate of change when given a graph.",
+                    "Percent": 15
+                }
+            },
+            "C": {
+                "Choice": "2/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used the x-intercept of the line, 3, and then likely estimated the y-intercept to be 2. The student likely understood that rate of change is the change in y divided by the change in x, interpreted these two values as changes from the origin, and found the rate of change to be 2/3. The student needs to focus on correctly applying the slope formula to find the rate of change when given a graph.",
+                    "Percent": 13
+                }
+            },
+            "D": {
+                "Choice": "−5/6",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the rate of change (constant increase or decrease) of y with respect to x, the student could have chosen two points from the graph and calculated the amount of change. The student could have used the ordered pairs (−3, 5) and (9, −5) and applied the slope formula, m = (y₂ − y₁)/(x₂ −x₁), resulting in m = (−5 − 5)/(9 − (−3)) = (−10)/12 = −5/6. Therefore, the rate of change is −5/6. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 57
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "20": {
+        "Number": 20,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            "Exponential Functions & Equations"
+        ],
+        "SubTopics": [
+            "Graph exponential functions that model growth and decay and identify key features, including y-intercept and asymptote, in mathematical and real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "What is the value of the y-intercept of the graph of h(x) = 12.3(4.9)ˣ?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "12.3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the value of the y-intercept of the graph, the student could have realized that h(x) = 12.3(4.9)ˣ represents an exponential function in the form h(x) = a(b)ˣ, where a is the y-intercept (the value where the graph crosses the y-axis), b is the growth factor, and x is the variable (symbol used to represent an unknown number). Therefore, the value of the y-intercept of the graph of h(x) = 12.3(4.9)ˣ is 12.3. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 50
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "21": {
+        "Number": 21,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Algebraic Methods"
+        ],
+        "SubTopics": [
+            "Simplify numeric and algebraic expressions using the laws of exponents, including integral and rational exponents."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which expression is equivalent to (8.8 × 10⁹)/(2.2 × 10⁻³)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "4 × 10¹²",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the equivalent expression, the student could first have found the quotient 8.8/2.2 = 4. Next, the student could have applied the quotient of powers property, aᵐ/aⁿ = aᵐ⁻ⁿ, to 10⁹/10⁻³, obtaining (10⁹)/(10⁻³) = 10⁹⁻⁽⁻³⁾ = 10¹². Finally, the student could have recognized that the simplified expression is equal to the product of 4 and 1012, or 4 × 1012. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 50
+                }
+            },
+            "B": {
+                "Choice": "4 × 10⁶",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly determined the quotient 8.8/2.2 = 4 but did not apply the quotient of powers property correctly, adding the exponents instead of subtracting. The student needs to focus on understanding how to apply the quotient of powers property when simplifying expressions.",
+                    "Percent": 27
+                }
+            },
+            "C": {
+                "Choice": "4 × 10⁻³",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly determined the quotient 8.8/2.2 = 4 but did not apply the quotient of powers property correctly, dividing the exponents instead of subtracting. The student needs to focus on understanding how to apply the quotient of powers property when simplifying expressions.",
+                    "Percent": 17
+                }
+            },
+            "D": {
+                "Choice": "4 × 10⁻⁶",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly determined the quotient 8.8/2.2 = 4 but did not apply the quotient of powers property correctly, adding the exponents instead of subtracting, and made a sign error. The student needs to focus on understanding how to apply the quotient of powers property when simplifying expressions.",
+                    "Percent": 6
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "22": {
+        "Number": 22,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Quadratic Functions & Equations"
+        ],
+        "SubTopics": [
+            "Write, using technology, quadratic functions that provide a reasonable fit to data to estimate solutions and make predictions for real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A person dives into a pool from its edge to swim to the other side. The table shows the depth in feet of the person from the surface of the water after x seconds. The data can be modeled by a quadratic function.",
+            "problems/TX22HSA1/media/22a.jpg",
+            "Which function best models the data?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "d(x) = 0.05x² + 0.74x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely reversed the values of time, x, and depth, d(x), when entering the data into a graphing calculator and disregarded the value of the constant term, c, that was generated. The student needs to focus on understanding how to use technology to determine a quadratic function that best fits a table of data.",
+                    "Percent": 12
+                }
+            },
+            "G": {
+                "Choice": "d(x) = 0.05x² + 0.74x + 9.17",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely reversed the values of time, x, and depth, d(x), when entering the data into a graphing calculator. The student needs to focus on understanding how to use technology to determine a quadratic function that best fits a table of data.",
+                    "Percent": 14
+                }
+            },
+            "H": {
+                "Choice": "d(x) = 0.26x² − 3.11x",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which function (relationship where each input has a single output) best models the data, the student could have used a graphing calculator to generate the function using quadratic regression (a method of determining the quadratic function of best fit). The function that best models the data is d(x) = 0.26x² – 3.11x. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 63
+                }
+            },
+            "J": {
+                "Choice": "d(x) = 0.26x² − 3.11x + 1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used the quadratic regression feature on a graphing calculator correctly but used the value of the coefficient of determination, r² = 1, as the value of the constant term, c. The student needs to focus on understanding how to use technology to determine a quadratic function that best fits a table of data.",
+                    "Percent": 11
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "23": {
+        "Number": 23,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Algebraic Methods"
+        ],
+        "SubTopics": [
+            "Add and subtract polynomials of degree one and degree two."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which expression is equivalent to (5rt − 3rw − 8tw) + (6rt − 4rw + 2tw)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "11rt + rw − 10tw",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely made sign errors when combining the rw terms, using −3rw + 4rw = rw, and tw terms, using −8tw – 2tw = −10tw. The student needs to focus on understanding how to combine like terms in polynomials.",
+                    "Percent": 8
+                }
+            },
+            "B": {
+                "Choice": "11rt − 7rw − 6tw",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the equivalent expression, the student could have applied the commutative property, a + b = b + a, to rearrange the terms, resulting in (5rt – 3rw – 8tw) + (6rt – 4rw + 2tw) = 5rt + 6rt – 3rw – 4rw – 8tw + 2tw. Next, the student could have combined like terms (terms that contain the same variables raised to the same powers), obtaining (5 + 6)rt + (–3 + (–4))rw + (–8 + 2)tw = 11rt – 7rw – 6tw. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 63
+                }
+            },
+            "C": {
+                "Choice": "11rt + rw − 6tw",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely made a sign error when combining the rw terms, using −3rw + 4rw = rw. The student needs to focus on understanding how to combine like terms in polynomials.",
+                    "Percent": 15
+                }
+            },
+            "D": {
+                "Choice": "11rt − 7rw − 10tw",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely made a sign error when combining the tw terms, using −8tw – 2tw = −10tw. The student needs to focus on understanding how to combine like terms in polynomials.",
+                    "Percent": 14
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "24": {
+        "Number": 24,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Quadratic Functions & Equations"
+        ],
+        "SubTopics": [
+            "Write quadratic functions when given real solutions and graphs of their related equations."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The solutions to p(x) = 0 are x = −7 and x = 7. Which quadratic function could represent p?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "p(x) = x² − 49",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which function could be represented by the quadratic function p(x) with the given solutions (x-values when p(x) is equal to 0), the student could have used the solutions to construct and simplify the equation of a quadratic function using p(x) = (x – u)(x – v), where u and v represent solutions to the equation p(x) = 0. The student could have used the values of the given solutions, x = −7 and x = 7, letting u = −7 and v = 7, and substituted those values into p(x) = (x – u)(x – v) to obtain p(x) = [x – (−7)](x – 7). Then the student could have found the product of [x – (−7)](x – 7) to equal (x + 7)(x – 7) = x – 49, so p(x) = x² – 49. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 61
+                }
+            },
+            "G": {
+                "Choice": "p(x) = x² + 49",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely substituted the correct solutions into p(x) = (x – u)(x – v) to obtain p(x) = [x – (−7)](x – 7) but then made a sign error when multiplying −7 and 7, obtaining 49 instead of −49. The student needs to focus on understanding how to multiply binomial expressions.",
+                    "Percent": 14
+                }
+            },
+            "H": {
+                "Choice": "p(x) = x² − 14",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely substituted the correct solutions into p(x) = (x – u)(x – v) to obtain p(x) = [x – (−7)](x – 7) but then the student likely added −7 to −7 to obtain −14, instead of multiplying −7 and 7. The student needs to focus on understanding how to multiply binomial expressions.",
+                    "Percent": 16
+                }
+            },
+            "J": {
+                "Choice": "p(x) = x² + 14",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely substituted the correct solutions into p(x) = (x – u)(x – v) to obtain p(x) = [x – (−7)](x – 7) but then added 7 to 7 to obtain 14, instead of multiplying −7 and 7. The student needs to focus on understanding how to multiply binomial expressions.",
+                    "Percent": 9
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "25": {
+        "Number": 25,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Write linear equations in two variables in various forms, including y = mx + b, Ax + By = C, and y – y₁ = m(x – x₁), given one point and the slope and given two points."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Two points are plotted on the grid.",
+            "problems/TX22HSA1/media/25a.jpg",
+            "Which equation in slope-intercept form best represents the line that passes through these two points?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "y = (−2/3)x − 11/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly determined the value of the y-intercept, −2/3. The student then likely correctly calculated the change in x, 3, but when determining the change in y, counted the horizontal grid lines, including the grid lines at y = 6 and y = −4, and found the change in y to be −11 instead of −10 and the value of the slope to be −11/3. Finally, the student likely reversed the values of the slope and the y-intercept when substituting those values into the slope-intercept form of a linear equation, y = mx + b. The student needs to focus on understanding how to write a linear function in slope-intercept form when given a graph.",
+                    "Percent": 10
+                }
+            },
+            "B": {
+                "Choice": "y = (−11/3)x − 2/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly determined the value of the y-intercept, −2/3. The student then likely correctly calculated the change in x, 3, but when determining the change in y, counted the horizontal grid lines, including the grid lines at y = 6 and y = −4, and found the change in y to be −11 instead of −10 and the value of the slope to be −11/3. The student needs to focus on understanding how to write a linear function in slope-intercept form when given a graph.",
+                    "Percent": 22
+                }
+            },
+            "C": {
+                "Choice": "y = (−2/3)x − 10/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified the correct values for the slope, m, and the y-intercept, b, but reversed those values when substituting them into the slope-intercept form of a linear equation, y = mx + b. The student needs to focus on understanding how to write a linear function in slope-intercept form when given a graph.",
+                    "Percent": 14
+                }
+            },
+            "D": {
+                "Choice": "y = (−10/3)x − 2/3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the equation of the line in slope-intercept form, y = mx + b, where m represents the slope of the line and b represents the y-intercept of the line, when given the graph of the line, the student could have first identified the two ordered pairs shown on the graph, (−2, 6) and (1, −4). The student then could have substituted those two points into the slope formula, m = (y₂ − y₁)/(x₂ −x₁), resulting in m = (−4 − 6)/(1 − (−2)) = (−10)/3 = −10/3. To determine the y-intercept of the line, the student could have substituted the slope and one of the ordered pairs from the graph, (−2, 6), into the point-slope equation, y – y1 = m(x – x1), where m represents the slope of the line and (x1, y1) represents a point on the line. The student could have obtained y − 6 = (−10/3)(x − (−2)) and then solved for y, by first distributing the −10/3, resulting in y − 6 = (−10/3)x −20/3. Next, the student could have added 6 to both sides of the equation to isolate the y, resulting in the equation y = (−10/3)x −2/3. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 54
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "26": {
+        "Number": 26,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Exponential Functions & Equations"
+        ],
+        "SubTopics": [
+            "Write exponential functions in the form f(x) = abˣ (where b is a rational number) to describe problems arising from mathematical and real-world situations, including growth and decay."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The table shows the value in dollars of a motorcycle at the end of x years.",
+            "problems/TX22HSA1/media/26a.jpg",
+            "Which exponential function models this situation?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "v(x) = 9,000(1.1)ˣ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly determined that the value of a is 9,000. When determining the value of the common factor, b, the student likely inverted the division to obtain b = 1.1 instead of 0.9. The student needs to focus on how to find the value of the common factor of an exponential function from a table of values.",
+                    "Percent": 12
+                }
+            },
+            "G": {
+                "Choice": "v(x) = 9,000(0.9)ˣ",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which exponential function models the values given in the table, the student could have recognized that an exponential function is of the form v (x ) = abˣ, where a is the y-intercept (value where the graph crosses the y-axis), b is the common factor (constant rate by which successive values decrease), and x is the variable (symbol used to represent an unknown number). From the table, the student could have determined that the y-intercept at (0, 9,000) means that the value of a is 9,000. Next, the student could have determined the common factor, b, by dividing each v(x) value by the previous v(x) value, calculating 8,100-9,100 = 7,290/8,100 = 6,561/7,290 = 0.9. Substituting a = 9,000 and b = 0.9 into the exponential equation v(x) = abˣ, the student could have obtained v(x) = (9,000)(0.9)ˣ = 9,000(0.9)ˣ. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 65
+                }
+            },
+            "H": {
+                "Choice": "v(x) = 8,100(1.1)ˣ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified the y-intercept of the function as the value of v(x) when x = 1 instead of when x = 0, to obtain a = 8,100. When determining the value of the common factor, b, the student likely inverted the division to obtain b = 1.1 instead of 0.9. The student needs to focus on how to identify the y-intercept and how to find the common factor of an exponential function from a table of values.",
+                    "Percent": 14
+                }
+            },
+            "J": {
+                "Choice": "v(x) = 8,100(0.9)ˣ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified the y-intercept of the function as the value of v(x) when x = 1 instead of when x = 0, to obtain a = 8,100. When determining the value of the common factor, b, the student likely correctly calculated that the value of the common factor, b, is 0.9. The student needs to focus on how to identify the y-intercept of an exponential function from a table of values.",
+                    "Percent": 8
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "27": {
+        "Number": 27,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            "Quadratic Functions & Equations"
+        ],
+        "SubTopics": [
+            "Solve quadratic equations having real solutions by factoring, taking square roots, completing the square, and applying the quadratic formula."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "What is the positive solution to x² + 9x − 22 = 0?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the positive solution to x² + 9x – 22 = 0, the student could have recognized the need to find the factors (numbers or expressions that can be multiplied to get another number or expression) of x² + 9x – 22. The student could have determined that x² is equal to x ∙ x and written x as the first term in each factor. The student then could have determined that the second terms in the two factors are 11 and −2, because their product (answer when multiplying) is −22 (last term in the expression given) and their sum is 9 (coefficient of middle term in the expression given). The student could have then written the factors as (x + 11)(x – 2). Next, the student could have set each factor equal to zero (x + 11 = 0 and x – 2 = 0) and solved each equation for x, resulting in x = –11 and x = 2. Finally, the student could have recognized that x = 2 is the positive solution to x² + 9x – 22 = 0. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 45
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "28": {
+        "Number": 28,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Write linear inequalities in two variables given a table of values, a graph, and a verbal description."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A university will spend at most $4,500 to buy monitors and keyboards for a computer lab. Each monitor will cost $250, and each keyboard will cost $50.",
+            "Which inequality represents all possible combinations of x, the number of monitors, and y, the number of keyboards, the university can buy for the computer lab?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "250x + 50y < 4,500",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly identified the coefficients (numbers multiplied by a variable) representing the costs of each monitor and each keyboard but identified the phrase “at most” as being represented by the inequality symbol “<”, instead of “≤”, resulting in 250x + 50y < 4,500. The student needs to focus on understanding how to write a linear inequality given a real-world situation.",
+                    "Percent": 17
+                }
+            },
+            "G": {
+                "Choice": "250x + 50y ≤ 4,500",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the inequality representing all possible combinations of x, the number of monitors, and y, the number of keyboards, that can be purchased for the computer lab, the student should have first identified that each monitor costs $250 and each keyboard costs $50, and represented those costs by the expressions 250x and 50y. So the total cost of the monitors and keyboards for the computer lab should be represented by the expression 250x + 50y. Then the student should have realized that the phrase “at most” can be represented by the inequality symbol “≤”, so the phrase “at most $4,500” can be represented by “≤ 4,500”. Therefore, all possible combinations of x and y should be represented by the inequality 250x + 50y ≤ 4,500.",
+                    "Percent": 51
+                }
+            },
+            "H": {
+                "Choice": "50x + 250y < 4,500",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely reversed the coefficients (numbers multiplied by a variable) representing the costs of each monitor and each keyboard and identified the phrase “at most” as being represented by the inequality symbol “<”, resulting in 50x +250y < 4,500. The student needs to focus on understanding how to write a linear inequality given a real-world situation.",
+                    "Percent": 8
+                }
+            },
+            "J": {
+                "Choice": "50x + 250y ≤ 4,500",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely reversed the coefficients (numbers multiplied by a variable) representing the costs of each monitor and each keyboard, resulting in 50x + 250y ≤ 4,500. The student needs to focus on understanding how to write a linear inequality given a real-world situation.",
+                    "Percent": 6
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "29": {
+        "Number": 29,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Describing & Graphing Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Write, with and without technology, linear functions that provide a reasonable fit to data to estimate solutions and make predictions for real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A construction manager is monitoring the progress of the build of a new house. The scatterplot and table show the number of months since the start of the build and the percentage of the house still left to build. A linear function can be used to model this relationship.",
+            "problems/TX22HSA1/media/29a.jpg",
+            "problems/TX22HSA1/media/29b.jpg",
+            "Which function best models the data?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "y = −13.5x + 97.8",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which function (relationship where each input has a single output) best models the data in the table and graph, the student could have used a graphing calculator to generate the function using linear regression (method of determining a linear function, y = mx + b, where m represents the slope of the linear function, and b represents the y-intercept). The function that best models the data is y = −13.5x + 97.8. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 62
+                }
+            },
+            "B": {
+                "Choice": "y = −13.5x + 7.3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly identified the slope of the linear function and estimated from the graph that the x-intercept would occur near x = 7.3, but used that value for b, the y-intercept. The student needs to focus on how to use technology to generate the equation of a function when given data in a table or graph.",
+                    "Percent": 17
+                }
+            },
+            "C": {
+                "Choice": "y = 97.8x − 13.5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely generated the correct function using linear regression but reversed the values of the slope and y-intercept. The student needs to focus on understanding how to write a linear function that was generated with technology using linear regression.",
+                    "Percent": 13
+                }
+            },
+            "D": {
+                "Choice": "y = 7.3x − 97.8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly identified the slope of the linear function and estimated from the graph that the x-intercept would occur near x = 7.3. Next, the student likely reversed the values of the slope and y-intercept, using the estimated x-intercept as the slope and the slope as the y-intercept. The student needs to focus on understanding how to use technology to generate the equation of a function when given data in a table or graph.",
+                    "Percent": 8
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "30": {
+        "Number": 30,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Quadratic Functions & Equations"
+        ],
+        "SubTopics": [
+            "Describe the relationship between the linear factors of quadratic expressions and the zeros of their associated quadratic functions."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Given f(x) = x² − 36, which statement is true?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "The only zero, 6, can be found when 0 = (x − 6)(x − 6).",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely incorrectly identified the difference of squares pattern as a² – b² = (a – b)(a – b), obtaining (x – 6)(x – 6) instead of (x + 6)(x – 6). The student needs to focus on understanding how to factor an expression representing the difference of squares.",
+                    "Percent": 12
+                }
+            },
+            "G": {
+                "Choice": "The only zero, 18, can be found when 0 = (x − 18)(x − 18).",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely incorrectly identified the difference of squares pattern as a² – b² = (a – b)(a – b), and then likely divided 36 by 2 instead of taking the square root of 36, resulting in (x – 18)(x – 18). The student needs to focus on understanding how to factor an expression representing the difference of squares.",
+                    "Percent": 10
+                }
+            },
+            "H": {
+                "Choice": "The zeros, −6 and 6, can be found when 0 = (x + 6)(x − 6).",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which statement is true, the student could have first found the factors (numbers or expressions that can be multiplied to get another number or expression) of x² – 36. The student could have recognized that x² – 36 can be rewritten as (x)² – (6)², which represents the difference of squares pattern, where a² – b² can be written as the product of the binomial factors (a + b) and (a – b). Applying this pattern, the student could have rewritten the expression x² – 36 = (x)² – (6)² as the product (x + 6)(x – 6). Finally, the student could have solved for the zeros (input value, x, that produces an output value, y, of zero) by setting each factor (expression within the parentheses) equal to zero (x + 6 = 0 and x – 6 = 0) and solving for x, resulting in x = –6 and x = 6. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 70
+                }
+            },
+            "J": {
+                "Choice": "The zeros, −18 and 18, can be found when 0 = (x + 18)(x − 18).",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly identified the difference of squares pattern as a² – b² = (a + b)(a – b). The student then likely divided 36 by 2 instead of taking the square root of 36, resulting in (x + 18)(x – 18). The student needs to focus on understanding how to factor an expression representing the difference of squares.",
+                    "Percent": 8
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "31": {
+        "Number": 31,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Algebraic Methods"
+        ],
+        "SubTopics": [
+            "Evaluate functions, expressed in function notation, given one or more elements in their domains."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A function is shown.",
+            "f(x) = 7 − 4x",
+            "What is the value of f(−5)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "27",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the value of f(−5), the student should have substituted −5 for x in the function (relationship where each input has a single output) and then simplified the function, resulting in f(−5) = 7 – 4(−5) = 7 – (−20) = 27.",
+                    "Percent": 58
+                }
+            },
+            "B": {
+                "Choice": "−13",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely made a sign error when multiplying 4(−5), resulting in 7 – 20 = −13. The student needs to focus on understanding how to perform arithmetic with rational numbers.",
+                    "Percent": 20
+                }
+            },
+            "C": {
+                "Choice": "−15",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely subtracted 4 from 7 before multiplying by −5, obtaining 3(−5) = −15. The student needs to focus on understanding how to apply the order of operations when simplifying a numeric expression.",
+                    "Percent": 18
+                }
+            },
+            "D": {
+                "Choice": "140",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely calculated the product 7(−4)(−5) = 140. The student needs to focus on understanding how to apply the order of operations when simplifying a numeric expression.",
+                    "Percent": 4
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "32": {
+        "Number": 32,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Describing & Graphing Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Graph linear functions on the coordinate plane and identify key features, including x-intercept, y-intercept, zeros, and slope, in mathematical and real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which graph best represents y = −4(x + 3) − 2?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "problems/TX22HSA1/media/32a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely solved the point-slope equation, y – y₁ = m(x – x₁), for y, resulting in y = m(x – x₁) + y₁. The student then likely interpreted the slope of the line y = −4(x + 3) – 2 as 4 instead of –4 and identified a point on the line as (−3, 2) instead of (−3, −2). The student needs to focus on understanding how to identify the key features of a linear graph when given an equation in point-slope form.",
+                    "Percent": 11
+                }
+            },
+            "G": {
+                "Choice": "problems/TX22HSA1/media/32b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely solved the point-slope equation, y – y₁ = m(x – x₁), for y, resulting in y = m(x – x₁) + y₁. The student then likely interpreted the slope of the line y = −4(x + 3) – 2 as 4 instead of −4 but correctly identified that the line contains the point (−3, −2). The student needs to focus on understanding how to identify the key features of a linear graph when given an equation in point-slope form.",
+                    "Percent": 8
+                }
+            },
+            "H": {
+                "Choice": "problems/TX22HSA1/media/32c.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which graph best represents the linear function y = −4(x + 3) – 2, the student could have applied the point-slope equation, y – y₁ = m(x – x₁), where m represents the slope of the line and (x₁, y₁) represents a point on the line. Solving for y, the student could have obtained y = m(x – x₁) + y₁ and then determined that the graph of the given line has a slope of −4 and contains the point (−3, −2). To graph the line, the student could have plotted the point (−3, −2) and used the slope to find that the points (−2, −6) and (−4, 2) also lie on the line. Therefore, this graph could represent y = −4(x + 3) – 2 because it has a slope equal to −4 and contains the point (−3, −2). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 69
+                }
+            },
+            "J": {
+                "Choice": "problems/TX22HSA1/media/32d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely solved the point-slope equation, y – y₁ = m(x – x₁), for y, resulting in y = m(x – x₁) + y₁. The student then likely identified a point on the line as (−3, 2) instead of (−3, −2) but correctly identified the slope of the line as −4. The student needs to focus on understanding how to identify the key features of a linear graph when given an equation in point- slope form.",
+                    "Percent": 12
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "33": {
+        "Number": 33,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Algebraic Methods"
+        ],
+        "SubTopics": [
+            "Factor, if possible, trinomials with real factors in the form ax² + bx + c, including perfect square trinomials of degree two."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which expression is a factor of 10x² − 19x + 6?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "10x − 3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined that two factors of 60x² are 10x and 6x, and that two factors of 6 are −3 and −2 but disregarded the value of the linear term of the quadratic equation. The student needs to focus on understanding how to factor an expression of the form ax² + bx + c.",
+                    "Percent": 25
+                }
+            },
+            "B": {
+                "Choice": "10x − 1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined that two factors of 60x² are 10x and 6x, and that two factors of 6 are −1 and −6 but disregarded the value of the linear term of the quadratic equation. The student needs to focus on understanding how to factor an expression of the form ax² + bx + c.",
+                    "Percent": 15
+                }
+            },
+            "C": {
+                "Choice": "5x − 3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined the correct expanded form of the expression, 10x² – 15x – 4x + 6, but likely switched the constant terms when factoring out the common factor from each group. The student needs to focus on understanding how to factor an expression of the form ax² + bx + c.",
+                    "Percent": 27
+                }
+            },
+            "D": {
+                "Choice": "5x − 2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine a factor of the given expression, 10x² – 19x + 6, the student could have found the factors (numbers or expressions that can be multiplied to get another number or expression) of the expression. The student could have first multiplied 10x² by 6, resulting in 60x². The student then could have identified two terms that have a product of 60x² and a sum of −19x, which are −15x and −4x. Then the student could have rewritten the expression in expanded form using these two terms, resulting in 10x² – 15x – 4x + 6. The student could have grouped the first two terms and last two terms of the expression and factored out the greatest (largest) common factor from each group of terms, resulting in 5x(2x – 3) – 2(2x – 3). Next, the student could have factored out the binomial (2x – 3) from the expression, resulting in the factored form (5x – 2)(2x − 3). Finally, the student could have recognized that (5x – 2) is one of the factors of the given expression. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 34
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "34": {
+        "Number": 34,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            "Describing & Graphing Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Calculate the rate of change of a linear function represented tabularly, graphically, or algebraically in context of mathematical and real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The table shows the linear relationship between the distance in feet below sea level and the time in seconds traveled by a submarine.",
+            "problems/TX22HSA1/media/34a.jpg",
+            "What is the rate of change of the distance in feet below sea level with respect to time that the submarine traveled?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "8",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the rate of change (constant rate of increase or decrease) of the distance in feet below sea level with respect to time in seconds the submarine traveled, the student could have chosen two points from the table and calculated the amount of change. The student could have used the first two sets of values in the table and applied the slope formula, m = (y₂ − y₁)/(x₂ −x₁), resulting in m = (604 − 460)/(18 − 0) = 144/18 = 8. Therefore, the student could have concluded that the rate of change is 8 feet per second. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 49
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "35": {
+        "Number": 35,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Write an equation of a line that is parallel or perpendicular to the x- or y-axis and determine whether the slope of the line is zero or undefined."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which equation best represents the line shown on the grid?",
+            "problems/TX22HSA1/media/35a.jpg"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "y = 0",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely recognized that because the line is horizontal, the equation of the line can be written as y = c, and that the slope of a horizontal line is 0. The student then likely used the value of the slope, 0, as the constant in the equation, obtaining y = 0. The student needs to focus on understanding how to write the equation of a horizontal line.",
+                    "Percent": 5
+                }
+            },
+            "B": {
+                "Choice": "y = −6",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which equation best represents the line shown on the grid, the student could have recognized that because the line is horizontal, the equation of the line can be written as y = c, where c is the value through which the line intersects (crosses) the y-axis, resulting in y = −6. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 76
+                }
+            },
+            "C": {
+                "Choice": "x = 0",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely recognized that the line is horizontal and that the slope of a horizontal line is 0. Then the student likely used the value of the slope, 0, and used x = 0 since a horizontal line is parallel to the x-axis. The student needs to focus on understanding how to write the equation of a horizontal line.",
+                    "Percent": 7
+                }
+            },
+            "D": {
+                "Choice": "x = −6",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely recognized that the line is horizontal and has a y-intercept of −6. Then the student likely used x = −6 since a horizontal line is parallel to the x-axis. The student needs to focus on understanding how to write the equation of a horizontal line.",
+                    "Percent": 12
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "36": {
+        "Number": 36,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Exponential Functions & Equations"
+        ],
+        "SubTopics": [
+            "Interpret the meaning of the values of a and b in exponential functions of the form f(x) = abˣ in real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "An insect population after x months can be modeled by the function g(x) = 18(1.3)ˣ. Which statement is the best interpretation of one of the values in this function?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "The insect population increased by 13 insects each month.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely misinterpreted b = 1.3 as representing that the population increases by 13 insects per month, instead of recognizing that 1.3 is a factor of growth and not a constant rate of change of the population. The student needs to focus on interpreting the meaning of b in exponential function in the form g(x) = abˣ.",
+                    "Percent": 22
+                }
+            },
+            "G": {
+                "Choice": "The insect population decreased by 13 insects each month.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely misinterpreted b = 1.3 as representing that the population decreases by 13 insects per month, instead of recognizing that 1.3 is a factor of growth and not a constant rate of change of the population. The student needs to focus on interpreting the meaning of b in exponential function in the form g(x) = abˣ.",
+                    "Percent": 10
+                }
+            },
+            "H": {
+                "Choice": "The insect population increased at a rate of 30% each month.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the best interpretation of one of the values in the function g(x) = 18(1.3)ˣ, the student should have recognized that in an exponential function g(x) = abˣ, a represents the initial value of the function (when x = 0), b is the common factor (constant rate by which successive values increase or decrease), and x is the variable (symbol used to represent an unknown number). In this situation, the variable x represents the number of months. In g(x) = 18(1.3)ˣ, the initial value of the population is 18 insects, and the value of the common factor is b = 1.3. The student should have recognized that since 1.3 > 1, this situation represents exponential growth, with a growth factor of 1.3 or 130% and a growth rate of 0.3 or 30% per month. The student should then have concluded that the insect population increased at a rate of 30% per month.",
+                    "Percent": 61
+                }
+            },
+            "J": {
+                "Choice": "The insect population decreased at a rate of 30% each month.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely misinterpreted b = 1.3 as representing that the insect population decreases at a rate of 30% per month, instead of recognizing that 1.3 is a factor of growth. The student needs to focus on interpreting the meaning of b in exponential function in the form g(x) = abˣ.",
+                    "Percent": 7
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "37": {
+        "Number": 37,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Describing & Graphing Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Graph the solution set of linear inequalities in two variables on the coordinate plane."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The graph of y = (−1/6)x − 4 is shown on the grid.",
+            "problems/TX22HSA1/media/37a.jpg",
+            "Which ordered pair is in the solution set of y > (−1/6)x − 4?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "(−8, 8)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which ordered pair is in the solution set of y > (−1/6)x − 4, the student should have recognized that the graph of the solution set of the inequality would have a boundary line that is dashed because the “>” symbol indicates that the solution set of the inequality does not include the points that lie on the boundary line. Next, the student could have used the test point (0, 0) to determine which half-plane is included in the solution set. Substituting (0, 0) into y > (−1/6)x − 4 , the student could have obtained 0 > (−1/6)(0) − 4 and then 0 > −4. Since that is a true statement, the student could have then concluded that the solution set of the inequality is the half-plane that contains (0, 0), not including the points on the boundary line. Finally, the student could have realized that the point (−8, 8) lies in that half-plane. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 29
+                }
+            },
+            "B": {
+                "Choice": "(6, −5)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined that the point (6, −5) lies on the line y = (−1/6)x − 4 , not understanding that the points on the boundary line are not included in the solution set of the inequality y > (−1/6)x − 4. The student needs to focus on understanding how to determine whether an ordered pair is in the solution set of an inequality.",
+                    "Percent": 43
+                }
+            },
+            "C": {
+                "Choice": "(4, −6)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used (4, −6) as the test point and substituted it into y > (−1/6)x − 4 to obtain −6 > (−1/6)(4) − 4 and then −6 > −14/3. Next, the student likely incorrectly concluded that the inequality is true and that the solution set of the inequality is the half-plane that contains (4, −6). The student needs to focus on understanding how to determine whether an ordered pair is in the solution set of an inequality.",
+                    "Percent": 22
+                }
+            },
+            "D": {
+                "Choice": "(−2, −7)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely reversed the coordinates of (−2, −7) when using it as test point and substituting into y > (−1/6)x − 4, obtaining −2 > (−1/6)(−7) − 4 and then −2 > −17/6. Next, the student likely concluded that the solution set of the inequality is the half-plane that contains that point. The student needs to focus on understanding how to determine whether an ordered pair is in the solution set of an inequality.",
+                    "Percent": 6
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "38": {
+        "Number": 38,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Write linear equations in two variables given a table of values, a graph, and a verbal description."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The conversion of degrees Celsius to degrees Fahrenheit can be represented by a linear relationship. The graph shows the linear relationship between y, the temperature in degrees Fahrenheit, and x, the temperature in degrees Celsius from the freezing point of water.",
+            "problems/TX22HSA1/media/38a.jpg",
+            "Which equation best represents this situation?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "y = (5/9)x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used the change in x divided by the change in y to find the slope of the line, ignoring the y-intercept of 32. The student needs to focus on understanding how to write a linear function in slope-intercept form when given a graph.",
+                    "Percent": 9
+                }
+            },
+            "G": {
+                "Choice": "y = (9/5)x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined the slope of the line correctly but disregarded the y-intercept of 32. The student needs to focus on understanding how to write a linear function in slope-intercept form when given a graph.",
+                    "Percent": 12
+                }
+            },
+            "H": {
+                "Choice": "y = (5/9)x + 32",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used the change in x divided by the change in y to find the slope of the line, using the correct value for b, the y-intercept. The student needs to focus on understanding how to write a linear function in slope-intercept form when given a graph.",
+                    "Percent": 25
+                }
+            },
+            "J": {
+                "Choice": "y = (9/5)x + 32",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the equation that best represents the line shown in the graph, the student could have used the slope-intercept form of a linear equation (y = mx + b, where m = (y₂ − y₁)/(x₂ −x₁) represents the slope of the line and b represents the value of the y-intercept). The student first could have recognized that the graph intersects the y-axis at (0, 32), so the value of the y-intercept, b, is 32. Next, the student could have substituted the x- and y-coordinates of (0, 32) and (10, 104) into the slope formula, resulting in m = (104 − 32)/(40 − 0) = 72/40 = 9/5. Since b = 32 and m = 9/5, the equation for the line is y = (9/5)x + 32 . This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 53
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "39": {
+        "Number": 39,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Describing & Graphing Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Graph the solution set of systems of two linear inequalities in two variables on the coordinate plane."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which graph best represents the solution set for this system of inequalities?",
+            "x + 2y < −2",
+            "y − x < 3"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/TX22HSA1/media/39a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely found and graphed the correct equation for each boundary line but misinterpreted the “<” symbols as meaning that the boundary lines are included in the solution set. The student needs to focus on understanding how to graph the solution set of a system of inequalities.",
+                    "Percent": 15
+                }
+            },
+            "B": {
+                "Choice": "problems/TX22HSA1/media/39b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely found and graphed the correct equation for each boundary line but chose the incorrect half-plane to shade for the inequality y < (−1/2)x − 1. The student needs to focus on understanding how to graph the solution set of a system of inequalities.",
+                    "Percent": 22
+                }
+            },
+            "C": {
+                "Choice": "problems/TX22HSA1/media/39c.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which graph best represents the solution set of x + 2y < −2 and y – x < 3, the student could have graphed each inequality and its solution set and determined where the two solution sets overlap with each other. To graph the first inequality, the student could have isolated the y on one side of the inequality and subtracted x from both sides of the inequality, resulting in 2y < −x – 2. Next, the student could have divided both sides of the inequality by 2, to obtain y < (−1/2)x − 1. The boundary line for this inequality, y = (−1/2)x − 1 , will cross the y-axis (vertical axis) at the point (0, −1) and will have a slope (steepness of a straight line graphed on a coordinate grid; m = (y₂ − y₁)/(x₂ −x₁)) of m = −1/2. The student could have then determined that the “<” symbol means “less than,” indicating that the boundary line is represented by a dashed line. Next, to determine where to shade, the student could have used the test point (0, 0) to determine which half-plane represents the solution to the inequality. Substituting (0, 0) into the original inequality, the student could have obtained (0) + 2(0) < −2 and then simplified, resulting in 0 < −2. Since this statement is not true, the student could have concluded that the solution set for the inequality x + 2y < −2 is the half-plane that does not contain (0, 0) and does not include the points on the boundary line.\nFor the second inequality, y – x < 3, the student could have added x to both sides of the inequality to obtain y < x + 3. The boundary line for this inequality will cross the y-axis at the point (0, 3) and will have a slope of 1. The student could have then determined that the “<” symbol means “less than,” indicating that the boundary line is represented by a dashed line. Next, to determine where to shade, the student could have used the test point (0, 0) to determine which half-plane represents the solution to the inequality. Substituting (0, 0) into the original inequality, the student could have obtained (0) – (0) < 3 and then simplified, resulting in 0 < 3. Since this statement is true, the student could have concluded that the solution set for the inequality y – x < 3 is the half-plane that contains (0, 0) and does not include the points on the boundary line. Finally, the student could have verified the region where the shaded half-planes overlap. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 50
+                }
+            },
+            "D": {
+                "Choice": "problems/TX22HSA1/media/39d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely found and graphed the correct equation for each boundary line but chose the incorrect half-plane to shade for the inequality y < (−1/2)x − 1 and misinterpreted the “<” symbols as meaning that the boundary lines are included in the solution set. The student needs to focus on understanding how to graph the solution set of a system of inequalities.",
+                    "Percent": 12
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "40": {
+        "Number": 40,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Quadratic Functions & Equations"
+        ],
+        "SubTopics": [
+            "Graph quadratic functions on the coordinate plane and use the graph to identify key attributes, if possible, including x-intercept, y-intercept, zeros, maximum value, minimum values, vertex, and the equation of the axis of symmetry."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which graph best represents h(x) = (x + 1)(x − 3)?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "problems/TX22HSA1/media/40a.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which graph best represents the function h(x) = (x + 1)(x – 3), the student could have identified that the zeros of h(x) could be obtained by setting each factor equal to 0 and solving for x. Setting x + 1 = 0, the student could have solved for x by subtracting 1 from both sides of the equation to obtain x = −1. Setting x – 3 = 0, the student could have solved for x by adding 3 to both sides of the equation to obtain x = 3. Next, the student could have recognized that the zeros of a function are the x-intercepts (values where the graph of a function crosses the x-axis) of the graph of the function. The student then could have identified that the graph has x-intercepts of −1 and 3. Finally, the student could have determined the value of the y-intercept by substituting x = 0 into the function and solving for y, resulting in h(0) = (0 + 1)(0 – 3) = −3. The student could have chosen the graph with x-intercepts of −1 and 3 and y-intercept of −3. This is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Percent": 67
+                }
+            },
+            "G": {
+                "Choice": "problems/TX22HSA1/media/40b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely used the values of the constants in the binomial factors (x + 1) and (x – 3) and interpreted that the x-intercepts would occur at x = 1 and x = −3. Also, the student did not find the correct y-intercept. The student needs to focus on identifying the correct graph of a quadratic function in the form h(x) = (x – u)(x – v).",
+                    "Percent": 11
+                }
+            },
+            "H": {
+                "Choice": "problems/TX22HSA1/media/40c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly found the correct zeros of the function and interpreted those values to be the x-intercepts but did not find the correct y-intercept. The student needs to focus on identifying the correct graph of a quadratic function in the form h(x) = (x – u)(x – v).",
+                    "Percent": 9
+                }
+            },
+            "J": {
+                "Choice": "problems/TX22HSA1/media/40d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely found the correct y-intercept but used the values of the constants in the binomial factors (x + 1) and (x – 3) and concluded that the x-intercepts would occur at x = 1 and x = −3. The student needs to identify the correct graph of a quadratic function in the form h(x) = (x – u)(x – v).",
+                    "Percent": 13
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "41": {
+        "Number": 41,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Algebraic Methods"
+        ],
+        "SubTopics": [
+            "Write a formula for the nᵗʰ term of arithmetic and geometric sequences, given the value of several of their terms."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The first six terms in a geometric sequence are shown, where a₁ = −4.",
+            "−4\t−16\t−64\t−256\t−1,024\t−4,096\t. . .",
+            "Based on this information, which equation can be used to find the nᵗʰ term in the sequence, aₙ?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "aₙ = −4n",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely chose a negative coefficient, since all the term values are negative, and likely misinterpreted that the common ratio is multiplied by the term number to generate a geometric sequence rather than multiplying the common ratio by the preceding term. The student needs to focus on how to write the equation for the nᵗʰ term of a geometric sequence when given several terms of the sequence.",
+                    "Percent": 22
+                }
+            },
+            "B": {
+                "Choice": "aₙ = −(4)ⁿ",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which equation can be used to find the nᵗʰ term in the geometric sequence, the student could have used the pattern, or the sequence, to determine the initial value, the number where the sequence begins, a1, and the common ratio by dividing each term in the sequence by the preceding term. Examining the sequence, the student could have realized that (−16)/(−4) = (−64)/(−16) = (−256)/(−64) = (−1,024)/(−256) = (−1,024) = 4. Next, the student could have realized that the pattern is a₁ = −1(4)¹, a₂ = −16 = −1(4)², a₃ = −64 = −1(4)³, a₄ = −256 = −1(4)⁴, a₅ = −1,024 = −1(4)⁵, and a6₆ = −4,096 = −1(4)⁶ and concluded that the equation for the nᵗʰ term of the sequence is aⁿ = −1(4)ⁿ. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 36
+                }
+            },
+            "C": {
+                "Choice": "aₙ = −n²",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely recognized that each term value is negative and is a perfect square so used an equation of a sequence that generates the opposite of perfect squares. The student needs to focus on how to write the equation for the nᵗʰ term of a geometric sequence when given several terms of the sequence.",
+                    "Percent": 14
+                }
+            },
+            "D": {
+                "Choice": "aₙ = (−4)ⁿ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely calculated the correct common ratio, 4, but recognizing that all term values are negative used −4 as the common ratio in the equation instead of 4. The student needs to focus on how to write the equation for the nᵗʰ term of a geometric sequence when given several terms of the sequence.",
+                    "Percent": 28
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "42": {
+        "Number": 42,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Solve linear equations in one variable, including those for which the application of the distributive property is necessary and for which variables are included on both sides."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "What is the solution to 4(q + 56.5) = 30q − 112?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "13",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the solution to 4(q + 56.5) = 30q – 112, the student could have first distributed (multiplied) the number immediately in front of the parentheses by the terms inside the parentheses. This step would result in the equation 4q + 226 = 30q – 112. Next, the student could have subtracted 4q from both sides, obtaining 226 = 26q – 112. The student could then have added 112 to both sides with the result 338 = 26q. Lastly, the student could have divided both sides of the equation by 26, obtaining 13 = q or q = 13. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 42
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "43": {
+        "Number": 43,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Algebraic Methods"
+        ],
+        "SubTopics": [
+            "Decide if a binomial can be written as the difference of two squares and, if possible, use the structure of a difference of two squares to rewrite the binomial."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which expression is equivalent to 36m² − 100?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "(9m − 20)(4m + 5)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined that two factors of 36m² are 9m and 4m, and that two factors of −100 are −20 and 5, but disregarded the value of the linear term of the quadratic equation. The student needs to focus on understanding how to factor quadratic expressions.",
+                    "Percent": 20
+                }
+            },
+            "B": {
+                "Choice": "4(3m − 5)(3m + 5)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the expression equivalent to 36m² – 100, the student could have first recognized that 36 and 100 have a greatest (largest) common factor of 4 and factored that out, resulting in 36m² – 100 = 4(9m² – 25). Next, the student could have recognized that the expression inside the parentheses, 9m² – 25, can be rewritten as (3m)² – (5)², which represents the difference-of-squares pattern, where a² – b² can be written as the product of the binomial factors (a – b) and (a + b). Applying this pattern, the student could have rewritten the expression 4(9m² – 25) = 4[(3m)² – (5)²] as the product 4(3m – 5)(3m + 5). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 55
+                }
+            },
+            "C": {
+                "Choice": "2(2m − 5)(9m + 10)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely recognized that 36 and 100 have a common factor of 2 and factored out the 2, obtaining 2(18m² – 50). Then the student likely recognized that 2m and 9m are factors of 18m² and that −5 and 10 are factors of −50 but disregarded the value of the linear term of the quadratic equation. The student needs to focus on understanding how to factor quadratic expressions.",
+                    "Percent": 16
+                }
+            },
+            "D": {
+                "Choice": "4(3m − 5)²",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely recognized that 36 and 100 have a greatest (largest) common factor of 4 and factored that out, resulting in 36m² – 100 = 4(9m² – 25). Next, the student likely recognized that 9 and 25 are perfect squares and applied the perfect-square trinomial pattern for factoring (a² – 2ab + b² = (a – b)²) instead of the difference-of-squares factoring pattern, obtaining 4(3m – 5)². The student needs to focus on understanding how to factor quadratic expressions.",
+                    "Percent": 9
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "44": {
+        "Number": 44,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Exponential Functions & Equations"
+        ],
+        "SubTopics": [
+            "Write, using technology, exponential functions that provide a reasonable fit to data and make predictions for real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The table shows the net revenue in millions of dollars of a company every three months for two years. An exponential function can be used to model the data.",
+            "problems/TX22HSA1/media/44a.jpg",
+            "Which function best models the data?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "r(x) = 223.06(1.09)ˣ",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which function (relationship where each input has a single output) best models the data, the student could have used a graphing calculator to generate the function using exponential regression (method of determining the exponential function, r(x) = abˣ, where a is the initial [beginning] value, b is the common factor [constant rate by which successive values increase or decrease], and x is the variable [symbol used to represent an unknown number]). The function that best models the data is r(x) = 223.06(1.09)ˣ. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 61
+                }
+            },
+            "G": {
+                "Choice": "r(x) = 1.09(223.06)ˣ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely transposed the values of a and b when writing the exponential function that models the data. The student needs to focus on understanding how to identify the different parts of an exponential regression equation that are generated using technology.",
+                    "Percent": 17
+                }
+            },
+            "H": {
+                "Choice": "r(x) = 2,232.91(0.92)ˣ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely switched the independent values (inputs, or exponent values) with the dependent values (outputs, or the values that change depending on the inputs) when calculating the exponential regression, using the time in months as the dependent variable and the net revenue as the independent variable. The student needs to focus on how to identify independent and dependent values when using technology to find a regression equation.",
+                    "Percent": 15
+                }
+            },
+            "J": {
+                "Choice": "r(x) = 0.92(2,232.91)ˣ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely switched the independent values (inputs, or exponent values) with the dependent values (outputs, or the values that change depending on the inputs) when calculating the exponential regression, using the time in months as the dependent variable and the net revenue as the independent variable. Next, the student likely transposed the values of a and b when writing the exponential function that models the data. The student needs to focus on how to identify independent and dependent values and how to identify the different parts of an exponential regression equation when using technology to find a regression equation.",
+                    "Percent": 7
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "45": {
+        "Number": 45,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Describing & Graphing Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Graph systems of two linear equations in two variables on the coordinate plane and determine the solutions if they exist."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which graph best represents this system of equations and its solution?",
+            "2x = 6 − y",
+            "5x − 4y = 28"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/TX22HSA1/media/45a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely made sign errors when converting each equation to slope-intercept form, resulting in identifying the slopes and y-intercepts as being the opposite signs of the correct values. The student needs to focus on understanding how to rewrite linear equations from standard form or other forms into slope-intercept form.",
+                    "Percent": 20
+                }
+            },
+            "B": {
+                "Choice": "problems/TX22HSA1/media/45b.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which graph best represents the system of equations (two or more equations containing the same set of variables [symbols used to represent unknown numbers]) and its solution, the student can first rewrite each equation into slope-intercept form. Slope-intercept form of a linear equation is y = mx + b, where m represents the slope (steepness of a straight line graphed on a coordinate grid; m = (y₂ − y₁)/(x₂ −x₁)) of each line and b represents the y-intercept (value where a line crosses the y-axis) of each line. To rewrite the first equation, 2x = 6 – y, the student could have first added y to both sides of the equation, obtaining 2x + y = 6. Next, the student could have subtracted 2x from both sides, resulting in the equation y = −2x + 6. Next, for the first equation, the student could have recognized that the graph of the line will cross the y-axis (vertical axis) at the point (0, 6) and will have a slope (steepness of a straight line graphed on a coordinate grid; m = (y₂ − y₁)/(x₂ −x₁)) of −2. To find the slope-intercept form of the second equation, 5x – 4y = 28, the student could first have subtracted 5x from both sides, resulting in −4y = −5x + 28. Next, the student could have divided both sides of the equation by −4, obtaining the equation y = (5/4)x − 7. Finally, the student could have recognized that the graph of the line will cross the y-axis (vertical axis) at (0, −7) and will have a slope (steepness of a straight line graphed on a coordinate grid; m = (y₂ − y₁)/(x₂ −x₁)) of 5/4. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 47
+                }
+            },
+            "C": {
+                "Choice": "problems/TX22HSA1/media/45c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely made sign errors when converting each equation to slope-intercept form, resulting in identifying the y-intercepts as being the opposite signs of the correct values. The student needs to focus on understanding how to rewrite linear equations from standard form or other forms into slope- intercept form.",
+                    "Percent": 18
+                }
+            },
+            "D": {
+                "Choice": "problems/TX22HSA1/media/45d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely made sign errors when converting each equation to slope-intercept form, resulting in identifying the slopes as being the opposite signs of the correct values. The student needs to focus on understanding how to rewrite linear equations from standard form or other forms into slope- intercept form.",
+                    "Percent": 15
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "46": {
+        "Number": 46,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Algebraic Methods"
+        ],
+        "SubTopics": [
+            "Factor, if possible, trinomials with real factors in the form ax² + bx + c, including perfect square trinomials of degree two."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which function is equivalent to k(x) = x² + 2x − 15?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "k(x) = (x + 15)(x − 1)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined that two factors of x² are x and x, and that two factors of −15 are 15 and −1 but disregarded the value of the linear term (middle term, or the term with a degree of 1) of the quadratic equation. The student needs to focus on understanding how to factor a quadratic equation of the form f(x) = x² + bx + c.",
+                    "Percent": 7
+                }
+            },
+            "G": {
+                "Choice": "k(x) = (x + 1)(x − 15)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined that two factors of x² are x and x, and that two factors of −15 are 1 and −15 but disregarded the value of the linear term (middle term, or the term with a degree of 1) of the quadratic equation. The student needs to focus on understanding how to factor a quadratic equation of the form f(x) = x² + bx + c.",
+                    "Percent": 14
+                }
+            },
+            "H": {
+                "Choice": "k(x) = (x + 5)(x − 3)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the function equivalent to k(x) = x² + 2x – 15, the student could have recognized the need to find the factors (numbers or expressions that can be multiplied to get another number or expression) of x² + 2x – 15. The student could have determined that x² is equal to x ∙ x and written x as the first term in each factor. The student could then have determined that the second terms in each factor are 5 and −3 because their product (answer when multiplying) is −15 (last term in the expression given) and their sum is 2 (coefficient of middle term in the expression given). The student could have then written the factors as (x + 5)(x – 3). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 66
+                }
+            },
+            "J": {
+                "Choice": "k(x) = (x + 3)(x − 5)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely determined that two factors of x² are x and x, and that two factors of −15 are 3 and −5 but disregarded the value of the linear term (middle term, or the term with a degree of 1) of the quadratic equation. The student needs to focus on understanding how to factor a quadratic equation of the form f(x) = x² + bx + c.",
+                    "Percent": 12
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "47": {
+        "Number": 47,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Quadratic Functions & Equations"
+        ],
+        "SubTopics": [
+            "Determine the domain and range of quadratic functions and represent the domain and range using inequalities."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Which graph best represents part of a quadratic function with a domain of all real numbers less than −4?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/TX22HSA1/media/47a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified a graph with a domain of all real numbers less than 0, using the y-value of the y-intercept, (0, −4), instead of the x-value. The student needs to focus on understanding how to identify the domain of a quadratic function from a graph.",
+                    "Percent": 17
+                }
+            },
+            "B": {
+                "Choice": "problems/TX22HSA1/media/47b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified a graph with a domain of all real numbers greater than −4, confusing “greater than” with “less than.” The student needs to focus on understanding how to identify the domain of a quadratic function from a graph.",
+                    "Percent": 15
+                }
+            },
+            "C": {
+                "Choice": "problems/TX22HSA1/media/47c.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which graph best represents part of a quadratic function with a domain (all possible x-values) of all real numbers less than −4, the student could have identified a graph with a vertex (highest or lowest point of the curve) containing an x-coordinate of −4 (which represents the greatest x-value) and a partial parabola that continues up forever (as represented by the arrow) to the left. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 56
+                }
+            },
+            "D": {
+                "Choice": "problems/TX22HSA1/media/47d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified a graph with a domain of all real numbers greater than 0, using the y-value of the y-intercept, (0, −4), instead of the x-value, and confusing “greater than” with “less than.” The student needs to focus on understanding how to identify the domain of a quadratic function from a graph.",
+                    "Percent": 11
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "48": {
+        "Number": 48,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Describing & Graphing Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Determine the slope of a line given a table of values, a graph, two points on the line, and an equation written in various forms, including y = mx + b, Ax + By = C, and y – y₁ = m(x – x₁)."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The graph of a line passes through the points (−3, 1) and (5, 8).",
+            "problems/TX22HSA1/media/48a.jpg",
+            "What is the slope of the line?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "9/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely misapplied the slope formula, adding the x-values and the y-values, obtaining m = (8 + 1)/(5 + (−3)) = 9/2. The student needs to focus on understanding how to use the formula for the slope of a line when given two ordered pairs.",
+                    "Percent": 13
+                }
+            },
+            "G": {
+                "Choice": "7/8",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the slope (steepness of a straight line when graphed on a coordinate grid) when given two points, the student could have used the given ordered pairs and applied the slope formula m = (y₂ − y₁)/(x₂ −x₁). Substituting the values of (−3, 1) and (5, 8) into the slope formula, the student could have calculated m = (8 − 1)/(5 − (−3)) = 7/8. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 65
+                }
+            },
+            "H": {
+                "Choice": "−9/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely misapplied the slope formula, adding the x-values and the y-values and making a sign error when calculating, obtaining m = (8 + 1)/(5 + (−3)) = 9/(−2) = −9/2. The student needs to focus on understanding how to use the formula for the slope of a line when given two ordered pairs.",
+                    "Percent": 12
+                }
+            },
+            "J": {
+                "Choice": "−7/8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely made a sign error when calculating the slope, resulting in m = (8 − 1)/(5 − (−3)) = 7/(−8) = −7/8 instead of m = 7/8. The student needs to focus on understanding how to use the formula for the slope of a line when given two ordered pairs.",
+                    "Percent": 9
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "49": {
+        "Number": 49,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Solve systems of two linear equations with two variables for mathematical and real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A mail carrier delivers mail on one of two different routes: a morning route or an afternoon route. Each workday the mail carrier is assigned one of these two routes.",
+            "• Last month the mail carrier delivered mail on the morning route 16 times and on the afternoon route 12 times, for a total distance traveled of 141 miles.",
+            "• This month the mail carrier delivered mail on the morning route 10 times and on the afternoon route 15 times, for a total distance traveled of 123.75 miles.",
+            "What is the distance of the morning route in miles?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "5.25 mi",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the distance the mail carrier traveled on the morning route, the student could set up and solve a system of equations [two or more equations containing the same set of variables (symbols used to represent unknown numbers)]. If x represents the number of miles the mail carrier traveled on the morning route and y represents the number of miles the mail carrier traveled on the afternoon route, the student could have set up the two equations; 16x + 12y = 141 (16 times the number of miles in the morning route + 12 times the number of miles in the afternoon route = 141 miles) and 10x + 15y = 123.75 (10 times the number of miles in the morning route + 15 times the number of miles in the afternoon route = 123.75 miles). Next, the student could have solved the system of equations using the elimination method, multiplying the first equation by 5 and the second equation by −4, resulting in the equations 80x + 60y = 705 and −40x – 60y = −495. Next, the student could have added the two equations together to eliminate the terms containing y, resulting in 40x = 210. Dividing by 40, the student obtained the result x = 5.25. Since x represents the number of miles the mail carrier traveled on the morning route, the student could have concluded that the distance of the morning route in miles is 5.25 miles. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 39
+                }
+            },
+            "B": {
+                "Choice": "6.00 mi",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely subtracted the number of times the mail carrier delivered mail on the morning route this month, 10, from the number of times the mail carried delivered mail on the morning route last month, 16, and concluded that the difference represents the distance of the morning route in miles. The student needs to focus on understanding how to write a system of equations from a verbal description.",
+                    "Percent": 21
+                }
+            },
+            "C": {
+                "Choice": "4.75 mi",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely set up and solved the system of equations correctly, but switched the values of x and y, concluding that the distance of the morning route was 4.75 miles instead of 5.25. The student needs to focus on understanding what value each variable represents in terms of the situation when solving a system of equations.",
+                    "Percent": 27
+                }
+            },
+            "D": {
+                "Choice": "5.00 mi",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely found the sum of the total distances traveled both months, 141 + 123.75 = 264.75, and the sum of the total number of routes the mail carrier delivered, 16 + 12 + 10 + 15 = 53, and then divided the sums, obtaining 264.75/53 ≈ 4.995. Lastly, the student likely rounded 4.99 to 5. The student needs to focus on understanding how to write a system of equations from a verbal description.",
+                    "Percent": 13
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "50": {
+        "Number": 50,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Quadratic Functions & Equations"
+        ],
+        "SubTopics": [
+            "Determine the effects on the graph of the parent function f(x) = x² when f(x) is replaced by af(x), f(x) + d, f(x – c), f(bx) for specific values of a, b, c, and d."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Quadratic functions p and q are graphed on the grid. The graph of p was transformed to create the graph of q.",
+            "problems/TX22HSA1/media/50a.jpg",
+            "Which function best represents the graph of q?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "q(x) = −(x − 2)²",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly identified the reflection of the graph over the x-axis but did not recognize replacing x with x – 2 in a quadratic function would indicate that the graph was translated 2 units right instead of up 2 units. The student needs to focus on how the direction of the transformation affects the function.",
+                    "Percent": 11
+                }
+            },
+            "G": {
+                "Choice": "q(x) = −(x + 2)²",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly identified the reflection of the graph over the x-axis but did not recognize that replacing x with x + 2 in a quadratic function would indicate that the graph was translated 2 units left instead of up 2 units. The student needs to focus on how the direction of the transformation affects the function.",
+                    "Percent": 17
+                }
+            },
+            "H": {
+                "Choice": "q(x) = −x² − 2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly identified the reflection of the parent graph over the x-axis but interpreted a vertical translation 2 units up as 2 being subtracted from the quadratic term instead of added. The student needs to focus on how the direction of the transformation affects the function.",
+                    "Percent": 11
+                }
+            },
+            "J": {
+                "Choice": "q(x) = −x² + 2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which function best represents the graph of q, the student could have first identified p(x) = x² as the quadratic parent function and used the function q(x) = af(x) + d to analyze the transformation. Next, the student could have recognized that the graph of p was reflected over the x-axis and translated up 2 units to create the graph of q. The student could then have determined that a reflection over the x-axis indicates that the coefficient of the quadratic term, a, is −1, and that a vertical translation up 2 units indicates that the value of d is 2. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 60
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "51": {
+        "Number": 51,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Solve linear equations in one variable, including those for which the application of the distributive property is necessary and for which variables are included on both sides."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "What is the solution to this equation?",
+            "2(40 − 5y) = 10y + 5(1 − y)"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "7.5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely distributed 2 to only the first term in the parentheses, resulting in 80 – 5y = 10y + 5 – 5y. After combining like terms, the student likely obtained 80 – 5y = 5y + 5. Then, adding 5y and subtracting 5 from both sides, the student likely obtained the result 75 = 10y. Finally, dividing both sides by 10, the student found that y = 7.5. The student needs to focus on understanding how to apply the distributive property when solving equations.",
+                    "Percent": 11
+                }
+            },
+            "B": {
+                "Choice": "15",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely made a sign error when applying the distributive property and identified all the terms as positive after distributing (multiplying) the numbers immediately in front of the parentheses to the terms inside the parentheses, resulting in 80 + 10y = 10y + 5 + 5y. When combining like terms, the student likely obtained 80 + 10y = 15y + 5. After subtracting 10y and subtracting 5 from both sides, the student likely obtained the equation 75 = 5y. Dividing by 5 on both sides, the student concluded that y = 15. The student needs to focus on understanding how to apply the distributive property when solving equations.",
+                    "Percent": 15
+                }
+            },
+            "C": {
+                "Choice": "5",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the solution to the equation 2(40 – 5y) = 10y + 5(1 – y), the student could first have distributed (multiplied) the number in front of the parentheses by the terms inside of the parentheses, resulting in 80 – 10y = 10y + 5 – 5y. Next, the student could have combined like terms (terms that contain the same variables raised to the same powers) on the right side of the equation, obtaining 80 – 10y = 5y + 5. The student could then have added 10y to both sides of the equation, resulting in the equation 80 = 15y + 5, and then subtracted 5 from both sides with the result 75 = 15y. Finally, the student could have divided both sides of the equation by 15, with the result that 5 = y, or y = 5. This is an efficient way to solve the problem; however, other methods could be used to solve the",
+                    "Percent": 52
+                }
+            },
+            "D": {
+                "Choice": "Not here",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely solved the equation for y and did not get a solution of either 5, 7.5, or 15. The student needs to focus on understanding how to apply the distributive property and on the arithmetic of solving equations.",
+                    "Percent": 22
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "52": {
+        "Number": 52,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Exponential Functions & Equations"
+        ],
+        "SubTopics": [
+            "Graph exponential functions that model growth and decay and identify key features, including y-intercept and asymptote, in mathematical and real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The initial value of a home is $200,000. The value of the home will increase at a rate of 6% each year.",
+            "Which graph best models this situation?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "problems/TX22HSA1/media/52a.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which graph best represents the situation in which the initial value of a home is $200,000 and the value of the home increases at the rate of 6% per year, the student first could have recognized that the graph will represent an exponential function in the form y = abˣ, where a is the y-intercept (value where the graph crosses the y-axis), b is the common factor (constant rate by which successive values increase or decrease), and x is the variable (symbol used to represent an unknown number). Since it is given that the initial value of the house is $200,000, the student could have recognized that the value of a is 200,000. Since the value of the home increases at a rate of 6% per year, the student could have understood that the common factor, b, will be 1 + 0.06, or b = 1.06. Substituting these values into the exponential function y = ab⁵ˣ, the student could have obtained the result y = 200,000(1.06)⁵ˣ, where x represents the time in years. The student then could have calculated the value of the function when x = 5, resulting in y = 200,000(1.06)⁵. Finally, the student could have concluded that the point located at approximately (5, 267,645) lies on the graph of the exponential function. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 53
+                }
+            },
+            "G": {
+                "Choice": "problems/TX22HSA1/media/52b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely miscalculated the value of the base, b, as b = 1.6 instead of 1.06, and used an initial value of a = 100,000. The student needs to focus on understanding how to identify the graph of an exponential function.",
+                    "Percent": 10
+                }
+            },
+            "H": {
+                "Choice": "problems/TX22HSA1/media/52c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely miscalculated the value of the base, b, as b = 1.6 instead of 1.06, but used the correct initial value of a = 200,000. The student needs to focus on understanding how to identify the graph of an exponential function.",
+                    "Percent": 24
+                }
+            },
+            "J": {
+                "Choice": "problems/TX22HSA1/media/52d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly calculated the value of the base, b, as b = 1.06, but used an incorrect initial value of a = 100,000. The student needs to focus on understanding how to identify the graph of an exponential function.",
+                    "Percent": 13
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "53": {
+        "Number": 53,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Writing & Solving Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Determine the domain and range of a linear function in mathematical problems; determine reasonable domain and range values for realworld situations, both continuous and discrete; and represent domain and range using inequalities."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A coach has 96 golf balls for the school’s golf team. The coach will give each player on the team 8 golf balls. The graph shows the linear relationship between y, the number of golf balls remaining for the team, and x, the number of players on the team.",
+            "problems/TX22HSA1/media/53a.jpg",
+            "The coach will use no more than 6 players on the school’s golf team. Which set best represents the range of the function for this situation?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "{96, 84, 72, 60, 48, 36, 24}",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified the set of seven y-values on the scale of the y-axis, beginning with 96 and decreasing in increments of 12, {96, 84, 72, 60, 48, 36, 24}, as representing the range of the function. The student needs to focus on understanding how to identify and express the domain and range of a function from a graph.",
+                    "Percent": 12
+                }
+            },
+            "B": {
+                "Choice": "{8, 9, 10, 11, 12, 13, 14}",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified the set of sums of the values in the domain and the number of balls given to each player, {8, 9, 10, 11, 12, 13, 14}, as the range. The student needs to focus on understanding how to identify and express the domain and range of a function from a graph.",
+                    "Percent": 7
+                }
+            },
+            "C": {
+                "Choice": "{96, 88, 80, 72, 64, 56, 48}",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine the range (all possible y-values) of the part of the discrete linear function shown, the student could have identified all the y-values of the points that are plotted. The ordered pairs on the graph are (0, 96), (1, 88), (2, 80), (3, 72), (4, 64), (5, 56), and (6, 48). The student could have realized that the set of y-values {96, 88, 80, 72, 64, 56, 48} represents the range of the function for this situation. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 70
+                }
+            },
+            "D": {
+                "Choice": "{0, 1, 2, 3, 4, 5, 6}",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely identified the set of values of the domain, {0, 1, 2, 3, 4, 5, 6}, as the range. The student needs to focus on understanding how to identify and express the domain and range of a function from a graph.",
+                    "Percent": 10
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "54": {
+        "Number": 54,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Describing & Graphing Linear Functions, Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Graph linear functions on the coordinate plane and identify key features, including x-intercept, y-intercept, zeros, and slope, in mathematical and real-world problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Linear function k has a zero of −2 and a y-intercept of 6. Which graph best represents k?"
+        ],
+        "AnswerChoices": {
+            "F": {
+                "Choice": "problems/TX22HSA1/media/54a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely correctly identified the y-intercept of 6 to be located at the point (0, 6), but likely confused the slope (steepness of a straight line graphed on a coordinate grid; m = (y₂ − y₁)/(x₂ −x₁)) of the line with the x-intercept of the line, choosing a line with a slope of −2. The student needs to focus on understanding how to identify the zero and the y-intercept of a linear function.",
+                    "Percent": 10
+                }
+            },
+            "G": {
+                "Choice": "problems/TX22HSA1/media/54b.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which graph best represents linear function (a relationship where each input has a single output) k, the student could have recognized that the zero of a linear function is located at the x-intercept of the graph. The student could then have identified the graph of a line that appears to have an x-intercept of −2 and a y-intercept of 6. The student could have determined that the line intersects (crosses) the x-axis at (−2, 0) and the y-axis at (0, 6), representing an x-intercept of −2 and a y-intercept of 6. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Percent": 75
+                }
+            },
+            "H": {
+                "Choice": "problems/TX22HSA1/media/54c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely reversed the values of the zero of the function and the y-intercept of the function. The student needs to focus on understanding how to identify the zero and the y-intercept of a linear function.",
+                    "Percent": 9
+                }
+            },
+            "J": {
+                "Choice": "problems/TX22HSA1/media/54d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student likely reversed the values of the zero of the function and the y-intercept of the function and then used −6, the opposite of 6, as the zero of the function. The student needs to focus on understanding how to identify the zero and the y-intercept of a linear function.",
+                    "Percent": 5
+                }
+            }
+        },
+        "Parts": {}
+    }
+}

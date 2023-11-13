@@ -559,6 +559,13 @@
       <input type="hidden" value="All Subjects" #state>
       <div class="card-container" style="max-width: 100%; margin-top: 0px">
         <label class="switch">
+          <input type="checkbox" value="A1">
+          <button *ngIf="subject_filters.includes('Algebra I')" (click)="toggle_button('Algebra I')"
+            class="toggle-button-on" tabindex="0"> <b>Algebra I</b> </button>
+          <button *ngIf="!subject_filters.includes('Algebra I')" (click)="toggle_button('Algebra I')"
+            class="toggle-button-off" tabindex="0"> <b>Algebra I</b> </button>
+        </label>
+        <label class="switch">
           <input type="checkbox" value="B">
           <button *ngIf="subject_filters.includes('Biology')" (click)="toggle_button('Biology')"
             class="toggle-button-on" tabindex="0">
