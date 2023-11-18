@@ -16,15 +16,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(x, y) → (x − 4, y + 5)",
+                "Choice": "(x, y) ⇒ (x − 4, y + 5)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To identify the rule that describes the transformation (change of a shape using a rotation (circular movement), reflection (flip), translation (slide), or dilation (resize)), the student should have recognized that when a shape is translated 4 units to the left, each x-coordinate (horizontal position from 0) is decreased by 4 units, which is represented by the expression x − 4. When a shape is translated 5 units up, each y-coordinate (vertical position from 0) is increased by 5 units, which is represented by the expression y + 5. Therefore the rule (x, y) → (x − 4, y + 5) describes this transformation.",
+                    "Rationale": "To identify the rule that describes the transformation (change of a shape using a rotation (circular movement), reflection (flip), translation (slide), or dilation (resize)), the student should have recognized that when a shape is translated 4 units to the left, each x-coordinate (horizontal position from 0) is decreased by 4 units, which is represented by the expression x − 4. When a shape is translated 5 units up, each y-coordinate (vertical position from 0) is increased by 5 units, which is represented by the expression y + 5. Therefore the rule (x, y) ⇒ (x − 4, y + 5) describes this transformation.",
                     "Percent": 76
                 }
             },
             "B": {
-                "Choice": "(x, y) → (x + 4, y − 5)",
+                "Choice": "(x, y) ⇒ (x + 4, y − 5)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely reversed the relationship between the effect on x and y and identified the rule for translating the figure 4 units to the right and 5 units down. The student needs to focus on writing rules for translations and explaining the effect.",
@@ -32,7 +32,7 @@
                 }
             },
             "C": {
-                "Choice": "(x, y) → (x + 4, y + 5)",
+                "Choice": "(x, y) ⇒ (x + 4, y + 5)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely reversed the relationship of the effect on x and translated the figure to the right rather than to the left and identified the rule for translating the figure 4 units to the right and 5 units up. The student needs to focus on writing rules for translations and explaining the effect.",
@@ -40,7 +40,7 @@
                 }
             },
             "D": {
-                "Choice": "(x, y) → (x − 4, y − 5)",
+                "Choice": "(x, y) ⇒ (x − 4, y − 5)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely reversed the relationship of the effect on y and translated the figure down rather than up and identified the rule for translating the figure 4 units to the left and 5 units down. The student needs to focus on writing rules for translations and explaining the effect.",
@@ -899,7 +899,7 @@
                 "Choice": "1.0 in.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the radius (distance from the center to the edge of a circle) of the cone, the student should have used the formula for the volume (amount of three-dimensional space taken up) of a cone, V = 1/3 • Bh, where B represents the area (amount of space covered by the surface) of the base of the cone (circle), which is also the formula for the area of a circle, A = πr2. Combining the formulas results in the formula V = 1/3 • πr²h. Substituting the values into the formula results in (1.5π) = 1/3 • πr² • (4.5). Solving the equation for r, r² = (1.5π) ÷ (1/3 • π(4.5)⎞ → r = √((1.5π) ÷ (1/3  π(4.5))) = √((1.5π) ÷ (1.5π)) = √1, results in 1.0.",
+                    "Rationale": "To determine the radius (distance from the center to the edge of a circle) of the cone, the student should have used the formula for the volume (amount of three-dimensional space taken up) of a cone, V = 1/3 • Bh, where B represents the area (amount of space covered by the surface) of the base of the cone (circle), which is also the formula for the area of a circle, A = πr2. Combining the formulas results in the formula V = 1/3 • πr²h. Substituting the values into the formula results in (1.5π) = 1/3 • πr² • (4.5). Solving the equation for r, r² = (1.5π) ÷ (1/3 • π(4.5)⎞ ⇒ r = √((1.5π) ÷ (1/3  π(4.5))) = √((1.5π) ÷ (1.5π)) = √1, results in 1.0.",
                     "Percent": 38
                 }
             },
@@ -984,34 +984,34 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(x, y) → (2/7 • x, 2/7 • y)",
+                "Choice": "(x, y) ⇒ (2/7 • x, 2/7 • y)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely divided the corresponding values of the original vertex (vertex Q) by the corresponding values of the dilated vertex (vertex Q′) (6 ÷ 21 = 2/7 and 2 ÷ 7 = 2/7) and therefore chose the rule (x, y) → (2/7 • x, 2/7 • y). The student needs to focus on the effect a dilation by a given scale factor has on a figure and how to determine the rule to explain the effect.",
+                    "Rationale": "The student likely divided the corresponding values of the original vertex (vertex Q) by the corresponding values of the dilated vertex (vertex Q′) (6 ÷ 21 = 2/7 and 2 ÷ 7 = 2/7) and therefore chose the rule (x, y) ⇒ (2/7 • x, 2/7 • y). The student needs to focus on the effect a dilation by a given scale factor has on a figure and how to determine the rule to explain the effect.",
                     "Percent": 18
                 }
             },
             "G": {
-                "Choice": "(x, y) → (x + 15, y + 5)",
+                "Choice": "(x, y) ⇒ (x + 15, y + 5)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely thought of a translation (slide) and added different values to the coordinates of the original vertex (vertex Q) to get to vertex Q′, instead of multiplying each coordinate by a single scale factor, choosing the rule (x, y) → (x + 15, y + 5). The student needs to focus on understanding how the scale factor affects the dilation.",
+                    "Rationale": "The student likely thought of a translation (slide) and added different values to the coordinates of the original vertex (vertex Q) to get to vertex Q′, instead of multiplying each coordinate by a single scale factor, choosing the rule (x, y) ⇒ (x + 15, y + 5). The student needs to focus on understanding how the scale factor affects the dilation.",
                     "Percent": 32
                 }
             },
             "H": {
-                "Choice": "(x, y) → (x − 15, y − 5)",
+                "Choice": "(x, y) ⇒ (x − 15, y − 5)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely thought of a translation (slide) and subtracted different values from the coordinates of vertex Q′ to get to the original vertex (vertex Q), instead of multiplying each coordinate by a single scale factor, choosing the rule (x, y) → (x − 15, y − 5). The student needs to focus on understanding how the scale factor affects the dilation.",
+                    "Rationale": "The student likely thought of a translation (slide) and subtracted different values from the coordinates of vertex Q′ to get to the original vertex (vertex Q), instead of multiplying each coordinate by a single scale factor, choosing the rule (x, y) ⇒ (x − 15, y − 5). The student needs to focus on understanding how the scale factor affects the dilation.",
                     "Percent": 13
                 }
             },
             "J": {
-                "Choice": "(x, y) → (7/2 • x, 7/2 • y)",
+                "Choice": "(x, y) ⇒ (7/2 • x, 7/2 • y)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the rule that best represents the dilation, the student should have determined that when a figure is dilated (enlarged or reduced in size), its measurements increase or decrease based on the scale factor (ratio of the length of a side of one figure to the length of the corresponding (paired) side of a similar figure). A scale factor with the origin (point where the x-axis (horizontal) and y-axis (vertical) on a coordinate grid intersect (cross); also, the point represented by the ordered pair (0, 0)) as the center of dilation means that each point on the dilated figure will be a certain number of times as far from the origin as it was on the original figure. Since the location of vertex Q was originally represented at (6, 2), and the location of the corresponding vertex (vertex Q′) on the dilated figure is at (21, 7), the scale factor of the dilation can be determined by dividing the value of each corresponding coordinate of vertex Q′ by the value of each corresponding coordinate of vertex Q (21 ÷ 6 = 7/2 and 7 ÷ 2 = 7/2), so the rule (x, y) → (7x, 7y) represents the dilation.",
+                    "Rationale": "To determine the rule that best represents the dilation, the student should have determined that when a figure is dilated (enlarged or reduced in size), its measurements increase or decrease based on the scale factor (ratio of the length of a side of one figure to the length of the corresponding (paired) side of a similar figure). A scale factor with the origin (point where the x-axis (horizontal) and y-axis (vertical) on a coordinate grid intersect (cross); also, the point represented by the ordered pair (0, 0)) as the center of dilation means that each point on the dilated figure will be a certain number of times as far from the origin as it was on the original figure. Since the location of vertex Q was originally represented at (6, 2), and the location of the corresponding vertex (vertex Q′) on the dilated figure is at (21, 7), the scale factor of the dilation can be determined by dividing the value of each corresponding coordinate of vertex Q′ by the value of each corresponding coordinate of vertex Q (21 ÷ 6 = 7/2 and 7 ÷ 2 = 7/2), so the rule (x, y) ⇒ (7x, 7y) represents the dilation.",
                     "Percent": 37
                 }
             }
@@ -1482,7 +1482,7 @@
         "SuppContent": [],
         "Explain": false,
         "Content": [
-            "A figure was transformed on a coordinate grid using the rule (x, y) → (−x, −y). Which of the following describes this transformation?"
+            "A figure was transformed on a coordinate grid using the rule (x, y) ⇒ (−x, −y). Which of the following describes this transformation?"
         ],
         "AnswerChoices": {
             "F": {
@@ -1505,7 +1505,7 @@
                 "Choice": "A 90° clockwise rotation about the origin",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the transformation as a rotation of (x, y) but did not realize that (x, y) would have used the rule (x, y) → (y, −x) instead of (x, y) → (−x, −y) for a 90° clockwise rotation about the origin. The student needs to focus on correctly identifying the type of transformation that was used and using the rule to explain the effect on (x, y) when graphed on a coordinate grid.",
+                    "Rationale": "The student likely identified the transformation as a rotation of (x, y) but did not realize that (x, y) would have used the rule (x, y) ⇒ (y, −x) instead of (x, y) ⇒ (−x, −y) for a 90° clockwise rotation about the origin. The student needs to focus on correctly identifying the type of transformation that was used and using the rule to explain the effect on (x, y) when graphed on a coordinate grid.",
                     "Percent": 17
                 }
             },
@@ -1513,7 +1513,7 @@
                 "Choice": "A 180° clockwise rotation about the origin",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To identify the phrase that describes the transformation (change of a shape using a rotation (circular movement), reflection (flip), translation (slide), or dilation (resize)), the student should have determined that the transformation used was a rotation 180° clockwise about the origin (point where the x-axis (horizontal) and the y-axis (vertical) on a coordinate grid intersect (cross); also, the point represented by the ordered pair (0, 0)) because of the rule (x, y) → (−x, −y). The student made this determination based on how the x-value in the ordered pair changed to the opposite sign and the y-value in the ordered pair changed to the opposite sign. Therefore the phrase “A 180° clockwise rotation about the origin” describes the transformation.",
+                    "Rationale": "To identify the phrase that describes the transformation (change of a shape using a rotation (circular movement), reflection (flip), translation (slide), or dilation (resize)), the student should have determined that the transformation used was a rotation 180° clockwise about the origin (point where the x-axis (horizontal) and the y-axis (vertical) on a coordinate grid intersect (cross); also, the point represented by the ordered pair (0, 0)) because of the rule (x, y) ⇒ (−x, −y). The student made this determination based on how the x-value in the ordered pair changed to the opposite sign and the y-value in the ordered pair changed to the opposite sign. Therefore the phrase “A 180° clockwise rotation about the origin” describes the transformation.",
                     "Percent": 54
                 }
             }

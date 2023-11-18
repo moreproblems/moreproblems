@@ -279,7 +279,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(x, y) → (0.5 − x, 0.5 − y)",
+                "Choice": "(x, y) ⇒ (0.5 − x, 0.5 − y)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely recognized the need for a scale factor less than 1 but subtracted instead of multiplying. The student needs to focus on understanding how the scale factor affects the dilation.",
@@ -287,7 +287,7 @@
                 }
             },
             "G": {
-                "Choice": "(x, y) → (x − 7, y − 7)",
+                "Choice": "(x, y) ⇒ (x − 7, y − 7)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely thought that subtracting 7 from both the x-coordinate and the y-coordinate of (x, y) would create a smaller polygon. The student needs to focus on understanding how the scale factor affects the dilation.",
@@ -295,7 +295,7 @@
                 }
             },
             "H": {
-                "Choice": "(x, y) → (0.9x, 0.9y)",
+                "Choice": "(x, y) ⇒ (0.9x, 0.9y)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely recognized that dilations are created using multiplication and thought that a 5/4 fraction would reduce the size of the polygon. The value is greater than 1, creating a polygon larger than the original. The student needs to focus on understanding how the scale factor affects the dilation.",
@@ -303,7 +303,7 @@
                 }
             },
             "J": {
-                "Choice": "(x, y) → (5/4 • x, 5/4 • y)",
+                "Choice": "(x, y) ⇒ (5/4 • x, 5/4 • y)",
                 "Key": {
                     "Correct": true,
                     "Rationale": "When a figure is dilated (enlarged or decreased in size), its measurements increase or decrease based on the scale factor (ratio of the length of a side of one figure to the length of the corresponding (paired) side of a similar figure). In order to create a smaller polygon, a scale factor of less than 1 (in this case 0.9) is necessary. The origin (point where the x-axis (horizontal) and the y-axis (vertical) on a coordinate grid cross, represented by the ordered pair (0, 0)) as the center of dilation means that each of the points on the dilated figure will be 0.9 as far from the origin as they were on the original figure. If the location of each point was originally represented by (x, y), then the new location will be (0.9x, 0.9y).",
@@ -465,15 +465,15 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(x,y) → (x, y − 7)",
+                "Choice": "(x,y) ⇒ (x, y − 7)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined the transformation (change of a shape using a rotation (circular movement), reflection (flip), translation (slide), or dilation (resize)) of the triangle was a translation. The student made this determination based on how the x-coordinate (horizontal position from 0) of each vertex (corner) of the triangle was the same after the transformation, but the y-coordinate (vertical position from 0) of each vertex was 7 units lower after the transformation. Therefore the rule (x, y) → (x, y − 7) describes the triangle moving down 7 units.",
+                    "Rationale": "The student should have determined the transformation (change of a shape using a rotation (circular movement), reflection (flip), translation (slide), or dilation (resize)) of the triangle was a translation. The student made this determination based on how the x-coordinate (horizontal position from 0) of each vertex (corner) of the triangle was the same after the transformation, but the y-coordinate (vertical position from 0) of each vertex was 7 units lower after the transformation. Therefore the rule (x, y) ⇒ (x, y − 7) describes the triangle moving down 7 units.",
                     "Percent": 0
                 }
             },
             "G": {
-                "Choice": "(x,y) → (x, −y)",
+                "Choice": "(x,y) ⇒ (x, −y)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student identified a reflection across the x-axis (horizontal) instead of the translation of the triangle. The student needs to focus on the effect a transformation has on a figure and the rule that can be used to explain the effect on the figure when graphed on a coordinate grid.",
@@ -481,7 +481,7 @@
                 }
             },
             "H": {
-                "Choice": "(x,y) → (x − 7, y)",
+                "Choice": "(x,y) ⇒ (x − 7, y)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student identified the transformation was a translation but chose the rule that describes a horizontal shift to the left instead of the vertical translation of the triangle. The student needs to focus on the effect a transformation has on a figure and the rule that can be used to explain the effect on the figure when graphed on a coordinate grid.",
@@ -489,7 +489,7 @@
                 }
             },
             "J": {
-                "Choice": "(x,y) → (−x, y)",
+                "Choice": "(x,y) ⇒ (−x, y)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student identified the rule that describes a reflection across the y-axis (vertical) instead of the translation of the triangle. The student needs to focus on the effect a transformation has on a figure and the rule that can be used to explain the effect on the figure when graphed on a coordinate grid.",
@@ -1172,7 +1172,7 @@
         "SuppContent": [],
         "Explain": false,
         "Content": [
-            "A polygon is graphed on a coordinate grid with (x, y) representing the location of a certain point on the polygon. The polygon is transformed using the rule (x, y) → (ax, ay).",
+            "A polygon is graphed on a coordinate grid with (x, y) representing the location of a certain point on the polygon. The polygon is transformed using the rule (x, y) ⇒ (ax, ay).",
             "Which statement must be true?"
         ],
         "AnswerChoices": {
@@ -1204,7 +1204,7 @@
                 "Choice": "If a is between 0 and 1, the image of the polygon is smaller than the polygon.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which statement is true, the student should have recognized that the rule given ((x, y) → (ax, ay)) for the transformation (change of a shape using a rotation (circular movement), reflection (flip), translation (slide), or dilation (resize)) creates a dilation. The scale factor (ratio of the length of a side of one figure to the length of the corresponding (paired) side of a similar figure) for the dilation is a. If a figure is dilated by a scale factor between 0 and 1, the new figure will be smaller.",
+                    "Rationale": "To determine which statement is true, the student should have recognized that the rule given ((x, y) ⇒ (ax, ay)) for the transformation (change of a shape using a rotation (circular movement), reflection (flip), translation (slide), or dilation (resize)) creates a dilation. The scale factor (ratio of the length of a side of one figure to the length of the corresponding (paired) side of a similar figure) for the dilation is a. If a figure is dilated by a scale factor between 0 and 1, the new figure will be smaller.",
                     "Percent": 0
                 }
             }
@@ -2071,7 +2071,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(x, y) → (x − 5, y − 3)",
+                "Choice": "(x, y) ⇒ (x − 5, y − 3)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely identified the rule for translating the figure 5 units to the left and 3 units down. The student needs to focus on writing rules for translations and explaining the effect.",
@@ -2079,15 +2079,15 @@
                 }
             },
             "G": {
-                "Choice": "(x, y) → (x + 5, y + 3)",
+                "Choice": "(x, y) ⇒ (x + 5, y + 3)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To identify the rule that describes the transformation (change of a shape using a rotation (circular movement), reflection (flip), translation (slide), or dilation (resize)), the student should have recognized that when a shape is translated 5 units to the right, each x-coordinate (horizontal position from 0) is increased by 5 units, which is represented by the expression x + 5. When a shape is translated 3 units up, each y-coordinate (vertical position from 0) is increased by 3 units, which is represented by the expression y + 3. Therefore the rule (x, y) → (x + 5, y + 3) describes this transformation.",
+                    "Rationale": "To identify the rule that describes the transformation (change of a shape using a rotation (circular movement), reflection (flip), translation (slide), or dilation (resize)), the student should have recognized that when a shape is translated 5 units to the right, each x-coordinate (horizontal position from 0) is increased by 5 units, which is represented by the expression x + 5. When a shape is translated 3 units up, each y-coordinate (vertical position from 0) is increased by 3 units, which is represented by the expression y + 3. Therefore the rule (x, y) ⇒ (x + 5, y + 3) describes this transformation.",
                     "Percent": 0
                 }
             },
             "H": {
-                "Choice": "(x, y) → (x − 3, y − 5)",
+                "Choice": "(x, y) ⇒ (x − 3, y − 5)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely reversed the relationship between the effect on x and y and identified the rule for translating the figure 3 units to the left and 5 units down. The student needs to focus on writing rules for translations and explaining the effect.",
@@ -2095,7 +2095,7 @@
                 }
             },
             "J": {
-                "Choice": "(x, y) → (x + 3, y + 5)",
+                "Choice": "(x, y) ⇒ (x + 3, y + 5)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely reversed the relationship between the effect on x and y and identified the rule to translate the figure 3 units to the right and 5 units up. The student needs to focus on writing rules for translations and explaining the effect.",
