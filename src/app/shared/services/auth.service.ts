@@ -1,5 +1,6 @@
 import { Injectable, NgZone } from '@angular/core';
 import { User } from './user';
+import { from } from 'rxjs';
 import * as auth from 'firebase/auth';
 import * as stor from "firebase/storage";
 import { AngularFireAuth } from '@angular/fire/compat/auth';
@@ -162,11 +163,26 @@ export class AuthService {
       //     this.SetUserData(result.user);
       //   });
       .signInWithPopup(provider)
-      .then((result) => {
-        this.router.navigate(['profile']);
-        this.userCredential = result;
+      .then(async (result) => {
+        // const authMethods: string[] = await (<any>this.afAuth.fetchSignInMethodsForEmail(result.user !== null && result.user.email !== null ? result.user.email : ''));
+        // console.log(authMethods);
+        this.userCredential = result.credential;
         this.SetUserData(result.user);
-        // this.WriteUserData(result.user, role);
+        console.log(result.user);
+        if (result.user != null) {
+          console.log(result.user.uid);
+          this.userData = this.searchUserId(result.user.uid as string);
+          setTimeout(() => {
+            if (result.user != null) {
+              this.userData = this.searchUserId(result.user.uid as string);
+              console.log(this.userData);
+              if (Object.keys(this.userData).length == 0) {
+                this.WriteUserData(result.user, '').then (() => {
+                });
+              }
+            }
+          }, 500);
+        }
         // this.setUserLoggedIn(result.user);
       })
       .catch((error) => {
@@ -199,9 +215,10 @@ export class AuthService {
       //   });
       .signInWithPopup(provider)
       .then((result) => {
-        this.WriteUserData(result.user, role);
-        this.SetUserData(result.user);
-        this.router.navigate(['profile']);
+        this.WriteUserData(result.user, role).then (() => {
+          this.SetUserData(result.user);
+          this.router.navigate(['profile']);
+        });
         // this.setUserLoggedIn(result.user);
       })
       .catch((error) => {
@@ -270,7 +287,7 @@ export class AuthService {
       updates2['/users/' + user.uid + '/role'] = role;
       updates2['/users/' + user.uid + '/standards/favorites'] = [""];
       updates2['/users/' + user.uid + '/exams/favorites'] = [""];
-      if (role != 'Parent') {
+      if (role != 'Parent' && role != '') {
         updates2['/users/' + user.uid + '/classes'] = [""];
       }
       if (role == 'Student') {
@@ -279,7 +296,7 @@ export class AuthService {
         updates2['/users/' + user.uid + '/problems/total'] = 0;
         updates2['/users/' + user.uid + '/problems/correct'] = 0;
       }
-      else {
+      else if (role != '') {
         updates2['/users/' + user.uid + '/students'] = [""];
       }
       update(ref(db), updates2);
@@ -470,6 +487,7 @@ export class AuthService {
   }
 
   searchUserId(id: string) {
+    this.user_result = {};
     const db = getDatabase();
     const user_ref = ref(db, "users/" + id);
     onValue(user_ref, (snapshot) => {
@@ -484,6 +502,7 @@ export class AuthService {
   }
 
   searchClassId(id: string) {
+    this.class_result = {};
     const db = getDatabase();
     const class_ref = ref(db, "classes/" + id);
     onValue(class_ref, (snapshot) => {

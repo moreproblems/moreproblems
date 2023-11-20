@@ -1414,7 +1414,7 @@
                             </div>
                         </button>
                     </label>
-                    <label *ngIf="user.role == 'Student'" class="switch">
+                    <label *ngIf="user.role == 'Student' && user.role != ''" class="switch">
                         <input type="checkbox" value="achievements">
                         <button *ngIf="profile_tab != 'achievements'" (click)="set_tab('achievements')"
                             class="toggle-button-off"
@@ -1435,7 +1435,7 @@
                             <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Results </b></div>
                         </button>
                     </label>
-                    <label *ngIf="user.role != 'Student'" class="switch">
+                    <label *ngIf="user.role != 'Student' && user.role != ''" class="switch">
                         <input type="checkbox" value="achievements">
                         <button *ngIf="profile_tab != 'students'" (click)="set_tab('students')"
                             class="toggle-button-off"
@@ -1648,9 +1648,16 @@
                                 <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
                                     <h3> Your Role: </h3>
-                                    <select value="{{user.role}}" (change)="edit_profile('role', this.userRole.value)"
+                                    <select *ngIf="user.role != ''" value="{{user.role}}" (change)="edit_profile('role', this.userRole.value)"
                                         style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                         disabled #userRole>
+                                        <option value="Teacher">Teacher</option>
+                                        <option value="Student">Student</option>
+                                        <option value="Parent">Parent</option>
+                                    </select>
+                                    <select *ngIf="user.role == ''" value="{{user.role}}" (change)="edit_profile('role', this.userRole.value)"
+                                        style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
+                                        #userRole>
                                         <option value="Teacher">Teacher</option>
                                         <option value="Student">Student</option>
                                         <option value="Parent">Parent</option>

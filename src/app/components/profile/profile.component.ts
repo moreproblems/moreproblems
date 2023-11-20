@@ -1224,6 +1224,7 @@ export class ProfileComponent implements OnInit {
     }
     else if (tb == 'students') {
       this.student_metadata = [];
+      console.log(this.authService.userData.students);
       const linked_students = this.authService.userData.students.slice(1);
       for (const [key, stud] of Object.entries(linked_students)) {
         setTimeout(() => {
@@ -1329,6 +1330,22 @@ export class ProfileComponent implements OnInit {
   }
 
   update_profile() {
+    if (Object.keys(this.edit_p_list).includes('role')) {
+      if (this.edit_p_list['role'] == 'Teacher') {
+        this.edit_p_list['classes'] = [''];
+        this.edit_p_list['students'] = [''];
+      }
+      else if (this.edit_p_list['role'] == 'Parent') {
+        this.edit_p_list['students'] = [''];
+      }
+      else if (this.edit_p_list['role'] == 'Student') {
+        this.edit_p_list['classes'] = [''];
+        this.edit_p_list['exams/history'] = { "test": { status: "", progress: 0} };
+        this.edit_p_list['problems/all'] = { "test": { status: ""} };
+        this.edit_p_list['problems/total'] = 0;
+        this.edit_p_list['problems/correct'] = 0;
+      }
+    }
     this.authService.UpdateUserData(this.edit_p_list);
   }
 
@@ -1472,10 +1489,12 @@ export class ProfileComponent implements OnInit {
   }
 
   link_student(id: string) {
-    this.student_list = [];
+    this.student_list = [''];
     // this.student_metadata = [];
-    for (let std of this.authService.userData.students) {
-      this.student_list.push(std as string);
+    if (this.authService.userData.students.length >  1) {
+      for (let std of this.authService.userData.students.slice(1)) {
+        this.student_list.push(std as string);
+      }
     }
     if (!this.student_list.includes(id)) {
       this.student_list.push(id);
