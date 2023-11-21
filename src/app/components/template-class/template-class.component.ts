@@ -31,6 +31,7 @@ export class TemplateClassComponent implements OnInit {
 
   exam_id: string = "";
   exam_url: string = "";
+  exam_dl = 0;
   file_source: string = "";
   file_page: number = 0;
   exam_fav = false;
@@ -692,16 +693,24 @@ export class TemplateClassComponent implements OnInit {
   }
 
   select_exam(ex: string) {
-    this.exam_id = ex;
-    this.exam_url = '/exam/' + ex;
-    this.file_source = "../assets/exams/" + ex + ".pdf";
-    this.file_page = 1;
-    for (let exm of this.authService.userData.exams.favorites) {
-      if (ex == exm) {
-        this.exam_fav = true;
+    this.exam_dl = (this.authService.searchExamId(ex)).downloads;
+    setTimeout(() => {
+      console.log(this.exam_dl);
+      this.exam_dl = (this.authService.searchExamId(ex)).downloads;
+      console.log(this.exam_dl);
+      this.exam_id = ex;
+      this.exam_url = '/exam/' + ex;
+      this.file_source = "../assets/exams/" + ex + ".pdf";
+      this.file_page = 1;
+      this.exam_name = this.exam_names[ex];
+      if (this.authService.userData) {
+        for (let exm of this.authService.userData.exams.favorites) {
+          if (ex == exm) {
+            this.exam_fav = true;
+          }
+        }
       }
-    }
-    this.exam_name = this.exam_names[ex];
+    }, 250);
   }
 
   toggle_favorite_exm() {
@@ -740,12 +749,19 @@ export class TemplateClassComponent implements OnInit {
 
   download_exam() {
     const link = document.createElement('a');
+    // const exam_ref = 'exams/' + this.exam_id + '/downloads';
     link.setAttribute('target', '_blank');
     link.setAttribute('href', this.file_source);
     link.setAttribute('download', this.exam_name);
     document.body.appendChild(link);
     link.click();
     link.remove();
+    // if (this.exam_dl == 0) {
+    //   this.authService.UpdateDatabase({exam_ref: 1});
+    // }
+    // else {
+    //   this.authService.UpdateDatabase({exam_ref: this.exam_dl + 1});
+    // }
     this.assert_favorite_exm();
   }
 

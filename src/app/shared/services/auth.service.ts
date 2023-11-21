@@ -381,17 +381,12 @@ export class AuthService {
     const db = getDatabase();
     const updates: any = {};
     console.log(this.userData)
-    // if (!this.userData) {
-    //   auth.signInAnonymously(auth.getAuth());
-    // }
     for (let key in changes) {
       updates[key] = changes[key];
     }
-    // setTimeout(() => {
     return update(ref(db), updates).then(() => {}).catch(error => {
       console.log(error.message);
     });
-    // }, 500);
   }
 
   UploadProfilePic(user: any, images: any) {

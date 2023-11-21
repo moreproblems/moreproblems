@@ -638,6 +638,9 @@ exam_names: {[key: string]: string} = {
   file_source = '';
   file_page = 1;
 
+  user_data: any = {};
+  edit_e_list: any = {};
+
   viewerWidth = Math.round(window.innerWidth * .99).toString() + "px";
   viewerHeight = Math.round(window.innerHeight * .95).toString() + "px";
 
@@ -757,19 +760,25 @@ exam_names: {[key: string]: string} = {
 
   download_exam() {
     const link = document.createElement('a');
-    const exam_ref = 'exams/' + this.exam_id + '/downloads';
+    const exam_ref: string = 'exams/' + this.exam_id + '/downloads';
+    console.log(exam_ref);
     link.setAttribute('target', '_blank');
     link.setAttribute('href', this.file_source);
     link.setAttribute('download', this.exam_name);
     document.body.appendChild(link);
     link.click();
     link.remove();
-    // if (this.exam_dl == 0) {
-    //   this.authService.UpdateDatabase({exam_ref: 1});
-    // }
-    // else {
-    //   this.authService.UpdateDatabase({exam_ref: this.exam_dl + 1});
-    // }
+    if (this.exam_dl == 0) {
+      this.edit_e_list[exam_ref] = 1;
+      this.authService.UpdateDatabase({exam_ref: {}});
+      this.authService.UpdateDatabase(this.edit_e_list);
+    }
+    else {
+      this.edit_e_list[exam_ref] = this.exam_dl + 1;
+      this.authService.UpdateDatabase({exam_ref: {}});
+      this.authService.UpdateDatabase(this.edit_e_list);
+    }
+    this.edit_e_list = {};
     this.assert_favorite();
   }
 
@@ -831,8 +840,12 @@ exam_names: {[key: string]: string} = {
     this.titleService.setTitle("MoreProblems.Org | U.S. K-12 State Testing Practice Exams");
     this.meta.updateTag({ name: 'description', content: "Access released practice problems & solutions to prepare for end-of-year tests - including Florida FSA, Illinois IAR, New York NYSTP, North Carolina EOG, Pennsylvania PSSA, and Texas STAAR. Choose from more 400 assessments across math, English language, science, & social studies for elementary, middle, & high school students." });
     this.favorite_set = [];
-    for (let exm of this.authService.userData.exams.favorites.slice(1)) {
-      this.favorite_set.push(exm as string);
+    if (this.authService.userData) {
+      // this.is_auth = true;
+      this.user_data = this.authService.userData;
+      for (let exm of this.authService.userData.exams.favorites.slice(1)) {
+        this.favorite_set.push(exm as string);
+      }
     }
     // location.reload();
   }
