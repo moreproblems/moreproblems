@@ -1347,6 +1347,7 @@ export class ProfileComponent implements OnInit {
       }
     }
     this.authService.UpdateUserData(this.edit_p_list);
+    // this.user = this.authService.userData;
   }
 
   upload_profile_pic(user: any, images: any) {

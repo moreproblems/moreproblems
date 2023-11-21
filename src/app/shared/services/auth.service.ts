@@ -22,6 +22,7 @@ export class AuthService {
   pp_url: any;
   user_result: any = {};
   class_result: any = {};
+  exam_result: any = {};
   inprog_exams: any = {};
   mystud_inprog_exams: any = {};
   exam_sub: any;
@@ -379,13 +380,18 @@ export class AuthService {
   UpdateDatabase(changes: { [index: string]: any }) {
     const db = getDatabase();
     const updates: any = {};
+    console.log(this.userData)
+    // if (!this.userData) {
+    //   auth.signInAnonymously(auth.getAuth());
+    // }
     for (let key in changes) {
       updates[key] = changes[key];
     }
-    return update(ref(db), updates).then(() => {
-    }).catch(error => {
+    // setTimeout(() => {
+    return update(ref(db), updates).then(() => {}).catch(error => {
       console.log(error.message);
     });
+    // }, 500);
   }
 
   UploadProfilePic(user: any, images: any) {
@@ -514,6 +520,21 @@ export class AuthService {
       }
     });
     return this.class_result;
+  }
+
+  searchExamId(id: string) {
+    this.exam_result = {"downloads": 0};
+    const db = getDatabase();
+    const class_ref = ref(db, "exams/" + id);
+    onValue(class_ref, (snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        this.exam_result = snapshot.val();
+      } else {
+        console.log("No data available");
+      }
+    });
+    return this.exam_result;
   }
 
   getInProgExams(id: string) {

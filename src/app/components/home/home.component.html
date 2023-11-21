@@ -888,15 +888,15 @@
       <br />
       <section
         style="height: auto; max-height: 75px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
-        <button *ngIf="file_source != '' && this.screenWidth > this.mobileWidth" (click)="print_exam()"
-          class="grade-button" style="margin: 10px 10px 10px 0; width: auto; height: auto">
-          <img src="./assets/icons/print.png" style="height: 25px">
-          <b style="margin-left: 10px"> Print </b>
-        </button>
         <button *ngIf="file_source != ''" (click)="download_exam()" class="grade-button"
           style="margin: 10px 10px 10px 0; width: auto; height: auto">
           <img src="./assets/icons/download.png" style="height: 25px">
           <b style="margin-left: 10px"> Download </b>
+        </button>
+        <button *ngIf="file_source != '' && this.screenWidth > this.mobileWidth" (click)="print_exam()"
+          class="grade-button" style="margin: 10px 10px 10px 0; width: auto; height: auto">
+          <img src="./assets/icons/print.png" style="height: 25px">
+          <b style="margin-left: 10px"> Print </b>
         </button>
         <button *ngIf="file_source != ''" (click)="prev_page()" class="grade-button"
           style="margin: 20px 0; margin-left: 10px; width: auto; height: auto">

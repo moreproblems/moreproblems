@@ -631,6 +631,7 @@ exam_names: {[key: string]: string} = {
 };
 
   exam_id = '';
+  exam_dl = 0;
   exam_name = '';
   exam_url = '';
   exam_fav = false;
@@ -696,62 +697,79 @@ exam_names: {[key: string]: string} = {
   }
 
   select_exam(ex: string) {
-    this.exam_id = ex;
-    this.exam_url = '/exam/' + ex;
-    this.file_source = "./assets/exams/" + ex + ".pdf";
-    this.file_page = 1;
-    this.exam_name = this.exam_names[ex];
-    if (this.authService.userData) {
-      for (let exm of this.authService.userData.exams.favorites) {
-        if (ex == exm) {
-          this.exam_fav = true;
+    this.exam_dl = (this.authService.searchExamId(ex)).downloads;
+    setTimeout(() => {
+      console.log(this.exam_dl);
+      this.exam_dl = (this.authService.searchExamId(ex)).downloads;
+      console.log(this.exam_dl);
+      this.exam_id = ex;
+      this.exam_url = '/exam/' + ex;
+      this.file_source = "./assets/exams/" + ex + ".pdf";
+      this.file_page = 1;
+      this.exam_name = this.exam_names[ex];
+      if (this.authService.userData) {
+        for (let exm of this.authService.userData.exams.favorites) {
+          if (ex == exm) {
+            this.exam_fav = true;
+          }
         }
       }
-    }
+    }, 250);
   }
 
   toggle_favorite() {
-    this.favorite_set = [];
-    for (let exm of this.authService.userData.exams.favorites) {
-      this.favorite_set.push(exm as string);
-    }
-    if (this.favorite_set.includes(this.exam_id)) {
-      if (this.favorite_set.indexOf(this.exam_id) !== -1) {
-        this.favorite_set.splice(this.favorite_set.indexOf(this.exam_id), 1);
+    if (this.authService.userData) {
+      this.favorite_set = [];
+      for (let exm of this.authService.userData.exams.favorites) {
+        this.favorite_set.push(exm as string);
+      }
+      if (this.favorite_set.includes(this.exam_id)) {
+        if (this.favorite_set.indexOf(this.exam_id) !== -1) {
+          this.favorite_set.splice(this.favorite_set.indexOf(this.exam_id), 1);
+        }
+        else {
+          this.favorite_set.pop()
+        }
       }
       else {
-        this.favorite_set.pop()
+        this.favorite_set.push(this.exam_id);
       }
+      this.authService.UpdateUserData({ 'exams/favorites': {} });
+      this.authService.UpdateUserData({ 'exams/favorites': this.favorite_set });
+      this.exam_fav = !this.exam_fav;
     }
-    else {
-      this.favorite_set.push(this.exam_id);
-    }
-    this.authService.UpdateUserData({ 'exams/favorites': {} });
-    this.authService.UpdateUserData({ 'exams/favorites': this.favorite_set });
-    this.exam_fav = !this.exam_fav;
   }
 
   assert_favorite() {
-    this.favorite_set = [];
-    for (let exm of this.authService.userData.exams.favorites) {
-      this.favorite_set.push(exm as string);
+    if (this.authService.userData) {
+      this.favorite_set = [];
+      for (let exm of this.authService.userData.exams.favorites) {
+        this.favorite_set.push(exm as string);
+      }
+      if (!this.favorite_set.includes(this.exam_id)) {
+        this.favorite_set.push(this.exam_id);
+      }
+      this.authService.UpdateUserData({ 'exams/favorites': {} });
+      this.authService.UpdateUserData({ 'exams/favorites': this.favorite_set });
+      this.exam_fav = true;
     }
-    if (!this.favorite_set.includes(this.exam_id)) {
-      this.favorite_set.push(this.exam_id);
-    }
-    this.authService.UpdateUserData({ 'exams/favorites': {} });
-    this.authService.UpdateUserData({ 'exams/favorites': this.favorite_set });
-    this.exam_fav = true;
   }
 
   download_exam() {
     const link = document.createElement('a');
+    const exam_ref = 'exams/' + this.exam_id + '/downloads';
     link.setAttribute('target', '_blank');
     link.setAttribute('href', this.file_source);
     link.setAttribute('download', this.exam_name);
     document.body.appendChild(link);
     link.click();
     link.remove();
+    // if (this.exam_dl == 0) {
+    //   this.authService.UpdateDatabase({exam_ref: 1});
+    // }
+    // else {
+    //   this.authService.UpdateDatabase({exam_ref: this.exam_dl + 1});
+    // }
     this.assert_favorite();
   }
 
