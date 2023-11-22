@@ -537,6 +537,17 @@
         <br />
       </div>
     </div>
+    <br *ngIf="selected_subtopic != '' && exam_attribute_dump[key].RefSheet != '' && expand_refsheet" />
+    <div *ngIf="selected_subtopic != '' && exam_attribute_dump[key].RefSheet != '' && expand_refsheet" class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+      #subtopicRefsheetCard>
+      <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
+        <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="exam_attribute_dump[key].RefSheet" [original-size]="false" [zoom]="0.95"
+          style="min-height: 400px; height: fit-content"></pdf-viewer>
+        <pdf-viewer *ngIf="this.screenWidth > 700" [src]="exam_attribute_dump[key].RefSheet" [original-size]="false" [zoom]="0.85"
+          style="min-height: 625px; height: fit-content"></pdf-viewer>
+      </section>
+    </div>
     <br *ngIf="selected_subtopic != ''" />
     <div *ngFor="let prob of subtopic_search_dump | keyvalue">
       <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp">
@@ -625,6 +636,18 @@
           style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
           #subtopicCard>
           <br />
+          <section *ngIf="exam_attribute_dump[key].RefSheet != ''"
+            style="height: auto; width: 100%; display: flex; justify-content: center">
+            <label class="switch" style="padding: 0 10px">
+              <input type="checkbox" value="{{expand_refsheet}}">
+              <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on"> <b> Show
+                  Reference Sheet </b>
+              </button>
+              <button (click)="expand_refsheet = !expand_refsheet" *ngIf="expand_refsheet" class="toggle-button-off"> <b> Hide
+                  Reference Sheet </b>
+              </button>
+            </label>
+          </section>
           <section *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0"
             style="height: auto; width: 100%; display: flex; justify-content: center">
             <label class="switch" style="padding: 0 10px">
@@ -862,6 +885,17 @@
           <br />
         </div>
       </div>
+      <br *ngIf="exam_attribute_dump[key].RefSheet != '' && expand_refsheet" />
+      <div *ngIf="exam_attribute_dump[key].RefSheet != '' && expand_refsheet" class="card card-large"
+        style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+        #problemRefsheetCard>
+        <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
+          <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="exam_attribute_dump[key].RefSheet" [original-size]="false" [zoom]="0.95"
+            style="min-height: 400px; height: fit-content"></pdf-viewer>
+          <pdf-viewer *ngIf="this.screenWidth > 700" [src]="exam_attribute_dump[key].RefSheet" [original-size]="false" [zoom]="0.85"
+            style="min-height: 625px; height: fit-content"></pdf-viewer>
+        </section>
+      </div>
       <br />
       <div *ngFor="let prob of exam_dump | keyvalue">
         <div *ngIf="problem_number == +prob.key && expand_supp">
@@ -950,6 +984,18 @@
             style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
             #problemCard>
             <br />
+            <section *ngIf="exam_attribute_dump[key].RefSheet != ''"
+              style="height: auto; width: 100%; display: flex; justify-content: center">
+              <label class="switch" style="padding: 0 10px">
+                <input type="checkbox" value="{{expand_refsheet}}">
+                <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on"> <b> Show
+                    Reference Sheet </b>
+                </button>
+                <button (click)="expand_refsheet = !expand_refsheet" *ngIf="expand_refsheet" class="toggle-button-off"> <b> Hide
+                    Reference Sheet </b>
+                </button>
+              </label>
+            </section>
             <section *ngIf="exam_dump[problem_number].SuppContent.length > 0"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
