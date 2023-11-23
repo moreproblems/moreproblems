@@ -177,6 +177,7 @@ export class ProfileComponent implements OnInit {
   screenHeight = window.innerHeight;
   mobileWidth = 1000;
   menuOpen = false;
+  expand_refsheet = false;
   expand_supp = true;
   data_loaded = false;
   stud_data_loaded = false;
@@ -1139,6 +1140,7 @@ export class ProfileComponent implements OnInit {
 
   supp_dump: any = {};
   supp_st_dump: any = {};
+  st_refsheet_source: string = '';
 
   selected_topic = "";
   selected_subtopic = "";
@@ -1147,7 +1149,7 @@ export class ProfileComponent implements OnInit {
   includes_standard = false;
   subtopic_problem_count = 0;
   subtopic_problem_number = 0;
-  subtopic_search_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+  subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
   subtopic_problem_selection = '';
   subtopic_problem_attempts = 0;
   subtopic_attempt_path: string[] = [];
@@ -1654,6 +1656,7 @@ export class ProfileComponent implements OnInit {
           if (prob.SubTopics.includes(subtopic)) {
             this.subtopic_problem_count += 1;
             this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+            this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + ''+this.subtopic_search_dump[this.subtopic_problem_count].Number;
           }
         }
       }
@@ -1668,6 +1671,7 @@ export class ProfileComponent implements OnInit {
     this.subtopic_attempt_explanation = '';
     this.standard_id = topic + ": " + subtopic;
     this.standard_fav = false;
+    this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
     for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
       setTimeout(() => {
         this.read_supp_st_json(supp);
@@ -1770,6 +1774,7 @@ export class ProfileComponent implements OnInit {
       this.selected_subtopic = '';
     }
     else {
+      this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
       for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
         setTimeout(() => {
           this.read_supp_st_json(supp);
