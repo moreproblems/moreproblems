@@ -627,7 +627,11 @@ exam_names: {[key: string]: string} = {
   "SAT7": "The SAT Practice Test #7",
   "SAT8": "The SAT Practice Test #8",
   "SAT9": "The SAT Practice Test #9",
-  "SAT10": "The SAT Practice Test #10"
+  "SAT10": "The SAT Practice Test #10",
+  "PSAT1": "PSAT/NMSQT Practice Test #1",
+  "PSAT101": "PSAT 10 Practice Test #1",
+  "PSAT102": "PSAT 10 Practice Test #2",
+  "PSAT891": "PSAT 8/9 Practice Test #1"
 };
 
   exam_id = '';
@@ -638,6 +642,7 @@ exam_names: {[key: string]: string} = {
   file_source = '';
   file_page = 1;
 
+  profileUploadURL: any = null;
   user_data: any = {};
   edit_e_list: any = {};
 
@@ -780,6 +785,10 @@ exam_names: {[key: string]: string} = {
     }
     this.edit_e_list = {};
     this.assert_favorite();
+    this.exam_dl = (this.authService.searchExamId(this.exam_id)).downloads;
+    setTimeout(() => {
+      this.exam_dl = (this.authService.searchExamId(this.exam_id)).downloads;
+    }, 250);
   }
 
   print_exam() {
@@ -842,6 +851,11 @@ exam_names: {[key: string]: string} = {
     this.favorite_set = [];
     if (this.authService.userData) {
       // this.is_auth = true;
+      this.authService.getProfilePic(this.authService.userData);
+      setTimeout(() => {
+        console.log(this.authService.pp_url);
+        this.profileUploadURL = this.authService.pp_url;
+      }, 150);
       this.user_data = this.authService.userData;
       for (let exm of this.authService.userData.exams.favorites.slice(1)) {
         this.favorite_set.push(exm as string);

@@ -180,6 +180,7 @@ export class TemplateExamComponent implements OnInit {
     last_date: any;
     last_time: any;
 
+    user_data: any = {};
     my_students: string[] = [];
     my_students_data: any = {};
     selected_student: string = "";
@@ -1538,6 +1539,8 @@ export class TemplateExamComponent implements OnInit {
         }
         setTimeout(() => {
             if (this.authService.userData) {
+                this.authService.getProfilePic(this.authService.userData);
+                this.user_data = this.authService.userData;
                 if (this.authService.userData.role != 'Student') {
                     const linked_students = this.authService.userData.students.slice(1);
                     var count = 0;

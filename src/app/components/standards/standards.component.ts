@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { AuthService } from "../../shared/services/auth.service";
 import { Router } from '@angular/router';
 import printJS from 'print-js';
 
@@ -17,6 +18,8 @@ export class StandardsComponent implements OnInit{
   mobileWidth = 1000;
   menuOpen = false;
 
+  user_data: any = {};
+
   selected_grade = '';
   selected_subject = '';
   selected_category = '';
@@ -29,7 +32,7 @@ export class StandardsComponent implements OnInit{
     4: false
   }
   
-  constructor(private router: Router, private titleService: Title, private meta: Meta) { }
+  constructor(private router: Router, private titleService: Title, private meta: Meta, public authService: AuthService) { }
 
   select_grade(gr: string) {
     this.domain_state = { 1: false, 2: false, 3: false, 4: false };
@@ -214,5 +217,9 @@ export class StandardsComponent implements OnInit{
   ngOnInit() {
     this.titleService.setTitle("MoreProblems.Org | U.S. K-12 Common Core Learning Standards");
     this.meta.updateTag({ name: 'description', content: "Find out what to expect from your learner's curriculum, all the way down to standards. Subjects include Math & English Language Arts from Kindergarten through High School - as they are outlined by the Common Core state standards adopted by most states in America." });
+    if (this.authService.userData) {
+      this.authService.getProfilePic(this.authService.userData);
+      this.user_data = this.authService.userData;
+    }
   }
 }

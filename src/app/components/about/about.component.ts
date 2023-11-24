@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { AuthService } from "../../shared/services/auth.service";
 
 @Component({
   selector: 'app-about',
@@ -11,6 +12,8 @@ import { Meta, Title } from '@angular/platform-browser';
 export class AboutComponent implements OnInit{
   // title = 'More Problems';
 
+  user_data: any = {};
+
   // selectedState: any = [
   //   {'code': 'ND', 'users': 324, 'org type' :'Service Provider'}, 
   //   {'code': 'WA', 'users': 454, 'org type' :'Manufacturer'}, 
@@ -20,11 +23,15 @@ export class AboutComponent implements OnInit{
   //   {'code' : 'DC', 'users': 544, 'org type' :'Manufacturer'},
   // ];
   
-  constructor(private titleService: Title, private meta: Meta) { }
+  constructor(private titleService: Title, private meta: Meta, public authService: AuthService) { }
 
   ngOnInit() {
     this.titleService.setTitle("About MoreProblems.Org | U.S. K-12 State Testing Preparation");
     // this.meta.updateTag({ name: 'description', content: "" });
+    if (this.authService.userData) {
+      this.authService.getProfilePic(this.authService.userData);
+      this.user_data = this.authService.userData;
+    }
   }
 
 }

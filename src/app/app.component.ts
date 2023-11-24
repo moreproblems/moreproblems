@@ -10,7 +10,7 @@ import { Meta } from '@angular/platform-browser';
 })
 
 @Injectable()
-export class AppComponent{
+export class AppComponent implements OnInit{
   title = 'MoreProblems.Org';
 
   public screenWidth = window.innerWidth;
@@ -20,6 +20,7 @@ export class AppComponent{
   public menuOpen = true;
 
   profileUploadURL: any = null;
+  user_data: any = {};
   
   constructor(public authService: AuthService) { }
 
@@ -43,5 +44,16 @@ export class AppComponent{
     el.scrollIntoView({behavior: 'smooth'});
   }
 
+  ngOnInit() {
+    if (this.authService.userData) {
+      // this.profileUploadURL = this.authService.getProfilePic(this.authService.userData);
+      this.authService.getProfilePic(this.authService.userData);
+      setTimeout(() => {
+        console.log(this.authService.pp_url);
+        this.profileUploadURL = this.authService.pp_url;
+      }, 150);
+      this.user_data = this.authService.userData;
+    }
+  }
 
 }

@@ -170,6 +170,8 @@ export class ProblemsComponent implements OnInit {
   screenWidth = window.innerWidth;
   mobileWidth = 1000;
 
+  user_data: any = {};
+
   expand_filters = true;
   topics: string[] = [];
   topics_count: { [key: string]: number }
@@ -1370,8 +1372,12 @@ export class ProblemsComponent implements OnInit {
   ngOnInit() {
     this.favorite_std_set = [];
     this.filter_exams();
-    for (let std of this.authService.userData.standards.favorites.slice(1)) {
-      this.favorite_std_set.push(std as string[]);
+    if (this.authService.userData) {
+      this.authService.getProfilePic(this.authService.userData);
+      this.user_data = this.authService.userData;
+      for (let std of this.authService.userData.standards.favorites.slice(1)) {
+        this.favorite_std_set.push(std as string[]);
+      }
     }
   }
 }

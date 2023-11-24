@@ -665,7 +665,11 @@ export class TemplateClassComponent implements OnInit {
     "SAT7": "The SAT Practice Test #7",
     "SAT8": "The SAT Practice Test #8",
     "SAT9": "The SAT Practice Test #9",
-    "SAT10": "The SAT Practice Test #10"
+    "SAT10": "The SAT Practice Test #10",
+    "PSAT1": "PSAT/NMSQT Practice Test #1",
+    "PSAT101": "PSAT 10 Practice Test #1",
+    "PSAT102": "PSAT 10 Practice Test #2",
+    "PSAT891": "PSAT 8/9 Practice Test #1"
   };
 
   constructor(public authService: AuthService, public router: Router, private aRoute: ActivatedRoute, private afAuth: AngularFireAuth) {
