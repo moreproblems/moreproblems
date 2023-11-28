@@ -631,6 +631,7 @@ export class TestExamComponent implements OnInit {
         }
         if (response != this.problem_selection[part_num][0]) {
             this.problem_selection[part_num] = [response];
+            this.problem_attempts += 1;
         }
     }
 
