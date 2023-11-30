@@ -20,6 +20,7 @@ import * as PA16G3EProblems from "src/assets/problems/PA16G3E/PA16G3E-problems.j
 import * as PA15G3MProblems from "src/assets/problems/PA15G3M/PA15G3M-problems.json";
 import * as PA15G3EProblems from "src/assets/problems/PA15G3E/PA15G3E-problems.json";
 import * as PA22G4MProblems from "src/assets/problems/PA22G4M/PA22G4M-problems.json";
+import * as PA22G4EProblems from "src/assets/problems/PA22G4E/PA22G4E-problems.json";
 import * as PA21G4MProblems from "src/assets/problems/PA21G4M/PA21G4M-problems.json";
 import * as PA19G4MProblems from "src/assets/problems/PA19G4M/PA19G4M-problems.json";
 import * as PA18G4MProblems from "src/assets/problems/PA18G4M/PA18G4M-problems.json";
@@ -231,7 +232,8 @@ export class ProfileComponent implements OnInit {
   student_uid: string = "";
   search: boolean = false;
   search_user = false;
-  search_user_result: any = {};
+  search_user_results: any = {};
+  search_student_results: any = {};
   SURPhotoURL = "";
   SURDisplayName = "";
   SURUid = "";
@@ -262,6 +264,7 @@ export class ProfileComponent implements OnInit {
   PA15G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA15G3MProblems;
   PA15G3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA15G3EProblems;
   PA22G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA22G4MProblems;
+  PA22G4E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA22G4EProblems;
   PA21G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA21G4MProblems;
   PA19G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA19G4MProblems;
   PA18G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA18G4MProblems;
@@ -414,6 +417,7 @@ export class ProfileComponent implements OnInit {
     "PA15G3M": this.PA15G3M_exam_dump,
     "PA15G3E": this.PA15G3E_exam_dump,
     "PA22G4M": this.PA22G4M_exam_dump,
+    "PA22G4E": this.PA22G4E_exam_dump,
     "PA21G4M": this.PA21G4M_exam_dump,
     "PA19G4M": this.PA19G4M_exam_dump,
     "PA18G4M": this.PA18G4M_exam_dump,
@@ -1225,7 +1229,7 @@ export class ProfileComponent implements OnInit {
     this.create_s = false;
     this.search = false;
     this.search_user = false;
-    this.search_user_result = {};
+    this.search_user_results = {};
     if (this.authService.userData.role == 'Student') {
       if (tb == 'achievements') {
         if (this.authService.userData.problems.total == 0) {
@@ -1352,7 +1356,7 @@ export class ProfileComponent implements OnInit {
   toggle_search() {
     this.search = !this.search;
     this.search_user = false;
-    this.search_user_result = {};
+    this.search_user_results = {};
   }
 
   edit_profile(field: string, val: string) {
@@ -1520,12 +1524,21 @@ export class ProfileComponent implements OnInit {
   }
 
   search_id(id: string) {
-    this.search_user_result = (this.authService.searchUserId(id) as any);
-    if (Object.keys(this.search_user_result).length > 0) {
-      this.search_user = true;
-    }
-    else {
-      this.search_user = false;
+    if (id != '') {
+      this.search_student_results = {};
+      this.search_user_results = (this.authService.searchUsersId(id) as any);
+      console.log(this.search_user_results);
+      for (let user of Object.values(this.search_user_results)) {
+        if ((user as any).role == 'Student') {
+          this.search_student_results[(user as any).uid] = user;
+        }
+      }
+      if (Object.keys(this.search_student_results).length > 0) {
+        this.search_user = true;
+      }
+      else {
+        this.search_user = false;
+      }
     }
   }
 
@@ -1553,6 +1566,13 @@ export class ProfileComponent implements OnInit {
     //     }, 100);
     //   }, +key * 200);
     // }
+    if (this.search) {
+      this.toggle_search();
+      this.set_tab("students");
+      setTimeout(() => {
+        this.set_tab("students");
+      }, 250);
+    }
   }
 
   select_student(std: string) {

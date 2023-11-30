@@ -528,7 +528,7 @@
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 100%+100px; background-attachment: fixed">
   <canvas id="confetticanvas"></canvas>
   <br />
-  <div class="content-menu" style="margin-bottom: 0; align-items: center">
+  <div *ngIf="data_loaded" class="content-menu" style="margin-bottom: 0; align-items: center">
     <section *ngIf="selected_subtopic != ''" style="width: 100%; align-items: left">
       <div (click)="selected_subtopic=''" class="card card-small"
         style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">

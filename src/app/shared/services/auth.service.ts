@@ -502,6 +502,33 @@ export class AuthService {
     return this.user_result;
   }
 
+  searchUsersId(id: string) {
+    this.user_result = {};
+    const db = getDatabase();
+    const all_user_ref = ref(db, "users");
+    var search_users: string[] = [];
+    onValue(all_user_ref, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+        if (childSnapshot.key != null && childSnapshot.key.startsWith(id)) {
+          search_users.push(childSnapshot.key);
+        }
+      })
+      console.log(search_users);
+    });
+    for (let userID of search_users) {
+      // const user_ref = ref(db, "users/" + userID);
+      onValue(ref(db, "users/" + userID), (snapshot) => {
+        if (snapshot.exists()) {
+          console.log(snapshot.val());
+          this.user_result[userID] = snapshot.val();
+        } else {
+          console.log("No data available");
+        }
+      });
+    }
+    return this.user_result;
+  }
+
   searchClassId(id: string) {
     this.class_result = {};
     const db = getDatabase();
