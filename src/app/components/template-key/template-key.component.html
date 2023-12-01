@@ -589,7 +589,7 @@
                       <div *ngFor="let block2 of supp_st_dump[block[1]].Content"
                         style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
                         <h3 *ngIf="!block2[1].endsWith('.jpg')"
-                          style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block2[0]}}</h3>
+                          style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: auto; max-width: 40px; text-align: center">{{block2[0]}}</h3>
                         <div *ngIf="block2[1].startsWith(':box:')"
                           style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
                           <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block2[1].slice(5)}}</h3>
@@ -1107,7 +1107,7 @@
                         <div *ngFor="let block2 of supp_dump[block[1]].Content"
                           style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
                           <h3 *ngIf="!block2[1].endsWith('.jpg')"
-                            style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">{{block2[0]}}</h3>
+                            style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: auto; max-width: 50px; text-align: center">{{block2[0]}}</h3>
                           <div *ngIf="block2[1].startsWith(':box:')"
                             style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
                             <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block2[1].slice(5)}}</h3>
