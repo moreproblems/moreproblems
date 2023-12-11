@@ -716,7 +716,7 @@
                   <input type="checkbox" value="{{choice.key}}">
                   <button
                     *ngIf="subtopic_problem_selection[0][0]==choice.key && !subtopic_attempt_response[0].startsWith('Correct')"
-                    class="toggle-button-on"> <b> {{choice.key}} </b>
+                    class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                   </button>
                   <button
                     *ngIf="subtopic_problem_selection[0][0]==choice.key && subtopic_attempt_response[0].startsWith('Correct')"
@@ -725,8 +725,11 @@
                   <button *ngIf="subtopic_problem_selection[0][0]!=choice.key && !subtopic_attempt_path[0].includes(choice.key)"
                     class="toggle-button-off"> <b> {{choice.key}} </b>
                   </button>
-                  <button *ngIf="subtopic_problem_selection[0][0]!=choice.key && subtopic_attempt_path[0].includes(choice.key)"
+                  <button *ngIf="subtopic_problem_selection[0][0]!=choice.key && subtopic_attempt_path[0].includes(choice.key) && !prob.value.AnswerChoices[choice.key].Key.Correct"
                     class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                  </button>
+                  <button *ngIf="subtopic_problem_selection[0][0]!=choice.key && subtopic_attempt_path[0].includes(choice.key) && prob.value.AnswerChoices[choice.key].Key.Correct"
+                    class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
                   </button>
                 </label>
                 <h3 *ngIf="!choice.value.Choice.endsWith('.jpg') && !choice.value.Choice.startsWith(':box:')"
@@ -912,7 +915,7 @@
                 <label class="switch" style="padding: 0 10px">
                   <input type="checkbox" value="{{choice.key}}">
                   <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && !subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
-                    class="toggle-button-on"> <b> {{choice.key}} </b>
+                    class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                   </button>
                   <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
                     class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
@@ -920,8 +923,11 @@
                   <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && !subtopic_attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key)"
                     class="toggle-button-off"> <b> {{choice.key}} </b>
                   </button>
-                  <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && subtopic_attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key)"
+                  <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && subtopic_attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && !part.value.AnswerChoices[choice.key].Key.Correct"
                     class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                  </button>
+                  <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && subtopic_attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && part.value.AnswerChoices[choice.key].Key.Correct"
+                    class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
                   </button>
                 </label>
                 <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
@@ -1232,7 +1238,7 @@
                   <label class="switch" style="padding: 0 10px">
                     <input type="checkbox" value="{{choice.key}}">
                     <button *ngIf="problem_selection[0][0]==choice.key && !attempt_response[0].startsWith('Correct')"
-                      class="toggle-button-on"> <b> {{choice.key}} </b>
+                      class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
                     <button *ngIf="problem_selection[0][0]==choice.key && attempt_response[0].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
@@ -1240,8 +1246,11 @@
                     <button *ngIf="problem_selection[0][0]!=choice.key && !attempt_path[0].includes(choice.key)"
                       class="toggle-button-off"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="problem_selection[0][0]!=choice.key && attempt_path[0].includes(choice.key)"
+                    <button *ngIf="problem_selection[0][0]!=choice.key && attempt_path[0].includes(choice.key) && !prob.value.AnswerChoices[choice.key].Key.Correct"
                       class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[0][0]!=choice.key && attempt_path[0].includes(choice.key) && prob.value.AnswerChoices[choice.key].Key.Correct"
+                      class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
                     </button>
                   </label>
                   <h3 *ngIf="!choice.value.Choice.endsWith('.jpg') && !choice.value.Choice.startsWith(':box:')"
@@ -1311,15 +1320,9 @@
                   </div>
                   <div *ngIf="prob.value.Type == 'MS'">
                     <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
-                      <h3 *ngIf="problem_selection[0].includes(choice.key) && attempt_explanation[0][problem_selection[0].indexOf(choice.key)] != ''"
-                        style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
-                        <br /> <br /> <b>Explanation:</b> <span *ngFor="let exp of attempt_explanation[0]">{{exp}}\n</span>
-                      </h3>
-                      <h3 *ngIf="choice.key == selection.value && attempt_explanation[0][problem_selection[0].indexOf(choice.key)] == ''"
-                        style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
-                        <br /> <br /> <b>No explanation or rationale is available.</b>
+                        <br /> <br /> <b>Explanation</b> <p *ngFor="let selec of problem_selection[0].sort()"> <b>{{'\nOption'}} {{selec}}</b>: {{attempt_explanation[0][problem_selection[0].indexOf(selec)]}}</p>
                       </h3>
                       <br
                         *ngIf="choice.key == selection.value && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
@@ -1467,7 +1470,7 @@
                   <label class="switch" style="padding: 0 10px">
                     <input type="checkbox" value="{{choice.key}}">
                     <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && !attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
-                      class="toggle-button-on"> <b> {{choice.key}} </b>
+                      class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
                     <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
@@ -1475,8 +1478,11 @@
                     <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && !attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key)"
                       class="toggle-button-off"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key)"
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && !part.value.AnswerChoices[choice.key].Key.Correct"
                       class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && part.value.AnswerChoices[choice.key].Key.Correct"
+                      class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
                     </button>
                   </label>
                   <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
@@ -1517,10 +1523,15 @@
                 style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
                 <div *ngIf="part.value.Type == 'MC'">
                   <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
-                    <h3 *ngIf="choice.key == selection.value"
+                    <h3 *ngIf="choice.key == selection.value && attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                       <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                       <br /> <br /> <b>Explanation:</b> {{attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0]}}
+                    </h3>
+                    <h3 *ngIf="choice.key == selection.value && attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <br /> <br /> <b>No explanation or rationale is available.</b>
                     </h3>
                   </div>
                 </div>
