@@ -1460,14 +1460,19 @@ export class ProblemsComponent implements OnInit {
       this.exam_submission[this.problem_number].Number = this.problem_number;
       this.exam_submission[this.problem_number].Topics = this.exam_dump[this.problem_number].Topics;
       this.exam_submission[this.problem_number].SubTopics = this.exam_dump[this.problem_number].SubTopics;
-      if (this.problem_number == this.exam_length) {
-        for (let i: number = 1; i <= this.exam_length; i++) {
-          this.exam_submission_list.push(this.exam_submission[i]);
-          if (this.exam_submission[i].Correct != ['✅']) {
-            this.wrong_submission_list.push(this.exam_submission[i]);
-          }
-        }
-      }
+      this.exam_submission[this.problem_number].Choice = [''];
+      this.exam_submission[this.problem_number].Attempts = this.problem_attempts;
+      this.exam_submission[this.problem_number].Path = this.attempt_path;
+      this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
+      this.exam_submission[this.problem_number].Rationale = [''];
+      // if (this.problem_number == this.exam_length) {
+      //   for (let i: number = 1; i <= this.exam_length; i++) {
+      //     this.exam_submission_list.push(this.exam_submission[i]);
+      //     if (this.exam_submission[i].Correct[0] != '✅') {
+      //       this.wrong_submission_list.push(this.exam_submission[i]);
+      //     }
+      //   }
+      // }
     }
     this.problem_number += 1;
     if (this.problem_number > this.max_problem_number) {
@@ -1476,7 +1481,7 @@ export class ProblemsComponent implements OnInit {
     if (this.problem_number > this.exam_length) {
       this.completeExam();
     }
-    else {
+    else if (this.max_problem_number == this.problem_number) {
       this.attempt_path = [];
       this.attempt_response = [];
       this.attempt_explanation = [];
@@ -1508,6 +1513,19 @@ export class ProblemsComponent implements OnInit {
               }
           }
       }
+      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_json(supp);
+        }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+      }
+    }
+    else {
+      this.attempt_path = [this.exam_submission[this.problem_number].Path];
+      this.attempt_response = [''];
+      this.attempt_explanation = [this.exam_submission[this.problem_number].Rationale];
+      this.problem_selection = [this.exam_submission[this.problem_number].Choice];
+      this.problem_attempts = this.exam_submission[this.problem_number].Attempts;
       this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
       for (let supp of this.exam_dump[this.problem_number].SuppContent) {
         setTimeout(() => {
@@ -1609,20 +1627,18 @@ export class ProblemsComponent implements OnInit {
     if (this.problem_number == this.exam_length) {
       for (let i: number = 1; i <= this.exam_length; i++) {
         this.exam_submission_list.push(this.exam_submission[i]);
-        if (this.exam_submission[i].Correct != ['✅']) {
+        if (this.exam_submission[i].Correct[0] != '✅') {
           this.wrong_submission_list.push(this.exam_submission[i]);
         }
       }
     }
     this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
     this.problem_number += 1;
-    if (this.problem_number > this.max_problem_number) {
-      this.max_problem_number = this.problem_number;
-    }
     if (this.problem_number > this.exam_length) {
       this.completeExam();
     }
-    else {
+    else if (this.problem_number > this.max_problem_number) {
+      this.max_problem_number = this.problem_number;
       this.attempt_path = [];
       this.attempt_response = [];
       this.attempt_explanation = [];
@@ -1661,46 +1677,49 @@ export class ProblemsComponent implements OnInit {
         }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
       }
     }
+    else if (this.problem_number <= this.max_problem_number) {
+      this.attempt_path = [this.exam_submission[this.problem_number].Path];
+      this.attempt_response = [''];
+      this.attempt_explanation = [this.exam_submission[this.problem_number].Rationale];
+      this.problem_selection = [this.exam_submission[this.problem_number].Choice];
+      this.problem_attempts = this.exam_submission[this.problem_number].Attempts;
+      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_json(supp);
+        }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+      }
+    }
     this.clearProblemTimer();
     this.toggleProblemTimer();
   }
 
   go_to_prob(num: number) {
       if (num <= this.max_problem_number) {
-        this.problem_number = num;
-        // if (this.problem_number > this.max_problem_number) {
-        //   this.max_problem_number = this.problem_number;
+        this.exam_submission[this.problem_number].Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+        this.exam_submission[this.problem_number].Seconds = this.pt_counter;
+        this.exam_submission[this.problem_number].Number = this.problem_number;
+        this.exam_submission[this.problem_number].Topics = this.exam_dump[this.problem_number].Topics;
+        this.exam_submission[this.problem_number].SubTopics = this.exam_dump[this.problem_number].SubTopics;
+        this.exam_submission[this.problem_number].Choice = this.problem_selection[0];
+        this.exam_submission[this.problem_number].Attempts = this.problem_attempts;
+        this.exam_submission[this.problem_number].Path = this.attempt_path;
+        this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
+        this.exam_submission[this.problem_number].Rationale = [this.exam_dump[this.problem_number].AnswerChoices[this.problem_selection[0][0]].Key.Rationale];
+        // if (this.problem_number == this.exam_length) {
+        //   for (let i: number = 1; i <= this.exam_length; i++) {
+        //     this.exam_submission_list.push(this.exam_submission[i]);
+        //     if (this.exam_submission[i].Correct[0] != '✅') {
+        //       this.wrong_submission_list.push(this.exam_submission[i]);
+        //     }
+        //   }
         // }
-        this.attempt_path = [];
-        this.attempt_response = [];
-        this.attempt_explanation = [];
-        this.problem_selection = [];
-        if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
-            this.problem_attempts = [0];
-            this.attempt_path = [[]];
-            this.attempt_response = [''];
-            this.attempt_explanation = [[]];
-            if (['MC', 'FR', 'LR'].includes(this.exam_dump[this.problem_number].Type)) {
-                this.problem_selection = [['']];
-            }
-            else if (['MS', 'O'].includes(this.exam_dump[this.problem_number].Type)) {
-                this.problem_selection = [[]];
-            }
-        }
-        else {
-            for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
-                this.problem_attempts.push(0);
-                this.attempt_path.push([]);
-                this.attempt_response.push('');
-                this.attempt_explanation.push([]);
-                if (['MC', 'FR', 'LR'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-                    this.problem_selection.push(['']);
-                }
-                else if (['MS', 'O'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-                    this.problem_selection.push([]);
-                }
-            }
-        }
+        this.problem_number = num;
+        this.attempt_path = [this.exam_submission[num].Path];
+        this.attempt_response = [''];
+        this.attempt_explanation = [this.exam_submission[num].Rationale];
+        this.problem_selection = [this.exam_submission[num].Choice];
+        this.problem_attempts = this.exam_submission[num].Attempts;
         console.log(this.problem_selection);
         for (let supp of this.exam_dump[this.problem_number].SuppContent) {
             setTimeout(() => {
@@ -1713,6 +1732,7 @@ export class ProblemsComponent implements OnInit {
   }
 
   completeExam() {
+    console.log(this.exam_submission);
     this.toggleExamTimer();
     this.confetti_pop();
     if (this.mode == 'explain') {
@@ -1723,7 +1743,7 @@ export class ProblemsComponent implements OnInit {
         if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[num])) {
           this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Total += 1;
           this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Seconds += this.exam_submission_list[i].Seconds;
-          if (this.exam_submission_list[i].Correct == '✅') {
+          if (this.exam_submission_list[i].Correct[0] == '✅') {
             this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Correct += 1;
             if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs).includes(this.exam_submission_list[i].SubTopics[num])) {
               this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Total += 1;
@@ -1747,7 +1767,7 @@ export class ProblemsComponent implements OnInit {
           }
         }
         else {
-          if (this.exam_submission_list[i].Correct == '✅') {
+          if (this.exam_submission_list[i].Correct[0] == '✅') {
             this.topic_breakdown[this.exam_submission_list[i].Topics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[num]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
           }
           else {
