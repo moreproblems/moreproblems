@@ -622,9 +622,10 @@ export class ProblemsComponent implements OnInit {
   random_index = 0
   random_list: string[] = [];
 
-  exam_key: string[] = [];
+  exam_key: string[][] = [];
 
   problem_number = 0;
+  max_problem_number = 0;
   problem_selection: string[][] = [];
   problem_attempts: number[] = [];
   attempt_path: any[] = [];
@@ -636,7 +637,7 @@ export class ProblemsComponent implements OnInit {
   choices_sequence: string[] = [];
   shuffle_choices: string[] = [];
 
-  exam_submission: { [key: number]: { 'Number': number, 'Topics': string[], 'SubTopics': string[], 'Choice': string, 'Correct': string, 'Rationale': string, 'Attempts': number[], 'Path': string[], 'Seconds': number, 'Time': string } } = {};
+  exam_submission: { [key: number]: { 'Number': number, 'Topics': string[], 'SubTopics': string[], 'Choice': string[], 'Correct': string[], 'Rationale': string[], 'Attempts': number[], 'Path': string[], 'Seconds': number, 'Time': string, 'Flags': boolean[] } } = {};
 
   exam_submission_list: any[] = [];
   wrong_submission_list: any[] = [];
@@ -866,13 +867,19 @@ export class ProblemsComponent implements OnInit {
     }
     this.exam_key = [];
     for (const [num, val] of Object.entries(this.exam_dump)) {
-      for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-        if (ch == 'KEY') {
-          this.exam_key.push(val2.Choice);
-        }
-        else {
-          if (val2.Key.Correct) {
-            this.exam_key.push(ch);
+      this.exam_key.push([]);
+      if (Object.keys(val.AnswerChoices).length == 0) {
+        this.exam_key[this.exam_key.length-1].push('');
+      }
+      else {
+        for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+          if (ch == 'KEY') {
+            this.exam_key[this.exam_key.length-1].push(val2.Choice);
+          }
+          else {
+            if (val2.Key.Correct) { 
+              this.exam_key[this.exam_key.length-1].push(ch);
+            }
           }
         }
       }
@@ -886,22 +893,24 @@ export class ProblemsComponent implements OnInit {
     if (this.mode == 'assess') {
       for (let num of Object.keys(this.exam_dump)) {
         this.exam_submission[+num] = {
-          'Number': 0,
+          'Number': +num,
           'Topics': [],
           'SubTopics': [],
-          'Choice': '',
-          'Correct': '',
-          'Rationale': '',
+          'Choice': [''],
+          'Correct': [''],
+          'Rationale': [''],
           'Attempts': [0],
           'Path': [],
           'Seconds': 0,
-          'Time': ''
+          'Time': '',
+          'Flags': [false] 
         };
       }
       this.toggleExamTimer();
     }
     this.toggleProblemTimer();
     this.problem_number = 1;
+    this.max_problem_number = 1;
     this.attempt_path = [];
     this.attempt_response = [];
     this.attempt_explanation = [];
@@ -947,6 +956,16 @@ export class ProblemsComponent implements OnInit {
   get_refsheet(key: string) {
     // console.log('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
     return ('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
+  }
+
+  order_numbers() {
+    return (Array.from({ length: Object.keys(this.exam_submission).length }, (_, i) => i+1));
+  }
+
+  toggle_flag() {
+    console.log('flag');
+    this.exam_submission[this.problem_number].Flags.push(!this.exam_submission[this.problem_number].Flags[this.exam_submission[this.problem_number].Flags.length-1]);
+    console.log(this.exam_submission[this.problem_number].Flags);
   }
 
   attempt_mc_problem(choice: string, part: string) {
@@ -1444,13 +1463,16 @@ export class ProblemsComponent implements OnInit {
       if (this.problem_number == this.exam_length) {
         for (let i: number = 1; i <= this.exam_length; i++) {
           this.exam_submission_list.push(this.exam_submission[i]);
-          if (this.exam_submission[i].Correct != '✅') {
+          if (this.exam_submission[i].Correct != ['✅']) {
             this.wrong_submission_list.push(this.exam_submission[i]);
           }
         }
       }
     }
     this.problem_number += 1;
+    if (this.problem_number > this.max_problem_number) {
+      this.max_problem_number = this.problem_number;
+    }
     if (this.problem_number > this.exam_length) {
       this.completeExam();
     }
@@ -1554,29 +1576,29 @@ export class ProblemsComponent implements OnInit {
             sub.Number = this.problem_number;
             sub.Topics = prob.Topics;
             sub.SubTopics = prob.SubTopics;
-            sub.Choice = choice;
+            sub.Choice = [choice];
             sub.Attempts = this.problem_attempts;
             sub.Path = this.attempt_path;
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (choice == ch) {
                 if (key.Key.Correct == true) {
-                  sub.Correct = '✅';
+                  sub.Correct = ['✅'];
                   this.number_correct += 1;
                 }
                 else {
                   sub.Correct = this.exam_key[this.problem_number - 1];
                 }
-                sub.Rationale = key.Key.Rationale;
+                sub.Rationale = [key.Key.Rationale];
               }
               else if (prob.Type == 'FR') {
                 if (choice == key.Choice) {
-                  sub.Correct = '✅';
+                  sub.Correct = ['✅'];
                   this.number_correct += 1;
-                  sub.Rationale = key.Key.Rationale;
+                  sub.Rationale = [key.Key.Rationale];
                 }
                 else {
                   sub.Correct = this.exam_key[this.problem_number - 1];
-                  sub.Rationale = 'No rationale provided. The number submitted was not right';
+                  sub.Rationale = ['No rationale provided. The number submitted was not right'];
                 }
               }
             }
@@ -1587,13 +1609,16 @@ export class ProblemsComponent implements OnInit {
     if (this.problem_number == this.exam_length) {
       for (let i: number = 1; i <= this.exam_length; i++) {
         this.exam_submission_list.push(this.exam_submission[i]);
-        if (this.exam_submission[i].Correct != '✅') {
+        if (this.exam_submission[i].Correct != ['✅']) {
           this.wrong_submission_list.push(this.exam_submission[i]);
         }
       }
     }
     this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
     this.problem_number += 1;
+    if (this.problem_number > this.max_problem_number) {
+      this.max_problem_number = this.problem_number;
+    }
     if (this.problem_number > this.exam_length) {
       this.completeExam();
     }
@@ -1638,6 +1663,53 @@ export class ProblemsComponent implements OnInit {
     }
     this.clearProblemTimer();
     this.toggleProblemTimer();
+  }
+
+  go_to_prob(num: number) {
+      if (num <= this.max_problem_number) {
+        this.problem_number = num;
+        // if (this.problem_number > this.max_problem_number) {
+        //   this.max_problem_number = this.problem_number;
+        // }
+        this.attempt_path = [];
+        this.attempt_response = [];
+        this.attempt_explanation = [];
+        this.problem_selection = [];
+        if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+            this.problem_attempts = [0];
+            this.attempt_path = [[]];
+            this.attempt_response = [''];
+            this.attempt_explanation = [[]];
+            if (['MC', 'FR', 'LR'].includes(this.exam_dump[this.problem_number].Type)) {
+                this.problem_selection = [['']];
+            }
+            else if (['MS', 'O'].includes(this.exam_dump[this.problem_number].Type)) {
+                this.problem_selection = [[]];
+            }
+        }
+        else {
+            for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+                this.problem_attempts.push(0);
+                this.attempt_path.push([]);
+                this.attempt_response.push('');
+                this.attempt_explanation.push([]);
+                if (['MC', 'FR', 'LR'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                    this.problem_selection.push(['']);
+                }
+                else if (['MS', 'O'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                    this.problem_selection.push([]);
+                }
+            }
+        }
+        console.log(this.problem_selection);
+        for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+            setTimeout(() => {
+                this.read_supp_json(supp);
+            }, 100*(1+this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+        }
+        this.clearProblemTimer();
+        this.toggleProblemTimer();
+      }
   }
 
   completeExam() {
@@ -1827,6 +1899,7 @@ export class ProblemsComponent implements OnInit {
     this.wrong_submission_list = [];
     this.topic_breakdown = {};
     this.problem_number = 0;
+    this.max_problem_number = 0;
     // this.filter_exams();
   }
 
