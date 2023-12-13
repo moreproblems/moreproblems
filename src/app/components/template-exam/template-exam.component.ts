@@ -791,6 +791,7 @@ export class TemplateExamComponent implements OnInit {
         for (let num of Object.keys(this.ordered_dump)) {
             this.exam_submission[+num] = {
                 'Number': +num,
+                //'Rank': +num,
                 'Topics': [],
                 'SubTopics': [],
                 'Choice': [''],
@@ -823,7 +824,6 @@ export class TemplateExamComponent implements OnInit {
                             console.log(this.db_submission);
                             for (const [key2, det2] of Object.entries(this.db_submission)) {
                                 if (+key2 != 0) {
-                                    []
                                     this.exam_submission[(det2 as any).Number] = (det2 as any);
                                 }
                             }
@@ -1077,6 +1077,7 @@ export class TemplateExamComponent implements OnInit {
         for (let num of Object.keys(this.ordered_dump)) {
             this.exam_submission[+num] = {
                 'Number': +num,
+                //'Rank': +num,
                 'Topics': [],
                 'SubTopics': [],
                 'Choice': [''],
@@ -1552,6 +1553,7 @@ export class TemplateExamComponent implements OnInit {
                         sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
                         sub.Seconds = this.pt_counter;
                         sub.Number = prob.Number;
+                        // sub.Rank = this.problem_number;
                         sub.Topics = prob.Topics;
                         sub.SubTopics = prob.SubTopics;
                         sub.Choice = [choice];
@@ -2259,6 +2261,7 @@ export class TemplateExamComponent implements OnInit {
         for (let num of Object.keys(this.ordered_dump)) {
             this.exam_submission[+num] = {
                 'Number': +num,
+                //'Rank': +num,
                 'Topics': [],
                 'SubTopics': [],
                 'Choice': [''],
