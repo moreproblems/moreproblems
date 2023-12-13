@@ -331,6 +331,64 @@
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35); */
   }
 
+  .select-avatar {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+
+  .select-middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  .avatar-container:hover .select-avatar {
+    opacity: 0.3;
+  }
+
+  .avatar-container:hover .middle {
+    opacity: 1;
+  }
+
+  progress {
+    border-radius: 10px;
+  }
+
+  progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 1px solid darkslategrey;
+  }
+
+  progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: limegreen;
+    /* border: 2px solid black; */
+  }
+
+  progress::-moz-progress-bar {
+    border-radius: 10px;
+  }
+
   .terminal {
     position: relative;
     /* width: 100%; */
@@ -855,11 +913,11 @@
           <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a>
         </h3>
         <br />
-        <hr *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="width: max(50%, 250px)">
-        <br *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" />
-        <h3 *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0"
+        <hr *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12" style="width: max(50%, 250px)">
+        <br *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12" />
+        <h3 *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12"
           style="margin: auto 0; color: slategrey; font-size: 18px"> Related Curriculum:</h3>
-        <section *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0"
+        <section *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12"
           style="height: auto; width: 100%; display: flex; justify-content: center">
           <div *ngFor="let prob of subtopic_search_dump | keyvalue"
             style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
@@ -1360,7 +1418,7 @@
       <div class="content" style="margin: auto; align-items: center">
         <section *ngIf="exam_length >= problem_number" 
           style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
-          <h3 *ngIf="exam_length >= problem_number" style="margin: 10px 15px 10px 0px; color: slategrey; font-size: 22px">
+          <h3 *ngIf="exam_length >= problem_number" style="margin: 10px 15px 10px 0px; color: slategrey; font-size: 20px">
             Problem #{{problem_number}} of {{exam_length}} </h3>
         </section>
         <h2 *ngIf="problem_number > exam_length && mode == 'assess'"> With {{number_correct}} out of
@@ -1410,9 +1468,9 @@
           <hr style="width: max(50%, 250px)">
           <h3 *ngIf="exam_length >= problem_number" style="margin: 10px auto; color: slategrey; font-size: 20px">
             Time spent solving problem: {{pt_minutes}}m {{pt_counter%60}}s </h3>
-          <h3 *ngIf="exam_dump[problem_number].Topics.length > 0"
+          <h3 *ngIf="exam_dump[problem_number].SubTopics.length > 0 && exam_dump[problem_number].SubTopics[0].length > 12"
             style="margin: auto 0; color: slategrey; font-size: 18px"> Related Curriculum:</h3>
-          <section *ngIf="exam_dump[problem_number].Topics.length > 0"
+          <section *ngIf="exam_dump[problem_number].SubTopics.length > 0 && exam_dump[problem_number].SubTopics[0].length > 12"
             style="height: auto; width: 100%; display: flex; justify-content: center">
             <div *ngFor="let prob of exam_dump | keyvalue"
               style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
@@ -2007,7 +2065,7 @@
                     <button *ngIf="!exam_submission[problem_number].Flags[this.exam_submission[this.problem_number].Flags.length-1]" (click)="toggle_flag()" class="toggle-button-off"
                         style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: auto; padding: 2px 5px">
                         <div style="margin: 2px">
-                          <span style="font-size: 40px; font-weight: 1200; margin: 5px; color:rgba(235, 67, 38, 0.757)"> &#9872; </span>
+                          <span style="font-size: 32px; font-weight: 1200; margin: 5px; color:rgba(235, 67, 38, 0.757)"> &#9872; </span>
                         </div>
                         <div style="margin: 2px; text-align: center; font-size: 18px"><b> Flag </b>
                         </div>
@@ -2015,7 +2073,7 @@
                     <button *ngIf="exam_submission[problem_number].Flags[this.exam_submission[this.problem_number].Flags.length-1]" (click)="toggle_flag()" class="toggle-button-on"
                         style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: auto; padding: 2px 5px">
                         <div style="margin: 2px">
-                          <span style="font-size: 40px; font-weight: 1200; margin: 5px; color:rgba(235, 67, 38, 0.757)"> &#9873; </span>
+                          <span style="font-size: 32px; font-weight: 1200; margin: 5px; color:rgba(235, 67, 38, 0.757)"> &#9873; </span>
                         </div>
                         <div style="margin: 2px; text-align: center; font-size: 18px"><b> Unflag </b>
                         </div>

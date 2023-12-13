@@ -1465,14 +1465,6 @@ export class ProblemsComponent implements OnInit {
       this.exam_submission[this.problem_number].Path = this.attempt_path;
       this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
       this.exam_submission[this.problem_number].Rationale = [''];
-      // if (this.problem_number == this.exam_length) {
-      //   for (let i: number = 1; i <= this.exam_length; i++) {
-      //     this.exam_submission_list.push(this.exam_submission[i]);
-      //     if (this.exam_submission[i].Correct[0] != '✅') {
-      //       this.wrong_submission_list.push(this.exam_submission[i]);
-      //     }
-      //   }
-      // }
     }
     this.problem_number += 1;
     if (this.problem_number > this.max_problem_number) {
@@ -1705,7 +1697,9 @@ export class ProblemsComponent implements OnInit {
         this.exam_submission[this.problem_number].Attempts = this.problem_attempts;
         this.exam_submission[this.problem_number].Path = this.attempt_path;
         this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
-        this.exam_submission[this.problem_number].Rationale = [this.exam_dump[this.problem_number].AnswerChoices[this.problem_selection[0][0]].Key.Rationale];
+        if (this.problem_selection[0][0] != '') {
+            this.exam_submission[this.problem_number].Rationale = [this.exam_dump[this.problem_number].AnswerChoices[this.problem_selection[0][0]].Key.Rationale];
+        }
         // if (this.problem_number == this.exam_length) {
         //   for (let i: number = 1; i <= this.exam_length; i++) {
         //     this.exam_submission_list.push(this.exam_submission[i]);
