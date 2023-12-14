@@ -791,7 +791,6 @@ export class TemplateExamComponent implements OnInit {
         for (let num of Object.keys(this.ordered_dump)) {
             this.exam_submission[+num] = {
                 'Number': +num,
-                //'Rank': +num,
                 'Topics': [],
                 'SubTopics': [],
                 'Choice': [''],
@@ -821,10 +820,14 @@ export class TemplateExamComponent implements OnInit {
                             this.random_list = [];
                         }
                         if ((det as any).progress != 0) {
+                            var sub_count = 0;
                             console.log(this.db_submission);
                             for (const [key2, det2] of Object.entries(this.db_submission)) {
                                 if (+key2 != 0) {
-                                    this.exam_submission[(det2 as any).Number] = (det2 as any);
+                                    sub_count += 1;
+                                    this.exam_dump[sub_count] = this.ordered_dump[(det2 as any).Number];
+                                    this.exam_submission[sub_count] = (det2 as any);
+                                    // this.exam_submission[(det2 as any).Number] = (det2 as any);
                                 }
                             }
                             if ((det as any).shuffle) {
@@ -838,7 +841,7 @@ export class TemplateExamComponent implements OnInit {
                             for (let i = 1; i <= remaining_length; i++) {
                                 this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
                                 this.random_list.push('' + this.problems_sequence[this.random_index]);
-                                this.exam_dump[i + (det as any).progress] = this.ordered_dump[this.problems_sequence[this.random_index]];
+                                this.exam_dump[i + Object.keys(this.db_submission).length] = this.ordered_dump[this.problems_sequence[this.random_index]];
                                 this.problems_sequence.splice(this.random_index, 1);
                             }
                             console.log(this.exam_dump);
@@ -910,11 +913,14 @@ export class TemplateExamComponent implements OnInit {
                             this.random_list = [];
                         }
                         if ((det as any).progress != 0) {
+                            var sub_count = 0;
                             console.log(this.db_submission);
                             for (const [key2, det2] of Object.entries(this.db_submission)) {
                                 if (+key2 != 0) {
-                                    // doesn't work because nested list
-                                    this.exam_submission[(det2 as any).Number] = (det2 as any);
+                                    sub_count += 1;
+                                    this.exam_dump[sub_count] = this.ordered_dump[(det2 as any).Number];
+                                    this.exam_submission[sub_count] = (det2 as any);
+                                    // this.exam_submission[(det2 as any).Number] = (det2 as any);
                                 }
                             }
                             if ((det as any).shuffle) {
@@ -929,7 +935,7 @@ export class TemplateExamComponent implements OnInit {
                             for (let i = 1; i <= remaining_length; i++) {
                                 this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
                                 this.random_list.push('' + this.problems_sequence[this.random_index]);
-                                this.exam_dump[i + (det as any).progress] = this.ordered_dump[this.problems_sequence[this.random_index]];
+                                this.exam_dump[i + Object.keys(this.db_submission).length] = this.ordered_dump[this.problems_sequence[this.random_index]];
                                 this.problems_sequence.splice(this.random_index, 1);
                             }
                             console.log(this.exam_dump);
@@ -1077,7 +1083,6 @@ export class TemplateExamComponent implements OnInit {
         for (let num of Object.keys(this.ordered_dump)) {
             this.exam_submission[+num] = {
                 'Number': +num,
-                //'Rank': +num,
                 'Topics': [],
                 'SubTopics': [],
                 'Choice': [''],
@@ -1549,11 +1554,10 @@ export class TemplateExamComponent implements OnInit {
         for (const [num, prob] of Object.entries(this.exam_dump)) {
             if (this.problem_number == +num) {
                 for (const [num2, sub] of Object.entries(this.exam_submission)) {
-                    if (prob.Number == +num2) {
+                    if (+num == +num2) {
                         sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
                         sub.Seconds = this.pt_counter;
                         sub.Number = prob.Number;
-                        // sub.Rank = this.problem_number;
                         sub.Topics = prob.Topics;
                         sub.SubTopics = prob.SubTopics;
                         sub.Choice = [choice];
@@ -1568,7 +1572,7 @@ export class TemplateExamComponent implements OnInit {
                                 else {
                                     console.log(this.exam_key);
                                     console.log(this.exam_key[this.problem_number]);
-                                    sub.Correct = this.exam_key[this.problem_number];
+                                    sub.Correct = this.exam_key[this.problem_number-1];
                                 }
                                 sub.Rationale = [key.Key.Rationale];
                             }
@@ -1579,7 +1583,7 @@ export class TemplateExamComponent implements OnInit {
                                     sub.Rationale = [key.Key.Rationale];
                                 }
                                 else {
-                                    sub.Correct = this.exam_key[this.problem_number];
+                                    sub.Correct = this.exam_key[this.problem_number-1];
                                     sub.Rationale = ['No rationale provided. The number submitted was not right'];
                                 }
                             }
@@ -1590,48 +1594,52 @@ export class TemplateExamComponent implements OnInit {
         }
         if (this.authService.userData) {
             if (this.authService.userData.role == 'Student') {
-                this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
                 this.db_updates['exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
-                this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
+                if (this.problem_number + 1 > this.max_problem_number) {
+                    this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
+                    this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
+                }
                 // not necessarily true for multi part problems
                 if (this.attempt_response[-1] == 'Correct') {
                     this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
                 }
-                this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = this.attempt_response;
+                this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/status'] = this.attempt_response;
                 this.authService.UpdateUserData(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
-                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number] = this.exam_submission[this.problem_number];
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/problems/' + "" + this.exam_submission[this.problem_number].Number] = this.exam_submission[this.problem_number];
                 if (this.problem_number == this.exam_length) {
                     this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
                 }
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/timestamp'] = serverTimestamp();
+                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/timestamp'] = serverTimestamp();
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
             }
             else if (this.selected_student != '') {
                 this.selected_student_data = this.authService.searchUserId(this.selected_student);
-                this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/progress'] = this.selected_student_data.exams.history[this.key].progress + 1;
                 this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
-                this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1; //only add if new
+                if (this.problem_number + 1 > this.max_problem_number) {
+                    this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/progress'] = this.selected_student_data.exams.history[this.key].progress + 1;
+                    this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1;
+                }
                 // not necessarily true for multi part problems
                 if (this.attempt_response[-1] == 'Correct') {
                     this.db_updates['users/' + this.selected_student + '/problems/correct'] = this.selected_student_data.problems.correct + 1;
                 }
-                this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = this.attempt_response;
+                this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/status'] = this.attempt_response;
                 console.log(this.exam_submission[this.exam_dump[this.problem_number].Number]);
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/problems/' + this.selected_student + '/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
-                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                this.db_updates['/submissions/problems/' + this.selected_student + '/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number] = this.exam_submission[this.problem_number];
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/problems/' + "" + this.exam_submission[this.problem_number].Number] = this.exam_submission[this.problem_number];
                 if (this.problem_number == this.exam_length) {
                     this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/endtimestamp'] = serverTimestamp();
                 }
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/problems/' + this.selected_student + '/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/timestamp'] = serverTimestamp();
+                this.db_updates['/submissions/problems/' + this.selected_student + '/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/timestamp'] = serverTimestamp();
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
             }
@@ -1787,6 +1795,8 @@ export class TemplateExamComponent implements OnInit {
     }
 
     go_to_prob(num: number) {
+        console.log(this.exam_dump);
+        console.log(this.exam_submission);
         if (num <= this.max_problem_number) {
             this.exam_submission[this.problem_number].Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
             this.exam_submission[this.problem_number].Seconds = this.pt_counter;
@@ -1888,13 +1898,13 @@ export class TemplateExamComponent implements OnInit {
         this.et_counter = this.total_seconds;
         this.et_minutes = Math.floor(this.total_seconds / 60);
         this.correct_percent = Math.round(this.number_correct / (this.problem_number - 1) * 100);
-        this.confetti_pop();
+        console.log(this.topic_breakdown);
         for (let i: number = 0; i < this.exam_length; i++) {
             for (let num: number = 0; num < this.exam_submission_list[i].Topics.length; num++) {
                 if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[num])) {
                     this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Total += 1;
                     this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Seconds += this.exam_submission_list[i].Seconds;
-                    if (this.exam_submission[i].Correct[0] == '✅') {
+                    if (this.exam_submission[i+1].Correct[0] == '✅') {
                         this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Correct += 1;
                         if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs).includes(this.exam_submission_list[i].SubTopics[num])) {
                             this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Total += 1;
@@ -1918,7 +1928,7 @@ export class TemplateExamComponent implements OnInit {
                     }
                 }
                 else {
-                    if (this.exam_submission[i].Correct[0] == '✅') {
+                    if (this.exam_submission[i+1].Correct[0] == '✅') {
                         this.topic_breakdown[this.exam_submission_list[i].Topics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[num]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
                     }
                     else {
@@ -1943,31 +1953,33 @@ export class TemplateExamComponent implements OnInit {
                     break;
                 }
             }
-            if (this.authService.userData) {
-                if (this.authService.userData.role == 'Student') {
-                    this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';
-                    this.authService.UpdateUserData(this.db_updates);
-                    this.db_updates = {};
-                    this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/total'] = this.exam_length;
-                    this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/correct'] = this.number_correct;
-                    this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/score'] = this.correct_percent;
-                    this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/level'] = this.performance_level;
-                    this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
-                    this.authService.UpdateDatabase(this.db_updates);
-                    this.db_updates = {};
-                }
-                else if (this.selected_student != '') {
-                    this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/status'] = 'Completed';
-                    this.authService.UpdateDatabase(this.db_updates);
-                    this.db_updates = {};
-                    this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/total'] = this.exam_length;
-                    this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/correct'] = this.number_correct;
-                    this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/score'] = this.correct_percent;
-                    this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/level'] = this.performance_level;
-                    this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
-                    this.authService.UpdateDatabase(this.db_updates);
-                    this.db_updates = {};
-                }
+        }
+        this.confetti_pop();
+        if (this.authService.userData) {
+            console.log('submitting exam to db');
+            if (this.authService.userData.role == 'Student') {
+                this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';
+                this.authService.UpdateUserData(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/total'] = this.exam_length;
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/correct'] = this.number_correct;
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/score'] = this.correct_percent;
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/level'] = this.performance_level;
+                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+            }
+            else if (this.selected_student != '') {
+                this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/status'] = 'Completed';
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/total'] = this.exam_length;
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/correct'] = this.number_correct;
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/score'] = this.correct_percent;
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/level'] = this.performance_level;
+                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
+                this.authService.UpdateDatabase(this.db_updates);
+                this.db_updates = {};
             }
         }
     }
@@ -2261,7 +2273,6 @@ export class TemplateExamComponent implements OnInit {
         for (let num of Object.keys(this.ordered_dump)) {
             this.exam_submission[+num] = {
                 'Number': +num,
-                //'Rank': +num,
                 'Topics': [],
                 'SubTopics': [],
                 'Choice': [''],
