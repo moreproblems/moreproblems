@@ -216,9 +216,10 @@ export class ProblemsComponent implements OnInit {
   subject_filters: string[] = [];
   topic_filters: string[] = [];
   // sub_topic = false;
-  expand_topics = true;
   expand_refsheet = false;
   expand_supp = true;
+  expand_overview = true;
+  expand_topics = true;
   show_correct = false;
   mode = 'assess';
 
@@ -674,6 +675,11 @@ export class ProblemsComponent implements OnInit {
     this.screenWidth = window.innerWidth;
     if (this.screenWidth <= this.mobileWidth) {
       this.expand_topics = false;
+      this.expand_overview = false;
+    }
+    else {
+      this.expand_topics = true;
+      this.expand_overview = true;
     }
   }
 
@@ -701,6 +707,41 @@ export class ProblemsComponent implements OnInit {
         }
       }
     });
+  }
+
+  get_refsheet(key: string) {
+    // console.log('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
+    return ('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
+  }
+
+  get_flag_count () {
+    var count = 0;
+    for (let sub of this.order_numbers()) {
+      if (sub != this.problem_number && sub <= this.max_problem_number && (this.exam_submission[sub].Path.length > 0 && this.exam_submission[sub].Path[0] != '') && this.exam_submission[sub].Flags[this.exam_submission[sub].Flags.length-1]) {
+        count += 1;
+      }
+    }
+    return (count)
+  }
+
+  get_skip_count () {
+    var count = 0;
+    for (let sub of this.order_numbers()) {
+      if (sub != this.problem_number && sub <= this.max_problem_number && (this.exam_submission[sub].Path.length == 0 || this.exam_submission[sub].Path[0] == '')) {
+        count += 1;
+      }
+    }
+    return (count)
+  }
+
+  order_numbers() {
+    return (Array.from({ length: Object.keys(this.exam_submission).length }, (_, i) => i+1));
+  }
+
+  toggle_flag() {
+    console.log('flag');
+    this.exam_submission[this.problem_number].Flags.push(!this.exam_submission[this.problem_number].Flags[this.exam_submission[this.problem_number].Flags.length-1]);
+    console.log(this.exam_submission[this.problem_number].Flags);
   }
 
   toggle_button(val: string) {
@@ -951,21 +992,6 @@ export class ProblemsComponent implements OnInit {
     console.log(this.exam_dump[this.problem_number].Number);
     console.log((this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-')));
     console.log(this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet);
-  }
-
-  get_refsheet(key: string) {
-    // console.log('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
-    return ('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
-  }
-
-  order_numbers() {
-    return (Array.from({ length: Object.keys(this.exam_submission).length }, (_, i) => i+1));
-  }
-
-  toggle_flag() {
-    console.log('flag');
-    this.exam_submission[this.problem_number].Flags.push(!this.exam_submission[this.problem_number].Flags[this.exam_submission[this.problem_number].Flags.length-1]);
-    console.log(this.exam_submission[this.problem_number].Flags);
   }
 
   attempt_mc_problem(choice: string, part: string) {
@@ -2029,6 +2055,7 @@ export class ProblemsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.width_change2();
     this.favorite_std_set = [];
     this.filter_exams();
     if (this.authService.userData) {

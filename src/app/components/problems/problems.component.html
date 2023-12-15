@@ -1157,7 +1157,7 @@
             <div *ngFor="let prob of subtopic_search_dump | keyvalue">
               <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts[0] > 0 && (prob.value.Parts | keys).length == 0"
                 class="card highlight-card card-small"
-                style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+                style="height: auto; min-height: 100px; max-width: 95%; padding: 20px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
                 <div *ngIf="prob.value.Type == 'MC'">
                   <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                     <h3 *ngIf="choice.key == selection.value && subtopic_attempt_response[0] != ''"
@@ -1170,8 +1170,6 @@
                       <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
                       <br /> <br /> <b>No explanation or rationale is available.</b>
                     </h3>
-                    <br
-                      *ngIf="choice.key == selection.value && subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
                     <br
                       *ngIf="choice.key == selection.value && subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
                     <button
@@ -1196,8 +1194,7 @@
                       <!-- wrong data format, extra KEY -->
                       <br /> <br /> <b>No explanation or rationale is available.</b>
                     </h3>
-                    <br *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" /> <br
-                      *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                    <br *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
                     <button *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
                       class="grade-button" (click)="next_problem_st(); scroll_top()"
                       style="display: block; max-width: 150px; max-height: 100px; margin: auto">
@@ -1216,8 +1213,7 @@
                     <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your response.
                     <!-- wrong data format, extra KEY -->
                   </h3>
-                  <br *ngIf="subtopic_problem_attempts[0] > 0 && screenWidth <= mobileWidth" /> <br
-                    *ngIf="subtopic_problem_attempts[0] > 0 && screenWidth <= mobileWidth" />
+                  <br *ngIf="subtopic_problem_attempts[0] > 0 && screenWidth <= mobileWidth" />
                   <button *ngIf="subtopic_problem_attempts[0] > 0 && screenWidth <= mobileWidth"
                     class="grade-button" (click)="next_problem_st(); scroll_top()"
                     style="display: block; max-width: 150px; max-height: 100px; margin: auto">
@@ -1232,11 +1228,23 @@
               </div>
               <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts[0] == 0"
                 class="card highlight-card card-small"
-                style="height: auto; max-width: 90%; padding: 20px; margin: auto; align-items: center; display: inline-flex; background-color: transparent">
-                <button class="grade-button" (click)="next_problem_st(); scroll_top()"
+                style="height: auto; max-width: 95%; padding: 20px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: transparent">
+                <!-- <button class="grade-button" (click)="next_problem_st(); scroll_top()"
                   style="display: block; max-width: 150px; max-height: 100px; margin: auto">
                   <b> Skip Problem </b>
-                </button>
+                </button> -->
+                <label class="switch" style="padding: 0px">
+                    <input type="checkbox">
+                    <button (click)="next_problem(); scroll_top()" class="toggle-button-off"
+                        style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
+                        <div style="margin: 5px">
+                          <span (click)="toggle_flag()"
+                            style="font-size: 20px; font-weight: 1200; margin: 5px"> ⏩ </span>
+                        </div>
+                        <div style="margin: 5px; text-align: center; font-size: 18px; width: 120px"><b> Skip Problem </b>
+                        </div>
+                    </button>
+                </label>
               </div>
             </div>
           </div>
@@ -1423,14 +1431,34 @@
       <div class="content" style="margin: auto; align-items: center">
         <section *ngIf="exam_length >= problem_number" 
           style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
-          <h3 *ngIf="exam_length >= problem_number" style="margin: 10px 15px 10px 0px; color: slategrey; font-size: 20px">
-            Problem #{{problem_number}} of {{exam_length}} </h3>
+          <div style="display: flex; flex-direction: row; align-items: center">
+              <div (click)="expand_overview = !expand_overview" style="margin: auto">
+                  <img *ngIf="expand_overview" src="./assets/icons/caret.png"
+                      style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: slategrey">
+                  <img *ngIf="!expand_overview" src="./assets/icons/caret.png"
+                      style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: slategrey; transform: rotate(-90deg)">
+              </div>
+              <div style="margin: auto 10px; text-align: left">
+                <h3 *ngIf="exam_length >= problem_number" style="margin: 10px 15px 10px 0px; color: darkslategrey; font-size: 20px">
+                  Problem #{{problem_number}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
+              </div>
+          </div>
         </section>
         <h2 *ngIf="problem_number > exam_length && mode == 'assess'"> With {{number_correct}} out of
           {{exam_length}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
-        <div *ngIf="exam_length >= problem_number && mode == 'assess'" class="card-container"
-          style="height: auto; max-height: 500px; width: 100%; margin: 15px auto; display: flex; flex-direction: row; align-items: center; justify-content: center">
+        <div *ngIf="exam_length >= problem_number && mode == 'assess' && !expand_overview"  class="card card-medium"
+          style="display: block; text-align: center; max-width: 350px; color: darkslategrey">
+          <progress value="{{max_problem_number-1}}" max="{{exam_length}}"
+            style="height: 20px; width: 80%; border-radius: 15px; margin: auto"
+            #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+          <h4 style="margin: auto; margin-bottom: 10px; font-size: 15px; font-weight: 500"> Exam Progress: <b>{{""+(max_problem_number-1)}} /
+            {{""+exam_length}}</b> </h4>
+          <h4 style="margin: 1px auto; font-size: 17px; font-weight: 500"> <b style="font-size: 27px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); padding-right: 5px">&#9873;</b> <b>Flagged</b> Problems: <b>{{get_flag_count()}}</b> </h4>
+          <h4 style="margin: 1px auto; font-size: 17px; font-weight: 500"> ⏩ <b>Skipped</b> Problems: <b>{{get_skip_count()}}</b> </h4>
+        </div>
+        <div *ngIf="exam_length >= problem_number && mode == 'assess' && expand_overview" class="card-container"
+          style="height: auto; max-height: 650px; width: 100%; margin: 15px auto; display: flex; flex-direction: row; align-items: center; justify-content: center">
           <label *ngFor="let sub of order_numbers()" (click)="go_to_prob(sub)" class="switch" style="padding: 0px; margin: 0px; height: 45px; width: 60px">
             <input type="checkbox" value="{{sub}}">
             <button *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length > 0 && exam_submission[sub].Path[0] != '')  && !exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" class="toggle-button-off" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
@@ -1470,11 +1498,11 @@
           </label>
         </div>
         <div *ngIf="problem_number <= exam_length">
-          <hr style="width: max(50%, 250px)">
-          <h3 *ngIf="exam_length >= problem_number" style="margin: 10px auto; color: slategrey; font-size: 20px">
-            Time spent solving problem: {{pt_minutes}}m {{pt_counter%60}}s </h3>
+          <hr *ngIf="exam_dump[problem_number].SubTopics.length > 0 && exam_dump[problem_number].SubTopics[0].length > 12" style="width: max(50%, 250px)">
+          <!-- <h3 *ngIf="exam_length >= problem_number" style="margin: 10px auto; color: slategrey; font-size: 20px">
+            Time spent solving problem: {{pt_minutes}}m {{pt_counter%60}}s </h3> -->
           <h3 *ngIf="exam_dump[problem_number].SubTopics.length > 0 && exam_dump[problem_number].SubTopics[0].length > 12"
-            style="margin: auto 0; color: slategrey; font-size: 18px"> Related Curriculum:</h3>
+            style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
           <section *ngIf="exam_dump[problem_number].SubTopics.length > 0 && exam_dump[problem_number].SubTopics[0].length > 12"
             style="height: auto; width: 100%; display: flex; justify-content: center">
             <div *ngFor="let prob of exam_dump | keyvalue"
@@ -1979,7 +2007,7 @@
             <div *ngFor="let prob of exam_dump | keyvalue" style="max-width: 100%">
               <div *ngIf="problem_number == +prob.key && problem_attempts[0] > 0 && mode == 'explain' && (prob.value.Parts | keys).length == 0"
                 class="card highlight-card card-small"
-                style="height: auto; min-height: 100px; width: 95%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+                style="height: auto; min-height: 100px; max-width: 95%; padding: 20px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
                 <div *ngIf="prob.value.Type == 'MC'">
                   <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                     <h3 *ngIf="choice.key == selection.value && attempt_explanation[0][0] != ''"
@@ -1992,8 +2020,6 @@
                       <b style="font-size: 20px; color: #1976d2"> {{attempt_response}} </b>
                       <br /> <br /> <b>No explanation or rationale is available.</b>
                     </h3>
-                    <br
-                      *ngIf="choice.key == selection.value && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
                     <br
                       *ngIf="choice.key == selection.value && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
                     <button
@@ -2053,8 +2079,9 @@
                 </button>
               </div>
               <div *ngIf="problem_number == +prob.key && (mode =='assess' || problem_attempts[0] == 0)" class="card highlight-card card-small"
-                style="height: auto; min-height: 100px; width: 100%; padding: 0px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: transparent">
+                style="height: auto; min-height: 100px; width: fit-content; padding: 0px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: transparent">
                 <label *ngIf="problem_attempts[0] == 0" class="switch" style="padding: 0px">
+                    <input type="checkbox">
                     <button (click)="next_problem(); scroll_top()" class="toggle-button-off"
                         style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                         <div style="margin: 5px">

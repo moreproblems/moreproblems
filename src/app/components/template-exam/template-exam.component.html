@@ -871,7 +871,7 @@
               <div
                 *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts[0] > 0 && (prob.value.Parts | keys).length == 0"
                 class="card highlight-card card-small"
-                style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+                style="height: auto; min-height: 100px; max-width: 95%; padding: 20px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
                 <div *ngIf="prob.value.Type == 'MC'">
                   <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                     <h3 *ngIf="choice.key == selection.value && subtopic_attempt_response[0] != ''"
@@ -1209,7 +1209,7 @@
         <h2 *ngIf="problem_number > exam_length && performance_level == 'Does Not Meet Grade Level Performance'"
           style="color: red"> {{performance_level}} </h2>
         <div *ngIf="exam_length >= problem_number && problem_number > 0" class="card-container"
-          style="height: auto; max-height: 500px; width: 100%; margin: 15px auto; display: flex; flex-direction: row; align-items: center; justify-content: center">
+          style="height: auto; max-height: 650px; width: 100%; margin: 15px auto; display: flex; flex-direction: row; align-items: center; justify-content: center">
           <label *ngFor="let sub of order_numbers()" (click)="go_to_prob(sub)" class="switch"
             style="padding: 0px; margin: 0px; height: 45px; width: 60px">
             <input type="checkbox" value="{{sub}}">

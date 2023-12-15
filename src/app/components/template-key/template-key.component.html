@@ -1293,7 +1293,7 @@
               <div *ngFor="let prob of exam_dump | keyvalue">
                 <div *ngIf="+prob.key == problem_number && problem_attempts[0] > 0 && (prob.value.Parts | keys).length == 0"
                   class="card highlight-card card-small"
-                  style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+                  style="height: auto; min-height: 100px; max-width: 95%; padding: 20px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
                   <div *ngIf="prob.value.Type == 'MC'">
                     <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="choice.key == selection.value && attempt_explanation[0][0] != ''"
@@ -1306,8 +1306,6 @@
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
                         <br /> <br /> <b>No explanation or rationale is available.</b>
                       </h3>
-                      <br
-                        *ngIf="choice.key == selection.value && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
                       <br
                         *ngIf="choice.key == selection.value && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
                       <button
@@ -1326,8 +1324,6 @@
                       </h3>
                       <br
                         *ngIf="choice.key == selection.value && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
-                      <br
-                        *ngIf="choice.key == selection.value && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
                       <button
                         *ngIf="choice.key == selection.value && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
                         class="grade-button" (click)="next_problem(); scroll_top()"
@@ -1342,8 +1338,7 @@
                       <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your response.
                       <!-- wrong data format, extra KEY -->
                     </h3>
-                    <br *ngIf="problem_attempts[0] > 0 && screenWidth <= mobileWidth" /> <br
-                      *ngIf="problem_attempts[0] > 0 && screenWidth <= mobileWidth" />
+                    <br *ngIf="problem_attempts[0] > 0 && screenWidth <= mobileWidth" />
                     <button *ngIf="problem_attempts[0] > 0 && screenWidth <= mobileWidth"
                       class="grade-button" (click)="next_problem(); scroll_top()"
                       style="display: block; max-width: 150px; max-height: 100px; margin: auto">
@@ -1364,8 +1359,7 @@
                         <!-- wrong data format, extra KEY -->
                         <br /> <br /> <b>No explanation or rationale is available.</b>
                       </h3>
-                      <br *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" /> <br
-                        *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                      <br *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
                       <button *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
                         class="grade-button" (click)="next_problem(); scroll_top()"
                         style="display: block; max-width: 150px; max-height: 100px; margin: auto">
