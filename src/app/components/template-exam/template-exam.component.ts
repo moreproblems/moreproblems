@@ -233,10 +233,11 @@ export class TemplateExamComponent implements OnInit {
     pt_timer: any;
     pt_running: boolean = false;
 
-    expand_topics = true;
-    show_correct = false;
     expand_refsheet = false;
     expand_supp = true;
+    expand_overview = true;
+    expand_topics = true;
+    show_correct = false;
 
     key = "";
     exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
@@ -680,10 +681,15 @@ export class TemplateExamComponent implements OnInit {
     sub: any;
 
     width_change2() {
-        this.screenWidth = window.innerWidth;
-        if (this.screenWidth <= this.mobileWidth) {
-            this.expand_topics = false;
-        }
+      this.screenWidth = window.innerWidth;
+      if (this.screenWidth <= this.mobileWidth) {
+        this.expand_topics = false;
+        this.expand_overview = false;
+      }
+      else {
+        this.expand_topics = true;
+        this.expand_overview = true;
+      }
     }
 
     read_supp_json(path: string) {
@@ -710,6 +716,26 @@ export class TemplateExamComponent implements OnInit {
                 }
             }
         });
+    }
+
+    get_flag_count () {
+      var count = 0;
+      for (let sub of this.order_numbers()) {
+        if (sub <= this.max_problem_number && (this.exam_submission[sub].Path.length > 0 && this.exam_submission[sub].Path[0] != '') && this.exam_submission[sub].Flags[this.exam_submission[sub].Flags.length-1]) {
+          count += 1;
+        }
+      }
+      return (count)
+    }
+  
+    get_skip_count () {
+      var count = 0;
+      for (let sub of this.order_numbers()) {
+        if (sub < this.max_problem_number && (this.exam_submission[sub].Path.length == 0 || this.exam_submission[sub].Path[0] == '')) {
+          count += 1;
+        }
+      }
+      return (count)
     }
 
     select_student(id: string) {
@@ -938,8 +964,6 @@ export class TemplateExamComponent implements OnInit {
                                 this.exam_dump[i + Object.keys(this.db_submission).length] = this.ordered_dump[this.problems_sequence[this.random_index]];
                                 this.problems_sequence.splice(this.random_index, 1);
                             }
-                            console.log(this.exam_dump);
-                            console.log(this.exam_submission);
                             this.exam_key = [];
                             for (const [num, val] of Object.entries(this.exam_dump)) {
                                 this.exam_key.push([]);
@@ -993,6 +1017,9 @@ export class TemplateExamComponent implements OnInit {
                 this.db_updates = {};
             }
         }
+        console.log(this.exam_dump);
+        console.log(this.exam_submission);
+        console.log(this.exam_key);
         this.toggleExamTimer();
         this.toggleProblemTimer();
         this.problem_number = this.progress_number;
@@ -2259,6 +2286,7 @@ export class TemplateExamComponent implements OnInit {
                 this.router.navigate(['exams']);
             }
         });
+        this.width_change2();
         this.exam_state = this.exam_attribute_dump[this.key].State;
         this.exam_grade = this.exam_attribute_dump[this.key].Grade;
         this.exam_subject = this.exam_attribute_dump[this.key].Subject;

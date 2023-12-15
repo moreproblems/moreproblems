@@ -717,7 +717,7 @@ export class ProblemsComponent implements OnInit {
   get_flag_count () {
     var count = 0;
     for (let sub of this.order_numbers()) {
-      if (sub != this.problem_number && sub <= this.max_problem_number && (this.exam_submission[sub].Path.length > 0 && this.exam_submission[sub].Path[0] != '') && this.exam_submission[sub].Flags[this.exam_submission[sub].Flags.length-1]) {
+      if (sub <= this.max_problem_number && (this.exam_submission[sub].Path.length > 0 && this.exam_submission[sub].Path[0] != '') && this.exam_submission[sub].Flags[this.exam_submission[sub].Flags.length-1]) {
         count += 1;
       }
     }
@@ -727,7 +727,7 @@ export class ProblemsComponent implements OnInit {
   get_skip_count () {
     var count = 0;
     for (let sub of this.order_numbers()) {
-      if (sub != this.problem_number && sub <= this.max_problem_number && (this.exam_submission[sub].Path.length == 0 || this.exam_submission[sub].Path[0] == '')) {
+      if (sub < this.max_problem_number && (this.exam_submission[sub].Path.length == 0 || this.exam_submission[sub].Path[0] == '')) {
         count += 1;
       }
     }
@@ -947,8 +947,8 @@ export class ProblemsComponent implements OnInit {
           'Flags': [false] 
         };
       }
-      this.toggleExamTimer();
     }
+    this.toggleExamTimer();
     this.toggleProblemTimer();
     this.problem_number = 1;
     this.max_problem_number = 1;

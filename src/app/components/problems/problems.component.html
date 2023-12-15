@@ -1429,76 +1429,82 @@
       #problemSummaryCard>
       <br />
       <div class="content" style="margin: auto; align-items: center">
-        <section *ngIf="exam_length >= problem_number" 
-          style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
-          <div style="display: flex; flex-direction: row; align-items: center">
-              <div (click)="expand_overview = !expand_overview" style="margin: auto">
-                  <img *ngIf="expand_overview" src="./assets/icons/caret.png"
-                      style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: slategrey">
-                  <img *ngIf="!expand_overview" src="./assets/icons/caret.png"
-                      style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: slategrey; transform: rotate(-90deg)">
-              </div>
-              <div style="margin: auto 10px; text-align: left">
-                <h3 *ngIf="exam_length >= problem_number" style="margin: 10px 15px 10px 0px; color: darkslategrey; font-size: 20px">
-                  Problem #{{problem_number}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
-              </div>
-          </div>
-        </section>
         <h2 *ngIf="problem_number > exam_length && mode == 'assess'"> With {{number_correct}} out of
           {{exam_length}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
-        <div *ngIf="exam_length >= problem_number && mode == 'assess' && !expand_overview"  class="card card-medium"
-          style="display: block; text-align: center; max-width: 350px; color: darkslategrey">
-          <progress value="{{max_problem_number-1}}" max="{{exam_length}}"
-            style="height: 20px; width: 80%; border-radius: 15px; margin: auto"
+        <div *ngIf="exam_length >= problem_number"  class="card card-medium"
+          style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
+          <section *ngIf="mode == 'assess'" (click)="expand_overview = !expand_overview" style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+            <div style="display: flex; flex-direction: row; align-items: center">
+                <div style="margin: auto">
+                    <img *ngIf="expand_overview" src="./assets/icons/caret.png"
+                        style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: slategrey">
+                    <img *ngIf="!expand_overview" src="./assets/icons/caret.png"
+                        style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: slategrey; transform: rotate(-90deg)">
+                </div>
+                <div style="margin: auto; text-align: right">
+                  <h3 *ngIf="exam_length >= problem_number" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
+                    Problem #{{problem_number}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
+                </div>
+            </div>
+          </section>
+          <section *ngIf="mode == 'explain'" style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+            <div style="display: flex; flex-direction: row; align-items: center">
+                <div style="margin: auto; text-align: right">
+                  <h3 *ngIf="exam_length >= problem_number" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
+                    Problem #{{problem_number}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
+                </div>
+            </div>
+          </section>
+          <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+(max_problem_number-1)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
+          <progress *ngIf="!expand_overview || mode == 'explain'" value="{{max_problem_number-1}}" max="{{exam_length}}"
+            style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
-          <h4 style="margin: auto; margin-bottom: 10px; font-size: 15px; font-weight: 500"> Exam Progress: <b>{{""+(max_problem_number-1)}} /
-            {{""+exam_length}}</b> </h4>
-          <h4 style="margin: 1px auto; font-size: 17px; font-weight: 500"> <b style="font-size: 27px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); padding-right: 5px">&#9873;</b> <b>Flagged</b> Problems: <b>{{get_flag_count()}}</b> </h4>
-          <h4 style="margin: 1px auto; font-size: 17px; font-weight: 500"> ⏩ <b>Skipped</b> Problems: <b>{{get_skip_count()}}</b> </h4>
-        </div>
-        <div *ngIf="exam_length >= problem_number && mode == 'assess' && expand_overview" class="card-container"
-          style="height: auto; max-height: 650px; width: 100%; margin: 15px auto; display: flex; flex-direction: row; align-items: center; justify-content: center">
-          <label *ngFor="let sub of order_numbers()" (click)="go_to_prob(sub)" class="switch" style="padding: 0px; margin: 0px; height: 45px; width: 60px">
-            <input type="checkbox" value="{{sub}}">
-            <button *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length > 0 && exam_submission[sub].Path[0] != '')  && !exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" class="toggle-button-off" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
-              <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-              <span style="font-size: 25px; font-weight: 1200; width: 30px; text-align: right;"> 
-                <b style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
-              </span>
-            </button>
-            <button *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length > 0 && exam_submission[sub].Path[0] != '') && exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" class="toggle-button-off" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(214, 141, 14)">
-              <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-              <span style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right;"> 
-                <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub < 10" style="padding-left: 7px"> &#9873; </b>
-                <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub >=10" style="padding-left: 3px"> &#9873; </b>
-              </span>
-            </button>
-            <button *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length == 0 || exam_submission[sub].Path[0] == '')" class="toggle-button-off" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(245, 77, 77)">
-              <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-              <span style="font-size: 16px; font-weight: 1200; width: 30px; text-align: right;"> 
-                <b *ngIf="sub < 10" style="padding-left: 7px"> ⏩ </b>
-                <b *ngIf="sub >=10" style="padding-left: 3px"> ⏩ </b>
-              </span>
-            </button>
-            <button *ngIf="sub != problem_number && sub > max_problem_number && exam_submission[sub].Path.length == 0" class="toggle-button-disabled" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px">
-              <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-              <span style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right;"> 
-                <b *ngIf="!exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
-              </span>
-            </button>
-            <button *ngIf="sub == problem_number" class="toggle-button-on" style="margin: 0px; height: 40px; width: 60px; font-size: 18px; padding: 0px">
-              <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-              <span style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right"> 
-                <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub < 10" style="padding-left: 7px"> &#9873; </b>
-                <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub >=10" style="padding-left: 3px"> &#9873; </b>
-                <b *ngIf="!exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
-              </span>
-            </button>
-          </label>
+          <h4 *ngIf="get_flag_count() != 0 && !expand_overview && mode == 'assess'" style="margin-top: 5px; font-size: 17px; font-weight: 500"> <b style="font-size: 27px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); padding-right: 5px">&#9873;</b> <b>Flagged</b> Problems: <b>{{get_flag_count()}}</b> </h4>
+          <h4 *ngIf="get_skip_count() != 0 && !expand_overview && mode == 'assess'" style="margin-top: 5px; font-size: 17px; font-weight: 500"> ⏩ <b>Skipped</b> Problems: <b>{{get_skip_count()}}</b> </h4>
+          <div *ngIf="expand_overview && mode == 'assess'" class="card-container"
+            style="height: auto; max-height: 650px; width: 100%; margin-top: 15px; display: flex; flex-direction: row; align-items: center; justify-content: center">
+            <label *ngFor="let sub of order_numbers()" (click)="go_to_prob(sub)" class="switch" style="padding: 0px; margin: 0px; height: 45px; width: 60px">
+              <input type="checkbox" value="{{sub}}">
+              <button *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length > 0 && exam_submission[sub].Path[0] != '')  && !exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" class="toggle-button-off" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
+                <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
+                <span style="font-size: 25px; font-weight: 1200; width: 30px; text-align: right;"> 
+                  <b style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
+                </span>
+              </button>
+              <button *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length > 0 && exam_submission[sub].Path[0] != '') && exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" class="toggle-button-off" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(214, 141, 14)">
+                <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
+                <span style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right;"> 
+                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub < 10" style="padding-left: 7px"> &#9873; </b>
+                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub >=10" style="padding-left: 3px"> &#9873; </b>
+                </span>
+              </button>
+              <button *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length == 0 || exam_submission[sub].Path[0] == '')" class="toggle-button-off" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(245, 77, 77)">
+                <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
+                <span *ngIf="sub < max_problem_number" style="font-size: 16px; font-weight: 1200; width: 30px; text-align: right;"> 
+                  <b *ngIf="sub < 10" style="padding-left: 7px"> ⏩ </b>
+                  <b *ngIf="sub >=10" style="padding-left: 3px"> ⏩ </b>
+                </span>
+              </button>
+              <button *ngIf="sub != problem_number && sub > max_problem_number && exam_submission[sub].Path.length == 0" class="toggle-button-disabled" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px">
+                <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
+                <span style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right;"> 
+                  <b *ngIf="!exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
+                </span>
+              </button>
+              <button *ngIf="sub == problem_number" class="toggle-button-on" style="margin: 0px; height: 40px; width: 60px; font-size: 18px; padding: 0px">
+                <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
+                <span style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right"> 
+                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub < 10" style="padding-left: 7px"> &#9873; </b>
+                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub >=10" style="padding-left: 3px"> &#9873; </b>
+                  <b *ngIf="!exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
+                </span>
+              </button>
+            </label>
+          </div>
         </div>
         <div *ngIf="problem_number <= exam_length">
-          <hr *ngIf="exam_dump[problem_number].SubTopics.length > 0 && exam_dump[problem_number].SubTopics[0].length > 12" style="width: max(50%, 250px)">
+          <hr *ngIf="exam_dump[problem_number].SubTopics.length > 0 && exam_dump[problem_number].SubTopics[0].length > 12" style="width: max(50%, 250px); margin-top: 10px">
           <!-- <h3 *ngIf="exam_length >= problem_number" style="margin: 10px auto; color: slategrey; font-size: 20px">
             Time spent solving problem: {{pt_minutes}}m {{pt_counter%60}}s </h3> -->
           <h3 *ngIf="exam_dump[problem_number].SubTopics.length > 0 && exam_dump[problem_number].SubTopics[0].length > 12"
