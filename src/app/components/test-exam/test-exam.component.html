@@ -488,13 +488,13 @@
       <br />
       <div class="content" style="margin: auto; align-items: center">
         <section
-          style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+          style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 15px">
           <h2 *ngIf="screenWidth > mobileWidth"
-            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 24.5px; line-height: 30px; color: slategrey">
+            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 24.5px; line-height: 30px; color: darkslategrey">
             <b>{{selected_topic}}:</b> {{selected_subtopic}}
           </h2>
           <h2 *ngIf="screenWidth <= mobileWidth"
-            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px; color: slategrey">
+            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px; color: darkslategrey">
             <b>{{selected_topic}}:</b> {{selected_subtopic}}
           </h2>
           <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
@@ -504,17 +504,25 @@
             style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &starf;
           </span>
         </section>
-        <br />
-        <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px"> <a>#{{subtopic_problem_number}}
-            of {{subtopic_problem_count}} total problems for this subtopic.</a> </h3>
-        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px">
-          <a>#{{subtopic_problem_number}} of {{subtopic_problem_count}} total problems for this subtopic.</a>
-        </h3>
-        <br />
-        <hr *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="width: max(50%, 250px)">
+        <div class="card card-medium"
+          style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
+          <section style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+            <div style="display: flex; flex-direction: row; align-items: center">
+                <div style="margin: auto; text-align: right">
+                  <h3 style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
+                    Problem #{{subtopic_problem_number}} </h3>
+                </div>
+            </div>
+          </section>
+          <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Subtopic Progress: <b>{{""+(subtopic_problem_number-1)}}/{{""+subtopic_problem_count}}</b> </h4>
+          <progress value="{{subtopic_problem_number-1}}" max="{{subtopic_problem_count}}"
+            style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
+            #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+        </div>
+        <hr *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="width: max(50%, 250px); margin-top: 10px">
         <br *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" />
         <h3 *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0"
-          style="margin: auto 0; color: slategrey; font-size: 18px"> Related Curriculum:</h3>
+          style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
         <section *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0"
           style="height: auto; width: 100%; display: flex; justify-content: center">
           <div *ngFor="let prob of subtopic_search_dump | keyvalue"
@@ -694,7 +702,7 @@
             <div *ngIf="prob.value.Type == 'MC'">
               <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
                 (click)="selection.value = choice.key; attempt_mc_st_problem(choice.key); scroll_bottom()"
-                style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                 <label class="switch" style="padding: 0 10px">
                   <input type="checkbox" value="{{choice.key}}">
                   <button
@@ -810,7 +818,7 @@
         #problemSummaryCard>
         <br />
         <div class="content" style="margin: auto; align-items: center">
-          <h2 *ngIf="this.problem_number > 0" style="color: slategrey"> {{exam_state}} {{exam_name}}
+          <h2 *ngIf="this.problem_number > 0" style="color: darkslategrey"> {{exam_state}} {{exam_name}}
             {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
           <section style="height: auto; width: 100%; display: flex; justify-content: center">
             <button (click)="prev_problem()" class="grade-button"
@@ -818,17 +826,17 @@
               <img src="./assets/icons/minus.png" style="height: 30px; width: 30px; filter: invert(100%)">
             </button>
             <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0"
-              style="margin: auto 0; color: slategrey; font-size: 18px"> Problem # </h3>
+              style="margin: auto 0; color: darkslategrey; font-size: 18px"> Problem # </h3>
             <input *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0"
               (keyup)="go_to_prob(+this.probNum.value)" type="text" inputmode="numeric" value="{{problem_number}}"
               min="1" maxlength="2"
               style="margin: auto 3px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
               #probNum />
             <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0 && screenWidth > mobileWidth"
-              style="margin: auto 0; color: slategrey; font-size: 18px"> / {{exam_length}} ({{pt_minutes}}m
+              style="margin: auto 0; color: darkslategrey; font-size: 18px"> / {{exam_length}} ({{pt_minutes}}m
               {{pt_counter%60}}s) </h3>
             <h3 *ngIf="this.problem_number <= this.exam_length && this.problem_number > 0 && screenWidth <= mobileWidth"
-              style="margin: auto 0; color: slategrey; font-size: 18px"> / {{exam_length}} </h3>
+              style="margin: auto 0; color: darkslategrey; font-size: 18px"> / {{exam_length}} </h3>
             <button (click)="next_problem()" class="grade-button"
               style="margin: 20px 0; margin-left: 20px; width: auto; height: auto">
               <img src="./assets/icons/plus.png" style="height: 30px; width: 30px; filter: invert(100%)">
@@ -837,7 +845,7 @@
           <hr *ngIf="exam_dump[problem_number].Topics.length > 0" style="width: max(50%, 250px)">
           <br *ngIf="exam_dump[problem_number].Topics.length > 0" />
           <h3 *ngIf="exam_dump[problem_number].Topics.length > 0"
-            style="margin: auto 0; color: slategrey; font-size: 18px"> Related Curriculum:</h3>
+            style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
           <section *ngIf="exam_dump[problem_number].Topics.length > 0"
             style="height: auto; width: 100%; display: flex; justify-content: center">
             <div *ngFor="let prob of exam_dump | keyvalue"
@@ -1037,7 +1045,7 @@
               <div *ngIf="prob.value.Type == 'MC'">
                 <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
                   (click)="selection.value = choice.key; attempt_mc_problem(choice.key, prob.key); scroll_bottom()"
-                  style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                  style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
                     <input type="checkbox" value="{{choice.key}}">
                     <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(prob.key)][0]==choice.key && !attempt_response[(prob.value.Parts | keys).indexOf(prob.key)].startsWith('Correct')"
@@ -1064,7 +1072,7 @@
               <div *ngIf="prob.value.Type == 'MS'">
                 <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
                   (click)="attempt_ms_problem(choice.key, prob.key); scroll_bottom()"
-                  style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                  style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
                     <input type="checkbox" value="{{choice.key}}">
                     <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(prob.key)].includes(choice.key) && !choice.value.Key.Correct"
@@ -1098,7 +1106,7 @@
               <div *ngIf="prob.value.Type == 'MC'">
                 <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
                   (click)="selection.value = choice.key; attempt_mc_problem(choice.key, ''); scroll_bottom()"
-                  style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                  style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
                     <input type="checkbox" value="{{choice.key}}">
                     <button *ngIf="problem_selection[0][0]==choice.key && !attempt_response[0].startsWith('Correct')"
@@ -1260,7 +1268,7 @@
               <div *ngIf="part.value.Type == 'MC'">
                 <div *ngFor="let choice of part.value.AnswerChoices | keyvalue" class="card card-small"
                   (click)="selection.value = choice.key; attempt_mc_problem(choice.key, part.key); scroll_bottom()"
-                  style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                  style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
                     <input type="checkbox" value="{{choice.key}}">
                     <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && !attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
@@ -1287,7 +1295,7 @@
               <div *ngIf="part.value.Type == 'MS'">
                 <div *ngFor="let choice of part.value.AnswerChoices | keyvalue" class="card card-small"
                   (click)="attempt_ms_problem(choice.key, part.key); scroll_bottom()"
-                  style="min-height: 50px; min-width: 40%; max-height: 200px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                  style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
                     <input type="checkbox" value="{{choice.key}}">
                     <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && !choice.value.Key.Correct"
