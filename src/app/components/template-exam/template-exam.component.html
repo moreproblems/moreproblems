@@ -1504,15 +1504,18 @@
           <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_type}} {{exam_grade}}
             {{exam_subject}} Exam
           </h2>
-          <p style="font-size: 18px; padding: 10px; white-space: pre-wrap"> <b>Directions</b> : {{exam_directions}}
+          <p style="font-size: 18px; padding: 10px; white-space: pre-wrap; margin-bottom: 15px"> <b>Directions</b> : {{exam_directions}}
           </p>
           <!-- <br /> -->
-          <h3
+          <h3 style="font-size: 18px; margin-bottom: 0px"
             *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.my_students != []">
-            Take this exam as: </h3>
+            Take exam as: </h3>
+          <h3 style="font-size: 18px; margin-bottom: 0px"
+            *ngIf="!this.authService.userData || (this.authService.userData && this.authService.userData.role != 'Student' && this.selected_student == '')">
+            Anonymous <b style="font-weight: 400">(results won't be saved)</b> </h3>
           <div
             *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.my_students != []"
-            class="card-container" style="align-items: center; padding-top: 0">
+            class="card-container" style="align-items: center; padding-top: 0px; margin-top: 10px">
             <div *ngFor="let std of my_students" (click)="select_student(my_students_data[std].uid)"
               class="card card-small" style="height: 75px; width: 170px; align-items: center; padding-top: 0">
               <div class="avatar-container"
@@ -1535,8 +1538,8 @@
             </div>
           </div>
           <div *ngIf="!this.authService.userData || !this.exam_inprogress" class="card-container"
-            style="align-items: center; padding-top: 20px">
-            <label class="switch" style="align-items: center">
+            style="align-items: center">
+            <!-- <label class="switch" style="align-items: center">
               <input type="checkbox" value="random">
               <button (click)="toggle_random()" *ngIf="random" class="toggle-button-on"
                 style="margin: 0px 20px 0px 20px"> <b> Order Problems </b>
@@ -1544,7 +1547,15 @@
               <button (click)="toggle_random()" *ngIf="!random" class="toggle-button-off"
                 style="margin: 0px 20px 0px 20px"> <b> Shuffle Problems </b>
               </button>
-            </label>
+            </label> -->
+            <div style="display: flex; flex-direction: column">
+              <h3 style="font-size: 18px; margin-bottom: 0px"> Problem Order: </h3>
+              <select (change)="toggle_random()"
+                  style="margin: 0 20px 20px ; padding: 5px 0px 5px 15px; width: 140px; height: 40px; font-size: 20px; font-weight: 500; text-align: left">
+                  <option value="default" selected value>Default</option>
+                  <option value="random">Random</option>
+              </select>
+            </div>
             <button class="grade-button" (click)="begin_exam(); scroll_top()"
               style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px">
               <b> Begin Exam </b>
