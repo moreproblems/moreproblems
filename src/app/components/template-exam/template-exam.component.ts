@@ -1627,7 +1627,7 @@ export class TemplateExamComponent implements OnInit {
                     this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
                 }
                 // not necessarily true for multi part problems
-                if (this.attempt_response[-1] == 'Correct') {
+                if (this.attempt_response[this.attempt_response.length-1] == 'Correct') {
                     this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
                 }
                 this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/status'] = this.attempt_response;
@@ -1652,7 +1652,7 @@ export class TemplateExamComponent implements OnInit {
                     this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1;
                 }
                 // not necessarily true for multi part problems
-                if (this.attempt_response[-1] == 'Correct') {
+                if (this.attempt_response[this.attempt_response.length-1] == 'Correct') {
                     this.db_updates['users/' + this.selected_student + '/problems/correct'] = this.selected_student_data.problems.correct + 1;
                 }
                 this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/status'] = this.attempt_response;

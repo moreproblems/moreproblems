@@ -307,6 +307,26 @@
     width: 100%;
   }
 
+  progress {
+    border-radius: 10px;
+  }
+
+  progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 1px solid darkslategrey;
+  }
+
+  progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: limegreen;
+    /* border: 2px solid black; */
+  }
+
+  progress::-moz-progress-bar {
+    border-radius: 10px;
+  }
+
   .terminal {
     position: relative;
     /* width: 100%; */
