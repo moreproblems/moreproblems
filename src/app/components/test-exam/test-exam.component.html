@@ -520,7 +520,6 @@
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
         </div>
         <hr *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="width: max(50%, 250px); margin-top: 10px">
-        <br *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" />
         <h3 *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0"
           style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
         <section *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0"
@@ -843,7 +842,6 @@
             </button>
           </section>
           <hr *ngIf="exam_dump[problem_number].Topics.length > 0" style="width: max(50%, 250px)">
-          <br *ngIf="exam_dump[problem_number].Topics.length > 0" />
           <h3 *ngIf="exam_dump[problem_number].Topics.length > 0"
             style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
           <section *ngIf="exam_dump[problem_number].Topics.length > 0"
