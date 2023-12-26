@@ -8,6 +8,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from "../../shared/services/auth.service";
 import * as examMetadata from "src/assets/problems/exams.json";
+import * as NY22G3MProblems from "src/assets/problems/NY22G3M/NY22G3M-problems.json";
+import * as NY21G3MProblems from "src/assets/problems/NY21G3M/NY21G3M-problems.json";
+import * as NY19G3MProblems from "src/assets/problems/NY19G3M/NY19G3M-problems.json";
+import * as NY18G3MProblems from "src/assets/problems/NY18G3M/NY18G3M-problems.json";
+import * as NY17G3MProblems from "src/assets/problems/NY17G3M/NY17G3M-problems.json";
+import * as NY16G3MProblems from "src/assets/problems/NY16G3M/NY16G3M-problems.json";
+import * as NY15G3MProblems from "src/assets/problems/NY15G3M/NY15G3M-problems.json";
 import * as PA22G3MProblems from "src/assets/problems/PA22G3M/PA22G3M-problems.json";
 import * as PA22G3EProblems from "src/assets/problems/PA22G3E/PA22G3E-problems.json";
 import * as PA21G3MProblems from "src/assets/problems/PA21G3M/PA21G3M-problems.json";
@@ -92,7 +99,6 @@ import * as PA19G8SProblems from "src/assets/problems/PA19G8S/PA19G8S-problems.j
 import * as PA18G8SProblems from "src/assets/problems/PA18G8S/PA18G8S-problems.json";
 import * as PA16G8SProblems from "src/assets/problems/PA16G8S/PA16G8S-problems.json";
 import * as PA15G8SProblems from "src/assets/problems/PA15G8S/PA15G8S-problems.json";
-import * as NY22G3MProblems from "src/assets/problems/NY22G3M/NY22G3M-problems.json";
 import * as TX22G3MProblems from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
 import * as TX22G3RProblems from "src/assets/problems/TX22G3R/TX22G3R-problems.json";
 import * as TX21G3MProblems from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
@@ -250,11 +256,19 @@ export class TemplateExamComponent implements OnInit {
     exam_type = "";
     exam_length = 0;
 
-    online_set = ['PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S',  'NY22G3M', 'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH'];
+    online_set = ['NY22G3M', 'NY21G3M', 'NY19G3M', 'NY18G3M', 'NY17G3M', 'NY16G3M', 'NY15G3M', 'PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S',  'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH'];
 
     exam_directions = "";
 
     topics_count: { [key: string]: number } = {}
+
+    NY22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = NY22G3MProblems;
+    NY21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = NY21G3MProblems;
+    NY19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = NY19G3MProblems;
+    NY18G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = NY18G3MProblems;
+    NY17G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = NY17G3MProblems;
+    NY16G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = NY16G3MProblems;
+    NY15G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = NY15G3MProblems;
     PA22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA22G3MProblems;
     PA22G3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA22G3EProblems;
     PA21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA21G3MProblems;
@@ -339,7 +353,6 @@ export class TemplateExamComponent implements OnInit {
     PA18G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA18G8SProblems;
     PA16G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA16G8SProblems;
     PA15G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA15G8SProblems;
-    NY22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = NY22G3MProblems;
     TX22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX22G3MProblems;
     TX22G3R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX22G3RProblems;
     TX21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX21G3MProblems;
@@ -438,6 +451,13 @@ export class TemplateExamComponent implements OnInit {
     TX18HSUSH_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX18HSUSHProblems;
     TX17HSUSH_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX17HSUSHProblems;
     dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } } = {
+        "NY22G3M": this.NY22G3M_exam_dump,
+        "NY21G3M": this.NY21G3M_exam_dump,
+        "NY19G3M": this.NY19G3M_exam_dump,
+        "NY18G3M": this.NY18G3M_exam_dump,
+        "NY17G3M": this.NY17G3M_exam_dump,
+        "NY16G3M": this.NY16G3M_exam_dump,
+        "NY15G3M": this.NY15G3M_exam_dump,
         "PA22G3M": this.PA22G3M_exam_dump,
         "PA22G3E": this.PA22G3E_exam_dump,
         "PA21G3M": this.PA21G3M_exam_dump,
@@ -522,7 +542,6 @@ export class TemplateExamComponent implements OnInit {
         "PA18G8S": this.PA18G8S_exam_dump,
         "PA16G8S": this.PA16G8S_exam_dump,
         "PA15G8S": this.PA15G8S_exam_dump,
-        "NY22G3M": this.NY22G3M_exam_dump,
         "TX22G3M": this.TX22G3M_exam_dump,
         "TX22G3R": this.TX22G3R_exam_dump,
         "TX21G3M": this.TX21G3M_exam_dump,
@@ -807,7 +826,12 @@ export class TemplateExamComponent implements OnInit {
     }
 
     order_numbers() {
-        return (Array.from({ length: Object.keys(this.exam_submission).length }, (_, i) => i + 1));
+        // return (Array.from({ length: Object.keys(this.exam_submission).length }, (_, i) => i + 1));
+        var num_list = [];
+        for (let num of Object.keys(this.exam_dump)) {
+            num_list.push(+num);
+        }
+        return (num_list);
     }
 
     toggle_flag() {
@@ -1070,9 +1094,10 @@ export class TemplateExamComponent implements OnInit {
             this.randomize_problems();
         }
         else {
-            for (let i = 1; i <= this.exam_length; i++) {
-                this.exam_dump[i] = this.ordered_dump[i];
+            for (let i = 0; i < this.exam_length; i++) {
+                this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
             }
+            console.log(this.exam_dump);
             for (const [num, val] of Object.entries(this.exam_dump)) {
                 this.exam_key.push([]);
                 if (Object.keys(val.AnswerChoices).length == 0) {
@@ -1127,8 +1152,8 @@ export class TemplateExamComponent implements OnInit {
         }
         this.toggleExamTimer();
         this.toggleProblemTimer();
-        this.problem_number = 1;
-        this.max_problem_number = 1;
+        this.problem_number = +Object.keys(this.exam_dump)[0];;
+        this.max_problem_number = +Object.keys(this.exam_dump)[0];;
         this.attempt_path = [];
         this.attempt_response = [];
         this.attempt_explanation = [];
@@ -1674,8 +1699,75 @@ export class TemplateExamComponent implements OnInit {
                 this.db_updates = {};
             }
         }
-        this.problem_number += 1;
-        if (this.problem_number > this.exam_length) {
+        if (Object.keys(this.exam_dump).indexOf(""+this.problem_number) + 1 < this.exam_length) {
+            this.problem_number = +Object.keys(this.exam_dump)[Object.keys(this.exam_dump).indexOf(""+this.problem_number) + 1];
+            if (this.problem_number > this.max_problem_number) {
+                if (this.authService.userData) {
+                    if (this.authService.userData.role == 'Student') {
+                        this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = 'Viewed';
+                        this.authService.UpdateUserData(this.db_updates);
+                        this.db_updates = {};
+                    }
+                    else if (this.selected_student != '') {
+                        console.log(this.exam_submission[this.exam_dump[this.problem_number].Number].Number);
+                        this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = 'Viewed';
+                        this.authService.UpdateDatabase(this.db_updates);
+                        this.db_updates = {};
+                    }
+                }
+                this.max_problem_number = this.problem_number;
+                this.attempt_path = [];
+                this.attempt_response = [];
+                this.attempt_explanation = [];
+                this.problem_selection = [];
+                if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+                    this.problem_attempts = [0];
+                    this.attempt_path = [[]];
+                    this.attempt_response = [''];
+                    this.attempt_explanation = [[]];
+                    if (['MC', 'FR', 'LR'].includes(this.exam_dump[this.problem_number].Type)) {
+                        this.problem_selection = [['']];
+                    }
+                    else if (['MS', 'O'].includes(this.exam_dump[this.problem_number].Type)) {
+                        this.problem_selection = [[]];
+                    }
+                }
+                else {
+                    this.problem_attempts = [];
+                    for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+                        this.problem_attempts.push(0);
+                        this.attempt_path.push([]);
+                        this.attempt_response.push('');
+                        this.attempt_explanation.push([]);
+                        if (['MC', 'FR', 'LR'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                            this.problem_selection.push(['']);
+                        }
+                        else if (['MS', 'O'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                            this.problem_selection.push([]);
+                        }
+                    }
+                }
+                for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+                    setTimeout(() => {
+                        this.read_supp_json(supp);
+                    }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+                }
+            }
+            else if (this.problem_number <= this.max_problem_number) {
+                this.attempt_path = [this.exam_submission[this.problem_number].Path];
+                this.attempt_response = [''];
+                this.attempt_explanation = [this.exam_submission[this.problem_number].Rationale];
+                this.problem_selection = [this.exam_submission[this.problem_number].Choice];
+                this.problem_attempts = this.exam_submission[this.problem_number].Attempts;
+                for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+                    setTimeout(() => {
+                        this.read_supp_json(supp);
+                    }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+                }
+            }
+        }
+        else {
+            this.problem_number += 1;
             if (this.authService.userData) {
                 if (this.authService.userData.role == 'Student') {
                     this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
@@ -1688,70 +1780,6 @@ export class TemplateExamComponent implements OnInit {
             }
             this.toggleExamTimer();
             this.completeExam();
-        }
-        else if (this.problem_number > this.max_problem_number) {
-            if (this.authService.userData) {
-                if (this.authService.userData.role == 'Student') {
-                    this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = 'Viewed';
-                    this.authService.UpdateUserData(this.db_updates);
-                    this.db_updates = {};
-                }
-                else if (this.selected_student != '') {
-                    console.log(this.exam_submission[this.exam_dump[this.problem_number].Number].Number);
-                    this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = 'Viewed';
-                    this.authService.UpdateDatabase(this.db_updates);
-                    this.db_updates = {};
-                }
-            }
-            this.max_problem_number = this.problem_number;
-            this.attempt_path = [];
-            this.attempt_response = [];
-            this.attempt_explanation = [];
-            this.problem_selection = [];
-            if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
-                this.problem_attempts = [0];
-                this.attempt_path = [[]];
-                this.attempt_response = [''];
-                this.attempt_explanation = [[]];
-                if (['MC', 'FR', 'LR'].includes(this.exam_dump[this.problem_number].Type)) {
-                    this.problem_selection = [['']];
-                }
-                else if (['MS', 'O'].includes(this.exam_dump[this.problem_number].Type)) {
-                    this.problem_selection = [[]];
-                }
-            }
-            else {
-                this.problem_attempts = [];
-                for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
-                    this.problem_attempts.push(0);
-                    this.attempt_path.push([]);
-                    this.attempt_response.push('');
-                    this.attempt_explanation.push([]);
-                    if (['MC', 'FR', 'LR'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-                        this.problem_selection.push(['']);
-                    }
-                    else if (['MS', 'O'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-                        this.problem_selection.push([]);
-                    }
-                }
-            }
-            for (let supp of this.exam_dump[this.problem_number].SuppContent) {
-                setTimeout(() => {
-                    this.read_supp_json(supp);
-                }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
-            }
-        }
-        else if (this.problem_number <= this.max_problem_number) {
-            this.attempt_path = [this.exam_submission[this.problem_number].Path];
-            this.attempt_response = [''];
-            this.attempt_explanation = [this.exam_submission[this.problem_number].Rationale];
-            this.problem_selection = [this.exam_submission[this.problem_number].Choice];
-            this.problem_attempts = this.exam_submission[this.problem_number].Attempts;
-            for (let supp of this.exam_dump[this.problem_number].SuppContent) {
-                setTimeout(() => {
-                    this.read_supp_json(supp);
-                }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
-            }
         }
         // if (this.problem_number <= this.exam_length) {
         //     if (this.authService.userData) {
@@ -1940,26 +1968,26 @@ export class TemplateExamComponent implements OnInit {
     completeExam() {
         // retreive db sub/exam/problems if auth student, to calculate results & set db sub/exam/...
         console.log(this.exam_submission);
-        for (let i: number = 1; i <= this.exam_length; i++) {
-            this.exam_submission_list.push(this.exam_submission[i]);
-            if (this.exam_submission[i].Correct[0] != '✅') {
-                this.wrong_submission_list.push(this.exam_submission[i]);
+        for (let i: number = 0; i < this.exam_length; i++) {
+            this.exam_submission_list.push(this.exam_submission[+Object.keys(this.ordered_dump)[i]]);
+            if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0] != '✅') {
+                this.wrong_submission_list.push(this.exam_submission[+Object.keys(this.ordered_dump)[i]]);
             }
             else {
                 this.number_correct += 1;
             }
-            this.total_seconds += this.exam_submission[i].Seconds;
+            this.total_seconds += this.exam_submission[+Object.keys(this.ordered_dump)[i]].Seconds;
         }
         this.et_counter = this.total_seconds;
         this.et_minutes = Math.floor(this.total_seconds / 60);
-        this.correct_percent = Math.round(this.number_correct / (this.problem_number - 1) * 100);
+        this.correct_percent = Math.round(this.number_correct / (this.exam_length) * 100);
         console.log(this.topic_breakdown);
         for (let i: number = 0; i < this.exam_length; i++) {
             for (let num: number = 0; num < this.exam_submission_list[i].Topics.length; num++) {
                 if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[num])) {
                     this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Total += 1;
                     this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Seconds += this.exam_submission_list[i].Seconds;
-                    if (this.exam_submission[i+1].Correct[0] == '✅') {
+                    if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0] == '✅') {
                         this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Correct += 1;
                         if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs).includes(this.exam_submission_list[i].SubTopics[num])) {
                             this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Total += 1;
@@ -1983,7 +2011,7 @@ export class TemplateExamComponent implements OnInit {
                     }
                 }
                 else {
-                    if (this.exam_submission[i+1].Correct[0] == '✅') {
+                    if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0] == '✅') {
                         this.topic_breakdown[this.exam_submission_list[i].Topics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[num]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
                     }
                     else {
@@ -2323,9 +2351,10 @@ export class TemplateExamComponent implements OnInit {
         this.exam_type = this.exam_attribute_dump[this.key].ExamType;
         this.exam_length = this.exam_attribute_dump[this.key].NumQuestions;
         this.exam_directions = this.exam_attribute_dump[this.key].Directions;
-        for (let i: number = 1; i <= this.exam_length; i++) {
-            this.ordered_dump[i] = this.dump_dict[this.key][i];
-        }
+        // for (let i: number = 0; i < this.exam_length; i++) {
+        //     this.ordered_dump[+Object.keys(this.ordered_dump)[i]] = this.dump_dict[this.key][+Object.keys(this.ordered_dump)[i]];
+        // }
+        this.ordered_dump = this.dump_dict[this.key];
         for (let num of Object.keys(this.ordered_dump)) {
             this.exam_submission[+num] = {
                 'Number': +num,

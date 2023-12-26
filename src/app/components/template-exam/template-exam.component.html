@@ -1199,7 +1199,7 @@
       <div class="content" style="margin: auto; align-items: center">
         <h2 *ngIf="problem_number > 0" style="padding-bottom: 20px; color: darkslategrey"> {{exam_state}} {{exam_name}}
           {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
-        <div *ngIf="exam_length >= problem_number && problem_number > 0"  class="card card-medium"
+        <div *ngIf="order_numbers()[exam_length-1] >= problem_number && problem_number > 0"  class="card card-medium"
           style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
           <section (click)="expand_overview = !expand_overview" style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <div style="display: flex; flex-direction: row; align-items: center">
@@ -1210,13 +1210,13 @@
                         style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: darkslategrey; transform: rotate(-90deg)">
                 </div>
                 <div style="margin: auto; text-align: right">
-                  <h3 *ngIf="exam_length >= problem_number" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
+                  <h3 *ngIf="order_numbers()[exam_length-1] >= problem_number" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
                     Problem #{{problem_number}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
                 </div>
             </div>
           </section>
-          <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+(max_problem_number-1)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
-          <progress *ngIf="!expand_overview" value="{{max_problem_number-1}}" max="{{exam_length}}"
+          <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+(exam_dump | keys).indexOf(''+this.problem_number)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
+          <progress *ngIf="!expand_overview" value="{{(exam_dump | keys).indexOf(''+this.problem_number)}}" max="{{exam_length}}"
             style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           <h4 *ngIf="get_flag_count() != 0 && !expand_overview" style="margin-top: 5px; font-size: 17px; font-weight: 500"> <b style="font-size: 27px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); padding-right: 5px">&#9873;</b> <b>Flagged</b> Problems: <b>{{get_flag_count()}}</b> </h4>
@@ -1262,19 +1262,19 @@
             </label>
           </div>
         </div>
-        <h2 *ngIf="problem_number > exam_length"> With {{number_correct}} out of
+        <h2 *ngIf="problem_number > order_numbers()[exam_length-1]"> With {{number_correct}} out of
           {{exam_length}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
-        <h2 *ngIf="problem_number > exam_length && performance_level == 'Masters Grade Level Performance'"
+        <h2 *ngIf="problem_number > order_numbers()[exam_length-1] && performance_level == 'Masters Grade Level Performance'"
           style="color: green"> {{performance_level}} </h2>
-        <h2 *ngIf="problem_number > exam_length && performance_level == 'Approaches Grade Level Performance'"
+        <h2 *ngIf="problem_number > order_numbers()[exam_length-1] && performance_level == 'Approaches Grade Level Performance'"
           style="color: blue"> {{performance_level}} </h2>
-        <h2 *ngIf="problem_number > exam_length && performance_level == 'Meets Grade Level Performance'"
+        <h2 *ngIf="problem_number > order_numbers()[exam_length-1] && performance_level == 'Meets Grade Level Performance'"
           style="color: magenta"> {{performance_level}} </h2>
-        <h2 *ngIf="problem_number > exam_length && performance_level == 'Does Not Meet Grade Level Performance'"
+        <h2 *ngIf="problem_number > order_numbers()[exam_length-1] && performance_level == 'Does Not Meet Grade Level Performance'"
           style="color: red"> {{performance_level}} </h2>
-        <br *ngIf="problem_number > exam_length" />
-        <div *ngIf="problem_number > exam_length" style="width: 100%">
+        <br *ngIf="problem_number > order_numbers()[exam_length-1]" />
+        <div *ngIf="problem_number > order_numbers()[exam_length-1]" style="width: 100%">
           <!-- <div class="card card-small" style="height: auto; width: auto; max-width: 500px; padding: 10px; margin: auto">
                           <button *ngIf="sub_form == ''" (click)="sub_form = 'adult'" class="grade-button"> <b> Share Your Results With An Adult </b> </button>
                           <button *ngIf="sub_form == ''" (click)="sub_form = 'friend'" class="grade-button"> <b> Invite A Friend To Beat Your Results </b> </button>
@@ -1703,7 +1703,7 @@
     </div>
     <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%">
       <div *ngIf="problem_number == +prob.key" style="width: 100%">
-        <div *ngIf="selected_subtopic == '' && this.problem_number <= this.exam_length && this.problem_number > 0"
+        <div *ngIf="selected_subtopic == '' && (exam_dump | keys).indexOf(''+this.problem_number)  <= exam_length && problem_number > 0"
           class="card card-large"
           style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
           #problemCard>
