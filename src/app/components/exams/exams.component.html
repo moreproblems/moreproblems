@@ -517,16 +517,18 @@
           <img src="./assets/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px"> Take Exam! </b>
         </button>
-        <button *ngIf="online_set.includes(exam_id) && !['', 'Student'].includes(authService.userData.role) && this.screenWidth > this.mobileWidth" (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
-            style="margin: 10px 5px 5px; width: auto; height: auto">
-            <img src="./assets/icons/key.png" style="height: 25px">
-            <b style="margin-left: 10px"> Answer Key </b>
-        </button>
-        <button *ngIf="online_set.includes(exam_id) && !['', 'Student'].includes(authService.userData.role) && this.screenWidth <= this.mobileWidth" (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
-            style="margin: 10px 5px 5px; width: auto; height: auto">
-            <img src="./assets/icons/key.png" style="height: 25px">
-            <b style="margin-left: 10px"> Answers </b>
-        </button>
+        <div *ngIf="authService.userData as user">
+          <button *ngIf="online_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > this.mobileWidth" (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
+              style="margin: 10px 5px 5px; width: auto; height: auto">
+              <img src="./assets/icons/key.png" style="height: 25px">
+              <b style="margin-left: 10px"> Answer Key </b>
+          </button>
+          <button *ngIf="online_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= this.mobileWidth" (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
+              style="margin: 10px 5px 5px; width: auto; height: auto">
+              <img src="./assets/icons/key.png" style="height: 25px">
+              <b style="margin-left: 10px"> Answers </b>
+          </button>
+        </div>
       </section>
       <hr style="width: max(50%, 300px)">
       <section
