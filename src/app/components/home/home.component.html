@@ -1091,19 +1091,31 @@
       </section>
       <section
         style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+        <button *ngIf="authService.userData as user" (click)="toggle_favorite_exm()" class="grade-button"
+          style="margin: 10px 5px 5px; width: auto; height: auto">
+          <span *ngIf="!this.exam_fav"
+            style="font-size: 22px; font-weight: 2px; color: white; -webkit-text-stroke: 2px rgba(255, 217, 0)"> &starf;
+          </span>
+          <span *ngIf="this.exam_fav"
+            style="font-size: 22px; font-weight: 2px; color:rgba(255, 217, 0); -webkit-text-stroke: 2px rgba(255, 217, 0)">
+            &starf; </span>
+          <b *ngIf="!this.exam_fav" style="margin-left: 10px"> Favorite </b>
+          <b *ngIf="this.exam_fav" style="margin-left: 10px"> Favorited </b>
+        </button>
         <button *ngIf="online_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
-          style="margin: 10px 10px 5px 0; width: auto; height: auto; background-color: green">
+          style="margin: 10px 5px 5px; width: auto; height: auto; background-color: green">
           <img src="./assets/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px"> Take Exam! </b>
         </button>
-        <button *ngIf="authService.userData as user" (click)="toggle_favorite_exm()"
-          class="grade-button" style="margin: 10px 10px 5px 0; width: auto; height: auto">
-          <span *ngIf="!this.exam_fav"
-            style="font-size: 22px; font-weight: 2px; color: white; -webkit-text-stroke: 2px rgba(255, 217, 0)"> &starf; </span>
-          <span *ngIf="this.exam_fav"
-            style="font-size: 22px; font-weight: 2px; color:rgba(255, 217, 0); -webkit-text-stroke: 2px rgba(255, 217, 0)"> &starf; </span>
-          <b *ngIf="!this.exam_fav" style="margin-left: 10px"> Favorite </b>
-          <b *ngIf="this.exam_fav" style="margin-left: 10px"> Favorited </b>
+        <button *ngIf="online_set.includes(exam_id) && !['', 'Student'].includes(authService.userData.role) && this.screenWidth > this.mobileWidth" (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
+            style="margin: 10px 5px 5px; width: auto; height: auto">
+            <img src="./assets/icons/key.png" style="height: 25px">
+            <b style="margin-left: 10px"> Answer Key </b>
+        </button>
+        <button *ngIf="online_set.includes(exam_id) && !['', 'Student'].includes(authService.userData.role) && this.screenWidth <= this.mobileWidth" (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
+            style="margin: 10px 5px 5px; width: auto; height: auto">
+            <img src="./assets/icons/key.png" style="height: 25px">
+            <b style="margin-left: 10px"> Answers </b>
         </button>
       </section>
       <hr style="width: max(50%, 300px)">

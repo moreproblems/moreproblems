@@ -545,7 +545,7 @@ export class AuthService {
   }
 
   searchExamId(id: string) {
-    this.exam_result = {"downloads": 0};
+    // this.exam_result = {"downloads": 0};
     const db = getDatabase();
     const class_ref = ref(db, "exams/" + id);
     onValue(class_ref, (snapshot) => {
