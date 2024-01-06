@@ -820,8 +820,8 @@
       <h3 *ngIf="filtered_set.length == 0" style="color: red; text-align: center"> {{generate_message}} </h3>
       <br />
     </div>
-    <br *ngIf="grade_filters.length != 0 || subject_filters.length != 0" />
-    <div class="card card-large" *ngIf="grade_filters.length != 0 || subject_filters.length != 0"
+    <br *ngIf="(grade_filters.length != 0 || subject_filters.length != 0) && topics.sort().length > 0" />
+    <div class="card card-large" *ngIf="(grade_filters.length != 0 || subject_filters.length != 0) && topics.sort().length > 0"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br #chooseTopic />
       <h2 style="margin-bottom: 0px">Choose Your Topic(s)</h2>
@@ -1844,7 +1844,10 @@
                     <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block[1].slice(5)}}</h3>
                   </div>
                   <h3
-                    *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_dump[supp].LabelType == 'L' || supp_dump[supp].LabelType == 'N')"
+                    *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (supp_dump[supp].LabelType == 'N')"
+                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: 100%">{{block[1]}}</h3>
+                  <h3
+                    *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_dump[supp].LabelType == 'L')"
                     style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
                   <h3
                     *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] == '' && supp_dump[supp].LabelType == 'P'"

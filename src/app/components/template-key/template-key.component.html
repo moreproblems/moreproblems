@@ -1163,7 +1163,10 @@
                       <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block[1].slice(5)}}</h3>
                     </div>
                     <h3
-                      *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_dump[supp].LabelType == 'L' || supp_dump[supp].LabelType == 'N')"
+                      *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (supp_dump[supp].LabelType == 'N')"
+                      style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: 100%">{{block[1]}}</h3>
+                    <h3
+                      *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_dump[supp].LabelType == 'L')"
                       style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block[1]}}</h3>
                     <h3
                       *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] == '' && supp_dump[supp].LabelType == 'P'"
