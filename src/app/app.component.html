@@ -42,7 +42,7 @@
   }
 
   .toolbar {
-    position: sticky;
+    position: fixed;
     z-index: 999;
     top: 0;
     left: 0;
@@ -467,7 +467,7 @@ button.grade-button-l:hover {
       </div>
     </div>
   </div>
-  <hr *ngIf="this.menuOpen && this.screenWidth <= this.mobileWidth" style="width: 100%; border-width: 2px" >
+  <hr *ngIf="this.menuOpen && this.screenWidth <= this.mobileWidth" style="width: 100%; border-width: 2px; margin-top: 0px; margin-bottom: 1px" >
   <div *ngIf="this.menuOpen && this.screenWidth <= this.mobileWidth" style="width: 100%">
     <nav style="width: 100%; text-align: center; display: inline-flex; flex-wrap: wrap; height: fit-content; align-items: center; justify-content: center;">
       <!-- <a routerLink="/about" routerLinkActive="active" style="padding: 0 10px; font-size: 16px; text-align: center"> <p style="width: 100px; margin: 0; padding: 0">About Us</p></a>&nbsp;&nbsp;
@@ -499,7 +499,7 @@ button.grade-button-l:hover {
     </nav>
   </div>
 </div>
-<div class="content-box" role="menu" style="width: 100%; padding: 0px" [style.height.px]="screenHeight-this.navbar.offsetHeight">
+<div class="content-box" role="menu" style="width: 100%; padding: 0px" [style.height.px]="screenHeight-this.navbar.offsetHeight" [style.margin-top.px]="this.navbar.offsetHeight">
   <router-outlet style="width:100%; padding: Opx; margin: auto; height: 100%; align-items: center"></router-outlet>
 </div>
 
