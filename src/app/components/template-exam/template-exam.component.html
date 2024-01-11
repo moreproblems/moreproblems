@@ -608,8 +608,8 @@
                 </div>
             </div>
           </section>
-          <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Subtopic Progress: <b>{{""+(subtopic_problem_number-1)}}/{{""+subtopic_problem_count}}</b> </h4>
-          <progress value="{{subtopic_problem_number-1}}" max="{{subtopic_problem_count}}"
+          <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Subtopic Progress: <b>{{""+(subtopic_problem_number)}}/{{""+subtopic_problem_count}}</b> </h4>
+          <progress value="{{subtopic_problem_number}}" max="{{subtopic_problem_count}}"
             style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
         </div>
