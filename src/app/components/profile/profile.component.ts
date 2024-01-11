@@ -316,6 +316,7 @@ export class ProfileComponent implements OnInit {
   login_method: string = "";
   edit_p = false;
   edit_p_list: { [index: string]: any } = {};
+  edit_p_message: string = "";
   photo_upload = false;
   create_s: boolean = false;
   edit_s: boolean = false;
@@ -1568,14 +1569,20 @@ export class ProfileComponent implements OnInit {
   }
 
   toggle_edit_profile() {
-    this.edit_p_list = [];
-    this.photoURL = this.authService.userData.photoURL;
-    this.profileUploadURL = this.authService.pp_url;
-    setTimeout(() => {
+    if (this.edit_p && (this.authService.userData.role == '' || this.authService.userData.role == undefined)) {
+      this.edit_p_message = "Please choose your role before moving on.";
+    }
+    else {
+      this.edit_p_list = [];
       this.photoURL = this.authService.userData.photoURL;
       this.profileUploadURL = this.authService.pp_url;
-      this.edit_p = !this.edit_p;
-    }, 500);
+      setTimeout(() => {
+        this.photoURL = this.authService.userData.photoURL;
+        this.profileUploadURL = this.authService.pp_url;
+        this.edit_p_message = "";
+        this.edit_p = !this.edit_p;
+      }, 500);
+    }
   }
 
   toggle_create_student() {
@@ -1643,27 +1650,35 @@ export class ProfileComponent implements OnInit {
 
   update_profile() {
     if (Object.keys(this.edit_p_list).includes('role')) {
-      if (this.edit_p_list['role'] == 'Teacher') {
-        this.edit_p_list['classes'] = [''];
-        this.edit_p_list['students'] = [''];
-      }
-      else if (this.edit_p_list['role'] == 'Parent') {
-        this.edit_p_list['students'] = [''];
-      }
-      else if (this.edit_p_list['role'] == 'Student') {
-        this.edit_p_list['classes'] = [''];
-        this.edit_p_list['exams/history'] = { "test": { status: "", progress: 0} };
-        this.edit_p_list['problems/all'] = { "test": { status: ""} };
-        this.edit_p_list['problems/total'] = 0;
-        this.edit_p_list['problems/correct'] = 0;
-      }
+      this.authService.WriteUserData(this.authService.userData, this.edit_p_list['role']).then (() => {
+        this.authService.SetUserData(this.authService.userData);
+      });
+      // if (this.edit_p_list['role'] == 'Teacher') {
+      //   this.edit_p_list['classes'] = [''];
+      //   this.edit_p_list['students'] = [''];
+      // }
+      // else if (this.edit_p_list['role'] == 'Parent') {
+      //   this.edit_p_list['students'] = [''];
+      // }
+      // else if (this.edit_p_list['role'] == 'Student') {
+      //   this.edit_p_list['classes'] = [''];
+      //   this.edit_p_list['exams/history'] = { "test": { status: "", progress: 0} };
+      //   this.edit_p_list['problems/all'] = { "test": { status: ""} };
+      //   this.edit_p_list['problems/total'] = 0;
+      //   this.edit_p_list['problems/correct'] = 0;
+      // }
     }
-    this.authService.UpdateUserData(this.edit_p_list);
-    // this.user = this.authService.userData;
-    this.profileUploadURL = this.authService.pp_url;
-    setTimeout(() => {
-      this.profileUploadURL = this.authService.getProfilePic(this.authService.userData);
-    }, 500);
+    if (this.edit_p && (this.authService.userData.role == '' || this.authService.userData.role == undefined)) {
+      this.edit_p_message = "Please choose your role before moving on.";
+    }
+    else {
+      this.authService.UpdateUserData(this.edit_p_list);
+      // this.user = this.authService.userData;
+      this.profileUploadURL = this.authService.pp_url;
+      setTimeout(() => {
+        this.profileUploadURL = this.authService.getProfilePic(this.authService.userData);
+      }, 500);
+    }
   }
 
   upload_profile_pic(user: any, images: any) {
@@ -2435,6 +2450,9 @@ export class ProfileComponent implements OnInit {
         this.router.navigate(['login']);
       }
       else {
+        if (this.user == undefined && (this.authService.userData.role == '' || this.authService.userData.role == undefined)) {
+          this.toggle_edit_profile();
+        }
         if (this.authService.userData.role == 'Student') {
           this.complete_exam_count = 0;
           this.complete_exam_list = [];

@@ -1916,8 +1916,8 @@
                                 <br />
                                 <section
                                     style="margin: auto; height: auto; max-height: 150px; max-width: 450px; display: flex; justify-content: space-between; padding: 5px">
-                                    <h3> Your Role: </h3>
-                                    <select *ngIf="user.role != ''" value="{{user.role}}"
+                                    <h3> <b *ngIf="user.role == '' || user.role == undefined" style="color: red; font-size: 32px; font-weight: 1000">&ast;</b> Your Role: </h3>
+                                    <select *ngIf="user.role != '' && user.role != undefined" value="{{user.role}}"
                                         (change)="edit_profile('role', this.userRole.value)"
                                         style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                         disabled #userRole>
@@ -1925,7 +1925,7 @@
                                         <option value="Student">Student</option>
                                         <option value="Parent">Parent</option>
                                     </select>
-                                    <select *ngIf="user.role == ''" value="{{user.role}}"
+                                    <select *ngIf="user.role == '' || user.role == undefined" value="{{user.role}}"
                                         (change)="edit_profile('role', this.userRole.value)"
                                         style="margin: auto 10px auto 0; padding-left: 10px; width: 215px; height: 30px; font-size: 16px; font-weight: 400; text-align: left"
                                         #userRole>
@@ -2730,6 +2730,7 @@
                 </div>
             </div>
             <br *ngIf="edit_p || create_s || edit_s" />
+            <h3 *ngIf="edit_p && edit_p_message != ''" style="color: red; text-align: center; margin-bottom: 10px"> {{edit_p_message}} </h3>
             <section *ngIf="edit_p"
                 style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
                 <button *ngIf="authService.userData as user" (click)="update_profile(); toggle_edit_profile()"
