@@ -692,7 +692,7 @@
                                 <section style="width:fit-content">
                                     <div *ngFor="let block of supp_st_dump[supp].Content"
                                         style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
-                                        <h3
+                                        <h3 *ngIf="(supp_st_dump[supp].LabelType == 'L' || supp_st_dump[supp].LabelType == 'P') && block[0] != ''"
                                             style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
                                             {{block[0]}}</h3>
                                         <div *ngIf="block[1].endsWith('.json')"
@@ -730,10 +730,13 @@
                                                 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                                                 {{block[1].slice(5)}}</h3>
                                         </div>
-                                        <h3 *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (block[0] != '' || supp_st_dump[supp].LabelType == 'L')"
+                                        <h3
+                                          *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (supp_st_dump[supp].LabelType == 'N')"
+                                          style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: 100%">{{block[1]}}</h3>
+                                        <h3 *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] != '' && supp_st_dump[supp].LabelType != 'N'"
                                             style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
                                             {{block[1]}}</h3>
-                                        <h3 *ngIf="!block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] == '' && supp_st_dump[supp].LabelType == 'P'"
+                                        <h3 *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] == '' && supp_st_dump[supp].LabelType != 'N'"
                                             style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px); margin: 10px auto; text-align: center">
                                             <b>{{block[1]}}</b>
                                         </h3>
