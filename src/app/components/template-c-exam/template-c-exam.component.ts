@@ -346,7 +346,7 @@ export class TemplateCExamComponent implements OnInit {
     exam_type = "";
     exam_length = 0;
 
-    online_set = ['NY22G3M', 'NY22G3E', 'NY21G3M', 'NY21G3E', 'NY19G3M', 'NY19G3E', 'NY18G3M', 'NY18G3E', 'NY17G3M', 'NY17G3E', 'NY16G3M', 'NY16G3E', 'NY15G3M', 'NY15G3E', 'NY22G4M', 'NY22G4E', 'NY21G4M', 'NY21G4E', 'NY19G4M', 'NY19G4E', 'NY18G4M', 'NY18G4E', 'NY17G4M', 'NY17G4E', 'NY16G4M', 'NY16G4E', 'NY15G4M', 'NY15G4E', 'NY22G4S', 'NY21G4S', 'NY19G4S', 'NY18G4S', 'NY17G4S', 'NY16G4S', 'NY15G4S', 'NY22G5M', 'NY22G5E', 'NY21G5M', 'NY21G5E', 'NY19G5M', 'NY19G5E', 'NY18G5M', 'NY18G5E', 'NY17G5M', 'NY17G5E', 'NY16G5M', 'NY16G5E', 'NY15G5M', 'NY15G5E', 'NY22G6M', 'NY22G6E', 'NY21G6M', 'NY21G6E', 'NY19G6M', 'NY19G6E', 'NY18G6M', 'NY18G6E', 'NY17G6M', 'NY17G6E', 'NY16G6M', 'NY16G6E', 'NY15G6M', 'NY15G6E', 'NY22G7M', 'NY22G7E', 'NY21G7M', 'NY21G7E', 'NY19G7M', 'NY19G7E', 'NY18G7M', 'NY18G7E', 'NY17G7M', 'NY17G7E', 'NY16G7M', 'NY16G7E', 'NY15G7M', 'NY15G7E', 'NY22G8M', 'NY22G8E', 'NY21G8M', 'NY21G8E', 'NY19G8M', 'NY19G8E', 'NY18G8M', 'NY18G8E', 'NY17G8M', 'NY17G8E', 'NY16G8M', 'NY16G8E', 'NY15G8M', 'NY15G8E', 'NY22G8S', 'NY21G8S', 'NY19G8S', 'NY18G8S', 'NY17G8S', 'NY16G8S', 'NY15G8S', 'PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S',  'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH'];
+    online_set = ['NY22G3M', 'NY22G3E', 'NY21G3M', 'NY21G3E', 'NY19G3M', 'NY19G3E', 'NY18G3M', 'NY18G3E', 'NY17G3M', 'NY17G3E', 'NY16G3M', 'NY16G3E', 'NY15G3M', 'NY15G3E', 'NY22G4M', 'NY22G4E', 'NY21G4M', 'NY21G4E', 'NY19G4M', 'NY19G4E', 'NY18G4M', 'NY18G4E', 'NY17G4M', 'NY17G4E', 'NY16G4M', 'NY16G4E', 'NY15G4M', 'NY15G4E', 'NY22G4S', 'NY21G4S', 'NY19G4S', 'NY18G4S', 'NY17G4S', 'NY16G4S', 'NY15G4S', 'NY22G5M', 'NY22G5E', 'NY21G5M', 'NY21G5E', 'NY19G5M', 'NY19G5E', 'NY18G5M', 'NY18G5E', 'NY17G5M', 'NY17G5E', 'NY16G5M', 'NY16G5E', 'NY15G5M', 'NY15G5E', 'NY22G6M', 'NY22G6E', 'NY21G6M', 'NY21G6E', 'NY19G6M', 'NY19G6E', 'NY18G6M', 'NY18G6E', 'NY17G6M', 'NY17G6E', 'NY16G6M', 'NY16G6E', 'NY15G6M', 'NY15G6E', 'NY22G7M', 'NY22G7E', 'NY21G7M', 'NY21G7E', 'NY19G7M', 'NY19G7E', 'NY18G7M', 'NY18G7E', 'NY17G7M', 'NY17G7E', 'NY16G7M', 'NY16G7E', 'NY15G7M', 'NY15G7E', 'NY22G8M', 'NY22G8E', 'NY21G8M', 'NY21G8E', 'NY19G8M', 'NY19G8E', 'NY18G8M', 'NY18G8E', 'NY17G8M', 'NY17G8E', 'NY16G8M', 'NY16G8E', 'NY15G8M', 'NY15G8E', 'NY22G8S', 'NY21G8S', 'NY19G8S', 'NY18G8S', 'NY17G8S', 'NY16G8S', 'NY15G8S', 'PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S', 'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH'];
 
     exam_directions = "";
 
@@ -969,6 +969,19 @@ export class TemplateCExamComponent implements OnInit {
     db_updates: any = {};
     db_submission: any = {};
 
+    subject_labels: { [key: string]: string } = {
+      "Algebra I": "Algebra I",
+      "Biology": "Biology",
+      "English I": "English I",
+      "English II": "English II",
+      "English Language Arts": "Language Arts",
+      "English Reading": "Reading",
+      "Mathematics": "Math",
+      "Science": "Science",
+      "Social Studies": "Social Studies",
+      "U.S. History": "U.S. History",
+    };
+
     constructor(public authService: AuthService, public router: Router, private aRoute: ActivatedRoute, private afAuth: AngularFireAuth, private http: HttpClient) { }
 
     sub: any;
@@ -994,16 +1007,16 @@ export class TemplateCExamComponent implements OnInit {
     }
 
     read_supp_st_json(path: string) {
-      this.http.get("./assets/" + path).subscribe(res => {
-        console.log(res);
-        console.log(JSON.stringify(res));
-        this.supp_st_dump[path] = res;
-        for (let block of this.supp_st_dump[path].Content) {
-            if (block[1].endsWith('.json')) {
-                this.read_supp_st_json(block[1]);
+        this.http.get("./assets/" + path).subscribe(res => {
+            console.log(res);
+            console.log(JSON.stringify(res));
+            this.supp_st_dump[path] = res;
+            for (let block of this.supp_st_dump[path].Content) {
+                if (block[1].endsWith('.json')) {
+                    this.read_supp_st_json(block[1]);
+                }
             }
-        }
-      });
+        });
     }
 
     select_student(id: string) {
@@ -1044,7 +1057,7 @@ export class TemplateCExamComponent implements OnInit {
         console.log(this.problems_sequence);
         for (let i = 1; i <= this.exam_length; i++) {
             this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
-            this.random_list.push(''+this.problems_sequence[this.random_index]);
+            this.random_list.push('' + this.problems_sequence[this.random_index]);
             this.exam_dump[i] = this.ordered_dump[this.problems_sequence[this.random_index]];
             this.problems_sequence.splice(this.random_index, 1);
         }
@@ -1098,7 +1111,8 @@ export class TemplateCExamComponent implements OnInit {
                         if ((det as any).progress != 0) {
                             console.log(this.db_submission);
                             for (const [key2, det2] of Object.entries(this.db_submission)) {
-                                if (+key2 != 0) {[]
+                                if (+key2 != 0) {
+                                    []
                                     this.exam_submission[(det2 as any).Number] = (det2 as any);
                                 }
                             }
@@ -1112,7 +1126,7 @@ export class TemplateCExamComponent implements OnInit {
                             const remaining_length = this.problems_sequence.length;
                             for (let i = 1; i <= remaining_length; i++) {
                                 this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
-                                this.random_list.push(''+this.problems_sequence[this.random_index]);
+                                this.random_list.push('' + this.problems_sequence[this.random_index]);
                                 this.exam_dump[i + (det as any).progress] = this.ordered_dump[this.problems_sequence[this.random_index]];
                                 this.problems_sequence.splice(this.random_index, 1);
                             }
@@ -1190,7 +1204,7 @@ export class TemplateCExamComponent implements OnInit {
                             console.log(remaining_length);
                             for (let i = 1; i <= remaining_length; i++) {
                                 this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
-                                this.random_list.push(''+this.problems_sequence[this.random_index]);
+                                this.random_list.push('' + this.problems_sequence[this.random_index]);
                                 this.exam_dump[i + (det as any).progress] = this.ordered_dump[this.problems_sequence[this.random_index]];
                                 this.problems_sequence.splice(this.random_index, 1);
                             }
@@ -1243,7 +1257,7 @@ export class TemplateCExamComponent implements OnInit {
         for (let supp of this.exam_dump[this.problem_number].SuppContent) {
             setTimeout(() => {
                 this.read_supp_json(supp);
-            }, 100*(1+this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+            }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
         }
     }
 
@@ -1337,7 +1351,7 @@ export class TemplateCExamComponent implements OnInit {
         for (let supp of this.exam_dump[this.problem_number].SuppContent) {
             setTimeout(() => {
                 this.read_supp_json(supp);
-            }, 100*(1+this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+            }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
         }
 
     }
@@ -1624,7 +1638,7 @@ export class TemplateCExamComponent implements OnInit {
                         for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
                             if (choice == key.Choice) {
                                 this.confetti_light(this.subtopic_problem_attempts[part_num]);
-                                this.subtopic_attempt_explanation[part_num][0]= key.Key.Rationale;
+                                this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                                 if (this.subtopic_problem_attempts[part_num] == 1) {
                                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                                 }
@@ -1641,7 +1655,7 @@ export class TemplateCExamComponent implements OnInit {
                         for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
                             if (choice == key.Choice) {
                                 this.confetti_light(this.subtopic_problem_attempts[part_num]);
-                                this.subtopic_attempt_explanation[part_num][0]= key.Key.Rationale;
+                                this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                                 if (this.subtopic_problem_attempts[part_num] == 1) {
                                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                                 }
@@ -1893,7 +1907,7 @@ export class TemplateCExamComponent implements OnInit {
             for (let supp of this.exam_dump[this.problem_number].SuppContent) {
                 setTimeout(() => {
                     this.read_supp_json(supp);
-                }, 100*(1+this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+                }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
             }
         }
         else {
@@ -1956,9 +1970,9 @@ export class TemplateCExamComponent implements OnInit {
             }
             this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
             for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
-              setTimeout(() => {
-                this.read_supp_st_json(supp);
-              }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+                setTimeout(() => {
+                    this.read_supp_st_json(supp);
+                }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
             }
         }
     }
@@ -2185,15 +2199,17 @@ export class TemplateCExamComponent implements OnInit {
         this.subtopic_problem_count = 0;
         this.subtopic_search_dump = {};
         for (const [ex, dump] of Object.entries(this.dump_dict)) {
-          for (const [num, prob] of Object.entries(dump)) {
-            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-              if (prob.SubTopics.includes(subtopic)) {
-                this.subtopic_problem_count += 1;
-                this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-                this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + ''+this.subtopic_search_dump[this.subtopic_problem_count].Number;
-              }
+            for (const [num, prob] of Object.entries(dump)) {
+                if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                    if (prob.SubTopics.includes(subtopic)) {
+                        if (prob.Topics[prob.SubTopics.indexOf(subtopic)] == topic) {
+                            this.subtopic_problem_count += 1;
+                            this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                            this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                        }
+                    }
+                }
             }
-          }
         }
         this.selected_topic = topic;
         this.selected_subtopic = subtopic;
@@ -2233,31 +2249,31 @@ export class TemplateCExamComponent implements OnInit {
         this.standard_fav = false;
         this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
         for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
-          setTimeout(() => {
-            this.read_supp_st_json(supp);
-          }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+            setTimeout(() => {
+                this.read_supp_st_json(supp);
+            }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
         }
         for (let fav of this.authService.userData.standards.favorites) {
-          if (topic == fav[0] && subtopic == fav[1]) {
-            this.standard_fav = true;
-          }
+            if (topic == fav[0] && subtopic == fav[1]) {
+                this.standard_fav = true;
+            }
         }
     }
 
     fav_std_includes(topic: string, subtopic: string) {
-      this.favorite_std_set = [];
-      for (let std of this.authService.userData.standards.favorites) {
-        this.favorite_std_set.push(std as string[]);
-      }
-      this.includes_standard = false;
-      if (this.favorite_std_set.length != 0) {
-        for (const [key, std] of Object.entries(this.favorite_std_set)) {
-          if (std[0] == topic && std[1] == subtopic) {
-            this.includes_standard = true;
-          }
+        this.favorite_std_set = [];
+        for (let std of this.authService.userData.standards.favorites) {
+            this.favorite_std_set.push(std as string[]);
         }
-      }
-      return this.includes_standard;
+        this.includes_standard = false;
+        if (this.favorite_std_set.length != 0) {
+            for (const [key, std] of Object.entries(this.favorite_std_set)) {
+                if (std[0] == topic && std[1] == subtopic) {
+                    this.includes_standard = true;
+                }
+            }
+        }
+        return this.includes_standard;
     }
 
     toggleExamTimer() {

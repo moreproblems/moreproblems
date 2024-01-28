@@ -614,30 +614,54 @@
               style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
               #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           </div>
-          <hr *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0" style="width: max(50%, 250px); margin-top: 10px">
-          <h3 *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0"
-            style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
-          <section *ngIf="subtopic_search_dump[subtopic_problem_number].Topics.length > 0"
-            style="height: auto; width: 100%; display: flex; justify-content: center">
-            <div *ngFor="let prob of subtopic_search_dump | keyvalue"
-              style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
-              <div *ngIf="subtopic_problem_number == +prob.key">
-                <label *ngFor="let num of prob.value.SubTopics | keyvalue"
-                  (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
-                  style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
-                  <button class="topic-button"
-                    style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey">
-                    <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
-                    <span
-                      *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
-                      style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
-                      &starf;
-                    </span>
-                  </button>
-                </label>
-              </div>
+          <br />
+          <div class="card card-medium"
+            style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
+            <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
+            <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
+              <label class="switch" style="padding: 0 5px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+              </label>
+              <label class="switch" style="padding: 0 5px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
+              </label>
+              <label class="switch" style="padding: 0 5px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State}} </b> </button>
+              </label>
             </div>
-          </section>
+            <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
+              <label class="switch" style="padding: 0 2px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+              </label>
+              <label class="switch" style="padding: 0 2px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
+              </label>
+              <label class="switch" style="padding: 0 2px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State}} </b> </button>
+              </label>
+            </div>
+            <section *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12"
+              style="height: auto; width: 100%; display: flex; justify-content: center">
+              <div *ngFor="let prob of subtopic_search_dump | keyvalue"
+                style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
+                <div *ngIf="subtopic_problem_number == +prob.key">
+                  <label *ngFor="let num of prob.value.SubTopics | keyvalue"
+                    (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
+                    style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
+                    <button class="topic-button"
+                      style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey">
+                      <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
+                      <span
+                        *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
+                        style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
+                        &starf;
+                      </span>
+                    </button>
+                  </label>
+                </div>
+              </div>
+            </section>
+          </div>
           <br />
         </div>
       </div>

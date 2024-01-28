@@ -929,6 +929,19 @@ export class TemplateKeyComponent implements OnInit {
     subtopic_attempt_response: string[] = [];
     subtopic_attempt_explanation: string[][] = [];
 
+    subject_labels: { [key: string]: string } = {
+      "Algebra I": "Algebra I",
+      "Biology": "Biology",
+      "English I": "English I",
+      "English II": "English II",
+      "English Language Arts": "Language Arts",
+      "English Reading": "Reading",
+      "Mathematics": "Math",
+      "Science": "Science",
+      "Social Studies": "Social Studies",
+      "U.S. History": "U.S. History",
+    };
+
     constructor(public router: Router, private aRoute: ActivatedRoute, public authService: AuthService, private http: HttpClient) { }
 
     sub: any;
@@ -1654,9 +1667,11 @@ export class TemplateKeyComponent implements OnInit {
             for (const [num, prob] of Object.entries(dump)) {
                 if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
                     if (prob.SubTopics.includes(subtopic)) {
+                      if (prob.Topics[prob.SubTopics.indexOf(subtopic)] == topic) {
                         this.subtopic_problem_count += 1;
                         this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-                        this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + ''+this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                        this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                      }
                     }
                 }
             }

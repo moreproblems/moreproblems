@@ -1260,6 +1260,19 @@ export class HomeComponent implements OnInit {
   viewerWidth = Math.round(window.innerWidth * .99).toString() + "px";
   viewerHeight = Math.round(window.innerHeight * .95).toString() + "px";
 
+  subject_labels: { [key: string]: string } = {
+    "Algebra I": "Algebra I",
+    "Biology": "Biology",
+    "English I": "English I",
+    "English II": "English II",
+    "English Language Arts": "Language Arts",
+    "English Reading": "Reading",
+    "Mathematics": "Math",
+    "Science": "Science",
+    "Social Studies": "Social Studies",
+    "U.S. History": "U.S. History",
+  };
+
   constructor(public router: Router, private titleService: Title, private meta: Meta, public authService: AuthService, private http: HttpClient) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
@@ -1370,9 +1383,11 @@ export class HomeComponent implements OnInit {
       for (const [num, prob] of Object.entries(dump)) {
         if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
           if (prob.SubTopics.includes(subtopic)) {
-            this.subtopic_problem_count += 1;
-            this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-            this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + ''+this.subtopic_search_dump[this.subtopic_problem_count].Number;
+            if (prob.Topics[prob.SubTopics.indexOf(subtopic)] == topic) {
+              this.subtopic_problem_count += 1;
+              this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+              this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+            }
           }
         }
       }
