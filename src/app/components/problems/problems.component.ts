@@ -308,7 +308,9 @@ export class ProblemsComponent implements OnInit {
 
   expand_filters = true;
   topics: string[] = [];
-  topics_count: { [key: string]: number }
+  subtopics: string[] = [];
+  topics_count: { [key: string]: number } = {};
+  subtopics_count: { [key: string]: number } = {};
   state_filters: string[] = [];
   grade_filters: string[] = [];
   subject_filters: string[] = [];
@@ -2403,5 +2405,33 @@ export class ProblemsComponent implements OnInit {
         this.favorite_std_set.push(std as string[]);
       }
     }
+    // // Just to de-dupe all the subtopic labels
+    // for (let exam of this.online_set) {
+    //   if (!this.exam_attribute_dump[exam].HideTopics) {
+    //     for (const [key, val] of Object.entries(this.dump_dict[exam])) {
+    //       if (typeof val.SubTopics != 'undefined') {
+    //         for (let subtop of val.SubTopics) {
+    //           if (!this.subtopics.includes(subtop)) {
+    //             this.subtopics.push(subtop);
+    //           }
+    //           if (!Object.keys(this.subtopics_count).includes(subtop)) {
+    //             this.subtopics_count[subtop] = 1;
+    //           }
+    //           else {
+    //             this.subtopics_count[subtop] += 1;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // const subtopics_array = Object.keys(this.subtopics_count).map(sub => [sub, this.subtopics_count[sub]] as [string, number]);
+    // subtopics_array.sort((a, b) => b[1] - a[1])
+    // const sorted_subtopics_count: { [key: string]: number } = {};
+    // subtopics_array.forEach(([sub, count]) => {
+    //   sorted_subtopics_count[sub] = count;
+    // });
+    // console.log(sorted_subtopics_count);
+    // console.log(this.subtopics.sort());
   }
 }
