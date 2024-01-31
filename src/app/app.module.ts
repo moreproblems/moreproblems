@@ -58,6 +58,7 @@ import { TemplateClassComponent } from './components/template-class/template-cla
 import { TemplateCExamComponent } from './components/template-c-exam/template-c-exam.component';
 import { TemplateExamComponent } from './components/template-exam/template-exam.component';
 import { TemplateKeyComponent } from './components/template-key/template-key.component';
+import { TemplateStandardsComponent } from './components/template-standards/template-standards.component';
 import { TestExamComponent } from './components/test-exam/test-exam.component';
 
 // const firebaseUiAuthConfig: firebaseui.auth.Config = {
@@ -111,6 +112,7 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
     TemplateExamComponent,
     TemplateCExamComponent,
     TemplateKeyComponent,
+    TemplateStandardsComponent,
     TestExamComponent
 
   ],

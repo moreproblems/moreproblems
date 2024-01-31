@@ -13,6 +13,7 @@ import { TemplateClassComponent } from './components/template-class/template-cla
 import { TemplateExamComponent } from './components/template-exam/template-exam.component';
 import { TemplateCExamComponent } from './components/template-c-exam/template-c-exam.component';
 import { TemplateKeyComponent } from './components/template-key/template-key.component';
+import { TemplateStandardsComponent } from './components/template-standards/template-standards.component';
 import { TestExamComponent } from './components/test-exam/test-exam.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { KMStandardsComponent } from './components/KM-standards/KM-standards.component';
@@ -57,31 +58,32 @@ const routes: Routes = [
   { path: 'exam/:examKey', component: TemplateExamComponent },
   { path: 'exam/:examKey/key', component: TemplateKeyComponent },
   { path: 'exam/:examKey/:classKey', component: TemplateCExamComponent },
-  { path: 'standards/K-Math', component: KMStandardsComponent },
-  { path: 'standards/K-English', component: KEStandardsComponent },
-  { path: 'standards/G1-Math', component: G1MStandardsComponent },
-  { path: 'standards/G1-English', component: G1EStandardsComponent },
-  { path: 'standards/G2-Math', component: G2MStandardsComponent },
-  { path: 'standards/G2-English', component: G2EStandardsComponent },
-  { path: 'standards/G3-Math', component: G3MStandardsComponent },
-  { path: 'standards/G3-English', component: G3EStandardsComponent },
-  { path: 'standards/G4-Math', component: G4MStandardsComponent },
-  { path: 'standards/G4-English', component: G4EStandardsComponent },
-  { path: 'standards/G5-Math', component: G5MStandardsComponent },
-  { path: 'standards/G5-English', component: G5EStandardsComponent },
-  { path: 'standards/G6-Math', component: G6MStandardsComponent },
-  { path: 'standards/G6-English', component: G6EStandardsComponent },
-  { path: 'standards/G7-Math', component: G7MStandardsComponent },
-  { path: 'standards/G7-English', component: G7EStandardsComponent },
-  { path: 'standards/G8-Math', component: G8MStandardsComponent },
-  { path: 'standards/G8-English', component: G8EStandardsComponent },
-  { path: 'standards/HS1-English', component: HS1EStandardsComponent },
-  { path: 'standards/HS2-English', component: HS2EStandardsComponent },
-  { path: 'standards/HS-Math-Number-Quantity', component: HSMNQStandardsComponent },
-  { path: 'standards/HS-Math-Algebra', component: HSMAStandardsComponent },
-  { path: 'standards/HS-Math-Functions', component: HSMFStandardsComponent },
-  { path: 'standards/HS-Math-Geometry', component: HSMGStandardsComponent },
-  { path: 'standards/HS-Math-Statistics-Probability', component: HSMSPStandardsComponent }
+  { path: 'standards/:subjectKey', component: TemplateStandardsComponent }
+  // { path: 'standards/K-Math', component: KMStandardsComponent },
+  // { path: 'standards/K-English', component: KEStandardsComponent },
+  // { path: 'standards/G1-Math', component: G1MStandardsComponent },
+  // { path: 'standards/G1-English', component: G1EStandardsComponent },
+  // { path: 'standards/G2-Math', component: G2MStandardsComponent },
+  // { path: 'standards/G2-English', component: G2EStandardsComponent },
+  // { path: 'standards/G3-Math', component: G3MStandardsComponent },
+  // { path: 'standards/G3-English', component: G3EStandardsComponent },
+  // { path: 'standards/G4-Math', component: G4MStandardsComponent },
+  // { path: 'standards/G4-English', component: G4EStandardsComponent },
+  // { path: 'standards/G5-Math', component: G5MStandardsComponent },
+  // { path: 'standards/G5-English', component: G5EStandardsComponent },
+  // { path: 'standards/G6-Math', component: G6MStandardsComponent },
+  // { path: 'standards/G6-English', component: G6EStandardsComponent },
+  // { path: 'standards/G7-Math', component: G7MStandardsComponent },
+  // { path: 'standards/G7-English', component: G7EStandardsComponent },
+  // { path: 'standards/G8-Math', component: G8MStandardsComponent },
+  // { path: 'standards/G8-English', component: G8EStandardsComponent },
+  // { path: 'standards/HS1-English', component: HS1EStandardsComponent },
+  // { path: 'standards/HS2-English', component: HS2EStandardsComponent },
+  // { path: 'standards/HS-Math-Number-Quantity', component: HSMNQStandardsComponent },
+  // { path: 'standards/HS-Math-Algebra', component: HSMAStandardsComponent },
+  // { path: 'standards/HS-Math-Functions', component: HSMFStandardsComponent },
+  // { path: 'standards/HS-Math-Geometry', component: HSMGStandardsComponent },
+  // { path: 'standards/HS-Math-Statistics-Probability', component: HSMSPStandardsComponent }
 ];
 
 @NgModule({
