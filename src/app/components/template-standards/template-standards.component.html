@@ -481,9 +481,16 @@
     <div class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1350px, 95%); display: flex; flex-direction: column">
       <br />
-      <h2 style="text-align: center; margin-bottom: 10px"> {{standards_dump.Title}} </h2>
-      <br />
-      <div class="card-container" style="width: 100%">
+      <h2 *ngIf="!toggle_goals" style="text-align: center; margin-bottom: 10px"> {{standards_dump.Title}} | Standards </h2>
+      <h2 *ngIf="toggle_goals" style="text-align: center; margin-bottom: 10px"> {{standards_dump.Title}} | Learning Goals </h2>
+      <a *ngIf="!toggle_goals && standards_dump.Goals.length > 0" (click)="toggle_goals = true" routerLinkActive="active"
+        style="font-size: 18px; font-weight: 600; padding-left: 10px"> View <b>learning goals</b> for this subject </a>
+      <a *ngIf="toggle_goals && standards_dump.Standards.length > 0" (click)="toggle_goals = false" routerLinkActive="active"
+        style="font-size: 18px; font-weight: 600; padding-left: 10px"> View <b>standards</b> for this subject </a>
+      <br *ngIf="standards_dump.Goals.length > 0 && standards_dump.Standards.length > 0" />
+      <h4 *ngIf="toggle_goals" style="font-size: 18px; font-weight: 500"> {{standards_dump.Overview}} </h4>
+      <br *ngIf="standards_dump.Overview != '' && toggle_goals" />
+      <div *ngIf="!toggle_goals" class="card-container" style="width: 100%">
         <div *ngFor="let domain of standards_dump.Standards" class="card card-medium"
           (click)="toggle_domain(domain.Key)" style="width: 95%; text-align: center; flex-direction: column">
           <div style="display: flex; flex-direction: row; align-items: center">
@@ -511,6 +518,25 @@
                 </ul>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="toggle_goals" class="card-container" style="width: 100%">
+        <div *ngFor="let goal of standards_dump.Goals" class="card card-medium"
+          (click)="toggle_goal(goal[0])" style="width: 95%; text-align: center; flex-direction: column">
+          <div style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 10px">
+              <img *ngIf="goal_state[goal[0]]" src="./assets/icons/caret.png"
+                style="padding: 5px 0 0; width: 25px; height: 25px">
+              <img *ngIf="!goal_state[goal[0]]" src="./assets/icons/caret.png"
+                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+            </div>
+            <div style="margin: 0 10px; text-align: left">
+              <h4 style="font-size: 18px; font-weight: 600"> {{goal[0]}} </h4>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: row; text-align: left">
+            <p *ngIf="goal_state[goal[0]]" style="font-size: 15px; margin-top: 20px; white-space: pre-wrap">{{goal[1]}}</p>
           </div>
         </div>
       </div>

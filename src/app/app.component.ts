@@ -18,6 +18,7 @@ export class AppComponent implements OnInit{
   // public toolbarHeight = this.navbar.nativeElement.offsetWidth;
   public mobileWidth = 1000;
   public menuOpen = true;
+  public menuSet = false;
 
   profileUploadURL: any = null;
   user_data: any = {};
@@ -28,16 +29,19 @@ export class AppComponent implements OnInit{
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
     // this.toolbarHeight = this.navbar.nativElement.offsetWidth;
-    if (this.screenWidth > this.mobileWidth) {
-      this.menuOpen = false;
-    }
-    if (this.screenWidth <= this.mobileWidth) {
-      this.menuOpen = true;
+    if (!this.menuSet) {
+      if (this.screenWidth > this.mobileWidth) {
+        this.menuOpen = false;
+      }
+      if (this.screenWidth <= this.mobileWidth) {
+        this.menuOpen = true;
+      }
     }
   }
 
   menu_toggle() {
     this.menuOpen = !this.menuOpen;
+    this.menuSet = true;
   }
 
   scroll(el: HTMLElement) {

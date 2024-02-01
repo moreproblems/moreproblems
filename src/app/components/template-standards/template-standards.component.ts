@@ -27,8 +27,8 @@ import * as HSE2Standards from "src/assets/standards/CC/HS-E2.json";
 import * as HSMAStandards from "src/assets/standards/CC/HS-M-A.json";
 import * as HSMFStandards from "src/assets/standards/CC/HS-M-F.json";
 import * as HSMGStandards from "src/assets/standards/CC/HS-M-G.json";
-import * as HSMNStandards from "src/assets/standards/CC/HS-M-N.json";
 import * as HSMMStandards from "src/assets/standards/CC/HS-M-M.json";
+import * as HSMNStandards from "src/assets/standards/CC/HS-M-N.json";
 import * as HSMSStandards from "src/assets/standards/CC/HS-M-S.json";
 
 // function syncReadFile(filename: string) {
@@ -53,35 +53,35 @@ export class TemplateStandardsComponent implements OnInit {
   menuOpen = false;
 
   key: string = "";
-  online_subjects: string[] = ["KE", "KM", "G1E", "G1M", "G2E", "G2M", "G3E", "G3M", "G4E", "G4M", "G5E", "G5M", "G6E", "G6M", "G7E", "G7M", "G8E", "G8M", "HSE1", "HSE2", "HSM-A", "HSM-F", "HSM-G", "HSM-N", "HSM-S"];
+  online_subjects: string[] = ["KE", "KM", "G1E", "G1M", "G2E", "G2M", "G3E", "G3M", "G4E", "G4M", "G5E", "G5M", "G6E", "G6M", "G7E", "G7M", "G8E", "G8M", "HSE1", "HSE2", "HSM-A", "HSM-F", "HSM-G", "HSM-M", "HSM-N", "HSM-S"];
 
-  KE_standards_dump: any = KEStandards;
-  KM_standards_dump: any = KMStandards;
-  G1E_standards_dump: any = G1EStandards;
-  G1M_standards_dump: any = G1MStandards;
-  G2E_standards_dump: any = G2EStandards;
-  G2M_standards_dump: any = G2MStandards;
-  G3E_standards_dump: any = G3EStandards;
-  G3M_standards_dump: any = G3MStandards;
-  G4E_standards_dump: any = G4EStandards;
-  G4M_standards_dump: any = G4MStandards;
-  G5E_standards_dump: any = G5EStandards;
-  G5M_standards_dump: any = G5MStandards;
-  G6E_standards_dump: any = G6EStandards;
-  G6M_standards_dump: any = G6MStandards;
-  G7E_standards_dump: any = G7EStandards;
-  G7M_standards_dump: any = G7MStandards;
-  G8E_standards_dump: any = G8EStandards;
-  G8M_standards_dump: any = G8MStandards;
-  HSE1_standards_dump: any = HSE1Standards;
-  HSE2_standards_dump: any = HSE2Standards;
-  HSMA_standards_dump: any = HSMAStandards;
-  HSMF_standards_dump: any = HSMFStandards;
-  HSMG_standards_dump: any = HSMGStandards;
-  HSMM_standards_dump: any = HSMMStandards;
-  HSMN_standards_dump: any = HSMNStandards;
-  HSMS_standards_dump: any = HSMSStandards;
-  standards_dump: any = {};
+  KE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KEStandards;
+  KM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KMStandards;
+  G1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G1EStandards;
+  G1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G1MStandards;
+  G2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G2EStandards;
+  G2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G2MStandards;
+  G3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G3EStandards;
+  G3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G3MStandards;
+  G4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G4EStandards;
+  G4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G4MStandards;
+  G5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G5EStandards;
+  G5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G5MStandards;
+  G6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G6EStandards;
+  G6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G6MStandards;
+  G7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G7EStandards;
+  G7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G7MStandards;
+  G8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G8EStandards;
+  G8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G8MStandards;
+  HSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSE1Standards;
+  HSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSE2Standards;
+  HSMA_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMAStandards;
+  HSMF_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMFStandards;
+  HSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMGStandards;
+  HSMM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMMStandards;
+  HSMN_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMNStandards;
+  HSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMSStandards;
+  standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KEStandards;
 
   dump_dict: any = {
     "KE": this.KE_standards_dump,
@@ -107,12 +107,14 @@ export class TemplateStandardsComponent implements OnInit {
     "HSM-A": this.HSMA_standards_dump,
     "HSM-F": this.HSMF_standards_dump,
     "HSM-G": this.HSMG_standards_dump,
+    "HSM-M": this.HSMM_standards_dump,
     "HSM-N": this.HSMN_standards_dump,
     "HSM-S": this.HSMS_standards_dump,
   };
 
-
-  domain_state: {[key: string]: boolean} = {}
+  toggle_goals: boolean = false;
+  goal_state: {[key: string]: boolean} = {};
+  domain_state: {[key: string]: boolean} = {};
 
   constructor(public router: Router, private aRoute: ActivatedRoute, public authService: AuthService, private http: HttpClient) { }
 
@@ -129,6 +131,14 @@ export class TemplateStandardsComponent implements OnInit {
         this.domain_state[domain.Key] = true;
       }
     }
+    for (let goal of this.standards_dump.Goals) {
+      if (this.screenWidth <= this.mobileWidth) {
+        this.goal_state[goal[0]] = false;
+      }
+      else {
+        this.goal_state[goal[0]] = true;
+      }
+    }
   }
 
   // public onChange(file: File): void {
@@ -142,6 +152,10 @@ export class TemplateStandardsComponent implements OnInit {
 
   toggle_domain(dmn: string) {
     this.domain_state[dmn] = !this.domain_state[dmn];
+  }
+
+  toggle_goal(goal: string) {
+    this.goal_state[goal] = !this.goal_state[goal];
   }
 
   scroll(el: HTMLElement) {
@@ -177,12 +191,23 @@ export class TemplateStandardsComponent implements OnInit {
         }
     });
     this.standards_dump = this.dump_dict[this.key];
+    if (this.standards_dump.Standards.length == 0) {
+      this.toggle_goals = true;
+    }
     for (let domain of this.standards_dump.Standards) {
       if (this.screenWidth <= this.mobileWidth) {
         this.domain_state[domain.Key] = false;
       }
       else {
         this.domain_state[domain.Key] = true;
+      }
+    }
+    for (let goal of this.standards_dump.Goals) {
+      if (this.screenWidth <= this.mobileWidth) {
+        this.goal_state[goal[0]] = false;
+      }
+      else {
+        this.goal_state[goal[0]] = true;
       }
     }
   }
