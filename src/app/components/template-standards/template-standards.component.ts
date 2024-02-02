@@ -51,6 +51,7 @@ export class TemplateStandardsComponent implements OnInit {
   screenHeight = window.innerHeight;
   mobileWidth = 1000;
   menuOpen = false;
+  stateSet = false;
 
   key: string = "";
   online_subjects: string[] = ["KE", "KM", "G1E", "G1M", "G2E", "G2M", "G3E", "G3M", "G4E", "G4M", "G5E", "G5M", "G6E", "G6M", "G7E", "G7M", "G8E", "G8M", "HSE1", "HSE2", "HSM-A", "HSM-F", "HSM-G", "HSM-M", "HSM-N", "HSM-S"];
@@ -123,20 +124,22 @@ export class TemplateStandardsComponent implements OnInit {
   width_change2() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
-    for (let domain of this.standards_dump.Standards) {
-      if (this.screenWidth <= this.mobileWidth) {
-        this.domain_state[domain.Key] = false;
+    if (!this.stateSet) {
+      for (let domain of this.standards_dump.Standards) {
+        if (this.screenWidth <= this.mobileWidth) {
+          this.domain_state[domain.Key] = false;
+        }
+        else {
+          this.domain_state[domain.Key] = true;
+        }
       }
-      else {
-        this.domain_state[domain.Key] = true;
-      }
-    }
-    for (let goal of this.standards_dump.Goals) {
-      if (this.screenWidth <= this.mobileWidth) {
-        this.goal_state[goal[0]] = false;
-      }
-      else {
-        this.goal_state[goal[0]] = true;
+      for (let goal of this.standards_dump.Goals) {
+        if (this.screenWidth <= this.mobileWidth) {
+          this.goal_state[goal[0]] = false;
+        }
+        else {
+          this.goal_state[goal[0]] = true;
+        }
       }
     }
   }
@@ -152,10 +155,12 @@ export class TemplateStandardsComponent implements OnInit {
 
   toggle_domain(dmn: string) {
     this.domain_state[dmn] = !this.domain_state[dmn];
+    this.stateSet = true;
   }
 
   toggle_goal(goal: string) {
     this.goal_state[goal] = !this.goal_state[goal];
+    this.stateSet = true;
   }
 
   scroll(el: HTMLElement) {
