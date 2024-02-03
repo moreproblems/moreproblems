@@ -3,6 +3,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from "../../shared/services/auth.service";
+import { serverTimestamp } from "firebase/database";
 import printJS from 'print-js';
 import * as examMetadata from "src/assets/problems/exams.json";
 import * as PA22G3MProblems from "src/assets/problems/PA22G3M/PA22G3M-problems.json";
@@ -233,13 +234,19 @@ export class HomeComponent implements OnInit {
   selected_state = '';
   selected_grade = '';
 
+  assign_e = false;
+  all_students: string[] = [];
+  all_students_data: any = {};
+  my_students: string[] = [];
+  my_students_data: any = {};
+  new_assignments: string[] = [];
+  my_class_metadata: any[] = [];
+  class_data: any = {};
   student_list: string[] = [];
   student_metadata: any[] = [];
   my_student_metadata: any[] = [];
   student_data: any = {};
   class_list: string[] = [];
-  my_class_metadata: any[] = [];
-  class_data: any = {};
   complete_exam_count = 0;
   inprog_exam_count = 0;
 
@@ -1282,6 +1289,14 @@ export class HomeComponent implements OnInit {
     this.screenHeight = window.innerHeight;
   }
 
+  can_assign_s(std: string) {
+    return (!Object.keys(this.all_students_data[std].exams.history).includes(this.exam_id));
+  }
+
+  can_assign_c(clss: string) {
+    return (!this.my_class_metadata[this.authService.userData.classes.indexOf(clss)-1].assignments.includes(this.exam_id));
+  }
+
   read_supp_json(path: string) {
       this.http.get("./assets/" + path).subscribe(res => {
           console.log(res);
@@ -1340,7 +1355,7 @@ export class HomeComponent implements OnInit {
         this.inprogress_set = [];
         this.inprogress_exams = {};
         for (const [key, det] of Object.entries(exam_history)) {
-          if ((det as any).status == "Started") {
+          if (["Started", "Assigned"].includes((det as any).status)) {
             this.inprogress_set.push(key);
             this.inprogress_exams[key] = { progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString()};
           }
@@ -1579,6 +1594,115 @@ export class HomeComponent implements OnInit {
     //   this.set_tab("information");
     //   this.set_tab("students");
     // }, 200);
+  }
+
+  toggle_assign_exam() {
+    if (!this.assign_e) {
+      this.all_students = [];
+      this.my_students = [];
+      const linked_students = this.authService.userData.students.slice(1);
+      for (const [key, stud] of Object.entries(linked_students)) {
+        setTimeout(() => {
+          const student_data = this.authService.searchUserId(stud as string);
+          this.all_students.push(stud as string);
+          if (student_data != null) {
+            this.all_students_data[(stud as string)] = (student_data as object);
+          }
+          if ((stud as string).includes(this.authService.userData.uid as string)) {
+            this.my_students.push(stud as string);
+            if (student_data != null) {
+              this.my_students_data[(stud as string)] = (student_data as object);
+            }
+          }
+        }, +key * 10);
+      }
+      setTimeout(() => {
+        this.all_students = [];
+        this.my_students = [];
+        const linked_students = this.authService.userData.students.slice(1);
+        for (const [key, stud] of Object.entries(linked_students)) {
+          setTimeout(() => {
+            const student_data = this.authService.searchUserId(stud as string);
+            this.all_students.push(stud as string);
+            if (student_data != null) {
+              this.all_students_data[(stud as string)] = (student_data as object);
+            }
+            if ((stud as string).includes(this.authService.userData.uid as string)) {
+              this.my_students.push(stud as string);
+              if (student_data != null) {
+                this.my_students_data[(stud as string)] = (student_data as object);
+              }
+            }
+          }, +key * 10);
+        }
+      }, 100);
+      this.my_class_metadata = [];
+      const linked_classes = this.authService.userData.classes.slice(1);
+      for (const [key, clss] of Object.entries(linked_classes)) {
+        setTimeout(() => {
+          console.log(clss);
+          this.class_data = this.authService.searchClassId(clss as string);
+          console.log(this.class_data);
+          this.my_class_metadata.push(this.class_data as object);
+        }, +key * 10);
+      }
+      setTimeout(() => {
+        this.my_class_metadata = [];
+        const linked_classes = this.authService.userData.classes.slice(1);
+        for (const [key, clss] of Object.entries(linked_classes)) {
+          setTimeout(() => {
+            console.log(clss);
+            this.class_data = this.authService.searchClassId(clss as string);
+            console.log(this.class_data);
+            this.my_class_metadata.push(this.class_data as object);
+          }, +key * 10);
+        }
+      }, 100);
+    }
+    this.assign_e = !this.assign_e;
+  }
+
+  toggle_new_assignment(target: string) {
+    if (!this.new_assignments.includes(target)) {
+      this.new_assignments.push(target);
+    }
+    else {
+      if (this.new_assignments.indexOf(target) !== -1) {
+        this.new_assignments.splice(this.new_assignments.indexOf(target), 1);
+      }
+      else {
+        this.new_assignments.pop()
+      }
+    }
+  }
+
+  add_assignments() {
+    for (let ass of this.new_assignments) {
+      if (ass.length < 10) {
+        const class_ass_ref = 'classes/' + ass + '/assignments';
+        var class_ass_set: any = [];
+        var edit_c_list: any = {};
+        for (let exam of this.my_class_metadata[this.authService.userData.classes.indexOf(ass)-1].assignments) {
+          class_ass_set.push(exam as string);
+        }
+        class_ass_set.push(this.exam_id);
+        edit_c_list[class_ass_ref] = class_ass_set;
+        this.authService.UpdateDatabase({ class_ass_ref: {} });
+        this.authService.UpdateDatabase(edit_c_list);
+      }
+      else {
+        var db_updates: any = {};
+        db_updates['users/' + ass + '/exams/history/' + this.exam_id] = { progress: 0, status: 'Assigned', shuffle: false, lasttimestamp: serverTimestamp() };
+        // this.db_updates['users/' + ass + '/problems/all/' + this.exam_id + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
+        db_updates['/submissions/exams/' + ass + '/' + this.exam_id + '/starttimestamp'] = serverTimestamp();
+        this.authService.UpdateDatabase(db_updates);
+      }
+    }
+  }
+
+  clear_assignments() {
+    this.new_assignments = [];
+    this.assign_e = false;
   }
 
   toggle_favorite_exm() {
@@ -2048,7 +2172,7 @@ export class HomeComponent implements OnInit {
         if (this.authService.userData.role == 'Student') {
           const exam_history = this.authService.userData.exams.history;
           for (const [key, det] of Object.entries(exam_history)) {
-            if ((det as any).status == "Started") {
+            if (["Started", "Assigned"].includes((det as any).status)) {
               this.inprogress_set.push(key);
               this.inprogress_exams[key] = { progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString()};
             }

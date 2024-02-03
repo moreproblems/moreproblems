@@ -3,6 +3,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from "../../shared/services/auth.service";
+import { serverTimestamp } from "firebase/database";
 import * as examMetadata from "src/assets/problems/exams.json";
 import printJS from 'print-js';
 
@@ -10,8 +11,8 @@ const confetti = require('canvas-confetti');
 
 const confettiCanvas = document.getElementById('confetticanvas');
 const confettiHandler = confetti.create(confettiCanvas, {
-    resize: true,
-    useWorker: true,
+  resize: true,
+  useWorker: true,
 });
 
 @Component({
@@ -40,13 +41,19 @@ export class TemplateClassComponent implements OnInit {
   edit_c = false;
   add_s = false;
   add_a = false;
+  assign_e = false;
   edit_c_list: { [index: string]: any } = {};
   new_assignments: string[] = [];
   new_students: string[] = [];
+  all_students: string[] = [];
+  all_students_data: any = {};
+  my_students: string[] = [];
+  my_students_data: any = {};
   class_uid: string = "";
   class_data: any = {};
   class_ass_set: string[] = []
   class_stud_set: string[] = [];
+  my_class_metadata: any[] = [];
   class_student_metadata: any[] = [];
   selected_assignment: string = "";
   user_data: any = {};
@@ -55,18 +62,16 @@ export class TemplateClassComponent implements OnInit {
   is_student = false;
   is_enrolled = false;
 
-  my_students: string[] = [];
-  my_students_data: any = {};
   // selected_students: string[] = [];
 
   assignments_title: string = "Assignments For This Class";
   sessions_title: string = "Sessions For This Class";
-  
+
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
-  online_set = ['PA22G3M', 'PA21G3M', 'PA19G3M', 'PA18G3M', 'PA16G3M', 'PA15G3M', 'PA22G4M', 'PA21G4M', 'PA19G4M', 'PA18G4M', 'PA16G4M', 'PA15G4M', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA22G5M', 'PA21G5M', 'PA19G5M', 'PA18G5M', 'PA16G5M', 'PA15G5M', 'PA22G6M', 'PA21G6M', 'PA19G6M', 'PA18G6M', 'PA16G6M', 'PA15G6M', 'PA22G7M', 'PA21G7M', 'PA19G7M', 'PA18G7M', 'PA16G7M', 'PA15G7M', 'PA22G8M', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA18G8M', 'PA16G8M', 'PA15G8M', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S', 'TX22G3M', 'TX21G3M', 'TX19G3M', 'TX18G3M', 'TX17G3M', 'TX22G4M', 'TX21G4M', 'TX19G4M', 'TX18G4M', 'TX17G4M', 'TX22G5M', 'TX21G5M', 'TX19G5M', 'TX18G5M', 'TX17G5M', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX21G6M', 'TX19G6M', 'TX18G6M', 'TX17G6M', 'TX22G7M', 'TX21G7M', 'TX19G7M', 'TX18G7M', 'TX17G7M', 'TX22G8M', 'TX21G8M', 'TX19G8M', 'TX18G8M', 'TX17G8M', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS'];
+  online_set = ['NY22G3M', 'NY22G3E', 'NY21G3M', 'NY21G3E', 'NY19G3M', 'NY19G3E', 'NY18G3M', 'NY18G3E', 'NY17G3M', 'NY17G3E', 'NY16G3M', 'NY16G3E', 'NY15G3M', 'NY15G3E', 'NY22G4M', 'NY22G4E', 'NY21G4M', 'NY21G4E', 'NY19G4M', 'NY19G4E', 'NY18G4M', 'NY18G4E', 'NY17G4M', 'NY17G4E', 'NY16G4M', 'NY16G4E', 'NY15G4M', 'NY15G4E', 'NY22G4S', 'NY21G4S', 'NY19G4S', 'NY18G4S', 'NY17G4S', 'NY16G4S', 'NY15G4S', 'NY22G5M', 'NY22G5E', 'NY21G5M', 'NY21G5E', 'NY19G5M', 'NY19G5E', 'NY18G5M', 'NY18G5E', 'NY17G5M', 'NY17G5E', 'NY16G5M', 'NY16G5E', 'NY15G5M', 'NY15G5E', 'NY22G6M', 'NY22G6E', 'NY21G6M', 'NY21G6E', 'NY19G6M', 'NY19G6E', 'NY18G6M', 'NY18G6E', 'NY17G6M', 'NY17G6E', 'NY16G6M', 'NY16G6E', 'NY15G6M', 'NY15G6E', 'NY22G7M', 'NY22G7E', 'NY21G7M', 'NY21G7E', 'NY19G7M', 'NY19G7E', 'NY18G7M', 'NY18G7E', 'NY17G7M', 'NY17G7E', 'NY16G7M', 'NY16G7E', 'NY15G7M', 'NY15G7E', 'NY22G8M', 'NY22G8E', 'NY21G8M', 'NY21G8E', 'NY19G8M', 'NY19G8E', 'NY18G8M', 'NY18G8E', 'NY17G8M', 'NY17G8E', 'NY16G8M', 'NY16G8E', 'NY15G8M', 'NY15G8E', 'NY22G8S', 'NY21G8S', 'NY19G8S', 'NY18G8S', 'NY17G8S', 'NY16G8S', 'NY15G8S', 'PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S', 'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH'];
   favorite_exm_set: string[] = [];
 
-  exam_names: {[key: string]: string} = {
+  exam_names: { [key: string]: string } = {
     "COG3M": "Colorado CMAS Grade 3 Math Practice Exam",
     "COG3E": "Colorado CMAS Grade 3 English Language Arts Practice Exam",
     "COG4M": "Colorado CMAS Grade 4 Math Practice Exam",
@@ -673,7 +678,8 @@ export class TemplateClassComponent implements OnInit {
   };
 
   constructor(public authService: AuthService, public router: Router, private aRoute: ActivatedRoute, private afAuth: AngularFireAuth) {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;}
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+  }
 
   sub: any;
 
@@ -686,7 +692,15 @@ export class TemplateClassComponent implements OnInit {
   width_change2() {
     this.screenWidth = window.innerWidth;
   }
-  
+
+  can_assign_s(std: string) {
+    return (!Object.keys(this.all_students_data[std].exams.history).includes(this.exam_id));
+  }
+
+  can_assign_c(clss: string) {
+    return (!this.my_class_metadata[this.authService.userData.classes.indexOf(clss)-1].assignments.includes(this.exam_id));
+  }
+
   load_data() {
     this.class_data = {};
     this.class_data = this.authService.searchClassId(this.class_uid);
@@ -715,6 +729,115 @@ export class TemplateClassComponent implements OnInit {
         }
       }
     }, 250);
+  }
+
+  toggle_assign_exam() {
+    if (!this.assign_e) {
+      this.all_students = [];
+      this.my_students = [];
+      const linked_students = this.authService.userData.students.slice(1);
+      for (const [key, stud] of Object.entries(linked_students)) {
+        setTimeout(() => {
+          const student_data = this.authService.searchUserId(stud as string);
+          this.all_students.push(stud as string);
+          if (student_data != null) {
+            this.all_students_data[(stud as string)] = (student_data as object);
+          }
+          if ((stud as string).includes(this.authService.userData.uid as string)) {
+            this.my_students.push(stud as string);
+            if (student_data != null) {
+              this.my_students_data[(stud as string)] = (student_data as object);
+            }
+          }
+        }, +key * 10);
+      }
+      setTimeout(() => {
+        this.all_students = [];
+        this.my_students = [];
+        const linked_students = this.authService.userData.students.slice(1);
+        for (const [key, stud] of Object.entries(linked_students)) {
+          setTimeout(() => {
+            const student_data = this.authService.searchUserId(stud as string);
+            this.all_students.push(stud as string);
+            if (student_data != null) {
+              this.all_students_data[(stud as string)] = (student_data as object);
+            }
+            if ((stud as string).includes(this.authService.userData.uid as string)) {
+              this.my_students.push(stud as string);
+              if (student_data != null) {
+                this.my_students_data[(stud as string)] = (student_data as object);
+              }
+            }
+          }, +key * 10);
+        }
+      }, 100);
+      this.my_class_metadata = [];
+      const linked_classes = this.authService.userData.classes.slice(1);
+      for (const [key, clss] of Object.entries(linked_classes)) {
+        setTimeout(() => {
+          console.log(clss);
+          this.class_data = this.authService.searchClassId(clss as string);
+          console.log(this.class_data);
+          this.my_class_metadata.push(this.class_data as object);
+        }, +key * 10);
+      }
+      setTimeout(() => {
+        this.my_class_metadata = [];
+        const linked_classes = this.authService.userData.classes.slice(1);
+        for (const [key, clss] of Object.entries(linked_classes)) {
+          setTimeout(() => {
+            console.log(clss);
+            this.class_data = this.authService.searchClassId(clss as string);
+            console.log(this.class_data);
+            this.my_class_metadata.push(this.class_data as object);
+          }, +key * 10);
+        }
+      }, 100);
+    }
+    this.assign_e = !this.assign_e;
+  }
+
+  toggle_new_assignment_e(target: string) {
+    if (!this.new_assignments.includes(target)) {
+      this.new_assignments.push(target);
+    }
+    else {
+      if (this.new_assignments.indexOf(target) !== -1) {
+        this.new_assignments.splice(this.new_assignments.indexOf(target), 1);
+      }
+      else {
+        this.new_assignments.pop()
+      }
+    }
+  }
+
+  add_assignments_e() {
+    for (let ass of this.new_assignments) {
+      if (ass.length < 10) {
+        const class_ass_ref = 'classes/' + ass + '/assignments';
+        var class_ass_set: any = [];
+        var edit_c_list: any = {};
+        for (let exam of this.my_class_metadata[this.authService.userData.classes.indexOf(ass)-1].assignments) {
+          class_ass_set.push(exam as string);
+        }
+        class_ass_set.push(this.exam_id);
+        edit_c_list[class_ass_ref] = class_ass_set;
+        this.authService.UpdateDatabase({ class_ass_ref: {} });
+        this.authService.UpdateDatabase(edit_c_list);
+      }
+      else {
+        var db_updates: any = {};
+        db_updates['users/' + ass + '/exams/history/' + this.exam_id] = { progress: 0, status: 'Assigned', shuffle: false, lasttimestamp: serverTimestamp() };
+        // this.db_updates['users/' + ass + '/problems/all/' + this.exam_id + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
+        db_updates['/submissions/exams/' + ass + '/' + this.exam_id + '/starttimestamp'] = serverTimestamp();
+        this.authService.UpdateDatabase(db_updates);
+      }
+    }
+  }
+
+  clear_assignments() {
+    this.new_assignments = [];
+    this.assign_e = false;
   }
 
   toggle_favorite_exm() {
@@ -795,20 +918,22 @@ export class TemplateClassComponent implements OnInit {
     this.class_data = (this.authService.searchClassId(this.class_uid) as any);
     if (!this.add_s) {
       this.my_students = [];
+      this.all_students = [];
       const linked_students = this.authService.userData.students.slice(1);
-      var count = 0;
       for (const [key, stud] of Object.entries(linked_students)) {
-          setTimeout(() => {
-              if ((stud as string).includes(this.authService.userData.uid as string)) {
-                  count += 1;
-                  this.my_students.push(stud as string);
-                  // setTimeout(() => {
-                  const student_data = this.authService.searchUserId(stud as string);
-                  if (student_data != null) {
-                      this.my_students_data[(stud as string)] = (student_data as object);
-                  }
-              }
-          }, +key * 10);
+        const student_data = this.authService.searchUserId(stud as string);
+        setTimeout(() => {
+          this.all_students.push(stud as string);
+          if (student_data != null) {
+            this.all_students_data[(stud as string)] = (student_data as object);
+          }
+          if ((stud as string).includes(this.authService.userData.uid as string)) {
+            this.my_students.push(stud as string);
+            if (student_data != null) {
+              this.my_students_data[(stud as string)] = (student_data as object);
+            }
+          }
+        }, +key * 10);
       }
     }
     this.add_s = !this.add_s;
@@ -816,17 +941,17 @@ export class TemplateClassComponent implements OnInit {
   }
 
   toggle_new_student(stud: string) {
-      if (!this.new_students.includes(stud)) {
-          this.new_students.push(stud);
+    if (!this.new_students.includes(stud)) {
+      this.new_students.push(stud);
+    }
+    else {
+      if (this.new_students.indexOf(stud) !== -1) {
+        this.new_students.splice(this.new_students.indexOf(stud), 1);
       }
       else {
-        if (this.new_students.indexOf(stud) !== -1) {
-          this.new_students.splice(this.new_students.indexOf(stud), 1);
-        }
-        else {
-          this.new_students.pop()
-        }
+        this.new_students.pop()
       }
+    }
   }
 
   add_students() {
@@ -852,7 +977,7 @@ export class TemplateClassComponent implements OnInit {
     // this.edit_c_list = [];
   }
 
-  toggle_new_assignment(ass: string) {
+  toggle_new_assignment_c(ass: string) {
     if (!this.new_assignments.includes(ass)) {
       this.new_assignments.push(ass);
     }
@@ -866,7 +991,7 @@ export class TemplateClassComponent implements OnInit {
     }
   }
 
-  add_assignments() {
+  add_assignments_c() {
     this.class_ass_set = [];
     this.edit_c_list = {};
     const class_ass_ref = 'classes/' + this.class_uid + '/assignments';
@@ -932,16 +1057,16 @@ export class TemplateClassComponent implements OnInit {
   }
 
   confetti_light() {
-      confettiHandler({
-          particleCount: 250,
-          startVelocity: 125,
-          scalar: 1.15,
-          ticks: 150,
-          decay: 0.8,
-          angle: 90,
-          spread: 60,
-          origin: { x: 0.5, y: 1 }
-      });
+    confettiHandler({
+      particleCount: 250,
+      startVelocity: 125,
+      scalar: 1.15,
+      ticks: 150,
+      decay: 0.8,
+      angle: 90,
+      spread: 60,
+      origin: { x: 0.5, y: 1 }
+    });
   }
 
   scroll_top() {
@@ -981,7 +1106,7 @@ export class TemplateClassComponent implements OnInit {
       else {
         this.is_auth = true;
         this.user_data = this.authService.userData;
-        if (this.authService.userData.uid == this.class_data.teacher)  {
+        if (this.authService.userData.uid == this.class_data.teacher) {
           this.assignments_title = "Assignments For Your Class";
           this.sessions_title = "Sessions For Your Class";
           for (const [key, stud] of Object.entries(this.class_data.students.slice(1))) {
@@ -1001,23 +1126,24 @@ export class TemplateClassComponent implements OnInit {
           }, 250);
         }
         if (this.authService.userData.role != 'Student') {
-            const linked_students = this.authService.userData.students.slice(1);
-            var count = 0;
-            for (const [key, stud] of Object.entries(linked_students)) {
-                setTimeout(() => {
-                    if ((stud as string).includes(this.authService.userData.uid as string)) {
-                        count += 1;
-                        this.my_students.push(stud as string);
-                        // setTimeout(() => {
-                        const student_data = this.authService.searchUserId(stud as string);
-                        if (student_data != null) {
-                            this.my_students_data[(stud as string)] = (student_data as object);
-                        }
-                    }
-                }, +key * 10);
-            }
+          const linked_students = this.authService.userData.students.slice(1);
+          for (const [key, stud] of Object.entries(linked_students)) {
+            const student_data = this.authService.searchUserId(stud as string);
+            setTimeout(() => {
+              this.all_students.push(stud as string);
+              if (student_data != null) {
+                this.all_students_data[(stud as string)] = (student_data as object);
+              }
+              if ((stud as string).includes(this.authService.userData.uid as string)) {
+                this.my_students.push(stud as string);
+                if (student_data != null) {
+                  this.my_students_data[(stud as string)] = (student_data as object);
+                }
+              }
+            }, +key * 10);
+          }
         }
-        if (this.authService.userData.role == 'Student')  {
+        if (this.authService.userData.role == 'Student') {
           this.is_student = true;
           if (this.class_data.students.includes(this.authService.userData.uid)) {
             this.is_enrolled = true;
