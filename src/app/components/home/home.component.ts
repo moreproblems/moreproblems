@@ -1357,7 +1357,7 @@ export class HomeComponent implements OnInit {
         for (const [key, det] of Object.entries(exam_history)) {
           if (["Started", "Assigned"].includes((det as any).status)) {
             this.inprogress_set.push(key);
-            this.inprogress_exams[key] = { progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString()};
+            this.inprogress_exams[key] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString()};
           }
         }
       }, 200);
@@ -2174,7 +2174,7 @@ export class HomeComponent implements OnInit {
           for (const [key, det] of Object.entries(exam_history)) {
             if (["Started", "Assigned"].includes((det as any).status)) {
               this.inprogress_set.push(key);
-              this.inprogress_exams[key] = { progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString()};
+              this.inprogress_exams[key] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString()};
             }
           }
           this.my_class_metadata = [];

@@ -1376,17 +1376,17 @@
           <br />
           <h2 style="line-height: 28px"> Assign To Your Student(s) </h2>
           <div class="card-container" style="align-items: center; padding-top: 0">
-            <h3 *ngIf="my_students.length < 1" style="font-size: 18px"> You haven't created any students under your account.
+            <h3 *ngIf="all_students.length < 1" style="font-size: 18px"> You haven't created any students under your account.
             </h3>
-            <div *ngFor="let std of my_students" (click)="toggle_new_assignment(std)"
+            <div *ngFor="let std of all_students" (click)="toggle_new_assignment(std)"
               class="card card-small" style="height: 75px; width: 170px; align-items: center">
               <div class="avatar-container"
                 style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 0">
-                <img *ngIf="!can_assign_s(std)" src="{{my_students_data[std].photoURL}}"
+                <img *ngIf="!can_assign_s(std)" src="{{all_students_data[std].photoURL}}"
                   class="select-avatar" style="width:100%; height: 100%; filter: grayscale(100%)">
-                <img *ngIf="can_assign_s(std) && !this.new_assignments.includes(std)" src="{{my_students_data[std].photoURL}}"
+                <img *ngIf="can_assign_s(std) && !this.new_assignments.includes(std)" src="{{all_students_data[std].photoURL}}"
                   class="select-avatar" style="width:100%; height: 100%">
-                <img *ngIf="can_assign_s(std) && this.new_assignments.includes(std)" src="{{my_students_data[std].photoURL}}"
+                <img *ngIf="can_assign_s(std) && this.new_assignments.includes(std)" src="{{all_students_data[std].photoURL}}"
                   class="select-avatar" style="width:100%; height: 100%; opacity: 0.3">
                 <div class="middle">
                   <div *ngIf="can_assign_s(std) && !this.new_assignments.includes(std)"
@@ -1397,7 +1397,7 @@
                   <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
                 </div>
               </div>
-              <h3 style="font-size: 18px; padding-left: 5px; width: 100px"> {{my_students_data[std].displayName}} </h3>
+              <h3 style="font-size: 18px; padding-left: 5px; width: 100px"> {{all_students_data[std].displayName}} </h3>
             </div>
           </div>
           <br />
