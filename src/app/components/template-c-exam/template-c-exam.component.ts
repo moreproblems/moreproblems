@@ -309,8 +309,9 @@ export class TemplateCExamComponent implements OnInit {
     screenWidth = window.innerWidth;
     mobileWidth = 1000;
 
-    exam_inprogress = false;
-    progress_number = 0;
+    exam_inprogress: boolean = false;
+    exam_status: string = "";
+    progress_number: number = 0;
     last_date: any;
     last_time: any;
 
@@ -1026,8 +1027,9 @@ export class TemplateCExamComponent implements OnInit {
             this.selected_student = id;
             const exam_history = this.my_students_data[id].exams.history;
             for (const [key, det] of Object.entries(exam_history)) {
-                if ((det as any).status == "Started" && key == this.eKey) {
+                if (["Started", "Assigned"].includes((det as any).status) && key == this.eKey) {
                     this.exam_inprogress = true;
+                    this.exam_status = (det as any).status;
                     this.progress_number = (det as any).progress + 1;
                     this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
                     this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
@@ -1097,7 +1099,7 @@ export class TemplateCExamComponent implements OnInit {
             if (this.authService.userData.role == 'Student') {
                 const exam_history = this.authService.userData.exams.history;
                 for (const [key, det] of Object.entries(exam_history)) {
-                    if ((det as any).status == "Started" && key == this.eKey) {
+                    if (["Started", "Assigned"].includes((det as any).status) && key == this.eKey) {
                         if ((det as any).progress != 0) {
                             this.db_submission = this.authService.getExamSubmission(this.eKey).problems;
                         }
@@ -1175,7 +1177,7 @@ export class TemplateCExamComponent implements OnInit {
             else if (this.selected_student != '') {
                 const exam_history = this.my_students_data[this.selected_student].exams.history;
                 for (const [key, det] of Object.entries(exam_history)) {
-                    if ((det as any).status == "Started" && key == this.eKey) {
+                    if (["Started", "Assigned"].includes((det as any).status) && key == this.eKey) {
                         if ((det as any).progress != 0) {
                             this.db_submission = this.authService.getStudExamSubmission(this.selected_student, this.eKey).problems;
                         }
@@ -2402,8 +2404,9 @@ export class TemplateCExamComponent implements OnInit {
                 if (this.authService.userData.role == 'Student') {
                     const exam_history = this.authService.userData.exams.history;
                     for (const [key, det] of Object.entries(exam_history)) {
-                        if ((det as any).status == "Started" && key == this.eKey) {
+                        if (["Started", "Assigned"].includes((det as any).status) && key == this.eKey) {
                             this.exam_inprogress = true;
+                            this.exam_status = (det as any).status;
                             this.progress_number = (det as any).progress + 1;
                             this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
                             this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()

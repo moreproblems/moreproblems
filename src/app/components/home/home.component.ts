@@ -1335,7 +1335,7 @@ export class HomeComponent implements OnInit {
       if ((det as any).status == "Completed") {
         this.complete_exam_count += 1;
       }
-      else if ((det as any).status == "Started") {
+      else if (["Started", "Assigned"].includes((det as any).status)) {
         this.inprog_exam_count += 1;
       }
     }
