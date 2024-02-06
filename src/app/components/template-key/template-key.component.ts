@@ -316,7 +316,6 @@ export class TemplateKeyComponent implements OnInit {
     pt_running: boolean = false;
 
     expand_filters = true;
-    expand_topic = false;
     expand_refsheet = false;
     expand_supp = true;
 
@@ -984,10 +983,6 @@ export class TemplateKeyComponent implements OnInit {
             }
         }
       });
-    }
-
-    toggle_topic() {
-        this.expand_topic = !this.expand_topic;
     }
 
     attempt_mc_problem(choice: string, part: string) {
@@ -1816,7 +1811,6 @@ export class TemplateKeyComponent implements OnInit {
         }
         this.favorite_set = [];
         if (this.authService.userData) {
-          // this.is_auth = true;
           this.authService.getProfilePic(this.authService.userData);
           this.user_data = this.authService.userData;
           for (let exm of this.authService.userData.exams.favorites.slice(1)) {

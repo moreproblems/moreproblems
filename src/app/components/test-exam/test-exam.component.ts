@@ -142,7 +142,6 @@ export class TestExamComponent implements OnInit {
     pt_running: boolean = false;
 
     expand_filters = true;
-    expand_topic = false;
     expand_refsheet = false;
     expand_supp = true;
 
@@ -441,10 +440,6 @@ export class TestExamComponent implements OnInit {
             }
         }
       });
-    }
-
-    toggle_topic() {
-        this.expand_topic = !this.expand_topic;
     }
 
     attempt_mc_problem(choice: string, part: string) {
