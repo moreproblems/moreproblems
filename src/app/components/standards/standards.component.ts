@@ -20,22 +20,27 @@ export class StandardsComponent implements OnInit{
 
   user_data: any = {};
 
+  selected_curriculum = 'CC';
   selected_grade = '';
   selected_subject = '';
   selected_category = '';
   subject_name = '';
 
-  domain_state: {[key: number]: boolean} = {
-    1: false,
-    2: false,
-    3: false,
-    4: false
-  }
+  domain_state: {[key: number]: boolean} = {};
   
   constructor(private router: Router, private titleService: Title, private meta: Meta, public authService: AuthService) { }
 
+  select_curriculum(curr: string) {
+    if (this.selected_curriculum == curr) {
+      this.selected_curriculum = '';
+    }
+    else {
+      this.selected_curriculum = curr;
+      
+    }
+  }
+
   select_grade(gr: string) {
-    this.domain_state = { 1: false, 2: false, 3: false, 4: false };
     this.selected_subject = '';
     this.selected_category = '';
     this.subject_name = '';

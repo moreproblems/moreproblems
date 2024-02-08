@@ -1113,8 +1113,8 @@
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1350px, 95%); display: flex; flex-direction: column">
         <br />
-        <h2 *ngIf="!toggle_goals" style="text-align: center; margin-bottom: 10px"> {{standards_dump.Title}} | Standards </h2>
-        <h2 *ngIf="toggle_goals" style="text-align: center; margin-bottom: 10px"> {{standards_dump.Title}} | Learning Goals </h2>
+        <h2 *ngIf="!toggle_goals" style="text-align: center; margin-bottom: 10px; font-weight: 800"> {{standards_dump.Title}} > <b style="font-weight: 600">Standards</b> </h2>
+        <h2 *ngIf="toggle_goals" style="text-align: center; margin-bottom: 10px; font-weight: 800"> {{standards_dump.Title}} > <b style="font-weight: 600">Learning Goals</b> </h2>
         <a *ngIf="!toggle_goals && standards_dump.Goals.length > 0" (click)="toggle_goals = true" routerLinkActive="active"
           style="font-size: 18px; font-weight: 600; padding-left: 10px"> View <b>learning goals</b> for this subject </a>
         <a *ngIf="toggle_goals && standards_dump.Standards.length > 0" (click)="toggle_goals = false" routerLinkActive="active"
@@ -1124,20 +1124,20 @@
         <br *ngIf="standards_dump.Overview != '' && toggle_goals" />
         <div *ngIf="!toggle_goals" class="card-container" style="width: 100%">
           <div *ngFor="let domain of standards_dump.Standards" class="card card-medium"
-            (click)="toggle_domain(domain.Key)" style="width: 95%; text-align: center; flex-direction: column">
+            (click)="toggle_domain(domain.Label)" style="width: 95%; text-align: center; flex-direction: column">
             <div style="display: flex; flex-direction: row; align-items: center">
               <div style="margin: 0 10px">
-                <img *ngIf="domain_state[domain.Key]" src="./assets/icons/caret.png"
+                <img *ngIf="domain_state[domain.Label]" src="./assets/icons/caret.png"
                   style="padding: 5px 0 0; width: 25px; height: 25px">
-                <img *ngIf="!domain_state[domain.Key]" src="./assets/icons/caret.png"
+                <img *ngIf="!domain_state[domain.Label]" src="./assets/icons/caret.png"
                   style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
               </div>
               <div style="margin: 0 10px; text-align: left">
-                <h4 style="font-size: 18px"> {{domain.Key}}: <b style="font-weight: 500">{{domain.Label}}</b> </h4>
+                <h4 style="font-size: 18px"> <b *ngIf="domain.Key != ''" style="font-weight: 900">{{domain.Key}}: </b> <b style="font-weight: 700">{{domain.Label}}</b> </h4>
               </div>
             </div>
             <div style="display: flex; flex-direction: row; text-align: left">
-              <ul *ngIf="domain_state[domain.Key]" style="font-size: 17px; line-height: 21px; padding-left: 17px">
+              <ul *ngIf="domain_state[domain.Label]" style="font-size: 17px; line-height: 21px; padding-left: 17px">
                 <li *ngFor="let cluster of domain.Subs" style="margin-top: 20px; margin-bottom: 8px"> <b>{{cluster.Key}}</b>:
                   <b *ngIf="cluster.NumProb == 0" style="font-weight: 500">{{cluster.Label}}</b>
                   <a *ngIf="cluster.NumProb > 0" (click)="selectSubTopic([domain.Label], cluster.Label)" style="font-weight: 500">{{cluster.Label}}</a> <b *ngIf="cluster.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{cluster.NumProb}}</i>)</b>

@@ -30,6 +30,33 @@ import * as HSMGStandards from "src/assets/standards/CC/HS-M-G.json";
 import * as HSMMStandards from "src/assets/standards/CC/HS-M-M.json";
 import * as HSMNStandards from "src/assets/standards/CC/HS-M-N.json";
 import * as HSMSStandards from "src/assets/standards/CC/HS-M-S.json";
+import * as TXKEStandards from "src/assets/standards/TX/K-E.json";
+import * as TXKMStandards from "src/assets/standards/TX/K-M.json";
+import * as TXG1EStandards from "src/assets/standards/TX/G1-E.json";
+import * as TXG1MStandards from "src/assets/standards/TX/G1-M.json";
+import * as TXG2EStandards from "src/assets/standards/TX/G2-E.json";
+import * as TXG2MStandards from "src/assets/standards/TX/G2-M.json";
+import * as TXG3EStandards from "src/assets/standards/TX/G3-E.json";
+import * as TXG3MStandards from "src/assets/standards/TX/G3-M.json";
+import * as TXG4EStandards from "src/assets/standards/TX/G4-E.json";
+import * as TXG4MStandards from "src/assets/standards/TX/G4-M.json";
+import * as TXG5EStandards from "src/assets/standards/TX/G5-E.json";
+import * as TXG5MStandards from "src/assets/standards/TX/G5-M.json";
+import * as TXG6EStandards from "src/assets/standards/TX/G6-E.json";
+import * as TXG6MStandards from "src/assets/standards/TX/G6-M.json";
+import * as TXG7EStandards from "src/assets/standards/TX/G7-E.json";
+import * as TXG7MStandards from "src/assets/standards/TX/G7-M.json";
+import * as TXG8EStandards from "src/assets/standards/TX/G8-E.json";
+import * as TXG8MStandards from "src/assets/standards/TX/G8-M.json";
+import * as TXHSE1Standards from "src/assets/standards/TX/HS-E1.json";
+import * as TXHSE2Standards from "src/assets/standards/TX/HS-E2.json";
+import * as TXHSE3Standards from "src/assets/standards/TX/HS-E3.json";
+import * as TXHSE4Standards from "src/assets/standards/TX/HS-E4.json";
+import * as TXHSMAStandards from "src/assets/standards/TX/HS-M-A.json";
+import * as TXHSMA2Standards from "src/assets/standards/TX/HS-M-A2.json";
+import * as TXHSMGStandards from "src/assets/standards/TX/HS-M-G.json";
+import * as TXHSMPStandards from "src/assets/standards/TX/HS-M-P.json";
+import * as TXHSMSStandards from "src/assets/standards/TX/HS-M-S.json";
 import * as examMetadata from "src/assets/problems/exams.json";
 import * as NY22G3MProblems from "src/assets/problems/NY22G3M/NY22G3M-problems.json";
 import * as NY22G3EProblems from "src/assets/problems/NY22G3E/NY22G3E-problems.json";
@@ -336,7 +363,7 @@ export class TemplateStandardsComponent implements OnInit {
     stateSet = false;
 
     key: string = "";
-    online_subjects: string[] = ["KE", "KM", "G1E", "G1M", "G2E", "G2M", "G3E", "G3M", "G4E", "G4M", "G5E", "G5M", "G6E", "G6M", "G7E", "G7M", "G8E", "G8M", "HSE1", "HSE2", "HSM-A", "HSM-F", "HSM-G", "HSM-M", "HSM-N", "HSM-S"];
+    online_subjects: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "KE-TX", "KM-TX", "G1E-TX", "G1M-TX", "G2E-TX", "G2M-TX", "G3E-TX", "G3M-TX", "G4E-TX", "G4M-TX", "G5E-TX", "G5M-TX", "G6E-TX", "G6M-TX", "G7E-TX", "G7M-TX", "G8E-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX"];
 
     KE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KEStandards;
     KM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KMStandards;
@@ -364,6 +391,33 @@ export class TemplateStandardsComponent implements OnInit {
     HSMM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMMStandards;
     HSMN_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMNStandards;
     HSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMSStandards;
+    TXKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXKEStandards;
+    TXKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXKMStandards;
+    TXG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG1EStandards;
+    TXG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG1MStandards;
+    TXG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG2EStandards;
+    TXG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG2MStandards;
+    TXG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG3EStandards;
+    TXG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG3MStandards;
+    TXG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG4EStandards;
+    TXG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG4MStandards;
+    TXG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG5EStandards;
+    TXG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG5MStandards;
+    TXG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG6EStandards;
+    TXG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG6MStandards;
+    TXG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG7EStandards;
+    TXG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG7MStandards;
+    TXG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG8EStandards;
+    TXG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG8MStandards;
+    TXHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE1Standards;
+    TXHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE2Standards;
+    TXHSE3_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE3Standards;
+    TXHSE4_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE4Standards;
+    TXHSMA_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMAStandards;
+    TXHSMA2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMA2Standards;
+    TXHSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMGStandards;
+    TXHSMP_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMPStandards;
+    TXHSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMSStandards;
     standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KEStandards;
 
     exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
@@ -929,32 +983,59 @@ export class TemplateStandardsComponent implements OnInit {
     };
 
     s_dump_dict: any = {
-        "KE": this.KE_standards_dump,
-        "KM": this.KM_standards_dump,
-        "G1E": this.G1E_standards_dump,
-        "G1M": this.G1M_standards_dump,
-        "G2E": this.G2E_standards_dump,
-        "G2M": this.G2M_standards_dump,
-        "G3E": this.G3E_standards_dump,
-        "G3M": this.G3M_standards_dump,
-        "G4E": this.G4E_standards_dump,
-        "G4M": this.G4M_standards_dump,
-        "G5E": this.G5E_standards_dump,
-        "G5M": this.G5M_standards_dump,
-        "G6E": this.G6E_standards_dump,
-        "G6M": this.G6M_standards_dump,
-        "G7E": this.G7E_standards_dump,
-        "G7M": this.G7M_standards_dump,
-        "G8E": this.G8E_standards_dump,
-        "G8M": this.G8M_standards_dump,
-        "HSE1": this.HSE2_standards_dump,
-        "HSE2": this.HSE2_standards_dump,
-        "HSM-A": this.HSMA_standards_dump,
-        "HSM-F": this.HSMF_standards_dump,
-        "HSM-G": this.HSMG_standards_dump,
-        "HSM-M": this.HSMM_standards_dump,
-        "HSM-N": this.HSMN_standards_dump,
-        "HSM-S": this.HSMS_standards_dump,
+        "KE-CC": this.KE_standards_dump,
+        "KM-CC": this.KM_standards_dump,
+        "G1E-CC": this.G1E_standards_dump,
+        "G1M-CC": this.G1M_standards_dump,
+        "G2E-CC": this.G2E_standards_dump,
+        "G2M-CC": this.G2M_standards_dump,
+        "G3E-CC": this.G3E_standards_dump,
+        "G3M-CC": this.G3M_standards_dump,
+        "G4E-CC": this.G4E_standards_dump,
+        "G4M-CC": this.G4M_standards_dump,
+        "G5E-CC": this.G5E_standards_dump,
+        "G5M-CC": this.G5M_standards_dump,
+        "G6E-CC": this.G6E_standards_dump,
+        "G6M-CC": this.G6M_standards_dump,
+        "G7E-CC": this.G7E_standards_dump,
+        "G7M-CC": this.G7M_standards_dump,
+        "G8E-CC": this.G8E_standards_dump,
+        "G8M-CC": this.G8M_standards_dump,
+        "HSE1-CC": this.HSE2_standards_dump,
+        "HSE2-CC": this.HSE2_standards_dump,
+        "HSMA-CC": this.HSMA_standards_dump,
+        "HSMF-CC": this.HSMF_standards_dump,
+        "HSMG-CC": this.HSMG_standards_dump,
+        "HSMM-CC": this.HSMM_standards_dump,
+        "HSMN-CC": this.HSMN_standards_dump,
+        "HSMS-CC": this.HSMS_standards_dump,
+        "KE-TX": this.TXKE_standards_dump,
+        "KM-TX": this.TXKM_standards_dump,
+        "G1E-TX": this.TXG1E_standards_dump,
+        "G1M-TX": this.TXG1M_standards_dump,
+        "G2E-TX": this.TXG2E_standards_dump,
+        "G2M-TX": this.TXG2M_standards_dump,
+        "G3E-TX": this.TXG3E_standards_dump,
+        "G3M-TX": this.TXG3M_standards_dump,
+        "G4E-TX": this.TXG4E_standards_dump,
+        "G4M-TX": this.TXG4M_standards_dump,
+        "G5E-TX": this.TXG5E_standards_dump,
+        "G5M-TX": this.TXG5M_standards_dump,
+        "G6E-TX": this.TXG6E_standards_dump,
+        "G6M-TX": this.TXG6M_standards_dump,
+        "G7E-TX": this.TXG7E_standards_dump,
+        "G7M-TX": this.TXG7M_standards_dump,
+        "G8E-TX": this.TXG8E_standards_dump,
+        "G8M-TX": this.TXG8M_standards_dump,
+        "HSE1-TX": this.TXHSE1_standards_dump,
+        "HSE2-TX": this.TXHSE2_standards_dump,
+        "HSE3-TX": this.TXHSE3_standards_dump,
+        "HSE4-TX": this.TXHSE4_standards_dump,
+        "HSMA-TX": this.TXHSMA_standards_dump,
+        "HSMA2-TX": this.TXHSMA2_standards_dump,
+        "HSMG-TX": this.TXHSMG_standards_dump,
+        "HSMP-TX": this.TXHSMP_standards_dump,
+        "HSMS-TX": this.TXHSMS_standards_dump
     };
 
     toggle_goals: boolean = false;
@@ -1018,10 +1099,10 @@ export class TemplateStandardsComponent implements OnInit {
         if (!this.stateSet) {
             for (let domain of this.standards_dump.Standards) {
                 if (this.screenWidth <= this.mobileWidth) {
-                    this.domain_state[domain.Key] = false;
+                    this.domain_state[domain.Label] = false;
                 }
                 else {
-                    this.domain_state[domain.Key] = true;
+                    this.domain_state[domain.Label] = true;
                 }
             }
             for (let goal of this.standards_dump.Goals) {
@@ -1573,10 +1654,10 @@ export class TemplateStandardsComponent implements OnInit {
         }
         for (let domain of this.standards_dump.Standards) {
             if (this.screenWidth <= this.mobileWidth) {
-                this.domain_state[domain.Key] = false;
+                this.domain_state[domain.Label] = false;
             }
             else {
-                this.domain_state[domain.Key] = true;
+                this.domain_state[domain.Label] = true;
             }
         }
         for (let goal of this.standards_dump.Goals) {
