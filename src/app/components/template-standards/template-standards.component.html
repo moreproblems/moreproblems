@@ -1119,9 +1119,11 @@
           style="font-size: 18px; font-weight: 600; padding-left: 10px"> View <b>learning goals</b> for this subject </a>
         <a *ngIf="toggle_goals && standards_dump.Standards.length > 0" (click)="toggle_goals = false" routerLinkActive="active"
           style="font-size: 18px; font-weight: 600; padding-left: 10px"> View <b>standards</b> for this subject </a>
-        <br *ngIf="standards_dump.Goals.length > 0 && standards_dump.Standards.length > 0" />
+        <br />
+        <hr *ngIf="standards_dump.Overview != '' && toggle_goals" style="width: 100%; border-width: 2px" />
         <h4 *ngIf="toggle_goals" style="font-size: 18px; font-weight: 500"> {{standards_dump.Overview}} </h4>
-        <br *ngIf="standards_dump.Overview != '' && toggle_goals" />
+        <hr style="width: 100%; border-width: 2px" />
+        <br />
         <div *ngIf="!toggle_goals" class="card-container" style="width: 100%">
           <div *ngFor="let domain of standards_dump.Standards" class="card card-medium"
             (click)="toggle_domain(domain.Label)" style="width: 95%; text-align: center; flex-direction: column">
@@ -1136,8 +1138,9 @@
                 <h4 style="font-size: 18px"> <b *ngIf="domain.Key != ''" style="font-weight: 900">{{domain.Key}}: </b> <b style="font-weight: 700">{{domain.Label}}</b> </h4>
               </div>
             </div>
+            <hr *ngIf="domain_state[domain.Label]" style="width: 100%; border-width: 1px" />
             <div style="display: flex; flex-direction: row; text-align: left">
-              <ul *ngIf="domain_state[domain.Label]" style="font-size: 17px; line-height: 21px; padding-left: 17px">
+              <ul *ngIf="domain_state[domain.Label]" style="font-size: 17px; line-height: 21px; padding-left: 17px; margin-top: 0px">
                 <li *ngFor="let cluster of domain.Subs" style="margin-top: 20px; margin-bottom: 8px"> <b>{{cluster.Key}}</b>:
                   <b *ngIf="cluster.NumProb == 0" style="font-weight: 500">{{cluster.Label}}</b>
                   <a *ngIf="cluster.NumProb > 0" (click)="selectSubTopic([domain.Label], cluster.Label)" style="font-weight: 500">{{cluster.Label}}</a> <b *ngIf="cluster.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{cluster.NumProb}}</i>)</b>
@@ -1172,6 +1175,7 @@
                 <h4 style="font-size: 18px; font-weight: 600"> {{goal[0]}} </h4>
               </div>
             </div>
+            <hr *ngIf="goal_state[goal[0]]" style="width: 100%; border-width: 1px" />
             <div style="display: flex; flex-direction: row; text-align: left">
               <p *ngIf="goal_state[goal[0]]" style="font-size: 15px; margin-top: 20px; white-space: pre-wrap">{{goal[1]}}</p>
             </div>
