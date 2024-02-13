@@ -664,7 +664,9 @@ export class TemplateClassComponent implements OnInit {
     "WIG8SS": "Wisconsin WFE Grade 8 Social Studies Practice Exam",
     "WIG10SS": "Wisconsin WFE Grade 10 Social Studies Practice Exam",
     "SAT1": "The SAT Practice Test #1",
+    "SAT2": "The SAT Practice Test #2",
     "SAT3": "The SAT Practice Test #3",
+    "SAT4": "The SAT Practice Test #4",
     "SAT5": "The SAT Practice Test #5",
     "SAT6": "The SAT Practice Test #6",
     "SAT7": "The SAT Practice Test #7",
@@ -699,6 +701,10 @@ export class TemplateClassComponent implements OnInit {
 
   can_assign_c(clss: string) {
     return (!this.my_class_metadata[this.authService.userData.classes.indexOf(clss)-1].assignments.includes(this.exam_id));
+  }
+
+  can_assign_e(xm: string) {
+    return (!this.class_ass_set.includes(xm));
   }
 
   load_data() {
@@ -973,6 +979,10 @@ export class TemplateClassComponent implements OnInit {
 
   toggle_add_assignments() {
     this.class_data = (this.authService.searchClassId(this.class_uid) as any);
+    this.class_ass_set = [];
+    for (let ass of this.class_data.assignments) {
+      this.class_ass_set.push(ass as string);
+    }
     this.add_a = !this.add_a;
     // this.edit_c_list = [];
   }

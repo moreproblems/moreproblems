@@ -1001,6 +1001,10 @@ export class TemplateExamComponent implements OnInit {
         }
     }
 
+    can_assign_s(std: string) {
+      return (!(Object.keys(this.my_students_data[std].exams.history).includes(this.key) && this.my_students_data[std].exams.history[this.key].status == 'Completed'));
+    }
+
     read_supp_json(path: string) {
         this.http.get("./assets/" + path).subscribe(res => {
             console.log(res);

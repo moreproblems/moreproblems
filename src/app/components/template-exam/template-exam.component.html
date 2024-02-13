@@ -368,6 +368,14 @@
     opacity: 1;
   }
 
+  .card.card-small:hover .select-avatar {
+    opacity: 0.3;
+  }
+
+  .card.card-small:hover .middle {
+    opacity: 1;
+  }
+
   progress {
     border-radius: 10px;
   }
@@ -601,15 +609,17 @@
           </section>
           <div class="card card-medium"
             style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
-            <section style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+            <section
+              style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
               <div style="display: flex; flex-direction: row; align-items: center">
-                  <div style="margin: auto; text-align: right">
-                    <h3 style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
-                      Problem #{{subtopic_problem_number}} </h3>
-                  </div>
+                <div style="margin: auto; text-align: right">
+                  <h3 style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
+                    Problem #{{subtopic_problem_number}} </h3>
+                </div>
               </div>
             </section>
-            <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Subtopic Progress: <b>{{""+(subtopic_problem_number)}}/{{""+subtopic_problem_count}}</b> </h4>
+            <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Subtopic Progress:
+              <b>{{""+(subtopic_problem_number)}}/{{""+subtopic_problem_count}}</b> </h4>
             <progress value="{{subtopic_problem_number}}" max="{{subtopic_problem_count}}"
               style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
               #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
@@ -618,29 +628,44 @@
           <div class="card card-medium"
             style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
             <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
-            <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
+            <div *ngIf="screenWidth > 700" class="card-container"
+              style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b>
+                    {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0,
+                    (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b>
+                    {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0,
+                    (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b>
+                    {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0,
+                    (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State}} </b> </button>
               </label>
             </div>
-            <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
+            <div *ngIf="screenWidth <= 700" class="card-container"
+              style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b>
+                    {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0,
+                    (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b>
+                    {{subject_labels[exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0,
+                    (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b>
+                    {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0,
+                    (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State}} </b> </button>
               </label>
             </div>
-            <section *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12"
+            <section
+              *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <div *ngFor="let prob of subtopic_search_dump | keyvalue"
                 style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
@@ -674,10 +699,10 @@
             style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
             #subtopicRefsheetCard>
             <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
-              <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false" [zoom]="0.95"
-                style="min-height: 400px; height: fit-content"></pdf-viewer>
-              <pdf-viewer *ngIf="this.screenWidth > 700" [src]="st_refsheet_source" [original-size]="false" [zoom]="0.85"
-                style="min-height: 625px; height: fit-content"></pdf-viewer>
+              <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false"
+                [zoom]="0.95" style="min-height: 400px; height: fit-content"></pdf-viewer>
+              <pdf-viewer *ngIf="this.screenWidth > 700" [src]="st_refsheet_source" [original-size]="false"
+                [zoom]="0.85" style="min-height: 625px; height: fit-content"></pdf-viewer>
             </section>
           </div>
         </div>
@@ -699,7 +724,8 @@
                   style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
                   <h3 *ngIf="!block.endsWith('.jpg')" style="font-size: 18px"><i style="font-weight: 400">{{block}}</i>
                   </h3>
-                  <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
+                  <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}"
+                    style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                 </div>
                 <h2 *ngIf="supp_st_dump[supp].Title != ''"> {{supp_st_dump[supp].Title}} </h2>
                 <h3 *ngIf="supp_st_dump[supp].Subtitle != ''" style="font-size: 18px"> {{supp_st_dump[supp].Subtitle}}
@@ -710,7 +736,8 @@
                 <section style="width:fit-content">
                   <div *ngFor="let block of supp_st_dump[supp].Content"
                     style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
-                    <h3 *ngIf="(supp_st_dump[supp].LabelType == 'L' || supp_st_dump[supp].LabelType == 'P') && block[0] != ''"
+                    <h3
+                      *ngIf="(supp_st_dump[supp].LabelType == 'L' || supp_st_dump[supp].LabelType == 'P') && block[0] != ''"
                       style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: 20px; text-align: center">
                       {{block[0]}}</h3>
                     <div *ngIf="block[1].endsWith('.json')"
@@ -749,7 +776,8 @@
                     </div>
                     <h3
                       *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (supp_st_dump[supp].LabelType == 'N')"
-                      style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: 100%">{{block[1]}}</h3>
+                      style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: 100%">
+                      {{block[1]}}</h3>
                     <h3
                       *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] != '' && supp_st_dump[supp].LabelType != 'N'"
                       style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
@@ -836,7 +864,8 @@
                     </div>
                     <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:')"
                       style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
-                    <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
+                    <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}"
+                      style="max-width: min(750px, 90%); max-height: 750px">
                   </div>
                 </div>
               </div>
@@ -848,7 +877,8 @@
                   <input
                     style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
                     inputmode="numeric" #inputFRST />
-                  <button class="grade-button" (click)="attempt_fr_st_problem(this.inputFRST.value, ''); scroll_bottom()"
+                  <button class="grade-button"
+                    (click)="attempt_fr_st_problem(this.inputFRST.value, ''); scroll_bottom()"
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
@@ -860,7 +890,8 @@
                   <textarea rows="5" maxlength="1000" placeholder="Write Your Answer Here"
                     style="margin: auto; padding-top: 10px; padding-left: 10px; width: 90%; height: 250px; font-size: 18px; line-height: 22px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
                     #inputLRST></textarea>
-                  <button class="grade-button" (click)="attempt_lr_st_problem(this.inputLRST.value, ''); scroll_bottom()"
+                  <button class="grade-button"
+                    (click)="attempt_lr_st_problem(this.inputLRST.value, ''); scroll_bottom()"
                     style="display: block; max-width: 150px; max-height: 150px; margin: 10px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
@@ -879,13 +910,16 @@
                       *ngIf="subtopic_problem_selection[0][0]==choice.key && subtopic_attempt_response[0].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="subtopic_problem_selection[0][0]!=choice.key && !subtopic_attempt_path[0].includes(choice.key)"
+                    <button
+                      *ngIf="subtopic_problem_selection[0][0]!=choice.key && !subtopic_attempt_path[0].includes(choice.key)"
                       class="toggle-button-off"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="subtopic_problem_selection[0][0]!=choice.key && subtopic_attempt_path[0].includes(choice.key) && !prob.value.AnswerChoices[choice.key].Key.Correct"
+                    <button
+                      *ngIf="subtopic_problem_selection[0][0]!=choice.key && subtopic_attempt_path[0].includes(choice.key) && !prob.value.AnswerChoices[choice.key].Key.Correct"
                       class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="subtopic_problem_selection[0][0]!=choice.key && subtopic_attempt_path[0].includes(choice.key) && prob.value.AnswerChoices[choice.key].Key.Correct"
+                    <button
+                      *ngIf="subtopic_problem_selection[0][0]!=choice.key && subtopic_attempt_path[0].includes(choice.key) && prob.value.AnswerChoices[choice.key].Key.Correct"
                       class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
                     </button>
                   </label>
@@ -895,7 +929,8 @@
                   </h3>
                   <div *ngIf="choice.value.Choice.startsWith(':box:')"
                     style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{choice.value.Choice.slice(5)}}</h3>
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      {{choice.value.Choice.slice(5)}}</h3>
                   </div>
                   <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
@@ -933,20 +968,22 @@
                   </div>
                   <div *ngIf="prob.value.Type == 'FR'">
                     <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
-                      <h3 *ngIf="subtopic_attempt_response[0].startsWith('Correct') && subtopic_attempt_response[0] != ''"
+                      <h3
+                        *ngIf="subtopic_attempt_response[0].startsWith('Correct') && subtopic_attempt_response[0] != ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                         <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
                         <!-- wrong data format, extra KEY -->
                         <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation}}
                       </h3>
-                      <h3 *ngIf="subtopic_attempt_response[0].startsWith('Correct') && subtopic_attempt_response[0] == ''"
+                      <h3
+                        *ngIf="subtopic_attempt_response[0].startsWith('Correct') && subtopic_attempt_response[0] == ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                         <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
                         <!-- wrong data format, extra KEY -->
                         <br /> <br /> <b>No explanation or rationale is available.</b>
                       </h3>
-                      <br *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" /> <br
-                        *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                      <br *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                      <br *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
                       <button *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
                         class="grade-button" (click)="next_problem_st(); scroll_top()"
                         style="display: block; max-width: 150px; max-height: 100px; margin: auto">
@@ -985,15 +1022,15 @@
                   class="card highlight-card card-small"
                   style="height: auto; max-width: 90%; padding: 20px; margin: auto; align-items: center; display: inline-flex; background-color: transparent">
                   <label class="switch" style="padding: 0px">
-                      <input type="checkbox">
-                      <button (click)="next_problem_st(); scroll_top()" class="toggle-button-off"
-                          style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
-                          <div style="margin: 5px">
-                            <span style="font-size: 20px; font-weight: 1200; margin: 5px"> ⏩ </span>
-                          </div>
-                          <div style="margin: 5px; text-align: center; font-size: 18px; width: 120px"><b> Skip Problem </b>
-                          </div>
-                      </button>
+                    <input type="checkbox">
+                    <button (click)="next_problem_st(); scroll_top()" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
+                      <div style="margin: 5px">
+                        <span style="font-size: 20px; font-weight: 1200; margin: 5px"> ⏩ </span>
+                      </div>
+                      <div style="margin: 5px; text-align: center; font-size: 18px; width: 120px"><b> Skip Problem </b>
+                      </div>
+                    </button>
                   </label>
                 </div>
               </div>
@@ -1014,7 +1051,8 @@
                   </div>
                   <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':unit:')"
                     style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
-                  <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
+                  <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}"
+                    style="max-width: min(750px, 90%); max-height: 750px">
                 </div>
                 <br />
                 <input type="hidden" #selection>
@@ -1024,7 +1062,8 @@
                     <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices)" class="switch"
                       style="padding: 0 10px; min-width: 100px; margin: auto">
                       <input type="checkbox">
-                      <button (click)="select_m_choice('', 0)" *ngIf="m_selection[0] == choice" class="toggle-button-on">
+                      <button (click)="select_m_choice('', 0)" *ngIf="m_selection[0] == choice"
+                        class="toggle-button-on">
                         <b>{{choice}}</b> </button>
                       <button (click)="select_m_choice(choice, 0)"
                         *ngIf="!is_matched(choice, 0) && m_selection[0] != choice" class="toggle-button-off">
@@ -1228,64 +1267,95 @@
       <div class="content" style="margin: auto; align-items: center">
         <h2 *ngIf="problem_number > 0" style="padding-bottom: 20px; color: darkslategrey"> {{exam_state}} {{exam_name}}
           {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
-        <div *ngIf="order_numbers()[exam_length-1] >= problem_number && problem_number > 0"  class="card card-medium"
+        <div *ngIf="order_numbers()[exam_length-1] >= problem_number && problem_number > 0" class="card card-medium"
           style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
-          <section (click)="expand_overview = !expand_overview" style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+          <section (click)="expand_overview = !expand_overview"
+            style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <div style="display: flex; flex-direction: row; align-items: center">
-                <div style="margin: auto">
-                    <img *ngIf="expand_overview" src="./assets/icons/caret.png"
-                        style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: darkslategrey">
-                    <img *ngIf="!expand_overview" src="./assets/icons/caret.png"
-                        style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: darkslategrey; transform: rotate(-90deg)">
-                </div>
-                <div style="margin: auto; text-align: right">
-                  <h3 *ngIf="order_numbers()[exam_length-1] >= problem_number" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
-                    Problem #{{problem_number}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
-                </div>
+              <div style="margin: auto">
+                <img *ngIf="expand_overview" src="./assets/icons/caret.png"
+                  style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: darkslategrey">
+                <img *ngIf="!expand_overview" src="./assets/icons/caret.png"
+                  style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: darkslategrey; transform: rotate(-90deg)">
+              </div>
+              <div style="margin: auto; text-align: right">
+                <h3 *ngIf="order_numbers()[exam_length-1] >= problem_number"
+                  style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
+                  Problem #{{problem_number}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
+              </div>
             </div>
           </section>
-          <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+(exam_dump | keys).indexOf(''+this.problem_number)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
-          <progress *ngIf="!expand_overview" value="{{(exam_dump | keys).indexOf(''+this.problem_number)}}" max="{{exam_length}}"
-            style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
+          <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+(exam_dump |
+              keys).indexOf(''+this.problem_number)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
+          <progress *ngIf="!expand_overview" value="{{(exam_dump | keys).indexOf(''+this.problem_number)}}"
+            max="{{exam_length}}" style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
-          <h4 *ngIf="get_flag_count() != 0 && !expand_overview" style="margin-top: 5px; font-size: 17px; font-weight: 500"> <b style="font-size: 27px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); padding-right: 5px">&#9873;</b> <b>Flagged</b> Problems: <b>{{get_flag_count()}}</b> </h4>
-          <h4 *ngIf="get_skip_count() != 0 && !expand_overview" style="margin-top: 5px; font-size: 17px; font-weight: 500"> ⏩ <b>Skipped</b> Problems: <b>{{get_skip_count()}}</b> </h4>
+          <h4 *ngIf="get_flag_count() != 0 && !expand_overview"
+            style="margin-top: 5px; font-size: 17px; font-weight: 500"> <b
+              style="font-size: 27px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); padding-right: 5px">&#9873;</b>
+            <b>Flagged</b> Problems: <b>{{get_flag_count()}}</b> </h4>
+          <h4 *ngIf="get_skip_count() != 0 && !expand_overview"
+            style="margin-top: 5px; font-size: 17px; font-weight: 500"> ⏩ <b>Skipped</b> Problems:
+            <b>{{get_skip_count()}}</b> </h4>
           <div *ngIf="expand_overview" class="card-container"
             style="height: auto; max-height: 650px; width: 100%; margin-top: 15px; display: flex; flex-direction: row; align-items: center; justify-content: center">
-            <label *ngFor="let sub of order_numbers()" (click)="go_to_prob(sub)" class="switch" style="padding: 0px; margin: 0px; height: 45px; width: 60px">
+            <label *ngFor="let sub of order_numbers()" (click)="go_to_prob(sub)" class="switch"
+              style="padding: 0px; margin: 0px; height: 45px; width: 60px">
               <input type="checkbox" value="{{sub}}">
-              <button *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length > 0 && exam_submission[sub].Path[0] != '')  && !exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" class="toggle-button-off" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
+              <button
+                *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length > 0 && exam_submission[sub].Path[0] != '')  && !exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
+                class="toggle-button-off"
+                style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-                <span style="font-size: 25px; font-weight: 1200; width: 30px; text-align: right;"> 
+                <span style="font-size: 25px; font-weight: 1200; width: 30px; text-align: right;">
                   <b style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
                 </span>
               </button>
-              <button *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length > 0 && exam_submission[sub].Path[0] != '') && exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" class="toggle-button-off" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(214, 141, 14)">
+              <button
+                *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length > 0 && exam_submission[sub].Path[0] != '') && exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
+                class="toggle-button-off"
+                style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(214, 141, 14)">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-                <span style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right;"> 
-                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub < 10" style="padding-left: 7px"> &#9873; </b>
-                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub >=10" style="padding-left: 3px"> &#9873; </b>
+                <span
+                  style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right;">
+                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub < 10"
+                    style="padding-left: 7px"> &#9873; </b>
+                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub >=10"
+                    style="padding-left: 3px"> &#9873; </b>
                 </span>
               </button>
-              <button *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length == 0 || exam_submission[sub].Path[0] == '')" class="toggle-button-off" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(245, 77, 77)">
+              <button
+                *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length == 0 || exam_submission[sub].Path[0] == '')"
+                class="toggle-button-off"
+                style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(245, 77, 77)">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-                <span *ngIf="sub < max_problem_number" style="font-size: 16px; font-weight: 1200; width: 30px; text-align: right;"> 
+                <span *ngIf="sub < max_problem_number"
+                  style="font-size: 16px; font-weight: 1200; width: 30px; text-align: right;">
                   <b *ngIf="sub < 10" style="padding-left: 7px"> ⏩ </b>
                   <b *ngIf="sub >=10" style="padding-left: 3px"> ⏩ </b>
                 </span>
               </button>
-              <button *ngIf="sub != problem_number && sub > max_problem_number && exam_submission[sub].Path.length == 0" class="toggle-button-disabled" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px">
+              <button *ngIf="sub != problem_number && sub > max_problem_number && exam_submission[sub].Path.length == 0"
+                class="toggle-button-disabled"
+                style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-                <span style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right;"> 
-                  <b *ngIf="!exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
+                <span
+                  style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right;">
+                  <b *ngIf="!exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
+                    style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
                 </span>
               </button>
-              <button *ngIf="sub == problem_number" class="toggle-button-on" style="margin: 0px; height: 40px; width: 60px; font-size: 18px; padding: 0px">
+              <button *ngIf="sub == problem_number" class="toggle-button-on"
+                style="margin: 0px; height: 40px; width: 60px; font-size: 18px; padding: 0px">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-                <span style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right"> 
-                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub < 10" style="padding-left: 7px"> &#9873; </b>
-                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub >=10" style="padding-left: 3px"> &#9873; </b>
-                  <b *ngIf="!exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
+                <span
+                  style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right">
+                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub < 10"
+                    style="padding-left: 7px"> &#9873; </b>
+                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub >=10"
+                    style="padding-left: 3px"> &#9873; </b>
+                  <b *ngIf="!exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
+                    style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
                 </span>
               </button>
             </label>
@@ -1294,13 +1364,17 @@
         <h2 *ngIf="problem_number > order_numbers()[exam_length-1]"> With {{number_correct}} out of
           {{exam_length}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
-        <h2 *ngIf="problem_number > order_numbers()[exam_length-1] && performance_level == 'Masters Grade Level Performance'"
+        <h2
+          *ngIf="problem_number > order_numbers()[exam_length-1] && performance_level == 'Masters Grade Level Performance'"
           style="color: green"> {{performance_level}} </h2>
-        <h2 *ngIf="problem_number > order_numbers()[exam_length-1] && performance_level == 'Approaches Grade Level Performance'"
+        <h2
+          *ngIf="problem_number > order_numbers()[exam_length-1] && performance_level == 'Approaches Grade Level Performance'"
           style="color: blue"> {{performance_level}} </h2>
-        <h2 *ngIf="problem_number > order_numbers()[exam_length-1] && performance_level == 'Meets Grade Level Performance'"
+        <h2
+          *ngIf="problem_number > order_numbers()[exam_length-1] && performance_level == 'Meets Grade Level Performance'"
           style="color: magenta"> {{performance_level}} </h2>
-        <h2 *ngIf="problem_number > order_numbers()[exam_length-1] && performance_level == 'Does Not Meet Grade Level Performance'"
+        <h2
+          *ngIf="problem_number > order_numbers()[exam_length-1] && performance_level == 'Does Not Meet Grade Level Performance'"
           style="color: red"> {{performance_level}} </h2>
         <br *ngIf="problem_number > order_numbers()[exam_length-1]" />
         <div *ngIf="problem_number > order_numbers()[exam_length-1]" style="width: 100%">
@@ -1541,7 +1615,8 @@
           <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_type}} {{exam_grade}}
             {{exam_subject}} Exam
           </h2>
-          <p style="font-size: 18px; padding: 10px; white-space: pre-wrap; margin-bottom: 15px"> <b>Directions</b> : {{exam_directions}}
+          <p style="font-size: 18px; padding: 10px; white-space: pre-wrap; margin-bottom: 15px"> <b>Directions</b> :
+            {{exam_directions}}
           </p>
           <!-- <br /> -->
           <h3 style="font-size: 18px; margin-bottom: 0px"
@@ -1557,16 +1632,18 @@
               class="card card-small" style="height: 75px; width: 170px; align-items: center; padding-top: 0">
               <div class="avatar-container"
                 style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 0">
-                <img *ngIf="this.selected_student != my_students_data[std].uid" src="{{my_students_data[std].photoURL}}"
+                <img *ngIf="!can_assign_s(std)" src="{{my_students_data[std].photoURL}}"
+                  class="select-avatar" style="width:100%; height: 100%; filter: grayscale(100%)">
+                <img *ngIf="can_assign_s(std) && this.selected_student != my_students_data[std].uid" src="{{my_students_data[std].photoURL}}"
                   class="select-avatar" style="width:100%; height: 100%">
-                <img *ngIf="this.selected_student == my_students_data[std].uid" src="{{my_students_data[std].photoURL}}"
+                <img *ngIf="can_assign_s(std) && this.selected_student == my_students_data[std].uid" src="{{my_students_data[std].photoURL}}"
                   class="select-avatar" style="width:100%; height: 100%; opacity: 0.3">
                 <div class="middle">
-                  <div *ngIf="this.selected_student != my_students_data[std].uid"
+                  <div *ngIf="can_assign_s(std) && this.selected_student != my_students_data[std].uid"
                     style="color: white; background-color: #1976d2; border-radius: 10px">Select
                   </div>
                 </div>
-                <div *ngIf="this.selected_student == my_students_data[std].uid" class="select-middle">
+                <div *ngIf="can_assign_s(std) && this.selected_student == my_students_data[std].uid" class="select-middle">
                   <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
                 </div>
               </div>
@@ -1588,9 +1665,9 @@
             <div style="display: flex; flex-direction: column">
               <h3 style="font-size: 18px; margin-bottom: 0px"> Problem Order: </h3>
               <select (change)="toggle_random()"
-                  style="margin: 0 20px 20px ; padding: 5px 0px 5px 15px; width: 140px; height: 40px; font-size: 20px; font-weight: 500; text-align: left">
-                  <option value="default" selected value>Default</option>
-                  <option value="random">Random</option>
+                style="margin: 0 20px 20px ; padding: 5px 0px 5px 15px; width: 140px; height: 40px; font-size: 20px; font-weight: 500; text-align: left">
+                <option value="default" selected value>Default</option>
+                <option value="random">Random</option>
               </select>
             </div>
             <button class="grade-button" (click)="begin_exam(); scroll_top()"
@@ -1606,10 +1683,12 @@
               <progress value="{{progress_number-1}}" max="{{exam_length}}"
                 style="height: 20px; width: 100%; border-radius: 15px; margin: 10px auto"
                 #progressBar>{{progressBar.value/progressBar.max}}%</progress>
-              <h4 *ngIf="exam_status == 'Started'" style="margin: 1px auto; font-weight: 500"> Last Submission: <b>{{""+last_date}}</b>
+              <h4 *ngIf="exam_status == 'Started'" style="margin: 1px auto; font-weight: 500"> Last Submission:
+                <b>{{""+last_date}}</b>
                 {{""+last_time}}
               </h4>
-              <h4 *ngIf="exam_status == 'Assigned'" style="margin: 1px auto; font-weight: 500"> Assigned On: <b>{{""+last_date}}</b>
+              <h4 *ngIf="exam_status == 'Assigned'" style="margin: 1px auto; font-weight: 500"> Assigned On:
+                <b>{{""+last_date}}</b>
                 {{""+last_time}}
               </h4>
             </div>
@@ -1650,7 +1729,8 @@
                 style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
                 <h3 *ngIf="!block.endsWith('.jpg')" style="font-size: 18px; margin: auto"><i
                     style="font-weight: 400">{{block}}</i></h3>
-                <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
+                <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}"
+                  style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
               </div>
               <br *ngIf="supp_dump[supp].Context.length > 0" />
               <h2 *ngIf="supp_dump[supp].Title != ''"> {{supp_dump[supp].Title}} </h2>
@@ -1700,9 +1780,10 @@
                   </div>
                   <h3
                     *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && (supp_dump[supp].LabelType == 'N')"
-                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: 100%">{{block[1]}}</h3>
+                    style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: 100%">
+                    {{block[1]}}</h3>
                   <h3
-                  *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] != '' && supp_dump[supp].LabelType != 'N'"
+                    *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && block[0] != '' && supp_dump[supp].LabelType != 'N'"
                     style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
                     {{block[1]}}</h3>
                   <h3
@@ -1738,7 +1819,8 @@
     </div>
     <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%">
       <div *ngIf="problem_number == +prob.key" style="width: 100%">
-        <div *ngIf="selected_subtopic == '' && (exam_dump | keys).indexOf(''+this.problem_number)  <= exam_length && problem_number > 0"
+        <div
+          *ngIf="selected_subtopic == '' && (exam_dump | keys).indexOf(''+this.problem_number)  <= exam_length && problem_number > 0"
           class="card card-large"
           style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
           #problemCard>
@@ -1787,7 +1869,8 @@
                   </div>
                   <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:')"
                     style="display: block; white-space: pre-wrap; font-size: 18px"> {{block}} </h3>
-                  <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
+                  <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}"
+                    style="max-width: min(750px, 90%); max-height: 750px">
                 </div>
               </div>
             </div>
@@ -1918,7 +2001,8 @@
               </div>
               <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':unit:')"
                 style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
-              <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
+              <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}"
+                style="max-width: min(750px, 90%); max-height: 750px">
             </div>
             <br />
             <input type="hidden" #selection>
