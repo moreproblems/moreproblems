@@ -189,6 +189,10 @@ import * as PA19G8SProblems from "src/assets/problems/PA19G8S/PA19G8S-problems.j
 import * as PA18G8SProblems from "src/assets/problems/PA18G8S/PA18G8S-problems.json";
 import * as PA16G8SProblems from "src/assets/problems/PA16G8S/PA16G8S-problems.json";
 import * as PA15G8SProblems from "src/assets/problems/PA15G8S/PA15G8S-problems.json";
+import * as SAT1M1Problems from "src/assets/problems/SAT1-M1/SAT1-M1-problems.json";
+import * as SAT1M2Problems from "src/assets/problems/SAT1-M2/SAT1-M2-problems.json";
+import * as SAT1RW1Problems from "src/assets/problems/SAT1-RW1/SAT1-RW1-problems.json";
+import * as SAT1RW2Problems from "src/assets/problems/SAT1-RW2/SAT1-RW2-problems.json";
 import * as TX22G3MProblems from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
 import * as TX22G3RProblems from "src/assets/problems/TX22G3R/TX22G3R-problems.json";
 import * as TX21G3MProblems from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
@@ -328,7 +332,7 @@ export class ProfileComponent implements OnInit {
   // db_submission: any;
 
 
-  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number } } } = examMetadata;
+  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Timer': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number }, 'Parts': string[] } } = examMetadata;
 
   selected_exam = "";
   expand_topics = false;
@@ -561,6 +565,10 @@ export class ProfileComponent implements OnInit {
   PA18G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA18G8SProblems;
   PA16G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA16G8SProblems;
   PA15G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA15G8SProblems;
+  SAT1M1_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = SAT1M1Problems;
+  SAT1M2_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = SAT1M2Problems;
+  SAT1RW1_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = SAT1RW1Problems;
+  SAT1RW2_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = SAT1RW2Problems;
   TX22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX22G3MProblems;
   TX22G3R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX22G3RProblems;
   TX21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX21G3MProblems;
@@ -841,6 +849,10 @@ export class ProfileComponent implements OnInit {
     "PA18G8S": this.PA18G8S_exam_dump,
     "PA16G8S": this.PA16G8S_exam_dump,
     "PA15G8S": this.PA15G8S_exam_dump,
+    "SAT1-M1": this.SAT1M1_exam_dump,
+    "SAT1-M2": this.SAT1M2_exam_dump,
+    "SAT1-RW1": this.SAT1RW1_exam_dump,
+    "SAT1-RW2": this.SAT1RW2_exam_dump,
     "TX22G3M": this.TX22G3M_exam_dump,
     "TX22G3R": this.TX22G3R_exam_dump,
     "TX21G3M": this.TX21G3M_exam_dump,
@@ -1153,6 +1165,19 @@ export class ProfileComponent implements OnInit {
     "NMG8E": "New Mexico NM-MSSA Grade 8 English Language Arts Practice Exam",
     "NMG8S": "New Mexico NM-ASR Grade 8 Science Practice Exam",
     "NMG11S": "New Mexico NM-ASR Grade 11 Science Practice Exam",
+    "NY23G3M": "New York NYSTP 2023 Grade 3 Math Exam",
+    "NY23G3E": "New York NYSTP 2023 Grade 3 English Language Arts Exam",
+    "NY23G4M": "New York NYSTP 2023 Grade 4 Math Exam",
+    "NY23G4E": "New York NYSTP 2023 Grade 4 English Language Arts Exam",
+    "NY23G5M": "New York NYSTP 2023 Grade 5 Math Exam",
+    "NY23G5E": "New York NYSTP 2023 Grade 5 English Language Arts Exam",
+    "NY23G6M": "New York NYSTP 2023 Grade 6 Math Exam",
+    "NY23G6E": "New York NYSTP 2023 Grade 6 English Language Arts Exam",
+    "NY23G7M": "New York NYSTP 2023 Grade 7 Math Exam",
+    "NY23G7E": "New York NYSTP 2023 Grade 7 English Language Arts Exam",
+    "NY23G8M": "New York NYSTP 2023 Grade 8 Math Exam",
+    "NY23G8E": "New York NYSTP 2023 Grade 8 English Language Arts Exam",
+    "NY23G8S": "New York NYSTP 2023 Grade 8 Science Exam",
     "NY22G3M": "New York NYSTP 2022 Grade 3 Math Exam",
     "NY22G3E": "New York NYSTP 2022 Grade 3 English Language Arts Exam",
     "NY22G4M": "New York NYSTP 2022 Grade 4 Math Exam",
@@ -1251,6 +1276,20 @@ export class ProfileComponent implements OnInit {
     "NY15G8M": "New York NYSTP 2015 Grade 8 Math Exam",
     "NY15G8E": "New York NYSTP 2015 Grade 8 English Language Arts Exam",
     "NY15G8S": "New York NYSTP 2015 Grade 8 Science Exam",
+    "PA23G3M": "Pennsylvania PSSA 2023 Grade 3 Math Exam",
+    "PA23G3E": "Pennsylvania PSSA 2023 Grade 3 English Language Arts Exam",
+    "PA23G4M": "Pennsylvania PSSA 2023 Grade 4 Math Exam",
+    "PA23G4E": "Pennsylvania PSSA 2023 Grade 4 English Language Arts Exam",
+    "PA23G4S": "Pennsylvania PSSA 2023 Grade 4 Science Exam",
+    "PA23G5M": "Pennsylvania PSSA 2023 Grade 5 Math Exam",
+    "PA23G5E": "Pennsylvania PSSA 2023 Grade 5 English Language Arts Exam",
+    "PA23G6M": "Pennsylvania PSSA 2023 Grade 6 Math Exam",
+    "PA23G6E": "Pennsylvania PSSA 2023 Grade 6 English Language Arts Exam",
+    "PA23G7M": "Pennsylvania PSSA 2023 Grade 7 Math Exam",
+    "PA23G7E": "Pennsylvania PSSA 2023 Grade 7 English Language Arts Exam",
+    "PA23G8M": "Pennsylvania PSSA 2023 Grade 8 Math Exam",
+    "PA23G8E": "Pennsylvania PSSA 2023 Grade 8 English Language Arts Exam",
+    "PA23G8S": "Pennsylvania PSSA 2023 Grade 8 Science Exam",
     "PA22G3M": "Pennsylvania PSSA 2022 Grade 3 Math Exam",
     "PA22G3E": "Pennsylvania PSSA 2022 Grade 3 English Language Arts Exam",
     "PA22G4M": "Pennsylvania PSSA 2022 Grade 4 Math Exam",
@@ -1383,6 +1422,10 @@ export class ProfileComponent implements OnInit {
     "RI21G8E": "Rhode Island RICAS 2021 Grade 8 English Language Arts Exam",
     "RI19G8E": "Rhode Island RICAS 2019 Grade 8 English Language Arts Exam",
     "RI18G8E": "Rhode Island RICAS 2018 Grade 8 English Language Arts Exam",
+    "SAT1-M1": "The SAT Practice Test #1 - Math, Module 1",
+    "SAT1-M2": "The SAT Practice Test #1 - Math, Module 2",
+    "SAT1-RW1": "The SAT Practice Test #1 - Reading & Writing, Module 1",
+    "SAT1-RW2": "The SAT Practice Test #1 - Reading & Writing, Module 2",
     "SC18G3M": "South Carolina SC READY Grade 3 Math Practice Exam",
     "SC18G3E": "South Carolina SC READY Grade 3 English Language Arts Practice Exam",
     "SC18G4M": "South Carolina SC READY Grade 4 Math Practice Exam",

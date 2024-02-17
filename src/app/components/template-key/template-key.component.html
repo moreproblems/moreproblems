@@ -126,7 +126,7 @@
     border: 1px solid #eee;
     background-color: #fafafa;
     /* height: 40px;
-          width: 200px; */
+        width: 200px; */
     margin: 0 8px 16px;
     padding: 8px 8px;
     display: flex;
@@ -138,17 +138,21 @@
   }
 
   /* .card-container .card:not(:last-child) {
-        margin-right: 0;
-      }
-    
-      .card-container .switch:not(:last-child) {
-        margin-right: 0;
-      } */
+      margin-right: 0;
+    }
+  
+    .card-container .switch:not(:last-child) {
+      margin-right: 0;
+    } */
 
   .card.card-small {
     min-height: 16px;
-    width: 190px;
+    width: 210px;
     border-radius: 8px;
+  }
+
+  .card.card-small span {
+    text-align: center;
   }
 
   .card.card-medium {
@@ -181,8 +185,8 @@
   }
 
   /* .card-container .card:not(.highlight-card):hover .material-icons path {
-        fill: rgb(105, 103, 103);
-      } */
+      fill: rgb(105, 103, 103);
+    } */
 
   .card.highlight-card {
     background-color: #0a1e33;
@@ -281,6 +285,19 @@
     color: white;
   }
 
+  button.toggle-button-on {
+    font-size: 18px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 12px;
+    border: 3px solid #0a1e33;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
+  }
+
   button.toggle-button-off {
     font-size: 18px;
     color: black;
@@ -294,17 +311,69 @@
     width: 100%;
   }
 
-  button.toggle-button-on {
+  button.toggle-button-disabled {
     font-size: 18px;
-    background-color: #1976d2;
-    color: white;
+    color: black;
+    background-color: #ccc;
     border-radius: 12px;
-    border: 3px solid #0a1e33;
+    border: 1px solid #eee;
     padding: 7px 15px;
     margin: 0 2px 10px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
+  }
+
+  button.toggle-button-disabled:hover {
+    /* background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35); */
+  }
+
+  .select-avatar {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+
+  .select-middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  .avatar-container:hover .select-avatar {
+    opacity: 0.3;
+  }
+
+  .avatar-container:hover .middle {
+    opacity: 1;
+  }
+
+  .card.card-small:hover .select-avatar {
+    opacity: 0.3;
+  }
+
+  .card.card-small:hover .middle {
+    opacity: 1;
   }
 
   progress {
@@ -432,6 +501,19 @@
     transition: all 0.2s ease-in-out;
   }
 
+  /* The switch - the box around the slider */
+  .switch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 75px;
+    transition: all 0.2s ease-in-out;
+  }
+
   /* Hide default HTML checkbox */
   .switch input {
     opacity: 0;
@@ -446,6 +528,7 @@
 
   input:hover+.toggle-button-on {
     background-color: #0a1e33;
+    border-color: #0a1e33;
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
@@ -458,6 +541,7 @@
 
   input:hover+.toggle-button-off {
     background-color: #0a1e33;
+    border-color: #0a1e33;
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
@@ -490,7 +574,7 @@
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <canvas id="confetticanvas"></canvas>
   <br />
-  <div class="content-menu" style="margin-bottom: 0; align-items: center">
+  <div *ngIf="data_loaded"  class="content-menu" style="margin-bottom: 0; align-items: center">
     <section *ngIf="selected_subtopic != ''" style="width: 100%; align-items: left">
       <div (click)="selected_subtopic=''" class="card card-small"
         style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -1070,7 +1154,38 @@
         </div>
       </div>
     </div>
-    <div *ngIf="selected_subtopic == ''">
+    <div  *ngIf="exam_attribute_dump[key].Parts.length > 0" class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column">
+      <div style="margin: auto; height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
+        <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_type}} {{exam_grade}}
+          {{exam_subject}} Exam
+        </h2>
+        <!-- <br /> -->
+        <h3 style="font-size: 18px; margin-bottom: 0px">
+          Choose a Module: </h3>
+        <div class="card-container" style="align-items: center; padding-top: 0px; margin-top: 10px">
+          <div *ngFor="let part of exam_attribute_dump[key].Parts" (click)="select_part(part)"
+            class="card card-small" style="height: 75px; width: 250px; align-items: center; padding-top: 0">
+            <div class="avatar-container"
+              style="position: relative; height: 50px; width: 50px; border-radius: 50%; padding: 0">
+              <img *ngIf="['-RW1', '-RW2'].includes(part.substring(part.indexOf('-')))" src="/assets/icons/ela.png"
+                class="select-avatar" style="width:100%; height: 100%">
+              <img *ngIf="['-M1', '-M2'].includes(part.substring(part.indexOf('-')))" src="/assets/icons/math.png"
+                class="select-avatar" style="width:100%; height: 100%">
+              <div class="middle">
+                <div style="color: white; background-color: #1976d2; border-radius: 10px">Select
+                </div>
+              </div>
+            </div>
+            <h3 *ngIf="part.substring(part.indexOf('-')) == '-RW1'" style="font-size: 18px; padding-left: 5px; width: 190px"> Reading & Writing, Module 1 </h3>
+            <h3 *ngIf="part.substring(part.indexOf('-')) == '-RW2'" style="font-size: 18px; padding-left: 5px; width: 190px"> Reading & Writing, Module 2 </h3>
+            <h3 *ngIf="part.substring(part.indexOf('-')) == '-M1'" style="font-size: 18px; padding-left: 5px; width: 190px"> Math, Module 1 </h3>
+            <h3 *ngIf="part.substring(part.indexOf('-')) == '-M2'" style="font-size: 18px; padding-left: 5px; width: 190px"> Math, Module 2 </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="selected_subtopic == '' && exam_attribute_dump[key].Parts.length == 0">
       <div class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
         #problemSummaryCard>

@@ -2160,6 +2160,16 @@
                 </span>
                 <span><b>New Mexico NM-MSSA</b> Grade 3 English Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G3E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G3E')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G3E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 3 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G3E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G3E')" src="./assets/flags/NY.png"
@@ -2229,6 +2239,16 @@
                   &starf;
                 </span>
                 <span><b>New York NYSTP 2015</b> Grade 3 English Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('PA23G3E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G3E')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G3E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 3 English Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('PA22G3E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -2592,6 +2612,16 @@
                 </span>
                 <span><b>New Mexico NM-MSSA</b> Grade 3 Math Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G3M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G3M')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G3M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 3 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G3M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G3M')" src="./assets/flags/NY.png"
@@ -2671,6 +2701,16 @@
                   &starf;
                 </span>
                 <span><b>North Carolina EOG 2018</b> Grade 3 Math Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('PA23G3M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G3M')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G3M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 3 Math Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('PA22G3M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -2985,6 +3025,16 @@
                 </span>
                 <span><b>New Mexico NM-MSSA</b> Grade 4 English Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G4E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G4E')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G4E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 4 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G4E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G4E')" src="./assets/flags/NY.png"
@@ -3054,6 +3104,16 @@
                   &starf;
                 </span>
                 <span><b>New York NYSTP 2015</b> Grade 4 English Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('PA23G4E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G4E')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G4E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 4 English Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('PA22G4E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -3423,6 +3483,16 @@
                 </span>
                 <span><b>New Mexico NM-MSSA</b> Grade 4 Math Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G4M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G4M')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G4M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 4 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G4M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G4M')" src="./assets/flags/NY.png"
@@ -3502,6 +3572,16 @@
                   &starf;
                 </span>
                 <span><b>North Carolina EOG 2018</b> Grade 4 Math Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('PA23G4M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G4M')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G4M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 4 Math Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('PA22G4M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -3759,6 +3839,16 @@
                 </span>
                 <span><b>New York NYSTP 2015</b> Grade 4 Science Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('PA23G4S'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G4S')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G4S') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 4 Science Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G4S'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G4S')" src="./assets/flags/PA.png"
@@ -3992,6 +4082,16 @@
                 </span>
                 <span><b>New Mexico NM-MSSA</b> Grade 5 English Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G5E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G5E')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G5E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 5 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G5E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G5E')" src="./assets/flags/NY.png"
@@ -4062,6 +4162,16 @@
                 </span>
                 <span><b>New York NYSTP 2015</b> Grade 5 English Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('PA23G5E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G5E')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G5E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 5 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G5E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G5E')" src="./assets/flags/PA.png"
@@ -4071,7 +4181,8 @@
                   &starf;
                 </span>
                 <span><b>Pennsylvania PSSA 2022</b> Grade 5 English Exam</span>
-              </button><button class="card card-small" (click)="select_exam('PA21G5E'); scroll_top()" tabindex="0"
+              </button>
+              <button class="card card-small" (click)="select_exam('PA21G5E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA21G5E')" src="./assets/flags/PA.png"
                   style="height: 20px; margin: 0 5px 0 0;">
@@ -4439,6 +4550,16 @@
                 </span>
                 <span><b>New Mexico NM-MSSA</b> Grade 5 Math Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G5M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G5M')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G5M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 5 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G5M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G5M')" src="./assets/flags/NY.png"
@@ -4518,6 +4639,16 @@
                   &starf;
                 </span>
                 <span><b>North Carolina EOG 2018</b> Grade 5 Math Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('PA23G5M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G5M')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G5M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 5 Math Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('PA22G5M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -4982,6 +5113,16 @@
                 </span>
                 <span><b>New Mexico NM-MSSA</b> Grade 6 English Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G6E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G6E')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G6E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 6 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G6E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G6E')" src="./assets/flags/NY.png"
@@ -5051,6 +5192,16 @@
                   &starf;
                 </span>
                 <span><b>New York NYSTP 2015</b> Grade 6 English Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('PA23G6E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G6E')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G6E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 6 English Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('PA22G6E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -5430,6 +5581,16 @@
                 </span>
                 <span><b>New Mexico NM-MSSA</b> Grade 6 Math Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G6M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G6M')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G6M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 6 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G6M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G6M')" src="./assets/flags/NY.png"
@@ -5509,6 +5670,16 @@
                   &starf;
                 </span>
                 <span><b>North Carolina EOG 2018</b> Grade 6 Math Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('PA23G6M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G6M')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G6M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 6 Math Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('PA22G6M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -5849,6 +6020,16 @@
                 </span>
                 <span><b>New Mexico NM-MSSA</b> Grade 7 English Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G7E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G7E')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G7E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 7 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G7E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G7E')" src="./assets/flags/NY.png"
@@ -5918,6 +6099,16 @@
                   &starf;
                 </span>
                 <span><b>New York NYSTP 2015</b> Grade 7 English Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('PA23G7E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G7E')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G7E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 7 English Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('PA22G7E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -6297,6 +6488,16 @@
                 </span>
                 <span><b>New Mexico NM-MSSA</b> Grade 7 Math Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G7M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G7M')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G7M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 7 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G7M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G7M')" src="./assets/flags/NY.png"
@@ -6376,6 +6577,16 @@
                   &starf;
                 </span>
                 <span><b>North Carolina EOG 2018</b> Grade 7 Math Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('PA23G7M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G7M')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G7M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 7 Math Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('PA22G7M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -6716,6 +6927,16 @@
                 </span>
                 <span><b>New Mexico NM-MSSA</b> Grade 8 English Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G8E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G8E')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G8E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 8 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G8E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G8E')" src="./assets/flags/NY.png"
@@ -6785,6 +7006,16 @@
                   &starf;
                 </span>
                 <span><b>New York NYSTP 2015</b> Grade 8 English Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('PA23G8E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G8E')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G8E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 8 English Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('PA22G8E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -7164,6 +7395,16 @@
                 </span>
                 <span><b>New Mexico NM-MSSA</b> Grade 8 Math Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G8M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G8M')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G8M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 8 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G8M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G8M')" src="./assets/flags/NY.png"
@@ -7243,6 +7484,16 @@
                   &starf;
                 </span>
                 <span><b>North Carolina EOG 2018</b> Grade 8 Math Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('PA23G8M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G8M')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G8M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 8 Math Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('PA22G8M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -7530,6 +7781,16 @@
                 </span>
                 <span><b>New Mexico NM-ASR</b> Grade 8 Science Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('NY23G8S'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G8S')" src="./assets/flags/NY.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G8S') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>New York NYSTP 2023</b> Grade 8 Science Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G8S'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G8S')" src="./assets/flags/NY.png"
@@ -7609,6 +7870,16 @@
                   &starf;
                 </span>
                 <span><b>North Carolina EOG 2018</b> Grade 8 Science Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('PA23G8S'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G8S')" src="./assets/flags/PA.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G8S') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Pennsylvania PSSA 2023</b> Grade 8 Science Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('PA22G8S'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -12486,6 +12757,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G3M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G3M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G3M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 3 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G3M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G3M')" src="./assets/icons/select.png"
@@ -12556,6 +12836,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G3E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G3E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G3E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 3 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G3E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G3E')" src="./assets/icons/select.png"
@@ -12628,6 +12917,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G4M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G4M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G4M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 4 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G4M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G4M')" src="./assets/icons/select.png"
@@ -12698,6 +12996,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G4E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G4E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G4E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 4 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G4E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G4E')" src="./assets/icons/select.png"
@@ -12840,6 +13147,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G5M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G5M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G5M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 5 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G5M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G5M')" src="./assets/icons/select.png"
@@ -12910,6 +13226,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G5E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G5E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G5E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 5 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G5E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G5E')" src="./assets/icons/select.png"
@@ -12982,6 +13307,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G6M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G6M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G6M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 6 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G6M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G6M')" src="./assets/icons/select.png"
@@ -13052,6 +13386,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G6E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G6E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G6E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 6 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G6E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G6E')" src="./assets/icons/select.png"
@@ -13124,6 +13467,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G7M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G7M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G7M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 7 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G7M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G7M')" src="./assets/icons/select.png"
@@ -13194,6 +13546,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G7E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G7E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G7E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 7 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G7E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G7E')" src="./assets/icons/select.png"
@@ -13266,6 +13627,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G8M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G8M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G8M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 8 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G8M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G8M')" src="./assets/icons/select.png"
@@ -13336,6 +13706,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G8E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G8E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G8E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 8 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G8E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G8E')" src="./assets/icons/select.png"
@@ -13406,6 +13785,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('NY23G8S'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('NY23G8S')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('NY23G8S') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>New York NYSTP <b>2023</b> Grade 8 Science Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('NY22G8S'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('NY22G8S')" src="./assets/icons/select.png"
@@ -13830,6 +14218,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G3M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G3M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G3M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 3 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G3M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G3M')" src="./assets/icons/select.png"
@@ -13891,6 +14288,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G3E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G3E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G3E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 3 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G3E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G3E')" src="./assets/icons/select.png"
@@ -13955,6 +14361,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G4M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G4M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G4M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 4 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G4M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G4M')" src="./assets/icons/select.png"
@@ -14016,6 +14431,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G4E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G4E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G4E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 4 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G4E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G4E')" src="./assets/icons/select.png"
@@ -14077,6 +14501,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G4S'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G4S')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G4S') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 4 Science Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G4S'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G4S')" src="./assets/icons/select.png"
@@ -14141,6 +14574,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G5M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G5M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G5M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 5 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G5M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G5M')" src="./assets/icons/select.png"
@@ -14202,6 +14644,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G5E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G5E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G5E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 5 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G5E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G5E')" src="./assets/icons/select.png"
@@ -14210,7 +14661,8 @@
                   style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
                 </span>
                 <span>Pennsylvania PSSA <b>2022</b> Grade 5 English Exam</span>
-              </button><button class="card card-small" (click)="select_exam('PA21G5E'); scroll_top()" tabindex="0"
+              </button>
+              <button class="card card-small" (click)="select_exam('PA21G5E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA21G5E')" src="./assets/icons/select.png"
                   style="height: 20px; margin: 0 5px 0 0;">
@@ -14265,6 +14717,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G6M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G6M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G6M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 6 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G6M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G6M')" src="./assets/icons/select.png"
@@ -14326,6 +14787,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G6E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G6E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G6E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 6 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G6E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G6E')" src="./assets/icons/select.png"
@@ -14390,6 +14860,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G7M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G7M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G7M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 7 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G7M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G7M')" src="./assets/icons/select.png"
@@ -14451,6 +14930,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G7E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G7E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G7E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 7 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G7E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G7E')" src="./assets/icons/select.png"
@@ -14515,6 +15003,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G8M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G8M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G8M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 8 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G8M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G8M')" src="./assets/icons/select.png"
@@ -14576,6 +15073,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G8E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G8E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G8E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 8 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G8E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G8E')" src="./assets/icons/select.png"
@@ -14637,6 +15143,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('PA23G8S'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('PA23G8S')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('PA23G8S') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Pennsylvania PSSA <b>2023</b> Grade 8 Science Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('PA22G8S'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('PA22G8S')" src="./assets/icons/select.png"
