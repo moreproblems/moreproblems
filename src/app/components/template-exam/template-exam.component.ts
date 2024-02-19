@@ -2696,7 +2696,7 @@ export class TemplateExamComponent implements OnInit {
                         }
                     }
                     // this.exam_dump[this.dump_count] = value;
-                    this.ordered_dump[this.dump_count] = value;
+                    // this.ordered_dump[this.dump_count] = value;
                     this.dump_count += 1;
                 }
             }
