@@ -1208,12 +1208,12 @@
               </div>
             </section>
             <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+((exam_dump | keys).indexOf(""+this.problem_number)+1)}}/{{""+exam_length}}</b> </h4>
-            <progress value="{{(exam_dump | keys).indexOf(''+this.problem_number)+1}}" max="{{exam_length}}"
+            <progress value="{{(exam_dump | keys).indexOf(''+problem_number)+1}}" max="{{exam_length}}"
               style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
               #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           </div>
           <br />
-          <div *ngIf="problem_number <= exam_length" class="card card-medium"
+          <div *ngIf="(exam_dump | keys).indexOf(''+problem_number)+1 <= exam_length" class="card card-medium"
             style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
             <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
             <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
