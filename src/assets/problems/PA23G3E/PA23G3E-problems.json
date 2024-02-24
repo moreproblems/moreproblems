@@ -3,46 +3,52 @@
         "Number": 1,
         "Type": "MC",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "Topics": [
+            "Literature - Vocabulary Acquisition & Use"
+        ],
+        "SubTopics": [
+            "Demonstrate understanding of word relationships and nuances in word meanings."
+        ],
+        "SuppContent": [
+            "problems/PA23G3E/supps/PA23G3E-S1.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/PA15G8M/media/1a.jpg",
-            ""
+            "Read the sentence from the passage.",
+            ":box:My sister tickled the dirt with her fingertips.",
+            "What does “tickled the dirt” mean in the sentence?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "lightly touched the dirt",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "The phrase “tickled the dirt” means to touch the dirt lightly. The literal meaning of the word “tickled” provides context for the correct answer. The development of the idea that Jessie does not like to get dirty and her reaction to touching the dirt provide additional context for the correct answer.",
+                    "Percent": 62
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "drew a picture in the dirt",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "This option does not convey the meaning of the word “tickled.”",
+                    "Percent": 6
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "patted the dirt back into place",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "This option does not convey the meaning of the word “tickled.”",
+                    "Percent": 7
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "dug in the dirt looking for things",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "This option does not convey the meaning of the word “tickled.”",
+                    "Percent": 25
                 }
             }
         },
@@ -52,46 +58,50 @@
         "Number": 2,
         "Type": "MC",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "Topics": [
+            "Literature - Key Ideas & Details"
+        ],
+        "SubTopics": [
+            "Recount poems, dramas, or stories, including fables, folktales, and myths from diverse cultures; determine the central message, lesson, or moral and explain how it is conveyed through key details in the text."
+        ],
+        "SuppContent": [
+            "problems/PA23G3E/supps/PA23G3E-S1.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/PA15G8M/media/2a.jpg",
-            ""
+            "Which sentence best tells what the sisters learn in the passage?"
         ],
         "AnswerChoices": {
-            "F": {
-                "Choice": "",
+            "A": {
+                "Choice": "Twin sisters see how they are alike.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "The sisters only reveal their differences in the passage, not the things they have in common.",
+                    "Percent": 16
                 }
             },
-            "G": {
-                "Choice": "",
+            "B": {
+                "Choice": "Twin sisters respect one another's differences.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "The sisters have very different interests, but Karly is able to use her interest in digging, dirt, and rocks to help Jessie with her diorama project. When the project is just about complete, Jessie declares, “I won't call you weird anymore,” indicating that she has learned to appreciate that her sister has different interests.",
+                    "Percent": 50
                 }
             },
-            "H": {
-                "Choice": "",
+            "C": {
+                "Choice": "Twin sisters work together to make a diorama.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Although the sisters do work together to make the diorama, this does not state something they learned in the passage.",
+                    "Percent": 26
                 }
             },
-            "J": {
-                "Choice": "",
+            "D": {
+                "Choice": "Twin sisters talk about what they will be when they grow up.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Although Karly talks about the job she wants to have when she grows up, Jessie does not.",
+                    "Percent": 8
                 }
             }
         },
@@ -99,195 +109,284 @@
     },
     "3": {
         "Number": 3,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Literature - Key Ideas & Details"
+        ],
+        "SubTopics": [
+            "Describe characters in a story (e.g., their traits, motivations, feelings) and explain how their actions contribute to the sequence of events."
+        ],
+        "SuppContent": [
+            "problems/PA23G3E/supps/PA23G3E-S1.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/PA15G8M/media/3a.jpg",
-            ""
+            "This question has two parts. Answer Part One and then answer Part Two."
         ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+        "AnswerChoices": {},
+        "Parts": {
+            "One": {
+                "Type": "MC",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    "What is the result of Karly helping Jessie with her school project?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Jessie appreciates Karly's having different interests.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "Jessie is thankful Karly is able to help her with her diorama project.",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "Jessie decides to become an archaeologist.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "Jessie is not sure which type of scientist she wants to be.",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "Jessie accepts Karly's offer to finish the diorama.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "Karly does not offer to finish the diorama.",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "Jessie decides to collect different types of dolls.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "Although Jessie decides to use a boy doll that she has, there is no indication that she decides to collect different types of dolls.",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+            "Two": {
+                "Type": "MS",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    "Which evidence from the passage supports the answer in Part One? Choose two answers."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "“ 'A granite cave,' I replied, 'it's perfect.' ”",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "This option does not support the idea that Jessie is appreciative of Karly's different interests.",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "“ 'I have a miniature boy doll I can dress up like a caveman!' Jessie exclaimed.”",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "This option does not support the idea that Jessie is appreciative of Karly's different interests.",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "“ 'I won't call you weird anymore.' ”",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "This option shows that Jessie will not insult Karly anymore because of her different interests.",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "“ 'I'd be lost without you for my sister,' Jessie said as she gave me a hug.”",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "This option shows that Jessie is glad to have Karly as her sister because Karly was able to help Jessie complete her project.",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "4": {
         "Number": 4,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Literature - Craft & Structure"
+        ],
+        "SubTopics": [
+            "Explain the point of view from which a story is narrated, including the difference between first- and third-person narrations."
+        ],
+        "SuppContent": [
+            "problems/PA23G3E/supps/PA23G3E-S1.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/PA15G8M/media/4a.jpg",
-            ""
+            "This question has two parts. Answer Part One and then answer Part Two."
         ],
-        "AnswerChoices": {
-            "F": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+        "AnswerChoices": {},
+        "Parts": {
+            "One": {
+                "Type": "MC",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    "From which point of view is the passage written?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "third person through a narrator",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "This option does not describe the point of view used in the passage.",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "first person through Karly",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "The passage is told using first-person point of view through Karly.",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "third person through Dad",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "This option does not describe the point of view used in the passage.",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "first person through Jessie",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "This option does not describe the point of view used in the passage.",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
-            "G": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "H": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "J": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+            "Two": {
+                "Type": "MC",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    "Which sentence from the passage best supports the answer in Part One? Choose one answer."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "“ 'Karly, get that slimy, disgusting piece of junk away from my doll!' Jessie hollered.”",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "This sentence is Jessie's dialogue.",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "“I pushed my rock under Jessie's nose.”",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "This option describes an action and uses the word “I,” which shows that Karly is telling the story.",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "“ 'Dad and I bought it at the Natural Science Museum.' ”",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "Although this sentence uses the word “I,” it is dialogue and therefore does not show the point of view used in the passage.",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "“Jessie scrunched up her face, closed her eyes, and clawed at the earth.”",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "Although this sentence describes an action in the story, it does not use the word “I,” which is needed to show that the story is being told using first-person point of view.",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "5": {
         "Number": 5,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "Type": "LR",
+        "NumChoices": 0,
+        "Topics": [
+            "Literature - Key Ideas & Details"
+        ],
+        "SubTopics": [
+            "Describe characters in a story (e.g., their traits, motivations, feelings) and explain how their actions contribute to the sequence of events."
+        ],
+        "SuppContent": [
+            "problems/PA23G3E/supps/PA23G3E-S1.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/PA15G8M/media/5a.jpg",
-            ""
+            "Read the sentences from the middle of the passage.",
+            ":box:An idea sizzled in my brain. I grabbed her hand and pulled her outside.",
+            "How does Karly's idea contribute to the sequence of events in the passage? Use evidence from the passage to support your answer."
         ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "6": {
         "Number": 6,
         "Type": "MC",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Conventions Of Standard English"
+        ],
+        "SubTopics": [
+            "Use spelling patterns and generalizations (e.g., word families, position-based spellings, syllable patterns, ending rules, meaningful word parts) in writing words."
+        ],
         "SuppContent": [],
         "Explain": false,
         "Content": [
-            "",
-            "problems/PA15G8M/media/6a.jpg",
-            ""
+            "Read the sentence.",
+            ":box:Jill likes to take care of the __________ in the nursery.",
+            "Which word should fill in the blank to correctly complete the sentence?"
         ],
         "AnswerChoices": {
-            "F": {
-                "Choice": "",
+            "A": {
+                "Choice": "babeis",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "This option does not use the correct spelling rule.",
+                    "Percent": 8
                 }
             },
-            "G": {
-                "Choice": "",
+            "B": {
+                "Choice": "babies",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "This option uses the rule change “y” to “i” and add “es.”",
+                    "Percent": 76
                 }
             },
-            "H": {
-                "Choice": "",
+            "C": {
+                "Choice": "babyes",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "This option does not use the correct spelling rule.",
+                    "Percent": 10
                 }
             },
-            "J": {
-                "Choice": "",
+            "D": {
+                "Choice": "babyies",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "This option does not use the correct spelling rule.",
+                    "Percent": 6
                 }
             }
         },
@@ -297,46 +396,49 @@
         "Number": 7,
         "Type": "MC",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Conventions Of Standard English"
+        ],
+        "SubTopics": [
+            "Ensure subject-verb and pronoun-antecedent agreement."
+        ],
         "SuppContent": [],
         "Explain": false,
         "Content": [
-            "",
-            "problems/PA15G8M/media/7a.jpg",
-            ""
+            "Which sentence uses a pronoun incorrectly?",
+            ":box:(1) Ms. Gustavo wishes Darien and his friends would wipe their feet before entering the house. (2) She asked them to try to remember more often. (3) Sometimes Darien remembers. (4) His friends only wipe them feet when Ms. Gustavo reminds them."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "sentence 1",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "This sentence does not contain errors in pronoun use.",
+                    "Percent": 17
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "sentence 2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "This sentence does not contain errors in pronoun use.",
+                    "Percent": 15
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "sentence 3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "This sentence does not contain errors in pronoun use.",
+                    "Percent": 17
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "sentence 4",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "Sentence 4, is the correct answer since the word “them” is incorrect: “His friends only wipe them feet...”",
+                    "Percent": 51
                 }
             }
         },
@@ -346,46 +448,50 @@
         "Number": 8,
         "Type": "MC",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Conventions Of Standard English"
+        ],
+        "SubTopics": [
+            "Form and use the simple verb tenses (e.g., I walked; I walk; I will walk)."
+        ],
         "SuppContent": [],
         "Explain": false,
         "Content": [
-            "",
-            "problems/PA15G8M/media/8a.jpg",
-            ""
+            "Read the paragraph.",
+            ":box:(1) Jen takes good care of her bike. (2) She washed it yesterday afternoon. (3) Then she made sure the tires had enough air. (4) Tomorrow her dad put a new bell on the bike.",
+            "Which verb should be changed?"
         ],
         "AnswerChoices": {
-            "F": {
-                "Choice": "",
+            "A": {
+                "Choice": "t͟a͟k͟e͟s in sentence 1",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "This verb is correct within the context of the paragraph.",
+                    "Percent": 17
                 }
             },
-            "G": {
-                "Choice": "",
+            "B": {
+                "Choice": "w͟a͟s͟h͟e͟d in sentence 2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "This verb is correct within the context of the paragraph.",
+                    "Percent": 20
                 }
             },
-            "H": {
-                "Choice": "",
+            "C": {
+                "Choice": "m͟a͟d͟e in sentence 3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "This verb is correct within the context of the paragraph.",
+                    "Percent": 16
                 }
             },
-            "J": {
-                "Choice": "",
+            "D": {
+                "Choice": "p͟u͟t in sentence 4",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "“Put” is not the correct verb tense for the context of the paragraph.",
+                    "Percent": 47
                 }
             }
         },
