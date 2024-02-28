@@ -669,16 +669,16 @@
         <label class="switch">
           <input type="checkbox" value="ELA">
           <button *ngIf="subject_filters.includes('English Language Arts')" (click)="toggle_button('English Language Arts')"
-            class="toggle-button-on" tabindex="0"> <b>English Language Arts</b> </button>
+            class="toggle-button-on" tabindex="0"> <b>{{subject_labels['English Language Arts']}}</b> </button>
           <button *ngIf="!subject_filters.includes('English Language Arts')" (click)="toggle_button('English Language Arts')"
-            class="toggle-button-off" tabindex="0"> <b>English Language Arts</b> </button>
+            class="toggle-button-off" tabindex="0"> <b>{{subject_labels['English Language Arts']}}</b> </button>
         </label>
         <label class="switch">
           <input type="checkbox" value="ER">
           <button *ngIf="subject_filters.includes('English Reading')" (click)="toggle_button('English Reading')"
-            class="toggle-button-on" tabindex="0"> <b>English Reading</b> </button>
+            class="toggle-button-on" tabindex="0"> <b>{{subject_labels['English Reading']}}</b> </button>
           <button *ngIf="!subject_filters.includes('English Reading')" (click)="toggle_button('English Reading')"
-            class="toggle-button-off" tabindex="0"> <b>English Reading</b> </button>
+            class="toggle-button-off" tabindex="0"> <b>{{subject_labels['English Reading']}}</b> </button>
         </label>
         <!-- <label class="switch">
           <input type="checkbox" value="EW">
@@ -806,6 +806,13 @@
           <button *ngIf="!state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')"
             class="toggle-button-off" tabindex="0"> <b>Tennessee</b> </button>
         </label> -->
+        <label class="switch">
+          <input type="checkbox" value="SAT">
+          <button *ngIf="state_filters.includes('SAT')" (click)="toggle_button('SAT')" class="toggle-button-on"
+            tabindex="0"> <b>SAT</b> </button>
+          <button *ngIf="!state_filters.includes('SAT')" (click)="toggle_button('SAT')" class="toggle-button-off"
+            tabindex="0"> <b>SAT</b> </button>
+        </label>
         <label class="switch">
           <input type="checkbox" value="TX">
           <button *ngIf="state_filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button-on"
@@ -939,7 +946,7 @@
                 <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
@@ -950,7 +957,7 @@
                 <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <section *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12"
@@ -1546,7 +1553,7 @@
               <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].Subject}} </b> </button>
             </label>
             <label class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State}} </b> </button>
+              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
             </label>
           </div>
           <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
@@ -1557,7 +1564,7 @@
               <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
             </label>
             <label class="switch" style="padding: 0 2px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State}} </b> </button>
+              <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
             </label>
           </div>
           <section *ngIf="exam_dump[problem_number].SubTopics.length > 0 && exam_dump[problem_number].SubTopics[0].length > 12"

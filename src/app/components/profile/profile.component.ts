@@ -215,10 +215,10 @@ import * as PA19G8SProblems from "src/assets/problems/PA19G8S/PA19G8S-problems.j
 import * as PA18G8SProblems from "src/assets/problems/PA18G8S/PA18G8S-problems.json";
 import * as PA16G8SProblems from "src/assets/problems/PA16G8S/PA16G8S-problems.json";
 import * as PA15G8SProblems from "src/assets/problems/PA15G8S/PA15G8S-problems.json";
-import * as SAT1M1Problems from "src/assets/problems/SAT1-M1/SAT1-M1-problems.json";
-import * as SAT1M2Problems from "src/assets/problems/SAT1-M2/SAT1-M2-problems.json";
-import * as SAT1RW1Problems from "src/assets/problems/SAT1-RW1/SAT1-RW1-problems.json";
-import * as SAT1RW2Problems from "src/assets/problems/SAT1-RW2/SAT1-RW2-problems.json";
+import * as SAT1M1Problems from "src/assets/problems/SAT1M1/SAT1M1-problems.json";
+import * as SAT1M2Problems from "src/assets/problems/SAT1M2/SAT1M2-problems.json";
+import * as SAT1RW1Problems from "src/assets/problems/SAT1RW1/SAT1RW1-problems.json";
+import * as SAT1RW2Problems from "src/assets/problems/SAT1RW2/SAT1RW2-problems.json";
 import * as TX22G3MProblems from "src/assets/problems/TX22G3M/TX22G3M-problems.json";
 import * as TX22G3RProblems from "src/assets/problems/TX22G3R/TX22G3R-problems.json";
 import * as TX21G3MProblems from "src/assets/problems/TX21G3M/TX21G3M-problems.json";
@@ -927,10 +927,10 @@ export class ProfileComponent implements OnInit {
     "PA18G8S": this.PA18G8S_exam_dump,
     "PA16G8S": this.PA16G8S_exam_dump,
     "PA15G8S": this.PA15G8S_exam_dump,
-    "SAT1-M1": this.SAT1M1_exam_dump,
-    "SAT1-M2": this.SAT1M2_exam_dump,
-    "SAT1-RW1": this.SAT1RW1_exam_dump,
-    "SAT1-RW2": this.SAT1RW2_exam_dump,
+    "SAT1M1": this.SAT1M1_exam_dump,
+    "SAT1M2": this.SAT1M2_exam_dump,
+    "SAT1RW1": this.SAT1RW1_exam_dump,
+    "SAT1RW2": this.SAT1RW2_exam_dump,
     "TX22G3M": this.TX22G3M_exam_dump,
     "TX22G3R": this.TX22G3R_exam_dump,
     "TX21G3M": this.TX21G3M_exam_dump,
@@ -1500,10 +1500,10 @@ export class ProfileComponent implements OnInit {
     "RI21G8E": "Rhode Island RICAS 2021 Grade 8 English Language Arts Exam",
     "RI19G8E": "Rhode Island RICAS 2019 Grade 8 English Language Arts Exam",
     "RI18G8E": "Rhode Island RICAS 2018 Grade 8 English Language Arts Exam",
-    "SAT1-M1": "The SAT Practice Test #1 - Math, Module 1",
-    "SAT1-M2": "The SAT Practice Test #1 - Math, Module 2",
-    "SAT1-RW1": "The SAT Practice Test #1 - Reading & Writing, Module 1",
-    "SAT1-RW2": "The SAT Practice Test #1 - Reading & Writing, Module 2",
+    "SAT1M1": "The SAT Practice Test #1 - Math, Module 1",
+    "SAT1M2": "The SAT Practice Test #1 - Math, Module 2",
+    "SAT1RW1": "The SAT Practice Test #1 - Reading & Writing, Module 1",
+    "SAT1RW2": "The SAT Practice Test #1 - Reading & Writing, Module 2",
     "SC18G3M": "South Carolina SC READY Grade 3 Math Practice Exam",
     "SC18G3E": "South Carolina SC READY Grade 3 English Language Arts Practice Exam",
     "SC18G4M": "South Carolina SC READY Grade 4 Math Practice Exam",

@@ -634,7 +634,7 @@
                 <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
@@ -645,7 +645,7 @@
                 <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <section *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12"
@@ -1224,7 +1224,7 @@
                 <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[key].Subject}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[key].State}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[key].State) ? exam_attribute_dump[key].State : exam_attribute_dump[key].ExamName}} </b> </button>
               </label>
             </div>
             <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
@@ -1235,7 +1235,7 @@
                 <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[key].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[key].State}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[key].State) ? exam_attribute_dump[key].State : exam_attribute_dump[key].ExamName}} </b> </button>
               </label>
             </div>
             <section *ngIf="exam_dump[problem_number].SubTopics.length > 0 && exam_dump[problem_number].SubTopics[0].length > 12"
