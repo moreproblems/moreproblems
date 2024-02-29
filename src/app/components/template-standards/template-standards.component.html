@@ -1140,18 +1140,24 @@
             </div>
             <hr *ngIf="domain_state[domain.Label]" style="width: 100%; border-width: 1px" />
             <div style="display: flex; flex-direction: row; text-align: left">
-              <ul *ngIf="domain_state[domain.Label]" style="font-size: 17px; line-height: 21px; padding-left: 17px; margin-top: 0px">
+              <ul *ngIf="domain_state[domain.Label]" style="font-size: 18px; line-height: 22px; padding-left: 17px; margin-top: 0px">
                 <li *ngFor="let cluster of domain.Subs" style="margin-top: 20px; margin-bottom: 8px"> <b *ngIf="cluster.Key != ''" style="font-weight: 800">{{cluster.Key}}: </b>
                   <b *ngIf="cluster.NumProb == 0" style="font-weight: 500">{{cluster.Label}}</b>
                   <a *ngIf="cluster.NumProb > 0" (click)="selectSubTopic([domain.Label], cluster.Label)" style="font-weight: 500">{{cluster.Label}}</a> <b *ngIf="cluster.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{cluster.NumProb}}</i>)</b>
-                  <ul style="font-size: 16px; line-height: 20px; padding-left: 17px">
+                  <ul style="font-size: 17px; line-height: 21px; padding-left: 17px">
                     <li *ngFor="let standard of cluster.Subs" style="margin-top: 15px; margin-bottom: 6px"> <b *ngIf="standard.Key != ''" style="font-weight: 800">{{standard.Key}}: </b>
                       <b *ngIf="standard.NumProb == 0" style="font-weight: 500">{{standard.Label}}</b>
                       <a *ngIf="standard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], standard.Label)" style="font-weight: 500">{{standard.Label}}</a> <b *ngIf="standard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{standard.NumProb}}</i>)</b>
-                      <ul style="font-size: 15px; line-height: 19px; padding-left: 17px">
+                      <ul style="font-size: 16px; line-height: 20px; padding-left: 17px">
                         <li *ngFor="let substandard of standard.Subs" style="margin-top: 10px; margin-bottom: 4px"> <b *ngIf="substandard.Key != ''" style="font-weight: 800">{{substandard.Key}}: </b>
                           <b *ngIf="substandard.NumProb == 0" style="font-weight: 500">{{substandard.Label}}</b>
                           <a *ngIf="substandard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], substandard.Label)" style="font-weight: 500">{{substandard.Label}}</a> <b *ngIf="substandard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{substandard.NumProb}}</i>)</b>
+                          <ul style="font-size: 15px; line-height: 19px; padding-left: 17px">
+                            <li *ngFor="let subsubstandard of substandard.Subs" style="margin-top: 10px; margin-bottom: 4px"> <b *ngIf="subsubstandard.Key != ''" style="font-weight: 800">{{subsubstandard.Key}}: </b>
+                              <b *ngIf="subsubstandard.NumProb == 0" style="font-weight: 500">{{subsubstandard.Label}}</b>
+                              <a *ngIf="subsubstandard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], subsubstandard.Label)" style="font-weight: 500">{{subsubstandard.Label}}</a> <b *ngIf="subsubstandard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{subsubstandard.NumProb}}</i>)</b>
+                            </li>
+                          </ul>
                         </li>
                       </ul>
                     </li>

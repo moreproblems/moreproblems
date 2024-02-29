@@ -52,23 +52,37 @@ import * as NYG8EStandards from "src/assets/standards/NY/G8-E.json";
 import * as NYG8MStandards from "src/assets/standards/NY/G8-M.json";
 import * as NYHSE1Standards from "src/assets/standards/NY/HS-E1.json";
 import * as NYHSE2Standards from "src/assets/standards/NY/HS-E2.json";
-import * as TXKEStandards from "src/assets/standards/TX/K-E.json";
+import * as PAG3EStandards from "src/assets/standards/PA/G3-E.json";
+import * as PAG3MStandards from "src/assets/standards/PA/G3-M.json";
+import * as PAG4EStandards from "src/assets/standards/PA/G4-E.json";
+import * as PAG4MStandards from "src/assets/standards/PA/G4-M.json";
+import * as PAG4SStandards from "src/assets/standards/PA/G4-S.json";
+import * as PAG5EStandards from "src/assets/standards/PA/G5-E.json";
+import * as PAG5MStandards from "src/assets/standards/PA/G5-M.json";
+import * as PAG6EStandards from "src/assets/standards/PA/G6-E.json";
+import * as PAG6MStandards from "src/assets/standards/PA/G6-M.json";
+import * as PAG7EStandards from "src/assets/standards/PA/G7-E.json";
+import * as PAG7MStandards from "src/assets/standards/PA/G7-M.json";
+import * as PAG8EStandards from "src/assets/standards/PA/G8-E.json";
+import * as PAG8MStandards from "src/assets/standards/PA/G8-M.json";
+import * as PAG8SStandards from "src/assets/standards/PA/G8-S.json";
+import * as TXKRStandards from "src/assets/standards/TX/K-R.json";
 import * as TXKMStandards from "src/assets/standards/TX/K-M.json";
-import * as TXG1EStandards from "src/assets/standards/TX/G1-E.json";
+import * as TXG1RStandards from "src/assets/standards/TX/G1-R.json";
 import * as TXG1MStandards from "src/assets/standards/TX/G1-M.json";
-import * as TXG2EStandards from "src/assets/standards/TX/G2-E.json";
+import * as TXG2RStandards from "src/assets/standards/TX/G2-R.json";
 import * as TXG2MStandards from "src/assets/standards/TX/G2-M.json";
-import * as TXG3EStandards from "src/assets/standards/TX/G3-E.json";
+import * as TXG3RStandards from "src/assets/standards/TX/G3-R.json";
 import * as TXG3MStandards from "src/assets/standards/TX/G3-M.json";
-import * as TXG4EStandards from "src/assets/standards/TX/G4-E.json";
+import * as TXG4RStandards from "src/assets/standards/TX/G4-R.json";
 import * as TXG4MStandards from "src/assets/standards/TX/G4-M.json";
-import * as TXG5EStandards from "src/assets/standards/TX/G5-E.json";
+import * as TXG5RStandards from "src/assets/standards/TX/G5-R.json";
 import * as TXG5MStandards from "src/assets/standards/TX/G5-M.json";
-import * as TXG6EStandards from "src/assets/standards/TX/G6-E.json";
+import * as TXG6RStandards from "src/assets/standards/TX/G6-R.json";
 import * as TXG6MStandards from "src/assets/standards/TX/G6-M.json";
-import * as TXG7EStandards from "src/assets/standards/TX/G7-E.json";
+import * as TXG7RStandards from "src/assets/standards/TX/G7-R.json";
 import * as TXG7MStandards from "src/assets/standards/TX/G7-M.json";
-import * as TXG8EStandards from "src/assets/standards/TX/G8-E.json";
+import * as TXG8RStandards from "src/assets/standards/TX/G8-R.json";
 import * as TXG8MStandards from "src/assets/standards/TX/G8-M.json";
 import * as TXHSE1Standards from "src/assets/standards/TX/HS-E1.json";
 import * as TXHSE2Standards from "src/assets/standards/TX/HS-E2.json";
@@ -385,7 +399,7 @@ export class TemplateStandardsComponent implements OnInit {
     stateSet = false;
 
     key: string = "";
-    online_subjects: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PKE-NY", "PKM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "KE-TX", "KM-TX", "G1E-TX", "G1M-TX", "G2E-TX", "G2M-TX", "G3E-TX", "G3M-TX", "G4E-TX", "G4M-TX", "G5E-TX", "G5M-TX", "G6E-TX", "G6M-TX", "G7E-TX", "G7M-TX", "G8E-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX"];
+    online_subjects: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PKE-NY", "PKM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX"];
 
     KE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KEStandards;
     KM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KMStandards;
@@ -435,23 +449,37 @@ export class TemplateStandardsComponent implements OnInit {
     NYG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG8MStandards;
     NYHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYHSE1Standards;
     NYHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYHSE2Standards;
-    TXKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXKEStandards;
+    PAG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG3EStandards;
+    PAG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG3MStandards;
+    PAG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG4EStandards;
+    PAG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG4MStandards;
+    PAG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG4SStandards;
+    PAG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG5EStandards;
+    PAG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG5MStandards;
+    PAG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG6EStandards;
+    PAG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG6MStandards;
+    PAG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG7EStandards;
+    PAG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG7MStandards;
+    PAG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG8EStandards;
+    PAG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG8MStandards;
+    PAG8S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG8SStandards;
+    TXKR_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXKRStandards;
     TXKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXKMStandards;
-    TXG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG1EStandards;
+    TXG1R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG1RStandards;
     TXG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG1MStandards;
-    TXG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG2EStandards;
+    TXG2R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG2RStandards;
     TXG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG2MStandards;
-    TXG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG3EStandards;
+    TXG3R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG3RStandards;
     TXG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG3MStandards;
-    TXG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG4EStandards;
+    TXG4R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG4RStandards;
     TXG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG4MStandards;
-    TXG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG5EStandards;
+    TXG5R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG5RStandards;
     TXG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG5MStandards;
-    TXG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG6EStandards;
+    TXG6R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG6RStandards;
     TXG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG6MStandards;
-    TXG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG7EStandards;
+    TXG7R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG7RStandards;
     TXG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG7MStandards;
-    TXG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG8EStandards;
+    TXG8R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG8RStandards;
     TXG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG8MStandards;
     TXHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE1Standards;
     TXHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE2Standards;
@@ -1075,23 +1103,37 @@ export class TemplateStandardsComponent implements OnInit {
         "G8M-NY": this.NYG8M_standards_dump,
         "HSE1-NY": this.NYHSE1_standards_dump,
         "HSE2-NY": this.NYHSE2_standards_dump,
-        "KE-TX": this.TXKE_standards_dump,
+        "G3E-PA": this.PAG3E_standards_dump,
+        "G3M-PA": this.PAG3M_standards_dump,
+        "G4E-PA": this.PAG4E_standards_dump,
+        "G4M-PA": this.PAG4M_standards_dump,
+        "G4S-PA": this.PAG4S_standards_dump,
+        "G5E-PA": this.PAG5E_standards_dump,
+        "G5M-PA": this.PAG5M_standards_dump,
+        "G6E-PA": this.PAG6E_standards_dump,
+        "G6M-PA": this.PAG6M_standards_dump,
+        "G7E-PA": this.PAG7E_standards_dump,
+        "G7M-PA": this.PAG7M_standards_dump,
+        "G8E-PA": this.PAG8E_standards_dump,
+        "G8M-PA": this.PAG8M_standards_dump,
+        "G8S-PA": this.PAG8S_standards_dump,
+        "KR-TX": this.TXKR_standards_dump,
         "KM-TX": this.TXKM_standards_dump,
-        "G1E-TX": this.TXG1E_standards_dump,
+        "G1R-TX": this.TXG1R_standards_dump,
         "G1M-TX": this.TXG1M_standards_dump,
-        "G2E-TX": this.TXG2E_standards_dump,
+        "G2R-TX": this.TXG2R_standards_dump,
         "G2M-TX": this.TXG2M_standards_dump,
-        "G3E-TX": this.TXG3E_standards_dump,
+        "G3R-TX": this.TXG3R_standards_dump,
         "G3M-TX": this.TXG3M_standards_dump,
-        "G4E-TX": this.TXG4E_standards_dump,
+        "G4R-TX": this.TXG4R_standards_dump,
         "G4M-TX": this.TXG4M_standards_dump,
-        "G5E-TX": this.TXG5E_standards_dump,
+        "G5R-TX": this.TXG5R_standards_dump,
         "G5M-TX": this.TXG5M_standards_dump,
-        "G6E-TX": this.TXG6E_standards_dump,
+        "G6R-TX": this.TXG6R_standards_dump,
         "G6M-TX": this.TXG6M_standards_dump,
-        "G7E-TX": this.TXG7E_standards_dump,
+        "G7R-TX": this.TXG7R_standards_dump,
         "G7M-TX": this.TXG7M_standards_dump,
-        "G8E-TX": this.TXG8E_standards_dump,
+        "G8R-TX": this.TXG8R_standards_dump,
         "G8M-TX": this.TXG8M_standards_dump,
         "HSE1-TX": this.TXHSE1_standards_dump,
         "HSE2-TX": this.TXHSE2_standards_dump,
@@ -1711,6 +1753,9 @@ export class TemplateStandardsComponent implements OnInit {
                     standard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], standard.Label);
                     for (let substandard of standard.Subs) {
                         substandard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], substandard.Label);
+                        for (let subsubstandard of substandard.Subs) {
+                            subsubstandard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], subsubstandard.Label);
+                        }
                     }
                 }
             }
