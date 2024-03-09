@@ -30,6 +30,29 @@ import * as HSMGStandards from "src/assets/standards/CC/HS-M-G.json";
 import * as HSMMStandards from "src/assets/standards/CC/HS-M-M.json";
 import * as HSMNStandards from "src/assets/standards/CC/HS-M-N.json";
 import * as HSMSStandards from "src/assets/standards/CC/HS-M-S.json";
+import * as FLKEStandards from "src/assets/standards/FL/K-E.json";
+import * as FLKMStandards from "src/assets/standards/FL/K-M.json";
+import * as FLG1EStandards from "src/assets/standards/FL/G1-E.json";
+import * as FLG1MStandards from "src/assets/standards/FL/G1-M.json";
+import * as FLG2EStandards from "src/assets/standards/FL/G2-E.json";
+import * as FLG2MStandards from "src/assets/standards/FL/G2-M.json";
+import * as FLG3EStandards from "src/assets/standards/FL/G3-E.json";
+import * as FLG3MStandards from "src/assets/standards/FL/G3-M.json";
+import * as FLG4EStandards from "src/assets/standards/FL/G4-E.json";
+import * as FLG4MStandards from "src/assets/standards/FL/G4-M.json";
+import * as FLG5EStandards from "src/assets/standards/FL/G5-E.json";
+import * as FLG5MStandards from "src/assets/standards/FL/G5-M.json";
+import * as FLG6EStandards from "src/assets/standards/FL/G6-E.json";
+import * as FLG6MStandards from "src/assets/standards/FL/G6-M.json";
+import * as FLG7EStandards from "src/assets/standards/FL/G7-E.json";
+import * as FLG7MStandards from "src/assets/standards/FL/G7-M.json";
+import * as FLG8EStandards from "src/assets/standards/FL/G8-E.json";
+import * as FLG8MStandards from "src/assets/standards/FL/G8-M.json";
+import * as FLG9EStandards from "src/assets/standards/FL/G9-E.json";
+import * as FLG10EStandards from "src/assets/standards/FL/G10-E.json";
+import * as FLG11EStandards from "src/assets/standards/FL/G11-E.json";
+import * as FLG12EStandards from "src/assets/standards/FL/G12-E.json";
+import * as FLHSMStandards from "src/assets/standards/FL/HS-M.json";
 import * as NYPKEStandards from "src/assets/standards/NY/PK-E.json";
 import * as NYPKMStandards from "src/assets/standards/NY/PK-M.json";
 import * as NYKEStandards from "src/assets/standards/NY/K-E.json";
@@ -432,7 +455,7 @@ export class TemplateStandardsComponent implements OnInit {
     stateSet = false;
 
     key: string = "";
-    online_subjects: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PKE-NY", "PKM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX"];
+    online_subjects: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "KE-FL", "KM-FL", "G1E-FL", "G1M-FL", "G2E-FL", "G2M-FL", "G3E-FL", "G3M-FL", "G4E-FL", "G4M-FL", "G5E-FL", "G5M-FL", "G6E-FL", "G6M-FL", "G7E-FL", "G7M-FL", "G8E-FL", "G8M-FL", "G9E-FL", "G10E-FL", "G11E-FL", "G12E-FL", "HSM-FL", "PKE-NY", "PKM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX"];
 
     KE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KEStandards;
     KM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KMStandards;
@@ -460,6 +483,29 @@ export class TemplateStandardsComponent implements OnInit {
     HSMM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMMStandards;
     HSMN_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMNStandards;
     HSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMSStandards;
+    FLKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLKEStandards;
+    FLKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLKMStandards;
+    FLG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG1EStandards;
+    FLG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG1MStandards;
+    FLG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG2EStandards;
+    FLG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG2MStandards;
+    FLG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG3EStandards;
+    FLG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG3MStandards;
+    FLG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG4EStandards;
+    FLG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG4MStandards;
+    FLG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG5EStandards;
+    FLG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG5MStandards;
+    FLG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG6EStandards;
+    FLG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG6MStandards;
+    FLG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG7EStandards;
+    FLG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG7MStandards;
+    FLG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG8EStandards;
+    FLG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG8MStandards;
+    FLG9E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG9EStandards;
+    FLG10E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG10EStandards;
+    FLG11E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG11EStandards;
+    FLG12E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG12EStandards;
+    FLHSM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLHSMStandards;
     NYPKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYPKEStandards;
     NYPKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYPKMStandards;
     NYKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYKEStandards;
@@ -1177,6 +1223,29 @@ export class TemplateStandardsComponent implements OnInit {
         "HSMM-CC": this.HSMM_standards_dump,
         "HSMN-CC": this.HSMN_standards_dump,
         "HSMS-CC": this.HSMS_standards_dump,
+        "KE-FL": this.FLKE_standards_dump,
+        "KM-FL": this.FLKM_standards_dump,
+        "G1E-FL": this.FLG1E_standards_dump,
+        "G1M-FL": this.FLG1M_standards_dump,
+        "G2E-FL": this.FLG2E_standards_dump,
+        "G2M-FL": this.FLG2M_standards_dump,
+        "G3E-FL": this.FLG3E_standards_dump,
+        "G3M-FL": this.FLG3M_standards_dump,
+        "G4E-FL": this.FLG4E_standards_dump,
+        "G4M-FL": this.FLG4M_standards_dump,
+        "G5E-FL": this.FLG5E_standards_dump,
+        "G5M-FL": this.FLG5M_standards_dump,
+        "G6E-FL": this.FLG6E_standards_dump,
+        "G6M-FL": this.FLG6M_standards_dump,
+        "G7E-FL": this.FLG7E_standards_dump,
+        "G7M-FL": this.FLG7M_standards_dump,
+        "G8E-FL": this.FLG8E_standards_dump,
+        "G8M-FL": this.FLG8M_standards_dump,
+        "G9E-FL": this.FLG9E_standards_dump,
+        "G10E-FL": this.FLG10E_standards_dump,
+        "G11E-FL": this.FLG11E_standards_dump,
+        "G12E-FL": this.FLG12E_standards_dump,
+        "HSM-FL": this.FLHSM_standards_dump,
         "PKE-NY": this.NYPKE_standards_dump,
         "PKM-NY": this.NYPKM_standards_dump,
         "KE-NY": this.NYKE_standards_dump,
