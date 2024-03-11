@@ -1003,6 +1003,26 @@ export class TemplateClassComponent implements OnInit {
     this.edit_c_list[class_stud_ref] = this.class_stud_set;
     this.authService.UpdateDatabase({ class_stud_ref: {} });
     this.authService.UpdateDatabase(this.edit_c_list);
+    location.reload();``
+  }
+
+  remove_student(stud: string) {
+    this.class_stud_set = [];
+    this.edit_c_list = {};
+    const class_stud_ref = 'classes/' + this.class_uid + '/students';
+    for (let student of this.class_data.students) {
+      this.class_stud_set.push(student as string);
+    }
+    if (this.class_stud_set.indexOf(stud) !== -1) {
+      this.class_stud_set.splice(this.class_stud_set.indexOf(stud), 1);
+    }
+    else {
+      this.class_stud_set.pop()
+    }
+    this.edit_c_list[class_stud_ref] = this.class_stud_set;
+    this.authService.UpdateDatabase({ class_stud_ref: {} });
+    this.authService.UpdateDatabase(this.edit_c_list);
+    location.reload();
   }
 
   toggle_add_assignments() {
@@ -1044,6 +1064,26 @@ export class TemplateClassComponent implements OnInit {
     this.edit_c_list[class_ass_ref] = this.class_ass_set;
     this.authService.UpdateDatabase({ class_ass_ref: {} });
     this.authService.UpdateDatabase(this.edit_c_list);
+    location.reload();
+  }
+
+  remove_assignment(ass: string) {
+    this.class_ass_set = [];
+    this.edit_c_list = {};
+    const class_ass_ref = 'classes/' + this.class_uid + '/assignments';
+    for (let assign of this.class_data.assignments) {
+      this.class_ass_set.push(assign as string);
+    }
+    if (this.class_ass_set.indexOf(ass) !== -1) {
+      this.class_ass_set.splice(this.class_ass_set.indexOf(ass), 1);
+    }
+    else {
+      this.class_ass_set.pop()
+    }
+    this.edit_c_list[class_ass_ref] = this.class_ass_set;
+    this.authService.UpdateDatabase({ class_ass_ref: {} });
+    this.authService.UpdateDatabase(this.edit_c_list);
+    location.reload();
   }
 
   select_assignment(ass: string) {
