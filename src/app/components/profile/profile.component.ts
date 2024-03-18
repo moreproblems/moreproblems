@@ -1693,7 +1693,6 @@ export class ProfileComponent implements OnInit {
     "PSAT891": "PSAT 8/9 Practice Test #1"
   };
 
-  supp_dump: any = {};
   supp_st_dump: any = {};
   st_refsheet_source: string = '';
 
@@ -1739,19 +1738,6 @@ export class ProfileComponent implements OnInit {
     this.screenHeight = window.innerHeight;
   }
 
-  read_supp_json(path: string) {
-    this.http.get("./assets/" + path).subscribe(res => {
-      console.log(res);
-      console.log(JSON.stringify(res));
-      this.supp_dump[path] = res;
-      for (let block of this.supp_dump[path].Content) {
-          if (block[1].endsWith('.json')) {
-              this.read_supp_json(block[1]);
-          }
-      }
-    });
-  }
-
   read_supp_st_json(path: string) {
     this.http.get("./assets/" + path).subscribe(res => {
       console.log(res);
@@ -1774,6 +1760,9 @@ export class ProfileComponent implements OnInit {
     this.search_user_results = {};
     if (this.authService.userData.role == 'Student') {
       if (tb == 'achievements') {
+        this.student_exam_metadata = {};
+        console.log(this.authService.getExamSubmissions());
+        this.student_exam_metadata = this.authService.getExamSubmissions();
         if (this.authService.userData.problems.total == 0) {
           this.total_percent_correct = 0;
         }
@@ -1782,17 +1771,21 @@ export class ProfileComponent implements OnInit {
         }
         this.complete_exam_count = 0;
         this.complete_exam_list = [];
-        this.student_exam_metadata = {};
-        this.student_exam_metadata = this.authService.getExamSubmissions();
+        this.temp_count = 1;
         const exam_history = this.authService.userData.exams.history;
+        console.log(exam_history);
         for (const [key, det] of Object.entries(exam_history)) {
-          if ((det as any).status == "Completed") {
-            this.complete_exam_count = this.complete_exam_count + 1;
-            this.complete_exam_list.push(key);
-            this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
-            this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
-          }
+          setTimeout(() => {
+            if ((det as any).status == "Completed") {
+              this.complete_exam_count = this.complete_exam_count + 1;
+              this.complete_exam_list.push(key);
+              this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
+              this.student_exam_metadata[key].endtime = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleTimeString();
+            }
+          }, this.temp_count * 50);
+          this.temp_count += 1;
         }
+        console.log(this.student_exam_metadata);
         setTimeout(() => {
           this.student_data = this.authService.userData;
           this.subject_break();
@@ -2131,16 +2124,46 @@ export class ProfileComponent implements OnInit {
     }
   }
 
+  unlink_student(id: string) {
+    this.student_list = [''];
+    // this.student_metadata = [];
+    if (this.authService.userData.students.length >  1) {
+      for (let std of this.authService.userData.students.slice(1)) {
+        this.student_list.push(std as string);
+      }
+    }
+    if (this.student_list.includes(id)) {
+      if (this.student_list.indexOf(id) !== -1) {
+        this.student_list.splice(this.student_list.indexOf(id), 1);
+      }
+      else {
+        this.student_list.pop()
+      }
+    }
+    this.authService.UpdateUserData({ 'students': {} });
+    this.authService.UpdateUserData({ 'students': this.student_list });
+    this.set_tab("students");
+    setTimeout(() => {
+      this.set_tab("students");
+    }, 250);
+  }
+
   select_student(std: string) {
     this.grade_breakdown = {};
     this.subject_breakdown = {};
     this.topic_breakdown = {};
     this.student_exam_metadata = {};
     this.student_data = this.authService.searchUserId(std);
-    this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
+    for (let exm of Object.keys(this.student_data.exams.history)) {
+      this.student_exam_metadata[exm] = this.authService.getStudExamSubmission2(std, exm);
+    }
+    // this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
     setTimeout(() => {
       this.student_data = this.authService.searchUserId(std);
-      this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
+      for (let exm of Object.keys(this.student_data.exams.history)) {
+        this.student_exam_metadata[exm] = this.authService.getStudExamSubmission2(std, exm);
+      }
+      // this.student_exam_metadata = this.authService.getStudExamSubmissions(std);
       if (this.student_data.problems.total == 0) {
         this.total_percent_correct = 0;
       }
@@ -2739,7 +2762,7 @@ export class ProfileComponent implements OnInit {
             this.complete_exam_count = 0;
             this.complete_exam_list = [];
             this.temp_count = 1;
-            const exam_history = this.student_data.exams.history;
+            const exam_history = this.authService.userData.exams.history;
             for (const [key, det] of Object.entries(exam_history)) {
               setTimeout(() => {
                 if ((det as any).status == "Completed") {

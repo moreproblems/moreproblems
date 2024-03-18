@@ -265,45 +265,54 @@ export class AuthService {
   }
 
   WriteUserData(user: any, role: string) {
+    this.userData = this.searchUserId(user.uid as string);
     const db = getDatabase();
     const updates: any = {};
     const updates2: any = {};
-    this.userData = {
-      uid: user.uid,
-      role: role,
-      email: user.email,
-      phoneNumber: user.phoneNumber,
-      // password: user.password,
-      displayName: user.displayName,
-      photoURL: user.photoURL,
-      emailVerified: user.emailVerified,
-      // exams: {favorites: {}}
-    };
-    if (role == 'Student') {
-      const avatar = this.avatars[Math.floor(Math.random() * this.avatars.length)];
-      this.userData.photoURL = '/assets/icons/user/' + avatar + '.png';
-    }
-    updates['/users/' + user.uid] = this.userData;
-    return update(ref(db), updates).then(() => {
-      updates2['/users/' + user.uid + '/role'] = role;
-      updates2['/users/' + user.uid + '/standards/favorites'] = [""];
-      updates2['/users/' + user.uid + '/exams/favorites'] = [""];
-      if (role != 'Parent' && role != '') {
-        updates2['/users/' + user.uid + '/classes'] = [""];
-      }
+    if (Object.keys(this.userData).length == 0) {
+      this.userData = {
+        uid: user.uid,
+        role: role,
+        email: user.email,
+        phoneNumber: user.phoneNumber,
+        // password: user.password,
+        displayName: user.displayName,
+        photoURL: user.photoURL,
+        emailVerified: user.emailVerified,
+        // exams: {favorites: {}}
+      };
       if (role == 'Student') {
-        updates2['/users/' + user.uid + '/exams/history'] = { "test": { status: "", progress: 0} };
-        updates2['/users/' + user.uid + '/problems/all'] = { "test": { status: ""} };
-        updates2['/users/' + user.uid + '/problems/total'] = 0;
-        updates2['/users/' + user.uid + '/problems/correct'] = 0;
+        const avatar = this.avatars[Math.floor(Math.random() * this.avatars.length)];
+        this.userData.photoURL = '/assets/icons/user/' + avatar + '.png';
       }
-      else if (role != '') {
-        updates2['/users/' + user.uid + '/students'] = [""];
-      }
-      update(ref(db), updates2);
-    }).catch(error => {
-      console.log(error.message)
-    });
+      updates['/users/' + user.uid] = this.userData;
+      return update(ref(db), updates).then(() => {
+        updates2['/users/' + user.uid + '/role'] = role;
+        updates2['/users/' + user.uid + '/standards/favorites'] = [""];
+        updates2['/users/' + user.uid + '/exams/favorites'] = [""];
+        if (role != 'Parent' && role != '') {
+          updates2['/users/' + user.uid + '/classes'] = [""];
+        }
+        if (role == 'Student') {
+          updates2['/users/' + user.uid + '/exams/history'] = { "test": { status: "", progress: 0} };
+          updates2['/users/' + user.uid + '/problems/all'] = { "test": { status: ""} };
+          updates2['/users/' + user.uid + '/problems/total'] = 0;
+          updates2['/users/' + user.uid + '/problems/correct'] = 0;
+        }
+        else if (role != '') {
+          updates2['/users/' + user.uid + '/students'] = [""];
+        }
+        update(ref(db), updates2);
+      }).catch(error => {
+        console.log(error.message)
+      });
+    }
+    else {
+      updates['/users/' + user.uid] = this.userData;
+      return update(ref(db), updates).then(() => {}).catch(error => {
+        console.log(error.message)
+      });
+    }
   }
 
   WriteUserDataList (student: { [index: string]: any }) {
@@ -422,25 +431,28 @@ export class AuthService {
   }
 
   getExamSubmissions() {
+    var exam_history: any = {};
+    var my_exam_subs: any = {};
     const db = getDatabase();
     const exam_completed_count = 0;
-    // const exam_history = query(ref(db, "users/" + this.userData.uid + "/exams/history"), equalTo("status", "Completed"));
-    // const exam_history: any = {};
-    get(child(ref(db), "submissions/exams/" + this.userData.uid)).then((snapshot) => {
+    const stud_ref = ref(db,"users/" + this.userData.uid + "/exams/history");
+    onValue(stud_ref, (snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
-        this.exam_sub = snapshot.val();
+        console.log(Object.keys(snapshot.val()));
+        exam_history = snapshot.val();
       } else {
         console.log("No data available");
       }
-    }).catch((error) => {
-      console.error(error);
     });
-    return this.exam_sub;
+    for (let exm of Object.keys(exam_history)) {
+      my_exam_subs[exm] = this.getExamSubmission2(exm);
+    }
+    return my_exam_subs;
   }
 
   getExamSubmission(exm: string) {
     const db = getDatabase();
+    const db_updates: any = {};
     const exam_completed_count = 0;
     // const exam_history = query(ref(db, "users/" + this.userData.uid + "/exams/history"), equalTo("status", "Completed"));
     // const exam_history: any = {};
@@ -448,6 +460,8 @@ export class AuthService {
       if (snapshot.exists()) {
         console.log(snapshot.val());
         this.exam_sub = snapshot.val();
+        db_updates['/submissions/exams/' + exm + '/' + this.userData.uid] = this.exam_sub;
+        this.UpdateDatabase(db_updates);
       } else {
         console.log("No data available");
       }
@@ -457,14 +471,59 @@ export class AuthService {
     return this.exam_sub;
   }
 
-  getStudExamSubmissions(std: string) {
+  getExamSubmission2(exm: string) {
+    var my_exam_sub: any = {};
     const db = getDatabase();
     const exam_completed_count = 0;
-    const stud_ref = ref(db,"submissions/exams/" + std);
+    // const exam_history = query(ref(db, "users/" + this.userData.uid + "/exams/history"), equalTo("status", "Completed"));
+    // const exam_history: any = {};
+    get(child(ref(db), "submissions/exams/" + exm + "/" + this.userData.uid)).then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        for (const [key, val] of Object.entries(snapshot.val())) {
+          my_exam_sub[key] = val;
+        }
+        // this.exam_sub = snapshot.val();
+      } else {
+        console.log("No data available");
+        my_exam_sub = this.getExamSubmission(exm);
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
+    console.log(my_exam_sub);
+    return my_exam_sub;
+  }
+
+  // Create duplicate method with exm/std index that calls this method if to retrieve and update old structure
+  getStudExamSubmissions(std: string) {
+    var my_exam_subs: any = {};
+    const db = getDatabase();
+    const exam_completed_count = 0;
+    const stud_ref = ref(db,"users/" + std + "/exams/history");
+    onValue(stud_ref, (snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        for (let exm of Object.keys(snapshot.val)) {
+          my_exam_subs[exm] = this.getStudExamSubmission2(std, exm)
+        }
+      } else {
+        console.log("No data available");
+      }
+    });
+    return my_exam_subs;
+  }
+
+  getStudExamSubmission(std: string, exm: string) {
+    const db = getDatabase();
+    const db_updates: any = {};
+    const stud_ref = ref(db,"submissions/exams/" + std + "/" + exm);
     onValue(stud_ref, (snapshot) => {
       if (snapshot.exists()) {
         console.log(snapshot.val());
         this.exam_sub = snapshot.val();
+        db_updates['/submissions/exams/' + exm + '/' + std] = this.exam_sub;
+        this.UpdateDatabase(db_updates);
       } else {
         console.log("No data available");
       }
@@ -472,20 +531,39 @@ export class AuthService {
     return this.exam_sub;
   }
 
-  getStudExamSubmission(std: string, exm: string) {
+  getStudExamSubmission2(std: string, exm: string) {
+    var my_exam_sub: any = {};
     const db = getDatabase();
-    const exam_completed_count = 0;
-    const stud_ref = ref(db,"submissions/exams/" + std + "/" + exm);
+    const stud_ref = ref(db,"submissions/exams/" + exm + "/" + std);
     onValue(stud_ref, (snapshot) => {
       if (snapshot.exists()) {
         console.log(snapshot.val());
-        this.exam_sub = snapshot.val();
+        for (const [key, val] of Object.entries(snapshot.val())) {
+          my_exam_sub[key] = val;
+        }
+        // this.exam_sub = snapshot.val();
       } else {
         console.log("No data available");
+        my_exam_sub = this.getStudExamSubmission(std, exm);
       }
     });
-    return this.exam_sub;
+    return my_exam_sub;
   }
+
+  // getStudClassSubmissions(std: string, clss: string) {
+  //   const db = getDatabase();
+  //   const exam_completed_count = 0;
+  //   const stud_ref = ref(db,"submissions/exams/" + std);
+  //   onValue(stud_ref, (snapshot) => {
+  //     if (snapshot.exists()) {
+  //       console.log(snapshot.val());
+  //       this.exam_sub = snapshot.val();
+  //     } else {
+  //       console.log("No data available");
+  //     }
+  //   });
+  //   return this.exam_sub;
+  // }
 
   searchUserId(id: string) {
     this.user_result = {};

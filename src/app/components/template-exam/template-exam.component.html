@@ -1303,7 +1303,7 @@
               style="padding: 0px; margin: 0px; height: 45px; width: 60px">
               <input type="checkbox" value="{{sub}}">
               <button
-                *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length > 0 && exam_submission[sub].Path[0] != '')  && !exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
+                *ngIf="sub != problem_number && sub <= max_problem_number && (this.exam_submission[sub].Attempts[0] != 0) && !exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
                 class="toggle-button-off"
                 style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
@@ -1312,7 +1312,7 @@
                 </span>
               </button>
               <button
-                *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length > 0 && exam_submission[sub].Path[0] != '') && exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
+                *ngIf="sub != problem_number && sub <= max_problem_number && (this.exam_submission[sub].Attempts[0] != 0) && exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
                 class="toggle-button-off"
                 style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(214, 141, 14)">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
@@ -1325,7 +1325,7 @@
                 </span>
               </button>
               <button
-                *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Path.length == 0 || exam_submission[sub].Path[0] == '')"
+                *ngIf="sub != problem_number && sub <= max_problem_number && (this.exam_submission[sub].Attempts[0] == 0)"
                 class="toggle-button-off"
                 style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(245, 77, 77)">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
@@ -1335,7 +1335,7 @@
                   <b *ngIf="sub >=10" style="padding-left: 3px"> ⏩ </b>
                 </span>
               </button>
-              <button *ngIf="sub != problem_number && sub > max_problem_number && exam_submission[sub].Path.length == 0"
+              <button *ngIf="sub != problem_number && sub > max_problem_number && (this.exam_submission[sub].Attempts[0] == 0)"
                 class="toggle-button-disabled"
                 style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
@@ -1626,9 +1626,9 @@
               class="card card-small" style="height: 75px; width: 250px; align-items: center; padding-top: 0">
               <div class="avatar-container"
                 style="position: relative; height: 50px; width: 50px; border-radius: 50%; padding: 0">
-                <img *ngIf="'RW1'.includes(part.substring(part.indexOf('SAT') + 3)) || 'RW2'.includes(part.substring(part.indexOf('SAT') + 3))" src="/assets/icons/ela.png"
+                <img *ngIf="['RW1', 'RW2'].includes(part.substring(part.indexOf('SAT') + 3))" src="/assets/icons/ela.png"
                   class="select-avatar" style="width:100%; height: 100%">
-                <img *ngIf="'M1'.includes(part.substring(part.indexOf('SAT') + 3)) || 'M2'.includes(part.substring(part.indexOf('SAT') + 3))" src="/assets/icons/math.png"
+                <img *ngIf="['M1', 'M2'].includes(part.substring(part.indexOf('SAT') + 3))" src="/assets/icons/math.png"
                   class="select-avatar" style="width:100%; height: 100%">
                 <div class="middle">
                   <div style="color: white; background-color: #1976d2; border-radius: 10px">Select
@@ -1852,7 +1852,7 @@
     <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%">
       <div *ngIf="problem_number == +prob.key" style="width: 100%">
         <div
-          *ngIf="selected_subtopic == '' && (exam_dump | keys).indexOf(''+this.problem_number)  <= exam_length && problem_number > 0"
+          *ngIf="selected_subtopic == '' && (exam_dump | keys).indexOf(''+this.problem_number)  <= exam_length && this.problem_number > 0"
           class="card card-large"
           style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
           #problemCard>
@@ -1984,7 +1984,7 @@
             </div>
             <br />
             <div *ngIf="problem_attempts[0] > 0" [ngSwitch]="selection.value" class="card highlight-card card-small"
-              style="height: auto; min-height: 100px; width: fit-content; padding: 0px; margin: 0px auto 20px auto; align-items: center; display: inline-flex; background-color: transparent">
+              style="height: auto; min-height: 100px; width: fit-content; padding: 0px; margin: 0px auto 20px auto; align-items: center; justify-content: center; display: inline-flex; background-color: transparent">
               <label class="switch" style="padding: 0px; margin: 5px">
                 <input type="checkbox">
                 <button

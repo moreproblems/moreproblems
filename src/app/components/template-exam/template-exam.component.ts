@@ -1041,7 +1041,7 @@ export class TemplateExamComponent implements OnInit {
     random_list: string[] = [];
     random = false;
 
-    exam_key: string[][] = [];
+    exam_key: any = {};
 
     problem_number = 0;
     max_problem_number = 0;
@@ -1056,7 +1056,7 @@ export class TemplateExamComponent implements OnInit {
     choices_sequence: string[] = [];
     shuffle_choices: string[] = [];
 
-    exam_submission: { [key: number]: { 'Number': number, 'Topics': string[], 'SubTopics': string[], 'Choice': string[], 'Correct': string[], 'Rationale': string[], 'Attempts': number[], 'Path': string[], 'Seconds': number, 'Time': string, 'Flags': boolean[] } } = {};
+    exam_submission: { [key: number]: { 'Number': number, 'Topics': string[], 'SubTopics': string[], 'Choice': string[][], 'Correct': string[][], 'Rationale': string[][], 'Attempts': number[], 'Path': string[][][], 'Seconds': number, 'Time': string, 'Flags': boolean[] } } = {};
 
     selected_topic = "";
     selected_subtopic = "";
@@ -1149,7 +1149,7 @@ export class TemplateExamComponent implements OnInit {
     get_flag_count() {
         var count = 0;
         for (let sub of this.order_numbers()) {
-            if (sub <= this.max_problem_number && (this.exam_submission[sub].Path.length > 0 && this.exam_submission[sub].Path[0] != '') && this.exam_submission[sub].Flags[this.exam_submission[sub].Flags.length - 1]) {
+            if (sub <= this.max_problem_number && (this.exam_submission[sub].Attempts[0] != 0) && this.exam_submission[sub].Flags[this.exam_submission[sub].Flags.length - 1]) {
                 count += 1;
             }
         }
@@ -1159,7 +1159,7 @@ export class TemplateExamComponent implements OnInit {
     get_skip_count() {
         var count = 0;
         for (let sub of this.order_numbers()) {
-            if (sub < this.max_problem_number && (this.exam_submission[sub].Path.length == 0 || this.exam_submission[sub].Path[0] == '')) {
+            if (sub < this.max_problem_number && (this.exam_submission[sub].Attempts[0] == 0)) {
                 count += 1;
             }
         }
@@ -1184,7 +1184,7 @@ export class TemplateExamComponent implements OnInit {
                     this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
                     this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
                     if ((det as any).progress != 0) {
-                        const db_submission = this.authService.getExamSubmission(this.key).problems;
+                        const db_submission = this.authService.getStudExamSubmission2(id, this.key).problems;
                         for (const [key2, det2] of Object.entries(db_submission)) {
                             if (+key2 != 0) {
                                 this.exam_submission[+(det2 as any).Number] = (det2 as any);
@@ -1213,22 +1213,45 @@ export class TemplateExamComponent implements OnInit {
             this.exam_dump[i] = this.ordered_dump[this.problems_sequence[this.random_index]];
             this.problems_sequence.splice(this.random_index, 1);
         }
-        this.exam_key = [];
+        this.exam_key = {};
         console.log(this.random_list);
         console.log(this.exam_dump);
+        for (let i = 0; i < this.exam_length; i++) {
+            this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
+        }
+        this.exam_key = {};
         for (const [num, val] of Object.entries(this.exam_dump)) {
-            this.exam_key.push([]);
-            if (Object.keys(val.AnswerChoices).length == 0) {
-                this.exam_key[this.exam_key.length - 1].push('');
+            this.exam_key[+num] = [];
+            if (Object.keys(val.Parts).length == 0) {
+                this.exam_key[+num].push([]);
+                if (Object.keys(val.AnswerChoices).length == 0) {
+                    this.exam_key[+num][0].push('');
+                }
+                else {
+                    for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                        if (ch == 'KEY') {
+                            this.exam_key[+num][0].push(val2.Choice);
+                        }
+                        else if (val2.Key.Correct) {
+                            this.exam_key[+num][0].push(ch);
+                        }
+                    }
+                }
             }
             else {
-                for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-                    if (ch == 'KEY') {
-                        this.exam_key[this.exam_key.length - 1].push(val2.Choice);
+                for (let part of Object.keys(val.Parts)) {
+                    this.exam_key[+num].push([]);
+                    if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
+                        this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push('');
                     }
                     else {
-                        if (val2.Key.Correct) {
-                            this.exam_key[this.exam_key.length - 1].push(ch);
+                        for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
+                            if (ch == 'KEY') {
+                                this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
+                            }
+                            else if (val2.Key.Correct) {
+                                this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(ch);
+                            }
                         }
                     }
                 }
@@ -1253,19 +1276,31 @@ export class TemplateExamComponent implements OnInit {
 
     resume_exam() {
         for (let num of Object.keys(this.ordered_dump)) {
-            this.exam_submission[+num] = {
-                'Number': +num,
-                'Topics': [],
-                'SubTopics': [],
-                'Choice': [''],
-                'Correct': [''],
-                'Rationale': [''],
-                'Attempts': [0],
-                'Path': [],
-                'Seconds': 0,
-                'Time': '',
-                'Flags': [false]
-            };
+            if (num != 'default') {
+                this.exam_submission[+num] = {
+                    'Number': +num,
+                    'Topics': [],
+                    'SubTopics': [],
+                    'Choice': [],
+                    'Correct': [],
+                    'Rationale': [],
+                    'Attempts': [],
+                    'Path': [],
+                    'Seconds': 0,
+                    'Time': '',
+                    'Flags': [false]
+                };
+                if (Object.keys(this.ordered_dump[+num].Parts).length == 0) {
+                    this.exam_submission[+num].Path.push([['']]);
+                    this.exam_submission[+num].Attempts.push(0);
+                }
+                else {
+                    for (let part of Object.keys(this.ordered_dump[+num].Parts)) {
+                        this.exam_submission[+num].Path.push([['']]);
+                        this.exam_submission[+num].Attempts.push(0);
+                    }
+                }
+            }   
         }
         console.log(this.exam_submission);
         if (this.authService.userData) {
@@ -1273,9 +1308,38 @@ export class TemplateExamComponent implements OnInit {
                 const exam_history = this.authService.userData.exams.history;
                 for (const [key, det] of Object.entries(exam_history)) {
                     if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
-                        if ((det as any).progress != 0) {
-                            this.db_submission = this.authService.getExamSubmission(this.key).problems;
-                        }
+                        // if ((det as any).progress != 0) {
+                        //     var db_submission = this.authService.getExamSubmission2(this.key);
+                        //     setTimeout(() => {
+                        //         console.log(db_submission.problems);
+                        //         for (const [key2, det2] of Object.entries(db_submission.problems)) {
+                        //             if (+key2 != 0) {
+                        //                 const sub_prob: any = (det2 as any);
+                        //                 var sub_prob_2: any = {};
+                        //                 for (const [field, dump] of Object.entries(det2 as any)) {
+                        //                     // sub_prob[field] = dump;
+                        //                     sub_prob_2[field] = dump;
+                        //                 }
+                        //                 if (typeof (det2 as any).Choice == "string") {
+                        //                     sub_prob_2.Choice = [];
+                        //                     sub_prob_2.Correct = [];
+                        //                     sub_prob_2.Attempts = [];
+                        //                     sub_prob_2.Path = [];
+                        //                     sub_prob_2.Choice.push([sub_prob.Choice]);
+                        //                     sub_prob_2.Correct.push([sub_prob.Correct]);
+                        //                     sub_prob_2.Attempts.push(sub_prob.Attempts);
+                        //                     sub_prob_2.Path.push([[sub_prob.Path]]);
+                        //                 }
+                        //                 this.exam_submission[+(det2 as any).Number] = sub_prob_2;
+                        //             }
+                        //         }
+                        //     }, 500);
+                        // }
+                        // console.log(this.exam_submission);
+                        // if ((det as any).progress != 0) {
+                        //     this.db_submission = this.authService.getExamSubmission2(this.key).problems;
+                        // }
+                        var db_submission = this.authService.getExamSubmission2(this.key);
                         this.exam_inprogress = true;
                         this.progress_number = (det as any).progress + 1;
                         if ((det as any).shuffle) {
@@ -1284,18 +1348,41 @@ export class TemplateExamComponent implements OnInit {
                             this.random_list = [];
                         }
                         if ((det as any).progress != 0) {
-                            var sub_count = 0;
-                            console.log(this.db_submission);
-                            for (const [key2, det2] of Object.entries(this.db_submission)) {
-                                if (+key2 != 0) {
-                                    sub_count += 1;
-                                    this.exam_dump[sub_count] = this.ordered_dump[(det2 as any).Number];
-                                    this.exam_submission[sub_count] = (det2 as any);
-                                    // this.exam_submission[(det2 as any).Number] = (det2 as any);
+                            setTimeout(() => {
+                                console.log(db_submission.problems);
+                                for (const [key2, det2] of Object.entries(db_submission.problems)) {
+                                    if (+key2 != 0) {
+                                        const sub_prob: any = (det2 as any);
+                                        var sub_prob_2: any = {};
+                                        for (const [field, dump] of Object.entries(det2 as any)) {
+                                            // sub_prob[field] = dump;
+                                            sub_prob_2[field] = dump;
+                                        }
+                                        if (typeof (det2 as any).Choice == "string") {
+                                            sub_prob_2.Choice = [];
+                                            sub_prob_2.Correct = [];
+                                            sub_prob_2.Attempts = [];
+                                            sub_prob_2.Path = [];
+                                            sub_prob_2.Choice.push([sub_prob.Choice]);
+                                            sub_prob_2.Correct.push([sub_prob.Correct]);
+                                            sub_prob_2.Attempts.push(sub_prob.Attempts);
+                                            sub_prob_2.Path.push([[sub_prob.Path]]);
+                                        }
+                                        if (!Object.keys(sub_prob_2).includes("Flags")) {
+                                            sub_prob_2.Flags = [false];
+                                        }
+                                        if (!(det as any).shuffle) {
+                                            this.exam_submission[+(det2 as any).Number] = sub_prob_2;
+                                        }
+                                        else {
+                                            this.exam_submission[+Object.keys(this.exam_dump)[Object.keys(db_submission.problems).indexOf((det2 as any).Number)]] = sub_prob_2;
+                                        }
+                                    }
                                 }
-                            }
+                            }, 500);
+                            console.log(this.exam_submission);
                             if ((det as any).shuffle) {
-                                for (const [key2, det2] of Object.entries(this.db_submission)) {
+                                for (const [key2, det2] of Object.entries(db_submission.problems)) {
                                     this.problems_sequence.splice(this.problems_sequence.indexOf((det2 as any).Number), 1);
                                 }
                             }
@@ -1305,25 +1392,47 @@ export class TemplateExamComponent implements OnInit {
                             for (let i = 1; i <= remaining_length; i++) {
                                 this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
                                 this.random_list.push('' + this.problems_sequence[this.random_index]);
-                                this.exam_dump[i + Object.keys(this.db_submission).length] = this.ordered_dump[this.problems_sequence[this.random_index]];
+                                this.exam_dump[i + Object.keys(db_submission.problems).length] = this.ordered_dump[this.problems_sequence[this.random_index]];
                                 this.problems_sequence.splice(this.random_index, 1);
                             }
                             console.log(this.exam_dump);
                             console.log(this.exam_submission);
-                            this.exam_key = [];
+                            for (let i = 0; i < this.exam_length; i++) {
+                                this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
+                            }
+                            this.exam_key = {};
                             for (const [num, val] of Object.entries(this.exam_dump)) {
-                                this.exam_key.push([]);
-                                if (Object.keys(val.AnswerChoices).length == 0) {
-                                    this.exam_key[this.exam_key.length - 1].push('');
+                                this.exam_key[+num] = [];
+                                if (Object.keys(val.Parts).length == 0) {
+                                    this.exam_key[+num].push([]);
+                                    if (Object.keys(val.AnswerChoices).length == 0) {
+                                        this.exam_key[+num][0].push('');
+                                    }
+                                    else {
+                                        for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                                            if (ch == 'KEY') {
+                                                this.exam_key[+num][0].push(val2.Choice);
+                                            }
+                                            else if (val2.Key.Correct) {
+                                                this.exam_key[+num][0].push(ch);
+                                            }
+                                        }
+                                    }
                                 }
                                 else {
-                                    for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-                                        if (ch == 'KEY') {
-                                            this.exam_key[this.exam_key.length - 1].push(val2.Choice);
+                                    for (let part of Object.keys(val.Parts)) {
+                                        this.exam_key[+num].push([]);
+                                        if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
+                                            this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push('');
                                         }
                                         else {
-                                            if (val2.Key.Correct) {
-                                                this.exam_key[this.exam_key.length - 1].push(ch);
+                                            for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
+                                                if (ch == 'KEY') {
+                                                    this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
+                                                }
+                                                else if (val2.Key.Correct) {
+                                                    this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(ch);
+                                                }
                                             }
                                         }
                                     }
@@ -1331,23 +1440,45 @@ export class TemplateExamComponent implements OnInit {
                             }
                         }
                         else {
-                            for (let i = 1; i <= this.exam_length; i++) {
-                                this.exam_dump[i] = this.ordered_dump[i];
+                            // for (let i = 1; i <= this.exam_length; i++) {
+                            //     this.exam_dump[i] = this.ordered_dump[i];
+                            // }
+                            for (let i = 0; i < this.exam_length; i++) {
+                                this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
                             }
-                            this.exam_key = [];
+                            this.exam_key = {};
                             for (const [num, val] of Object.entries(this.exam_dump)) {
-                                this.exam_key.push([]);
-                                if (Object.keys(val.AnswerChoices).length == 0) {
-                                    this.exam_key[this.exam_key.length - 1].push('');
+                                this.exam_key[+num] = [];
+                                if (Object.keys(val.Parts).length == 0) {
+                                    this.exam_key[+num].push([]);
+                                    if (Object.keys(val.AnswerChoices).length == 0) {
+                                        this.exam_key[+num][0].push('');
+                                    }
+                                    else {
+                                        for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                                            if (ch == 'KEY') {
+                                                this.exam_key[+num][0].push(val2.Choice);
+                                            }
+                                            else if (val2.Key.Correct) {
+                                                this.exam_key[+num][0].push(ch);
+                                            }
+                                        }
+                                    }
                                 }
                                 else {
-                                    for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-                                        if (ch == 'KEY') {
-                                            this.exam_key[this.exam_key.length - 1].push(val2.Choice);
+                                    for (let part of Object.keys(val.Parts)) {
+                                        this.exam_key[+num].push([]);
+                                        if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
+                                            this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push('');
                                         }
                                         else {
-                                            if (val2.Key.Correct) {
-                                                this.exam_key[this.exam_key.length - 1].push(ch);
+                                            for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
+                                                if (ch == 'KEY') {
+                                                    this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
+                                                }
+                                                else if (val2.Key.Correct) {
+                                                    this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(ch);
+                                                }
                                             }
                                         }
                                     }
@@ -1367,7 +1498,7 @@ export class TemplateExamComponent implements OnInit {
                 for (const [key, det] of Object.entries(exam_history)) {
                     if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
                         if ((det as any).progress != 0) {
-                            this.db_submission = this.authService.getStudExamSubmission(this.selected_student, this.key).problems;
+                            this.db_submission = this.authService.getStudExamSubmission2(this.selected_student, this.key).problems;
                         }
                         this.exam_inprogress = true;
                         this.progress_number = (det as any).progress + 1;
@@ -1377,14 +1508,11 @@ export class TemplateExamComponent implements OnInit {
                             this.random_list = [];
                         }
                         if ((det as any).progress != 0) {
-                            var sub_count = 0;
                             console.log(this.db_submission);
                             for (const [key2, det2] of Object.entries(this.db_submission)) {
                                 if (+key2 != 0) {
-                                    sub_count += 1;
-                                    this.exam_dump[sub_count] = this.ordered_dump[(det2 as any).Number];
-                                    this.exam_submission[sub_count] = (det2 as any);
-                                    // this.exam_submission[(det2 as any).Number] = (det2 as any);
+                                    this.exam_dump[+key2] = this.ordered_dump[(det2 as any).Number];
+                                    this.exam_submission[+key2] = (det2 as any);
                                 }
                             }
                             if ((det as any).shuffle) {
@@ -1402,20 +1530,42 @@ export class TemplateExamComponent implements OnInit {
                                 this.exam_dump[i + Object.keys(this.db_submission).length] = this.ordered_dump[this.problems_sequence[this.random_index]];
                                 this.problems_sequence.splice(this.random_index, 1);
                             }
-                            this.exam_key = [];
+                            for (let i = 0; i < this.exam_length; i++) {
+                                this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
+                            }
+                            this.exam_key = {};
                             for (const [num, val] of Object.entries(this.exam_dump)) {
-                                this.exam_key.push([]);
-                                if (Object.keys(val.AnswerChoices).length == 0) {
-                                    this.exam_key[this.exam_key.length - 1].push('');
+                                this.exam_key[+num] = [];
+                                if (Object.keys(val.Parts).length == 0) {
+                                    this.exam_key[+num].push([]);
+                                    if (Object.keys(val.AnswerChoices).length == 0) {
+                                        this.exam_key[+num][0].push('');
+                                    }
+                                    else {
+                                        for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                                            if (ch == 'KEY') {
+                                                this.exam_key[+num][0].push(val2.Choice);
+                                            }
+                                            else if (val2.Key.Correct) {
+                                                this.exam_key[+num][0].push(ch);
+                                            }
+                                        }
+                                    }
                                 }
                                 else {
-                                    for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-                                        if (ch == 'KEY') {
-                                            this.exam_key[this.exam_key.length - 1].push(val2.Choice);
+                                    for (let part of Object.keys(val.Parts)) {
+                                        this.exam_key[+num].push([]);
+                                        if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
+                                            this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push('');
                                         }
                                         else {
-                                            if (val2.Key.Correct) {
-                                                this.exam_key[this.exam_key.length - 1].push(ch);
+                                            for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
+                                                if (ch == 'KEY') {
+                                                    this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
+                                                }
+                                                else if (val2.Key.Correct) {
+                                                    this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(ch);
+                                                }
                                             }
                                         }
                                     }
@@ -1423,23 +1573,45 @@ export class TemplateExamComponent implements OnInit {
                             }
                         }
                         else {
-                            for (let i = 1; i <= this.exam_length; i++) {
-                                this.exam_dump[i] = this.ordered_dump[i];
+                            // for (let i = 1; i <= this.exam_length; i++) {
+                            //     this.exam_dump[i] = this.ordered_dump[i];
+                            // }
+                            for (let i = 0; i < this.exam_length; i++) {
+                                this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
                             }
-                            this.exam_key = [];
+                            this.exam_key = {};
                             for (const [num, val] of Object.entries(this.exam_dump)) {
-                                this.exam_key.push([]);
-                                if (Object.keys(val.AnswerChoices).length == 0) {
-                                    this.exam_key[this.exam_key.length - 1].push('');
+                                this.exam_key[+num] = [];
+                                if (Object.keys(val.Parts).length == 0) {
+                                    this.exam_key[+num].push([]);
+                                    if (Object.keys(val.AnswerChoices).length == 0) {
+                                        this.exam_key[+num][0].push('');
+                                    }
+                                    else {
+                                        for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                                            if (ch == 'KEY') {
+                                                this.exam_key[+num][0].push(val2.Choice);
+                                            }
+                                            else if (val2.Key.Correct) {
+                                                this.exam_key[+num][0].push(ch);
+                                            }
+                                        }
+                                    }
                                 }
                                 else {
-                                    for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-                                        if (ch == 'KEY') {
-                                            this.exam_key[this.exam_key.length - 1].push(val2.Choice);
+                                    for (let part of Object.keys(val.Parts)) {
+                                        this.exam_key[+num].push([]);
+                                        if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
+                                            this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push('');
                                         }
                                         else {
-                                            if (val2.Key.Correct) {
-                                                this.exam_key[this.exam_key.length - 1].push(ch);
+                                            for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
+                                                if (ch == 'KEY') {
+                                                    this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
+                                                }
+                                                else if (val2.Key.Correct) {
+                                                    this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(ch);
+                                                }
                                             }
                                         }
                                     }
@@ -1460,8 +1632,8 @@ export class TemplateExamComponent implements OnInit {
         console.log(this.exam_key);
         this.toggleExamTimer();
         this.toggleProblemTimer();
-        this.problem_number = this.progress_number;
-        this.max_problem_number = this.progress_number;
+        this.problem_number = +Object.keys(this.exam_dump)[this.progress_number-1];
+        this.max_problem_number = this.problem_number;
         this.attempt_path = [];
         this.attempt_response = [];
         this.attempt_explanation = [];
@@ -1509,19 +1681,42 @@ export class TemplateExamComponent implements OnInit {
                 this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
             }
             console.log(this.exam_dump);
+            // for (let i = 0; i < this.exam_length; i++) {
+            //     this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
+            // }
+            this.exam_key = {};
             for (const [num, val] of Object.entries(this.exam_dump)) {
-                this.exam_key.push([]);
-                if (Object.keys(val.AnswerChoices).length == 0) {
-                    this.exam_key[this.exam_key.length - 1].push('');
+                this.exam_key[+num] = [];
+                if (Object.keys(val.Parts).length == 0) {
+                    this.exam_key[+num].push([]);
+                    if (Object.keys(val.AnswerChoices).length == 0) {
+                        this.exam_key[+num][0].push('');
+                    }
+                    else {
+                        for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                            if (ch == 'KEY') {
+                                this.exam_key[+num][0].push(val2.Choice);
+                            }
+                            else if (val2.Key.Correct) {
+                                this.exam_key[+num][0].push(ch);
+                            }
+                        }
+                    }
                 }
                 else {
-                    for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-                        if (ch == 'KEY') {
-                            this.exam_key[this.exam_key.length - 1].push(val2.Choice);
+                    for (let part of Object.keys(val.Parts)) {
+                        this.exam_key[+num].push([]);
+                        if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
+                            this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push('');
                         }
                         else {
-                            if (val2.Key.Correct) {
-                                this.exam_key[this.exam_key.length - 1].push(ch);
+                            for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
+                                if (ch == 'KEY') {
+                                    this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
+                                }
+                                else if (val2.Key.Correct) {
+                                    this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(ch);
+                                }
                             }
                         }
                     }
@@ -1531,40 +1726,53 @@ export class TemplateExamComponent implements OnInit {
         console.log(this.exam_dump);
         console.log(this.exam_key);
         if (this.authService.userData) {
+            this.db_updates = {};
             if (this.authService.userData.role == 'Student') {
+                this.db_updates['problems/all/' + this.key + '-' + "" + (Object.keys(this.exam_dump)[0]) + '/status'] = 'Viewed';
                 this.db_updates['exams/history/' + this.key] = { progress: 0, status: 'Started', shuffle: this.random, lasttimestamp: serverTimestamp() };
-                this.db_updates['problems/all/' + this.key + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
                 this.authService.UpdateUserData(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/starttimestamp'] = serverTimestamp();
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/starttimestamp'] = serverTimestamp();
             }
             else if (this.selected_student != '') {
+                this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + (Object.keys(this.exam_dump)[0]) + '/status'] = 'Viewed';
                 this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key] = { progress: 0, status: 'Started', shuffle: this.random, lasttimestamp: serverTimestamp() };
-                this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
-                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/starttimestamp'] = serverTimestamp();
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/starttimestamp'] = serverTimestamp();
             }
             this.authService.UpdateDatabase(this.db_updates);
             this.db_updates = {};
         }
         for (let num of Object.keys(this.ordered_dump)) {
-            this.exam_submission[+num] = {
-                'Number': +num,
-                'Topics': [],
-                'SubTopics': [],
-                'Choice': [''],
-                'Correct': [''],
-                'Rationale': [''],
-                'Attempts': [0],
-                'Path': [],
-                'Seconds': 0,
-                'Time': '',
-                'Flags': [false]
-            };
+            if (num != 'default') {
+                this.exam_submission[+num] = {
+                    'Number': +num,
+                    'Topics': [],
+                    'SubTopics': [],
+                    'Choice': [],
+                    'Correct': [],
+                    'Rationale': [],
+                    'Attempts': [],
+                    'Path': [],
+                    'Seconds': 0,
+                    'Time': '',
+                    'Flags': [false]
+                };
+                if (Object.keys(this.ordered_dump[+num].Parts).length == 0) {
+                    this.exam_submission[+num].Path.push([['']]);
+                    this.exam_submission[+num].Attempts.push(0);
+                }
+                else {
+                    for (let part of Object.keys(this.ordered_dump[+num].Parts)) {
+                        this.exam_submission[+num].Path.push([['']]);
+                        this.exam_submission[+num].Attempts.push(0);
+                    }
+                }
+            }   
         }
         this.toggleExamTimer();
         this.toggleProblemTimer();
-        this.problem_number = +Object.keys(this.exam_dump)[0];;
-        this.max_problem_number = +Object.keys(this.exam_dump)[0];;
+        this.problem_number = +Object.keys(this.exam_dump)[0];
+        this.max_problem_number = +Object.keys(this.exam_dump)[0];
         this.attempt_path = [];
         this.attempt_response = [];
         this.attempt_explanation = [];
@@ -2020,37 +2228,40 @@ export class TemplateExamComponent implements OnInit {
         for (const [num, prob] of Object.entries(this.exam_dump)) {
             if (this.problem_number == +num) {
                 for (const [num2, sub] of Object.entries(this.exam_submission)) {
-                    if (+num == +num2) {
+                    if (this.problem_number == +num2) {
                         sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
                         sub.Seconds = this.pt_counter;
                         sub.Number = prob.Number;
                         sub.Topics = prob.Topics;
                         sub.SubTopics = prob.SubTopics;
-                        sub.Choice = [choice];
                         sub.Attempts = this.problem_attempts;
                         sub.Path = this.attempt_path;
-                        for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
-                            if (choice == ch) {
-                                if (key.Key.Correct == true) {
-                                    sub.Correct = ['✅'];
-                                    // this.number_correct += 1;
+                        // if (Object.keys(prob.Parts).length == 0 || typeof prob.Parts == "undefined") {
+                        if (Object.keys(prob.Parts).length == 0) {
+                            sub.Choice = [[choice]];
+                            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                                if (choice == ch) {
+                                    if (key.Key.Correct == true) {
+                                        sub.Correct = [['✅']];
+                                        // this.number_correct += 1;
+                                    }
+                                    else {
+                                        console.log(this.exam_key);
+                                        console.log(this.exam_key[this.problem_number]);
+                                        sub.Correct = this.exam_key[this.problem_number];
+                                    }
+                                    sub.Rationale = [[key.Key.Rationale]];
                                 }
-                                else {
-                                    console.log(this.exam_key);
-                                    console.log(this.exam_key[this.problem_number]);
-                                    sub.Correct = this.exam_key[this.problem_number - 1];
-                                }
-                                sub.Rationale = [key.Key.Rationale];
-                            }
-                            else if (prob.Type == 'FR') {
-                                if (choice == key.Choice) {
-                                    sub.Correct = ['✅'];
-                                    // this.number_correct += 1;
-                                    sub.Rationale = [key.Key.Rationale];
-                                }
-                                else {
-                                    sub.Correct = this.exam_key[this.problem_number - 1];
-                                    sub.Rationale = ['No rationale provided. The number submitted was not right'];
+                                else if (prob.Type == 'FR') {
+                                    if (choice == key.Choice) {
+                                        sub.Correct = [['✅']];
+                                        // this.number_correct += 1;
+                                        sub.Rationale = [[key.Key.Rationale]];
+                                    }
+                                    else {
+                                        sub.Correct = this.exam_key[this.problem_number];
+                                        sub.Rationale = [['No rationale provided. The number submitted was not right']];
+                                    }
                                 }
                             }
                         }
@@ -2059,53 +2270,53 @@ export class TemplateExamComponent implements OnInit {
             }
         }
         if (this.authService.userData) {
+            this.db_updates = {};
             if (this.authService.userData.role == 'Student') {
-                this.db_updates['exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
-                if (this.problem_number + 1 > this.max_problem_number) {
-                    this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
-                    this.db_updates['problems/total'] = this.authService.userData.problems.total + 1; //only add if new
-                }
+                this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/status'] = this.attempt_response;
                 // not necessarily true for multi part problems
                 if (this.attempt_response[this.attempt_response.length - 1] == 'Correct') {
                     this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
                 }
-                this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/status'] = this.attempt_response;
+                if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
+                    this.db_updates['problems/total'] = this.authService.userData.problems.total + 1;
+                    this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
+                }
+                this.db_updates['exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
                 this.authService.UpdateUserData(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number] = this.exam_submission[this.problem_number];
-                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/problems/' + "" + this.exam_submission[this.problem_number].Number] = this.exam_submission[this.problem_number];
-                if (this.problem_number == this.exam_length) {
-                    this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
+                this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.authService.userData.uid] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
+                    this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/endtimestamp'] = serverTimestamp();
                 }
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/problems/' + this.authService.userData.uid + '/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/timestamp'] = serverTimestamp();
+                this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.authService.userData.uid + '/timestamp'] = serverTimestamp();
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
             }
             else if (this.selected_student != '') {
                 this.selected_student_data = this.authService.searchUserId(this.selected_student);
-                this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
-                if (this.problem_number + 1 > this.max_problem_number) {
-                    this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/progress'] = this.selected_student_data.exams.history[this.key].progress + 1;
-                    this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1;
-                }
+                this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = this.attempt_response;
                 // not necessarily true for multi part problems
-                if (this.attempt_response[this.attempt_response.length - 1] == 'Correct') {
+                if (this.attempt_response[-1] == 'Correct') {
                     this.db_updates['users/' + this.selected_student + '/problems/correct'] = this.selected_student_data.problems.correct + 1;
                 }
-                this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/status'] = this.attempt_response;
-                console.log(this.exam_submission[this.exam_dump[this.problem_number].Number]);
+                if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
+                    this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1;
+                    this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/progress'] = this.selected_student_data.exams.history[this.key].progress + 1;
+                }
+                this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + "/lasttimestamp"] = serverTimestamp();
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/problems/' + this.selected_student + '/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number] = this.exam_submission[this.problem_number];
-                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/problems/' + "" + this.exam_submission[this.problem_number].Number] = this.exam_submission[this.problem_number];
-                if (this.problem_number == this.exam_length) {
-                    this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/endtimestamp'] = serverTimestamp();
+                this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.selected_student] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
+                    this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/endtimestamp'] = serverTimestamp();
                 }
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/problems/' + this.selected_student + '/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/timestamp'] = serverTimestamp();
+                this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.selected_student + '/timestamp'] = serverTimestamp();
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
             }
@@ -2114,6 +2325,7 @@ export class TemplateExamComponent implements OnInit {
             this.problem_number = +Object.keys(this.exam_dump)[Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1];
             if (this.problem_number > this.max_problem_number) {
                 if (this.authService.userData) {
+                    this.db_updates = {};
                     if (this.authService.userData.role == 'Student') {
                         this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = 'Viewed';
                         this.authService.UpdateUserData(this.db_updates);
@@ -2167,8 +2379,8 @@ export class TemplateExamComponent implements OnInit {
             else if (this.problem_number <= this.max_problem_number) {
                 this.attempt_path = [this.exam_submission[this.problem_number].Path];
                 this.attempt_response = [''];
-                this.attempt_explanation = [this.exam_submission[this.problem_number].Rationale];
-                this.problem_selection = [this.exam_submission[this.problem_number].Choice];
+                this.attempt_explanation = this.exam_submission[this.problem_number].Rationale;
+                this.problem_selection = this.exam_submission[this.problem_number].Choice;
                 this.problem_attempts = this.exam_submission[this.problem_number].Attempts;
                 for (let supp of this.exam_dump[this.problem_number].SuppContent) {
                     setTimeout(() => {
@@ -2176,10 +2388,13 @@ export class TemplateExamComponent implements OnInit {
                     }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
                 }
             }
+            this.clearProblemTimer();
+            this.toggleProblemTimer();
         }
         else {
             this.problem_number += 1;
             if (this.authService.userData) {
+                this.db_updates = {};
                 if (this.authService.userData.role == 'Student') {
                     this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
                 }
@@ -2189,78 +2404,10 @@ export class TemplateExamComponent implements OnInit {
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
             }
+            this.toggleProblemTimer();
             this.toggleExamTimer();
             this.completeExam();
         }
-        // if (this.problem_number <= this.exam_length) {
-        //     if (this.authService.userData) {
-        //         if (this.authService.userData.role == 'Student') {
-        //             this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = 'Viewed';
-        //             this.authService.UpdateUserData(this.db_updates);
-        //             this.db_updates = {};
-        //         }
-        //         else if (this.selected_student != '') {
-        //             console.log(this.exam_submission[this.exam_dump[this.problem_number].Number].Number);
-        //             this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = 'Viewed';
-        //             this.authService.UpdateDatabase(this.db_updates);
-        //             this.db_updates = {};
-        //         }
-        //     }
-        //     this.attempt_path = [];
-        //     this.attempt_response = [];
-        //     this.attempt_explanation = [];
-        //     this.problem_selection = [];
-        //     if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
-        //         this.problem_attempts = [0];
-        //         this.attempt_path = [[]];
-        //         this.attempt_response = [''];
-        //         this.attempt_explanation = [[]];
-        //         if (['MC', 'FR', 'LR'].includes(this.exam_dump[this.problem_number].Type)) {
-        //             this.problem_selection = [['']];
-        //         }
-        //         else if (['MS', 'O'].includes(this.exam_dump[this.problem_number].Type)) {
-        //             this.problem_selection = [[]];
-        //         }
-        //     }
-        //     else {
-        //         this.problem_attempts = [];
-        //         for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
-        //             this.problem_attempts.push(0);
-        //             this.attempt_path.push([]);
-        //             this.attempt_response.push('');
-        //             this.attempt_explanation.push([]);
-        //             if (['MC', 'FR', 'LR'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-        //                 this.problem_selection.push(['']);
-        //             }
-        //             else if (['MS', 'O'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-        //                 this.problem_selection.push([]);
-        //             }
-        //         }
-        //     }
-        //     for (let supp of this.exam_dump[this.problem_number].SuppContent) {
-        //         setTimeout(() => {
-        //             this.read_supp_json(supp);
-        //         }, 100*(1+this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
-        //     }
-        // }
-        // else {
-        //     if (this.authService.userData) {
-        //         if (this.authService.userData.role == 'Student') {
-        //             this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
-        //         }
-        //         else if (this.selected_student != '') {
-        //             this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/endtimestamp'] = serverTimestamp();
-        //         }
-        //         this.authService.UpdateDatabase(this.db_updates);
-        //         this.db_updates = {};
-        //     }
-        // }
-        this.clearProblemTimer();
-        this.toggleProblemTimer();
-        // if (this.problem_number > this.exam_length) {
-        //     this.toggleExamTimer();
-        //     this.completeExam();
-        // }
     }
 
     go_to_prob(num: number) {
@@ -2272,51 +2419,91 @@ export class TemplateExamComponent implements OnInit {
             this.exam_submission[this.problem_number].Number = this.problem_number;
             this.exam_submission[this.problem_number].Topics = this.exam_dump[this.problem_number].Topics;
             this.exam_submission[this.problem_number].SubTopics = this.exam_dump[this.problem_number].SubTopics;
-            this.exam_submission[this.problem_number].Choice = this.problem_selection[0];
+            this.exam_submission[this.problem_number].Choice = this.problem_selection;
             this.exam_submission[this.problem_number].Attempts = this.problem_attempts;
             this.exam_submission[this.problem_number].Path = this.attempt_path;
-            // this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
-            // if (this.problem_selection[0][0] != '') {
-            //     this.exam_submission[this.problem_number].Rationale = [this.exam_dump[this.problem_number].AnswerChoices[this.problem_selection[0][0]].Key.Rationale];
-            // }
             for (const [ch, key] of Object.entries(this.exam_dump[this.problem_number].AnswerChoices)) {
                 if (this.exam_dump[this.problem_number].Type == 'MC' && this.problem_selection[0][0] == ch) {
                     if (key.Key.Correct == true) {
-                        this.exam_submission[this.problem_number].Correct = ['✅'];
+                        this.exam_submission[this.problem_number].Correct = [['✅']];
                         // this.number_correct += 1;
                     }
                     else {
                         console.log(this.exam_key);
                         console.log(this.exam_key[this.problem_number]);
-                        this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
+                        this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number];
                     }
-                    this.exam_submission[this.problem_number].Rationale = [key.Key.Rationale];
+                    this.exam_submission[this.problem_number].Rationale = [[key.Key.Rationale]];
                 }
                 else if (this.exam_dump[this.problem_number].Type == 'FR') {
                     if (this.problem_selection[0][0] == key.Choice) {
-                        this.exam_submission[this.problem_number].Correct = ['✅'];
+                        this.exam_submission[this.problem_number].Correct = [['✅']];
                         // this.number_correct += 1;
-                        this.exam_submission[this.problem_number].Rationale = [key.Key.Rationale];
+                        this.exam_submission[this.problem_number].Rationale = [[key.Key.Rationale]];
                     }
                     else {
-                        this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
-                        this.exam_submission[this.problem_number].Rationale = ['No rationale provided. The number submitted was not right'];
+                        this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number];
+                        this.exam_submission[this.problem_number].Rationale = [['No rationale provided. The number submitted was not right']];
                     }
                 }
             }
-            // if (this.problem_number == this.exam_length) {
-            //   for (let i: number = 1; i <= this.exam_length; i++) {
-            //     this.exam_submission_list.push(this.exam_submission[i]);
-            //     if (this.exam_submission[i].Correct[0] != '✅') {
-            //       this.wrong_submission_list.push(this.exam_submission[i]);
-            //     }
-            //   }
-            // }
+            if (this.authService.userData) {
+                this.db_updates = {};
+                if (this.authService.userData.role == 'Student') {
+                    this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/status'] = this.attempt_response;
+                    // not necessarily true for multi part problems
+                    if (this.attempt_response[this.attempt_response.length - 1] == 'Correct') {
+                        this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
+                    }
+                    if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
+                        this.db_updates['problems/total'] = this.authService.userData.problems.total + 1;
+                        this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
+                    }
+                    this.db_updates['exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
+                    this.authService.UpdateUserData(this.db_updates);
+                    this.db_updates = {};
+                    this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.authService.userData.uid] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                    this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                    if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
+                        this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/endtimestamp'] = serverTimestamp();
+                    }
+                    this.authService.UpdateDatabase(this.db_updates);
+                    this.db_updates = {};
+                    this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.authService.userData.uid + '/timestamp'] = serverTimestamp();
+                    this.authService.UpdateDatabase(this.db_updates);
+                    this.db_updates = {};
+                }
+                else if (this.selected_student != '') {
+                    this.selected_student_data = this.authService.searchUserId(this.selected_student);
+                    this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = this.attempt_response;
+                    // not necessarily true for multi part problems
+                    if (this.attempt_response[-1] == 'Correct') {
+                        this.db_updates['users/' + this.selected_student + '/problems/correct'] = this.selected_student_data.problems.correct + 1;
+                    }
+                    if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
+                        this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1;
+                        this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/progress'] = this.selected_student_data.exams.history[this.key].progress + 1;
+                    }
+                    this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + "/lasttimestamp"] = serverTimestamp();
+                    this.authService.UpdateDatabase(this.db_updates);
+                    this.db_updates = {};
+                    this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.selected_student] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                    this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
+                    if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
+                        this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/endtimestamp'] = serverTimestamp();
+                    }
+                    this.authService.UpdateDatabase(this.db_updates);
+                    this.db_updates = {};
+                    this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.selected_student + '/timestamp'] = serverTimestamp();
+                    this.authService.UpdateDatabase(this.db_updates);
+                    this.db_updates = {};
+                }
+            }
             this.problem_number = num;
             this.attempt_path = [this.exam_submission[num].Path];
             this.attempt_response = [''];
-            this.attempt_explanation = [this.exam_submission[num].Rationale];
-            this.problem_selection = [this.exam_submission[num].Choice];
+            this.attempt_explanation = this.exam_submission[num].Rationale;
+            this.problem_selection = this.exam_submission[num].Choice;
             this.problem_attempts = this.exam_submission[num].Attempts;
             console.log(this.problem_selection);
             for (let supp of this.exam_dump[this.problem_number].SuppContent) {
@@ -2381,7 +2568,7 @@ export class TemplateExamComponent implements OnInit {
         console.log(this.exam_submission);
         for (let i: number = 0; i < this.exam_length; i++) {
             this.exam_submission_list.push(this.exam_submission[+Object.keys(this.ordered_dump)[i]]);
-            if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0] != '✅') {
+            if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0][0] != '✅') {
                 this.wrong_submission_list.push(this.exam_submission[+Object.keys(this.ordered_dump)[i]]);
             }
             else {
@@ -2392,13 +2579,13 @@ export class TemplateExamComponent implements OnInit {
         this.et_counter = this.total_seconds;
         this.et_minutes = Math.floor(this.total_seconds / 60);
         this.correct_percent = Math.round(this.number_correct / (this.exam_length) * 100);
-        console.log(this.topic_breakdown);
+        this.confetti_pop();
         for (let i: number = 0; i < this.exam_length; i++) {
             for (let num: number = 0; num < this.exam_submission_list[i].Topics.length; num++) {
                 if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[num])) {
                     this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Total += 1;
                     this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Seconds += this.exam_submission_list[i].Seconds;
-                    if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0] == '✅') {
+                    if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0][0] == '✅') {
                         this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Correct += 1;
                         if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs).includes(this.exam_submission_list[i].SubTopics[num])) {
                             this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Total += 1;
@@ -2422,7 +2609,7 @@ export class TemplateExamComponent implements OnInit {
                     }
                 }
                 else {
-                    if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0] == '✅') {
+                    if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0][0] == '✅') {
                         this.topic_breakdown[this.exam_submission_list[i].Topics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[num]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
                     }
                     else {
@@ -2448,18 +2635,17 @@ export class TemplateExamComponent implements OnInit {
                 }
             }
         }
-        this.confetti_pop();
         if (this.authService.userData) {
-            console.log('submitting exam to db');
+            this.db_updates = {};
             if (this.authService.userData.role == 'Student') {
                 this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';
                 this.authService.UpdateUserData(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/total'] = this.exam_length;
-                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/correct'] = this.number_correct;
-                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/score'] = this.correct_percent;
-                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/level'] = this.performance_level;
-                this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/total'] = this.exam_length;
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/correct'] = this.number_correct;
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/score'] = this.correct_percent;
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/level'] = this.performance_level;
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
             }
@@ -2467,11 +2653,11 @@ export class TemplateExamComponent implements OnInit {
                 this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/status'] = 'Completed';
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
-                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/total'] = this.exam_length;
-                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/correct'] = this.number_correct;
-                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/score'] = this.correct_percent;
-                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/level'] = this.performance_level;
-                this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/total'] = this.exam_length;
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/correct'] = this.number_correct;
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/score'] = this.correct_percent;
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/level'] = this.performance_level;
+                this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
                 this.authService.UpdateDatabase(this.db_updates);
                 this.db_updates = {};
             }
@@ -2770,19 +2956,31 @@ export class TemplateExamComponent implements OnInit {
         if (this.exam_attribute_dump[this.key].Parts.length == 0) {
             this.ordered_dump = this.dump_dict[this.key];
             for (let num of Object.keys(this.ordered_dump)) {
-                this.exam_submission[+num] = {
-                    'Number': +num,
-                    'Topics': [],
-                    'SubTopics': [],
-                    'Choice': [''],
-                    'Correct': [''],
-                    'Rationale': [''],
-                    'Attempts': [0],
-                    'Path': [],
-                    'Seconds': 0,
-                    'Time': '',
-                    'Flags': [false]
-                };
+                if (num != 'default') {
+                    this.exam_submission[+num] = {
+                        'Number': +num,
+                        'Topics': [],
+                        'SubTopics': [],
+                        'Choice': [],
+                        'Correct': [],
+                        'Rationale': [],
+                        'Attempts': [],
+                        'Path': [],
+                        'Seconds': 0,
+                        'Time': '',
+                        'Flags': [false]
+                    };
+                    if (Object.keys(this.ordered_dump[+num].Parts).length == 0) {
+                        this.exam_submission[+num].Path.push([['']]);
+                        this.exam_submission[+num].Attempts.push(0);
+                    }
+                    else {
+                        for (let part of Object.keys(this.ordered_dump[+num].Parts)) {
+                            this.exam_submission[+num].Path.push([['']]);
+                            this.exam_submission[+num].Attempts.push(0);
+                        }
+                    }
+                }   
             }
             console.log(this.ordered_dump as any);
             console.log(JSON.stringify(this.ordered_dump));
@@ -2803,19 +3001,39 @@ export class TemplateExamComponent implements OnInit {
                 }
             }
             console.log(this.topics_count);
+            this.exam_key = {};
             for (const [num, val] of Object.entries(this.exam_dump)) {
-                this.exam_key.push([]);
-                if (Object.keys(val.AnswerChoices).length == 0) {
-                    this.exam_key[this.exam_key.length - 1].push('');
+                this.exam_key[+num] = [];
+                if (Object.keys(val.Parts).length == 0) {
+                    this.exam_key[+num].push([]);
+                    if (Object.keys(val.AnswerChoices).length == 0) {
+                        this.exam_key[+num][0].push('');
+                    }
+                    else {
+                        for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                            if (ch == 'KEY') {
+                                this.exam_key[+num][0].push(val2.Choice);
+                            }
+                            else if (val2.Key.Correct) {
+                                this.exam_key[+num][0].push(ch);
+                            }
+                        }
+                    }
                 }
                 else {
-                    for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-                        if (ch == 'KEY') {
-                            this.exam_key[this.exam_key.length - 1].push(val2.Choice);
+                    for (let part of Object.keys(val.Parts)) {
+                        this.exam_key[+num].push([]);
+                        if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
+                            this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push('');
                         }
                         else {
-                            if (val2.Key.Correct) {
-                                this.exam_key[this.exam_key.length - 1].push(ch);
+                            for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
+                                if (ch == 'KEY') {
+                                    this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
+                                }
+                                else if (val2.Key.Correct) {
+                                    this.exam_key[+num][Object.keys(val.Parts).indexOf(part)].push(ch);
+                                }
                             }
                         }
                     }
@@ -2870,13 +3088,33 @@ export class TemplateExamComponent implements OnInit {
                             this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
                             this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
                             if ((det as any).progress != 0) {
-                                const db_submission = this.authService.getExamSubmission(this.key).problems;
-                                for (const [key2, det2] of Object.entries(db_submission)) {
-                                    if (+key2 != 0) {
-                                        this.exam_submission[+(det2 as any).Number] = (det2 as any);
+                                var db_submission = this.authService.getExamSubmission2(this.key);
+                                setTimeout(() => {
+                                    console.log(db_submission.problems);
+                                    for (const [key2, det2] of Object.entries(db_submission.problems)) {
+                                        if (+key2 != 0) {
+                                            const sub_prob: any = (det2 as any);
+                                            var sub_prob_2: any = {};
+                                            for (const [field, dump] of Object.entries(det2 as any)) {
+                                                // sub_prob[field] = dump;
+                                                sub_prob_2[field] = dump;
+                                            }
+                                            if (typeof (det2 as any).Choice == "string") {
+                                                sub_prob_2.Choice = [];
+                                                sub_prob_2.Correct = [];
+                                                sub_prob_2.Attempts = [];
+                                                sub_prob_2.Path = [];
+                                                sub_prob_2.Choice.push([sub_prob.Choice]);
+                                                sub_prob_2.Correct.push([sub_prob.Correct]);
+                                                sub_prob_2.Attempts.push(sub_prob.Attempts);
+                                                sub_prob_2.Path.push([[sub_prob.Path]]);
+                                            }
+                                            this.exam_submission[+(det2 as any).Number] = sub_prob_2;
+                                        }
                                     }
-                                }
+                                }, 500);
                             }
+                            console.log(this.exam_submission);
                         }
                     }
                 }
