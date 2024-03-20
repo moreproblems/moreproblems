@@ -1730,6 +1730,30 @@ export class TemplateClassComponent implements OnInit {
   random_index = 0
   random_list: string[] = [];
 
+  state_labels: { [key: string]: string } = {
+    "Colorado": "CO",
+    "Delaware": "DE",
+    "Florida": "FL",
+    "Illinois": "IL",
+    "Maine": "ME",
+    "Maryland": "MD",
+    "Massachusetts": "MA",
+    "Minnesota": "MN",
+    "Mississippi": "MS",
+    "Missouri": "MO",
+    "Nebraska": "NE",
+    "New Jersey": "NJ",
+    "New Mexico": "NM",
+    "New York": "NY",
+    "North Carolina": "NC",
+    "Pennsylvania": "PA",
+    "Rhode Island": "RI",
+    "South Carolina": "SC",
+    "Tennessee": "TN",
+    "Texas": "TX",
+    "Wisconsin": "WI"
+  };
+
   constructor(public authService: AuthService, public router: Router, private aRoute: ActivatedRoute, private afAuth: AngularFireAuth, private http: HttpClient) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
@@ -2467,10 +2491,10 @@ export class TemplateClassComponent implements OnInit {
       // }
     }
     for (let grade of Object.keys(this.grade_breakdown)) {
-      this.student_class_total_problems = 0;
-      this.student_class_correct_problems = 0;
-      this.student_class_total_problems += this.grade_breakdown[grade].Total;
-      this.student_class_correct_problems += this.grade_breakdown[grade].Correct;
+      this.exam_class_total_problems = 0;
+      this.exam_class_correct_problems = 0;
+      this.exam_class_total_problems += this.grade_breakdown[grade].Total;
+      this.exam_class_correct_problems += this.grade_breakdown[grade].Correct;
       this.grade_breakdown[grade].Percent = Math.round(100 * this.grade_breakdown[grade].Correct / (this.grade_breakdown[grade].Total));
       this.grade_breakdown[grade].Time = (Math.floor(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total % 60)).toString() + 's';
       for (let subject of Object.keys(this.grade_breakdown[grade].Subs)) {
