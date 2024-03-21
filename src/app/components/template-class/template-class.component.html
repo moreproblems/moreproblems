@@ -799,44 +799,43 @@
                 <div class="col-md-12">
                     <div class="media">
                         <div class="card card-large"
-                            style="margin: auto; height: auto; max-height: 300px; min-width: 40%; max-width: 600px; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 15px 25px">
-                            <img *ngIf="this.screenWidth > this.mobileWidth"
-                                class="align-self-start mr-5 img-thumbnail rounded-circle"
-                                style="max-height: 250px; max-width: 250px; border-radius: 10%"
-                                src="./assets/flags/{{state_labels[exam_attribute_dump[selected_ass_results].State]}}.png">
-                            <img *ngIf="this.screenWidth <= this.mobileWidth"
-                                class="align-self-start mr-5 img-thumbnail rounded-circle"
-                                style="max-height: 150px; max-width: 150px; border-radius: 10%"
-                                src="./assets/flags/{{state_labels[exam_attribute_dump[selected_ass_results].State]}}.png">
-                            <div style="align-items: center; text-align: center;">
-                                <h2>{{exam_names[selected_ass_results]}}</h2>
-                                <hr />
-                                <div
-                                    style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-                                    <div *ngIf="screenWidth > mobileWidth"
-                                        class="media-body" style="padding: 0 20px">
-                                        <h3 style="font-weight: 600">{{exam_attribute_dump[selected_ass_results].Subject}}</h3>
-                                        <h3 style="font-weight: 600">{{exam_attribute_dump[selected_ass_results].Grade}}</h3>
-                                        <!-- <h4>Role: <strong style="font-weight: 500">{{search_user_result.role}}</strong></h4>
-                                        <h4>Grade: <strong style="font-weight: 500">{{search_user_result.grade}}</strong></h4>
-                                        <h4>State: <strong style="font-weight: 500">{{search_user_result.state}}</strong></h4> -->
+                            style="margin: auto; height: auto; max-height: 300px; min-width: 40%; max-width: 600px; width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 25px">
+                            <h2>{{exam_names[selected_ass_results]}}</h2>
+                            <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; width: 100%" >
+                                <img *ngIf="this.screenWidth > this.mobileWidth"
+                                    class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                    style="max-height: 250px; max-width: 250px; border-radius: 10%"
+                                    src="./assets/flags/{{state_labels[exam_attribute_dump[selected_ass_results].State]}}.png">
+                                <img *ngIf="this.screenWidth <= this.mobileWidth"
+                                    class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                    style="max-height: 175px; max-width: min(175px, 40%); border-radius: 10%"
+                                    src="./assets/flags/{{state_labels[exam_attribute_dump[selected_ass_results].State]}}.png">
+                                <div style="align-items: center; text-align: center;">
+                                    <div
+                                        style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+                                        <div *ngIf="screenWidth > mobileWidth"
+                                            class="media-body" style="padding: 0 20px">
+                                            <h3 style="font-weight: 600">{{exam_attribute_dump[selected_ass_results].Subject}}</h3>
+                                            <h3 style="font-weight: 600">{{exam_attribute_dump[selected_ass_results].Grade}}</h3>
+                                            <!-- <h4>Role: <strong style="font-weight: 500">{{search_user_result.role}}</strong></h4>
+                                            <h4>Grade: <strong style="font-weight: 500">{{search_user_result.grade}}</strong></h4>
+                                            <h4>State: <strong style="font-weight: 500">{{search_user_result.state}}</strong></h4> -->
+                                        </div>
+                                        <div class="media-body" style="padding: 0 20px">
+                                            <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600">{{exam_attribute_dump[selected_ass_results].State}}</h3>
+                                            <h3>Total Problems: <strong style="font-weight: 500">{{exam_attribute_dump[selected_ass_results].NumQuestions}}</strong></h3>
+                                        </div>
                                     </div>
-                                    <div class="media-body" style="padding: 0 20px">
-                                        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600">{{exam_attribute_dump[selected_ass_results].Subject}}</h3>
-                                        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600">{{exam_attribute_dump[selected_ass_results].Grade}}</h3>
-                                        <h3 style="font-weight: 600">{{exam_attribute_dump[selected_ass_results].State}}</h3>
-                                        <h3>Total Problems: <strong style="font-weight: 500">{{exam_attribute_dump[selected_ass_results].NumQuestions}}</strong></h3>
-                                    </div>
+                                    <hr />
+                                    <h3>Total Exams: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
+                                    </h3>
+                                    <h3>Total Time: <strong style="font-weight: 500">{{total_test_time}}</strong>
+                                    </h3>
+                                    <h3>Correct Problems: <strong style="font-weight: 500">{{exam_class_correct_problems}} / {{exam_class_total_problems}}</strong>
+                                    </h3>
+                                    <h3>Average Score: <strong style="font-weight: 500">{{total_percent_correct}}%</strong>
+                                    </h3>
                                 </div>
-                                <hr />
-                                <h3>Total Exams: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
-                                </h3>
-                                <h3>Total Time: <strong style="font-weight: 500">{{total_test_time}}</strong>
-                                </h3>
-                                <h3>Correct Problems: <strong style="font-weight: 500">{{exam_class_correct_problems}} / {{exam_class_total_problems}}</strong>
-                                </h3>
-                                <h3>Average Score: <strong style="font-weight: 500">{{total_percent_correct}}%</strong>
-                                </h3>
                             </div>
                         </div>
                         <br />
@@ -996,46 +995,45 @@
                 <div class="col-md-12">
                     <div class="media">
                         <div class="card card-large"
-                            style="margin: auto; height: auto; max-height: 300px; min-width: 40%; max-width: 600px; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 15px 25px">
-                            <img *ngIf="this.screenWidth > this.mobileWidth"
-                                class="align-self-start mr-5 img-thumbnail rounded-circle"
-                                style="height: 250px; width: 250px; border-radius: 50%"
-                                src="{{(student_data.photoURL) ? student_data.photoURL : '/assets/icons/user/user.png'}}"
-                                alt="{{student_data.displayName}}">
-                            <img *ngIf="this.screenWidth <= this.mobileWidth"
-                                class="align-self-start mr-5 img-thumbnail rounded-circle"
-                                style="height: 150px; width: 150px; border-radius: 50%"
-                                src="{{(student_data.photoURL) ?student_data.photoURL : '/assets/icons/user/user.png'}}"
-                                alt="{{student_data.displayName}}">
-                            <div style="align-items: center; text-align: center;">
-                                <h2>{{(student_data.displayName) ?
-                                    student_data.displayName :
-                                    'User'}}</h2>
-                                <hr />
-                                <div
-                                    style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-                                    <div *ngIf="!student_data.uid.includes(authService.userData.uid) && screenWidth > mobileWidth"
-                                        class="media-body" style="padding: 0 20px">
-                                        <h3 style="font-weight: 600">{{student_data.email}}</h3>
-                                        <h3 style="font-weight: 600">{{student_data.phoneNumber}}</h3>
-                                        <!-- <h4>Role: <strong style="font-weight: 500">{{search_user_result.role}}</strong></h4>
-                                        <h4>Grade: <strong style="font-weight: 500">{{search_user_result.grade}}</strong></h4>
-                                        <h4>State: <strong style="font-weight: 500">{{search_user_result.state}}</strong></h4> -->
+                            style="margin: auto; height: auto; max-height: 300px; min-width: 40%; max-width: 600px; width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 25px">
+                            <h2>{{(student_data.displayName) ? student_data.displayName : 'User'}}</h2>
+                            <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; width: 100%" >
+                                <img *ngIf="this.screenWidth > this.mobileWidth"
+                                    class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                    style="height: 250px; width: 250px; border-radius: 50%"
+                                    src="{{(student_data.photoURL) ? student_data.photoURL : '/assets/icons/user/user.png'}}"
+                                    alt="{{student_data.displayName}}">
+                                <img *ngIf="this.screenWidth <= this.mobileWidth"
+                                    class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                    style="max-height: 175px; width: min(175px, 40%); border-radius: 50%"
+                                    src="{{(student_data.photoURL) ?student_data.photoURL : '/assets/icons/user/user.png'}}"
+                                    alt="{{student_data.displayName}}">
+                                <div style="align-items: center; text-align: center;">
+                                    <div
+                                        style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+                                        <div *ngIf="!student_data.uid.includes(authService.userData.uid) && screenWidth > mobileWidth"
+                                            class="media-body" style="padding: 0 20px">
+                                            <h3 style="font-weight: 600">{{student_data.email}}</h3>
+                                            <h3 style="font-weight: 600">{{student_data.phoneNumber}}</h3>
+                                            <!-- <h4>Role: <strong style="font-weight: 500">{{search_user_result.role}}</strong></h4>
+                                            <h4>Grade: <strong style="font-weight: 500">{{search_user_result.grade}}</strong></h4>
+                                            <h4>State: <strong style="font-weight: 500">{{search_user_result.state}}</strong></h4> -->
+                                        </div>
+                                        <div class="media-body" style="padding: 0 20px">
+                                            <h3 style="font-weight: 600">{{student_data.grade}}</h3>
+                                            <h3 style="font-weight: 600">{{student_data.state}}</h3>
+                                        </div>
                                     </div>
-                                    <div class="media-body" style="padding: 0 20px">
-                                        <h3 style="font-weight: 600">{{student_data.grade}}</h3>
-                                        <h3 style="font-weight: 600">{{student_data.state}}</h3>
-                                    </div>
+                                    <hr />
+                                    <h3>Total Exams: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
+                                    </h3>
+                                    <h3>Total Time: <strong style="font-weight: 500">{{total_test_time}}</strong>
+                                    </h3>
+                                    <h3>Correct Problems: <strong style="font-weight: 500">{{student_class_correct_problems}} / {{student_class_total_problems}}</strong>
+                                    </h3>
+                                    <h3>Weighted Score: <strong style="font-weight: 500">{{total_percent_correct}}%</strong>
+                                    </h3>
                                 </div>
-                                <hr />
-                                <h3>Total Exams: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
-                                </h3>
-                                <h3>Total Time: <strong style="font-weight: 500">{{total_test_time}}</strong>
-                                </h3>
-                                <h3>Correct Problems: <strong style="font-weight: 500">{{student_class_correct_problems}} / {{student_class_total_problems}}</strong>
-                                </h3>
-                                <h3>Weighted Score: <strong style="font-weight: 500">{{total_percent_correct}}%</strong>
-                                </h3>
                             </div>
                         </div>
                         <br />
