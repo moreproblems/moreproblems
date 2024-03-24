@@ -215,6 +215,10 @@ import * as PA19G8SProblems from "src/assets/problems/PA19G8S/PA19G8S-problems.j
 import * as PA18G8SProblems from "src/assets/problems/PA18G8S/PA18G8S-problems.json";
 import * as PA16G8SProblems from "src/assets/problems/PA16G8S/PA16G8S-problems.json";
 import * as PA15G8SProblems from "src/assets/problems/PA15G8S/PA15G8S-problems.json";
+import * as PSAT1M1Problems from "src/assets/problems/PSAT1M1/PSAT1M1-problems.json";
+import * as PSAT1M2Problems from "src/assets/problems/PSAT1M2/PSAT1M2-problems.json";
+import * as PSAT1RW1Problems from "src/assets/problems/PSAT1RW1/PSAT1RW1-problems.json";
+import * as PSAT1RW2Problems from "src/assets/problems/PSAT1RW2/PSAT1RW2-problems.json";
 import * as SAT1M1Problems from "src/assets/problems/SAT1M1/SAT1M1-problems.json";
 import * as SAT1M2Problems from "src/assets/problems/SAT1M2/SAT1M2-problems.json";
 import * as SAT1RW1Problems from "src/assets/problems/SAT1RW1/SAT1RW1-problems.json";
@@ -385,8 +389,9 @@ export class ProfileComponent implements OnInit {
   correct_percent = 0;
   performance_level = "";
   time_duration = "";
-  grade_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Tops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } } } = {};
-  subject_breakdown: { [key: string]: { 'Grade': string, 'Subject': string, 'Break': { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Tops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } } = {};
+  grade_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Tops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'SubTops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } } } } } = {};
+  subject_breakdown_top: { [key: string]: { 'Grade': string, 'Subject': string, 'Break': { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Tops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, } } } } } = {};
+  subject_breakdown_subtop: { [key: string]: { 'Grade': string, 'Subject': string, 'Topic': string, 'Break': { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'SubTops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, } } } } } = {};
   topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
 
 
@@ -629,6 +634,10 @@ export class ProfileComponent implements OnInit {
   PA18G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA18G8SProblems;
   PA16G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA16G8SProblems;
   PA15G8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PA15G8SProblems;
+  PSAT1M1_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PSAT1M1Problems;
+  PSAT1M2_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PSAT1M2Problems;
+  PSAT1RW1_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PSAT1RW1Problems;
+  PSAT1RW2_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PSAT1RW2Problems;
   SAT1M1_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = SAT1M1Problems;
   SAT1M2_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = SAT1M2Problems;
   SAT1RW1_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = SAT1RW1Problems;
@@ -951,6 +960,10 @@ export class ProfileComponent implements OnInit {
     "PA18G8S": this.PA18G8S_exam_dump,
     "PA16G8S": this.PA16G8S_exam_dump,
     "PA15G8S": this.PA15G8S_exam_dump,
+    "PSAT1M1": this.PSAT1M1_exam_dump,
+    "PSAT1M2": this.PSAT1M2_exam_dump,
+    "PSAT1RW1": this.PSAT1RW1_exam_dump,
+    "PSAT1RW2": this.PSAT1RW2_exam_dump,
     "SAT1M1": this.SAT1M1_exam_dump,
     "SAT1M2": this.SAT1M2_exam_dump,
     "SAT1RW1": this.SAT1RW1_exam_dump,
@@ -2162,7 +2175,8 @@ export class ProfileComponent implements OnInit {
 
   select_student(std: string) {
     this.grade_breakdown = {};
-    this.subject_breakdown = {};
+    this.subject_breakdown_top = {};
+    this.subject_breakdown_subtop = {};
     this.topic_breakdown = {};
     this.student_exam_metadata = {};
     this.student_data = this.authService.searchUserId(std);
@@ -2225,21 +2239,31 @@ export class ProfileComponent implements OnInit {
                     this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
                   }
                   else {
-                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
+                  }
+                  if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops).includes((prob as any).SubTopics[n])) {
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Total += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Correct += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Seconds += +(prob as any).Seconds;
+                  }
+                  else {
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
                   }
                 }
               }
               else {
                 this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
                 for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
                 }
               }
             }
             else {
               this.grade_breakdown[this.exam_attribute_dump[key].Grade] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[key].Subject]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
               for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
               }
             }
           }
@@ -2259,21 +2283,31 @@ export class ProfileComponent implements OnInit {
                     this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
                   }
                   else {
-                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
+                  }
+                  if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops).includes((prob as any).SubTopics[n])) {
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Total += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Incorrect += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Seconds += +(prob as any).Seconds;
+                  }
+                  else {
+                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
                   }
                 }
               }
               else {
                 this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
                 for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
+                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
                 }
               }
             }
             else {
               this.grade_breakdown[this.exam_attribute_dump[key].Grade] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[key].Subject]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
               for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
+                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
               }
             }
           }
@@ -2289,8 +2323,13 @@ export class ProfileComponent implements OnInit {
         for (let topic of Object.keys(this.grade_breakdown[grade].Subs[subject].Tops)) {
           this.grade_breakdown[grade].Subs[subject].Tops[topic].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Tops[topic].Correct / (this.grade_breakdown[grade].Subs[subject].Tops[topic].Total));
           this.grade_breakdown[grade].Subs[subject].Tops[topic].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total % 60)).toString() + 's';
+          for (let subtop of Object.keys(this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops)) {
+            this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Correct / (this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Total));
+            this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Total % 60)).toString() + 's';
+          }
+          this.subject_breakdown_subtop[grade + " " + subject + ": " + topic] = { 'Grade': grade, 'Subject': subject, 'Topic': topic, 'Break': this.grade_breakdown[grade].Subs[subject].Tops[topic] };
         }
-        this.subject_breakdown[grade + " " + subject] = { 'Grade': grade, 'Subject': subject, 'Break': this.grade_breakdown[grade].Subs[subject] };
+        this.subject_breakdown_top[grade + " " + subject] = { 'Grade': grade, 'Subject': subject, 'Break': this.grade_breakdown[grade].Subs[subject] };
       }
     }
     console.log(this.grade_breakdown);

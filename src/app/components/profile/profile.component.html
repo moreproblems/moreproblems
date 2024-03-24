@@ -1485,7 +1485,7 @@
             </div>
             <br />
         </div>
-        <section *ngIf="selected_student != '' && selected_exam == ''" style="width: 100%; align-items: left">
+        <section *ngIf="selected_student != '' && selected_exam == '' && selected_subtopic == ''" style="width: 100%; align-items: left">
             <div (click)="selected_student=''" class="card card-small"
                 style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
                 <img src="./assets/icons/caret.png"
@@ -1493,8 +1493,8 @@
                 <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Profile </a>
             </div>
         </section>
-        <br *ngIf="selected_student != '' && selected_exam == ''" />
-        <div *ngIf="selected_student != '' && selected_exam == '' && stud_data_loaded" class="card card-large"
+        <br *ngIf="selected_student != '' && selected_exam == '' && selected_subtopic == ''" />
+        <div *ngIf="selected_student != '' && selected_exam == '' && selected_subtopic == '' && stud_data_loaded" class="card card-large"
             style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
             <br />
             <div class="row">
@@ -1544,58 +1544,36 @@
                             </div>
                         </div>
                         <br />
+                        <h2>{{student_data.displayName}}'s Completed Exams</h2>
+                        <div class="card-container" style="max-width: 100%">
+                            <div *ngFor="let exm of complete_exam_list" class="card card-large"
+                                style="height: auto; max-height: 200px; max-width: 450px; display: flex; flex-direction: column; align-items: center">
+                                <h3 style="margin: auto"> {{exam_names[exm]}} </h3>
+                                <hr style="width: 50%; height:1px; border-width:0; color:gray; background-color:gray" />
+                                <div style="display: flex; justify-content: space-between; padding: 5px; width: 100%">
+                                    <div>
+                                        <h3 style="margin: 1px auto; font-weight: 500"> Score:
+                                            <b>{{student_exam_metadata[exm].score}}%</b>
+                                            (<b>{{student_exam_metadata[exm].time}}</b>)
+                                        </h3>
+                                        <progress value="{{student_exam_metadata[exm].score}}" max="100"
+                                            style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto;"
+                                            #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+                                        <h4 style="margin: 1px auto; font-weight: 500"> Completed:
+                                            <b>{{""+student_exam_metadata[exm].enddate}}</b>
+                                            {{""+student_exam_metadata[exm].endtime}}
+                                        </h4>
+                                    </div>
+                                    <button (click)="this.select_exam(exm)" class="grade-button"
+                                        style="margin: auto; padding: 5px"> <b>Results</b> </button>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
                         <div style="overflow: auto">
                             <table *ngIf="!this.expand_topics"
                                 style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
                                 #subjectTableS>
-                                <thead>
-                                    <tr>
-                                        <th colspan="3" style="font-size: 18px"> Subject Results </th>
-                                        <th colspan="2">
-                                            <label class="switch"
-                                                style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
-                                                <input type="checkbox">
-                                                <button *ngIf="!this.expand_topics" (click)="expandTopics()"
-                                                    class="topic-button" style="width: 100%; font-size: 14px">
-                                                    <b>Show Topics</b> </button>
-                                                <button *ngIf="this.expand_topics" (click)="expandTopics()"
-                                                    class="topic-button" style="width: 100%; font-size: 14px">
-                                                    Hide Topics </button>
-                                            </label>
-                                        </th>
-                                    </tr>
-                                    <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                                        <th> Subjects </th>
-                                        <th> Total Problems </th>
-                                        <th> Missed Problems </th>
-                                        <th> Percent Correct </th>
-                                        <th> Average Time </th>
-                                    </tr>
-                                </thead>
-                                <tbody *ngFor="let grade of grade_breakdown | keyvalue" style="border: 5px solid black">
-                                    <tr style="background-color: lightgrey">
-                                        <td style="border-top: 1px solid #ddd"> <b> {{grade.key}} </b> </td>
-                                        <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Total}} </b> </td>
-                                        <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Incorrect}} </b> </td>
-                                        <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Percent}}% </b> </td>
-                                        <td style="border-top: 1px solid #ddd"> <b> {{grade.value.Time}} </b> </td>
-                                    </tr>
-                                    <tr *ngFor="let subject of grade.value.Subs | keyvalue">
-                                        <td style="border-top: 1px solid #ddd; ; text-align: center">
-                                            <i> <b> {{subject.key}} </b> </i>
-                                        </td>
-                                        <td style="border-top: 1px solid #ddd"> {{subject.value.Total}} </td>
-                                        <td style="border-top: 1px solid #ddd"> {{subject.value.Incorrect}} </td>
-                                        <td style="border-top: 1px solid #ddd"> {{grade.value.Percent}}% </td>
-                                        <td style="border-top: 1px solid #ddd"> {{subject.value.Time}} </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div style="overflow: auto">
-                            <table *ngIf="this.expand_topics"
-                                style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
-                                #subjectTableL>
                                 <thead>
                                     <tr>
                                         <th colspan="3" style="font-size: 18px"> Topic Results </th>
@@ -1605,10 +1583,10 @@
                                                 <input type="checkbox">
                                                 <button *ngIf="!this.expand_topics" (click)="expandTopics()"
                                                     class="topic-button" style="width: 100%; font-size: 14px">
-                                                    <b>Show Topics</b> </button>
+                                                    <b>Show Subtopics</b> </button>
                                                 <button *ngIf="this.expand_topics" (click)="expandTopics()"
                                                     class="topic-button" style="width: 100%; font-size: 14px">
-                                                    Hide Topics </button>
+                                                    Hide Subtopics </button>
                                             </label>
                                         </th>
                                     </tr>
@@ -1620,7 +1598,7 @@
                                         <th> Average Time </th>
                                     </tr>
                                 </thead>
-                                <tbody *ngFor="let subject of subject_breakdown | keyvalue"
+                                <tbody *ngFor="let subject of subject_breakdown_top | keyvalue"
                                     style="border: 5px solid black">
                                     <tr style="background-color: lightgrey">
                                         <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Grade + ": " +
@@ -1650,31 +1628,61 @@
                                 </tbody>
                             </table>
                         </div>
-                        <br />
-                        <h2>{{student_data.displayName}}'s Completed Exams</h2>
-                        <div class="card-container" style="max-width: 100%">
-                            <div *ngFor="let exm of complete_exam_list" class="card card-large"
-                                style="height: auto; max-height: 200px; max-width: 450px; display: flex; flex-direction: column; align-items: center">
-                                <h3 style="margin: auto"> {{exam_names[exm]}} </h3>
-                                <hr style="width: 50%; height:1px; border-width:0; color:gray; background-color:gray" />
-                                <div style="display: flex; justify-content: space-between; padding: 5px; width: 100%">
-                                    <div>
-                                        <h3 style="margin: 1px auto; font-weight: 500"> Score:
-                                            <b>{{student_exam_metadata[exm].score}}%</b>
-                                            (<b>{{student_exam_metadata[exm].time}}</b>)
-                                        </h3>
-                                        <progress value="{{student_exam_metadata[exm].score}}" max="100"
-                                            style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto;"
-                                            #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
-                                        <h4 style="margin: 1px auto; font-weight: 500"> Completed:
-                                            <b>{{""+student_exam_metadata[exm].enddate}}</b>
-                                            {{""+student_exam_metadata[exm].endtime}}
-                                        </h4>
-                                    </div>
-                                    <button (click)="this.select_exam(exm)" class="grade-button"
-                                        style="margin: auto; padding: 5px"> <b>Results</b> </button>
-                                </div>
-                            </div>
+                        <div style="overflow: auto">
+                            <table *ngIf="this.expand_topics"
+                                style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+                                #subjectTableL>
+                                <thead>
+                                    <tr>
+                                        <th colspan="3" style="font-size: 18px"> Topic Results </th>
+                                        <th colspan="2">
+                                            <label class="switch"
+                                                style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
+                                                <input type="checkbox">
+                                                <button *ngIf="!this.expand_topics" (click)="expandTopics()"
+                                                    class="topic-button" style="width: 100%; font-size: 14px">
+                                                    <b>Show Subtopics</b> </button>
+                                                <button *ngIf="this.expand_topics" (click)="expandTopics()"
+                                                    class="topic-button" style="width: 100%; font-size: 14px">
+                                                    Hide Subtopics </button>
+                                            </label>
+                                        </th>
+                                    </tr>
+                                    <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
+                                        <th> Topics & Subtopics </th>
+                                        <th> Total Problems </th>
+                                        <th> Missed Problems </th>
+                                        <th> Percent Correct </th>
+                                        <th> Average Time </th>
+                                    </tr>
+                                </thead>
+                                <tbody *ngFor="let subject of subject_breakdown_subtop | keyvalue"
+                                    style="border: 5px solid black">
+                                    <tr style="background-color: lightgrey">
+                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.key}} </b> </td>
+                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b>
+                                        </td>
+                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}}
+                                            </b>
+                                        </td>
+                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Percent}}%
+                                            </b>
+                                        </td>
+                                        <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Time}} </b>
+                                        </td>
+                                    </tr>
+                                    <tr *ngFor="let subtop of subject.value.Break.SubTops | keyvalue">
+                                        <td style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
+                                            <a (click)="searchSubTopic(subject.value.Topic, subtop.key)" style="font-weight: 500"> <i>
+                                                    {{subtop.key}} </i> </a>
+                                        </td>
+                                        <td style="border-top: 1px solid #ddd"> {{subtop.value.Total}} </td>
+                                        <td style="border-top: 1px solid #ddd"> {{subtop.value.Incorrect}} </td>
+                                        <td style="border-top: 1px solid #ddd"> {{subtop.value.Percent}}% </td>
+                                        <td style="border-top: 1px solid #ddd"> {{subtop.value.Time}} </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
