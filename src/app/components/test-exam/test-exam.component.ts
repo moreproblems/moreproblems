@@ -147,7 +147,7 @@ export class TestExamComponent implements OnInit {
 
     favorite_std_set: string[][] = [];
 
-    key = "";
+    key = "test";
     exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Timer': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number }, 'Parts': string[] } } = examMetadata;
     exam_state = "";
     exam_grade = "";
@@ -648,7 +648,7 @@ export class TestExamComponent implements OnInit {
             for (let i = 0; i < Object.keys(choices).length; i++) {
                 this.random_index = Math.floor(Math.random() * this.choices_sequence.length);
                 this.random_list.push(this.choices_sequence[this.random_index]);
-                this.shuffle_choices[i] = choices[this.choices_sequence[this.random_index]].Choice;
+                this.shuffle_choices[i] = this.choices_sequence[this.random_index];
                 this.choices_sequence.splice(this.random_index, 1);
             }
             this.m_shuffled = true;
@@ -1006,6 +1006,12 @@ export class TestExamComponent implements OnInit {
 
     ngOnInit() {
         this.exam_dump = this.test_exam_dump;
+        this.exam_state = this.exam_attribute_dump[this.key].State;
+        this.exam_grade = this.exam_attribute_dump[this.key].Grade;
+        this.exam_name = this.exam_attribute_dump[this.key].ExamName;
+        this.exam_type = this.exam_attribute_dump[this.key].ExamType;
+        this.exam_year = this.exam_attribute_dump[this.key].ExamYear;
+        this.exam_subject = this.exam_attribute_dump[this.key].Subject;
         if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
             this.attempt_path = [[]];
             this.attempt_response = [''];

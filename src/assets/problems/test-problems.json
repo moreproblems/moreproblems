@@ -3382,47 +3382,37 @@
     },
     "70": {
         "Number": 70,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "O",
+        "NumChoices": 3,
         "Topics": [],
         "SubTopics": [],
         "SuppContent": [],
         "Explain": false,
         "Content": [
-            "",
-            "problems/PA15G8M/media/70a.jpg",
-            ""
+            "Fill in one bubble in each row to show the order of steps ants take to leave their homes during a flood in Passage 1."
         ],
         "AnswerChoices": {
-            "F": {
-                "Choice": "",
+            "They stick their bodies together.": {
+                "Choice": "1:First",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "This is the first action in a series of steps that ants take to leave their homes during a flood.",
                     "Percent": 0
                 }
             },
-            "G": {
-                "Choice": "",
+            "They move food and each other.": {
+                "Choice": "2:Next",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "This is the second action in a series of steps that ants take to leave their homes during a flood.",
                     "Percent": 0
                 }
             },
-            "H": {
-                "Choice": "",
+            "They build a new nest.": {
+                "Choice": "3:Finally",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "J": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "This is the third and final action in a series of steps that ants take to leave their homes during a flood.",
                     "Percent": 0
                 }
             }
@@ -3431,7 +3421,7 @@
     },
     "71": {
         "Number": 71,
-        "Type": "I",
+        "Type": "IDD",
         "NumChoices": 6,
         "Topics": [],
         "SubTopics": [],
@@ -3441,7 +3431,7 @@
             "The two figures shown are measured in centimeters (cm).",
             "problems/test/media/b.jpg",
             "Complete the statement about the two figures. For each box, fill in the bubble before the word or phrase that is correct.",
-            "The shapes are both :dd1: because :dd2:"
+            "\n\nThe shapes are both :DD-1: because :DD-2:"
         ],
         "AnswerChoices": {
             "1:A": {
@@ -3617,24 +3607,24 @@
                     "LIST the weights, in pounds, of the animals in order from lightest to heaviest."
                 ],
                 "AnswerChoices": {
-                    "1:lightest": {
-                        "Choice": "275",
+                    "275": {
+                        "Choice": "1:lightest",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
                             "Percent": 0
                         }
                     },
-                    "2:": {
-                        "Choice": "291",
+                    "291": {
+                        "Choice": "2:",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
                             "Percent": 0
                         }
                     },
-                    "3: heaviest": {
-                        "Choice": "849",
+                    "849": {
+                        "Choice": "3:heaviest",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",

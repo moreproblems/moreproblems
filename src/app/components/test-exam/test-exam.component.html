@@ -1016,6 +1016,31 @@
           <input type="hidden" #selection>
           <div *ngFor="let prob of exam_dump | keyvalue">
             <div *ngIf="prob.value.Number == problem_number && (prob.value.Parts | keys).length == 0">
+              <div *ngIf="prob.value.Type == 'O'">
+                <div class="card card-small" style="min-height: 100px; width: auto; max-height: 500px; padding: 10px; align-items: center">
+                  <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices)" class="switch" style="padding: 0 10px; min-width: 100px; margin: auto">
+                    <input type="checkbox">
+                    <button (click)="select_m_choice('', 0)" *ngIf="m_selection[0] == choice" class="toggle-button-on"> <b>{{choice}}</b> </button>
+                    <button (click)="select_m_choice(choice, 0)" *ngIf="!is_matched(choice, 0) && m_selection[0] != choice" class="toggle-button-off"> <b>{{choice}}</b> </button>
+                    <button *ngIf="is_matched(choice, 0)" class="toggle-button-off"></button>
+                  </label>
+                </div>
+                <br />
+                <div class="card card-small" style="min-height: 100px; width: auto; max-height: 500px; padding: 10px; align-items: center">
+                  <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" style="margin: auto; margin-top: 0px; align-items: center; flex-direction: column">
+                    <label class="switch" style="padding: 0 10px; min-width: 100px">
+                      <input type="checkbox">
+                      <button (click)="select_m_choice('', 1)" *ngIf="!is_matched(choice.value.Choice[0], 1) && m_selection[1] == choice.value.Choice[0]" class="toggle-button-on"></button>
+                      <button (click)="remove_m_choice(choice.value.Choice[0]); select_m_choice(choice.value.Choice[0], 1)" *ngIf="is_matched(choice.value.Choice[0], 1) && m_submission[choice.value.Choice[0]] == choice.key" class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{m_submission[choice.value.Choice[0]]}} </b>
+                      </button>
+                      <button (click)="remove_m_choice(choice.value.Choice[0]); select_m_choice(choice.value.Choice[0], 1)" *ngIf="is_matched(choice.value.Choice[0], 1) && m_submission[choice.value.Choice[0]] != choice.key" class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{m_submission[choice.value.Choice[0]]}} </b>
+                      </button>
+                      <button (click)="select_m_choice(choice.value.Choice[0], 1)" *ngIf="!is_matched(choice.value.Choice[0], 1) && m_selection[1] != choice.value.Choice[0]" class="toggle-button-off"></button>
+                    </label>
+                    <h3> {{choice.value.Choice.slice(2)}} </h3>
+                  </div>
+                </div>
+              </div>
               <div *ngIf="prob.value.Type == 'FR'" style="width: 90%">
                 <div *ngIf="prob.value.Explain" class="card card-small" style="min-height: 100px; width: auto; padding: 10px; margin: auto; align-items: center; flex-direction: column;">
                   <!-- <h3 style="font-size: 18px"> Your Work: </h3> -->
@@ -1228,14 +1253,14 @@
                   <div *ngFor="let choice of part.value.AnswerChoices | keyvalue" style="margin: auto; margin-top: 0px; align-items: center; flex-direction: column">
                     <label class="switch" style="padding: 0 10px; min-width: 100px">
                       <input type="checkbox">
-                      <button (click)="select_m_choice('', 1)" *ngIf="!is_matched(choice.key[0], 1) && m_selection[1] == choice.key[0]" class="toggle-button-on"></button>
-                      <button (click)="remove_m_choice(choice.key[0]); select_m_choice(choice.key[0], 1)" *ngIf="is_matched(choice.key[0], 1) && m_submission[choice.key[0]] == choice.value.Choice" class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{m_submission[choice.key[0]]}} </b>
+                      <button (click)="select_m_choice('', 1)" *ngIf="!is_matched(choice.value.Choice[0], 1) && m_selection[1] == choice.value.Choice[0]" class="toggle-button-on"></button>
+                      <button (click)="remove_m_choice(choice.value.Choice[0]); select_m_choice(choice.value.Choice[0], 1)" *ngIf="is_matched(choice.value.Choice[0], 1) && m_submission[choice.value.Choice[0]] == choice.key" class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{m_submission[choice.value.Choice[0]]}} </b>
                       </button>
-                      <button (click)="remove_m_choice(choice.key[0]); select_m_choice(choice.key[0], 1)" *ngIf="is_matched(choice.key[0], 1) && m_submission[choice.key[0]] != choice.value.Choice" class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{m_submission[choice.key[0]]}} </b>
+                      <button (click)="remove_m_choice(choice.value.Choice[0]); select_m_choice(choice.value.Choice[0], 1)" *ngIf="is_matched(choice.value.Choice[0], 1) && m_submission[choice.value.Choice[0]] != choice.key" class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{m_submission[choice.value.Choice[0]]}} </b>
                       </button>
-                      <button (click)="select_m_choice(choice.key[0], 1)" *ngIf="!is_matched(choice.key[0], 1) && m_selection[1] != choice.key[0]" class="toggle-button-off"></button>
+                      <button (click)="select_m_choice(choice.value.Choice[0], 1)" *ngIf="!is_matched(choice.value.Choice[0], 1) && m_selection[1] != choice.value.Choice[0]" class="toggle-button-off"></button>
                     </label>
-                    <h3> {{choice.key.slice(2)}} </h3>
+                    <h3> {{choice.value.Choice.slice(2)}} </h3>
                   </div>
                 </div>
               </div>
