@@ -2928,7 +2928,7 @@ export class TemplateExamComponent implements OnInit {
       if (this.m_selection[part_num][0] != '' && this.m_selection[part_num][1] != '') {
         this.m_submission[part_num][this.m_selection[part_num][1]] = this.m_selection[part_num][0];
         this.problem_selection[part_num][+this.m_selection[part_num][1] - 1] = this.m_selection[part_num][0][0];
-        // this.attempt_path[part_num].push();
+        this.attempt_path[part_num].push(this.problem_selection[part_num]);
         this.problem_attempts[part_num] += 1;
         this.is_m_correct(part, true);
         this.m_selection[part_num] = ["", ""];
@@ -2945,6 +2945,9 @@ export class TemplateExamComponent implements OnInit {
       this.m_submission[part_num][ch] = '';
       this.problem_selection[part_num][+ch - 1] = '';
       this.attempt_explanation[part_num][+ch - 1] = '';
+      this.attempt_path[part_num].push(this.problem_selection[part_num]);
+      this.problem_attempts[part_num] += 1;
+      this.is_m_correct(part, true);
       this.select_m_choice('', 1, part)
     }
   
@@ -2997,7 +3000,7 @@ export class TemplateExamComponent implements OnInit {
           }
         }
         this.problem_selection[part_num][+this.m_selection[part_num][1] - 1] = cat_choices;
-        this.attempt_path[part_num].push();
+        this.attempt_path[part_num].push(this.problem_selection[part_num]);
         this.problem_attempts[part_num] += 1;
         if (this.exam_dump[this.problem_number].Type == 'C' || (this.exam_dump[this.problem_number].Type == 'MP' && this.exam_dump[this.problem_number].Parts[part].Type == 'C')) {
           this.is_c_correct(part, true);
@@ -3038,6 +3041,8 @@ export class TemplateExamComponent implements OnInit {
           }
         }
       }
+      this.attempt_path[part_num].push(this.problem_selection[part_num]);
+      this.problem_attempts[part_num] += 1;
       this.is_c_correct(part, true);
       this.select_c_choice('', 1, part);
     }
@@ -3064,7 +3069,10 @@ export class TemplateExamComponent implements OnInit {
           this.attempt_explanation[part_num][this.problem_selection[part_num].indexOf(this.problem_selection[part_num][+cat - 1])].pop();
           this.problem_selection[part_num][+cat - 1].pop();
         }
-      } this.is_g_correct(part, true);
+      }
+      this.attempt_path[part_num].push(this.problem_selection[part_num]);
+      this.problem_attempts[part_num] += 1;
+      this.is_g_correct(part, true);
       this.select_c_choice('', 1, part);
     }
   
@@ -3436,7 +3444,12 @@ export class TemplateExamComponent implements OnInit {
                           }
                           else if (['LR'].includes(prob.Type)) {
                             sub.Correct = [['👀']];
-                            this.number_correct += 1;
+                            if (this.problem_selection[0] == '') {
+                              sub.Choice = [['No Student Response Given']];
+                            }
+                            else {
+                              this.number_correct += 1;
+                            }
                           }
                           else {
                             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
@@ -3523,7 +3536,12 @@ export class TemplateExamComponent implements OnInit {
                             }
                             else if (['LR'].includes(part.Type)) {
                               sub.Correct.push(['👀']);
-                              this.number_correct += 1;
+                              if (this.problem_selection[Object.keys(prob.Parts).indexOf(name)] == '') {
+                                sub.Choice[Object.keys(prob.Parts).indexOf(name)] = ['No Student Response Given'];
+                              }
+                              else {
+                                this.number_correct += 1;
+                              }
                             }
                             else {
                               for (const [ch, key] of Object.entries(part.AnswerChoices)) {
@@ -4161,12 +4179,13 @@ export class TemplateExamComponent implements OnInit {
     completeExam() {
         // retreive db sub/exam/problems if auth student, to calculate results & set db sub/exam/...
         console.log(this.exam_submission);
+        this.number_correct = 0;
         for (let i: number = 1; i <= this.exam_length; i++) {
           console.log('' + i);
           this.exam_submission_list.push(this.exam_submission[i]);
           if (Object.keys(this.exam_dump[i].Parts).length == 0) {
-            if (this.exam_submission[i].Correct[0][0] != '✅') {
-              this.wrong_submission_list.push(this.exam_submission[i]);
+            if (this.exam_submission[+Object.keys(this.ordered_dump)[i-1]].Correct[0][0] != '✅') {
+              this.wrong_submission_list.push(this.exam_submission[+Object.keys(this.ordered_dump)[i-1]]);
             }
             else {
               this.number_correct += 1;
@@ -4175,8 +4194,8 @@ export class TemplateExamComponent implements OnInit {
           else {
             var pushed_wrong = false;
             for (let part of Object.keys(this.exam_dump[i].Parts)) {
-              if (!pushed_wrong && this.exam_submission[i].Correct[(Object.keys(this.exam_dump[i].Parts)).indexOf(part)][0] != '✅') {
-                this.wrong_submission_list.push(this.exam_submission[i]);
+              if (!pushed_wrong && this.exam_submission[+Object.keys(this.ordered_dump)[i-1]].Correct[(Object.keys(this.exam_dump[i].Parts)).indexOf(part)][0] != '✅') {
+                this.wrong_submission_list.push(this.exam_submission[+Object.keys(this.ordered_dump)[i-1]]);
                 pushed_wrong = true;
               }
             }
@@ -4184,7 +4203,7 @@ export class TemplateExamComponent implements OnInit {
               this.number_correct += 1;
             }
           }
-          this.total_seconds += this.exam_submission[+Object.keys(this.ordered_dump)[i]].Seconds;
+          this.total_seconds += this.exam_submission[+Object.keys(this.ordered_dump)[i-1]].Seconds;
         }
         this.et_counter = this.total_seconds;
         this.et_minutes = Math.floor(this.total_seconds / 60);

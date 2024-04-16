@@ -1535,27 +1535,28 @@
                 <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
                   <th style="padding-right: 5px; padding-left: 5px"> # </th>
                   <th style="padding-right: 5px; padding-left: 5px"> Topics </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Time </th>
                   <th style="padding-right: 5px; padding-left: 5px"> Key </th>
                   <th style="padding-right: 5px; padding-left: 5px"> Submission </th>
                   <th *ngIf="this.screenWidth > this.mobileWidth" style="padding-right: 5px; padding-left: 5px">
                     Submission Explanation </th>
-                  <th style="padding-right: 5px; padding-left: 5px"> Time </th>
                   <th style="padding-right: 5px; padding-left: 5px"> Attempts </th>
                 </tr>
               </thead>
-              <tbody>
-                <tr *ngFor="let sub of wrong_submission_list">
-                  <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                  <td style="border-top: 1px solid #ddd">
+              <tbody *ngFor="let sub of wrong_submission_list">
+                <tr *ngFor="let part of sub.Correct">
+                  <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd" [attr.rowspan]="sub.Correct.length"> <b> {{sub.Number}} </b> </td>
+                  <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd" [attr.rowspan]="sub.Correct.length">
                     <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
                   </td>
-                  <td style="border-top: 1px solid #ddd"> {{(sub.Correct == '✅') ? sub.Choice : sub.Correct}} </td>
-                  <td style="border-top: 1px solid #ddd"> <b> {{(sub.Correct == '✅') ? sub.Correct : sub.Choice}} </b>
+                  <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd" [attr.rowspan]="sub.Correct.length"> {{sub.Time}} </td>
+                  <td style="border-top: 1px solid #ddd"> {{(part == '✅') ? sub.Choice[sub.Correct.indexOf(part)] : part}} </td>
+                  <td style="border-top: 1px solid #ddd"> <b> {{(part == '✅') ? part : sub.Choice[sub.Correct.indexOf(part)]}} </b>
                   </td>
                   <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                    {{sub.Rationale}} </td>
-                  <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
-                  <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} ({{sub.Path}}) </td>
+                    <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{rat}} </h4>
+                  </td>
+                  <td style="border-top: 1px solid #ddd"> {{sub.Attempts[sub.Correct.indexOf(part)]}} ({{(sub.Path != undefined) ? sub.Path[sub.Correct.indexOf(part)] : ''}}) </td>
                 </tr>
               </tbody>
             </table>
@@ -1583,27 +1584,28 @@
                 <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
                   <th style="padding-right: 5px; padding-left: 5px"> # </th>
                   <th style="padding-right: 5px; padding-left: 5px"> Topics </th>
+                  <th style="padding-right: 5px; padding-left: 5px"> Time </th>
                   <th style="padding-right: 5px; padding-left: 5px"> Key </th>
                   <th style="padding-right: 5px; padding-left: 5px"> Submission </th>
                   <th *ngIf="this.screenWidth > this.mobileWidth" style="padding-right: 5px; padding-left: 5px">
                     Submission Explanation </th>
-                  <th style="padding-right: 5px; padding-left: 5px"> Time </th>
                   <th style="padding-right: 5px; padding-left: 5px"> Attempts </th>
                 </tr>
               </thead>
-              <tbody>
-                <tr *ngFor="let sub of exam_submission_list">
-                  <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                  <td style="border-top: 1px solid #ddd">
+              <tbody *ngFor="let sub of exam_submission_list">
+                <tr *ngFor="let part of sub.Correct">
+                  <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd" [attr.rowspan]="sub.Correct.length"> <b> {{sub.Number}} </b> </td>
+                  <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd" [attr.rowspan]="sub.Correct.length">
                     <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
                   </td>
-                  <td style="border-top: 1px solid #ddd"> {{(sub.Correct == '✅') ? sub.Choice : sub.Correct}} </td>
-                  <td style="border-top: 1px solid #ddd"> <b> {{(sub.Correct == '✅') ? sub.Correct : sub.Choice}} </b>
+                  <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd" [attr.rowspan]="sub.Correct.length"> {{sub.Time}} </td>
+                  <td style="border-top: 1px solid #ddd"> {{(part == '✅') ? sub.Choice[sub.Correct.indexOf(part)] : part}} </td>
+                  <td style="border-top: 1px solid #ddd"> <b> {{(part == '✅') ? part : sub.Choice[sub.Correct.indexOf(part)]}} </b>
                   </td>
                   <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                    {{sub.Rationale}} </td>
-                  <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
-                  <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} ({{sub.Path}}) </td>
+                    <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{rat}} </h4>
+                  </td>
+                  <td style="border-top: 1px solid #ddd"> {{sub.Attempts[sub.Correct.indexOf(part)]}} ({{sub.Path[sub.Correct.indexOf(part)]}}) </td>
                 </tr>
               </tbody>
             </table>

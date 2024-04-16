@@ -1793,21 +1793,6 @@
                 <td style="border-top: 1px solid #ddd"> {{sub.Attempts[sub.Correct.indexOf(part)]}} ({{sub.Path[sub.Correct.indexOf(part)]}}) </td>
               </tr>
             </tbody>
-            <!-- <tbody>
-              <tr *ngFor="let sub of wrong_submission_list">
-                <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                <td style="border-top: 1px solid #ddd">
-                  <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
-                </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
-                <td style="border-top: 1px solid #ddd"> {{(sub.Correct[0] == '✅') ? sub.Choice : sub.Correct}} </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{(sub.Correct[0] == '✅') ? sub.Correct : sub.Choice}} </b>
-                </td>
-                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                  {{sub.Rationale}} </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} ({{sub.Path}}) </td>
-              </tr>
-            </tbody> -->
           </table>
         </div>
         <div style="overflow: auto">
