@@ -1479,50 +1479,6 @@
                         <td style="border-top: 1px solid #ddd"> {{sub.Attempts[sub.Correct.indexOf(part)]}} ({{(sub.Path != undefined) ? sub.Path[sub.Correct.indexOf(part)] : ''}}) </td>
                       </tr>
                     </tbody>
-                    <!-- <thead>
-                        <tr>
-                            <th colspan="4.5" style="font-size: 18px"> All Submission Results </th>
-                            <th colspan="2">
-                                <label class="switch"
-                                    style="max-height: 100px; height: auto; max-width: 275px; align-items: center; text-align: center; margin: auto">
-                                    <input type="checkbox">
-                                    <button *ngIf="!this.show_correct" (click)="showCorrect()" class="topic-button"
-                                        style="width: 100%; font-size: 14px">
-                                        <b>Show Correct Responses</b> </button>
-                                    <button *ngIf="this.show_correct" (click)="showCorrect()" class="topic-button"
-                                        style="width: 100%; font-size: 14px">
-                                        Hide Correct Responses </button>
-                                </label>
-                            </th>
-                        </tr>
-                        <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
-                            <th style="padding-right: 5px; padding-left: 5px"> # </th>
-                            <th style="padding-right: 5px; padding-left: 5px"> Topics </th>
-                            <th style="padding-right: 5px; padding-left: 5px"> Key </th>
-                            <th style="padding-right: 5px; padding-left: 5px"> Submission </th>
-                            <th *ngIf="this.screenWidth > this.mobileWidth"
-                                style="padding-right: 5px; padding-left: 5px"> Submission Explanation </th>
-                            <th style="padding-right: 5px; padding-left: 5px"> Time </th>
-                            <th style="padding-right: 5px; padding-left: 5px"> Attempts </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let sub of exam_submission_list">
-                            <td style="border-top: 1px solid #ddd"> <b> {{sub.Number}} </b> </td>
-                            <td style="border-top: 1px solid #ddd">
-                                <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
-                            </td>
-                            <td style="border-top: 1px solid #ddd"> {{(sub.Correct == '✅') ? sub.Choice : sub.Correct}}
-                            </td>
-                            <td style="border-top: 1px solid #ddd"> <b> {{(sub.Correct == '✅') ? sub.Correct :
-                                    sub.Choice}} </b> </td>
-                            <td *ngIf="this.screenWidth > this.mobileWidth"
-                                style="border-top: 1px solid #ddd; max-width: 750px">
-                                {{sub.Rationale}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{sub.Time}} </td>
-                            <td style="border-top: 1px solid #ddd"> {{sub.Attempts}} ({{sub.Path}}) </td>
-                        </tr>
-                    </tbody> -->
                 </table>
             </div>
             <br />
