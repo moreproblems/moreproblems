@@ -3566,11 +3566,11 @@ export class TemplateExamComponent implements OnInit {
                   sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
                 }
                 else if (['MFR', 'IDD'].includes(part.Type) && (mp_correct || this.is_idd_correct(name))) {
-                  sub.Correct = [['✅']];
+                  sub.Correct.push(['✅']);
                   this.number_correct += 1;
                 }
                 else if (['MFR', 'IDD'].includes(part.Type)) {
-                  sub.Correct = [this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]];
+                  sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
                 }
               }
             }
