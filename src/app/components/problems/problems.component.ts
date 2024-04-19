@@ -2915,6 +2915,14 @@ export class ProblemsComponent implements OnInit {
     return comp;
   }
 
+  total_attempts(attempts: number[]) {
+    var sum = 0;
+    for (let num of attempts) {
+      sum += num;
+    }
+    return (sum);
+  }
+
   update_DD(index: string, part: string) {
     var part_num = 0;
     if (part != '') {
@@ -3422,47 +3430,246 @@ export class ProblemsComponent implements OnInit {
       this.exam_submission[this.problem_number].Number = this.problem_number;
       this.exam_submission[this.problem_number].Topics = this.exam_dump[this.problem_number].Topics;
       this.exam_submission[this.problem_number].SubTopics = this.exam_dump[this.problem_number].SubTopics;
-      this.exam_submission[this.problem_number].Choice = [this.problem_selection[0]];
+      this.exam_submission[this.problem_number].Choice = this.problem_selection;
       this.exam_submission[this.problem_number].Attempts = this.problem_attempts;
       this.exam_submission[this.problem_number].Path = this.attempt_path;
       // this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
-      // if (this.problem_selection[0][0] != '') {
-      //     this.exam_submission[this.problem_number].Rationale = [this.exam_dump[this.problem_number].AnswerChoices[this.problem_selection[0][0]].Key.Rationale];
-      // }
-      for (const [ch, key] of Object.entries(this.exam_dump[this.problem_number].AnswerChoices)) {
-        if (this.exam_dump[this.problem_number].Type == 'MC' && this.problem_selection[0][0] == ch) {
-          if (key.Key.Correct == true) {
-            this.exam_submission[this.problem_number].Correct = [['✅']];
-            // this.number_correct += 1;
-          }
-          else {
-            console.log(this.exam_key);
-            console.log(this.exam_key[this.problem_number]);
-            this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
-          }
-          this.exam_submission[this.problem_number].Rationale = [[key.Key.Rationale]];
-        }
-        else if (this.exam_dump[this.problem_number].Type == 'FR') {
-          if (this.problem_selection[0][0] == key.Choice) {
-            this.exam_submission[this.problem_number].Correct = [['✅']];
-            // this.number_correct += 1;
-            this.exam_submission[this.problem_number].Rationale = [[key.Key.Rationale]];
-          }
-          else {
-            this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
-            this.exam_submission[this.problem_number].Rationale = [['No rationale provided. The number submitted was not right']];
+      this.exam_submission[this.problem_number].Rationale = this.attempt_explanation;
+      // if (this.exam_submission[this.problem_number].Attempts.reduce((accumulator, currentValue) => accumulator + currentValue, 0) > 0) {
+      if (this.total_attempts(this.exam_submission[this.problem_number].Attempts) > 0) {
+        for (const [num, prob] of Object.entries(this.exam_dump)) {
+          if (this.problem_number == +num) {
+            for (const [num2, sub] of Object.entries(this.exam_submission)) {
+              if (this.problem_number == +num2) {
+                console.log(sub.Choice);
+                // sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+                // sub.Seconds = this.pt_counter;
+                // sub.Number = this.problem_number;
+                // sub.Topics = prob.Topics;
+                // sub.SubTopics = prob.SubTopics;
+                // sub.Attempts = this.problem_attempts;
+                // sub.Path = this.attempt_path;
+                if (Object.keys(prob.Parts).length == 0) {
+                  // sub.Choice.push(sub.Path[0][sub.Path[0].length - 1]);
+                  var ms_correct = true;
+                  var mp_correct = true;
+                  if (['O', 'C', 'G'].includes(prob.Type)) {
+                    if ((prob.Type == 'O' && this.is_m_correct('', false)) || (prob.Type == 'C' && this.is_c_correct('', false)) || (prob.Type == 'G' && this.is_g_correct('', false))) {
+                      sub.Correct = [['✅']];
+                      this.number_correct += 1;
+                    }
+                    else {
+                      sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                    }
+                    // sub.Rationale = this.attempt_explanation;
+                  }
+                  else if (['LR'].includes(prob.Type)) {
+                    sub.Correct = [['👀']];
+                    if (this.problem_selection[0] == '') {
+                      sub.Choice = [['No Student Response Given']];
+                    }
+                    else {
+                      this.number_correct += 1;
+                    }
+                  }
+                  else {
+                    for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                      if (['MC', 'IMC'].includes(prob.Type)) {
+                        if (sub.Path[0][sub.Path[0].length - 1][0] == ch) {
+                          if (key.Key.Correct == true) {
+                            sub.Correct = [['✅']];
+                            this.number_correct += 1;
+                          }
+                          else {
+                            sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                          }
+                          // sub.Rationale = [[key.Key.Rationale]];
+                        }
+                      }
+                      else if (['MS', 'IMS'].includes(prob.Type)) {
+                        if (key.Key.Correct && !sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                          ms_correct = false;
+                        }
+                        else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                          ms_correct = false;
+                        }
+                      }
+                      else if (['MFR', 'IDD'].includes(prob.Type)) {
+                        if (prob.Type == 'MFR') {
+                          if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                            mp_correct = false;
+                          }
+                        }
+                        if (prob.Type == 'IDD') {
+                          if (key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != ch[2]) {
+                            mp_correct = false;
+                          }
+                          else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] == ch[2]) {
+                            mp_correct = false;
+                          }
+                        }
+                      }
+                      else if (prob.Type == 'FR') {
+                        if (sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
+                          sub.Correct = [['✅']];
+                          this.number_correct += 1;
+                          // sub.Rationale = [[key.Key.Rationale]];
+                        }
+                        else {
+                          sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                          // sub.Rationale = [['No rationale provided. The number submitted was not right']];
+                        }
+                      }
+                    }
+                  }
+                  if (['MS', 'IMS'].includes(prob.Type) && ms_correct) {
+                    sub.Correct = [['✅']];
+                    this.number_correct += 1;
+                  }
+                  else if (['MS', 'IMS'].includes(prob.Type)) {
+                    sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                  }
+                  else if (['MFR', 'IDD'].includes(prob.Type) && (mp_correct || this.is_idd_correct(''))) {
+                    sub.Correct = [['✅']];
+                    this.number_correct += 1;
+                  }
+                  else if (['MFR', 'IDD'].includes(prob.Type)) {
+                    sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                  }
+                }
+                else {
+                  sub.Correct = [];
+                  // sub.Rationale = [];
+                  // sub.Rationale = this.attempt_explanation;
+                  for (const [name, part] of Object.entries(prob.Parts)) {
+                    if (this.problem_attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                      // sub.Choice.push(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1]);
+                      var ms_correct = true;
+                      var mp_correct = true;
+                      if (['O', 'C', 'G'].includes(part.Type)) {
+                        if ((part.Type == 'O' && this.is_m_correct(name, false)) || (part.Type == 'C' && this.is_c_correct(name, false)) || (part.Type == 'G' && this.is_g_correct(name, false))) {
+                          sub.Correct.push(['✅']);
+                          this.number_correct += 1;
+                        }
+                        else {
+                          sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                        }
+                        // sub.Rationale.push(this.attempt_explanation);
+                      }
+                      else if (['LR'].includes(part.Type)) {
+                        sub.Correct.push(['👀']);
+                        if (this.problem_selection[Object.keys(prob.Parts).indexOf(name)] == '') {
+                          sub.Choice[Object.keys(prob.Parts).indexOf(name)] = ['No Student Response Given'];
+                        }
+                        else {
+                          this.number_correct += 1;
+                        }
+                      }
+                      else {
+                        for (const [ch, key] of Object.entries(part.AnswerChoices)) {
+                          if (['MC', 'IMC'].includes(part.Type)) {
+                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch) {
+                              if (key.Key.Correct == true) {
+                                sub.Correct.push(['✅']);
+                                this.number_correct += 1;
+                              }
+                              else {
+                                sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                              }
+                              // sub.Rationale.push([key.Key.Rationale]);
+                            }
+                          }
+                          if (['MS', 'IMS'].includes(part.Type)) {
+                            if (key.Key.Correct && !sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                              ms_correct = false;
+                            }
+                            else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                              ms_correct = false;
+                            }
+                          }
+                          else if (['MFR', 'IDD'].includes(part.Type)) {
+                            if (part.Type == 'MFR') {
+                              if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                                mp_correct = false;
+                              }
+                            }
+                            if (part.Type == 'IDD') {
+                              if (key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != ch[2]) {
+                                mp_correct = false;
+                              }
+                              else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] == ch[2]) {
+                                mp_correct = false;
+                              }
+                            }
+                          }
+                          else if (part.Type == 'FR') {
+                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice) {
+                              sub.Correct.push(['✅']);
+                              this.number_correct += 1;
+                              // sub.Rationale.push([key.Key.Rationale]);
+                            }
+                            else {
+                              sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                              // sub.Rationale.push(['No rationale provided. The number submitted was not right']);
+                            }
+                          }
+                        }
+                      }
+                      if (['MS', 'IMS'].includes(part.Type) && ms_correct) {
+                        sub.Correct.push(['✅']);
+                        this.number_correct += 1;
+                      }
+                      else if (['MS', 'IMS'].includes(part.Type)) {
+                        sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                      }
+                      else if (['MFR', 'IDD'].includes(part.Type) && (mp_correct || this.is_idd_correct(name))) {
+                        sub.Correct.push(['✅']);
+                        this.number_correct += 1;
+                      }
+                      else if (['MFR', 'IDD'].includes(part.Type)) {
+                        sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                      }
+                    }
+                  }
+                }
+                console.log(sub.Choice);
+              }
+            }
           }
         }
       }
       this.problem_number = num;
-      this.attempt_path = [this.exam_submission[num].Path];
-      this.attempt_response = [''];
+      this.attempt_path = this.exam_submission[num].Path;
       this.attempt_explanation = this.exam_submission[num].Rationale;
       this.problem_selection = this.exam_submission[num].Choice;
       this.problem_attempts = this.exam_submission[num].Attempts;
-      // this.m_shuffled = false;
-      // this.shuffle_choices = [];
-      // this.unique_choices = [];
+      this.attempt_response = [];
+      this.m_shuffled = false;
+      this.m_selection = [];
+      this.m_submission = [];
+      this.c_submission = [];
+      this.shuffle_choices = [];
+      this.unique_choices = [];
+      if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+        this.attempt_response = [''];
+        this.m_selection = [["", ""]];
+        this.m_submission = [{}];
+        this.c_submission = [{}];
+        if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
+          this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
+        }
+      }
+      else {
+        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+          this.attempt_response.push('');
+          this.m_selection.push(["", ""]);
+          this.m_submission.push({});
+          this.c_submission.push({});
+          if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
+          }
+        }
+      }
       console.log(this.problem_selection);
       this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
       for (let supp of this.exam_dump[this.problem_number].SuppContent) {
