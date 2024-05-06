@@ -402,7 +402,7 @@ import * as TX18HSUSHProblems from "src/assets/problems/TX18HSUSH/TX18HSUSH-prob
 import * as TX17HSUSHProblems from "src/assets/problems/TX17HSUSH/TX17HSUSH-problems.json";
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
-const MathJax = require('mathjax');
+// const MathJax = require('mathjax');
 const confetti = require('canvas-confetti');
 
 const confettiCanvas = document.getElementById('confetticanvas');
@@ -3617,7 +3617,7 @@ export class TemplateKeyComponent implements OnInit {
         }
         this.clearProblemTimer();
         this.toggleProblemTimer();
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        // MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
     }
 
     toggle_favorite_std() {
