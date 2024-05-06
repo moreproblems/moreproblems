@@ -1146,7 +1146,7 @@
                     <button *ngIf="problem_selection[0][0]==choice.key && attempt_response[0].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="problem_selection[0][0]!=choice.key && !attempt_path[0].includes(choice.key)"
+                    <button *ngIf="problem_selection[0][0]!=choice.key"
                       class="toggle-button-off"> <b> {{choice.key}} </b>
                     </button>
                     <button *ngIf="problem_selection[0][0]!=choice.key && attempt_path[0].includes(choice.key)"
@@ -1308,7 +1308,7 @@
                     <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && !attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key)"
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key"
                       class="toggle-button-off"> <b> {{choice.key}} </b>
                     </button>
                     <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key)"

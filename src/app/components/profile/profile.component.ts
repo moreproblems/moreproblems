@@ -242,6 +242,54 @@ import * as PSAT1M1Problems from "src/assets/problems/PSAT1M1/PSAT1M1-problems.j
 import * as PSAT1M2Problems from "src/assets/problems/PSAT1M2/PSAT1M2-problems.json";
 import * as PSAT1RW1Problems from "src/assets/problems/PSAT1RW1/PSAT1RW1-problems.json";
 import * as PSAT1RW2Problems from "src/assets/problems/PSAT1RW2/PSAT1RW2-problems.json";
+import * as RI22G3MProblems from "src/assets/problems/RI22G3M/RI22G3M-problems.json";
+import * as RI21G3MProblems from "src/assets/problems/RI21G3M/RI21G3M-problems.json";
+import * as RI19G3MProblems from "src/assets/problems/RI19G3M/RI19G3M-problems.json";
+import * as RI18G3MProblems from "src/assets/problems/RI18G3M/RI18G3M-problems.json";
+import * as RI22G3EProblems from "src/assets/problems/RI22G3E/RI22G3E-problems.json";
+import * as RI21G3EProblems from "src/assets/problems/RI21G3E/RI21G3E-problems.json";
+import * as RI19G3EProblems from "src/assets/problems/RI19G3E/RI19G3E-problems.json";
+import * as RI18G3EProblems from "src/assets/problems/RI18G3E/RI18G3E-problems.json";
+import * as RI22G4MProblems from "src/assets/problems/RI22G4M/RI22G4M-problems.json";
+import * as RI21G4MProblems from "src/assets/problems/RI21G4M/RI21G4M-problems.json";
+import * as RI19G4MProblems from "src/assets/problems/RI19G4M/RI19G4M-problems.json";
+import * as RI18G4MProblems from "src/assets/problems/RI18G4M/RI18G4M-problems.json";
+import * as RI22G4EProblems from "src/assets/problems/RI22G4E/RI22G4E-problems.json";
+import * as RI21G4EProblems from "src/assets/problems/RI21G4E/RI21G4E-problems.json";
+import * as RI19G4EProblems from "src/assets/problems/RI19G4E/RI19G4E-problems.json";
+import * as RI18G4EProblems from "src/assets/problems/RI18G4E/RI18G4E-problems.json";
+import * as RI22G5MProblems from "src/assets/problems/RI22G5M/RI22G5M-problems.json";
+import * as RI21G5MProblems from "src/assets/problems/RI21G5M/RI21G5M-problems.json";
+import * as RI19G5MProblems from "src/assets/problems/RI19G5M/RI19G5M-problems.json";
+import * as RI18G5MProblems from "src/assets/problems/RI18G5M/RI18G5M-problems.json";
+import * as RI22G5EProblems from "src/assets/problems/RI22G5E/RI22G5E-problems.json";
+import * as RI21G5EProblems from "src/assets/problems/RI21G5E/RI21G5E-problems.json";
+import * as RI19G5EProblems from "src/assets/problems/RI19G5E/RI19G5E-problems.json";
+import * as RI18G5EProblems from "src/assets/problems/RI18G5E/RI18G5E-problems.json";
+import * as RI22G6MProblems from "src/assets/problems/RI22G6M/RI22G6M-problems.json";
+import * as RI21G6MProblems from "src/assets/problems/RI21G6M/RI21G6M-problems.json";
+import * as RI19G6MProblems from "src/assets/problems/RI19G6M/RI19G6M-problems.json";
+import * as RI18G6MProblems from "src/assets/problems/RI18G6M/RI18G6M-problems.json";
+import * as RI22G6EProblems from "src/assets/problems/RI22G6E/RI22G6E-problems.json";
+import * as RI21G6EProblems from "src/assets/problems/RI21G6E/RI21G6E-problems.json";
+import * as RI19G6EProblems from "src/assets/problems/RI19G6E/RI19G6E-problems.json";
+import * as RI18G6EProblems from "src/assets/problems/RI18G6E/RI18G6E-problems.json";
+import * as RI22G7MProblems from "src/assets/problems/RI22G7M/RI22G7M-problems.json";
+import * as RI21G7MProblems from "src/assets/problems/RI21G7M/RI21G7M-problems.json";
+import * as RI19G7MProblems from "src/assets/problems/RI19G7M/RI19G7M-problems.json";
+import * as RI18G7MProblems from "src/assets/problems/RI18G7M/RI18G7M-problems.json";
+import * as RI22G7EProblems from "src/assets/problems/RI22G7E/RI22G7E-problems.json";
+import * as RI21G7EProblems from "src/assets/problems/RI21G7E/RI21G7E-problems.json";
+import * as RI19G7EProblems from "src/assets/problems/RI19G7E/RI19G7E-problems.json";
+import * as RI18G7EProblems from "src/assets/problems/RI18G7E/RI18G7E-problems.json";
+import * as RI22G8MProblems from "src/assets/problems/RI22G8M/RI22G8M-problems.json";
+import * as RI21G8MProblems from "src/assets/problems/RI21G8M/RI21G8M-problems.json";
+import * as RI19G8MProblems from "src/assets/problems/RI19G8M/RI19G8M-problems.json";
+import * as RI18G8MProblems from "src/assets/problems/RI18G8M/RI18G8M-problems.json";
+import * as RI22G8EProblems from "src/assets/problems/RI22G8E/RI22G8E-problems.json";
+import * as RI21G8EProblems from "src/assets/problems/RI21G8E/RI21G8E-problems.json";
+import * as RI19G8EProblems from "src/assets/problems/RI19G8E/RI19G8E-problems.json";
+import * as RI18G8EProblems from "src/assets/problems/RI18G8E/RI18G8E-problems.json";
 import * as SAT1M1Problems from "src/assets/problems/SAT1M1/SAT1M1-problems.json";
 import * as SAT1M2Problems from "src/assets/problems/SAT1M2/SAT1M2-problems.json";
 import * as SAT1RW1Problems from "src/assets/problems/SAT1RW1/SAT1RW1-problems.json";
@@ -684,6 +732,54 @@ export class ProfileComponent implements OnInit {
   PSAT1M2_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PSAT1M2Problems;
   PSAT1RW1_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PSAT1RW1Problems;
   PSAT1RW2_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = PSAT1RW2Problems;
+  RI22G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI22G3MProblems;
+  RI21G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI21G3MProblems;
+  RI19G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI19G3MProblems;
+  RI18G3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI18G3MProblems;
+  RI22G3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI22G3EProblems;
+  RI21G3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI21G3EProblems;
+  RI19G3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI19G3EProblems;
+  RI18G3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI18G3EProblems;
+  RI22G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI22G4MProblems;
+  RI21G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI21G4MProblems;
+  RI19G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI19G4MProblems;
+  RI18G4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI18G4MProblems;
+  RI22G4E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI22G4EProblems;
+  RI21G4E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI21G4EProblems;
+  RI19G4E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI19G4EProblems;
+  RI18G4E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI18G4EProblems;
+  RI22G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI22G5MProblems;
+  RI21G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI21G5MProblems;
+  RI19G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI19G5MProblems;
+  RI18G5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI18G5MProblems;
+  RI22G5E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI22G5EProblems;
+  RI21G5E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI21G5EProblems;
+  RI19G5E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI19G5EProblems;
+  RI18G5E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI18G5EProblems;
+  RI22G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI22G6MProblems;
+  RI21G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI21G6MProblems;
+  RI19G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI19G6MProblems;
+  RI18G6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI18G6MProblems;
+  RI22G6E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI22G6EProblems;
+  RI21G6E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI21G6EProblems;
+  RI19G6E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI19G6EProblems;
+  RI18G6E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI18G6EProblems;
+  RI22G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI22G7MProblems;
+  RI21G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI21G7MProblems;
+  RI19G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI19G7MProblems;
+  RI18G7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI18G7MProblems;
+  RI22G7E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI22G7EProblems;
+  RI21G7E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI21G7EProblems;
+  RI19G7E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI19G7EProblems;
+  RI18G7E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI18G7EProblems;
+  RI22G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI22G8MProblems;
+  RI21G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI21G8MProblems;
+  RI19G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI19G8MProblems;
+  RI18G8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI18G8MProblems;
+  RI22G8E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI22G8EProblems;
+  RI21G8E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI21G8EProblems;
+  RI19G8E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI19G8EProblems;
+  RI18G8E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = RI18G8EProblems;
   SAT1M1_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = SAT1M1Problems;
   SAT1M2_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = SAT1M2Problems;
   SAT1RW1_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = SAT1RW1Problems;
@@ -1033,6 +1129,54 @@ export class ProfileComponent implements OnInit {
     "PSAT1M2": this.PSAT1M2_exam_dump,
     "PSAT1RW1": this.PSAT1RW1_exam_dump,
     "PSAT1RW2": this.PSAT1RW2_exam_dump,
+    "RI22G3M": this.RI22G3M_exam_dump,
+    "RI21G3M": this.RI21G3M_exam_dump,
+    "RI19G3M": this.RI19G3M_exam_dump,
+    "RI18G3M": this.RI18G3M_exam_dump,
+    "RI22G3E": this.RI22G3E_exam_dump,
+    "RI21G3E": this.RI21G3E_exam_dump,
+    "RI19G3E": this.RI19G3E_exam_dump,
+    "RI18G3E": this.RI18G3E_exam_dump,
+    "RI22G4M": this.RI22G4M_exam_dump,
+    "RI21G4M": this.RI21G4M_exam_dump,
+    "RI19G4M": this.RI19G4M_exam_dump,
+    "RI18G4M": this.RI18G4M_exam_dump,
+    "RI22G4E": this.RI22G4E_exam_dump,
+    "RI21G4E": this.RI21G4E_exam_dump,
+    "RI19G4E": this.RI19G4E_exam_dump,
+    "RI18G4E": this.RI18G4E_exam_dump,
+    "RI22G5M": this.RI22G5M_exam_dump,
+    "RI21G5M": this.RI21G5M_exam_dump,
+    "RI19G5M": this.RI19G5M_exam_dump,
+    "RI18G5M": this.RI18G5M_exam_dump,
+    "RI22G5E": this.RI22G5E_exam_dump,
+    "RI21G5E": this.RI21G5E_exam_dump,
+    "RI19G5E": this.RI19G5E_exam_dump,
+    "RI18G5E": this.RI18G5E_exam_dump,
+    "RI22G6M": this.RI22G6M_exam_dump,
+    "RI21G6M": this.RI21G6M_exam_dump,
+    "RI19G6M": this.RI19G6M_exam_dump,
+    "RI18G6M": this.RI18G6M_exam_dump,
+    "RI22G6E": this.RI22G6E_exam_dump,
+    "RI21G6E": this.RI21G6E_exam_dump,
+    "RI19G6E": this.RI19G6E_exam_dump,
+    "RI18G6E": this.RI18G6E_exam_dump,
+    "RI22G7M": this.RI22G7M_exam_dump,
+    "RI21G7M": this.RI21G7M_exam_dump,
+    "RI19G7M": this.RI19G7M_exam_dump,
+    "RI18G7M": this.RI18G7M_exam_dump,
+    "RI22G7E": this.RI22G7E_exam_dump,
+    "RI21G7E": this.RI21G7E_exam_dump,
+    "RI19G7E": this.RI19G7E_exam_dump,
+    "RI18G7E": this.RI18G7E_exam_dump,
+    "RI22G8M": this.RI22G8M_exam_dump,
+    "RI21G8M": this.RI21G8M_exam_dump,
+    "RI19G8M": this.RI19G8M_exam_dump,
+    "RI18G8M": this.RI18G8M_exam_dump,
+    "RI22G8E": this.RI22G8E_exam_dump,
+    "RI21G8E": this.RI21G8E_exam_dump,
+    "RI19G8E": this.RI19G8E_exam_dump,
+    "RI18G8E": this.RI18G8E_exam_dump,
     "SAT1M1": this.SAT1M1_exam_dump,
     "SAT1M2": this.SAT1M2_exam_dump,
     "SAT1RW1": this.SAT1RW1_exam_dump,
@@ -1832,6 +1976,14 @@ export class ProfileComponent implements OnInit {
     this.screenHeight = window.innerHeight;
   }
 
+  get_part_num_st(part: string) {
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      return part_num;
+  }
+
   read_supp_st_json(path: string) {
     this.http.get("./assets/" + path).subscribe(res => {
       console.log(res);
@@ -2571,6 +2723,61 @@ export class ProfileComponent implements OnInit {
       }
   }
 
+  attempt_imc_st_problem(choice: string, part: string) {
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      if (choice != this.subtopic_problem_selection[part_num][0]) {
+          this.subtopic_problem_attempts[part_num] += 1;
+          this.subtopic_attempt_path[part_num].push(choice);
+          this.subtopic_problem_selection[part_num] = [choice];
+          console.log(this.subtopic_problem_selection);
+          for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+              if (this.subtopic_problem_number == +num) {
+                  if (Object.keys(prob.Parts).length == 0) {
+                      for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                          if (choice == ch) {
+                              this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                              if (key.Key.Correct == true) {
+                                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                                  if (this.subtopic_problem_attempts[part_num] == 1) {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                                  }
+                                  else {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                                  }
+                              }
+                              else {
+                                  this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                              }
+                          }
+                      }
+                  }
+                  else {
+                      for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                          if (choice == ch) {
+                              this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                              if (key.Key.Correct == true) {
+                                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                                  if (this.subtopic_problem_attempts[part_num] == 1) {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                                  }
+                                  else {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                                  }
+                              }
+                              else {
+                                  this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+
   attempt_ms_st_problem(choice: string, part: string) {
       var part_num = 0;
       if (part != '') {
@@ -2640,6 +2847,211 @@ export class ProfileComponent implements OnInit {
       this.subtopic_attempt_path.push(this.subtopic_problem_selection[part_num]);
   }
 
+  attempt_ims_st_problem(choice: string, part: string) {
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      this.subtopic_problem_attempts[part_num] += 1;
+      this.subtopic_attempt_path[part_num].push(this.subtopic_problem_selection[part_num]);
+      for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+          if (this.subtopic_problem_number == +num) {
+              this.subtopic_attempt_response[part_num] = "";
+              if (part == '') {
+                  for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                      if (choice == ch) {
+                          if (!this.subtopic_problem_selection[part_num].includes(choice)) {
+                              this.subtopic_attempt_explanation[part_num].push(key.Key.Rationale);
+                              this.subtopic_problem_selection[part_num].push(choice);
+                          }
+                          else {
+                              if (this.subtopic_problem_selection[part_num].indexOf(choice) != -1) {
+                                  this.subtopic_attempt_explanation[part_num].splice(this.subtopic_problem_selection[part_num].indexOf(choice), 1);
+                                  this.subtopic_problem_selection[part_num].splice(this.subtopic_problem_selection[part_num].indexOf(choice), 1);
+                              }
+                              else {
+                                  this.subtopic_attempt_explanation[part_num].pop();
+                                  this.subtopic_problem_selection[part_num].pop();
+                              }
+                          }
+                      }
+                      if ((key.Key.Correct == false && this.subtopic_problem_selection[part_num].includes(ch)) || (key.Key.Correct == true && !this.subtopic_problem_selection[part_num].includes(ch))) {
+                          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                      }
+                  }
+              }
+              else {
+                  for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                      if (choice == ch) {
+                          if (!this.subtopic_problem_selection[part_num].includes(choice)) {
+                              this.subtopic_attempt_explanation[part_num].push(key.Key.Rationale);
+                              this.subtopic_problem_selection[part_num].push(choice);
+                          }
+                          else {
+                              if (this.subtopic_problem_selection[part_num].indexOf(choice) != -1) {
+                                  this.subtopic_attempt_explanation[part_num].splice(this.subtopic_problem_selection[part_num].indexOf(choice), 1);
+                                  this.subtopic_problem_selection[part_num].splice(this.subtopic_problem_selection[part_num].indexOf(choice), 1);
+                              }
+                              else {
+                                  this.subtopic_attempt_explanation[part_num].pop();
+                                  this.subtopic_problem_selection[part_num].pop();
+                              }
+                          }
+                      }
+                      if ((key.Key.Correct == false && this.subtopic_problem_selection[part_num].includes(ch)) || (key.Key.Correct == true && !this.subtopic_problem_selection[part_num].includes(ch))) {
+                          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                      }
+                  }
+              }
+              if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
+                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                  if (this.subtopic_problem_attempts[part_num] == 1) {
+                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                  }
+                  else {
+                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                  }
+              }
+          }
+      }
+  }
+
+  attempt_idd_st_problem(inum: string, choice: string, part: string) {
+      var part_num = 0;
+      var index: number = +inum - 1;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      if (choice != this.subtopic_problem_selection[part_num][index]) {
+          this.subtopic_problem_attempts[part_num] += 1;
+          this.subtopic_problem_selection[part_num][index] = choice;
+          console.log(this.subtopic_problem_selection);
+          this.subtopic_attempt_path[part_num].push(this.subtopic_problem_selection[part_num]);
+          for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+              if (this.subtopic_problem_number == +num) {
+                  if (part == '') {
+                      for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                          if (inum + ':' + choice == ch) {
+                              console.log(ch);
+                              this.subtopic_attempt_explanation[part_num][index] = key.Key.Rationale;
+                              if (!key.Key.Correct) {
+                                  this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                                  console.log(this.subtopic_attempt_response);
+                              }
+                          }
+                      }
+                  }
+                  else {
+                      for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                          if (inum + ':' + choice == ch) {
+                              this.subtopic_attempt_explanation[part_num][index] = key.Key.Rationale;
+                              if (!key.Key.Correct) {
+                                  this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                              }
+                          }
+                      }
+                  }
+                  if (!this.subtopic_problem_selection[part_num].includes('')) {
+                      var correct_attempt: boolean = true;
+                      for (let i = 0; i < this.subtopic_problem_selection[part_num].length; i++) {
+                          if (part == '') {
+                              if (!this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices['' + (i + 1) + ':' + this.subtopic_problem_selection[part_num][i]].Key.Correct) {
+                                  correct_attempt = false;
+                              }
+                          }
+                          else {
+                              if (!this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices['' + (i + 1) + ':' + this.subtopic_problem_selection[part_num][i]].Key.Correct) {
+                                  correct_attempt = false;
+                              }
+                          }
+                      }
+                      if (correct_attempt) {
+                          this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                          if (this.subtopic_problem_attempts[part_num] == 1) {
+                              this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                          }
+                          else {
+                              this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                          }
+                      }
+                  }
+              }
+          }
+          setTimeout(() => {
+              this.update_DD_st(inum, part);
+          }, 100);
+      }
+      console.log(this.subtopic_problem_selection);
+      console.log(this.subtopic_attempt_response);
+  }
+
+    attempt_lp_st_problem(numb: number, part: string) {
+        var choice = '';
+        var part_num = 0;
+        if (part != '') {
+            var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+            for (let ch of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+                if (+this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[ch].Choice == numb) {
+                    choice = ch[0];
+                }
+            }
+        }
+        else {
+            for (let ch of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+                if (+this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[ch].Choice == numb) {
+                    choice = ch[0];
+                }
+            }
+        }
+        if (choice != this.subtopic_problem_selection[part_num][0]) {
+            this.subtopic_problem_attempts[part_num] += 1;
+            this.subtopic_attempt_path[part_num].push([choice]);
+            this.subtopic_problem_selection[part_num] = [choice];
+            for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+                if (this.subtopic_problem_number == +num) {
+                    if (part == '') {
+                        for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                            if (ch[0] == choice) {
+                                this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                                if (key.Key.Correct == true) {
+                                    this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                                    if (this.subtopic_problem_attempts[part_num] == 1) {
+                                        this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                                    }
+                                    else {
+                                        this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                                    }
+                                }
+                                else {
+                                    this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                                }
+                            }
+                        }
+                    }
+                    else {
+                        for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                            if (ch[0] == choice) {
+                                this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                                if (key.Key.Correct == true) {
+                                    this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                                    if (this.subtopic_problem_attempts[part_num] == 1) {
+                                        this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                                    }
+                                    else {
+                                        this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                                    }
+                                }
+                                else {
+                                    this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
   attempt_fr_st_problem(choice: string, part: string) {
       var part_num = 0;
       if (part != '') {
@@ -2671,6 +3083,110 @@ export class ProfileComponent implements OnInit {
       }
   }
 
+    attempt_mfr_st_problem(choice: string, inum: string, part: string) {
+        var correct: boolean = false;
+        var part_num = 0;
+        if (part != '') {
+            part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+        }
+        if (choice != this.subtopic_problem_selection[part_num][+inum - 1]) {
+            this.subtopic_problem_attempts[part_num] += 1;
+            this.subtopic_problem_selection[part_num][+inum - 1] = choice;
+            this.subtopic_attempt_path[part_num].push(this.subtopic_problem_selection[part_num]);
+            this.subtopic_attempt_response[part_num] = '';
+            for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+                if (this.subtopic_problem_number == +num) {
+                    if (part == '') {
+                        for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                            if (inum + ':KEY' == ch && choice == key.Choice) {
+                                correct = true;
+                                this.subtopic_attempt_explanation[part_num][+inum - 1] = key.Key.Rationale;
+                            }
+                        }
+                    }
+                    else {
+                        for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                            if (inum + ':KEY' == ch && choice == key.Choice) {
+                                correct = true;
+                                this.subtopic_attempt_explanation[part_num][+inum - 1] = key.Key.Rationale;
+                            }
+                        }
+                    }
+                    if (!correct) {
+                        this.subtopic_attempt_explanation[part_num][+inum - 1] = '';
+                        this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                    }
+                    for (let sub of Object.keys(this.subtopic_problem_selection[part_num])) {
+                        if (this.subtopic_problem_selection[part_num][+sub] == '') {
+                            this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                        }
+                    }
+                    if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
+                        this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                        if (this.subtopic_problem_attempts[part_num] == 1) {
+                            this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                        }
+                        else {
+                            this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    attempt_sr_st_problem(choice: string, part: string) {
+        var part_num = 0;
+        if (part != '') {
+            var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+        }
+        if (choice != this.subtopic_problem_selection[part_num][0]) {
+            this.subtopic_problem_attempts[part_num] += 1;
+            this.subtopic_attempt_path[part_num].push(choice);
+            this.subtopic_problem_selection[part_num] = [choice];
+            for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+                if (part == '') {
+                    if (this.subtopic_problem_number == +num) {
+                        for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                            if (choice == key.Choice) {
+                                this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                                this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                                if (this.subtopic_problem_attempts[part_num] == 1) {
+                                    this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                                }
+                                else {
+                                    this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                                }
+                            }
+                            else {
+                                this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                            }
+                        }
+                    }
+                }
+                else {
+                    if (this.subtopic_problem_number == +num) {
+                        for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                            if (choice == key.Choice) {
+                                this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                                this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                                if (this.subtopic_problem_attempts[part_num] == 1) {
+                                    this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                                }
+                                else {
+                                    this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                                }
+                            }
+                            else {
+                                this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
   attempt_lr_st_problem(response: string, part: string) {
       var part_num = 0;
       if (part != '') {
@@ -2680,6 +3196,29 @@ export class ProfileComponent implements OnInit {
           this.subtopic_problem_selection[part_num][0] = response;
           this.subtopic_problem_attempts[part_num] += 1;
       }
+  }
+
+  get_choices_idd_st(num: string, part: string) {
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      var choices: any = {};
+      if (part == '') {
+          for (let key of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+              if (key[0] == num) {
+                  choices[key[2]] = this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[key].Choice;
+              }
+          }
+      }
+      else {
+          for (let key of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+              if (key[0] == num) {
+                  choices[key[2]] = this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[key].Choice;
+              }
+          }
+      }
+      return (choices);
   }
 
   shuffle_m(choices: any) {
@@ -2741,6 +3280,42 @@ export class ProfileComponent implements OnInit {
           }
       }
       return comp;
+  }
+
+  update_DD_st(index: string, part: string) {
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+          if (this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[index + ':' + this.subtopic_problem_selection[part_num][+index - 1]].Key.Correct) {
+              const DDICel: string = "DDInputC-" + index;
+              var dropdown: any = document.getElementById(DDICel);
+          }
+          else {
+              const DDIIel: string = "DDInputI-" + index;
+              var dropdown: any = document.getElementById(DDIIel);
+          }
+      }
+      else {
+          if (this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[index + ':' + this.subtopic_problem_selection[part_num][+index - 1]].Key.Correct) {
+              const DDICel: string = "DDInputC-" + index;
+              var dropdown: any = document.getElementById(DDICel);
+          }
+          else {
+              const DDIIel: string = "DDInputI-" + index;
+              var dropdown: any = document.getElementById(DDIIel);
+          }
+      }
+      dropdown.value = this.subtopic_problem_selection[part_num][+index - 1];
+  }
+
+  get_MFR_st(index: string, part: string) {
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      const MFRIel: string = "inputFR-" + index;
+      var dropdown: any = document.getElementById(MFRIel);
+      return dropdown.value;
   }
 
   next_problem_st() {

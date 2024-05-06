@@ -1869,6 +1869,14 @@ export class TemplateClassComponent implements OnInit {
     this.screenWidth = window.innerWidth;
   }
 
+  get_part_num_st(part: string) {
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      return part_num;
+  }
+
   can_assign_s(std: string) {
     return (!Object.keys(this.all_students_data[std].exams.history).includes(this.exam_id));
   }
@@ -2898,6 +2906,61 @@ export class TemplateClassComponent implements OnInit {
       }
   }
 
+  attempt_imc_st_problem(choice: string, part: string) {
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      if (choice != this.subtopic_problem_selection[part_num][0]) {
+          this.subtopic_problem_attempts[part_num] += 1;
+          this.subtopic_attempt_path[part_num].push(choice);
+          this.subtopic_problem_selection[part_num] = [choice];
+          console.log(this.subtopic_problem_selection);
+          for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+              if (this.subtopic_problem_number == +num) {
+                  if (Object.keys(prob.Parts).length == 0) {
+                      for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                          if (choice == ch) {
+                              this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                              if (key.Key.Correct == true) {
+                                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                                  if (this.subtopic_problem_attempts[part_num] == 1) {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                                  }
+                                  else {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                                  }
+                              }
+                              else {
+                                  this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                              }
+                          }
+                      }
+                  }
+                  else {
+                      for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                          if (choice == ch) {
+                              this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                              if (key.Key.Correct == true) {
+                                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                                  if (this.subtopic_problem_attempts[part_num] == 1) {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                                  }
+                                  else {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                                  }
+                              }
+                              else {
+                                  this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+
   attempt_ms_st_problem(choice: string, part: string) {
       var part_num = 0;
       if (part != '') {
@@ -2967,6 +3030,211 @@ export class TemplateClassComponent implements OnInit {
       this.subtopic_attempt_path.push(this.subtopic_problem_selection[part_num]);
   }
 
+  attempt_ims_st_problem(choice: string, part: string) {
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      this.subtopic_problem_attempts[part_num] += 1;
+      this.subtopic_attempt_path[part_num].push(this.subtopic_problem_selection[part_num]);
+      for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+          if (this.subtopic_problem_number == +num) {
+              this.subtopic_attempt_response[part_num] = "";
+              if (part == '') {
+                  for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                      if (choice == ch) {
+                          if (!this.subtopic_problem_selection[part_num].includes(choice)) {
+                              this.subtopic_attempt_explanation[part_num].push(key.Key.Rationale);
+                              this.subtopic_problem_selection[part_num].push(choice);
+                          }
+                          else {
+                              if (this.subtopic_problem_selection[part_num].indexOf(choice) != -1) {
+                                  this.subtopic_attempt_explanation[part_num].splice(this.subtopic_problem_selection[part_num].indexOf(choice), 1);
+                                  this.subtopic_problem_selection[part_num].splice(this.subtopic_problem_selection[part_num].indexOf(choice), 1);
+                              }
+                              else {
+                                  this.subtopic_attempt_explanation[part_num].pop();
+                                  this.subtopic_problem_selection[part_num].pop();
+                              }
+                          }
+                      }
+                      if ((key.Key.Correct == false && this.subtopic_problem_selection[part_num].includes(ch)) || (key.Key.Correct == true && !this.subtopic_problem_selection[part_num].includes(ch))) {
+                          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                      }
+                  }
+              }
+              else {
+                  for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                      if (choice == ch) {
+                          if (!this.subtopic_problem_selection[part_num].includes(choice)) {
+                              this.subtopic_attempt_explanation[part_num].push(key.Key.Rationale);
+                              this.subtopic_problem_selection[part_num].push(choice);
+                          }
+                          else {
+                              if (this.subtopic_problem_selection[part_num].indexOf(choice) != -1) {
+                                  this.subtopic_attempt_explanation[part_num].splice(this.subtopic_problem_selection[part_num].indexOf(choice), 1);
+                                  this.subtopic_problem_selection[part_num].splice(this.subtopic_problem_selection[part_num].indexOf(choice), 1);
+                              }
+                              else {
+                                  this.subtopic_attempt_explanation[part_num].pop();
+                                  this.subtopic_problem_selection[part_num].pop();
+                              }
+                          }
+                      }
+                      if ((key.Key.Correct == false && this.subtopic_problem_selection[part_num].includes(ch)) || (key.Key.Correct == true && !this.subtopic_problem_selection[part_num].includes(ch))) {
+                          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                      }
+                  }
+              }
+              if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
+                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                  if (this.subtopic_problem_attempts[part_num] == 1) {
+                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                  }
+                  else {
+                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                  }
+              }
+          }
+      }
+  }
+
+  attempt_idd_st_problem(inum: string, choice: string, part: string) {
+      var part_num = 0;
+      var index: number = +inum - 1;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      if (choice != this.subtopic_problem_selection[part_num][index]) {
+          this.subtopic_problem_attempts[part_num] += 1;
+          this.subtopic_problem_selection[part_num][index] = choice;
+          console.log(this.subtopic_problem_selection);
+          this.subtopic_attempt_path[part_num].push(this.subtopic_problem_selection[part_num]);
+          for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+              if (this.subtopic_problem_number == +num) {
+                  if (part == '') {
+                      for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                          if (inum + ':' + choice == ch) {
+                              console.log(ch);
+                              this.subtopic_attempt_explanation[part_num][index] = key.Key.Rationale;
+                              if (!key.Key.Correct) {
+                                  this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                                  console.log(this.subtopic_attempt_response);
+                              }
+                          }
+                      }
+                  }
+                  else {
+                      for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                          if (inum + ':' + choice == ch) {
+                              this.subtopic_attempt_explanation[part_num][index] = key.Key.Rationale;
+                              if (!key.Key.Correct) {
+                                  this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                              }
+                          }
+                      }
+                  }
+                  if (!this.subtopic_problem_selection[part_num].includes('')) {
+                      var correct_attempt: boolean = true;
+                      for (let i = 0; i < this.subtopic_problem_selection[part_num].length; i++) {
+                          if (part == '') {
+                              if (!this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices['' + (i + 1) + ':' + this.subtopic_problem_selection[part_num][i]].Key.Correct) {
+                                  correct_attempt = false;
+                              }
+                          }
+                          else {
+                              if (!this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices['' + (i + 1) + ':' + this.subtopic_problem_selection[part_num][i]].Key.Correct) {
+                                  correct_attempt = false;
+                              }
+                          }
+                      }
+                      if (correct_attempt) {
+                          this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                          if (this.subtopic_problem_attempts[part_num] == 1) {
+                              this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                          }
+                          else {
+                              this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                          }
+                      }
+                  }
+              }
+          }
+          setTimeout(() => {
+              this.update_DD_st(inum, part);
+          }, 100);
+      }
+      console.log(this.subtopic_problem_selection);
+      console.log(this.subtopic_attempt_response);
+  }
+
+    attempt_lp_st_problem(numb: number, part: string) {
+        var choice = '';
+        var part_num = 0;
+        if (part != '') {
+            var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+            for (let ch of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+                if (+this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[ch].Choice == numb) {
+                    choice = ch[0];
+                }
+            }
+        }
+        else {
+            for (let ch of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+                if (+this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[ch].Choice == numb) {
+                    choice = ch[0];
+                }
+            }
+        }
+        if (choice != this.subtopic_problem_selection[part_num][0]) {
+            this.subtopic_problem_attempts[part_num] += 1;
+            this.subtopic_attempt_path[part_num].push([choice]);
+            this.subtopic_problem_selection[part_num] = [choice];
+            for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+                if (this.subtopic_problem_number == +num) {
+                    if (part == '') {
+                        for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                            if (ch[0] == choice) {
+                                this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                                if (key.Key.Correct == true) {
+                                    this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                                    if (this.subtopic_problem_attempts[part_num] == 1) {
+                                        this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                                    }
+                                    else {
+                                        this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                                    }
+                                }
+                                else {
+                                    this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                                }
+                            }
+                        }
+                    }
+                    else {
+                        for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                            if (ch[0] == choice) {
+                                this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                                if (key.Key.Correct == true) {
+                                    this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                                    if (this.subtopic_problem_attempts[part_num] == 1) {
+                                        this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                                    }
+                                    else {
+                                        this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                                    }
+                                }
+                                else {
+                                    this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
   attempt_fr_st_problem(choice: string, part: string) {
       var part_num = 0;
       if (part != '') {
@@ -2998,6 +3266,110 @@ export class TemplateClassComponent implements OnInit {
       }
   }
 
+  attempt_mfr_st_problem(choice: string, inum: string, part: string) {
+      var correct: boolean = false;
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      if (choice != this.subtopic_problem_selection[part_num][+inum - 1]) {
+          this.subtopic_problem_attempts[part_num] += 1;
+          this.subtopic_problem_selection[part_num][+inum - 1] = choice;
+          this.subtopic_attempt_path[part_num].push(this.subtopic_problem_selection[part_num]);
+          this.subtopic_attempt_response[part_num] = '';
+          for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+              if (this.subtopic_problem_number == +num) {
+                  if (part == '') {
+                      for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                          if (inum + ':KEY' == ch && choice == key.Choice) {
+                              correct = true;
+                              this.subtopic_attempt_explanation[part_num][+inum - 1] = key.Key.Rationale;
+                          }
+                      }
+                  }
+                  else {
+                      for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                          if (inum + ':KEY' == ch && choice == key.Choice) {
+                              correct = true;
+                              this.subtopic_attempt_explanation[part_num][+inum - 1] = key.Key.Rationale;
+                          }
+                      }
+                  }
+                  if (!correct) {
+                      this.subtopic_attempt_explanation[part_num][+inum - 1] = '';
+                      this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                  }
+                  for (let sub of Object.keys(this.subtopic_problem_selection[part_num])) {
+                      if (this.subtopic_problem_selection[part_num][+sub] == '') {
+                          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                      }
+                  }
+                  if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
+                      this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                      if (this.subtopic_problem_attempts[part_num] == 1) {
+                          this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                      }
+                      else {
+                          this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                      }
+                  }
+              }
+          }
+      }
+  }
+
+  attempt_sr_st_problem(choice: string, part: string) {
+      var part_num = 0;
+      if (part != '') {
+          var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      if (choice != this.subtopic_problem_selection[part_num][0]) {
+          this.subtopic_problem_attempts[part_num] += 1;
+          this.subtopic_attempt_path[part_num].push(choice);
+          this.subtopic_problem_selection[part_num] = [choice];
+          for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+              if (part == '') {
+                  if (this.subtopic_problem_number == +num) {
+                      for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                          if (choice == key.Choice) {
+                              this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                              this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                              if (this.subtopic_problem_attempts[part_num] == 1) {
+                                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                              }
+                              else {
+                                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                              }
+                          }
+                          else {
+                              this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                          }
+                      }
+                  }
+              }
+              else {
+                  if (this.subtopic_problem_number == +num) {
+                      for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                          if (choice == key.Choice) {
+                              this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                              this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                              if (this.subtopic_problem_attempts[part_num] == 1) {
+                                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                              }
+                              else {
+                                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                              }
+                          }
+                          else {
+                              this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+
   attempt_lr_st_problem(response: string, part: string) {
       var part_num = 0;
       if (part != '') {
@@ -3007,6 +3379,29 @@ export class TemplateClassComponent implements OnInit {
           this.subtopic_problem_selection[part_num][0] = response;
           this.subtopic_problem_attempts[part_num] += 1;
       }
+  }
+
+  get_choices_idd_st(num: string, part: string) {
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      var choices: any = {};
+      if (part == '') {
+          for (let key of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+              if (key[0] == num) {
+                  choices[key[2]] = this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[key].Choice;
+              }
+          }
+      }
+      else {
+          for (let key of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+              if (key[0] == num) {
+                  choices[key[2]] = this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[key].Choice;
+              }
+          }
+      }
+      return (choices);
   }
 
   shuffle_m(choices: any) {
@@ -3069,6 +3464,42 @@ export class TemplateClassComponent implements OnInit {
       }
       return comp;
   }
+
+  update_DD_st(index: string, part: string) {
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+          if (this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[index + ':' + this.subtopic_problem_selection[part_num][+index - 1]].Key.Correct) {
+              const DDICel: string = "DDInputC-" + index;
+              var dropdown: any = document.getElementById(DDICel);
+          }
+          else {
+              const DDIIel: string = "DDInputI-" + index;
+              var dropdown: any = document.getElementById(DDIIel);
+          }
+      }
+      else {
+          if (this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[index + ':' + this.subtopic_problem_selection[part_num][+index - 1]].Key.Correct) {
+              const DDICel: string = "DDInputC-" + index;
+              var dropdown: any = document.getElementById(DDICel);
+          }
+          else {
+              const DDIIel: string = "DDInputI-" + index;
+              var dropdown: any = document.getElementById(DDIIel);
+          }
+      }
+      dropdown.value = this.subtopic_problem_selection[part_num][+index - 1];
+  }
+
+    get_MFR_st(index: string, part: string) {
+        var part_num = 0;
+        if (part != '') {
+            part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+        }
+        const MFRIel: string = "inputFR-" + index;
+        var dropdown: any = document.getElementById(MFRIel);
+        return dropdown.value;
+    }
 
   next_problem_st() {
       this.subtopic_problem_number += 1;
