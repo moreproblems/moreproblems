@@ -1080,6 +1080,34 @@
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                 </div>
               </div>
+              <div *ngIf="prob.value.Type == 'MS' && (prob.value.Parts | keys).length == 0">
+                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                  (click)="attempt_ms_st_problem(choice.key, ''); scroll_bottom()"
+                  style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
+                  <label class="switch" style="padding: 0 10px">
+                    <input type="checkbox" value="{{choice.key}}">
+                    <button *ngIf="subtopic_problem_selection[0].includes(choice.key) && !choice.value.Key.Correct"
+                      class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="subtopic_problem_selection[0].includes(choice.key) && choice.value.Key.Correct"
+                      class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="!subtopic_problem_selection[0].includes(choice.key)"
+                      class="toggle-button-off"> <b> {{choice.key}} </b>
+                    </button>
+                  </label>
+                  <h3 *ngIf="!choice.value.Choice.endsWith('.jpg') && !choice.value.Choice.startsWith(':box:')"
+                    style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">
+                    {{choice.value.Choice}}
+                  </h3>
+                  <div *ngIf="choice.value.Choice.startsWith(':box:')"
+                    style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{choice.value.Choice.slice(5)}}</h3>
+                  </div>
+                  <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                </div>
+              </div>
               <br />
               <div *ngFor="let prob of subtopic_search_dump | keyvalue">
                 <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts[0] > 0 && (prob.value.Parts | keys).length == 0"
@@ -1109,45 +1137,20 @@
                       </button>
                     </div>
                   </div>
-                  <!-- <div *ngIf="prob.value.Type == 'FR'">
-                    <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
-                      <h3 *ngIf="subtopic_attempt_response[0].startsWith('Correct') && subtopic_attempt_response[0] != ''"
-                        style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
-                        <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation}}
-                      </h3>
-                      <h3 *ngIf="!subtopic_attempt_response[0].startsWith('Correct') || subtopic_attempt_response[0] == ''"
-                        style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
-                        <br /> <br /> <b>No explanation or rationale is available.</b>
-                      </h3>
-                      <br *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" /> <br
-                        *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
-                      <button *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
-                        class="grade-button" (click)="next_problem_st(); scroll_top()"
-                        style="display: block; max-width: 150px; max-height: 100px; margin: auto">
-                        <b> Next Problem </b>
-                      </button>
-                      <h3 *ngIf="!subtopic_attempt_response[0].startsWith('Correct')"
-                        style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
-                        <br /> <br /> <b>No explanation or rationale available.</b> 
-                      </h3>
-                    </div>
-                  </div>
-                  <div *ngIf="prob.value.Type == 'LR'">
-                    <h3 *ngIf="subtopic_problem_attempts[0] > 0"
-                      style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; font-size: 20px; color: #1976d2">
-                      <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your response.
+                  <div *ngIf="prob.value.Type == 'MS'">
+                    <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                      <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[0].sort()"> <b>{{'\nExplanation (' + selec + ')'}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                     </h3>
-                    <br *ngIf="subtopic_problem_attempts[0] > 0 && screenWidth <= mobileWidth" /> <br
-                      *ngIf="subtopic_problem_attempts[0] > 0 && screenWidth <= mobileWidth" />
-                    <button *ngIf="subtopic_problem_attempts[0] > 0 && screenWidth <= mobileWidth"
+                    <br
+                      *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                    <button
+                      *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
                       class="grade-button" (click)="next_problem_st(); scroll_top()"
                       style="display: block; max-width: 150px; max-height: 100px; margin: auto">
                       <b> Next Problem </b>
                     </button>
-                  </div> -->
+                  </div>
                   <div *ngIf="prob.value.Type == 'LP'">
                     <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="choice.key[0] == subtopic_problem_selection[0][0]"
@@ -2403,7 +2406,7 @@
               <div class="card card-small"
                 style="min-height: 100px; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch"
-                  style="padding: 0 5px; min-width: 100px; max-height: 200px; margin: auto">
+                  style="padding: 0 5px; min-width: 150px; max-height: 200px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_m_choice('', 0, '')" *ngIf="m_selection[0][0] == choice"
                     class="toggle-button-on"
@@ -2417,7 +2420,7 @@
                     <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                   </button>
-                  <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off"></button>
+                  <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                 </label>
               </div>
               <br />
@@ -2425,12 +2428,12 @@
                 style="min-height: 100px; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices"
                   style="margin: auto; margin-top: 0px; align-items: center; flex-direction: column">
-                  <h3 style="max-width: 90%; margin: auto"> {{choice.slice(2, choice.length-2)}} </h3>
-                  <label class="switch" style="padding: 0 15x; min-width: 100px; max-height: 200px; margin: auto">
+                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto"> {{choice.slice(2, choice.length-2)}} </h3>
+                  <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 200px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_m_choice('', 1, '')"
                       *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] == choice[0]"
-                      class="toggle-button-on"></button>
+                      class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
                     <button (click)="remove_m_choice(choice[0], ''); select_m_choice(choice[0], 1, '')"
                       *ngIf="is_matched(choice[0], 1, '')" class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
@@ -2440,7 +2443,7 @@
                     </button>
                     <button (click)="select_m_choice(choice[0], 1, '')"
                       *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] != choice[0]"
-                      class="toggle-button-off"></button>
+                      class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                   </label>
                 </div>
               </div>
@@ -2449,7 +2452,7 @@
               <div class="card-container"
                 style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch"
-                  style="padding: 0 5px; min-width: 100px; max-height: 200px; margin: auto">
+                  style="padding: 0 5px; min-width: 150px; max-height: 200px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_c_choice('', 0, '')" *ngIf="m_selection[0][0] == choice"
                     class="toggle-button-on"
@@ -2475,7 +2478,7 @@
                         {{choice.slice(7)}}</h3>
                     </div>
                   </button>
-                  <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off"></button>
+                  <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                 </label>
               </div>
               <br />
@@ -2483,12 +2486,12 @@
                 style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices"
                   style="margin: auto; margin-top: 0px; align-items: center; flex-direction: column">
-                  <h3 style="max-width: 90%; margin: auto"> {{choice.slice(2)}} </h3>
+                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto"> {{choice.slice(2)}} </h3>
                   <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch"
-                    style="padding: 0 5px; min-width: 100px; max-height: 200px; margin: auto">
+                    style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 200px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, '')"
-                      *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on"></button>
+                      *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
                     <button (click)="remove_c_choice(selection, '')" *ngIf="selection != ''" class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
@@ -2501,7 +2504,7 @@
                       </div>
                     </button>
                     <button (click)="select_c_choice(choice[0], 1, '')"
-                      *ngIf="selection == '' && m_selection[0][1] != choice[0]" class="toggle-button-off"></button>
+                      *ngIf="selection == '' && m_selection[0][1] != choice[0]" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                   </label>
                 </div>
               </div>
@@ -2510,7 +2513,7 @@
               <div class="card-container"
                 style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch"
-                  style="padding: 0 5px; min-width: 100px; max-height: 200px; margin: auto">
+                  style="padding: 0 5px; min-width: 150px; max-height: 200px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_c_choice('', 0, '')" *ngIf="m_selection[0][0] == choice"
                     class="toggle-button-on"
@@ -2543,12 +2546,12 @@
                 style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices"
                   style="margin: auto; margin-top: 0px; align-items: center; flex-direction: column">
-                  <h3 style="max-width: 90%; margin: auto"> {{choice.slice(2)}} </h3>
+                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto"> {{choice.slice(2)}} </h3>
                   <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch"
-                    style="padding: 0 5px; min-width: 100px; max-height: 200px; margin: auto">
+                    style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 200px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, '')"
-                      *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on"></button>
+                      *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
                     <button (click)="remove_g_choice(selection, choice[0], '')" *ngIf="selection != ''"
                       class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; width: fit-content">
@@ -2562,7 +2565,7 @@
                       </div>
                     </button>
                     <button (click)="select_c_choice(choice[0], 1, '')"
-                      *ngIf="selection == '' && m_selection[0][1] != choice[0]" class="toggle-button-off"></button>
+                      *ngIf="selection == '' && m_selection[0][1] != choice[0]" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                   </label>
                 </div>
               </div>
@@ -2877,7 +2880,7 @@
               <div class="card card-small"
                 style="min-height: 100px; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch"
-                  style="padding: 0 5px; min-width: 100px; max-height: 200px; margin: auto">
+                  style="padding: 0 5px; min-width: 150px; max-height: 200px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_m_choice('', 0, part.key)"
                     *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
@@ -2892,7 +2895,7 @@
                     <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                   </button>
-                  <button *ngIf="is_matched(choice, 0, part.key)" class="toggle-button-off"></button>
+                  <button *ngIf="is_matched(choice, 0, part.key)" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                 </label>
               </div>
               <br />
@@ -2900,12 +2903,12 @@
                 style="min-height: 100px; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices"
                   style="margin: auto; margin-top: 0px; align-items: center; flex-direction: column">
-                  <h3 style="max-width: 90%; margin: auto"> {{choice.slice(2, choice.length-2)}} </h3>
-                  <label class="switch" style="padding: 0 15x; min-width: 100px; max-height: 200px; margin: auto">
+                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto"> {{choice.slice(2, choice.length-2)}} </h3>
+                  <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 200px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_m_choice('', 1, part.key)"
                       *ngIf="!is_matched(choice[0], 1, part.key) && m_selection[get_part_num(part.key)][1] == choice[0]"
-                      class="toggle-button-on"></button>
+                      class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
                     <button (click)="remove_m_choice(choice[0], part.key); select_m_choice(choice[0], 1, part.key)"
                       *ngIf="is_matched(choice[0], 1, part.key)" class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
@@ -2915,7 +2918,7 @@
                     </button>
                     <button (click)="select_m_choice(choice[0], 1, part.key)"
                       *ngIf="!is_matched(choice[0], 1, part.key) && m_selection[get_part_num(part.key)][1] != choice[0]"
-                      class="toggle-button-off"></button>
+                      class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                   </label>
                 </div>
               </div>
@@ -2924,7 +2927,7 @@
               <div class="card-container"
                 style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch"
-                  style="padding: 0 5px; min-width: 100px; max-height: 200px; margin: auto">
+                  style="padding: 0 5px; min-width: 150px; max-height: 200px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_c_choice('', 0, part.key)"
                     *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
@@ -2951,7 +2954,7 @@
                         {{choice.slice(7)}}</h3>
                     </div>
                   </button>
-                  <button *ngIf="is_matched(choice, 0, part.key)" class="toggle-button-off"></button>
+                  <button *ngIf="is_matched(choice, 0, part.key)" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                 </label>
               </div>
               <br />
@@ -2959,13 +2962,13 @@
                 style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of this.unique_choices"
                   style="margin: auto; margin-top: 0px; align-items: center; flex-direction: column">
-                  <h3 style="max-width: 90%; margin: auto"> {{choice.slice(2)}} </h3>
+                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto"> {{choice.slice(2)}} </h3>
                   <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch"
-                    style="padding: 0 5px; min-width: 100px; max-height: 200px; margin: auto">
+                    style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 200px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, part.key)"
                       *ngIf="selection == '' && m_selection[get_part_num(part.key)][1] == choice[0]"
-                      class="toggle-button-on"></button>
+                      class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
                     <button (click)="remove_c_choice(selection, part.key)" *ngIf="selection != ''"
                       class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; width: fit-content">
@@ -2980,7 +2983,7 @@
                     </button>
                     <button (click)="select_c_choice(choice[0], 1, part.key)"
                       *ngIf="selection == '' && m_selection[get_part_num(part.key)][1] != choice[0]"
-                      class="toggle-button-off"></button>
+                      class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                   </label>
                 </div>
               </div>
@@ -2989,7 +2992,7 @@
               <div class="card-container"
                 style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch"
-                  style="padding: 0 5px; min-width: 100px; max-height: 200px; margin: auto">
+                  style="padding: 0 5px; min-width: 150px; max-height: 200px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_c_choice('', 0, part.key)"
                     *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
@@ -3022,13 +3025,13 @@
                 style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of this.unique_choices"
                   style="margin: auto; margin-top: 0px; align-items: center; flex-direction: column">
-                  <h3 style="max-width: 90%; margin: auto"> {{choice.slice(2)}} </h3>
+                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto"> {{choice.slice(2)}} </h3>
                   <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch"
-                    style="padding: 0 5px; min-width: 100px; max-height: 200px; margin: auto">
+                    style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 200px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, part.key)"
                       *ngIf="selection == '' && m_selection[get_part_num(part.key)][1] == choice[0]"
-                      class="toggle-button-on"></button>
+                      class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
                     <button (click)="remove_g_choice(selection, choice[0], part.key)" *ngIf="selection != ''"
                       class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; width: fit-content">
@@ -3043,7 +3046,7 @@
                     </button>
                     <button (click)="select_c_choice(choice[0], 1, part.key)"
                       *ngIf="selection == '' && m_selection[get_part_num(part.key)][1] != choice[0]"
-                      class="toggle-button-off"></button>
+                      class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                   </label>
                 </div>
               </div>
