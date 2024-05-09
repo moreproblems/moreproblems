@@ -2310,6 +2310,16 @@
                 </span>
                 <span><b>Pennsylvania PSSA 2015</b> Grade 3 English Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('RI23G3E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G3E')" src="./assets/flags/RI.svg"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G3E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Rhode Island RICAS 2023</b> Grade 3 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G3E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G3E')" src="./assets/flags/RI.svg"
@@ -2772,6 +2782,16 @@
                 </span>
                 <span><b>Pennsylvania PSSA 2015</b> Grade 3 Math Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('RI23G3M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G3M')" src="./assets/flags/RI.svg"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G3M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Rhode Island RICAS 2023</b> Grade 3 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G3M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G3M')" src="./assets/flags/RI.svg"
@@ -3174,6 +3194,16 @@
                   &starf;
                 </span>
                 <span><b>Pennsylvania PSSA 2015</b> Grade 4 English Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('RI23G4E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G4E')" src="./assets/flags/RI.svg"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G4E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Rhode Island RICAS 2023</b> Grade 4 English Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('RI22G4E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -3642,6 +3672,16 @@
                   &starf;
                 </span>
                 <span><b>Pennsylvania PSSA 2015</b> Grade 4 Math Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('RI23G4M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G4M')" src="./assets/flags/RI.svg"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G4M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Rhode Island RICAS 2023</b> Grade 4 Math Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('RI22G4M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -4232,6 +4272,16 @@
                 </span>
                 <span><b>Pennsylvania PSSA 2015</b> Grade 5 English Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('RI23G5E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G5E')" src="./assets/flags/RI.svg"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G5E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Rhode Island RICAS 2023</b> Grade 5 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G5E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G5E')" src="./assets/flags/RI.svg"
@@ -4709,6 +4759,16 @@
                   &starf;
                 </span>
                 <span><b>Pennsylvania PSSA 2015</b> Grade 5 Math Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('RI23G5M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G5M')" src="./assets/flags/RI.svg"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G5M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Rhode Island RICAS 2023</b> Grade 5 Math Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('RI22G5M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -5263,6 +5323,16 @@
                 </span>
                 <span><b>Pennsylvania PSSA 2015</b> Grade 6 English Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('RI23G6E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G6E')" src="./assets/flags/RI.svg"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G6E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Rhode Island RICAS 2023</b> Grade 6 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G6E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G6E')" src="./assets/flags/RI.svg"
@@ -5741,6 +5811,16 @@
                 </span>
                 <span><b>Pennsylvania PSSA 2015</b> Grade 6 Math Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('RI23G6M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G6M')" src="./assets/flags/RI.svg"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G6M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Rhode Island RICAS 2023</b> Grade 6 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G6M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G6M')" src="./assets/flags/RI.svg"
@@ -6169,6 +6249,16 @@
                   &starf;
                 </span>
                 <span><b>Pennsylvania PSSA 2015</b> Grade 7 English Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('RI23G7E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G7E')" src="./assets/flags/RI.svg"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G7E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Rhode Island RICAS 2023</b> Grade 7 English Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('RI22G7E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -6648,6 +6738,16 @@
                 </span>
                 <span><b>Pennsylvania PSSA 2015</b> Grade 7 Math Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('RI23G7M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G7M')" src="./assets/flags/RI.svg"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G7M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Rhode Island RICAS 2023</b> Grade 7 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G7M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G7M')" src="./assets/flags/RI.svg"
@@ -7076,6 +7176,16 @@
                   &starf;
                 </span>
                 <span><b>Pennsylvania PSSA 2015</b> Grade 8 English Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('RI23G8E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G8E')" src="./assets/flags/RI.svg"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G8E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Rhode Island RICAS 2023</b> Grade 8 English Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('RI22G8E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -7554,6 +7664,16 @@
                   &starf;
                 </span>
                 <span><b>Pennsylvania PSSA 2015</b> Grade 8 Math Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('RI23G8M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G8M')" src="./assets/flags/RI.svg"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G8M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Rhode Island RICAS 2023</b> Grade 8 Math Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('RI22G8M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
@@ -15293,6 +15413,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('RI23G3M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G3M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G3M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Rhode Island RICAS <b>2023</b> Grade 3 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G3M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G3M')" src="./assets/icons/select.png"
@@ -15336,6 +15465,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('RI23G3E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G3E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G3E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Rhode Island RICAS <b>2023</b> Grade 3 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G3E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G3E')" src="./assets/icons/select.png"
@@ -15381,6 +15519,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('RI23G4M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G4M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G4M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Rhode Island RICAS <b>2023</b> Grade 4 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G4M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G4M')" src="./assets/icons/select.png"
@@ -15424,6 +15571,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('RI23G4E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G4E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G4E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Rhode Island RICAS <b>2023</b> Grade 4 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G4E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G4E')" src="./assets/icons/select.png"
@@ -15469,6 +15625,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('RI23G5M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G5M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G5M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Rhode Island RICAS <b>2023</b> Grade 5 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G5M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G5M')" src="./assets/icons/select.png"
@@ -15512,6 +15677,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('RI23G5E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G5E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G5E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Rhode Island RICAS <b>2023</b> Grade 5 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G5E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G5E')" src="./assets/icons/select.png"
@@ -15557,6 +15731,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('RI23G6M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G6M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G6M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Rhode Island RICAS <b>2023</b> Grade 6 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G6M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G6M')" src="./assets/icons/select.png"
@@ -15600,6 +15783,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('RI23G6E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G6E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G6E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Rhode Island RICAS <b>2023</b> Grade 6 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G6E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G6E')" src="./assets/icons/select.png"
@@ -15645,6 +15837,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('RI23G7M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G7M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G7M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Rhode Island RICAS <b>2023</b> Grade 7 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G7M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G7M')" src="./assets/icons/select.png"
@@ -15688,6 +15889,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('RI23G7E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G7E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G7E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Rhode Island RICAS <b>2023</b> Grade 7 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G7E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G7E')" src="./assets/icons/select.png"
@@ -15733,6 +15943,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('RI23G8M'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G8M')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G8M') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Rhode Island RICAS <b>2023</b> Grade 8 Math Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G8M'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G8M')" src="./assets/icons/select.png"
@@ -15776,6 +15995,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('RI23G8E'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('RI23G8E')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('RI23G8E') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Rhode Island RICAS <b>2023</b> Grade 8 English Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('RI22G8E'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('RI22G8E')" src="./assets/icons/select.png"
