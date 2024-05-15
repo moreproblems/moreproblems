@@ -7,6 +7,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from "../../shared/services/auth.service";
+import * as Plotly from 'plotly.js-dist-min';
 import * as examMetadata from "src/assets/problems/exams.json";
 import * as FL20G3MProblems from "src/assets/problems/FL20G3M/FL20G3M-problems.json";
 import * as FL20G3RProblems from "src/assets/problems/FL20G3R/FL20G3R-problems.json";
@@ -1460,6 +1461,99 @@ export class TemplateExamComponent implements OnInit {
     // return (table);
   }
 
+  plot_graph(part: string, subtop: boolean) {
+      var myPlot: any = document.getElementById('myPlot');
+      var x = [];
+      var y = [];
+      for (let i = -250; i <= 250; i++){
+        x.push(i);
+      }
+      for (let i = -250; i <= 250; i++){
+        y.push(i);
+      }
+      var z = [];
+      for (let i = 0; i < y.length; i++){
+        var temp = [];
+        for (let j = 0; j < x.length; j++){
+          temp.push(0);
+        }
+        z.push(temp);
+      }
+      var map: any = {
+          x: x,
+          y: y,
+          z: z,
+          type: 'heatmap',
+          colorscale: [['0.0', 'rgba(0, 0, 0, 0)'], ['1.0', 'rgba(0, 0, 0, 0)']],
+          xgap: 1,
+          ygap: 1,
+          hoverinfo: "x+y",
+          showscale: false
+      }
+      var sub: any = {
+          x: [],
+          y: [],
+          type: 'scatter',
+          hoverinfo: false,
+          marker:{color: '#1976d2', size: 16}
+      }
+      var layout: any = {
+          dragmode: false,
+          margin: {
+              l: 20,
+              t: 10,
+              r: 10,
+              b: 30
+          },
+          xaxis: {
+              range: [-1, 15],
+              showgrid: true,
+              ticks: 'inside',
+              zeroline: true,
+              zerolinewidth: 2,
+              gridwidth: 1,
+              gridcolor: '#000',
+              dtick: 1,
+              tickcolor: '#000'
+          },
+          yaxis: {
+              range: [-1, 15],
+              showgrid: true,
+              ticks: 'inside',
+              zeroline: true,
+              zerolinewidth: 2,
+              gridwidth: 1,
+              gridcolor: '#000',
+              dtick: 1,
+              tickcolor: '#000'
+          }
+      };
+      var config = {
+          hoverinfo: false,
+          displayModeBar: false,
+          scrollZoom: false,
+          responsive: true,
+          editSelection: false
+      };
+      Plotly.newPlot('myPlot', [ map, sub ], layout, config);
+      myPlot.on('plotly_click', (data: any) => {
+          var grid = data.points.filter((obj: any) => {
+               return obj.curveNumber === 0;
+          })
+          console.log("Selected Point: (" + grid[0].x + ", " + grid[0].y +")");
+          sub.x[0] = +grid[0].x;
+          sub.y[0] = +grid[0].y;
+          Plotly.redraw('myPlot');
+          if (subtop) {
+              this.attempt_gp_st_problem(+grid[0].x, +grid[0].y, part);
+          }
+          else {
+              this.attempt_gp_problem(+grid[0].x, +grid[0].y, part);
+          }
+      })
+      console.log('plot graph');
+  }
+
   get_flag_count() {
     var count = 0;
     for (let sub of this.order_numbers()) {
@@ -2110,8 +2204,13 @@ export class TemplateExamComponent implements OnInit {
       this.m_selection = [["", ""]];
       this.m_submission = [{}];
       this.c_submission = [{}];
-      if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP'].includes(this.exam_dump[this.problem_number].Type)) {
+      if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
         this.problem_selection = [['']];
+        if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
+            setTimeout(() => {
+                this.plot_graph('', false);
+            }, 500);
+        }
       }
       else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.exam_dump[this.problem_number].Type)) {
         this.problem_selection = [[]];
@@ -2140,8 +2239,13 @@ export class TemplateExamComponent implements OnInit {
         this.m_selection.push(["", ""]);
         this.m_submission.push({});
         this.c_submission.push({});
-        if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+        if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
           this.problem_selection.push(['']);
+          if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+              setTimeout(() => {
+                  this.plot_graph(part, false);
+              }, 500);
+          }
         }
         else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
           this.problem_selection.push([]);
@@ -2340,8 +2444,13 @@ export class TemplateExamComponent implements OnInit {
       this.m_selection = [["", ""]];
       this.m_submission = [{}];
       this.c_submission = [{}];
-      if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP'].includes(this.exam_dump[this.problem_number].Type)) {
+      if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
         this.problem_selection = [['']];
+        if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
+            setTimeout(() => {
+                this.plot_graph('', false);
+            }, 500);
+        }
       }
       else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.exam_dump[this.problem_number].Type)) {
         this.problem_selection = [[]];
@@ -2370,8 +2479,13 @@ export class TemplateExamComponent implements OnInit {
         this.m_selection.push(["", ""]);
         this.m_submission.push({});
         this.c_submission.push({});
-        if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+        if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
           this.problem_selection.push(['']);
+          if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+              setTimeout(() => {
+                  this.plot_graph(part, false);
+              }, 500);
+          }
         }
         else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
           this.problem_selection.push([]);
@@ -3178,6 +3292,108 @@ export class TemplateExamComponent implements OnInit {
         }
       }
     }
+  }
+
+  attempt_gp_problem(xnum: number, ynum: number, part: string) {
+      var choice = '(' + ''+xnum + ',' + ''+ynum + ')';
+      console.log(choice);
+      var part_num = 0;
+      if (part != '') {
+          var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+      }
+      if (choice != this.problem_selection[part_num][0]) {
+          this.problem_attempts[part_num] += 1;
+          this.attempt_path[part_num].push([choice]);
+          this.problem_selection[part_num] = [choice];
+          for (const [num, prob] of Object.entries(this.exam_dump)) {
+              if (this.problem_number == +num) {
+                  if (part == '') {
+                      for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                          if (choice == key.Choice) {
+                              this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                              if (this.problem_attempts[part_num] == 1) {
+                                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                              }
+                              else {
+                                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                              }
+                          }
+                          else {
+                              this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                          }
+                      }
+                  }
+                  else {
+                      for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                          if (choice == key.Choice) {
+                              this.confetti_light(this.problem_attempts[part_num]);
+                              this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                              if (this.problem_attempts[part_num] == 1) {
+                                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                              }
+                              else {
+                                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                              }
+                          }
+                          else {
+                              this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+
+  attempt_gp_st_problem(xnum: number, ynum: number, part: string) {
+      var choice = '(' + ''+xnum + ',' + ''+ynum + ')';
+      var part_num = 0;
+      if (part != '') {
+          var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      if (choice != this.subtopic_problem_selection[part_num][0]) {
+          this.subtopic_problem_attempts[part_num] += 1;
+          this.subtopic_attempt_path[part_num].push([choice]);
+          this.subtopic_problem_selection[part_num] = [choice];
+          for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+              if (this.subtopic_problem_number == +num) {
+                  if (part == '') {
+                      for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                          if (choice == key.Choice) {
+                              this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                              this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                              if (this.subtopic_problem_attempts[part_num] == 1) {
+                                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                              }
+                              else {
+                                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                              }
+                          }
+                          else {
+                              this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                          }
+                      }
+                  }
+                  else {
+                      for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                          if (choice == key.Choice) {
+                              this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                              this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                              if (this.subtopic_problem_attempts[part_num] == 1) {
+                                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                              }
+                              else {
+                                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                              }
+                          }
+                          else {
+                              this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                          }
+                      }
+                  }
+              }
+          }
+      }
   }
 
   attempt_t_problem(choice: string, inum: string, part: string) {
@@ -4700,8 +4916,13 @@ export class TemplateExamComponent implements OnInit {
           this.m_selection = [["", ""]];
           this.m_submission = [{}];
           this.c_submission = [{}];
-          if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP'].includes(this.exam_dump[this.problem_number].Type)) {
+          if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
             this.problem_selection = [['']];
+            if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
+                setTimeout(() => {
+                    this.plot_graph('', false);
+                }, 500);
+            }
           }
           else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.exam_dump[this.problem_number].Type)) {
             this.problem_selection = [[]];
@@ -4730,8 +4951,13 @@ export class TemplateExamComponent implements OnInit {
             this.m_selection.push(["", ""]);
             this.m_submission.push({});
             this.c_submission.push({});
-            if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
               this.problem_selection.push(['']);
+              if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                  setTimeout(() => {
+                      this.plot_graph(part, false);
+                  }, 500);
+              }
             }
             else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
               this.problem_selection.push([]);
@@ -5212,8 +5438,13 @@ export class TemplateExamComponent implements OnInit {
         this.subtopic_attempt_path = [[]];
         this.subtopic_attempt_response = [''];
         this.subtopic_attempt_explanation = [[]];
-        if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+        if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
           this.subtopic_problem_selection = [['']];
+          if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+              setTimeout(() => {
+                  this.plot_graph('', true);
+              }, 500);
+          }
         }
         else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
           this.subtopic_problem_selection = [[]];
@@ -5242,8 +5473,13 @@ export class TemplateExamComponent implements OnInit {
           this.m_selection.push(["", ""]);
           this.m_submission.push({});
           this.c_submission.push({});
-          if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+          if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
             this.subtopic_problem_selection.push(['']);
+            if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                setTimeout(() => {
+                    this.plot_graph(part, true);
+                }, 500);
+            }
           }
           else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
             this.subtopic_problem_selection.push([]);
@@ -5557,8 +5793,13 @@ export class TemplateExamComponent implements OnInit {
       this.subtopic_attempt_path = [[]];
       this.subtopic_attempt_response = [''];
       this.subtopic_attempt_explanation = [[]];
-      if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+      if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
         this.subtopic_problem_selection = [['']];
+        if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            setTimeout(() => {
+                this.plot_graph('', true);
+            }, 500);
+        }
       }
       else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
         this.subtopic_problem_selection = [[]];
@@ -5584,8 +5825,13 @@ export class TemplateExamComponent implements OnInit {
         this.subtopic_attempt_path.push([]);
         this.subtopic_attempt_response.push('');
         this.subtopic_attempt_explanation.push([]);
-        if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+        if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
           this.subtopic_problem_selection.push(['']);
+          if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+              setTimeout(() => {
+                  this.plot_graph(part, true);
+              }, 500);
+          }
         }
         else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
           this.subtopic_problem_selection.push([]);

@@ -1301,6 +1301,11 @@
                   </div>
                 </div>
               </div>
+              <div *ngIf="prob.value.Type == 'GP'" style="width: 90%">
+                <div style="min-height: 50px; height: auto; padding: 10px; margin: auto; align-items: center">
+                  <div id="myPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" [style.height.px]="this.myPlot.offsetWidth" #myPlot></div>
+                </div>
+              </div>
               <div *ngIf="prob.value.Type == 'FR'" style="width: 90%">
                 <div class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
                   <textarea
@@ -1479,6 +1484,28 @@
                         <br /> <br /> <b>Explanation:</b> {{(subtopic_attempt_explanation[0][0] != '') ? subtopic_attempt_explanation[0][0] : 'No explanation or rationale is available.'}}
                       </h3>
                     </div>
+                  </div>
+                  <div *ngIf="prob.value.Type == 'GP'">
+                    <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
+                      <h3 *ngIf="subtopic_attempt_response[0].startsWith('Correct') && subtopic_attempt_explanation[0][0] != ''"
+                        style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                        <!-- wrong data format, extra KEY -->
+                        <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[0]}}
+                      </h3>
+                      <h3 *ngIf="!subtopic_attempt_response[0].startsWith('Correct') || subtopic_attempt_explanation[0][0] == ''"
+                        style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                        <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
+                      </h3>
+                    </div>
+                    <br *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" /> <br
+                      *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                    <button *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
+                      class="grade-button" (click)="next_problem_st(); scroll_top()"
+                      style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                      <b> Next Problem </b>
+                    </button>
                   </div>
                   <div *ngIf="prob.value.Type == 'T'">
                     <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
@@ -1757,6 +1784,11 @@
                   </div>
                 </div>
               </div>
+              <div *ngIf="part.value.Type == 'GP'" style="width: 90%">
+                <div style="min-height: 50px; height: auto; padding: 10px; margin: auto; align-items: center">
+                  <div id="myPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" [style.height.px]="this.myPlot.offsetWidth" #myPlot></div>
+                </div>
+              </div>
               <div *ngIf="part.value.Type == 'FR'" style="width: 90%">
                 <div class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
                   <textarea
@@ -1902,6 +1934,21 @@
                     </h3>
                   </div>
                 </div>
+                <div *ngIf="part.value.Type == 'GP'">
+                  <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
+                    <h3 *ngIf="subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <!-- wrong data format, extra KEY -->
+                      <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
+                    </h3>
+                    <h3 *ngIf="!subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') || subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
+                    </h3>
+                  </div>
+                </div>
                 <div *ngIf="part.value.Type == 'T'">
                   <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                     <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
@@ -1963,14 +2010,6 @@
                     <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                     <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                   </h3>
-                  <br
-                    *ngIf="subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && screenWidth <= mobileWidth" />
-                  <button
-                    *ngIf="subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && screenWidth <= mobileWidth"
-                    class="grade-button" (click)="next_problem_st(); scroll_top()"
-                    style="display: block; max-width: 150px; max-height: 100px; margin: auto">
-                    <b> Next Problem </b>
-                  </button>
                 </div>
               </div>
             </div>
@@ -2790,6 +2829,11 @@
                 </div>
               </div>
             </div>
+            <div *ngIf="prob.value.Type == 'GP'" style="width: 90%">
+              <div style="min-height: 50px; height: auto; padding: 10px; margin: auto; align-items: center">
+                <div id="myPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" [style.height.px]="this.myPlot.offsetWidth" #myPlot></div>
+              </div>
+            </div>
             <div *ngIf="prob.value.Type == 'FR' && (prob.value.Parts | keys).length == 0" style="width: 90%">
               <div class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
                 <textarea
@@ -3062,6 +3106,29 @@
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                       <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
                       <br /> <br /> <b>Explanation:</b> {{(attempt_explanation[0][0] != '') ? attempt_explanation[0][0] : 'No explanation or rationale is available.'}}
+                    </h3>
+                    <br
+                      *ngIf="choice.key[0] == problem_selection[0][0] && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                    <button
+                      *ngIf="choice.key[0] == problem_selection[0][0] && attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
+                      class="grade-button" (click)="next_problem(); scroll_top()"
+                      style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                      <b> Next Problem </b>
+                    </button>
+                  </div>
+                </div>
+                <div *ngIf="prob.value.Type == 'GP'">
+                  <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
+                    <h3 *ngIf="attempt_response[0].startsWith('Correct') && attempt_explanation[0][0] != ''"
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
+                      <!-- wrong data format, extra KEY -->
+                      <br /> <br /> <b>Explanation:</b> {{attempt_explanation[0]}}
+                    </h3>
+                    <h3 *ngIf="!attempt_response[0].startsWith('Correct') || attempt_explanation[0][0] == ''"
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
+                      <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                     </h3>
                     <br
                       *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
@@ -3519,6 +3586,11 @@
                 </div>
               </div>
             </div>
+            <div *ngIf="part.value.Type == 'GP'" style="width: 90%">
+              <div style="min-height: 50px; height: auto; padding: 10px; margin: auto; align-items: center">
+                <div id="myPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" [style.height.px]="this.myPlot.offsetWidth" #myPlot></div>
+              </div>
+            </div>
             <div *ngIf="part.value.Type == 'FR'" style="width: 90%">
               <div class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
                 <textarea
@@ -3730,6 +3802,21 @@
                     style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                     <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                     <br /> <br /> <b>Explanation:</b> {{(attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != '') ? attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] : 'No explanation or rationale is available.'}}
+                  </h3>
+                </div>
+              </div>
+              <div *ngIf="part.value.Type == 'GP'">
+                <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
+                  <h3 *ngIf="attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
+                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                    <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                    <!-- wrong data format, extra KEY -->
+                    <br /> <br /> <b>Explanation:</b> {{attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
+                  </h3>
+                  <h3 *ngIf="!attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') || attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
+                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                    <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                    <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                   </h3>
                 </div>
               </div>
