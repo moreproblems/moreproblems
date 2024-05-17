@@ -829,13 +829,11 @@
                           <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                             <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                           </select>
-                          <div *ngIf="word.startsWith(':FR')" class="card" style="min-height: 50px; width: 275px; max-height: 100px; display: inline-flex">
-                            <input
-                              style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
-                              inputmode="numeric" id="inputFR-{{word[4]}}"#inputFR />
+                          <div *ngIf="word.startsWith(':FR')" class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                            <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR--{{word[4]}}" #inputMFRST></textarea>
                             <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()"
-                              style="display: flex; flex-direction: column; max-width: 150px; max-height: 150px; height: auto; margin: 0px 10px 0px 10px; padding: 7px 15px; align-items: center">
-                              <b style="display: flex; margin: auto; height: 20px; align-items: center"> Submit </b>
+                              style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                              <b> Submit </b>
                             </button>
                           </div>
                           <!-- <select value="{{problem_number}}" (change)="attempt_idd_problem(this.DDInput.value, '')"
@@ -872,13 +870,11 @@
                         <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                           <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                         </select>
-                        <div *ngIf="word.startsWith(':FR')" class="card" style="min-height: 50px; width: 275px; max-height: 100px; display: inline-flex">
-                          <input
-                            style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
-                            inputmode="numeric" id="inputFR-{{word[4]}}"#inputFR />
+                        <div *ngIf="word.startsWith(':FR')" class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                          <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR--{{word[4]}}" #inputMFRST></textarea>
                           <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()"
-                            style="display: flex; flex-direction: column; max-width: 150px; max-height: 150px; height: auto; margin: 0px 10px 0px 10px; padding: 7px 15px; align-items: center">
-                            <b style="display: flex; margin: auto; height: 20px; align-items: center"> Submit </b>
+                            style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                            <b> Submit </b>
                           </button>
                         </div>
                         <!-- <select value="{{problem_number}}" (change)="attempt_idd_problem(word[4], this.DDInput.value, '')"
@@ -939,6 +935,11 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'GP'" style="width: 90%">
+                <div style="min-height: 50px; height: auto; padding: 10px; margin: auto; align-items: center">
+                  <div id="myPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" [style.height.px]="this.myPlot.offsetWidth" #myPlot></div>
+                </div>
+              </div>
+              <div *ngIf="prob.value.Type == 'MGP'" style="width: 90%">
                 <div style="min-height: 50px; height: auto; padding: 10px; margin: auto; align-items: center">
                   <div id="myPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" [style.height.px]="this.myPlot.offsetWidth" #myPlot></div>
                 </div>
@@ -1144,6 +1145,20 @@
                       <b> Next Problem </b>
                     </button>
                   </div>
+                  <div *ngIf="prob.value.Type == 'MGP'">
+                    <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                      <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[0]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[0].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                    </h3>
+                    <br
+                      *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                    <button
+                      *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
+                      class="grade-button" (click)="next_problem_st(); scroll_top()"
+                      style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                      <b> Next Problem </b>
+                    </button>
+                  </div>
                   <div *ngIf="prob.value.Type == 'T'">
                     <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                       <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
@@ -1314,13 +1329,11 @@
                       <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                         <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                       </select>
-                      <div *ngIf="word.startsWith(':FR')" class="card" style="min-height: 50px; width: 275px; max-height: 100px; display: inline-flex">
-                        <input
-                          style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
-                          inputmode="numeric" id="inputFR-{{word[4]}}"#inputFR />
+                      <div *ngIf="word.startsWith(':FR')" class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                        <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFRST></textarea>
                         <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()"
-                          style="display: flex; flex-direction: column; max-width: 150px; max-height: 150px; height: auto; margin: 0px 10px 0px 10px; padding: 7px 15px; align-items: center">
-                          <b style="display: flex; margin: auto; height: 20px; align-items: center"> Submit </b>
+                          style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                          <b> Submit </b>
                         </button>
                       </div>
                       <!-- <select value="{{problem_number}}" (change)="attempt_idd_problem(this.DDInput.value, '')"
@@ -1357,13 +1370,11 @@
                     <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                       <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                     </select>
-                    <div *ngIf="word.startsWith(':FR')" class="card" style="min-height: 50px; width: 275px; max-height: 100px; display: inline-flex">
-                      <input
-                        style="display: block; width: 150px; height: 50px; margin: 0px 10px 0px 10px; padding: 0px; font-size: 20px; text-indent: 10px"
-                        inputmode="numeric" id="inputFR-{{word[4]}}" #inputFR />
+                    <div *ngIf="word.startsWith(':FR')" class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                      <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFRST></textarea>
                       <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()"
-                        style="display: flex; flex-direction: column; max-width: 150px; max-height: 150px; height: auto; margin: 0px 10px 0px 10px; padding: 7px 15px; align-items: center">
-                        <b style="display: flex; margin: auto; height: 20px; align-items: center"> Submit </b>
+                        style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                        <b> Submit </b>
                       </button>
                     </div>
                     <!-- <select value="{{problem_number}}" (change)="attempt_idd_problem(word[4], this.DDInput.value, '')"
@@ -1422,6 +1433,11 @@
                 </div>
               </div>
               <div *ngIf="part.value.Type == 'GP'" style="width: 90%">
+                <div style="min-height: 50px; height: auto; padding: 10px; margin: auto; align-items: center">
+                  <div id="myPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" [style.height.px]="this.myPlot.offsetWidth" #myPlot></div>
+                </div>
+              </div>
+              <div *ngIf="part.value.Type == 'MGP'" style="width: 90%">
                 <div style="min-height: 50px; height: auto; padding: 10px; margin: auto; align-items: center">
                   <div id="myPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" [style.height.px]="this.myPlot.offsetWidth" #myPlot></div>
                 </div>
@@ -1586,19 +1602,17 @@
                     </h3>
                   </div>
                 </div>
+                <div *ngIf="part.value.Type == 'MGP'">
+                  <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                    <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                    <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                  </h3>
+                </div>
                 <div *ngIf="part.value.Type == 'T'">
                   <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                     <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                     <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                   </h3>
-                  <br
-                    *ngIf="subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && screenWidth <= mobileWidth" />
-                  <button
-                    *ngIf="subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && screenWidth <= mobileWidth"
-                    class="grade-button" (click)="next_problem_st(); scroll_top()"
-                    style="display: block; max-width: 150px; max-height: 100px; margin: auto">
-                    <b> Next Problem </b>
-                  </button>
                 </div>
                 <div *ngIf="part.value.Type == 'LR'">
                   <h3 *ngIf="subtopic_problem_attempts[(prob.value.Parts | keys).indexOf(part.key)] > 0"

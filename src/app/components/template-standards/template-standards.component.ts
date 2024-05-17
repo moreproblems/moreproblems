@@ -1737,23 +1737,23 @@ export class TemplateStandardsComponent implements OnInit {
         // return (table);
     }
 
-    plot_graph(part: string, subtop: boolean) {
+    plot_graph_gp(part: string, subtop: boolean) {
         var myPlot: any = document.getElementById('myPlot');
         var x = [];
         var y = [];
-        for (let i = -250; i <= 250; i++){
-          x.push(i);
+        for (let i = -250; i <= 250; i++) {
+            x.push(i);
         }
-        for (let i = -250; i <= 250; i++){
-          y.push(i);
+        for (let i = -250; i <= 250; i++) {
+            y.push(i);
         }
         var z = [];
-        for (let i = 0; i < y.length; i++){
-          var temp = [];
-          for (let j = 0; j < x.length; j++){
-            temp.push(0);
-          }
-          z.push(temp);
+        for (let i = 0; i < y.length; i++) {
+            var temp = [];
+            for (let j = 0; j < x.length; j++) {
+                temp.push(0);
+            }
+            z.push(temp);
         }
         var map: any = {
             x: x,
@@ -1771,7 +1771,7 @@ export class TemplateStandardsComponent implements OnInit {
             y: [],
             type: 'scatter',
             hoverinfo: false,
-            marker:{color: '#1976d2', size: 16}
+            marker: { color: '#1976d2', size: 16 }
         }
         var layout: any = {
             dragmode: false,
@@ -1808,20 +1808,135 @@ export class TemplateStandardsComponent implements OnInit {
             hoverinfo: false,
             displayModeBar: false,
             scrollZoom: false,
-            responsive: true,
+            responsive: false,
             editSelection: false
         };
-        Plotly.newPlot('myPlot', [ map, sub ], layout, config);
+        Plotly.newPlot('myPlot', [map, sub], layout, config);
         myPlot.on('plotly_click', (data: any) => {
             var grid = data.points.filter((obj: any) => {
-                 return obj.curveNumber === 0;
+                return obj.curveNumber === 0;
             })
-            console.log("Selected Point: (" + grid[0].x + ", " + grid[0].y +")");
+            console.log("Selected Point: (" + grid[0].x + ", " + grid[0].y + ")");
             sub.x[0] = +grid[0].x;
             sub.y[0] = +grid[0].y;
             Plotly.redraw('myPlot');
             if (subtop) {
                 this.attempt_gp_st_problem(+grid[0].x, +grid[0].y, part);
+            }
+        })
+        console.log('plot graph');
+    }
+
+    plot_graph_mgp(part: string, subtop: boolean) {
+        var myPlot: any = document.getElementById('myPlot');
+        var x = [];
+        var y = [];
+        for (let i = -250; i <= 250; i++) {
+            x.push(i);
+        }
+        for (let i = -250; i <= 250; i++) {
+            y.push(i);
+        }
+        var z = [];
+        for (let i = 0; i < y.length; i++) {
+            var temp = [];
+            for (let j = 0; j < x.length; j++) {
+                temp.push(0);
+            }
+            z.push(temp);
+        }
+        var map: any = {
+            x: x,
+            y: y,
+            z: z,
+            type: 'heatmap',
+            colorscale: [['0.0', 'rgba(0, 0, 0, 0)'], ['1.0', 'rgba(0, 0, 0, 0)']],
+            xgap: 1,
+            ygap: 1,
+            hoverinfo: "x+y",
+            showscale: false
+        }
+        var sub: any = {
+            x: [],
+            y: [],
+            type: 'scatter',
+            hoverinfo: false,
+            marker: { color: '#1976d2', size: 16 }
+        }
+        var layout: any = {
+            dragmode: false,
+            margin: {
+                l: 20,
+                t: 10,
+                r: 10,
+                b: 30
+            },
+            xaxis: {
+                range: [-1, 15],
+                showgrid: true,
+                ticks: 'inside',
+                zeroline: true,
+                zerolinewidth: 2,
+                gridwidth: 1,
+                gridcolor: '#000',
+                dtick: 1,
+                tickcolor: '#000'
+            },
+            yaxis: {
+                range: [-1, 15],
+                showgrid: true,
+                ticks: 'inside',
+                zeroline: true,
+                zerolinewidth: 2,
+                gridwidth: 1,
+                gridcolor: '#000',
+                dtick: 1,
+                tickcolor: '#000'
+            }
+        };
+        var config = {
+            hoverinfo: false,
+            displayModeBar: false,
+            scrollZoom: false,
+            responsive: false,
+            editSelection: false
+        };
+        Plotly.newPlot('myPlot', [map, sub], layout, config);
+        myPlot.on('plotly_click', (data: any) => {
+            var grid = data.points.filter((obj: any) => {
+                return obj.curveNumber === 0;
+            })
+            var points = data.points.filter((obj: any) => {
+                return obj.curveNumber === 1;
+            })
+            // console.log("Selected Point: (" + grid[0].x + ", " + grid[0].y +")");
+            var point_graphed = false;
+            if (grid[0] == undefined) {
+                for (let i = 0; i < sub.x.length; i++) {
+                    if (sub.x[i] == +points[0].x && sub.y[i] == +points[0].y) {
+                        point_graphed = true;
+                        if (i != sub.x.length - 1) {
+                            sub.x.splice(i, 1);
+                            sub.y.splice(i, 1);
+                        }
+                        else {
+                            sub.x.pop();
+                            sub.y.pop();
+                        }
+                    }
+                }
+                Plotly.redraw('myPlot');
+                if (subtop) {
+                    this.attempt_mgp_st_problem(+points[0].x, +points[0].y, part);
+                }
+            }
+            if (!point_graphed) {
+                sub.x.push(+grid[0].x);
+                sub.y.push(+grid[0].y);
+                Plotly.redraw('myPlot');
+                if (subtop) {
+                    this.attempt_mgp_st_problem(+grid[0].x, +grid[0].y, part);
+                }
             }
         })
         console.log('plot graph');
@@ -1890,14 +2005,19 @@ export class TemplateStandardsComponent implements OnInit {
                 this.subtopic_problem_selection = [['']];
                 if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                     setTimeout(() => {
-                        this.plot_graph('', true);
+                        this.plot_graph_gp('', true);
                     }, 500);
                 }
             }
-            else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                 this.subtopic_problem_selection = [[]];
                 if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                     this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
+                }
+                if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                    setTimeout(() => {
+                        this.plot_graph_mgp('', true);
+                    }, 500);
                 }
             }
             else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
@@ -1922,14 +2042,19 @@ export class TemplateStandardsComponent implements OnInit {
                     this.subtopic_problem_selection.push(['']);
                     if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                         setTimeout(() => {
-                            this.plot_graph(part, true);
+                            this.plot_graph_gp(part, true);
                         }, 500);
                     }
                 }
-                else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                     this.subtopic_problem_selection.push([]);
                     if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                         this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
+                    }
+                    if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                        setTimeout(() => {
+                            this.plot_graph_mgp(part, true);
+                        }, 500);
                     }
                 }
                 else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
@@ -2428,7 +2553,7 @@ export class TemplateStandardsComponent implements OnInit {
     }
 
     attempt_gp_st_problem(xnum: number, ynum: number, part: string) {
-        var choice = '(' + ''+xnum + ',' + ''+ynum + ')';
+        var choice = '(' + '' + xnum + ',' + '' + ynum + ')';
         var part_num = 0;
         if (part != '') {
             var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
@@ -2476,6 +2601,117 @@ export class TemplateStandardsComponent implements OnInit {
                 }
             }
         }
+    }
+
+    attempt_mgp_st_problem(xnum: number, ynum: number, part: string) {
+        var choice = '(' + '' + xnum + ',' + '' + ynum + ')';
+        console.log(choice);
+        var part_num = 0;
+        if (part != '') {
+            var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+        }
+        var choice_in_key = false;
+        for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+            if (this.subtopic_problem_number == +num) {
+                this.subtopic_attempt_response[part_num] = "";
+                if (part == '') {
+                    if (this.subtopic_problem_selection[part_num].includes(choice)) {
+                        if (this.subtopic_problem_selection[part_num].indexOf(choice) != -1) {
+                            this.subtopic_attempt_explanation[part_num].splice(this.subtopic_problem_selection[part_num].indexOf(choice), 1);
+                            this.subtopic_problem_selection[part_num].splice(this.subtopic_problem_selection[part_num].indexOf(choice), 1);
+                        }
+                        else {
+                            this.subtopic_attempt_explanation[part_num].pop();
+                            this.subtopic_problem_selection[part_num].pop();
+                        }
+                    }
+                    else {
+                        this.subtopic_problem_selection[part_num].push(choice);
+                        for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                            if (choice == key.Choice) {
+                                choice_in_key = true;
+                                this.subtopic_attempt_explanation[part_num].push(key.Key.Rationale);
+                            }
+                        }
+                        if (!choice_in_key) {
+                            this.subtopic_attempt_explanation[part_num].push('');
+                        }
+                    }
+                    for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                        if (!this.subtopic_problem_selection[part_num].includes(key.Choice)) {
+                            console.log('missing selection');
+                            this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                        }
+                    }
+                    var graph_key = [];
+                    for (let ch of Object.values(prob.AnswerChoices)) {
+                        graph_key.push(ch.Choice)
+                    }
+                    for (let sel of this.subtopic_problem_selection[part_num]) {
+                        if (!graph_key.includes(sel)) {
+                            console.log('extra selection');
+                            this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                        }
+                    }
+                }
+                else {
+                    if (this.subtopic_problem_selection[part_num].includes(choice)) {
+                        if (this.subtopic_problem_selection[part_num].indexOf(choice) != -1) {
+                            this.subtopic_attempt_explanation[part_num].splice(this.subtopic_problem_selection[part_num].indexOf(choice), 1);
+                            this.subtopic_problem_selection[part_num].splice(this.subtopic_problem_selection[part_num].indexOf(choice), 1);
+                        }
+                        else {
+                            this.subtopic_attempt_explanation[part_num].pop();
+                            this.subtopic_problem_selection[part_num].pop();
+                        }
+                    }
+                    else {
+                        this.subtopic_problem_selection[part_num].push(choice);
+                        for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                            if (choice == key.Choice) {
+                                choice_in_key = true;
+                                this.subtopic_attempt_explanation[part_num].push(key.Key.Rationale);
+                            }
+                        }
+                        if (!choice_in_key) {
+                            this.subtopic_attempt_explanation[part_num].push('');
+                        }
+                    }
+                    for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                        if (!this.subtopic_problem_selection[part_num].includes(key.Choice)) {
+                            console.log('missing selection');
+                            this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                        }
+                    }
+                    var graph_key = [];
+                    for (let ch of Object.values(prob.Parts[part].AnswerChoices)) {
+                        graph_key.push(ch.Choice)
+                    }
+                    for (let sel of this.subtopic_problem_selection[part_num]) {
+                        if (!graph_key.includes(sel)) {
+                            console.log('extra selection');
+                            this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                        }
+                    }
+                }
+                if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
+                    this.confetti_light(this.subtopic_problem_attempts[part_num]);
+                    if (this.subtopic_problem_attempts[part_num] == 1) {
+                        this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                    }
+                    else {
+                        this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                    }
+                }
+            }
+        }
+        this.subtopic_problem_attempts[part_num] += 1;
+        var current_selection = [];
+        for (let sel of this.subtopic_problem_selection[part_num]) {
+            current_selection.push(sel);
+        }
+        this.subtopic_attempt_path[part_num].push(current_selection);
+        console.log(this.subtopic_attempt_path[part_num]);
     }
 
     attempt_t_st_problem(choice: string, inum: string, part: string) {
@@ -2727,7 +2963,7 @@ export class TemplateStandardsComponent implements OnInit {
         }
         if (!Object.keys(this.shuffle_choices).includes('' + part_num)) {
             this.m_shuffled = false;
-            this.shuffle_choices[''+part_num] = []
+            this.shuffle_choices['' + part_num] = []
         }
         if (!this.m_shuffled) {
             if (part == '') {
@@ -2759,7 +2995,7 @@ export class TemplateStandardsComponent implements OnInit {
                 }
             }
             this.random_list = [];
-            this.shuffle_choices[''+part_num] = [];
+            this.shuffle_choices['' + part_num] = [];
             console.log(this.choices_sequence);
             for (let i = 0; i < this.choices_sequence.length; i++) {
                 if (this.choices_sequence[i] == '') {
@@ -2770,7 +3006,7 @@ export class TemplateStandardsComponent implements OnInit {
             for (let i = 0; i < num_choices; i++) {
                 this.random_index = Math.floor(Math.random() * this.choices_sequence.length);
                 this.random_list.push(this.choices_sequence[this.random_index]);
-                this.shuffle_choices[''+part_num][i] = this.choices_sequence[this.random_index];
+                this.shuffle_choices['' + part_num][i] = this.choices_sequence[this.random_index];
                 this.choices_sequence.splice(this.random_index, 1);
                 console.log(i);
                 console.log(this.random_index);
@@ -2778,7 +3014,7 @@ export class TemplateStandardsComponent implements OnInit {
             console.log(this.shuffle_choices);
             this.m_shuffled = true;
         }
-        return (this.shuffle_choices[''+part_num].sort());
+        return (this.shuffle_choices['' + part_num].sort());
     }
 
     unique_m_st(choices: any, part: string) {
@@ -3292,7 +3528,7 @@ export class TemplateStandardsComponent implements OnInit {
         if (part != '') {
             part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
         }
-        const MFRIel: string = "inputFR-" + index;
+        const MFRIel: string = "inputMFR-" + part + "-" + index;
         var dropdown: any = document.getElementById(MFRIel);
         return dropdown.value;
     }
@@ -3317,14 +3553,19 @@ export class TemplateStandardsComponent implements OnInit {
                     this.subtopic_problem_selection = [['']];
                     if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                         setTimeout(() => {
-                            this.plot_graph('', true);
+                            this.plot_graph_gp('', true);
                         }, 500);
                     }
                 }
-                else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                     this.subtopic_problem_selection = [[]];
                     if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                         this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
+                    }
+                    if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                        setTimeout(() => {
+                            this.plot_graph_mgp('', true);
+                        }, 500);
                     }
                 }
                 else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
@@ -3349,14 +3590,19 @@ export class TemplateStandardsComponent implements OnInit {
                         this.subtopic_problem_selection.push(['']);
                         if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                             setTimeout(() => {
-                                this.plot_graph(part, true);
+                                this.plot_graph_gp(part, true);
                             }, 500);
                         }
                     }
-                    else if (['MS', 'O', 'C', 'G', 'IMS'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                    else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                         this.subtopic_problem_selection.push([]);
                         if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                             this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
+                        }
+                        if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                            setTimeout(() => {
+                                this.plot_graph_mgp(part, true);
+                            }, 500);
                         }
                     }
                     else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
