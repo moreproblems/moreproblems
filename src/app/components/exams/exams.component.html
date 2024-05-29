@@ -1993,6 +1993,13 @@
                 class="toggle-button-off" tabindex="0"><b> Algebra I </b></button>
             </label>
             <label class="switch">
+              <input type="checkbox" value="Algebra2">
+              <button *ngIf="selected_subject == 'Algebra2'" (click)="select_subject('Algebra2'); scroll(chooseSubject)"
+                class="toggle-button-on" tabindex="0"><b> Algebra II </b></button>
+              <button *ngIf="selected_subject != 'Algebra2'" (click)="select_subject('Algebra2'); scroll(chooseSubject)"
+                class="toggle-button-off" tabindex="0"><b> Algebra II </b></button>
+            </label>
+            <label class="switch">
               <input type="checkbox" value="Biology">
               <button *ngIf="selected_subject == 'Biology'" (click)="select_subject('Biology'); scroll(chooseSubject)"
                 class="toggle-button-on" tabindex="0"><b> Biology </b></button>
@@ -2012,6 +2019,13 @@
                 class="toggle-button-on" tabindex="0"><b> English II </b></button>
               <button *ngIf="selected_subject != 'English2'" (click)="select_subject('English2'); scroll(chooseSubject)"
                 class="toggle-button-off" tabindex="0"><b> English II </b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" value="Geometry">
+              <button *ngIf="selected_subject == 'Geometry'" (click)="select_subject('Geometry'); scroll(chooseSubject)"
+                class="toggle-button-on" tabindex="0"><b> Geometry </b></button>
+              <button *ngIf="selected_subject != 'Geometry'" (click)="select_subject('Geometry'); scroll(chooseSubject)"
+                class="toggle-button-off" tabindex="0"><b> Geometry </b></button>
             </label>
             <label class="switch">
               <input type="checkbox" value="PSAT">
@@ -8470,6 +8484,15 @@
             <br #algebra1 />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('TN20HSA1'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSA1')" src="./assets/flags/TN.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSA1') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span><b>Tennessee TCAP 2020</b> Algebra I Practice Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('TX22HSA1'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('TX22HSA1')" src="./assets/flags/TX.png"
@@ -8522,10 +8545,34 @@
               </button>
             </div>
           </div>
+          <div *ngSwitchCase="'Algebra2'" class="subcontent" style="margin-top: 0px">
+            <br #algebra2 />
+            <input type="hidden" #selection>
+            <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('TN20HSA2'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSA2')" src="./assets/flags/TN.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSA2') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span><b>Tennessee TCAP 2020</b> Algebra II Practice Exam</span>
+              </button>
+            </div>
+          </div>
           <div *ngSwitchCase="'Biology'" class="subcontent" style="margin-top: 0px">
             <br #biology />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('TN20HSB'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSB')" src="./assets/flags/TN.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSB') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span><b>Tennessee TCAP 2020</b> Biology Practice Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('TX22HSB'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('TX22HSB')" src="./assets/flags/TX.png"
@@ -8582,6 +8629,15 @@
             <br #english1 />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('TN20HSE1'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSE1')" src="./assets/flags/TN.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSE1') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span><b>Tennessee TCAP 2020</b> English I Practice Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('TX22HSE1'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('TX22HSE1')" src="./assets/flags/TX.png"
@@ -8638,6 +8694,15 @@
             <br #english2 />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('TN20HSE2'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSE2')" src="./assets/flags/TN.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSE2') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span><b>Tennessee TCAP 2020</b> English II Practice Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('TX22HSE2'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('TX22HSE2')" src="./assets/flags/TX.png"
@@ -8689,6 +8754,21 @@
                 <span><b>Texas STAAR 2017</b> English II Exam</span>
               </button>
             </div>
+          </div>
+          <div *ngSwitchCase="'Geometry'" class="subcontent" style="margin-top: 0px">
+            <br #geometry />
+            <input type="hidden" #selection>
+            <div class="card-container" style="max-width: 100%">
+                <button class="card card-small" (click)="select_exam('TN20HSG'); scroll_top()" tabindex="0"
+                  style="display: flex; flex-direction: row; align-items: center">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSG')" src="./assets/flags/TN.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('TN20HSG') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                  </span>
+                  <span><b>Tennessee TCAP 2020</b> Geometry Practice Exam</span>
+                </button>
+              </div>
           </div>
           <div *ngSwitchCase="'PSAT'" class="subcontent" style="margin-top: 0px">
             <br #science />
@@ -8878,6 +8958,15 @@
             <br #usHistory />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('TN20HSUSH'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSUSH')" src="./assets/flags/TN.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSUSH') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span><b>Tennessee TCAP 2020</b> U.S. History Practice Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('TX22HSUSH'); scroll_top()" tabindex="0"
                 style="display: flex; flex-direction: row; align-items: center">
                 <img *ngIf="!authService.userData || !favorite_set.includes('TX22HSUSH')" src="./assets/flags/TX.png"
@@ -16374,6 +16463,15 @@
               class="toggle-button-off" tabindex="0">Grade
               <b>8</b></button>
           </label>
+          <label class="switch">
+            <input type="checkbox" value="HS">
+            <button *ngIf="selected_grade == 'HS'" (click)="select_grade('HS'); scroll(chooseExam)"
+              class="toggle-button-on" tabindex="0">
+              <b>High School</b></button>
+            <button *ngIf="selected_grade != 'HS'" (click)="select_grade('HS'); scroll(chooseExam)"
+              class="toggle-button-off" tabindex="0">
+              <b>High School</b></button>
+          </label>
         </div>
         <br />
       </div>
@@ -16628,6 +16726,78 @@
                   style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
                 </span>
                 <span>Tennessee TCAP Grade 8 <b>Social Studies</b> Practice Exam</span>
+              </button>
+            </div>
+          </div>
+          <div *ngSwitchCase="'HS'" class="subcontent">
+            <h2 style="margin-bottom: 0px">Choose Your Exam</h2>
+            <br #grade8 />
+            <h3>High School</h3>
+            <br />
+            <input type="hidden" #selection>
+            <div class="card-container" style="max-width: 100%">
+              <button class="card card-small" (click)="select_exam('TN20HSA1'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSA1')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSA1') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Tennessee TCAP High School <b>Algebra I</b> Practice Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('TN20HSA2'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSA2')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSA2') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Tennessee TCAP High School <b>Algebra II</b> Practice Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('TN20HSB'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSB')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSB') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Tennessee TCAP High School <b>Biology</b> Practice Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('TN20HSE1'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSE1')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSE1') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Tennessee TCAP High School <b>English I</b> Practice Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('TN20HSE2'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSE2')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSE2') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Tennessee TCAP High School <b>English II</b> Practice Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('TN20HSG'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSG')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSG') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Tennessee TCAP High School <b>Geometry</b> Practice Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('TN20HSUSH'); scroll_top()" tabindex="0"
+                style="display: flex; flex-direction: row; align-items: center">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN20HSUSH')" src="./assets/icons/select.png"
+                  style="height: 20px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN20HSUSH') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span>Tennessee TCAP High School <b>U.S. History</b> Practice Exam</span>
               </button>
             </div>
           </div>
