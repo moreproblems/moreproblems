@@ -1716,6 +1716,136 @@ export class TemplateKeyComponent implements OnInit {
         console.log('plot graph');
     }
 
+    plot_graph_s(part: string, subtop: boolean) {
+        var myPlot: any = document.getElementById('myPlot');
+        var x = [];
+        var y = [];
+        var z1 = [];
+        var z2 = [];
+        for (let i = -250; i <= 250; i++) {
+            x.push(i);
+        }
+        for (let i = -250; i <= 250; i++) {
+            y.push(i);
+        }
+        for (let i = 0; i < y.length; i++) {
+            var temp = [];
+            for (let j = 0; j < x.length; j++) {
+                temp.push(0.0);
+            }
+            z1.push(temp);
+        }
+        for (let i = 0; i < y.length; i++) {
+            var temp = [];
+            for (let j = 0; j < x.length; j++) {
+                temp.push(0.0);
+            }
+            z2.push(temp);
+        }
+        var map: any = {
+            x: x,
+            y: y,
+            z: z1,
+            type: 'heatmap',
+            autorange: false,
+            colorscale: [[0, 'rgba(0, 0, 0, 0)'], [1, 'rgba(0, 0, 0, 0)']],
+            xgap: 1,
+            ygap: 1,
+            hoverinfo: "x+y",
+            showscale: false
+        }
+        var sub: any = {
+            x: x,
+            y: y,
+            z: z2,
+            type: 'heatmap',
+            autorange: false,
+            colorscale: [[0, 'rgba(0, 0, 0, 0)'], [1, 'rgba(128, 128, 128, 0.75)']],
+            xgap: 1,
+            ygap: 1,
+            hoverinfo: false,
+            showscale: false
+        }
+        var layout: any = {
+            dragmode: false,
+            margin: {
+                l: 20,
+                t: 10,
+                r: 10,
+                b: 30
+            },
+            xaxis: {
+                range: [-1, 15],
+                showgrid: true,
+                ticks: 'inside',
+                zeroline: false,
+                zerolinewidth: 2,
+                gridwidth: 1,
+                gridcolor: '#000',
+                dtick: 1,
+                tick0: 0.5,
+                tickcolor: '#000'
+            },
+            yaxis: {
+                range: [-1, 15],
+                showgrid: true,
+                ticks: 'inside',
+                zeroline: false,
+                zerolinewidth: 2,
+                gridwidth: 1,
+                gridcolor: '#000',
+                dtick: 1,
+                tick0: 0.5,
+                tickcolor: '#000'
+            }
+        };
+        var config = {
+            hoverinfo: false,
+            displayModeBar: false,
+            scrollZoom: false,
+            responsive: false,
+            editSelection: false
+        };
+        Plotly.newPlot('myPlot', [map, sub], layout, config);
+        myPlot.on('plotly_click', (data: any) => {
+            var grid = data.points.filter((obj: any) => {
+                return obj.curveNumber === 0;
+            })
+            var points = data.points.filter((obj: any) => {
+                return obj.curveNumber === 1;
+            })
+            // console.log("Selected Point: (" + grid[0].x + ", " + grid[0].y +")");
+            var point_shaded = false;
+            console.log(sub.z[sub.y.indexOf(+points[0].y)][sub.x.indexOf(+points[0].x)]);
+            var shade = sub.z[sub.y.indexOf(+points[0].y)][sub.x.indexOf(+points[0].x)];
+            if (shade == 1) {
+                point_shaded = true;
+                console.log('unshade');
+                sub.z[sub.y.indexOf(+points[0].y)][sub.x.indexOf(+points[0].x)] = 0.0;
+                Plotly.redraw('myPlot');
+                // if (subtop) {
+                //     this.attempt_mgp_st_problem(+points[0].x, +points[0].y, part);
+                // }
+                // else {
+                //     this.attempt_mgp_problem(+points[0].x, +points[0].y, part);
+                // }
+            }
+            else if (shade == 0) {
+                console.log('shade');
+                sub.z[sub.y.indexOf(+points[0].y)][sub.x.indexOf(+points[0].x)] = 1.0;
+                Plotly.redraw('myPlot');
+                // if (subtop) {
+                //     this.attempt_mgp_st_problem(+grid[0].x, +grid[0].y, part);
+                // }
+                // else {
+                //     this.attempt_mgp_problem(+grid[0].x, +grid[0].y, part);
+                // }
+            }
+        })
+        Plotly.redraw('myPlot');
+        console.log('plot graph');
+    }
+
     select_part(part: string) {
         this.router.navigateByUrl('/exam/' + part + '/key');
         this.data_loaded = false;
@@ -4425,11 +4555,16 @@ export class TemplateKeyComponent implements OnInit {
             this.m_selection = [["", ""]];
             this.m_submission = [{}];
             this.c_submission = [{}];
-            if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
+            if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP', 'S'].includes(this.exam_dump[this.problem_number].Type)) {
                 this.problem_selection = [['']];
                 if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
                     setTimeout(() => {
                         this.plot_graph_gp('', false);
+                    }, 500);
+                }
+                if (['S'].includes(this.exam_dump[this.problem_number].Type)) {
+                    setTimeout(() => {
+                        this.plot_graph_s('', false);
                     }, 500);
                 }
             }

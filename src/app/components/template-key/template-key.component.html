@@ -2255,6 +2255,11 @@
                   </div>
                 </div>
               </div>
+              <div *ngIf="prob.value.Type == 'S'" style="width: 90%">
+                <div style="min-height: 50px; height: auto; padding: 10px; margin: auto; align-items: center">
+                  <div id="myPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" [style.height.px]="this.myPlot.offsetWidth" #myPlot></div>
+                </div>
+              </div>
               <div *ngIf="prob.value.Type == 'LP'" style="width: 90%">
                 <div style="min-height: 50px; max-height: 100px; padding: 10px; margin: auto; align-items: center">
                   <div style="display: flex; justify-content: space-between">
