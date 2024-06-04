@@ -27,6 +27,11 @@ const confettiHandler = confetti.create(confettiCanvas, {
 @Injectable()
 export class SignupComponent implements OnInit, AfterViewInit {
   // title = 'More Problems';
+
+  screenHeight = window.innerHeight;
+  screenWidth = window.innerWidth;
+  mobileWidth = 1000;
+
   iti: any;
   user: any;
   phone: string = "";
@@ -41,6 +46,11 @@ export class SignupComponent implements OnInit, AfterViewInit {
   @ViewChild('userPhone') userPhone: ElementRef;
 
   constructor(private titleService: Title, private meta: Meta, public authService: AuthService, public router: Router, private afAuth: AngularFireAuth) { }
+
+  width_change2() {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+  }
 
   set_user_role(role: string) {
     if (this.user_role != role) {

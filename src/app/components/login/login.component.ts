@@ -28,6 +28,11 @@ import 'node_modules/intl-tel-input/build/css/intlTelInput.css';
 @Injectable()
 export class LoginComponent implements OnInit {
   // title = 'More Problems';
+
+  screenHeight = window.innerHeight;
+  screenWidth = window.innerWidth;
+  mobileWidth = 1000;
+
   iti: any;
   user: any;
   phone: string = "";
@@ -42,6 +47,11 @@ export class LoginComponent implements OnInit {
   @ViewChild('userPhone') userPhone: ElementRef;
 
   constructor(private titleService: Title, private meta: Meta, public authService: AuthService, public router: Router, private afAuth: AngularFireAuth) { }
+
+  width_change2() {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+  }
 
   toggle_login_method(mthd: string) {
     if (this.login_method != mthd) {
