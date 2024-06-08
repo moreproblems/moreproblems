@@ -11,7 +11,7 @@ import { Meta } from '@angular/platform-browser';
 
 @Injectable()
 export class AppComponent implements OnInit{
-  title = 'MoreProblems';
+  title = 'More+Problems!';
 
   public screenWidth = window.innerWidth;
   public screenHeight = window.innerHeight;
