@@ -1441,7 +1441,10 @@
             <div style="margin: 0 5px">
               <img src="./assets/flags/US.png" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 17px">
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
+              <b> All United States Exams </b> <br /> (including The SAT)
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 15px">
               <b> All United States Exams </b> <br /> (including The SAT)
             </div>
           </button>
@@ -1451,7 +1454,10 @@
             <div style="margin: 0 5px">
               <img src="./assets/flags/US.png" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 17px">
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
+              <b> All United States Exams </b> <br /> (including The SAT)
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 15px">
               <b> All United States Exams </b> <br /> (including The SAT)
             </div>
           </button>

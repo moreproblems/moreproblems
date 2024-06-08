@@ -498,8 +498,11 @@
             <div style="margin: 0 5px">
               <img src="./assets/flags/US.png" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> U.S. Common Core </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
+              <b> U.S. Common </b> Core
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 15px">
+              <b> U.S. Common </b> Core
             </div>
           </button>
           <button *ngIf="selected_curriculum != 'CC'" (click)="select_curriculum('CC'); scroll(chooseGrade)"
@@ -508,11 +511,46 @@
             <div style="margin: 0 5px">
               <img src="./assets/flags/US.png" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> U.S. Common Core </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
+              <b> U.S. Common </b> Core
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 15px">
+              <b> U.S. Common </b> Core
             </div>
           </button>
         </label>
+        <label class="switch" style="max-width: 500px; width: auto">
+          <input type="checkbox" value="SAT">
+          <button *ngIf="selected_curriculum == 'SAT'" (click)="select_curriculum('SAT'); scroll_top()" class="toggle-button-on"
+            tabindex="0" style="display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto; height: 64px">
+            <div style="margin: 0 5px">
+              <img src="./assets/media/SAT.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
+              <b> SAT </b> Suite
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 15px">
+              <b> SAT </b> Suite
+            </div>
+          </button>
+          <button *ngIf="selected_curriculum != 'SAT'" (click)="select_curriculum('SAT'); scroll(chooseGrade)"
+            class="toggle-button-off" tabindex="0"
+            style="display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto; height: 64px">
+            <div style="margin: 0 5px">
+              <img src="./assets/media/SAT.png" style="padding: 5px 0 0; height: 25px">
+            </div>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
+              <b> SAT </b> Suite
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 15px">
+              <b> SAT </b> Suite
+            </div>
+          </button>
+        </label>
+      </div>
+      <br />
+      <input type="hidden" value="" #state>
+      <div class="card-container" style="max-width: 100%; margin-top: 0px">
         <label class="switch" style="max-width: 500px; width: auto">
           <input type="checkbox" value="FL">
           <button *ngIf="selected_curriculum == 'FL'" (click)="select_curriculum('FL'); scroll_top()" class="toggle-button-on"
@@ -520,18 +558,24 @@
             <div style="margin: 0 5px">
               <img src="./assets/flags/FL.png" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> Florida B.E.S.T </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+              <b> Florida </b> B.E.S.T.
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 14px; line-height: 18px">
+              <b> Florida </b> <br /> B.E.S.T.
             </div>
           </button>
           <button *ngIf="selected_curriculum != 'FL'" (click)="select_curriculum('FL'); scroll(chooseGrade)"
             class="toggle-button-off" tabindex="0"
             style="display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto; height: 64px">
-            <div style="margin: 0 5px">
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
               <img src="./assets/flags/FL.png" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> Florida B.E.S.T. </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+              <b> Florida </b> B.E.S.T.
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 14px; line-height: 18px">
+              <b> Florida </b> <br /> B.E.S.T.
             </div>
           </button>
         </label>
@@ -542,18 +586,24 @@
             <div style="margin: 0 5px">
               <img src="./assets/flags/NY.png" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> New York Next Generation </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+              <b> New York </b> Next Generation
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 14px; line-height: 18px">
+              <b> New York </b> <br /> Next Generation
             </div>
           </button>
           <button *ngIf="selected_curriculum != 'NY'" (click)="select_curriculum('NY'); scroll(chooseGrade)"
             class="toggle-button-off" tabindex="0"
             style="display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto; height: 64px">
-            <div style="margin: 0 5px">
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
               <img src="./assets/flags/NY.png" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> New York Next Generation </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+              <b> New York </b> Next Generation
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 14px; line-height: 18px">
+              <b> New York </b> <br /> Next Generation
             </div>
           </button>
         </label>
@@ -564,18 +614,24 @@
             <div style="margin: 0 5px">
               <img src="./assets/flags/PA.png" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> Pennsylvania Core </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+              <b> Pennsylvania </b> Core
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 14px; line-height: 18px">
+              <b> Pennsylvania </b> <br /> Core
             </div>
           </button>
           <button *ngIf="selected_curriculum != 'PA'" (click)="select_curriculum('PA'); scroll(chooseGrade)"
             class="toggle-button-off" tabindex="0"
             style="display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto; height: 64px">
-            <div style="margin: 0 5px">
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
               <img src="./assets/flags/PA.png" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> Pennsylvania Core </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+              <b> Pennsylvania </b> Core
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 14px; line-height: 18px">
+              <b> Pennsylvania </b> <br /> Core
             </div>
           </button>
         </label>
@@ -586,18 +642,24 @@
             <div style="margin: 0 5px">
               <img src="./assets/flags/RI.svg" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> Rhode Island Core </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+              <b> Rhode Island </b> Core
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 14px; line-height: 18px">
+              <b> Rhode Island </b> <br /> Core
             </div>
           </button>
           <button *ngIf="selected_curriculum != 'RI'" (click)="select_curriculum('RI'); scroll(chooseGrade)"
             class="toggle-button-off" tabindex="0"
             style="display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto; height: 64px">
-            <div style="margin: 0 5px">
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
               <img src="./assets/flags/RI.svg" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> Rhode Island Core </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+              <b> Rhode Island </b> Core
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 14px; line-height: 18px">
+              <b> Rhode Island </b> <br /> Core
             </div>
           </button>
         </label>
@@ -608,18 +670,24 @@
             <div style="margin: 0 5px">
               <img src="./assets/flags/TN.png" style="padding: 5px 0 0; height: 15px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> Tennessee Standards </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+              <b> Tennessee </b> Standards
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 14px; line-height: 18px">
+              <b> Tennessee </b> <br /> Standards
             </div>
           </button>
           <button *ngIf="selected_curriculum != 'TN'" (click)="select_curriculum('TN'); scroll(chooseGrade)"
             class="toggle-button-off" tabindex="0"
             style="display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto; height: 64px">
-            <div style="margin: 0 5px">
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
               <img src="./assets/flags/TN.png" style="padding: 5px 0 0; height: 15px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> Tennessee Standards </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+              <b> Tennessee </b> Standards
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 14px; line-height: 18px">
+              <b> Tennessee </b> <br /> Standards
             </div>
           </button>
         </label>
@@ -630,18 +698,24 @@
             <div style="margin: 0 5px">
               <img src="./assets/flags/TX.png" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> Texas T.E.K.S. </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+              <b> Texas </b> T.E.K.S.
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 14px; line-height: 18px">
+              <b> Texas </b> <br /> T.E.K.S.
             </div>
           </button>
           <button *ngIf="selected_curriculum != 'TX'" (click)="select_curriculum('TX'); scroll(chooseGrade)"
             class="toggle-button-off" tabindex="0"
             style="display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto; height: 64px">
-            <div style="margin: 0 5px">
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
               <img src="./assets/flags/TX.png" style="padding: 5px 0 0; height: 25px">
             </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px">
-              <b> Texas T.E.K.S. </b>
+            <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+              <b> Texas </b> T.E.K.S.
+            </div>
+            <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 14px; line-height: 18px">
+              <b> Texas </b> <br /> T.E.K.S.
             </div>
           </button>
         </label>
@@ -2454,6 +2528,62 @@
                   tabindex="0"> <b> Mathematics </b></button>
                 <button *ngIf="selected_subject != 'G12M'" (click)="select_subject('G12M'); scroll_top()"
                   class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="selected_curriculum == 'SAT'">
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
+          <!-- <label class="switch">
+            <input type="checkbox" value="PRW">
+            <button *ngIf="selected_grade == 'PRW'" (click)="select_grade('PRW')" class="toggle-button-on" tabindex="0">
+              PSAT <b>Reading & Writing</b></button>
+            <button *ngIf="selected_grade != 'PRW'" routerLink="/standards/PSAT-RW" routerLinkActive="active" (click)="select_grade('PRW')" class="toggle-button-off" tabindex="0">
+              PSAT <b>Reading & Writing</b></button>
+          </label> -->
+          <label class="switch">
+            <input type="checkbox" value="SRW">
+            <button *ngIf="selected_grade == 'SRW'" (click)="select_grade('SRW')" class="toggle-button-on" tabindex="0">
+              SAT <b>Reading & Writing</b></button>
+            <button *ngIf="selected_grade != 'SRW'" routerLink="/standards/SAT-RW" routerLinkActive="active" (click)="select_grade('SRW')" class="toggle-button-off" tabindex="0">
+              SAT <b>Reading & Writing</b></button>
+          </label>
+          <!-- <label class="switch">
+            <input type="checkbox" value="PM">
+            <button *ngIf="selected_grade == 'PM'" (click)="select_grade('PM')" class="toggle-button-on" tabindex="0">
+              PSAT <b>Math</b></button>
+            <button *ngIf="selected_grade != 'PM'" routerLink="/standards/PSAT-M" routerLinkActive="active" (click)="select_grade('PM')" class="toggle-button-off" tabindex="0">
+              PSAT <b>Math</b></button>
+          </label> -->
+          <label class="switch">
+            <input type="checkbox" value="SM">
+            <button *ngIf="selected_grade == 'SM'" (click)="select_grade('SM')" class="toggle-button-on" tabindex="0">
+              SAT <b>Math</b></button>
+            <button *ngIf="selected_grade != 'SM'" routerLink="/standards/SAT-M" routerLinkActive="active" (click)="select_grade('SM')" class="toggle-button-off" tabindex="0">
+              SAT <b>Math</b></button>
+          </label>
+        </div>
+        <br />
+        <div
+          *ngIf="subject_name == '' || (subject_name == 'Ninth Grade Mathematics' && selected_category == '') || (subject_name == 'Tenth Grade Mathematics' && selected_category == '') || (subject_name == 'Eleventh Grade Mathematics' && selected_category == '') || (subject_name == 'Twelfth Grade Mathematics' && selected_category == '')"
+          class="content" role="main" [ngSwitch]="selected_grade" style="margin-bottom: 0px">
+          <!-- Kindergarten Standards -->
+          <div *ngSwitchCase="'K'" class="subcontent">
+            <!-- Subject Selector -->
+            <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+            <br />
+            <input type="hidden" #subject>
+            <div class="card-container" style="max-width: 100%; margin-top: 0px">
+              <label class="switch">
+                <input type="checkbox" value="KM">
+                <button routerLink="/standards/KM-RI" routerLinkActive="active"
+                  (click)="select_subject('KM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+              </label>
+              <label class="switch">
+                <input type="checkbox" value="KE">
+                <button routerLink="/standards/KE-RI" routerLinkActive="active"
+                  (click)="select_subject('KE')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
               </label>
             </div>
           </div>
