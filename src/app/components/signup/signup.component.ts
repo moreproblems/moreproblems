@@ -199,7 +199,7 @@ export class SignupComponent implements OnInit, AfterViewInit {
     this.titleService.setTitle("Sign Up For MoreProblems.Org | U.S. K-12 State Testing Preparation");
     // this.meta.updateTag({ name: 'description', content: "" });
     setTimeout(() => {
-      this.authService.AuthRoute();
+      this.authService.AuthRoute('profile');
     }, 250);
     this.windowRef = this.win.windowRef;
     this.verify = JSON.parse(localStorage.getItem('verificationId') || '{}');

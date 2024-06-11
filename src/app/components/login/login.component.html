@@ -149,6 +149,7 @@
     min-height: 16px;
     width: 210px;
     border-radius: 8px;
+    background-color: #ccc;
   }
 
   .card.card-small span {
@@ -160,6 +161,7 @@
     width: 80%;
     border-radius: 8px;
     padding: 20px;
+    background-color: #eee;
   }
 
   .card.card-medium:hover {
@@ -488,7 +490,7 @@
           <div class="card-container" style="align-items: center; margin-top: 0px">
             <label class="switch">
               <input type="checkbox" value="google">
-              <button *ngIf="login_method != 'google'" (click)="toggle_login_method('google'); authService.GoogleAuthLogin()"
+              <button *ngIf="login_method != 'google'" (click)="toggle_login_method('google'); authService.GoogleAuthLogin('home')"
                 class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
@@ -496,7 +498,7 @@
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Google </b></div>
               </button>
-              <button *ngIf="login_method == 'google'" (click)="authService.GoogleAuthLogin()" class="toggle-button-on"
+              <button *ngIf="login_method == 'google'" (click)="authService.GoogleAuthLogin('home')" class="toggle-button-on"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
                   <img src="./assets/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
@@ -556,7 +558,7 @@
               <p><span (click)="reset_password()">Can't remember your login? <b>Reset Password</b></span></p>
               <br />
               <div class="formGroup">
-                <button class="grade-button" (click)="authService.SignIn(userName.value, userPassword.value)"
+                <button class="grade-button" (click)="authService.SignIn('home', userName.value, userPassword.value)"
                   style="margin: auto"> <b>Log In</b> </button>
               </div>
             </div>

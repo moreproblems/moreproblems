@@ -70,7 +70,7 @@ export class AuthService {
   }
 
   // Sign in with email/password
-  SignIn(email: string, password: string) {
+  SignIn(route: string, email: string, password: string) {
     return this.afAuth
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
@@ -80,7 +80,9 @@ export class AuthService {
         // this.setUserLoggedIn(result.user);
         this.afAuth.authState.subscribe((user) => {
           if (user) {
-            this.router.navigate(['profile']);
+            if (route != '') {
+              this.router.navigate([route]);
+            }
           }
         });
       })
@@ -90,7 +92,7 @@ export class AuthService {
   }
 
   // // Sign in with phone number
-  // SignInPhone(phone: string, win: WindowService) {
+  // SignInPhone(route: string, phone: string, win: WindowService) {
   //   return this.afAuth
   //     .signInWithPhoneNumber(phone, win.windowRef.recapthcaVerifier)
   //     .then(confirmationResult) => {
@@ -98,20 +100,25 @@ export class AuthService {
   //       this.setUserLoggedIn(result.user);
   //     this.afAuth.authState.subscribe(user) => {
   //       if (user) {
-  //         this.router.navigate(['profile']);
+  //         if (route != '') {
+  //           this.router.navigate([route]);
+  //         }
   //       }
-  //     }}
+  //     }
+  //   }
   // }
 
   // Sign up with email/password
-  SignUp(email: string, password: string, role: string) {
+  SignUp(route: string, email: string, password: string, role: string) {
     return this.afAuth
       .createUserWithEmailAndPassword(email, password)
       .then((result) => {
         /* Call the SendVerificaitonMail() function when new user sign 
         up and returns promise */
         this.SendVerificationMail();
-        this.router.navigate(['profile']);
+        if (route != '') {
+          this.router.navigate([route]);
+        }
         this.WriteUserData(result.user, role);
         this.SetUserData(result.user);
         // this.setUserLoggedIn(result.user);
@@ -149,9 +156,11 @@ export class AuthService {
   }
 
   // Sign in with Google
-  GoogleAuthLogin() {
+  GoogleAuthLogin(route: string) {
     return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
-      this.router.navigate(['profile']);
+      if (route != '') {
+        this.router.navigate([route]);
+      }
     });
   }
 
@@ -191,23 +200,27 @@ export class AuthService {
       });
   }
 
-  AuthRoute() {
+  AuthRoute(route: string) {
     this.afAuth.onAuthStateChanged(user => {
       if (user) {
-        this.router.navigate(['profile']);
+        if (route != '') {
+          this.router.navigate([route]);
+        }
       }
     });
   }
 
   // Sign in with Google
-  GoogleAuthSignup(role: string) {
-    return this.AuthSignup(new auth.GoogleAuthProvider(), role).then((res: any) => {
-      this.router.navigate(['profile']);
+  GoogleAuthSignup(route: string, role: string) {
+    return this.AuthSignup(route, new auth.GoogleAuthProvider(), role).then((res: any) => {
+      if (route != '') {
+        this.router.navigate([route]);
+      }
     });
   }
 
   // Auth logic to run auth providers
-  AuthSignup(provider: any, role: string) {
+  AuthSignup(route: string, provider: any, role: string) {
     return this.afAuth
       // .signInWithRedirect(provider)
       // .then(() => {
@@ -218,7 +231,9 @@ export class AuthService {
       .then((result) => {
         this.WriteUserData(result.user, role).then (() => {
           this.SetUserData(result.user);
-          this.router.navigate(['profile']);
+          if (route != '') {
+            this.router.navigate([route]);
+          }
         });
         // this.setUserLoggedIn(result.user);
       })

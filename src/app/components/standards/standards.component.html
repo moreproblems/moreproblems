@@ -149,6 +149,7 @@
     min-height: 16px;
     width: 210px;
     border-radius: 8px;
+    background-color: #ccc;
   }
 
   .card.card-medium {
@@ -156,6 +157,7 @@
     width: 80%;
     border-radius: 8px;
     padding: 20px;
+    background-color: #eee;
   }
 
   .card.card-medium:hover {
@@ -470,7 +472,7 @@
   <div class="content-menu" role="main" style="margin-bottom: 0; align-items: center">
     <br *ngIf="selected_grade == '' && selected_subject == ''" />
     <div *ngIf="selected_grade == '' && selected_subject == ''" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2 *ngIf="screenWidth > mobileWidth" style="font-weight: 400; font-size: 24.5px; line-height: 30px"> Find out what to expect as a student from this year's instruction, all the way down to specific standards. Subjects include Math & English Language Arts from Kindergarten through High School - as they are outlined by the curriculum of specific states. </h2>
       <h2 *ngIf="screenWidth <= mobileWidth" style="font-weight: 400; font-size: 18.5px; line-height: 24px"> Find out what to expect as a student from this year's instruction, all the way down to specific standards. Subjects include Math & English Language Arts from Kindergarten through High School - as they are outlined by the curriculum of specific states. </h2>
@@ -484,7 +486,7 @@
     <br *ngIf="selected_subject == '' || (selected_subject == 'G9M' && selected_category == '') || (selected_subject == 'G10M' && selected_category == '') || (selected_subject == 'G11M' && selected_category == '') || (selected_subject == 'G12M' && selected_category == '')" />
     <div
       *ngIf="selected_subject == '' || (selected_subject == 'G9M' && selected_category == '') || (selected_subject == 'G10M' && selected_category == '') || (selected_subject == 'G11M' && selected_category == '') || (selected_subject == 'G12M' && selected_category == '')"
-      class="card card-large" style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      class="card card-large" style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <!-- Standards Selector -->
       <br />
       <h2 style="margin-bottom: 0px"> Choose Your Curriculum </h2>
@@ -3552,7 +3554,7 @@
       </div>
     </div>
     <br />
-    <div *ngIf="selected_curriculum == 'CC' && ['G9M', 'G10M', 'G11M', 'G12M'].includes(selected_subject)" class="card card-large" style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+    <div *ngIf="selected_curriculum == 'CC' && ['G9M', 'G10M', 'G11M', 'G12M'].includes(selected_subject)" class="card card-large" style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <div class="subcontent" style="text-align: center">
         <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 30px"> The high school standards specify the
@@ -3598,7 +3600,7 @@
         <br />
       </div>
     </div>
-    <div *ngIf="selected_curriculum == 'RI' && ['G9M', 'G10M', 'G11M', 'G12M'].includes(selected_subject)" class="card card-large" style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+    <div *ngIf="selected_curriculum == 'RI' && ['G9M', 'G10M', 'G11M', 'G12M'].includes(selected_subject)" class="card card-large" style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <div class="subcontent" style="text-align: center">
         <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 30px"> The high school standards specify the

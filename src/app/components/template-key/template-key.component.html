@@ -149,6 +149,7 @@
     min-height: 16px;
     width: 210px;
     border-radius: 8px;
+    background-color: #ccc;
   }
 
   .card.card-small span {
@@ -160,6 +161,7 @@
     width: 80%;
     border-radius: 8px;
     padding: 20px;
+    background-color: #eee;
   }
 
   .card.card-medium:hover {
@@ -700,7 +702,7 @@
                     (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
                     style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
                     <button class="topic-button"
-                      style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey">
+                      style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey; background-color: #ccc">
                       <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
                       <span
                         *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
@@ -901,7 +903,7 @@
                           <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                             <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                           </select>
-                          <div *ngIf="word.startsWith(':FR')" class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                          <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                             <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR--{{word[4]}}" #inputMFRST></textarea>
                             <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()"
                               style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -942,7 +944,7 @@
                         <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                           <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                         </select>
-                        <div *ngIf="word.startsWith(':FR')" class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                        <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                           <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR--{{word[4]}}" #inputMFRST></textarea>
                           <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()"
                             style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -960,7 +962,7 @@
                 </div>
               </div>
               <br />
-              <div *ngIf="prob.value.Explain" class="card card-small" style="min-height: 100px; width: min(750px, 90%); padding: 10px; margin: auto; align-items: center; flex-direction: column;">
+              <div *ngIf="prob.value.Explain" class="card card-medium" style="min-height: 100px; width: min(750px, 90%); padding: 10px; margin: auto; align-items: center; flex-direction: column;">
                 <textarea
                     rows="2" maxlength="400" placeholder="Show your work or explain your answer here"
                     style="margin: auto; padding-top: 10px; padding-left: 10px; width: 90%; height: 75px; font-size: 18px; line-height: 22px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1017,7 +1019,7 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'FR'" style="width: 90%">
-                <div class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
+                <div class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
                   <textarea
                       rows="1" maxlength="20" placeholder="Final Answer"
                       style="margin: 10px auto; padding: 10px; width: min(80%, 200px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1028,7 +1030,7 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'SR'" style="width: 90%">
-                <div *ngIf="screenWidth > mobileWidth" class="card card-small" style="min-height: 50px; width: auto; max-width: 90%; height: auto; padding: 10px; margin: auto; align-items: center">
+                <div *ngIf="screenWidth > mobileWidth" class="card card-medium" style="min-height: 50px; width: auto; max-width: 90%; height: auto; padding: 10px; margin: auto; align-items: center">
                   <textarea
                       rows="1" maxlength="150" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px; width: min(90%, 800px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1037,7 +1039,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="2" maxlength="150" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1046,7 +1048,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="3" maxlength="150" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1057,7 +1059,7 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'LR'" style="width: 90%">
-                <div *ngIf="screenWidth > mobileWidth" class="card card-small" style="min-height: 50px; width: auto; max-width: 1200px; height: auto; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth > mobileWidth" class="card card-medium" style="min-height: 50px; width: auto; max-width: 1200px; height: auto; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="20" maxlength="1500" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1066,7 +1068,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="30" maxlength="1500" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1075,7 +1077,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="45" maxlength="1500" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1086,7 +1088,7 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'MC'">
-                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-medium"
                   (click)="selection.value = choice.key; attempt_mc_st_problem(choice.key, ''); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
@@ -1116,7 +1118,7 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'MS' && (prob.value.Parts | keys).length == 0">
-                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-medium"
                   (click)="attempt_ms_st_problem(choice.key, ''); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
@@ -1401,7 +1403,7 @@
                       <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                         <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                       </select>
-                      <div *ngIf="word.startsWith(':FR')" class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                      <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                         <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFRST></textarea>
                         <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()"
                           style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -1442,7 +1444,7 @@
                     <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                       <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                     </select>
-                    <div *ngIf="word.startsWith(':FR')" class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                    <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                       <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFRST></textarea>
                       <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()"
                         style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -1515,7 +1517,7 @@
                 </div>
               </div>
               <div *ngIf="part.value.Type == 'FR'" style="width: 90%">
-                <div class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
+                <div class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
                   <textarea
                       rows="1" maxlength="20" placeholder="Final Answer"
                       style="margin: 10px auto; padding: 10px; width: min(80%, 200px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1526,7 +1528,7 @@
                 </div>
               </div>
               <div *ngIf="part.value.Type == 'SR'" style="width: 90%">
-                <div *ngIf="screenWidth > mobileWidth" class="card card-small" style="min-height: 50px; width: auto; max-width: 90%; height: auto; padding: 10px; margin: auto; align-items: center">
+                <div *ngIf="screenWidth > mobileWidth" class="card card-medium" style="min-height: 50px; width: auto; max-width: 90%; height: auto; padding: 10px; margin: auto; align-items: center">
                   <textarea
                       rows="1" maxlength="150" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px; width: min(90%, 800px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1535,7 +1537,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="2" maxlength="150" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1544,7 +1546,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="3" maxlength="150" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1555,7 +1557,7 @@
                 </div>
               </div>
               <div *ngIf="part.value.Type == 'LR'" style="width: 90%">
-                <div *ngIf="screenWidth > mobileWidth" class="card card-small" style="min-height: 50px; width: auto; max-width: 1200px; height: auto; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth > mobileWidth" class="card card-medium" style="min-height: 50px; width: auto; max-width: 1200px; height: auto; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="20" maxlength="1500" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1564,7 +1566,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="30" maxlength="1500" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1573,7 +1575,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="45" maxlength="1500" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1783,7 +1785,7 @@
         #problemSummaryCard>
         <br />
         <div class="content" style="margin: auto; align-items: center">
-          <h2 *ngIf="this.problem_number > 0" style="color: darkslategrey"> {{exam_state}} {{exam_name}}
+          <h2 *ngIf="this.problem_number > 0" style="padding-bottom: 20px; color: darkslategrey"> {{exam_state}} {{exam_name}}
             {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
           <div class="card card-medium"
             style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
@@ -1839,7 +1841,7 @@
                     (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
                     style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
                     <button class="topic-button"
-                      style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey">
+                      style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey; background-color: #ccc">
                       <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
                       <span
                         *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
@@ -2041,7 +2043,7 @@
                           <select *ngIf="word.startsWith(':DD') && problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputI.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                             <option *ngFor="let choice of get_choices_idd(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                           </select>
-                          <div *ngIf="word.startsWith(':FR')" class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                          <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                             <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR--{{word[4]}}" #inputMFR></textarea>
                             <button class="grade-button" (click)="attempt_mfr_problem(get_MFR(word[4], ''), word[4], ''); scroll_bottom()"
                               style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -2082,7 +2084,7 @@
                         <select *ngIf="word.startsWith(':DD') && problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputI.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                           <option *ngFor="let choice of get_choices_idd(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                         </select>
-                        <div *ngIf="word.startsWith(':FR')" class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                        <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                           <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR--{{word[4]}}" #inputMFR></textarea>
                           <button class="grade-button" (click)="attempt_mfr_problem(get_MFR(word[4], ''), word[4], ''); scroll_bottom()"
                             style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -2101,7 +2103,7 @@
                 </div>
               </div>
               <br />
-              <div *ngIf="prob.value.Explain" class="card card-small" style="min-height: 100px; width: auto; padding: 10px; margin: auto; align-items: center; flex-direction: column;">
+              <div *ngIf="prob.value.Explain" class="card card-medium" style="min-height: 100px; width: auto; padding: 10px; margin: auto; align-items: center; flex-direction: column;">
                 <textarea
                     rows="2" maxlength="400" placeholder="Show your work or explain your answer here"
                     style="margin: auto; padding-top: 10px; padding-left: 10px; width: 90%; height: 75px; font-size: 18px; line-height: 22px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -2284,7 +2286,7 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'FR' && (prob.value.Parts | keys).length == 0" style="width: 90%">
-                <div class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
+                <div class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
                   <textarea
                       rows="1" maxlength="20" placeholder="Final Answer"
                       style="margin: 10px auto; padding: 10px; width: min(80%, 200px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -2295,7 +2297,7 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'SR' && (prob.value.Parts | keys).length == 0" style="width: 90%">
-                <div *ngIf="screenWidth > mobileWidth" class="card card-small" style="min-height: 50px; width: auto; max-width: 90%; height: auto; padding: 10px; margin: auto; align-items: center">
+                <div *ngIf="screenWidth > mobileWidth" class="card card-medium" style="min-height: 50px; width: auto; max-width: 90%; height: auto; padding: 10px; margin: auto; align-items: center">
                   <textarea
                       rows="1" maxlength="150" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px; width: min(90%, 800px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -2304,7 +2306,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="2" maxlength="150" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -2313,7 +2315,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="3" maxlength="150" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -2324,7 +2326,7 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'LR' && (prob.value.Parts | keys).length == 0" style="width: 90%">
-                <div *ngIf="screenWidth > mobileWidth" class="card card-small" style="min-height: 50px; width: auto; max-width: 1200px; height: auto; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth > mobileWidth" class="card card-medium" style="min-height: 50px; width: auto; max-width: 1200px; height: auto; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="20" maxlength="1500" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -2333,7 +2335,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="30" maxlength="1500" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -2342,7 +2344,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="45" maxlength="1500" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -2353,7 +2355,7 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'MC' && (prob.value.Parts | keys).length == 0">
-                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-medium"
                   (click)="selection.value = choice.key; attempt_mc_problem(choice.key, ''); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
@@ -2381,7 +2383,7 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'MS' && (prob.value.Parts | keys).length == 0">
-                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-small"
+                <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" class="card card-medium"
                   (click)="attempt_ms_problem(choice.key, ''); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
@@ -2742,7 +2744,7 @@
                       <select *ngIf="word.startsWith(':DD') && problem_selection[get_part_num(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + problem_selection[get_part_num(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputI.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                         <option *ngFor="let choice of get_choices_idd(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                       </select>
-                      <div *ngIf="word.startsWith(':FR')" class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                      <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                         <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFR></textarea>
                         <button class="grade-button" (click)="attempt_mfr_problem(get_MFR(word[4], part.key), word[4], part.key); scroll_bottom()"
                           style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -2783,7 +2785,7 @@
                     <select *ngIf="word.startsWith(':DD') && problem_selection[get_part_num(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + problem_selection[get_part_num(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputI.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                       <option *ngFor="let choice of get_choices_idd(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                     </select>
-                    <div *ngIf="word.startsWith(':FR')" class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                    <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                       <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFR></textarea>
                       <button class="grade-button" (click)="attempt_mfr_problem(get_MFR(word[4], part.key), word[4], part.key); scroll_bottom()"
                         style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -2977,7 +2979,7 @@
                 </div>
               </div>
               <div *ngIf="part.value.Type == 'FR'" style="width: 90%">
-                <div class="card card-small" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
+                <div class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
                   <textarea
                       rows="1" maxlength="20" placeholder="Final Answer"
                       style="margin: 10px auto; padding: 10px; width: min(80%, 200px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -2988,7 +2990,7 @@
                 </div>
               </div>
               <div *ngIf="part.value.Type == 'SR'" style="width: 90%">
-                <div *ngIf="screenWidth > mobileWidth" class="card card-small" style="min-height: 50px; width: auto; max-width: 90%; height: auto; padding: 10px; margin: auto; align-items: center">
+                <div *ngIf="screenWidth > mobileWidth" class="card card-medium" style="min-height: 50px; width: auto; max-width: 90%; height: auto; padding: 10px; margin: auto; align-items: center">
                   <textarea
                       rows="1" maxlength="150" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px; width: min(90%, 800px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -2997,7 +2999,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="2" maxlength="150" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -3006,7 +3008,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="3" maxlength="150" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -3017,7 +3019,7 @@
                 </div>
               </div>
               <div *ngIf="part.value.Type == 'LR'" style="width: 90%">
-                <div *ngIf="screenWidth > mobileWidth" class="card card-small" style="min-height: 50px; width: auto; max-width: 1200px; height: auto; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth > mobileWidth" class="card card-medium" style="min-height: 50px; width: auto; max-width: 1200px; height: auto; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="20" maxlength="1500" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -3026,7 +3028,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="30" maxlength="1500" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -3035,7 +3037,7 @@
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
-                <div *ngIf="screenWidth <= 500" class="card card-small" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                <div *ngIf="screenWidth <= 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
                   <textarea
                       rows="45" maxlength="1500" placeholder="Final Response"
                       style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"

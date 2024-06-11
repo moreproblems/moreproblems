@@ -149,6 +149,7 @@
     min-height: 16px;
     width: 210px;
     border-radius: 8px;
+    background-color: #ccc;
   }
 
   .card.card-small span {
@@ -160,6 +161,7 @@
     width: 80%;
     border-radius: 8px;
     padding: 20px;
+    background-color: #eee;
   }
 
   .card.card-medium:hover {
@@ -546,7 +548,7 @@
           <div class="card-container" style="align-items: center; margin-top: 0px">
             <label *ngIf="user_role == 'Parent' || user_role == 'Teacher'" class="switch">
               <input type="checkbox" value="google">
-              <button *ngIf="login_method != 'google'" (click)="set_login_method('google'); authService.GoogleAuthSignup(user_role); confetti_light()"
+              <button *ngIf="login_method != 'google'" (click)="set_login_method('google'); authService.GoogleAuthSignup('profile', user_role); confetti_light()"
                 class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
@@ -554,7 +556,7 @@
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Google </b></div>
               </button>
-              <button *ngIf="login_method == 'google'" (click)="authService.GoogleAuthSignup(user_role); confetti_light()" class="toggle-button-on"
+              <button *ngIf="login_method == 'google'" (click)="authService.GoogleAuthSignup('profile', user_role); confetti_light()" class="toggle-button-on"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
                   <img src="./assets/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
@@ -612,7 +614,7 @@
             </div>
             <br />
             <div class="formGroup">
-              <button class="grade-button" (click)="authService.SignUp(userEmail.value, userPassword.value, this.user_role); confetti_light()"
+              <button class="grade-button" (click)="authService.SignUp('profile', userEmail.value, userPassword.value, this.user_role); confetti_light()"
                 style="margin: auto"> <b>Sign Up</b> </button>
             </div>
           </div>

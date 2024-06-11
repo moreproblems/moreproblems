@@ -179,7 +179,7 @@ export class LoginComponent implements OnInit {
     this.titleService.setTitle("Log In To MoreProblems.Org | U.S. K-12 State Testing Preparation");
     // this.meta.updateTag({ name: 'description', content: "" });
     setTimeout(() => {
-      this.authService.AuthRoute();
+      this.authService.AuthRoute('home');
       }, 250);
     this.windowRef = this.win.windowRef;
     this.verify = JSON.parse(localStorage.getItem('verificationId') || '{}');
