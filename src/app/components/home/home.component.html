@@ -1388,7 +1388,7 @@
                   style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
               </div>
               <br />
-              <div *ngIf="part.value.Explain" class="card card-small" style="min-height: 100px; width: min(750px, 90%); padding: 10px; margin: auto; align-items: center; flex-direction: column;">
+              <div *ngIf="part.value.Explain" class="card card-medium" style="min-height: 100px; width: min(750px, 90%); padding: 10px; margin: auto; align-items: center; flex-direction: column;">
                 <textarea
                     rows="2" maxlength="400" placeholder="Show your work or explain your answer here"
                     style="margin: auto; padding-top: 10px; padding-left: 10px; width: 90%; height: 75px; font-size: 18px; line-height: 22px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1514,7 +1514,7 @@
                 </div>
               </div>
               <div *ngIf="part.value.Type == 'MC'">
-                <div *ngFor="let choice of part.value.AnswerChoices | keyvalue" class="card card-small"
+                <div *ngFor="let choice of part.value.AnswerChoices | keyvalue" class="card card-medium"
                   (click)="selection.value = choice.key; attempt_mc_st_problem(choice.key, part.key); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
@@ -1538,7 +1538,7 @@
                 </div>
               </div>
               <div *ngIf="part.value.Type == 'MS'">
-                <div *ngFor="let choice of part.value.AnswerChoices | keyvalue" class="card card-small"
+                <div *ngFor="let choice of part.value.AnswerChoices | keyvalue" class="card card-medium"
                   (click)="attempt_ms_st_problem(choice.key, part.key); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
