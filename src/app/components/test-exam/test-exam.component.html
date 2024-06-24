@@ -741,7 +741,8 @@
                       style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                       <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                         <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content"> 
-                          <span *ngIf="!word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
+                          <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
+                          <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
                           <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
                           <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
                           <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
@@ -781,8 +782,9 @@
                     </div>
                     <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                       style="display: block; white-space: pre-wrap; font-size: 18px">
-                      <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content"> 
-                        <span *ngIf="!word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
+                      <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content">
+                        <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
+                        <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
                         <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
                         <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
                         <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
@@ -909,6 +911,35 @@
                       style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
                       #inputSRST></textarea>
                   <button class="grade-button" (click)="attempt_sr_st_problem(this.inputSRST.value, ''); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+              </div>
+              <div *ngIf="prob.value.Type == 'MR'" style="width: 90%">
+                <div *ngIf="screenWidth > mobileWidth" class="card card-medium" style="min-height: 50px; width: auto; max-width: 1200px; height: auto; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                  <textarea
+                      rows="5" maxlength="450" placeholder="Final Response"
+                      style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputMRST></textarea>
+                  <button class="grade-button" (click)="attempt_mr_st_problem(this.inputMRST.value, ''); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                  <textarea
+                      rows="10" maxlength="450" placeholder="Final Response"
+                      style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputMRST></textarea>
+                  <button class="grade-button" (click)="attempt_mr_st_problem(this.inputMRST.value, ''); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+                <div *ngIf="screenWidth <= 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                  <textarea
+                      rows="20" maxlength="450" placeholder="Final Response"
+                      style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputMRST></textarea>
+                  <button class="grade-button" (click)="attempt_mr_st_problem(this.inputMRST.value, ''); scroll_bottom()"
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
@@ -1116,6 +1147,20 @@
                       <b> Next Problem </b>
                     </button>
                   </div>
+                  <div *ngIf="prob.value.Type == 'MR'">
+                    <h3 *ngIf="subtopic_problem_attempts[0] > 0"
+                      style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; font-size: 20px; color: #1976d2">
+                      <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your response.
+                      <!-- wrong data format, extra KEY -->
+                    </h3>
+                    <br *ngIf="subtopic_problem_attempts[0] > 0 && screenWidth <= mobileWidth" /> <br
+                      *ngIf="subtopic_problem_attempts[0] > 0 && screenWidth <= mobileWidth" />
+                    <button *ngIf="subtopic_problem_attempts[0] > 0 && screenWidth <= mobileWidth"
+                      class="grade-button" (click)="next_problem_st(); scroll_top()"
+                      style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                      <b> Next Problem </b>
+                    </button>
+                  </div>
                   <div *ngIf="prob.value.Type == 'SR'">
                     <h3 *ngIf="(prob.value.AnswerChoices | keys).length == 0 && subtopic_problem_attempts[0] > 0"
                       style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; font-size: 20px; color: #1976d2">
@@ -1179,7 +1224,7 @@
                       <b> Next Problem </b>
                     </button>
                   </div>
-                  <button *ngIf="(subtopic_attempt_response[0].startsWith('Correct') || (prob.value.Type == 'LR' && subtopic_problem_attempts[0] > 0)) && screenWidth > mobileWidth"
+                  <button *ngIf="(subtopic_attempt_response[0].startsWith('Correct') || (['LR', 'MR'].includes(prob.value.Type) && subtopic_problem_attempts[0] > 0)) && screenWidth > mobileWidth"
                     class="grade-button" (click)="next_problem_st(); scroll_top()"
                     style="display: block; max-width: 150px; max-height: 100px; margin: auto">
                     <b> Next Problem </b>
@@ -1240,8 +1285,9 @@
                 <div *ngIf="block.startsWith(':box:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                   style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                   <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
-                    <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content"> 
-                      <span *ngIf="!word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
+                    <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content">
+                      <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
+                      <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
                       <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
                       <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
                       <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
@@ -1282,7 +1328,8 @@
                 <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                   style="display: block; white-space: pre-wrap; font-size: 18px">
                   <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content"> 
-                    <span *ngIf="!word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
+                    <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
+                    <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
                     <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
                     <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
                     <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
@@ -1407,6 +1454,35 @@
                       style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
                       #inputSRST></textarea>
                   <button class="grade-button" (click)="attempt_sr_st_problem(this.inputSRST.value, part.key); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+              </div>
+              <div *ngIf="part.value.Type == 'MR'" style="width: 90%">
+                <div *ngIf="screenWidth > mobileWidth" class="card card-medium" style="min-height: 50px; width: auto; max-width: 1200px; height: auto; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                  <textarea
+                      rows="5" maxlength="450" placeholder="Final Response"
+                      style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputMRST></textarea>
+                  <button class="grade-button" (click)="attempt_mr_st_problem(this.inputMRST.value, part.key); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                  <textarea
+                      rows="10" maxlength="450" placeholder="Final Response"
+                      style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputMRST></textarea>
+                  <button class="grade-button" (click)="attempt_mr_st_problem(this.inputMRST.value, part.key); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+                <div *ngIf="screenWidth <= 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                  <textarea
+                      rows="20" maxlength="450" placeholder="Final Response"
+                      style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputMRST></textarea>
+                  <button class="grade-button" (click)="attempt_mr_st_problem(this.inputMRST.value, part.key); scroll_bottom()"
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
@@ -1544,6 +1620,13 @@
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'LR'">
+                  <h3 *ngIf="subtopic_problem_attempts[(prob.value.Parts | keys).indexOf(part.key)] > 0"
+                    style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; font-size: 20px; color: #1976d2">
+                    <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your response.
+                    <!-- wrong data format, extra KEY -->
+                  </h3>
+                </div>
+                <div *ngIf="part.value.Type == 'MR'">
                   <h3 *ngIf="subtopic_problem_attempts[(prob.value.Parts | keys).indexOf(part.key)] > 0"
                     style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; font-size: 20px; color: #1976d2">
                     <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your response.
@@ -1850,7 +1933,8 @@
                       style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                       <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                         <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content"> 
-                          <span *ngIf="!word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
+                          <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
+                          <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
                           <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
                           <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
                           <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
@@ -1891,7 +1975,8 @@
                     <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                       style="display: block; white-space: pre-wrap; font-size: 18px">
                       <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content"> 
-                        <span *ngIf="!word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
+                        <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
+                        <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
                         <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
                         <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
                         <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
@@ -1926,7 +2011,7 @@
                 </div>
               </div>
               <br />
-              <div *ngIf="prob.value.Explain" class="card card-medium" style="min-height: 100px; width: auto; padding: 10px; margin: auto; align-items: center; flex-direction: column;">
+              <div *ngIf="prob.value.Explain" class="card card-medium" style="min-height: 100px; width: min(750px, 90%); padding: 10px; margin: auto; align-items: center; flex-direction: column;">
                 <textarea
                     rows="2" maxlength="400" placeholder="Show your work or explain your answer here"
                     style="margin: auto; padding-top: 10px; padding-left: 10px; width: 90%; height: 75px; font-size: 18px; line-height: 22px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -1935,7 +2020,7 @@
               <br *ngIf="prob.value.Explain" />
               <input type="hidden" #selection>
               <div *ngIf="prob.value.Type == 'O'">
-                <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
+                <div class="card card-medium" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center">
                   <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 200px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_m_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
@@ -1953,8 +2038,8 @@
                 </div>
                 <br />
                 <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                  <div *ngFor="let choice of unique_choices" style="margin: auto; margin-top: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto"> {{choice.slice(2, choice.length-2)}} </h3>
+                  <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
                     <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 200px; margin: auto">
                       <input type="checkbox">
                       <button (click)="select_m_choice('', 1, '')" *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -1972,7 +2057,7 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'C'">
-                <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
+                <div class="card card-medium" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center">
                   <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 200px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
@@ -1998,8 +2083,8 @@
                 </div>
                 <br />
                 <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                  <div *ngFor="let choice of unique_choices" style="margin: auto; margin-top: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto"> {{choice.slice(2)}} </h3>
+                  <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
                     <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 200px; margin: auto">
                       <input type="checkbox">
                       <button (click)="select_c_choice('', 1, '')" *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -2027,7 +2112,7 @@
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'G'">
-                <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
+                <div class="card card-medium" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center">
                   <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 200px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
@@ -2052,8 +2137,8 @@
                 </div>
                 <br />
                 <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                  <div *ngFor="let choice of unique_choices" style="margin: auto; margin-top: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto"> {{choice.slice(2)}} </h3>
+                  <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
                     <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 200px; margin: auto">
                       <input type="checkbox">
                       <button (click)="select_c_choice('', 1, '')" *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -2139,6 +2224,35 @@
                       style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
                       #inputSR></textarea>
                   <button class="grade-button" (click)="attempt_sr_problem(this.inputSR.value, ''); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+              </div>
+              <div *ngIf="prob.value.Type == 'MR'" style="width: 90%">
+                <div *ngIf="screenWidth > mobileWidth" class="card card-medium" style="min-height: 50px; width: auto; max-width: 1200px; height: auto; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                  <textarea
+                      rows="5" maxlength="450" placeholder="Final Response"
+                      style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputMR></textarea>
+                  <button class="grade-button" (click)="attempt_mr_problem(this.inputMR.value, ''); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                  <textarea
+                      rows="10" maxlength="450" placeholder="Final Response"
+                      style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputMR></textarea>
+                  <button class="grade-button" (click)="attempt_mr_problem(this.inputMR.value, ''); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+                <div *ngIf="screenWidth <= 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                  <textarea
+                      rows="20" maxlength="450" placeholder="Final Response"
+                      style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputMR></textarea>
+                  <button class="grade-button" (click)="attempt_mr_problem(this.inputMR.value, ''); scroll_bottom()"
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
@@ -2425,6 +2539,13 @@
                       <!-- wrong data format, extra KEY -->
                     </h3>
                   </div>
+                  <div *ngIf="prob.value.Type == 'MR'">
+                    <h3 *ngIf="problem_attempts[0] > 0"
+                      style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; font-size: 20px; color: #1976d2">
+                      <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your response.
+                      <!-- wrong data format, extra KEY -->
+                    </h3>
+                  </div>
                   <div *ngIf="prob.value.Type == 'SR'">
                     <h3 *ngIf="(prob.value.AnswerChoices | keys).length == 0 && problem_attempts[0] > 0"
                       style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; font-size: 20px; color: #1976d2">
@@ -2474,7 +2595,7 @@
                       <b> Next Problem </b>
                     </button>
                   </div>
-                  <button *ngIf="((attempt_response[0].startsWith('Correct') || ((prob.value.Type == 'LR' || (prob.value.Type == 'O' && is_m_correct('', false)) || (prob.value.Type == 'C' && is_c_correct('', false)) || (prob.value.Type == 'G' && is_g_correct('', false))) && problem_attempts[0] > 0)) && screenWidth > mobileWidth)" class="grade-button"
+                  <button *ngIf="((attempt_response[0].startsWith('Correct') || ((['LR', 'MR'].includes(prob.value.Type) || (prob.value.Type == 'O' && is_m_correct('', false)) || (prob.value.Type == 'C' && is_c_correct('', false)) || (prob.value.Type == 'G' && is_g_correct('', false))) && problem_attempts[0] > 0)) && screenWidth > mobileWidth)" class="grade-button"
                     (click)="next_problem(); scroll_top()"
                     style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px px">
                     <b> Next Problem </b>
@@ -2521,7 +2642,8 @@
                   style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                   <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                     <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content"> 
-                      <span *ngIf="!word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
+                      <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
+                      <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
                       <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
                       <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !attempt_response[get_part_num(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
                       <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && attempt_response[get_part_num(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
@@ -2562,7 +2684,8 @@
                 <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                   style="display: block; white-space: pre-wrap; font-size: 18px">
                   <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content"> 
-                    <span *ngIf="!word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
+                    <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
+                    <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
                     <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
                     <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !attempt_response[get_part_num(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
                     <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && attempt_response[get_part_num(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
@@ -2604,7 +2727,7 @@
               <br *ngIf="part.value.Explain" />
               <input type="hidden" #selection>
               <div *ngIf="part.value.Type == 'O'">
-                <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
+                <div class="card card-medium" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center">
                   <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 200px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_m_choice('', 0, part.key)" *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
@@ -2622,8 +2745,8 @@
                 </div>
                 <br />
                 <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                  <div *ngFor="let choice of unique_choices" style="margin: auto; margin-top: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto"> {{choice.slice(2, choice.length-2)}} </h3>
+                  <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
                     <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 200px; margin: auto">
                       <input type="checkbox">
                       <button (click)="select_m_choice('', 1, part.key)" *ngIf="!is_matched(choice[0], 1, part.key) && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -2641,7 +2764,7 @@
                 </div>
               </div>
               <div *ngIf="part.value.Type == 'C'">
-                <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
+                <div class="card card-medium" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center">
                   <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 200px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 0, part.key)" *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
@@ -2667,8 +2790,8 @@
                 </div>
                 <br />
                 <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                  <div *ngFor="let choice of unique_choices" style="margin: auto; margin-top: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto"> {{choice.slice(2)}} </h3>
+                  <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
                     <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 200px; margin: auto">
                       <input type="checkbox">
                       <button (click)="select_c_choice('', 1, part.key)" *ngIf="selection == '' && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -2696,7 +2819,7 @@
                 </div>
               </div>
               <div *ngIf="part.value.Type == 'G'">
-                <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
+                <div class="card card-medium" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center">
                   <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 200px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 0, part.key)" *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
@@ -2721,8 +2844,8 @@
                 </div>
                 <br />
                 <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                  <div *ngFor="let choice of unique_choices" style="margin: auto; margin-top: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto"> {{choice.slice(2)}} </h3>
+                  <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
                     <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 200px; margin: auto">
                       <input type="checkbox">
                       <button (click)="select_c_choice('', 1, part.key)" *ngIf="selection == '' && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -2808,6 +2931,35 @@
                       style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
                       #inputSR></textarea>
                   <button class="grade-button" (click)="attempt_sr_problem(this.inputSR.value, part.key); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+              </div>
+              <div *ngIf="part.value.Type == 'MR'" style="width: 90%">
+                <div *ngIf="screenWidth > mobileWidth" class="card card-medium" style="min-height: 50px; width: auto; max-width: 1200px; height: auto; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                  <textarea
+                      rows="5" maxlength="450" placeholder="Final Response"
+                      style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputMR></textarea>
+                  <button class="grade-button" (click)="attempt_mr_problem(this.inputMR.value, ''); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+                <div *ngIf="screenWidth <= mobileWidth && screenWidth > 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                  <textarea
+                      rows="10" maxlength="450" placeholder="Final Response"
+                      style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputMR></textarea>
+                  <button class="grade-button" (click)="attempt_mr_problem(this.inputMR.value, ''); scroll_bottom()"
+                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
+                    <b> Submit </b> </button>
+                </div>
+                <div *ngIf="screenWidth <= 500" class="card card-medium" style="min-height: 50px; height: auto; width: auto; max-width: 750px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: column">
+                  <textarea
+                      rows="20" maxlength="450" placeholder="Final Response"
+                      style="margin: 10px auto; padding: 10px 0 10px 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #inputMR></textarea>
+                  <button class="grade-button" (click)="attempt_mr_problem(this.inputMR.value, ''); scroll_bottom()"
                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
                     <b> Submit </b> </button>
                 </div>
@@ -2995,6 +3147,13 @@
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'LR'">
+                  <h3 *ngIf="problem_attempts[(prob.value.Parts | keys).indexOf(part.key)] > 0"
+                    style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; font-size: 20px; color: #1976d2">
+                    <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your response.
+                    <!-- wrong data format, extra KEY -->
+                  </h3>
+                </div>
+                <div *ngIf="part.value.Type == 'MR'">
                   <h3 *ngIf="problem_attempts[(prob.value.Parts | keys).indexOf(part.key)] > 0"
                     style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; font-size: 20px; color: #1976d2">
                     <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your response.

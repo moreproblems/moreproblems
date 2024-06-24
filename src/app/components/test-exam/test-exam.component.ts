@@ -1455,7 +1455,7 @@ export class TestExamComponent implements OnInit {
         }
         else {
             for (let ch of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
-                if (+this.exam_dump[this.problem_number].Parts[part].AnswerChoices[ch].Choice == numb) {
+                if (+this.exam_dump[this.problem_number].AnswerChoices[ch].Choice == numb) {
                     choice = ch[0];
                 }
             }
@@ -1522,7 +1522,7 @@ export class TestExamComponent implements OnInit {
         }
         else {
             for (let ch of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
-                if (+this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[ch].Choice == numb) {
+                if (+this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[ch].Choice == numb) {
                     choice = ch[0];
                 }
             }
@@ -2310,6 +2310,28 @@ export class TestExamComponent implements OnInit {
                     }
                 }
             }
+        }
+    }
+
+    attempt_mr_problem(response: string, part: string) {
+        var part_num = 0;
+        if (part != '') {
+            var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+        }
+        if (response != this.problem_selection[part_num][0]) {
+            this.problem_selection[part_num] = [response];
+            this.problem_attempts[part_num] += 1;
+        }
+    }
+
+    attempt_mr_st_problem(response: string, part: string) {
+        var part_num = 0;
+        if (part != '') {
+            var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+        }
+        if (response != this.subtopic_problem_selection[part_num][0]) {
+            this.subtopic_problem_selection[part_num][0] = response;
+            this.subtopic_problem_attempts[part_num] += 1;
         }
     }
 
@@ -3139,7 +3161,7 @@ export class TestExamComponent implements OnInit {
                 this.m_selection = [["", ""]];
                 this.m_submission = [{}];
                 this.c_submission = [{}];
-                if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
+                if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
                     this.problem_selection = [['']];
                     if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
                         setTimeout(() => {
@@ -3179,7 +3201,7 @@ export class TestExamComponent implements OnInit {
                     this.m_selection.push(["", ""]);
                     this.m_submission.push({});
                     this.c_submission.push({});
-                    if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                    if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                         this.problem_selection.push(['']);
                         if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                             setTimeout(() => {
@@ -3257,7 +3279,7 @@ export class TestExamComponent implements OnInit {
                 this.subtopic_attempt_path = [[]];
                 this.subtopic_attempt_response = [''];
                 this.subtopic_attempt_explanation = [[]];
-                if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                     this.subtopic_problem_selection = [['']];
                     if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                         setTimeout(() => {
@@ -3297,7 +3319,7 @@ export class TestExamComponent implements OnInit {
                     this.m_selection.push(["", ""]);
                     this.m_submission.push({});
                     this.c_submission.push({});
-                    if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                    if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                         this.subtopic_problem_selection.push(['']);
                         if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                             setTimeout(() => {
@@ -3375,7 +3397,7 @@ export class TestExamComponent implements OnInit {
                 this.m_selection = [["", ""]];
                 this.m_submission = [{}];
                 this.c_submission = [{}];
-                if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
+                if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
                     this.problem_selection = [['']];
                     if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
                         setTimeout(() => {
@@ -3415,7 +3437,7 @@ export class TestExamComponent implements OnInit {
                     this.m_selection.push(["", ""]);
                     this.m_submission.push({});
                     this.c_submission.push({});
-                    if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                    if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                         this.problem_selection.push(['']);
                         if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                             setTimeout(() => {
@@ -3506,7 +3528,7 @@ export class TestExamComponent implements OnInit {
             this.m_selection = [["", ""]];
             this.m_submission = [{}];
             this.c_submission = [{}];
-            if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
+            if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
                 this.problem_selection = [['']];
                 if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
                     setTimeout(() => {
@@ -3546,7 +3568,7 @@ export class TestExamComponent implements OnInit {
                 this.m_selection.push(["", ""]);
                 this.m_submission.push({});
                 this.c_submission.push({});
-                if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                     this.problem_selection.push(['']);
                     if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                         setTimeout(() => {
@@ -3698,7 +3720,7 @@ export class TestExamComponent implements OnInit {
             this.subtopic_attempt_path = [[]];
             this.subtopic_attempt_response = [''];
             this.subtopic_attempt_explanation = [[]];
-            if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                 this.subtopic_problem_selection = [['']];
                 if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                     setTimeout(() => {
@@ -3738,7 +3760,7 @@ export class TestExamComponent implements OnInit {
                 this.m_selection.push(["", ""]);
                 this.m_submission.push({});
                 this.c_submission.push({});
-                if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                     this.subtopic_problem_selection.push(['']);
                     if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                         setTimeout(() => {
@@ -3860,7 +3882,7 @@ export class TestExamComponent implements OnInit {
             this.m_selection = [["", ""]];
             this.m_submission = [{}];
             this.c_submission = [{}];
-            if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
+            if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
                 this.problem_selection = [['']];
                 if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
                     setTimeout(() => {
@@ -3900,7 +3922,7 @@ export class TestExamComponent implements OnInit {
                 this.m_selection.push(["", ""]);
                 this.m_submission.push({});
                 this.c_submission.push({});
-                if (['MC', 'FR', 'SR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                     this.problem_selection.push(['']);
                     if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                         setTimeout(() => {
