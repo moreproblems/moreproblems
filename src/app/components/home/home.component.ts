@@ -4639,6 +4639,6 @@ export class HomeComponent implements OnInit {
       setTimeout(() => {
         this.data_loaded = true;
       }, 500);
-    }, 1000);
+    }, 2000);
   }
 }

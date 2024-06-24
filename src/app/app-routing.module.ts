@@ -18,7 +18,7 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
 import { StandardsComponent } from './components/standards/standards.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'exams', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
   // { path: 'contact', component: ContactComponent },
   { path: 'exams', component: ExamsComponent },
