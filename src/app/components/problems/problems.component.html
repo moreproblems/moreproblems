@@ -1152,9 +1152,9 @@
                 <div *ngIf="subtopic_problem_number == +prob.key">
                   <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
                     <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
-                    <div *ngIf="block.startsWith(':table:')" >
+                    <div *ngIf="block.startsWith(':table:')" style="max-width: 80vw; overflow: auto">
                       <h3 style="margin: auto; margin-top: 10px; display: block; white-space: pre-wrap; font-size: 20px; text-align: center">{{supp_st_dump[block.slice(7)].Title}}</h3>
-                      <table style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 95%; font-size: 18px; background-color: white">
+                      <table style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 80vw; font-size: 18px; background-color: white">
                         <thead>
                           <tr style="border: 3px solid black; background-color: grey">
                             <th *ngFor="let header of supp_st_dump[block.slice(7)].Headers" style="width: fit-content">{{header}}</th>
@@ -1164,8 +1164,8 @@
                           <tr *ngFor="let row of supp_st_dump[block.slice(7)].Rows" style="background-color: rgb(236, 236, 236)">
                             <td *ngFor="let cell of row" style="border-top: 1px solid #ddd">
                               <span *ngIf="!cell.startsWith(':T-')"><b>{{cell}}</b></span>
-                              <span *ngIf="cell.startsWith(':T-')" style="display: inline-flex; margin: 0px">
-                                <textarea rows="1" maxlength="10" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputT--{{cell[3]}}"></textarea>
+                              <span *ngIf="cell.startsWith(':T-')" style="display: inline-flex; flex-wrap: wrap; margin: 0px">
+                                <textarea rows="1" maxlength="10" placeholder="Answer" style="margin: 10px auto; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputT--{{cell[3]}}"></textarea>
                                 <button class="grade-button" (click)="attempt_t_st_problem(get_T_st(cell[3], ''), cell[3], ''); scroll_bottom()"
                                   style="display: flex; flex-direction: column; max-width: 150px; max-height: 150px; height: 40px; margin: auto; padding: 5px; align-items: center">
                                   <b style="display: flex; margin: 0px; height: 20px; align-items: center"> Submit </b>
@@ -1697,9 +1697,9 @@
             <div class="content" style="margin: auto; align-items: center">
               <div *ngFor="let block of part.value.Content" style="align-items: center; text-align: center">
                 <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
-                <div *ngIf="block.startsWith(':table:')" >
+                <div *ngIf="block.startsWith(':table:')" style="max-width: 80vw; overflow: auto">
                   <h3 style="margin: auto; margin-top: 10px; display: block; white-space: pre-wrap; font-size: 20px; text-align: center">{{supp_st_dump[block.slice(7)].Title}}</h3>
-                  <table style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 95%; font-size: 18px; background-color: white">
+                  <table style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 80vw; font-size: 18px; background-color: white">
                     <thead>
                       <tr style="border: 3px solid black; background-color: grey">
                         <th *ngFor="let header of supp_st_dump[block.slice(7)].Headers" style="width: fit-content">{{header}}</th>
@@ -1709,8 +1709,8 @@
                       <tr *ngFor="let row of supp_st_dump[block.slice(7)].Rows" style="background-color: rgb(236, 236, 236)">
                         <td *ngFor="let cell of row" style="border-top: 1px solid #ddd">
                           <span *ngIf="!cell.startsWith(':T-')"><b>{{cell}}</b></span>
-                          <span *ngIf="cell.startsWith(':T-')" style="display: inline-flex; margin: 0px">
-                            <textarea rows="1" maxlength="10" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputT-{{part.key}}-{{cell[3]}}"></textarea>
+                          <span *ngIf="cell.startsWith(':T-')" style="display: inline-flex; flex-wrap: wrap; margin: 0px">
+                            <textarea rows="1" maxlength="10" placeholder="Answer" style="margin: 10px auto; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputT-{{part.key}}-{{cell[3]}}"></textarea>
                             <button class="grade-button" (click)="attempt_t_st_problem(get_T_st(cell[3], part.key), cell[3], part.key); scroll_bottom()"
                               style="display: flex; flex-direction: column; max-width: 150px; max-height: 150px; height: 40px; margin: auto; padding: 5px; align-items: center">
                               <b style="display: flex; margin: 0px; height: 20px; align-items: center"> Submit </b>
@@ -2638,9 +2638,9 @@
               <div *ngIf="problem_number == +prob.key">
                 <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
                   <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
-                  <div *ngIf="block.startsWith(':table:')" >
+                  <div *ngIf="block.startsWith(':table:')" style="max-width: 80vw; overflow: auto">
                     <h3 style="margin: auto; margin-top: 10px; display: block; white-space: pre-wrap; font-size: 20px; text-align: center">{{supp_dump[block.slice(7)].Title}}</h3>
-                    <table style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 95%; font-size: 18px; background-color: white">
+                    <table style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 80vw; font-size: 18px; background-color: white">
                       <thead>
                         <tr style="border: 3px solid black; background-color: grey">
                           <th *ngFor="let header of supp_dump[block.slice(7)].Headers" style="width: fit-content">{{header}}</th>
@@ -2650,8 +2650,8 @@
                         <tr *ngFor="let row of supp_dump[block.slice(7)].Rows" style="background-color: rgb(236, 236, 236)">
                           <td *ngFor="let cell of row" style="border-top: 1px solid #ddd">
                             <span *ngIf="!cell.startsWith(':T-')"><b>{{cell}}</b></span>
-                            <span *ngIf="cell.startsWith(':T-')" style="display: inline-flex; margin: 0px">
-                              <textarea rows="1" maxlength="10" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputT--{{cell[3]}}"></textarea>
+                            <span *ngIf="cell.startsWith(':T-')" style="display: inline-flex; flex-wrap: wrap; margin: 0px">
+                              <textarea rows="1" maxlength="10" placeholder="Answer" style="margin: 10px auto; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputT--{{cell[3]}}"></textarea>
                               <button class="grade-button" (click)="attempt_t_problem(get_T(cell[3], ''), cell[3], ''); scroll_bottom()"
                                 style="display: flex; flex-direction: column; max-width: 150px; max-height: 150px; height: 40px; margin: auto; padding: 5px; align-items: center">
                                 <b style="display: flex; margin: 0px; height: 20px; align-items: center"> Submit </b>
@@ -2757,7 +2757,7 @@
             <br *ngIf="prob.value.Explain" />
             <input type="hidden" #selection>
             <div *ngIf="prob.value.Type == 'O'">
-              <div class="card card-medium" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center">
+              <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
                 <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 200px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_m_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
@@ -2798,7 +2798,7 @@
               </div>
             </div>
             <div *ngIf="prob.value.Type == 'C'">
-              <div class="card card-medium" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center">
+              <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
                 <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 200px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_c_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
@@ -2857,7 +2857,7 @@
               </div>
             </div>
             <div *ngIf="prob.value.Type == 'G'">
-              <div class="card card-medium" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center">
+              <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
                 <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 200px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_c_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
@@ -3456,9 +3456,9 @@
           <div class="content" style="margin: auto; align-items: center">
             <div *ngFor="let block of part.value.Content" style="align-items: center; text-align: center">
               <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
-              <div *ngIf="block.startsWith(':table:')" >
+              <div *ngIf="block.startsWith(':table:')" style="max-width: 80vw; overflow: auto">
                 <h3 style="margin: auto; margin-top: 10px; display: block; white-space: pre-wrap; font-size: 20px; text-align: center">{{supp_dump[block.slice(7)].Title}}</h3>
-                <table style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 95%; font-size: 18px; background-color: white">
+                <table style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 80vw; font-size: 18px; background-color: white">
                   <thead>
                     <tr style="border: 3px solid black; background-color: grey">
                       <th *ngFor="let header of supp_dump[block.slice(7)].Headers" style="width: fit-content">{{header}}</th>
@@ -3468,8 +3468,8 @@
                     <tr *ngFor="let row of supp_dump[block.slice(7)].Rows" style="background-color: rgb(236, 236, 236)">
                       <td *ngFor="let cell of row" style="border-top: 1px solid #ddd">
                         <span *ngIf="!cell.startsWith(':T-')"><b>{{cell}}</b></span>
-                        <span *ngIf="cell.startsWith(':T-')" style="display: inline-flex; margin: 0px">
-                          <textarea rows="1" maxlength="10" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputT-{{part.key}}-{{cell[3]}}"></textarea>
+                        <span *ngIf="cell.startsWith(':T-')" style="display: inline-flex; flex-wrap: wrap; margin: 0px">
+                          <textarea rows="1" maxlength="10" placeholder="Answer" style="margin: 10px auto; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputT-{{part.key}}-{{cell[3]}}"></textarea>
                           <button class="grade-button" (click)="attempt_t_problem(get_T(cell[3], part.key), cell[3], part.key); scroll_bottom()"
                             style="display: flex; flex-direction: column; max-width: 150px; max-height: 150px; height: 40px; margin: auto; padding: 5px; align-items: center">
                             <b style="display: flex; margin: 0px; height: 20px; align-items: center"> Submit </b>
@@ -3573,7 +3573,7 @@
             <br *ngIf="part.value.Explain" />
             <input type="hidden" #selection>
             <div *ngIf="part.value.Type == 'O'">
-              <div class="card card-medium" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center">
+              <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
                 <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 200px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_m_choice('', 0, part.key)" *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
@@ -3614,7 +3614,7 @@
               </div>
             </div>
             <div *ngIf="part.value.Type == 'C'">
-              <div class="card card-medium" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center">
+              <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
                 <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 200px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_c_choice('', 0, part.key)" *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
@@ -3675,7 +3675,7 @@
               </div>
             </div>
             <div *ngIf="part.value.Type == 'G'">
-              <div class="card card-medium" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center">
+              <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
                 <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 200px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_c_choice('', 0, part.key)" *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
