@@ -854,5 +854,153 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Number & Operations - Fractions",
+            "Number & Operations - Fractions",
+            "Measurement & Data"
+        ],
+        "SubTopics": [
+            "Demonstrate that when a whole or set is partitioned into y equal parts, the fraction 1/y represents 1 part of the whole and/or the fraction x/y represents x equal parts of the whole (limit denominators to 2, 3, 4, 6, and 8; limit numerators to whole numbers less than the denominator; and no simplification necessary).",
+            "Represent fractions on a number line (limit denominators to 2, 3, 4, 6, and 8; limit numerators to whole numbers less than the denominator; and no simplification necessary).2",
+            "Multiply side lengths to find areas of rectangles with whole-number side lengths in the context of solving real-world and mathematical problems, and represent whole-number products as rectangular areas in mathematical reasoning."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Kaylee is painting a picture for her art class."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Kaylee uses the colors red, yellow, green, orange, blue, and purple.",
+                    "Purple is what fraction of Kaylee's colors?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "1/6",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "LP",
+                "NumChoices": 9,
+                "Explain": false,
+                "Content": [
+                    "Kaylee paints 2/8 of her picture with yellow paint.",
+                    "Plot a point on the number line shown below to represent the fraction of Kaylee's picture that is yellow."
+                ],
+                "AnswerChoices": {
+                    "A:0": {
+                        "Choice": "0",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B:": {
+                        "Choice": "1/8",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C:": {
+                        "Choice": "1/4",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D:": {
+                        "Choice": "3/8",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "E:": {
+                        "Choice": "1/2",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "F:": {
+                        "Choice": "5/8",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "G:": {
+                        "Choice": "3/4",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "H:": {
+                        "Choice": "7/8",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "I:1": {
+                        "Choice": "1",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Kaylee painted a green rectangle and an orange rectangle on her picture.",
+                    "The green rectangle has side lengths of 3 inches and 4 inches.",
+                    "The orange rectangle has side lengths of 2 inches and 6 inches.",
+                    "Kaylee makes the incorrect claim shown below.",
+                    ":ibox:The area of the green rectangle is less than the area of the orange rectangle since 14 < 16.",
+                    "Explain the mistake Kaylee 𝗠𝗢𝗦𝗧 𝗟𝗜𝗞𝗘𝗟𝗬 made when finding the areas of the two rectangles."
+                ],
+                "AnswerChoices": {}
+            },
+            "D": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Rewrite Kaylee's claim with the correct comparison of the areas."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

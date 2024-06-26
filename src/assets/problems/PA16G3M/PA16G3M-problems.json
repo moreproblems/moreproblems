@@ -868,5 +868,108 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Measurement & Data"
+        ],
+        "SubTopics": [
+            "Organize, display, and answer questions based on data."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The bar graph below shows the number of students at Abigail's school who were born outside of Pennsylvania.",
+            "The information for Ohio is not included in the bar graph.",
+            "problems/PA16G3M/media/17a.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MS",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    "The number of students who were born in New Jersey is the same as the number of students who were born in two other states combined.",
+                    "What are the two other states?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Delaware",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "Maryland",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "New York",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "Ohio",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "There are more students at Abigail's school who were born in Maryland than were born in Ohio.",
+                    "Also, there are more students who were born in Ohio than were born in Delaware.",
+                    "List a possible number of students at Abigail's school who could have been born in Ohio.",
+                    "Explain how you found your answer."
+                ],
+                "AnswerChoices": {
+                    "KEY1": {
+                        "Choice": "4",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "KEY2": {
+                        "Choice": "5",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Abigail says that the number of students in her school who were actually born in Ohio must be an even number since only even numbers appear on the left side of the graph.",
+                    "Explain why Abigail's reasoning is 𝗡𝗢𝗧 correct."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

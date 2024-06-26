@@ -824,5 +824,110 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Operations & Algebraic Thinking"
+        ],
+        "SubTopics": [
+            "Recognize, describe, extend, create, and replicate a variety of patterns."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Three number patterns are described below.",
+            ":ibox:• pattern A: Start at 10 and add 4.\n\n• pattern B: Start at 30 and subtract 3.\n\n• pattern C: Start at 6 and add 5."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "What are the first four terms of pattern A?",
+                    "\n\nFirst number: :FR-1:",
+                    "Second number: :FR-2:",
+                    "Third number: :FR-3:",
+                    "Fourth number: :FR-4:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "10",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "14",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "3:KEY": {
+                        "Choice": "18",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "4:KEY": {
+                        "Choice": "22",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "What numbers are in both pattern B and pattern C? Show or explain all your work.",
+                    "\n\nFirst number: :FR-1:",
+                    "Second number: :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "6",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "21",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Another number pattern is shown below.",
+                    ":ibox:16, 14, 15, 13, 14, 12, 13, __",
+                    "Explain how to determine whether the next number in the pattern is even or odd."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

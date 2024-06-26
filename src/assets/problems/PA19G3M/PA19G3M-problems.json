@@ -916,5 +916,111 @@
             }
         },
         "Parts": {}
+    },
+    "18": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Measurement & Data"
+        ],
+        "SubTopics": [
+            "Find the areas of plane figures."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Miss Drake and Mr. Lee each have gardens.",
+            "Pictures of their gardens are shown below.",
+            "problems/PA19G3M/media/18a.jpg",
+            "problems/PA19G3M/media/18b.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "What is the area, in square meters, of Miss Drake's garden?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "The shaded part of Mr. Lee's garden shows where he plants corn.",
+                    "In what fraction of his garden does Mr. Lee plant corn?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Mr. Tillman has a rectangular-shaped garden with an area of 24 square meters.",
+                    "What could be the side lengths, in meters, of Mr. Tillman's garden?",
+                    "\n\nLength 1 (meters): :FR-1:",
+                    "Length 2 (meters): :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "D": {
+                "Type": "MR",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    "Explain why there can be more than one possible answer for Part C."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

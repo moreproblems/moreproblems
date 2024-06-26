@@ -782,5 +782,93 @@
             }
         },
         "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Geometry",
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Apply properties of geometric transformations to verify congruence or similarity.",
+            "Apply the Pythagorean theorem to find the distance between two points in a coordinate system."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Some figures are plotted on the coordinate grid shown below.",
+            "problems/PA23G8M/media/16a.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Rounded to the nearest hundredth, what is the length, in units, of line segment PQ?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "3.16",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Figure A is mapped onto figure A' without a rotational transformation.",
+                    "Identify a set of two transformations that could map figure A onto figure A' 𝗪𝗜𝗧𝗛𝗢𝗨𝗧 using a rotational transformation.",
+                    "Transformation 1: :FR-1:",
+                    "Transformation 2: :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "reflection across the x-axis",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "reflection across the y-axis",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Explain why figure A is congruent to figure A'."
+                ],
+                "AnswerChoices": {}
+            },
+            "D": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "A set of transformations maps figure A onto figure B.",
+                    "Explain why one of the transformations 𝗠𝗨𝗦𝗧 be a dilation."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

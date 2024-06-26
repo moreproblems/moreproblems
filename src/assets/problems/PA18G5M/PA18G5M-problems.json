@@ -841,5 +841,72 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Number & Operations - Fractions"
+        ],
+        "SubTopics": [
+            "Solve addition and subtraction problems involving fractions (straight computation or word problems)."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Mitch is making some bread dough."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "To make the bread dough, Mitch uses 5 1/2 cups of wheat flour, 1 3/4 cups of rice flour, and 2/3 cup of white flour.",
+                    "How many cups of flour, in total, does Mitch use? Show or explain all your work."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "95/12",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Mitch decides that the next time he makes the bread dough he would use only 4 1/2 cups of wheat flour. He would also increase the amounts of rice flour and white flour so that the total amount of flour he used stayed the same. He plans to increase the rice flour and the white flour by the same amount.",
+                    "How many cups of rice flour and white flour will Mitch use the next time he makes the bread dough? Show or explain all your work.",
+                    "Rice flour: :FR-1:",
+                    "White flour: :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "9/4",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "7/6",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -836,5 +836,99 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Ratios & Proportional Relationships"
+        ],
+        "SubTopics": [
+            "Analyze, recognize, and represent proportional relationships and use them to solve real-world and mathematical problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Archie has a bag of grass seed that he will use to cover a new field. The bag contains information about the area of the ground to be covered and the number of scoops of grass seed needed, as shown in the table below.",
+            "problems/PA18G7M/media/17a.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "What is the constant of proportionality between the number of square yards of ground to be covered and the number of scoops of grass seed needed?"
+                ],
+                "AnswerChoices": {
+                    "KEY1": {
+                        "Choice": "1/25",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "KEY2": {
+                        "Choice": "25",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "The field Archie will cover with grass seed is rectangular and measures 100 yards long by 60 yards wide.",
+                    "Write an equation that describes the relationship between the number of square yards (x) of ground to be covered and the number of scoops (y) of grass seed needed. Use the equation to determine the number of scoops of grass seed Archie needs to cover the entire field. Show or explain all your work.",
+                    "Equation: :FR-1:",
+                    "Scoops of grass seed: :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "KEY:1": {
+                        "Choice": "y=x/25",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "KEY:2": {
+                        "Choice": "240",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Archie has a goal to finish covering the field before 1 2/3 hours have elapsed. He will use any remaining time to water the field. After 1 hour has elapsed, he has covered 4,000 square yards of the field.",
+                    "Explain why Archie will be able to meet his goal by working at this rate. As part of the explanation, determine the amount of time, in hours, Archie will have to water the field."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "1/6",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

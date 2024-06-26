@@ -799,5 +799,108 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Geometry",
+            "Number & Operations - Fractions"
+        ],
+        "SubTopics": [
+            "Explain that shapes in different categories may share attributes and that the shared attributes can define a larger category.",
+            "Develop and apply number theory concepts to compare quantities and magnitudes of fractions and whole numbers."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Dorie has the five shapes listed below.",
+            ":ibox:octagon, pentagon, rectangle, square, triangle",
+            "Dorie only wants quadrilateral shapes for an art project."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MS",
+                "NumChoices": 5,
+                "Explain": false,
+                "Content": [
+                    "Which shapes from the list can Dorie use for her art project?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "octagon",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "pentagon",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "rectangle",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "square",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "E": {
+                        "Choice": "triangle",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Explain how a square and a rhombus are alike."
+                ],
+                "AnswerChoices": {}
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Explain how a square and a rhombus could be different."
+                ],
+                "AnswerChoices": {}
+            },
+            "D": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Dorie draws the picture below for another part of her art project.",
+                    "problems/PA18G3M/media/17a.jpg",
+                    "Dorie states each section inside the shape is 1/8 of the whole shape.",
+                    "Explain why Dorie is 𝗡𝗢𝗧 correct."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

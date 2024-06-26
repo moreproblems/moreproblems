@@ -120,7 +120,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–0.222...",
+                "Choice": "–0.222 ...",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Thinks repeating would mean irrational; disregards negative sign.",
@@ -170,7 +170,7 @@
         "Explain": false,
         "Content": [
             "A number is shown below.",
-            ":box:0.565656...",
+            ":box:0.565656 ...",
             "Which statement about the number is true?"
         ],
         "AnswerChoices": {
@@ -840,5 +840,73 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Analyze and describe linear relationships between two variables, using slope."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The graph below shows the relationship between the number of pounds of beeswax purchased at a craft store and the cost of the beeswax.",
+            "problems/PA19G8M/media/17a.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "What is the cost, in dollars, of purchasing 15 pounds of beeswax at the craft store? Show or explain all your work."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "185.85",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "An online marketplace sells the same brand of beeswax that is sold at the craft store. At the online marketplace, 7 pounds of beeswax costs $78.75.",
+                    "• For the craft store, an equation in the form c = r p can be used to describe the relationship between the number of pounds (p) of beeswax purchased and the cost (c), in dollars.\n\n• For the online marketplace, an equation in the form c = sp can be used to describe the relationship between the number of pounds (p) of beeswax purchased and the cost (c), in dollars.",
+                    "Explain why the value of the expression r – s must be 1.14."
+                ],
+                "AnswerChoices": {}
+            },
+            "C": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "The online marketplace pays $175.00 for every 50 pounds of beeswax it buys from a manufacturer.",
+                    "Write an equation that can be used to determine the profit (t), in dollars, that the online marketplace makes when it sells p pounds of beeswax. Show or explain all your work."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "t=11.25p-3.5p",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

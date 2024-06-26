@@ -850,5 +850,199 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Geometry",
+            "Geometry",
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Draw points, lines, line segments, rays, angles (right, acute, and obtuse), and perpendicular and parallel lines. Identify these in two-dimensional figures.",
+            "Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines or the presence or absence of angles of a specified size. Recognize right triangles as a category, and identify right triangles.",
+            "Recognize a line of symmetry for a two-dimensional figure as a line across the figure such that the figure can be folded along the line into mirroring parts. Identify line-symmetric figures and draw lines of symmetry (up to two lines of symmetry)."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A map is shown below.",
+            "problems/PA22G4M/media/17a.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MS",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    "There are right triangles shown on the map.",
+                    "Select three roads that form a right triangle."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Lincoln Ave.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "Olive St.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "Lemon St.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "Troy Ln.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MS",
+                "NumChoices": 8,
+                "Explain": false,
+                "Content": [
+                    "There are roads that run parallel to Troy Ln. shown on the map.",
+                    "Select all the roads that run parallel to Troy Ln."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Benson Ln.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "Lincoln Ave.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "Olive St.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "Farm St.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "E": {
+                        "Choice": "Franklin Ln.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "F": {
+                        "Choice": "Marlin Ln.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "G": {
+                        "Choice": "Lemon St.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MC",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    "Jack claims that Farm St. is perpendicular to every road it intersects on the map.",
+                    "Which road proves that Jack's claim is 𝗡𝗢𝗧 correct?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Benson Ln.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "Franklin Ln.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "Marlin Ln.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "Troy Ln.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "E": {
+                        "Choice": "Lincoln Ave.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "D": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Explain why the map does not have a line of symmetry even though it is in the shape of a rectangle."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

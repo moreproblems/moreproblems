@@ -828,5 +828,76 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Operations & Algebraic Thinking",
+            "Operations & Algebraic Thinking"
+        ],
+        "SubTopics": [
+            "Use multiple grouping symbols (parentheses, brackets, or braces) in numerical expressions and evaluate expressions containing these symbols.",
+            "Write simple expressions that model calculations with numbers and interpret numerical expressions without evaluating them."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Every week, Patrick attends basketball practice for 2 hours on Tuesday and 3 hours on Thursday. Patrick has been attending practice for 6 weeks."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Write a numerical expression with at least one operation symbol to represent the total amount of time Patrick has spent at basketball practice the past 6 weeks."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "6*(2+3)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "The expression below represents the number of points Patrick scored in his last basketball game.",
+                    ":ibox:2 × (4 + 3) + 3 × (1 + 2) + 2",
+                    "How many points did Patrick score in his last game? Show or explain all your work."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "25",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "During another game, Patrick scored points by making 2-point shots and by making 3-point shots. The two expressions below represent the number of points he scored from making 2-point shots and the number of points he scored from making 3-point shots.",
+                    ":ibox:2-point shots: 2 × (4 + 6)\n\n3-point shots: 3 × (2 + 3)",
+                    "Patrick claims he scored twice as many points from making 2-point shots as from making 3-point shots since 4 + 6 is twice as large as 2 + 3.",
+                    "Explain why Patrick's claim is 𝗡𝗢𝗧 correct even though 4 + 6 is twice as large as 2 + 3."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

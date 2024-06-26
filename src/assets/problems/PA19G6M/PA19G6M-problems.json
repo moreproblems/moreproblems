@@ -830,5 +830,107 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Create, solve, and interpret one-variable equations or inequalities in real-world and mathematical problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A factory produces blue pens and black pens. Each week, 2/3 of the pens produced at the factory are black."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "How does the story in paragraphs 1 and 2 in the passage from The World's Smartest Animals: Dolphins support the idea stated in the passage's title?",
+                    "Equation: :FR-1:",
+                    "Solution: x = :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "45000/3=x",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "15000",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "What is the total number of pens produced at the factory in a week when 21,000 blue pens are produced?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "63000",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "A different factory produces red pens and green pens. Of the pens produced at the factory each week, 3/4 are red. In a week when 39,000 red pens are produced, the factory manager uses the equation 3y/4 = 39,000.",
+                    "What does the variable y represent in the manager's equation?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "the number of pens the factory produced that week",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "D": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "What is the total number of green pens produced during a week when 39,000 red pens are produced?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "13000",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -440,7 +440,7 @@
                 "Choice": "75 minutes",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Sets up Ms. Martin's equation as y = 15x by using “each quarter... 15 minutes” as the slope, while recognizing that “0 minutes of time remaining” means the equation has no initial value; sets up Mrs. Tyler's equation as y = 8x + 35 by using “each dime... 8 minutes” as the slope and “35 minutes of time remaining” as the initial value; solves the equations by setting up 15x = 8x + 35 (since both expressions are equal to y), subtracting 8x from each side to get 7x = 35, dividing each side by 7 to get x = 5; and then substitutes x into either equation to determine y (either 15(5) OR 8(5) + 35).",
+                    "Rationale": "Sets up Ms. Martin's equation as y = 15x by using “each quarter ... 15 minutes” as the slope, while recognizing that “0 minutes of time remaining” means the equation has no initial value; sets up Mrs. Tyler's equation as y = 8x + 35 by using “each dime ... 8 minutes” as the slope and “35 minutes of time remaining” as the initial value; solves the equations by setting up 15x = 8x + 35 (since both expressions are equal to y), subtracting 8x from each side to get 7x = 35, dividing each side by 7 to get x = 5; and then substitutes x into either equation to determine y (either 15(5) OR 8(5) + 35).",
                     "Percent": 60
                 }
             },
@@ -790,5 +790,84 @@
             }
         },
         "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Functions",
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Represent or interpret functional relationships between quantities using tables, graphs, and descriptions.",
+            "Interpret solutions to a system of two linear equations in two variables as points of intersection of their graphs because points of intersection satisfy both equations simultaneously."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Justin is joining a gym. The gym is currently offering a discount on the fee to join and on the monthly rate."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "The discounted price, in dollars, the gym charges can be represented by the equation y = 10x + 5.",
+                    "What are the slope and the y-intercept of the equation? What do the slope and the y-intercept each represent in this situation?",
+                    "Slope: :FR-1:",
+                    "Y-intercept: :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "10",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "5",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "The regular price, in dollars, the gym charges can be represented by the equation y = 15x + 20.",
+                    "How much money, in dollars, does Justin save the first month by joining the gym at the discounted price rather than at the regular price?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "20",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Justin creates a system of equations based on the equation from Part A and the equation from Part B. The solution to the system of equations is (−3, −25).",
+                    "Why is the point (−3, −25) 𝗡𝗢𝗧 a possible solution in this situation?"
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

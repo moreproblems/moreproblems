@@ -785,5 +785,95 @@
             }
         },
         "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Geometry",
+            "Geometry",
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Determine the area of irregular or compound polygons.",
+            "Determine the volume of right rectangular prisms with fractional edge lengths.",
+            "Determine the surface area of triangular and rectangular prisms (including cubes)."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Devonte bought a kite that needs to be put together. When finished, the kite will look like the diagram shown below.",
+            "problems/PA22G6M/media/16a.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "What is the area, in square inches, of the kite when it is put together?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "288",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "The box that the kite came in is a rectangular prism with dimensions of 20 1/2 inches by 9 1/2 inches by 2 inches.",
+                    "What is the surface area, in square inches, of the box? Show or explain all your work."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "509.5",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Miriam bought a kite that is already put together. It is the same size as Devonte's kite. The box that Miriam's kite came in is a rectangular prism with dimensions of 32 1/2 inches by 18 1/2 inches by 1 inch. Miriam thinks that since both her kite and Devonte's kite are the same size, the volumes of the boxes they came in are the same.",
+                    "Show or explain why Miriam is 𝗡𝗢𝗧 correct. As part of your response, find the correct volume, in cubic inches, of each box.",
+                    "Devonte's box: :FR-1:",
+                    "Miriam's box: :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "389.5",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "601.25",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

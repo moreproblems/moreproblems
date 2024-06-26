@@ -361,7 +361,7 @@
                 "Choice": "Ed had $18. He bought 3 pens for $4 each and then shared the rest of the money equally with his sister.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Identifies a story in which 3 is multiplied by 4 (“3 pens for $4 each”) before subtracting the product from 18 (“Ed had $18... the rest of the money”), with the difference being divided by 2 (“shared... equally with his sister”).",
+                    "Rationale": "Identifies a story in which 3 is multiplied by 4 (“3 pens for $4 each”) before subtracting the product from 18 (“Ed had $18 ... the rest of the money”), with the difference being divided by 2 (“shared ... equally with his sister”).",
                     "Percent": 54
                 }
             }
@@ -787,5 +787,102 @@
             }
         },
         "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Geometry",
+            "Number & Operations In Base Ten",
+            "Measurement & Data "
+        ],
+        "SubTopics": [
+            "Identify parts of a coordinate grid and describe or interpret points given an ordered pair.",
+            "Add, subtract, multiply, and divide decimals to hundredths (no divisors with decimals).",
+            "Organize, display, and answer questions based on data."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Leon is selling candy bars for a school fundraiser. He raises $3.00 for each candy bar he sells. The graph shown below represents the total amount of money, in dollars, Leon has raised based on the number of candy bars he has sold.",
+            "problems/PA2G5M/media/16a.jpg",
+            "The pattern continues."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MC",
+                "NumChoices": 2,
+                "Explain": false,
+                "Content": [
+                    "Which axis represents the number of candy bars sold?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "x-axis",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "y-axis",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Write the ordered pair, in the form (x,y), that represents the amount of money Leon raises for selling 6 candy bars."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "(6,18)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Explain why it is 𝗡𝗢𝗧 possible for any of the points on the graph to have a y-coordinate of 77."
+                ],
+                "AnswerChoices": {}
+            },
+            "D": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Last year, Leon raised a total of $240 from his candy bar sales. This year, his goal is to raise at least 2.5 times that amount.",
+                    "What is the 𝗙𝗘𝗪𝗘𝗦𝗧 candy bars Leon needs to sell to reach his goal for this year? Show or explain all your work."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "200",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }
