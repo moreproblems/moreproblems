@@ -845,5 +845,82 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Number & Operations In Base Ten"
+        ],
+        "SubTopics": [
+            "Demonstrate an understanding that in a multi-digit number, a digit in one place represents 1/10 of what it represents in the place to its left."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Derek rode his bike several times last week."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "On Monday, Derek rode his bike for 0.355 × 10² minutes.",
+                    "Write the standard form for the number of minutes Derek rode his bike on Monday."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "35.5",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "On Thursday, the number of minutes Derek rode his bike is shown below.",
+                    "(4 × 10) + (5 × 1) + (8 × 1/100 ) + (2 × 1/1,000)",
+                    "Write the word form for the number of minutes Derek rode his bike on Thursday."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "forty-five and eighty-two thousandths",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "On Saturday, Derek rode his bike 5.2409 miles. Derek rounds this distance to the nearest hundredth and gets 5.25 miles. Derek is incorrect.",
+                    "Explain the correct way to round 5.2409 to the nearest hundredth using place value concepts. As part of your explanation, include the correctly rounded distance, to the nearest hundredth mile, Derek rode his bike."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "5.24",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

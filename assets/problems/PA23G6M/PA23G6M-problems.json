@@ -832,5 +832,82 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Create, solve, and interpret one-variable equations or inequalities in real-world and mathematical problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A baseball game has two different ticket prices.",
+            ":ibox:• The price of each student ticket is $18.00.\n\n• The price of each adult ticket is $31.50."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Christine spent $72.00 on student tickets.",
+                    "How many student tickets did Christine purchase?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "4",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Mr. Perkins spent exactly $117.00 on tickets.",
+                    "How many adult tickets did Mr. Perkins purchase? Show or explain why there is only one possible answer."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "2",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Ms. Barkin purchased 1 adult ticket and spent some money on nachos. The price for the nachos ends in $0.25. She spent more than $38.00 but less than $43.00 for the adult ticket and the nachos.",
+                    "How many prices are possible for the nachos? Explain how to determine this amount 𝗪𝗜𝗧𝗛𝗢𝗨𝗧 listing all the possible prices for the nachos."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "5",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

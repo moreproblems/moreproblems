@@ -836,5 +836,93 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Predict or determine the likelihood of outcomes."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The table below shows the number of pencils of each color for all 25 pencils in a box.",
+            "problems/PA15G8M/media/17a.jpg",
+            "The likelihood of an event occurring may be described as certain, more likely, equally likely, less likely, or impossible."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "A single pencil is drawn from the box.",
+                    "Describe the likelihood that the pencil is a yellow pencil. Explain your reasoning."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "0",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "The pencils have all been placed back in the box.",
+                    "Compare the likelihood of drawing a red pencil to the likelihood of drawing a blue pencil from the box. Explain your reasoning."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "equally likely",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "The original 25 colored pencils have all been placed back in the box and another 11 colored pencils have been added to the box. The new pencils are either red, blue, or green. The likelihood of drawing a green pencil is now 𝗚𝗥𝗘𝗔𝗧𝗘𝗥 than the likelihood of drawing a red pencil, but 𝗟𝗘𝗦𝗦 than the likelihood of drawing a blue pencil.",
+                    "How many pencils of each color were added to the box? Explain how you know that your answer is the only possible outcome that meets all of the conditions.",
+                    "Green pencils: :FR-1:",
+                    "Blue pencils: :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "9",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "2",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

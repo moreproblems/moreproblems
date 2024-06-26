@@ -832,5 +832,91 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Measurement & Data"
+        ],
+        "SubTopics": [
+            "Solve problems involving length, weight (mass), liquid volume, time, area, and perimeter."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A construction crew is paving a highway."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "One morning, the crew starts work at 10 minutes past 6 a.m. and finishes at 20 minutes to noon.",
+                    "How many hours and minutes does the crew work in the morning?",
+                    "\n\nHours: :FR-1:",
+                    "\n\nMinutes: :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "5",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "30",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "The crew can extend the length of the highway by 200 feet each hour.",
+                    "What is the length, in feet, of the new part of the highway when the crew finishes working in the morning? Show or explain all your work."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "1100",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "After lunch, the crew will extend the length of the highway by another 300 𝗬𝗔𝗥𝗗𝗦. They will start at 1:30 p.m.",
+                    "At what time will they complete the 300 𝗬𝗔𝗥𝗗𝗦?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "6:00",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

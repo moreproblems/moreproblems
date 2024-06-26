@@ -844,5 +844,91 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Measurement & Data"
+        ],
+        "SubTopics": [
+            "Use, describe, and develop procedures to solve problems involving volume."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Luke works in the shipping department of a toy company. He sends toys in boxes that are each in the shape of a rectangular prism. The lengths, widths, and heights of all the boxes are whole numbers of inches."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Luke needs to find a box that has a total volume of 24 cubic inches.",
+                    "Find a possible combination of length, width, and height, all in whole numbers of inches, of a box Luke could use.",
+                    "Length: :FR-1:",
+                    "Width: :FR-2:",
+                    "Height: :FR-3:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "2",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "3",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "3:KEY": {
+                        "Choice": "4",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Luke is shipping another toy that has a volume of 34 cubic feet. The box he will use has a base of 15 square feet and a height of 3 feet. The rest of the box will be filled with packing material.",
+                    "What is the volume, in cubic feet, of the packing material Luke will need? Show or explain all your work."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "11",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Luke has a toy, shaped like a rectangular prism, that needs to be sent in a box. The measurements of the toy are 8 inches long, 5 inches wide, and 6 inches high. To make sure there is enough room for the packing material, the measurements of the box need to be at least 1 inch greater than the length, width, and height of the toy. The box's volume must be less than 400 cubic inches.",
+                    "Explain why there is only one possible combination of length, width, and height of the box."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

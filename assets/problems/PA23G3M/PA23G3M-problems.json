@@ -856,5 +856,114 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Number & Operations In Base Ten",
+            "Operations & Algebraic Thinking"
+        ],
+        "SubTopics": [
+            "Apply place-value strategies to solve problems.",
+            "Use operations, patterns, and estimation strategies to solve problems (may include word problems)."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Elyssa, Kendra, Hendrix, and Mike played a game.",
+            ":ibox:• Elyssa scored 132 points.\n\n• Kendra scored 97 points.\n\n• Hendrix scored 105 points.\n\n• Mike scored 68 points."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "What is the difference between the number of points Elyssa scored and the number of points Kendra scored?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "35",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Write a number sentence using <, >, or = to compare the number of points Elyssa scored to the number of points Kendra scored."
+                ],
+                "AnswerChoices": {
+                    "KEY1": {
+                        "Choice": "132>97",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "KEY2": {
+                        "Choice": "97<132",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "O",
+                "NumChoices": 4,
+                "Explain": true,
+                "Content": [
+                    "List the four scores in order from the 𝗚𝗥𝗘𝗔𝗧𝗘𝗦𝗧 number of points to the 𝗟𝗘𝗔𝗦𝗧 number of points.",
+                    "Explain how you used place value to determine which score is the 𝗚𝗥𝗘𝗔𝗧𝗘𝗦𝗧."
+                ],
+                "AnswerChoices": {
+                    "A:132 (Elyssa)": {
+                        "Choice": "1:greatest",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B:97 (Kendra)": {
+                        "Choice": "3:",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C:105 (Hendrix)": {
+                        "Choice": "2:",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D:68 (Mike)": {
+                        "Choice": "4:least",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

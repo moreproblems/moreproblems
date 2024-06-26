@@ -842,5 +842,70 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Number & Operations - Fractions"
+        ],
+        "SubTopics": [
+            "Use operations to solve problems involving decimals, including converting between fractions and decimals (may include word problems)."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Curt has two pieces of rope. The first piece of rope is 4/10 meter long. The second piece of rope is 42/100 meter long."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Write the length, in meters as a decimal, of the first piece of rope."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "0.4",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Write the total length, in meters as a fraction, of both pieces of rope. Show or explain all your work."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "82/100",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "The length of a third piece of rope is between the lengths of the first and second pieces of rope. The length of the third piece is expressed as a decimal to the hundredths place.",
+                    "Explain why there is only one possible length for the third piece of rope. As part of the explanation, find the length, in meters, of the third piece of rope and express it as a decimal to the hundredths place."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

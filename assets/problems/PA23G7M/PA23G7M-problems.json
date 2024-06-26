@@ -840,5 +840,88 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Ratios & Proportional Relationships",
+            "Ratios & Proportional Relationships",
+            "Ratios & Proportional Relationships"
+        ],
+        "SubTopics": [
+            "Compute unit rates associated with ratios of fractions, including ratios of lengths, areas, and other quantities measured in like or different units.",
+            "Explain what a point (x, y) on the graph of a proportional relationship means in terms of the situation, with special attention to the points (0, 0) and (1, r), where r is the unit rate.",
+            "Use proportional relationships to solve multi-step ratio and percent problems."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Gavin, Sara, and Frank are each typing a book report."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Gavin can type 1/2 page of his book report in 5 3/4 minutes.",
+                    "What is Gavin's typing rate, in pages per minute?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "2/23",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "The graph shown below can be used to determine the number of pages of her book report that Sara has typed based on the amount of time, in minutes, she has been typing.",
+                    "problems/PA23G7M/media/17a.jpg",
+                    "One point on the graph has an x-coordinate of 1.",
+                    "What does this point represent in terms of Sara's typing rate?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "0.5 pages per minute",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Frank's book report will be 3 pages long. He has 40% of his book report typed.",
+                    "He can type at a rate of 1/8 page per minute.",
+                    "How much more time, in minutes, does Frank need to finish typing his book report? Show or explain all your work."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "14.4",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

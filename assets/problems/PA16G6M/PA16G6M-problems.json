@@ -837,5 +837,70 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Identify, write, and evaluate numerical and algebraic expressions."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Sam and Annika ride their bikes to school. Sam rides his bike k kilometers. Annika rides her bike 2 less than 4 times as many kilometers as Sam rides."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Write an expression to represent how many kilometers Annika rides her bike to school."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "4k-2",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Sam rides his bike at most 2 kilometers to school.",
+                    "What is the 𝗚𝗥𝗘𝗔𝗧𝗘𝗦𝗧 distance, in kilometers, Annika could ride her bike to school? Show or explain all your work."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "6",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Explain why Sam must ride his bike more than 1/2 kilometer to school."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

@@ -832,5 +832,109 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Operations & Algebraic Thinking"
+        ],
+        "SubTopics": [
+            "Create, extend, and analyze patterns."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Adam and Brianna each made a number pattern."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Adam's pattern starts with the number 3 and follows the rule “add 6.”",
+                    "What are the first four terms of Adam's pattern?",
+                    "First number: :FR-1:",
+                    "Second number: :FR-2:",
+                    "Third number: :FR-3:",
+                    "Fourth number: :FR-4:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "3",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "9",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "3:KEY": {
+                        "Choice": "15",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "4:KEY": {
+                        "Choice": "21",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Brianna's pattern starts with the number 3 and follows the rule “add 5.”",
+                    "What is the first number greater than 3 that will be in both Adam's pattern and Brianna's pattern?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "33",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Adam and Brianna each wrote the first 20 terms in their patterns.",
+                    "How much smaller is the 20th term in Brianna's pattern than the 20th term in Adam's pattern? Explain how to determine the difference 𝗪𝗜𝗧𝗛𝗢𝗨𝗧 expanding both patterns to the 20th term."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "19",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

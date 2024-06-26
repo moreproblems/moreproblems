@@ -838,5 +838,74 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Use properties of operations to generate equivalent expressions."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Bella bought gardening materials from different stores."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "At Garden Mart, Bella bought g packets of geranium seeds, m packets of marigold seeds, and z packets of zinnia seeds. All of the plant seeds were on sale for half price. The expression shown below represents the total cost of the plant seeds Bella bought.",
+                    ":ibox:(2.48g + 1.74m + 1.96z)/2",
+                    "Write an expression without parentheses that also represents Bella's total cost at Garden Mart."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "1.24g+0.87m+0.98z",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "At Plant World, Bella bought a hose and a shovel. The hose was priced at $29.68, but Bella had a coupon for x dollars off. The price of the shovel was $14.45.",
+                    "Write an expression to represent how much money, in dollars, Bella spent at Plant World."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "44.13-x",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Bella went to Yard Depot multiple times. Each time she was there, Bella bought a gardening hat and y pairs of gardening gloves. The expression shown below represents the total amount of money, in dollars, Bella spent at Yard Depot.",
+                    ":ibox:a(by + c)",
+                    "Explain what a, b, and c each mean in terms of the situation."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

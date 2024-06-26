@@ -840,5 +840,53 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Analyze and interpret bivariate data displayed in multiple representations."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Audrey surveyed eight people about how many magazine subscriptions they have and how many books they read in the last month. The table shows the results of Audrey's survey.",
+            "problems/PA18G8M/media/17a.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MGP",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Construct a scatter plot to represent the data. Draw a line of best fit for the data.",
+                    "problems/PA18G8M/media/17b.jpg"
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Explain how to determine where to draw the line of best fit for the data."
+                ],
+                "AnswerChoices": {}
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Explain what the slope of the line of best fit represents for this problem. (It is not necessary to find the actual value of the slope.)"
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

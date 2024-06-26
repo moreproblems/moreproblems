@@ -840,5 +840,83 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Expressions & Equations",
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Apply properties of operations to calculate with numbers in any form; convert between forms as appropriate.",
+            "Determine the reasonableness of answer(s) or interpret the solution(s) in the context of the problem."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Dustin earns $9.80 per hour at his job."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Last week Dustin worked x hours on Thursday and 6 hours on Saturday.",
+                    "Write an expression that can be used to calculate Dustin's earnings on these two days."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "(x+6)*9.8",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Dustin's older brother Jeff earns 5% more per hour at his job than Dustin earns.",
+                    "How much money, in dollars, does Jeff earn in an hour? Show or explain all your work."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "10.29",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Laura earns 10% more per hour than Dustin. This week Dustin and Laura worked the same number of hours. Dustin earned $137.20. He calculated the amount Laura earned to be $152.44 because 137.20 ÷ 0.90 = 152.44.",
+                    "Describe the error in Dustin's work. State the actual amount Laura earned this week as part of your description."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "150.92",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

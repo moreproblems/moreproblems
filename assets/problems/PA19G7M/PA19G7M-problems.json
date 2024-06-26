@@ -835,5 +835,132 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Describe and apply properties of geometric figures."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A piece of steel is in the shape of a triangle. One side of the triangle is 8 inches long. The lengths of the other two sides are equal and each is less than 8 inches long."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MC",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    "What type of triangle 𝗠𝗨𝗦𝗧 describe the shape of the piece of steel?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "right",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "isosceles",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "equilateral",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "scalene",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MFR",
+                "NumChoices": 3,
+                "Explain": false,
+                "Content": [
+                    "The triangle formed is a right triangle, where Angle 1 is across from the longest side. What are possible values for each of the three angle measures, in degrees, of the vertices of the triangle?",
+                    "Angle 1: :FR-1",
+                    "Angle 2: :FR-2",
+                    "Angle 3: :FR-3"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "90",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "45",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "3:KEY": {
+                        "Choice": "45",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Another piece of steel is also in the shape of a triangle. One side of the triangle is 6 inches long. The lengths of the other two sides are equal and each is less than 6 inches long. The lengths of the unknown sides of the triangle are whole numbers of inches.",
+                    "What are all the possible lengths, in inches, of the unknown sides of the triangle? Explain the process you used to find all the possible lengths.",
+                    "Possible length 1: :FR-1:",
+                    "Possible length 2: :FR-2"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "4",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "5",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

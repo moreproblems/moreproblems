@@ -710,7 +710,7 @@
                 "Choice": "19.1 inches",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Uses the Pythagorean theorem (a² + b² = c²) to set up 34² + b² = 39², simplifies this to b² = 1,521 – 1,156 = 365, and then solves for b by determining the square root of 365 (19.104973...).",
+                    "Rationale": "Uses the Pythagorean theorem (a² + b² = c²) to set up 34² + b² = 39², simplifies this to b² = 1,521 – 1,156 = 365, and then solves for b by determining the square root of 365 (19.104973 ...).",
                     "Percent": 59
                 }
             },
@@ -814,7 +814,7 @@
                 "Choice": "11.78 cubic inches",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Uses the volume formula for a cone (V = (1/3)πr²h) to set up V = (1/3)π(1.5)²(5), simplifies this to V = 3.75π, and then uses either calculator π or 3.14 to determine an approximation of the volume (either 11.780972... or 11.775).",
+                    "Rationale": "Uses the volume formula for a cone (V = (1/3)πr²h) to set up V = (1/3)π(1.5)²(5), simplifies this to V = 3.75π, and then uses either calculator π or 3.14 to determine an approximation of the volume (either 11.780972 ... or 11.775).",
                     "Percent": 73
                 }
             },
@@ -836,5 +836,63 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Apply concepts of rational and irrational numbers."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The locations of four points on a number line are described by the numbers listed below.",
+            ":ibox:point J: √12\tpoint K: 15/7\tpoint L: √16\tpoint M: 3π/2"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MLP",
+                "NumChoices": 51,
+                "Explain": false,
+                "Content": [
+                    "For 𝗢𝗡𝗟𝗬 the 𝗜𝗥𝗥𝗔𝗧𝗜𝗢𝗡𝗔𝗟 numbers that are listed, write the approximate value of each irrational number as a decimal rounded to the nearest tenth. Graph these approximate values on the number line below to show the locations of the irrational numbers. Label each graphed point with the correct letter."
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "An integer is represented by x. A rational number is represented by √x . The value of √x is between 84/18 and √41.",
+                    "Explain why there are only two possible values of x. As part of the explanation, state the two possible values of x.",
+                    "Solution 1: x = :FR-1:",
+                    "Solution 2: x = :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "25",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "36",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

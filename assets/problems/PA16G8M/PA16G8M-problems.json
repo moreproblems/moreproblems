@@ -841,5 +841,100 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Analyze and describe linear relationships between two variables, using slope."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Bill used a rain gauge to measure how much rain fell, in centimeters (cm), during a rainfall."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "T",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    "The rain fell at the same rate throughout the first 180 minutes of the rainfall.",
+                    "Complete the table below with the number of minutes it took for 9 centimeters of rain to fall and the number of centimeters of rain that fell through 150 minutes.",
+                    "problems/PA16G8M/supps/PA16G8M-T1.json"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "135",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "10",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Write an equation to describe the relationship between the time (t), in minutes, and the amount of rain (r), in centimeters."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "t=15r",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "The total amount of rain that fell from 180 minutes through 280 minutes is shown in the scatter plot below.",
+                    "problems/PA16G8M/media/17a.jpg",
+                    "Describe the change in the slope between the first 180 minutes and the following 100 minutes, and explain what it means in terms of the total amount of rainfall."
+                ],
+                "AnswerChoices": {}
+            },
+            "D": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "After 280 minutes, the slope of the graph is 0.",
+                    "Explain what a slope of 0 means in this situation."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "It stopped raining",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }
