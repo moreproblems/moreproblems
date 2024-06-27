@@ -835,5 +835,117 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "The Nature Of Science"
+        ],
+        "SubTopics": [
+            "Identify and describe examples of common technological changes past to present in the community (e.g., energy production, transportation, communications, agriculture, packaging materials) that have either positive or negative impacts on society or the environment."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Use the information below to answer the question.",
+            ":box:Oʙᴊᴇᴄᴛs\n\n• horse-drawn wagon\n\n• bicycle\n\n• automobile\n\n• train\n\n• airplane\n\n• boat",
+            "A student made a list of some objects."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Describe one similarity shared by all the objects in the list."
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    "Choose one of the objects from the list and describe a positive or a negative impact it has had on society or the environment."
+                ],
+                "AnswerChoices": {}
+            }
+        }
+    },
+    "18": {
+        "Number": 18,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Physical Sciences"
+        ],
+        "SubTopics": [
+            "Describe changes in motion caused by forces (e.g., magnetic, pushes or pulls, gravity, friction)."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Use the drawings below to answer the question.",
+            "problems/PA21G4S/media/18a.jpg",
+            "A student pushes a bar magnet across a tabletop toward magnet X. The student repeats this action toward magnet Y."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MC",
+                "NumChoices": 2,
+                "Explain": false,
+                "Content": [
+                    "Predict the motion of magnet X."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "The two magnets will repel.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "The two magnets will attract.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MC",
+                "NumChoices": 2,
+                "Explain": false,
+                "Content": [
+                    "Predict the motion of magnet Y."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "The two magnets will repel.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "The two magnets will attract.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }

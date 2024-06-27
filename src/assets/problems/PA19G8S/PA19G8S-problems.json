@@ -828,5 +828,109 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Biological Sciences"
+        ],
+        "SubTopics": [
+            "Describe the structures of living things that help them function effectively in specific ways (e.g., adaptations, characteristics)."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "The drawings below show the feet of two different animals.",
+            "problems/PA19G8S/media/17a.jpg",
+            "problems/PA19G8S/media/17b.jpg",
+            "Describe how the features of each animal’s foot likely help the animal survive in its habitat."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "How do the features of Animal 1 help with survival?"
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "How do the features of Animal 2 help with survival?"
+                ],
+                "AnswerChoices": {}
+            }
+        }
+    },
+    "18": {
+        "Number": 18,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Physical Sciences"
+        ],
+        "SubTopics": [
+            "Explain the differences among elements, compounds, and mixtures."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Answer Part A and Part B for this question.",
+            "problems/PA19G8S/media/18a.jpg",
+            "When club soda is made, carbon dioxide (CO₂) is forced into the drink solution, making it carbonated, or fizzy. The drink solution contains water and salts. If the lid of the soda is not tightly closed, it loses its carbonation."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MC",
+                "NumChoices": 3,
+                "Explain": false,
+                "Content": [
+                    "Identify club soda as an element, compound, or mixture."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "element",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "compound",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "mixture",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Explain the classification of club soda identified in Part A."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

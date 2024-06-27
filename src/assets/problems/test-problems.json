@@ -785,52 +785,84 @@
     },
     "17": {
         "Number": 17,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
         "SuppContent": [],
         "Explain": false,
         "Content": [
-            "",
+            "Answer Part A and Part B for this question.",
             "problems/PA15G8M/media/17a.jpg",
             ""
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    ""
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    ""
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "18": {
         "Number": 18,
