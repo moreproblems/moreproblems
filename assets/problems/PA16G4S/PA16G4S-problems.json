@@ -830,5 +830,109 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "The Nature Of Science"
+        ],
+        "SubTopics": [
+            "Provide examples, predict, or describe how everyday human activities (e.g., solid waste production, food production and consumption, transportation, water consumption, energy production and use) may change the environment."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "In the morning, a student eats cereal for breakfast and throws away the empty cardboard cereal box. The student then rides in a bus to school."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Explain how one of the student’s morning activities may have a negative effect on the environment."
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "SR",
+                "NumChoices": 4,
+                "Explain": false,
+                "Content": [
+                    "Describe an activity that could replace one of the student’s morning activities and reduce a negative effect on the environment."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "Recycle the cereal box",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "18": {
+        "Number": 18,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Biological Sciences"
+        ],
+        "SubTopics": [
+            "Explain how specific adaptations can help a living organism survive (e.g., protective coloration, mimicry, leaf sizes and shapes, ability to catch or retain water)."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Use the drawing below to answer the question.",
+            "problems/PA16G4S/media/18a.jpg",
+            "A mantis is a green insect that can grow up to 6 inches in length. It is a predator that can move very quickly. Also, it has excellent vision. A mantis can turn its head from side to side, unlike most other insects."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Identify two adaptations that help a mantis survive in its environment.",
+                    "Adaptation 1: :FR-1:",
+                    "Adaptation 2: :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "body shape",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "large eyes",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Describe how a mantis uses 𝗢𝗡𝗘 of the two adaptations listed in Part A to survive in its environment."
+                ],
+                "AnswerChoices": {}
+            }
+        }
     }
 }

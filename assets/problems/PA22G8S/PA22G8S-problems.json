@@ -834,5 +834,114 @@
             }
         },
         "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "The Nature Of Science"
+        ],
+        "SubTopics": [
+            "Use evidence, observations, or a variety of scales (e.g., mass, distance, volume, temperature) to describe relationships."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "Use the table below to answer the question.",
+            "problems/PA22G8S/media/17a.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Describe the relationship between the distance from the Sun and the orbital velocity of the planets in the table."
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "State a hypothesis describing how gravity affects the relationship in Part A."
+                ],
+                "AnswerChoices": {}
+            }
+        }
+    },
+    "18": {
+        "Number": 18,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "The Nature Of Science"
+        ],
+        "SubTopics": [
+            "Design a controlled experiment by specifying how the independent variables will be manipulated, how the dependent variable will be measured, and which variables will be held constant."
+        ],
+        "SuppContent": [],
+        "Explain": false,
+        "Content": [
+            "A student noticed that a can of carbonated beverage had lost most of its fizziness after being left open for one hour in a warm room with a temperature set at 25°C (77°F). The student hypothesized that a carbonated beverage would lose more carbon dioxide (CO₂) in a warm environment than in a colder environment."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Explain": true,
+                "Content": [
+                    "Identify the independent variable to test this hypothesis and describe how it could be changed."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "environmental temperature",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Explain": false,
+                "Content": [
+                    "Identify 𝗢𝗡𝗘 variable that should be held constant to accurately test the hypothesis."
+                ],
+                "AnswerChoices": {
+                    "KEY1": {
+                        "Choice": "beverage type",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "KEY2": {
+                        "Choice": "can size",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "KEY3": {
+                        "Choice": "time",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
     }
 }
