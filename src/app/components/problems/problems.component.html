@@ -2151,7 +2151,7 @@
           {{exam_length}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
         <h2 *ngIf="mode == 'assess' && length_mode == 'timer' && et_counter <= 0"> With {{number_correct}} out of
-          {{exam_length}} problems
+          {{max_problem_number - 1}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
         <div *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)"  class="card card-medium"
           style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">

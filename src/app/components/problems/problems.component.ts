@@ -3109,7 +3109,9 @@ export class ProblemsComponent implements OnInit {
           if (part == '') {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (choice == key.Choice) {
-                this.confetti_light(this.problem_attempts[part_num]);
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
@@ -3126,7 +3128,9 @@ export class ProblemsComponent implements OnInit {
           else {
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
               if (choice == key.Choice) {
-                this.confetti_light(this.problem_attempts[part_num]);
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
@@ -3288,7 +3292,9 @@ export class ProblemsComponent implements OnInit {
           }
         }
         if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
-          this.confetti_light(this.problem_attempts[part_num]);
+          if (this.mode == 'explain') {
+            this.confetti_light(this.problem_attempts[part_num]);
+          }
           if (this.problem_attempts[part_num] == 1) {
             this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
           }
@@ -4997,7 +5003,7 @@ export class ProblemsComponent implements OnInit {
     if (this.problem_number > this.max_problem_number) {
       this.max_problem_number = this.problem_number;
     }
-    if (this.problem_number > this.exam_length) {
+    if (this.problem_number > this.exam_length && this.length_mode == 'number') {
       this.completeExam();
     }
     else if (this.max_problem_number == this.problem_number) {
@@ -5635,7 +5641,7 @@ export class ProblemsComponent implements OnInit {
           }
         }
       }
-      this.correct_percent = Math.round(this.number_correct / this.problem_number * 100);
+      this.correct_percent = Math.round(this.number_correct / length_num * 100);
       for (let i: number = 0; i < length_num; i++) {
         for (let num: number = 0; num < this.exam_submission_list[i].Topics.length; num++) {
           if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[num])) {
