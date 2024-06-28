@@ -880,7 +880,12 @@
       <h2>Choose Your Settings</h2>
       <br />
       <div class="card-container" style="display: flex; justify-content: center; align-items: center; max-width: 100%; margin-top: 0px">
-        <div class="slider" style="margin: 10px">
+        <select (change)="toggle_length_mode()"
+            style="margin: 20px; padding: 5px 0px 5px 10px; width: 230px; height: 40px; font-size: 20px; font-weight: 500; text-align: center">
+            <option value="number" selected value>Number of Questions</option>
+            <option value="timer">Duration of Time</option>
+        </select>
+        <div *ngIf="length_mode=='number'" class="slider" style="margin: 10px">
           <div class="slider" style="display: flex; justify-content: center; align-items: center; margin-top: 10px; margin-bottom: 5px">
             <p style="font-size: 18px"> Total Problems: </p>
             <input (keyup)="set_problem_num(+this.probEntry.value)" type="text" inputmode="numeric"
@@ -889,6 +894,18 @@
               #probEntry />
           </div>
           <input type="range" min="5" max="50" value="{{exam_length}}" (input)="set_problem_num(+this.probSlider.value)"
+            style="width: 190px" #probSlider />
+        </div>
+        <div *ngIf="length_mode=='timer'" class="slider" style="margin: 10px">
+          <div class="slider" style="display: flex; justify-content: center; align-items: center; margin-top: 10px; margin-bottom: 5px">
+            <p style="font-size: 18px"> Total Time: </p>
+            <input (keyup)="set_timer(+this.probEntry.value)" type="text" inputmode="numeric"
+              value="{{exam_timer}}" min="5" max="60" maxlength="2"
+              style="margin: auto 5px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
+              #probEntry />
+              <p style="font-size: 16px"> mins </p>
+          </div>
+          <input type="range" min="5" max="50" value="{{exam_length}}" (input)="set_timer(+this.probSlider.value)"
             style="width: 190px" #probSlider />
         </div>
         <!-- <label class="switch" style="align-items: center; margin: 15px 0">
@@ -901,7 +918,7 @@
           </button>
         </label> -->
         <select (change)="toggle_mode()"
-            style="margin: 20px; padding: 5px 0px 5px 15px; width: 215px; height: 40px; font-size: 20px; font-weight: 500; text-align: left">
+            style="margin: 20px; padding: 5px 0px 5px 10px; width: 230px; height: 40px; font-size: 20px; font-weight: 500; text-align: center">
             <option value="assess" selected value>Assessment Mode</option>
             <option value="explain">Explanation Mode</option>
         </select>
@@ -2130,10 +2147,13 @@
       #problemSummaryCard>
       <br />
       <div class="content" style="margin: auto; align-items: center">
-        <h2 *ngIf="problem_number > exam_length && mode == 'assess'"> With {{number_correct}} out of
+        <h2 *ngIf="mode == 'assess' && length_mode == 'number' && problem_number > exam_length"> With {{number_correct}} out of
           {{exam_length}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
-        <div *ngIf="exam_length >= problem_number"  class="card card-medium"
+        <h2 *ngIf="mode == 'assess' && length_mode == 'timer' && et_counter <= 0"> With {{number_correct}} out of
+          {{exam_length}} problems
+          correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
+        <div *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)"  class="card card-medium"
           style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
           <section *ngIf="mode == 'assess'" (click)="expand_overview = !expand_overview" style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <div style="display: flex; flex-direction: row; align-items: center">
@@ -2144,7 +2164,7 @@
                         style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: darkslategrey; transform: rotate(-90deg)">
                 </div>
                 <div style="margin: auto; text-align: right">
-                  <h3 *ngIf="exam_length >= problem_number" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
+                  <h3 *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
                     Problem #{{problem_number}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
                 </div>
             </div>
@@ -2152,13 +2172,17 @@
           <section *ngIf="mode == 'explain'" style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <div style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: auto; text-align: right">
-                  <h3 *ngIf="exam_length >= problem_number" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
+                  <h3 *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
                     Problem #{{problem_number}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
                 </div>
             </div>
           </section>
-          <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+(max_problem_number-1)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
-          <progress *ngIf="!expand_overview || mode == 'explain'" value="{{max_problem_number-1}}" max="{{exam_length}}"
+          <h4 *ngIf="length_mode=='number'" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+(max_problem_number-1)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
+          <progress *ngIf="(!expand_overview || mode == 'explain') && length_mode=='number'" value="{{max_problem_number-1}}" max="{{exam_length}}"
+            style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
+            #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
+          <h4 *ngIf="length_mode=='timer'" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Remaining Time: <b>{{et_minutes}} mins {{et_counter%60}} secs</b> </h4>
+          <progress *ngIf="(!expand_overview || mode == 'explain') && length_mode=='timer'" value="{{exam_timer*60-et_counter}}" max="{{exam_timer*60}}"
             style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           <h4 *ngIf="get_flag_count() != 0 && !expand_overview && mode == 'assess'" style="margin-top: 5px; font-size: 17px; font-weight: 500"> <b style="font-size: 27px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); padding-right: 5px">&#9873;</b> <b>Flagged</b> Problems: <b>{{get_flag_count()}}</b> </h4>
@@ -2205,7 +2229,7 @@
           </div>
         </div>
         <br />
-        <div *ngIf="problem_number <= exam_length" class="card card-medium"
+        <div *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)" class="card card-medium"
           style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
           <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
           <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
@@ -2255,7 +2279,7 @@
         <!-- <br *ngIf="problem_number <= exam_length" /> -->
         <br />
       </div>
-      <div *ngIf="problem_number > exam_length && mode == 'assess'" style="width: 100%;">
+      <div *ngIf="mode == 'assess' && ((length_mode == 'number' && problem_number > exam_length) || (length_mode == 'timer' && et_counter <= 0))" style="width: 100%;">
         <button class="grade-button" (click)="resetExam();"
           style="display: block; max-width: 150px; max-height: 150px; margin: auto">
           <b> Reset Test </b> </button>
@@ -2494,7 +2518,7 @@
       </div>
     </div>
     <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%">
-      <div *ngIf="problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && expand_refsheet" style="width: 100%">
+      <div *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0) && problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && expand_refsheet" style="width: 100%">
         <br />
         <div class="card card-large"
           style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
@@ -2510,7 +2534,7 @@
     </div>
     <br *ngIf="selected_subtopic == ''" />
     <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%">
-      <div *ngIf="problem_number == +prob.key && selected_subtopic == '' && expand_supp">
+      <div *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0) && problem_number == +prob.key && selected_subtopic == '' && expand_supp">
         <div *ngFor="let supp of prob.value.SuppContent">
           <div class="card card-large"
             style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
@@ -2603,8 +2627,8 @@
       </div>
     </div>
     <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%">
-      <div *ngIf="problem_number == +prob.key" style="width: 100%">
-        <div *ngIf="selected_subtopic == '' && exam_length >= problem_number" class="card card-large"
+      <div *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0) && problem_number == +prob.key" style="width: 100%">
+        <div *ngIf="selected_subtopic == ''" class="card card-large"
           style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
           #problemCard>
           <br />
@@ -3412,8 +3436,7 @@
                     <button (click)="next_problem(); scroll_top()" class="toggle-button-off"
                         style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                         <div style="margin: 5px">
-                          <span (click)="toggle_flag()"
-                            style="font-size: 20px; font-weight: 1200; margin: 5px"> ⏩ </span>
+                          <span style="font-size: 20px; font-weight: 1200; margin: 5px"> ⏩ </span>
                         </div>
                         <div style="margin: 5px; text-align: center; font-size: 18px; width: 120px"><b> Skip Problem </b>
                         </div>
