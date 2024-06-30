@@ -2249,8 +2249,8 @@
             style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           <h4 *ngIf="exam_timer>0" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Remaining Time: <b>{{et_minutes}} mins {{et_counter%60}} secs</b> </h4>
-          <progress *ngIf="!expand_overview && exam_timer>0" value="{{exam_timer*60-et_counter}}" max="{{exam_timer*60}}"
-            style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
+          <progress *ngIf="exam_timer>0" value="{{et_counter}}" max="{{exam_timer*60}}"
+            style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px; direction: rtl"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           <h4 *ngIf="get_flag_count() != 0 && !expand_overview"
             style="margin-top: 5px; font-size: 17px; font-weight: 500"> <b

@@ -5590,17 +5590,6 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     }
     else {
       this.problem_number += 1;
-      if (this.authService.userData) {
-        this.db_updates = {};
-        if (this.authService.userData.role == 'Student') {
-          this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
-        }
-        else if (this.selected_student != '') {
-          this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/endtimestamp'] = serverTimestamp();
-        }
-        this.authService.UpdateDatabase(this.db_updates);
-        this.db_updates = {};
-      }
       this.completeExam();
     }
   }
@@ -6090,6 +6079,17 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     // retreive db sub/exam/problems if auth student, to calculate results & set db sub/exam/...
     this.toggleProblemTimer();
     this.toggleExamTimer();
+    if (this.authService.userData) {
+      this.db_updates = {};
+      if (this.authService.userData.role == 'Student') {
+        this.db_updates['/submissions/exams/' + this.authService.userData.uid + '/' + this.key + '/endtimestamp'] = serverTimestamp();
+      }
+      else if (this.selected_student != '') {
+        this.db_updates['/submissions/exams/' + this.selected_student + '/' + this.key + '/endtimestamp'] = serverTimestamp();
+      }
+      this.authService.UpdateDatabase(this.db_updates);
+      this.db_updates = {};
+    }
     console.log(this.exam_submission);
     this.number_correct = 0;
     for (let i: number = 1; i <= this.exam_length; i++) {
