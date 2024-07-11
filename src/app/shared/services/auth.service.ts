@@ -23,6 +23,7 @@ export class AuthService {
   user_result: any = {};
   class_result: any = {};
   exam_result: any = {};
+  quiz_result: any = {};
   inprog_exams: any = {};
   mystud_inprog_exams: any = {};
   exam_sub: any;
@@ -650,6 +651,21 @@ export class AuthService {
       }
     });
     return this.exam_result;
+  }
+
+  searchQuizId(id: string) {
+    this.quiz_result = {};
+    const db = getDatabase();
+    const quiz_ref = ref(db, "quizzes/" + id);
+    onValue(quiz_ref, (snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        this.quiz_result = snapshot.val();
+      } else {
+        console.log("No data available");
+      }
+    });
+    return this.quiz_result;
   }
 
   getInProgExams(id: string) {

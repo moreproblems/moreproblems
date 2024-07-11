@@ -720,7 +720,7 @@ export class ExamsComponent implements OnInit {
   }
 
   can_assign_c(clss: string) {
-    return (!this.my_class_metadata[this.authService.userData.classes.indexOf(clss)-1].assignments.includes(this.exam_id));
+    return (!this.my_class_metadata[this.authService.userData.classes.indexOf(clss)-1].exams.includes(this.exam_id));
   }
 
   select_state(st: string) {
@@ -859,7 +859,7 @@ export class ExamsComponent implements OnInit {
     this.assign_e = !this.assign_e;
   }
 
-  toggle_new_assignment(target: string) {
+  toggle_new_exam(target: string) {
     if (!this.new_assignments.includes(target)) {
       this.new_assignments.push(target);
     }
@@ -873,13 +873,13 @@ export class ExamsComponent implements OnInit {
     }
   }
 
-  add_assignments() {
+  add_assign_exam() {
     for (let ass of this.new_assignments) {
       if (ass.length < 10) {
-        const class_ass_ref = 'classes/' + ass + '/assignments';
+        const class_ass_ref = 'classes/' + ass + '/exams';
         var class_ass_set: any = [];
         var edit_c_list: any = {};
-        for (let exam of this.my_class_metadata[this.authService.userData.classes.indexOf(ass)-1].assignments) {
+        for (let exam of this.my_class_metadata[this.authService.userData.classes.indexOf(ass)-1].exams) {
           class_ass_set.push(exam as string);
         }
         class_ass_set.push(this.exam_id);

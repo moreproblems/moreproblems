@@ -12,6 +12,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { TemplateClassComponent } from './components/template-class/template-class.component';
 import { TemplateExamComponent } from './components/template-exam/template-exam.component';
 import { TemplateCExamComponent } from './components/template-c-exam/template-c-exam.component';
+import { TemplateQuizComponent } from './components/template-quiz/template-quiz.component';
+import { TemplateCQuizComponent } from './components/template-c-quiz/template-c-quiz.component';
 import { TemplateKeyComponent } from './components/template-key/template-key.component';
 import { TemplateStandardsComponent } from './components/template-standards/template-standards.component';
 import { TestExamComponent } from './components/test-exam/test-exam.component';
@@ -33,6 +35,8 @@ const routes: Routes = [
   { path: 'exam/:examKey', component: TemplateExamComponent },
   { path: 'exam/:examKey/key', component: TemplateKeyComponent },
   { path: 'exam/:examKey/:classKey', component: TemplateCExamComponent },
+  { path: 'quiz/:quizKey', component: TemplateQuizComponent },
+  { path: 'quiz/:quizKey/:classKey', component: TemplateCQuizComponent },
   { path: 'standards/:subjectKey', component: TemplateStandardsComponent }
 ];
 

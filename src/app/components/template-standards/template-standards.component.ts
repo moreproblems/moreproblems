@@ -32,35 +32,46 @@ import * as HSMSStandards from "src/assets/standards/CC/HS-M-S.json";
 import * as COPEStandards from "src/assets/standards/CO/P-E.json";
 import * as COPMStandards from "src/assets/standards/CO/P-M.json";
 import * as COPSStandards from "src/assets/standards/CO/P-S.json";
+import * as COPSSStandards from "src/assets/standards/CO/P-SS.json";
 import * as COKEStandards from "src/assets/standards/CO/K-E.json";
 import * as COKMStandards from "src/assets/standards/CO/K-M.json";
 import * as COKSStandards from "src/assets/standards/CO/K-S.json";
+import * as COKSSStandards from "src/assets/standards/CO/K-SS.json";
 import * as COG1EStandards from "src/assets/standards/CO/G1-E.json";
 import * as COG1MStandards from "src/assets/standards/CO/G1-M.json";
 import * as COG1SStandards from "src/assets/standards/CO/G1-S.json";
+import * as COG1SSStandards from "src/assets/standards/CO/G1-SS.json";
 import * as COG2EStandards from "src/assets/standards/CO/G2-E.json";
 import * as COG2MStandards from "src/assets/standards/CO/G2-M.json";
 import * as COG2SStandards from "src/assets/standards/CO/G2-S.json";
+import * as COG2SSStandards from "src/assets/standards/CO/G2-SS.json";
 import * as COG3EStandards from "src/assets/standards/CO/G3-E.json";
 import * as COG3MStandards from "src/assets/standards/CO/G3-M.json";
 import * as COG3SStandards from "src/assets/standards/CO/G3-S.json";
+import * as COG3SSStandards from "src/assets/standards/CO/G3-SS.json";
 import * as COG4EStandards from "src/assets/standards/CO/G4-E.json";
 import * as COG4MStandards from "src/assets/standards/CO/G4-M.json";
 import * as COG4SStandards from "src/assets/standards/CO/G4-S.json";
+import * as COG4SSStandards from "src/assets/standards/CO/G4-SS.json";
 import * as COG5EStandards from "src/assets/standards/CO/G5-E.json";
 import * as COG5MStandards from "src/assets/standards/CO/G5-M.json";
 import * as COG5SStandards from "src/assets/standards/CO/G5-S.json";
+import * as COG5SSStandards from "src/assets/standards/CO/G5-SS.json";
 import * as COG6EStandards from "src/assets/standards/CO/G6-E.json";
 import * as COG6MStandards from "src/assets/standards/CO/G6-M.json";
+import * as COG6SSStandards from "src/assets/standards/CO/G6-SS.json";
 import * as COG7EStandards from "src/assets/standards/CO/G7-E.json";
 import * as COG7MStandards from "src/assets/standards/CO/G7-M.json";
+import * as COG7SSStandards from "src/assets/standards/CO/G7-SS.json";
 import * as COG8EStandards from "src/assets/standards/CO/G8-E.json";
 import * as COG8MStandards from "src/assets/standards/CO/G8-M.json";
+import * as COG8SSStandards from "src/assets/standards/CO/G8-SS.json";
 import * as COMSSStandards from "src/assets/standards/CO/MS-S.json";
 import * as COHSE1Standards from "src/assets/standards/CO/HS-E1.json";
 import * as COHSE2Standards from "src/assets/standards/CO/HS-E2.json";
 import * as COHSMStandards from "src/assets/standards/CO/HS-M.json";
 import * as COHSSStandards from "src/assets/standards/CO/HS-S.json";
+import * as COHSSSStandards from "src/assets/standards/CO/HS-SS.json";
 import * as FLKEStandards from "src/assets/standards/FL/K-E.json";
 import * as FLKMStandards from "src/assets/standards/FL/K-M.json";
 import * as FLG1EStandards from "src/assets/standards/FL/G1-E.json";
@@ -689,7 +700,7 @@ export class TemplateStandardsComponent implements OnInit {
     stateSet = false;
 
     key: string = "";
-    online_subjects: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PE-CO", "PM-CO", "PS-CO", "KE-CO", "KM-CO", "KS-CO", "G1E-CO", "G1M-CO", "G1S-CO", "G2E-CO", "G2M-CO", "G2S-CO", "G3E-CO", "G3M-CO", "G3S-CO", "G4E-CO", "G4M-CO", "G4S-CO", "G5E-CO", "G5M-CO", "G5S-CO", "G6E-CO", "G6M-CO", "G7E-CO", "G7M-CO", "G8E-CO", "G8M-CO", "MSS-CO", "HSE1-CO", "HSE2-CO", "HSM-CO", "HSS-CO", "KE-FL", "KM-FL", "G1E-FL", "G1M-FL", "G2E-FL", "G2M-FL", "G3E-FL", "G3M-FL", "G4E-FL", "G4M-FL", "G5E-FL", "G5M-FL", "G6E-FL", "G6M-FL", "G7E-FL", "G7M-FL", "G8E-FL", "G8M-FL", "G9E-FL", "G10E-FL", "G11E-FL", "G12E-FL", "HSM-FL", "PKE-NY", "PKM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KE-RI", "KM-RI", "G1E-RI", "G1M-RI", "G2E-RI", "G2M-RI", "G3E-RI", "G3M-RI", "G4E-RI", "G4M-RI", "G5E-RI", "G5M-RI", "G6E-RI", "G6M-RI", "G7E-RI", "G7M-RI", "G8E-RI", "G8M-RI", "HSE1-RI", "HSE2-RI", "HSMA-RI", "HSMF-RI", "HSMG-RI", "HSMM-RI", "HSMN-RI", "HSMS-RI", "KE-TN", "KM-TN", "KS-TN", "G1E-TN", "G1M-TN", "G1S-TN", "G2E-TN", "G2M-TN", "G2S-TN", "G3E-TN", "G3M-TN", "G3S-TN", "G4E-TN", "G4M-TN", "G4S-TN", "G5E-TN", "G5M-TN", "G5S-TN", "G6E-TN", "G6M-TN", "G6S-TN", "G7E-TN", "G7M-TN", "G7S-TN", "G8E-TN", "G8M-TN", "G8S-TN", "HSMA1-TN", "HSMA2-TN", "HSSB1-TN", "HSE1-TN", "HSE2-TN", "HSMG-TN", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX", "SAT-M", "SAT-RW"];
+    online_subjects: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PE-CO", "PM-CO", "PS-CO", "PSS-CO", "KE-CO", "KM-CO", "KS-CO", "KSS-CO", "G1E-CO", "G1M-CO", "G1S-CO", "G1SS-CO", "G2E-CO", "G2M-CO", "G2S-CO", "G2SS-CO", "G3E-CO", "G3M-CO", "G3S-CO", "G3SS-CO", "G4E-CO", "G4M-CO", "G4S-CO", "G4SS-CO", "G5E-CO", "G5M-CO", "G5S-CO", "G5SS-CO", "G6E-CO", "G6M-CO", "G6SS-CO", "G7E-CO", "G7M-CO", "G7SS-CO", "G8E-CO", "G8M-CO", "MSS-CO", "G8SS-CO", "HSE1-CO", "HSE2-CO", "HSM-CO", "HSS-CO", "HSSS-CO", "KE-FL", "KM-FL", "G1E-FL", "G1M-FL", "G2E-FL", "G2M-FL", "G3E-FL", "G3M-FL", "G4E-FL", "G4M-FL", "G5E-FL", "G5M-FL", "G6E-FL", "G6M-FL", "G7E-FL", "G7M-FL", "G8E-FL", "G8M-FL", "G9E-FL", "G10E-FL", "G11E-FL", "G12E-FL", "HSM-FL", "PKE-NY", "PKM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KE-RI", "KM-RI", "G1E-RI", "G1M-RI", "G2E-RI", "G2M-RI", "G3E-RI", "G3M-RI", "G4E-RI", "G4M-RI", "G5E-RI", "G5M-RI", "G6E-RI", "G6M-RI", "G7E-RI", "G7M-RI", "G8E-RI", "G8M-RI", "HSE1-RI", "HSE2-RI", "HSMA-RI", "HSMF-RI", "HSMG-RI", "HSMM-RI", "HSMN-RI", "HSMS-RI", "KE-TN", "KM-TN", "KS-TN", "G1E-TN", "G1M-TN", "G1S-TN", "G2E-TN", "G2M-TN", "G2S-TN", "G3E-TN", "G3M-TN", "G3S-TN", "G4E-TN", "G4M-TN", "G4S-TN", "G5E-TN", "G5M-TN", "G5S-TN", "G6E-TN", "G6M-TN", "G6S-TN", "G7E-TN", "G7M-TN", "G7S-TN", "G8E-TN", "G8M-TN", "G8S-TN", "HSMA1-TN", "HSMA2-TN", "HSSB1-TN", "HSE1-TN", "HSE2-TN", "HSMG-TN", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX", "SAT-M", "SAT-RW"];
 
     KE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KEStandards;
     KM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KMStandards;
@@ -720,35 +731,46 @@ export class TemplateStandardsComponent implements OnInit {
     COPE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COPEStandards;
     COPM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COPMStandards;
     COPS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COPSStandards;
+    COPSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COPSSStandards;
     COKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COKEStandards;
     COKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COKMStandards;
     COKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COKSStandards;
+    COKSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COKSSStandards;
     COG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG1EStandards;
     COG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG1MStandards;
     COG1S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG1SStandards;
+    COG1SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG1SSStandards;
     COG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG2EStandards;
     COG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG2MStandards;
     COG2S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG2SStandards;
+    COG2SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG2SSStandards;
     COG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG3EStandards;
     COG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG3MStandards;
     COG3S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG3SStandards;
+    COG3SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG3SSStandards;
     COG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG4EStandards;
     COG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG4MStandards;
     COG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG4SStandards;
+    COG4SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG4SSStandards;
     COG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG5EStandards;
     COG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG5MStandards;
     COG5S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG5SStandards;
+    COG5SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG5SSStandards;
     COG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG6EStandards;
     COG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG6MStandards;
+    COG6SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG6SSStandards;
     COG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG7EStandards;
     COG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG7MStandards;
+    COG7SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG7SSStandards;
     COG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG8EStandards;
     COG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG8MStandards;
     COMSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COMSSStandards;
+    COG8SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG8SSStandards;
     COHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSE1Standards;
     COHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSE2Standards;
     COHSM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSMStandards;
     COHSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSSStandards;
+    COHSSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSSSStandards;
     FLKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLKEStandards;
     FLKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLKMStandards;
     FLG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG1EStandards;
@@ -1837,35 +1859,46 @@ export class TemplateStandardsComponent implements OnInit {
         "PE-CO": this.COPE_standards_dump,
         "PM-CO": this.COPM_standards_dump,
         "PS-CO": this.COPS_standards_dump,
+        "PSS-CO": this.COPSS_standards_dump,
         "KE-CO": this.COKE_standards_dump,
         "KM-CO": this.COKM_standards_dump,
         "KS-CO": this.COKS_standards_dump,
+        "KSS-CO": this.COKSS_standards_dump,
         "G1E-CO": this.COG1E_standards_dump,
         "G1M-CO": this.COG1M_standards_dump,
         "G1S-CO": this.COG1S_standards_dump,
+        "G1SS-CO": this.COG1SS_standards_dump,
         "G2E-CO": this.COG2E_standards_dump,
         "G2M-CO": this.COG2M_standards_dump,
         "G2S-CO": this.COG2S_standards_dump,
+        "G2SS-CO": this.COG2SS_standards_dump,
         "G3E-CO": this.COG3E_standards_dump,
         "G3M-CO": this.COG3M_standards_dump,
         "G3S-CO": this.COG3S_standards_dump,
+        "G3SS-CO": this.COG3SS_standards_dump,
         "G4E-CO": this.COG4E_standards_dump,
         "G4M-CO": this.COG4M_standards_dump,
         "G4S-CO": this.COG4S_standards_dump,
+        "G4SS-CO": this.COG4SS_standards_dump,
         "G5E-CO": this.COG5E_standards_dump,
         "G5M-CO": this.COG5M_standards_dump,
         "G5S-CO": this.COG5S_standards_dump,
+        "G5SS-CO": this.COG5SS_standards_dump,
         "G6E-CO": this.COG6E_standards_dump,
         "G6M-CO": this.COG6M_standards_dump,
+        "G6SS-CO": this.COG6SS_standards_dump,
         "G7E-CO": this.COG7E_standards_dump,
         "G7M-CO": this.COG7M_standards_dump,
+        "G7SS-CO": this.COG7SS_standards_dump,
         "G8E-CO": this.COG8E_standards_dump,
         "G8M-CO": this.COG8M_standards_dump,
         "MSS-CO": this.COMSS_standards_dump,
+        "G8SS-CO": this.COG8SS_standards_dump,
         "HSE1-CO": this.COHSE1_standards_dump,
         "HSE2-CO": this.COHSE2_standards_dump,
         "HSM-CO": this.COHSM_standards_dump,
         "HSS-CO": this.COHSS_standards_dump,
+        "HSSS-CO": this.COHSSS_standards_dump,
         "KE-FL": this.FLKE_standards_dump,
         "KM-FL": this.FLKM_standards_dump,
         "G1E-FL": this.FLG1E_standards_dump,

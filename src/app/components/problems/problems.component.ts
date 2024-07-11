@@ -2,6 +2,7 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from "../../shared/services/auth.service";
+import { serverTimestamp } from "firebase/database";
 import * as Plotly from 'plotly.js-dist-min';
 import * as examMetadata from "src/assets/problems/exams.json";
 import * as COG3EProblems from "src/assets/problems/COG3E/COG3E-problems.json";
@@ -497,6 +498,16 @@ export class ProblemsComponent implements OnInit {
   show_correct = false;
   mode = 'assess';
   length_mode = 'number';
+  quiz_name = '';
+
+  assign_e = false;
+  all_students: string[] = [];
+  all_students_data: any = {};
+  my_students: string[] = [];
+  my_students_data: any = {};
+  new_assignments: string[] = [];
+  my_class_metadata: any[] = [];
+  class_data: any = {};
 
   et_counter: number = 0;
   et_minutes: number = 0;
@@ -2148,6 +2159,124 @@ export class ProblemsComponent implements OnInit {
     console.log(JSON.stringify(this.exam_dump));
     console.log(this.exam_submission);
     console.log(this.exam_key);
+  }
+
+  assign_quiz() {
+    if (!this.assign_e) {
+      this.all_students = [];
+      this.my_students = [];
+      const linked_students = this.authService.userData.students.slice(1);
+      for (const [key, stud] of Object.entries(linked_students)) {
+        setTimeout(() => {
+          const student_data = this.authService.searchUserId(stud as string);
+          this.all_students.push(stud as string);
+          if (student_data != null) {
+            this.all_students_data[(stud as string)] = (student_data as object);
+          }
+          if ((stud as string).includes(this.authService.userData.uid as string)) {
+            this.my_students.push(stud as string);
+            if (student_data != null) {
+              this.my_students_data[(stud as string)] = (student_data as object);
+            }
+          }
+        }, +key * 10);
+      }
+      setTimeout(() => {
+        this.all_students = [];
+        this.my_students = [];
+        const linked_students = this.authService.userData.students.slice(1);
+        for (const [key, stud] of Object.entries(linked_students)) {
+          setTimeout(() => {
+            const student_data = this.authService.searchUserId(stud as string);
+            this.all_students.push(stud as string);
+            if (student_data != null) {
+              this.all_students_data[(stud as string)] = (student_data as object);
+            }
+            if ((stud as string).includes(this.authService.userData.uid as string)) {
+              this.my_students.push(stud as string);
+              if (student_data != null) {
+                this.my_students_data[(stud as string)] = (student_data as object);
+              }
+            }
+          }, +key * 10);
+        }
+      }, 100);
+      this.my_class_metadata = [];
+      const linked_classes = this.authService.userData.classes.slice(1);
+      for (const [key, clss] of Object.entries(linked_classes)) {
+        setTimeout(() => {
+          console.log(clss);
+          this.class_data = this.authService.searchClassId(clss as string);
+          console.log(this.class_data);
+          this.my_class_metadata.push(this.class_data as object);
+        }, +key * 10);
+      }
+      setTimeout(() => {
+        this.my_class_metadata = [];
+        const linked_classes = this.authService.userData.classes.slice(1);
+        for (const [key, clss] of Object.entries(linked_classes)) {
+          setTimeout(() => {
+            console.log(clss);
+            this.class_data = this.authService.searchClassId(clss as string);
+            console.log(this.class_data);
+            this.my_class_metadata.push(this.class_data as object);
+          }, +key * 10);
+        }
+      }, 100);
+    }
+    this.assign_e = !this.assign_e;
+  }
+
+  toggle_new_quiz(target: string) {
+    if (!this.new_assignments.includes(target)) {
+      this.new_assignments.push(target);
+    }
+    else {
+      if (this.new_assignments.indexOf(target) !== -1) {
+        this.new_assignments.splice(this.new_assignments.indexOf(target), 1);
+      }
+      else {
+        this.new_assignments.pop()
+      }
+    }
+  }
+
+  add_assign_quiz() {
+    for (let ass of this.new_assignments) {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      const charactersLength = characters.length;
+      var quiz_id = '';
+      for (let i: number = 1; i <= 5; i++) {
+        quiz_id += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+      var db_updates: any = {};
+      db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, grades: this.grade_filters, subjects: this.subject_filters, states: this.state_filters, topics: this.topic_filters, mode: this.mode, lmode: this.length_mode, length: (this.length_mode=='number') ? this.exam_length : this.exam_timer };
+      this.authService.UpdateDatabase(db_updates);
+      if (ass.length < 10) {
+        const class_ass_ref = 'classes/' + ass + '/quizzes';
+        var class_ass_set: any = [];
+        var edit_c_list: any = {};
+        for (let quiz of this.my_class_metadata[this.authService.userData.classes.indexOf(ass)-1].quizzes) {
+          class_ass_set.push(quiz as string);
+        }
+        class_ass_set.push(quiz_id);
+        edit_c_list[class_ass_ref] = class_ass_set;
+        this.authService.UpdateDatabase({ class_ass_ref: {} });
+        this.authService.UpdateDatabase(edit_c_list);
+      }
+      else {
+        db_updates = {};
+        db_updates['users/' + ass + '/exams/history/Q-' + quiz_id] = { progress: 0, status: 'Assigned', shuffle: true, lasttimestamp: serverTimestamp() };
+        // this.db_updates['users/' + ass + '/problems/all/' + this.exam_id + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
+        db_updates['/submissions/exams/' + ass + '/Q-' + quiz_id + '/starttimestamp'] = serverTimestamp();
+        this.authService.UpdateDatabase(db_updates);
+      }
+    }
+  }
+
+  clear_assignments() {
+    this.new_assignments = [];
+    this.assign_e = false;
   }
 
   toggle_filters() {
@@ -6012,10 +6141,75 @@ export class ProblemsComponent implements OnInit {
     this.favorite_std_set = [];
     this.filter_exams();
     if (this.authService.userData) {
+      // this.is_auth = true;
       this.authService.getProfilePic(this.authService.userData);
+      // setTimeout(() => {
+      //   console.log(this.authService.pp_url);
+      //   this.profileUploadURL = this.authService.pp_url;
+      // }, 150);
       this.user_data = this.authService.userData;
       for (let std of this.authService.userData.standards.favorites.slice(1)) {
         this.favorite_std_set.push(std as string[]);
+      }
+      if (this.authService.userData.role != 'Student' && this.authService.userData.role != '') {
+        const linked_students = this.authService.userData.students.slice(1);
+        for (const [key, stud] of Object.entries(linked_students)) {
+          setTimeout(() => {
+            const student_data = this.authService.searchUserId(stud as string);
+            this.all_students.push(stud as string);
+            if (student_data != null) {
+              this.all_students_data[(stud as string)] = (student_data as object);
+            }
+            if ((stud as string).includes(this.authService.userData.uid as string)) {
+              this.my_students.push(stud as string);
+              if (student_data != null) {
+                this.my_students_data[(stud as string)] = (student_data as object);
+              }
+            }
+          }, +key * 10);
+        }
+        setTimeout(() => {
+          this.all_students = [];
+          this.my_students = [];
+          const linked_students = this.authService.userData.students.slice(1);
+          for (const [key, stud] of Object.entries(linked_students)) {
+            setTimeout(() => {
+              const student_data = this.authService.searchUserId(stud as string);
+              this.all_students.push(stud as string);
+              if (student_data != null) {
+                this.all_students_data[(stud as string)] = (student_data as object);
+              }
+              if ((stud as string).includes(this.authService.userData.uid as string)) {
+                this.my_students.push(stud as string);
+                if (student_data != null) {
+                  this.my_students_data[(stud as string)] = (student_data as object);
+                }
+              }
+            }, +key * 10);
+          }
+        }, 100);
+        this.my_class_metadata = [];
+        const linked_classes = this.authService.userData.classes.slice(1);
+        for (const [key, clss] of Object.entries(linked_classes)) {
+          setTimeout(() => {
+            console.log(clss);
+            this.class_data = this.authService.searchClassId(clss as string);
+            console.log(this.class_data);
+            this.my_class_metadata.push(this.class_data as object);
+          }, +key * 10);
+        }
+        setTimeout(() => {
+          this.my_class_metadata = [];
+          const linked_classes = this.authService.userData.classes.slice(1);
+          for (const [key, clss] of Object.entries(linked_classes)) {
+            setTimeout(() => {
+              console.log(clss);
+              this.class_data = this.authService.searchClassId(clss as string);
+              console.log(this.class_data);
+              this.my_class_metadata.push(this.class_data as object);
+            }, +key * 10);
+          }
+        }, 100);
       }
     }
     // // Just to de-dupe all the subtopic labels

@@ -593,7 +593,7 @@
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <canvas id="confetticanvas"></canvas>
-  <div *ngIf="expand_filters" class="content-menu" role="menu" style="margin-bottom: 0; align-items: center">
+  <div *ngIf="expand_filters && !assign_e" class="content-menu" role="menu" style="margin-bottom: 0; align-items: center">
     <br *ngIf="grade_filters.length == 0 && subject_filters.length == 0" />
     <div *ngIf="grade_filters.length == 0 && subject_filters.length == 0" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
@@ -958,13 +958,113 @@
         </div>
         <br />
         <div class="card-container" style="display: flex; justify-content: center; align-items: center; max-width: 100%; margin-top: 0px">
-          <button class="grade-button" (click)="generate_problems()" style="width: 180px">
-            <h3 (click)="scroll_top()" style="margin-top: 2px; margin-bottom: 2px"><b> Begin Practice </b></h3>
-          </button>
+          <span *ngIf="authService.userData as user">
+            <button
+              *ngIf="!['', 'Student', 'Parent'].includes(user.role)"
+              (click)="assign_quiz()" class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
+              <img src="./assets/icons/assign.png" style="height: 27px; margin-top: 2px; margin-bottom: 2px">
+              <b style="margin-left: 10px; font-size: 20px; font-size: 22px; margin-top: 2px; margin-bottom: 2px"> Assign </b>
+            </button>
+          </span>
+          <span>
+            <button class="grade-button" (click)="generate_problems()" style="width: 180px">
+              <h3 (click)="scroll_top()" style="margin-top: 2px; margin-bottom: 2px; font-size: 22px"><b> Begin Practice </b></h3>
+            </button>
+          </span>
         </div>
       </div>
       <br />
     </div>
+  </div>
+  <div *ngIf="assign_e" class="card card-large"
+    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+    <br />
+    <h1 style="line-height: 28px"> Assign This Quiz </h1>
+    <br />
+    <div class="media">
+      <textarea *ngIf="screenWidth > 500" (change)="this.quiz_name = this.newQuizName.value" rows="1" maxlength="70" placeholder="Name Your Quiz"
+        style="margin: 10px auto; padding: 10px; width: min(90%, 600px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+        #newQuizName></textarea>
+      <textarea *ngIf="screenWidth <= 500" (change)="this.quiz_name = this.newQuizName.value" rows="2" maxlength="70" value="{{quiz_name}}" placeholder="Name Your Quiz"
+        style="margin: 10px auto; padding: 10px; width: 90%; height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+        #newQuizName></textarea>
+      <!-- <input (change)="this.quiz_name = this.newQuizName.value"
+        value="{{quiz_name}}" placeholder="Give your quiz a name" type="text" inputmode="text" maxlength="50"
+        style="margin: auto 10px auto 0; padding-left: 10px; width: min(450px, 80%); height: 40px; font-size: 17px; font-weight: 600; text-align: center"
+        #newQuizName /> -->
+      <br />
+      <h2 style="line-height: 28px"> Assign To Your Student(s) </h2>
+      <div class="card-container" style="align-items: center; padding-top: 0">
+        <h3 *ngIf="all_students.length < 1" style="font-size: 18px"> You haven't created any students under your
+          account.
+        </h3>
+        <div *ngFor="let std of all_students" (click)="toggle_new_quiz(std)" class="card card-small"
+          style="height: 75px; width: 170px; align-items: center">
+          <div class="avatar-container"
+            style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 0">
+            <img *ngIf="!this.new_assignments.includes(std)"
+              src="{{all_students_data[std].photoURL}}" class="select-avatar" style="width:100%; height: 100%">
+            <img *ngIf="this.new_assignments.includes(std)"
+              src="{{all_students_data[std].photoURL}}" class="select-avatar"
+              style="width:100%; height: 100%; opacity: 0.3">
+            <div class="middle">
+              <div *ngIf="!this.new_assignments.includes(std)"
+                style="color: white; background-color: #1976d2; border-radius: 10px">Select
+              </div>
+            </div>
+            <div *ngIf="this.new_assignments.includes(std)" class="select-middle">
+              <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
+            </div>
+          </div>
+          <h3 style="font-size: 18px; padding-left: 5px; width: 100px"> {{all_students_data[std].displayName}} </h3>
+        </div>
+      </div>
+      <br />
+      <h2 style="line-height: 28px"> Assign To Your Class(es) </h2>
+      <div class="card-container" style="align-items: center; padding-top: 0">
+        <h3 *ngIf="authService.userData.classes.length <= 1" style="font-size: 18px"> You haven't created any students
+          under your account.
+        </h3>
+        <div *ngFor="let clss of authService.userData.classes.slice(1)" (click)="toggle_new_quiz(clss)"
+          class="card card-small" style="height: 75px; width: 200px; align-items: center">
+          <div class="avatar-container"
+            style="position: relative; height: 50px; width: 50px; border-radius: 50%; padding: 0">
+            <img *ngIf="!this.new_assignments.includes(clss)" src="/assets/icons/class.png"
+              class="select-avatar" style="width:90%; height: 90%">
+            <img *ngIf="this.new_assignments.includes(clss)" src="/assets/icons/class.png"
+              class="select-avatar" style="width:90%; height: 90%; opacity: 0.3">
+            <div class="middle">
+              <div *ngIf="!this.new_assignments.includes(clss)"
+                style="color: white; background-color: #1976d2; border-radius: 10px">Select
+              </div>
+            </div>
+            <div *ngIf="this.new_assignments.includes(clss)" class="select-middle">
+              <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
+            </div>
+          </div>
+          <h3 style="font-size: 18px; padding-left: 5px; width: 140px">
+            {{my_class_metadata[authService.userData.classes.indexOf(clss)-1].displayName}} </h3>
+        </div>
+      </div>
+      <br />
+      <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+        <button *ngIf="authService.userData as user" (click)="add_assign_quiz(); clear_assignments()"
+          class="grade-button" style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
+          <div style="margin: 0 5px">
+            <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+          </div>
+          <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
+        </button>
+        <button *ngIf="authService.userData as user" (click)="clear_assignments()" class="grade-button"
+          style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
+          <div style="margin: 0 5px">
+            <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+          </div>
+          <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
+        </button>
+      </section>
+    </div>
+    <br />
   </div>
   <br *ngIf="!expand_filters" />
   <div *ngIf="!expand_filters" class="content-menu" role="menu" style="margin-bottom: 0; align-items: center">

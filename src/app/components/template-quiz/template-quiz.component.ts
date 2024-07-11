@@ -1,13 +1,8 @@
-import { Component, OnInit, AfterViewInit, Injectable, ElementRef, Input, ViewChild } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
-import { WindowService } from '../../shared/services/window.service';
-import { getAuth, RecaptchaVerifier } from 'firebase/auth';
-import { serverTimestamp } from "firebase/database";
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Component, OnInit, AfterViewInit, Injectable } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from "../../shared/services/auth.service";
-import intlTelInput from 'intl-tel-input';
+import { serverTimestamp } from "firebase/database";
 import * as Plotly from 'plotly.js-dist-min';
 import * as examMetadata from "src/assets/problems/exams.json";
 import * as COG3EProblems from "src/assets/problems/COG3E/COG3E-problems.json";
@@ -461,8 +456,7 @@ import * as TX21HSUSHProblems from "src/assets/problems/TX21HSUSH/TX21HSUSH-prob
 import * as TX19HSUSHProblems from "src/assets/problems/TX19HSUSH/TX19HSUSH-problems.json";
 import * as TX18HSUSHProblems from "src/assets/problems/TX18HSUSH/TX18HSUSH-problems.json";
 import * as TX17HSUSHProblems from "src/assets/problems/TX17HSUSH/TX17HSUSH-problems.json";
-
-import 'node_modules/intl-tel-input/build/css/intlTelInput.css';
+import { partition } from 'rxjs/operators';
 
 const confetti = require('canvas-confetti');
 
@@ -473,18 +467,20 @@ const confettiHandler = confetti.create(confettiCanvas, {
 });
 
 @Component({
-  selector: 'app-template-exam',
-  templateUrl: './template-exam.component.html',
-  styleUrls: ['./template-exam.component.css']
+  selector: 'app-template-quiz',
+  templateUrl: './template-quiz.component.html',
+  styleUrls: ['./template-quiz.component.css']
 })
 
 @Injectable()
-export class TemplateExamComponent implements OnInit, AfterViewInit {
+export class TemplateQuizComponent implements OnInit, AfterViewInit {
   title = 'More Problems';
 
   screenWidth = window.innerWidth;
-  screenHeight = window.innerHeight;
   mobileWidth = 1000;
+
+  key = "";
+  quiz_config: any = {};
   data_loaded = false;
 
   exam_inprogress: boolean = false;
@@ -498,9 +494,31 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
   my_students_data: any = {};
   selected_student: string = "";
   selected_student_data: any = {};
+  all_students: string[] = [];
+  all_students_data: any = {};
   favorite_std_set: string[][] = [];
+  class_data: any = {};
 
-  et_counter: number = 1;
+  expand_filters = true;
+  topics: string[] = [];
+  subtopics: string[] = [];
+  topics_count: { [key: string]: number } = {};
+  subtopics_count: { [key: string]: number } = {};
+  state_filters: string[] = [];
+  grade_filters: string[] = [];
+  subject_filters: string[] = [];
+  topic_filters: string[] = [];
+  // sub_topic = false;
+  expand_refsheet = false;
+  expand_supp = true;
+  expand_overview = true;
+  expand_topics = true;
+  show_correct = false;
+  mode = 'assess';
+  length_mode = 'number';
+  quiz_name: string = '';
+
+  et_counter: number = 0;
   et_minutes: number = 0;
   et_timer: any;
   et_running: boolean = false;
@@ -509,31 +527,15 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
   pt_timer: any;
   pt_running: boolean = false;
 
-  expand_refsheet = false;
-  expand_supp = true;
-  expand_overview = true;
-  expand_topics = true;
-  show_correct = false;
-
-  key = "";
-  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Timer': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number }, 'Parts': string[] } } = examMetadata;
-  exam_state = "";
-  exam_grade = "";
-  exam_subject = "";
-  exam_name = "";
-  exam_year = "";
-  exam_type = "";
-  exam_length = 0;
-  exam_timer = 0;
+  // exam_state = 'Texas';
+  // exam_grade = 'Grade 3';
+  // exam_subject = 'Mathematics';
+  // exam_name = 'STAAR';
+  // exam_year = '2021';
+  exam_length = 10;
+  exam_timer = 10;
   timer_hours = 0;
   timer_minutes = 0;
-
-  online_set = ['COG3E', 'COG4E', 'COG5E', 'COG6E', 'COG7E', 'COG8E', 'COG3M', 'COG4M', 'COG5M', 'COG6M', 'COG7M', 'COG8M', 'COG5S', 'COG8S', 'COHSS', 'FL20G3M', 'FL20G3R', 'FL20G4M', 'FL20G4R', 'FL20G4W', 'FL20G5M', 'FL20G5R', 'FL20G5W', 'FL20G5S', 'FL20G6M', 'FL20G6R', 'FL20G6W', 'FL20G7M', 'FL20G7R', 'FL20G7W', 'FL20G8M', 'FL20G8R', 'FL20G8W', 'FL20G8S', 'FL20G9R', 'FL20G9W', 'FL20G10R', 'FL20G10W', 'NY23G3M', 'NY23G3E', 'NY22G3M', 'NY22G3E', 'NY21G3M', 'NY21G3E', 'NY19G3M', 'NY19G3E', 'NY18G3M', 'NY18G3E', 'NY17G3M', 'NY17G3E', 'NY16G3M', 'NY16G3E', 'NY15G3M', 'NY15G3E', 'NY23G4M', 'NY23G4E', 'NY22G4M', 'NY22G4E', 'NY21G4M', 'NY21G4E', 'NY19G4M', 'NY19G4E', 'NY18G4M', 'NY18G4E', 'NY17G4M', 'NY17G4E', 'NY16G4M', 'NY16G4E', 'NY15G4M', 'NY15G4E', 'NY22G4S', 'NY21G4S', 'NY19G4S', 'NY18G4S', 'NY17G4S', 'NY16G4S', 'NY15G4S', 'NY23G5M', 'NY23G5E', 'NY22G5M', 'NY22G5E', 'NY21G5M', 'NY21G5E', 'NY19G5M', 'NY19G5E', 'NY18G5M', 'NY18G5E', 'NY17G5M', 'NY17G5E', 'NY16G5M', 'NY16G5E', 'NY15G5M', 'NY15G5E', 'NY23G6M', 'NY23G6E', 'NY22G6M', 'NY22G6E', 'NY21G6M', 'NY21G6E', 'NY19G6M', 'NY19G6E', 'NY18G6M', 'NY18G6E', 'NY17G6M', 'NY17G6E', 'NY16G6M', 'NY16G6E', 'NY15G6M', 'NY15G6E', 'NY23G7M', 'NY23G7E', 'NY22G7M', 'NY22G7E', 'NY21G7M', 'NY21G7E', 'NY19G7M', 'NY19G7E', 'NY18G7M', 'NY18G7E', 'NY17G7M', 'NY17G7E', 'NY16G7M', 'NY16G7E', 'NY15G7M', 'NY15G7E', 'NY23G8M', 'NY23G8E', 'NY22G8M', 'NY22G8E', 'NY21G8M', 'NY21G8E', 'NY19G8M', 'NY19G8E', 'NY18G8M', 'NY18G8E', 'NY17G8M', 'NY17G8E', 'NY16G8M', 'NY16G8E', 'NY15G8M', 'NY15G8E', 'NY22G8S', 'NY21G8S', 'NY19G8S', 'NY18G8S', 'NY17G8S', 'NY16G8S', 'NY15G8S', 'PA23G3M', 'PA23G3E', 'PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA23G4M', 'PA23G4E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA23G4S', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA23G5M', 'PA23G5E', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA23G6M', 'PA23G6E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA23G7M', 'PA23G7E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA23G8M', 'PA23G8E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA23G8S', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S', 'PSAT1', 'PSAT1RW1', 'PSAT1RW2', 'PSAT1M1', 'PSAT1M2', 'RI23G3M', 'RI22G3M', 'RI21G3M', 'RI19G3M', 'RI18G3M', 'RI23G3E', 'RI22G3E', 'RI21G3E', 'RI19G3E', 'RI18G3E', 'RI23G4M', 'RI22G4M', 'RI21G4M', 'RI19G4M', 'RI18G4M', 'RI23G4E', 'RI22G4E', 'RI21G4E', 'RI19G4E', 'RI18G4E', 'RI23G5M', 'RI22G5M', 'RI21G5M', 'RI19G5M', 'RI18G5M', 'RI23G5E', 'RI22G5E', 'RI21G5E', 'RI19G5E', 'RI18G5E', 'RI23G6M', 'RI22G6M', 'RI21G6M', 'RI19G6M', 'RI18G6M', 'RI23G6E', 'RI22G6E', 'RI21G6E', 'RI19G6E', 'RI18G6E', 'RI23G7M', 'RI22G7M', 'RI21G7M', 'RI19G7M', 'RI18G7M', 'RI23G7E', 'RI22G7E', 'RI21G7E', 'RI19G7E', 'RI18G7E', 'RI23G8M', 'RI22G8M', 'RI21G8M', 'RI19G8M', 'RI18G8M', 'RI23G8E', 'RI22G8E', 'RI21G8E', 'RI19G8E', 'RI18G8E', 'SAT1', 'SAT1RW1', 'SAT1RW2', 'SAT1M1', 'SAT1M2', 'SAT2', 'SAT2RW1', 'SAT2RW2', 'SAT2M1', 'SAT2M2', 'SAT3', 'SAT3RW1', 'SAT3RW2', 'SAT3M1', 'SAT3M2', 'SAT4', 'SAT4RW1', 'SAT4RW2', 'SAT4M1', 'SAT4M2', 'TN20G3E', 'TN20G3M', 'TN20G3S', 'TN20G4E', 'TN20G4M', 'TN20G4S', 'TN20G5E', 'TN20G5M', 'TN20G5S', 'TN20G6E', 'TN20G6M', 'TN20G6S', 'TN20G6SS', 'TN20G7E', 'TN20G7M', 'TN20G7S', 'TN20G7SS', 'TN20G8E', 'TN20G8M', 'TN20G8S', 'TN20G8SS', 'TN20HSA1', 'TN20HSA2', 'TN20HSB', 'TN20HSE1', 'TN20HSE2', 'TN20HSG', 'TN20HSUSH', 'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH'];
-
-  exam_directions = "";
-  
-
-  topics_count: { [key: string]: number } = {};
 
   COG3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = COG3EProblems;
   COG4E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = COG4EProblems;
@@ -1439,18 +1441,25 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     "TX18HSUSH": this.TX18HSUSH_exam_dump,
     "TX17HSUSH": this.TX17HSUSH_exam_dump
   };
-  dump_count = 1;
+  dump_count = 0;
+
+  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Timer': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number }, 'Parts': string[] } } = examMetadata;
+  online_set = ["COG3E", "COG4E", "COG5E", "COG6E", "COG7E", "COG8E", "COG3M", "COG4M", "COG5M", "COG6M", "COG7M", "COG8M", "COG5S", "COG8S", "COHSS", "FL20G3M", "FL20G3R", "FL20G4M", "FL20G4R", "FL20G4W", "FL20G5M", "FL20G5R", "FL20G5S", "FL20G5W", "FL20G6M", "FL20G6R", "FL20G6W", "FL20G7M", "FL20G7R", "FL20G7W", "FL20G8M", "FL20G8R", "FL20G8S", "FL20G8W", "FL20G9R", "FL20G9W", "FL20G10R", "FL20G10W", "NY23G3M", "NY23G3E", "NY22G3M", "NY22G3E", "NY21G3M", "NY21G3E", "NY19G3M", "NY19G3E", "NY18G3M", "NY18G3E", "NY17G3M", "NY17G3E", "NY16G3M", "NY16G3E", "NY15G3M", "NY15G3E", "NY23G4M", "NY23G4E", "NY22G4M", "NY22G4E", "NY21G4M", "NY21G4E", "NY19G4M", "NY19G4E", "NY18G4M", "NY18G4E", "NY17G4M", "NY17G4E", "NY16G4M", "NY16G4E", "NY15G4M", "NY15G4E", "NY22G4S", "NY21G4S", "NY19G4S", "NY18G4S", "NY17G4S", "NY16G4S", "NY15G4S", "NY23G5M", "NY23G5E", "NY22G5M", "NY22G5E", "NY21G5M", "NY21G5E", "NY19G5M", "NY19G5E", "NY18G5M", "NY18G5E", "NY17G5M", "NY17G5E", "NY16G5M", "NY16G5E", "NY15G5M", "NY15G5E", "NY23G6M", "NY23G6E", "NY22G6M", "NY22G6E", "NY21G6M", "NY21G6E", "NY19G6M", "NY19G6E", "NY18G6M", "NY18G6E", "NY17G6M", "NY17G6E", "NY16G6M", "NY16G6E", "NY15G6M", "NY15G6E", "NY23G7M", "NY23G7E", "NY22G7M", "NY22G7E", "NY21G7M", "NY21G7E", "NY19G7M", "NY19G7E", "NY18G7M", "NY18G7E", "NY17G7M", "NY17G7E", "NY16G7M", "NY16G7E", "NY15G7M", "NY15G7E", "NY23G8M", "NY23G8E", "NY22G8M", "NY22G8E", "NY21G8M", "NY21G8E", "NY19G8M", "NY19G8E", "NY18G8M", "NY18G8E", "NY17G8M", "NY17G8E", "NY16G8M", "NY16G8E", "NY15G8M", "NY15G8E", "NY22G8S", "NY21G8S", "NY19G8S", "NY18G8S", "NY17G8S", "NY16G8S", "NY15G8S", "PA23G3M", "PA23G3E", "PA22G3M", "PA22G3E", "PA21G3M", "PA21G3E", "PA19G3M", "PA19G3E", "PA18G3M", "PA18G3E", "PA16G3M", "PA16G3E", "PA15G3M", "PA15G3E", "PA23G4M", "PA23G4E", "PA22G4M", "PA22G4E", "PA21G4M", "PA21G4E", "PA19G4M", "PA19G4E", "PA18G4M", "PA18G4E", "PA16G4M", "PA16G4E", "PA15G4M", "PA15G4E", "PA23G4S", "PA22G4S", "PA21G4S", "PA19G4S", "PA18G4S", "PA16G4S", "PA15G4S", "PA23G5M", "PA23G5E", "PA22G5M", "PA22G5E", "PA21G5M", "PA21G5E", "PA19G5M", "PA19G5E", "PA18G5M", "PA18G5E", "PA16G5M", "PA16G5E", "PA15G5M", "PA15G5E", "PA23G6M", "PA23G6E", "PA22G6M", "PA22G6E", "PA21G6M", "PA21G6E", "PA19G6M", "PA19G6E", "PA18G6M", "PA18G6E", "PA16G6M", "PA16G6E", "PA15G6M", "PA15G6E", "PA23G7M", "PA23G7E", "PA22G7M", "PA22G7E", "PA21G7M", "PA21G7E", "PA19G7M", "PA19G7E", "PA18G7M", "PA18G7E", "PA16G7M", "PA16G7E", "PA15G7M", "PA15G7E", "PA23G8M", "PA23G8E", "PA22G8M", "PA22G8E", "PA21G8M", "PA21G8E", "PA19G8M", "PA19G8E", "PA18G8M", "PA18G8E", "PA16G8M", "PA16G8E", "PA15G8M", "PA15G8E", "PA23G8S", "PA22G8S", "PA21G8S", "PA19G8S", "PA18G8S", "PA16G8S", "PA15G8S", "PSAT1M1", "PSAT1M2", "PSAT1RW1", "PSAT1RW2", "RI23G3M", "RI22G3M", "RI21G3M", "RI19G3M", "RI18G3M", "RI23G3E", "RI22G3E", "RI21G3E", "RI19G3E", "RI18G3E", "RI23G4M", "RI22G4M", "RI21G4M", "RI19G4M", "RI18G4M", "RI23G4E", "RI22G4E", "RI21G4E", "RI19G4E", "RI18G4E", "RI23G5M", "RI22G5M", "RI21G5M", "RI19G5M", "RI18G5M", "RI23G5E", "RI22G5E", "RI21G5E", "RI19G5E", "RI18G5E", "RI23G6M", "RI22G6M", "RI21G6M", "RI19G6M", "RI18G6M", "RI23G6E", "RI22G6E", "RI21G6E", "RI19G6E", "RI18G6E", "RI23G7M", "RI22G7M", "RI21G7M", "RI19G7M", "RI18G7M", "RI23G7E", "RI22G7E", "RI21G7E", "RI19G7E", "RI18G7E", "RI23G8M", "RI22G8M", "RI21G8M", "RI19G8M", "RI18G8M", "RI23G8E", "RI22G8E", "RI21G8E", "RI19G8E", "RI18G8E", "SAT1M1", "SAT1M2", "SAT1RW1", "SAT1RW2", "SAT2M1", "SAT2M2", "SAT2RW1", "SAT2RW2", "SAT3M1", "SAT3M2", "SAT3RW1", "SAT3RW2", "SAT4M1", "SAT4M2", "SAT4RW1", "SAT4RW2", "TN20G3E", "TN20G3M", "TN20G3S", "TN20G4E", "TN20G4M", "TN20G4S", "TN20G5E", "TN20G5M", "TN20G5S", "TN20G6E", "TN20G6M", "TN20G6S", "TN20G6SS", "TN20G7E", "TN20G7M", "TN20G7S", "TN20G7SS", "TN20G8E", "TN20G8M", "TN20G8S", "TN20G8SS", "TN20HSA1", "TN20HSA2", "TN20HSB", "TN20HSE1", "TN20HSE2", "TN20HSG", "TN20HSUSH", "TX22G3M", "TX22G3R", "TX21G3M", "TX21G3R", "TX19G3M", "TX19G3R", "TX18G3M", "TX18G3R", "TX17G3M", "TX17G3R", "TX22G4M", "TX22G4R", "TX21G4M", "TX21G4R", "TX19G4M", "TX19G4R", "TX18G4M", "TX18G4R", "TX17G4M", "TX17G4R", "TX22G5M", "TX22G5R", "TX21G5M", "TX21G5R", "TX19G5M", "TX19G5R", "TX18G5M", "TX18G5R", "TX17G5M", "TX17G5R", "TX22G5S", "TX21G5S", "TX19G5S", "TX18G5S", "TX22G6M", "TX22G6R", "TX21G6M", "TX21G6R", "TX19G6M", "TX19G6R", "TX18G6M", "TX18G6R", "TX17G6M", "TX17G6R", "TX22G7M", "TX22G7R", "TX21G7M", "TX21G7R", "TX19G7M", "TX19G7R", "TX18G7M", "TX18G7R", "TX17G7M", "TX17G7R", "TX22G8M", "TX22G8R", "TX21G8M", "TX21G8R", "TX19G8M", "TX19G8R", "TX18G8M", "TX18G8R", "TX17G8M", "TX17G8R", "TX22G8S", "TX21G8S", "TX19G8S", "TX18G8S", "TX22G8SS", "TX21G8SS", "TX19G8SS", "TX18G8SS", "TX22HSA1", "TX21HSA1", "TX19HSA1", "TX18HSA1", "TX17HSA1", "TX22HSB", "TX21HSB", "TX19HSB", "TX18HSB", "TX17HSB", "TX22HSE1", "TX21HSE1", "TX19HSE1", "TX18HSE1", "TX17HSE1", "TX22HSE2", "TX21HSE2", "TX19HSE2", "TX18HSE2", "TX17HSE2", "TX22HSUSH", "TX21HSUSH", "TX19HSUSH", "TX18HSUSH", "TX17HSUSH"];
+  filtered_set: string[] = this.online_set;
+  filtered_exam_num = 0;
+  filtered_prob_num = 0;
+  generate_message = "";
 
   problems_sequence: number[] = [];
-  ordered_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
-  exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+  problem_ids: string[] = [];
+  ordered_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+  exam_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
   refsheet_source: string = '';
   st_refsheet_source: string = '';
   supp_dump: any = {};
   supp_st_dump: any = {};
-  random_index = 0;
+  random_index = 0
   random_list: string[] = [];
-  random = false;
 
   exam_key: any[] = [];
 
@@ -1471,8 +1480,16 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
 
   exam_submission: { [key: number]: { 'Number': number, 'Topics': string[], 'SubTopics': string[], 'Choice': string[][], 'Correct': string[][], 'Rationale': string[][], 'Attempts': number[], 'Path': string[][][], 'Seconds': number, 'Time': string, 'Flags': boolean[] } } = {};
 
-  signup: boolean = false;
-  login: boolean = false;
+  exam_submission_list: any[] = [];
+  wrong_submission_list: any[] = [];
+  number_correct = 0;
+  correct_percent = 0;
+  topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
+  total_seconds = 0;
+
+  db_updates: any = {};
+  db_submission: any = {};
+
   selected_topic = "";
   selected_subtopic = "";
   standard_id = '';
@@ -1487,51 +1504,41 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
   subtopic_attempt_response: string[] = [];
   subtopic_attempt_explanation: any[] = [];
 
-  exam_submission_list: any[] = [];
-  wrong_submission_list: any[] = [];
-  number_correct = 0;
-  correct_percent = 0;
-  topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
-  performance_level = "";
-  total_seconds = 0;
-
-  sub_form = '';
-  parent_select = false;
-  teacher_select = false;
-
-  db_updates: any = {};
-  db_submission: any = {};
-
   subject_labels: { [key: string]: string } = {
     "Algebra I": "Algebra I",
+    "Algebra II": "Algebra II",
     "Biology": "Biology",
     "English I": "English I",
     "English II": "English II",
     "English Language Arts": "Language Arts",
     "English Reading": "Reading",
+    "Geometry": "Geometry",
     "Mathematics": "Math",
     "Science": "Science",
     "Social Studies": "Social Studies",
     "U.S. History": "U.S. History",
   };
 
-  iti: any;
-  user: any;
-  phone: string = "";
-  iti_msg: string = "";
-  otp: string = '';
-  verify: any
-  windowRef: any;
-  login_method = "";
-  user_role = "";
-  pw_reset = false;
-  win = new WindowService;
+  sub_subjects: { [key: string]: string[] } = {
+    "English Language Arts": ["English Language Arts", "English I", "English II"],
+    "Mathematics": ["Mathematics", "Algebra I", "Algebra II", 'Geometry'],
+    "Sciences": ["Sciences", "Science", "Biology"],
+    "Social Studies": ["Social Studies", "U.S. History"],
+    "Reading & Writing": ["Reading & Writing", "English Reading", "English Writing"],
+  };
 
-  @ViewChild('userPhone') userPhone: ElementRef;
-
-  constructor(public authService: AuthService, public router: Router, private aRoute: ActivatedRoute, private afAuth: AngularFireAuth, private http: HttpClient) { }
+  constructor(public router: Router, public authService: AuthService, private http: HttpClient, private aRoute: ActivatedRoute) { }
 
   sub: any;
+
+  // public onChange(file: File): void {
+  //   let fileReader: FileReader = new FileReader();
+  //   let self = this;
+  //   fileReader.onloadend = function(x) {
+  //     self.exam_data = fileReader.result;
+  //   }
+  //   fileReader.readAsText(file);
+  // }
 
   width_change2() {
     this.screenWidth = window.innerWidth;
@@ -1827,6 +1834,11 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     console.log('plot graph');
   }
 
+  get_refsheet(key: string) {
+    // console.log('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
+    return ('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
+  }
+
   get_flag_count() {
     var count = 0;
     for (let sub of this.order_numbers()) {
@@ -1847,10 +1859,19 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     return (count)
   }
 
-  select_part(part: string) {
-    this.router.navigateByUrl('/exam/' + part).then(() => {
-      location.reload();
-    });
+  order_numbers() {
+    if (this.length_mode == 'number') {
+      return (Array.from({ length: Object.keys(this.exam_submission).length }, (_, i) => i + 1));
+    }
+    else {
+      return (Array.from({ length: this.max_problem_number }, (_, i) => i + 1));
+    }
+  }
+
+  toggle_flag() {
+    console.log('flag');
+    this.exam_submission[this.problem_number].Flags.push(!this.exam_submission[this.problem_number].Flags[this.exam_submission[this.problem_number].Flags.length - 1]);
+    console.log(this.exam_submission[this.problem_number].Flags);
   }
 
   select_student(id: string) {
@@ -1861,14 +1882,17 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
       this.selected_student_data = this.my_students_data[id];
       const exam_history = this.my_students_data[id].exams.history;
       for (const [key, det] of Object.entries(exam_history)) {
-        if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
+        if (["Started", "Assigned"].includes((det as any).status) && key == 'Q-' + this.key) {
           this.exam_inprogress = true;
           this.exam_status = (det as any).status;
           this.progress_number = (det as any).progress + 1;
           this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
-          this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
-          if ((det as any).progress != 0) {
-            const db_submission = this.authService.getStudExamSubmission2(id, this.key).problems;
+          this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString();
+          if ("Started" == (det as any).status) {
+            this.problem_ids = (det as any).sequence;
+          }
+          if (this.mode == 'assess' && (det as any).progress != 0) {
+            const db_submission = this.authService.getStudExamSubmission2(id, 'Q-'+this.key).problems;
             for (const [key2, det2] of Object.entries(db_submission)) {
               if (+key2 != 0) {
                 this.exam_submission[+(det2 as any).Number] = (det2 as any);
@@ -1883,25 +1907,117 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     }
   }
 
-  toggle_random() {
-    this.random = !this.random;
+  toggle_topic(val: string) {
+    if (!this.topic_filters.includes(val)) {
+      this.topic_filters.push(val)
+    }
+    else {
+      if (this.topic_filters.indexOf(val) != -1) {
+        this.topic_filters.splice(this.topic_filters.indexOf(val), 1);
+      }
+      else {
+        this.topic_filters.pop()
+      }
+    }
+    this.filter_exams();
   }
 
-  randomize_problems() {
-    this.problems_sequence = Array.from({ length: this.exam_length }, (_, i) => i + 1);
+  filter_exams() {
+    this.filtered_set = [];
+    this.topics = [];
+    this.topics_count = {};
+    for (let i = 0; i < this.online_set.length; i++) {
+      if ((this.state_filters.includes(this.exam_attribute_dump[this.online_set[i]].State) || this.state_filters.includes(this.exam_attribute_dump[this.online_set[i]].ExamName) || this.state_filters.length == 0) && (this.grade_filters.includes(this.exam_attribute_dump[this.online_set[i]].Grade) || this.grade_filters.length == 0) && (this.subject_filters.includes(this.exam_attribute_dump[this.online_set[i]].Subject) || this.subject_filters.length == 0)) {
+        this.filtered_set.push(this.online_set[i]);
+      }
+    }
+    this.filtered_exam_num = this.filtered_set.length;
+    this.filtered_prob_num = 0;
+    for (let i = 0; i < this.filtered_set.length; i++) {
+      this.filtered_prob_num += this.exam_attribute_dump[this.filtered_set[i]].NumQuestions;
+      if (!this.exam_attribute_dump[this.filtered_set[i]].HideTopics) {
+        for (const [key, val] of Object.entries(this.exam_attribute_dump[this.filtered_set[i]].Topics)) {
+          if (!this.topics.includes(key)) {
+            this.topics.push(key);
+          }
+          if (!Object.keys(this.topics_count).includes(key)) {
+            this.topics_count[key] = val;
+          }
+          else {
+            this.topics_count[key] += val;
+          }
+        }
+      }
+    }
+    for (let topic of this.topic_filters) {
+      if (!this.topics.includes(topic)) {
+        this.toggle_topic(topic);
+      }
+    }
+    if (this.grade_filters.length == 0 && this.subject_filters.length == 0) {
+      this.topics = [];
+      this.topics_count = {};
+      this.topic_filters = []
+    }
+    if (this.filtered_set.length == 0) {
+      this.generate_message = "There are no problems based on your selection.";
+    }
+  }
+
+  generate_problems() {
+    this.filter_exams();
+    this.dump_count = 0;
+    for (let online_key of this.online_set) {
+      if (this.filtered_set.includes(online_key)) {
+        for (const [num, value] of Object.entries(this.dump_dict[online_key])) {
+          if (value.Number <= this.exam_attribute_dump[online_key].NumQuestions) {
+            var prob: any = {};
+            for (const [key, val] of Object.entries(value)) {
+              prob[key] = val;
+            }
+            if (this.topic_filters.length == 0) {
+              this.ordered_dump[this.dump_count] = prob;
+              this.ordered_dump[this.dump_count].Number = online_key + '-' + (this.ordered_dump[this.dump_count].Number as string);
+              this.dump_count += 1;
+            }
+            else if (!this.exam_attribute_dump[online_key].HideTopics) {
+              for (let topic of value.Topics) {
+                if (this.topic_filters.includes(topic)) {
+                  this.ordered_dump[this.dump_count] = prob;
+                  this.ordered_dump[this.dump_count].Number = online_key + '-' + (this.ordered_dump[this.dump_count].Number as string);
+                  this.dump_count += 1;
+                }
+              }
+            }
+            console.log(this.dump_count);
+          }
+        }
+      }
+    }
+    console.log(this.ordered_dump);
+    if (this.filtered_set.length != 0) {
+      this.generate_message = "";
+      if (this.length_mode == 'number') {
+        this.randomize_problems(this.exam_length);
+      }
+      else {
+        this.randomize_problems(Math.min(100, this.filtered_prob_num));
+      }
+      this.toggle_filters();
+    }
+  }
+
+  randomize_problems(total: number) {
+    this.problems_sequence = Array.from({ length: Object.keys(this.ordered_dump).length }, (_, i) => i);
     this.random_list = []
-    console.log(this.problems_sequence);
-    for (let i = 1; i <= this.exam_length; i++) {
+    for (let i = 1; i <= total; i++) {
       this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
       this.random_list.push('' + this.problems_sequence[this.random_index]);
       this.exam_dump[i] = this.ordered_dump[this.problems_sequence[this.random_index]];
       this.problems_sequence.splice(this.random_index, 1);
+      this.problem_ids.push(this.exam_dump[i].Number);
     }
-    console.log(this.random_list);
     console.log(this.exam_dump);
-    for (let i = 0; i < this.exam_length; i++) {
-      this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
-    }
     this.exam_key = [];
     for (const [num, val] of Object.entries(this.exam_dump)) {
       this.exam_key.push([]);
@@ -1976,26 +2092,15 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
         }
       }
     }
+    console.log(JSON.stringify(this.exam_dump));
+    console.log(this.exam_submission);
+    console.log(this.exam_key);
   }
 
-  order_numbers() {
-    // return (Array.from({ length: Object.keys(this.exam_submission).length }, (_, i) => i + 1));
-    var num_list = [];
-    for (let num of Object.keys(this.exam_dump)) {
-      num_list.push(+num);
-    }
-    return (num_list);
-  }
-
-  toggle_flag() {
-    console.log('flag');
-    this.exam_submission[this.problem_number].Flags.push(!this.exam_submission[this.problem_number].Flags[this.exam_submission[this.problem_number].Flags.length - 1]);
-    console.log(this.exam_submission[this.problem_number].Flags);
-  }
-
-  resume_exam() {
-    for (let num of Object.keys(this.ordered_dump)) {
-      if (num != 'default') {
+  toggle_filters() {
+    this.expand_filters = !this.expand_filters;
+    if (this.mode == 'assess') {
+      for (let num of Object.keys(this.exam_dump)) {
         this.exam_submission[+num] = {
           'Number': +num,
           'Topics': [],
@@ -2009,14 +2114,174 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           'Time': '',
           'Flags': [false]
         };
-        if (Object.keys(this.ordered_dump[+num].Parts).length == 0) {
+        if (Object.keys(this.exam_dump[+num].Parts).length == 0) {
           this.exam_submission[+num].Path.push([['']]);
           this.exam_submission[+num].Attempts.push(0);
         }
         else {
-          for (let part of Object.keys(this.ordered_dump[+num].Parts)) {
+          for (let part of Object.keys(this.exam_dump[+num].Parts)) {
             this.exam_submission[+num].Path.push([['']]);
             this.exam_submission[+num].Attempts.push(0);
+          }
+        }
+      }
+    }
+    this.toggleExamTimer();
+    this.toggleProblemTimer();
+    this.problem_number = 1;
+    this.max_problem_number = 1;
+    this.attempt_path = [];
+    this.attempt_response = [];
+    this.attempt_explanation = [];
+    this.problem_selection = [];
+    this.m_shuffled = false;
+    this.m_selection = [];
+    this.m_submission = [];
+    this.c_submission = [];
+    this.shuffle_choices = {};
+    this.unique_choices = [];
+    if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+      this.problem_attempts = [0];
+      this.attempt_path = [[]];
+      this.attempt_response = [''];
+      this.attempt_explanation = [[]];
+      this.m_selection = [["", ""]];
+      this.m_submission = [{}];
+      this.c_submission = [{}];
+      if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
+        this.problem_selection = [['']];
+        if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
+          setTimeout(() => {
+            this.plot_graph_gp('', false);
+          }, 500);
+        }
+      }
+      else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+        this.problem_selection = [[]];
+        if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
+          this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
+        }
+        if (['MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+          setTimeout(() => {
+            this.plot_graph_mgp('', false);
+          }, 500);
+        }
+      }
+      else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Type)) {
+        var msp_nums: string[] = [];
+        this.problem_selection.push([]);
+        for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
+          if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+            this.problem_selection[0].push('');
+            msp_nums.push(choice[0]);
+          }
+        }
+      }
+    }
+    else {
+      this.problem_attempts = [];
+      for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+        this.problem_attempts.push(0);
+        this.attempt_path.push([]);
+        this.attempt_response.push('');
+        this.attempt_explanation.push([]);
+        this.m_selection.push(["", ""]);
+        this.m_submission.push({});
+        this.c_submission.push({});
+        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+          this.problem_selection.push(['']);
+          if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            setTimeout(() => {
+              this.plot_graph_gp(part, false);
+            }, 500);
+          }
+        }
+        else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+          this.problem_selection.push([]);
+          if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
+          }
+          if (['MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            setTimeout(() => {
+              this.plot_graph_mgp(part, false);
+            }, 500);
+          }
+        }
+        else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+          var msp_nums: string[] = [];
+          this.problem_selection.push([]);
+          for (let choice of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
+            if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+              this.problem_selection[Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part)].push('');
+              msp_nums.push(choice[0]);
+            }
+          }
+        }
+      }
+    }
+    this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+    for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+      setTimeout(() => {
+        this.read_supp_json(supp);
+      }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+    }
+    if (this.exam_dump[this.problem_number].Type == 'MP') {
+      for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+        for (let block of this.exam_dump[this.problem_number].Parts[part].Content) {
+          if (block.startsWith(':table:')) {
+            setTimeout(() => {
+              this.read_table(block.slice(7));
+            }, 100);
+          }
+        }
+      }
+    }
+    if (this.exam_dump[this.problem_number].Type != 'MP') {
+      for (let block of this.exam_dump[this.problem_number].Content) {
+        if (block.startsWith(':table:')) {
+          setTimeout(() => {
+            this.read_table(block.slice(7));
+          }, 100);
+        }
+      }
+    }
+    this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+    console.log(this.exam_dump[this.problem_number].Number);
+    console.log((this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-')));
+    console.log(this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet);
+  }
+
+  resume_exam() {
+    for (let i: number = 1; i <= this.problem_ids.length; i++) {
+      this.exam_dump[i] = this.dump_dict[this.problem_ids[i - 1].substring(0, this.problem_ids[i - 1].indexOf('-'))][+this.problem_ids[i - 1].substring(this.problem_ids[i - 1].indexOf('-') + 1)];
+      this.exam_dump[i].Number = this.problem_ids[i - 1];
+    }
+    this.expand_filters = !this.expand_filters;
+    if (this.mode == 'assess') {
+      for (let num of Object.keys(this.exam_dump)) {
+        if (num != 'default') {
+          this.exam_submission[+num] = {
+            'Number': +num,
+            'Topics': [],
+            'SubTopics': [],
+            'Choice': [],
+            'Correct': [],
+            'Rationale': [],
+            'Attempts': [],
+            'Path': [],
+            'Seconds': 0,
+            'Time': '',
+            'Flags': [false]
+          };
+          if (Object.keys(this.exam_dump[+num].Parts).length == 0) {
+            this.exam_submission[+num].Path.push([['']]);
+            this.exam_submission[+num].Attempts.push(0);
+          }
+          else {
+            for (let part of Object.keys(this.exam_dump[+num].Parts)) {
+              this.exam_submission[+num].Path.push([['']]);
+              this.exam_submission[+num].Attempts.push(0);
+            }
           }
         }
       }
@@ -2026,16 +2291,11 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
       if (this.authService.userData.role == 'Student') {
         const exam_history = this.authService.userData.exams.history;
         for (const [key, det] of Object.entries(exam_history)) {
-          if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
-            var db_submission = this.authService.getExamSubmission2(this.key);
+          if (["Started", "Assigned"].includes((det as any).status) && key == 'Q-' + this.key) {
+            var db_submission = this.authService.getExamSubmission2('Q-' + this.key);
             this.exam_inprogress = true;
             this.progress_number = (det as any).progress + 1;
-            if ((det as any).shuffle) {
-              this.random = true;
-              this.problems_sequence = Array.from({ length: this.exam_length }, (_, i) => i + 1);
-              this.random_list = [];
-            }
-            if ((det as any).progress != 0) {
+            if (this.mode == 'assess' && (det as any).progress != 0) {
               setTimeout(() => {
                 console.log(db_submission.problems);
                 for (const [key2, det2] of Object.entries(db_submission.problems)) {
@@ -2059,402 +2319,188 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
                     if (!Object.keys(sub_prob_2).includes("Flags")) {
                       sub_prob_2.Flags = [false];
                     }
-                    if (!(det as any).shuffle) {
-                      this.exam_submission[+(det2 as any).Number] = sub_prob_2;
-                    }
-                    else {
-                      this.exam_submission[+Object.keys(this.exam_dump)[Object.keys(db_submission.problems).indexOf((det2 as any).Number)]] = sub_prob_2;
-                    }
+                    this.exam_submission[+Object.keys(this.exam_dump)[Object.keys(db_submission.problems).indexOf((det2 as any).Number)]] = sub_prob_2;
+
                   }
                 }
               }, 500);
               console.log(this.exam_submission);
-              if ((det as any).shuffle) {
-                for (const [key2, det2] of Object.entries(db_submission.problems)) {
-                  this.problems_sequence.splice(this.problems_sequence.indexOf((det2 as any).Number), 1);
-                }
-              }
             }
-            if ((det as any).shuffle) {
-              const remaining_length = this.problems_sequence.length;
-              for (let i = 1; i <= remaining_length; i++) {
-                this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
-                this.random_list.push('' + this.problems_sequence[this.random_index]);
-                this.exam_dump[i + Object.keys(db_submission.problems).length] = this.ordered_dump[this.problems_sequence[this.random_index]];
-                this.problems_sequence.splice(this.random_index, 1);
-              }
-              console.log(this.exam_dump);
-              console.log(this.exam_submission);
-              for (let i = 0; i < this.exam_length; i++) {
-                this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
-              }
-              this.exam_key = [];
-              for (const [num, val] of Object.entries(this.exam_dump)) {
-                this.exam_key.push([]);
-                if (Object.keys(val.Parts).length == 0) {
-                  this.exam_key[this.exam_key.length - 1].push([]);
-                  if (Object.keys(val.AnswerChoices).length == 0) {
-                    this.exam_key[this.exam_key.length - 1][0].push('');
-                  }
-                  else if (['O'].includes(val.Type)) {
-                    this.exam_key[this.exam_key.length - 1][0] = this.get_o_key(val.AnswerChoices);
-                  }
-                  else if (['C'].includes(val.Type)) {
-                    this.exam_key[this.exam_key.length - 1][0] = this.get_c_key(val.AnswerChoices);
-                  }
-                  else if (['G'].includes(val.Type)) {
-                    this.exam_key[this.exam_key.length - 1][0] = this.get_g_key(val.AnswerChoices);
-                  }
-                  else {
-                    for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-                      if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Type) && val2.Key.Correct) {
-                        this.exam_key[this.exam_key.length - 1][0].push(ch);
-                      }
-                      else if (['IDD'].includes(val.Type) && val2.Key.Correct) {
-                        this.exam_key[this.exam_key.length - 1][0].push([ch[2]]);
-                      }
-                      else if (['FR'].includes(val.Type) && ch.includes('KEY')) {
-                        this.exam_key[this.exam_key.length - 1][0].push(val2.Choice);
-                      }
-                      else if (['MFR'].includes(val.Type) && ch.includes('KEY')) {
-                        this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
-                      }
-                      else if (['T'].includes(val.Type) && ch.includes('KEY')) {
-                        this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
-                      }
-                    }
-                  }
+            this.exam_key = [];
+            for (const [num, val] of Object.entries(this.exam_dump)) {
+              this.exam_key.push([]);
+              if (Object.keys(val.Parts).length == 0) {
+                this.exam_key[this.exam_key.length - 1].push([]);
+                if (Object.keys(val.AnswerChoices).length == 0) {
+                  this.exam_key[this.exam_key.length - 1][0].push('');
+                }
+                else if (['O'].includes(val.Type)) {
+                  this.exam_key[this.exam_key.length - 1][0] = this.get_o_key(val.AnswerChoices);
+                }
+                else if (['C'].includes(val.Type)) {
+                  this.exam_key[this.exam_key.length - 1][0] = this.get_c_key(val.AnswerChoices);
+                }
+                else if (['G'].includes(val.Type)) {
+                  this.exam_key[this.exam_key.length - 1][0] = this.get_g_key(val.AnswerChoices);
                 }
                 else {
-                  for (let part of Object.keys(val.Parts)) {
-                    this.exam_key[this.exam_key.length - 1].push([]);
-                    if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push('');
+                  for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                    if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Type) && val2.Key.Correct) {
+                      this.exam_key[this.exam_key.length - 1][0].push(ch);
                     }
-                    else if (['O'].includes(val.Parts[part].Type)) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_o_key(val.Parts[part].AnswerChoices);
+                    else if (['IDD'].includes(val.Type) && val2.Key.Correct) {
+                      this.exam_key[this.exam_key.length - 1][0].push([ch[2]]);
                     }
-                    else if (['C'].includes(val.Parts[part].Type)) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_c_key(val.Parts[part].AnswerChoices);
+                    else if (['FR'].includes(val.Type) && ch.includes('KEY')) {
+                      this.exam_key[this.exam_key.length - 1][0].push(val2.Choice);
                     }
-                    else if (['G'].includes(val.Parts[part].Type)) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_g_key(val.Parts[part].AnswerChoices);
+                    else if (['MFR'].includes(val.Type) && ch.includes('KEY')) {
+                      this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
                     }
-                    else {
-                      for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
-                        if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Parts[part].Type) && val2.Key.Correct) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(ch);
-                        }
-                        else if (['IDD'].includes(val.Parts[part].Type) && val2.Key.Correct) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([ch[2]]);
-                        }
-                        else if (['FR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
-                        }
-                        else if (['MFR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
-                        }
-                        else if (['T'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
-                        }
-                      }
+                    else if (['T'].includes(val.Type) && ch.includes('KEY')) {
+                      this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
                     }
                   }
                 }
               }
-            }
-            else {
-              // for (let i = 1; i <= this.exam_length; i++) {
-              //     this.exam_dump[i] = this.ordered_dump[i];
-              // }
-              for (let i = 0; i < this.exam_length; i++) {
-                this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
-              }
-              this.exam_key = [];
-              for (const [num, val] of Object.entries(this.exam_dump)) {
-                this.exam_key.push([]);
-                if (Object.keys(val.Parts).length == 0) {
+              else {
+                for (let part of Object.keys(val.Parts)) {
                   this.exam_key[this.exam_key.length - 1].push([]);
-                  if (Object.keys(val.AnswerChoices).length == 0) {
-                    this.exam_key[this.exam_key.length - 1][0].push('');
+                  if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
+                    this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push('');
                   }
-                  else if (['O'].includes(val.Type)) {
-                    this.exam_key[this.exam_key.length - 1][0] = this.get_o_key(val.AnswerChoices);
+                  else if (['O'].includes(val.Parts[part].Type)) {
+                    this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_o_key(val.Parts[part].AnswerChoices);
                   }
-                  else if (['C'].includes(val.Type)) {
-                    this.exam_key[this.exam_key.length - 1][0] = this.get_c_key(val.AnswerChoices);
+                  else if (['C'].includes(val.Parts[part].Type)) {
+                    this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_c_key(val.Parts[part].AnswerChoices);
                   }
-                  else if (['G'].includes(val.Type)) {
-                    this.exam_key[this.exam_key.length - 1][0] = this.get_g_key(val.AnswerChoices);
+                  else if (['G'].includes(val.Parts[part].Type)) {
+                    this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_g_key(val.Parts[part].AnswerChoices);
                   }
                   else {
-                    for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-                      if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Type) && val2.Key.Correct) {
-                        this.exam_key[this.exam_key.length - 1][0].push(ch);
+                    for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
+                      if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Parts[part].Type) && val2.Key.Correct) {
+                        this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(ch);
                       }
-                      else if (['IDD'].includes(val.Type) && val2.Key.Correct) {
-                        this.exam_key[this.exam_key.length - 1][0].push([ch[2]]);
+                      else if (['IDD'].includes(val.Parts[part].Type) && val2.Key.Correct) {
+                        this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([ch[2]]);
                       }
-                      else if (['FR'].includes(val.Type) && ch.includes('KEY')) {
-                        this.exam_key[this.exam_key.length - 1][0].push(val2.Choice);
+                      else if (['FR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
+                        this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
                       }
-                      else if (['MFR'].includes(val.Type) && ch.includes('KEY')) {
-                        this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
+                      else if (['MFR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
+                        this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
                       }
-                      else if (['T'].includes(val.Type) && ch.includes('KEY')) {
-                        this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
-                      }
-                    }
-                  }
-                }
-                else {
-                  for (let part of Object.keys(val.Parts)) {
-                    this.exam_key[this.exam_key.length - 1].push([]);
-                    if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push('');
-                    }
-                    else if (['O'].includes(val.Parts[part].Type)) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_o_key(val.Parts[part].AnswerChoices);
-                    }
-                    else if (['C'].includes(val.Parts[part].Type)) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_c_key(val.Parts[part].AnswerChoices);
-                    }
-                    else if (['G'].includes(val.Parts[part].Type)) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_g_key(val.Parts[part].AnswerChoices);
-                    }
-                    else {
-                      for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
-                        if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Parts[part].Type) && val2.Key.Correct) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(ch);
-                        }
-                        else if (['IDD'].includes(val.Parts[part].Type) && val2.Key.Correct) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([ch[2]]);
-                        }
-                        else if (['FR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
-                        }
-                        else if (['MFR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
-                        }
-                        else if (['T'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
-                        }
+                      else if (['T'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
+                        this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
                       }
                     }
                   }
                 }
               }
-              console.log(this.exam_dump);
-              console.log(this.exam_key);
             }
           }
         }
-        this.db_updates['exams/history/' + this.key + "/lasttimestamp"] = serverTimestamp();
+        this.db_updates['exams/history/Q-' + this.key + "/lasttimestamp"] = serverTimestamp();
         this.authService.UpdateUserData(this.db_updates);
         this.db_updates = {};
       }
       else if (this.selected_student != '') {
         const exam_history = this.my_students_data[this.selected_student].exams.history;
         for (const [key, det] of Object.entries(exam_history)) {
-          if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
-            if ((det as any).progress != 0) {
-              this.db_submission = this.authService.getStudExamSubmission2(this.selected_student, this.key).problems;
+          if (["Started", "Assigned"].includes((det as any).status) && key == 'Q-' + this.key) {
+            if (this.mode == 'assess' && (det as any).progress != 0) {
+              this.db_submission = this.authService.getStudExamSubmission2(this.selected_student, 'Q-' + this.key).problems;
             }
             this.exam_inprogress = true;
             this.progress_number = (det as any).progress + 1;
-            if ((det as any).shuffle) {
-              this.random = true;
-              this.problems_sequence = Array.from({ length: this.exam_length }, (_, i) => i + 1);
-              this.random_list = [];
-            }
-            if ((det as any).progress != 0) {
+            if (this.mode == 'assess' && (det as any).progress != 0) {
               console.log(this.db_submission);
               for (const [key2, det2] of Object.entries(this.db_submission)) {
                 if (+key2 != 0) {
-                  this.exam_dump[+key2] = this.ordered_dump[(det2 as any).Number];
+                  // this.exam_dump[+key2] = this.ordered_dump[(det2 as any).Number];
                   this.exam_submission[+key2] = (det2 as any);
                 }
               }
-              if ((det as any).shuffle) {
-                for (const [key2, det2] of Object.entries(this.db_submission)) {
-                  this.problems_sequence.splice(this.problems_sequence.indexOf((det2 as any).Number), 1);
-                }
-              }
             }
-            if ((det as any).shuffle) {
-              const remaining_length = this.problems_sequence.length;
-              console.log(remaining_length);
-              for (let i = 1; i <= remaining_length; i++) {
-                this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
-                this.random_list.push('' + this.problems_sequence[this.random_index]);
-                this.exam_dump[i + Object.keys(this.db_submission).length] = this.ordered_dump[this.problems_sequence[this.random_index]];
-                this.problems_sequence.splice(this.random_index, 1);
-              }
-              for (let i = 0; i < this.exam_length; i++) {
-                this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
-              }
-              this.exam_key = [];
-              for (const [num, val] of Object.entries(this.exam_dump)) {
-                this.exam_key.push([]);
-                if (Object.keys(val.Parts).length == 0) {
-                  this.exam_key[this.exam_key.length - 1].push([]);
-                  if (Object.keys(val.AnswerChoices).length == 0) {
-                    this.exam_key[this.exam_key.length - 1][0].push('');
-                  }
-                  else if (['O'].includes(val.Type)) {
-                    this.exam_key[this.exam_key.length - 1][0] = this.get_o_key(val.AnswerChoices);
-                  }
-                  else if (['C'].includes(val.Type)) {
-                    this.exam_key[this.exam_key.length - 1][0] = this.get_c_key(val.AnswerChoices);
-                  }
-                  else if (['G'].includes(val.Type)) {
-                    this.exam_key[this.exam_key.length - 1][0] = this.get_g_key(val.AnswerChoices);
-                  }
-                  else {
-                    for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-                      if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Type) && val2.Key.Correct) {
-                        this.exam_key[this.exam_key.length - 1][0].push(ch);
-                      }
-                      else if (['IDD'].includes(val.Type) && val2.Key.Correct) {
-                        this.exam_key[this.exam_key.length - 1][0].push([ch[2]]);
-                      }
-                      else if (['FR'].includes(val.Type) && ch.includes('KEY')) {
-                        this.exam_key[this.exam_key.length - 1][0].push(val2.Choice);
-                      }
-                      else if (['MFR'].includes(val.Type) && ch.includes('KEY')) {
-                        this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
-                      }
-                      else if (['T'].includes(val.Type) && ch.includes('KEY')) {
-                        this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
-                      }
-                    }
-                  }
+            this.exam_key = [];
+            for (const [num, val] of Object.entries(this.exam_dump)) {
+              this.exam_key.push([]);
+              if (Object.keys(val.Parts).length == 0) {
+                this.exam_key[this.exam_key.length - 1].push([]);
+                if (Object.keys(val.AnswerChoices).length == 0) {
+                  this.exam_key[this.exam_key.length - 1][0].push('');
+                }
+                else if (['O'].includes(val.Type)) {
+                  this.exam_key[this.exam_key.length - 1][0] = this.get_o_key(val.AnswerChoices);
+                }
+                else if (['C'].includes(val.Type)) {
+                  this.exam_key[this.exam_key.length - 1][0] = this.get_c_key(val.AnswerChoices);
+                }
+                else if (['G'].includes(val.Type)) {
+                  this.exam_key[this.exam_key.length - 1][0] = this.get_g_key(val.AnswerChoices);
                 }
                 else {
-                  for (let part of Object.keys(val.Parts)) {
-                    this.exam_key[this.exam_key.length - 1].push([]);
-                    if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push('');
+                  for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                    if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Type) && val2.Key.Correct) {
+                      this.exam_key[this.exam_key.length - 1][0].push(ch);
                     }
-                    else if (['O'].includes(val.Parts[part].Type)) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_o_key(val.Parts[part].AnswerChoices);
+                    else if (['IDD'].includes(val.Type) && val2.Key.Correct) {
+                      this.exam_key[this.exam_key.length - 1][0].push([ch[2]]);
                     }
-                    else if (['C'].includes(val.Parts[part].Type)) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_c_key(val.Parts[part].AnswerChoices);
+                    else if (['FR'].includes(val.Type) && ch.includes('KEY')) {
+                      this.exam_key[this.exam_key.length - 1][0].push(val2.Choice);
                     }
-                    else if (['G'].includes(val.Parts[part].Type)) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_g_key(val.Parts[part].AnswerChoices);
+                    else if (['MFR'].includes(val.Type) && ch.includes('KEY')) {
+                      this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
                     }
-                    else {
-                      for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
-                        if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Parts[part].Type) && val2.Key.Correct) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(ch);
-                        }
-                        else if (['IDD'].includes(val.Parts[part].Type) && val2.Key.Correct) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([ch[2]]);
-                        }
-                        else if (['FR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
-                        }
-                        else if (['MFR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
-                        }
-                        else if (['T'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
-                        }
-                      }
+                    else if (['T'].includes(val.Type) && ch.includes('KEY')) {
+                      this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
                     }
                   }
                 }
               }
-            }
-            else {
-              // for (let i = 1; i <= this.exam_length; i++) {
-              //     this.exam_dump[i] = this.ordered_dump[i];
-              // }
-              for (let i = 0; i < this.exam_length; i++) {
-                this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
-              }
-              this.exam_key = [];
-              for (const [num, val] of Object.entries(this.exam_dump)) {
-                this.exam_key.push([]);
-                if (Object.keys(val.Parts).length == 0) {
+              else {
+                for (let part of Object.keys(val.Parts)) {
                   this.exam_key[this.exam_key.length - 1].push([]);
-                  if (Object.keys(val.AnswerChoices).length == 0) {
-                    this.exam_key[this.exam_key.length - 1][0].push('');
+                  if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
+                    this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push('');
                   }
-                  else if (['O'].includes(val.Type)) {
-                    this.exam_key[this.exam_key.length - 1][0] = this.get_o_key(val.AnswerChoices);
+                  else if (['O'].includes(val.Parts[part].Type)) {
+                    this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_o_key(val.Parts[part].AnswerChoices);
                   }
-                  else if (['C'].includes(val.Type)) {
-                    this.exam_key[this.exam_key.length - 1][0] = this.get_c_key(val.AnswerChoices);
+                  else if (['C'].includes(val.Parts[part].Type)) {
+                    this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_c_key(val.Parts[part].AnswerChoices);
                   }
-                  else if (['G'].includes(val.Type)) {
-                    this.exam_key[this.exam_key.length - 1][0] = this.get_g_key(val.AnswerChoices);
+                  else if (['G'].includes(val.Parts[part].Type)) {
+                    this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_g_key(val.Parts[part].AnswerChoices);
                   }
                   else {
-                    for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-                      if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Type) && val2.Key.Correct) {
-                        this.exam_key[this.exam_key.length - 1][0].push(ch);
+                    for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
+                      if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Parts[part].Type) && val2.Key.Correct) {
+                        this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(ch);
                       }
-                      else if (['IDD'].includes(val.Type) && val2.Key.Correct) {
-                        this.exam_key[this.exam_key.length - 1][0].push([ch[2]]);
+                      else if (['IDD'].includes(val.Parts[part].Type) && val2.Key.Correct) {
+                        this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([ch[2]]);
                       }
-                      else if (['FR'].includes(val.Type) && ch.includes('KEY')) {
-                        this.exam_key[this.exam_key.length - 1][0].push(val2.Choice);
+                      else if (['FR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
+                        this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
                       }
-                      else if (['MFR'].includes(val.Type) && ch.includes('KEY')) {
-                        this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
+                      else if (['MFR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
+                        this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
                       }
-                      else if (['T'].includes(val.Type) && ch.includes('KEY')) {
-                        this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
-                      }
-                    }
-                  }
-                }
-                else {
-                  for (let part of Object.keys(val.Parts)) {
-                    this.exam_key[this.exam_key.length - 1].push([]);
-                    if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push('');
-                    }
-                    else if (['O'].includes(val.Parts[part].Type)) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_o_key(val.Parts[part].AnswerChoices);
-                    }
-                    else if (['C'].includes(val.Parts[part].Type)) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_c_key(val.Parts[part].AnswerChoices);
-                    }
-                    else if (['G'].includes(val.Parts[part].Type)) {
-                      this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_g_key(val.Parts[part].AnswerChoices);
-                    }
-                    else {
-                      for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
-                        if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Parts[part].Type) && val2.Key.Correct) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(ch);
-                        }
-                        else if (['IDD'].includes(val.Parts[part].Type) && val2.Key.Correct) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([ch[2]]);
-                        }
-                        else if (['FR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
-                        }
-                        else if (['MFR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
-                        }
-                        else if (['T'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                          this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
-                        }
+                      else if (['T'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
+                        this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
                       }
                     }
                   }
                 }
               }
-              console.log(this.exam_dump);
-              console.log(this.exam_key);
             }
           }
         }
-        this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + "/lasttimestamp"] = serverTimestamp();
+        this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.key + "/lasttimestamp"] = serverTimestamp();
         this.authService.UpdateDatabase(this.db_updates);
         this.db_updates = {};
       }
@@ -2462,10 +2508,10 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     console.log(this.exam_dump);
     console.log(this.exam_submission);
     console.log(this.exam_key);
+    this.problem_number = this.progress_number;
+    this.max_problem_number = this.problem_number;
     this.toggleExamTimer();
     this.toggleProblemTimer();
-    this.problem_number = +Object.keys(this.exam_dump)[this.progress_number - 1];
-    this.max_problem_number = this.problem_number;
     this.attempt_path = [];
     this.attempt_response = [];
     this.attempt_explanation = [];
@@ -2473,6 +2519,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     this.m_shuffled = false;
     this.shuffle_choices = {};
     this.unique_choices = [];
+    console.log(this.problem_number);
     if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
       this.problem_attempts = [0];
       this.attempt_path = [[]];
@@ -2579,254 +2626,25 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     }
   }
 
-  // resolve exam_key for all new problem types
   begin_exam() {
-    if (this.random) {
-      this.randomize_problems();
-    }
-    else {
-      for (let i = 0; i < this.exam_length; i++) {
-        this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
-      }
-      console.log(this.exam_dump);
-      // for (let i = 0; i < this.exam_length; i++) {
-      //     this.exam_dump[+Object.keys(this.ordered_dump)[i]] = this.ordered_dump[+Object.keys(this.ordered_dump)[i]];
-      // }
-      this.exam_key = [];
-      for (const [num, val] of Object.entries(this.exam_dump)) {
-        this.exam_key.push([]);
-        if (Object.keys(val.Parts).length == 0) {
-          this.exam_key[this.exam_key.length - 1].push([]);
-          if (Object.keys(val.AnswerChoices).length == 0) {
-            this.exam_key[this.exam_key.length - 1][0].push('');
-          }
-          else if (['O'].includes(val.Type)) {
-            this.exam_key[this.exam_key.length - 1][0] = this.get_o_key(val.AnswerChoices);
-          }
-          else if (['C'].includes(val.Type)) {
-            this.exam_key[this.exam_key.length - 1][0] = this.get_c_key(val.AnswerChoices);
-          }
-          else if (['G'].includes(val.Type)) {
-            this.exam_key[this.exam_key.length - 1][0] = this.get_g_key(val.AnswerChoices);
-          }
-          else {
-            for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-              if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Type) && val2.Key.Correct) {
-                this.exam_key[this.exam_key.length - 1][0].push(ch);
-              }
-              else if (['IDD'].includes(val.Type) && val2.Key.Correct) {
-                this.exam_key[this.exam_key.length - 1][0].push([ch[2]]);
-              }
-              else if (['FR'].includes(val.Type) && ch.includes('KEY')) {
-                this.exam_key[this.exam_key.length - 1][0].push(val2.Choice);
-              }
-              else if (['MFR'].includes(val.Type) && ch.includes('KEY')) {
-                this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
-              }
-              else if (['T'].includes(val.Type) && ch.includes('KEY')) {
-                this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
-              }
-            }
-          }
-        }
-        else {
-          for (let part of Object.keys(val.Parts)) {
-            this.exam_key[this.exam_key.length - 1].push([]);
-            if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
-              this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push('');
-            }
-            else if (['O'].includes(val.Parts[part].Type)) {
-              this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_o_key(val.Parts[part].AnswerChoices);
-            }
-            else if (['C'].includes(val.Parts[part].Type)) {
-              this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_c_key(val.Parts[part].AnswerChoices);
-            }
-            else if (['G'].includes(val.Parts[part].Type)) {
-              this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_g_key(val.Parts[part].AnswerChoices);
-            }
-            else {
-              for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
-                if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Parts[part].Type) && val2.Key.Correct) {
-                  this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(ch);
-                }
-                else if (['IDD'].includes(val.Parts[part].Type) && val2.Key.Correct) {
-                  this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([ch[2]]);
-                }
-                else if (['FR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                  this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
-                }
-                else if (['MFR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                  this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
-                }
-                else if (['T'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                  this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    console.log(this.exam_dump);
-    console.log(this.exam_key);
-    if (this.authService.userData) {
+    this.generate_problems();
+    this.db_updates = {};
+    if (this.authService.userData.role == 'Student') {
+      this.db_updates['problems/all/' + "" + (this.exam_dump[+Object.keys(this.exam_dump)[0]].Number) + '/status'] = 'Viewed';
+      this.db_updates['exams/history/Q-' + this.key] = { progress: 0, status: 'Started', shuffle: true, lasttimestamp: serverTimestamp(), sequence: this.problem_ids };
+      this.authService.UpdateUserData(this.db_updates);
       this.db_updates = {};
-      if (this.authService.userData.role == 'Student') {
-        this.db_updates['problems/all/' + this.key + '-' + "" + (Object.keys(this.exam_dump)[0]) + '/status'] = 'Viewed';
-        this.db_updates['exams/history/' + this.key] = { progress: 0, status: 'Started', shuffle: this.random, lasttimestamp: serverTimestamp() };
-        this.authService.UpdateUserData(this.db_updates);
-        this.db_updates = {};
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/starttimestamp'] = serverTimestamp();
-      }
-      else if (this.selected_student != '') {
-        this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + (Object.keys(this.exam_dump)[0]) + '/status'] = 'Viewed';
-        this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key] = { progress: 0, status: 'Started', shuffle: this.random, lasttimestamp: serverTimestamp() };
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/starttimestamp'] = serverTimestamp();
-      }
-      this.authService.UpdateDatabase(this.db_updates);
-      this.db_updates = {};
+      this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.authService.userData.uid + '/starttimestamp'] = serverTimestamp();
     }
-    for (let num of Object.keys(this.ordered_dump)) {
-      if (num != 'default') {
-        this.exam_submission[+num] = {
-          'Number': +num,
-          'Topics': [],
-          'SubTopics': [],
-          'Choice': [],
-          'Correct': [],
-          'Rationale': [],
-          'Attempts': [],
-          'Path': [],
-          'Seconds': 0,
-          'Time': '',
-          'Flags': [false]
-        };
-        if (Object.keys(this.ordered_dump[+num].Parts).length == 0) {
-          this.exam_submission[+num].Path.push([['']]);
-          this.exam_submission[+num].Attempts.push(0);
-        }
-        else {
-          for (let part of Object.keys(this.ordered_dump[+num].Parts)) {
-            this.exam_submission[+num].Path.push([['']]);
-            this.exam_submission[+num].Attempts.push(0);
-          }
-        }
-      }
+    else if (this.selected_student != '') {
+      this.db_updates['users/' + this.selected_student + '/problems/all/' + "" + (this.exam_dump[+Object.keys(this.exam_dump)[0]].Number) + '/status'] = 'Viewed';
+      this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.key] = { progress: 0, status: 'Started', shuffle: true, lasttimestamp: serverTimestamp(), sequence: this.problem_ids };
+      this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.selected_student + '/starttimestamp'] = serverTimestamp();
     }
-    this.toggleExamTimer();
-    this.toggleProblemTimer();
-    this.problem_number = +Object.keys(this.exam_dump)[0];
-    this.max_problem_number = +Object.keys(this.exam_dump)[0]; this.attempt_path = [];
-    this.attempt_response = [];
-    this.attempt_explanation = [];
-    this.problem_selection = [];
-    this.m_shuffled = false;
-    this.shuffle_choices = {};
-    this.unique_choices = [];
-    if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
-      this.problem_attempts = [0];
-      this.attempt_path = [[]];
-      this.attempt_response = [''];
-      this.attempt_explanation = [[]];
-      this.m_selection = [["", ""]];
-      this.m_submission = [{}];
-      this.c_submission = [{}];
-      if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
-        this.problem_selection = [['']];
-        if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
-          setTimeout(() => {
-            this.plot_graph_gp('', false);
-          }, 500);
-        }
-      }
-      else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
-        this.problem_selection = [[]];
-        if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
-          this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
-        }
-        if (['MGP'].includes(this.exam_dump[this.problem_number].Type)) {
-          setTimeout(() => {
-            this.plot_graph_mgp('', false);
-          }, 500);
-        }
-      }
-      else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Type)) {
-        var msp_nums: string[] = [];
-        this.problem_selection.push([]);
-        for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
-          if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-            this.problem_selection[0].push('');
-            msp_nums.push(choice[0]);
-          }
-        }
-      }
-    }
-    else {
-      this.problem_attempts = [];
-      for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
-        this.problem_attempts.push(0);
-        this.attempt_path.push([]);
-        this.attempt_response.push('');
-        this.attempt_explanation.push([]);
-        this.m_selection.push(["", ""]);
-        this.m_submission.push({});
-        this.c_submission.push({});
-        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-          this.problem_selection.push(['']);
-          if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-            setTimeout(() => {
-              this.plot_graph_gp(part, false);
-            }, 500);
-          }
-        }
-        else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-          this.problem_selection.push([]);
-          if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-            this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
-          }
-          if (['MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-            setTimeout(() => {
-              this.plot_graph_mgp(part, false);
-            }, 500);
-          }
-        }
-        else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-          var msp_nums: string[] = [];
-          this.problem_selection.push([]);
-          for (let choice of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
-            if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-              this.problem_selection[Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part)].push('');
-              msp_nums.push(choice[0]);
-            }
-          }
-        }
-      }
-    }
-    for (let supp of this.exam_dump[this.problem_number].SuppContent) {
-      setTimeout(() => {
-        this.read_supp_json(supp);
-      }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
-    }
-    if (this.exam_dump[this.problem_number].Type == 'MP') {
-      for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
-        for (let block of this.exam_dump[this.problem_number].Parts[part].Content) {
-          if (block.startsWith(':table:')) {
-            setTimeout(() => {
-              this.read_table(block.slice(7));
-            }, 100);
-          }
-        }
-      }
-    }
-    if (this.exam_dump[this.problem_number].Type != 'MP') {
-      for (let block of this.exam_dump[this.problem_number].Content) {
-        if (block.startsWith(':table:')) {
-          setTimeout(() => {
-            this.read_table(block.slice(7));
-          }, 100);
-        }
-      }
-    }
+    this.authService.UpdateDatabase(this.db_updates);
+    this.db_updates = {};
+    // this.data_loaded = true;
+    console.log(this.problem_ids);
   }
 
   attempt_mc_problem(choice: string, part: string) {
@@ -2845,6 +2663,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
               if (ch == choice) {
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
+                  }
                   if (this.problem_attempts[part_num] == 1) {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
@@ -2863,6 +2684,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
               if (ch == choice) {
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
+                  }
                   if (this.problem_attempts[part_num] == 1) {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
@@ -2952,6 +2776,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
               if (choice == ch) {
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
+                  }
                   if (this.problem_attempts[part_num] == 1) {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
@@ -2970,6 +2797,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
               if (choice == ch) {
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
+                  }
                   if (this.problem_attempts[part_num] == 1) {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
@@ -3098,6 +2928,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           }
         }
         if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
+          if (this.mode == 'explain') {
+            this.confetti_light(this.problem_attempts[part_num]);
+          }
           if (this.problem_attempts[part_num] == 1) {
             this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
           }
@@ -3242,6 +3075,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           }
         }
         if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
+          if (this.mode == 'explain') {
+            this.confetti_light(this.problem_attempts[part_num]);
+          }
           if (this.problem_attempts[part_num] == 1) {
             this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
           }
@@ -3372,6 +3208,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
               }
             }
             if (correct_attempt) {
+              if (this.mode == 'explain') {
+                this.confetti_light(this.problem_attempts[part_num]);
+              }
               if (this.problem_attempts[part_num] == 1) {
                 this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
               }
@@ -3488,6 +3327,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
               if (ch[0] == choice) {
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
+                  }
                   if (this.problem_attempts[part_num] == 1) {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
@@ -3506,6 +3348,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
               if (ch[0] == choice) {
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
+                  }
                   if (this.problem_attempts[part_num] == 1) {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
@@ -3607,6 +3452,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           if (part == '') {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (choice == key.Choice) {
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
@@ -3623,7 +3471,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           else {
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
               if (choice == key.Choice) {
-                this.confetti_light(this.problem_attempts[part_num]);
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
@@ -3785,7 +3635,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           }
         }
         if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
-          this.confetti_light(this.problem_attempts[part_num]);
+          if (this.mode == 'explain') {
+            this.confetti_light(this.problem_attempts[part_num]);
+          }
           if (this.problem_attempts[part_num] == 1) {
             this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
           }
@@ -3954,6 +3806,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
             }
           }
           if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
+            if (this.mode == 'explain') {
+              this.confetti_light(this.problem_attempts[part_num]);
+            }
             if (this.problem_attempts[part_num] == 1) {
               this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
             }
@@ -4032,6 +3887,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           if (part == '') {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (choice == key.Choice) {
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
@@ -4048,6 +3906,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           else {
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
               if (choice == key.Choice) {
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
@@ -4129,7 +3990,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
       this.problem_selection[part_num][+inum - 1] = choice;
       this.attempt_path[part_num].push(this.problem_selection[part_num]);
       this.attempt_response[part_num] = '';
-      for (const [num, prob] of Object.entries(this.exam_dump)) {
+      for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
         if (this.problem_number == +num) {
           if (part == '') {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
@@ -4157,6 +4018,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
             }
           }
           if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
+            if (this.mode == 'explain') {
+              this.confetti_light(this.problem_attempts[part_num]);
+            }
             if (this.problem_attempts[part_num] == 1) {
               this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
             }
@@ -4180,7 +4044,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
       this.subtopic_problem_selection[part_num][+inum - 1] = choice;
       this.subtopic_attempt_path[part_num].push(this.subtopic_problem_selection[part_num]);
       this.subtopic_attempt_response[part_num] = '';
-      for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
         if (this.subtopic_problem_number == +num) {
           if (part == '') {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
@@ -4235,6 +4099,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           if (part == '') {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (choice == key.Choice) {
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
@@ -4251,6 +4118,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           else {
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
               if (choice == key.Choice) {
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
@@ -4322,25 +4192,25 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
   }
 
   attempt_mr_problem(response: string, part: string) {
-      var part_num = 0;
-      if (part != '') {
-          var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
-      }
-      if (response != this.problem_selection[part_num][0]) {
-          this.problem_selection[part_num] = [response];
-          this.problem_attempts[part_num] += 1;
-      }
+    var part_num = 0;
+    if (part != '') {
+      var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (response != this.problem_selection[part_num][0]) {
+      this.problem_selection[part_num] = [response];
+      this.problem_attempts[part_num] += 1;
+    }
   }
 
   attempt_mr_st_problem(response: string, part: string) {
-      var part_num = 0;
-      if (part != '') {
-          var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
-      }
-      if (response != this.subtopic_problem_selection[part_num][0]) {
-          this.subtopic_problem_selection[part_num][0] = response;
-          this.subtopic_problem_attempts[part_num] += 1;
-      }
+    var part_num = 0;
+    if (part != '') {
+      var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+    }
+    if (response != this.subtopic_problem_selection[part_num][0]) {
+      this.subtopic_problem_selection[part_num][0] = response;
+      this.subtopic_problem_attempts[part_num] += 1;
+    }
   }
 
   attempt_lr_problem(response: string, part: string) {
@@ -4772,7 +4642,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
             this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = this.exam_dump[this.problem_number].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale;
           }
         }
-        else if (this.exam_dump[this.problem_number].AnswerChoices[choice].Key.Correct) {
+        else if (this.exam_dump[this.problem_number].Parts[part].AnswerChoices[choice].Key.Correct) {
           this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
           this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = '';
           correct = false;
@@ -4791,7 +4661,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
             this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = this.exam_dump[this.problem_number].Parts[part].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale;
           }
         }
-        else if (this.exam_dump[this.problem_number].Parts[part].AnswerChoices[choice].Key.Correct) {
+        else if (this.exam_dump[this.problem_number].AnswerChoices[choice].Key.Correct) {
           this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
           this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = '';
           correct = false;
@@ -4811,6 +4681,11 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
       this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
     }
     // for (let selec of this.m_submission[part_num])
+    if (correct && fetti) {
+      if (this.mode == 'explain') {
+        this.confetti_light(this.problem_attempts[part_num]);
+      }
+    }
     return correct;
   }
 
@@ -4874,6 +4749,11 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     }
     else if (correct) {
       this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+    }
+    if (correct && fetti) {
+      if (this.mode == 'explain') {
+        this.confetti_light(this.problem_attempts[part_num]);
+      }
     }
     return correct;
   }
@@ -4956,6 +4836,11 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     else if (correct) {
       this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
     }
+    if (correct && fetti) {
+      if (this.mode == 'explain') {
+        this.confetti_light(this.problem_attempts[part_num]);
+      }
+    }
     return correct;
   }
 
@@ -5018,9 +4903,18 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
 
   is_MP_complete() {
     var comp = true;
-    for (let tempt of this.problem_attempts) {
-      if (tempt == 0) {
-        comp = false;
+    if (this.mode == 'explain') {
+      for (let resp of this.attempt_response) {
+        if (resp == '' || !resp.startsWith('Correct')) {
+          comp = false;
+        }
+      }
+    }
+    else if (this.mode == 'assess') {
+      for (let tempt of this.problem_attempts) {
+        if (tempt == 0) {
+          comp = false;
+        }
       }
     }
     return comp;
@@ -5074,26 +4968,26 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     var part_num = 0;
     if (part != '') {
       part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
-      //     if (this.exam_dump[this.problem_number].Parts[part].AnswerChoices[index + ':' + this.problem_selection[part_num][+index - 1]].Key.Correct) {
-      //       const DDICel: string = "DDInputC-" + index;
-      //       var dropdown: any = document.getElementById(DDICel);
-      //     }
-      //     else {
-      //       const DDIIel: string = "DDInputI-" + index;
-      //       var dropdown: any = document.getElementById(DDIIel);
-      //     }
-      //   }
-      //   else {
-      //     if (this.exam_dump[this.problem_number].AnswerChoices[index + ':' + this.problem_selection[part_num][+index - 1]].Key.Correct) {
-      //       const DDICel: string = "DDInputC-" + index;
-      //       var dropdown: any = document.getElementById(DDICel);
-      //     }
-      //     else {
-      //       const DDIIel: string = "DDInputI-" + index;
-      //       var dropdown: any = document.getElementById(DDIIel);
-      //     }
+      if (this.exam_dump[this.problem_number].Parts[part].AnswerChoices[index + ':' + this.problem_selection[part_num][+index - 1]].Key.Correct) {
+        const DDICel: string = "DDInputC-" + index;
+        var dropdown: any = document.getElementById(DDICel);
+      }
+      else {
+        const DDIIel: string = "DDInputI-" + index;
+        var dropdown: any = document.getElementById(DDIIel);
+      }
     }
-    //   dropdown.value = this.problem_selection[part_num][+index - 1];
+    else {
+      if (this.exam_dump[this.problem_number].AnswerChoices[index + ':' + this.problem_selection[part_num][+index - 1]].Key.Correct) {
+        const DDICel: string = "DDInputC-" + index;
+        var dropdown: any = document.getElementById(DDICel);
+      }
+      else {
+        const DDIIel: string = "DDInputI-" + index;
+        var dropdown: any = document.getElementById(DDIIel);
+      }
+    }
+    dropdown.value = this.problem_selection[part_num][+index - 1];
   }
 
   get_T(index: string, part: string) {
@@ -5136,467 +5030,62 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     return dropdown.value;
   }
 
-  next_problem(choice: any) {
-    console.log(this.exam_dump);
-    console.log(this.exam_submission);
-    for (const [num, prob] of Object.entries(this.exam_dump)) {
-      if (this.problem_number == +num) {
-        for (const [num2, sub] of Object.entries(this.exam_submission)) {
-          if (this.problem_number == +num2) {
-            sub.Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
-            sub.Seconds = this.pt_counter;
-            sub.Number = this.problem_number;
-            sub.Topics = this.exam_dump[this.problem_number].Topics;
-            sub.SubTopics = this.exam_dump[this.problem_number].SubTopics;
-            sub.Choice = this.problem_selection;
-            sub.Attempts = this.problem_attempts;
-            sub.Path = this.attempt_path;
-            // sub.Correct = this.exam_key[this.problem_number - 1];
-            sub.Rationale = this.attempt_explanation;
-            if (Object.keys(prob.Parts).length == 0) {
-              // sub.Choice.push(sub.Path[0][sub.Path[0].length - 1]);
-              var ms_correct = true;
-              var mp_correct = true;
-              if (['O', 'C', 'G'].includes(prob.Type)) {
-                if ((prob.Type == 'O' && this.is_m_correct('', false)) || (prob.Type == 'C' && this.is_c_correct('', false)) || (prob.Type == 'G' && this.is_g_correct('', false))) {
-                  sub.Correct = [['✅']];
-                  this.number_correct += 1;
-                }
-                else {
-                  sub.Correct = [this.exam_key[this.problem_number - 1][0]];
-                }
-                // sub.Rationale = this.attempt_explanation;
-              }
-              else if (['MR', 'LR'].includes(prob.Type)) {
-                sub.Correct = [['👀']];
-                if (this.problem_selection[0] == '') {
-                  sub.Choice = [['No Student Response Given']];
-                }
-                else {
-                  this.number_correct += 1;
-                }
-              }
-              else {
-                for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
-                  if (['MC', 'IMC'].includes(prob.Type)) {
-                    if (sub.Path[0][sub.Path[0].length - 1][0] == ch) {
-                      if (key.Key.Correct == true) {
-                        sub.Correct = [['✅']];
-                        this.number_correct += 1;
-                      }
-                      else {
-                        sub.Correct = [this.exam_key[this.problem_number - 1][0]];
-                      }
-                      // sub.Rationale = [[key.Key.Rationale]];
-                    }
-                  }
-                  else if (['LP'].includes(prob.Type)) {
-                    if (sub.Path[0][sub.Path[0].length - 1][0] == ch[0]) {
-                      if (key.Key.Correct == true) {
-                        sub.Correct = [['✅']];
-                        this.number_correct += 1;
-                      }
-                      else {
-                        sub.Correct = [this.exam_key[this.problem_number - 1][0]];
-                      }
-                      // sub.Rationale = [[key.Key.Rationale]];
-                    }
-                  }
-                  else if (['MS', 'IMS'].includes(prob.Type)) {
-                    if (key.Key.Correct && !sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
-                      ms_correct = false;
-                    }
-                    else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
-                      ms_correct = false;
-                    }
-                  }
-                  else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
-                    if (prob.Type == 'T') {
-                      if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
-                        mp_correct = false;
-                      }
-                    }
-                    if (prob.Type == 'MFR') {
-                      if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
-                        mp_correct = false;
-                      }
-                    }
-                    if (prob.Type == 'IDD') {
-                      if (key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != ch[2]) {
-                        mp_correct = false;
-                      }
-                      else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] == ch[2]) {
-                        mp_correct = false;
-                      }
-                    }
-                  }
-                  else if (prob.Type == 'FR') {
-                    if (sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
-                      sub.Correct = [['✅']];
-                      this.number_correct += 1;
-                      // sub.Rationale = [[key.Key.Rationale]];
-                    }
-                    else {
-                      sub.Correct = [this.exam_key[this.problem_number - 1][0]];
-                      // sub.Rationale = [['No rationale provided. The number submitted was not right']];
-                    }
-                  }
-                }
-              }
-              if (['MS', 'IMS'].includes(prob.Type) && ms_correct) {
-                sub.Correct = [['✅']];
-                this.number_correct += 1;
-              }
-              else if (['MS', 'IMS'].includes(prob.Type)) {
-                sub.Correct = [this.exam_key[this.problem_number - 1][0]];
-              }
-              else if (['MFR', 'IDD', 'T'].includes(prob.Type) && (mp_correct || this.is_idd_correct(''))) {
-                sub.Correct = [['✅']];
-                this.number_correct += 1;
-              }
-              else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
-                sub.Correct = [this.exam_key[this.problem_number - 1][0]];
-              }
-            }
-            else {
-              sub.Correct = [];
-              // sub.Rationale = [];
-              // sub.Rationale = this.attempt_explanation;
-              for (const [name, part] of Object.entries(prob.Parts)) {
-                // sub.Choice.push(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1]);
-                var ms_correct = true;
-                var mp_correct = true;
-                if (['O', 'C', 'G'].includes(part.Type)) {
-                  if ((part.Type == 'O' && this.is_m_correct(name, false)) || (part.Type == 'C' && this.is_c_correct(name, false)) || (part.Type == 'G' && this.is_g_correct(name, false))) {
-                    sub.Correct.push(['✅']);
-                    this.number_correct += 1;
-                  }
-                  else {
-                    sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
-                  }
-                  // sub.Rationale.push(this.attempt_explanation);
-                }
-                else if (['LR'].includes(part.Type)) {
-                  sub.Correct.push(['👀']);
-                  if (this.problem_selection[Object.keys(prob.Parts).indexOf(name)] == '') {
-                    sub.Choice[Object.keys(prob.Parts).indexOf(name)] = ['No Student Response Given'];
-                  }
-                  else {
-                    this.number_correct += 1;
-                  }
-                }
-                else {
-                  for (const [ch, key] of Object.entries(part.AnswerChoices)) {
-                    if (['MC', 'IMC'].includes(part.Type)) {
-                      if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch) {
-                        if (key.Key.Correct == true) {
-                          sub.Correct.push(['✅']);
-                          this.number_correct += 1;
-                        }
-                        else {
-                          sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
-                        }
-                        // sub.Rationale.push([key.Key.Rationale]);
-                      }
-                    }
-                    else if (['LP'].includes(part.Type)) {
-                      if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch[0]) {
-                        if (key.Key.Correct == true) {
-                          sub.Correct = [['✅']];
-                          this.number_correct += 1;
-                        }
-                        else {
-                          sub.Correct = [this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]];
-                        }
-                        // sub.Rationale = [[key.Key.Rationale]];
-                      }
-                    }
-                    if (['MS', 'IMS'].includes(part.Type)) {
-                      if (key.Key.Correct && !sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
-                        ms_correct = false;
-                      }
-                      else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
-                        ms_correct = false;
-                      }
-                    }
-                    else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
-                      if (part.Type == 'T') {
-                        if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
-                          mp_correct = false;
-                        }
-                      }
-                      if (part.Type == 'MFR') {
-                        if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
-                          mp_correct = false;
-                        }
-                      }
-                      if (part.Type == 'IDD') {
-                        if (key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != ch[2]) {
-                          mp_correct = false;
-                        }
-                        else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] == ch[2]) {
-                          mp_correct = false;
-                        }
-                      }
-                    }
-                    else if (part.Type == 'FR') {
-                      if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice) {
-                        sub.Correct.push(['✅']);
-                        this.number_correct += 1;
-                        // sub.Rationale.push([key.Key.Rationale]);
-                      }
-                      else {
-                        sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
-                        // sub.Rationale.push(['No rationale provided. The number submitted was not right']);
-                      }
-                    }
-                  }
-                }
-                if (['MS', 'IMS'].includes(part.Type) && ms_correct) {
-                  sub.Correct.push(['✅']);
-                  this.number_correct += 1;
-                }
-                else if (['MS', 'IMS'].includes(part.Type)) {
-                  sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
-                }
-                else if (['MFR', 'IDD', 'T'].includes(part.Type) && (mp_correct || this.is_idd_correct(name))) {
-                  sub.Correct.push(['✅']);
-                  this.number_correct += 1;
-                }
-                else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
-                  sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
-                }
-              }
-            }
-          }
-        }
+  toggleExamTimer() {
+    this.et_running = !this.et_running;
+    if (this.length_mode == 'number') {
+      if (this.et_running) {
+        const startTime = Date.now() - (this.et_counter || 0);
+        this.et_timer = setInterval(() => {
+          this.et_counter = Math.round((Date.now() - startTime) / 1000);
+          this.et_minutes = Math.floor(this.et_counter / 60);
+        });
+      } else {
+        clearInterval(this.et_timer);
       }
-    }
-    if (this.authService.userData) {
-      this.db_updates = {};
-      if (this.authService.userData.role == 'Student') {
-        this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/status'] = this.attempt_response;
-        // not necessarily true for multi part problems
-        if (this.attempt_response[this.attempt_response.length - 1] == 'Correct') {
-          this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
-        }
-        if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
-          this.db_updates['problems/total'] = this.authService.userData.problems.total + 1;
-          this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
-        }
-        this.db_updates['exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
-        this.authService.UpdateUserData(this.db_updates);
-        this.db_updates = {};
-        this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.authService.userData.uid] = this.exam_submission[this.exam_dump[this.problem_number].Number];
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
-        if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
-          this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/endtimestamp'] = serverTimestamp();
-        }
-        this.authService.UpdateDatabase(this.db_updates);
-        this.db_updates = {};
-        this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.authService.userData.uid + '/timestamp'] = serverTimestamp();
-        this.authService.UpdateDatabase(this.db_updates);
-        this.db_updates = {};
-      }
-      else if (this.selected_student != '') {
-        this.selected_student_data = this.authService.searchUserId(this.selected_student);
-        this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = this.attempt_response;
-        // not necessarily true for multi part problems
-        if (this.attempt_response[-1] == 'Correct') {
-          this.db_updates['users/' + this.selected_student + '/problems/correct'] = this.selected_student_data.problems.correct + 1;
-        }
-        if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
-          this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1;
-          this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/progress'] = this.selected_student_data.exams.history[this.key].progress + 1;
-        }
-        this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + "/lasttimestamp"] = serverTimestamp();
-        this.authService.UpdateDatabase(this.db_updates);
-        this.db_updates = {};
-        this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.selected_student] = this.exam_submission[this.exam_dump[this.problem_number].Number];
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
-        if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
-          this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/endtimestamp'] = serverTimestamp();
-        }
-        this.authService.UpdateDatabase(this.db_updates);
-        this.db_updates = {};
-        this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.selected_student + '/timestamp'] = serverTimestamp();
-        this.authService.UpdateDatabase(this.db_updates);
-        this.db_updates = {};
-      }
-    }
-    if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 < this.exam_length) {
-      this.problem_number = +Object.keys(this.exam_dump)[Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1];
-      if (this.problem_number > this.max_problem_number) {
-        if (this.authService.userData) {
-          this.db_updates = {};
-          if (this.authService.userData.role == 'Student') {
-            this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = 'Viewed';
-            this.authService.UpdateUserData(this.db_updates);
-            this.db_updates = {};
-          }
-          else if (this.selected_student != '') {
-            console.log(this.exam_submission[this.exam_dump[this.problem_number].Number].Number);
-            this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = 'Viewed';
-            this.authService.UpdateDatabase(this.db_updates);
-            this.db_updates = {};
-          }
-        }
-        this.max_problem_number = this.problem_number;
-        this.attempt_path = [];
-        this.attempt_response = [];
-        this.attempt_explanation = [];
-        this.problem_selection = [];
-        this.m_shuffled = false;
-        this.shuffle_choices = {};
-        this.unique_choices = [];
-        if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
-          this.problem_attempts = [0];
-          this.attempt_path = [[]];
-          this.attempt_response = [''];
-          this.attempt_explanation = [[]];
-          this.m_selection = [["", ""]];
-          this.m_submission = [{}];
-          this.c_submission = [{}];
-          if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
-            this.problem_selection = [['']];
-            if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
-              setTimeout(() => {
-                this.plot_graph_gp('', false);
-              }, 500);
-            }
-          }
-          else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
-            this.problem_selection = [[]];
-            if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
-              this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
-            }
-            if (['MGP'].includes(this.exam_dump[this.problem_number].Type)) {
-              setTimeout(() => {
-                this.plot_graph_mgp('', false);
-              }, 500);
-            }
-          }
-          else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Type)) {
-            var msp_nums: string[] = [];
-            this.problem_selection.push([]);
-            for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
-              if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-                this.problem_selection[0].push('');
-                msp_nums.push(choice[0]);
-              }
-            }
-          }
-        }
-        else {
-          this.problem_attempts = [];
-          for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
-            this.problem_attempts.push(0);
-            this.attempt_path.push([]);
-            this.attempt_response.push('');
-            this.attempt_explanation.push([]);
-            this.m_selection.push(["", ""]);
-            this.m_submission.push({});
-            this.c_submission.push({});
-            if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-              this.problem_selection.push(['']);
-              if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-                setTimeout(() => {
-                  this.plot_graph_gp(part, false);
-                }, 500);
-              }
-            }
-            else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-              this.problem_selection.push([]);
-              if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-                this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
-              }
-              if (['MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-                setTimeout(() => {
-                  this.plot_graph_mgp(part, false);
-                }, 500);
-              }
-            }
-            else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-              var msp_nums: string[] = [];
-              this.problem_selection.push([]);
-              for (let choice of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
-                if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-                  this.problem_selection[Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part)].push('');
-                  msp_nums.push(choice[0]);
-                }
-              }
-            }
-          }
-        }
-        for (let supp of this.exam_dump[this.problem_number].SuppContent) {
-          setTimeout(() => {
-            this.read_supp_json(supp);
-          }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
-        }
-        if (this.exam_dump[this.problem_number].Type == 'MP') {
-          for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
-            for (let block of this.exam_dump[this.problem_number].Parts[part].Content) {
-              if (block.startsWith(':table:')) {
-                setTimeout(() => {
-                  this.read_table(block.slice(7));
-                }, 100);
-              }
-            }
-          }
-        }
-        if (this.exam_dump[this.problem_number].Type != 'MP') {
-          for (let block of this.exam_dump[this.problem_number].Content) {
-            if (block.startsWith(':table:')) {
-              setTimeout(() => {
-                this.read_table(block.slice(7));
-              }, 100);
-            }
-          }
-        }
-      }
-      else if (this.problem_number <= this.max_problem_number) {
-        this.attempt_path = [this.exam_submission[this.problem_number].Path];
-        this.attempt_response = [''];
-        this.attempt_explanation = this.exam_submission[this.problem_number].Rationale;
-        this.problem_selection = this.exam_submission[this.problem_number].Choice;
-        this.problem_attempts = this.exam_submission[this.problem_number].Attempts;
-        for (let supp of this.exam_dump[this.problem_number].SuppContent) {
-          setTimeout(() => {
-            this.read_supp_json(supp);
-          }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
-        }
-        if (this.exam_dump[this.problem_number].Type == 'MP') {
-          for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
-            for (let block of this.exam_dump[this.problem_number].Parts[part].Content) {
-              if (block.startsWith(':table:')) {
-                setTimeout(() => {
-                  this.read_table(block.slice(7));
-                }, 100);
-              }
-            }
-          }
-        }
-        if (this.exam_dump[this.problem_number].Type != 'MP') {
-          for (let block of this.exam_dump[this.problem_number].Content) {
-            if (block.startsWith(':table:')) {
-              setTimeout(() => {
-                this.read_table(block.slice(7));
-              }, 100);
-            }
-          }
-        }
-      }
-      this.clearProblemTimer();
-      this.toggleProblemTimer();
     }
     else {
-      this.problem_number += 1;
-      this.completeExam();
+      if (this.et_running) {
+        const startTime = Date.now() - (this.et_counter || 0);
+        this.et_timer = setInterval(() => {
+          this.et_counter = Math.round(this.exam_timer * 60 - ((Date.now() - startTime) / 1000));
+          this.et_minutes = Math.floor(this.et_counter / 60);
+          if (this.et_counter <= 0) {
+            this.completeExam();
+          }
+        });
+      } else {
+        clearInterval(this.et_timer);
+      }
     }
   }
 
-  go_to_prob(num: number) {
-    if (num <= this.max_problem_number) {
+  clearExamTimer() {
+    this.et_running = false;
+    this.et_counter = 0;
+    clearInterval(this.et_timer);
+  }
+
+  toggleProblemTimer() {
+    this.pt_running = !this.pt_running;
+    if (this.pt_running) {
+      const startTime = Date.now() - (this.pt_counter || 0);
+      this.pt_timer = setInterval(() => {
+        this.pt_counter = Math.round((Date.now() - startTime) / 1000);
+        this.pt_minutes = Math.floor(this.pt_counter / 60);
+      });
+    } else {
+      clearInterval(this.pt_timer);
+    }
+  }
+
+  clearProblemTimer() {
+    this.pt_running = false;
+    this.pt_counter = 0;
+    clearInterval(this.pt_timer);
+  }
+
+  next_problem() {
+    if (this.mode == 'assess') {
       this.exam_submission[this.problem_number].Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
       this.exam_submission[this.problem_number].Seconds = this.pt_counter;
       this.exam_submission[this.problem_number].Number = this.problem_number;
@@ -5607,46 +5096,45 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
       this.exam_submission[this.problem_number].Path = this.attempt_path;
       // this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
       this.exam_submission[this.problem_number].Rationale = this.attempt_explanation;
-      // if (this.exam_submission[this.problem_number].Attempts.reduce((accumulator, currentValue) => accumulator + currentValue, 0) > 0) {
-      if (this.total_attempts(this.exam_submission[this.problem_number].Attempts) > 0) {
-        for (const [num, prob] of Object.entries(this.exam_dump)) {
-          if (this.problem_number == +num) {
-            for (const [num2, sub] of Object.entries(this.exam_submission)) {
-              if (this.problem_number == +num2) {
-                console.log(sub.Choice);
-                // sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
-                // sub.Seconds = this.pt_counter;
-                // sub.Number = this.problem_number;
-                // sub.Topics = prob.Topics;
-                // sub.SubTopics = prob.SubTopics;
-                // sub.Attempts = this.problem_attempts;
-                // sub.Path = this.attempt_path;
-                if (Object.keys(prob.Parts).length == 0) {
-                  // sub.Choice.push(sub.Path[0][sub.Path[0].length - 1]);
-                  var ms_correct = true;
-                  var mp_correct = true;
-                  if (['O', 'C', 'G'].includes(prob.Type)) {
-                    if ((prob.Type == 'O' && this.is_m_correct('', false)) || (prob.Type == 'C' && this.is_c_correct('', false)) || (prob.Type == 'G' && this.is_g_correct('', false))) {
-                      sub.Correct = [['✅']];
-                      this.number_correct += 1;
-                    }
-                    else {
-                      sub.Correct = [this.exam_key[this.problem_number - 1][0]];
-                    }
-                    // sub.Rationale = this.attempt_explanation;
-                  }
-                  else if (['MR', 'LR'].includes(prob.Type)) {
-                    sub.Correct = [['👀']];
-                    if (this.problem_selection[0] == '') {
-                      sub.Choice = [['No Student Response Given']];
-                    }
-                    else {
-                      this.number_correct += 1;
-                    }
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
+        if (this.problem_number == +num) {
+          for (const [num2, sub] of Object.entries(this.exam_submission)) {
+            if (this.problem_number == +num2) {
+              console.log(sub.Choice);
+              // sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+              // sub.Seconds = this.pt_counter;
+              // sub.Number = this.problem_number;
+              // sub.Topics = prob.Topics;
+              // sub.SubTopics = prob.SubTopics;
+              // sub.Attempts = this.problem_attempts;
+              // sub.Path = this.attempt_path;
+              if (Object.keys(prob.Parts).length == 0) {
+                // sub.Choice.push(sub.Path[0][sub.Path[0].length - 1]);
+                var ms_correct = true;
+                var mp_correct = true;
+                if (['O', 'C', 'G'].includes(prob.Type)) {
+                  if ((prob.Type == 'O' && this.is_m_correct('', false)) || (prob.Type == 'C' && this.is_c_correct('', false)) || (prob.Type == 'G' && this.is_g_correct('', false))) {
+                    sub.Correct = [['✅']];
+                    this.number_correct += 1;
                   }
                   else {
-                    for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
-                      if (['MC', 'IMC'].includes(prob.Type)) {
+                    sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                  }
+                  // sub.Rationale = this.attempt_explanation;
+                }
+                else if (['MR', 'LR'].includes(prob.Type)) {
+                  sub.Correct = [['👀']];
+                  if (this.problem_selection[0] == '') {
+                    sub.Choice = [['No Student Response Given']];
+                  }
+                  else {
+                    this.number_correct += 1;
+                  }
+                }
+                else {
+                  for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                    if (['MC', 'IMC'].includes(prob.Type)) {
+                      if (sub.Attempts[0] > 0) {
                         if (sub.Path[0][sub.Path[0].length - 1][0] == ch) {
                           if (key.Key.Correct == true) {
                             sub.Correct = [['✅']];
@@ -5658,7 +5146,9 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
                           // sub.Rationale = [[key.Key.Rationale]];
                         }
                       }
-                      else if (['LP'].includes(prob.Type)) {
+                    }
+                    else if (['LP'].includes(prob.Type)) {
+                      if (sub.Attempts[0] > 0) {
                         if (sub.Path[0][sub.Path[0].length - 1][0] == ch[0]) {
                           if (key.Key.Correct == true) {
                             sub.Correct = [['✅']];
@@ -5670,35 +5160,37 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
                           // sub.Rationale = [[key.Key.Rationale]];
                         }
                       }
-                      else if (['MS', 'IMS'].includes(prob.Type)) {
-                        if (key.Key.Correct && !sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
-                          ms_correct = false;
-                        }
-                        else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
-                          ms_correct = false;
+                    }
+                    else if (['MS', 'IMS'].includes(prob.Type)) {
+                      if (key.Key.Correct && !sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                        ms_correct = false;
+                      }
+                      else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                        ms_correct = false;
+                      }
+                    }
+                    else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
+                      if (prob.Type == 'MFR') {
+                        if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                          mp_correct = false;
                         }
                       }
-                      else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
-                        if (prob.Type == 'T') {
-                          if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
-                            mp_correct = false;
-                          }
-                        }
-                        if (prob.Type == 'MFR') {
-                          if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
-                            mp_correct = false;
-                          }
-                        }
-                        if (prob.Type == 'IDD') {
-                          if (key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != ch[2]) {
-                            mp_correct = false;
-                          }
-                          else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] == ch[2]) {
-                            mp_correct = false;
-                          }
+                      if (prob.Type == 'T') {
+                        if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                          mp_correct = false;
                         }
                       }
-                      else if (prob.Type == 'FR') {
+                      if (prob.Type == 'IDD') {
+                        if (key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != ch[2]) {
+                          mp_correct = false;
+                        }
+                        else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] == ch[2]) {
+                          mp_correct = false;
+                        }
+                      }
+                    }
+                    else if (prob.Type == 'FR') {
+                      if (sub.Attempts[0] > 0) {
                         if (sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
                           sub.Correct = [['✅']];
                           this.number_correct += 1;
@@ -5711,197 +5203,256 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
                       }
                     }
                   }
-                  if (['MS', 'IMS'].includes(prob.Type) && ms_correct) {
-                    sub.Correct = [['✅']];
-                    this.number_correct += 1;
-                  }
-                  else if (['MS', 'IMS'].includes(prob.Type)) {
-                    sub.Correct = [this.exam_key[this.problem_number - 1][0]];
-                  }
-                  else if (['MFR', 'IDD', 'T'].includes(prob.Type) && (mp_correct || this.is_idd_correct(''))) {
-                    sub.Correct = [['✅']];
-                    this.number_correct += 1;
-                  }
-                  else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
-                    sub.Correct = [this.exam_key[this.problem_number - 1][0]];
-                  }
                 }
-                else {
-                  sub.Correct = [];
-                  // sub.Rationale = [];
-                  // sub.Rationale = this.attempt_explanation;
-                  for (const [name, part] of Object.entries(prob.Parts)) {
-                    if (this.problem_attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
-                      // sub.Choice.push(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1]);
-                      var ms_correct = true;
-                      var mp_correct = true;
-                      if (['O', 'C', 'G'].includes(part.Type)) {
-                        if ((part.Type == 'O' && this.is_m_correct(name, false)) || (part.Type == 'C' && this.is_c_correct(name, false)) || (part.Type == 'G' && this.is_g_correct(name, false))) {
-                          sub.Correct.push(['✅']);
-                          this.number_correct += 1;
-                        }
-                        else {
-                          sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
-                        }
-                        // sub.Rationale.push(this.attempt_explanation);
-                      }
-                      else if (['LR'].includes(part.Type)) {
-                        sub.Correct.push(['👀']);
-                        if (this.problem_selection[Object.keys(prob.Parts).indexOf(name)] == '') {
-                          sub.Choice[Object.keys(prob.Parts).indexOf(name)] = ['No Student Response Given'];
-                        }
-                        else {
-                          this.number_correct += 1;
-                        }
-                      }
-                      else {
-                        for (const [ch, key] of Object.entries(part.AnswerChoices)) {
-                          if (['MC', 'IMC'].includes(part.Type)) {
-                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch) {
-                              if (key.Key.Correct == true) {
-                                sub.Correct.push(['✅']);
-                                this.number_correct += 1;
-                              }
-                              else {
-                                sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
-                              }
-                              // sub.Rationale.push([key.Key.Rationale]);
-                            }
-                          }
-                          else if (['LP'].includes(part.Type)) {
-                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch[0]) {
-                              if (key.Key.Correct == true) {
-                                sub.Correct = [['✅']];
-                                this.number_correct += 1;
-                              }
-                              else {
-                                sub.Correct = [this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]];
-                              }
-                              // sub.Rationale = [[key.Key.Rationale]];
-                            }
-                          }
-                          if (['MS', 'IMS'].includes(part.Type)) {
-                            if (key.Key.Correct && !sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
-                              ms_correct = false;
-                            }
-                            else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
-                              ms_correct = false;
-                            }
-                          }
-                          else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
-                            if (part.Type == 'T') {
-                              if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
-                                mp_correct = false;
-                              }
-                            }
-                            if (part.Type == 'MFR') {
-                              if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
-                                mp_correct = false;
-                              }
-                            }
-                            if (part.Type == 'IDD') {
-                              if (key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != ch[2]) {
-                                mp_correct = false;
-                              }
-                              else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] == ch[2]) {
-                                mp_correct = false;
-                              }
-                            }
-                          }
-                          else if (part.Type == 'FR') {
-                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice) {
+                if (['MS', 'IMS'].includes(prob.Type) && ms_correct) {
+                  sub.Correct = [['✅']];
+                  this.number_correct += 1;
+                }
+                else if (['MS', 'IMS'].includes(prob.Type)) {
+                  sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                }
+                else if (['MFR', 'IDD', 'T'].includes(prob.Type) && (mp_correct || this.is_idd_correct(''))) {
+                  sub.Correct = [['✅']];
+                  this.number_correct += 1;
+                }
+                else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
+                  sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                }
+              }
+              else {
+                sub.Correct = [];
+                // sub.Rationale = [];
+                // sub.Rationale = this.attempt_explanation;
+                for (const [name, part] of Object.entries(prob.Parts)) {
+                  // sub.Choice.push(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1]);
+                  var ms_correct = true;
+                  var mp_correct = true;
+                  if (['O', 'C', 'G'].includes(part.Type)) {
+                    if ((part.Type == 'O' && this.is_m_correct(name, false)) || (part.Type == 'C' && this.is_c_correct(name, false)) || (part.Type == 'G' && this.is_g_correct(name, false))) {
+                      sub.Correct.push(['✅']);
+                      this.number_correct += 1;
+                    }
+                    else {
+                      sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                    }
+                    // sub.Rationale.push(this.attempt_explanation);
+                  }
+                  else if (['LR'].includes(part.Type)) {
+                    sub.Correct.push(['👀']);
+                    if (this.problem_selection[Object.keys(prob.Parts).indexOf(name)] == '') {
+                      sub.Choice[Object.keys(prob.Parts).indexOf(name)] = ['No Student Response Given'];
+                    }
+                    else {
+                      this.number_correct += 1;
+                    }
+                  }
+                  else {
+                    for (const [ch, key] of Object.entries(part.AnswerChoices)) {
+                      if (['MC', 'IMC'].includes(part.Type)) {
+                        if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch) {
+                            if (key.Key.Correct == true) {
                               sub.Correct.push(['✅']);
                               this.number_correct += 1;
-                              // sub.Rationale.push([key.Key.Rationale]);
                             }
                             else {
                               sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
-                              // sub.Rationale.push(['No rationale provided. The number submitted was not right']);
                             }
+                            // sub.Rationale.push([key.Key.Rationale]);
                           }
                         }
                       }
-                      if (['MS', 'IMS'].includes(part.Type) && ms_correct) {
-                        sub.Correct.push(['✅']);
-                        this.number_correct += 1;
+                      else if (['LP'].includes(part.Type)) {
+                        if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch[0]) {
+                            if (key.Key.Correct == true) {
+                              sub.Correct = [['✅']];
+                              this.number_correct += 1;
+                            }
+                            else {
+                              sub.Correct = [this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]];
+                            }
+                            // sub.Rationale = [[key.Key.Rationale]];
+                          }
+                        }
                       }
-                      else if (['MS', 'IMS'].includes(part.Type)) {
-                        sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
-                      }
-                      else if (['MFR', 'IDD', 'T'].includes(part.Type) && (mp_correct || this.is_idd_correct(name))) {
-                        sub.Correct.push(['✅']);
-                        this.number_correct += 1;
+                      if (['MS', 'IMS'].includes(part.Type)) {
+                        if (key.Key.Correct && !sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                          ms_correct = false;
+                        }
+                        else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                          ms_correct = false;
+                        }
                       }
                       else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
-                        sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                        if (part.Type == 'T') {
+                          if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                            mp_correct = false;
+                          }
+                        }
+                        if (part.Type == 'MFR') {
+                          if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                            mp_correct = false;
+                          }
+                        }
+                        if (part.Type == 'IDD') {
+                          if (key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != ch[2]) {
+                            mp_correct = false;
+                          }
+                          else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] == ch[2]) {
+                            mp_correct = false;
+                          }
+                        }
+                      }
+                      else if (part.Type == 'FR') {
+                        if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice) {
+                            sub.Correct.push(['✅']);
+                            this.number_correct += 1;
+                            // sub.Rationale.push([key.Key.Rationale]);
+                          }
+                          else {
+                            sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                            // sub.Rationale.push(['No rationale provided. The number submitted was not right']);
+                          }
+                        }
                       }
                     }
                   }
+                  if (['MS', 'IMS'].includes(part.Type) && ms_correct) {
+                    sub.Correct.push(['✅']);
+                    this.number_correct += 1;
+                  }
+                  else if (['MS', 'IMS'].includes(part.Type)) {
+                    sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                  }
+                  else if (['MFR', 'IDD', 'T'].includes(part.Type) && (mp_correct || this.is_idd_correct(name))) {
+                    sub.Correct.push(['✅']);
+                    this.number_correct += 1;
+                  }
+                  else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
+                    sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                  }
                 }
-                console.log(sub.Choice);
               }
+              console.log(sub.Choice);
             }
-          }
-        }
-        if (this.authService.userData) {
-          this.db_updates = {};
-          if (this.authService.userData.role == 'Student') {
-            this.db_updates['problems/all/' + this.key + '-' + "" + this.exam_submission[this.problem_number].Number + '/status'] = this.attempt_response;
-            // not necessarily true for multi part problems
-            if (this.attempt_response[this.attempt_response.length - 1] == 'Correct') {
-              this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
-            }
-            if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
-              this.db_updates['problems/total'] = this.authService.userData.problems.total + 1;
-              this.db_updates['exams/history/' + this.key + '/progress'] = this.authService.userData.exams.history[this.key].progress + 1;
-            }
-            this.db_updates['exams/history/' + this.key + '/lasttimestamp'] = serverTimestamp();
-            this.authService.UpdateUserData(this.db_updates);
-            this.db_updates = {};
-            this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.authService.userData.uid] = this.exam_submission[this.exam_dump[this.problem_number].Number];
-            this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
-            if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
-              this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/endtimestamp'] = serverTimestamp();
-            }
-            this.authService.UpdateDatabase(this.db_updates);
-            this.db_updates = {};
-            this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.authService.userData.uid + '/timestamp'] = serverTimestamp();
-            this.authService.UpdateDatabase(this.db_updates);
-            this.db_updates = {};
-          }
-          else if (this.selected_student != '') {
-            this.selected_student_data = this.authService.searchUserId(this.selected_student);
-            this.db_updates['users/' + this.selected_student + '/problems/all/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/status'] = this.attempt_response;
-            // not necessarily true for multi part problems
-            if (this.attempt_response[-1] == 'Correct') {
-              this.db_updates['users/' + this.selected_student + '/problems/correct'] = this.selected_student_data.problems.correct + 1;
-            }
-            if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
-              this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1;
-              this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/progress'] = this.selected_student_data.exams.history[this.key].progress + 1;
-            }
-            this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + "/lasttimestamp"] = serverTimestamp();
-            this.authService.UpdateDatabase(this.db_updates);
-            this.db_updates = {};
-            this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.selected_student] = this.exam_submission[this.exam_dump[this.problem_number].Number];
-            this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/problems/' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number] = this.exam_submission[this.exam_dump[this.problem_number].Number];
-            if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
-              this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/endtimestamp'] = serverTimestamp();
-            }
-            this.authService.UpdateDatabase(this.db_updates);
-            this.db_updates = {};
-            this.db_updates['/submissions/problems/' + this.key + '-' + "" + this.exam_submission[this.exam_dump[this.problem_number].Number].Number + '/' + this.selected_student + '/timestamp'] = serverTimestamp();
-            this.authService.UpdateDatabase(this.db_updates);
-            this.db_updates = {};
           }
         }
       }
-      this.problem_number = num;
-      this.attempt_path = this.exam_submission[num].Path;
-      this.attempt_explanation = this.exam_submission[num].Rationale;
-      this.problem_selection = this.exam_submission[num].Choice;
-      this.problem_attempts = this.exam_submission[num].Attempts;
+      console.log(this.exam_submission);
+      if (this.authService.userData) {
+        this.db_updates = {};
+        if (this.authService.userData.role == 'Student') {
+          this.db_updates['problems/all/' + "" + (this.exam_dump[this.problem_number].Number) + '/status'] = this.attempt_response;
+          // not necessarily true for multi part problems
+          if (this.attempt_response[this.attempt_response.length - 1] == 'Correct') {
+            this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
+          }
+          if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
+            this.db_updates['problems/total'] = this.authService.userData.problems.total + 1;
+            this.db_updates['exams/history/Q-' + this.key + '/progress'] = this.authService.userData.exams.history['Q-' + this.key].progress + 1;
+          }
+          this.db_updates['exams/history/Q-' + this.key + '/lasttimestamp'] = serverTimestamp();
+          this.authService.UpdateUserData(this.db_updates);
+          this.db_updates = {};
+          this.db_updates['/submissions/problems/' + "" + (this.exam_dump[this.problem_number].Number) + '/' + this.authService.userData.uid] = this.exam_submission[this.problem_number];
+          this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.authService.userData.uid + '/problems/' + "" + (this.exam_dump[this.problem_number].Number)] = this.exam_submission[this.problem_number];
+          if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
+            this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.authService.userData.uid + '/endtimestamp'] = serverTimestamp();
+          }
+          this.authService.UpdateDatabase(this.db_updates);
+          this.db_updates = {};
+          this.db_updates['/submissions/problems/' + "" + (this.exam_dump[this.problem_number].Number) + '/' + this.authService.userData.uid + '/timestamp'] = serverTimestamp();
+          this.authService.UpdateDatabase(this.db_updates);
+          this.db_updates = {};
+        }
+        else if (this.selected_student != '') {
+          this.selected_student_data = this.authService.searchUserId(this.selected_student);
+          this.db_updates['users/' + this.selected_student + '/problems/all/' + "" + (this.exam_dump[this.problem_number].Number) + '/status'] = this.attempt_response;
+          // not necessarily true for multi part problems
+          if (this.attempt_response[-1] == 'Correct') {
+            this.db_updates['users/' + this.selected_student + '/problems/correct'] = this.selected_student_data.problems.correct + 1;
+          }
+          if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
+            this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1;
+            this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.key + '/progress'] = this.selected_student_data.exams.history['Q-' + this.key].progress + 1;
+          }
+          this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.key + "/lasttimestamp"] = serverTimestamp();
+          this.authService.UpdateDatabase(this.db_updates);
+          this.db_updates = {};
+          this.db_updates['/submissions/problems/' + "" + (this.exam_dump[this.problem_number].Number) + '/' + this.selected_student] = this.exam_submission[this.problem_number];
+          this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.selected_student + '/problems/' + "" + (this.exam_dump[this.problem_number].Number)] = this.exam_submission[this.problem_number];
+          if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
+            this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.selected_student + '/endtimestamp'] = serverTimestamp();
+          }
+          this.authService.UpdateDatabase(this.db_updates);
+          this.db_updates = {};
+          this.db_updates['/submissions/problems/' + "" + (this.exam_dump[this.problem_number].Number) + '/' + this.selected_student + '/timestamp'] = serverTimestamp();
+          this.authService.UpdateDatabase(this.db_updates);
+          this.db_updates = {};
+        }
+      }
+    }
+    else {
+      if (this.authService.userData) {
+        this.db_updates = {};
+        if (this.authService.userData.role == 'Student') {
+          this.db_updates['problems/all/' + "" + (this.exam_dump[this.problem_number].Number) + '/status'] = this.attempt_response;
+          // not necessarily true for multi part problems
+          if (this.attempt_response[this.attempt_response.length - 1] == 'Correct') {
+            this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
+          }
+          if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
+            this.db_updates['problems/total'] = this.authService.userData.problems.total + 1;
+            this.db_updates['exams/history/Q-' + this.key + '/progress'] = this.authService.userData.exams.history['Q-' + this.key].progress + 1;
+          }
+          this.db_updates['exams/history/Q-' + this.key + '/lasttimestamp'] = serverTimestamp();
+          this.authService.UpdateUserData(this.db_updates);
+          this.db_updates = {};
+        }
+        else if (this.selected_student != '') {
+          this.selected_student_data = this.authService.searchUserId(this.selected_student);
+          this.db_updates['users/' + this.selected_student + '/problems/all/' + "" + (this.exam_dump[this.problem_number].Number) + '/status'] = this.attempt_response;
+          // not necessarily true for multi part problems
+          if (this.attempt_response[-1] == 'Correct') {
+            this.db_updates['users/' + this.selected_student + '/problems/correct'] = this.selected_student_data.problems.correct + 1;
+          }
+          if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
+            this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1;
+            this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.key + '/progress'] = this.selected_student_data.exams.history['Q-' + this.key].progress + 1;
+          }
+          this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.key + "/lasttimestamp"] = serverTimestamp();
+          this.authService.UpdateDatabase(this.db_updates);
+          this.db_updates = {};
+        }
+      }
+    }
+    this.problem_number += 1;
+    if (this.problem_number <= this.exam_length && this.problem_number > this.max_problem_number) {
+      if (this.authService.userData) {
+        this.db_updates = {};
+        if (this.authService.userData.role == 'Student') {
+          this.db_updates['problems/all/' + "" + (this.exam_dump[this.problem_number].Number) + '/status'] = 'Viewed';
+          this.authService.UpdateUserData(this.db_updates);
+          this.db_updates = {};
+        }
+        else if (this.selected_student != '') {
+          this.db_updates['users/' + this.selected_student + '/problems/all/' + "" + (this.exam_dump[this.problem_number].Number) + '/status'] = 'Viewed';
+          this.authService.UpdateDatabase(this.db_updates);
+          this.db_updates = {};
+        }
+      }
+      this.max_problem_number = this.problem_number;
+    }
+    if (this.problem_number > this.exam_length && this.length_mode == 'number') {
+      this.completeExam();
+    }
+    else if (this.max_problem_number == this.problem_number) {
+      this.attempt_path = [];
       this.attempt_response = [];
+      this.attempt_explanation = [];
+      this.problem_selection = [];
       this.m_shuffled = false;
       this.m_selection = [];
       this.m_submission = [];
@@ -5909,27 +5460,85 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
       this.shuffle_choices = {};
       this.unique_choices = [];
       if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+        this.problem_attempts = [0];
+        this.attempt_path = [[]];
         this.attempt_response = [''];
+        this.attempt_explanation = [[]];
         this.m_selection = [["", ""]];
         this.m_submission = [{}];
         this.c_submission = [{}];
-        if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
-          this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
+        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
+          this.problem_selection = [['']];
+          if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
+            setTimeout(() => {
+              this.plot_graph_gp('', false);
+            }, 500);
+          }
         }
-      }
-      else {
-        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
-          this.attempt_response.push('');
-          this.m_selection.push(["", ""]);
-          this.m_submission.push({});
-          this.c_submission.push({});
-          if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-            this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
+        else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+          this.problem_selection = [[]];
+          if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
+            this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
+          }
+          if (['MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+            setTimeout(() => {
+              this.plot_graph_mgp('', false);
+            }, 500);
+          }
+        }
+        else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Type)) {
+          var msp_nums: string[] = [];
+          this.problem_selection.push([]);
+          for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
+            if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+              this.problem_selection[0].push('');
+              msp_nums.push(choice[0]);
+            }
           }
         }
       }
-      console.log(this.problem_selection);
-      // this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      else {
+        this.problem_attempts = [];
+        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+          this.problem_attempts.push(0);
+          this.attempt_path.push([]);
+          this.attempt_response.push('');
+          this.attempt_explanation.push([]);
+          this.m_selection.push(["", ""]);
+          this.m_submission.push({});
+          this.c_submission.push({});
+          if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            this.problem_selection.push(['']);
+            if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+              setTimeout(() => {
+                this.plot_graph_gp(part, false);
+              }, 500);
+            }
+          }
+          else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            this.problem_selection.push([]);
+            if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+              this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
+            }
+            if (['MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+              setTimeout(() => {
+                this.plot_graph_mgp(part, false);
+              }, 500);
+            }
+          }
+          else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            var msp_nums: string[] = [];
+            this.problem_selection.push([]);
+            for (let choice of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
+              if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+                this.problem_selection[Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part)].push('');
+                msp_nums.push(choice[0]);
+              }
+            }
+          }
+        }
+      }
+      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
       for (let supp of this.exam_dump[this.problem_number].SuppContent) {
         setTimeout(() => {
           this.read_supp_json(supp);
@@ -5955,9 +5564,42 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           }
         }
       }
-      this.clearProblemTimer();
-      this.toggleProblemTimer();
     }
+    else {
+      this.attempt_path = [this.exam_submission[this.problem_number].Path];
+      this.attempt_response = [''];
+      this.attempt_explanation = this.exam_submission[this.problem_number].Rationale;
+      this.problem_selection = this.exam_submission[this.problem_number].Choice;
+      this.problem_attempts = this.exam_submission[this.problem_number].Attempts;
+      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_json(supp);
+        }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+      }
+      if (this.exam_dump[this.problem_number].Type == 'MP') {
+        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+          for (let block of this.exam_dump[this.problem_number].Parts[part].Content) {
+            if (block.startsWith(':table:')) {
+              setTimeout(() => {
+                this.read_table(block.slice(7));
+              }, 100);
+            }
+          }
+        }
+      }
+      if (this.exam_dump[this.problem_number].Type != 'MP') {
+        for (let block of this.exam_dump[this.problem_number].Content) {
+          if (block.startsWith(':table:')) {
+            setTimeout(() => {
+              this.read_table(block.slice(7));
+            }, 100);
+          }
+        }
+      }
+    }
+    this.clearProblemTimer();
+    this.toggleProblemTimer();
   }
 
   next_problem_st() {
@@ -6013,9 +5655,6 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           this.subtopic_attempt_path.push([]);
           this.subtopic_attempt_response.push('');
           this.subtopic_attempt_explanation.push([]);
-          this.m_selection.push(["", ""]);
-          this.m_submission.push({});
-          this.c_submission.push({});
           if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
             this.subtopic_problem_selection.push(['']);
             if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
@@ -6076,138 +5715,564 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     }
   }
 
-  completeExam() {
-    // retreive db sub/exam/problems if auth student, to calculate results & set db sub/exam/...
-    this.toggleProblemTimer();
-    this.toggleExamTimer();
-    if (this.authService.userData) {
-      this.db_updates = {};
-      if (this.authService.userData.role == 'Student') {
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/endtimestamp'] = serverTimestamp();
-      }
-      else if (this.selected_student != '') {
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/endtimestamp'] = serverTimestamp();
-      }
-      this.authService.UpdateDatabase(this.db_updates);
-      this.db_updates = {};
-    }
-    console.log(this.exam_submission);
-    this.number_correct = 0;
-    for (let i: number = 1; i <= this.exam_length; i++) {
-      console.log('' + i);
-      if (this.exam_submission[+Object.keys(this.ordered_dump)[i - 1]].Attempts[0] > 0) {
-        this.exam_submission_list.push(this.exam_submission[i]);
-        if (Object.keys(this.exam_dump[i].Parts).length == 0) {
-          if (this.exam_submission[+Object.keys(this.ordered_dump)[i - 1]].Correct[0][0] != '✅') {
-            this.wrong_submission_list.push(this.exam_submission[+Object.keys(this.ordered_dump)[i - 1]]);
-          }
-          else {
-            this.number_correct += 1;
-          }
-        }
-        else {
-          var pushed_wrong = false;
-          for (let part of Object.keys(this.exam_dump[i].Parts)) {
-            if (!pushed_wrong && this.exam_submission[+Object.keys(this.ordered_dump)[i - 1]].Correct[(Object.keys(this.exam_dump[i].Parts)).indexOf(part)][0] != '✅') {
-              this.wrong_submission_list.push(this.exam_submission[+Object.keys(this.ordered_dump)[i - 1]]);
-              pushed_wrong = true;
-            }
-          }
-          if (!pushed_wrong) {
-            this.number_correct += 1;
-          }
-        }
-        this.total_seconds += this.exam_submission[+Object.keys(this.ordered_dump)[i - 1]].Seconds;
-      }
-    }
-    // this.et_counter = this.total_seconds;
-    this.et_minutes = Math.floor(this.total_seconds / 60);
-    this.correct_percent = Math.round(this.number_correct / (this.exam_length) * 100);
-    this.confetti_pop();
-    for (let i: number = 0; i < this.exam_length; i++) {
-      if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Attempts[0] > 0) {
-        if (this.exam_submission_list[i].Topics != undefined) {
-          for (let num: number = 0; num < this.exam_submission_list[i].Topics.length; num++) {
-            if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[num])) {
-              this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Total += 1;
-              this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Seconds += this.exam_submission_list[i].Seconds;
-              if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0][0] == '✅') {
-                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Correct += 1;
-                if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs).includes(this.exam_submission_list[i].SubTopics[num])) {
-                  this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Total += 1;
-                  this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Correct += 1;
-                  this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Seconds += this.exam_submission_list[i].Seconds;
-                }
-                else {
-                  this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
+  go_to_prob(num: number) {
+    if (num <= this.max_problem_number) {
+      if (this.mode == 'assess') {
+        this.exam_submission[this.problem_number].Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+        this.exam_submission[this.problem_number].Seconds = this.pt_counter;
+        this.exam_submission[this.problem_number].Number = this.problem_number;
+        this.exam_submission[this.problem_number].Topics = this.exam_dump[this.problem_number].Topics;
+        this.exam_submission[this.problem_number].SubTopics = this.exam_dump[this.problem_number].SubTopics;
+        this.exam_submission[this.problem_number].Choice = this.problem_selection;
+        this.exam_submission[this.problem_number].Attempts = this.problem_attempts;
+        this.exam_submission[this.problem_number].Path = this.attempt_path;
+        // this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
+        this.exam_submission[this.problem_number].Rationale = this.attempt_explanation;
+        // if (this.exam_submission[this.problem_number].Attempts.reduce((accumulator, currentValue) => accumulator + currentValue, 0) > 0) {
+        if (this.total_attempts(this.exam_submission[this.problem_number].Attempts) > 0) {
+          for (const [num, prob] of Object.entries(this.exam_dump)) {
+            if (this.problem_number == +num) {
+              for (const [num2, sub] of Object.entries(this.exam_submission)) {
+                if (this.problem_number == +num2) {
+                  console.log(sub.Choice);
+                  // sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+                  // sub.Seconds = this.pt_counter;
+                  // sub.Number = this.problem_number;
+                  // sub.Topics = prob.Topics;
+                  // sub.SubTopics = prob.SubTopics;
+                  // sub.Attempts = this.problem_attempts;
+                  // sub.Path = this.attempt_path;
+                  if (Object.keys(prob.Parts).length == 0) {
+                    // sub.Choice.push(sub.Path[0][sub.Path[0].length - 1]);
+                    var ms_correct = true;
+                    var mp_correct = true;
+                    if (['O', 'C', 'G'].includes(prob.Type)) {
+                      if ((prob.Type == 'O' && this.is_m_correct('', false)) || (prob.Type == 'C' && this.is_c_correct('', false)) || (prob.Type == 'G' && this.is_g_correct('', false))) {
+                        sub.Correct = [['✅']];
+                        this.number_correct += 1;
+                      }
+                      else {
+                        sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                      }
+                      // sub.Rationale = this.attempt_explanation;
+                    }
+                    else if (['MR', 'LR'].includes(prob.Type)) {
+                      sub.Correct = [['👀']];
+                      if (this.problem_selection[0] == '') {
+                        sub.Choice = [['No Student Response Given']];
+                      }
+                      else {
+                        this.number_correct += 1;
+                      }
+                    }
+                    else {
+                      for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                        if (['MC', 'IMC'].includes(prob.Type)) {
+                          if (sub.Attempts[0] > 0) {
+                            if (sub.Path[0][sub.Path[0].length - 1][0] == ch) {
+                              if (key.Key.Correct == true) {
+                                sub.Correct = [['✅']];
+                                this.number_correct += 1;
+                              }
+                              else {
+                                sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                              }
+                              // sub.Rationale = [[key.Key.Rationale]];
+                            }
+                          }
+                        }
+                        else if (['LP'].includes(prob.Type)) {
+                          if (sub.Attempts[0] > 0) {
+                            if (sub.Path[0][sub.Path[0].length - 1][0] == ch[0]) {
+                              if (key.Key.Correct == true) {
+                                sub.Correct = [['✅']];
+                                this.number_correct += 1;
+                              }
+                              else {
+                                sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                              }
+                              // sub.Rationale = [[key.Key.Rationale]];
+                            }
+                          }
+                        }
+                        else if (['MS', 'IMS'].includes(prob.Type)) {
+                          if (key.Key.Correct && !sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                            ms_correct = false;
+                          }
+                          else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                            ms_correct = false;
+                          }
+                        }
+                        else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
+                          if (prob.Type == 'T') {
+                            if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                              mp_correct = false;
+                            }
+                          }
+                          if (prob.Type == 'MFR') {
+                            if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                              mp_correct = false;
+                            }
+                          }
+                          if (prob.Type == 'IDD') {
+                            if (key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != ch[2]) {
+                              mp_correct = false;
+                            }
+                            else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] == ch[2]) {
+                              mp_correct = false;
+                            }
+                          }
+                        }
+                        else if (prob.Type == 'FR') {
+                          if (sub.Attempts[0] > 0) {
+                            if (sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
+                              sub.Correct = [['✅']];
+                              this.number_correct += 1;
+                              // sub.Rationale = [[key.Key.Rationale]];
+                            }
+                            else {
+                              sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                              // sub.Rationale = [['No rationale provided. The number submitted was not right']];
+                            }
+                          }
+                        }
+                      }
+                    }
+                    if (['MS', 'IMS'].includes(prob.Type) && ms_correct) {
+                      sub.Correct = [['✅']];
+                      this.number_correct += 1;
+                    }
+                    else if (['MS', 'IMS'].includes(prob.Type)) {
+                      sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                    }
+                    else if (['MFR', 'IDD', 'T'].includes(prob.Type) && (mp_correct || this.is_idd_correct(''))) {
+                      sub.Correct = [['✅']];
+                      this.number_correct += 1;
+                    }
+                    else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
+                      sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                    }
+                  }
+                  else {
+                    sub.Correct = [];
+                    // sub.Rationale = [];
+                    // sub.Rationale = this.attempt_explanation;
+                    for (const [name, part] of Object.entries(prob.Parts)) {
+                      if (this.problem_attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                        // sub.Choice.push(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1]);
+                        var ms_correct = true;
+                        var mp_correct = true;
+                        if (['O', 'C', 'G'].includes(part.Type)) {
+                          if ((part.Type == 'O' && this.is_m_correct(name, false)) || (part.Type == 'C' && this.is_c_correct(name, false)) || (part.Type == 'G' && this.is_g_correct(name, false))) {
+                            sub.Correct.push(['✅']);
+                            this.number_correct += 1;
+                          }
+                          else {
+                            sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                          }
+                          // sub.Rationale.push(this.attempt_explanation);
+                        }
+                        else if (['LR'].includes(part.Type)) {
+                          sub.Correct.push(['👀']);
+                          if (this.problem_selection[Object.keys(prob.Parts).indexOf(name)] == '') {
+                            sub.Choice[Object.keys(prob.Parts).indexOf(name)] = ['No Student Response Given'];
+                          }
+                          else {
+                            this.number_correct += 1;
+                          }
+                        }
+                        else {
+                          for (const [ch, key] of Object.entries(part.AnswerChoices)) {
+                            if (['MC', 'IMC'].includes(part.Type)) {
+                              if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                                if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch) {
+                                  if (key.Key.Correct == true) {
+                                    sub.Correct.push(['✅']);
+                                    this.number_correct += 1;
+                                  }
+                                  else {
+                                    sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                                  }
+                                  // sub.Rationale.push([key.Key.Rationale]);
+                                }
+                              }
+                            }
+                            else if (['LP'].includes(part.Type)) {
+                              if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                                if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch[0]) {
+                                  if (key.Key.Correct == true) {
+                                    sub.Correct = [['✅']];
+                                    this.number_correct += 1;
+                                  }
+                                  else {
+                                    sub.Correct = [this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]];
+                                  }
+                                  // sub.Rationale = [[key.Key.Rationale]];
+                                }
+                              }
+                            }
+                            if (['MS', 'IMS'].includes(part.Type)) {
+                              if (key.Key.Correct && !sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                                ms_correct = false;
+                              }
+                              else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                                ms_correct = false;
+                              }
+                            }
+                            else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
+                              if (part.Type == 'T') {
+                                if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                                  mp_correct = false;
+                                }
+                              }
+                              if (part.Type == 'MFR') {
+                                if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                                  mp_correct = false;
+                                }
+                              }
+                              if (part.Type == 'IDD') {
+                                if (key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != ch[2]) {
+                                  mp_correct = false;
+                                }
+                                else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] == ch[2]) {
+                                  mp_correct = false;
+                                }
+                              }
+                            }
+                            else if (part.Type == 'FR') {
+                              if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                                if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice) {
+                                  sub.Correct.push(['✅']);
+                                  this.number_correct += 1;
+                                  // sub.Rationale.push([key.Key.Rationale]);
+                                }
+                                else {
+                                  sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                                  // sub.Rationale.push(['No rationale provided. The number submitted was not right']);
+                                }
+                              }
+                            }
+                          }
+                        }
+                        if (['MS', 'IMS'].includes(part.Type) && ms_correct) {
+                          sub.Correct.push(['✅']);
+                          this.number_correct += 1;
+                        }
+                        else if (['MS', 'IMS'].includes(part.Type)) {
+                          sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                        }
+                        else if (['MFR', 'IDD', 'T'].includes(part.Type) && (mp_correct || this.is_idd_correct(name))) {
+                          sub.Correct.push(['✅']);
+                          this.number_correct += 1;
+                        }
+                        else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
+                          sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                        }
+                      }
+                    }
+                  }
+                  console.log(sub.Choice);
                 }
               }
+            }
+          }
+          if (this.authService.userData) {
+            this.db_updates = {};
+            if (this.authService.userData.role == 'Student') {
+              this.db_updates['problems/all/' + "" + (this.exam_dump[this.problem_number].Number) + '/status'] = this.attempt_response;
+              // not necessarily true for multi part problems
+              if (this.attempt_response[this.attempt_response.length - 1] == 'Correct') {
+                this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
+              }
+              if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
+                this.db_updates['problems/total'] = this.authService.userData.problems.total + 1;
+                this.db_updates['exams/history/Q-' + this.key + '/progress'] = this.authService.userData.exams.history['Q-' + this.key].progress + 1;
+              }
+              this.db_updates['exams/history/Q-' + this.key + '/lasttimestamp'] = serverTimestamp();
+              this.authService.UpdateUserData(this.db_updates);
+              this.db_updates = {};
+              this.db_updates['/submissions/problems/' + "" + (this.exam_dump[this.problem_number].Number) + '/' + this.authService.userData.uid] = this.exam_submission[this.problem_number];
+              this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.authService.userData.uid + '/problems/' + "" + (this.exam_dump[this.problem_number].Number)] = this.exam_submission[this.problem_number];
+              if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
+                this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.authService.userData.uid + '/endtimestamp'] = serverTimestamp();
+              }
+              this.authService.UpdateDatabase(this.db_updates);
+              this.db_updates = {};
+              this.db_updates['/submissions/problems/Q-' + "" + (this.exam_dump[this.problem_number].Number) + '/' + this.authService.userData.uid + '/timestamp'] = serverTimestamp();
+              this.authService.UpdateDatabase(this.db_updates);
+              this.db_updates = {};
+            }
+            else if (this.selected_student != '') {
+              this.selected_student_data = this.authService.searchUserId(this.selected_student);
+              this.db_updates['users/' + this.selected_student + '/problems/all/' + "" + (this.exam_dump[this.problem_number].Number) + '/status'] = this.attempt_response;
+              // not necessarily true for multi part problems
+              if (this.attempt_response[-1] == 'Correct') {
+                this.db_updates['users/' + this.selected_student + '/problems/correct'] = this.selected_student_data.problems.correct + 1;
+              }
+              if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
+                this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1;
+                this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.key + '/progress'] = this.selected_student_data.exams.history['Q-' + this.key].progress + 1;
+              }
+              this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.key + "/lasttimestamp"] = serverTimestamp();
+              this.authService.UpdateDatabase(this.db_updates);
+              this.db_updates = {};
+              this.db_updates['/submissions/problems/' + "" + (this.exam_dump[this.problem_number].Number) + '/' + this.selected_student] = this.exam_submission[this.problem_number];
+              this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.selected_student + '/problems/' + "" + (this.exam_dump[this.problem_number].Number)] = this.exam_submission[this.problem_number];
+              if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
+                this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.selected_student + '/endtimestamp'] = serverTimestamp();
+              }
+              this.authService.UpdateDatabase(this.db_updates);
+              this.db_updates = {};
+              this.db_updates['/submissions/problems/' + "" + (this.exam_dump[this.problem_number].Number) + '/' + this.selected_student + '/timestamp'] = serverTimestamp();
+              this.authService.UpdateDatabase(this.db_updates);
+              this.db_updates = {};
+            }
+          }
+        }
+      }
+      else {
+        if (this.total_attempts(this.exam_submission[this.problem_number].Attempts) > 0) {
+          if (this.authService.userData) {
+            this.db_updates = {};
+            if (this.authService.userData.role == 'Student') {
+              this.db_updates['problems/all/' + "" + (this.exam_dump[this.problem_number].Number) + '/status'] = this.attempt_response;
+              // not necessarily true for multi part problems
+              if (this.attempt_response[this.attempt_response.length - 1] == 'Correct') {
+                this.db_updates['problems/correct'] = this.authService.userData.problems.correct + 1;
+              }
+              if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
+                this.db_updates['problems/total'] = this.authService.userData.problems.total + 1;
+                this.db_updates['exams/history/Q-' + this.key + '/progress'] = this.authService.userData.exams.history['Q-' + this.key].progress + 1;
+              }
+              this.db_updates['exams/history/Q-' + this.key + '/lasttimestamp'] = serverTimestamp();
+              this.authService.UpdateUserData(this.db_updates);
+              this.db_updates = {};
+            }
+            else if (this.selected_student != '') {
+              this.selected_student_data = this.authService.searchUserId(this.selected_student);
+              this.db_updates['users/' + this.selected_student + '/problems/all/' + "" + (this.exam_dump[this.problem_number].Number) + '/status'] = this.attempt_response;
+              // not necessarily true for multi part problems
+              if (this.attempt_response[-1] == 'Correct') {
+                this.db_updates['users/' + this.selected_student + '/problems/correct'] = this.selected_student_data.problems.correct + 1;
+              }
+              if (this.problem_number + 1 > this.max_problem_number) { //only add if newly viewed problem
+                this.db_updates['users/' + this.selected_student + '/problems/total'] = this.selected_student_data.problems.total + 1;
+                this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.key + '/progress'] = this.selected_student_data.exams.history['Q-' + this.key].progress + 1;
+              }
+              this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.key + "/lasttimestamp"] = serverTimestamp();
+              this.authService.UpdateDatabase(this.db_updates);
+              this.db_updates = {};
+            }
+          }
+        }
+      }
+      this.problem_number = num;
+      this.attempt_path = this.exam_submission[num].Path;
+      this.attempt_explanation = this.exam_submission[num].Rationale;
+      this.problem_selection = this.exam_submission[num].Choice;
+      this.problem_attempts = this.exam_submission[num].Attempts;
+      this.attempt_response = [];
+      this.m_shuffled = false;
+      this.m_selection = [];
+      this.m_submission = [];
+      this.c_submission = [];
+      this.shuffle_choices = {};
+      this.unique_choices = [];
+      if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+        this.attempt_response = [''];
+        this.m_selection = [["", ""]];
+        this.m_submission = [{}];
+        this.c_submission = [{}];
+        // set m/c_sub based on problem selection
+        if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
+          this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
+        }
+      }
+      else {
+        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+          this.attempt_response.push('');
+          this.m_selection.push(["", ""]);
+          this.m_submission.push({});
+          this.c_submission.push({});
+          // set m/c_sub based on problem selection
+          if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
+          }
+        }
+      }
+      console.log(this.problem_selection);
+      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_json(supp);
+        }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+      }
+      if (this.exam_dump[this.problem_number].Type == 'MP') {
+        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+          for (let block of this.exam_dump[this.problem_number].Parts[part].Content) {
+            if (block.startsWith(':table:')) {
+              setTimeout(() => {
+                this.read_table(block.slice(7));
+              }, 100);
+            }
+          }
+        }
+      }
+      if (this.exam_dump[this.problem_number].Type != 'MP') {
+        for (let block of this.exam_dump[this.problem_number].Content) {
+          if (block.startsWith(':table:')) {
+            setTimeout(() => {
+              this.read_table(block.slice(7));
+            }, 100);
+          }
+        }
+      }
+      this.clearProblemTimer();
+      this.toggleProblemTimer();
+    }
+  }
+
+  completeExam() {
+    console.log(this.exam_submission);
+    this.toggleExamTimer();
+    this.toggleProblemTimer();
+    this.confetti_pop();
+    if (this.mode == 'explain') {
+      if (this.authService.userData) {
+        this.db_updates = {};
+        if (this.authService.userData.role == 'Student') {
+          this.db_updates['exams/history/Q-' + this.key + '/status'] = 'Completed';
+          this.authService.UpdateUserData(this.db_updates);
+          this.db_updates = {};
+        }
+        else if (this.selected_student != '') {
+          this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.key + '/status'] = 'Completed';
+          this.authService.UpdateDatabase(this.db_updates);
+          this.db_updates = {};
+        }
+      }
+      this.resetExam();
+    }
+    else if (this.mode == 'assess') {
+      if (this.authService.userData) {
+        this.db_updates = {};
+        if (this.authService.userData.role == 'Student') {
+          this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.authService.userData.uid + '/endtimestamp'] = serverTimestamp();
+        }
+        else if (this.selected_student != '') {
+          this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.selected_student + '/endtimestamp'] = serverTimestamp();
+        }
+        this.authService.UpdateDatabase(this.db_updates);
+        this.db_updates = {};
+      }
+      var length_num = 0;
+      if (this.length_mode == 'number') {
+        length_num = this.exam_length;
+      }
+      else {
+        length_num = this.max_problem_number - 1;
+      }
+      this.number_correct = 0;
+      for (let i: number = 1; i <= length_num; i++) {
+        console.log('' + i);
+        if (this.exam_submission[i].Attempts[0] > 0) {
+          this.exam_submission_list.push(this.exam_submission[i]);
+          if (Object.keys(this.exam_dump[i].Parts).length == 0) {
+            if (this.exam_submission[i].Correct[0][0] != '✅') {
+              this.wrong_submission_list.push(this.exam_submission[i]);
+            }
+            else {
+              this.number_correct += 1;
+            }
+          }
+          else {
+            var pushed_wrong = false;
+            for (let part of Object.keys(this.exam_dump[i].Parts)) {
+              if (!pushed_wrong && this.exam_submission[i].Correct[(Object.keys(this.exam_dump[i].Parts)).indexOf(part)][0] != '✅') {
+                this.wrong_submission_list.push(this.exam_submission[i]);
+                pushed_wrong = true;
+              }
+            }
+            if (!pushed_wrong) {
+              this.number_correct += 1;
+            }
+          }
+          this.total_seconds += this.exam_submission[+Object.keys(this.ordered_dump)[i - 1]].Seconds;
+        }
+      }
+      // this.et_counter = this.total_seconds;
+      this.et_minutes = Math.floor(this.total_seconds / 60);
+      this.correct_percent = Math.round(this.number_correct / length_num * 100);
+      for (let i: number = 0; i < length_num; i++) {
+        for (let num: number = 0; num < this.exam_submission_list[i].Topics.length; num++) {
+          if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[num])) {
+            this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Total += 1;
+            this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Seconds += this.exam_submission_list[i].Seconds;
+            if (this.exam_submission_list[i].Correct[0] == '✅') {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Correct += 1;
+              if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs).includes(this.exam_submission_list[i].SubTopics[num])) {
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Total += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Correct += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Seconds += this.exam_submission_list[i].Seconds;
+              }
               else {
-                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Incorrect += 1;
-                if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs).includes(this.exam_submission_list[i].SubTopics[num])) {
-                  this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Total += 1;
-                  this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Incorrect += 1;
-                  this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Seconds += this.exam_submission_list[i].Seconds;
-                }
-                else {
-                  this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
-                }
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
               }
             }
             else {
-              if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0][0] == '✅') {
-                this.topic_breakdown[this.exam_submission_list[i].Topics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[num]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
+              this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Incorrect += 1;
+              if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs).includes(this.exam_submission_list[i].SubTopics[num])) {
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Total += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Incorrect += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Seconds += this.exam_submission_list[i].Seconds;
               }
               else {
-                this.topic_breakdown[this.exam_submission_list[i].Topics[num]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[num]]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
               }
+            }
+          }
+          else {
+            if (this.exam_submission_list[i].Correct[0] == '✅') {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[num]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
+            }
+            else {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[num]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[num]]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
             }
           }
         }
       }
-    }
-    for (let topic of Object.keys(this.topic_breakdown)) {
-      this.topic_breakdown[topic].Percent = Math.round(100 * this.topic_breakdown[topic].Correct / (this.topic_breakdown[topic].Total));
-      this.topic_breakdown[topic].Time = (Math.floor(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total % 60)).toString() + 's';
-      for (let subtopic of Object.keys(this.topic_breakdown[topic].Subs)) {
-        this.topic_breakdown[topic].Subs[subtopic].Percent = Math.round(100 * this.topic_breakdown[topic].Subs[subtopic].Correct / (this.topic_breakdown[topic].Subs[subtopic].Total));
-        this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
+      for (let topic of Object.keys(this.topic_breakdown)) {
+        this.topic_breakdown[topic].Percent = Math.round(100 * this.topic_breakdown[topic].Correct / (this.topic_breakdown[topic].Total));
+        this.topic_breakdown[topic].Time = (Math.floor(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total % 60)).toString() + 's';
+        for (let subtopic of Object.keys(this.topic_breakdown[topic].Subs)) {
+          this.topic_breakdown[topic].Subs[subtopic].Percent = Math.round(100 * this.topic_breakdown[topic].Subs[subtopic].Correct / (this.topic_breakdown[topic].Subs[subtopic].Total));
+          this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
+        }
       }
-    }
-    for (const [level, floor] of Object.entries(this.exam_attribute_dump[this.key].Levels)) {
-      if (level == "") {
-        break;
-      }
-      else if (this.number_correct >= floor) {
-        this.performance_level = level;
-        break;
-      }
-    }
-    if (this.authService.userData) {
-      this.db_updates = {};
-      if (this.authService.userData.role == 'Student') {
-        this.db_updates['exams/history/' + this.key + '/status'] = 'Completed';
-        this.authService.UpdateUserData(this.db_updates);
+      if (this.authService.userData) {
         this.db_updates = {};
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/total'] = this.exam_length;
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/correct'] = this.number_correct;
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/score'] = this.correct_percent;
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/level'] = this.performance_level;
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.authService.userData.uid + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
-        this.authService.UpdateDatabase(this.db_updates);
-        this.db_updates = {};
-      }
-      else if (this.selected_student != '') {
-        this.db_updates['users/' + this.selected_student + '/exams/history/' + this.key + '/status'] = 'Completed';
-        this.authService.UpdateDatabase(this.db_updates);
-        this.db_updates = {};
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/total'] = this.exam_length;
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/correct'] = this.number_correct;
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/score'] = this.correct_percent;
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/level'] = this.performance_level;
-        this.db_updates['/submissions/exams/' + this.key + '/' + this.selected_student + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
-        this.authService.UpdateDatabase(this.db_updates);
-        this.db_updates = {};
+        if (this.authService.userData.role == 'Student') {
+          this.db_updates['exams/history/Q-' + this.key + '/status'] = 'Completed';
+          this.authService.UpdateUserData(this.db_updates);
+          this.db_updates = {};
+          this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.authService.userData.uid + '/total'] = this.exam_length;
+          this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.authService.userData.uid + '/correct'] = this.number_correct;
+          this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.authService.userData.uid + '/score'] = this.correct_percent;
+          this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.authService.userData.uid + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
+          this.authService.UpdateDatabase(this.db_updates);
+          this.db_updates = {};
+        }
+        else if (this.selected_student != '') {
+          this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.key + '/status'] = 'Completed';
+          this.authService.UpdateDatabase(this.db_updates);
+          this.db_updates = {};
+          this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.selected_student + '/total'] = this.exam_length;
+          this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.selected_student + '/correct'] = this.number_correct;
+          this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.selected_student + '/score'] = this.correct_percent;
+          this.db_updates['/submissions/exams/Q-' + this.key + '/' + this.selected_student + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
+          this.authService.UpdateDatabase(this.db_updates);
+          this.db_updates = {};
+        }
       }
     }
   }
@@ -6328,6 +6393,24 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
       spread: 60,
       origin: { x: 0.5, y: 1 }
     });
+  }
+
+  resetExam() {
+    // Object.keys(this.ordered_dump).forEach(key => delete this.ordered_dump[+key]);
+    // Object.keys(this.exam_dump).forEach(key => delete this.exam_dump[+key]);
+    this.exam_dump = {};
+    this.ordered_dump = {};
+    this.exam_key = [];
+    this.attempt_path = [];
+    this.exam_submission = {};
+    this.exam_submission_list = [];
+    this.wrong_submission_list = [];
+    this.topic_breakdown = {};
+    this.problem_number = 0;
+    this.max_problem_number = 0;
+    this.number_correct = 0;
+    this.expand_filters = true;
+    // this.filter_exams();
   }
 
   searchSubTopic(topic: string, subtopic: string) {
@@ -6477,60 +6560,6 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     return this.includes_standard;
   }
 
-  toggleExamTimer() {
-    this.et_running = !this.et_running;
-    if (this.exam_timer == 0) {
-      if (this.et_running) {
-        const startTime = Date.now() - (this.et_counter || 0);
-        this.et_timer = setInterval(() => {
-          this.et_counter = Math.round((Date.now() - startTime) / 1000);
-          this.et_minutes = Math.floor(this.et_counter / 60);
-        });
-      } else {
-        clearInterval(this.et_timer);
-      }
-    }
-    else {
-      if (this.et_running) {
-        const startTime = Date.now() - (this.et_counter || 0);
-        this.et_timer = setInterval(() => {
-          this.et_counter = Math.round(this.exam_timer * 60 - ((Date.now() - startTime) / 1000));
-          this.et_minutes = Math.floor(this.et_counter / 60);
-          if (this.et_counter <= 0) {
-            this.completeExam();
-          }
-        });
-      } else {
-        clearInterval(this.et_timer);
-      }
-    }
-  }
-
-  clearExamTimer() {
-    this.et_running = false;
-    this.et_counter = 0;
-    clearInterval(this.et_timer);
-  }
-
-  toggleProblemTimer() {
-    this.pt_running = !this.pt_running;
-    if (this.pt_running) {
-      const startTime = Date.now() - (this.pt_counter || 0);
-      this.pt_timer = setInterval(() => {
-        this.pt_counter = Math.round((Date.now() - startTime) / 1000);
-        this.pt_minutes = Math.floor(this.pt_counter / 60);
-      });
-    } else {
-      clearInterval(this.pt_timer);
-    }
-  }
-
-  clearProblemTimer() {
-    this.pt_running = false;
-    this.pt_counter = 0;
-    clearInterval(this.pt_timer);
-  }
-
   expandTopics() {
     this.expand_topics = !this.expand_topics;
   }
@@ -6563,405 +6592,48 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     }, 250);
   }
 
-  set_user_role(role: string) {
-    if (this.user_role != role) {
-      this.user_role = role;
-    }
-    else {
-      this.user_role = "";
-    }
-  }
-
-  set_login_method(mthd: string) {
-    if (this.login_method != mthd) {
-      this.login_method = mthd;
-    }
-    else {
-      this.login_method = "";
-    }
-    setTimeout(() => {
-      this.iti = intlTelInput(this.userPhone.nativeElement, {
-        allowDropdown: true,
-        autoPlaceholder: "aggressive",
-        placeholderNumberType: "FIXED_LINE_OR_MOBILE",
-        nationalMode: true,
-        formatOnDisplay: true,
-        initialCountry: 'auto',
-        geoIpLookup: callback => {
-          fetch("https://ipapi.co/json")
-            .then(res => res.json())
-            .then(data => callback(data.country_code))
-            .catch(() => callback("us"));
-        },
-        utilsScript: "node_modules/intl-tel-input/build/js/utils.js",
-        // onlyCountries: ['JP'],
-        separateDialCode: true,
-      });
-    }, 10);
-  }
-
-  toggle_login_method(mthd: string) {
-    if (this.login_method != mthd) {
-      this.login_method = mthd;
-    }
-    else {
-      this.login_method = "";
-    }
-    if (this.login_method == 'phone') {
-      setTimeout(() => {
-        this.iti = intlTelInput(this.userPhone.nativeElement, {
-          allowDropdown: true,
-          autoPlaceholder: "aggressive",
-          placeholderNumberType: "FIXED_LINE_OR_MOBILE",
-          nationalMode: true,
-          formatOnDisplay: true,
-          initialCountry: 'auto',
-          geoIpLookup: callback => {
-            fetch("https://ipapi.co/json")
-              .then(res => res.json())
-              .then(data => callback(data.country_code))
-              .catch(() => callback("us"));
-          },
-          utilsScript: "node_modules/intl-tel-input/build/js/utils.js",
-          // onlyCountries: ['JP'],
-          separateDialCode: true,
-        });
-      }, 25);
-    }
-  }
-
-  reset_password() {
-    this.pw_reset = true;
-  }
-
-  sendLoginCode(phone: string) {
-    // const appVerifier = this.windowRef.recaptchaVerifier;
-    // const num = `+${phone}`;
-    const appVerifier = new RecaptchaVerifier('sign-in-button', {
-      'size': 'invisible',
-      // 'callback': (response) => {
-      //   // reCAPTCHA solved, allow signInWithPhoneNumber.
-      //   // onSignInSubmit();
-      // }
-    }, getAuth());
-    const intlPhone = '+' + ""+this.iti.getSelectedCountryData().dialCode + phone;
-    if (phone != '') {
-      this.afAuth
-        .signInWithPhoneNumber(intlPhone, appVerifier)
-        .then(result => {
-          this.windowRef.confirmationResult = result;
-          console.log(result);
-        })
-        .catch((error: any) => window.alert(error.message));
-    } else {
-      this.iti_msg = "Please enter a valid number below";
-      window.alert(this.iti_msg);
-    }
-  }
-
-  verifyLoginCodeL(code: string) {
-    this.windowRef.confirmationResult
-      .confirm(code)
-      .then((result: any) => {
-        this.user = result.user;
-        // check if user in database, write user data
-        this.authService.userData = this.user;
-        // this.login = false;
-        console.log(result);
-        this.onLogIn();
-      })
-      .catch((error: any) => console.log(error, 'Incorrect code entered?'));
-    // get(child(ref(getDatabase()), '/users/' + this.user.uid)).then((snapshot) => {
-    //   if (snapshot.exists()) {
-    //     console.log(snapshot.val());
-    //     this.authService.userData = snapshot.val();
-    //   } else {
-    //     console.log("No data available");
-    //     this.authService.WriteUserData(this.user, "");
-    //     this.authService.SetUserData(this.user);
-    //   }
-    // }).catch((error) => {
-    //   console.error(error);
-    // });
-  }
-
-  verifyLoginCodeS(phone: string, code: string, role: string) {
-    const appVerifier = new RecaptchaVerifier('sign-in-button', {
-      'size': 'invisible',
-      // 'callback': (response) => {
-      //   // reCAPTCHA solved, allow signInWithPhoneNumber.
-      //   // onSignInSubmit();
-      // }
-    }, getAuth());
-    this.windowRef.confirmationResult
-      .confirm(code)
-      .then((result: any) => {
-        this.user = result.user;
-        // check if user in database, write user data
-        // this.authService.userData = this.user;
-        this.authService.WriteUserData(this.user, role);
-        this.authService.SetUserData(this.user);
-        this.signup = false;
-        // console.log(this.user);
-        // console.log(result);
-      })
-      .catch((error: any) => window.alert(error));
-    // get(child(ref(getDatabase()), '/users/' + this.user.uid)).then((snapshot) => {
-    //   if (snapshot.exists()) {
-    //     console.log(snapshot.val());
-    //     this.authService.userData = snapshot.val();
-    //   } else {
-    //     console.log("No data available");
-    //     this.authService.WriteUserData(this.user, this.user_role);
-    //     this.authService.SetUserData(this.user);
-    //   }
-    // }).catch((error) => {
-    //   console.error(error);
-    // });
-  }
-
-  onLogIn() {
-    setTimeout(() => {
-      this.login = true;
-      if (this.authService.userData.role != 'Student') {
-        const linked_students = this.authService.userData.students.slice(1);
-        var count = 0;
-        for (const [key, stud] of Object.entries(linked_students)) {
-          setTimeout(() => {
-            if ((stud as string).includes(this.authService.userData.uid as string)) {
-              count += 1;
-              this.my_students.push(stud as string);
-              // setTimeout(() => {
-              const student_data = this.authService.searchUserId(stud as string);
-              if (student_data != null) {
-                this.my_students_data[(stud as string)] = (student_data as object);
-              }
-            }
-          }, +key * 10);
-        }
-        setTimeout(() => {
-          this.my_students = [];
-          var count = 0;
-          for (const [key, stud] of Object.entries(linked_students)) {
-            setTimeout(() => {
-              if ((stud as string).includes(this.authService.userData.uid as string)) {
-                count += 1;
-                this.my_students.push(stud as string);
-                // setTimeout(() => {
-                const student_data = this.authService.searchUserId(stud as string);
-                if (student_data != null) {
-                  this.my_students_data[(stud as string)] = (student_data as object);
-                }
-              }
-            }, +key * 10);
-          }
-        }, 500);
-      }
-      if (this.authService.userData.role == 'Student') {
-        const exam_history = this.authService.userData.exams.history;
-        for (const [key, det] of Object.entries(exam_history)) {
-          if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
-            this.exam_inprogress = true;
-            this.exam_status = (det as any).status;
-            this.progress_number = (det as any).progress + 1;
-            this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
-            this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
-            if ((det as any).progress != 0) {
-              var db_submission = this.authService.getExamSubmission2(this.key);
-              setTimeout(() => {
-                console.log(db_submission.problems);
-                for (const [key2, det2] of Object.entries(db_submission.problems)) {
-                  if (+key2 != 0) {
-                    this.exam_submission[+(det2 as any).Number] = (det2 as any);
-                    // const sub_prob: any = (det2 as any);
-                    // var sub_prob_2: any = {};
-                    // for (const [field, dump] of Object.entries(det2 as any)) {
-                    //   // sub_prob[field] = dump;
-                    //   sub_prob_2[field] = dump;
-                    // }
-                    // if (typeof (det2 as any).Choice == "string") {
-                    //   sub_prob_2.Choice = [];
-                    //   sub_prob_2.Correct = [];
-                    //   sub_prob_2.Attempts = [];
-                    //   sub_prob_2.Path = [];
-                    //   sub_prob_2.Choice.push([sub_prob.Choice]);
-                    //   sub_prob_2.Correct.push([sub_prob.Correct]);
-                    //   sub_prob_2.Attempts.push(sub_prob.Attempts);
-                    //   sub_prob_2.Path.push([[sub_prob.Path]]);
-                    // }
-                    // this.exam_submission[+(det2 as any).Number] = sub_prob_2;
-                  }
-                }
-              }, 500);
-            }
-            console.log(this.exam_submission);
-          }
-        }
-      }
-      this.login = false;
-    }, 500);
-  }
-
-  onOtpChange(otpCode: any) {
-    this.otp = otpCode;
-  }
-
   ngAfterViewInit() {
-    
+
   }
 
   ngOnInit() {
     this.sub = this.aRoute.paramMap.subscribe((params) => {
       console.log(params);
-      this.key = (params.get('examKey') as string);
-      if (!this.online_set.includes(this.key)) {
-        this.router.navigate(['exams']);
-      }
+      this.key = (params.get('quizKey') as string);
+      // if (!this.online_set.includes(this.key)) {
+      //   this.router.navigate(['exams']);
+      // }
     });
-    this.windowRef = this.win.windowRef;
-    this.verify = JSON.parse(localStorage.getItem('verificationId') || '{}');
     this.width_change2();
-    this.exam_state = this.exam_attribute_dump[this.key].State;
-    this.exam_grade = this.exam_attribute_dump[this.key].Grade;
-    this.exam_subject = this.exam_attribute_dump[this.key].Subject;
-    this.exam_name = this.exam_attribute_dump[this.key].ExamName;
-    this.exam_year = this.exam_attribute_dump[this.key].ExamYear;
-    this.exam_type = this.exam_attribute_dump[this.key].ExamType;
-    this.exam_length = this.exam_attribute_dump[this.key].NumQuestions;
-    this.exam_timer = this.exam_attribute_dump[this.key].Timer;
-    this.exam_directions = this.exam_attribute_dump[this.key].Directions;
-    this.timer_hours = Math.floor(this.exam_timer / 60);
-    this.timer_minutes = this.exam_timer % 60;
-    // for (let i: number = 0; i < this.exam_length; i++) {
-    //     this.ordered_dump[+Object.keys(this.ordered_dump)[i]] = this.dump_dict[this.key][+Object.keys(this.ordered_dump)[i]];
-    // }
-    if (this.exam_attribute_dump[this.key].Parts.length == 0) {
-      this.ordered_dump = this.dump_dict[this.key];
-      for (let num of Object.keys(this.ordered_dump)) {
-        if (num != 'default') {
-          this.exam_submission[+num] = {
-            'Number': +num,
-            'Topics': [],
-            'SubTopics': [],
-            'Choice': [],
-            'Correct': [],
-            'Rationale': [],
-            'Attempts': [],
-            'Path': [],
-            'Seconds': 0,
-            'Time': '',
-            'Flags': [false]
-          };
-          if (Object.keys(this.ordered_dump[+num].Parts).length == 0) {
-            this.exam_submission[+num].Path.push([['']]);
-            this.exam_submission[+num].Attempts.push(0);
-          }
-          else {
-            for (let part of Object.keys(this.ordered_dump[+num].Parts)) {
-              this.exam_submission[+num].Path.push([['']]);
-              this.exam_submission[+num].Attempts.push(0);
-            }
-          }
-        }
-      }
-      console.log(this.ordered_dump as any);
-      console.log(JSON.stringify(this.ordered_dump));
-      console.log(this.exam_submission);
-      for (const [num, value] of Object.entries(this.ordered_dump)) {
-        if (value.Number <= this.exam_length) {
-          for (let topic of value.Topics) {
-            if (!Object.keys(this.topics_count).includes(topic)) {
-              this.topics_count[topic] = 1;
-            }
-            else {
-              this.topics_count[topic] += 1;
-            }
-          }
-          // this.exam_dump[this.dump_count] = value;
-          // this.ordered_dump[this.dump_count] = value;
-          this.dump_count += 1;
-        }
-      }
-      console.log(this.topics_count);
-      this.exam_key = [];
-      for (const [num, val] of Object.entries(this.exam_dump)) {
-        this.exam_key.push([]);
-        if (Object.keys(val.Parts).length == 0) {
-          this.exam_key[this.exam_key.length - 1].push([]);
-          if (Object.keys(val.AnswerChoices).length == 0) {
-            this.exam_key[this.exam_key.length - 1][0].push('');
-          }
-          else if (['O'].includes(val.Type)) {
-            this.exam_key[this.exam_key.length - 1][0] = this.get_o_key(val.AnswerChoices);
-          }
-          else if (['C'].includes(val.Type)) {
-            this.exam_key[this.exam_key.length - 1][0] = this.get_c_key(val.AnswerChoices);
-          }
-          else if (['G'].includes(val.Type)) {
-            this.exam_key[this.exam_key.length - 1][0] = this.get_g_key(val.AnswerChoices);
-          }
-          else {
-            for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
-              if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Type) && val2.Key.Correct) {
-                this.exam_key[this.exam_key.length - 1][0].push(ch);
-              }
-              else if (['IDD'].includes(val.Type) && val2.Key.Correct) {
-                this.exam_key[this.exam_key.length - 1][0].push([ch[2]]);
-              }
-              else if (['FR'].includes(val.Type) && ch.includes('KEY')) {
-                this.exam_key[this.exam_key.length - 1][0].push(val2.Choice);
-              }
-              else if (['MFR'].includes(val.Type) && ch.includes('KEY')) {
-                this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
-              }
-              else if (['T'].includes(val.Type) && ch.includes('KEY')) {
-                this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
-              }
-            }
-          }
-        }
-        else {
-          for (let part of Object.keys(val.Parts)) {
-            this.exam_key[this.exam_key.length - 1].push([]);
-            if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
-              this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push('');
-            }
-            else if (['O'].includes(val.Parts[part].Type)) {
-              this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_o_key(val.Parts[part].AnswerChoices);
-            }
-            else if (['C'].includes(val.Parts[part].Type)) {
-              this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_c_key(val.Parts[part].AnswerChoices);
-            }
-            else if (['G'].includes(val.Parts[part].Type)) {
-              this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_g_key(val.Parts[part].AnswerChoices);
-            }
-            else {
-              for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
-                if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Parts[part].Type) && val2.Key.Correct) {
-                  this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(ch);
-                }
-                else if (['IDD'].includes(val.Parts[part].Type) && val2.Key.Correct) {
-                  this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([ch[2]]);
-                }
-                else if (['FR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                  this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
-                }
-                else if (['MFR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                  this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
-                }
-                else if (['T'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
-                  this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+    this.quiz_config = (this.authService.searchQuizId(this.key) as any);;
     setTimeout(() => {
       if (this.authService.userData) {
+        this.quiz_config = (this.authService.searchQuizId(this.key) as any);
+        console.log(this.quiz_config);
+        this.quiz_name = this.quiz_config.name;
+        this.grade_filters = this.quiz_config.grades;
+        this.subject_filters = this.quiz_config.subjects;
+        this.state_filters = this.quiz_config.states;
+        this.topic_filters = this.quiz_config.topics;
+        this.mode = this.quiz_config.mode;
+        this.length_mode = this.quiz_config.lmode;
+        if (this.length_mode == 'number') {
+          this.exam_length = this.quiz_config.length;
+        }
+        else {
+          this.exam_timer = this.quiz_config.length;
+        }
+        this.timer_hours = Math.floor(this.exam_timer / 60);
+        this.timer_minutes = this.exam_timer % 60;
+        // this.is_auth = true;
         this.authService.getProfilePic(this.authService.userData);
         this.user_data = this.authService.userData;
+      }
+      setTimeout(() => {
+      }, 100);
+    }, 500);
+    setTimeout(() => {
+      if (this.authService.userData) {
         if (this.authService.userData.role != 'Student') {
           const linked_students = this.authService.userData.students.slice(1);
           var count = 0;
@@ -6999,14 +6671,17 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
         if (this.authService.userData.role == 'Student') {
           const exam_history = this.authService.userData.exams.history;
           for (const [key, det] of Object.entries(exam_history)) {
-            if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
+            if (["Started", "Assigned"].includes((det as any).status) && key == 'Q-' + this.key) {
               this.exam_inprogress = true;
               this.exam_status = (det as any).status;
               this.progress_number = (det as any).progress + 1;
               this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
-              this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
-              if ((det as any).progress != 0) {
-                var db_submission = this.authService.getExamSubmission2(this.key);
+              this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString();
+              if ("Started" == (det as any).status) {
+                this.problem_ids = (det as any).sequence;
+              }
+              var db_submission = this.authService.getExamSubmission2('Q-' + this.key);
+              if (this.mode == 'assess' && (det as any).progress != 0) {
                 setTimeout(() => {
                   console.log(db_submission.problems);
                   for (const [key2, det2] of Object.entries(db_submission.problems)) {

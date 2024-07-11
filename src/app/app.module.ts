@@ -30,8 +30,10 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { TemplateClassComponent } from './components/template-class/template-class.component';
-import { TemplateCExamComponent } from './components/template-c-exam/template-c-exam.component';
 import { TemplateExamComponent } from './components/template-exam/template-exam.component';
+import { TemplateCExamComponent } from './components/template-c-exam/template-c-exam.component';
+import { TemplateQuizComponent } from './components/template-quiz/template-quiz.component';
+import { TemplateCQuizComponent } from './components/template-c-quiz/template-c-quiz.component';
 import { TemplateKeyComponent } from './components/template-key/template-key.component';
 import { TemplateStandardsComponent } from './components/template-standards/template-standards.component';
 import { TestExamComponent } from './components/test-exam/test-exam.component';
@@ -61,10 +63,11 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
     TemplateClassComponent,
     TemplateExamComponent,
     TemplateCExamComponent,
+    TemplateQuizComponent,
+    TemplateCQuizComponent,
     TemplateKeyComponent,
     TemplateStandardsComponent,
     TestExamComponent
-
   ],
   imports: [
     BrowserModule,

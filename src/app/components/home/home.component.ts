@@ -498,8 +498,10 @@ export class HomeComponent implements OnInit {
   favorite_std_set: string[][] = [];
   inprogress_set: string[] = [];
   inprogress_exams: { [key: string]: any } = {};
+  inprogress_quizzes: { [key: string]: any } = {};
   my_stud_inprogress_set: string[][] = [];
   my_stud_inprogress_exams: { [key: string]: { [key: string]: any } } = {};
+  my_stud_inprogress_quizzes: { [key: string]: { [key: string]: any } } = {};
   selected_stud = '';
 
   selected_state = '';
@@ -1910,10 +1912,6 @@ export class HomeComponent implements OnInit {
     "RI21G8E": "Rhode Island RICAS 2021 Grade 8 English Language Arts Exam",
     "RI19G8E": "Rhode Island RICAS 2019 Grade 8 English Language Arts Exam",
     "RI18G8E": "Rhode Island RICAS 2018 Grade 8 English Language Arts Exam",
-    "SAT1M1": "The SAT Practice Test #1 - Math, Module 1",
-    "SAT1M2": "The SAT Practice Test #1 - Math, Module 2",
-    "SAT1RW1": "The SAT Practice Test #1 - Reading & Writing, Module 1",
-    "SAT1RW2": "The SAT Practice Test #1 - Reading & Writing, Module 2",
     "SC18G3M": "South Carolina SC READY Grade 3 Math Practice Exam",
     "SC18G3E": "South Carolina SC READY Grade 3 English Language Arts Practice Exam",
     "SC18G4M": "South Carolina SC READY Grade 4 Math Practice Exam",
@@ -2071,9 +2069,25 @@ export class HomeComponent implements OnInit {
     "WIG8SS": "Wisconsin WFE Grade 8 Social Studies Practice Exam",
     "WIG10SS": "Wisconsin WFE Grade 10 Social Studies Practice Exam",
     "SAT1": "The SAT Practice Test #1",
+    "SAT1RW1": "The SAT Practice Test #1\n(Reading & Writing - Module 1)",
+    "SAT1RW2": "The SAT Practice Test #1\n(Reading & Writing - Module 2)",
+    "SAT1M1": "The SAT Practice Test #1\n(Math - Module 1)",
+    "SAT1M2": "The SAT Practice Test #1\n(Math - Module 2)",
     "SAT2": "The SAT Practice Test #2",
+    "SAT2RW1": "The SAT Practice Test #2\n(Reading & Writing - Module 1)",
+    "SAT2RW2": "The SAT Practice Test #2\n(Reading & Writing - Module 2)",
+    "SAT2M1": "The SAT Practice Test #2\n(Math - Module 1)",
+    "SAT2M2": "The SAT Practice Test #2\n(Math - Module 2)",
     "SAT3": "The SAT Practice Test #3",
+    "SAT3RW1": "The SAT Practice Test #3\n(Reading & Writing - Module 1)",
+    "SAT3RW2": "The SAT Practice Test #3\n(Reading & Writing - Module 2)",
+    "SAT3M1": "The SAT Practice Test #3\n(Math - Module 1)",
+    "SAT3M2": "The SAT Practice Test #3\n(Math - Module 2)",
     "SAT4": "The SAT Practice Test #4",
+    "SAT4RW1": "The SAT Practice Test #4\n(Reading & Writing - Module 1)",
+    "SAT4RW2": "The SAT Practice Test #4\n(Reading & Writing - Module 2)",
+    "SAT4M1": "The SAT Practice Test #4\n(Math - Module 1)",
+    "SAT4M2": "The SAT Practice Test #4\n(Math - Module 2)",
     "SAT5": "The SAT Practice Test #5",
     "SAT6": "The SAT Practice Test #6",
     "SAT7": "The SAT Practice Test #7",
@@ -2081,6 +2095,10 @@ export class HomeComponent implements OnInit {
     "SAT9": "The SAT Practice Test #9",
     "SAT10": "The SAT Practice Test #10",
     "PSAT1": "PSAT/NMSQT Practice Test #1",
+    "PSAT1RW1": "PSAT/NMSQT Practice Test #1\n(Reading & Writing - Module 1)",
+    "PSAT1RW2": "PSAT/NMSQT Practice Test #1\n(Reading & Writing - Module 2)",
+    "PSAT1M1": "PSAT/NMSQT Practice Test #1\n(Math - Module 1)",
+    "PSAT1M2": "PSAT/NMSQT Practice Test #1\n(Math - Module 2)",
     "PSAT101": "PSAT 10 Practice Test #1",
     "PSAT102": "PSAT 10 Practice Test #2",
     "PSAT891": "PSAT 8/9 Practice Test #1"
@@ -2167,7 +2185,7 @@ export class HomeComponent implements OnInit {
   }
 
   can_assign_c(clss: string) {
-    return (!this.my_class_metadata[this.authService.userData.classes.indexOf(clss) - 1].assignments.includes(this.exam_id));
+    return (!this.my_class_metadata[this.authService.userData.classes.indexOf(clss) - 1].exams.includes(this.exam_id));
   }
 
   read_supp_st_json(path: string) {
@@ -2430,10 +2448,17 @@ export class HomeComponent implements OnInit {
         const exam_history = this.student_data.exams.history;
         this.inprogress_set = [];
         this.inprogress_exams = {};
+        this.inprogress_quizzes = {};
         for (const [key, det] of Object.entries(exam_history)) {
           if (["Started", "Assigned"].includes((det as any).status)) {
             this.inprogress_set.push(key);
-            this.inprogress_exams[key] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString() };
+            if ((""+key).startsWith('Q-')) {
+              this.inprogress_quizzes[key.substring(2)] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString() };
+            }
+            else {
+              this.inprogress_exams[key] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString() };
+            }
+            console.log(this.inprogress_quizzes);
           }
         }
       }, 200);
@@ -2443,6 +2468,7 @@ export class HomeComponent implements OnInit {
       this.student_data = [];
       this.inprogress_set = [];
       this.inprogress_exams = {};
+      this.inprogress_quizzes = {};
     }
   }
 
@@ -2687,7 +2713,7 @@ export class HomeComponent implements OnInit {
     this.create_c = !this.create_c;
     this.edit_c_list = [];
     this.class_uid = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     const charactersLength = characters.length;
     for (let i: number = 1; i <= 5; i++) {
       this.class_uid += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -2807,7 +2833,7 @@ export class HomeComponent implements OnInit {
     this.assign_e = !this.assign_e;
   }
 
-  toggle_new_assignment(target: string) {
+  toggle_new_exam(target: string) {
     if (!this.new_assignments.includes(target)) {
       this.new_assignments.push(target);
     }
@@ -2821,13 +2847,13 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  add_assignments() {
+  add_assign_exam() {
     for (let ass of this.new_assignments) {
       if (ass.length < 10) {
-        const class_ass_ref = 'classes/' + ass + '/assignments';
+        const class_ass_ref = 'classes/' + ass + '/exams';
         var class_ass_set: any = [];
         var edit_c_list: any = {};
-        for (let exam of this.my_class_metadata[this.authService.userData.classes.indexOf(ass) - 1].assignments) {
+        for (let exam of this.my_class_metadata[this.authService.userData.classes.indexOf(ass) - 1].exams) {
           class_ass_set.push(exam as string);
         }
         class_ass_set.push(this.exam_id);
@@ -4532,7 +4558,12 @@ export class HomeComponent implements OnInit {
           for (const [key, det] of Object.entries(exam_history)) {
             if (["Started", "Assigned"].includes((det as any).status)) {
               this.inprogress_set.push(key);
-              this.inprogress_exams[key] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString() };
+              if ((""+key).startsWith('Q-')) {
+                this.inprogress_quizzes[key.substring(2)] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString(), metadata: (this.authService.searchQuizId((""+key).substring(2)) as any) };
+              }
+              else {
+                this.inprogress_exams[key] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString() };
+              }
             }
           }
           this.my_class_metadata = [];
