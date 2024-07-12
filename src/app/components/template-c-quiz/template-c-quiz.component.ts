@@ -1863,7 +1863,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
 
   order_numbers() {
     if (this.length_mode == 'number') {
-      return (Array.from({ length: Object.keys(this.exam_submission).length }, (_, i) => i + 1));
+      return (Array.from({ length: Object.keys(this.exam_dump).length }, (_, i) => i + 1));
     }
     else {
       return (Array.from({ length: this.max_problem_number }, (_, i) => i + 1));
@@ -1885,6 +1885,9 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
       const exam_history = this.my_students_data[id].exams.history;
       for (const [key, det] of Object.entries(exam_history)) {
         if (["Started", "Assigned"].includes((det as any).status) && key == 'Q-' + this.qKey) {
+          if (this.mode == 'assess' && (det as any).progress != 0) {
+            var db_submission = this.authService.getStudExamSubmission2(id, 'Q-' + this.qKey).problems;
+          }
           this.exam_inprogress = true;
           this.exam_status = (det as any).status;
           this.progress_number = (det as any).progress + 1;
@@ -1894,10 +1897,9 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
             this.problem_ids = (det as any).sequence;
           }
           if (this.mode == 'assess' && (det as any).progress != 0) {
-            const db_submission = this.authService.getStudExamSubmission2(id, 'Q-'+this.qKey).problems;
             for (const [key2, det2] of Object.entries(db_submission)) {
               if (+key2 != 0) {
-                this.exam_submission[+(det2 as any).Number] = (det2 as any);
+                this.exam_submission[this.problem_ids.indexOf(key2)+1] = (det2 as any);
               }
             }
           }
@@ -2294,36 +2296,57 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
         const exam_history = this.authService.userData.exams.history;
         for (const [key, det] of Object.entries(exam_history)) {
           if (["Started", "Assigned"].includes((det as any).status) && key == 'Q-' + this.qKey) {
-            var db_submission = this.authService.getExamSubmission2('Q-' + this.qKey);
+            if (this.mode == 'assess' && (det as any).progress != 0) {
+              var db_submission = this.authService.getExamSubmission2('Q-' + this.qKey);
+            }
             this.exam_inprogress = true;
             this.progress_number = (det as any).progress + 1;
             if (this.mode == 'assess' && (det as any).progress != 0) {
               setTimeout(() => {
                 console.log(db_submission.problems);
                 for (const [key2, det2] of Object.entries(db_submission.problems)) {
-                  if (+key2 != 0) {
-                    const sub_prob: any = (det2 as any);
-                    var sub_prob_2: any = {};
-                    for (const [field, dump] of Object.entries(det2 as any)) {
-                      // sub_prob[field] = dump;
-                      sub_prob_2[field] = dump;
-                    }
-                    if (typeof (det2 as any).Choice == "string") {
-                      sub_prob_2.Choice = [];
-                      sub_prob_2.Correct = [];
-                      sub_prob_2.Attempts = [];
-                      sub_prob_2.Path = [];
-                      sub_prob_2.Choice.push([sub_prob.Choice]);
-                      sub_prob_2.Correct.push([sub_prob.Correct]);
-                      sub_prob_2.Attempts.push(sub_prob.Attempts);
-                      sub_prob_2.Path.push([[sub_prob.Path]]);
-                    }
-                    if (!Object.keys(sub_prob_2).includes("Flags")) {
-                      sub_prob_2.Flags = [false];
-                    }
-                    this.exam_submission[+Object.keys(this.exam_dump)[Object.keys(db_submission.problems).indexOf((det2 as any).Number)]] = sub_prob_2;
-
+                  // if (+key2 != 0) {
+                  //   const sub_prob: any = (det2 as any);
+                  //   var sub_prob_2: any = {};
+                  //   for (const [field, dump] of Object.entries(det2 as any)) {
+                  //     // sub_prob[field] = dump;
+                  //     sub_prob_2[field] = dump;
+                  //   }
+                  //   if (typeof (det2 as any).Choice == "string") {
+                  //     sub_prob_2.Choice = [];
+                  //     sub_prob_2.Correct = [];
+                  //     sub_prob_2.Attempts = [];
+                  //     sub_prob_2.Path = [];
+                  //     sub_prob_2.Choice.push([sub_prob.Choice]);
+                  //     sub_prob_2.Correct.push([sub_prob.Correct]);
+                  //     sub_prob_2.Attempts.push(sub_prob.Attempts);
+                  //     sub_prob_2.Path.push([[sub_prob.Path]]);
+                  //   }
+                  //   if (!Object.keys(sub_prob_2).includes("Flags")) {
+                  //     sub_prob_2.Flags = [false];
+                  //   }
+                  //   this.exam_submission[this.problem_ids.indexOf(key2)+1] = sub_prob_2;
+                  // }
+                  const sub_prob: any = (det2 as any);
+                  var sub_prob_2: any = {};
+                  for (const [field, dump] of Object.entries(det2 as any)) {
+                    // sub_prob[field] = dump;
+                    sub_prob_2[field] = dump;
                   }
+                  if (typeof (det2 as any).Choice == "string") {
+                    sub_prob_2.Choice = [];
+                    sub_prob_2.Correct = [];
+                    sub_prob_2.Attempts = [];
+                    sub_prob_2.Path = [];
+                    sub_prob_2.Choice.push([sub_prob.Choice]);
+                    sub_prob_2.Correct.push([sub_prob.Correct]);
+                    sub_prob_2.Attempts.push(sub_prob.Attempts);
+                    sub_prob_2.Path.push([[sub_prob.Path]]);
+                  }
+                  if (!Object.keys(sub_prob_2).includes("Flags")) {
+                    sub_prob_2.Flags = [false];
+                  }
+                  this.exam_submission[this.problem_ids.indexOf(key2)+1] = sub_prob_2;
                 }
               }, 500);
               console.log(this.exam_submission);
@@ -2420,10 +2443,10 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
             if (this.mode == 'assess' && (det as any).progress != 0) {
               console.log(this.db_submission);
               for (const [key2, det2] of Object.entries(this.db_submission)) {
-                if (+key2 != 0) {
-                  // this.exam_dump[+key2] = this.ordered_dump[(det2 as any).Number];
-                  this.exam_submission[+key2] = (det2 as any);
-                }
+                // if (+key2 != 0) {
+                //   this.exam_submission[this.problem_ids.indexOf(key2)+1] = (det2 as any);
+                // }
+                this.exam_submission[this.problem_ids.indexOf(key2)+1] = (det2 as any);
               }
             }
             this.exam_key = [];
@@ -5475,6 +5498,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
     }
     if (this.problem_number > this.exam_length && this.length_mode == 'number') {
       this.completeExam();
+      console.log('Exam Complete');
     }
     else if (this.max_problem_number == this.problem_number) {
       this.attempt_path = [];
@@ -5491,7 +5515,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
         this.problem_attempts = [0];
         this.attempt_path = [[]];
         this.attempt_response = [''];
-        this.attempt_explanation = [[]];
+        this.attempt_explanation = [[""]];
         this.m_selection = [["", ""]];
         this.m_submission = [{}];
         this.c_submission = [{}];
@@ -5531,7 +5555,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
           this.problem_attempts.push(0);
           this.attempt_path.push([]);
           this.attempt_response.push('');
-          this.attempt_explanation.push([]);
+          this.attempt_explanation.push([""]);
           this.m_selection.push(["", ""]);
           this.m_submission.push({});
           this.c_submission.push({});
@@ -6245,7 +6269,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
               this.number_correct += 1;
             }
           }
-          this.total_seconds += this.exam_submission[+Object.keys(this.ordered_dump)[i - 1]].Seconds;
+          this.total_seconds += this.exam_submission[i].Seconds;
         }
       }
       // this.et_counter = this.total_seconds;
@@ -6729,6 +6753,9 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
           const exam_history = this.authService.userData.exams.history;
           for (const [key, det] of Object.entries(exam_history)) {
             if (["Started", "Assigned"].includes((det as any).status) && key == 'Q-' + this.qKey) {
+              if (this.mode == 'assess' && (det as any).progress != 0) {
+                var db_submission = this.authService.getExamSubmission2('Q-' + this.qKey);
+              }
               this.exam_inprogress = true;
               this.exam_status = (det as any).status;
               this.progress_number = (det as any).progress + 1;
@@ -6737,13 +6764,12 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
               if ("Started" == (det as any).status) {
                 this.problem_ids = (det as any).sequence;
               }
-              var db_submission = this.authService.getExamSubmission2('Q-' + this.qKey);
               if (this.mode == 'assess' && (det as any).progress != 0) {
                 setTimeout(() => {
                   console.log(db_submission.problems);
                   for (const [key2, det2] of Object.entries(db_submission.problems)) {
                     if (+key2 != 0) {
-                      this.exam_submission[+(det2 as any).Number] = (det2 as any);
+                      this.exam_submission[this.problem_ids.indexOf(key2)+1] = (det2 as any);
                       // const sub_prob: any = (det2 as any);
                       // var sub_prob_2: any = {};
                       // for (const [field, dump] of Object.entries(det2 as any)) {

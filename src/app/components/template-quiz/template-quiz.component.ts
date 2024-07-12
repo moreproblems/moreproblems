@@ -1861,7 +1861,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
 
   order_numbers() {
     if (this.length_mode == 'number') {
-      return (Array.from({ length: Object.keys(this.exam_submission).length }, (_, i) => i + 1));
+      return (Array.from({ length: Object.keys(this.exam_dump).length }, (_, i) => i + 1));
     }
     else {
       return (Array.from({ length: this.max_problem_number }, (_, i) => i + 1));
@@ -1883,6 +1883,9 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
       const exam_history = this.my_students_data[id].exams.history;
       for (const [key, det] of Object.entries(exam_history)) {
         if (["Started", "Assigned"].includes((det as any).status) && key == 'Q-' + this.key) {
+          if (this.mode == 'assess' && (det as any).progress != 0) {
+            var db_submission = this.authService.getStudExamSubmission2(id, 'Q-'+this.key).problems;
+          }
           this.exam_inprogress = true;
           this.exam_status = (det as any).status;
           this.progress_number = (det as any).progress + 1;
@@ -1892,10 +1895,9 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
             this.problem_ids = (det as any).sequence;
           }
           if (this.mode == 'assess' && (det as any).progress != 0) {
-            const db_submission = this.authService.getStudExamSubmission2(id, 'Q-'+this.key).problems;
             for (const [key2, det2] of Object.entries(db_submission)) {
               if (+key2 != 0) {
-                this.exam_submission[+(det2 as any).Number] = (det2 as any);
+                this.exam_submission[this.problem_ids.indexOf(key2)+1] = (det2 as any);
               }
             }
           }
@@ -2292,7 +2294,9 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
         const exam_history = this.authService.userData.exams.history;
         for (const [key, det] of Object.entries(exam_history)) {
           if (["Started", "Assigned"].includes((det as any).status) && key == 'Q-' + this.key) {
-            var db_submission = this.authService.getExamSubmission2('Q-' + this.key);
+            if (this.mode == 'assess' && (det as any).progress != 0) {
+              var db_submission = this.authService.getExamSubmission2('Q-' + this.key);
+            }
             this.exam_inprogress = true;
             this.progress_number = (det as any).progress + 1;
             if (this.mode == 'assess' && (det as any).progress != 0) {
@@ -2319,7 +2323,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
                     if (!Object.keys(sub_prob_2).includes("Flags")) {
                       sub_prob_2.Flags = [false];
                     }
-                    this.exam_submission[+Object.keys(this.exam_dump)[Object.keys(db_submission.problems).indexOf((det2 as any).Number)]] = sub_prob_2;
+                    this.exam_submission[this.problem_ids.indexOf(key2)+1] = sub_prob_2;
 
                   }
                 }
@@ -2419,8 +2423,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
               console.log(this.db_submission);
               for (const [key2, det2] of Object.entries(this.db_submission)) {
                 if (+key2 != 0) {
-                  // this.exam_dump[+key2] = this.ordered_dump[(det2 as any).Number];
-                  this.exam_submission[+key2] = (det2 as any);
+                  this.exam_submission[this.problem_ids.indexOf(key2)+1] = (det2 as any);
                 }
               }
             }
@@ -6672,6 +6675,9 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
           const exam_history = this.authService.userData.exams.history;
           for (const [key, det] of Object.entries(exam_history)) {
             if (["Started", "Assigned"].includes((det as any).status) && key == 'Q-' + this.key) {
+              if (this.mode == 'assess' && (det as any).progress != 0) {
+                var db_submission = this.authService.getExamSubmission2('Q-' + this.key);
+              }
               this.exam_inprogress = true;
               this.exam_status = (det as any).status;
               this.progress_number = (det as any).progress + 1;
@@ -6680,13 +6686,12 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
               if ("Started" == (det as any).status) {
                 this.problem_ids = (det as any).sequence;
               }
-              var db_submission = this.authService.getExamSubmission2('Q-' + this.key);
               if (this.mode == 'assess' && (det as any).progress != 0) {
                 setTimeout(() => {
                   console.log(db_submission.problems);
                   for (const [key2, det2] of Object.entries(db_submission.problems)) {
                     if (+key2 != 0) {
-                      this.exam_submission[+(det2 as any).Number] = (det2 as any);
+                      this.exam_submission[this.problem_ids.indexOf(key2)+1] = (det2 as any);
                       // const sub_prob: any = (det2 as any);
                       // var sub_prob_2: any = {};
                       // for (const [field, dump] of Object.entries(det2 as any)) {

@@ -462,7 +462,8 @@ export class TemplateClassComponent implements OnInit {
   selected_quiz_results: string = "";
   selected_assignment: string = "";
   stud_results_loaded = false;
-  ass_results_loaded = false;
+  exam_results_loaded = false;
+  quiz_results_loaded = false;
   user_data: any = {};
   stud_class_set: string[] = [];
   is_auth = false;
@@ -2518,14 +2519,22 @@ export class TemplateClassComponent implements OnInit {
   }
 
   select_sub(exm: string, stud: string) {
+    console.log(this.student_exam_metadata);
     // if (this.authService.userData.role == 'Student') {
     if (this.selected_stud_results != '') {
       this.db_submission = this.student_exam_metadata[exm];
+      this.exam_submission = this.db_submission.problems;
     }
     else if (this.selected_exam_results != '') {
       this.db_submission = this.student_exam_metadata[stud];
+      this.exam_submission = this.db_submission.problems;
     }
-    this.exam_submission = this.db_submission.problems;
+    else if (this.selected_quiz_results != '') {
+      this.db_submission = this.student_exam_metadata[stud];
+      for (const [id, sub] of Object.entries(this.db_submission.problems)) {
+        this.exam_submission[(sub as any).Number] = (sub as any);
+      }
+    }
     this.exam_length = this.db_submission.total;
     this.number_correct = this.db_submission.correct;
     this.correct_percent = this.db_submission.score;
@@ -2549,7 +2558,45 @@ export class TemplateClassComponent implements OnInit {
     //   }
     // }, 500);
     for (let i: number = 0; i < this.exam_length; i++) {
-      if (!this.exam_attribute_dump[exm].HideTopics) {
+      if (!exm.startsWith('Q-') && !this.exam_attribute_dump[exm].HideTopics) {
+        for (let n: number = 0; n < this.exam_submission_list[i].SubTopics.length; n++) {
+          if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[n])) {
+            this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Total += 1;
+            this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Seconds += +this.exam_submission_list[i].Seconds;
+            if (this.exam_submission_list[i].Correct == '✅') {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Correct += 1;
+              if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs).includes(this.exam_submission_list[i].SubTopics[n])) {
+                this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]].Total += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]].Correct += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]].Seconds += +this.exam_submission_list[i].Seconds;
+              }
+              else {
+                this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' };
+              }
+            }
+            else {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Incorrect += 1;
+              if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs).includes(this.exam_submission_list[i].SubTopics[n])) {
+                this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]].Total += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]].Incorrect += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]].Seconds += +this.exam_submission_list[i].Seconds;
+              }
+              else {
+                this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Subs[this.exam_submission_list[i].SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' };
+              }
+            }
+          }
+          else {
+            if (this.exam_submission_list[i].Correct == '✅') {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[n]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
+            }
+            else {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[n]]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
+            }
+          }
+        }
+      }
+      else if (exm.startsWith('Q-')) {
         for (let n: number = 0; n < this.exam_submission_list[i].SubTopics.length; n++) {
           if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[n])) {
             this.topic_breakdown[this.exam_submission_list[i].Topics[n]].Total += 1;
@@ -2679,11 +2726,11 @@ export class TemplateClassComponent implements OnInit {
     this.topic_breakdown = {};
     this.student_exam_metadata = {};
     // this.student_data = this.authService.searchUserId(stud);
-    this.student_exam_metadata = this.getExamClassSubmissions(ass);
+    this.student_exam_metadata = this.getAssClassSubmissions(ass);
     setTimeout(() => {
       // this.student_data = this.authService.searchUserId(stud);
-      this.student_exam_metadata = this.getExamClassSubmissions(ass);
-      this.subject_break_ass();
+      this.student_exam_metadata = this.getAssClassSubmissions(ass);
+      this.subject_break_exam();
       if (this.exam_class_total_problems == 0) {
         this.total_percent_correct = 0;
       }
@@ -2707,7 +2754,7 @@ export class TemplateClassComponent implements OnInit {
         }, temp_count * 50);
         temp_count += 1;
       }
-      this.ass_results_loaded = true;
+      this.exam_results_loaded = true;
     }, 500);
   }
 
@@ -2719,11 +2766,11 @@ export class TemplateClassComponent implements OnInit {
     this.topic_breakdown = {};
     this.student_exam_metadata = {};
     // this.student_data = this.authService.searchUserId(stud);
-    this.student_exam_metadata = this.getExamClassSubmissions(ass);
+    this.student_exam_metadata = this.getAssClassSubmissions(ass);
     setTimeout(() => {
       // this.student_data = this.authService.searchUserId(stud);
-      this.student_exam_metadata = this.getExamClassSubmissions(ass);
-      this.subject_break_ass();
+      this.student_exam_metadata = this.getAssClassSubmissions(ass);
+      this.subject_break_quiz();
       if (this.exam_class_total_problems == 0) {
         this.total_percent_correct = 0;
       }
@@ -2747,11 +2794,11 @@ export class TemplateClassComponent implements OnInit {
         }, temp_count * 50);
         temp_count += 1;
       }
-      this.ass_results_loaded = true;
+      this.quiz_results_loaded = true;
     }, 500);
   }
 
-  getExamClassSubmissions(ass: string) {
+  getAssClassSubmissions(ass: string) {
     var exam_submissions: any = {};
     for (const [exm, studs] of Object.entries(this.class_data.history.exams)) {
       if (exm == ass) {
@@ -2763,7 +2810,7 @@ export class TemplateClassComponent implements OnInit {
     return (exam_submissions);
   }
 
-  subject_break_ass() {
+  subject_break_exam() {
     this.grade_breakdown = {};
     this.total_test_time = "0h 0m 0s";
     var test_time = 0;
@@ -2869,6 +2916,145 @@ export class TemplateClassComponent implements OnInit {
               for (let n: number = 0; n < (prob as any).Topics.length; n++) {
                 this.grade_breakdown[this.exam_attribute_dump[this.selected_exam_results].Grade].Subs[this.exam_attribute_dump[this.selected_exam_results].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
                 this.grade_breakdown[this.exam_attribute_dump[this.selected_exam_results].Grade].Subs[this.exam_attribute_dump[this.selected_exam_results].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+              }
+            }
+          }
+        }
+      }
+      // }
+    }
+    for (let grade of Object.keys(this.grade_breakdown)) {
+      this.exam_class_total_problems = 0;
+      this.exam_class_correct_problems = 0;
+      this.exam_class_total_problems += this.grade_breakdown[grade].Total;
+      this.exam_class_correct_problems += this.grade_breakdown[grade].Correct;
+      this.grade_breakdown[grade].Percent = Math.round(100 * this.grade_breakdown[grade].Correct / (this.grade_breakdown[grade].Total));
+      this.grade_breakdown[grade].Time = (Math.floor(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total % 60)).toString() + 's';
+      for (let subject of Object.keys(this.grade_breakdown[grade].Subs)) {
+        this.grade_breakdown[grade].Subs[subject].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Correct / (this.grade_breakdown[grade].Subs[subject].Total));
+        this.grade_breakdown[grade].Subs[subject].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total % 60)).toString() + 's';
+        for (let topic of Object.keys(this.grade_breakdown[grade].Subs[subject].Tops)) {
+          this.grade_breakdown[grade].Subs[subject].Tops[topic].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Tops[topic].Correct / (this.grade_breakdown[grade].Subs[subject].Tops[topic].Total));
+          this.grade_breakdown[grade].Subs[subject].Tops[topic].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total % 60)).toString() + 's';
+          for (let subtop of Object.keys(this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops)) {
+            this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Correct / (this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Total));
+            this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Total % 60)).toString() + 's';
+          }
+          this.subject_breakdown_subtop[grade + " " + subject + ": " + topic] = { 'Grade': grade, 'Subject': subject, 'Topic': topic, 'Break': this.grade_breakdown[grade].Subs[subject].Tops[topic] };
+        }
+        this.subject_breakdown_top[grade + " " + subject] = { 'Grade': grade, 'Subject': subject, 'Break': this.grade_breakdown[grade].Subs[subject] };
+      }
+    }
+    this.total_test_time = "" + Math.floor(test_time / 3600) + "h " + "" + (Math.floor(test_time / 60) % 60) + "m " + "" + (test_time % 60) + "s";
+    console.log(this.grade_breakdown);
+  }
+
+  subject_break_quiz() {
+    this.grade_breakdown = {};
+    this.total_test_time = "0h 0m 0s";
+    var test_time = 0;
+    // const exam_history = this.student_data.exams.history;
+    console.log(this.student_exam_metadata);
+    for (const [key, det] of Object.entries(this.student_exam_metadata)) {
+      // if ((det as any).status == "Completed") {
+      for (const [id, prob] of Object.entries(this.student_exam_metadata[key].problems)) {
+        test_time += +(prob as any).Seconds;
+        if ((prob as any).Correct[0][0] == '✅') {
+          if (Object.keys(this.grade_breakdown).includes(this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade)) {
+            this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Total += 1;
+            this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Correct += 1;
+            this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Seconds += +(prob as any).Seconds;
+            if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs).includes(this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject)) {
+              this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Total += 1;
+              this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Correct += 1;
+              this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Seconds += +(prob as any).Seconds;
+              if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
+                for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                  if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops).includes((prob as any).Topics[n])) {
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].Total += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].Correct += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
+                  }
+                  else {
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
+                  }
+                  if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops).includes((prob as any).SubTopics[n])) {
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Total += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Correct += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Seconds += +(prob as any).Seconds;
+                  }
+                  else {
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                  }
+                }
+              }
+            }
+            else {
+              this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
+              if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
+                for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                  this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
+                  this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                }
+              }
+            }
+          }
+          else {
+            this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
+            if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
+              for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
+                this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+              }
+            }
+          }
+        }
+        else {
+          if (Object.keys(this.grade_breakdown).includes(this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade)) {
+            this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Total += 1;
+            this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Incorrect += 1;
+            this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Seconds += +(prob as any).Seconds;
+            if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs).includes(this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject)) {
+              this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Total += 1;
+              this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Incorrect += 1;
+              this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Seconds += +(prob as any).Seconds;
+              if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
+                for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                  if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops).includes((prob as any).Topics[n])) {
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].Total += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].Incorrect += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
+                  }
+                  else {
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
+                  }
+                  if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops).includes((prob as any).SubTopics[n])) {
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Total += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Incorrect += 1;
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Seconds += +(prob as any).Seconds;
+                  }
+                  else {
+                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                  }
+                }
+              }
+            }
+            else {
+              this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
+              if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
+                for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                  this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
+                  this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
+                }
+              }
+            }
+          }
+          else {
+            this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
+            if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
+              for (let n: number = 0; n < (prob as any).Topics.length; n++) {
+                this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
+                this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
               }
             }
           }

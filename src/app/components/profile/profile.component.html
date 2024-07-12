@@ -1819,7 +1819,7 @@
                     {{performance_level}} </h3>
                 <h3 *ngIf="this.performance_level == 'Does Not Meet Grade Level Performance'" style="color: red">
                     {{performance_level}} </h3>
-                <button (click)="router.navigate(['exam/' + selected_exam + '/key'])" class="grade-button"
+                <button *ngIf="!selected_exam.startsWith('Q-')" (click)="router.navigate(['exam/' + selected_exam + '/key'])" class="grade-button"
                     style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content;">
                     <div style="margin: 0 5px">
                         <img src="./assets/icons/key.png" style="padding: 5px 0 0; height: 20px; width: 20px">
@@ -2083,7 +2083,8 @@
                         <div class="card-container" style="max-width: 100%">
                             <div *ngFor="let exm of complete_exam_list" class="card card-medium"
                                 style="height: auto; max-height: 200px; max-width: min(90%, 325px); display: flex; flex-direction: column; align-items: center">
-                                <h3 style="margin: auto"> {{exam_names[exm]}} </h3>
+                                <h3 *ngIf="!exm.startsWith('Q-')" style="margin: auto"> {{exam_names[exm]}} </h3>
+                                <h3 *ngIf="exm.startsWith('Q-')" style="margin: auto"> {{authService.searchQuizId(exm.substring(exm.indexOf('-')+1)).name}} </h3>
                                 <hr style="width: 50%; height:1px; border-width:0; color:gray; background-color:gray" />
                                 <div style="display: flex; justify-content: space-between; padding: 5px; width: 100%">
                                     <div>
@@ -2840,7 +2841,8 @@
                             <h2>My Completed Exams</h2>
                             <div *ngFor="let exm of complete_exam_list" class="card card-large"
                                 style="margin: auto; height: auto; max-height: 200px; max-width: 450px; display: flex; flex-direction: column">
-                                <h3 style="margin: auto"> {{exam_names[exm]}} </h3>
+                                <h3 *ngIf="!exm.startsWith('Q-')" style="margin: auto"> {{exam_names[exm]}} </h3>
+                                <h3 *ngIf="exm.startsWith('Q-')" style="margin: auto"> {{authService.searchQuizId(exm.substring(exm.indexOf('-')+1)).name}} </h3>
                                 <hr style="width: 50%; height:1px; border-width:0; color:gray; background-color:gray" />
                                 <div style="display: flex; justify-content: space-between; padding: 5px; width: 100%">
                                     <div>
