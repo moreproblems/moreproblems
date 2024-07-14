@@ -2456,7 +2456,7 @@
           <div class="media">
             <div class="card card-medium"
               style="margin: auto; height: auto; max-height: 300px; min-width: 40%; max-width: min(80%, 600px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
-              <h2>{{exam_names[selected_exam_results]}}</h2>
+              <h1 style="font-size: 26px">{{exam_names[selected_exam_results]}}</h1>
               <div
                 style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; width: 100%">
                 <img *ngIf="this.screenWidth > this.mobileWidth"
@@ -2485,7 +2485,7 @@
                     </div>
                   </div>
                   <hr />
-                  <h3>Total Exams: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
+                  <h3>Total Submissions: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
                   </h3>
                   <h3>Total Time: <strong style="font-weight: 500">{{total_test_time}}</strong>
                   </h3>
@@ -2660,8 +2660,41 @@
         <div class="col-md-12">
           <div class="media">
             <div class="card card-medium"
-              style="margin: auto; height: auto; max-height: 300px; min-width: 40%; max-width: min(80%, 600px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
-              <h2>{{authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).name}}</h2>
+              style="margin: auto; height: auto; max-height: 800px; min-width: 40%; max-width: min(80%, 600px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
+              <h1 style="font-size: 26px">{{authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).name}}</h1>
+              <p *ngIf="authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).lmode == 'timer'" style="font-size: 20px; padding: 10px; white-space: pre-wrap"> <b>Time Allowed</b> :
+                {{(get_hours(authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).length) >= 1) ? (get_hours(authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).length) >= 2) ? ''+get_hours(authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).length) + ' hrs' : ''+get_hours(authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).length) + ' hr' : ''}} {{''+(authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).length % 60)}} mins
+              </p>
+              <p *ngIf="authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).lmode == 'number'" style="font-size: 20px; padding: 10px; white-space: pre-wrap;"> <b>No Time Limit</b>
+              </p>
+              <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
+                <label *ngFor="let grade of authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).grades" class="switch" style="padding: 0 5px">
+                  <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{grade}} </b> </button>
+                </label>
+                <label *ngFor="let subject of master_filters(authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).subjects)" class="switch" style="padding: 0 5px">
+                  <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{subject}} </b> </button>
+                </label>
+                <label *ngFor="let state of authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).states" class="switch" style="padding: 0 5px">
+                  <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{state}} </b> </button>
+                </label>
+                <label *ngFor="let topic of authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).topics" class="switch" style="padding: 0 5px">
+                  <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{topic}} </b> </button>
+                </label>
+              </div>
+              <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
+                <label *ngFor="let grade of authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).grades" class="switch" style="padding: 0 5px">
+                  <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px"> <b> {{grade}} </b> </button>
+                </label>
+                <label *ngFor="let subject of master_filters(authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).subjects)" class="switch" style="padding: 0 5px">
+                  <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px"> <b> {{subject}} </b> </button>
+                </label>
+                <label *ngFor="let state of authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).states" class="switch" style="padding: 0 5px">
+                  <button class="toggle-button-off" style="color: darkslategrey; font-size: 14x"> <b> {{state}} </b> </button>
+                </label>
+                <label *ngFor="let topic of authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).topics" class="switch" style="padding: 0 5px">
+                  <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px"> <b> {{topic}} </b> </button>
+                </label>
+              </div>
               <div
                 style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; width: 100%">
                 <!-- <img *ngIf="this.screenWidth > this.mobileWidth"
@@ -2686,8 +2719,8 @@
                       </h3>
                     </div>
                   </div> -->
-                  <hr />
-                  <h3>Total Exams: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
+                  <hr style="margin: 20px" />
+                  <h3>Total Submissions: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
                   </h3>
                   <h3>Total Time: <strong style="font-weight: 500">{{total_test_time}}</strong>
                   </h3>
@@ -2892,7 +2925,7 @@
                     </div>
                   </div>
                   <hr />
-                  <h3>Total Exams: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
+                  <h3>Total Submissions: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
                   </h3>
                   <h3>Total Time: <strong style="font-weight: 500">{{total_test_time}}</strong>
                   </h3>

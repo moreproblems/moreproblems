@@ -2155,12 +2155,36 @@ export class ProfileComponent implements OnInit {
     "U.S. History": "U.S. History",
   };
 
+  sub_subjects: { [key: string]: string[] } = {
+    "English Language Arts": ["English Language Arts", "English I", "English II"],
+    "Mathematics": ["Mathematics", "Algebra I", "Algebra II", 'Geometry'],
+    "Sciences": ["Sciences", "Science", "Biology"],
+    "Social Studies": ["Social Studies", "U.S. History"],
+    "Reading & Writing": ["Reading & Writing", "English Reading", "English Writing"],
+  };
+
   // constructor(private titleService: Title, private meta: Meta, public authService: AuthService, private win: WindowService, private afAuth: AngularFireAuth) { }
   constructor(private titleService: Title, private meta: Meta, public authService: AuthService, public router: Router, private afAuth: AngularFireAuth, private http: HttpClient) { }
 
   width_change2() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+  }
+
+  master_filters(filts: string[]) {
+    var master_filts = []
+    if (filts != undefined) {
+      for (let filt of filts) {
+        if (Object.keys(this.sub_subjects).includes(filt)) {
+          master_filts.push(filt);
+        }
+      }
+    }
+    return master_filts;
+  }
+
+  get_hours(seconds: number) {
+    return Math.floor(seconds / 60);
   }
 
   get_part_num_st(part: string) {
@@ -2425,7 +2449,7 @@ export class ProfileComponent implements OnInit {
         console.log(exam_history);
         for (const [key, det] of Object.entries(exam_history)) {
           setTimeout(() => {
-            if ((det as any).status == "Completed") {
+            if ((det as any).status == "Completed" && (!key.startsWith('Q-') || (key.startsWith('Q-') && this.authService.searchQuizId(key.substring(key.indexOf('-')+1)).mode == 'assess'))) {
               this.complete_exam_count = this.complete_exam_count + 1;
               this.complete_exam_list.push(key);
               this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
@@ -2893,7 +2917,7 @@ export class ProfileComponent implements OnInit {
       const exam_history = this.student_data.exams.history;
       for (const [key, det] of Object.entries(exam_history)) {
         setTimeout(() => {
-          if ((det as any).status == "Completed") {
+          if ((det as any).status == "Completed" && (!key.startsWith('Q-') || (key.startsWith('Q-') && this.authService.searchQuizId(key.substring(key.indexOf('-')+1)).mode == 'assess'))) {
             this.complete_exam_count = this.complete_exam_count + 1;
             this.complete_exam_list.push(key);
             this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();
@@ -4903,7 +4927,7 @@ export class ProfileComponent implements OnInit {
             const exam_history = this.authService.userData.exams.history;
             for (const [key, det] of Object.entries(exam_history)) {
               setTimeout(() => {
-                if ((det as any).status == "Completed") {
+                if ((det as any).status == "Completed" && (!key.startsWith('Q-') || (key.startsWith('Q-') && this.authService.searchQuizId(key.substring(key.indexOf('-')+1)).mode == 'assess'))) {
                   this.complete_exam_count = this.complete_exam_count + 1;
                   this.complete_exam_list.push(key);
                   this.student_exam_metadata[key].enddate = new Date(this.student_exam_metadata[key].endtimestamp).toLocaleDateString();

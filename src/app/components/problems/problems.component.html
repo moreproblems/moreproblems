@@ -958,9 +958,21 @@
         </div>
         <br />
         <div class="card-container" style="display: flex; justify-content: center; align-items: center; max-width: 100%; margin-top: 0px">
+          <!-- <span *ngIf="authService.userData as user">
+            <button (click)="toggle_favorite()"
+              class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
+              <span *ngIf="!this.quiz_fav"
+                style="font-size: 22px; font-weight: 2px; color: white; -webkit-text-stroke: 2px rgba(255, 217, 0)"> &starf;
+              </span>
+              <span *ngIf="this.quiz_fav"
+                style="font-size: 22px; font-weight: 2px; color:rgba(255, 217, 0); -webkit-text-stroke: 2px rgba(255, 217, 0)">
+                &starf; </span>
+              <b *ngIf="!this.quiz_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Favorite </b>
+              <b *ngIf="this.quiz_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Favorited </b>
+            </button>
+          </span> -->
           <span *ngIf="authService.userData as user">
-            <button
-              *ngIf="!['', 'Student', 'Parent'].includes(user.role)"
+            <button *ngIf="!['', 'Student', 'Parent'].includes(user.role)"
               (click)="assign_quiz()" class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
               <img src="./assets/icons/assign.png" style="height: 27px; margin-top: 2px; margin-bottom: 2px">
               <b style="margin-left: 10px; font-size: 20px; font-size: 22px; margin-top: 2px; margin-bottom: 2px"> Assign </b>

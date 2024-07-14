@@ -1806,8 +1806,43 @@
             style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
             <br />
             <div class="card card-medium"
-                style="text-align: center; margin: auto; width: fit-content; padding: 20px; display: flex; flex-direction: column">
-                <h2> {{exam_names[selected_exam]}} </h2>
+                style="margin: auto; height: auto; max-height: 800px; min-width: 40%; max-width: min(80%, 600px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
+                <h1 *ngIf="!selected_exam.startsWith('Q-')" style="font-size: 26px"> {{exam_names[selected_exam]}} </h1>
+                <h1 *ngIf="selected_exam.startsWith('Q-')" style="font-size: 26px"> {{authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).name}} </h1>
+                <p *ngIf="(!selected_exam.startsWith('Q-') && exam_attribute_dump[selected_exam].Timer > 0) || (selected_exam.startsWith('Q-') && authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).lmode == 'timer')" style="font-size: 20px; padding: 10px; white-space: pre-wrap"> <b>Time Allowed</b> :
+                  {{(get_hours(authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).length) >= 1) ? (get_hours(authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).length) >= 2) ? ''+get_hours(authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).length) + ' hrs' : ''+get_hours(authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).length) + ' hr' : ''}} {{''+(authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).length % 60)}} mins
+                </p>
+                <p *ngIf="(!selected_exam.startsWith('Q-') && exam_attribute_dump[selected_exam].Timer == 0) || (selected_exam.startsWith('Q-') && authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).lmode == 'number')" style="font-size: 20px; padding: 10px; white-space: pre-wrap;"> <b>No Time Limit</b>
+                </p>
+                <div *ngIf="selected_exam.startsWith('Q-') && screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
+                  <label *ngFor="let grade of authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).grades" class="switch" style="padding: 0 5px">
+                    <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{grade}} </b> </button>
+                  </label>
+                  <label *ngFor="let subject of master_filters(authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).subjects)" class="switch" style="padding: 0 5px">
+                    <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{subject}} </b> </button>
+                  </label>
+                  <label *ngFor="let state of authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).states" class="switch" style="padding: 0 5px">
+                    <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{state}} </b> </button>
+                  </label>
+                  <label *ngFor="let topic of authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).topics" class="switch" style="padding: 0 5px">
+                    <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{topic}} </b> </button>
+                  </label>
+                </div>
+                <div *ngIf="selected_exam.startsWith('Q-') && screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
+                  <label *ngFor="let grade of authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).grades" class="switch" style="padding: 0 5px">
+                    <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px"> <b> {{grade}} </b> </button>
+                  </label>
+                  <label *ngFor="let subject of master_filters(authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).subjects)" class="switch" style="padding: 0 5px">
+                    <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px"> <b> {{subject}} </b> </button>
+                  </label>
+                  <label *ngFor="let state of authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).states" class="switch" style="padding: 0 5px">
+                    <button class="toggle-button-off" style="color: darkslategrey; font-size: 14x"> <b> {{state}} </b> </button>
+                  </label>
+                  <label *ngFor="let topic of authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).topics" class="switch" style="padding: 0 5px">
+                    <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px"> <b> {{topic}} </b> </button>
+                  </label>
+                </div>
+                <hr style="margin: 20px" />
                 <h3 style="font-size: 18px; color: rgb(94, 104, 113)"> With {{number_correct}} out of {{exam_length}}
                     problems
                     correct, you scored {{correct_percent}}% in {{time_duration}}</h3>

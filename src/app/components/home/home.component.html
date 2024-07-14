@@ -1805,7 +1805,7 @@
             style="font-size: 18px; font-weight: 2px; color:rgba(255, 217, 0); -webkit-text-stroke: 2px rgba(255, 217, 0)">
             &starf; </span>
           <b *ngIf="!this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Favorite </b>
-          <b *ngIf="this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Favorite </b>
+          <b *ngIf="this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Favorited </b>
         </button>
         <button *ngIf="this.screenWidth > 900 && authService.userData as user" (click)="toggle_favorite_exm()"
           class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
@@ -1816,7 +1816,7 @@
             style="font-size: 22px; font-weight: 2px; color:rgba(255, 217, 0); -webkit-text-stroke: 2px rgba(255, 217, 0)">
             &starf; </span>
           <b *ngIf="!this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Favorite </b>
-          <b *ngIf="this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Favorite </b>
+          <b *ngIf="this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Favorited </b>
         </button>
         <!-- <button *ngIf="online_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
         style="margin: 10px 5px 5px; width: auto; height: auto; background-color: green">

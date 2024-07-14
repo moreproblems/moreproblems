@@ -606,7 +606,7 @@
               <label *ngFor="let grade of this.quiz_config.grades" class="switch" style="padding: 0 5px">
                 <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{grade}} </b> </button>
               </label>
-              <label *ngFor="let subject of this.quiz_config.subjects" class="switch" style="padding: 0 5px">
+              <label *ngFor="let subject of this.master_filters(this.quiz_config.subjects)" class="switch" style="padding: 0 5px">
                 <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{subject}} </b> </button>
               </label>
               <label *ngFor="let state of this.quiz_config.states" class="switch" style="padding: 0 5px">
@@ -620,14 +620,14 @@
               <label *ngFor="let grade of this.quiz_config.grades" class="switch" style="padding: 0 5px">
                 <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px"> <b> {{grade}} </b> </button>
               </label>
-              <label *ngFor="let subject of this.quiz_config.subjects" class="switch" style="padding: 0 5px">
+              <label *ngFor="let subject of this.master_filters(this.quiz_config.subjects)" class="switch" style="padding: 0 5px">
                 <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px"> <b> {{subject}} </b> </button>
               </label>
               <label *ngFor="let state of this.quiz_config.states" class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 164x"> <b> {{state}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14x"> <b> {{state}} </b> </button>
               </label>
               <label *ngFor="let topic of this.quiz_config.topics" class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{topic}} </b> </button>
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px"> <b> {{topic}} </b> </button>
               </label>
             </div>
             <p *ngIf="length_mode == 'timer'" style="font-size: 20px; padding: 10px; white-space: pre-wrap; margin-top: 15px"> <b>Time Allowed</b> :

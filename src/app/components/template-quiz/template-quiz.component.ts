@@ -1552,6 +1552,18 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
     }
   }
 
+  master_filters(filts: string[]) {
+    var master_filts = []
+    if (filts != undefined) {
+      for (let filt of filts) {
+        if (Object.keys(this.sub_subjects).includes(filt)) {
+          master_filts.push(filt);
+        }
+      }
+    }
+    return master_filts;
+  }
+
   get_part_num(part: string) {
     var part_num = 0;
     if (part != '') {
@@ -6614,10 +6626,10 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
         this.quiz_config = (this.authService.searchQuizId(this.key) as any);
         console.log(this.quiz_config);
         this.quiz_name = this.quiz_config.name;
-        this.grade_filters = this.quiz_config.grades;
-        this.subject_filters = this.quiz_config.subjects;
-        this.state_filters = this.quiz_config.states;
-        this.topic_filters = this.quiz_config.topics;
+        this.grade_filters = (this.quiz_config.grades != undefined) ? this.quiz_config.grades : [];
+        this.subject_filters = (this.quiz_config.subjects != undefined) ? this.quiz_config.subjects : [];
+        this.state_filters = (this.quiz_config.states != undefined) ? this.quiz_config.states : [];
+        this.topic_filters = (this.quiz_config.topics != undefined) ? this.quiz_config.topics : [];
         this.mode = this.quiz_config.mode;
         this.length_mode = this.quiz_config.lmode;
         if (this.length_mode == 'number') {

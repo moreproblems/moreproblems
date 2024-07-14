@@ -2009,6 +2009,14 @@ export class TemplateClassComponent implements OnInit {
     "U.S. History": "U.S. History",
   };
 
+  sub_subjects: { [key: string]: string[] } = {
+    "English Language Arts": ["English Language Arts", "English I", "English II"],
+    "Mathematics": ["Mathematics", "Algebra I", "Algebra II", 'Geometry'],
+    "Sciences": ["Sciences", "Science", "Biology"],
+    "Social Studies": ["Social Studies", "U.S. History"],
+    "Reading & Writing": ["Reading & Writing", "English Reading", "English Writing"],
+  };
+
   constructor(public authService: AuthService, public router: Router, private aRoute: ActivatedRoute, private afAuth: AngularFireAuth, private http: HttpClient) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
@@ -2023,6 +2031,22 @@ export class TemplateClassComponent implements OnInit {
 
   width_change2() {
     this.screenWidth = window.innerWidth;
+  }
+
+  master_filters(filts: string[]) {
+    var master_filts = []
+    if (filts != undefined) {
+      for (let filt of filts) {
+        if (Object.keys(this.sub_subjects).includes(filt)) {
+          master_filts.push(filt);
+        }
+      }
+    }
+    return master_filts;
+  }
+
+  get_hours(seconds: number) {
+    return Math.floor(seconds / 60);
   }
 
   get_part_num_st(part: string) {
