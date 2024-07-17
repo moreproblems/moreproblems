@@ -1,12 +1,13 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from "../../shared/services/auth.service";
 import { serverTimestamp } from "firebase/database";
 import printJS from 'print-js';
 import * as Plotly from 'plotly.js-dist-min';
 import * as examMetadata from "src/assets/problems/exams.json";
+import * as standardMetadata from "src/assets/standards/standards.json";
 import * as COG3EProblems from "src/assets/problems/COG3E/COG3E-problems.json";
 import * as COG4EProblems from "src/assets/problems/COG4E/COG4E-problems.json";
 import * as COG5EProblems from "src/assets/problems/COG5E/COG5E-problems.json";
@@ -458,6 +459,225 @@ import * as TX21HSUSHProblems from "src/assets/problems/TX21HSUSH/TX21HSUSH-prob
 import * as TX19HSUSHProblems from "src/assets/problems/TX19HSUSH/TX19HSUSH-problems.json";
 import * as TX18HSUSHProblems from "src/assets/problems/TX18HSUSH/TX18HSUSH-problems.json";
 import * as TX17HSUSHProblems from "src/assets/problems/TX17HSUSH/TX17HSUSH-problems.json";
+import * as KEStandards from "src/assets/standards/CC/K-E.json";
+import * as KMStandards from "src/assets/standards/CC/K-M.json";
+import * as G1EStandards from "src/assets/standards/CC/G1-E.json";
+import * as G1MStandards from "src/assets/standards/CC/G1-M.json";
+import * as G2EStandards from "src/assets/standards/CC/G2-E.json";
+import * as G2MStandards from "src/assets/standards/CC/G2-M.json";
+import * as G3EStandards from "src/assets/standards/CC/G3-E.json";
+import * as G3MStandards from "src/assets/standards/CC/G3-M.json";
+import * as G4EStandards from "src/assets/standards/CC/G4-E.json";
+import * as G4MStandards from "src/assets/standards/CC/G4-M.json";
+import * as G5EStandards from "src/assets/standards/CC/G5-E.json";
+import * as G5MStandards from "src/assets/standards/CC/G5-M.json";
+import * as G6EStandards from "src/assets/standards/CC/G6-E.json";
+import * as G6MStandards from "src/assets/standards/CC/G6-M.json";
+import * as G7EStandards from "src/assets/standards/CC/G7-E.json";
+import * as G7MStandards from "src/assets/standards/CC/G7-M.json";
+import * as G8EStandards from "src/assets/standards/CC/G8-E.json";
+import * as G8MStandards from "src/assets/standards/CC/G8-M.json";
+import * as HSE1Standards from "src/assets/standards/CC/HS-E1.json";
+import * as HSE2Standards from "src/assets/standards/CC/HS-E2.json";
+import * as HSMAStandards from "src/assets/standards/CC/HS-M-A.json";
+import * as HSMFStandards from "src/assets/standards/CC/HS-M-F.json";
+import * as HSMGStandards from "src/assets/standards/CC/HS-M-G.json";
+import * as HSMMStandards from "src/assets/standards/CC/HS-M-M.json";
+import * as HSMNStandards from "src/assets/standards/CC/HS-M-N.json";
+import * as HSMSStandards from "src/assets/standards/CC/HS-M-S.json";
+import * as COPEStandards from "src/assets/standards/CO/P-E.json";
+import * as COPMStandards from "src/assets/standards/CO/P-M.json";
+import * as COPSStandards from "src/assets/standards/CO/P-S.json";
+import * as COPSSStandards from "src/assets/standards/CO/P-SS.json";
+import * as COKEStandards from "src/assets/standards/CO/K-E.json";
+import * as COKMStandards from "src/assets/standards/CO/K-M.json";
+import * as COKSStandards from "src/assets/standards/CO/K-S.json";
+import * as COKSSStandards from "src/assets/standards/CO/K-SS.json";
+import * as COG1EStandards from "src/assets/standards/CO/G1-E.json";
+import * as COG1MStandards from "src/assets/standards/CO/G1-M.json";
+import * as COG1SStandards from "src/assets/standards/CO/G1-S.json";
+import * as COG1SSStandards from "src/assets/standards/CO/G1-SS.json";
+import * as COG2EStandards from "src/assets/standards/CO/G2-E.json";
+import * as COG2MStandards from "src/assets/standards/CO/G2-M.json";
+import * as COG2SStandards from "src/assets/standards/CO/G2-S.json";
+import * as COG2SSStandards from "src/assets/standards/CO/G2-SS.json";
+import * as COG3EStandards from "src/assets/standards/CO/G3-E.json";
+import * as COG3MStandards from "src/assets/standards/CO/G3-M.json";
+import * as COG3SStandards from "src/assets/standards/CO/G3-S.json";
+import * as COG3SSStandards from "src/assets/standards/CO/G3-SS.json";
+import * as COG4EStandards from "src/assets/standards/CO/G4-E.json";
+import * as COG4MStandards from "src/assets/standards/CO/G4-M.json";
+import * as COG4SStandards from "src/assets/standards/CO/G4-S.json";
+import * as COG4SSStandards from "src/assets/standards/CO/G4-SS.json";
+import * as COG5EStandards from "src/assets/standards/CO/G5-E.json";
+import * as COG5MStandards from "src/assets/standards/CO/G5-M.json";
+import * as COG5SStandards from "src/assets/standards/CO/G5-S.json";
+import * as COG5SSStandards from "src/assets/standards/CO/G5-SS.json";
+import * as COG6EStandards from "src/assets/standards/CO/G6-E.json";
+import * as COG6MStandards from "src/assets/standards/CO/G6-M.json";
+import * as COG6SSStandards from "src/assets/standards/CO/G6-SS.json";
+import * as COG7EStandards from "src/assets/standards/CO/G7-E.json";
+import * as COG7MStandards from "src/assets/standards/CO/G7-M.json";
+import * as COG7SSStandards from "src/assets/standards/CO/G7-SS.json";
+import * as COG8EStandards from "src/assets/standards/CO/G8-E.json";
+import * as COG8MStandards from "src/assets/standards/CO/G8-M.json";
+import * as COG8SSStandards from "src/assets/standards/CO/G8-SS.json";
+import * as COMSSStandards from "src/assets/standards/CO/MS-S.json";
+import * as COHSE1Standards from "src/assets/standards/CO/HS-E1.json";
+import * as COHSE2Standards from "src/assets/standards/CO/HS-E2.json";
+import * as COHSMStandards from "src/assets/standards/CO/HS-M.json";
+import * as COHSSStandards from "src/assets/standards/CO/HS-S.json";
+import * as COHSSSStandards from "src/assets/standards/CO/HS-SS.json";
+import * as FLKEStandards from "src/assets/standards/FL/K-E.json";
+import * as FLKMStandards from "src/assets/standards/FL/K-M.json";
+import * as FLG1EStandards from "src/assets/standards/FL/G1-E.json";
+import * as FLG1MStandards from "src/assets/standards/FL/G1-M.json";
+import * as FLG2EStandards from "src/assets/standards/FL/G2-E.json";
+import * as FLG2MStandards from "src/assets/standards/FL/G2-M.json";
+import * as FLG3EStandards from "src/assets/standards/FL/G3-E.json";
+import * as FLG3MStandards from "src/assets/standards/FL/G3-M.json";
+import * as FLG4EStandards from "src/assets/standards/FL/G4-E.json";
+import * as FLG4MStandards from "src/assets/standards/FL/G4-M.json";
+import * as FLG5EStandards from "src/assets/standards/FL/G5-E.json";
+import * as FLG5MStandards from "src/assets/standards/FL/G5-M.json";
+import * as FLG6EStandards from "src/assets/standards/FL/G6-E.json";
+import * as FLG6MStandards from "src/assets/standards/FL/G6-M.json";
+import * as FLG7EStandards from "src/assets/standards/FL/G7-E.json";
+import * as FLG7MStandards from "src/assets/standards/FL/G7-M.json";
+import * as FLG8EStandards from "src/assets/standards/FL/G8-E.json";
+import * as FLG8MStandards from "src/assets/standards/FL/G8-M.json";
+import * as FLG9EStandards from "src/assets/standards/FL/G9-E.json";
+import * as FLG10EStandards from "src/assets/standards/FL/G10-E.json";
+import * as FLG11EStandards from "src/assets/standards/FL/G11-E.json";
+import * as FLG12EStandards from "src/assets/standards/FL/G12-E.json";
+import * as FLHSMStandards from "src/assets/standards/FL/HS-M.json";
+import * as NYPEStandards from "src/assets/standards/NY/P-E.json";
+import * as NYPMStandards from "src/assets/standards/NY/P-M.json";
+import * as NYKEStandards from "src/assets/standards/NY/K-E.json";
+import * as NYKMStandards from "src/assets/standards/NY/K-M.json";
+import * as NYG1EStandards from "src/assets/standards/NY/G1-E.json";
+import * as NYG1MStandards from "src/assets/standards/NY/G1-M.json";
+import * as NYG2EStandards from "src/assets/standards/NY/G2-E.json";
+import * as NYG2MStandards from "src/assets/standards/NY/G2-M.json";
+import * as NYG3EStandards from "src/assets/standards/NY/G3-E.json";
+import * as NYG3MStandards from "src/assets/standards/NY/G3-M.json";
+import * as NYG4EStandards from "src/assets/standards/NY/G4-E.json";
+import * as NYG4MStandards from "src/assets/standards/NY/G4-M.json";
+import * as NYG5EStandards from "src/assets/standards/NY/G5-E.json";
+import * as NYG5MStandards from "src/assets/standards/NY/G5-M.json";
+import * as NYG6EStandards from "src/assets/standards/NY/G6-E.json";
+import * as NYG6MStandards from "src/assets/standards/NY/G6-M.json";
+import * as NYG7EStandards from "src/assets/standards/NY/G7-E.json";
+import * as NYG7MStandards from "src/assets/standards/NY/G7-M.json";
+import * as NYG8EStandards from "src/assets/standards/NY/G8-E.json";
+import * as NYG8MStandards from "src/assets/standards/NY/G8-M.json";
+import * as NYHSMA1Standards from "src/assets/standards/NY/HS-M-A1.json";
+import * as NYHSMA2Standards from "src/assets/standards/NY/HS-M-A2.json";
+import * as NYHSE1Standards from "src/assets/standards/NY/HS-E1.json";
+import * as NYHSE2Standards from "src/assets/standards/NY/HS-E2.json";
+import * as NYHSMGStandards from "src/assets/standards/NY/HS-M-G.json";
+import * as PAG3EStandards from "src/assets/standards/PA/G3-E.json";
+import * as PAG3MStandards from "src/assets/standards/PA/G3-M.json";
+import * as PAG4EStandards from "src/assets/standards/PA/G4-E.json";
+import * as PAG4MStandards from "src/assets/standards/PA/G4-M.json";
+import * as PAG4SStandards from "src/assets/standards/PA/G4-S.json";
+import * as PAG5EStandards from "src/assets/standards/PA/G5-E.json";
+import * as PAG5MStandards from "src/assets/standards/PA/G5-M.json";
+import * as PAG6EStandards from "src/assets/standards/PA/G6-E.json";
+import * as PAG6MStandards from "src/assets/standards/PA/G6-M.json";
+import * as PAG7EStandards from "src/assets/standards/PA/G7-E.json";
+import * as PAG7MStandards from "src/assets/standards/PA/G7-M.json";
+import * as PAG8EStandards from "src/assets/standards/PA/G8-E.json";
+import * as PAG8MStandards from "src/assets/standards/PA/G8-M.json";
+import * as PAG8SStandards from "src/assets/standards/PA/G8-S.json";
+import * as RIKEStandards from "src/assets/standards/RI/K-E.json";
+import * as RIKMStandards from "src/assets/standards/RI/K-M.json";
+import * as RIG1EStandards from "src/assets/standards/RI/G1-E.json";
+import * as RIG1MStandards from "src/assets/standards/RI/G1-M.json";
+import * as RIG2EStandards from "src/assets/standards/RI/G2-E.json";
+import * as RIG2MStandards from "src/assets/standards/RI/G2-M.json";
+import * as RIG3EStandards from "src/assets/standards/RI/G3-E.json";
+import * as RIG3MStandards from "src/assets/standards/RI/G3-M.json";
+import * as RIG4EStandards from "src/assets/standards/RI/G4-E.json";
+import * as RIG4MStandards from "src/assets/standards/RI/G4-M.json";
+import * as RIG5EStandards from "src/assets/standards/RI/G5-E.json";
+import * as RIG5MStandards from "src/assets/standards/RI/G5-M.json";
+import * as RIG6EStandards from "src/assets/standards/RI/G6-E.json";
+import * as RIG6MStandards from "src/assets/standards/RI/G6-M.json";
+import * as RIG7EStandards from "src/assets/standards/RI/G7-E.json";
+import * as RIG7MStandards from "src/assets/standards/RI/G7-M.json";
+import * as RIG8EStandards from "src/assets/standards/RI/G8-E.json";
+import * as RIG8MStandards from "src/assets/standards/RI/G8-M.json";
+import * as RIHSE1Standards from "src/assets/standards/RI/HS-E1.json";
+import * as RIHSE2Standards from "src/assets/standards/RI/HS-E2.json";
+import * as RIHSMAStandards from "src/assets/standards/RI/HS-M-A.json";
+import * as RIHSMFStandards from "src/assets/standards/RI/HS-M-F.json";
+import * as RIHSMGStandards from "src/assets/standards/RI/HS-M-G.json";
+import * as RIHSMMStandards from "src/assets/standards/RI/HS-M-M.json";
+import * as RIHSMNStandards from "src/assets/standards/RI/HS-M-N.json";
+import * as RIHSMSStandards from "src/assets/standards/RI/HS-M-S.json";
+import * as TNKEStandards from "src/assets/standards/TN/K-E.json";
+import * as TNKMStandards from "src/assets/standards/TN/K-M.json";
+import * as TNKSStandards from "src/assets/standards/TN/K-S.json";
+import * as TNG1EStandards from "src/assets/standards/TN/G1-E.json";
+import * as TNG1MStandards from "src/assets/standards/TN/G1-M.json";
+import * as TNG1SStandards from "src/assets/standards/TN/G1-S.json";
+import * as TNG2EStandards from "src/assets/standards/TN/G2-E.json";
+import * as TNG2MStandards from "src/assets/standards/TN/G2-M.json";
+import * as TNG2SStandards from "src/assets/standards/TN/G2-S.json";
+import * as TNG3EStandards from "src/assets/standards/TN/G3-E.json";
+import * as TNG3MStandards from "src/assets/standards/TN/G3-M.json";
+import * as TNG3SStandards from "src/assets/standards/TN/G3-S.json";
+import * as TNG4EStandards from "src/assets/standards/TN/G4-E.json";
+import * as TNG4MStandards from "src/assets/standards/TN/G4-M.json";
+import * as TNG4SStandards from "src/assets/standards/TN/G4-S.json";
+import * as TNG5EStandards from "src/assets/standards/TN/G5-E.json";
+import * as TNG5MStandards from "src/assets/standards/TN/G5-M.json";
+import * as TNG5SStandards from "src/assets/standards/TN/G5-S.json";
+import * as TNG6EStandards from "src/assets/standards/TN/G6-E.json";
+import * as TNG6MStandards from "src/assets/standards/TN/G6-M.json";
+import * as TNG6SStandards from "src/assets/standards/TN/G6-S.json";
+import * as TNG7EStandards from "src/assets/standards/TN/G7-E.json";
+import * as TNG7MStandards from "src/assets/standards/TN/G7-M.json";
+import * as TNG7SStandards from "src/assets/standards/TN/G7-S.json";
+import * as TNG8EStandards from "src/assets/standards/TN/G8-E.json";
+import * as TNG8MStandards from "src/assets/standards/TN/G8-M.json";
+import * as TNG8SStandards from "src/assets/standards/TN/G8-S.json";
+import * as TNHSMA1Standards from "src/assets/standards/TN/HS-M-A1.json";
+import * as TNHSMA2Standards from "src/assets/standards/TN/HS-M-A2.json";
+import * as TNHSSB1Standards from "src/assets/standards/TN/HS-S-B1.json";
+import * as TNHSE1Standards from "src/assets/standards/TN/HS-E1.json";
+import * as TNHSE2Standards from "src/assets/standards/TN/HS-E2.json";
+import * as TNHSMGStandards from "src/assets/standards/TN/HS-M-G.json";
+import * as TXKRStandards from "src/assets/standards/TX/K-R.json";
+import * as TXKMStandards from "src/assets/standards/TX/K-M.json";
+import * as TXG1RStandards from "src/assets/standards/TX/G1-R.json";
+import * as TXG1MStandards from "src/assets/standards/TX/G1-M.json";
+import * as TXG2RStandards from "src/assets/standards/TX/G2-R.json";
+import * as TXG2MStandards from "src/assets/standards/TX/G2-M.json";
+import * as TXG3RStandards from "src/assets/standards/TX/G3-R.json";
+import * as TXG3MStandards from "src/assets/standards/TX/G3-M.json";
+import * as TXG4RStandards from "src/assets/standards/TX/G4-R.json";
+import * as TXG4MStandards from "src/assets/standards/TX/G4-M.json";
+import * as TXG5RStandards from "src/assets/standards/TX/G5-R.json";
+import * as TXG5MStandards from "src/assets/standards/TX/G5-M.json";
+import * as TXG6RStandards from "src/assets/standards/TX/G6-R.json";
+import * as TXG6MStandards from "src/assets/standards/TX/G6-M.json";
+import * as TXG7RStandards from "src/assets/standards/TX/G7-R.json";
+import * as TXG7MStandards from "src/assets/standards/TX/G7-M.json";
+import * as TXG8RStandards from "src/assets/standards/TX/G8-R.json";
+import * as TXG8MStandards from "src/assets/standards/TX/G8-M.json";
+import * as TXHSE1Standards from "src/assets/standards/TX/HS-E1.json";
+import * as TXHSE2Standards from "src/assets/standards/TX/HS-E2.json";
+import * as TXHSE3Standards from "src/assets/standards/TX/HS-E3.json";
+import * as TXHSE4Standards from "src/assets/standards/TX/HS-E4.json";
+import * as TXHSMAStandards from "src/assets/standards/TX/HS-M-A.json";
+import * as TXHSMA2Standards from "src/assets/standards/TX/HS-M-A2.json";
+import * as TXHSMGStandards from "src/assets/standards/TX/HS-M-G.json";
+import * as TXHSMPStandards from "src/assets/standards/TX/HS-M-P.json";
+import * as TXHSMSStandards from "src/assets/standards/TX/HS-M-S.json";
+import * as SATMStandards from "src/assets/standards/SAT/SAT-M.json";
+import * as SATRWStandards from "src/assets/standards/SAT/SAT-RW.json";
 
 const confetti = require('canvas-confetti');
 
@@ -468,14 +688,15 @@ const confettiHandler = confetti.create(confettiCanvas, {
 });
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-template-state',
+  templateUrl: './template-state.component.html',
+  styleUrls: ['./template-state.component.css']
 })
 
 @Injectable()
-export class HomeComponent implements OnInit {
+export class TemplateStateComponent implements OnInit {
   // title = 'More Problems';
+  state_key: string = "";
 
   user_data: any = {};
 
@@ -483,6 +704,8 @@ export class HomeComponent implements OnInit {
   screenHeight = window.innerHeight;
   mobileWidth = 1000;
   menuOpen = false;
+  stateSet = false;
+
   expand_refsheet = false;
   expand_supp = true;
   data_loaded = false;
@@ -493,7 +716,10 @@ export class HomeComponent implements OnInit {
   edit_e_list: any = {};
 
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Timer': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number }, 'Parts': string[] } } = examMetadata;
+  standards_attribute_dump: { [key: string]: { 'State': string, 'Grades': string[], 'Subject': string, 'Curriculum': string } } = standardMetadata;
+  state_set: string[] = ['CO', 'FL', 'NY', 'PA', 'RI', 'TN', 'TX'];
   exam_set = ['COG3E', 'COG4E', 'COG5E', 'COG6E', 'COG7E', 'COG8E', 'COG3M', 'COG4M', 'COG5M', 'COG6M', 'COG7M', 'COG8M', 'COG5S', 'COG8S', 'COHSS', 'FL20G3M', 'FL20G3R', 'FL20G4M', 'FL20G4R', 'FL20G4W', 'FL20G5M', 'FL20G5R', 'FL20G5W', 'FL20G5S', 'FL20G6M', 'FL20G6R', 'FL20G6W', 'FL20G7M', 'FL20G7R', 'FL20G7W', 'FL20G8M', 'FL20G8R', 'FL20G8W', 'FL20G8S', 'FL20G9R', 'FL20G9W', 'FL20G10R', 'FL20G10W', 'NY23G3M', 'NY23G3E', 'NY22G3M', 'NY22G3E', 'NY21G3M', 'NY21G3E', 'NY19G3M', 'NY19G3E', 'NY18G3M', 'NY18G3E', 'NY17G3M', 'NY17G3E', 'NY16G3M', 'NY16G3E', 'NY15G3M', 'NY15G3E', 'NY23G4M', 'NY23G4E', 'NY22G4M', 'NY22G4E', 'NY21G4M', 'NY21G4E', 'NY19G4M', 'NY19G4E', 'NY18G4M', 'NY18G4E', 'NY17G4M', 'NY17G4E', 'NY16G4M', 'NY16G4E', 'NY15G4M', 'NY15G4E', 'NY22G4S', 'NY21G4S', 'NY19G4S', 'NY18G4S', 'NY17G4S', 'NY16G4S', 'NY15G4S', 'NY23G5M', 'NY23G5E', 'NY22G5M', 'NY22G5E', 'NY21G5M', 'NY21G5E', 'NY19G5M', 'NY19G5E', 'NY18G5M', 'NY18G5E', 'NY17G5M', 'NY17G5E', 'NY16G5M', 'NY16G5E', 'NY15G5M', 'NY15G5E', 'NY23G6M', 'NY23G6E', 'NY22G6M', 'NY22G6E', 'NY21G6M', 'NY21G6E', 'NY19G6M', 'NY19G6E', 'NY18G6M', 'NY18G6E', 'NY17G6M', 'NY17G6E', 'NY16G6M', 'NY16G6E', 'NY15G6M', 'NY15G6E', 'NY23G7M', 'NY23G7E', 'NY22G7M', 'NY22G7E', 'NY21G7M', 'NY21G7E', 'NY19G7M', 'NY19G7E', 'NY18G7M', 'NY18G7E', 'NY17G7M', 'NY17G7E', 'NY16G7M', 'NY16G7E', 'NY15G7M', 'NY15G7E', 'NY23G8M', 'NY23G8E', 'NY22G8M', 'NY22G8E', 'NY21G8M', 'NY21G8E', 'NY19G8M', 'NY19G8E', 'NY18G8M', 'NY18G8E', 'NY17G8M', 'NY17G8E', 'NY16G8M', 'NY16G8E', 'NY15G8M', 'NY15G8E', 'NY22G8S', 'NY21G8S', 'NY19G8S', 'NY18G8S', 'NY17G8S', 'NY16G8S', 'NY15G8S', 'PA23G3M', 'PA23G3E', 'PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA23G4M', 'PA23G4E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA23G4S', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA23G5M', 'PA23G5E', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA23G6M', 'PA23G6E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA23G7M', 'PA23G7E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA23G8M', 'PA23G8E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA23G8S', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S', 'PSAT1', 'RI23G3M', 'RI22G3M', 'RI21G3M', 'RI19G3M', 'RI18G3M', 'RI23G3E', 'RI22G3E', 'RI21G3E', 'RI19G3E', 'RI18G3E', 'RI23G4M', 'RI22G4M', 'RI21G4M', 'RI19G4M', 'RI18G4M', 'RI23G4E', 'RI22G4E', 'RI21G4E', 'RI19G4E', 'RI18G4E', 'RI23G5M', 'RI22G5M', 'RI21G5M', 'RI19G5M', 'RI18G5M', 'RI23G5E', 'RI22G5E', 'RI21G5E', 'RI19G5E', 'RI18G5E', 'RI23G6M', 'RI22G6M', 'RI21G6M', 'RI19G6M', 'RI18G6M', 'RI23G6E', 'RI22G6E', 'RI21G6E', 'RI19G6E', 'RI18G6E', 'RI23G7M', 'RI22G7M', 'RI21G7M', 'RI19G7M', 'RI18G7M', 'RI23G7E', 'RI22G7E', 'RI21G7E', 'RI19G7E', 'RI18G7E', 'RI23G8M', 'RI22G8M', 'RI21G8M', 'RI19G8M', 'RI18G8M', 'RI23G8E', 'RI22G8E', 'RI21G8E', 'RI19G8E', 'RI18G8E', 'SAT1', 'SAT2', 'SAT3', 'SAT4', 'TN20G3E', 'TN20G3M', 'TN20G3S', 'TN20G4E', 'TN20G4M', 'TN20G4S', 'TN20G5E', 'TN20G5M', 'TN20G5S', 'TN20G6E', 'TN20G6M', 'TN20G6S', 'TN20G6SS', 'TN20G7E', 'TN20G7M', 'TN20G7S', 'TN20G7SS', 'TN20G8E', 'TN20G8M', 'TN20G8S', 'TN20G8SS', 'TN20HSA1', 'TN20HSA2', 'TN20HSB', 'TN20HSE1', 'TN20HSE2', 'TN20HSG', 'TN20HSUSH', 'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH'];
+  standard_set: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PE-CO", "PM-CO", "PS-CO", "PSS-CO", "KE-CO", "KM-CO", "KS-CO", "KSS-CO", "G1E-CO", "G1M-CO", "G1S-CO", "G1SS-CO", "G2E-CO", "G2M-CO", "G2S-CO", "G2SS-CO", "G3E-CO", "G3M-CO", "G3S-CO", "G3SS-CO", "G4E-CO", "G4M-CO", "G4S-CO", "G4SS-CO", "G5E-CO", "G5M-CO", "G5S-CO", "G5SS-CO", "G6E-CO", "G6M-CO", "G6SS-CO", "G7E-CO", "G7M-CO", "G7SS-CO", "G8E-CO", "G8M-CO", "MSS-CO", "G8SS-CO", "HSE1-CO", "HSE2-CO", "HSM-CO", "HSS-CO", "HSSS-CO", "KE-FL", "KM-FL", "G1E-FL", "G1M-FL", "G2E-FL", "G2M-FL", "G3E-FL", "G3M-FL", "G4E-FL", "G4M-FL", "G5E-FL", "G5M-FL", "G6E-FL", "G6M-FL", "G7E-FL", "G7M-FL", "G8E-FL", "G8M-FL", "G9E-FL", "G10E-FL", "G11E-FL", "G12E-FL", "HSM-FL", "PE-NY", "PM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KE-RI", "KM-RI", "G1E-RI", "G1M-RI", "G2E-RI", "G2M-RI", "G3E-RI", "G3M-RI", "G4E-RI", "G4M-RI", "G5E-RI", "G5M-RI", "G6E-RI", "G6M-RI", "G7E-RI", "G7M-RI", "G8E-RI", "G8M-RI", "HSE1-RI", "HSE2-RI", "HSMA-RI", "HSMF-RI", "HSMG-RI", "HSMM-RI", "HSMN-RI", "HSMS-RI", "KE-TN", "KM-TN", "KS-TN", "G1E-TN", "G1M-TN", "G1S-TN", "G2E-TN", "G2M-TN", "G2S-TN", "G3E-TN", "G3M-TN", "G3S-TN", "G4E-TN", "G4M-TN", "G4S-TN", "G5E-TN", "G5M-TN", "G5S-TN", "G6E-TN", "G6M-TN", "G6S-TN", "G7E-TN", "G7M-TN", "G7S-TN", "G8E-TN", "G8M-TN", "G8S-TN", "HSMA1-TN", "HSMA2-TN", "HSSB1-TN", "HSE1-TN", "HSE2-TN", "HSMG-TN", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA1-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX", "SAT-M", "SAT-RW"];
   favorite_exm_set: string[] = [];
   favorite_std_set: string[][] = [];
   inprogress_set: string[] = [];
@@ -502,10 +728,13 @@ export class HomeComponent implements OnInit {
   my_stud_inprogress_set: string[][] = [];
   my_stud_inprogress_exams: { [key: string]: { [key: string]: any } } = {};
   my_stud_inprogress_quizzes: { [key: string]: { [key: string]: any } } = {};
-  selected_stud = '';
+  selected_stud: string = '';
 
-  selected_state = '';
-  selected_grade = '';
+  selected_grade: string = '';
+  selected_subject: string = '';
+  state_grades: string[] = [];
+  state_subjects: string[] = [];
+  subject_exams: string[] = [];
 
   assign_e = false;
   all_students: string[] = [];
@@ -976,7 +1205,229 @@ export class HomeComponent implements OnInit {
   TX19HSUSH_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX19HSUSHProblems;
   TX18HSUSH_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX18HSUSHProblems;
   TX17HSUSH_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = TX17HSUSHProblems;
-  dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } } = {
+
+  KE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KEStandards;
+  KM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KMStandards;
+  G1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G1EStandards;
+  G1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G1MStandards;
+  G2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G2EStandards;
+  G2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G2MStandards;
+  G3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G3EStandards;
+  G3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G3MStandards;
+  G4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G4EStandards;
+  G4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G4MStandards;
+  G5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G5EStandards;
+  G5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G5MStandards;
+  G6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G6EStandards;
+  G6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G6MStandards;
+  G7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G7EStandards;
+  G7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G7MStandards;
+  G8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G8EStandards;
+  G8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G8MStandards;
+  HSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSE1Standards;
+  HSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSE2Standards;
+  HSMA_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMAStandards;
+  HSMF_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMFStandards;
+  HSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMGStandards;
+  HSMM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMMStandards;
+  HSMN_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMNStandards;
+  HSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMSStandards;
+  COPE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COPEStandards;
+  COPM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COPMStandards;
+  COPS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COPSStandards;
+  COPSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COPSSStandards;
+  COKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COKEStandards;
+  COKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COKMStandards;
+  COKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COKSStandards;
+  COKSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COKSSStandards;
+  COG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG1EStandards;
+  COG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG1MStandards;
+  COG1S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG1SStandards;
+  COG1SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG1SSStandards;
+  COG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG2EStandards;
+  COG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG2MStandards;
+  COG2S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG2SStandards;
+  COG2SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG2SSStandards;
+  COG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG3EStandards;
+  COG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG3MStandards;
+  COG3S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG3SStandards;
+  COG3SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG3SSStandards;
+  COG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG4EStandards;
+  COG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG4MStandards;
+  COG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG4SStandards;
+  COG4SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG4SSStandards;
+  COG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG5EStandards;
+  COG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG5MStandards;
+  COG5S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG5SStandards;
+  COG5SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG5SSStandards;
+  COG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG6EStandards;
+  COG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG6MStandards;
+  COG6SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG6SSStandards;
+  COG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG7EStandards;
+  COG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG7MStandards;
+  COG7SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG7SSStandards;
+  COG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG8EStandards;
+  COG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG8MStandards;
+  COMSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COMSSStandards;
+  COG8SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG8SSStandards;
+  COHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSE1Standards;
+  COHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSE2Standards;
+  COHSM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSMStandards;
+  COHSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSSStandards;
+  COHSSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSSSStandards;
+  FLKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLKEStandards;
+  FLKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLKMStandards;
+  FLG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG1EStandards;
+  FLG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG1MStandards;
+  FLG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG2EStandards;
+  FLG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG2MStandards;
+  FLG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG3EStandards;
+  FLG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG3MStandards;
+  FLG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG4EStandards;
+  FLG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG4MStandards;
+  FLG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG5EStandards;
+  FLG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG5MStandards;
+  FLG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG6EStandards;
+  FLG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG6MStandards;
+  FLG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG7EStandards;
+  FLG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG7MStandards;
+  FLG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG8EStandards;
+  FLG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG8MStandards;
+  FLG9E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG9EStandards;
+  FLG10E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG10EStandards;
+  FLG11E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG11EStandards;
+  FLG12E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG12EStandards;
+  FLHSM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLHSMStandards;
+  NYPE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYPEStandards;
+  NYPM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYPMStandards;
+  NYKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYKEStandards;
+  NYKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYKMStandards;
+  NYG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG1EStandards;
+  NYG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG1MStandards;
+  NYG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG2EStandards;
+  NYG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG2MStandards;
+  NYG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG3EStandards;
+  NYG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG3MStandards;
+  NYG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG4EStandards;
+  NYG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG4MStandards;
+  NYG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG5EStandards;
+  NYG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG5MStandards;
+  NYG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG6EStandards;
+  NYG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG6MStandards;
+  NYG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG7EStandards;
+  NYG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG7MStandards;
+  NYG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG8EStandards;
+  NYG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG8MStandards;
+  NYHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYHSE1Standards;
+  NYHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYHSE2Standards;
+  NYHSMA1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYHSMA1Standards;
+  NYHSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYHSMGStandards;
+  NYHSMA2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYHSMA2Standards;
+  PAG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG3EStandards;
+  PAG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG3MStandards;
+  PAG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG4EStandards;
+  PAG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG4MStandards;
+  PAG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG4SStandards;
+  PAG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG5EStandards;
+  PAG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG5MStandards;
+  PAG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG6EStandards;
+  PAG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG6MStandards;
+  PAG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG7EStandards;
+  PAG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG7MStandards;
+  PAG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG8EStandards;
+  PAG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG8MStandards;
+  PAG8S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG8SStandards;
+  RIKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIKEStandards;
+  RIKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIKMStandards;
+  RIG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG1EStandards;
+  RIG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG1MStandards;
+  RIG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG2EStandards;
+  RIG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG2MStandards;
+  RIG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG3EStandards;
+  RIG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG3MStandards;
+  RIG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG4EStandards;
+  RIG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG4MStandards;
+  RIG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG5EStandards;
+  RIG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG5MStandards;
+  RIG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG6EStandards;
+  RIG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG6MStandards;
+  RIG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG7EStandards;
+  RIG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG7MStandards;
+  RIG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG8EStandards;
+  RIG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG8MStandards;
+  RIHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSE1Standards;
+  RIHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSE2Standards;
+  RIHSMA_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMAStandards;
+  RIHSMF_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMFStandards;
+  RIHSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMGStandards;
+  RIHSMM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMMStandards;
+  RIHSMN_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMNStandards;
+  RIHSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMSStandards;
+  TNKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNKEStandards;
+  TNKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNKMStandards;
+  TNKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNKSStandards;
+  TNG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG1EStandards;
+  TNG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG1MStandards;
+  TNG1S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG1SStandards;
+  TNG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG2EStandards;
+  TNG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG2MStandards;
+  TNG2S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG2SStandards;
+  TNG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG3EStandards;
+  TNG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG3MStandards;
+  TNG3S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG3SStandards;
+  TNG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG4EStandards;
+  TNG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG4MStandards;
+  TNG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG4SStandards;
+  TNG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG5EStandards;
+  TNG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG5MStandards;
+  TNG5S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG5SStandards;
+  TNG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG6EStandards;
+  TNG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG6MStandards;
+  TNG6S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG6SStandards;
+  TNG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG7EStandards;
+  TNG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG7MStandards;
+  TNG7S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG7SStandards;
+  TNG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG8EStandards;
+  TNG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG8MStandards;
+  TNG8S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG8SStandards;
+  TNHSMA1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNHSMA1Standards;
+  TNHSMA2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNHSMA2Standards;
+  TNHSSB1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNHSSB1Standards;
+  TNHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNHSE1Standards;
+  TNHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNHSE2Standards;
+  TNHSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNHSMGStandards;
+  TXKR_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXKRStandards;
+  TXKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXKMStandards;
+  TXG1R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG1RStandards;
+  TXG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG1MStandards;
+  TXG2R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG2RStandards;
+  TXG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG2MStandards;
+  TXG3R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG3RStandards;
+  TXG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG3MStandards;
+  TXG4R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG4RStandards;
+  TXG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG4MStandards;
+  TXG5R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG5RStandards;
+  TXG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG5MStandards;
+  TXG6R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG6RStandards;
+  TXG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG6MStandards;
+  TXG7R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG7RStandards;
+  TXG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG7MStandards;
+  TXG8R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG8RStandards;
+  TXG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG8MStandards;
+  TXHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE1Standards;
+  TXHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE2Standards;
+  TXHSE3_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE3Standards;
+  TXHSE4_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE4Standards;
+  TXHSMA1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMAStandards;
+  TXHSMA2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMA2Standards;
+  TXHSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMGStandards;
+  TXHSMP_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMPStandards;
+  TXHSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMSStandards;
+  SATM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SATMStandards;
+  SATRW_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SATRWStandards;
+  standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SATRWStandards;
+
+  e_dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } } = {
     "COG3E": this.COG3E_exam_dump,
     "COG4E": this.COG4E_exam_dump,
     "COG5E": this.COG5E_exam_dump,
@@ -1428,6 +1879,228 @@ export class HomeComponent implements OnInit {
     "TX19HSUSH": this.TX19HSUSH_exam_dump,
     "TX18HSUSH": this.TX18HSUSH_exam_dump,
     "TX17HSUSH": this.TX17HSUSH_exam_dump
+  };
+
+  s_dump_dict: any = {
+    "KE-CC": this.KE_standards_dump,
+    "KM-CC": this.KM_standards_dump,
+    "G1E-CC": this.G1E_standards_dump,
+    "G1M-CC": this.G1M_standards_dump,
+    "G2E-CC": this.G2E_standards_dump,
+    "G2M-CC": this.G2M_standards_dump,
+    "G3E-CC": this.G3E_standards_dump,
+    "G3M-CC": this.G3M_standards_dump,
+    "G4E-CC": this.G4E_standards_dump,
+    "G4M-CC": this.G4M_standards_dump,
+    "G5E-CC": this.G5E_standards_dump,
+    "G5M-CC": this.G5M_standards_dump,
+    "G6E-CC": this.G6E_standards_dump,
+    "G6M-CC": this.G6M_standards_dump,
+    "G7E-CC": this.G7E_standards_dump,
+    "G7M-CC": this.G7M_standards_dump,
+    "G8E-CC": this.G8E_standards_dump,
+    "G8M-CC": this.G8M_standards_dump,
+    "HSE1-CC": this.HSE2_standards_dump,
+    "HSE2-CC": this.HSE2_standards_dump,
+    "HSMA-CC": this.HSMA_standards_dump,
+    "HSMF-CC": this.HSMF_standards_dump,
+    "HSMG-CC": this.HSMG_standards_dump,
+    "HSMM-CC": this.HSMM_standards_dump,
+    "HSMN-CC": this.HSMN_standards_dump,
+    "HSMS-CC": this.HSMS_standards_dump,
+    "PE-CO": this.COPE_standards_dump,
+    "PM-CO": this.COPM_standards_dump,
+    "PS-CO": this.COPS_standards_dump,
+    "PSS-CO": this.COPSS_standards_dump,
+    "KE-CO": this.COKE_standards_dump,
+    "KM-CO": this.COKM_standards_dump,
+    "KS-CO": this.COKS_standards_dump,
+    "KSS-CO": this.COKSS_standards_dump,
+    "G1E-CO": this.COG1E_standards_dump,
+    "G1M-CO": this.COG1M_standards_dump,
+    "G1S-CO": this.COG1S_standards_dump,
+    "G1SS-CO": this.COG1SS_standards_dump,
+    "G2E-CO": this.COG2E_standards_dump,
+    "G2M-CO": this.COG2M_standards_dump,
+    "G2S-CO": this.COG2S_standards_dump,
+    "G2SS-CO": this.COG2SS_standards_dump,
+    "G3E-CO": this.COG3E_standards_dump,
+    "G3M-CO": this.COG3M_standards_dump,
+    "G3S-CO": this.COG3S_standards_dump,
+    "G3SS-CO": this.COG3SS_standards_dump,
+    "G4E-CO": this.COG4E_standards_dump,
+    "G4M-CO": this.COG4M_standards_dump,
+    "G4S-CO": this.COG4S_standards_dump,
+    "G4SS-CO": this.COG4SS_standards_dump,
+    "G5E-CO": this.COG5E_standards_dump,
+    "G5M-CO": this.COG5M_standards_dump,
+    "G5S-CO": this.COG5S_standards_dump,
+    "G5SS-CO": this.COG5SS_standards_dump,
+    "G6E-CO": this.COG6E_standards_dump,
+    "G6M-CO": this.COG6M_standards_dump,
+    "G6SS-CO": this.COG6SS_standards_dump,
+    "G7E-CO": this.COG7E_standards_dump,
+    "G7M-CO": this.COG7M_standards_dump,
+    "G7SS-CO": this.COG7SS_standards_dump,
+    "G8E-CO": this.COG8E_standards_dump,
+    "G8M-CO": this.COG8M_standards_dump,
+    "MSS-CO": this.COMSS_standards_dump,
+    "G8SS-CO": this.COG8SS_standards_dump,
+    "HSE1-CO": this.COHSE1_standards_dump,
+    "HSE2-CO": this.COHSE2_standards_dump,
+    "HSM-CO": this.COHSM_standards_dump,
+    "HSS-CO": this.COHSS_standards_dump,
+    "HSSS-CO": this.COHSSS_standards_dump,
+    "KE-FL": this.FLKE_standards_dump,
+    "KM-FL": this.FLKM_standards_dump,
+    "G1E-FL": this.FLG1E_standards_dump,
+    "G1M-FL": this.FLG1M_standards_dump,
+    "G2E-FL": this.FLG2E_standards_dump,
+    "G2M-FL": this.FLG2M_standards_dump,
+    "G3E-FL": this.FLG3E_standards_dump,
+    "G3M-FL": this.FLG3M_standards_dump,
+    "G4E-FL": this.FLG4E_standards_dump,
+    "G4M-FL": this.FLG4M_standards_dump,
+    "G5E-FL": this.FLG5E_standards_dump,
+    "G5M-FL": this.FLG5M_standards_dump,
+    "G6E-FL": this.FLG6E_standards_dump,
+    "G6M-FL": this.FLG6M_standards_dump,
+    "G7E-FL": this.FLG7E_standards_dump,
+    "G7M-FL": this.FLG7M_standards_dump,
+    "G8E-FL": this.FLG8E_standards_dump,
+    "G8M-FL": this.FLG8M_standards_dump,
+    "G9E-FL": this.FLG9E_standards_dump,
+    "G10E-FL": this.FLG10E_standards_dump,
+    "G11E-FL": this.FLG11E_standards_dump,
+    "G12E-FL": this.FLG12E_standards_dump,
+    "HSM-FL": this.FLHSM_standards_dump,
+    "PE-NY": this.NYPE_standards_dump,
+    "PM-NY": this.NYPM_standards_dump,
+    "KE-NY": this.NYKE_standards_dump,
+    "KM-NY": this.NYKM_standards_dump,
+    "G1E-NY": this.NYG1E_standards_dump,
+    "G1M-NY": this.NYG1M_standards_dump,
+    "G2E-NY": this.NYG2E_standards_dump,
+    "G2M-NY": this.NYG2M_standards_dump,
+    "G3E-NY": this.NYG3E_standards_dump,
+    "G3M-NY": this.NYG3M_standards_dump,
+    "G4E-NY": this.NYG4E_standards_dump,
+    "G4M-NY": this.NYG4M_standards_dump,
+    "G5E-NY": this.NYG5E_standards_dump,
+    "G5M-NY": this.NYG5M_standards_dump,
+    "G6E-NY": this.NYG6E_standards_dump,
+    "G6M-NY": this.NYG6M_standards_dump,
+    "G7E-NY": this.NYG7E_standards_dump,
+    "G7M-NY": this.NYG7M_standards_dump,
+    "G8E-NY": this.NYG8E_standards_dump,
+    "G8M-NY": this.NYG8M_standards_dump,
+    "HSE1-NY": this.NYHSE1_standards_dump,
+    "HSE2-NY": this.NYHSE2_standards_dump,
+    "HSMA1-NY": this.NYHSMA1_standards_dump,
+    "HSMG-NY": this.NYHSMG_standards_dump,
+    "HSMA2-NY": this.NYHSMA2_standards_dump,
+    "G3E-PA": this.PAG3E_standards_dump,
+    "G3M-PA": this.PAG3M_standards_dump,
+    "G4E-PA": this.PAG4E_standards_dump,
+    "G4M-PA": this.PAG4M_standards_dump,
+    "G4S-PA": this.PAG4S_standards_dump,
+    "G5E-PA": this.PAG5E_standards_dump,
+    "G5M-PA": this.PAG5M_standards_dump,
+    "G6E-PA": this.PAG6E_standards_dump,
+    "G6M-PA": this.PAG6M_standards_dump,
+    "G7E-PA": this.PAG7E_standards_dump,
+    "G7M-PA": this.PAG7M_standards_dump,
+    "G8E-PA": this.PAG8E_standards_dump,
+    "G8M-PA": this.PAG8M_standards_dump,
+    "G8S-PA": this.PAG8S_standards_dump,
+    "KE-RI": this.RIKE_standards_dump,
+    "KM-RI": this.RIKM_standards_dump,
+    "G1E-RI": this.RIG1E_standards_dump,
+    "G1M-RI": this.RIG1M_standards_dump,
+    "G2E-RI": this.RIG2E_standards_dump,
+    "G2M-RI": this.RIG2M_standards_dump,
+    "G3E-RI": this.RIG3E_standards_dump,
+    "G3M-RI": this.RIG3M_standards_dump,
+    "G4E-RI": this.RIG4E_standards_dump,
+    "G4M-RI": this.RIG4M_standards_dump,
+    "G5E-RI": this.RIG5E_standards_dump,
+    "G5M-RI": this.RIG5M_standards_dump,
+    "G6E-RI": this.RIG6E_standards_dump,
+    "G6M-RI": this.RIG6M_standards_dump,
+    "G7E-RI": this.RIG7E_standards_dump,
+    "G7M-RI": this.RIG7M_standards_dump,
+    "G8E-RI": this.RIG8E_standards_dump,
+    "G8M-RI": this.RIG8M_standards_dump,
+    "HSE1-RI": this.RIHSE1_standards_dump,
+    "HSE2-RI": this.RIHSE2_standards_dump,
+    "HSMA-RI": this.RIHSMA_standards_dump,
+    "HSMF-RI": this.RIHSMF_standards_dump,
+    "HSMG-RI": this.RIHSMG_standards_dump,
+    "HSMM-RI": this.RIHSMM_standards_dump,
+    "HSMN-RI": this.RIHSMN_standards_dump,
+    "HSMS-RI": this.RIHSMS_standards_dump,
+    "KE-TN": this.TNKE_standards_dump,
+    "KM-TN": this.TNKM_standards_dump,
+    "KS-TN": this.TNKS_standards_dump,
+    "G1E-TN": this.TNG1E_standards_dump,
+    "G1M-TN": this.TNG1M_standards_dump,
+    "G1S-TN": this.TNG1S_standards_dump,
+    "G2E-TN": this.TNG2E_standards_dump,
+    "G2M-TN": this.TNG2M_standards_dump,
+    "G2S-TN": this.TNG2S_standards_dump,
+    "G3E-TN": this.TNG3E_standards_dump,
+    "G3M-TN": this.TNG3M_standards_dump,
+    "G3S-TN": this.TNG3S_standards_dump,
+    "G4E-TN": this.TNG4E_standards_dump,
+    "G4M-TN": this.TNG4M_standards_dump,
+    "G4S-TN": this.TNG4S_standards_dump,
+    "G5E-TN": this.TNG5E_standards_dump,
+    "G5M-TN": this.TNG5M_standards_dump,
+    "G5S-TN": this.TNG5S_standards_dump,
+    "G6E-TN": this.TNG6E_standards_dump,
+    "G6M-TN": this.TNG6M_standards_dump,
+    "G6S-TN": this.TNG6S_standards_dump,
+    "G7E-TN": this.TNG7E_standards_dump,
+    "G7M-TN": this.TNG7M_standards_dump,
+    "G7S-TN": this.TNG7S_standards_dump,
+    "G8E-TN": this.TNG8E_standards_dump,
+    "G8M-TN": this.TNG8M_standards_dump,
+    "G8S-TN": this.TNG8S_standards_dump,
+    "HSMA1-TN": this.TNHSMA1_standards_dump,
+    "HSMA2-TN": this.TNHSMA2_standards_dump,
+    "HSSB1-TN": this.TNHSSB1_standards_dump,
+    "HSE1-TN": this.TNHSE1_standards_dump,
+    "HSE2-TN": this.TNHSE2_standards_dump,
+    "HSMG-TN": this.TNHSMG_standards_dump,
+    "KR-TX": this.TXKR_standards_dump,
+    "KM-TX": this.TXKM_standards_dump,
+    "G1R-TX": this.TXG1R_standards_dump,
+    "G1M-TX": this.TXG1M_standards_dump,
+    "G2R-TX": this.TXG2R_standards_dump,
+    "G2M-TX": this.TXG2M_standards_dump,
+    "G3R-TX": this.TXG3R_standards_dump,
+    "G3M-TX": this.TXG3M_standards_dump,
+    "G4R-TX": this.TXG4R_standards_dump,
+    "G4M-TX": this.TXG4M_standards_dump,
+    "G5R-TX": this.TXG5R_standards_dump,
+    "G5M-TX": this.TXG5M_standards_dump,
+    "G6R-TX": this.TXG6R_standards_dump,
+    "G6M-TX": this.TXG6M_standards_dump,
+    "G7R-TX": this.TXG7R_standards_dump,
+    "G7M-TX": this.TXG7M_standards_dump,
+    "G8R-TX": this.TXG8R_standards_dump,
+    "G8M-TX": this.TXG8M_standards_dump,
+    "HSE1-TX": this.TXHSE1_standards_dump,
+    "HSE2-TX": this.TXHSE2_standards_dump,
+    "HSE3-TX": this.TXHSE3_standards_dump,
+    "HSE4-TX": this.TXHSE4_standards_dump,
+    "HSMA1-TX": this.TXHSMA1_standards_dump,
+    "HSMA2-TX": this.TXHSMA2_standards_dump,
+    "HSMG-TX": this.TXHSMG_standards_dump,
+    "HSMP-TX": this.TXHSMP_standards_dump,
+    "HSMS-TX": this.TXHSMS_standards_dump,
+    "SAT-M": this.SATM_standards_dump,
+    "SAT-RW": this.SATRW_standards_dump
   };
 
   exam_names: { [key: string]: string } = {
@@ -2120,6 +2793,10 @@ export class HomeComponent implements OnInit {
   file_source = '';
   file_page = 1;
 
+  toggle_goals: boolean = false;
+  goal_state: { [key: string]: boolean } = {};
+  domain_state: { [key: string]: boolean } = {};
+
   supp_dump: any = {};
   supp_st_dump: any = {};
   st_refsheet_source: string = '';
@@ -2163,13 +2840,60 @@ export class HomeComponent implements OnInit {
     "U.S. History": "U.S. History",
   };
 
-  constructor(public router: Router, private titleService: Title, private meta: Meta, public authService: AuthService, private http: HttpClient) {
+  state_labels: { [key: string]: string } = {
+    "CO": "Colorado",
+    "FL": "Florida",
+    "NY": "New York",
+    "PA": "Pennsylvania",
+    "RI": "Rhode Island",
+    "TN": "Tennessee",
+    "TX": "Texas"
+  };
+
+  subject_map: { [key: string]: string[] } = {
+    "English Language Arts": ["English Language Arts", "English Language Arts & Reading", "Reading, Writing & Communication", "Reading & Writing", "English Reading", "English Writing", "English I", "English II"],
+    "Social Studies": ["Social Studies", "U.S. History"],
+    "Sciences": ["Sciences", "Science"],
+    "Biology I": ["Biology", "Science - Biology 1"],
+    "Biology II": ["Science - Biology 2"],
+    "Mathematics": ["Mathematics"],
+    "Geometry": ["Geometry", "Mathematics - Geometry"],
+    "Algebra I": ["Algebra I", "Mathematics - Algebra", "Mathematics - Algebra 1"],
+    "Algebra II": ["Algebra II", "Mathematics - Algebra 2"],
+    "Functions": ["Mathematics - Functions"],
+    "Modeling": ["Mathematics - Modeling"],
+    "Number & Quantity": ["Mathematics - Number & Quantity"],
+    "Statistics": ["Mathematics - Statistics & Probabliity", "Mathematics - Statistics"],
+    "Precalculus": ["Mathematics - Functions"]
+  }
+
+  constructor(public router: Router, private aRoute: ActivatedRoute, private titleService: Title, private meta: Meta, public authService: AuthService, private http: HttpClient) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
+
+  sub: any;
 
   width_change2() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+    if (!this.stateSet) {
+      for (let domain of this.standards_dump.Standards) {
+        if (this.screenWidth <= this.mobileWidth) {
+          this.domain_state[domain.Label] = false;
+        }
+        else {
+          this.domain_state[domain.Label] = true;
+        }
+      }
+      for (let goal of this.standards_dump.Goals) {
+        if (this.screenWidth <= this.mobileWidth) {
+          this.goal_state[goal[0]] = false;
+        }
+        else {
+          this.goal_state[goal[0]] = true;
+        }
+      }
+    }
   }
 
   get_part_num_st(part: string) {
@@ -2436,6 +3160,85 @@ export class HomeComponent implements OnInit {
     return [this.complete_exam_count, this.inprog_exam_count];
   }
 
+  select_grade(grade: string) {
+    this.toggle_goals = false;
+    this.selected_grade = grade;
+    this.selected_subject = "";
+    this.state_subjects = [];
+    for (const [id, dump] of Object.entries(this.standards_attribute_dump)) {
+      if (id.endsWith('-' + this.state_key) && this.standards_attribute_dump[id].Grades.includes(grade)) {
+        for (const [name, labels] of Object.entries(this.subject_map)) {
+          if (labels.includes(this.standards_attribute_dump[id].Subject) && !this.state_subjects.includes(name)) {
+            this.state_subjects.push(name);
+          }
+        }
+      }
+    }
+  }
+
+  select_subject(subject: string) {
+    this.toggle_goals = false;
+    this.selected_subject = subject;
+    this.subject_exams = [];
+    for (const [id, dump] of Object.entries(this.exam_attribute_dump)) {
+      for (const [name, labels] of Object.entries(this.subject_map)) {
+        if (this.exam_attribute_dump[id].State == this.state_labels[this.state_key] && (this.exam_attribute_dump[id].Grade == this.selected_grade || (this.exam_attribute_dump[id].Grade == 'High School') && ['Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'].includes(this.selected_grade)) && labels.includes(this.exam_attribute_dump[id].Subject) && name == this.selected_subject) {
+          this.subject_exams.push(id);
+        }
+      }
+    }
+    for (const [id, dump] of Object.entries(this.standards_attribute_dump)) {
+      for (const [name, labels] of Object.entries(this.subject_map)) {
+        if (id.endsWith('-' + this.state_key) && this.standards_attribute_dump[id].Grades.includes(this.selected_grade) && labels.includes(this.standards_attribute_dump[id].Subject) && name == this.selected_subject) {
+          this.standards_dump = this.s_dump_dict[id];
+          for (let domain of this.standards_dump.Standards) {
+              for (let cluster of domain.Subs) {
+                  cluster.NumProb = this.searchSubTopic([domain.Label], cluster.Label);
+                  for (let standard of cluster.Subs) {
+                      standard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], standard.Label);
+                      for (let substandard of standard.Subs) {
+                          substandard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], substandard.Label);
+                          for (let subsubstandard of substandard.Subs) {
+                              subsubstandard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], subsubstandard.Label);
+                          }
+                      }
+                  }
+              }
+          }
+          if (this.standards_dump.Standards.length == 0) {
+              this.toggle_goals = true;
+          }
+          for (let domain of this.standards_dump.Standards) {
+              if (this.screenWidth <= this.mobileWidth) {
+                  this.domain_state[domain.Label] = false;
+              }
+              else {
+                  this.domain_state[domain.Label] = true;
+              }
+          }
+          for (let goal of this.standards_dump.Goals) {
+              if (this.screenWidth <= this.mobileWidth) {
+                  this.goal_state[goal[0]] = false;
+              }
+              else {
+                  this.goal_state[goal[0]] = true;
+              }
+          }
+        }
+      }
+    }
+  }
+
+  toggle_domain(dmn: string) {
+    this.domain_state[dmn] = !this.domain_state[dmn];
+    this.stateSet = true;
+  }
+
+  toggle_goal(goal: string) {
+    this.goal_state[goal] = !this.goal_state[goal];
+    this.stateSet = true;
+  }
+
   select_class(uid: string) {
     this.router.navigateByUrl('class/' + uid);
   }
@@ -2452,7 +3255,7 @@ export class HomeComponent implements OnInit {
         for (const [key, det] of Object.entries(exam_history)) {
           if (["Started", "Assigned"].includes((det as any).status)) {
             this.inprogress_set.push(key);
-            if ((""+key).startsWith('Q-')) {
+            if (("" + key).startsWith('Q-')) {
               this.inprogress_quizzes[key.substring(2)] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString() };
             }
             else {
@@ -2493,23 +3296,45 @@ export class HomeComponent implements OnInit {
     }, 250);
   }
 
-  select_standard(topic: string, subtopic: string) {
+  searchSubTopic(topics: string[], subtopic: string) {
+      var subtop_num_prob = 0;
+      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+          for (const [num, prob] of Object.entries(dump)) {
+              if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                  if (prob.SubTopics.includes(subtopic)) {
+                      for (let topic of topics) {
+                          if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                              subtop_num_prob += 1;
+                          }
+                      }
+                  }
+              }
+          }
+      }
+      return (subtop_num_prob);
+  }
+
+  select_standard(topics: string[], subtopic: string) {
     this.subtopic_problem_count = 0;
     this.subtopic_search_dump = {};
-    for (const [ex, dump] of Object.entries(this.dump_dict)) {
+    for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
       for (const [num, prob] of Object.entries(dump)) {
         if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
           if (prob.SubTopics.includes(subtopic)) {
-            if (prob.Topics[prob.SubTopics.indexOf(subtopic)] == topic) {
-              this.subtopic_problem_count += 1;
-              this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-              this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+            for (let topic of topics) {
+              if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                this.selected_topic = topic;
+                this.standard_id = topic + ": " + subtopic;
+                this.subtopic_problem_count += 1;
+                this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+              }
             }
           }
         }
       }
     }
-    this.selected_topic = topic;
+    // this.selected_topic = topic;
     this.selected_subtopic = subtopic;
     this.subtopic_problem_number = 1;
     this.subtopic_attempt_path = [];
@@ -2592,7 +3417,7 @@ export class HomeComponent implements OnInit {
         }
       }
     }
-    this.standard_id = topic + ": " + subtopic;
+    // this.standard_id = topic + ": " + subtopic;
     this.standard_fav = false;
     this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
     for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
@@ -2621,8 +3446,10 @@ export class HomeComponent implements OnInit {
       }
     }
     for (let fav of this.authService.userData.standards.favorites) {
-      if (topic == fav[0] && subtopic == fav[1]) {
-        this.standard_fav = true;
+      for (let topic of topics) {
+          if (topic == fav[0] && subtopic == fav[1]) {
+              this.standard_fav = true;
+          }
       }
     }
   }
@@ -3761,16 +4588,16 @@ export class HomeComponent implements OnInit {
     }
   }
 
-    attempt_mr_st_problem(response: string, part: string) {
-        var part_num = 0;
-        if (part != '') {
-            var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
-        }
-        if (response != this.subtopic_problem_selection[part_num][0]) {
-            this.subtopic_problem_selection[part_num][0] = response;
-            this.subtopic_problem_attempts[part_num] += 1;
-        }
+  attempt_mr_st_problem(response: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
     }
+    if (response != this.subtopic_problem_selection[part_num][0]) {
+      this.subtopic_problem_selection[part_num][0] = response;
+      this.subtopic_problem_attempts[part_num] += 1;
+    }
+  }
 
   attempt_lr_st_problem(response: string, part: string) {
     var part_num = 0;
@@ -4541,25 +5368,56 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.titleService.setTitle("MoreProblems.Org | U.S. K-12 State Testing Practice Exams");
-    this.meta.updateTag({ name: 'description', content: "Access released practice problems & solutions to prepare for end-of-year tests - including Florida FSA, Illinois IAR, New York NYSTP, North Carolina EOG, Pennsylvania PSSA, and Texas STAAR. Choose from more 400 assessments across math, English language, science, & social studies for elementary, middle, & high school students." });
-    setTimeout(() => {
-      if (!this.authService.userData) {
+    // this.titleService.setTitle("MoreProblems.Org | U.S. K-12 State Testing Practice Exams");
+    // this.meta.updateTag({ name: 'description', content: "Access released practice problems & solutions to prepare for end-of-year tests - including Florida FSA, Illinois IAR, New York NYSTP, North Carolina EOG, Pennsylvania PSSA, and Texas STAAR. Choose from more 400 assessments across math, English language, science, & social studies for elementary, middle, & high school students." });
+    this.sub = this.aRoute.paramMap.subscribe((params) => {
+      console.log(params);
+      this.state_key = (params.get('stateKey') as string);
+      if (!this.state_set.includes(this.state_key)) {
         this.router.navigate(['exams']);
       }
-      else {
+    });
+    // var subject_list: string[] = [];
+    // for (let set of Object.keys(this.exam_attribute_dump)) {
+    //   if (!subject_list.includes(this.exam_attribute_dump[set].Subject)) {
+    //     subject_list.push(this.exam_attribute_dump[set].Subject)
+    //   }
+    // }
+    // for (let set of Object.keys(this.standards_attribute_dump)) {
+    //   if (!subject_list.includes(this.standards_attribute_dump[set].Subject)) {
+    //     subject_list.push(this.standards_attribute_dump[set].Subject)
+    //   }
+    // }
+    // console.log(subject_list);
+    this.width_change2();
+    for (const [id, dump] of Object.entries(this.standards_attribute_dump)) {
+      if (id.endsWith('-' + this.state_key)) {
+        for (let grade of this.standards_attribute_dump[id].Grades) {
+          if (!this.state_grades.includes(grade)) {
+            this.state_grades.push(grade);
+          }
+        }
+        for (const [name, labels] of Object.entries(this.subject_map)) {
+          if (labels.includes(this.standards_attribute_dump[id].Subject) && !this.state_subjects.includes(name)) {
+            this.state_subjects.push(name);
+          }
+        }
+      }
+    }
+    setTimeout(() => {
+      if (this.authService.userData) {
         this.authService.getProfilePic(this.authService.userData);
         this.user_data = this.authService.userData;
-        // for (let exm of this.authService.userData.exams.favorites.slice(1)) {
-        //   this.favorite_set.push(exm as string);
-        // }
+        for (let exm of this.authService.userData.exams.favorites.slice(1)) {
+          this.favorite_exm_set.push(exm as string);
+        }
         if (this.authService.userData.role == 'Student') {
           const exam_history = this.authService.userData.exams.history;
           for (const [key, det] of Object.entries(exam_history)) {
             if (["Started", "Assigned"].includes((det as any).status)) {
               this.inprogress_set.push(key);
-              if ((""+key).startsWith('Q-')) {
-                this.inprogress_quizzes[key.substring(2)] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString(), metadata: (this.authService.searchQuizId((""+key).substring(2)) as any) };
+              if (("" + key).startsWith('Q-')) {
+                this.inprogress_quizzes[key.substring(2)] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString(), metadata: (this.authService.searchQuizId(("" + key).substring(2)) as any) };
               }
               else {
                 this.inprogress_exams[key] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString() };

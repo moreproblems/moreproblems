@@ -35,6 +35,7 @@ import { TemplateCExamComponent } from './components/template-c-exam/template-c-
 import { TemplateQuizComponent } from './components/template-quiz/template-quiz.component';
 import { TemplateCQuizComponent } from './components/template-c-quiz/template-c-quiz.component';
 import { TemplateKeyComponent } from './components/template-key/template-key.component';
+import { TemplateStateComponent } from './components/template-state/template-state.component';
 import { TemplateStandardsComponent } from './components/template-standards/template-standards.component';
 import { TestExamComponent } from './components/test-exam/test-exam.component';
 
@@ -66,6 +67,7 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
     TemplateQuizComponent,
     TemplateCQuizComponent,
     TemplateKeyComponent,
+    TemplateStateComponent,
     TemplateStandardsComponent,
     TestExamComponent
   ],

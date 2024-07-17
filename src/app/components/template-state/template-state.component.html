@@ -533,7 +533,7 @@
         style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
         <img src="./assets/icons/caret.png"
           style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Home </a>
+        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> {{state_labels[state_key]}} Standards </a>
       </div>
     </section>
     <br *ngIf="selected_subtopic != ''" />
@@ -624,7 +624,7 @@
                 style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
                 <div *ngIf="subtopic_problem_number == +prob.key">
                   <label *ngFor="let num of prob.value.SubTopics | keyvalue"
-                    (click)="select_standard(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
+                    (click)="select_standard([prob.value.Topics[+num.key]], prob.value.SubTopics[+num.key])"
                     class="switch"
                     style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
                     <button class="topic-button"
@@ -1767,7 +1767,7 @@
         style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
         <img src="./assets/icons/caret.png"
           style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> All favorite exams </a>
+        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> {{state_labels[state_key]}} Exams </a>
       </div>
     </section>
     <br />
@@ -2312,339 +2312,139 @@
   <div *ngIf="file_source == '' && standard_id =='' && !create_s && !create_c && data_loaded" class="content"
     role="main" style="margin-bottom: 0px;">
     <br />
-    <div
-      *ngIf="(this.authService.userData.role != 'Student' && this.authService.userData.role != 'Parent') || this.has_classes"
-      class="card card-large"
+    <div class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
-      <br />
-      <h2 #yourClasses> My Classes </h2>
-      <br />
-      <h3 *ngIf="my_class_metadata.length == 0" style="font-size: 18px"> You haven't created any classes under this
-        account yet. </h3>
-      <div *ngIf="my_class_metadata.length != 0" class="card-container" style="max-width: 100%">
-        <div *ngFor="let clss of my_class_metadata" class="card card-medium"
-          style="display: block; text-align: center; min-width: 40%; max-width: 500px; max-height: 300px; width: auto; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
-          <h2 style="padding-bottom: 10px">{{(clss.displayName) ?
-            clss.displayName :
-            'Class'}}</h2>
-          <h4> {{clss.description}} </h4>
-          <hr style="width: 50%" />
-          <div
-            style="display: block; text-align: center; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-            <div style="align-items: center; text-align: center; margin-right: 10px">
-              <section
-                style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
-                <div style="margin: 0 5px">
-                  <img src="{{this.authService.searchUserId(clss.teacher).photoURL}}"
-                    style="padding: 5px 0 0; height: 35px; width: 35px; border-radius: 50%">
-                </div>
-                <div style="margin: 0 5px; text-align: center; font-weight: 500; font-size: 16px">
-                  <h3 style="padding-bottom: 10px"> {{this.authService.searchUserId(clss.teacher).displayName}} </h3>
-                </div>
-              </section>
-              <label class="switch">
-                <input type="checkbox">
-                <button (click)="select_class(clss.uid)" class="toggle-button-off"
-                  style="margin: auto; margin-top: 10px; padding: 10px 5px; width: auto">
-                  <b> Enter Class </b>
-                </button>
-              </label>
-            </div>
-            <div style="align-items: center; text-align: center; margin-left: 10px">
-              <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-                <div class="media-body" style="padding: 0 20px">
-                  <h3 style="font-weight: 600">{{clss.grade}}</h3>
-                  <h3 style="font-weight: 600">{{clss.subject}}</h3>
-                  <h3 style="font-weight: 600">{{clss.state}}</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <button *ngIf="authService.userData as user" (click)="toggle_create_class()" class="grade-button"
-        style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
-        <div style="margin: 0 5px">
-          <img src="./assets/icons/add.png" style="padding: 5px 0 0; height: 25px; width: 25px">
-        </div>
-        <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create Class
-          </b>
-        </div>
-      </button>
-      <br />
-    </div>
-    <br />
-    <div *ngIf="this.authService.userData.role != 'Student'" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
-      <br />
-      <h2 #yourStudents> My Students </h2>
-      <br />
-      <h3 *ngIf="my_student_metadata.length == 0"> You haven't created any students under this account yet. </h3>
-      <div *ngIf="my_student_metadata.length != 0" class="card-container" style="max-width: 100%">
-        <div *ngFor="let stud of my_student_metadata" class="card card-medium"
-          style="display: block; text-align: center; min-width: 40%; max-width: 500px; max-height: 300px; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-          <div style="align-items: center; text-align: center; margin-right: 10px">
-            <h2 style="padding-bottom: 10px">{{(stud.displayName) ?
-              stud.displayName :
-              'User'}}</h2>
-            <img *ngIf="this.screenWidth > this.mobileWidth" class="align-self-start mr-5 img-thumbnail rounded-circle"
-              style="height: 160px; width: 160px; border-radius: 50%"
-              src="{{(stud.photoURL) ? stud.photoURL : '/assets/icons/user/user.png'}}" alt="{{stud.displayName}}">
-            <img *ngIf="this.screenWidth <= this.mobileWidth" class="align-self-start mr-5 img-thumbnail rounded-circle"
-              style="height: 120px; width: 120px; border-radius: 50%"
-              src="{{(stud.photoURL) ?stud.photoURL : '/assets/icons/user/user.png'}}" alt="{{stud.displayName}}">
-            <label class="switch">
-              <input type="checkbox">
-              <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud != stud.uid"
-                (click)="select_student(stud.uid)" class="toggle-button-off"
-                style="margin-top: 10px; padding: 10px 5px; width: auto">
-                <b> Exams </b>
-              </button>
-              <button *ngIf="get_exam_count(stud)[1] != 0 && this.selected_stud == stud.uid"
-                (click)="select_student(stud.uid)" class="toggle-button-on"
-                style="margin-top: 10px; padding: 10px 5px; width: auto">
-                <b> Exams </b>
-              </button>
-            </label>
-          </div>
-          <div style="align-items: center; text-align: center; margin-left: 10px">
-            <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-              <div class="media-body" style="padding: 0 20px">
-                <h3 style="font-weight: 600">{{stud.grade}}</h3>
-                <h3 style="font-weight: 600">{{stud.state}}</h3>
-              </div>
-              <div *ngIf="!stud.uid.includes(authService.userData.uid) && screenWidth > mobileWidth" class="media-body"
-                style="padding: 0 20px">
-                <h3 style="font-weight: 600">{{stud.email}}</h3>
-                <h3 style="font-weight: 600">{{stud.phoneNumber}}</h3>
-              </div>
-            </div>
-            <hr style="width: 90%" />
-            <h3> {{stud.problems.total}} <strong style="font-weight: 500">problems total</strong>
-            </h3>
-            <h3> {{stud.problems.correct}} <strong style="font-weight: 500">problems
-                correct{{(get_percent_correct(stud)) ?', or ' : ""}}</strong> {{(get_percent_correct(stud))
-              ?get_percent_correct(stud) + '%' : ""}}
-            </h3>
-            <hr style="width: 90%" />
-            <h3> {{get_exam_count(stud)[0]}} <strong style="font-weight: 500">exams complete</strong>
-            </h3>
-            <h3> {{get_exam_count(stud)[1]}} <strong style="font-weight: 500">exams in progress</strong>
-            </h3>
-          </div>
-        </div>
-      </div>
-      <br />
-      <button *ngIf="authService.userData as user" (click)="toggle_create_student()" class="grade-button"
-        style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
-        <div style="margin: 0 5px">
-          <img src="./assets/icons/add.png" style="padding: 5px 0 0; height: 25px; width: 25px">
-        </div>
-        <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create Student
-          </b>
-        </div>
-      </button>
-      <br />
-    </div>
-    <br *ngIf="this.authService.userData.role != 'Student'" />
-    <div *ngIf="this.authService.userData.role == 'Student' || selected_stud != ''" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
-      <br />
-      <h2 *ngIf="this.authService.userData.role == 'Student'" #myFavoriteExams>My In Progress Exams</h2>
-      <h2 *ngIf="this.authService.userData.role != 'Student'" #studFavoriteExams>{{student_data.displayName}}'s In
-        Progress Exams</h2>
-      <br />
-      <!-- <input type="hidden" #selection> -->
-      <div *ngIf="this.authService.userData.role == 'Student'" class="card-container" style="max-width: 100%">
-        <div *ngFor="let exm of this.inprogress_exams | keys" class="card card-medium"
-          style="display: block; text-align: center; max-width: 350px">
-          <h3 style="font-size: 18px; white-space: pre-wrap"> {{exam_names[exm]}} </h3>
-          <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
-            {{""+exam_attribute_dump[exm].NumQuestions}} </h4>
-          <progress value="{{inprogress_exams[exm].progress}}" max="{{exam_attribute_dump[exm].NumQuestions}}"
-            style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
-            #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
-          <!-- time spent on exam so far -->
-          <h4 *ngIf="inprogress_exams[exm].status == 'Started'" style="margin: 1px auto; font-weight: 500"> Last
-            Submission:
-            <b>{{""+inprogress_exams[exm].lastdate}}</b> {{""+inprogress_exams[exm].lasttime}}
-          </h4>
-          <h4 *ngIf="inprogress_exams[exm].status == 'Assigned'" style="margin: 1px auto; font-weight: 500"> Assigned
-            On:
-            <b>{{""+inprogress_exams[exm].lastdate}}</b> {{""+inprogress_exams[exm].lasttime}}
-          </h4>
-          <label *ngIf="inprogress_exams[exm].status == 'Started'" class="switch">
-            <input type="checkbox" style="margin: auto; margin-top: 25px">
-            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto"
-              routerLink="/exam/{{exm}}" routerLinkActive="active">
-              <b> Resume Exam </b>
-            </button>
-          </label>
-          <label *ngIf="inprogress_exams[exm].status == 'Assigned'" class="switch">
-            <input type="checkbox" style="margin: auto; margin-top: 25px">
-            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto"
-              routerLink="/exam/{{exm}}" routerLinkActive="active">
-              <b> Begin Exam </b>
-            </button>
+      <br #chooseGrade />
+      <div class="card card-medium"
+        style="margin: auto; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        <h2 style="margin-bottom: 0px">Choose Your Grade</h2>
+        <br />
+        <input type="hidden" value="All Grades" #state>
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
+          <label *ngFor="let grade of state_grades" class="switch">
+            <input type="checkbox" value="{{grade}}">
+            <button *ngIf="selected_grade == grade" (click)="select_grade(grade)" class="toggle-button-on"
+              tabindex="0"> <b>{{grade}}</b> </button>
+            <button *ngIf="selected_grade != grade" (click)="select_grade(grade)"
+              class="toggle-button-off" tabindex="0"> <b>{{grade}}</b> </button>
           </label>
         </div>
       </div>
-      <div *ngIf="this.authService.userData.role != 'Student'" class="card-container" style="max-width: 100%">
-        <div *ngFor="let exm of this.inprogress_exams | keys" class="card card-medium"
-          style="display: block; text-align: center; max-width: 350px">
-          <h3 style="font-size: 18px; white-space: pre-wrap"> {{exam_names[exm]}} </h3>
-          <!-- resolve hard code exam length -->
-          <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
-            {{""+exam_attribute_dump[exm].NumQuestions}} </h4>
-          <progress value="{{inprogress_exams[exm].progress}}" max="{{exam_attribute_dump[exm].NumQuestions}}"
-            style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
-            #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
-          <!-- time spent on exam so far -->
-          <h4 *ngIf="inprogress_exams[exm].status == 'Started'" style="margin: 1px auto; font-weight: 500"> Last
-            Submission:
-            <b>{{""+inprogress_exams[exm].lastdate}}</b> {{""+inprogress_exams[exm].lasttime}}
-          </h4>
-          <h4 *ngIf="inprogress_exams[exm].status == 'Assigned'" style="margin: 1px auto; font-weight: 500"> Assigned
-            On:
-            <b>{{""+inprogress_exams[exm].lastdate}}</b> {{""+inprogress_exams[exm].lasttime}}
-          </h4>
-          <label *ngIf="inprogress_exams[exm].status == 'Started'" class="switch" style="margin: auto; margin-top: 25px">
-            <input type="checkbox">
-            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto"
-              routerLink="/exam/{{exm}}" routerLinkActive="active">
-              <b> Resume Exam </b>
-            </button>
+      <br *ngIf="selected_grade != ''" #chooseSubject />
+      <div *ngIf="selected_grade != ''" class="card card-medium"
+        style="margin: auto; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        <h2 style="margin-bottom: 0px">Choose Your Subject</h2>
+        <br />
+        <input type="hidden" value="All Subjects" #state>
+        <div class="card-container" style="max-width: 100%; margin-top: 0px">
+          <label *ngFor="let subject of state_subjects" class="switch">
+            <input type="checkbox" value="{{subject}}">
+            <button *ngIf="selected_subject == subject" (click)="select_subject(subject)" class="toggle-button-on"
+              tabindex="0"> <b>{{subject}}</b> </button>
+            <button *ngIf="selected_subject != subject" (click)="select_subject(subject)"
+              class="toggle-button-off" tabindex="0"> <b>{{subject}}</b> </button>
           </label>
-          <label *ngIf="inprogress_exams[exm].status == 'Assigned'" class="switch" style="margin: auto; margin-top: 25px">
-            <input type="checkbox">
-            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto"
-              routerLink="/exam/{{exm}}" routerLinkActive="active">
-              <b> Begin Exam </b>
-            </button>
-          </label>
-          <!-- <button class="grade-button" style="margin: auto; margin-top: 25px; padding: 10px 5px"
-            routerLink="/exam/{{exm}}" routerLinkActive="active"> <b>Resume Exam</b> </button> -->
-        </div>
-      </div>
-      <br />
-      <h2 *ngIf="this.authService.userData.role == 'Student'" #myFavoriteExams>My In Progress Quizzes</h2>
-      <h2 *ngIf="this.authService.userData.role != 'Student'" #studFavoriteExams>{{student_data.displayName}}'s In
-        Progress Quizzes</h2>
-      <br />
-      <!-- <input type="hidden" #selection> -->
-      <div *ngIf="this.authService.userData.role == 'Student'" class="card-container" style="max-width: 100%">
-        <div *ngFor="let quiz of this.inprogress_quizzes | keys" class="card card-medium"
-          style="display: block; text-align: center; max-width: 350px">
-          <h3 style="font-size: 18px"> {{authService.searchQuizId(quiz).name}} </h3>
-          <h4 style="margin: auto; margin-top: 25px"> Quiz Progress: {{inprogress_quizzes[quiz].progress}} /
-            {{""+authService.searchQuizId(quiz).length}} {{(authService.searchQuizId(quiz).lmode=='timer') ? 'minutes' : 'questions'}} </h4>
-          <progress value="{{inprogress_quizzes[quiz].progress}}" max="{{authService.searchQuizId(quiz).length}}"
-            style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
-            #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
-          <!-- time spent on exam so far -->
-          <h4 *ngIf="inprogress_quizzes[quiz].status == 'Started'" style="margin: 1px auto; font-weight: 500"> Last
-            Submission:
-            <b>{{""+inprogress_quizzes[quiz].lastdate}}</b> {{""+inprogress_quizzes[quiz].lasttime}}
-          </h4>
-          <h4 *ngIf="inprogress_quizzes[quiz].status == 'Assigned'" style="margin: 1px auto; font-weight: 500"> Assigned
-            On:
-            <b>{{""+inprogress_quizzes[quiz].lastdate}}</b> {{""+inprogress_quizzes[quiz].lasttime}}
-          </h4>
-          <label *ngIf="inprogress_quizzes[quiz].status == 'Started'" class="switch">
-            <input type="checkbox" style="margin: auto; margin-top: 25px">
-            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto"
-              routerLink="/quiz/{{quiz}}" routerLinkActive="active">
-              <b> Resume Quiz </b>
-            </button>
-          </label>
-          <label *ngIf="inprogress_quizzes[quiz].status == 'Assigned'" class="switch">
-            <input type="checkbox" style="margin: auto; margin-top: 25px">
-            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto"
-              routerLink="/quiz/{{quiz}}" routerLinkActive="active">
-              <b> Begin Quiz </b>
-            </button>
-          </label>
-        </div>
-      </div>
-      <div *ngIf="this.authService.userData.role != 'Student'" class="card-container" style="max-width: 100%">
-        <div *ngFor="let quiz of this.inprogress_quizzes | keys" class="card card-medium"
-          style="display: block; text-align: center; max-width: 350px">
-          <h3 style="font-size: 18px"> {{authService.searchQuizId(quiz).name}} </h3>
-          <!-- resolve hard code exam length -->
-          <h4 style="margin: auto; margin-top: 25px"> Quiz Progress: {{inprogress_quizzes[quiz].progress}} /
-            {{""+authService.searchQuizId(quiz).length}} {{(authService.searchQuizId(quiz).lmode=='timer') ? 'minutes' : 'questions'}} </h4>
-          <progress value="{{inprogress_quizzes[quiz].progress}}" max="{{authService.searchQuizId(quiz).length}}"
-            style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
-            #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
-          <!-- time spent on exam so far -->
-          <h4 *ngIf="inprogress_quizzes[quiz].status == 'Started'" style="margin: 1px auto; font-weight: 500"> Last
-            Submission:
-            <b>{{""+inprogress_quizzes[quiz].lastdate}}</b> {{""+inprogress_quizzes[quiz].lasttime}}
-          </h4>
-          <h4 *ngIf="inprogress_quizzes[quiz].status == 'Assigned'" style="margin: 1px auto; font-weight: 500"> Assigned
-            On:
-            <b>{{""+inprogress_quizzes[quiz].lastdate}}</b> {{""+inprogress_quizzes[quiz].lasttime}}
-          </h4>
-          <label *ngIf="inprogress_quizzes[quiz].status == 'Started'" class="switch" style="margin: auto; margin-top: 25px">
-            <input type="checkbox">
-            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto"
-              routerLink="/quiz/{{quiz}}" routerLinkActive="active">
-              <b> Resume Quiz </b>
-            </button>
-          </label>
-          <label *ngIf="inprogress_quizzes[quiz].status == 'Assigned'" class="switch" style="margin: auto; margin-top: 25px">
-            <input type="checkbox">
-            <button class="toggle-button-off" style="margin: auto; padding: 10px 5px; width: auto"
-              routerLink="/quiz/{{quiz}}" routerLinkActive="active">
-              <b> Begin Quiz </b>
-            </button>
-          </label>
-          <!-- <button class="grade-button" style="margin: auto; margin-top: 25px; padding: 10px 5px"
-            routerLink="/exam/{{exm}}" routerLinkActive="active"> <b>Resume Exam</b> </button> -->
         </div>
       </div>
       <br />
     </div>
-    <br *ngIf="this.authService.userData.role == 'Student' || selected_stud != ''" />
-    <div *ngIf="this.authService.userData.exams.favorites.slice(1).length != 0" class="card card-large"
+    <br *ngIf="selected_subject != '' && subject_exams.length > 0" />
+    <div *ngIf="selected_subject != '' && subject_exams.length > 0" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
-      <h2 #favoriteExams> My Favorite Exams </h2>
-      <!-- <br /> -->
-      <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px"><a routerLink="/exams" routerLinkActive="active"> Click here to browse all available exams. </a></h3>
-      <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px"><a routerLink="/exams" routerLinkActive="active"> Click here to browse all available exams. </a></h3>
+      <h2 #favoriteExams> {{state_labels[state_key]}} {{selected_grade}} {{selected_subject}} Exams </h2>
       <br />
       <input type="hidden" #selection>
       <div class="card-container" style="max-width: 100%">
-        <button *ngFor="let fav of this.authService.userData.exams.favorites.slice(1)" class="card card-small"
-          (click)="select_exam(fav); scroll_top()" tabindex="0"
-          style="display: flex; flex-direction: row; align-items: center">
-          <span style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+        <button *ngFor="let exam of subject_exams" (click)="select_exam(exam)" class="card card-small" style="display: flex; flex-direction: row; align-items: center;" tabindex="0">
+          <img *ngIf="!authService.userData || !favorite_exm_set.includes(exam)"
+            src="./assets/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+          <span *ngIf="favorite_exm_set.includes(exam) && authService.userData as user"
+            style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
           </span>
-          <span style="text-align: center; margin: auto; padding: 5px"> <b>{{exam_names[fav]}}</b> </span>
+          <span>{{exam_names[exam]}}</span>
+          <!-- <span>Texas STAAR <b>2022</b> U.S. History Exam</span> -->
         </button>
       </div>
       <br />
     </div>
-    <br *ngIf="this.authService.userData.exams.favorites.slice(1).length != 0" />
-    <div *ngIf="this.authService.userData.standards.favorites.slice(1).length != 0" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+    <br *ngIf="selected_subject != ''" />
+    <div *ngIf="selected_subject != ''" class="card card-large"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1350px, 95%); display: flex; flex-direction: column">
       <br />
-      <h2 #favoriteExams> My Favorite Standards </h2>
-      <!-- <br /> -->
-      <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px"><a routerLink="/standards" routerLinkActive="active"> Click here to browse all available standards. </a></h3>
-      <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px"><a routerLink="/standards" routerLinkActive="active"> Click here to browse all available standards. </a></h3>
+      <h2 *ngIf="!toggle_goals" style="text-align: center; margin-bottom: 10px; font-weight: 800"> {{standards_dump.Title}} > <b style="font-weight: 600">Standards</b> </h2>
+      <h2 *ngIf="toggle_goals" style="text-align: center; margin-bottom: 10px; font-weight: 800"> {{standards_dump.Title}} > <b style="font-weight: 600">Learning Goals</b> </h2>
+      <a *ngIf="!toggle_goals && standards_dump.Goals.length > 0" (click)="toggle_goals = true" routerLinkActive="active"
+        style="font-size: 18px; font-weight: 600; padding-left: 10px"> View <b>learning goals</b> for this subject </a>
+      <a *ngIf="toggle_goals && standards_dump.Standards.length > 0" (click)="toggle_goals = false" routerLinkActive="active"
+        style="font-size: 18px; font-weight: 600; padding-left: 10px"> View <b>standards</b> for this subject </a>
       <br />
-      <input type="hidden" #selection>
-      <div class="card-container" style="max-width: 100%">
-        <button *ngFor="let fav of this.authService.userData.standards.favorites.slice(1)" class="card card-small"
-          (click)="select_standard(fav[0], fav[1]); scroll_top()" tabindex="0"
-          style="display: flex; flex-direction: row; align-items: center; width: 90%">
-          <span style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
-          </span>
-          <span style="text-align: center; margin: auto; padding: 5px 10px"> <b>{{fav[0]}}:</b> {{fav[1]}} </span>
-        </button>
+      <hr *ngIf="standards_dump.Overview != '' && toggle_goals" style="width: 100%; border-width: 2px" />
+      <h4 *ngIf="toggle_goals" style="font-size: 18px; font-weight: 500"> {{standards_dump.Overview}} </h4>
+      <hr style="width: 100%; border-width: 2px" />
+      <br />
+      <div *ngIf="!toggle_goals" class="card-container" style="width: 100%">
+        <div *ngFor="let domain of standards_dump.Standards" class="card card-medium"
+          (click)="toggle_domain(domain.Label)" style="width: 95%; text-align: center; flex-direction: column">
+          <div style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 10px">
+              <img *ngIf="domain_state[domain.Label]" src="./assets/icons/caret.png"
+                style="padding: 5px 0 0; width: 25px; height: 25px">
+              <img *ngIf="!domain_state[domain.Label]" src="./assets/icons/caret.png"
+                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+            </div>
+            <div style="margin: 0 10px; text-align: left">
+              <h4 style="font-size: 18px"> <b *ngIf="domain.Key != ''" style="font-weight: 900">{{domain.Key}}: </b> <b style="font-weight: 700">{{domain.Label}}</b> </h4>
+            </div>
+          </div>
+          <hr *ngIf="domain_state[domain.Label]" style="width: 100%; border-width: 1px" />
+          <div style="display: flex; flex-direction: row; text-align: left">
+            <ul *ngIf="domain_state[domain.Label]" style="font-size: 18px; line-height: 22px; padding-left: 17px; margin-top: 0px">
+              <li *ngFor="let cluster of domain.Subs" style="margin-top: 20px; margin-bottom: 8px"> <b *ngIf="cluster.Key != ''" style="font-weight: 800">{{cluster.Key}}: </b>
+                <b *ngIf="cluster.NumProb == 0" style="font-weight: 500">{{cluster.Label}}</b>
+                <a *ngIf="cluster.NumProb > 0" (click)="select_standard([domain.Label], cluster.Label)" style="font-weight: 500">{{cluster.Label}}</a> <b *ngIf="cluster.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{cluster.NumProb}}</i>)</b>
+                <ul style="font-size: 17px; line-height: 21px; padding-left: 17px">
+                  <li *ngFor="let standard of cluster.Subs" style="margin-top: 15px; margin-bottom: 6px"> <b *ngIf="standard.Key != ''" style="font-weight: 800">{{standard.Key}}: </b>
+                    <b *ngIf="standard.NumProb == 0" style="font-weight: 500">{{standard.Label}}</b>
+                    <a *ngIf="standard.NumProb > 0" (click)="select_standard([domain.Label, cluster.Label], standard.Label)" style="font-weight: 500">{{standard.Label}}</a> <b *ngIf="standard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{standard.NumProb}}</i>)</b>
+                    <ul style="font-size: 16px; line-height: 20px; padding-left: 17px">
+                      <li *ngFor="let substandard of standard.Subs" style="margin-top: 10px; margin-bottom: 4px"> <b *ngIf="substandard.Key != ''" style="font-weight: 800">{{substandard.Key}}: </b>
+                        <b *ngIf="substandard.NumProb == 0" style="font-weight: 500">{{substandard.Label}}</b>
+                        <a *ngIf="substandard.NumProb > 0" (click)="select_standard([domain.Label, cluster.Label], substandard.Label)" style="font-weight: 500">{{substandard.Label}}</a> <b *ngIf="substandard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{substandard.NumProb}}</i>)</b>
+                        <ul style="font-size: 15px; line-height: 19px; padding-left: 17px">
+                          <li *ngFor="let subsubstandard of substandard.Subs" style="margin-top: 10px; margin-bottom: 4px"> <b *ngIf="subsubstandard.Key != ''" style="font-weight: 800">{{subsubstandard.Key}}: </b>
+                            <b *ngIf="subsubstandard.NumProb == 0" style="font-weight: 500">{{subsubstandard.Label}}</b>
+                            <a *ngIf="subsubstandard.NumProb > 0" (click)="select_standard([domain.Label, cluster.Label], subsubstandard.Label)" style="font-weight: 500">{{subsubstandard.Label}}</a> <b *ngIf="subsubstandard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{subsubstandard.NumProb}}</i>)</b>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="toggle_goals" class="card-container" style="width: 100%">
+        <div *ngFor="let goal of standards_dump.Goals" class="card card-medium"
+          (click)="toggle_goal(goal[0])" style="width: 95%; text-align: center; flex-direction: column">
+          <div style="display: flex; flex-direction: row; align-items: center">
+            <div style="margin: 0 10px">
+              <img *ngIf="goal_state[goal[0]]" src="./assets/icons/caret.png"
+                style="padding: 5px 0 0; width: 25px; height: 25px">
+              <img *ngIf="!goal_state[goal[0]]" src="./assets/icons/caret.png"
+                style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
+            </div>
+            <div style="margin: 0 10px; text-align: left">
+              <h4 style="font-size: 18px; font-weight: 600"> {{goal[0]}} </h4>
+            </div>
+          </div>
+          <hr *ngIf="goal_state[goal[0]]" style="width: 100%; border-width: 1px" />
+          <div style="display: flex; flex-direction: row; text-align: left">
+            <p *ngIf="goal_state[goal[0]]" style="font-size: 15px; margin-top: 20px; white-space: pre-wrap">{{goal[1]}}</p>
+          </div>
+        </div>
       </div>
       <br />
     </div>

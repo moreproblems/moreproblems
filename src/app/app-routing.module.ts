@@ -15,6 +15,7 @@ import { TemplateCExamComponent } from './components/template-c-exam/template-c-
 import { TemplateQuizComponent } from './components/template-quiz/template-quiz.component';
 import { TemplateCQuizComponent } from './components/template-c-quiz/template-c-quiz.component';
 import { TemplateKeyComponent } from './components/template-key/template-key.component';
+import { TemplateStateComponent } from './components/template-state/template-state.component';
 import { TemplateStandardsComponent } from './components/template-standards/template-standards.component';
 import { TestExamComponent } from './components/test-exam/test-exam.component';
 import { StandardsComponent } from './components/standards/standards.component';
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: 'exam/:examKey/:classKey', component: TemplateCExamComponent },
   { path: 'quiz/:quizKey', component: TemplateQuizComponent },
   { path: 'quiz/:quizKey/:classKey', component: TemplateCQuizComponent },
+  { path: 'state/:stateKey', component: TemplateStateComponent },
   { path: 'standards/:subjectKey', component: TemplateStandardsComponent }
 ];
 

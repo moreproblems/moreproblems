@@ -682,47 +682,11 @@
         <br />
         <input type="hidden" value="All Subjects" #state>
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
-          <!-- <label class="switch">
-            <input type="checkbox" value="A1">
-            <button *ngIf="subject_filters.includes('Algebra I')" (click)="toggle_button('Algebra I')"
-              class="toggle-button-on" tabindex="0"> <b>Algebra I</b> </button>
-            <button *ngIf="!subject_filters.includes('Algebra I')" (click)="toggle_button('Algebra I')"
-              class="toggle-button-off" tabindex="0"> <b>Algebra I</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="B">
-            <button *ngIf="subject_filters.includes('Biology')" (click)="toggle_button('Biology')"
-              class="toggle-button-on" tabindex="0">
-              <b>Biology</b> </button>
-            <button *ngIf="!subject_filters.includes('Biology')" (click)="toggle_button('Biology')"
-              class="toggle-button-off" tabindex="0"> <b>Biology</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="E1">
-            <button *ngIf="subject_filters.includes('English I')" (click)="toggle_button('English I')"
-              class="toggle-button-on" tabindex="0"> <b>English I</b> </button>
-            <button *ngIf="!subject_filters.includes('English I')" (click)="toggle_button('English I')"
-              class="toggle-button-off" tabindex="0"> <b>English I</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="E2">
-            <button *ngIf="subject_filters.includes('English II')" (click)="toggle_button('English II')"
-              class="toggle-button-on" tabindex="0"> <b>English II</b> </button>
-            <button *ngIf="!subject_filters.includes('English II')" (click)="toggle_button('English II')"
-              class="toggle-button-off" tabindex="0"> <b>English II</b> </button>
-          </label> -->
           <label class="switch">
             <input type="checkbox" value="ELA">
             <button *ngIf="subject_filters.includes('English Language Arts')" (click)="toggle_button('English Language Arts')" class="toggle-button-on" tabindex="0"> <b>English Language Arts</b> </button>
             <button *ngIf="!subject_filters.includes('English Language Arts')" (click)="toggle_button('English Language Arts')" class="toggle-button-off" tabindex="0"> <b>English Language Arts</b> </button>
           </label>
-          <!-- <label class="switch">
-            <input type="checkbox" value="EW">
-            <button *ngIf="subject_filters.includes('English Writing')" (click)="toggle_button('English Writing')"
-              class="toggle-button-on" tabindex="0"> <b>English Writing</b> </button>
-            <button *ngIf="!subject_filters.includes('English Writing')" (click)="toggle_button('English Writing')"
-              class="toggle-button-off" tabindex="0"> <b>English Writing</b> </button>
-          </label> -->
           <label class="switch">
             <input type="checkbox" value="M">
             <button *ngIf="subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')" class="toggle-button-on" tabindex="0"> <b>Mathematics</b> </button>
@@ -743,13 +707,6 @@
             <button *ngIf="subject_filters.includes('Reading & Writing')" (click)="toggle_button('Reading & Writing')" class="toggle-button-on" tabindex="0"> <b>Reading & Writing</b> </button>
             <button *ngIf="!subject_filters.includes('Reading & Writing')" (click)="toggle_button('Reading & Writing')" class="toggle-button-off" tabindex="0"> <b>Reading & Writing</b> </button>
           </label>
-          <!-- <label class="switch">
-            <input type="checkbox" value="USH">
-            <button *ngIf="subject_filters.includes('U.S. History')" (click)="toggle_button('U.S. History')"
-              class="toggle-button-on" tabindex="0"> <b>U.S. History</b> </button>
-            <button *ngIf="!subject_filters.includes('U.S. History')" (click)="toggle_button('U.S. History')"
-              class="toggle-button-off" tabindex="0"> <b>U.S. History</b> </button>
-          </label> -->
         </div>
       </div>
       <br #chooseState />
