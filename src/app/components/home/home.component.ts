@@ -2728,7 +2728,8 @@ export class HomeComponent implements OnInit {
     this.edit_c_list['classes/' + this.class_uid + '/uid'] = this.class_uid;
     this.edit_c_list['classes/' + this.class_uid + '/teacher'] = this.authService.userData.uid;
     this.edit_c_list['classes/' + this.class_uid + '/students'] = [""];
-    this.edit_c_list['classes/' + this.class_uid + '/assignments'] = [""];
+    this.edit_c_list['classes/' + this.class_uid + '/exams'] = [""];
+    this.edit_c_list['classes/' + this.class_uid + '/quizzes'] = [""];
     this.authService.UpdateDatabase(this.edit_c_list);
     this.class_list = [];
     for (let clss of this.authService.userData.classes) {
