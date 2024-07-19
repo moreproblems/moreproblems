@@ -596,7 +596,7 @@
   <br />
   <div *ngIf="data_loaded" class="content-menu" style="margin-bottom: 0; align-items: center">
     <div *ngIf="selected_subtopic == '' && expand_filters" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column">
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <div class="content" style="margin: auto; align-items: center">
         <div style="height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
@@ -715,18 +715,20 @@
       </div>
     </div>
     <div *ngIf="!expand_filters" class="content-menu" role="menu" style="margin-bottom: 0; align-items: center">
-      <section *ngIf="selected_subtopic != ''" style="width: 100%; align-items: left">
-        <div (click)="selected_subtopic=''" class="card card-small"
-          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-          <img src="./assets/icons/caret.png"
-            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Problems </a>
-        </div>
-      </section>
+      <div *ngIf="selected_subtopic != ''" style="align-items: left; width: min(1075px, 95%)">
+        <section>
+          <div (click)="selected_subtopic=''" class="card card-small"
+            style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+            <img src="./assets/icons/caret.png"
+              style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+            <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Problems </a>
+          </div>
+        </section>
+      </div>
       <br *ngIf="selected_subtopic != ''" />
       <div *ngIf="selected_subtopic != ''">
         <div *ngIf="selected_subtopic != ''" class="card card-large"
-          style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+          style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
           #subtopicSummaryCard>
           <br />
           <div class="content" style="margin: auto; align-items: center">
@@ -817,7 +819,7 @@
           <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && st_refsheet_source != '../../' && expand_refsheet" style="width: 100%">
             <br />
             <div class="card card-large"
-              style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+              style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
               #subtopicRefsheetCard>
               <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
                 <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false" [zoom]="0.95"
@@ -833,7 +835,7 @@
           <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp">
             <div *ngFor="let supp of prob.value.SuppContent">
               <div class="card card-large"
-                style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+                style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
                 #subtopicSuppCard>
                 <br />
                 <div class="content" style="margin: auto; align-items: center">
@@ -920,7 +922,7 @@
         <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="width: 100%">
           <div *ngIf="subtopic_problem_number == +prob.key" style="width: 100%">
             <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number" class="card card-large"
-              style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+              style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
               #subtopicCard>
               <br />
               <section *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
@@ -1927,7 +1929,7 @@
         </div>
       </div>
       <div *ngIf="selected_subtopic == ''" class="card card-large"
-        style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #problemSummaryCard>
         <br />
         <div class="content" style="margin: auto; align-items: center">
@@ -2306,7 +2308,7 @@
         <div *ngIf="((length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && expand_refsheet" style="width: 100%">
           <br />
           <div class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #problemRefsheetCard>
             <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
               <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="refsheet_source" [original-size]="false" [zoom]="0.95"
@@ -2322,7 +2324,7 @@
         <div *ngIf="((length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && expand_supp">
           <div *ngFor="let supp of prob.value.SuppContent">
             <div class="card card-large"
-              style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+              style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
               #problemSuppCard>
               <br />
               <div class="content" style="margin: auto; align-items: center">
@@ -2414,7 +2416,7 @@
       <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%">
         <div *ngIf="((length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key" style="width: 100%">
           <div *ngIf="selected_subtopic == ''" class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #problemCard>
             <br />
             <section *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"

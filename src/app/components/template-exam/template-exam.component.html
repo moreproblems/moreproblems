@@ -641,14 +641,16 @@
   <canvas id="confetticanvas"></canvas>
   <br />
   <div *ngIf="data_loaded" class="content-menu" style="margin-bottom: 0; align-items: center">
-    <section *ngIf="signup || login" style="width: 100%; align-items: left">
-      <div (click)="signup=false; login=false" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Directions </a>
-      </div>
-    </section>
+    <div *ngIf="signup || login" style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="signup=false; login=false" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Directions </a>
+        </div>
+      </section>
+    </div>
     <br *ngIf="signup || login" />
     <div *ngIf="signup || login" style="width: 100%; height: calc(100vh - 180px); display: flex">
       <div *ngIf="signup" class="card card-large"
@@ -988,18 +990,20 @@
         </div>
       </div>
     </div>
-    <section *ngIf="selected_subtopic != '' && !signup && !login" style="width: 100%; align-items: left">
-      <div (click)="selected_subtopic=''" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Problems </a>
-      </div>
-    </section>
+    <div *ngIf="selected_subtopic != '' && !signup && !login" style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="selected_subtopic=''" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Problems </a>
+        </div>
+      </section>
+    </div>
     <br *ngIf="selected_subtopic != '' && !signup && !login" />
     <div *ngIf="selected_subtopic != '' && !signup && !login">
       <div *ngIf="selected_subtopic != ''" class="card card-large"
-        style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #subtopicSummaryCard>
         <br />
         <div class="content" style="margin: auto; align-items: center">
@@ -1110,7 +1114,7 @@
           style="width: 100%">
           <br />
           <div class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #subtopicRefsheetCard>
             <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
               <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false"
@@ -1126,7 +1130,7 @@
         <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp">
           <div *ngFor="let supp of prob.value.SuppContent">
             <div class="card card-large"
-              style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+              style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
               #subtopicSuppCard>
               <br />
               <div class="content" style="margin: auto; align-items: center">
@@ -1213,7 +1217,7 @@
       <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="width: 100%">
         <div *ngIf="subtopic_problem_number == +prob.key" style="width: 100%">
           <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number" class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #subtopicCard>
             <br />
             <section *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
@@ -2220,7 +2224,7 @@
       </div>
     </div>
     <div *ngIf="selected_subtopic == '' && !signup && !login" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
       #problemSummaryCard>
       <br />
       <div class="content" style="margin: auto; align-items: center">
@@ -2745,7 +2749,7 @@
     </div>
     <br *ngIf="selected_subtopic == '' && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && exam_attribute_dump[key].RefSheet != '' && expand_refsheet" />
     <div *ngIf="selected_subtopic == '' && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && exam_attribute_dump[key].RefSheet != '' && expand_refsheet" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
       #problemRefsheetCard>
       <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
         <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="'../../' + exam_attribute_dump[key].RefSheet"
@@ -2759,7 +2763,7 @@
       <div *ngIf="selected_subtopic == '' && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && problem_number == +prob.key && expand_supp">
         <div *ngFor="let supp of prob.value.SuppContent">
           <div class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #problemSuppCard>
             <br />
             <div class="content" style="margin: auto; align-items: center">
@@ -2871,7 +2875,7 @@
     <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%">
       <div *ngIf="selected_subtopic == '' && problem_number > 0 && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && problem_number == +prob.key" style="width: 100%">
         <div class="card card-large"
-          style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+          style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
           #problemCard>
           <br />
           <section *ngIf="exam_attribute_dump[key].RefSheet != ''"

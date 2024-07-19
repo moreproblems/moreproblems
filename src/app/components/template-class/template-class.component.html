@@ -531,26 +531,30 @@
   <div *ngIf="(file_source != '' || selected_subtopic != '') && !assign_e" class="content-menu" role="menu"
     style="margin-bottom: 0px; align-items: center">
     <br />
-    <section *ngIf="file_source != ''" style="width: 100%; align-items: left">
-      <div (click)="file_source=''; exam_fav=false" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Class </a>
-      </div>
-    </section>
-    <section *ngIf="selected_subtopic != ''" style="width: 100%; align-items: left">
-      <div (click)="selected_subtopic=''" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Exam </a>
-      </div>
-    </section>
+    <div *ngIf="file_source != ''" style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="file_source=''; exam_fav=false" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Class </a>
+        </div>
+      </section>
+    </div>
+    <div *ngIf="selected_subtopic != ''" style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="selected_subtopic=''" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Exam </a>
+        </div>
+      </section>
+    </div>
     <br *ngIf="file_source != '' || selected_subtopic != ''" />
     <div *ngIf="selected_subtopic != ''">
       <div *ngIf="selected_subtopic != ''" class="card card-large"
-        style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #subtopicSummaryCard>
         <br />
         <div class="content" style="margin: auto; align-items: center">
@@ -671,7 +675,7 @@
           style="width: 100%">
           <br />
           <div class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #subtopicRefsheetCard>
             <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
               <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false"
@@ -687,7 +691,7 @@
         <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp">
           <div *ngFor="let supp of prob.value.SuppContent">
             <div class="card card-large"
-              style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+              style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
               #subtopicSuppCard>
               <br />
               <div class="content" style="margin: auto; align-items: center">
@@ -796,7 +800,7 @@
         <div *ngIf="subtopic_problem_number == +prob.key" style="width: 100%">
           <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number"
             class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #subtopicCard>
             <br />
             <section
@@ -2198,7 +2202,7 @@
     </div>
     <!-- PDF Viewer -->
     <div *ngIf="file_source != ''" class="card card-large" (window:resize)="width_change()"
-      style="margin: auto; height: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); display: flex; flex-direction: column; border: 3px solid black; border-radius: 20px"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
       #pdfViewer>
       <br />
       <section
@@ -2439,14 +2443,16 @@
   <div *ngIf="exam_results_loaded && selected_exam_results != '' && selected_subtopic == '' && selected_sub[0] == '' && selected_sub[1] == ''"
     class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
     <br />
-    <section style="width: 100%; align-items: left">
-      <div (click)="selected_exam_results=''; exam_results_loaded=false" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Class </a>
-      </div>
-    </section>
+    <div style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="selected_exam_results=''; exam_results_loaded=false" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Class </a>
+        </div>
+      </section>
+    </div>
     <br />
     <div class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
@@ -2644,14 +2650,16 @@
   <div *ngIf="quiz_results_loaded && selected_quiz_results != '' && selected_subtopic == '' && selected_sub[0] == '' && selected_sub[1] == ''"
     class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
     <br />
-    <section style="width: 100%; align-items: left">
-      <div (click)="selected_quiz_results=''; quiz_results_loaded=false" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Class </a>
-      </div>
-    </section>
+    <div style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="selected_quiz_results=''; quiz_results_loaded=false" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Class </a>
+        </div>
+      </section>
+    </div>
     <br />
     <div class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
@@ -2879,14 +2887,16 @@
   <div *ngIf="selected_stud_results != '' && selected_subtopic == '' && selected_sub[0] == '' && selected_sub[1] == ''"
     class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
     <br />
-    <section style="width: 100%; align-items: left">
-      <div (click)="selected_stud_results=''; stud_results_loaded=false" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Class </a>
-      </div>
-    </section>
+    <div style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="selected_stud_results=''; stud_results_loaded=false" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Class </a>
+        </div>
+      </section>
+    </div>
     <br />
     <div *ngIf="stud_results_loaded" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
@@ -3085,30 +3095,36 @@
     *ngIf="(selected_stud_results != '' || selected_exam_results != '' || selected_quiz_results != '') && selected_subtopic == '' && selected_sub[0] != '' && selected_sub[1] != ''"
     class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
     <br />
-    <section *ngIf="selected_stud_results != ''" style="width: 100%; align-items: left">
-      <div (click)="selected_sub=['', '']" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Student Results </a>
-      </div>
-    </section>
-    <section *ngIf="selected_exam_results != ''" style="width: 100%; align-items: left">
-      <div (click)="selected_sub=['', '']" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Exam Results </a>
-      </div>
-    </section>
-    <section *ngIf="selected_quiz_results != ''" style="width: 100%; align-items: left">
-      <div (click)="selected_sub=['', '']" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Quiz Results </a>
-      </div>
-    </section>
+    <div *ngIf="selected_stud_results != ''" style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="selected_sub=['', '']" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Student Results </a>
+        </div>
+      </section>
+    </div>
+    <div *ngIf="selected_exam_results != ''" style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="selected_sub=['', '']" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Exam Results </a>
+        </div>
+      </section>
+    </div>
+    <div *ngIf="selected_quiz_results != ''" style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="selected_sub=['', '']" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Quiz Results </a>
+        </div>
+      </section>
+    </div>
     <br />
     <div class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">

@@ -528,18 +528,20 @@
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <div *ngIf="standard_id != ''" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
     <br />
-    <section *ngIf="standard_id != ''" style="width: 100%; align-items: left">
-      <div (click)="standard_id=''" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Home </a>
-      </div>
-    </section>
+    <div *ngIf="standard_id != ''" style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="standard_id=''" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Home </a>
+        </div>
+      </section>
+    </div>
     <br *ngIf="selected_subtopic != ''" />
     <div *ngIf="selected_subtopic != ''">
       <div *ngIf="selected_subtopic != ''" class="card card-large"
-        style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #subtopicSummaryCard>
         <br />
         <div class="content" style="margin: auto; align-items: center">
@@ -650,7 +652,7 @@
           style="width: 100%">
           <br />
           <div class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #subtopicRefsheetCard>
             <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
               <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false"
@@ -666,7 +668,7 @@
         <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp">
           <div *ngFor="let supp of prob.value.SuppContent">
             <div class="card card-large"
-              style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+              style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
               #subtopicSuppCard>
               <br />
               <div class="content" style="margin: auto; align-items: center">
@@ -753,7 +755,7 @@
       <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="width: 100%">
         <div *ngIf="subtopic_problem_number == +prob.key" style="width: 100%">
           <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number" class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #subtopicCard>
             <br />
             <section *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
@@ -1762,18 +1764,20 @@
   </div>
   <div *ngIf="file_source != '' && !assign_e" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
     <br />
-    <section *ngIf="file_source != ''" style="width: 100%; align-items: left">
-      <div (click)="file_source=''; exam_fav=false" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> All favorite exams </a>
-      </div>
-    </section>
+    <div *ngIf="file_source != ''" style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="file_source=''; exam_fav=false" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> All favorite exams </a>
+        </div>
+      </section>
+    </div>
     <br />
     <!-- PDF Viewer -->
     <div class="card card-large" (window:resize)="width_change()"
-      style="margin: auto; height: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); display: flex; flex-direction: column; border: 3px solid black; border-radius: 20px"
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
       #pdfViewer>
       <br />
       <section

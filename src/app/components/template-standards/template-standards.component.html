@@ -523,18 +523,20 @@
   <canvas id="confetticanvas"></canvas>
   <br />
   <div class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
-    <section *ngIf="selected_subtopic != ''" style="width: 100%; align-items: left">
-      <div (click)="selected_subtopic=''" class="card card-small"
-        style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-        <img src="./assets/icons/caret.png"
-          style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-        <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Problems </a>
-      </div>
-    </section>
+    <div *ngIf="selected_subtopic != ''" style="align-items: left; width: min(1075px, 95%)">
+      <section>
+        <div (click)="selected_subtopic=''" class="card card-small"
+          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Problems </a>
+        </div>
+      </section>
+    </div>
     <br *ngIf="selected_subtopic != ''" />
     <div *ngIf="selected_subtopic != ''">
       <div *ngIf="selected_subtopic != ''" class="card card-large"
-        style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #subtopicSummaryCard>
         <br />
         <div class="content" style="margin: auto; align-items: center">
@@ -625,7 +627,7 @@
         <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && st_refsheet_source != '../../' && expand_refsheet" style="width: 100%">
           <br />
           <div class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #subtopicRefsheetCard>
             <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
               <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false" [zoom]="0.95"
@@ -641,7 +643,7 @@
         <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp">
           <div *ngFor="let supp of prob.value.SuppContent">
             <div class="card card-large"
-              style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+              style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
               #subtopicSuppCard>
               <br />
               <div class="content" style="margin: auto; align-items: center">
@@ -728,7 +730,7 @@
       <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="width: 100%">
         <div *ngIf="subtopic_problem_number == +prob.key" style="width: 100%">
           <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number" class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #subtopicCard>
             <br />
             <section *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
@@ -1735,17 +1737,19 @@
       </div>
     </div>
     <div *ngIf="selected_subtopic == ''">
-      <section style="width: 100%; align-items: left">
-        <div routerLink="/standards" routerLinkActive="active" class="card card-small"
-          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-          <img src="./assets/icons/caret.png"
-            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
-          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
-        </div>
-      </section>
+      <div style="align-items: left; width: min(1075px, 95%)">
+        <section>
+          <div routerLink="/standards" routerLinkActive="active" class="card card-small"
+            style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+            <img src="./assets/icons/caret.png"
+              style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+            <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Browse other standards </a>
+          </div>
+        </section>
+      </div>
       <br />
       <div class="card card-large"
-        style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1350px, 95%); display: flex; flex-direction: column">
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
         <br />
         <h2 *ngIf="!toggle_goals" style="text-align: center; margin-bottom: 10px; font-weight: 800"> {{standards_dump.Title}} > <b style="font-weight: 600">Standards</b> </h2>
         <h2 *ngIf="toggle_goals" style="text-align: center; margin-bottom: 10px; font-weight: 800"> {{standards_dump.Title}} > <b style="font-weight: 600">Learning Goals</b> </h2>
