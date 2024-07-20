@@ -2362,12 +2362,18 @@
         </div>
       </div>
       <br />
+      <h3 *ngIf="filtered_set.length != 0" style="color: blue; text-align: center"> There are a total of
+        {{filtered_exam_num}} exams with {{filtered_prob_num}} problems matching your selection. </h3>
+      <!-- <h3 *ngIf="filtered_set.length == 0" style="color: red; text-align: center"> There are no problems based on your selection. </h3> -->
+      <br />
     </div>
     <br *ngIf="selected_subject != '' && subject_exams.length > 0" />
     <div *ngIf="selected_subject != '' && subject_exams.length > 0" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2 #favoriteExams> {{state_labels[state_key]}} {{selected_grade}} {{selected_subject}} Exams </h2>
+      <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px"><a routerLink="/exams" routerLinkActive="active"> Click here to browse all available exams. </a></h3>
+      <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px"><a routerLink="/exams" routerLinkActive="active"> Click here to browse all available exams. </a></h3>
       <br />
       <input type="hidden" #selection>
       <div class="card-container" style="max-width: 100%">
@@ -2389,14 +2395,17 @@
       <br />
       <h2 *ngIf="!toggle_goals" style="text-align: center; margin-bottom: 10px; font-weight: 800"> {{standards_dump.Title}} > <b style="font-weight: 600">Standards</b> </h2>
       <h2 *ngIf="toggle_goals" style="text-align: center; margin-bottom: 10px; font-weight: 800"> {{standards_dump.Title}} > <b style="font-weight: 600">Learning Goals</b> </h2>
-      <a *ngIf="!toggle_goals && standards_dump.Goals.length > 0" (click)="toggle_goals = true" routerLinkActive="active"
-        style="font-size: 18px; font-weight: 600; padding-left: 10px"> View <b>learning goals</b> for this subject </a>
-      <a *ngIf="toggle_goals && standards_dump.Standards.length > 0" (click)="toggle_goals = false" routerLinkActive="active"
-        style="font-size: 18px; font-weight: 600; padding-left: 10px"> View <b>standards</b> for this subject </a>
+      <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px"><a routerLink="/standards" routerLinkActive="active"> Click here to browse all available standards. </a></h3>
+      <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px"><a routerLink="/standards" routerLinkActive="active"> Click here to browse all available standards. </a></h3>
       <br />
       <hr *ngIf="standards_dump.Overview != '' && toggle_goals" style="width: 100%; border-width: 2px" />
       <h4 *ngIf="toggle_goals" style="font-size: 18px; font-weight: 500"> {{standards_dump.Overview}} </h4>
       <hr style="width: 100%; border-width: 2px" />
+      <br />
+      <a *ngIf="!toggle_goals && standards_dump.Goals.length > 0" (click)="toggle_goals = true" routerLinkActive="active"
+        style="font-size: 18px; font-weight: 600; padding-left: 10px"> View <b>learning goals</b> for this subject </a>
+      <a *ngIf="toggle_goals && standards_dump.Standards.length > 0" (click)="toggle_goals = false" routerLinkActive="active"
+        style="font-size: 18px; font-weight: 600; padding-left: 10px"> View <b>standards</b> for this subject </a>
       <br />
       <div *ngIf="!toggle_goals" class="card-container" style="width: 100%">
         <div *ngFor="let domain of standards_dump.Standards" class="card card-medium"

@@ -724,6 +724,10 @@ export class TemplateStateComponent implements OnInit {
   standard_set: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PE-CO", "PM-CO", "PS-CO", "PSS-CO", "KE-CO", "KM-CO", "KS-CO", "KSS-CO", "G1E-CO", "G1M-CO", "G1S-CO", "G1SS-CO", "G2E-CO", "G2M-CO", "G2S-CO", "G2SS-CO", "G3E-CO", "G3M-CO", "G3S-CO", "G3SS-CO", "G4E-CO", "G4M-CO", "G4S-CO", "G4SS-CO", "G5E-CO", "G5M-CO", "G5S-CO", "G5SS-CO", "G6E-CO", "G6M-CO", "G6SS-CO", "G7E-CO", "G7M-CO", "G7SS-CO", "G8E-CO", "G8M-CO", "MSS-CO", "G8SS-CO", "HSE1-CO", "HSE2-CO", "HSM-CO", "HSS-CO", "HSSS-CO", "KE-FL", "KM-FL", "G1E-FL", "G1M-FL", "G2E-FL", "G2M-FL", "G3E-FL", "G3M-FL", "G4E-FL", "G4M-FL", "G5E-FL", "G5M-FL", "G6E-FL", "G6M-FL", "G7E-FL", "G7M-FL", "G8E-FL", "G8M-FL", "G9E-FL", "G10E-FL", "G11E-FL", "G12E-FL", "HSM-FL", "PE-NY", "PM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KE-RI", "KM-RI", "G1E-RI", "G1M-RI", "G2E-RI", "G2M-RI", "G3E-RI", "G3M-RI", "G4E-RI", "G4M-RI", "G5E-RI", "G5M-RI", "G6E-RI", "G6M-RI", "G7E-RI", "G7M-RI", "G8E-RI", "G8M-RI", "HSE1-RI", "HSE2-RI", "HSMA-RI", "HSMF-RI", "HSMG-RI", "HSMM-RI", "HSMN-RI", "HSMS-RI", "KE-TN", "KM-TN", "KS-TN", "G1E-TN", "G1M-TN", "G1S-TN", "G2E-TN", "G2M-TN", "G2S-TN", "G3E-TN", "G3M-TN", "G3S-TN", "G4E-TN", "G4M-TN", "G4S-TN", "G5E-TN", "G5M-TN", "G5S-TN", "G6E-TN", "G6M-TN", "G6S-TN", "G7E-TN", "G7M-TN", "G7S-TN", "G8E-TN", "G8M-TN", "G8S-TN", "HSMA1-TN", "HSMA2-TN", "HSSB1-TN", "HSE1-TN", "HSE2-TN", "HSMG-TN", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA1-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX", "SAT-M", "SAT-RW"];
   favorite_exm_set: string[] = [];
   favorite_std_set: string[][] = [];
+  filtered_set: string[] = [];
+  filtered_exam_num = 0;
+  filtered_prob_num = 0;
+  generate_message = "";
   inprogress_set: string[] = [];
   inprogress_exams: { [key: string]: any } = {};
   inprogress_quizzes: { [key: string]: any } = {};
@@ -3176,19 +3180,33 @@ export class TemplateStateComponent implements OnInit {
         }
       }
     }
+    this.filtered_set = [];
+    this.filtered_prob_num = 0;
+    for (const [id, dump] of Object.entries(this.exam_attribute_dump)) {
+      if (dump.State == this.state_labels[this.state_key] && (this.exam_attribute_dump[id].Grade == this.selected_grade || (this.exam_attribute_dump[id].Grade == 'High School') && ['Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'].includes(this.selected_grade))) {
+        this.filtered_set.push(id);
+        this.filtered_prob_num += dump.NumQuestions;
+      }
+    }
+    this.filtered_exam_num = this.filtered_set.length;
   }
 
   select_subject(subject: string) {
     this.toggle_goals = false;
     this.selected_subject = subject;
     this.subject_exams = [];
+    this.filtered_set = [];
+    this.filtered_prob_num = 0;
     for (const [id, dump] of Object.entries(this.exam_attribute_dump)) {
       for (const [name, labels] of Object.entries(this.subject_map)) {
         if (this.exam_attribute_dump[id].State == this.state_labels[this.state_key] && (this.exam_attribute_dump[id].Grade == this.selected_grade || (this.exam_attribute_dump[id].Grade == 'High School') && ['Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'].includes(this.selected_grade)) && labels.includes(this.exam_attribute_dump[id].Subject) && name == this.selected_subject) {
           this.subject_exams.push(id);
+          this.filtered_set.push(id);
+          this.filtered_prob_num += dump.NumQuestions;
         }
       }
     }
+    this.filtered_exam_num = this.filtered_set.length;
     for (const [id, dump] of Object.entries(this.standards_attribute_dump)) {
       for (const [name, labels] of Object.entries(this.subject_map)) {
         if (id.endsWith('-' + this.state_key) && this.standards_attribute_dump[id].Grades.includes(this.selected_grade) && labels.includes(this.standards_attribute_dump[id].Subject) && name == this.selected_subject) {
@@ -5406,6 +5424,13 @@ export class TemplateStateComponent implements OnInit {
         }
       }
     }
+    for (const [id, dump] of Object.entries(this.exam_attribute_dump)) {
+      if (dump.State == this.state_labels[this.state_key]) {
+        this.filtered_set.push(id);
+        this.filtered_prob_num += dump.NumQuestions;
+      }
+    }
+    this.filtered_exam_num = this.filtered_set.length;
     setTimeout(() => {
       if (this.authService.userData) {
         this.authService.getProfilePic(this.authService.userData);
