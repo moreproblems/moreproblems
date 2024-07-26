@@ -741,13 +741,6 @@
               class="toggle-button-off" tabindex="0"> <b>Maryland</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="MA">
-            <button *ngIf="state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')"
-              class="toggle-button-on" tabindex="0"> <b>Massachusetts</b> </button>
-            <button *ngIf="!state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')"
-              class="toggle-button-off" tabindex="0"> <b>Massachusetts</b> </button>
-          </label>
-          <label class="switch">
             <input type="checkbox" value="MN">
             <button *ngIf="state_filters.includes('Minnesota')" (click)="toggle_button('Minnesota')"
               class="toggle-button-on" tabindex="0"> <b>Minnesota</b> </button>
@@ -768,6 +761,11 @@
             <button *ngIf="!state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')"
               class="toggle-button-off" tabindex="0"> <b>New Jersey</b> </button>
           </label> -->
+          <label class="switch">
+            <input type="checkbox" value="MA">
+            <button *ngIf="state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')" class="toggle-button-on" tabindex="0"> <b>Massachusetts</b> </button>
+            <button *ngIf="!state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')" class="toggle-button-off" tabindex="0"> <b>Massachusetts</b> </button>
+          </label>
           <label class="switch">
             <input type="checkbox" value="NY">
             <button *ngIf="state_filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button-on" tabindex="0"> <b>New York</b> </button>
@@ -1814,7 +1812,7 @@
           </div>
           <br *ngIf="(prob.value.Parts | keys).length >= 0" />
           <div *ngFor="let part of prob.value.Parts | keyvalue" class="card card-large"
-            style="height: auto; margin: auto; margin-bottom: 20px; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+            style="height: auto; margin: auto; margin-bottom: 20px; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #subtopicPartCard>
             <br />
             <h2>Part {{part.key}}</h2>
@@ -3579,7 +3577,7 @@
         </div>
         <br *ngIf="(prob.value.Parts | keys).length >= 0" />
         <div *ngFor="let part of prob.value.Parts | keyvalue" class="card card-large"
-          style="height: auto; margin: auto; margin-bottom: 20px; padding: 0 2.5%; text-align: center; width: min(1350px, 95%); border: 3px solid black; border-radius: 20px; display: flex; flex-direction: column"
+          style="height: auto; margin: auto; margin-bottom: 20px; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
           #problemPartCard>
           <br />
           <h2>Part {{part.key}}</h2>
