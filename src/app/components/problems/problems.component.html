@@ -753,18 +753,16 @@
               tabindex="0"> <b>Missouri</b> </button>
             <button *ngIf="!state_filters.includes('Missouri')" (click)="toggle_button('Missouri')"
               class="toggle-button-off" tabindex="0"> <b>Missouri</b> </button>
-          </label>
-          <label class="switch">
-            <input type="checkbox" value="NJ">
-            <button *ngIf="state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')"
-              class="toggle-button-on" tabindex="0"> <b>New Jersey</b> </button>
-            <button *ngIf="!state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')"
-              class="toggle-button-off" tabindex="0"> <b>New Jersey</b> </button>
           </label> -->
           <label class="switch">
             <input type="checkbox" value="MA">
             <button *ngIf="state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')" class="toggle-button-on" tabindex="0"> <b>Massachusetts</b> </button>
             <button *ngIf="!state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')" class="toggle-button-off" tabindex="0"> <b>Massachusetts</b> </button>
+          </label>
+          <label class="switch">
+            <input type="checkbox" value="NJ">
+            <button *ngIf="state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-on" tabindex="0"> <b>New Jersey</b> </button>
+            <button *ngIf="!state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-off" tabindex="0"> <b>New Jersey</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" value="NY">
