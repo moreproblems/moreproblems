@@ -799,6 +799,11 @@
             <button *ngIf="!state_filters.includes('SAT')" (click)="toggle_button('SAT')" class="toggle-button-off" tabindex="0"> <b>SAT</b> </button>
           </label>
           <label class="switch">
+            <input type="checkbox" value="SC">
+            <button *ngIf="state_filters.includes('South Carolina')" (click)="toggle_button('South Carolina')" class="toggle-button-on" tabindex="0"> <b>South Carolina</b> </button>
+            <button *ngIf="!state_filters.includes('South Carolina')" (click)="toggle_button('South Carolina')" class="toggle-button-off" tabindex="0"> <b>South Carolina</b> </button>
+          </label>
+          <label class="switch">
             <input type="checkbox" value="TN">
             <button *ngIf="state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')" class="toggle-button-on" tabindex="0"> <b>Tennessee</b> </button>
             <button *ngIf="!state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')" class="toggle-button-off" tabindex="0"> <b>Tennessee</b> </button>
