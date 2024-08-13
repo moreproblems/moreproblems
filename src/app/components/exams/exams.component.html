@@ -8647,6 +8647,33 @@
                 </span>
                 <span><b>Tennessee TCAP</b> Grade 8 Social Studies Practice Exam</span>
               </button>
+              <button class="card card-small" (click)="select_exam('TN23G8SS')" tabindex="0">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN23G8SS')" src="./assets/flags/TN.png"
+                  style="height: 10px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN23G8SS') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Tennessee TCAP 2023</b> Grade 8 Social Studies Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('TN21G8SS')" tabindex="0">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN21G8SS')" src="./assets/flags/TN.png"
+                  style="height: 10px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN21G8SS') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Tennessee TCAP 2021</b> Grade 8 Social Studies Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('TN19G8SS')" tabindex="0">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN19G8SS')" src="./assets/flags/TN.png"
+                  style="height: 10px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN19G8SS') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
+                  &starf;
+                </span>
+                <span><b>Tennessee TCAP 2019</b> Grade 8 Social Studies Exam</span>
+              </button>
               <button class="card card-small" (click)="select_exam('TX22G8SS')" tabindex="0">
                 <img *ngIf="!authService.userData || !favorite_set.includes('TX22G8SS')" src="./assets/flags/TX.png"
                   style="height: 20px; margin: 0 5px 0 0;">
@@ -9665,7 +9692,31 @@
                 <span *ngIf="favorite_set.includes('TN20HSUSH') && authService.userData as user"
                   style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
                 </span>
-                <span><b>Tennessee TCAP 2020</b> U.S. History Practice Exam</span>
+                <span><b>Tennessee TCAP</b> U.S. History Practice Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('TN23HSUSH')" tabindex="0">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN23HSUSH')" src="./assets/flags/TN.png"
+                  style="height: 10px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN23HSUSH') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span><b>Tennessee TCAP 2023</b> U.S. History Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('TN21HSUSH')" tabindex="0">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN21HSUSH')" src="./assets/flags/TN.png"
+                  style="height: 10px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN21HSUSH') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span><b>Tennessee TCAP 2021</b> U.S. History Exam</span>
+              </button>
+              <button class="card card-small" (click)="select_exam('TN19HSUSH')" tabindex="0">
+                <img *ngIf="!authService.userData || !favorite_set.includes('TN19HSUSH')" src="./assets/flags/TN.png"
+                  style="height: 10px; margin: 0 5px 0 0;">
+                <span *ngIf="favorite_set.includes('TN19HSUSH') && authService.userData as user"
+                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+                </span>
+                <span><b>Tennessee TCAP 2019</b> U.S. History Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('TX22HSUSH')" tabindex="0">
                 <img *ngIf="!authService.userData || !favorite_set.includes('TX22HSUSH')" src="./assets/flags/TX.png"
@@ -11440,13 +11491,13 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G10">
-              <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10'); scroll(chooseExam)"
-                class="toggle-button-on" tabindex="0">Grade
-                <b>10</b></button>
-              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseExam)"
-                class="toggle-button-off" tabindex="0">Grade
-                <b>10</b></button>
+              <input type="checkbox" value="HS">
+              <button *ngIf="selected_grade == 'HS'" (click)="select_grade('HS'); scroll(chooseExam)"
+                class="toggle-button-on" tabindex="0">
+                <b>High School</b></button>
+              <button *ngIf="selected_grade != 'HS'" (click)="select_grade('HS'); scroll(chooseExam)"
+                class="toggle-button-off" tabindex="0">
+                <b>High School</b></button>
             </label>
           </div>
         </div>
@@ -12205,7 +12256,7 @@
                   style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
                 </span>
                 <span>Massachusetts MCAS 2021 Grade 10 <b>English</b> Exam</span>
-              </button> 23q
+              </button>
               <button class="card card-small" (click)="select_exam('MA19G10E')" tabindex="0">
                 <img *ngIf="!authService.userData || !favorite_set.includes('MA19G10E')" src="./assets/icons/select.png"
                   style="height: 20px; margin: 0 5px 0 0;">
@@ -17782,33 +17833,6 @@
                   style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
                 </span>
                 <span>Tennessee TCAP Grade 6 <b>Social Studies</b> Practice Exam</span>
-              </button>
-              <button class="card card-small" (click)="select_exam('TN23G6M')" tabindex="0">
-                <img *ngIf="!authService.userData || !favorite_set.includes('TN23G6M')" src="./assets/flags/TN.png"
-                  style="height: 10px; margin: 0 5px 0 0;">
-                <span *ngIf="favorite_set.includes('TN23G6M') && authService.userData as user"
-                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
-                  &starf;
-                </span>
-                <span><b>Tennessee TCAP 2023</b> Grade 6 Social Studies Exam</span>
-              </button>
-              <button class="card card-small" (click)="select_exam('TN21G6M')" tabindex="0">
-                <img *ngIf="!authService.userData || !favorite_set.includes('TN21G6M')" src="./assets/flags/TN.png"
-                  style="height: 10px; margin: 0 5px 0 0;">
-                <span *ngIf="favorite_set.includes('TN21G6M') && authService.userData as user"
-                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
-                  &starf;
-                </span>
-                <span><b>Tennessee TCAP 2021</b> Grade 6 Social Studies Exam</span>
-              </button>
-              <button class="card card-small" (click)="select_exam('TN19G6M')" tabindex="0">
-                <img *ngIf="!authService.userData || !favorite_set.includes('TN19G6M')" src="./assets/flags/TN.png"
-                  style="height: 10px; margin: 0 5px 0 0;">
-                <span *ngIf="favorite_set.includes('TN19G6M') && authService.userData as user"
-                  style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0">
-                  &starf;
-                </span>
-                <span><b>Tennessee TCAP 2019</b> Grade 6 Social Studies Exam</span>
               </button>
               <button class="card card-small" (click)="select_exam('TN23G6SS')" tabindex="0">
                 <img *ngIf="!authService.userData || !favorite_set.includes('TN23G6SS')" src="./assets/icons/select.png"
