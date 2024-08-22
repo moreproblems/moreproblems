@@ -88,6 +88,10 @@ import * as MA22G5MProblems from "src/assets/problems/MA22G5M/MA22G5M-problems.j
 import * as MA21G5MProblems from "src/assets/problems/MA21G5M/MA21G5M-problems.json";
 import * as MA19G5MProblems from "src/assets/problems/MA19G5M/MA19G5M-problems.json";
 import * as MAG5MProblems from "src/assets/problems/MAG5M/MAG5M-problems.json";
+import * as MA23G5SProblems from "src/assets/problems/MA23G5S/MA23G5S-problems.json";
+import * as MA22G5SProblems from "src/assets/problems/MA22G5S/MA22G5S-problems.json";
+import * as MA21G5SProblems from "src/assets/problems/MA21G5S/MA21G5S-problems.json";
+import * as MA19G5SProblems from "src/assets/problems/MA19G5S/MA19G5S-problems.json";
 import * as MAG5SProblems from "src/assets/problems/MAG5S/MAG5S-problems.json";
 import * as MA23G6EProblems from "src/assets/problems/MA23G6E/MA23G6E-problems.json";
 import * as MA22G6EProblems from "src/assets/problems/MA22G6E/MA22G6E-problems.json";
@@ -119,6 +123,10 @@ import * as MA22G8MProblems from "src/assets/problems/MA22G8M/MA22G8M-problems.j
 import * as MA21G8MProblems from "src/assets/problems/MA21G8M/MA21G8M-problems.json";
 import * as MA19G8MProblems from "src/assets/problems/MA19G8M/MA19G8M-problems.json";
 import * as MAG8MProblems from "src/assets/problems/MAG8M/MAG8M-problems.json";
+import * as MA23G8SProblems from "src/assets/problems/MA23G8S/MA23G8S-problems.json";
+import * as MA22G8SProblems from "src/assets/problems/MA22G8S/MA22G8S-problems.json";
+import * as MA21G8SProblems from "src/assets/problems/MA21G8S/MA21G8S-problems.json";
+import * as MA19G8SProblems from "src/assets/problems/MA19G8S/MA19G8S-problems.json";
 import * as MAG8SProblems from "src/assets/problems/MAG8S/MAG8S-problems.json";
 import * as MAG10EProblems from "src/assets/problems/MAG10E/MAG10E-problems.json";
 import * as MAG10MProblems from "src/assets/problems/MAG10M/MAG10M-problems.json";
