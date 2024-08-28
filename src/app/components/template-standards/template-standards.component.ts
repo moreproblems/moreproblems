@@ -414,6 +414,9 @@ import * as MAG10MProblems from "src/assets/problems/MAG10M/MAG10M-problems.json
 import * as MA23HSBProblems from "src/assets/problems/MA23HSB/MA23HSB-problems.json";
 import * as MA22HSBProblems from "src/assets/problems/MA22HSB/MA22HSB-problems.json";
 import * as MA19HSBProblems from "src/assets/problems/MA19HSB/MA19HSB-problems.json";
+import * as MA23HSPProblems from "src/assets/problems/MA23HSP/MA23HSP-problems.json";
+import * as MA22HSPProblems from "src/assets/problems/MA22HSP/MA22HSP-problems.json";
+import * as MA19HSPProblems from "src/assets/problems/MA19HSP/MA19HSP-problems.json";
 import * as MDG3EProblems from "src/assets/problems/MDG3E/MDG3E-problems.json";
 import * as MDG4EProblems from "src/assets/problems/MDG4E/MDG4E-problems.json";
 import * as MDG5EProblems from "src/assets/problems/MDG5E/MDG5E-problems.json";
@@ -1314,6 +1317,9 @@ export class TemplateStandardsComponent implements OnInit {
     MA23HSB_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MA23HSBProblems;
     MA22HSB_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MA22HSBProblems;
     MA19HSB_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MA19HSBProblems;
+    MA23HSP_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MA23HSPProblems;
+    MA22HSP_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MA22HSPProblems;
+    MA19HSP_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MA19HSPProblems;
     MDG3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MDG3EProblems;
     MDG4E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MDG4EProblems;
     MDG5E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MDG5EProblems;
@@ -1907,6 +1913,9 @@ export class TemplateStandardsComponent implements OnInit {
         "MA23HSB": this.MA23HSB_exam_dump,
         "MA22HSB": this.MA22HSB_exam_dump,
         "MA19HSB": this.MA19HSB_exam_dump,
+        "MA23HSP": this.MA23HSP_exam_dump,
+        "MA22HSP": this.MA22HSP_exam_dump,
+        "MA19HSP": this.MA19HSP_exam_dump,
         "MDG3E": this.MDG3E_exam_dump,
         "MDG4E": this.MDG4E_exam_dump,
         "MDG5E": this.MDG5E_exam_dump,
@@ -2689,15 +2698,18 @@ export class TemplateStandardsComponent implements OnInit {
 
     subject_labels: { [key: string]: string } = {
         "Algebra I": "Algebra I",
+        "Algebra II": "Algebra II",
         "Biology": "Biology",
         "English I": "English I",
         "English II": "English II",
         "English Language Arts": "Language Arts",
         "English Reading": "Reading",
+        "Geometry": "Geometry",
         "Mathematics": "Math",
+        "Physics": "Physics",
         "Science": "Science",
         "Social Studies": "Social Studies",
-        "U.S. History": "U.S. History",
+        "U.S. History": "U.S. History"
     };
 
     constructor(public router: Router, private aRoute: ActivatedRoute, public authService: AuthService, private http: HttpClient) { }
