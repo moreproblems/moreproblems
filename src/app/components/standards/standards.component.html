@@ -2629,14 +2629,19 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
+                  <input type="checkbox" value="PE">
+                  <button routerLink="/standards/PE-MA" routerLinkActive="active"
+                    (click)="select_subject('PE')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
                   <input type="checkbox" value="PM">
                   <button routerLink="/standards/PM-MA" routerLinkActive="active"
                     (click)="select_subject('PM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="PE">
-                  <button routerLink="/standards/PE-MA" routerLinkActive="active"
-                    (click)="select_subject('PE')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                  <input type="checkbox" value="PS">
+                  <button routerLink="/standards/PS-MA" routerLinkActive="active"
+                    (click)="select_subject('PS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
                 </label>
               </div>
             </div>
@@ -2658,10 +2663,15 @@
                     (click)="select_subject('KM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="EESS">
-                  <button routerLink="/standards/EESS-MA" routerLinkActive="active"
-                    (click)="select_subject('EESS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="KS">
+                  <button routerLink="/standards/KS-MA" routerLinkActive="active"
+                    (click)="select_subject('KS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
                 </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="EEST">
+                  <button routerLink="/standards/EEST-MA" routerLinkActive="active"
+                    (click)="select_subject('EEST')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
             <!-- First Grade Standards -->
@@ -2682,10 +2692,15 @@
                     (click)="select_subject('G1M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="EESS">
-                  <button routerLink="/standards/EESS-MA" routerLinkActive="active"
-                    (click)="select_subject('EESS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="G1S">
+                  <button routerLink="/standards/G1S-MA" routerLinkActive="active"
+                    (click)="select_subject('G1S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
                 </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="EEST">
+                  <button routerLink="/standards/EEST-MA" routerLinkActive="active"
+                    (click)="select_subject('EEST')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
             <!-- Second Grade Standards -->
@@ -2706,10 +2721,15 @@
                     (click)="select_subject('G2M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="EESS">
-                  <button routerLink="/standards/EESS-MA" routerLinkActive="active"
-                    (click)="select_subject('EESS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="G2S">
+                  <button routerLink="/standards/G2S-MA" routerLinkActive="active"
+                    (click)="select_subject('G2S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
                 </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="EEST">
+                  <button routerLink="/standards/EEST-MA" routerLinkActive="active"
+                    (click)="select_subject('EEST')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
             <!-- Third Grade Standards -->
@@ -2730,10 +2750,15 @@
                     (click)="select_subject('G3M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="UESS">
-                  <button routerLink="/standards/UESS-MA" routerLinkActive="active"
-                    (click)="select_subject('UESS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="G3S">
+                  <button routerLink="/standards/G3S-MA" routerLinkActive="active"
+                    (click)="select_subject('G3S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
                 </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="UEST">
+                  <button routerLink="/standards/UEST-MA" routerLinkActive="active"
+                    (click)="select_subject('UEST')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
             <!-- Fourth Grade Standards -->
@@ -2754,10 +2779,15 @@
                     (click)="select_subject('G4M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="UESS">
-                  <button routerLink="/standards/UESS-MA" routerLinkActive="active"
-                    (click)="select_subject('UESS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="G4S">
+                  <button routerLink="/standards/G4S-MA" routerLinkActive="active"
+                    (click)="select_subject('G4S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
                 </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="UEST">
+                  <button routerLink="/standards/UEST-MA" routerLinkActive="active"
+                    (click)="select_subject('UEST')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
             <!-- Fifth Grade Standards -->
@@ -2778,10 +2808,15 @@
                     (click)="select_subject('G5M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="UESS">
-                  <button routerLink="/standards/UESS-MA" routerLinkActive="active"
-                    (click)="select_subject('UESS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="G5S">
+                  <button routerLink="/standards/G5S-MA" routerLinkActive="active"
+                    (click)="select_subject('G5S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
                 </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="UEST">
+                  <button routerLink="/standards/UEST-MA" routerLinkActive="active"
+                    (click)="select_subject('UET')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
             <!-- Sixth Grade Standards -->
@@ -2802,10 +2837,15 @@
                     (click)="select_subject('G6M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="MSS">
-                  <button routerLink="/standards/MSS-MA" routerLinkActive="active"
-                    (click)="select_subject('MSS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="G6S">
+                  <button routerLink="/standards/G6S-MA" routerLinkActive="active"
+                    (click)="select_subject('G6S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
                 </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="MST">
+                  <button routerLink="/standards/MST-MA" routerLinkActive="active"
+                    (click)="select_subject('MST')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
             <!-- Seventh Grade Standards -->
@@ -2826,10 +2866,15 @@
                     (click)="select_subject('G7M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="MSS">
-                  <button routerLink="/standards/MSS-MA" routerLinkActive="active"
-                    (click)="select_subject('MSS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="G7S">
+                  <button routerLink="/standards/G7S-MA" routerLinkActive="active"
+                    (click)="select_subject('G7S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
                 </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="MST">
+                  <button routerLink="/standards/MST-MA" routerLinkActive="active"
+                    (click)="select_subject('MST')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
             <!-- Eighth Grade Standards -->
@@ -2850,10 +2895,15 @@
                     (click)="select_subject('G8M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="MSS">
-                  <button routerLink="/standards/MSS-MA" routerLinkActive="active"
-                    (click)="select_subject('MSS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="G8S">
+                  <button routerLink="/standards/G8S-MA" routerLinkActive="active"
+                    (click)="select_subject('G8S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
                 </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="MST">
+                  <button routerLink="/standards/MST-MA" routerLinkActive="active"
+                    (click)="select_subject('MST')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
             <!-- Ninth Grade Standards -->
@@ -2876,10 +2926,35 @@
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="HSS">
-                  <button routerLink="/standards/HSS-MA" routerLinkActive="active"
-                    (click)="select_subject('HSS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="HSSB">
+                  <button routerLink="/standards/HSSB-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSB')" class="toggle-button-off" tabindex="0"> <b> Biology </b></button>
                 </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSC">
+                  <button routerLink="/standards/HSSC-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSC')" class="toggle-button-off" tabindex="0"> <b> Chemistry </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSP">
+                  <button routerLink="/standards/HSSP-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSP')" class="toggle-button-off" tabindex="0"> <b> Physics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSES">
+                  <button routerLink="/standards/HSSES-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSES')" class="toggle-button-off" tabindex="0"> <b> Earth & Space </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSTS">
+                  <button routerLink="/standards/HSSTS-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSTS')" class="toggle-button-off" tabindex="0"> <b> Engineering </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="HST">
+                  <button routerLink="/standards/HST-MA" routerLinkActive="active"
+                    (click)="select_subject('HST')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
             <!-- Tenth Grade Standards -->
@@ -2902,10 +2977,35 @@
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="HSS">
-                  <button routerLink="/standards/HSS-MA" routerLinkActive="active"
-                    (click)="select_subject('HSS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="HSSB">
+                  <button routerLink="/standards/HSSB-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSB')" class="toggle-button-off" tabindex="0"> <b> Biology </b></button>
                 </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSC">
+                  <button routerLink="/standards/HSSC-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSC')" class="toggle-button-off" tabindex="0"> <b> Chemistry </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSP">
+                  <button routerLink="/standards/HSSP-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSP')" class="toggle-button-off" tabindex="0"> <b> Physics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSES">
+                  <button routerLink="/standards/HSSES-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSES')" class="toggle-button-off" tabindex="0"> <b> Earth & Space </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSTS">
+                  <button routerLink="/standards/HSSTS-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSTS')" class="toggle-button-off" tabindex="0"> <b> Engineering </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="HST">
+                  <button routerLink="/standards/HST-MA" routerLinkActive="active"
+                    (click)="select_subject('HST')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
             <!-- Eleventh Grade Standards -->
@@ -2928,10 +3028,35 @@
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="HSS">
-                  <button routerLink="/standards/HSS-MA" routerLinkActive="active"
-                    (click)="select_subject('HSS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="HSSB">
+                  <button routerLink="/standards/HSSB-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSB')" class="toggle-button-off" tabindex="0"> <b> Biology </b></button>
                 </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSC">
+                  <button routerLink="/standards/HSSC-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSC')" class="toggle-button-off" tabindex="0"> <b> Chemistry </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSP">
+                  <button routerLink="/standards/HSSP-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSP')" class="toggle-button-off" tabindex="0"> <b> Physics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSES">
+                  <button routerLink="/standards/HSSES-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSES')" class="toggle-button-off" tabindex="0"> <b> Earth & Space </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSTS">
+                  <button routerLink="/standards/HSSTS-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSTS')" class="toggle-button-off" tabindex="0"> <b> Engineering </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="HST">
+                  <button routerLink="/standards/HST-MA" routerLinkActive="active"
+                    (click)="select_subject('HST')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
             <!-- Twelfth Grade Standards -->
@@ -2954,10 +3079,35 @@
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
-                  <input type="checkbox" value="HSS">
-                  <button routerLink="/standards/HSS-MA" routerLinkActive="active"
-                    (click)="select_subject('HSS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                  <input type="checkbox" value="HSSB">
+                  <button routerLink="/standards/HSSB-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSB')" class="toggle-button-off" tabindex="0"> <b> Biology </b></button>
                 </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSC">
+                  <button routerLink="/standards/HSSC-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSC')" class="toggle-button-off" tabindex="0"> <b> Chemistry </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSP">
+                  <button routerLink="/standards/HSSP-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSP')" class="toggle-button-off" tabindex="0"> <b> Physics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSES">
+                  <button routerLink="/standards/HSSES-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSES')" class="toggle-button-off" tabindex="0"> <b> Earth & Space </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" value="HSSTS">
+                  <button routerLink="/standards/HSSTS-MA" routerLinkActive="active"
+                    (click)="select_subject('HSSTS')" class="toggle-button-off" tabindex="0"> <b> Engineering </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" value="HST">
+                  <button routerLink="/standards/HST-MA" routerLinkActive="active"
+                    (click)="select_subject('HST')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label> -->
               </div>
             </div>
           </div>
