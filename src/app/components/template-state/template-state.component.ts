@@ -3649,7 +3649,7 @@ export class TemplateStateComponent implements OnInit {
     "Number & Quantity": ["Mathematics - Number & Quantity"],
     "Statistics": ["Mathematics - Statistics & Probability", "Mathematics - Statistics"],
     "Precalculus": ["Mathematics - Precalculus"],
-    "Physics": ["Science - Introductory Physics"],
+    "Physics": ["Physics", "Science - Introductory Physics"],
     "Earth & Space": ["Science - Earth & Space Science"],
     "Engineering": ["Science - Technology/Engineering"]
   }
