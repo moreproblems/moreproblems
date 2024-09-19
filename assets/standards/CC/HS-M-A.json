@@ -2,31 +2,47 @@
     "Title": "United States Common Core > Mathematics > High School - Algebra",
     "Overview": "",
     "Goals": [
-        ["Expressions", "An expression is a record of a computation with numbers, symbols that represent numbers, arithmetic operations, exponentiation, and, at more advanced levels, the operation of evaluating a function. Conventions about the use of parentheses and the order of operations assure that each expression is unambiguous. Creating an expression that describes a computation involving a general quantity requires the ability to express the computation in general terms, abstracting from specific instances.\n\nReading an expression with comprehension involves analysis of its underlying structure. This may suggest a different but equivalent way of writing the expression that exhibits some different aspect of its meaning. For example, p + 0.05p can be interpreted as the addition of a 5% tax to a price p. Rewriting p + 0.05p as 1.05p shows that adding a tax is the same as multiplying the price by a constant factor.\n\nAlgebraic manipulations are governed by the properties of operations and exponents, and the conventions of algebraic notation. At times, an expression is the result of applying operations to simpler expressions. For example, p + 0.05p is the sum of the simpler expressions p and 0.05p. Viewing an expression as the result of operation on simpler expressions can sometimes clarify its underlying structure.\n\nA spreadsheet or a computer algebra system (CAS) can be used to experiment with algebraic expressions, perform complicated algebraic manipulations, and understand how algebraic manipulations behave."],
-        ["Equations & Inequalities", "An equation is a statement of equality between two expressions, often viewed as a question asking for which values of the variables the expressions on either side are in fact equal. These values are the solutions to the equation. An identity, in contrast, is true for all values of the variables; identities are often developed by rewriting an expression in an equivalent form.\n\nThe solutions of an equation in one variable form a set of numbers; the solutions of an equation in two variables form a set of ordered pairs of numbers, which can be plotted in the coordinate plane. Two or more equations and/or inequalities form a system. A solution for such a system must satisfy every equation and inequality in the system.\n\nAn equation can often be solved by successively deducing from it one or more simpler equations. For example, one can add the same constant to both sides without changing the solutions, but squaring both sides might lead to extraneous solutions. Strategic competence in solving includes looking ahead for productive manipulations and anticipating the nature and number of solutions.\n\nSome equations have no solutions in a given number system, but have a solution in a larger system. For example, the solution of x + 1 = 0 is an integer, not a whole number; the solution of 2x + 1 = 0 is a rational number, not an integer; the solutions of x² – 2 = 0 are real numbers, not rational numbers; and the solutions of x² + 2 = 0 are complex numbers, not real numbers.\n\nThe same solution techniques used to solve equations can be used to rearrange formulas. For example, the formula for the area of a trapezoid, A = ((b₁ +b₂)/2)h, can be solved for h using the same deductive process.\n\nInequalities can be solved by reasoning about the properties of inequality. Many, but not all, of the properties of equality continue to hold for inequalities and can be useful in solving them."],
-        ["Connections To Functions & Modeling", "Expressions can define functions, and equivalent expressions define the same function. Asking when two functions have the same value for the same input leads to an equation; graphing the two functions allows for finding approximate solutions of the equation. Converting a verbal description to an equation, inequality, or system of these is an essential skill in modeling."]
+        [
+            "Expressions",
+            "An expression is a record of a computation with numbers, symbols that represent numbers, arithmetic operations, exponentiation, and, at more advanced levels, the operation of evaluating a function. Conventions about the use of parentheses and the order of operations assure that each expression is unambiguous. Creating an expression that describes a computation involving a general quantity requires the ability to express the computation in general terms, abstracting from specific instances.\n\nReading an expression with comprehension involves analysis of its underlying structure. This may suggest a different but equivalent way of writing the expression that exhibits some different aspect of its meaning. For example, p + 0.05p can be interpreted as the addition of a 5% tax to a price p. Rewriting p + 0.05p as 1.05p shows that adding a tax is the same as multiplying the price by a constant factor.\n\nAlgebraic manipulations are governed by the properties of operations and exponents, and the conventions of algebraic notation. At times, an expression is the result of applying operations to simpler expressions. For example, p + 0.05p is the sum of the simpler expressions p and 0.05p. Viewing an expression as the result of operation on simpler expressions can sometimes clarify its underlying structure.\n\nA spreadsheet or a computer algebra system (CAS) can be used to experiment with algebraic expressions, perform complicated algebraic manipulations, and understand how algebraic manipulations behave."
+        ],
+        [
+            "Equations & Inequalities",
+            "An equation is a statement of equality between two expressions, often viewed as a question asking for which values of the variables the expressions on either side are in fact equal. These values are the solutions to the equation. An identity, in contrast, is true for all values of the variables; identities are often developed by rewriting an expression in an equivalent form.\n\nThe solutions of an equation in one variable form a set of numbers; the solutions of an equation in two variables form a set of ordered pairs of numbers, which can be plotted in the coordinate plane. Two or more equations and/or inequalities form a system. A solution for such a system must satisfy every equation and inequality in the system.\n\nAn equation can often be solved by successively deducing from it one or more simpler equations. For example, one can add the same constant to both sides without changing the solutions, but squaring both sides might lead to extraneous solutions. Strategic competence in solving includes looking ahead for productive manipulations and anticipating the nature and number of solutions.\n\nSome equations have no solutions in a given number system, but have a solution in a larger system. For example, the solution of x + 1 = 0 is an integer, not a whole number; the solution of 2x + 1 = 0 is a rational number, not an integer; the solutions of x² – 2 = 0 are real numbers, not rational numbers; and the solutions of x² + 2 = 0 are complex numbers, not real numbers.\n\nThe same solution techniques used to solve equations can be used to rearrange formulas. For example, the formula for the area of a trapezoid, A = ((b₁ +b₂)/2)h, can be solved for h using the same deductive process.\n\nInequalities can be solved by reasoning about the properties of inequality. Many, but not all, of the properties of equality continue to hold for inequalities and can be useful in solving them."
+        ],
+        [
+            "Connections To Functions & Modeling",
+            "Expressions can define functions, and equivalent expressions define the same function. Asking when two functions have the same value for the same input leads to an equation; graphing the two functions allows for finding approximate solutions of the equation. Converting a verbal description to an equation, inequality, or system of these is an essential skill in modeling."
+        ]
     ],
     "Standards": [
         {
             "Key": "CC.M9-12.A-SSE",
             "Label": "Seeing Structure In Expressions",
+            "Examples": [],
             "Subs": [
                 {
                     "Key": "CC.M9-12.A-SSE.A",
                     "Label": "Interpret the structure of expressions.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "CC.M9-12.A-SSE.A.1",
                             "Label": "Interpret expressions that represent a quantity in terms of its context.",
+                            "Examples": [],
                             "Subs": [
                                 {
                                     "Key": "CC.M9-12.A-SSE.A.1.a",
                                     "Label": "Interpret parts of an expression, such as terms, factors, and coefficients.",
+                                    "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "CC.M9-12.A-SSE.A.1.b",
                                     "Label": "Interpret complicated expressions by viewing one or more of their parts as a single entity.",
+                                    "Examples": [
+                                        "For example, interpret P(1+r)ⁿ as the product of P and a factor not depending on P."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -34,6 +50,9 @@
                         {
                             "Key": "CC.M9-12.A-SSE.A.2",
                             "Label": "Use the structure of an expression to identify ways to rewrite it.",
+                            "Examples": [
+                                "For example, see x⁴ – y⁴ as (x²)² – (y²)², thus recognizing it as a difference of squares that can be factored as (x² – y²)(x² + y²)."
+                            ],
                             "Subs": []
                         }
                     ]
@@ -41,24 +60,31 @@
                 {
                     "Key": "CC.M9-12.A-SSE.B",
                     "Label": "Write expressions in equivalent forms to solve problems.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "CC.M9-12.A-SSE.B.3",
                             "Label": "Choose and produce an equivalent form of an expression to reveal and explain properties of the quantity represented by the expression.",
+                            "Examples": [],
                             "Subs": [
                                 {
                                     "Key": "CC.M9-12.A-SSE.B.3.a",
                                     "Label": "Factor a quadratic expression to reveal the zeros of the function it defines.",
+                                    "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "CC.M9-12.A-SSE.B.3.b",
                                     "Label": "Complete the square in a quadratic expression to reveal the maximum or minimum value of the function it defines.",
+                                    "Examples": [],
                                     "Subs": []
                                 },
                                 {
-                                    "Key": "CC.M9-12.A-SSE.B.3.b",
+                                    "Key": "CC.M9-12.A-SSE.B.3.c",
                                     "Label": "Use the properties of exponents to transform expressions for exponential functions. For example the expression 1.15ᵗ can be rewritten as (`(1.15)^(1/12)`)¹²ᵗ ≈ 1.012¹²ᵗ to reveal the approximate equivalent monthly interest rate if the annual rate is 15%.",
+                                    "Examples": [
+                                        "For example the expression 1.15ᵗ can be rewritten as (1.15¹/¹²)¹²ᵗ ≈ 1.012¹²ᵗ to reveal the approximate equivalent monthly interest rate if the annual rate is 15%."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -66,6 +92,9 @@
                         {
                             "Key": "CC.M9-12.A-SSE.B.4",
                             "Label": "Derive the formula for the sum of a finite geometric series (when the common ratio is not 1), and use the formula to solve problems.",
+                            "Examples": [
+                                "For example, calculate mortgage payments."
+                            ],
                             "Subs": []
                         }
                     ]
@@ -75,14 +104,17 @@
         {
             "Key": "CC.M9-12.A-APR",
             "Label": "Arithmetic With Polynomials & Rational Expressions",
+            "Examples": [],
             "Subs": [
                 {
                     "Key": "CC.M9-12.A-APR.A",
                     "Label": "Perform arithmetic operations on polynomials.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "CC.M9-12.A-APR.A.1",
                             "Label": "Understand that polynomials form a system analogous to the integers, namely, they are closed under the operations of addition, subtraction, and multiplication; add, subtract, and multiply polynomials.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -90,15 +122,18 @@
                 {
                     "Key": "CC.M9-12.A-APR.B",
                     "Label": "Understand the relationship between zeros and factors of polynomials.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "CC.M9-12.A-APR.B.2",
                             "Label": "Know and apply the Remainder Theorem: For a polynomial p(x) and a number a, the remainder on division by x – a is p(a), so p(a) = 0 if and only if (x – a) is a factor of p(x).",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-APR.B.3",
                             "Label": "Identify zeros of polynomials when suitable factorizations are available, and use the zeros to construct a rough graph of the function defined by the polynomial.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -106,15 +141,20 @@
                 {
                     "Key": "CC.M9-12.A-APR.C",
                     "Label": "Use polynomial identities to solve problems.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "CC.M9-12.A-APR.C.4",
                             "Label": "Prove polynomial identities and use them to describe numerical relationships.",
+                            "Examples": [
+                                "For example, the polynomial identity (x² + y²)² = (x² – y²)² + (2xy)² can be used to generate Pythagorean triples."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-APR.C.5",
                             "Label": "Know and apply the Binomial Theorem for the expansion of (x + y)ⁿ in powers of x and y for a positive integer n, where x and y are any numbers, with coefficients determined for example by Pascal's Triangle.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -122,15 +162,18 @@
                 {
                     "Key": "CC.M9-12.A-APR.D",
                     "Label": "Rewrite rational expressions.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "CC.M9-12.A-APR.D.6",
                             "Label": "Rewrite simple rational expressions in different forms; write a(x)/b(x) in the form q(x) + r(x)/b(x), where a(x), b(x), q(x), and r(x) are polynomials with the degree of r(x) less than the degree of b(x), using inspection, long division, or, for the more complicated examples, a computer algebra system.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-APR.D.7",
                             "Label": "Understand that rational expressions form a system analogous to the rational numbers, closed under addition, subtraction, multiplication, and division by a nonzero rational expression; add, subtract, multiply, and divide rational expressions.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -140,29 +183,39 @@
         {
             "Key": "CC.M9-12.A-CED",
             "Label": "Creating Equations",
+            "Examples": [],
             "Subs": [
                 {
                     "Key": "CC.M9-12.A-CED.A",
                     "Label": "Create equations that describe numbers or relationships.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "CC.M9-12.A-CED.A.1",
                             "Label": "Create equations and inequalities in one variable and use them to solve problems. Include equations arising from linear and quadratic functions, and simple rational and exponential functions.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-CED.A.2",
                             "Label": "Create equations in two or more variables to represent relationships between quantities; graph equations on coordinate axes with labels and scales.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-CED.A.3",
                             "Label": "Represent constraints by equations or inequalities, and by systems of equations and/or inequalities, and interpret solutions as viable or non-viable options in a modeling context.",
+                            "Examples": [
+                                "For example, represent inequalities describing nutritional and cost constraints on combinations of different foods."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-CED.A.4",
                             "Label": "Rearrange formulas to highlight a quantity of interest, using the same reasoning as in solving equations.",
+                            "Examples": [
+                                "For example, rearrange Ohm’s law V = IR to highlight resistance R."
+                            ],
                             "Subs": []
                         }
                     ]
@@ -172,19 +225,23 @@
         {
             "Key": "CC.M9-12.A-REI",
             "Label": "Reasoning With Equations & Inequalities",
+            "Examples": [],
             "Subs": [
                 {
                     "Key": "CC.M9-12.A-REI.A",
                     "Label": "Understand solving equations as a process of reasoning and explain the reasoning.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "CC.M9-12.A-REI.A.1",
                             "Label": "Explain each step in solving a simple equation as following from the equality of numbers asserted at the previous step, starting from the assumption that the original equation has a solution. Construct a viable argument to justify a solution method.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-REI.A.2",
                             "Label": "Solve simple rational and radical equations in one variable, and give examples showing how extraneous solutions may arise.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -192,24 +249,29 @@
                 {
                     "Key": "CC.M9-12.A-REI.B",
                     "Label": "Solve equations and inequalities in one variable.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "CC.M9-12.A-REI.B.3",
                             "Label": "Solve linear equations and inequalities in one variable, including equations with coefficients represented by letters.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-REI.B.4",
                             "Label": "Solve quadratic equations in one variable.",
+                            "Examples": [],
                             "Subs": [
                                 {
                                     "Key": "CC.M9-12.A-REI.B.4.a",
                                     "Label": "Use the method of completing the square to transform any quadratic equation in x into an equation of the form (x – p)² = q that has the same solutions. Derive the quadratic formula from this form.",
+                                    "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "CC.M9-12.A-REI.B.4.b",
                                     "Label": "Solve quadratic equations by inspection (e.g., for x² = 49), taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when the quadratic formula gives complex solutions and write them as a ± bi for real numbers a and b.",
+                                    "Examples": [],
                                     "Subs": []
                                 }
                             ]
@@ -219,30 +281,38 @@
                 {
                     "Key": "CC.M9-12.A-REI.C",
                     "Label": "Solve systems of equations.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "CC.M9-12.A-REI.C.5",
                             "Label": "Prove that, given a system of two equations in two variables, replacing one equation by the sum of that equation and a multiple of the other produces a system with the same solutions.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-REI.C.6",
                             "Label": "Solve systems of linear equations exactly and approximately (e.g., with graphs), focusing on pairs of linear equations in two variables.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-REI.C.7",
                             "Label": "Solve a simple system consisting of a linear equation and a quadratic equation in two variables algebraically and graphically.",
+                            "Examples": [
+                                "For example, find the points of intersection between the line y = –3x and the circle x² + y² = 3."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-REI.C.8",
                             "Label": "Represent a system of linear equations as a single matrix equation in a vector variable.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-REI.C.9",
                             "Label": "Find the inverse of a matrix if it exists and use it to solve systems of linear equations (using technology for matrices of dimension 3 × 3 or greater).",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -250,20 +320,24 @@
                 {
                     "Key": "CC.M9-12.A-REI.D",
                     "Label": "Represent and solve equations and inequalities graphically.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "CC.M9-12.A-REI.D.10",
                             "Label": "Understand that the graph of an equation in two variables is the set of all its solutions plotted in the coordinate plane, often forming a curve (which could be a line).",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-REI.D.11",
                             "Label": "Explain why the x-coordinates of the points where the graphs of the equations y = f(x) and y = g(x) intersect are the solutions of the equation f(x) = g(x); find the solutions approximately, e.g., using technology to graph the functions, make tables of values, or find successive approximations. Include cases where f(x) and/or g(x) are linear, polynomial, rational, absolute value, exponential, and logarithmic functions.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-REI.D.12",
                             "Label": "Graph the solutions to a linear inequality in two variables as a half-plane (excluding the boundary in the case of a strict inequality), and graph the solution set to a system of linear inequalities in two variables as the intersection of the corresponding half-planes.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -272,8 +346,17 @@
         }
     ],
     "References": [
-        ["+", "Indicates that a standard (or group of standards) should be learned in order to take advanced courses such as calculus, advanced statistics, or discrete mathematics."],
-        ["*", "Indicates that a standard (or group of standards) is related to the Modeling category."],
-        ["¹", "The Binomial Theorem can be proved by mathematical induction or by a combinatorial argument."]
+        [
+            "+",
+            "Indicates that a standard (or group of standards) should be learned in order to take advanced courses such as calculus, advanced statistics, or discrete mathematics."
+        ],
+        [
+            "*",
+            "Indicates that a standard (or group of standards) is related to the Modeling category."
+        ],
+        [
+            "¹",
+            "The Binomial Theorem can be proved by mathematical induction or by a combinatorial argument."
+        ]
     ]
 }
