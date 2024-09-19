@@ -2,27 +2,40 @@
     "Title": "Rhode Island Core > Mathematics > Grade 8",
     "Overview": "In Grade 8, instructional time should focus on three critical areas: (1) formulating and reasoning about expressions and equations, including modeling an association in bivariate data with a linear equation and solving linear equations and systems of linear equations; (2) grasping the concept of a function and using functions to describe quantitative relationships; and (3) analyzing two- and three-dimensional space and figures using distance, angle, similarity, and congruence, and understanding and applying the Pythagorean Theorem.",
     "Goals": [
-        ["(1) Formulating & Reasoning About Expressions & Equations", "Students use linear equations and systems of linear equations to represent, analyze, and solve a variety of problems. Students recognize equations for proportions (y/x = m or y = mx) as special linear equations (y = mx + b), understanding that the constant of proportionality (m) is the slope, and the graphs are lines through the origin. They understand that the slope (m) of a line is a constant rate of change, so that if the input or x-coordinate changes by an amount A, the output or y-coordinate changes by the amount m x A. Students also use a linear equation to describe the association between two quantities in bivariate data (such as arm span vs. height for students in a classroom). At this grade, fitting the model and assessing its fit to the data are done informally. Interpreting the model in the context of the data requires students to express a relationship between the two quantities in question and to interpret components of the relationship (such as slope and y-intercept) in terms of the situation.\n\nStudents strategically choose and efficiently implement procedures to solve linear equations in one variable, understanding that when they use the properties of equality and the concept of logical equivalence, they maintain the solutions of the original equation. Students solve systems of two linear equations in two variables and relate the systems to pairs of lines in the plane; these intersect, are parallel, or are the same line. Students use linear equations, systems of linear equations, linear functions, and their understanding of slope of a line to analyze situations and solve problems."],
-        ["(2) Grasping The Concept Of A Function & Using Functions To Describe Quantitative Relationships", "Students grasp the concept of a function as a rule that assigns to each input exactly one output.They understand that functions describe situations where one quantity determines another. They can translate among representations and partial representations of functions (noting that tabular and graphical representations may be partial representations), and they describe how aspects of the function are reflected in the different representations."],
-        ["(3) Analyzing Two- & Three-Dimensional Space & Figures", "Students use ideas about distance and angles, how they behave under translations, rotations, reflections, and dilations, and ideas about congruence and similarity to describe and analyze two-dimensional figures and to solve problems. Students show that the sum of the angles in a triangle is the angle formed by a straight line, and that various configurations of lines give rise to similar triangles because of the angles created when a transversal cuts parallel lines. Students understand the statement of the Pythagorean Theorem and its converse, and can explain why the Pythagorean Theorem holds, for example, by decomposing a square in two different ways. They apply the Pythagorean Theorem to find distances between points on the coordinate plane, to find lengths, and to analyze polygons. Students complete their work on volume by solving problems involving cones, cylinders, and spheres."]
+        [
+            "(1) Formulating & Reasoning About Expressions & Equations",
+            "Students use linear equations and systems of linear equations to represent, analyze, and solve a variety of problems. Students recognize equations for proportions (y/x = m or y = mx) as special linear equations (y = mx + b), understanding that the constant of proportionality (m) is the slope, and the graphs are lines through the origin. They understand that the slope (m) of a line is a constant rate of change, so that if the input or x-coordinate changes by an amount A, the output or y-coordinate changes by the amount m x A. Students also use a linear equation to describe the association between two quantities in bivariate data (such as arm span vs. height for students in a classroom). At this grade, fitting the model and assessing its fit to the data are done informally. Interpreting the model in the context of the data requires students to express a relationship between the two quantities in question and to interpret components of the relationship (such as slope and y-intercept) in terms of the situation.\n\nStudents strategically choose and efficiently implement procedures to solve linear equations in one variable, understanding that when they use the properties of equality and the concept of logical equivalence, they maintain the solutions of the original equation. Students solve systems of two linear equations in two variables and relate the systems to pairs of lines in the plane; these intersect, are parallel, or are the same line. Students use linear equations, systems of linear equations, linear functions, and their understanding of slope of a line to analyze situations and solve problems."
+        ],
+        [
+            "(2) Grasping The Concept Of A Function & Using Functions To Describe Quantitative Relationships",
+            "Students grasp the concept of a function as a rule that assigns to each input exactly one output.They understand that functions describe situations where one quantity determines another. They can translate among representations and partial representations of functions (noting that tabular and graphical representations may be partial representations), and they describe how aspects of the function are reflected in the different representations."
+        ],
+        [
+            "(3) Analyzing Two- & Three-Dimensional Space & Figures",
+            "Students use ideas about distance and angles, how they behave under translations, rotations, reflections, and dilations, and ideas about congruence and similarity to describe and analyze two-dimensional figures and to solve problems. Students show that the sum of the angles in a triangle is the angle formed by a straight line, and that various configurations of lines give rise to similar triangles because of the angles created when a transversal cuts parallel lines. Students understand the statement of the Pythagorean Theorem and its converse, and can explain why the Pythagorean Theorem holds, for example, by decomposing a square in two different ways. They apply the Pythagorean Theorem to find distances between points on the coordinate plane, to find lengths, and to analyze polygons. Students complete their work on volume by solving problems involving cones, cylinders, and spheres."
+        ]
     ],
     "Standards": [
         {
             "Key": "RI.M8.NS",
             "Label": "The Number System",
+            "Examples": [],
             "Subs": [
                 {
                     "Key": "RI.M8.NS.A",
                     "Label": "Know that there are numbers that are not rational, and approximate them by rational numbers.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "RI.M8.NS.A.1",
                             "Label": "Know that numbers that are not rational are called irrational. Understand informally that every number has a decimal expansion. For rational numbers show that the decimal expansion repeats eventually, and convert a decimal expansion which repeats eventually into a rational number.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.NS.A.2",
                             "Label": "Use rational approximations of irrational numbers to compare the size of irrational numbers, locate them approximately on a number line diagram, and estimate the value of expressions (e.g., π²).",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -32,29 +45,35 @@
         {
             "Key": "RI.M8.EE",
             "Label": "Expressions & Equations",
+            "Examples": [],
             "Subs": [
                 {
                     "Key": "RI.M8.EE.A",
                     "Label": "Work with radicals and integer exponents.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "RI.M8.EE.A.1",
                             "Label": "Know and apply the properties of integer exponents to generate equivalent numerical expressions.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.EE.A.2",
                             "Label": "Use square root and cube root symbols to represent solutions to equations of the form x² = p and x³ = p, where p is a positive rational number. Evaluate square roots of small perfect squares and cube roots of small perfect cubes. Know that √2 is irrational.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.EE.A.3",
                             "Label": "Use numbers expressed in the form of a single digit multiplied by an integer power of 10 to estimate very large or very small quantities, and express how many times as much one is than the other.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.EE.A.4",
                             "Label": "Perform operations with numbers expressed in scientific notation, including problems where both decimal and scientific notation are used. Use scientific notation and choose units of appropriate size for measurements of very large or very small quantities (e.g., use millimeters per year for seafloor spreading). Interpret scientific notation that has been generated by technology.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -62,15 +81,18 @@
                 {
                     "Key": "RI.M8.EE.B",
                     "Label": "Understand the connections between proportional relationships, lines, and linear equations.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "RI.M8.EE.B.5",
                             "Label": "Graph proportional relationships, interpreting the unit rate as the slope of the graph. Compare two different proportional relationships represented in different ways.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.EE.B.6",
                             "Label": "Use similar triangles to explain why the slope m is the same between any two distinct points on a non-vertical line in the coordinate plane. Derive the equation y = mx for a line through the origin and the equation y = mx + b for a line intercepting the vertical axis at b.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -78,19 +100,23 @@
                 {
                     "Key": "RI.M8.EE.C",
                     "Label": "Analyze and solve linear equations and pairs of simultaneous linear equations.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "RI.M8.EE.C.7",
                             "Label": "Solve linear equations in one variable.",
+                            "Examples": [],
                             "Subs": [
                                 {
                                     "Key": "RI.M8.EE.C.7.a",
                                     "Label": "Give examples of linear equations in one variable with one solution, infinitely many solutions, or no solutions. Show which of these possibilities is the case by successively transforming the given equation into simpler forms, until an equivalent equation of the form x = a, a = a, or a = b results (where a and b are different numbers).",
+                                    "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "RI.M8.EE.C.7.b",
                                     "Label": "Solve linear equations with rational number coefficients, including equations whose solutions require expanding expressions using the distributive property and collecting like terms.",
+                                    "Examples": [],
                                     "Subs": []
                                 }
                             ]
@@ -98,20 +124,24 @@
                         {
                             "Key": "RI.M8.EE.C.8",
                             "Label": "Analyze and solve pairs of simultaneous linear equations.",
+                            "Examples": [],
                             "Subs": [
                                 {
                                     "Key": "RI.M8.EE.C.8.a",
                                     "Label": "Understand that solutions to a system of two linear equations in two variables correspond to points of intersection of their graphs, because points of intersection satisfy both equations simultaneously.",
+                                    "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "RI.M8.EE.C.8.b",
                                     "Label": "Solve systems of two linear equations in two variables algebraically (using substitution and elimination strategies), and estimate solutions by graphing the equations. Solve simple cases by inspection.",
+                                    "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "RI.M8.EE.C.8.c",
                                     "Label": "Solve real-world and mathematical problems leading to two linear equations in two variables.",
+                                    "Examples": [],
                                     "Subs": []
                                 }
                             ]
@@ -123,24 +153,29 @@
         {
             "Key": "RI.M8.F",
             "Label": "Functions",
+            "Examples": [],
             "Subs": [
                 {
                     "Key": "RI.M8.F.A",
                     "Label": "Define, evaluate, and compare functions.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "RI.M8.F.A.1",
                             "Label": "Understand that a function is a rule that assigns to each input exactly one output. The graph of a function is the set of ordered pairs consisting of an input and the corresponding output.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.F.A.2",
                             "Label": "Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions).",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.F.A.3",
                             "Label": "Interpret the equation y = mx + b as defining a linear function whose graph is a straight line; give examples of functions that are not linear.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -148,15 +183,18 @@
                 {
                     "Key": "RI.M8.F.B",
                     "Label": "Use functions to model relationships between quantities.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "RI.M8.F.B.4",
                             "Label": "Construct a function to model a linear relationship between two quantities. Determine the rate of change and initial value of the function from a description of a relationship or from two (x, y) values, including reading these from a table or from a graph. Interpret the rate of change and initial value of a linear function in terms of the situation it models, and in terms of its graph or a table of values.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.F.B.5",
                             "Label": "Describe qualitatively the functional relationship between two quantities by analyzing a graph (e.g., where the function is increasing or decreasing, linear or nonlinear). Sketch a graph that exhibits the qualitative features of a function that has been described verbally.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -166,28 +204,34 @@
         {
             "Key": "RI.M8.G",
             "Label": "Geometry",
+            "Examples": [],
             "Subs": [
                 {
                     "Key": "RI.M8.G.A",
                     "Label": "Understand congruence and similarity using physical models, transparencies, or geometry software.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "RI.M8.G.A.1",
                             "Label": "Verify experimentally the properties of rotations, reflections, and translations:",
+                            "Examples": [],
                             "Subs": [
                                 {
                                     "Key": "RI.M8.G.A.1.a",
                                     "Label": "Lines are transformed to lines, and line segments to line segments of the same length.",
+                                    "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "RI.M8.G.A.1.b",
                                     "Label": "Angles are transformed to angles of the same measure.",
+                                    "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "RI.M8.G.A.1.c",
                                     "Label": "Parallel lines are transformed to parallel lines.",
+                                    "Examples": [],
                                     "Subs": []
                                 }
                             ]
@@ -195,21 +239,25 @@
                         {
                             "Key": "RI.M8.G.A.2",
                             "Label": "Understand that a two-dimensional figure is congruent to another if the second can be obtained from the first by a sequence of rotations, reflections, and translations. Given two congruent figures, describe a sequence that exhibits the congruence between them.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.G.A.3",
                             "Label": "Describe the effects of dilations, translations, rotations, and reflections on two-dimensional figures using coordinates.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.G.A.4",
                             "Label": "Understand that a two-dimensional figure is similar to another if the second can be obtained from the first by a sequence of rotations, reflections, translations, and dilations. Given two similar two-dimensional figures, describe a sequence that exhibits the similarity between them.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.G.A.5",
                             "Label": "Use informal arguments to establish facts about the angle sum and exterior angle of triangles, about the angles created when parallel lines are cut by a transversal, and the angle-angle criterion for similarity of triangles.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -217,25 +265,30 @@
                 {
                     "Key": "RI.M8.G.B",
                     "Label": "Understand and apply the Pythagorean Theorem.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "RI.M8.G.B.6.a",
                             "Label": "Understand the relationship among the sides of a right triangle.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.G.B.6.b",
                             "Label": "Analyze and justify the Pythagorean Theorem and its converse using pictures, diagrams, narratives, or models.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.G.B.7",
                             "Label": "Apply the Pythagorean Theorem to determine unknown side lengths in right triangles in real-world and mathematical problems in two and three dimensions.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.G.B.8",
                             "Label": "Apply the Pythagorean Theorem to find the distance between two points in a coordinate system.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -243,10 +296,12 @@
                 {
                     "Key": "RI.M8.G.C",
                     "Label": "Solve real-world and mathematical problems involving volume of cylinders, cones, and spheres.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "RI.M8.G.C.9",
                             "Label": "Know the formulas for the volumes of cones, cylinders, and spheres, and use them to solve real-world and mathematical problems.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
@@ -256,29 +311,35 @@
         {
             "Key": "RI.M8.SP",
             "Label": "Statistics & Probability",
+            "Examples": [],
             "Subs": [
                 {
                     "Key": "RI.M8.SP.A",
                     "Label": "Investigate patterns of association in bivariate data.",
+                    "Examples": [],
                     "Subs": [
                         {
                             "Key": "RI.M8.SP.A.1",
                             "Label": "Construct and interpret scatter plots for bivariate measurement data to investigate patterns of association between two quantities. Describe patterns such as clustering, outliers, positive or negative association, linear association, and nonlinear association.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.SP.A.2",
                             "Label": "Know that straight lines are widely used to model relationships between two quantitative variables. For scatter plots that suggest a linear association, informally fit a straight line and informally assess the model fit by judging the closeness of the data points to the line.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.SP.A.3",
                             "Label": "Use the equation of a linear model to solve problems in the context of bivariate measurement data, interpreting the slope and intercept.",
+                            "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "RI.M8.SP.A.4",
                             "Label": "Understand that patterns of association can also be seen in bivariate categorical data by displaying frequencies and relative frequencies in a two-way table. Construct and interpret a two-way table summarizing data on two categorical variables collected from the same subjects. Use relative frequencies calculated for rows or columns to describe possible association between the two variables.",
+                            "Examples": [],
                             "Subs": []
                         }
                     ]
