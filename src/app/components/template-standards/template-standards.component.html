@@ -541,24 +541,60 @@
         <br />
         <div class="content" style="margin: auto; align-items: center">
           <section
-            style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 15px">
-            <h2 *ngIf="screenWidth > mobileWidth"
-              style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 24.5px; line-height: 30px; color: darkslategrey">
-              <b>{{selected_topic}}:</b> {{selected_subtopic}}
-            </h2>
-            <h2 *ngIf="screenWidth <= mobileWidth"
-              style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px; color: darkslategrey">
-              <b>{{selected_topic}}:</b> {{selected_subtopic}}
-            </h2>
+            style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-              style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &star;
+              style="font-size: 32px; font-weight: 800; color:rgba(255, 217, 0, 0.757)"> &star;
             </span>
             <span *ngIf="this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-              style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &starf;
+              style="font-size: 32px; font-weight: 800; color:rgba(255, 217, 0, 0.757)"> &starf;
+            </span>
+            <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center; margin-top: 5px">
+              <label class="switch" style="padding: 0 5px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{standards_attribute_dump[key].State}} </b> </button>
+              </label>
+              <label *ngFor="let grade of standards_attribute_dump[key].Grades" class="switch" style="padding: 0 5px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{grade}} </b> </button>
+              </label>
+              <label class="switch" style="padding: 0 5px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{standards_attribute_dump[key].Subject}} </b> </button>
+              </label>
+            </div>
+            <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center; margin-top: 5px">
+              <label class="switch" style="padding: 0 2px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{standards_attribute_dump[key].State}} </b> </button>
+              </label>
+              <label *ngFor="let grade of standards_attribute_dump[key].Grades" class="switch" style="padding: 0 2px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{grade}} </b> </button>
+              </label>
+              <label class="switch" style="padding: 0 2px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[standards_attribute_dump[key].Subject]}} </b> </button>
+              </label>
+            </div>
+            <span style="font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)"> &starf;
             </span>
           </section>
-          <div class="card card-medium"
-            style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
+          <h2 *ngIf="screenWidth > mobileWidth"
+            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 24.5px; line-height: 30px; color: darkslategrey">
+            <b>{{selected_topic}}:</b> {{selected_subtopic}}
+          </h2>
+          <h2 *ngIf="screenWidth <= mobileWidth"
+            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px; color: darkslategrey">
+            <b>{{selected_topic}}:</b> {{selected_subtopic}}
+          </h2>
+          <h3 *ngIf="screenWidth > mobileWidth && subtopic_problem_number == 0"
+            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 18.5px; line-height: 24px; color: darkslategrey">
+            <b *ngFor="let example of examples_dump[standard_id]" style="font-weight: 400">{{example}}</b>
+          </h3>
+          <h3 *ngIf="screenWidth <= mobileWidth && subtopic_problem_number == 0"
+            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 14px; line-height: 18px; color: darkslategrey">
+            <b *ngFor="let example of examples_dump[standard_id]" style="font-weight: 400">{{example}}</b>
+          </h3>
+          <button *ngIf="subtopic_problem_number == 0" class="grade-button" (click)="subtopic_problem_number = 1; scroll_top()"
+            style="display: block; max-width: 150px; max-height: 100px; margin-top: 20px">
+            <b> Begin Practice </b>
+          </button>
+          <div *ngIf="subtopic_problem_number > 0" class="card card-medium"
+            style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin-top: 20px; padding: min(20px, 3%)">
             <section style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
               <div style="display: flex; flex-direction: row; align-items: center">
                   <div style="margin: auto; text-align: right">
@@ -573,7 +609,7 @@
               #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           </div>
           <br />
-          <div class="card card-medium"
+          <!-- <div *ngIf="subtopic_problem_number > 0" class="card card-medium"
             style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
             <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
             <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
@@ -604,7 +640,7 @@
                 style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
                 <div *ngIf="subtopic_problem_number == +prob.key">
                   <label *ngFor="let num of prob.value.SubTopics | keyvalue"
-                    (click)="selectSubTopic([prob.value.Topics[+num.key]], prob.value.SubTopics[+num.key])" class="switch"
+                    (click)="selectSubTopic([prob.value.Topics[+num.key]], prob.value.SubTopics[+num.key], 'none')" class="switch"
                     style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
                     <button class="topic-button"
                       style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey; background-color: #ccc">
@@ -620,7 +656,7 @@
               </div>
             </section>
           </div>
-          <br />
+          <br /> -->
         </div>
       </div>
       <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="width: 100%">
@@ -1781,19 +1817,19 @@
               <ul *ngIf="domain_state[domain.Label]" style="font-size: 18px; line-height: 22px; padding-left: 17px; margin-top: 0px">
                 <li *ngFor="let cluster of domain.Subs" style="margin-top: 20px; margin-bottom: 8px"> <b *ngIf="cluster.Key != ''" style="font-weight: 800">{{cluster.Key}}: </b>
                   <b *ngIf="cluster.NumProb == 0" style="font-weight: 500">{{cluster.Label}}</b>
-                  <a *ngIf="cluster.NumProb > 0" (click)="selectSubTopic([domain.Label], cluster.Label)" style="font-weight: 500">{{cluster.Label}}</a> <b *ngIf="cluster.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{cluster.NumProb}}</i>)</b>
+                  <a *ngIf="cluster.NumProb > 0" (click)="selectSubTopic([domain.Label], cluster.Label, cluster.Key)" style="font-weight: 500">{{cluster.Label}}</a> <b *ngIf="cluster.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{cluster.NumProb}}</i>)</b>
                   <ul style="font-size: 17px; line-height: 21px; padding-left: 17px">
                     <li *ngFor="let standard of cluster.Subs" style="margin-top: 15px; margin-bottom: 6px"> <b *ngIf="standard.Key != ''" style="font-weight: 800">{{standard.Key}}: </b>
                       <b *ngIf="standard.NumProb == 0" style="font-weight: 500">{{standard.Label}}</b>
-                      <a *ngIf="standard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], standard.Label)" style="font-weight: 500">{{standard.Label}}</a> <b *ngIf="standard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{standard.NumProb}}</i>)</b>
+                      <a *ngIf="standard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], standard.Label, standard.Key)" style="font-weight: 500">{{standard.Label}}</a> <b *ngIf="standard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{standard.NumProb}}</i>)</b>
                       <ul style="font-size: 16px; line-height: 20px; padding-left: 17px">
                         <li *ngFor="let substandard of standard.Subs" style="margin-top: 10px; margin-bottom: 4px"> <b *ngIf="substandard.Key != ''" style="font-weight: 800">{{substandard.Key}}: </b>
                           <b *ngIf="substandard.NumProb == 0" style="font-weight: 500">{{substandard.Label}}</b>
-                          <a *ngIf="substandard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], substandard.Label)" style="font-weight: 500">{{substandard.Label}}</a> <b *ngIf="substandard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{substandard.NumProb}}</i>)</b>
+                          <a *ngIf="substandard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], substandard.Label, substandard.Key)" style="font-weight: 500">{{substandard.Label}}</a> <b *ngIf="substandard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{substandard.NumProb}}</i>)</b>
                           <ul style="font-size: 15px; line-height: 19px; padding-left: 17px">
                             <li *ngFor="let subsubstandard of substandard.Subs" style="margin-top: 10px; margin-bottom: 4px"> <b *ngIf="subsubstandard.Key != ''" style="font-weight: 800">{{subsubstandard.Key}}: </b>
                               <b *ngIf="subsubstandard.NumProb == 0" style="font-weight: 500">{{subsubstandard.Label}}</b>
-                              <a *ngIf="subsubstandard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], subsubstandard.Label)" style="font-weight: 500">{{subsubstandard.Label}}</a> <b *ngIf="subsubstandard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{subsubstandard.NumProb}}</i>)</b>
+                              <a *ngIf="subsubstandard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], subsubstandard.Label, subsubstandard.Key)" style="font-weight: 500">{{subsubstandard.Label}}</a> <b *ngIf="subsubstandard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{subsubstandard.NumProb}}</i>)</b>
                             </li>
                           </ul>
                         </li>

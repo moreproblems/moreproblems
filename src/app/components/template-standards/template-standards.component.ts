@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from "../../shared/services/auth.service";
 import * as Plotly from 'plotly.js-dist-min';
+import * as standardMetadata from "src/assets/standards/standards.json";
 import * as KEStandards from "src/assets/standards/CC/K-E.json";
 import * as KMStandards from "src/assets/standards/CC/K-M.json";
 import * as G1EStandards from "src/assets/standards/CC/G1-E.json";
@@ -937,6 +938,7 @@ export class TemplateStandardsComponent implements OnInit {
     key: string = "";
     standard_set: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PE-CO", "PM-CO", "PS-CO", "PSS-CO", "KE-CO", "KM-CO", "KS-CO", "KSS-CO", "G1E-CO", "G1M-CO", "G1S-CO", "G1SS-CO", "G2E-CO", "G2M-CO", "G2S-CO", "G2SS-CO", "G3E-CO", "G3M-CO", "G3S-CO", "G3SS-CO", "G4E-CO", "G4M-CO", "G4S-CO", "G4SS-CO", "G5E-CO", "G5M-CO", "G5S-CO", "G5SS-CO", "G6E-CO", "G6M-CO", "G6SS-CO", "G7E-CO", "G7M-CO", "G7SS-CO", "G8E-CO", "G8M-CO", "MSS-CO", "G8SS-CO", "HSE1-CO", "HSE2-CO", "HSM-CO", "HSS-CO", "HSSS-CO", "KE-FL", "KM-FL", "G1E-FL", "G1M-FL", "G2E-FL", "G2M-FL", "G3E-FL", "G3M-FL", "G4E-FL", "G4M-FL", "G5E-FL", "G5M-FL", "G6E-FL", "G6M-FL", "G7E-FL", "G7M-FL", "G8E-FL", "G8M-FL", "G9E-FL", "G10E-FL", "G11E-FL", "G12E-FL", "HSM-FL", "PE-MA", "PM-MA", "PS-MA", "KE-MA", "KM-MA", "KS-MA", "EEST-MA", "G1E-MA", "G1M-MA", "G1S-MA", "G2E-MA", "G2M-MA", "G2S-MA", "G3E-MA", "G3M-MA", "G3S-MA", "UEST-MA", "G4E-MA", "G4M-MA", "G4S-MA", "G5E-MA", "G5M-MA", "G5S-MA", "G6E-MA", "G6M-MA", "G6S-MA", "MST-MA", "G7E-MA", "G7M-MA", "G7S-MA", "G8E-MA", "G8M-MA", "G8S-MA", "HSE1-MA", "HSE2-MA", "HSMA-MA", "HSMF-MA", "HSMG-MA", "HSMM-MA", "HSMN-MA", "HSMS-MA", "HSSB-MA", "HSSC-MA", "HSSP-MA", "HSSES-MA", "HSSTS-MA", "HST-MA", "PE-MD", "PM-MD", "KE-MD", "KM-MD", "G1E-MD", "G1M-MD", "G2E-MD", "G2M-MD", "G3E-MD", "G3M-MD", "G4E-MD", "G4M-MD", "G5E-MD", "G5M-MD", "G6E-MD", "G6M-MD", "G7E-MD", "G7M-MD", "G8E-MD", "G8M-MD", "HSE1-MD", "HSE2-MD", "HSMA1-MD", "HSMA2-MD", "HSMG-MD", "HSMS-MD", "PE-NY", "PM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KE-RI", "KM-RI", "G1E-RI", "G1M-RI", "G2E-RI", "G2M-RI", "G3E-RI", "G3M-RI", "G4E-RI", "G4M-RI", "G5E-RI", "G5M-RI", "G6E-RI", "G6M-RI", "G7E-RI", "G7M-RI", "G8E-RI", "G8M-RI", "HSE1-RI", "HSE2-RI", "HSMA-RI", "HSMF-RI", "HSMG-RI", "HSMM-RI", "HSMN-RI", "HSMS-RI", "KE-TN", "KM-TN", "KS-TN", "G1E-TN", "G1M-TN", "G1S-TN", "G2E-TN", "G2M-TN", "G2S-TN", "G3E-TN", "G3M-TN", "G3S-TN", "G4E-TN", "G4M-TN", "G4S-TN", "G5E-TN", "G5M-TN", "G5S-TN", "G6E-TN", "G6M-TN", "G6S-TN", "G7E-TN", "G7M-TN", "G7S-TN", "G8E-TN", "G8M-TN", "G8S-TN", "HSMA1-TN", "HSMA2-TN", "HSSB1-TN", "HSE1-TN", "HSE2-TN", "HSMG-TN", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA1-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX", "SAT-M", "SAT-RW"];
 
+    standards_attribute_dump: { [key: string]: { 'State': string, 'Grades': string[], 'Subject': string, 'Curriculum': string } } = standardMetadata;
     KE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KEStandards;
     KM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KMStandards;
     G1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G1EStandards;
@@ -1230,6 +1232,7 @@ export class TemplateStandardsComponent implements OnInit {
     SATM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SATMStandards;
     SATRW_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SATRWStandards;
     standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SATRWStandards;
+    examples_dump: { [key: string]: string[] } = {};
 
     exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Timer': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number }, 'Parts': string[] } } = examMetadata;
     COG3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = COG3EProblems;
@@ -3103,7 +3106,7 @@ export class TemplateStandardsComponent implements OnInit {
         return (subtop_num_prob);
     }
 
-    selectSubTopic(topics: string[], subtopic: string) {
+    selectSubTopic(topics: string[], subtopic: string, standardID: string) {
         this.subtopic_problem_count = 0;
         this.subtopic_search_dump = {};
         for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
@@ -3113,7 +3116,7 @@ export class TemplateStandardsComponent implements OnInit {
                         for (let topic of topics) {
                             if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
                                 this.selected_topic = topic;
-                                this.standard_id = topic + ": " + subtopic;
+                                this.standard_id = standardID;
                                 this.subtopic_problem_count += 1;
                                 this.subtopic_search_dump[this.subtopic_problem_count] = prob;
                                 this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
@@ -3124,39 +3127,39 @@ export class TemplateStandardsComponent implements OnInit {
             }
         }
         this.selected_subtopic = subtopic;
-        this.subtopic_problem_number = 1;
+        this.subtopic_problem_number = 0;
         this.subtopic_attempt_path = [];
         this.subtopic_attempt_response = [];
         this.subtopic_attempt_explanation = [];
         this.subtopic_problem_selection = [];
-        if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
+        if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts).length == 0) {
             this.subtopic_problem_attempts = [0];
             this.subtopic_attempt_path = [[]];
             this.subtopic_attempt_response = [''];
             this.subtopic_attempt_explanation = [[]];
-            if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
                 this.subtopic_problem_selection = [['']];
-                if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
                     setTimeout(() => {
                         this.plot_graph_gp('', true);
                     }, 500);
                 }
             }
-            else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
                 this.subtopic_problem_selection = [[]];
-                if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                    this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
+                if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
+                    this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number+1].AnswerChoices, '');
                 }
-                if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
                     setTimeout(() => {
                         this.plot_graph_mgp('', true);
                     }, 500);
                 }
             }
-            else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
                 var msp_nums: string[] = [];
                 this.subtopic_problem_selection.push([]);
-                for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+                for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number+1].AnswerChoices)) {
                     if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
                         this.subtopic_problem_selection[0].push('');
                         msp_nums.push(choice[0]);
@@ -3166,36 +3169,36 @@ export class TemplateStandardsComponent implements OnInit {
         }
         else {
             this.subtopic_problem_attempts = [];
-            for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+            for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts)) {
                 this.subtopic_problem_attempts.push(0);
                 this.subtopic_attempt_path.push([]);
                 this.subtopic_attempt_response.push('');
                 this.subtopic_attempt_explanation.push([]);
-                if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
                     this.subtopic_problem_selection.push(['']);
-                    if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                    if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
                         setTimeout(() => {
                             this.plot_graph_gp(part, true);
                         }, 500);
                     }
                 }
-                else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
                     this.subtopic_problem_selection.push([]);
-                    if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                        this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
+                    if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
+                        this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].AnswerChoices, part);
                     }
-                    if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                    if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
                         setTimeout(() => {
                             this.plot_graph_mgp(part, true);
                         }, 500);
                     }
                 }
-                else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
                     var msp_nums: string[] = [];
                     this.subtopic_problem_selection.push([]);
-                    for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+                    for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].AnswerChoices)) {
                         if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-                            this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part)].push('');
+                            this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts).indexOf(part)].push('');
                             msp_nums.push(choice[0]);
                         }
                     }
@@ -3203,15 +3206,15 @@ export class TemplateStandardsComponent implements OnInit {
             }
         }
         this.standard_fav = false;
-        this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
-        for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
+        this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number+1].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number+1].Number).indexOf('-'))].RefSheet;
+        for (let supp of this.subtopic_search_dump[this.subtopic_problem_number+1].SuppContent) {
             setTimeout(() => {
                 this.read_supp_st_json(supp);
-            }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+            }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number+1].SuppContent.indexOf(supp)));
         }
-        if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
-            for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
-                for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
+        if (this.subtopic_search_dump[this.subtopic_problem_number+1].Type == 'MP') {
+            for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts)) {
+                for (let block of this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Content) {
                     if (block.startsWith(':table:')) {
                         setTimeout(() => {
                             this.read_table_st(block.slice(7));
@@ -3220,8 +3223,8 @@ export class TemplateStandardsComponent implements OnInit {
                 }
             }
         }
-        if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
-            for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
+        if (this.subtopic_search_dump[this.subtopic_problem_number+1].Type != 'MP') {
+            for (let block of this.subtopic_search_dump[this.subtopic_problem_number+1].Content) {
                 if (block.startsWith(':table:')) {
                     setTimeout(() => {
                         this.read_table_st(block.slice(7));
@@ -4839,12 +4842,16 @@ export class TemplateStandardsComponent implements OnInit {
         for (let domain of this.standards_dump.Standards) {
             for (let cluster of domain.Subs) {
                 cluster.NumProb = this.searchSubTopic([domain.Label], cluster.Label);
+                this.examples_dump[cluster.Key] = cluster.Examples;
                 for (let standard of cluster.Subs) {
                     standard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], standard.Label);
+                    this.examples_dump[standard.Key] = standard.Examples;
                     for (let substandard of standard.Subs) {
                         substandard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], substandard.Label);
+                        this.examples_dump[substandard.Key] = substandard.Examples;
                         for (let subsubstandard of substandard.Subs) {
                             subsubstandard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], subsubstandard.Label);
+                            this.examples_dump[subsubstandard.Key] = subsubstandard.Examples;
                         }
                     }
                 }
