@@ -22,7 +22,9 @@
                         {
                             "Key": "FL.M9-12.NSO.1.2",
                             "Label": "Generate equivalent algebraic expressions using the properties of exponents.",
-                            "Examples": [],
+                            "Examples": [
+                                "The expression 1.5³ᵗ⁺² is equivalent to the expression 2.25(1.5)³ᵗ which is equivalent to 2.25(3.375)ᵗ."
+                            ],
                             "Subs": []
                         },
                         {
@@ -34,7 +36,9 @@
                         {
                             "Key": "FL.M9-12.NSO.1.4",
                             "Label": "Apply previous understanding of operations with rational numbers to add, subtract, multiply and divide numerical radicals.",
-                            "Examples": [],
+                            "Examples": [
+                                "(Algebra 1) The expression √136/√2 is equivalent to √(136/2) which is equivalent to √68 which is equivalent to 2√17."
+                            ],
                             "Subs": []
                         },
                         {
@@ -207,13 +211,20 @@
                         {
                             "Key": "FL.M9-12.AR.1.1",
                             "Label": "Identify and interpret parts of an equation or expression that represent a quantity in terms of a mathematical or real-world context, including viewing one or more of its parts as a single entity.",
-                            "Examples": [],
+                            "Examples": [
+                                "(Algebra 1) Derrick is using the formula P = 1000(1 + .1)ᵗ to make a prediction about the camel population in Australia. He identifies the growth factor as (1 + .1), or 1.1, and states that the camel population will grow at an annual rate of 10% per year.",
+                                "The expression 1.15ᵗ can be rewritten as (1.15¹/¹²)¹²ᵗ which is approximately equivalent to 1.012¹²ᵗ. This latter expression reveals the approximate equivalent monthly interest rate of 1.2% if the annual rate is 15%."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.AR.1.2",
                             "Label": "Rearrange equations or formulas to isolate a quantity of interest.",
-                            "Examples": [],
+                            "Examples": [
+                                "(Algebra 1) The Ideal Gas Law PV = nRT can be rearranged as T = PV/nR to isolate temperature as the quantity of interest.",
+                                "Given the Compound Interest formula A = P(1 + r/n)ⁿᵗ, solve for P.",
+                                "(Mathematics for Data and Financial Literacy Honors) Given the Compound Interest formula A = P(1 + r/n)ⁿᵗ, solve for t."
+                            ],
                             "Subs": []
                         },
                         {
@@ -243,7 +254,10 @@
                         {
                             "Key": "FL.M9-12.AR.1.7",
                             "Label": "Rewrite a polynomial expression as a product of polynomials over the real number system.",
-                            "Examples": [],
+                            "Examples": [
+                                "The expression 4x³y − 3x²y⁴ is equivalent to the factored form x²y(4x − 3y³).",
+                                "The expression 16x² − 9y² is equivalent to the factored form (4x − 3y)(4x + 3y)."
+                            ],
                             "Subs": []
                         },
                         {
@@ -304,13 +318,17 @@
                         {
                             "Key": "FL.M9-12.AR.2.5",
                             "Label": "Solve and graph mathematical and real-world problems that are modeled with linear functions. Interpret key features and determine constraints in terms of the context.",
-                            "Examples": [],
+                            "Examples": [
+                                "Lizzy’s mother uses the function C(p) = 450 + 7.75p, where C(p) represents the total cost of a rental space and p is the number of people attending, to help budget Lizzy’s 16th birthday party. Lizzy’s mom wants to spend no more than $850 for the party. Graph the function in terms of the context."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.AR.2.6",
                             "Label": "Given a mathematical or real-world context, write and solve one-variable linear inequalities, including compound inequalities. Represent solutions algebraically or graphically.",
-                            "Examples": [],
+                            "Examples": [
+                                "(Algebra 1) The compound inequality 2x ≤ 5x + 1 < 4 is equivalent to −1 ≤ 3x and 5x < 3, which is equivalent to −1/3 ≤ x < 3/5."
+                            ],
                             "Subs": []
                         },
                         {
@@ -353,12 +371,15 @@
                         {
                             "Key": "FL.M9-12.AR.3.4",
                             "Label": "Write a quadratic function to represent the relationship between two quantities from a graph, a written description or a table of values within a mathematical or real-world context.",
-                            "Examples": [],
+                            "Examples": [
+                                "(Algebra 1) Given the table of values below from a quadratic function, write an equation of that function.",
+                                "[INSERT TABLE HERE]"
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.AR.3.5",
-                            "Label": "Given the 𝑥-intercepts and another point on the graph of a quadratic function, write the equation for the function.",
+                            "Label": "Given the x-intercepts and another point on the graph of a quadratic function, write the equation for the function.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -377,7 +398,9 @@
                         {
                             "Key": "FL.M9-12.AR.3.8",
                             "Label": "Solve and graph mathematical and real-world problems that are modeled with quadratic functions. Interpret key features and determine constraints in terms of the context.",
-                            "Examples": [],
+                            "Examples": [
+                                "(Algebra 1) The value of a classic car produced in 1972 can be modeled by the function V(t) = 19.25t² − 440t + 3500, where t is the number of years since 1972. In what year does the car’s value start to increase?"
+                            ],
                             "Subs": []
                         },
                         {
@@ -469,7 +492,9 @@
                         {
                             "Key": "FL.M9-12.AR.5.7",
                             "Label": "Solve and graph mathematical and real-world problems that are modeled with exponential functions. Interpret key features and determine constraints in terms of the context.",
-                            "Examples": [],
+                            "Examples": [
+                                "The graph of the function f(t) = e⁵ᵗ⁺² can be transformed into the straight line y = 5t + 2 by taking the natural logarithm of the function’s outputs."
+                            ],
                             "Subs": []
                         },
                         {
@@ -506,7 +531,9 @@
                         {
                             "Key": "FL.M9-12.AR.6.3",
                             "Label": "Explain and apply theorems for polynomials to solve mathematical and real-world problems.",
-                            "Examples": [],
+                            "Examples": [
+                                "Write a polynomial function that has the zeroes 5 and 2 + i."
+                            ],
                             "Subs": []
                         },
                         {
@@ -647,7 +674,10 @@
                         {
                             "Key": "FL.M9-12.AR.9.10",
                             "Label": "Solve and graph mathematical and real-world problems that are modeled with piecewise functions. Interpret key features and determine constraints in terms of the context.",
-                            "Examples": [],
+                            "Examples": [
+                                "A mechanic wants to place an ad in his local newspaper. The cost, in dollars, of an ad 𝑥 inches long is given by the following piecewise function. Find the cost of an ad that would be 16 inches long.",
+                                "[INSERT FUNCTION HERE]"
+                            ],
                             "Subs": []
                         }
                     ]
@@ -660,13 +690,17 @@
                         {
                             "Key": "FL.M9-12.AR.10.1",
                             "Label": "Given a mathematical or real-world context, write and solve problems involving arithmetic sequences.",
-                            "Examples": [],
+                            "Examples": [
+                                "Tara is saving money to move out of her parent’s house. She opens the account with $250 and puts $100 into a savings account every month after that. Write the total amount of money she has in her account after each month as a sequence. In how many months will she have at least $3,000?"
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.AR.10.2",
                             "Label": "Given a mathematical or real-world context, write and solve problems involving geometric sequences.",
-                            "Examples": [],
+                            "Examples": [
+                                "A bacteria in a Petri dish initially covers 2 square centimeters. The bacteria grows at a rate of 2.6% every day. Determine the geometric sequence that describes the area covered by the bacteria after 0, 1, 2, 3 ... days. Determine using technology, how many days it would take the bacteria to cover 10 square centimeters."
+                            ],
                             "Subs": []
                         },
                         {
@@ -716,7 +750,9 @@
                         {
                             "Key": "FL.M9-12.F.1.2",
                             "Label": "Given a function represented in function notation, evaluate the function for an input in its domain. For a real-world context, interpret the output.",
-                            "Examples": [],
+                            "Examples": [
+                                "(Algebra 1) The function f(x) = x/7 − 8 models Alicia’s position in miles 7 relative to a water stand x minutes into a marathon. Evaluate and interpret for a quarter of an hour into the race."
+                            ],
                             "Subs": []
                         },
                         {
@@ -808,7 +844,9 @@
                         {
                             "Key": "FL.M9-12.F.3.1",
                             "Label": "Given a mathematical or real-world context, combine two functions, limited to linear and quadratic, using arithmetic operations. When appropriate, include domain restrictions for the new function.",
-                            "Examples": [],
+                            "Examples": [
+                                "The quotient of the functions f(x) = 3x² − 7x + 3 and g(x) = 6x − 1 can be expressed as h(x) = (3x² − 7x + 3)/(6x − 1), where the domain of h(x) is −∞ ≤ x < 1/6 and 1/6 < x ≤ ∞."
+                            ],
                             "Subs": []
                         },
                         {
@@ -882,13 +920,18 @@
                         {
                             "Key": "FL.M9-12.FL.1.2",
                             "Label": "Extend previous knowledge of ratios and proportional relationships to solve real-world problems involving money and business.",
-                            "Examples": [],
+                            "Examples": [
+                                "A local grocery stores sells trail mix for $1.75 per pound. If the grocery store spends $0.82 on each pound of mix, how much will the store gain in gross profit if they sell 6.4 pounds in one day?",
+                                "If Juan makes $25.00 per hour and works 40 hours per week, what is his annual salary?"
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.FL.1.3",
                             "Label": "Solve real-world problems involving weighted averages using spreadsheets and other technology.",
-                            "Examples": [],
+                            "Examples": [
+                                "Kiko wants to buy a new refrigerator and decides on the following rating system: capacity 50%, water filter life 30% and capability with technology 20%. One refrigerator gets 8 (out of 10) for capacity, 6 for water filter life and 7 for capability with technology. Another refrigerator gets 9 for capacity, 4 for water filter life and 6 for capability with technology. Which refrigerator is best based on the rating system?"
+                            ],
                             "Subs": []
                         }
                     ]
@@ -901,13 +944,17 @@
                         {
                             "Key": "FL.M9-12.FL.2.1",
                             "Label": "Given assets and liabilities, calculate net worth using spreadsheets and other technology.",
-                            "Examples": [],
+                            "Examples": [
+                                "Jose is trying to prepare a balance sheet for the end of the year based on his profits and losses. Create a spreadsheet showing his liabilities and assets, and compute his net worth."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.FL.2.2",
                             "Label": "Solve real-world problems involving profits, costs and revenues using spreadsheets and other technology.",
-                            "Examples": [],
+                            "Examples": [
+                                "A travel agency charges $2400 per person for a week-long trip to London if the group has 16 people or less. For groups larger then 16, the price per person is reduced by $100 for each additional person. Create an expression describing the revenue as a function of the number of people in the group. Determine the number of people that maximizes the revenue."
+                            ],
                             "Subs": []
                         },
                         {
@@ -925,7 +972,9 @@
                         {
                             "Key": "FL.M9-12.FL.2.5",
                             "Label": "Develop budgets that fit within various incomes using spreadsheets and other technology.",
-                            "Examples": [],
+                            "Examples": [
+                                "Develop a budget spreadsheet for your business that includes typical expenses such as rental space, transportation, utilities, inventory, payroll, and miscellaneous expenses. Add categories for savings toward your own financial goals, and determine the monthly income needed, before taxes, to meet the requirements of your budget."
+                            ],
                             "Subs": []
                         },
                         {
@@ -950,7 +999,10 @@
                         {
                             "Key": "FL.M9-12.FL.3.2",
                             "Label": "Solve real-world problems involving simple, compound and continuously compounded interest.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find the amount of money on deposit at the end of 5 years if you started with $500 and it was compounded quarterly at 6% interest per year.",
+                                "Joe won $25,000 on a lottery scratch-off ticket. How many years will it take at 6% interest compounded yearly for his money to double?"
+                            ],
                             "Subs": []
                         },
                         {
@@ -968,13 +1020,17 @@
                         {
                             "Key": "FL.M9-12.FL.3.5",
                             "Label": "Compare the advantages and disadvantages of using cash versus personal financing options.",
-                            "Examples": [],
+                            "Examples": [
+                                "Compare paying for a tank of gasoline in the following ways: cash; credit card and paying over 2 months; credit card and paying balance in full each month."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.FL.3.6",
                             "Label": "Calculate the finance charges and total amount due on a bill using various forms of credit using estimation, spreadsheets and other technology.",
-                            "Examples": [],
+                            "Examples": [
+                                "Calculate the finance charge each month and the total amount paid for 5 months if you charged $500 on your credit card but you can only afford to pay $100 each month. Your credit card has a monthly periodic finance rate of 1.5% and an annual finance rate of 17.99%."
+                            ],
                             "Subs": []
                         },
                         {
@@ -986,7 +1042,10 @@
                         {
                             "Key": "FL.M9-12.FL.3.8",
                             "Label": "Calculate using spreadsheets and other technology the total cost of purchasing consumer durables over time given different monthly payments, down payments, financing options and fees.",
-                            "Examples": [],
+                            "Examples": [
+                                "You want to buy a sofa that cost $899. Company A will let you pay $100 down and then pay the remaining balance over 3 years at 15.99% interest. Company B will not require a down payment and will defer payments for one year. However, you will accrue interest at a rate of 18.99% interest during that first year. Starting the second year you will have to pay the new amount for 2 years at a rate of 26 % interest. Which deal is better and why? Calculate the total amount paid for both deals.",
+                                "An electronics company advertises that if you buy a TV over $450, you will not have to pay interest for one year. If you bought a 65’ TV, regularly $699.99 and on sale for 10% off, on January 1st and only paid $300 of the balance within the year, how much interest would you have to pay for the remaining balance on the TV? Assume the interest rate is 23.99%. What did the TV really cost you?"
+                            ],
                             "Subs": []
                         },
                         {
@@ -1004,7 +1063,9 @@
                         {
                             "Key": "FL.M9-12.FL.3.11",
                             "Label": "Given a real-world scenario, establish a plan to pay off debt.",
-                            "Examples": [],
+                            "Examples": [
+                                "Suppose you currently have a balance of $4500 on a credit card that charges 18% annual interest. What monthly payment would you have to make in order to pay off the card in 3 years, assuming you do not make any more charges to the card?"
+                            ],
                             "Subs": []
                         },
                         {
@@ -1029,7 +1090,9 @@
                         {
                             "Key": "FL.M9-12.FL.4.2",
                             "Label": "Compare the advantages and disadvantages for adding on a one-time warranty to a purchase using spreadsheets and other technology.",
-                            "Examples": [],
+                            "Examples": [
+                                "VicTorrious is a graphic designer and needs to buy a new computer every 3 years. For every computer that VicTorrious buys, she does not add on the one-time warranty because she feels that the total cost of the added on warranties will be more than the total cost of all repairs she expects to have."
+                            ],
                             "Subs": []
                         },
                         {
@@ -1041,7 +1104,9 @@
                         {
                             "Key": "FL.M9-12.FL.4.4",
                             "Label": "Collect, organize and interpret data to determine an effective retirement savings plan to meet personal financial goals using spreadsheets and other technology.",
-                            "Examples": [],
+                            "Examples": [
+                                "Investigate historical rates of return for stocks, bonds, savings accounts, mutual funds, as well as the relative risks for each type of investment. Organize your results in a table showing the relative returns and risks of each type of investment over short and long terms, and use these data to determine a combination of investments suitable for building a retirement account sufficient to meet anticipated financial needs."
+                            ],
                             "Subs": []
                         },
                         {
@@ -1116,7 +1181,9 @@
                         {
                             "Key": "FL.M9-12.GR.2.1",
                             "Label": "Given a preimage and image, describe the transformation and represent the transformation algebraically using coordinates.",
-                            "Examples": [],
+                            "Examples": [
+                                "Given a triangle whose vertices have the coordinates (−3, 4), (2, 1.7) and (−0.4, −3). If this triangle is reflected across the y-axis the transformation can be described using coordinates as (x, y) → (−x, y) resulting in the image whose vertices have the coordinates (3, 4), (−2, 1.7) and (0.4, −3)."
+                            ],
                             "Subs": []
                         },
                         {
@@ -1183,19 +1250,27 @@
                         {
                             "Key": "FL.M9-12.GR.3.2",
                             "Label": "Given a mathematical context, use coordinate geometry to classify or justify definitions, properties and theorems involving circles, triangles or quadrilaterals.",
-                            "Examples": [],
+                            "Examples": [
+                                "Given Triangle ABC has vertices located at (−2, 2), (3, 3) and (1, −3), respectively, classify the type of triangle ABC is based on its angle measures and side lengths.",
+                                "If a square has a diagonal with vertices (−1, 1) and (−4, −3), find the coordinate values of the vertices of the other diagonal and show that the two diagonals are perpendicular."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.GR.3.3",
                             "Label": "Use coordinate geometry to solve mathematical and real-world geometric problems involving lines, circles, triangles and quadrilaterals.",
-                            "Examples": [],
+                            "Examples": [
+                                "The line x + 2y = 10 is tangent to a circle whose center is located at (2, −1). Find the tangent point and a second tangent point of a line with the same slope as the given line.",
+                                "Given M(−4, 7) and N(12, −1),find the coordinates of point P on MN so that P partitions MN in the ratio 2:3."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.GR.3.4",
                             "Label": "Use coordinate geometry to solve mathematical and real-world problems on the coordinate plane involving perimeter or area of polygons.",
-                            "Examples": [],
+                            "Examples": [
+                                "A new community garden has four corners. Starting at the first corner and working counterclockwise, the second corner is 200 feet east, the third corner is 150 feet north of the second corner and the fourth corner is 100 feet west of the third corner. Represent the garden in the coordinate plane, and determine how much fence is needed for the perimeter of the garden and determine the total area of the garden."
+                            ],
                             "Subs": []
                         }
                     ]
@@ -1220,19 +1295,25 @@
                         {
                             "Key": "FL.M9-12.GR.4.3",
                             "Label": "Extend previous understanding of scale drawings and scale factors to determine how dilations affect the area of two-dimensional figures and the surface area or volume of three-dimensional figures.",
-                            "Examples": [],
+                            "Examples": [
+                                "Mike is having a graduation party and wants to make sure he has enough pizza. Which option would provide more pizza for his guests: one 12-inch pizza or three 6-inch pizzas?"
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.GR.4.4",
                             "Label": "Solve mathematical and real-world problems involving the area of two-dimensional figures.",
-                            "Examples": [],
+                            "Examples": [
+                                "A town has 23 city blocks, each of which has dimensions of 1 quarter mile by 1 quarter mile, and there are 4500 people in the town. What is the population density of the town?"
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.GR.4.5",
                             "Label": "Solve mathematical and real-world problems involving the volume of three-dimensional figures limited to cylinders, pyramids, prisms, cones and spheres.",
-                            "Examples": [],
+                            "Examples": [
+                                "A cylindrical swimming pool is filled with water and has a diameter of 10 feet and height of 4 feet. If water weighs 62.4 pounds per cubic foot, what is the total weight of the water in a full tank to the nearest pound?"
+                            ],
                             "Subs": []
                         },
                         {
@@ -1578,13 +1659,17 @@
                         {
                             "Key": "FL.M9-12.DP.1.3",
                             "Label": "Explain the difference between correlation and causation in the contexts of both numerical and categorical data.",
-                            "Examples": [],
+                            "Examples": [
+                                "(Algebra 1) There is a strong positive correlation between the number of Nobel prizes won by country and the per capita chocolate consumption by country. Does this mean that increased chocolate consumption in America will increase the United States of America’s chances of a Nobel prize winner?"
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.DP.1.4",
                             "Label": "Estimate a population total, mean or percentage using data from a sample survey; develop a margin of error through the use of simulation.",
-                            "Examples": [],
+                            "Examples": [
+                                "(Algebra 1) Based on a survey of 100 households in Twin Lakes, the newspaper reports that the average number of televisions per household is 3.5 with a margin of error of ±0.6. The actual population mean can be estimated to be between 2.9 and 4.1 television per household. Since there are 5,500 households in Twin Lakes the estimated number of televisions is between 15,950 and 22,550."
+                            ],
                             "Subs": []
                         },
                         {
@@ -1664,19 +1749,29 @@
                         {
                             "Key": "FL.M9-12.DP.3.1",
                             "Label": "Construct a two-way frequency table summarizing bivariate categorical data. Interpret joint and marginal frequencies and determine possible associations in terms of a real-world context.",
-                            "Examples": [],
+                            "Examples": [
+                                "(Algebra 1) Complete the frequency table below.",
+                                "[INSERT TABLE HERE]",
+                                "Using the information in the table, it is possible to determine that the second column contains the numbers 70 and 240. This means that there are 70 students who play an instrument but do not have an A in math and the total number of students who play an instrument is 90. The ratio of the joint frequencies in the first column is 1 to 1 and the ratio in the second column is 7 to 24, indicating a strong positive association between playing an instrument and getting an A in math."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.DP.3.2",
                             "Label": "Given marginal and conditional relative frequencies, construct a two-way relative frequency table summarizing categorical bivariate data.",
-                            "Examples": [],
+                            "Examples": [
+                                "(Algebra 1) A study shows that 9% of the population have diabetes and 91% do not. The study also shows that 95% of the people who do not have diabetes, test negative on a diabetes test while 80% who do have diabetes, test positive. Based on the given information, the following relative frequency table can be constructed.",
+                                "[INSERT TABLE HERE]"
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.DP.3.3",
                             "Label": "Given a two-way relative frequency table or segmented bar graph summarizing categorical bivariate data, interpret joint, marginal and conditional relative frequencies in terms of a real-world context.",
-                            "Examples": [],
+                            "Examples": [
+                                "(Algebra 1) Given the relative frequency table below, the ratio of true positives to false positives can be determined as 7.2 to 4.55, which is about 3 to 2, meaning that a randomly selected person who tests positive for diabetes is about 50% more likely to have diabetes than not have it.",
+                                "[INSERT TABLE HERE]"
+                            ],
                             "Subs": []
                         },
                         {
@@ -1725,7 +1820,9 @@
                         {
                             "Key": "FL.M9-12.DP.4.5",
                             "Label": "Given a two-way table containing data from a population, interpret the joint and marginal relative frequencies as empirical probabilities and the conditional relative frequencies as empirical conditional probabilities. Use those probabilities to determine whether characteristics in the population are approximately independent.",
-                            "Examples": [],
+                            "Examples": [
+                                "A company has a commercial for their new grill. A population of people are surveyed to determine whether or not they have seen the commercial and whether or not they have purchased the product. Using this data, calculate the empirical conditional probabilities that a person who has seen the commercial did or did not purchase the grill."
+                            ],
                             "Subs": []
                         },
                         {
@@ -1828,7 +1925,9 @@
                         {
                             "Key": "FL.M9-12.DP.5.11",
                             "Label": "Evaluate reports based on data from diverse media, print and digital resources by interpreting graphs and tables; evaluating data-based arguments; determining whether a valid sampling method was used; or interpreting provided statistics.",
-                            "Examples": [],
+                            "Examples": [
+                                "A local news station changes the 𝑦-axis on a data display from 0 to 10,000 to include data only within the range 7,000 to 10,000. Depending on the purpose, this could emphasize differences in data values in a misleading way."
+                            ],
                             "Subs": []
                         }
                     ]
@@ -2125,43 +2224,57 @@
                         {
                             "Key": "FL.M9-12.C.1.1",
                             "Label": "Demonstrate understanding of the concept of a limit and estimate limits from graphs and tables of values.",
-                            "Examples": [],
+                            "Examples": [
+                                "For f(x) = (x² + 2x − 8)/(x − 2), estimate lim(x→2) (x² + 2x − 8)/(x − 2) by calculating the function’s values for x = 2.1, 2.01, 2.001 and for x = 1.9, 1.99, 1.999. Explain your answer."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.1.2",
                             "Label": "Determine the value of a limit if it exists algebraically using limits of sums, differences, products, quotients and compositions of continuous functions.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find lim(𝑥→π) sin(x)cos(x) + tan(x). "
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.1.3",
                             "Label": "Find limits of rational functions that are undefined at a point.",
-                            "Examples": [],
+                            "Examples": [
+                                "The magnitude of the force between two positive charges, q₁ and q₂, can be described by the following function: F(r) = k(q₁q₂/r²), where 𝑘 is Coulomb’s constant and r is the distance between the two charges. Find the limit as r approaches 0 of the function F(r). Interpret the answer in terms of the context."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.1.4",
                             "Label": "Find one-sided limits.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find lim(x→4⁻) −√(4 − x)."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.1.5",
                             "Label": "Find limits at infinity.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find lim(𝑥→∞) 2x³ − 500x²."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.1.6",
                             "Label": "Decide when a limit is infinite and use limits involving infinity to describe asymptotic behavior.",
-                            "Examples": [],
+                            "Examples": [
+                                "Where does the function, f(x) = 1/(x² − 7x + 10), have asymptote(s)?"
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.1.7",
                             "Label": "Find special limits by using the Squeeze Theorem or algebraic manipulation.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find lim(x→0) sin²x/x."
+                            ],
                             "Subs": []
                         },
                         {
@@ -2173,7 +2286,9 @@
                         {
                             "Key": "FL.M9-12.C.1.9",
                             "Label": "Define continuity in terms of limits.",
-                            "Examples": [],
+                            "Examples": [
+                                "Given that the limit of g(x) as x approaches to 5 exists, is the statement “g(x) is continuous at x = 5” necessarily true? Provide example functions to support your conclusion."
+                            ],
                             "Subs": []
                         },
                         {
@@ -2185,7 +2300,10 @@
                         {
                             "Key": "FL.M9-12.C.1.11",
                             "Label": "Apply the Intermediate Value Theorem and the Extreme Value Theorem.",
-                            "Examples": [],
+                            "Examples": [
+                                "Use the Intermediate Value Theorem to show that g(x) = x³ + 3x² − 9x − 2 has a zero between 𝑥 = 0 and x = 3.",
+                                "Use the Extreme Value Theorem to decide whether f(x) = tan(x) has a minimum and maximum on the interval [−π/4, π/4]. What about on the  interval [−π, π]?"
+                            ],
                             "Subs": []
                         }
                     ]
@@ -2198,7 +2316,9 @@
                         {
                             "Key": "FL.M9-12.C.2.1",
                             "Label": "State, understand and apply the definition of derivative. Apply and interpret derivatives geometrically and numerically.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find lim(h→0) ((5 + h)² − 5²)/h. What does the result tell you? Use the limit to determine the derivative function for f(x) = x²."
+                            ],
                             "Subs": []
                         },
                         {
@@ -2216,43 +2336,59 @@
                         {
                             "Key": "FL.M9-12.C.2.4",
                             "Label": "Apply the rules for finding derivatives of constants, sums, products, quotients and the Chain Rule to solve problems with functions limited to algebraic, trigonometric, inverse trigonometric, logarithmic and exponential.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find dy/dx for the function y = ln(x).",
+                                "Show that the derivative of f(x) = tan(x) is f′(x) = sec²x using the quotient rule for derivatives.",
+                                "Find f′(x) for f(x) = (x² + 2)¹/²."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.2.5",
                             "Label": "Find the derivatives of implicitly defined functions.",
-                            "Examples": [],
+                            "Examples": [
+                                "For the equation xy − x²y² = 5, find dy/dx at the point (2, 3)."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.2.6",
                             "Label": "Find derivatives of inverse functions.",
-                            "Examples": [],
+                            "Examples": [
+                                "Let f(x) = 2x³ and g(x) = f⁻¹(x), find g′(2)."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.2.7",
                             "Label": "Find second derivatives and derivatives of higher order.",
-                            "Examples": [],
+                            "Examples": [
+                                "Let f(x) = e⁵ˣ, find f′′(x) and f′′′(x)."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.2.8",
                             "Label": "Find derivatives using logarithmic differentiation.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find the derivative of f(x) = (3x² + 5)ˣ."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.2.9",
                             "Label": "Demonstrate and use the relationship between differentiability and continuity.",
-                            "Examples": [],
+                            "Examples": [
+                                "Is f(x) = |x| continuous at x = 0? Is f(x) differentiable at x = 0? Explain your answers."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.2.10",
                             "Label": "Apply the Mean Value Theorem.",
-                            "Examples": [],
+                            "Examples": [
+                                "At a car race, two cars join the race at the same point at the same time. They finish the race in a tie. Prove that sometime during the race, the two cars had exactly the same speed. (Hint: Define f(t), g(t), and h(t), where f(t) is the distance that Car A has traveled at time t; g(t) is the distance that Car B has travelled at time t; and h(t) = f(t) − g(t).)"
+                            ],
                             "Subs": []
                         }
                     ]
@@ -2265,61 +2401,82 @@
                         {
                             "Key": "FL.M9-12.C.3.1",
                             "Label": "Find the slope of a curve at a point, including points at which there are vertical tangent lines.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find the slope of the line tangent to the graph of f(x) = ∛(1 − x) at x = 1."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.3.2",
                             "Label": "Find an equation for the tangent line to a curve at a point and use it to make local linear approximation.",
-                            "Examples": [],
+                            "Examples": [
+                                "Use a local linear approximation to estimate the value of f(x) = x at xˣ = 2.1."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.3.3",
                             "Label": "Determine where a function is decreasing and increasing using its derivative.",
-                            "Examples": [],
+                            "Examples": [
+                                "For what values of x is the function f(x) = x/(x² + 1) decreasing?"
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.3.4",
                             "Label": "Find local and absolute maximum and minimum points of a function.",
-                            "Examples": [],
+                            "Examples": [
+                                "For the graph of the function f(x) = x³ − 3x, find the local maximum and local minimum points of f(x) on [−2, 3]."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.3.5",
                             "Label": "Determine the concavity and points of inflection of a function using its second derivative.",
-                            "Examples": [],
+                            "Examples": [
+                                "For the graph of the function f(x) = x³ − 3x, find the points of inflection of f(x) and determine where f(x) is concave upward and concave downward."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.3.6",
                             "Label": "Sketch graphs by using first and second derivatives. Compare the corresponding characteristics of the graphs of f, f' and f“.",
-                            "Examples": [],
+                            "Examples": [
+                                "Sketch the graph of f(x) = x⁴ + 3x² − 2x + 1 using information from the first and second derivatives."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.3.7",
                             "Label": "Solve optimization problems using derivatives.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find the shortest length of fencing you can use to enclose a rectangular field with and area of 5000 m².",
+                                "Find the dimensions of an equilateral triangle and a square that will produce the least area is the sum of their perimeters is 20 centimeters."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.3.8",
                             "Label": "Find average and instantaneous rates of change. Explain the instantaneous rate of change as the limit of the average rate of change. Interpret a derivative as a rate of change in applications, including velocity, speed and acceleration.",
-                            "Examples": [],
+                            "Examples": [
+                                "The vertical distance traveled by an object within the earth’s gravitational field, neglecting air resistance, is given by the equation x = 0.5gt² + vₒt + xₒ, where g is the force on the object due to earth’s gravity, vₒ is the initial velocity, x₀ is the initial height above the ground, t is the time in seconds and down is the negative vertical direction. Determine the instantaneous speed and the average speed for an object, initially at rest, 3 seconds after it is dropped from a 100 m. tall cliff. Describe the object 5 seconds after it is dropped from the same height. Use g = −10 m/s²."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.3.9",
                             "Label": "Find the velocity and acceleration of a particle moving in a straight line.",
-                            "Examples": [],
+                            "Examples": [
+                                "A bead on a wire moves so that, after t seconds, its distance s cm. from the midpoint of the wire is given by s = 5sin(t − π/4). Find its maximum velocity and where along the wire this occurs."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.3.10",
                             "Label": "Model and solve problems involving rates of change, including related rates.",
-                            "Examples": [],
+                            "Examples": [
+                                "One boat is heading due south at 10 mph. Another boat is heading due west at 15 mph. Both boats are heading toward the same point. If the boats maintain their speeds and directions, they will meet in two hours. Find the rate, in miles per hour, that the distance between them is decreasing exactly one hour before they meet."
+                            ],
                             "Subs": []
                         }
                     ]
@@ -2332,25 +2489,36 @@
                         {
                             "Key": "FL.M9-12.C.4.1",
                             "Label": "Interpret a definite integral as a limit of Riemann sums. Calculate the values of Riemann sums over equal subdivisions using left, right and midpoint evaluation points.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find the values of the Riemann sums over the interval [0, 1] using 12 and 24 subintervals of equal width for f(x) = eˣ evaluated at the midpoint of each subinterval. Write an expression for the Riemann sums using n intervals of equal width. Find the limit of this Riemann Sums as n goes to infinity.",
+                                "Estimate ∫(0,π) sin(x)dx using a Riemann midpoint sum with 4 subintervals.",
+                                "Find an approximate value for ∫(0,3) x²dx using 6 rectangles of equal width 0 under the graph of f(x) = x² between x = 0 and x = 3. How did you form your rectangles? Compute this approximation three times using at least three different methods to form the rectangles."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.4.2",
                             "Label": "Apply Riemann sums, the Trapezoidal Rule and technology to approximate definite integrals of functions represented algebraically, geometrically and by tables of values.",
-                            "Examples": [],
+                            "Examples": [
+                                "Approximate the value of ∫(0,3) x²dx using the Trapezoidal Rule with 6 0 subintervals over [0, 3] for f(x) = x².",
+                                "Find an approximation to ∫(0,3) √(9 − x²)dx."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.4.3",
                             "Label": "Interpret a definite integral of the rate of change of a quantity over an interval as the change of the quantity over the interval.",
-                            "Examples": [],
+                            "Examples": [
+                                "Explain why ∫(4,5) 2xdx = 5² − 4²."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.4.4",
                             "Label": "Evaluate definite integrals by using the Fundamental Theorem of Calculus.",
-                            "Examples": [],
+                            "Examples": [
+                                "Evaluate ∫(1,5) eˣdx."
+                            ],
                             "Subs": []
                         },
                         {
@@ -2368,7 +2536,9 @@
                         {
                             "Key": "FL.M9-12.C.4.7",
                             "Label": "Evaluate definite and indefinite integrals by using integration by substitution.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find ∫ x²(x³ + 1)⁴dx."
+                            ],
                             "Subs": []
                         }
                     ]
@@ -2381,43 +2551,58 @@
                         {
                             "Key": "FL.M9-12.C.5.1",
                             "Label": "Find specific antiderivatives using initial conditions, including finding velocity functions from acceleration functions, finding position functions from velocity functions and solving applications related to motion along a line.",
-                            "Examples": [],
+                            "Examples": [
+                                "A bead on a wire moves so that its velocity, in cm/s, after t seconds, is given by v(t) = 3cos(3t). Given that it starts 2 cm to the left of the midpoint of the wire, find its position after 5 seconds."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.5.2",
                             "Label": "Solve separable differential equations.",
-                            "Examples": [],
+                            "Examples": [
+                                "A certain amount of money, 𝑃, is earning interest continually at a rate of 𝑟. Write a separable differential equation to model the rate of change of the amount of money with respect to time."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.5.3",
                             "Label": "Solve differential equations of the form dy/dt = ky as applied to growth and decay problems.",
-                            "Examples": [],
+                            "Examples": [
+                                "The amount of a certain radioactive material was 10 kg a year ago. The amount is now 9 kg. When will it be reduced to 1 kg? Explain your answer."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.5.4",
                             "Label": "Display a graphic representation of the solution to a differential equation by using slope fields, and locate particular solutions to the equation.",
-                            "Examples": [],
+                            "Examples": [
+                                "Draw a slope field for dy/dx = x² and graph the particular solution that passes through the point (2, 4)."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.5.5",
                             "Label": "Find the area between a curve and the x-axis or between two curves by using definite integrals.",
-                            "Examples": [],
+                            "Examples": [
+                                "Find the area bounded by y = √x, y = 0 and x = 2."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.5.6",
                             "Label": "Find the average value of a function over a closed interval by using definite integrals.",
-                            "Examples": [],
+                            "Examples": [
+                                "The daytime temperature, in degrees Fahrenheit, in a certain city t hours after 8 AM can be modeled by the function T = 54 + 15sin(πt/12). What is the average temperature in this city during the time period from 8 AM to 8 PM?"
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.5.7",
                             "Label": "Find the volume of a figure with known cross-sectional area, including figures of revolution, by using definite integrals.",
-                            "Examples": [],
+                            "Examples": [
+                                "A cone with its vertex at the origin lies symmetrically along the x-axis. The base of the cone is at x = 5 and the base radius is 7. Use integration to find the volume of the cone.",
+                                "What is the volume of the solid created when the area between the curves f(x) = x and g(x) = x² for 0 ≤ x ≤ 1 is revolved around the y-axis?"
+                            ],
                             "Subs": []
                         }
                     ]

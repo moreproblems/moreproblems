@@ -27,7 +27,9 @@
                                 {
                                     "Key": "TN.M9-12.A2.N-RN.A.1.b",
                                     "Label": "Explain why x¹/ⁿ can be written as the nth root of x.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, we define 51/3 to be the cube root of 5 because we want (5¹/³)³ = 5(¹/³)³ to hold, so (51¹/³)³ must equal 5."
+                                    ],
                                     "Subs": []
                                 },
                                 {
@@ -157,7 +159,11 @@
                         {
                             "Key": "TN.M9-12.A2.A-SSE.A.1",
                             "Label": "Interpret expressions that represent a quantity in terms of its context.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, interpret P(1 + r)n as the product of the initial value P and the growth rate after the first n years.",
+                                "For example, view (1000 – 70x) (0.5 + 0.1x) as the product of the number of items sold and the cost of each item, which produces the profit, where x is the number of 10-cent price increases.",
+                                "For example, view x(100 – 2x)(30 – 2x) as the product of the length, width, and height, which produces the volume of an open box made from a 100 by 30 rectangle with an x by x square cut out of each corner."
+                            ],
                             "Subs": [
                                 {
                                     "Key": "TN.M9-12.A2.A-SSE.A.1.a",
@@ -228,7 +234,9 @@
                         {
                             "Key": "TN.M9-12.A2.A-CED.A.3",
                             "Label": "Rearrange formulas to isolate a quantity of interest using algebraic reasoning.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, rearrange the formula for the area of a circle to isolate the radius. Rearrange the formula for the volume of a cube to isolate the side length."
+                            ],
                             "Subs": []
                         }
                     ]
@@ -267,7 +275,9 @@
                         {
                             "Key": "TN.M9-12.A2.A-REI.B.3",
                             "Label": "Write and solve a system of linear equations in a real-world context.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, use systems of equations to find the vertices of a triangle defined by three lines."
+                            ],
                             "Subs": []
                         },
                         {
@@ -305,7 +315,10 @@
                         {
                             "Key": "TN.M9-12.A2.F-IF.A.3",
                             "Label": "Understand geometric formulas as functions.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, see geometric formulas such as area of a circle, area of a square, and surface area of a cube as quadratic functions.",
+                                "For example, see the volume of a cube and volume of a sphere as cubic functions."
+                            ],
                             "Subs": []
                         }
                     ]
@@ -324,7 +337,9 @@
                         {
                             "Key": "TN.M9-12.A2.F-IF.B.5",
                             "Label": "Write a function defined by an expression in different but equivalent forms to reveal and explain different properties of the function.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, the growth of bacteria can be modeled by either f(t) = 3ᵗ⁺² or g(t) = 9(3ᵗ) because the expression 3ᵗ⁺² can be rewritten as (3ᵗ) (3²) = 9(3ᵗ)."
+                            ],
                             "Subs": [
                                 {
                                     "Key": "TN.M9-12.A2.F-IF.B.5.a",
@@ -381,13 +396,17 @@
                                 {
                                     "Key": "TN.M9-12.A2.F-BF.A.1.a",
                                     "Label": "Combine standard function types using arithmetic operations.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, if 1000 – 70x represents the number of items sold in a month and 0.5 + 0.1x represents the cost of each item, multiply (1000 – 70x)(0.5 + 0.1x) to write the quadratic function representing the profit, where x is the number of 10-cent price increases."
+                                    ],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "TN.M9-12.A2.F-BF.A.1.b",
                                     "Label": "Combine standard function types using composition.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, given a product originally priced at $x is $4 off, build a function that will calculate the final price including 10% sales tax (i.e., f(g(x)) = 1.10 (x – 4))."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -478,7 +497,9 @@
                         {
                             "Key": "TN.M9-12.A2.F-LE.A.2",
                             "Label": "Know that a quantity increasing exponentially eventually exceeds a quantity increasing linearly, quadratically, or cubically.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, illustrate using graphs and tables that g(x) = 2¹.⁶ˣ eventually exceeds f(x) = 4x³ + 18. Tasks are limited to linear, quadratic, cubic and exponential functions."
+                            ],
                             "Subs": []
                         }
                     ]
@@ -543,7 +564,9 @@
                         {
                             "Key": "TN.M9-12.A2.S-IC.A.1",
                             "Label": "Recognize the purposes of and differences among sample surveys, experiments, and observational studies.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, in a given situation, is it more appropriate to use a sample survey, an experiment, or an observational study?"
+                            ],
                             "Subs": []
                         },
                         {
@@ -620,7 +643,9 @@
                         {
                             "Key": "TN.M9-12.A2.S-CP.C.4",
                             "Label": "Find the conditional probability of A given B as the fraction of B's outcomes that also belong to A and interpret the answer in terms of the given context.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, a teacher gave two exams. 75 percent passed the first exam and 25 percent passed both. What percent who passed the first exam also passed the second exam?"
+                            ],
                             "Subs": []
                         }
                     ]
