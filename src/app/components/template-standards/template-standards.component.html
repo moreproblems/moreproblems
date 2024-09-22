@@ -570,7 +570,7 @@
                 <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[standards_attribute_dump[key].Subject]}} </b> </button>
               </label>
             </div>
-            <span style="font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)"> &starf;
+            <span *ngIf="authService.userData as user" style="font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)"> &starf;
             </span>
           </section>
           <h2 *ngIf="screenWidth > mobileWidth"
@@ -586,19 +586,24 @@
             <b *ngFor="let example of examples_dump[standard_id]" style="font-weight: 400">{{example}}</b>
           </h3>
           <h3 *ngIf="screenWidth <= mobileWidth && subtopic_problem_number == 0"
-            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 14px; line-height: 18px; color: darkslategrey">
+            style="margin: auto 25px; padding-top: 20px; font-weight: 400; font-size: 15px; line-height: 19px; color: darkslategrey">
             <b *ngFor="let example of examples_dump[standard_id]" style="font-weight: 400">{{example}}</b>
           </h3>
-          <button *ngIf="subtopic_problem_number == 0" class="grade-button" (click)="subtopic_problem_number = 1; scroll_top()"
-            style="display: block; max-width: 150px; max-height: 100px; margin-top: 20px">
-            <b> Begin Practice </b>
-          </button>
+          <div *ngIf="subtopic_problem_number == 0" class="card card-medium"
+            style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin-top: 20px; padding: min(20px, 3%)">
+            <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
+              {{subtopic_problem_count}} Problems </h3>
+            <button *ngIf="subtopic_problem_number == 0" class="grade-button" (click)="subtopic_problem_number = 1; scroll_top()"
+              style="display: block; max-width: 150px; max-height: 100px">
+              <b> Begin Practice </b>
+            </button>
+          </div>
           <div *ngIf="subtopic_problem_number > 0" class="card card-medium"
             style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin-top: 20px; padding: min(20px, 3%)">
             <section style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
               <div style="display: flex; flex-direction: row; align-items: center">
                   <div style="margin: auto; text-align: right">
-                    <h3 style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
+                    <h3 style="margin: 10px 0px; color: darkslategrey; font-size: 20px">
                       Problem #{{subtopic_problem_number}} </h3>
                   </div>
               </div>

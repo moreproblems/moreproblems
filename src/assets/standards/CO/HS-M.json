@@ -21,7 +21,9 @@
                                 {
                                     "Key": "CO.M9-12.N-RN.A.1",
                                     "Label": "Explain how the definition of the meaning of rational exponents follows from extending the properties of integer exponents to those values, allowing for a notation for radicals in terms of rational exponents.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, we define 5¹/³ to be the cube root of 5 because we want (5¹/³)³ = 5⁽¹/³⁾³ to hold, so (5¹/³)³ must equal 5."
+                                    ],
                                     "Subs": []
                                 },
                                 {
@@ -123,7 +125,9 @@
                                 {
                                     "Key": "CO.M9-12.N-CN.B.5",
                                     "Label": "Represent addition, subtraction, multiplication, and conjugation of complex numbers geometrically on the complex plane; use properties of this representation for computation.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, (−1 + √(3i))³ = 8 because (−1 + √(3i)) has modulus 2 and argument 120∘."
+                                    ],
                                     "Subs": []
                                 },
                                 {
@@ -140,19 +144,21 @@
                             "Examples": [],
                             "Subs": [
                                 {
-                                    "Key": "CO.M9-12.N-CN.C",
+                                    "Key": "CO.M9-12.N-CN.C.7",
                                     "Label": "Solve quadratic equations with real coefficients that have complex solutions.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
-                                    "Key": "CO.M9-12.N-CN.C",
+                                    "Key": "CO.M9-12.N-CN.C.8",
                                     "Label": "Extend polynomial identities to the complex numbers.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, rewrite as x² + 4 as (x + 2i)(x − 2i)."
+                                    ],
                                     "Subs": []
                                 },
                                 {
-                                    "Key": "CO.M9-12.N-CN.C",
+                                    "Key": "CO.M9-12.N-CN.C.9",
                                     "Label": "Know the Fundamental Theorem of Algebra; show that it is true for quadratic polynomials.",
                                     "Examples": [],
                                     "Subs": []
@@ -324,7 +330,9 @@
                                         {
                                             "Key": "CO.M9-12.A-SSE.A.1.b",
                                             "Label": "Interpret complicated expressions by viewing one or more of their parts as a single entity.",
-                                            "Examples": [],
+                                            "Examples": [
+                                                "For example, interpret P(1 + r)ⁿ as the product of P and a factor not depending on P."
+                                            ],
                                             "Subs": []
                                         }
                                     ]
@@ -332,7 +340,9 @@
                                 {
                                     "Key": "CO.M9-12.A-SSE.A.2",
                                     "Label": "Use the structure of an expression to identify ways to rewrite it.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, see x⁴ – y⁴ as (x²)² – (y²)², thus recognizing it as a difference of squares that can be factored as (x² – y²)(x² + y²)."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -362,7 +372,9 @@
                                         {
                                             "Key": "CO.M9-12.A-SSE.B.3.c",
                                             "Label": "Use the properties of exponents to transform expressions for exponential functions.",
-                                            "Examples": [],
+                                            "Examples": [
+                                                "For example the expression 1.15ᵗ can be rewritten as (1.15¹/¹²)¹²ᵗ ≈ 1.012¹²ᵗ to reveal the approximate equivalent monthly interest rate if the annual rate is 15%."
+                                            ],
                                             "Subs": []
                                         }
                                     ]
@@ -370,7 +382,9 @@
                                 {
                                     "Key": "CO.M9-12.A-SSE.B.4",
                                     "Label": " Use the formula for the sum of a finite geometric series (when the common ratio is not 1) to solve problems.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, calculate mortgage payments."
+                                    ],
                                     "Subs": [
                                         {
                                             "Key": "CO.M9-12.A-SSE.B.4.a",
@@ -429,7 +443,9 @@
                                 {
                                     "Key": "CO.M9-12.A-APR.C.4",
                                     "Label": "Prove polynomial identities and use them to describe numerical relationships.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, the polynomial identity (x² + y²)² = (x² – y²)² + (2xy)² can be used to generate Pythagorean triples."
+                                    ],
                                     "Subs": []
                                 },
                                 {
@@ -486,13 +502,17 @@
                                 {
                                     "Key": "CO.M9-12.A-CED.A.3",
                                     "Label": "Represent constraints by equations or inequalities, and by systems of equations and/or inequalities, and interpret solutions as viable or nonviable options in a modeling context.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, represent inequalities describing nutritional and cost constraints on combinations of different foods."
+                                    ],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "CO.M9-12.A-CED.A.4",
                                     "Label": "Rearrange formulas to highlight a quantity of interest, using the same reasoning as in solving equations.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, rearrange Ohm’s law V = IR to highlight resistance R."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -575,7 +595,9 @@
                                 {
                                     "Key": "CO.M9-12.A-REI.C.7",
                                     "Label": "Solve a simple system consisting of a linear equation and a quadratic equation in two variables algebraically and graphically.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, find the points of intersection between the line y = –3x and the circle x² + y² = 3."
+                                    ],
                                     "Subs": []
                                 },
                                 {
@@ -644,7 +666,9 @@
                                 {
                                     "Key": "CO.M9-12.F-IF.A.3",
                                     "Label": "Demonstrate that sequences are functions, sometimes defined recursively, whose domain is a subset of the integers.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, the Fibonacci sequence is defined recursively by f(0) = f(1) = 1, f(n + 1) = f(n) + f(n − 1) for n ≥ 1 ."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -663,7 +687,9 @@
                                 {
                                     "Key": "CO.M9-12.F-IF.B.5",
                                     "Label": "Relate the domain of a function to its graph and, where applicable, to the quantitative relationship it describes.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, if the function h(n) gives the number of person-hours it takes to assemble n engines in a factory, then the positive integers would be an appropriate domain for the function."
+                                    ],
                                     "Subs": []
                                 },
                                 {
@@ -730,7 +756,9 @@
                                         {
                                             "Key": "CO.M9-12.F-IF.C.8.b",
                                             "Label": "Use the properties of exponents to interpret expressions for exponential functions.",
-                                            "Examples": [],
+                                            "Examples": [
+                                                "For example, identify percent rate of change in functions such as y = (1.02)ᵗ, y = (0.97)ᵗ, y = (1.01)¹²ᵗ, y = (1.2)ᵗ/¹⁰, and classify them as representing exponential growth or decay."
+                                            ],
                                             "Subs": []
                                         }
                                     ]
@@ -738,7 +766,9 @@
                                 {
                                     "Key": "CO.M9-12.F-IF.C.9",
                                     "Label": "Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions).",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, given a graph of one quadratic function and an algebraic expression for another, say which has the larger maximum."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -769,13 +799,17 @@
                                         {
                                             "Key": "CO.M9-12.F-BF.A.1.b",
                                             "Label": "Combine standard function types using arithmetic operations.",
-                                            "Examples": [],
+                                            "Examples": [
+                                                "For example, build a function that models the temperature of a cooling body by adding a constant function to a decaying exponential, and relate these functions to the model."
+                                            ],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "CO.M9-12.F-BF.A.1.c",
                                             "Label": "Compose functions.",
-                                            "Examples": [],
+                                            "Examples": [
+                                                "For example, if T(y) is the temperature in the atmosphere as a function of height, and h(t) is the height of a weather balloon as a function of time, then T(h(t)) is the temperature at the location of the weather balloon as a function of time."
+                                            ],
                                             "Subs": []
                                         }
                                     ]
@@ -807,7 +841,9 @@
                                         {
                                             "Key": "CO.M9-12.F-BF.B.4.a",
                                             "Label": "Solve an equation of the form f(x) = c for a simple function f that has an inverse and write an expression for the inverse.",
-                                            "Examples": [],
+                                            "Examples": [
+                                                "For example, f(x) = 2x³ or f(x) = (x + 1)/(x – 1) for x ≠ 1."
+                                            ],
                                             "Subs": []
                                         },
                                         {
@@ -1119,7 +1155,9 @@
                                 {
                                     "Key": "CO.M9-12.S-IC.A.2",
                                     "Label": "Decide if a specified model is consistent with results from a given data- generating process, e.g., using simulation.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, a model says a spinning coin falls heads up with probability 0.5. Would a result of 5 tails in a row cause you to question the model?"
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -1188,13 +1226,17 @@
                                 {
                                     "Key": "CO.M9-12.S-CP.A.4",
                                     "Label": "Construct and interpret two-way frequency tables of data when two categories are associated with each object being classified. Use the two-way table as a sample space to decide if events are independent and to approximate conditional probabilities.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, collect data from a random sample of students in your school on their favorite subject among math, science, and English. Estimate the probability that a randomly selected student from your school will favor science given that the student is in 10th grade. Do the same for other subjects and compare the results."
+                                    ],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "CO.M9-12.S-CP.A.5",
                                     "Label": "Recognize and explain the concepts of conditional probability and independence in everyday language and everyday situations.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, compare the chance of having lung cancer if you are a smoker with the chance of being a smoker if you have lung cancer."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -1257,13 +1299,17 @@
                                 {
                                     "Key": "CO.M9-12.S-MD.A.3",
                                     "Label": "Develop a probability distribution for a random variable defined for a sample space in which theoretical probabilities can be calculated; find the expected value.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, find the theoretical probability distribution for the number of correct answers obtained by guessing on all five questions of multiple-choice test where each question has four choices, and find the expected grade under various grading schemes."
+                                    ],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "CO.M9-12.S-MD.A.4",
                                     "Label": "Develop a probability distribution for a random variable defined for a sample space in which probabilities are assigned empirically; find the expected value.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, find a current data distribution on the number of TV sets per household in the United States, and calculate the expected number of sets per household. How many TV sets would you expect to find in 100 randomly selected households?"
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -1281,13 +1327,17 @@
                                         {
                                             "Key": "CO.M9-12.S-MD.B.5.a",
                                             "Label": "Find the expected payoff for a game of chance.",
-                                            "Examples": [],
+                                            "Examples": [
+                                                "For example, find the expected winnings from a state lottery ticket or game at a fast-food restaurant."
+                                            ],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "CO.M9-12.S-MD.B.5.b",
                                             "Label": "Evaluate and compare strategies on the basis of expected values.",
-                                            "Examples": [],
+                                            "Examples": [
+                                                "For example, compare a high-deductible versus a low-deductible automobile insurance policy using various, but reasonable, chances of having a minor or major accident."
+                                            ],
                                             "Subs": []
                                         }
                                     ]
@@ -1631,7 +1681,9 @@
                                 {
                                     "Key": "CO.M9-12.G-GPE.B.4",
                                     "Label": "Use coordinates to prove simple geometric theorems algebraically.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, prove or disprove that a figure defined by four given points in the coordinate plane is a rectangle; prove or disprove that the point (1, √3) lies on the circle centered at the origin and containing the point (0,2)."
+                                    ],
                                     "Subs": []
                                 },
                                 {
