@@ -21,7 +21,9 @@
                                 {
                                     "Key": "MD.M9-12.A2.N-RN.A.1",
                                     "Label": "Explain how the definition of the meaning of rational exponents follows from extending the properties of integer exponents to those values, allowing for a notation for radicals in terms of rational exponents.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, we define 5¹/³ to be the cube root of 5 because we want (5¹/³)³ = 5⁽¹/³⁾³ to hold, so (5¹/³)³ must equal 5."
+                                    ],
                                     "Subs": []
                                 },
                                 {
@@ -113,7 +115,9 @@
                                 {
                                     "Key": "MD.M9-12.A2.A-SSE.A.2",
                                     "Label": "Use the structure of an expression to identify ways to rewrite it.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, see x⁴ – y⁴ as (x²)² – (y²)², thus recognizing it as a difference of squares that can be factored as (x² – y²)(x² + y²)."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -143,7 +147,9 @@
                                         {
                                             "Key": "MD.M9-12.A2.A-SSE.B.3.c",
                                             "Label": "Use the properties of exponents to transform expressions for exponential functions.",
-                                            "Examples": [],
+                                            "Examples": [
+                                                "For example the expression 1.15ᵗ can be rewritten as (1.15¹/¹²)¹²ᵗ ≈ 1.012¹²ᵗ to reveal the approximate equivalent monthly interest rate if the annual rate is 15%."
+                                            ],
                                             "Subs": []
                                         }
                                     ]
@@ -151,7 +157,9 @@
                                 {
                                     "Key": "MD.M9-12.A2.A-SSE.B.4",
                                     "Label": "Derive the formula for the sum of a finite geometric series (when the common ratio is not 1), and use the formula to solve problems.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, calculate mortgage payments."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -190,7 +198,9 @@
                                 {
                                     "Key": "MD.M9-12.A2.A-APR.C.4",
                                     "Label": "Prove polynomial identities and use them to describe numerical relationships.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, the polynomial identity (x² + y²)² = (x² – y²)² + (2xy)² can be used to generate Pythagorean triples."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -288,7 +298,9 @@
                                 {
                                     "Key": "MD.M9-12.A2.A-REI.C.7",
                                     "Label": "Solve a simple system consisting of a linear equation and a quadratic equation in two variables algebraically and graphically.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, find the points of intersection between the line y = –3x and the circle x² + y² = 3."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -328,7 +340,9 @@
                                 {
                                     "Key": "MD.M9-12.A2.F-IF.A.3",
                                     "Label": "Recognize that sequences are functions, sometimes defined recursively, whose domain is a subset of the integers.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, the Fibonacci sequence is defined recursively by f(0) = f(1) = 1, f(n + 1) = f(n) + f(n − 1) for n ≥ 1 ."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -402,7 +416,9 @@
                                         {
                                             "Key": "MD.M9-12.A2.F-IF.C.8.b",
                                             "Label": "Use the properties of exponents to interpret expressions for exponential functions.",
-                                            "Examples": [],
+                                            "Examples": [
+                                                "For example, identify percent rate of change in functions such as y = (1.02)ᵗ, y = (0.97)ᵗ, y = (1.01)¹²ᵗ, y = (1.2)ᵗ/¹⁰, and classify them as representing exponential growth or decay."
+                                            ],
                                             "Subs": []
                                         }
                                     ]
@@ -410,7 +426,9 @@
                                 {
                                     "Key": "MD.M9-12.A2.F-IF.C.9",
                                     "Label": "Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions).",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, given a graph of one quadratic function and an algebraic expression for another, say which has the larger maximum."
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -441,7 +459,9 @@
                                         {
                                             "Key": "MD.M9-12.A2.F-BF.A.1.b",
                                             "Label": "Combine standard function types using arithmetic operations.",
-                                            "Examples": [],
+                                            "Examples": [
+                                                "For example, build a function that models the temperature of a cooling body by adding a constant function to a decaying exponential, and relate these functions to the model."
+                                            ],
                                             "Subs": []
                                         }
                                     ]
@@ -467,9 +487,17 @@
                                 },
                                 {
                                     "Key": "MD.M9-12.A2.F-BF.B.4",
-                                    "Label": "Solve an equation of the form f(x) = c for a simple function f that has an inverse and write an expression for the inverse.",
+                                    "Label": "Find inverse functions.",
                                     "Examples": [],
-                                    "Subs": []
+                                    "Subs": [
+                                        {
+                                            "Key": "MD.M9-12.A2.F-BF.B.4.a",
+                                            "Label": "Solve an equation of the form f(x) = c for a simple function f that has an inverse and write an expression for the inverse.",
+                                            "Examples": [
+                                                "For example, f(x) = 2x³ or f(x) = (x + 1)/(x – 1) for x ≠ 1."
+                                            ],
+                                            "Subs": []
+                                        }]
                                 }
                             ]
                         }
