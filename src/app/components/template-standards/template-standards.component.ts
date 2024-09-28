@@ -932,6 +932,7 @@ export class TemplateStandardsComponent implements OnInit {
     screenWidth = window.innerWidth;
     screenHeight = window.innerHeight;
     mobileWidth = 1000;
+    blank = " ";
     menuOpen = false;
     stateSet = false;
 
@@ -3145,7 +3146,7 @@ export class TemplateStandardsComponent implements OnInit {
                     }, 500);
                 }
             }
-            else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
+            else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
                 this.subtopic_problem_selection = [[]];
                 if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
                     this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number+1].AnswerChoices, '');
@@ -3182,7 +3183,7 @@ export class TemplateStandardsComponent implements OnInit {
                         }, 500);
                     }
                 }
-                else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
+                else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
                     this.subtopic_problem_selection.push([]);
                     if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
                         this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].AnswerChoices, part);
@@ -4704,7 +4705,7 @@ export class TemplateStandardsComponent implements OnInit {
                         }, 500);
                     }
                 }
-                else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                     this.subtopic_problem_selection = [[]];
                     if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                         this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
@@ -4741,7 +4742,7 @@ export class TemplateStandardsComponent implements OnInit {
                             }, 500);
                         }
                     }
-                    else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                    else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                         this.subtopic_problem_selection.push([]);
                         if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                             this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);

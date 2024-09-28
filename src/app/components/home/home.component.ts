@@ -644,6 +644,7 @@ export class HomeComponent implements OnInit {
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
   mobileWidth = 1000;
+  blank = " ";
   menuOpen = false;
   expand_refsheet = false;
   expand_supp = true;
@@ -3141,7 +3142,7 @@ export class HomeComponent implements OnInit {
           }, 500);
         }
       }
-      else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+      else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
         this.subtopic_problem_selection = [[]];
         if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
           this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
@@ -3181,7 +3182,7 @@ export class HomeComponent implements OnInit {
             }, 500);
           }
         }
-        else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
           this.subtopic_problem_selection.push([]);
           if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
             this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
@@ -3257,7 +3258,7 @@ export class HomeComponent implements OnInit {
 
   toggle_create_student() {
     const avatar = this.avatars[Math.floor(Math.random() * this.avatars.length)];
-    this.photoURL = '/assets/icons/user/' + avatar + '.png';
+    this.photoURL = '/assets/media/icons/user/' + avatar + '.png';
     this.create_s = !this.create_s;
     this.edit_s_list = [];
     this.edit_s_list['photoURL'] = this.photoURL;
@@ -3268,7 +3269,7 @@ export class HomeComponent implements OnInit {
   }
 
   student_profile_pic(avatar: string) {
-    this.photoURL = '/assets/icons/user/' + avatar + '.png';
+    this.photoURL = '/assets/media/icons/user/' + avatar + '.png';
     this.edit_s_list['photoURL'] = this.photoURL;
   }
 
@@ -5018,7 +5019,7 @@ export class HomeComponent implements OnInit {
             }, 500);
           }
         }
-        else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
           this.subtopic_problem_selection = [[]];
           if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
             this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
@@ -5055,7 +5056,7 @@ export class HomeComponent implements OnInit {
               }, 500);
             }
           }
-          else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+          else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
             this.subtopic_problem_selection.push([]);
             if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
               this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);

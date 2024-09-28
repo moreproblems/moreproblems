@@ -1,564 +1,636 @@
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
-    :host {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: 14px;
-        color: #333;
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin: 8px 0;
-    }
-
-    p {
-        margin: 0;
-    }
-
-    .spacer {
-        flex: 1;
-    }
-
-    .toolbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 85px;
-        display: flex;
-        align-items: center;
-        background-color: #0a1e33;
-        color: white;
-        font-weight: 600;
-        padding: 5px 10px 2px 20px;
-    }
-
-    .toolbar img {
-        /* margin: 0 16px; */
-        position: absolute;
-        left: -10px;
-        top: -18px;
-    }
-
-    .toolbar #twitter-logo {
-        height: 40px;
-        margin: 0 8px;
-    }
-
-    .toolbar #youtube-logo {
-        height: 40px;
-        margin: 0 16px;
-    }
-
-    .toolbar #twitter-logo:hover,
-    .toolbar #youtube-logo:hover {
-        opacity: 0.8;
-    }
-
-    #confetticanvas {
-        position: fixed;
-        z-index: 50;
-        top: 81px;
-        right: 0px;
-        bottom: 0px;
-        left: 125px;
-        height: 0px;
-    }
-
-    .content-menu {
-        display: flex;
-        margin: 0 auto 32px;
-        padding: 0 16px;
-        width: 90%;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .content {
-        display: flex;
-        margin: 0 auto 32px;
-        padding: 0;
-        width: 95%;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .subcontent {
-        display: flex;
-        margin: 12px auto;
-        padding: 0px;
-        width: 95%;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    svg.material-icons {
-        height: 24px;
-        width: auto;
-    }
-
-    svg.material-icons:not(:last-child) {
-        margin-right: 8px;
-    }
-
-    .card svg.material-icons path {
-        fill: #888;
-    }
-
-    .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 16px;
-    }
-
-    .card {
-        all: unset;
-        border-radius: 4px;
-        border: 1px solid #eee;
-        background-color: #fafafa;
-        /* height: 40px;
-      width: 200px; */
-        margin: 0 8px 16px;
-        padding: 8px 8px;
-        display: flex;
-        flex-direction: row;
-        /* justify-content: center; */
-        /* align-items: center; */
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    /* .card-container .card:not(:last-child) {
-    margin-right: 0;
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  .card-container .switch:not(:last-child) {
-    margin-right: 0;
-  } */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
 
-    .card.card-small {
-        min-height: 16px;
-        width: 210px;
-        border-radius: 8px;
-        background-color: #ccc;
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    background-color: #0a1e33;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px 2px 20px;
+  }
+
+  .toolbar img {
+    /* margin: 0 16px; */
+    position: absolute;
+    left: -10px;
+    top: -18px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+  #confetticanvas {
+    position: fixed;
+    z-index: 50;
+    top: 81px;
+    right: 0px;
+    bottom: 0px;
+    left: 125px;
+    height: 0px;
+  }
+
+  .content-menu {
+    display: flex;
+    margin: 0 auto 32px;
+    padding: 0 16px;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    margin: 0 auto 32px;
+    padding: 0;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subcontent {
+    display: flex;
+    margin: 12px auto;
+    padding: 0px;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    /* height: 40px;
+        width: 200px; */
+    margin: 0 8px 16px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  /* .card-container .card:not(:last-child) {
+      margin-right: 0;
+    }
+  
+    .card-container .switch:not(:last-child) {
+      margin-right: 0;
+    } */
+
+  .card.card-small {
+    min-height: 16px;
+    width: 210px;
+    border-radius: 8px;
+    background-color: #ccc;
+  }
+
+  .card.card-small span {
+    text-align: center;
+  }
+
+  .card.card-medium {
+    height: auto;
+    width: 80%;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #eee;
+  }
+
+  .card.card-medium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card.card-large {
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    margin: 8px 8px;
+    padding: 8px 0;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  /* .card-container .card:not(.highlight-card):hover .material-icons path {
+      fill: rgb(105, 103, 103);
+    } */
+
+  .card.highlight-card {
+    background-color: #0a1e33;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+  svg#rocket {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+  }
+
+  svg#rocket-smoke {
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+  button.grade-button {
+    font-size: 18px;
+    color: white;
+    background-color: #1976d2;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin: 8px;
+    padding: 8px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  button.grade-button:hover {
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  button.grade-button-gray {
+    font-size: 18px;
+    color: white;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  button.grade-button-gray:hover {
+    background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  button.grade-button-s {
+    font-size: 18px;
+    color: white;
+    background-color: rgba(82, 147, 228, 1.0);
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin: 8px;
+    padding: 8px 8px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  button.grade-button-s:hover {
+    background-color: #1976d2;
+    /* color:black; */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  button.grade-button-l {
+    font-size: 18px;
+    color: white;
+    background-color: rgba(82, 197, 243, 1.0);
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin: 8px;
+    padding: 8px 8px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  button.grade-button-l:hover {
+    background-color: #1976d2;
+    /* color:black; */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  button.toggle-button {
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .toggle-button:before {
+    background-color: #1976d2;
+    color: white;
+  }
+
+  button.toggle-button-on {
+    font-size: 18px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 12px;
+    border: 3px solid #0a1e33;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
+    min-height: 50px;
+  }
+
+  button.toggle-button-off {
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
+    min-height: 50px;
+  }
+
+  button.toggle-button-disabled {
+    font-size: 18px;
+    color: black;
+    background-color: #ccc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    padding: 7px 15px;
+    margin: 0 2px 10px;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  button.toggle-button-disabled:hover {
+    /* background-color: #0a1e33;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35); */
+  }
+
+  .select-avatar {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+
+  .select-middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  .avatar-container:hover .select-avatar {
+    opacity: 0.3;
+  }
+
+  .avatar-container:hover .middle {
+    opacity: 1;
+  }
+
+  .card.card-small:hover .select-avatar {
+    opacity: 0.3;
+  }
+
+  .card.card-small:hover .middle {
+    opacity: 1;
+  }
+
+  progress {
+    border-radius: 10px;
+  }
+
+  progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 1px solid darkslategrey;
+  }
+
+  progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: limegreen;
+    /* border: 2px solid black; */
+  }
+
+  progress::-moz-progress-bar {
+    border-radius: 10px;
+  }
+
+  .terminal {
+    position: relative;
+    /* width: 100%; */
+    max-width: 625px;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+    color: #c2c3c4;
+  }
+
+  .terminal::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: rgb(58, 58, 58);
+    color: #c2c3c4;
+    width: 100%;
+    line-height: 0;
+    padding: 14px 0;
+    font-size: 2rem;
+    text-indent: 4px;
+  }
+
+  .terminal pre {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .circle-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+  }
+
+  .circle-link:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
+  .github-star-badge {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27, 31, 35, .2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
+  }
+
+  .github-star-badge:hover {
+    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+    border-color: rgba(27, 31, 35, .35);
+    background-position: -.5em;
+  }
+
+  .github-star-badge .material-icons {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 75px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 75px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  input:checked+.toggle-button-on {
+    background-color: #1976d2;
+    color: white
+  }
+
+  button.toggle-button-on:hover {
+    background-color: #0a1e33;
+    border-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  input:hover+.toggle-button-on {
+    background-color: #0a1e33;
+    border-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  input:checked+.toggle-button-off {
+    background-color: #ccc;
+    color: black;
+  }
+
+  button.toggle-button-off:hover {
+    background-color: #0a1e33;
+    border-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  input:hover+.toggle-button-off {
+    background-color: #0a1e33;
+    border-color: #0a1e33;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+
+    .card-container>*:not(.circle-link),
+    .terminal {
+      /* width: 100%; */
     }
 
-    .card.card-medium {
-        height: auto;
-        width: 80%;
-        border-radius: 8px;
-        padding: 20px;
-        background-color: #eee;
+    .card:not(.highlight-card) {
+      /* height: 16px; */
+      margin: 8px 0;
     }
 
-    .card.card-medium:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    .card.highlight-card span {
+      margin-left: 72px;
     }
 
-    .card.card-large {
-        width: auto;
-        height: auto;
-        border-radius: 8px;
-        margin: 8px 8px;
-        padding: 8px 0;
-    }
-
-    .card-container .card:not(.highlight-card) {
-        cursor: pointer;
-    }
-
-    .card-container .card:not(.highlight-card):hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
-    /* .card-container .card:not(.highlight-card):hover .material-icons path {
-    fill: rgb(105, 103, 103);
-  } */
-
-    .card.highlight-card {
-        background-color: #0a1e33;
-        color: white;
-        font-weight: 600;
-        border: none;
-        width: auto;
-        min-width: 30%;
-        position: relative;
-    }
-
-    .card.card.highlight-card span {
-        margin-left: 60px;
-    }
-
-    svg#rocket {
-        width: 80px;
-        position: absolute;
-        left: -10px;
-        top: -24px;
-    }
-
-    svg#rocket-smoke {
-        height: calc(100vh - 95px);
-        position: absolute;
-        top: 10px;
-        right: 180px;
-        z-index: -10;
-    }
-
-    a,
-    a:visited,
-    a:hover {
-        color: #1976d2;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: #125699;
-    }
-
-    label.grade-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        margin: 8px;
-        padding: 8px 8px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    label.grade-button:hover {
-        background-color: #0a1e33;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
-    label.toggle-button-off {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-        width: 100%;
-    }
-
-    label.toggle-button-on {
-        font-size: 18px;
-        background-color: #1976d2;
-        color: white;
-        border-radius: 12px;
-        border: 3px solid #0a1e33;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-        width: 100%;
-    }
-
-    button.grade-button {
-        font-size: 18px;
-        color: white;
-        background-color: #1976d2;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        margin: 8px;
-        padding: 8px 8px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    button.grade-button:hover {
-        background-color: #0a1e33;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
-    button.grade-button-gray {
-        font-size: 18px;
-        color: white;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    button.grade-button-gray:hover {
-        background-color: #0a1e33;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
-    button.toggle-button {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-    }
-
-    .toggle-button:before {
-        background-color: #1976d2;
-        color: white;
-    }
-
-    button.toggle-button-off {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-        width: 100%;
-    }
-
-    button.toggle-button-on {
-        font-size: 18px;
-        background-color: #1976d2;
-        color: white;
-        border-radius: 12px;
-        border: 3px solid #0a1e33;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-        width: 100%;
-    }
-
-    button.toggle-button-disabled {
-        font-size: 18px;
-        color: black;
-        background-color: #ccc;
-        border-radius: 12px;
-        border: 1px solid #eee;
-        padding: 7px 15px;
-        margin: 0 2px 10px;
-        transition: all 0.2s ease-in-out;
-        line-height: 24px;
-        width: 100%;
-    }
-
-    button.toggle-button-disabled:hover {
-        /* background-color: #0a1e33;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35); */
-    }
-
-    .select-avatar {
-        opacity: 1;
-        display: block;
-        width: 100%;
-        height: auto;
-        transition: .5s ease;
-        backface-visibility: hidden;
-    }
-
-    .middle {
-        transition: .5s ease;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%)
-    }
-
-    .select-middle {
-        transition: .5s ease;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        opacity: 1;
-    }
-
-    .avatar-container:hover .select-avatar {
-        opacity: 0.3;
-    }
-
-    .avatar-container:hover .middle {
-        opacity: 1;
-    }
-
-    .avatar-container:hover .grade-button {
-        background-color: #0a1e33;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
-    progress {
-        border-radius: 10px;
-    }
-
-    progress::-webkit-progress-bar {
-        border-radius: 10px;
-        background-color: lightgray;
-        border: 1px solid darkslategrey;
-    }
-
-    progress::-webkit-progress-value {
-        border-radius: 10px;
-        background-color: limegreen;
-        /* border: 2px solid black; */
-    }
-
-    progress::-moz-progress-bar {
-        border-radius: 10px;
-    }
-
-    .circle-link {
-        height: 40px;
-        width: 40px;
-        border-radius: 40px;
-        margin: 8px;
-        background-color: white;
-        border: 1px solid #eeeeee;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        transition: 1s ease-out;
-    }
-
-    .circle-link:hover {
-        transform: translateY(-0.25rem);
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    footer {
-        margin-top: 8px;
-        display: flex;
-        align-items: center;
-        line-height: 20px;
-    }
-
-    footer a {
-        display: flex;
-        align-items: center;
-    }
-
-    .github-star-badge {
-        color: #24292e;
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        padding: 3px 10px;
-        border: 1px solid rgba(27, 31, 35, .2);
-        border-radius: 3px;
-        background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-        margin-left: 4px;
-        font-weight: 600;
-    }
-
-    .github-star-badge:hover {
-        background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-        border-color: rgba(27, 31, 35, .35);
-        background-position: -.5em;
-    }
-
-    .github-star-badge .material-icons {
-        height: 16px;
-        width: 16px;
-        margin-right: 4px;
-    }
-
-    /* The switch - the box around the slider */
-    .switch {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-        height: auto;
-        max-width: 250px;
-        max-height: 75px;
-        transition: all 0.2s ease-in-out;
-    }
-
-    /* Hide default HTML checkbox */
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-
-    input:checked+.toggle-button-on {
-        background-color: #1976d2;
-        color: white
-    }
-
-    input:hover+.toggle-button-on {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
-    input:checked+.toggle-button-off {
-        background-color: #ccc;
-        color: black;
-    }
-
-    input:hover+.toggle-button-off {
-        background-color: #0a1e33;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-
-    /* Responsive Styles */
-    @media screen and (max-width: 767px) {
-
-        .card-container>*:not(.circle-link),
-        .terminal {
-            /* width: 100%; */
-        }
-
-        .card:not(.highlight-card) {
-            /* height: 16px; */
-            margin: 8px 0;
-        }
-
-        .card.highlight-card span {
-            margin-left: 72px;
-        }
-
-    }
+  }
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -572,7 +644,7 @@
           <section>
               <div (click)="selected_exam=''" class="card card-small"
                   style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-                  <img src="./assets/icons/caret.png"
+                  <img src="./assets/media/icons/caret.png"
                       style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
                   <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Profile </a>
               </div>
@@ -582,7 +654,7 @@
           <section>
               <div (click)="selected_exam=''" class="card card-small"
                   style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-                  <img src="./assets/icons/caret.png"
+                  <img src="./assets/media/icons/caret.png"
                       style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
                   <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Student </a>
               </div>
@@ -592,7 +664,7 @@
           <section>
               <div (click)="selected_subtopic=''" class="card card-small"
                   style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-                  <img src="./assets/icons/caret.png"
+                  <img src="./assets/media/icons/caret.png"
                       style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
                   <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Exam </a>
               </div>
@@ -857,29 +929,39 @@
                               </tbody>
                             </table>
                           </div>
-                          <div *ngIf="block.startsWith(':box:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                          <div *ngIf="block.startsWith(':box:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                             style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                             <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                               <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content"> 
                                 <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                                <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
-                                <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                                <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                                <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                                <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && !this.subtopic_problem_selection[0].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                                <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[0].includes(word[4]) && !prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                                <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[0].includes(word[4]) && prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                                <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
+                                <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                                <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                                <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && !subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                                <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                                <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && !this.subtopic_problem_selection[0].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                                <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[0].includes(word[4]) && !prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                                <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[0].includes(word[4]) && prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                                <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] == word[3]" (click)="select_m_choice('', 1, '')" class="toggle-button-on" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                                <span *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" style="max-height: 300px; min-width: 0px; margin: auto">
+                                  <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
+                                    <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                                  </button>
+                                  <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && !(prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct)" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
+                                    <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                                  </button>
+                                </span>
+                                <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] != word[3]" (click)="select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                                <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
                                   <option value="" selected disabled></option>
                                   <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                                 </select>
-                                <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] != '' && prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
+                                <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] != '' && prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
                                   <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                                 </select>
-                                <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
+                                <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                                   <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                                 </select>
-                                <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                                <div *ngIf="word.startsWith(':FR-')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                                   <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR--{{word[4]}}" #inputMFRST></textarea>
                                   <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()"
                                     style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -892,7 +974,7 @@
                               </span>  
                             </h3>
                           </div>
-                          <div *ngIf="block.startsWith(':box:') && !['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                          <div *ngIf="block.startsWith(':box:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                             style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                             <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(5)}}</h3>
                           </div>
@@ -900,28 +982,38 @@
                             style="width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                             <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(6)}}</h3>
                           </div>
-                          <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                          <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                             style="display: block; white-space: pre-wrap; font-size: 18px">
                             <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content">
                               <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                              <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
-                              <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                              <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                              <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                              <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && !this.subtopic_problem_selection[0].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                              <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[0].includes(word[4]) && !prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                              <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[0].includes(word[4]) && prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                              <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
+                              <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                              <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                              <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && !subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                              <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                              <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && !this.subtopic_problem_selection[0].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                              <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[0].includes(word[4]) && !prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                              <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[0].includes(word[4]) && prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                              <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] == word[3]" (click)="select_m_choice('', 1, '')" class="toggle-button-on" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                              <span *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" style="max-height: 300px; min-width: 0px; margin: auto">
+                                <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
+                                  <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                                </button>
+                                <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && !(prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct)" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
+                                  <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                                </button>
+                              </span>
+                              <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] != word[3]" (click)="select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                              <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
                                 <option value="" selected disabled></option>
                                 <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                               </select>
-                              <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] != '' && prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
+                              <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] != '' && prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
                                 <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                               </select>
-                              <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
+                              <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                                 <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                               </select>
-                              <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                              <div *ngIf="word.startsWith(':FR-')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                                 <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR--{{word[4]}}" #inputMFRST></textarea>
                                 <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()"
                                   style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -933,7 +1025,7 @@
                               </select> -->
                             </span>  
                           </h3>
-                          <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                          <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                             style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
                         </div>
                       </div>
@@ -947,6 +1039,24 @@
                     </div>
                     <br *ngIf="prob.value.Explain" />
                     <input type="hidden" #selection>
+                    <div *ngIf="prob.value.Type == 'IM'">
+                      <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
+                        <label *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
+                          <input type="checkbox">
+                          <button (click)="select_m_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
+                              style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                              <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
+                              <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                          </button>
+                          <button (click)="select_m_choice(choice, 0, '')" *ngIf="!is_matched(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"
+                              style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                              <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
+                              <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                          </button>
+                          <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
+                        </label>
+                      </div>
+                    </div>
                     <!-- <div *ngIf="prob.value.Type == 'O'">
                       <div class="card card-small" style="min-height: 100px; width: auto; max-height: 500px; padding: 10px; align-items: center">
                         <label *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" class="switch" style="padding: 0 10px; min-width: 100px; margin: auto">
@@ -1156,6 +1266,21 @@
                       <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts[0] > 0 && (prob.value.Parts | keys).length == 0"
                         class="card highlight-card card-small"
                         style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+                        <div *ngIf="prob.value.Type == 'IM'">
+                          <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                            <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                            <!-- replace choice iteration with counter -->
+                            <br /> <br /> <p *ngFor="let choice of subtopic_problem_selection[0]"><span *ngIf="choice != ''"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[0].indexOf(choice)+1) + ' (' + choice + ')'}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(choice)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(choice)] : 'No explanation or rationale is available.'}}</span></p>
+                          </h3>
+                          <br
+                            *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                          <button
+                            *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
+                            class="grade-button" (click)="next_problem_st(); scroll_top()"
+                            style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                            <b> Next Problem </b>
+                          </button>
+                        </div>
                         <div *ngIf="prob.value.Type == 'MC'">
                           <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                             <h3 *ngIf="choice.key == selection.value && subtopic_attempt_explanation[0][0] != ''"
@@ -1402,29 +1527,39 @@
                           </tbody>
                         </table>
                       </div>
-                      <div *ngIf="block.startsWith(':box:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+                      <div *ngIf="block.startsWith(':box:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                         style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                         <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                           <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content">
                             <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                            <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
-                            <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                            <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                            <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                            <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && !this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                            <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && !part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                            <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                            <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
+                            <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                            <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                            <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                            <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                            <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && !this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                            <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && !part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                            <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                            <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] == word[3]" (click)="select_m_choice('', 1, part.key)" class="toggle-button-on" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                            <span *ngFor="let choice of shuffle_m_st(part.value.AnswerChoices, part.key)" style="max-height: 300px; min-width: 0px; margin: auto">
+                              <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
+                                <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                              </button>
+                              <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && !(part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct)" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
+                                <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                              </button>
+                            </span>
+                            <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] != word[3]" (click)="select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                            <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
                               <option value="" selected disabled></option>
                               <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                             </select>
-                            <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
+                            <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
                               <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                             </select>
-                            <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
+                            <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                               <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                             </select>
-                            <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                            <div *ngIf="word.startsWith(':FR-')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                               <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFRST></textarea>
                               <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()"
                                 style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -1437,7 +1572,7 @@
                           </span>  
                         </h3>
                       </div>
-                      <div *ngIf="block.startsWith(':box:') && !['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+                      <div *ngIf="block.startsWith(':box:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                         style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                         <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(5)}}</h3>
                       </div>
@@ -1445,28 +1580,38 @@
                         style="width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                         <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(6)}}</h3>
                       </div>
-                      <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+                      <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                         style="display: block; white-space: pre-wrap; font-size: 18px">
                         <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content"> 
                           <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                          <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
-                          <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                          <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                          <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                          <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && !this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                          <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && !part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                          <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                          <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
+                          <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                          <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                          <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                          <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                          <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && !this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                          <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && !part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                          <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                          <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] == word[3]" (click)="select_m_choice('', 1, part.key)" class="toggle-button-on" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                          <span *ngFor="let choice of shuffle_m_st(part.value.AnswerChoices, part.key)" style="max-height: 300px; min-width: 0px; margin: auto">
+                            <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
+                              <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                            </button>
+                            <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && !(part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct)" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
+                              <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                            </button>
+                          </span>
+                          <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] != word[3]" (click)="select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                          <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
                             <option value="" selected disabled></option>
                             <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                           </select>
-                          <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
+                          <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
                             <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                           </select>
-                          <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
+                          <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                             <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                           </select>
-                          <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                          <div *ngIf="word.startsWith(':FR-')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                             <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFRST></textarea>
                             <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()"
                               style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -1478,7 +1623,7 @@
                           </select> -->
                         </span>  
                       </h3>
-                      <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+                      <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                         style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
                     </div>
                     <br />
@@ -1490,6 +1635,24 @@
                     </div>
                     <br *ngIf="part.value.Explain" />
                     <input type="hidden" #selection>
+                    <div *ngIf="part.value.Type == 'IM'">
+                      <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
+                        <label *ngFor="let choice of shuffle_m_st(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
+                          <input type="checkbox">
+                          <button (click)="select_m_choice('', 0, part.key)" *ngIf="m_selection[get_part_num_st(part.key)][0] == choice" class="toggle-button-on"
+                              style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                              <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
+                              <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                          </button>
+                          <button (click)="select_m_choice(choice, 0, part.key)" *ngIf="!is_matched(choice, 0, part.key) && m_selection[get_part_num_st(part.key)][0] != choice" class="toggle-button-off"
+                              style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                              <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
+                              <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                          </button>
+                          <button *ngIf="is_matched(choice, 0, part.key)" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
+                        </label>
+                      </div>
+                    </div>
                     <!-- <div *ngIf="part.value.Type == 'O'">
                       <div class="card card-small" style="min-height: 100px; width: auto; max-height: 500px; padding: 10px; align-items: center">
                         <label *ngFor="let choice of shuffle_m_st(part.value.AnswerChoices, part.key)" class="switch" style="padding: 0 10px; min-width: 100px; margin: auto">
@@ -1688,6 +1851,12 @@
                     <div *ngIf="subtopic_problem_attempts[(prob.value.Parts | keys).indexOf(part.key)] > 0 && subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].length > 0"
                       class="card highlight-card card-small"
                       style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+                      <div *ngIf="part.value.Type == 'IM'">
+                        <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                          <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                          <br /> <br /> <p *ngFor="let choice of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"><span *ngIf="choice != ''"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)+1) + ' (' + choice + ')'}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)] : 'No explanation or rationale is available.'}}</span></p>
+                        </h3>
+                      </div>
                       <div *ngIf="part.value.Type == 'MC'">
                         <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
                           <h3 *ngIf="choice.key == selection.value"
@@ -1861,7 +2030,7 @@
                 <button *ngIf="!selected_exam.startsWith('Q-')" (click)="router.navigate(['exam/' + selected_exam + '/key'])" class="grade-button"
                     style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content;">
                     <div style="margin: 0 5px">
-                        <img src="./assets/icons/key.png" style="padding: 5px 0 0; height: 20px; width: 20px">
+                        <img src="./assets/media/icons/key.png" style="padding: 5px 0 0; height: 20px; width: 20px">
                     </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Answer Key </b></div>
                 </button>
@@ -2063,7 +2232,7 @@
           <section>
               <div (click)="selected_student=''" class="card card-small"
                   style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-                  <img src="./assets/icons/caret.png"
+                  <img src="./assets/media/icons/caret.png"
                       style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
                   <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Profile </a>
               </div>
@@ -2081,12 +2250,12 @@
                             <img *ngIf="this.screenWidth > this.mobileWidth"
                                 class="align-self-start mr-5 img-thumbnail rounded-circle"
                                 style="height: 250px; width: 250px; border-radius: 50%"
-                                src="{{(student_data.photoURL) ? student_data.photoURL : '/assets/icons/user/user.png'}}"
+                                src="{{(student_data.photoURL) ? student_data.photoURL : '/assets/media/icons/user/user.png'}}"
                                 alt="{{student_data.displayName}}">
                             <img *ngIf="this.screenWidth <= this.mobileWidth"
                                 class="align-self-start mr-5 img-thumbnail rounded-circle"
                                 style="height: 175px; width: 175px; border-radius: 50%"
-                                src="{{(student_data.photoURL) ?student_data.photoURL : '/assets/icons/user/user.png'}}"
+                                src="{{(student_data.photoURL) ?student_data.photoURL : '/assets/media/icons/user/user.png'}}"
                                 alt="{{student_data.displayName}}">
                             <div style="align-items: center; text-align: center;">
                                 <h2>{{(student_data.displayName) ?
@@ -2270,7 +2439,7 @@
           <section>
               <div (click)="authService.SignOut()" class="card card-small"
                   style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-                  <img src="./assets/icons/logout.png" style="width: 25px; height: 25px">
+                  <img src="./assets/media/icons/logout.png" style="width: 25px; height: 25px">
                   <a style="font-size: 22px; font-weight: 600; padding-left: 20px"> Log Out </a>
               </div>
           </section>
@@ -2300,7 +2469,7 @@
                             class="toggle-button-off"
                             style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                             <div style="margin: 0 5px">
-                                <img src="./assets/icons/info.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                                <img src="./assets/media/icons/info.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
                             <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Information </b>
                             </div>
@@ -2309,7 +2478,7 @@
                             class="toggle-button-on"
                             style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                             <div style="margin: 0 5px">
-                                <img src="./assets/icons/info.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                                <img src="./assets/media/icons/info.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
                             <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Information </b>
                             </div>
@@ -2321,7 +2490,7 @@
                             class="toggle-button-off"
                             style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                             <div style="margin: 0 5px">
-                                <img src="./assets/icons/results.png"
+                                <img src="./assets/media/icons/results.png"
                                     style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
                             <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Results </b></div>
@@ -2330,7 +2499,7 @@
                             class="toggle-button-on"
                             style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                             <div style="margin: 0 5px">
-                                <img src="./assets/icons/results.png"
+                                <img src="./assets/media/icons/results.png"
                                     style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
                             <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Results </b></div>
@@ -2342,7 +2511,7 @@
                             class="toggle-button-off"
                             style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                             <div style="margin: 0 5px">
-                                <img src="./assets/icons/student.png"
+                                <img src="./assets/media/icons/student.png"
                                     style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
                             <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Students </b></div>
@@ -2350,7 +2519,7 @@
                         <button *ngIf="profile_tab == 'students'" (click)="set_tab('students')" class="toggle-button-on"
                             style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px 10px; padding: 2px 5px">
                             <div style="margin: 0 5px">
-                                <img src="./assets/icons/student.png"
+                                <img src="./assets/media/icons/student.png"
                                     style="padding: 5px 0 0; height: 25px; width: 25px">
                             </div>
                             <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> My Students </b></div>
@@ -2364,7 +2533,7 @@
                         <div class="media" style="background-color: #eee; max-width: 600px; margin: 15px auto ; padding: 10px">
                             <img class="align-self-start mr-5 img-thumbnail rounded-circle"
                                 style="height: 300px; width: 300px; border-radius: 50%"
-                                src="{{(authService.pp_url) ? authService.pp_url : (user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
+                                src="{{(authService.pp_url) ? authService.pp_url : (user.photoURL) ? user.photoURL : '/assets/media/icons/user/user.png'}}"
                                 alt="{{user.displayName}}">
                             <div class="media-body">
                                 <h3 style="font-size: 18px">Your Name: <strong
@@ -2419,7 +2588,7 @@
                                 class="grade-button"
                                 style="display: flex; flex-direction: row; align-items: center; margin: auto; padding: 2px 5px">
                                 <div style="margin: 0 5px">
-                                    <img src="./assets/icons/edit.png"
+                                    <img src="./assets/media/icons/edit.png"
                                         style="padding: 5px 0 0; height: 30px; width: 30px">
                                 </div>
                                 <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Edit Profile
@@ -2435,7 +2604,7 @@
                             <!-- <img *ngIf="user.role != 'Student'"
                                 class="align-self-start mr-5 img-thumbnail rounded-circle"
                                 style="height: 300px; width: 300px; border-radius: 50%"
-                                src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
+                                src="{{(user.photoURL) ? user.photoURL : '/assets/media/icons/user/user.png'}}"
                                 alt="{{user.displayName}}"> -->
                             <br *ngIf="user.role != 'Student'" />
                             <div *ngIf="user.role != 'Student'" class="avatar-container"
@@ -2443,7 +2612,7 @@
                                 <form method="post" enctype="multipart/form-data">
                                     <label for="actual-btn" style="height: 100%; width: 100%; border-radius: 50%">
                                         <img class="select-avatar"
-                                            src="{{(profileUploadURL) ? profileUploadURL : (user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
+                                            src="{{(profileUploadURL) ? profileUploadURL : (user.photoURL) ? user.photoURL : '/assets/media/icons/user/user.png'}}"
                                             style="height: 100%; width: 100%; border-radius: 50%"
                                             alt="{{user.displayName}}">
                                         <input type="file"
@@ -2475,24 +2644,24 @@
                                 <div *ngFor="let pic of this.avatars" (click)="edit_profile_pic(pic)"
                                     class="avatar-container"
                                     style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 5px">
-                                    <img *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
-                                        src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                    <img *ngIf="this.photoURL != '/assets/media/icons/user/' + pic + '.png'"
+                                        src="{{'/assets/media/icons/user/' + pic + '.png'}}" class="select-avatar"
                                         style="width:100%; height: 100%">
-                                    <img *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
-                                        src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                    <img *ngIf="this.photoURL == '/assets/media/icons/user/' + pic + '.png'"
+                                        src="{{'/assets/media/icons/user/' + pic + '.png'}}" class="select-avatar"
                                         style="width:100%; height: 100%; opacity: 0.3">
                                     <div class="middle">
-                                        <div *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
+                                        <div *ngIf="this.photoURL != '/assets/media/icons/user/' + pic + '.png'"
                                             style="color: white; background-color: #1976d2; border-radius: 10px">Select
                                         </div>
                                     </div>
-                                    <div *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'" class="middle">
-                                        <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
+                                    <div *ngIf="this.photoURL == '/assets/media/icons/user/' + pic + '.png'" class="middle">
+                                        <img src="/assets/media/icons/save.png" style="height: 30px; width: 30px" />
                                     </div>
                                 </div>
                                 <!-- <img *ngFor="let pic of this.avatars" class="select-avatar"
                                     style="height: 60px; width: 60px; border-radius: 50%; padding: 5px"
-                                    src="{{'/assets/icons/user/' + pic + '.png'}}"> -->
+                                    src="{{'/assets/media/icons/user/' + pic + '.png'}}"> -->
                             </div>
                             <div class="media-body">
                                 <section
@@ -2817,12 +2986,12 @@
                                 <img *ngIf="this.screenWidth > this.mobileWidth"
                                     class="align-self-start mr-5 img-thumbnail rounded-circle"
                                     style="height: 150px; width: 150px; border-radius: 50%"
-                                    src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
+                                    src="{{(user.photoURL) ? user.photoURL : '/assets/media/icons/user/user.png'}}"
                                     alt="{{user.displayName}}">
                                 <img *ngIf="this.screenWidth <= this.mobileWidth"
                                     class="align-self-start mr-5 img-thumbnail rounded-circle"
                                     style="height: 75px; width: 75px; border-radius: 50%"
-                                    src="{{(user.photoURL) ? user.photoURL : '/assets/icons/user/user.png'}}"
+                                    src="{{(user.photoURL) ? user.photoURL : '/assets/media/icons/user/user.png'}}"
                                     alt="{{user.displayName}}">
                                 <div style="align-items: center; text-align: center;">
                                     <h3>Total Problems Attempted: <strong
@@ -2925,7 +3094,7 @@
                                     (click)="toggle_create_student()" class="grade-button"
                                     style="display: flex; flex-direction: row; align-items: center; margin: 0 10px; padding: 2px 5px">
                                     <div style="margin: 0 5px">
-                                        <img src="./assets/icons/add.png"
+                                        <img src="./assets/media/icons/add.png"
                                             style="padding: 5px 0 0; height: 25px; width: 25px">
                                     </div>
                                     <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create a Student
@@ -2935,7 +3104,7 @@
                                     class="grade-button"
                                     style="display: flex; flex-direction: row; align-items: center; margin: 0 10px; padding: 2px 5px">
                                     <div style="margin: 0 5px">
-                                        <img src="./assets/icons/usersearch.png"
+                                        <img src="./assets/media/icons/usersearch.png"
                                             style="padding: 5px 0 0; height: 25px; width: 25px">
                                     </div>
                                     <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Find a Student
@@ -2950,18 +3119,18 @@
                                       <img *ngIf="this.screenWidth > this.mobileWidth"
                                           class="align-self-start mr-5 img-thumbnail rounded-circle"
                                           style="height: 150px; width: 150px; border-radius: 50%"
-                                          src="{{(std.photoURL) ? std.photoURL : '/assets/icons/user/user.png'}}"
+                                          src="{{(std.photoURL) ? std.photoURL : '/assets/media/icons/user/user.png'}}"
                                           alt="{{std.displayName}}">
                                       <img *ngIf="this.screenWidth <= this.mobileWidth"
                                           class="align-self-start mr-5 img-thumbnail rounded-circle"
                                           style="height: 110x; width: 110px; border-radius: 50%"
-                                          src="{{(std.photoURL) ?std.photoURL : '/assets/icons/user/user.png'}}"
+                                          src="{{(std.photoURL) ?std.photoURL : '/assets/media/icons/user/user.png'}}"
                                           alt="{{std.displayName}}">
                                       <button *ngIf="std.uid.includes(user.uid)" (click)="toggle_edit_student(std.uid)"
                                           class="grade-button"
                                           style="margin: 15px auto 0; margin-bottom: 15px; display: flex; flex-direction: row; align-items: center; padding: 5px">
                                           <!-- <div style="margin: 0 5px">
-                                              <img src="./assets/icons/link.png"
+                                              <img src="./assets/media/icons/link.png"
                                                   style="padding: 5px 0 0; height: 25px; width: 25px">
                                           </div> -->
                                           <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Profile
@@ -2997,7 +3166,7 @@
                                           <button (click)="select_student(std.uid)" class="grade-button"
                                               style="margin: 10px auto; margin-bottom: 0; display: flex; flex-direction: row; align-items: center; padding: 5px">
                                               <!-- <div style="margin: 0 5px">
-                                                  <img src="./assets/icons/link.png"
+                                                  <img src="./assets/media/icons/link.png"
                                                       style="padding: 5px 0 0; height: 25px; width: 25px">
                                               </div> -->
                                               <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Exams </b>
@@ -3006,7 +3175,7 @@
                                           <button (click)="unlink_student(std.uid)" class="toggle-button-off"
                                               style="width: auto; margin: 10px auto; margin-bottom: 0; display: flex; flex-direction: row; align-items: center; padding: 5px">
                                               <!-- <div style="margin: 0 5px">
-                                                  <img src="./assets/icons/link.png"
+                                                  <img src="./assets/media/icons/link.png"
                                                       style="padding: 5px 0 0; height: 25px; width: 25px">
                                               </div> -->
                                               <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Unlink </b>
@@ -3022,13 +3191,13 @@
                             <h3> Search for a student by their ID </h3>
                             <section
                                 style="display: flex; flex-direction: row; align-items: center; margin: auto; height: auto; max-height: 150px; max-width: 450px; padding: 5px">
-                                <!-- <img src="./assets/icons/usersearch.png" style="padding: 5px 0 0; height: 30px; width: 30px"> -->
+                                <!-- <img src="./assets/media/icons/usersearch.png" style="padding: 5px 0 0; height: 30px; width: 30px"> -->
                                 <input type="text" inputmode="text" maxlength="40"
                                     (keyup)="search_id(this.userId.value)"
                                     style="margin: 0 5px 0 auto; padding-left: 10px; width: 275px; height: 40px; font-size: 16px; font-weight: 400; text-align: left; border-radius: 10px;"
                                     #userId />
                                 <input (click)="search_id(this.userId.value)" type="image"
-                                    src="./assets/icons/usersearch.png" style="margin: 0 auto 0 5px" alt="Search"
+                                    src="./assets/media/icons/usersearch.png" style="margin: 0 auto 0 5px" alt="Search"
                                     width="30" height="30">
                             </section>
                             <br />
@@ -3038,22 +3207,22 @@
                                     <img *ngIf="this.screenWidth > this.mobileWidth && !this.authService.userData.students.includes(searchUser.uid)"
                                         class="align-self-start mr-5 img-thumbnail rounded-circle"
                                         style="height: 150px; width: 150px; border-radius: 50%"
-                                        src="{{(searchUser.photoURL) ? searchUser.photoURL : '/assets/icons/user/user.png'}}"
+                                        src="{{(searchUser.photoURL) ? searchUser.photoURL : '/assets/media/icons/user/user.png'}}"
                                         alt="{{searchUser.displayName}}">
                                     <img *ngIf="this.screenWidth <= this.mobileWidth && !this.authService.userData.students.includes(searchUser.uid)"
                                         class="align-self-start mr-5 img-thumbnail rounded-circle"
                                         style="height: 75px; width: 75px; border-radius: 50%"
-                                        src="{{(searchUser.photoURL) ? searchUser.photoURL : '/assets/icons/user/user.png'}}"
+                                        src="{{(searchUser.photoURL) ? searchUser.photoURL : '/assets/media/icons/user/user.png'}}"
                                         alt="{{searchUser.displayName}}">
                                     <img *ngIf="this.screenWidth > this.mobileWidth && this.authService.userData.students.includes(searchUser.uid)"
                                         class="align-self-start mr-5 img-thumbnail rounded-circle"
                                         style="height: 150px; width: 150px; border-radius: 50%; filter: grayscale(100%)"
-                                        src="{{(searchUser.photoURL) ? searchUser.photoURL : '/assets/icons/user/user.png'}}"
+                                        src="{{(searchUser.photoURL) ? searchUser.photoURL : '/assets/media/icons/user/user.png'}}"
                                         alt="{{searchUser.displayName}}">
                                     <img *ngIf="this.screenWidth <= this.mobileWidth && this.authService.userData.students.includes(searchUser.uid)"
                                         class="align-self-start mr-5 img-thumbnail rounded-circle"
                                         style="height: 75px; width: 75px; border-radius: 50%; filter: grayscale(100%)"
-                                        src="{{(searchUser.photoURL) ? searchUser.photoURL : '/assets/icons/user/user.png'}}"
+                                        src="{{(searchUser.photoURL) ? searchUser.photoURL : '/assets/media/icons/user/user.png'}}"
                                         alt="{{searchUser.displayName}}">
                                     <div style="align-items: center; text-align: center;">
                                         <h2>{{(searchUser.displayName) ?
@@ -3080,7 +3249,7 @@
                                         <button *ngIf="!this.authService.userData.students.includes(searchUser.uid)" (click)="link_student(searchUser.uid)" class="grade-button"
                                             style="margin: 10px auto; display: flex; flex-direction: row; align-items: center; padding: 5px">
                                             <div style="margin: 0 0 0 5px">
-                                                <img src="./assets/icons/link.png"
+                                                <img src="./assets/media/icons/link.png"
                                                     style="padding: 5px 0 0; height: 25px; width: 25px">
                                             </div>
                                             <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Link
@@ -3090,7 +3259,7 @@
                                         <button *ngIf="this.authService.userData.students.includes(searchUser.uid)" class="toggle-button-disabled"
                                             style="margin: 10px auto; display: flex; flex-direction: row; align-items: center; padding: 5px; width: auto; align-text: center">
                                             <div style="margin: 0 0 0 5px">
-                                                <img src="./assets/icons/link.png"
+                                                <img src="./assets/media/icons/link.png"
                                                     style="padding: 5px 0 0; height: 25px; width: 25px">
                                             </div>
                                             <div style="margin: 0 5px; text-align: center; font-size: 16px"><b> Link
@@ -3107,7 +3276,7 @@
                             <button *ngIf="authService.userData as user" (click)="toggle_search()" class="grade-button"
                                 style="display: flex; flex-direction: row; align-items: center; margin: auto">
                                 <div style="margin: 0 5px">
-                                    <img src="./assets/icons/cancel.png"
+                                    <img src="./assets/media/icons/cancel.png"
                                         style="padding: 5px 0 0; height: 25px; width: 25px">
                                 </div>
                                 <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
@@ -3121,21 +3290,21 @@
                                             <div *ngFor="let pic of this.avatars" (click)="student_profile_pic(pic)"
                                                 class="avatar-container"
                                                 style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 5px">
-                                                <img *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
-                                                    src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                                <img *ngIf="this.photoURL != '/assets/media/icons/user/' + pic + '.png'"
+                                                    src="{{'/assets/media/icons/user/' + pic + '.png'}}" class="select-avatar"
                                                     style="width:100%; height: 100%">
-                                                <img *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
-                                                    src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                                <img *ngIf="this.photoURL == '/assets/media/icons/user/' + pic + '.png'"
+                                                    src="{{'/assets/media/icons/user/' + pic + '.png'}}" class="select-avatar"
                                                     style="width:100%; height: 100%; opacity: 0.3">
                                                 <div class="middle">
-                                                    <div *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
+                                                    <div *ngIf="this.photoURL != '/assets/media/icons/user/' + pic + '.png'"
                                                         style="color: white; background-color: #1976d2; border-radius: 10px">
                                                         Select
                                                     </div>
                                                 </div>
-                                                <div *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
+                                                <div *ngIf="this.photoURL == '/assets/media/icons/user/' + pic + '.png'"
                                                     class="select-middle">
-                                                    <img src="/assets/icons/save.png"
+                                                    <img src="/assets/media/icons/save.png"
                                                         style="height: 30px; width: 30px" />
                                                 </div>
                                             </div>
@@ -3258,21 +3427,21 @@
                                             <div *ngFor="let pic of this.avatars" (click)="student_profile_pic(pic)"
                                                 class="avatar-container"
                                                 style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 5px">
-                                                <img *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
-                                                    src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                                <img *ngIf="this.photoURL != '/assets/media/icons/user/' + pic + '.png'"
+                                                    src="{{'/assets/media/icons/user/' + pic + '.png'}}" class="select-avatar"
                                                     style="width:100%; height: 100%">
-                                                <img *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
-                                                    src="{{'/assets/icons/user/' + pic + '.png'}}" class="select-avatar"
+                                                <img *ngIf="this.photoURL == '/assets/media/icons/user/' + pic + '.png'"
+                                                    src="{{'/assets/media/icons/user/' + pic + '.png'}}" class="select-avatar"
                                                     style="width:100%; height: 100%; opacity: 0.3">
                                                 <div class="middle">
-                                                    <div *ngIf="this.photoURL != '/assets/icons/user/' + pic + '.png'"
+                                                    <div *ngIf="this.photoURL != '/assets/media/icons/user/' + pic + '.png'"
                                                         style="color: white; background-color: #1976d2; border-radius: 10px">
                                                         Select
                                                     </div>
                                                 </div>
-                                                <div *ngIf="this.photoURL == '/assets/icons/user/' + pic + '.png'"
+                                                <div *ngIf="this.photoURL == '/assets/media/icons/user/' + pic + '.png'"
                                                     class="select-middle">
-                                                    <img src="/assets/icons/save.png"
+                                                    <img src="/assets/media/icons/save.png"
                                                         style="height: 30px; width: 30px" />
                                                 </div>
                                             </div>
@@ -3401,14 +3570,14 @@
                     class="grade-button"
                     style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
-                        <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                        <img src="./assets/media/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
                 </button>
                 <button *ngIf="authService.userData as user" (click)="toggle_edit_profile()" class="grade-button"
                     style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
-                        <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                        <img src="./assets/media/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
                 </button>
@@ -3418,14 +3587,14 @@
                 <button *ngIf="authService.userData as user" (click)="create_student()" class="grade-button"
                     style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
-                        <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                        <img src="./assets/media/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
                 </button>
                 <button *ngIf="authService.userData as user" (click)="toggle_create_student()" class="grade-button"
                     style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
-                        <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                        <img src="./assets/media/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
                 </button>
@@ -3436,14 +3605,14 @@
                     (click)="update_student(student_data.uid); toggle_edit_student('')" class="grade-button"
                     style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
-                        <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                        <img src="./assets/media/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
                 </button>
                 <button *ngIf="authService.userData as user" (click)="toggle_edit_student('')" class="grade-button"
                     style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
                     <div style="margin: 0 5px">
-                        <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                        <img src="./assets/media/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                     </div>
                     <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
                 </button>

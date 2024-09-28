@@ -17,6 +17,7 @@ export class AppComponent implements OnInit{
   public screenHeight = window.innerHeight;
   // public toolbarHeight = this.navbar.nativeElement.offsetWidth;
   public mobileWidth = 1000;
+  blank = " ";
   public menuOpen = true;
   public menuSet = false;
 

@@ -299,7 +299,7 @@ export class AuthService {
       };
       if (role == 'Student') {
         const avatar = this.avatars[Math.floor(Math.random() * this.avatars.length)];
-        this.userData.photoURL = '/assets/icons/user/' + avatar + '.png';
+        this.userData.photoURL = '/assets/media/icons/user/' + avatar + '.png';
       }
       updates['/users/' + user.uid] = this.userData;
       return update(ref(db), updates).then(() => {

@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
   screenHeight = window.innerHeight;
   screenWidth = window.innerWidth;
   mobileWidth = 1000;
+  blank = " ";
 
   iti: any;
   user: any;

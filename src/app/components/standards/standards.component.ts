@@ -16,6 +16,7 @@ export class StandardsComponent implements OnInit{
 
   screenWidth = window.innerWidth;
   mobileWidth = 1000;
+  blank = " ";
   menuOpen = false;
 
   user_data: any = {};

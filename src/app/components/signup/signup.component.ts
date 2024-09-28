@@ -31,6 +31,7 @@ export class SignupComponent implements OnInit, AfterViewInit {
   screenHeight = window.innerHeight;
   screenWidth = window.innerWidth;
   mobileWidth = 1000;
+  blank = " ";
 
   iti: any;
   user: any;

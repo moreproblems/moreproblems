@@ -640,6 +640,7 @@ export class TestExamComponent implements OnInit {
 
     screenWidth = window.innerWidth;
     mobileWidth = 1000;
+    blank = " ";
 
     // et_counter: number = 0;
     // et_minutes: number = 0;
@@ -4610,7 +4611,7 @@ export class TestExamComponent implements OnInit {
                         }, 500);
                     }
                 }
-                else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+                else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
                     this.problem_selection = [[]];
                     if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
                         this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
@@ -4650,7 +4651,7 @@ export class TestExamComponent implements OnInit {
                             }, 500);
                         }
                     }
-                    else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                    else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                         this.problem_selection.push([]);
                         if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                             this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
@@ -4728,7 +4729,7 @@ export class TestExamComponent implements OnInit {
                         }, 500);
                     }
                 }
-                else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                     this.subtopic_problem_selection = [[]];
                     if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                         this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
@@ -4768,7 +4769,7 @@ export class TestExamComponent implements OnInit {
                             }, 500);
                         }
                     }
-                    else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                    else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                         this.subtopic_problem_selection.push([]);
                         if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                             this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
@@ -4846,7 +4847,7 @@ export class TestExamComponent implements OnInit {
                         }, 500);
                     }
                 }
-                else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+                else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
                     this.problem_selection = [[]];
                     if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
                         this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
@@ -4886,7 +4887,7 @@ export class TestExamComponent implements OnInit {
                             }, 500);
                         }
                     }
-                    else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                    else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                         this.problem_selection.push([]);
                         if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                             this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
@@ -4977,7 +4978,7 @@ export class TestExamComponent implements OnInit {
                     }, 500);
                 }
             }
-            else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+            else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
                 this.problem_selection = [[]];
                 if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
                     this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
@@ -5017,7 +5018,7 @@ export class TestExamComponent implements OnInit {
                         }, 500);
                     }
                 }
-                else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                     this.problem_selection.push([]);
                     if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                         this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
@@ -5169,7 +5170,7 @@ export class TestExamComponent implements OnInit {
                     }, 500);
                 }
             }
-            else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                 this.subtopic_problem_selection = [[]];
                 if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
                     this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
@@ -5209,7 +5210,7 @@ export class TestExamComponent implements OnInit {
                         }, 500);
                     }
                 }
-                else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                     this.subtopic_problem_selection.push([]);
                     if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                         this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
@@ -5331,7 +5332,7 @@ export class TestExamComponent implements OnInit {
                     }, 500);
                 }
             }
-            else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+            else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
                 this.problem_selection = [[]];
                 if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
                     this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
@@ -5371,7 +5372,7 @@ export class TestExamComponent implements OnInit {
                         }, 500);
                     }
                 }
-                else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+                else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                     this.problem_selection.push([]);
                     if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
                         this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);

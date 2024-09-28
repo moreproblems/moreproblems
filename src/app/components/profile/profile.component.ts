@@ -645,6 +645,7 @@ export class ProfileComponent implements OnInit {
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
   mobileWidth = 1000;
+  blank = " ";
   menuOpen = false;
   expand_refsheet = false;
   expand_supp = true;
@@ -3151,7 +3152,7 @@ export class ProfileComponent implements OnInit {
     this.edit_s_list = [];
     if (!this.create_s) {
       const avatar = this.avatars[Math.floor(Math.random() * this.avatars.length)];
-      this.photoURL = '/assets/icons/user/' + avatar + '.png';
+      this.photoURL = '/assets/media/icons/user/' + avatar + '.png';
       this.edit_s_list['photoURL'] = this.photoURL;
     }
     this.create_s = !this.create_s;
@@ -3206,7 +3207,7 @@ export class ProfileComponent implements OnInit {
   }
 
   edit_profile_pic(avatar: string) {
-    this.photoURL = '/assets/icons/user/' + avatar + '.png';
+    this.photoURL = '/assets/media/icons/user/' + avatar + '.png';
     this.edit_p_list['photoURL'] = this.photoURL;
   }
 
@@ -3262,7 +3263,7 @@ export class ProfileComponent implements OnInit {
   }
 
   student_profile_pic(avatar: string) {
-    this.photoURL = '/assets/icons/user/' + avatar + '.png';
+    this.photoURL = '/assets/media/icons/user/' + avatar + '.png';
     this.edit_s_list['photoURL'] = this.photoURL;
   }
 
@@ -3831,7 +3832,7 @@ export class ProfileComponent implements OnInit {
           }, 500);
         }
       }
-      else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+      else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
         this.subtopic_problem_selection = [[]];
         if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
           this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
@@ -3868,7 +3869,7 @@ export class ProfileComponent implements OnInit {
             }, 500);
           }
         }
-        else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
           this.subtopic_problem_selection.push([]);
           if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
             this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
@@ -5025,7 +5026,7 @@ export class ProfileComponent implements OnInit {
             this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale;
           }
         }
-        else if (this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Key.Correct) {
+        else if (this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[choice].Key.Correct) {
           this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
           this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = '';
           correct = false;
@@ -5339,7 +5340,7 @@ export class ProfileComponent implements OnInit {
             }, 500);
           }
         }
-        else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
           this.subtopic_problem_selection = [[]];
           if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
             this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
@@ -5376,7 +5377,7 @@ export class ProfileComponent implements OnInit {
               }, 500);
             }
           }
-          else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+          else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
             this.subtopic_problem_selection.push([]);
             if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
               this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);

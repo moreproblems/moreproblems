@@ -495,14 +495,14 @@
                 class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
-                  <img src="./assets/icons/teacher.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                  <img src="./assets/media/icons/teacher.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Teacher </b></div>
               </button>
               <button *ngIf="user_role == 'Teacher'" (click)="set_user_role('Teacher')" class="toggle-button-on"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
-                  <img src="./assets/icons/teacher.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                  <img src="./assets/media/icons/teacher.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Teacher </b></div>
               </button>
@@ -512,14 +512,14 @@
               <button *ngIf="user_role != 'Student'" (click)="set_user_role('Student')" class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
-                  <img src="./assets/icons/student.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                  <img src="./assets/media/icons/student.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Student </b></div>
               </button>
               <button *ngIf="user_role == 'Student'" (click)="set_user_role('Student')" class="toggle-button-on"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
-                  <img src="./assets/icons/student.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                  <img src="./assets/media/icons/student.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Student </b></div>
               </button>
@@ -529,14 +529,14 @@
               <button *ngIf="user_role != 'Parent'" (click)="set_user_role('Parent')" class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
-                  <img src="./assets/icons/parent.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                  <img src="./assets/media/icons/parent.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Parent </b></div>
               </button>
               <button *ngIf="user_role == 'Parent'" (click)="set_user_role('Parent')" class="toggle-button-on"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
-                  <img src="./assets/icons/parent.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                  <img src="./assets/media/icons/parent.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Parent </b></div>
               </button>
@@ -552,14 +552,14 @@
                 class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
-                  <img src="./assets/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                  <img src="./assets/media/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Google </b></div>
               </button>
               <button *ngIf="login_method == 'google'" (click)="authService.GoogleAuthSignup('profile', user_role); confetti_light()" class="toggle-button-on"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
-                  <img src="./assets/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                  <img src="./assets/media/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Google </b></div>
               </button>
@@ -569,14 +569,14 @@
               <button *ngIf="login_method != 'email'" (click)="set_login_method('email')" class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
-                  <img src="./assets/icons/email.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                  <img src="./assets/media/icons/email.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Email </b></div>
               </button>
               <button *ngIf="login_method == 'email'" (click)="set_login_method('email')" class="toggle-button-on"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
-                  <img src="./assets/icons/email.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                  <img src="./assets/media/icons/email.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Email </b></div>
               </button>
@@ -586,14 +586,14 @@
               <button *ngIf="login_method != 'phone'" (click)="set_login_method('phone')" class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
-                  <img src="./assets/icons/phone.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                  <img src="./assets/media/icons/phone.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Phone </b></div>
               </button>
               <button *ngIf="login_method == 'phone'" (click)="set_login_method('phone')" class="toggle-button-on"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
-                  <img src="./assets/icons/phone.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                  <img src="./assets/media/icons/phone.png" style="padding: 5px 0 0; height: 25px; width: 25px">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Phone </b></div>
               </button>

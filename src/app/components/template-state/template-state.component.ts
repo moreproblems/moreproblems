@@ -939,6 +939,7 @@ export class TemplateStateComponent implements OnInit {
   screenWidth = window.innerWidth;
   screenHeight = window.innerHeight;
   mobileWidth = 1000;
+  blank = " ";
   menuOpen = false;
   stateSet = false;
 
@@ -1902,6 +1903,7 @@ export class TemplateStateComponent implements OnInit {
   SATM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SATMStandards;
   SATRW_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SATRWStandards;
   standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SATRWStandards;
+  examples_dump: { [key: string]: string[] } = {};
 
   e_dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } } = {
     "COG3E": this.COG3E_exam_dump,
@@ -3636,6 +3638,7 @@ export class TemplateStateComponent implements OnInit {
 
   selected_topic = "";
   selected_subtopic = "";
+  standards_id = '';
   standard_id = '';
   standard_fav = false;
   includes_standard = false;
@@ -4045,16 +4048,21 @@ export class TemplateStateComponent implements OnInit {
     for (const [id, dump] of Object.entries(this.standards_attribute_dump)) {
       for (const [name, labels] of Object.entries(this.subject_map)) {
         if (id.endsWith('-' + this.state_key) && this.standards_attribute_dump[id].Grades.includes(this.selected_grade) && labels.includes(this.standards_attribute_dump[id].Subject) && name == this.selected_subject) {
+          this.standards_id = id;
           this.standards_dump = this.s_dump_dict[id];
           for (let domain of this.standards_dump.Standards) {
             for (let cluster of domain.Subs) {
               cluster.NumProb = this.searchSubTopic([domain.Label], cluster.Label);
+              this.examples_dump[cluster.Key] = cluster.Examples;
               for (let standard of cluster.Subs) {
                 standard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], standard.Label);
+                this.examples_dump[standard.Key] = standard.Examples;
                 for (let substandard of standard.Subs) {
                   substandard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], substandard.Label);
+                  this.examples_dump[substandard.Key] = substandard.Examples;
                   for (let subsubstandard of substandard.Subs) {
                     subsubstandard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], subsubstandard.Label);
+                    this.examples_dump[subsubstandard.Key] = subsubstandard.Examples;
                   }
                 }
               }
@@ -4169,7 +4177,7 @@ export class TemplateStateComponent implements OnInit {
     return (subtop_num_prob);
   }
 
-  select_standard(topics: string[], subtopic: string) {
+  select_standard(topics: string[], subtopic: string, standardID: string) {
     this.subtopic_problem_count = 0;
     this.subtopic_search_dump = {};
     for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
@@ -4179,7 +4187,7 @@ export class TemplateStateComponent implements OnInit {
             for (let topic of topics) {
               if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
                 this.selected_topic = topic;
-                this.standard_id = topic + ": " + subtopic;
+                this.standard_id = standardID;
                 this.subtopic_problem_count += 1;
                 this.subtopic_search_dump[this.subtopic_problem_count] = prob;
                 this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
@@ -4191,39 +4199,39 @@ export class TemplateStateComponent implements OnInit {
     }
     // this.selected_topic = topic;
     this.selected_subtopic = subtopic;
-    this.subtopic_problem_number = 1;
+    this.subtopic_problem_number = 0;
     this.subtopic_attempt_path = [];
     this.subtopic_attempt_response = [];
     this.subtopic_attempt_explanation = [];
     this.subtopic_problem_selection = [];
-    if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
+    if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts).length == 0) {
       this.subtopic_problem_attempts = [0];
       this.subtopic_attempt_path = [[]];
       this.subtopic_attempt_response = [''];
       this.subtopic_attempt_explanation = [[]];
-      if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+      if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
         this.subtopic_problem_selection = [['']];
-        if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+        if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
           setTimeout(() => {
             this.plot_graph_gp('', true);
           }, 500);
         }
       }
-      else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+      else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
         this.subtopic_problem_selection = [[]];
-        if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-          this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
+        if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
+          this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number+1].AnswerChoices, '');
         }
-        if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+        if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
           setTimeout(() => {
             this.plot_graph_mgp('', true);
           }, 500);
         }
       }
-      else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+      else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Type)) {
         var msp_nums: string[] = [];
         this.subtopic_problem_selection.push([]);
-        for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+        for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number+1].AnswerChoices)) {
           if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
             this.subtopic_problem_selection[0].push('');
             msp_nums.push(choice[0]);
@@ -4233,7 +4241,7 @@ export class TemplateStateComponent implements OnInit {
     }
     else {
       this.subtopic_problem_attempts = [];
-      for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+      for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts)) {
         this.subtopic_problem_attempts.push(0);
         this.subtopic_attempt_path.push([]);
         this.subtopic_attempt_response.push('');
@@ -4241,31 +4249,31 @@ export class TemplateStateComponent implements OnInit {
         this.m_selection.push(["", ""]);
         this.m_submission.push({});
         this.c_submission.push({});
-        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
           this.subtopic_problem_selection.push(['']);
-          if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+          if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
             setTimeout(() => {
               this.plot_graph_gp(part, true);
             }, 500);
           }
         }
-        else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
           this.subtopic_problem_selection.push([]);
-          if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-            this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
+          if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
+            this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].AnswerChoices, part);
           }
-          if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+          if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
             setTimeout(() => {
               this.plot_graph_mgp(part, true);
             }, 500);
           }
         }
-        else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+        else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Type)) {
           var msp_nums: string[] = [];
           this.subtopic_problem_selection.push([]);
-          for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+          for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].AnswerChoices)) {
             if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-              this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part)].push('');
+              this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts).indexOf(part)].push('');
               msp_nums.push(choice[0]);
             }
           }
@@ -4274,15 +4282,15 @@ export class TemplateStateComponent implements OnInit {
     }
     // this.standard_id = topic + ": " + subtopic;
     this.standard_fav = false;
-    this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
-    for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
+    this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number+1].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number+1].Number).indexOf('-'))].RefSheet;
+    for (let supp of this.subtopic_search_dump[this.subtopic_problem_number+1].SuppContent) {
       setTimeout(() => {
         this.read_supp_st_json(supp);
-      }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+      }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number+1].SuppContent.indexOf(supp)));
     }
-    if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
-      for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
-        for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
+    if (this.subtopic_search_dump[this.subtopic_problem_number+1].Type == 'MP') {
+      for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number+1].Parts)) {
+        for (let block of this.subtopic_search_dump[this.subtopic_problem_number+1].Parts[part].Content) {
           if (block.startsWith(':table:')) {
             setTimeout(() => {
               this.read_table_st(block.slice(7));
@@ -4291,8 +4299,8 @@ export class TemplateStateComponent implements OnInit {
         }
       }
     }
-    if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
-      for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
+    if (this.subtopic_search_dump[this.subtopic_problem_number+1].Type != 'MP') {
+      for (let block of this.subtopic_search_dump[this.subtopic_problem_number+1].Content) {
         if (block.startsWith(':table:')) {
           setTimeout(() => {
             this.read_table_st(block.slice(7));
@@ -4327,7 +4335,7 @@ export class TemplateStateComponent implements OnInit {
 
   toggle_create_student() {
     const avatar = this.avatars[Math.floor(Math.random() * this.avatars.length)];
-    this.photoURL = '/assets/icons/user/' + avatar + '.png';
+    this.photoURL = '/assets/media/icons/user/' + avatar + '.png';
     this.create_s = !this.create_s;
     this.edit_s_list = [];
     this.edit_s_list['photoURL'] = this.photoURL;
@@ -4338,7 +4346,7 @@ export class TemplateStateComponent implements OnInit {
   }
 
   student_profile_pic(avatar: string) {
-    this.photoURL = '/assets/icons/user/' + avatar + '.png';
+    this.photoURL = '/assets/media/icons/user/' + avatar + '.png';
     this.edit_s_list['photoURL'] = this.photoURL;
   }
 
@@ -6087,7 +6095,7 @@ export class TemplateStateComponent implements OnInit {
             }, 500);
           }
         }
-        else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
           this.subtopic_problem_selection = [[]];
           if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
             this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
@@ -6124,7 +6132,7 @@ export class TemplateStateComponent implements OnInit {
               }, 500);
             }
           }
-          else if (['MS', 'O', 'C', 'G', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+          else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
             this.subtopic_problem_selection.push([]);
             if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
               this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);

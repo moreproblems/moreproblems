@@ -270,6 +270,52 @@
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
+  button.grade-button-s {
+    font-size: 18px;
+    color: white;
+    background-color: rgba(82, 147, 228, 1.0);
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin: 8px;
+    padding: 8px 8px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  button.grade-button-s:hover {
+    background-color: #1976d2;
+    /* color:black; */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  button.grade-button-l {
+    font-size: 18px;
+    color: white;
+    background-color: rgba(82, 197, 243, 1.0);
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin: 8px;
+    padding: 8px 8px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  button.grade-button-l:hover {
+    background-color: #1976d2;
+    /* color:black; */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
   button.toggle-button {
     font-size: 18px;
     color: black;
@@ -938,7 +984,7 @@
           <span *ngIf="authService.userData as user">
             <button *ngIf="!['', 'Student', 'Parent'].includes(user.role)"
               (click)="assign_quiz()" class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
-              <img src="./assets/icons/assign.png" style="height: 27px; margin-top: 2px; margin-bottom: 2px">
+              <img src="./assets/media/icons/assign.png" style="height: 27px; margin-top: 2px; margin-bottom: 2px">
               <b style="margin-left: 10px; font-size: 20px; font-size: 22px; margin-top: 2px; margin-bottom: 2px"> Assign </b>
             </button>
           </span>
@@ -989,7 +1035,7 @@
               </div>
             </div>
             <div *ngIf="this.new_assignments.includes(std)" class="select-middle">
-              <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
+              <img src="/assets/media/icons/save.png" style="height: 30px; width: 30px" />
             </div>
           </div>
           <h3 style="font-size: 18px; padding-left: 5px; width: 100px"> {{all_students_data[std].displayName}} </h3>
@@ -1005,9 +1051,9 @@
           class="card card-small" style="height: 75px; width: 200px; align-items: center">
           <div class="avatar-container"
             style="position: relative; height: 50px; width: 50px; border-radius: 50%; padding: 0">
-            <img *ngIf="!this.new_assignments.includes(clss)" src="/assets/icons/class.png"
+            <img *ngIf="!this.new_assignments.includes(clss)" src="/assets/media/icons/class.png"
               class="select-avatar" style="width:90%; height: 90%">
-            <img *ngIf="this.new_assignments.includes(clss)" src="/assets/icons/class.png"
+            <img *ngIf="this.new_assignments.includes(clss)" src="/assets/media/icons/class.png"
               class="select-avatar" style="width:90%; height: 90%; opacity: 0.3">
             <div class="middle">
               <div *ngIf="!this.new_assignments.includes(clss)"
@@ -1015,7 +1061,7 @@
               </div>
             </div>
             <div *ngIf="this.new_assignments.includes(clss)" class="select-middle">
-              <img src="/assets/icons/save.png" style="height: 30px; width: 30px" />
+              <img src="/assets/media/icons/save.png" style="height: 30px; width: 30px" />
             </div>
           </div>
           <h3 style="font-size: 18px; padding-left: 5px; width: 140px">
@@ -1027,14 +1073,14 @@
         <button *ngIf="authService.userData as user" (click)="add_assign_quiz(); clear_assignments()"
           class="grade-button" style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
           <div style="margin: 0 5px">
-            <img src="./assets/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+            <img src="./assets/media/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
           </div>
           <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
         </button>
         <button *ngIf="authService.userData as user" (click)="clear_assignments()" class="grade-button"
           style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
           <div style="margin: 0 5px">
-            <img src="./assets/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+            <img src="./assets/media/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
           </div>
           <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Cancel </b></div>
         </button>
@@ -1048,7 +1094,7 @@
       <section>
         <div (click)="selected_subtopic=''" class="card card-small"
           style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
-          <img src="./assets/icons/caret.png"
+          <img src="./assets/media/icons/caret.png"
             style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
           <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Problems </a>
         </div>
@@ -1308,29 +1354,39 @@
                         </tbody>
                       </table>
                     </div>
-                    <div *ngIf="block.startsWith(':box:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                    <div *ngIf="block.startsWith(':box:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                       style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                       <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                         <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content"> 
                           <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                          <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
-                          <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                          <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                          <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                          <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && !this.subtopic_problem_selection[0].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                          <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[0].includes(word[4]) && !prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                          <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[0].includes(word[4]) && prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                          <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
+                          <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                          <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                          <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && !subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                          <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                          <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && !this.subtopic_problem_selection[0].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                          <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[0].includes(word[4]) && !prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                          <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[0].includes(word[4]) && prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                          <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] == word[3]" (click)="select_m_choice('', 1, '')" class="toggle-button-on" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                          <span *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" style="max-height: 300px; min-width: 0px; margin: auto">
+                            <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
+                              <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                            </button>
+                            <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && !(prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct)" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
+                              <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                            </button>
+                          </span>
+                          <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] != word[3]" (click)="select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                          <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
                             <option value="" selected disabled></option>
                             <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                           </select>
-                          <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] != '' && prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
+                          <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] != '' && prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
                             <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                           </select>
-                          <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
+                          <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                             <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                           </select>
-                          <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                          <div *ngIf="word.startsWith(':FR-')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                             <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR--{{word[4]}}" #inputMFRST></textarea>
                             <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()"
                               style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -1343,7 +1399,7 @@
                         </span>  
                       </h3>
                     </div>
-                    <div *ngIf="block.startsWith(':box:') && !['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                    <div *ngIf="block.startsWith(':box:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                       style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                       <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(5)}}</h3>
                     </div>
@@ -1351,28 +1407,38 @@
                       style="width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                       <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(6)}}</h3>
                     </div>
-                    <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                    <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                       style="display: block; white-space: pre-wrap; font-size: 18px">
                       <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content">
                         <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                        <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
-                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && !this.subtopic_problem_selection[0].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[0].includes(word[4]) && !prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[0].includes(word[4]) && prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                        <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
+                        <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && !subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && !this.subtopic_problem_selection[0].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[0].includes(word[4]) && !prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[0].includes(word[4]) && prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] == word[3]" (click)="select_m_choice('', 1, '')" class="toggle-button-on" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                        <span *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" style="max-height: 300px; min-width: 0px; margin: auto">
+                          <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
+                            <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                          </button>
+                          <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && !(prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct)" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
+                            <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                          </button>
+                        </span>
+                        <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] != word[3]" (click)="select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                        <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
                           <option value="" selected disabled></option>
                           <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                         </select>
-                        <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] != '' && prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
+                        <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] != '' && prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
                           <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                         </select>
-                        <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
+                        <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] != '' && !prob.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, '')" value="{{subtopic_problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                           <option *ngFor="let choice of get_choices_idd_st(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                         </select>
-                        <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                        <div *ngIf="word.startsWith(':FR-')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                           <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR--{{word[4]}}" #inputMFRST></textarea>
                           <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()"
                             style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -1384,7 +1450,7 @@
                         </select> -->
                       </span>  
                     </h3>
-                    <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                    <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                       style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
                   </div>
                 </div>
@@ -1398,6 +1464,24 @@
               </div>
               <br *ngIf="prob.value.Explain" />
               <input type="hidden" #selection>
+              <div *ngIf="prob.value.Type == 'IM'">
+                <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
+                  <label *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
+                    <input type="checkbox">
+                    <button (click)="select_m_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
+                        style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                        <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
+                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                    </button>
+                    <button (click)="select_m_choice(choice, 0, '')" *ngIf="!is_matched(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"
+                        style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                        <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
+                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                    </button>
+                    <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
+                  </label>
+                </div>
+              </div>
               <!-- <div *ngIf="prob.value.Type == 'O'">
                 <div class="card card-small" style="min-height: 100px; width: auto; max-height: 500px; padding: 10px; align-items: center">
                   <label *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" class="switch" style="padding: 0 10px; min-width: 100px; margin: auto">
@@ -1607,6 +1691,21 @@
                 <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts[0] > 0 && (prob.value.Parts | keys).length == 0"
                   class="card highlight-card card-small"
                   style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+                  <div *ngIf="prob.value.Type == 'IM'">
+                    <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                      <!-- replace choice iteration with counter -->
+                      <br /> <br /> <p *ngFor="let choice of subtopic_problem_selection[0]"><span *ngIf="choice != ''"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[0].indexOf(choice)+1) + ' (' + choice + ')'}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(choice)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(choice)] : 'No explanation or rationale is available.'}}</span></p>
+                    </h3>
+                    <br
+                      *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                    <button
+                      *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
+                      class="grade-button" (click)="next_problem_st(); scroll_top()"
+                      style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                      <b> Next Problem </b>
+                    </button>
+                  </div>
                   <div *ngIf="prob.value.Type == 'MC'">
                     <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="choice.key == selection.value && subtopic_attempt_explanation[0][0] != ''"
@@ -1853,29 +1952,39 @@
                     </tbody>
                   </table>
                 </div>
-                <div *ngIf="block.startsWith(':box:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+                <div *ngIf="block.startsWith(':box:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                   style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                   <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                     <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content">
                       <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                      <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
-                      <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                      <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                      <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                      <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && !this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                      <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && !part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                      <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                      <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
+                      <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                      <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && !this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && !part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] == word[3]" (click)="select_m_choice('', 1, part.key)" class="toggle-button-on" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                      <span *ngFor="let choice of shuffle_m_st(part.value.AnswerChoices, part.key)" style="max-height: 300px; min-width: 0px; margin: auto">
+                        <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
+                          <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                        </button>
+                        <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && !(part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct)" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
+                          <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                        </button>
+                      </span>
+                      <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] != word[3]" (click)="select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                      <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
                         <option value="" selected disabled></option>
                         <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                       </select>
-                      <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
+                      <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
                         <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                       </select>
-                      <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
+                      <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                         <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                       </select>
-                      <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                      <div *ngIf="word.startsWith(':FR-')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                         <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFRST></textarea>
                         <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()"
                           style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -1888,7 +1997,7 @@
                     </span>  
                   </h3>
                 </div>
-                <div *ngIf="block.startsWith(':box:') && !['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+                <div *ngIf="block.startsWith(':box:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                   style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                   <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(5)}}</h3>
                 </div>
@@ -1896,28 +2005,38 @@
                   style="width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                   <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(6)}}</h3>
                 </div>
-                <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+                <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                   style="display: block; white-space: pre-wrap; font-size: 18px">
                   <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content"> 
                     <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                    <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
-                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && !this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && !part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                    <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
+                    <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && !this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && !part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.subtopic_problem_selection[get_part_num_st(part.key)].includes(word[4]) && part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] == word[3]" (click)="select_m_choice('', 1, part.key)" class="toggle-button-on" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                    <span *ngFor="let choice of shuffle_m_st(part.value.AnswerChoices, part.key)" style="max-height: 300px; min-width: 0px; margin: auto">
+                      <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
+                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                      </button>
+                      <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && !(part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct)" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
+                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                      </button>
+                    </span>
+                    <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] != word[3]" (click)="select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                    <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] == ''" (change)="attempt_idd_st_problem(word[4], this.DDInput.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
                       <option value="" selected disabled></option>
                       <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                     </select>
-                    <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
+                    <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputC.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
                       <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                     </select>
-                    <select *ngIf="word.startsWith(':DD') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
+                    <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] != '' && !part.value.AnswerChoices[word[4] + ':' + subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_st_problem(word[4], this.DDInputI.value, part.key)" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                       <option *ngFor="let choice of get_choices_idd_st(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                     </select>
-                    <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                    <div *ngIf="word.startsWith(':FR-')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                       <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFRST></textarea>
                       <button class="grade-button" (click)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()"
                         style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -1929,7 +2048,7 @@
                     </select> -->
                   </span>  
                 </h3>
-                <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+                <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                   style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
               </div>
               <br />
@@ -1941,6 +2060,24 @@
               </div>
               <br *ngIf="part.value.Explain" />
               <input type="hidden" #selection>
+              <div *ngIf="part.value.Type == 'IM'">
+                <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
+                  <label *ngFor="let choice of shuffle_m_st(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
+                    <input type="checkbox">
+                    <button (click)="select_m_choice('', 0, part.key)" *ngIf="m_selection[get_part_num_st(part.key)][0] == choice" class="toggle-button-on"
+                        style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                        <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
+                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                    </button>
+                    <button (click)="select_m_choice(choice, 0, part.key)" *ngIf="!is_matched(choice, 0, part.key) && m_selection[get_part_num_st(part.key)][0] != choice" class="toggle-button-off"
+                        style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                        <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
+                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                    </button>
+                    <button *ngIf="is_matched(choice, 0, part.key)" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
+                  </label>
+                </div>
+              </div>
               <!-- <div *ngIf="part.value.Type == 'O'">
                 <div class="card card-small" style="min-height: 100px; width: auto; max-height: 500px; padding: 10px; align-items: center">
                   <label *ngFor="let choice of shuffle_m_st(part.value.AnswerChoices, part.key)" class="switch" style="padding: 0 10px; min-width: 100px; margin: auto">
@@ -2139,6 +2276,12 @@
               <div *ngIf="subtopic_problem_attempts[(prob.value.Parts | keys).indexOf(part.key)] > 0 && subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].length > 0"
                 class="card highlight-card card-small"
                 style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+                <div *ngIf="part.value.Type == 'IM'">
+                  <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                    <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                    <br /> <br /> <p *ngFor="let choice of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"><span *ngIf="choice != ''"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)+1) + ' (' + choice + ')'}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)] : 'No explanation or rationale is available.'}}</span></p>
+                  </h3>
+                </div>
                 <div *ngIf="part.value.Type == 'MC'">
                   <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
                     <h3 *ngIf="choice.key == selection.value"
@@ -2273,9 +2416,9 @@
           <section *ngIf="mode == 'assess'" (click)="expand_overview = !expand_overview" style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <div style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: auto">
-                    <img *ngIf="expand_overview" src="./assets/icons/caret.png"
+                    <img *ngIf="expand_overview" src="./assets/media/icons/caret.png"
                         style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: darkslategrey">
-                    <img *ngIf="!expand_overview" src="./assets/icons/caret.png"
+                    <img *ngIf="!expand_overview" src="./assets/media/icons/caret.png"
                         style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: darkslategrey; transform: rotate(-90deg)">
                 </div>
                 <div style="margin: auto; text-align: right">
@@ -2801,31 +2944,44 @@
                       </tbody>
                     </table>
                   </div>
-                  <div *ngIf="block.startsWith(':box:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                  <div *ngIf="block.startsWith(':box:') && ['IDD', 'IMC', 'IM', 'IMS', 'MFR'].includes(prob.value.Type)"
                     style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                     <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                       <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content"> 
                         <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                        <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
-                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && mode == 'explain' && !attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && mode == 'explain' && attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && !this.problem_selection[0].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.problem_selection[0].includes(word[4]) && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.problem_selection[0].includes(word[4]) && mode == 'explain' && !prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.problem_selection[0].includes(word[4]) && mode == 'explain' && prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                        <select *ngIf="word.startsWith(':DD') && (problem_selection[0][+word[4]-1] == '' || mode == 'assess')" (change)="attempt_idd_problem(word[4], this.DDInput.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
+                        <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-')&& !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && mode == 'explain' && !attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && mode == 'explain' && attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && !this.problem_selection[0].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.problem_selection[0].includes(word[4]) && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.problem_selection[0].includes(word[4]) && mode == 'explain' && !prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.problem_selection[0].includes(word[4]) && mode == 'explain' && prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                        <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] == word[3]" (click)="select_m_choice('', 1, '')" class="toggle-button-on" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                        <span *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" style="max-height: 300px; min-width: 0px; margin: auto">
+                          <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && mode == 'explain'  && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
+                            <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                          </button>
+                          <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && mode == 'explain'  && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && !(prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct)" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
+                            <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                          </button>
+                          <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && mode == 'assess'  && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">
+                            <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                          </button>
+                        </span>
+                        <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] != word[3]" (click)="select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                        <select *ngIf="word.startsWith(':DD-') && (problem_selection[0][+word[4]-1] == '' || mode == 'assess')" (change)="attempt_idd_problem(word[4], this.DDInput.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
                           <option value="" selected disabled></option>
                           <option *ngFor="let choice of get_choices_idd(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                         </select>
-                        <select *ngIf="word.startsWith(':DD') && problem_selection[0][+word[4]-1] != '' && mode == 'explain' && prob.value.AnswerChoices[word[4] + ':' + problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputC.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
+                        <select *ngIf="word.startsWith(':DD-') && problem_selection[0][+word[4]-1] != '' && mode == 'explain' && prob.value.AnswerChoices[word[4] + ':' + problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputC.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
                           <option *ngFor="let choice of get_choices_idd(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                         </select>
-                        <select *ngIf="word.startsWith(':DD') && problem_selection[0][+word[4]-1] != '' && mode == 'explain' && !prob.value.AnswerChoices[word[4] + ':' + problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputI.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
+                        <select *ngIf="word.startsWith(':DD-') && problem_selection[0][+word[4]-1] != '' && mode == 'explain' && !prob.value.AnswerChoices[word[4] + ':' + problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputI.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                           <option *ngFor="let choice of get_choices_idd(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                         </select>
-                        <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                        <div *ngIf="word.startsWith(':FR-')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                           <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR--{{word[4]}}" #inputMFR></textarea>
                           <button class="grade-button" (click)="attempt_mfr_problem(get_MFR(word[4], ''), word[4], ''); scroll_bottom()"
                             style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -2838,7 +2994,7 @@
                       </span>  
                     </h3>
                   </div>
-                  <div *ngIf="block.startsWith(':box:') && !['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                  <div *ngIf="block.startsWith(':box:') && !['IDD', 'IMC', 'IM', 'IMS', 'MFR'].includes(prob.value.Type)"
                     style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                     <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(5)}}</h3>
                   </div>
@@ -2846,30 +3002,43 @@
                     style="width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                     <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(6)}}</h3>
                   </div>
-                  <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                  <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IMC', 'IM', 'IMS', 'MFR'].includes(prob.value.Type)"
                     style="display: block; white-space: pre-wrap; font-size: 18px">
                     <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content"> 
                       <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                      <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
-                      <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                      <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                      <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && mode == 'explain' && !attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                      <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && mode == 'explain' && attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                      <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && !this.problem_selection[0].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                      <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.problem_selection[0].includes(word[4]) && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                      <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.problem_selection[0].includes(word[4]) && mode == 'explain' && !prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                      <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC') && this.problem_selection[0].includes(word[4]) && mode == 'explain' && prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                      <select *ngIf="word.startsWith(':DD') && (problem_selection[0][+word[4]-1] == '' || mode == 'assess')" (change)="attempt_idd_problem(word[4], this.DDInput.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
+                      <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-')&& !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                      <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && mode == 'explain' && !attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && mode == 'explain' && attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && !this.problem_selection[0].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.problem_selection[0].includes(word[4]) && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.problem_selection[0].includes(word[4]) && mode == 'explain' && !prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="prob.value.Type == 'IMS' && word.startsWith(':MC-') && this.problem_selection[0].includes(word[4]) && mode == 'explain' && prob.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                      <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] == word[3]" (click)="select_m_choice('', 1, '')" class="toggle-button-on" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                      <span *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" style="max-height: 300px; min-width: 0px; margin: auto">
+                        <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && mode == 'explain'  && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
+                          <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                        </button>
+                        <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && mode == 'explain'  && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && !(prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct)" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
+                          <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                        </button>
+                        <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && mode == 'assess'  && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice" (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">
+                          <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                        </button>
+                      </span>
+                      <button *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] != word[3]" (click)="select_m_choice(word[3], 1, '')" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                      <select *ngIf="word.startsWith(':DD-') && (problem_selection[0][+word[4]-1] == '' || mode == 'assess')" (change)="attempt_idd_problem(word[4], this.DDInput.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
                         <option value="" selected disabled></option>
                         <option *ngFor="let choice of get_choices_idd(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                       </select>
-                      <select *ngIf="word.startsWith(':DD') && problem_selection[0][+word[4]-1] != '' && mode == 'explain' && prob.value.AnswerChoices[word[4] + ':' + problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputC.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
+                      <select *ngIf="word.startsWith(':DD-') && problem_selection[0][+word[4]-1] != '' && mode == 'explain' && prob.value.AnswerChoices[word[4] + ':' + problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputC.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
                         <option *ngFor="let choice of get_choices_idd(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                       </select>
-                      <select *ngIf="word.startsWith(':DD') && problem_selection[0][+word[4]-1] != '' && mode == 'explain' && !prob.value.AnswerChoices[word[4] + ':' + problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputI.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
+                      <select *ngIf="word.startsWith(':DD-') && problem_selection[0][+word[4]-1] != '' && mode == 'explain' && !prob.value.AnswerChoices[word[4] + ':' + problem_selection[0][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputI.value, '')" value="{{problem_selection[0][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                         <option *ngFor="let choice of get_choices_idd(word[4], '') | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                       </select>
-                      <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                      <div *ngIf="word.startsWith(':FR-')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                         <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR--{{word[4]}}" #inputMFR></textarea>
                         <button class="grade-button" (click)="attempt_mfr_problem(get_MFR(word[4], ''), word[4], ''); scroll_bottom()"
                           style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -2881,7 +3050,7 @@
                       </select> -->
                     </span>  
                   </h3>
-                  <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                  <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IMC', 'IM', 'IMS', 'MFR'].includes(prob.value.Type)"
                     style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
                 </div>
               </div>
@@ -2895,9 +3064,27 @@
             </div>
             <br *ngIf="prob.value.Explain" />
             <input type="hidden" #selection>
+            <div *ngIf="prob.value.Type == 'IM'">
+              <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
+                <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
+                  <input type="checkbox">
+                  <button (click)="select_m_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                      <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                  </button>
+                  <button (click)="select_m_choice(choice, 0, '')" *ngIf="!is_matched(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                      <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                  </button>
+                  <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
+                </label>
+              </div>
+            </div>
             <div *ngIf="prob.value.Type == 'O'">
               <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
-                <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 300px; margin: auto">
+                <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_m_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
@@ -2934,7 +3121,7 @@
             </div>
             <div *ngIf="prob.value.Type == 'C'">
               <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
-                <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 300px; margin: auto">
+                <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_c_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
@@ -2997,7 +3184,7 @@
             </div>
             <div *ngIf="prob.value.Type == 'G'">
               <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
-                <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 300px; margin: auto">
+                <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_c_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
@@ -3258,6 +3445,21 @@
               <div *ngIf="problem_number == +prob.key && problem_attempts[0] > 0 && mode == 'explain' && (prob.value.Parts | keys).length == 0"
                 class="card highlight-card card-small"
                 style="height: auto; min-height: 100px; max-width: 95%; padding: 20px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+                <div *ngIf="prob.value.Type == 'IM'">
+                  <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                    <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
+                    <!-- replace choice iteration with counter -->
+                    <br /> <br /> <p *ngFor="let choice of problem_selection[0]"><span *ngIf="choice != ''"> <b>{{'\nExplanation '  + ''+(problem_selection[0].indexOf(choice)+1) + ' (' + choice + ')'}}</b>: {{(attempt_explanation[0][problem_selection[0].indexOf(choice)] != '') ? attempt_explanation[0][problem_selection[0].indexOf(choice)] : 'No explanation or rationale is available.'}}</span></p>
+                  </h3>
+                  <br
+                    *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                  <button
+                    *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
+                    class="grade-button" (click)="next_problem(); scroll_top()"
+                    style="display: block; max-width: 150px; max-height: 100px; margin: auto">
+                    <b> Next Problem </b>
+                  </button>
+                </div>
                 <div *ngIf="prob.value.Type == 'IDD'">
                   <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                     <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
@@ -3620,31 +3822,44 @@
                   </tbody>
                 </table>
               </div>
-              <div *ngIf="block.startsWith(':box:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+              <div *ngIf="block.startsWith(':box:') && ['IDD', 'IMC', 'IM', 'IMS', 'MFR'].includes(part.value.Type)"
                 style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                 <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                   <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content"> 
                     <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                    <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
-                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && mode == 'explain' && !attempt_response[get_part_num(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && mode == 'explain' && attempt_response[get_part_num(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && !this.problem_selection[get_part_num(part.key)].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.problem_selection[get_part_num(part.key)].includes(word[4]) && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.problem_selection[get_part_num(part.key)].includes(word[4]) && mode == 'explain' && !part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.problem_selection[get_part_num(part.key)].includes(word[4]) && mode == 'explain' && part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                    <select *ngIf="word.startsWith(':DD') && (problem_selection[get_part_num(part.key)][+word[4]-1] == '' || mode == 'assess')" (change)="attempt_idd_problem(word[4], this.DDInput.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
+                    <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-')&& !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && mode == 'explain' && !attempt_response[get_part_num(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && mode == 'explain' && attempt_response[get_part_num(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && !this.problem_selection[get_part_num(part.key)].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.problem_selection[get_part_num(part.key)].includes(word[4]) && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.problem_selection[get_part_num(part.key)].includes(word[4]) && mode == 'explain' && !part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.problem_selection[get_part_num(part.key)].includes(word[4]) && mode == 'explain' && part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                    <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num(part.key)][1] == word[3]" (click)="select_m_choice('', 1, part.key)" class="toggle-button-on" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                    <span *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" style="max-height: 300px; min-width: 0px; margin: auto">
+                      <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && mode == 'explain'  && is_matched(word[3], 1, part.key) && m_submission[get_part_num(part.key)][word[3]] == choice && part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
+                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                      </button>
+                      <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && mode == 'explain'  && is_matched(word[3], 1, part.key) && m_submission[get_part_num(part.key)][word[3]] == choice && !(part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct)" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
+                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                      </button>
+                      <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && mode == 'assess'  && is_matched(word[3], 1, part.key) && m_submission[get_part_num(part.key)][word[3]] == choice" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">
+                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                      </button>
+                    </span>
+                    <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num(part.key)][1] != word[3]" (click)="select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                    <select *ngIf="word.startsWith(':DD-') && (problem_selection[get_part_num(part.key)][+word[4]-1] == '' || mode == 'assess')" (change)="attempt_idd_problem(word[4], this.DDInput.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
                       <option value="" selected disabled></option>
                       <option *ngFor="let choice of get_choices_idd(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                     </select>
-                    <select *ngIf="word.startsWith(':DD') && problem_selection[get_part_num(part.key)][+word[4]-1] != '' && mode == 'explain' && part.value.AnswerChoices[word[4] + ':' + problem_selection[get_part_num(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputC.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
+                    <select *ngIf="word.startsWith(':DD-') && problem_selection[get_part_num(part.key)][+word[4]-1] != '' && mode == 'explain' && part.value.AnswerChoices[word[4] + ':' + problem_selection[get_part_num(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputC.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
                       <option *ngFor="let choice of get_choices_idd(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                     </select>
-                    <select *ngIf="word.startsWith(':DD') && problem_selection[get_part_num(part.key)][+word[4]-1] != '' && mode == 'explain' && !part.value.AnswerChoices[word[4] + ':' + problem_selection[get_part_num(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputI.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
+                    <select *ngIf="word.startsWith(':DD-') && problem_selection[get_part_num(part.key)][+word[4]-1] != '' && mode == 'explain' && !part.value.AnswerChoices[word[4] + ':' + problem_selection[get_part_num(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputI.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                       <option *ngFor="let choice of get_choices_idd(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                     </select>
-                    <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                    <div *ngIf="word.startsWith(':FR-')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                       <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFR></textarea>
                       <button class="grade-button" (click)="attempt_mfr_problem(get_MFR(word[4], part.key), word[4], part.key); scroll_bottom()"
                         style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -3657,7 +3872,7 @@
                   </span>  
                 </h3>
               </div>
-              <div *ngIf="block.startsWith(':box:') && !['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+              <div *ngIf="block.startsWith(':box:') && !['IDD', 'IMC', 'IM', 'IMS', 'MFR'].includes(part.value.Type)"
                 style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                 <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(5)}}</h3>
               </div>
@@ -3665,30 +3880,43 @@
                 style="width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                 <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(6)}}</h3>
               </div>
-              <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+              <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IMC', 'IM', 'IMS', 'MFR'].includes(part.value.Type)"
                 style="display: block; white-space: pre-wrap; font-size: 18px">
                 <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content"> 
                   <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                  <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':MC') && !word.startsWith(':DD') && !word.startsWith(':FR')"> {{word}} </span>
-                  <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                  <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                  <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && mode == 'explain' && !attempt_response[get_part_num(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                  <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC') && selection.value == word[4] && mode == 'explain' && attempt_response[get_part_num(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                  <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && !this.problem_selection[get_part_num(part.key)].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                  <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.problem_selection[get_part_num(part.key)].includes(word[4]) && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
-                  <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.problem_selection[get_part_num(part.key)].includes(word[4]) && mode == 'explain' && !part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
-                  <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC') && this.problem_selection[get_part_num(part.key)].includes(word[4]) && mode == 'explain' && part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
-                  <select *ngIf="word.startsWith(':DD') && (problem_selection[get_part_num(part.key)][+word[4]-1] == '' || mode == 'assess')" (change)="attempt_idd_problem(word[4], this.DDInput.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
+                  <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-')&& !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                  <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                  <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                  <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && mode == 'explain' && !attempt_response[get_part_num(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                  <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && mode == 'explain' && attempt_response[get_part_num(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                  <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && !this.problem_selection[get_part_num(part.key)].includes(word[4])" class="toggle-button-off" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                  <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.problem_selection[get_part_num(part.key)].includes(word[4]) && mode == 'assess'" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
+                  <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.problem_selection[get_part_num(part.key)].includes(word[4]) && mode == 'explain' && !part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
+                  <button *ngIf="part.value.Type == 'IMS' && word.startsWith(':MC-') && this.problem_selection[get_part_num(part.key)].includes(word[4]) && mode == 'explain' && part.value.AnswerChoices[word[4]].Key.Correct" class="toggle-button-on" (click)="selection.value = word[4]; attempt_ims_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
+                  <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num(part.key)][1] == word[3]" (click)="select_m_choice('', 1, part.key)" class="toggle-button-on" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                  <span *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" style="max-height: 300px; min-width: 0px; margin: auto">
+                    <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && mode == 'explain'  && is_matched(word[3], 1, part.key) && m_submission[get_part_num(part.key)][word[3]] == choice && part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
+                      <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                    </button>
+                    <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && mode == 'explain'  && is_matched(word[3], 1, part.key) && m_submission[get_part_num(part.key)][word[3]] == choice && !(part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct)" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
+                      <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                    </button>
+                    <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && mode == 'assess'  && is_matched(word[3], 1, part.key) && m_submission[get_part_num(part.key)][word[3]] == choice" (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">
+                      <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                    </button>
+                  </span>
+                  <button *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num(part.key)][1] != word[3]" (click)="select_m_choice(word[3], 1, part.key)" class="toggle-button-off" style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
+                  <select *ngIf="word.startsWith(':DD-') && (problem_selection[get_part_num(part.key)][+word[4]-1] == '' || mode == 'assess')" (change)="attempt_idd_problem(word[4], this.DDInput.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px" #DDInput>
                     <option value="" selected disabled></option>
                     <option *ngFor="let choice of get_choices_idd(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                   </select>
-                  <select *ngIf="word.startsWith(':DD') && problem_selection[get_part_num(part.key)][+word[4]-1] != '' && mode == 'explain' && part.value.AnswerChoices[word[4] + ':' + problem_selection[get_part_num(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputC.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
+                  <select *ngIf="word.startsWith(':DD-') && problem_selection[get_part_num(part.key)][+word[4]-1] != '' && mode == 'explain' && part.value.AnswerChoices[word[4] + ':' + problem_selection[get_part_num(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputC.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(66, 156, 10)" id="DDInputC-{{word[4]}}" #DDInputC>
                     <option *ngFor="let choice of get_choices_idd(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                   </select>
-                  <select *ngIf="word.startsWith(':DD') && problem_selection[get_part_num(part.key)][+word[4]-1] != '' && mode == 'explain' && !part.value.AnswerChoices[word[4] + ':' + problem_selection[get_part_num(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputI.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
+                  <select *ngIf="word.startsWith(':DD-') && problem_selection[get_part_num(part.key)][+word[4]-1] != '' && mode == 'explain' && !part.value.AnswerChoices[word[4] + ':' + problem_selection[get_part_num(part.key)][+word[4]-1]].Key.Correct" (change)="attempt_idd_problem(word[4], this.DDInputI.value, part.key)" value="{{problem_selection[get_part_num(part.key)][+word[4]-1]}}" style="margin: auto 0px auto 3px; padding: 0px 0px 0px 3px; width: auto; height: auto; min-height: 20px; max-width: min(55vw, 450px); font-size: 20px; font-weight: 800; text-align: center; font-size: 18px; background-color: rgb(245, 77, 77)" id="DDInputI-{{word[4]}}" #DDInputI>
                     <option *ngFor="let choice of get_choices_idd(word[4], part.key) | keyvalue" value="{{choice.key}}"> {{choice.value}} </option>
                   </select>
-                  <div *ngIf="word.startsWith(':FR')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
+                  <div *ngIf="word.startsWith(':FR-')" class="card card-medium" style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
                     <textarea rows="1" maxlength="20" placeholder="Answer" style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFR></textarea>
                     <button class="grade-button" (click)="attempt_mfr_problem(get_MFR(word[4], part.key), word[4], part.key); scroll_bottom()"
                       style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
@@ -3700,7 +3928,7 @@
                   </select> -->
                 </span>  
               </h3>
-              <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+              <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IMC', 'IM', 'IMS', 'MFR'].includes(part.value.Type)"
                 style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
             </div>
             <br />
@@ -3712,9 +3940,27 @@
             </div>
             <br *ngIf="part.value.Explain" />
             <input type="hidden" #selection>
+            <div *ngIf="part.value.Type == 'IM'">
+              <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
+                <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
+                  <input type="checkbox">
+                  <button (click)="select_m_choice('', 0, part.key)" *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                      <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                  </button>
+                  <button (click)="select_m_choice(choice, 0, part.key)" *ngIf="!is_matched(choice, 0, part.key) && m_selection[get_part_num(part.key)][0] != choice" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                      <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                  </button>
+                  <button *ngIf="is_matched(choice, 0, part.key)" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
+                </label>
+              </div>
+            </div>
             <div *ngIf="part.value.Type == 'O'">
               <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
-                <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 300px; margin: auto">
+                <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_m_choice('', 0, part.key)" *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
@@ -3751,7 +3997,7 @@
             </div>
             <div *ngIf="part.value.Type == 'C'">
               <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
-                <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 300px; margin: auto">
+                <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_c_choice('', 0, part.key)" *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
@@ -3814,7 +4060,7 @@
             </div>
             <div *ngIf="part.value.Type == 'G'">
               <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
-                <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 150px; max-height: 300px; margin: auto">
+                <label *ngFor="let choice of shuffle_m(part.value.AnswerChoices, part.key)" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
                   <input type="checkbox">
                   <button (click)="select_c_choice('', 0, part.key)" *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
@@ -4074,6 +4320,12 @@
             <div *ngIf="problem_attempts[(prob.value.Parts | keys).indexOf(part.key)] > 0 && problem_selection[(prob.value.Parts | keys).indexOf(part.key)].length > 0 && mode == 'explain'"
               class="card highlight-card card-small"
               style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
+              <div *ngIf="part.value.Type == 'IM'">
+                <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                  <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                  <br /> <br /> <p *ngFor="let choice of problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"><span *ngIf="choice != ''"> <b>{{'\nExplanation '  + ''+(problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)+1) + ' (' + choice + ')'}}</b>: {{(attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)] != '') ? attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)] : 'No explanation or rationale is available.'}}</span></p>
+                </h3>
+              </div>
               <div *ngIf="part.value.Type == 'IDD'">
                 <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                   <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
