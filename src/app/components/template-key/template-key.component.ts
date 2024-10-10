@@ -2380,6 +2380,10 @@ export class TemplateKeyComponent implements OnInit {
         console.log('plot graph');
     }
 
+    is_image(blob: string) {
+      return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
+    }
+
     select_part(part: string) {
         this.router.navigateByUrl('/exam/' + part + '/key');
         this.data_loaded = false;
@@ -4285,7 +4289,7 @@ export class TemplateKeyComponent implements OnInit {
             part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
         }
         if (this.c_submission[part_num][cat].includes(ch)) {
-            if (this.c_submission[part_num][cat].indexOf(ch) !== -1) {
+            if (this.c_submission[part_num][cat].indexOf(ch) != -1) {
                 this.c_submission[part_num][cat].splice(this.c_submission[part_num][cat].indexOf(ch), 1);
             }
             else {

@@ -810,9 +810,9 @@
                 <br *ngIf="supp_st_dump[supp].Directions != ''" />
                 <div *ngFor="let block of supp_st_dump[supp].Context"
                   style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
-                  <h3 *ngIf="!block.endsWith('.jpg')" style="font-size: 18px; margin: auto; white-space: pre-wrap"><i
+                  <h3 *ngIf="!is_image(block)" style="font-size: 18px; margin: auto; white-space: pre-wrap"><i
                       style="font-weight: 400">{{block}}</i></h3>
-                  <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}"
+                  <img *ngIf="is_image(block)" src="./assets/{{block}}"
                     style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                 </div>
                 <br *ngIf="supp_st_dump[supp].Context.length > 0" />
@@ -836,7 +836,7 @@
                       <section style="width:fit-content">
                         <div *ngFor="let block2 of supp_st_dump[block[1]].Content"
                           style="display: flex; flex-direction: row; align-items: center; margin: auto; width: 100%">
-                          <h3 *ngIf="!block2[1].endsWith('.jpg')"
+                          <h3 *ngIf="!is_image(block2[1])"
                             style="font-size: 20px; font-weight: 800; margin: 8px 15px auto 5px; width: auto; min-width: 20px; max-width: 100px; text-align: center">
                             {{block2[0]}}</h3>
                           <div *ngIf="block2[1].startsWith(':box:')"
@@ -845,14 +845,14 @@
                               {{block2[1].slice(5)}}</h3>
                           </div>
                           <h3
-                            *ngIf="!block2[1].endsWith('.jpg') && !block2[1].startsWith(':box:') && (block2[0] != '' || supp_st_dump[block[1]].LabelType == 'L')"
+                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && (block2[0] != '' || supp_st_dump[block[1]].LabelType == 'L')"
                             style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
                             {{block2[1]}}</h3>
                           <h3
-                            *ngIf="!block2[1].endsWith('.jpg') && !block2[1].startsWith(':box:') && block2[0] == '' && supp_st_dump[block[1]].LabelType == 'P'"
+                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && block2[0] == '' && supp_st_dump[block[1]].LabelType == 'P'"
                             style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
                             <b>{{block2[1]}}</b></h3>
-                          <img *ngIf="block2[1].endsWith('.jpg')" src="./assets/{{block2[1]}}"
+                          <img *ngIf="is_image(block2[1])" src="./assets/{{block2[1]}}"
                             style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                         </div>
                       </section>
@@ -868,18 +868,18 @@
                         {{block[1].slice(6)}}</h3>
                     </div>
                     <h3
-                      *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && !block[1].startsWith(':ibox:') && (supp_st_dump[supp].LabelType == 'N')"
+                      *ngIf="!block[1].endsWith('.json') && !is_image(block[1]) && !block[1].startsWith(':box:') && !block[1].startsWith(':ibox:') && (supp_st_dump[supp].LabelType == 'N')"
                       style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: 100%">
                       {{block[1]}}</h3>
                     <h3
-                      *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && !block[1].startsWith(':ibox:') && block[0] != '' && supp_st_dump[supp].LabelType != 'N'"
+                      *ngIf="!block[1].endsWith('.json') && !is_image(block[1]) && !block[1].startsWith(':box:') && !block[1].startsWith(':ibox:') && block[0] != '' && supp_st_dump[supp].LabelType != 'N'"
                       style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
                       {{block[1]}}</h3>
                     <h3
-                      *ngIf="!block[1].endsWith('.json') && !block[1].endsWith('.jpg') && !block[1].startsWith(':box:') && !block[1].startsWith(':ibox:') && block[0] == '' && supp_st_dump[supp].LabelType != 'N'"
+                      *ngIf="!block[1].endsWith('.json') && !is_image(block[1]) && !block[1].startsWith(':box:') && !block[1].startsWith(':ibox:') && block[0] == '' && supp_st_dump[supp].LabelType != 'N'"
                       style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px); margin: 10px auto; text-align: center">
                       <b>{{block[1]}}</b></h3>
-                    <img *ngIf="block[1].endsWith('.jpg')" src="./assets/{{block[1]}}"
+                    <img *ngIf="is_image(block[1])" src="./assets/{{block[1]}}"
                       style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                   </div>
                 </section>
@@ -940,7 +940,7 @@
               <div *ngFor="let prob of subtopic_search_dump | keyvalue">
                 <div *ngIf="subtopic_problem_number == +prob.key">
                   <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
-                    <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
+                    <img *ngIf="is_image(block)" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
                     <div *ngIf="block.startsWith(':table:')" style="max-width: 80vw; overflow: auto">
                       <h3 style="margin: auto; margin-top: 10px; display: block; white-space: pre-wrap; font-size: 20px; text-align: center">{{supp_st_dump[block.slice(7)].Title}}</h3>
                       <table style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 80vw; font-size: 18px; background-color: white">
@@ -969,8 +969,8 @@
                       style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                       <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                         <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content"> 
-                          <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                          <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                          <img *ngIf="is_image(word)" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
+                          <span *ngIf="!is_image(word) && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
                           <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
                           <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && !subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
                           <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
@@ -1018,11 +1018,11 @@
                       style="width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                       <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(6)}}</h3>
                     </div>
-                    <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                    <h3 *ngIf="!is_image(block) && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                       style="display: block; white-space: pre-wrap; font-size: 18px">
                       <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content">
-                        <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                        <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                        <img *ngIf="is_image(word)" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
+                        <span *ngIf="!is_image(word) && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
                         <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
                         <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && !subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
                         <button *ngIf="prob.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && subtopic_attempt_response[0].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], '')" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
@@ -1061,7 +1061,7 @@
                         </select> -->
                       </span>  
                     </h3>
-                    <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
+                    <h3 *ngIf="!is_image(block) && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                       style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
                   </div>
                 </div>
@@ -1257,7 +1257,7 @@
                       class="toggle-button-off"> <b> {{choice.key}} </b>
                     </button>
                   </label>
-                  <h3 *ngIf="!choice.value.Choice.endsWith('.jpg') && !choice.value.Choice.startsWith(':box:')"
+                  <h3 *ngIf="!is_image(choice.value.Choice) && !choice.value.Choice.startsWith(':box:')"
                     style="display: block; margin: 0px 20px 0px 20px; margin: auto; white-space: pre-wrap">
                     {{choice.value.Choice}}
                   </h3>
@@ -1265,7 +1265,7 @@
                     style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
                     <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{choice.value.Choice.slice(5)}}</h3>
                   </div>
-                  <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                  <img *ngIf="is_image(choice.value.Choice)" src="./assets/{{choice.value.Choice}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                 </div>
               </div>
@@ -1285,7 +1285,7 @@
                       class="toggle-button-off"> <b> {{choice.key}} </b>
                     </button>
                   </label>
-                  <h3 *ngIf="!choice.value.Choice.endsWith('.jpg') && !choice.value.Choice.startsWith(':box:')"
+                  <h3 *ngIf="!is_image(choice.value.Choice) && !choice.value.Choice.startsWith(':box:')"
                     style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">
                     {{choice.value.Choice}}
                   </h3>
@@ -1293,7 +1293,7 @@
                     style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
                     <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{choice.value.Choice.slice(5)}}</h3>
                   </div>
-                  <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                  <img *ngIf="is_image(choice.value.Choice)" src="./assets/{{choice.value.Choice}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                 </div>
               </div>
@@ -1538,7 +1538,7 @@
             <br />
             <div class="content" style="margin: auto; align-items: center">
               <div *ngFor="let block of part.value.Content" style="align-items: center; text-align: center">
-                <img *ngIf="block.endsWith('.jpg')" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
+                <img *ngIf="is_image(block)" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
                 <div *ngIf="block.startsWith(':table:')" style="max-width: 80vw; overflow: auto">
                   <h3 style="margin: auto; margin-top: 10px; display: block; white-space: pre-wrap; font-size: 20px; text-align: center">{{supp_st_dump[block.slice(7)].Title}}</h3>
                   <table style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 80vw; font-size: 18px; background-color: white">
@@ -1567,8 +1567,8 @@
                   style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                   <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                     <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content">
-                      <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                      <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                      <img *ngIf="is_image(word)" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
+                      <span *ngIf="!is_image(word) && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
                       <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
                       <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
                       <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
@@ -1616,11 +1616,11 @@
                   style="width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
                   <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(6)}}</h3>
                 </div>
-                <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+                <h3 *ngIf="!is_image(block) && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                   style="display: block; white-space: pre-wrap; font-size: 18px">
                   <span *ngFor="let word of block.split(' ')" style="width: fit-content; height: fit-content"> 
-                    <img *ngIf="word.endsWith('.jpg')" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
-                    <span *ngIf="!word.endsWith('.jpg') && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
+                    <img *ngIf="is_image(word)" src="./assets/{{word}}" style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
+                    <span *ngIf="!is_image(word) && !word.startsWith(':M-') && !word.startsWith(':MC-') && !word.startsWith(':DD-') && !word.startsWith(':FR-')"> {{word}} </span>
                     <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value != word[4]" class="toggle-button-off" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px"> <b>{{word[4]}}</b> </button>
                     <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(245, 77, 77)"> <b>{{word[4]}}</b> </button>
                     <button *ngIf="part.value.Type == 'IMC' && word.startsWith(':MC-') && selection.value == word[4] && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" class="toggle-button-on" (click)="selection.value = word[4]; attempt_imc_st_problem(word[4], part.key)" style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)"> <b>{{word[4]}}</b> </button>
@@ -1659,7 +1659,7 @@
                     </select> -->
                   </span>  
                 </h3>
-                <h3 *ngIf="!block.endsWith('.jpg') && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
+                <h3 *ngIf="!is_image(block) && !block.startsWith(':box:') && !block.startsWith(':ibox:') && !block.startsWith(':table:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                   style="display: block; white-space: pre-wrap; font-size: 18px">{{block}}</h3>
               </div>
               <br />
@@ -1851,11 +1851,11 @@
                       class="toggle-button-off"> <b> {{choice.key}} </b>
                     </button>
                   </label>
-                  <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                  <h3 *ngIf="!is_image(choice.value.Choice)"
                     style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">
                     {{choice.value.Choice}}
                   </h3>
-                  <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                  <img *ngIf="is_image(choice.value.Choice)" src="./assets/{{choice.value.Choice}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                 </div>
               </div>
@@ -1875,11 +1875,11 @@
                       class="toggle-button-off"> <b> {{choice.key}} </b>
                     </button>
                   </label>
-                  <h3 *ngIf="!choice.value.Choice.endsWith('.jpg')"
+                  <h3 *ngIf="!is_image(choice.value.Choice)"
                     style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">
                     {{choice.value.Choice}}
                   </h3>
-                  <img *ngIf="choice.value.Choice.endsWith('.jpg')" src="./assets/{{choice.value.Choice}}"
+                  <img *ngIf="is_image(choice.value.Choice)" src="./assets/{{choice.value.Choice}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                 </div>
               </div>

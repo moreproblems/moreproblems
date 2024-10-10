@@ -2295,6 +2295,10 @@ export class TemplateCExamComponent implements OnInit {
         console.log('plot graph');
     }
 
+    is_image(blob: string) {
+        return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
+    }
+
     get_flag_count() {
         var count = 0;
         for (let sub of this.order_numbers()) {
@@ -5187,7 +5191,7 @@ export class TemplateCExamComponent implements OnInit {
             part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
         }
         if (this.c_submission[part_num][cat].includes(ch)) {
-            if (this.c_submission[part_num][cat].indexOf(ch) !== -1) {
+            if (this.c_submission[part_num][cat].indexOf(ch) != -1) {
                 this.c_submission[part_num][cat].splice(this.c_submission[part_num][cat].indexOf(ch), 1);
             }
             else {

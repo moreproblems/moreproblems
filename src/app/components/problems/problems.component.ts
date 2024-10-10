@@ -2301,6 +2301,10 @@ export class ProblemsComponent implements OnInit {
     console.log('plot graph');
   }
 
+  is_image(blob: string) {
+    return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
+  }
+
   get_refsheet(key: string) {
     // console.log('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
     return ('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
@@ -2348,7 +2352,7 @@ export class ProblemsComponent implements OnInit {
           this.subject_filters.push(subval)
         }
         else {
-          if (this.subject_filters.indexOf(subval) !== -1) {
+          if (this.subject_filters.indexOf(subval) != -1) {
             this.subject_filters.splice(this.subject_filters.indexOf(subval), 1);
           }
           else {
@@ -2364,7 +2368,7 @@ export class ProblemsComponent implements OnInit {
             this.grade_filters.push(subval)
           }
           else {
-            if (this.grade_filters.indexOf(subval) !== -1) {
+            if (this.grade_filters.indexOf(subval) != -1) {
               this.grade_filters.splice(this.grade_filters.indexOf(subval), 1);
             }
             else {
@@ -2378,7 +2382,7 @@ export class ProblemsComponent implements OnInit {
           this.grade_filters.push(val)
         }
         else {
-          if (this.grade_filters.indexOf(val) !== -1) {
+          if (this.grade_filters.indexOf(val) != -1) {
             this.grade_filters.splice(this.grade_filters.indexOf(val), 1);
           }
           else {
@@ -2394,7 +2398,7 @@ export class ProblemsComponent implements OnInit {
             this.state_filters.push(subval)
           }
           else {
-            if (this.state_filters.indexOf(subval) !== -1) {
+            if (this.state_filters.indexOf(subval) != -1) {
               this.state_filters.splice(this.state_filters.indexOf(subval), 1);
             }
             else {
@@ -2408,7 +2412,7 @@ export class ProblemsComponent implements OnInit {
           this.state_filters.push(val)
         }
         else {
-          if (this.state_filters.indexOf(val) !== -1) {
+          if (this.state_filters.indexOf(val) != -1) {
             this.state_filters.splice(this.state_filters.indexOf(val), 1);
           }
           else {
@@ -2722,7 +2726,7 @@ export class ProblemsComponent implements OnInit {
       this.new_assignments.push(target);
     }
     else {
-      if (this.new_assignments.indexOf(target) !== -1) {
+      if (this.new_assignments.indexOf(target) != -1) {
         this.new_assignments.splice(this.new_assignments.indexOf(target), 1);
       }
       else {
@@ -2732,16 +2736,16 @@ export class ProblemsComponent implements OnInit {
   }
 
   add_assign_quiz() {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    var quiz_id = '';
+    for (let i: number = 1; i <= 5; i++) {
+      quiz_id += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    var db_updates: any = {};
+    db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, grades: this.grade_filters, subjects: this.subject_filters, states: this.state_filters, topics: this.topic_filters, mode: this.mode, lmode: this.length_mode, length: (this.length_mode == 'number') ? this.exam_length : this.exam_timer };
+    this.authService.UpdateDatabase(db_updates);
     for (let ass of this.new_assignments) {
-      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-      const charactersLength = characters.length;
-      var quiz_id = '';
-      for (let i: number = 1; i <= 5; i++) {
-        quiz_id += characters.charAt(Math.floor(Math.random() * charactersLength));
-      }
-      var db_updates: any = {};
-      db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, grades: this.grade_filters, subjects: this.subject_filters, states: this.state_filters, topics: this.topic_filters, mode: this.mode, lmode: this.length_mode, length: (this.length_mode == 'number') ? this.exam_length : this.exam_timer };
-      this.authService.UpdateDatabase(db_updates);
       if (ass.length < 10) {
         const class_ass_ref = 'classes/' + ass + '/quizzes';
         var class_ass_set: any = [];
@@ -4861,7 +4865,7 @@ export class ProblemsComponent implements OnInit {
       part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
     }
     if (this.c_submission[part_num][cat].includes(ch)) {
-      if (this.c_submission[part_num][cat].indexOf(ch) !== -1) {
+      if (this.c_submission[part_num][cat].indexOf(ch) != -1) {
         this.c_submission[part_num][cat].splice(this.c_submission[part_num][cat].indexOf(ch), 1);
       }
       else {

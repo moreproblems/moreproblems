@@ -680,8 +680,13 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
   expand_topics = true;
   show_correct = false;
   mode = 'assess';
-  length_mode = 'number';
+  shuffle = false;
+  public = false;
   quiz_name: string = '';
+  quiz_length = 10;
+  quiz_timer = 10;
+  timer_hours = 0;
+  timer_minutes = 0;
 
   et_counter: number = 0;
   et_minutes: number = 0;
@@ -697,10 +702,6 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
   // exam_subject = 'Mathematics';
   // exam_name = 'STAAR';
   // exam_year = '2021';
-  exam_length = 10;
-  exam_timer = 10;
-  timer_hours = 0;
-  timer_minutes = 0;
 
   COG3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = COG3EProblems;
   COG4E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = COG4EProblems;
@@ -1954,6 +1955,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
 
   problem_number = 0;
   max_problem_number = 0;
+  prob_images: { [key: string]: string } = {};
   problem_selection: any[] = [];
   problem_attempts: number[] = [];
   attempt_path: any[] = [];
@@ -2336,6 +2338,10 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
     console.log('plot graph');
   }
 
+  is_image(blob: string) {
+    return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
+  }
+
   get_refsheet(key: string) {
     // console.log('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
     return ('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
@@ -2362,7 +2368,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
   }
 
   order_numbers() {
-    if (this.length_mode == 'number') {
+    if (this.quiz_length > 0) {
       return (Array.from({ length: Object.keys(this.exam_dump).length }, (_, i) => i + 1));
     }
     else {
@@ -2395,11 +2401,15 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
           this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString();
           if ("Started" == (det as any).status) {
             this.problem_ids = (det as any).sequence;
+            for (let i = 0; i < this.problem_ids.length; i++) {
+              this.problem_ids[i] = ''+this.problem_ids[i];
+            }
+            console.log(this.problem_ids);
           }
           if (this.mode == 'assess' && (det as any).progress != 0) {
             for (const [key2, det2] of Object.entries(db_submission)) {
               if (+key2 != 0) {
-                this.exam_submission[this.problem_ids.indexOf(key2) + 1] = (det2 as any);
+                this.exam_submission[+this.problem_ids.indexOf(key2) + 1] = (det2 as any);
               }
             }
           }
@@ -2469,55 +2479,73 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
   }
 
   generate_problems() {
-    this.filter_exams();
-    this.dump_count = 0;
-    for (let online_key of this.exam_set) {
-      if (this.filtered_set.includes(online_key)) {
-        for (const [num, value] of Object.entries(this.dump_dict[online_key])) {
-          if (value.Number <= this.exam_attribute_dump[online_key].NumQuestions) {
-            var prob: any = {};
-            for (const [key, val] of Object.entries(value)) {
-              prob[key] = val;
-            }
-            if (this.topic_filters.length == 0) {
-              this.ordered_dump[this.dump_count] = prob;
-              this.ordered_dump[this.dump_count].Number = online_key + '-' + (this.ordered_dump[this.dump_count].Number as string);
-              this.dump_count += 1;
-            }
-            else if (!this.exam_attribute_dump[online_key].HideTopics) {
-              for (let topic of value.Topics) {
-                if (this.topic_filters.includes(topic)) {
-                  this.ordered_dump[this.dump_count] = prob;
-                  this.ordered_dump[this.dump_count].Number = online_key + '-' + (this.ordered_dump[this.dump_count].Number as string);
-                  this.dump_count += 1;
+    if (this.quiz_config.problems == undefined) {
+      this.filter_exams();
+      this.dump_count = 0;
+      for (let online_key of this.exam_set) {
+        if (this.filtered_set.includes(online_key)) {
+          for (const [num, value] of Object.entries(this.dump_dict[online_key])) {
+            if (value.Number <= this.exam_attribute_dump[online_key].NumQuestions) {
+              var prob: any = {};
+              for (const [key, val] of Object.entries(value)) {
+                prob[key] = val;
+              }
+              if (this.topic_filters.length == 0) {
+                this.ordered_dump[this.dump_count] = prob;
+                this.ordered_dump[this.dump_count].Number = online_key + '-' + (this.ordered_dump[this.dump_count].Number as string);
+                this.dump_count += 1;
+              }
+              else if (!this.exam_attribute_dump[online_key].HideTopics) {
+                for (let topic of value.Topics) {
+                  if (this.topic_filters.includes(topic)) {
+                    this.ordered_dump[this.dump_count] = prob;
+                    this.ordered_dump[this.dump_count].Number = online_key + '-' + (this.ordered_dump[this.dump_count].Number as string);
+                    this.dump_count += 1;
+                  }
                 }
               }
+              console.log(this.dump_count);
             }
-            console.log(this.dump_count);
           }
         }
       }
+      console.log(this.ordered_dump);
+      if (this.filtered_set.length != 0) {
+        this.generate_message = "";
+        if (this.quiz_length > 0) {
+          this.randomize_problems(this.quiz_length);
+        }
+        else {
+          this.randomize_problems(Math.min(100, this.filtered_prob_num));
+        }
+        this.toggle_filters();
+      }
     }
-    console.log(this.ordered_dump);
-    if (this.filtered_set.length != 0) {
-      this.generate_message = "";
-      if (this.length_mode == 'number') {
-        this.randomize_problems(this.exam_length);
-      }
-      else {
-        this.randomize_problems(Math.min(100, this.filtered_prob_num));
-      }
+    else {
+      this.ordered_dump = this.quiz_config.problems;
+      this.randomize_problems(this.quiz_length);
       this.toggle_filters();
     }
   }
 
   randomize_problems(total: number) {
-    this.problems_sequence = Array.from({ length: Object.keys(this.ordered_dump).length }, (_, i) => i);
+    if (this.quiz_config.problems == undefined) {
+      this.problems_sequence = Array.from({ length: Object.keys(this.ordered_dump).length }, (_, i) => i);
+    }
+    else {
+      this.problems_sequence = Array.from({ length: Object.keys(this.ordered_dump).length }, (_, i) => i+1);
+    }
     this.random_list = []
     for (let i = 1; i <= total; i++) {
       this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
       this.random_list.push('' + this.problems_sequence[this.random_index]);
       this.exam_dump[i] = this.ordered_dump[this.problems_sequence[this.random_index]];
+      if (this.exam_dump[i].Parts == undefined) {
+        this.exam_dump[i].Parts = {};
+      }
+      if (this.exam_dump[i].SuppContent == undefined) {
+        this.exam_dump[i].SuppContent = [];
+      }
       this.problems_sequence.splice(this.random_index, 1);
       this.problem_ids.push(this.exam_dump[i].Number);
     }
@@ -2603,6 +2631,17 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
 
   toggle_filters() {
     this.expand_filters = !this.expand_filters;
+    this.prob_images = {};
+    for (let block of this.exam_dump[1].Content) {
+      if (this.is_image(block)) {
+        this.authService.getQuizPic(this.qKey, block).then((url) => {
+          console.log(url);
+          this.prob_images[block] = url;
+        }).catch(error => {
+          console.log(error.message);
+        });;
+      }
+    }
     if (this.mode == 'assess') {
       for (let num of Object.keys(this.exam_dump)) {
         this.exam_submission[+num] = {
@@ -2723,7 +2762,9 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
         }
       }
     }
-    this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+    if (this.quiz_config.problems == undefined) {
+      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+    }
     for (let supp of this.exam_dump[this.problem_number].SuppContent) {
       setTimeout(() => {
         this.read_supp_json(supp);
@@ -2749,18 +2790,29 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
         }
       }
     }
-    this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+    if (this.quiz_config.problems == undefined) {
+      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+    }
     console.log(this.exam_dump[this.problem_number].Number);
-    console.log((this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-')));
-    console.log(this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet);
+    // console.log((this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-')));
+    // console.log(this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet);
   }
 
   resume_exam() {
-    for (let i: number = 1; i <= this.problem_ids.length; i++) {
-      this.exam_dump[i] = this.dump_dict[this.problem_ids[i - 1].substring(0, this.problem_ids[i - 1].indexOf('-'))][+this.problem_ids[i - 1].substring(this.problem_ids[i - 1].indexOf('-') + 1)];
-      this.exam_dump[i].Number = this.problem_ids[i - 1];
+    if (this.quiz_config.problems == undefined) {
+      for (let i: number = 1; i <= this.problem_ids.length; i++) {
+        this.exam_dump[i] = this.dump_dict[this.problem_ids[i - 1].substring(0, this.problem_ids[i - 1].indexOf('-'))][+this.problem_ids[i - 1].substring(this.problem_ids[i - 1].indexOf('-') + 1)];
+        this.exam_dump[i].Number = this.problem_ids[i - 1];
+      }
     }
-    this.expand_filters = !this.expand_filters;
+    else {
+      for (let i: number = 1; i <= this.problem_ids.length; i++) {
+        this.exam_dump[i] = this.ordered_dump[+this.problem_ids[i - 1]];
+        this.exam_dump[i].Number = this.problem_ids[i - 1];
+        this.exam_dump[i].Parts = {};
+        this.exam_dump[i].SuppContent = [];
+      }
+    }
     if (this.mode == 'assess') {
       for (let num of Object.keys(this.exam_dump)) {
         if (num != 'default') {
@@ -2801,52 +2853,43 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
             }
             this.exam_inprogress = true;
             this.progress_number = (det as any).progress + 1;
+            this.prob_images = {};
+            for (let block of this.exam_dump[this.progress_number].Content) {
+              if (this.is_image(block)) {
+                this.authService.getQuizPic(this.qKey, block).then((url) => {
+                  console.log(url);
+                  this.prob_images[block] = url;
+                }).catch(error => {
+                  console.log(error.message);
+                });;
+              }
+            }
             if (this.mode == 'assess' && (det as any).progress != 0) {
               setTimeout(() => {
                 console.log(db_submission.problems);
                 for (const [key2, det2] of Object.entries(db_submission.problems)) {
-                  // if (+key2 != 0) {
-                  //   const sub_prob: any = (det2 as any);
-                  //   var sub_prob_2: any = {};
-                  //   for (const [field, dump] of Object.entries(det2 as any)) {
-                  //     // sub_prob[field] = dump;
-                  //     sub_prob_2[field] = dump;
-                  //   }
-                  //   if (typeof (det2 as any).Choice == "string") {
-                  //     sub_prob_2.Choice = [];
-                  //     sub_prob_2.Correct = [];
-                  //     sub_prob_2.Attempts = [];
-                  //     sub_prob_2.Path = [];
-                  //     sub_prob_2.Choice.push([sub_prob.Choice]);
-                  //     sub_prob_2.Correct.push([sub_prob.Correct]);
-                  //     sub_prob_2.Attempts.push(sub_prob.Attempts);
-                  //     sub_prob_2.Path.push([[sub_prob.Path]]);
-                  //   }
-                  //   if (!Object.keys(sub_prob_2).includes("Flags")) {
-                  //     sub_prob_2.Flags = [false];
-                  //   }
-                  //   this.exam_submission[this.problem_ids.indexOf(key2)+1] = sub_prob_2;
-                  // }
-                  const sub_prob: any = (det2 as any);
-                  var sub_prob_2: any = {};
-                  for (const [field, dump] of Object.entries(det2 as any)) {
-                    // sub_prob[field] = dump;
-                    sub_prob_2[field] = dump;
+                  if (+key2 != 0) {
+                    const sub_prob: any = (det2 as any);
+                    var sub_prob_2: any = {};
+                    for (const [field, dump] of Object.entries(det2 as any)) {
+                      // sub_prob[field] = dump;
+                      sub_prob_2[field] = dump;
+                    }
+                    if (typeof (det2 as any).Choice == "string") {
+                      sub_prob_2.Choice = [];
+                      sub_prob_2.Correct = [];
+                      sub_prob_2.Attempts = [];
+                      sub_prob_2.Path = [];
+                      sub_prob_2.Choice.push([sub_prob.Choice]);
+                      sub_prob_2.Correct.push([sub_prob.Correct]);
+                      sub_prob_2.Attempts.push(sub_prob.Attempts);
+                      sub_prob_2.Path.push([[sub_prob.Path]]);
+                    }
+                    if (!Object.keys(sub_prob_2).includes("Flags")) {
+                      sub_prob_2.Flags = [false];
+                    }
+                    this.exam_submission[this.problem_ids.indexOf(key2) + 1] = sub_prob_2;
                   }
-                  if (typeof (det2 as any).Choice == "string") {
-                    sub_prob_2.Choice = [];
-                    sub_prob_2.Correct = [];
-                    sub_prob_2.Attempts = [];
-                    sub_prob_2.Path = [];
-                    sub_prob_2.Choice.push([sub_prob.Choice]);
-                    sub_prob_2.Correct.push([sub_prob.Correct]);
-                    sub_prob_2.Attempts.push(sub_prob.Attempts);
-                    sub_prob_2.Path.push([[sub_prob.Path]]);
-                  }
-                  if (!Object.keys(sub_prob_2).includes("Flags")) {
-                    sub_prob_2.Flags = [false];
-                  }
-                  this.exam_submission[this.problem_ids.indexOf(key2) + 1] = sub_prob_2;
                 }
               }, 500);
               console.log(this.exam_submission);
@@ -2940,13 +2983,23 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
             }
             this.exam_inprogress = true;
             this.progress_number = (det as any).progress + 1;
+            this.prob_images = {};
+            for (let block of this.exam_dump[this.progress_number].Content) {
+              if (this.is_image(block)) {
+                this.authService.getQuizPic(this.qKey, block).then((url) => {
+                  console.log(url);
+                  this.prob_images[block] = url;
+                }).catch(error => {
+                  console.log(error.message);
+                });;
+              }
+            }
             if (this.mode == 'assess' && (det as any).progress != 0) {
               console.log(this.db_submission);
               for (const [key2, det2] of Object.entries(this.db_submission)) {
-                // if (+key2 != 0) {
-                //   this.exam_submission[this.problem_ids.indexOf(key2)+1] = (det2 as any);
-                // }
-                this.exam_submission[this.problem_ids.indexOf(key2) + 1] = (det2 as any);
+                if (+key2 != 0) {
+                  this.exam_submission[this.problem_ids.indexOf(key2)+1] = (det2 as any);
+                }
               }
             }
             this.exam_key = [];
@@ -3030,108 +3083,120 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
         this.db_updates = {};
       }
     }
-    console.log(this.exam_dump);
-    console.log(this.exam_submission);
-    console.log(this.exam_key);
-    this.problem_number = this.progress_number;
-    this.max_problem_number = this.problem_number;
-    this.toggleExamTimer();
-    this.toggleProblemTimer();
-    this.attempt_path = [];
-    this.attempt_response = [];
-    this.attempt_explanation = [];
-    this.problem_selection = [];
-    this.m_shuffled = false;
-    this.shuffle_choices = {};
-    this.unique_choices = [];
-    console.log(this.problem_number);
-    if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
-      this.problem_attempts = [0];
-      this.attempt_path = [[]];
-      this.attempt_response = [''];
-      this.attempt_explanation = [[]];
-      this.m_selection = [["", ""]];
-      this.m_submission = [{}];
-      this.c_submission = [{}];
-      if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
-        this.problem_selection = [['']];
-        if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
-          setTimeout(() => {
-            this.plot_graph_gp('', false);
-          }, 500);
-        }
-      }
-      else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
-        this.problem_selection = [[]];
-        if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
-          this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
-        }
-        if (['MGP'].includes(this.exam_dump[this.problem_number].Type)) {
-          setTimeout(() => {
-            this.plot_graph_mgp('', false);
-          }, 500);
-        }
-      }
-      else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Type)) {
-        var msp_nums: string[] = [];
-        this.problem_selection.push([]);
-        for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
-          if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-            this.problem_selection[0].push('');
-            msp_nums.push(choice[0]);
-          }
-        }
-      }
-    }
-    else {
-      this.problem_attempts = [];
-      for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
-        this.problem_attempts.push(0);
-        this.attempt_path.push([]);
-        this.attempt_response.push('');
-        this.attempt_explanation.push([]);
-        this.m_selection.push(["", ""]);
-        this.m_submission.push({});
-        this.c_submission.push({});
-        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-          this.problem_selection.push(['']);
-          if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+    setTimeout(() => {
+      this.expand_filters = !this.expand_filters;
+      console.log(this.exam_dump);
+      console.log(this.exam_submission);
+      console.log(this.exam_key);
+      this.problem_number = this.progress_number;
+      this.max_problem_number = this.problem_number;
+      this.toggleExamTimer();
+      this.toggleProblemTimer();
+      this.attempt_path = [];
+      this.attempt_response = [];
+      this.attempt_explanation = [];
+      this.problem_selection = [];
+      this.m_shuffled = false;
+      this.shuffle_choices = {};
+      this.unique_choices = [];
+      console.log(this.problem_number);
+      if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+        this.problem_attempts = [0];
+        this.attempt_path = [[]];
+        this.attempt_response = [''];
+        this.attempt_explanation = [[]];
+        this.m_selection = [["", ""]];
+        this.m_submission = [{}];
+        this.c_submission = [{}];
+        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
+          this.problem_selection = [['']];
+          if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
             setTimeout(() => {
-              this.plot_graph_gp(part, false);
+              this.plot_graph_gp('', false);
             }, 500);
           }
         }
-        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-          this.problem_selection.push([]);
-          if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
-            this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
+        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+          this.problem_selection = [[]];
+          if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
+            this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
           }
-          if (['MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+          if (['MGP'].includes(this.exam_dump[this.problem_number].Type)) {
             setTimeout(() => {
-              this.plot_graph_mgp(part, false);
+              this.plot_graph_mgp('', false);
             }, 500);
           }
         }
-        else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+        else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Type)) {
           var msp_nums: string[] = [];
           this.problem_selection.push([]);
-          for (let choice of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
+          for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
             if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-              this.problem_selection[Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part)].push('');
+              this.problem_selection[0].push('');
               msp_nums.push(choice[0]);
             }
           }
         }
       }
-    }
-    for (let supp of this.exam_dump[this.problem_number].SuppContent) {
-      setTimeout(() => {
-        this.read_supp_json(supp);
-      }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
-    }
-    if (this.exam_dump[this.problem_number].Type == 'MP') {
-      for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
-        for (let block of this.exam_dump[this.problem_number].Parts[part].Content) {
+      else {
+        this.problem_attempts = [];
+        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+          this.problem_attempts.push(0);
+          this.attempt_path.push([]);
+          this.attempt_response.push('');
+          this.attempt_explanation.push([]);
+          this.m_selection.push(["", ""]);
+          this.m_submission.push({});
+          this.c_submission.push({});
+          if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            this.problem_selection.push(['']);
+            if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+              setTimeout(() => {
+                this.plot_graph_gp(part, false);
+              }, 500);
+            }
+          }
+          else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            this.problem_selection.push([]);
+            if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+              this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
+            }
+            if (['MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+              setTimeout(() => {
+                this.plot_graph_mgp(part, false);
+              }, 500);
+            }
+          }
+          else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            var msp_nums: string[] = [];
+            this.problem_selection.push([]);
+            for (let choice of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
+              if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+                this.problem_selection[Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part)].push('');
+                msp_nums.push(choice[0]);
+              }
+            }
+          }
+        }
+      }
+      for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_json(supp);
+        }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+      }
+      if (this.exam_dump[this.problem_number].Type == 'MP') {
+        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+          for (let block of this.exam_dump[this.problem_number].Parts[part].Content) {
+            if (block.startsWith(':table:')) {
+              setTimeout(() => {
+                this.read_table(block.slice(7));
+              }, 100);
+            }
+          }
+        }
+      }
+      if (this.exam_dump[this.problem_number].Type != 'MP') {
+        for (let block of this.exam_dump[this.problem_number].Content) {
           if (block.startsWith(':table:')) {
             setTimeout(() => {
               this.read_table(block.slice(7));
@@ -3139,16 +3204,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
           }
         }
       }
-    }
-    if (this.exam_dump[this.problem_number].Type != 'MP') {
-      for (let block of this.exam_dump[this.problem_number].Content) {
-        if (block.startsWith(':table:')) {
-          setTimeout(() => {
-            this.read_table(block.slice(7));
-          }, 100);
-        }
-      }
-    }
+    }, 200);
   }
 
   begin_exam() {
@@ -5116,7 +5172,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
       part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
     }
     if (this.c_submission[part_num][cat].includes(ch)) {
-      if (this.c_submission[part_num][cat].indexOf(ch) !== -1) {
+      if (this.c_submission[part_num][cat].indexOf(ch) != -1) {
         this.c_submission[part_num][cat].splice(this.c_submission[part_num][cat].indexOf(ch), 1);
       }
       else {
@@ -5563,7 +5619,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
 
   toggleExamTimer() {
     this.et_running = !this.et_running;
-    if (this.length_mode == 'number') {
+    if (this.quiz_length > 0) {
       if (this.et_running) {
         const startTime = Date.now() - (this.et_counter || 0);
         this.et_timer = setInterval(() => {
@@ -5578,7 +5634,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
       if (this.et_running) {
         const startTime = Date.now() - (this.et_counter || 0);
         this.et_timer = setInterval(() => {
-          this.et_counter = Math.round(this.exam_timer * 60 - ((Date.now() - startTime) / 1000));
+          this.et_counter = Math.round(this.quiz_timer * 60 - ((Date.now() - startTime) / 1000));
           this.et_minutes = Math.floor(this.et_counter / 60);
           if (this.et_counter <= 0) {
             this.completeExam();
@@ -5892,7 +5948,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
           this.db_updates['classes/' + this.cKey + '/history/exams/Q-' + this.qKey + '/' + this.authService.userData.uid + '/lasttimestamp'] = serverTimestamp();
           this.db_updates['/submissions/problems/' + "" + (this.exam_dump[this.problem_number].Number) + '/' + this.authService.userData.uid] = this.exam_submission[this.problem_number];
           this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.authService.userData.uid + '/problems/' + "" + (this.exam_dump[this.problem_number].Number)] = this.exam_submission[this.problem_number];
-          if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
+          if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.quiz_length) {
             this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.authService.userData.uid + '/endtimestamp'] = serverTimestamp();
           }
           this.authService.UpdateDatabase(this.db_updates);
@@ -5920,7 +5976,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
           this.db_updates['classes/' + this.cKey + '/history/exams/Q-' + this.qKey + '/' + this.selected_student + '/lasttimestamp'] = serverTimestamp();
           this.db_updates['/submissions/problems/' + "" + (this.exam_dump[this.problem_number].Number) + '/' + this.selected_student] = this.exam_submission[this.problem_number];
           this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.selected_student + '/problems/' + "" + (this.exam_dump[this.problem_number].Number)] = this.exam_submission[this.problem_number];
-          if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
+          if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.quiz_length) {
             this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.selected_student + '/endtimestamp'] = serverTimestamp();
           }
           this.authService.UpdateDatabase(this.db_updates);
@@ -5976,7 +6032,20 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
       }
     }
     this.problem_number += 1;
-    if (this.problem_number <= this.exam_length && this.problem_number > this.max_problem_number) {
+    if (this.problem_number <= this.quiz_length) {
+      this.prob_images = {};
+      for (let block of this.exam_dump[this.problem_number].Content) {
+        if (this.is_image(block)) {
+          this.authService.getQuizPic(this.qKey, block).then((url) => {
+            console.log(url);
+            this.prob_images[block] = url;
+          }).catch(error => {
+            console.log(error.message);
+          });;
+        }
+      }
+    }
+    if (this.problem_number <= this.quiz_length && this.problem_number > this.max_problem_number) {
       if (this.authService.userData) {
         this.db_updates = {};
         if (this.authService.userData.role == 'Student') {
@@ -5996,7 +6065,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
       }
       this.max_problem_number = this.problem_number;
     }
-    if (this.problem_number > this.exam_length && this.length_mode == 'number') {
+    if (this.problem_number > this.quiz_length && this.quiz_length > 0) {
       this.completeExam();
       console.log('Exam Complete');
     }
@@ -6090,7 +6159,9 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
           }
         }
       }
-      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      if (this.quiz_config.problems == undefined) {
+        this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      }
       for (let supp of this.exam_dump[this.problem_number].SuppContent) {
         setTimeout(() => {
           this.read_supp_json(supp);
@@ -6123,7 +6194,9 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
       this.attempt_explanation = this.exam_submission[this.problem_number].Rationale;
       this.problem_selection = this.exam_submission[this.problem_number].Choice;
       this.problem_attempts = this.exam_submission[this.problem_number].Attempts;
-      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      if (this.quiz_config.problems == undefined) {
+        this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      }
       for (let supp of this.exam_dump[this.problem_number].SuppContent) {
         setTimeout(() => {
           this.read_supp_json(supp);
@@ -6548,7 +6621,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
               this.db_updates['classes/' + this.cKey + '/history/exams/Q-' + this.qKey + '/' + this.authService.userData.uid + '/lasttimestamp'] = serverTimestamp();
               this.db_updates['/submissions/problems/' + "" + (this.exam_dump[this.problem_number].Number) + '/' + this.authService.userData.uid] = this.exam_submission[this.problem_number];
               this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.authService.userData.uid + '/problems/' + "" + (this.exam_dump[this.problem_number].Number)] = this.exam_submission[this.problem_number];
-              if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
+              if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.quiz_length) {
                 this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.authService.userData.uid + '/endtimestamp'] = serverTimestamp();
               }
               this.authService.UpdateDatabase(this.db_updates);
@@ -6576,7 +6649,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
               this.db_updates['classes/' + this.cKey + '/history/exams/Q-' + this.qKey + '/' + this.selected_student + '/lasttimestamp'] = serverTimestamp();
               this.db_updates['/submissions/problems/' + "" + (this.exam_dump[this.problem_number].Number) + '/' + this.selected_student] = this.exam_submission[this.problem_number];
               this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.selected_student + '/problems/' + "" + (this.exam_dump[this.problem_number].Number)] = this.exam_submission[this.problem_number];
-              if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.exam_length) {
+              if (Object.keys(this.exam_dump).indexOf("" + this.problem_number) + 1 == this.quiz_length) {
                 this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.selected_student + '/endtimestamp'] = serverTimestamp();
               }
               this.authService.UpdateDatabase(this.db_updates);
@@ -6635,6 +6708,17 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
         }
       }
       this.problem_number = num;
+      this.prob_images = {};
+      for (let block of this.exam_dump[this.problem_number].Content) {
+        if (this.is_image(block)) {
+          this.authService.getQuizPic(this.qKey, block).then((url) => {
+            console.log(url);
+            this.prob_images[block] = url;
+          }).catch(error => {
+            console.log(error.message);
+          });;
+        }
+      }
       this.attempt_path = this.exam_submission[num].Path;
       this.attempt_explanation = this.exam_submission[num].Rationale;
       this.problem_selection = this.exam_submission[num].Choice;
@@ -6669,7 +6753,9 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
         }
       }
       console.log(this.problem_selection);
-      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      if (this.quiz_config.problems == undefined) {
+        this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      }
       for (let supp of this.exam_dump[this.problem_number].SuppContent) {
         setTimeout(() => {
           this.read_supp_json(supp);
@@ -6738,8 +6824,8 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
         this.db_updates = {};
       }
       var length_num = 0;
-      if (this.length_mode == 'number') {
-        length_num = this.exam_length;
+      if (this.quiz_length > 0) {
+        length_num = this.quiz_length;
       }
       else {
         length_num = this.max_problem_number - 1;
@@ -6830,7 +6916,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
           this.db_updates['exams/history/Q-' + this.qKey + '/status'] = 'Completed';
           this.authService.UpdateUserData(this.db_updates);
           this.db_updates = {};
-          this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.authService.userData.uid + '/total'] = this.exam_length;
+          this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.authService.userData.uid + '/total'] = this.quiz_length;
           this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.authService.userData.uid + '/correct'] = this.number_correct;
           this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.authService.userData.uid + '/score'] = this.correct_percent;
           this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.authService.userData.uid + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
@@ -6842,7 +6928,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
           this.db_updates['users/' + this.selected_student + '/exams/history/Q-' + this.qKey + '/status'] = 'Completed';
           this.authService.UpdateDatabase(this.db_updates);
           this.db_updates = {};
-          this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.selected_student + '/total'] = this.exam_length;
+          this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.selected_student + '/total'] = this.quiz_length;
           this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.selected_student + '/correct'] = this.number_correct;
           this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.selected_student + '/score'] = this.correct_percent;
           this.db_updates['/submissions/exams/Q-' + this.qKey + '/' + this.selected_student + '/time'] = "" + "" + (Math.floor(this.total_seconds / 60)) + 'm ' + "" + "" + (this.total_seconds % 60) + 's';
@@ -7186,26 +7272,26 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
       // }
     });
     this.width_change2();
-    this.quiz_config = (this.authService.searchQuizId(this.qKey) as any);;
+    this.quiz_config = (this.authService.searchQuizId(this.qKey) as any);
     setTimeout(() => {
       if (this.authService.userData) {
         this.quiz_config = (this.authService.searchQuizId(this.qKey) as any);
         console.log(this.quiz_config);
+        if (this.quiz_config.problems != undefined) {
+          this.ordered_dump = this.quiz_config.problems;
+        }
         this.quiz_name = this.quiz_config.name;
         this.grade_filters = (this.quiz_config.grades != undefined) ? this.quiz_config.grades : [];
         this.subject_filters = (this.quiz_config.subjects != undefined) ? this.quiz_config.subjects : [];
         this.state_filters = (this.quiz_config.states != undefined) ? this.quiz_config.states : [];
         this.topic_filters = (this.quiz_config.topics != undefined) ? this.quiz_config.topics : [];
         this.mode = this.quiz_config.mode;
-        this.length_mode = this.quiz_config.lmode;
-        if (this.length_mode == 'number') {
-          this.exam_length = this.quiz_config.length;
-        }
-        else {
-          this.exam_timer = this.quiz_config.length;
-        }
-        this.timer_hours = Math.floor(this.exam_timer / 60);
-        this.timer_minutes = this.exam_timer % 60;
+        this.shuffle = this.quiz_config.shuffle;
+        this.public = this.quiz_config.public;
+        this.quiz_length = this.quiz_config.length;
+        this.quiz_timer = this.quiz_config.timer;
+        this.timer_hours = Math.floor(this.quiz_timer / 60);
+        this.timer_minutes = this.quiz_timer % 60;
         // this.is_auth = true;
         this.authService.getProfilePic(this.authService.userData);
         this.user_data = this.authService.userData;
@@ -7263,6 +7349,9 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
               this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString();
               if ("Started" == (det as any).status) {
                 this.problem_ids = (det as any).sequence;
+                for (let i = 0; i < this.problem_ids.length; i++) {
+                  this.problem_ids[i] = ''+this.problem_ids[i];
+                }
               }
               if (this.mode == 'assess' && (det as any).progress != 0) {
                 setTimeout(() => {

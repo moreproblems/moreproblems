@@ -3030,6 +3030,10 @@ export class HomeComponent implements OnInit {
     console.log('plot graph');
   }
 
+  is_image(blob: string) {
+    return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
+  }
+
   get_percent_correct(stud: any) {
     return Math.round(10000 * stud.problems.correct / stud.problems.total) / 100;
   }
@@ -3452,7 +3456,7 @@ export class HomeComponent implements OnInit {
       this.new_assignments.push(target);
     }
     else {
-      if (this.new_assignments.indexOf(target) !== -1) {
+      if (this.new_assignments.indexOf(target) != -1) {
         this.new_assignments.splice(this.new_assignments.indexOf(target), 1);
       }
       else {
@@ -3496,7 +3500,7 @@ export class HomeComponent implements OnInit {
       this.favorite_exm_set.push(exm as string);
     }
     if (this.favorite_exm_set.includes(this.exam_id)) {
-      if (this.favorite_exm_set.indexOf(this.exam_id) !== -1) {
+      if (this.favorite_exm_set.indexOf(this.exam_id) != -1) {
         this.favorite_exm_set.splice(this.favorite_exm_set.indexOf(this.exam_id), 1);
       }
       else {
@@ -4632,7 +4636,7 @@ export class HomeComponent implements OnInit {
       part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
     }
     if (this.c_submission[part_num][cat].includes(ch)) {
-      if (this.c_submission[part_num][cat].indexOf(ch) !== -1) {
+      if (this.c_submission[part_num][cat].indexOf(ch) != -1) {
         this.c_submission[part_num][cat].splice(this.c_submission[part_num][cat].indexOf(ch), 1);
       }
       else {

@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { ExamsComponent } from './components/exams/exams.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProblemsComponent } from './components/problems/problems.component';
+import { QuizzesComponent } from './components/quizzes/quizzes.component';
+import { StandardsComponent } from './components/standards/standards.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -18,7 +20,6 @@ import { TemplateKeyComponent } from './components/template-key/template-key.com
 import { TemplateStateComponent } from './components/template-state/template-state.component';
 import { TemplateStandardsComponent } from './components/template-standards/template-standards.component';
 import { TestExamComponent } from './components/test-exam/test-exam.component';
-import { StandardsComponent } from './components/standards/standards.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -26,6 +27,7 @@ const routes: Routes = [
   // { path: 'contact', component: ContactComponent },
   { path: 'exams', component: ExamsComponent },
   { path: 'problems', component: ProblemsComponent },
+  { path: 'quizzes', component: QuizzesComponent },
   { path: 'standards', component: StandardsComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },

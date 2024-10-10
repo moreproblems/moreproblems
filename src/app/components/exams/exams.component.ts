@@ -1008,7 +1008,7 @@ export class ExamsComponent implements OnInit {
       this.new_assignments.push(target);
     }
     else {
-      if (this.new_assignments.indexOf(target) !== -1) {
+      if (this.new_assignments.indexOf(target) != -1) {
         this.new_assignments.splice(this.new_assignments.indexOf(target), 1);
       }
       else {
@@ -1053,7 +1053,7 @@ export class ExamsComponent implements OnInit {
         this.favorite_set.push(exm as string);
       }
       if (this.favorite_set.includes(this.exam_id)) {
-        if (this.favorite_set.indexOf(this.exam_id) !== -1) {
+        if (this.favorite_set.indexOf(this.exam_id) != -1) {
           this.favorite_set.splice(this.favorite_set.indexOf(this.exam_id), 1);
         }
         else {

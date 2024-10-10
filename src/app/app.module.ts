@@ -23,12 +23,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { ExamsComponent } from './components/exams/exams.component';
 import { ProblemsComponent } from './components/problems/problems.component';
+import { QuizzesComponent } from './components/quizzes/quizzes.component';
+import { StandardsComponent } from './components/standards/standards.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { StandardsComponent } from './components/standards/standards.component';
 import { TemplateClassComponent } from './components/template-class/template-class.component';
 import { TemplateExamComponent } from './components/template-exam/template-exam.component';
 import { TemplateCExamComponent } from './components/template-c-exam/template-c-exam.component';
@@ -55,12 +56,13 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
     HomeComponent,
     ExamsComponent,
     ProblemsComponent,
+    QuizzesComponent,
+    StandardsComponent,
     AboutComponent,
     LoginComponent,
     ProfileComponent,
     SignupComponent,
     ContactComponent,
-    StandardsComponent,
     TemplateClassComponent,
     TemplateExamComponent,
     TemplateCExamComponent,

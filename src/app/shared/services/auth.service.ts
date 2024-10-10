@@ -153,7 +153,7 @@ export class AuthService {
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user')!);
-    return user !== null && user.emailVerified !== false ? true : false;
+    return user != null && user.emailVerified != false ? true : false;
   }
 
   // Sign in with Google
@@ -175,7 +175,7 @@ export class AuthService {
       //   });
       .signInWithPopup(provider)
       .then(async (result) => {
-        // const authMethods: string[] = await (<any>this.afAuth.fetchSignInMethodsForEmail(result.user !== null && result.user.email !== null ? result.user.email : ''));
+        // const authMethods: string[] = await (<any>this.afAuth.fetchSignInMethodsForEmail(result.user != null && result.user.email != null ? result.user.email : ''));
         // console.log(authMethods);
         this.userCredential = result.credential;
         this.SetUserData(result.user);
@@ -428,6 +428,24 @@ export class AuthService {
     }).catch(error => {
       console.log(error.message);
     });
+  }
+
+  UploadQuizPic(quizID: string, name: string, image: any) {
+    const strg = stor.getStorage();
+    const pref = stor.ref(strg, 'quiz/' + quizID + '/' + name);
+    return stor.uploadBytes(pref, image);
+  }
+  
+  getQuizPic(quizID: string, name: string) {
+    const strg = stor.getStorage();
+    var quizURL = "";
+    return stor.getDownloadURL(stor.ref(strg, 'quiz/' + quizID + '/' + name)).then((url) => {
+      console.log(url);
+      return (url as any);
+    }).catch(error => {
+      console.log(error.message);
+    });
+    // return (quizURL);
   }
 
   // Set data on localStorage

@@ -3079,6 +3079,10 @@ export class TemplateStandardsComponent implements OnInit {
         console.log('plot graph');
     }
 
+    is_image(blob: string) {
+      return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
+    }
+
     toggle_domain(dmn: string) {
         this.domain_state[dmn] = !this.domain_state[dmn];
         this.stateSet = true;
@@ -4318,7 +4322,7 @@ export class TemplateStandardsComponent implements OnInit {
             part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
         }
         if (this.c_submission[part_num][cat].includes(ch)) {
-            if (this.c_submission[part_num][cat].indexOf(ch) !== -1) {
+            if (this.c_submission[part_num][cat].indexOf(ch) != -1) {
                 this.c_submission[part_num][cat].splice(this.c_submission[part_num][cat].indexOf(ch), 1);
             }
             else {

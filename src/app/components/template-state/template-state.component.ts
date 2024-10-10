@@ -3663,6 +3663,18 @@ export class TemplateStateComponent implements OnInit {
   viewerWidth = Math.round(window.innerWidth * .99).toString() + "px";
   viewerHeight = Math.round(window.innerHeight * .95).toString() + "px";
 
+  state_labels: { [key: string]: string } = {
+    "CO": "Colorado",
+    "FL": "Florida",
+    "MD": "Maryland",
+    "MA": "Massachusetts",
+    "NY": "New York",
+    "PA": "Pennsylvania",
+    "RI": "Rhode Island",
+    "TN": "Tennessee",
+    "TX": "Texas"
+  };
+
   subject_labels: { [key: string]: string } = {
     "Algebra I": "Algebra I",
     "Algebra II": "Algebra II",
@@ -3677,18 +3689,6 @@ export class TemplateStateComponent implements OnInit {
     "Science": "Science",
     "Social Studies": "Social Studies",
     "U.S. History": "U.S. History"
-  };
-
-  state_labels: { [key: string]: string } = {
-    "CO": "Colorado",
-    "FL": "Florida",
-    "MD": "Maryland",
-    "MA": "Massachusetts",
-    "NY": "New York",
-    "PA": "Pennsylvania",
-    "RI": "Rhode Island",
-    "TN": "Tennessee",
-    "TX": "Texas"
   };
 
   subject_map: { [key: string]: string[] } = {
@@ -3983,6 +3983,10 @@ export class TemplateStateComponent implements OnInit {
       }
     })
     console.log('plot graph');
+  }
+
+  is_image(blob: string) {
+    return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
   }
 
   get_percent_correct(stud: any) {
@@ -4528,7 +4532,7 @@ export class TemplateStateComponent implements OnInit {
       this.new_assignments.push(target);
     }
     else {
-      if (this.new_assignments.indexOf(target) !== -1) {
+      if (this.new_assignments.indexOf(target) != -1) {
         this.new_assignments.splice(this.new_assignments.indexOf(target), 1);
       }
       else {
@@ -4572,7 +4576,7 @@ export class TemplateStateComponent implements OnInit {
       this.favorite_exm_set.push(exm as string);
     }
     if (this.favorite_exm_set.includes(this.exam_id)) {
-      if (this.favorite_exm_set.indexOf(this.exam_id) !== -1) {
+      if (this.favorite_exm_set.indexOf(this.exam_id) != -1) {
         this.favorite_exm_set.splice(this.favorite_exm_set.indexOf(this.exam_id), 1);
       }
       else {
@@ -5708,7 +5712,7 @@ export class TemplateStateComponent implements OnInit {
       part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
     }
     if (this.c_submission[part_num][cat].includes(ch)) {
-      if (this.c_submission[part_num][cat].indexOf(ch) !== -1) {
+      if (this.c_submission[part_num][cat].indexOf(ch) != -1) {
         this.c_submission[part_num][cat].splice(this.c_submission[part_num][cat].indexOf(ch), 1);
       }
       else {
