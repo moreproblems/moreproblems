@@ -4447,6 +4447,9 @@ export class QuizzesComponent implements OnInit {
         this.authService.UpdateDatabase(db_updates);
       }
     }
+    setTimeout(() => {
+      this.router.navigate(['quiz/' + quiz_id]);
+    }, 500);
   }
 
   clear_assignments() {

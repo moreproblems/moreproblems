@@ -2480,7 +2480,7 @@
           <div class="media">
             <div class="card card-medium"
               style="margin: auto; height: auto; max-height: 800px; min-width: 40%; max-width: min(80%, 600px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
-              <h1 style="font-size: 26px">{{authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).name}}</h1>
+              <h1 style="font-size: 26px">{{authService.searchQuizId(selected_quiz_results.slice(2)).name}}</h1>
               <p *ngIf="authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).lmode == 'timer'" style="font-size: 20px; padding: 10px; white-space: pre-wrap"> <b>Time Allowed</b> :
                 {{(get_hours(authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).length) >= 1) ? (get_hours(authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).length) >= 2) ? ''+get_hours(authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).length) + ' hrs' : ''+get_hours(authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).length) + ' hr' : ''}} {{''+(authService.searchQuizId(selected_quiz_results.substring(selected_quiz_results.indexOf('-')+1)).length % 60)}} mins
               </p>
@@ -2763,7 +2763,8 @@
             <div class="card-container" style="max-width: 100%">
               <div *ngFor="let exm of complete_exam_list" class="card card-medium"
                 style="height: auto; max-height: 200px; max-width: min(90%, 325px); display: flex; flex-direction: column; align-items: center">
-                <h3 style="margin: auto"> {{exam_names[exm]}} </h3>
+                <h3 *ngIf="!exm.startsWith('Q-')" style="margin: auto"> {{exam_names[exm]}} </h3>
+                <h3 *ngIf="exm.startsWith('Q-')" style="margin: auto"> {{authService.searchQuizId(exm.slice(2)).name}} </h3>
                 <hr style="width: 50%; height:1px; border-width:0; color:gray; background-color:gray" />
                 <div style="display: flex; justify-content: space-between; padding: 5px; width: 100%">
                   <div>

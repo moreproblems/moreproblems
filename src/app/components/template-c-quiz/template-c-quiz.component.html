@@ -725,8 +725,8 @@
               *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.selected_student != ''">
               Your exam results will be saved as {{selected_student_data.displayName}} </h3>
             <div *ngIf="this.authService.userData && this.exam_inprogress" class="card-container"
-              style="display: flex; flex-direction: row; align-items: center; text-align: center; width: 80%; margin: 0">
-              <div class="card-container" style="align-items: center; margin: 0px 20px">
+              style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 80%; margin: 0">
+              <div class="card-container" style="align-items: center; margin: 0px 20px; display: block">
                 <progress value="{{progress_number-1}}" max="{{quiz_length}}"
                   style="height: 20px; width: 100%; border-radius: 15px; margin: 10px auto 5px"
                   #progressBar>{{progressBar.value/progressBar.max}}%</progress>
@@ -741,11 +741,11 @@
                 </h4>
               </div>
               <button *ngIf="exam_status == 'Started'" class="grade-button" (click)="resume_exam(); scroll_top()"
-                style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0 20px; margin-top: 40px">
+                style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0 20px; margin-top: 20px">
                 <b> Resume Quiz </b>
               </button>
               <button *ngIf="exam_status == 'Assigned'" class="grade-button" (click)="begin_exam(); scroll_top()"
-                style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0 20px; margin-top: 40px">
+                style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0 20px; margin-top: 20px">
                 <b> Begin Quiz </b>
               </button>
             </div>
