@@ -2888,8 +2888,12 @@ export class QuizzesComponent implements OnInit {
   quiz_page: string = "pretext";
   quiz_public = false;
   prob_images: { [key: number]: any } = {};
+  image_index: number = 0;
+  image_choice_index: string = '';
   prob_statuses: { [key: number]: any } = {};
   incomplete_probs: any[] = [];
+  content_hover: boolean[][] = [];
+  choices_hover: boolean[][] = [];
 
   problem_types: { [key: string]: any[] } = {
     "MC": ["Multiple Choice", 4],
@@ -2906,7 +2910,9 @@ export class QuizzesComponent implements OnInit {
     // "GP": ["Graph Plot", 0],
     // "T": ["Table", 4],
   };
-
+  
+  content_types: string[] = ['Text', 'Image'];
+  
   default_problem: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } = {
     "Number": 0,
     "Type": "MC",
@@ -3552,6 +3558,8 @@ export class QuizzesComponent implements OnInit {
       const initial_dump = JSON.parse(JSON.stringify(this.exam_dump));
       const initial_images = JSON.parse(JSON.stringify(this.prob_images));
       const initial_statuses = JSON.parse(JSON.stringify(this.prob_statuses));
+      const initial_content = JSON.parse(JSON.stringify(this.content_hover));
+      const initial_choices = JSON.parse(JSON.stringify(this.choices_hover));
       this.problems_loaded = false;
       this.exam_dump = {};
       this.prob_images = {};
@@ -3559,6 +3567,8 @@ export class QuizzesComponent implements OnInit {
       for (let i = 1; i <= this.exam_length; i++) {
         if (Object.keys(initial_dump).includes(''+i)) {
           this.exam_dump[i] = JSON.parse(JSON.stringify(initial_dump[i]));
+          this.content_hover[i] = JSON.parse(JSON.stringify(initial_content[i]));
+          this.choices_hover[i] = JSON.parse(JSON.stringify(initial_choices[i]));
           if (Object.keys(initial_images).includes(''+i)) {
             var new_images: any = {};
             for (const [k, image] of Object.entries(initial_images[i])) {
@@ -3571,6 +3581,12 @@ export class QuizzesComponent implements OnInit {
         }
         else {
           this.exam_dump[i] = JSON.parse(JSON.stringify(this.default_problem));
+          this.content_hover[i] = [false];
+          var choices: boolean[] = [];
+          for (let i = 1; i <= this.default_numchoices; i++) {
+            choices.push(false);
+          }
+          this.choices_hover[i] = choices;
           this.prob_statuses[i] = [false, false];
           this.exam_dump[i].Number = i;
         }
@@ -3675,9 +3691,47 @@ export class QuizzesComponent implements OnInit {
     return slider.value;
   }
 
+  get_contenttype_sel(num: number, index: number) {
+    const contenttypeSel: string = "contenttypeInput" + '' + num + '-' + '' + index;
+    var dropdown: any = document.getElementById(contenttypeSel);
+    return dropdown.value;
+  }
+
+  get_choicetype_sel(num: number, index: string) {
+    const choicetypeSel: string = "choicetypeInput" + '' + num + '-' + index;
+    var dropdown: any = document.getElementById(choicetypeSel);
+    return dropdown.value;
+  }
+
+  get_content_keys(content: any) {
+    var index: number = 0;
+    var keys: number[] = []
+    for (let block of content) {
+      keys.push(index);
+      index += 1;
+    }
+    return (keys);
+  }
+
+  get_choice_keys(choices: any) {
+    return (Object.keys(choices) as string[]);
+  }
+
   get_add_images_sel(num: number) {
     const addimagesSel: string = "uploadProbImage" + '' + num;
     var input: any = document.getElementById(addimagesSel);
+    return (input.files as any);
+  }
+
+  get_add_imagesinv_sel(num: number) {
+    const addimagesinvSel: string = "uploadProbImageInv" + '' + num;
+    var input: any = document.getElementById(addimagesinvSel);
+    return (input.files as any);
+  }
+
+  get_add_imageschinv_sel(num: number) {
+    const addimageschinvSel: string = "uploadChoiceImageInv" + '' + num;
+    var input: any = document.getElementById(addimageschinvSel);
     return (input.files as any);
   }
 
@@ -3728,20 +3782,83 @@ export class QuizzesComponent implements OnInit {
     if (final_num != initial_num) {
       this.exam_dump[num].NumChoices = final_num;
       this.exam_dump[num].AnswerChoices = {};
+      this.choices_hover[num] = [];
       for (let i = 0; i < final_num; i++) {
         this.exam_dump[num].AnswerChoices[this.choices_list[i]] = JSON.parse(JSON.stringify(this.default_choice));
+        this.choices_hover[num].push(false);
       }
+    }
+  }
+
+  set_content_type(num: number, index: number, type: string) {
+    if (type == 'Text') {
+      console.log();
+    }
+    else if (type == 'Image') {
+      // this.add_image(num, this.get_add_images_sel(num))
+      this.image_index = index;
+      const el_id:string = 'uploadProbImageInv' + ''+num;
+      var upload: any = document.getElementById(el_id);
+      upload.click();
+    }
+  }
+
+  set_choice_type(num: number, index: string, type: string) {
+    if (type == 'Text') {
+      console.log();
+    }
+    else if (type == 'Image') {
+      // this.add_image(num, this.get_add_images_sel(num))
+      this.image_choice_index = index;
+      const el_id:string = 'uploadChoiceImageInv' + ''+num;
+      var upload: any = document.getElementById(el_id);
+      upload.click();
     }
   }
 
   add_text(num: number) {
     this.exam_dump[num].Content.push('');
+    this.content_hover[num].push(false);
     console.log(this.exam_dump);
   }
 
-  add_image(num: number, images: any) {
+  get_text_rows(el: any, blob: string) {
+    // element.style.height = "1px";
+    // element.style.height = (25+element.scrollHeight)+"px";
+    return (Math.max(1, Math.ceil(blob.length/(95))));
+  }
+
+  add_image(num: number, index: number, images: any) {
     for (let image of images) {
-      this.exam_dump[num].Content.push(''+image.name);
+      if (index == -1) {
+        this.exam_dump[num].Content.push(''+image.name);
+      }
+      else {
+        this.exam_dump[num].Content[index] = ''+image.name;
+      }
+      this.content_hover[num].push(false);
+      if (!Object.keys(this.prob_images).includes(''+num)) {
+        var image_dump: any = {}
+        image_dump[''+image.name] = [this.save_image(image), image];
+        this.prob_images[num] = image_dump;
+      }
+      else {
+        this.prob_images[num][''+image.name] = [this.save_image(image), image];
+      }
+    this.content_hover[num].push(false);
+    }
+    console.log(this.prob_images);
+  }
+
+  add_choice_image(num: number, index: string, images: any) {
+    for (let image of images) {
+      if (index == '') {
+        // this.exam_dump[num].AnswerChoices[].Choice = ''+image.name;
+        console.log();
+      }
+      else {
+        this.exam_dump[num].AnswerChoices[index].Choice = ''+image.name;
+      }
       if (!Object.keys(this.prob_images).includes(''+num)) {
         var image_dump: any = {}
         image_dump[''+image.name] = [this.save_image(image), image];
@@ -3762,6 +3879,27 @@ export class QuizzesComponent implements OnInit {
     return (this.sanitizer.bypassSecurityTrustUrl(image) as string);
   }
 
+  hover_card(num: number, type: string, index: number, hover: boolean) {
+    if (type == 'content') {
+      this.content_hover[num][index] = hover;
+    }
+    else if (type == 'choices') {
+      this.choices_hover[num][index] = hover;
+    }
+  }
+
+  hover_delete(num: number, type: string, index: number) {
+    if (type == 'content') {
+      return (this.content_hover[num][index]);
+    }
+    else if (type == 'choices') {
+      return (this.choices_hover[num][index]);
+    }
+    else {
+      return;
+    }
+  }
+
   delete_content(num: number, index: number) {
     this.problems_loaded = false;
     if (this.is_image(this.exam_dump[num].Content[index])) {
@@ -3776,9 +3914,11 @@ export class QuizzesComponent implements OnInit {
     }
     if (index != this.exam_dump[num].Content.length - 1) {
       this.exam_dump[num].Content.splice(index, 1);
+      this.content_hover[num].splice(index, 1);
     }
     else {
       this.exam_dump[num].Content.pop();
+      this.content_hover[num].pop();
     }
     setTimeout(() => {
       this.problems_loaded = true;
@@ -3799,6 +3939,7 @@ export class QuizzesComponent implements OnInit {
   add_choice(num: number) {
     this.exam_dump[num].AnswerChoices[this.choices_list[this.exam_dump[num].NumChoices]] = JSON.parse(JSON.stringify(this.default_choice));
     this.exam_dump[num].NumChoices += 1;
+    this.choices_hover[num].push(false);
   }
 
   delete_choice(num: number, choice: string) {
@@ -3813,6 +3954,7 @@ export class QuizzesComponent implements OnInit {
       }
     }
     this.exam_dump[num].NumChoices -= 1;
+    this.choices_hover[num].splice(Object.keys(initial_prob.AnswerChoices).indexOf(choice), 1);
     setTimeout(() => {
       this.problems_loaded = true;
       setTimeout(() => {
@@ -3886,6 +4028,12 @@ export class QuizzesComponent implements OnInit {
     this.exam_dump[this.exam_length+1] = JSON.parse(JSON.stringify(this.default_problem));
     this.exam_dump[this.exam_length+1].Number = this.exam_length+1;
     this.prob_statuses[this.exam_length+1] = [false, false];
+    this.content_hover[this.exam_length+1] = [false];
+    var choices: boolean[] = [];
+    for (let i = 1; i <= this.exam_length; i++) {
+      choices.push(false);
+    }
+    this.choices_hover[this.exam_length+1] = choices;
     this.exam_length += 1;
     setTimeout(() => {
       this.problems_loaded = true;

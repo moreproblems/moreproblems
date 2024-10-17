@@ -649,15 +649,14 @@
       <h2 *ngIf="screenWidth <= mobileWidth" style="font-weight: 400; font-size: 18.5px; line-height: 24px"> Find relevant practice problems for every student - with
         real-time feedback for learners and reports to share with teachers. Just pick which type of questions to work on, then get started on your unique quiz. </h2>
       <span *ngIf="authService.userData as user">
-        <br *ngIf="!['', 'Student', 'Parent'].includes(user.role)" />
-        <h3 *ngIf="!['', 'Student', 'Parent'].includes(user.role) && screenWidth > mobileWidth" (click)="router.navigate(['quizzes'])" style="font-weight: 600; font-size: 20px"><a>
+        <br *ngIf="!['', 'Student'].includes(user.role)" />
+        <h3 *ngIf="!['', 'Student'].includes(user.role) && screenWidth > mobileWidth" (click)="router.navigate(['quizzes'])" style="font-weight: 600; font-size: 20px"><a>
             Upload your own questions and create a custom quiz for your students. </a></h3>
-        <h3 *ngIf="!['', 'Student', 'Parent'].includes(user.role) && screenWidth <= mobileWidth" (click)="router.navigate(['quizzes'])" style="font-weight: 600; font-size: 16px"><a>
+        <h3 *ngIf="!['', 'Student'].includes(user.role) && screenWidth <= mobileWidth" (click)="router.navigate(['quizzes'])" style="font-weight: 600; font-size: 16px"><a>
           Upload your own questions and create a custom quiz for your students. </a></h3>
       </span>
       <br />
     </div>
-
     <br />
     <div class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
