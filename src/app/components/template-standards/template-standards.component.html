@@ -516,7 +516,6 @@
   }
 </style>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
@@ -543,10 +542,10 @@
           <section
             style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-              style="font-size: 32px; font-weight: 800; color:rgba(255, 217, 0, 0.757)"> &star;
+              style="font-size: 32px; font-weight: 800;  color: #4db7fd"> <i class="far fa-bookmark"></i>
             </span>
             <span *ngIf="this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-              style="font-size: 32px; font-weight: 800; color:rgba(255, 217, 0, 0.757)"> &starf;
+              style="font-size: 32px; font-weight: 800;  color: #4db7fd"> <i class="fas fa-bookmark"></i>
             </span>
             <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center; margin-top: 5px">
               <label class="switch" style="padding: 0 5px">
@@ -652,8 +651,8 @@
                       <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
                       <span
                         *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
-                        style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
-                        &starf;
+                        style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 0 0 5px">
+                        <i class="fas fa-bookmark"></i>
                       </span>
                     </button>
                   </label>

@@ -633,7 +633,6 @@
   }
 </style>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- <div class="content" role="main" (window:resize)="width_change2()"> -->
 <div class="content" role="main" (window:resize)="width_change2()"
@@ -669,10 +668,10 @@
               <b>{{selected_topic}}:</b> {{selected_subtopic}}
             </h2>
             <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-              style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &star;
+              style="font-size: 32px; font-weight: 800; margin-right: 15px;  color: #4db7fd"> <i class="far fa-bookmark"></i>
             </span>
             <span *ngIf="this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-              style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &starf;
+              style="font-size: 32px; font-weight: 800; margin-right: 15px;  color: #4db7fd"> <i class="fas fa-bookmark"></i>
             </span>
           </section>
           <div class="card card-medium"
@@ -729,8 +728,8 @@
                       <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
                       <span
                         *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
-                        style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
-                        &starf;
+                        style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 0 0 5px">
+                        <i class="fas fa-bookmark"></i>
                       </span>
                     </button>
                   </label>
@@ -2017,8 +2016,8 @@
                       <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
                       <span
                         *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
-                        style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
-                        &starf;
+                        style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 0 0 5px">
+                        <i class="fas fa-bookmark"></i>
                       </span>
                     </button>
                   </label>

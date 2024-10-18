@@ -657,10 +657,10 @@
           <section
             style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-              style="font-size: 32px; font-weight: 800; color:rgba(255, 217, 0, 0.757)"> &star;
+              style="font-size: 32px; font-weight: 800;  color: #4db7fd"> <i class="far fa-bookmark"></i>
             </span>
             <span *ngIf="this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-              style="font-size: 32px; font-weight: 800; color:rgba(255, 217, 0, 0.757)"> &starf;
+              style="font-size: 32px; font-weight: 800;  color: #4db7fd"> <i class="fas fa-bookmark"></i>
             </span>
             <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center; margin-top: 5px">
               <label class="switch" style="padding: 0 5px">
@@ -766,8 +766,8 @@
                       <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
                       <span
                         *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
-                        style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
-                        &starf;
+                        style="font-size: 24px; font-weight: 800;  color: #1976d2; margin: 0 0 0 5px">
+                        <i class="fas fa-bookmark"></i>
                       </span>
                     </button>
                   </label>
@@ -2032,24 +2032,24 @@
         <button *ngIf="this.screenWidth <= 900 && authService.userData as user" (click)="toggle_favorite_exm()"
           class="grade-button" style="margin: 10px 5px 5px; padding: 6px; width: auto; height: auto">
           <span *ngIf="!this.exam_fav"
-            style="font-size: 18px; font-weight: 2px; color: white; -webkit-text-stroke: 2px rgba(255, 217, 0)"> &starf;
+            style="font-size: 18px; font-weight: 2px; color: white; -webkit-text-stroke: 2px #4db7fd"> <i class="fas fa-bookmark"></i>
           </span>
           <span *ngIf="this.exam_fav"
-            style="font-size: 18px; font-weight: 2px; color:rgba(255, 217, 0); -webkit-text-stroke: 2px rgba(255, 217, 0)">
-            &starf; </span>
-          <b *ngIf="!this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Favorite </b>
-          <b *ngIf="this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Favorited </b>
+            style="font-size: 18px; font-weight: 2px; color:#1976d2; -webkit-text-stroke: 2px #1976d2">
+            <i class="fas fa-bookmark"></i> </span>
+          <b *ngIf="!this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Bookmark </b>
+          <b *ngIf="this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Bookmarked </b>
         </button>
         <button *ngIf="this.screenWidth > 900 && authService.userData as user" (click)="toggle_favorite_exm()"
           class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
           <span *ngIf="!this.exam_fav"
-            style="font-size: 22px; font-weight: 2px; color: white; -webkit-text-stroke: 2px rgba(255, 217, 0)"> &starf;
+            style="font-size: 22px; font-weight: 2px; color: white; -webkit-text-stroke: 2px #4db7fd"> <i class="fas fa-bookmark"></i>
           </span>
           <span *ngIf="this.exam_fav"
-            style="font-size: 22px; font-weight: 2px; color:rgba(255, 217, 0); -webkit-text-stroke: 2px rgba(255, 217, 0)">
-            &starf; </span>
-          <b *ngIf="!this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Favorite </b>
-          <b *ngIf="this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Favorited </b>
+            style="font-size: 22px; font-weight: 2px; color:#1976d2; -webkit-text-stroke: 2px #1976d2">
+            <i class="fas fa-bookmark"></i> </span>
+          <b *ngIf="!this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmark </b>
+          <b *ngIf="this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmarked </b>
         </button>
         <!-- <button *ngIf="exam_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
         style="margin: 10px 5px 5px; width: auto; height: auto; background-color: green">
@@ -2610,7 +2610,7 @@
           <img *ngIf="!authService.userData || !favorite_exm_set.includes(exam)"
             src="./assets/media/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
           <span *ngIf="favorite_exm_set.includes(exam) && authService.userData as user"
-            style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
+            style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
           </span>
           <span>{{exam_names[exam]}}</span>
         </button>

@@ -641,7 +641,6 @@
   }
 </style>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- <div class="content" role="main" (window:resize)="width_change2()"> -->
 <div class="content" role="main" (window:resize)="width_change2()"
@@ -902,7 +901,7 @@
         style="margin: auto; margin-top: 20px; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <section
           style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
-          <span style="font-size: 32px; font-weight: 800; width: 40px; color:rgba(0, 0, 0, 0)">&starf</span>
+          <span style="font-size: 32px; font-weight: 800; width: 40px; color:rgba(0, 0, 0, 0)">&starf;</span>
           <span style="font-weight: 800; width: 100%">
             <h2 style="margin-bottom: 0px; width: 100%">Problem #{{num}}</h2>
           </span>
@@ -1258,8 +1257,8 @@
                     <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
                     <span
                       *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
-                      style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
-                      &starf;
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 0 0 5px">
+                      <i class="fas fa-bookmark"></i>
                     </span>
                   </button>
                 </label>
@@ -2140,7 +2139,7 @@
                     style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
                     <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{choice.value.Choice.slice(5)}}</h3>
                   </div>
-                  <img *ngIf="is_image(choice.value.Choice)" src="./assets/{{choice.value.Choice}}"
+                  <img *ngIf="is_image(choice.value.Choice)" [src]="prob_images[+prob.key][choice.value.Choice][0]"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                 </div>
               </div>

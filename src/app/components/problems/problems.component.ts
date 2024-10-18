@@ -2743,7 +2743,7 @@ export class ProblemsComponent implements OnInit {
       quiz_id += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     var db_updates: any = {};
-    db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, grades: this.grade_filters, subjects: this.subject_filters, states: this.state_filters, topics: this.topic_filters, mode: this.mode, length: this.exam_length, timer: this.exam_timer, shuffle: true, public: false };
+    db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, grades: this.grade_filters, subjects: this.subject_filters, states: this.state_filters, topics: this.topic_filters, mode: this.mode, length: this.exam_length, timer: this.exam_timer, shuffle: true, public: false, author: this.authService.userData.uid };
     this.authService.UpdateDatabase(db_updates);
     for (let ass of this.new_assignments) {
       if (ass.length < 10) {

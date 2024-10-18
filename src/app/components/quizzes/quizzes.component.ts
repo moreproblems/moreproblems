@@ -4572,7 +4572,7 @@ export class QuizzesComponent implements OnInit {
       }
     }
     var db_updates: any = {};
-    db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, problems: this.exam_dump, grades: [this.selected_grade], subjects: [this.selected_subject], states: [this.state_labels[this.selected_curriculum]], topics: [this.selected_topic], mode: this.mode, length: this.exam_length, timer: this.exam_timer, shuffle: this.shuffle_mode, public: this.quiz_public };
+    db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, problems: this.exam_dump, grades: [this.selected_grade], subjects: [this.selected_subject], states: [this.state_labels[this.selected_curriculum]], topics: [this.selected_topic], mode: this.mode, length: this.exam_length, timer: this.exam_timer, shuffle: this.shuffle_mode, public: this.quiz_public, author: this.authService.userData.uid };
     this.authService.UpdateDatabase(db_updates);
     for (let ass of this.new_assignments) {
       if (ass.length < 10) {

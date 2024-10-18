@@ -665,10 +665,10 @@
               <b>{{selected_topic}}:</b> {{selected_subtopic}}
             </h2>
             <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-              style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &star;
+              style="font-size: 32px; font-weight: 800; margin-right: 15px;  color: #4db7fd"> <i class="far fa-bookmark"></i>
             </span>
             <span *ngIf="this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-              style="font-size: 32px; font-weight: 800; margin-right: 15px; color:rgba(255, 217, 0, 0.757)"> &starf;
+              style="font-size: 32px; font-weight: 800; margin-right: 15px;  color: #4db7fd"> <i class="fas fa-bookmark"></i>
             </span>
           </section>
           <div class="card card-medium"
@@ -743,8 +743,8 @@
                       <span> <b>{{prob.value.Topics[+num.key]}}:</b> {{prob.value.SubTopics[+num.key]}} </span>
                       <span
                         *ngIf="authService.userData && fav_std_includes(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])"
-                        style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 0 0 5px">
-                        &starf;
+                        style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 0 0 5px">
+                        <i class="fas fa-bookmark"></i>
                       </span>
                     </button>
                   </label>
@@ -2009,24 +2009,24 @@
         <button *ngIf="this.screenWidth <= 900 && authService.userData as user" (click)="toggle_favorite_exm()"
           class="grade-button" style="margin: 10px 5px 5px; padding: 6px; width: auto; height: auto">
           <span *ngIf="!this.exam_fav"
-            style="font-size: 18px; font-weight: 2px; color: white; -webkit-text-stroke: 2px rgba(255, 217, 0)"> &starf;
+            style="font-size: 18px; font-weight: 2px; color: white; -webkit-text-stroke: 2px #4db7fd"> <i class="fas fa-bookmark"></i>
           </span>
           <span *ngIf="this.exam_fav"
-            style="font-size: 18px; font-weight: 2px; color:rgba(255, 217, 0); -webkit-text-stroke: 2px rgba(255, 217, 0)">
-            &starf; </span>
-          <b *ngIf="!this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Favorite </b>
-          <b *ngIf="this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Favorited </b>
+            style="font-size: 18px; font-weight: 2px; color:#4db7fd; -webkit-text-stroke: 2px #4db7fd">
+            <i class="fas fa-bookmark"></i> </span>
+          <b *ngIf="!this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Bookmark </b>
+          <b *ngIf="this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Bookmarked </b>
         </button>
         <button *ngIf="this.screenWidth > 900 && authService.userData as user" (click)="toggle_favorite_exm()"
           class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
           <span *ngIf="!this.exam_fav"
-            style="font-size: 22px; font-weight: 2px; color: white; -webkit-text-stroke: 2px rgba(255, 217, 0)"> &starf;
+            style="font-size: 22px; font-weight: 2px; color: white; -webkit-text-stroke: 2px #4db7fd"> <i class="fas fa-bookmark"></i>
           </span>
           <span *ngIf="this.exam_fav"
-            style="font-size: 22px; font-weight: 2px; color:rgba(255, 217, 0); -webkit-text-stroke: 2px rgba(255, 217, 0)">
-            &starf; </span>
-          <b *ngIf="!this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Favorite </b>
-          <b *ngIf="this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Favorited </b>
+            style="font-size: 22px; font-weight: 2px; color:#4db7fd; -webkit-text-stroke: 2px #4db7fd">
+            <i class="fas fa-bookmark"></i> </span>
+          <b *ngIf="!this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmark </b>
+          <b *ngIf="this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmarked </b>
         </button>
         <!-- <button *ngIf="exam_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
         style="margin: 10px 5px 5px; width: auto; height: auto; background-color: green">
@@ -2527,13 +2527,13 @@
       class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
-      <h2 #yourClasses> My Classes </h2>
+      <h1 style="font-size: 26px" #yourClasses> My Classes </h1>
       <br />
       <h3 *ngIf="my_class_metadata.length == 0" style="font-size: 18px"> You haven't created any classes under this
         account yet. </h3>
       <div *ngIf="my_class_metadata.length != 0" class="card-container" style="max-width: 100%">
         <div *ngFor="let clss of my_class_metadata" class="card card-medium"
-          style="display: block; text-align: center; min-width: 40%; max-width: 500px; max-height: 300px; width: auto; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+          style="display: block; text-align: center; min-width: 40%; max-width: 470px; max-height: 300px; width: auto; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
           <h2 style="padding-bottom: 10px">{{(clss.displayName) ?
             clss.displayName :
             'Class'}}</h2>
@@ -2588,7 +2588,7 @@
     <div *ngIf="this.authService.userData.role != 'Student'" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
-      <h2 #yourStudents> My Students </h2>
+      <h1 style="font-size: 26px" #yourStudents> My Students </h1>
       <br />
       <h3 *ngIf="my_student_metadata.length == 0"> You haven't created any students under this account yet. </h3>
       <div *ngIf="my_student_metadata.length != 0" class="card-container" style="max-width: 100%">
@@ -2661,8 +2661,8 @@
     <div *ngIf="this.authService.userData.role == 'Student' || selected_stud != ''" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
-      <h2 *ngIf="this.authService.userData.role == 'Student'" #myFavoriteExams>My In Progress Exams</h2>
-      <h2 *ngIf="this.authService.userData.role != 'Student'" #studFavoriteExams>{{student_data.displayName}}'s In
+      <h2 *ngIf="this.authService.userData.role == 'Student'" #myProgressExams>My In Progress Exams</h2>
+      <h2 *ngIf="this.authService.userData.role != 'Student'" #studProgressExams>{{student_data.displayName}}'s In
         Progress Exams</h2>
       <br />
       <!-- <input type="hidden" #selection> -->
@@ -2738,8 +2738,8 @@
         </div>
       </div>
       <br />
-      <h2 *ngIf="this.authService.userData.role == 'Student'" #myFavoriteExams>My In Progress Quizzes</h2>
-      <h2 *ngIf="this.authService.userData.role != 'Student'" #studFavoriteExams>{{student_data.displayName}}'s In
+      <h2 *ngIf="this.authService.userData.role == 'Student'" #myProgressQuizzes>My In Progress Quizzes</h2>
+      <h2 *ngIf="this.authService.userData.role != 'Student'" #studProgressQuizzes>{{student_data.displayName}}'s In
         Progress Quizzes</h2>
       <br />
       <!-- <input type="hidden" #selection> -->
@@ -2817,44 +2817,47 @@
       <br />
     </div>
     <br *ngIf="this.authService.userData.role == 'Student' || selected_stud != ''" />
-    <div *ngIf="this.authService.userData.exams.favorites.slice(1).length != 0" class="card card-large"
+    <div *ngIf="this.authService.userData.exams.favorites.slice(1).length != 0 || this.authService.userData.standards.favorites.slice(1).length != 0" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
-      <h2 #favoriteExams> My Favorite Exams </h2>
-      <!-- <br /> -->
-      <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px"><a routerLink="/exams" routerLinkActive="active"> Click here to browse all available exams. </a></h3>
-      <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px"><a routerLink="/exams" routerLinkActive="active"> Click here to browse all available exams. </a></h3>
+      <h1 style="font-size: 26px" #myBookmarks> My Bookmarks </h1>
       <br />
-      <input type="hidden" #selection>
-      <div class="card-container" style="max-width: 100%">
-        <button *ngFor="let fav of this.authService.userData.exams.favorites.slice(1)" class="card card-small"
-          (click)="select_exam(fav); scroll_top()" tabindex="0"
-          style="display: flex; flex-direction: row; align-items: center">
-          <span style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
-          </span>
-          <span style="text-align: center; margin: auto; padding: 5px"> <b>{{exam_names[fav]}}</b> </span>
-        </button>
+      <div class="card card-medium" *ngIf="this.authService.userData.exams.favorites.slice(1).length != 0"
+        style="margin: auto; display: block; text-align: center; width: min(95%, 1200px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 700; font-size: 20px">Exams (<a routerLink="/exams" routerLinkActive="active" style="font-weight: 500">Click here to browse all available exams</a>)</h3>
+        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 700; font-size: 16px">Exams (<a routerLink="/exams" routerLinkActive="active" style="font-weight: 500">Click here to browse all available exams</a>)</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container" style="max-width: 100%">
+          <button *ngFor="let fav of this.authService.userData.exams.favorites.slice(1)" class="card card-small"
+            (click)="select_exam(fav); scroll_top()" tabindex="0"
+            style="display: flex; flex-direction: row; align-items: center">
+            <!-- <span style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+            </span> -->
+            <span style="font-size: 24px; font-weight: 800; color: #4db7fd ; margin: 0 5px 0 2px"><i class="fas fa-bookmark"></i>
+            </span>
+            <span style="text-align: center; margin: auto; padding: 5px"> <b>{{exam_names[fav]}}</b> </span>
+          </button>
+        </div>
       </div>
-      <br />
-    </div>
-    <br *ngIf="this.authService.userData.exams.favorites.slice(1).length != 0" />
-    <div *ngIf="this.authService.userData.standards.favorites.slice(1).length != 0" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
-      <br />
-      <h2 #favoriteExams> My Favorite Standards </h2>
-      <!-- <br /> -->
-      <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 600; font-size: 20px"><a routerLink="/standards" routerLinkActive="active"> Click here to browse all available standards. </a></h3>
-      <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 600; font-size: 16px"><a routerLink="/standards" routerLinkActive="active"> Click here to browse all available standards. </a></h3>
-      <br />
-      <input type="hidden" #selection>
-      <div class="card-container" style="max-width: 100%">
-        <button *ngFor="let fav of this.authService.userData.standards.favorites.slice(1)" class="card card-small"
-          (click)="select_standard(fav[0], fav[1]); scroll_top()" tabindex="0"
-          style="display: flex; flex-direction: row; align-items: center; width: 90%">
-          <span style="font-size: 24px; font-weight: 800; color:rgba(255, 217, 0, 0.757); margin: 0 5px 0 0"> &starf;
-          </span>
-          <span style="text-align: center; margin: auto; padding: 5px 10px"> <b>{{fav[0]}}:</b> {{fav[1]}} </span>
-        </button>
+      <br *ngIf="this.authService.userData.exams.favorites.slice(1).length != 0" />
+      <div class="card card-medium" *ngIf="this.authService.userData.standards.favorites.slice(1).length != 0"
+        style="margin: auto; display: block; text-align: center; width: min(95%, 1200px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 700; font-size: 20px">Standards (<a routerLink="/standards" routerLinkActive="active" style="font-weight: 500">Click here to browse all available standards</a>)</h3>
+        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 700; font-size: 16px">Standards (<a routerLink="/standards" routerLinkActive="active" style="font-weight: 500">Click here to browse all available standards</a>)</h3>
+        <br />
+        <input type="hidden" #selection>
+        <div class="card-container" style="max-width: 100%">
+          <button *ngFor="let fav of this.authService.userData.standards.favorites.slice(1)" class="card card-small"
+            (click)="select_standard(fav[0], fav[1]); scroll_top()" tabindex="0"
+            style="display: flex; flex-direction: row; align-items: center; width: 90%">
+            <!-- <span style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+            </span> -->
+            <span style="font-size: 24px; font-weight: 800; color: #4db7fd; margin: 0 5px 0 10px"> <i class="fas fa-bookmark"></i>
+            </span>
+            <span style="text-align: center; margin: auto; padding: 5px 10px"> <b>{{fav[0]}}:</b> {{fav[1]}} </span>
+          </button>
+        </div>
       </div>
       <br />
     </div>
