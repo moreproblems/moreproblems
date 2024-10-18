@@ -2527,7 +2527,8 @@
       class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
-      <h1 style="font-size: 26px" #yourClasses> My Classes </h1>
+      <h1 *ngIf="screenWidth > mobileWidth" style="font-size: 26px" #myClasses> My Classes </h1>
+      <h1 *ngIf="screenWidth <= mobileWidth" style="font-size: 22px" #myClasses> My Classes </h1>
       <br />
       <h3 *ngIf="my_class_metadata.length == 0" style="font-size: 18px"> You haven't created any classes under this
         account yet. </h3>
@@ -2588,7 +2589,8 @@
     <div *ngIf="this.authService.userData.role != 'Student'" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
-      <h1 style="font-size: 26px" #yourStudents> My Students </h1>
+      <h1 *ngIf="screenWidth > mobileWidth" style="font-size: 26px" #mStudents> My Students </h1>
+      <h1 *ngIf="screenWidth <= mobileWidth" style="font-size: 22px" #mStudents> My Students </h1>
       <br />
       <h3 *ngIf="my_student_metadata.length == 0"> You haven't created any students under this account yet. </h3>
       <div *ngIf="my_student_metadata.length != 0" class="card-container" style="max-width: 100%">
@@ -2820,12 +2822,13 @@
     <div *ngIf="this.authService.userData.exams.favorites.slice(1).length != 0 || this.authService.userData.standards.favorites.slice(1).length != 0" class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
-      <h1 style="font-size: 26px" #myBookmarks> My Bookmarks </h1>
+      <h1 *ngIf="screenWidth > mobileWidth" style="font-size: 26px" #myBookmarks> My Bookmarks </h1>
+      <h1 *ngIf="screenWidth <= mobileWidth" style="font-size: 22px" #myBookmarks> My Bookmarks </h1>
       <br />
       <div class="card card-medium" *ngIf="this.authService.userData.exams.favorites.slice(1).length != 0"
         style="margin: auto; display: block; text-align: center; width: min(95%, 1200px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 700; font-size: 20px">Exams (<a routerLink="/exams" routerLinkActive="active" style="font-weight: 500">Click here to browse all available exams</a>)</h3>
-        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 700; font-size: 16px">Exams (<a routerLink="/exams" routerLinkActive="active" style="font-weight: 500">Click here to browse all available exams</a>)</h3>
+        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 700; font-size: 16px">Exams (<a routerLink="/exams" routerLinkActive="active" style="font-weight: 500">Click here for all exams</a>)</h3>
         <br />
         <input type="hidden" #selection>
         <div class="card-container" style="max-width: 100%">
@@ -2844,7 +2847,7 @@
       <div class="card card-medium" *ngIf="this.authService.userData.standards.favorites.slice(1).length != 0"
         style="margin: auto; display: block; text-align: center; width: min(95%, 1200px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 700; font-size: 20px">Standards (<a routerLink="/standards" routerLinkActive="active" style="font-weight: 500">Click here to browse all available standards</a>)</h3>
-        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 700; font-size: 16px">Standards (<a routerLink="/standards" routerLinkActive="active" style="font-weight: 500">Click here to browse all available standards</a>)</h3>
+        <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 700; font-size: 16px">Standards (<a routerLink="/standards" routerLinkActive="active" style="font-weight: 500">Click here for all standards</a>)</h3>
         <br />
         <input type="hidden" #selection>
         <div class="card-container" style="max-width: 100%">

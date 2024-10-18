@@ -541,35 +541,35 @@
         <div class="content" style="margin: auto; align-items: center">
           <section
             style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+            <span *ngIf="authService.userData as user" style="font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)"> &starf;
+            </span>
+            <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center; margin-top: 5px">
+              <label class="switch" style="padding: 0 5px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{standards_attribute_dump[s_dump_dict[key][0]].State}} </b> </button>
+              </label>
+              <label *ngFor="let grade of standards_attribute_dump[s_dump_dict[key][0]].Grades" class="switch" style="padding: 0 5px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{grade}} </b> </button>
+              </label>
+              <label class="switch" style="padding: 0 5px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{standards_attribute_dump[s_dump_dict[key][0]].Subject}} </b> </button>
+              </label>
+            </div>
+            <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center; margin-top: 5px">
+              <label class="switch" style="padding: 0 2px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{standards_attribute_dump[s_dump_dict[key][0]].State}} </b> </button>
+              </label>
+              <label *ngFor="let grade of standards_attribute_dump[s_dump_dict[key][0]].Grades" class="switch" style="padding: 0 2px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{grade}} </b> </button>
+              </label>
+              <label class="switch" style="padding: 0 2px">
+                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[standards_attribute_dump[s_dump_dict[key][0]].Subject]}} </b> </button>
+              </label>
+            </div>
             <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
               style="font-size: 32px; font-weight: 800;  color: #4db7fd"> <i class="far fa-bookmark"></i>
             </span>
             <span *ngIf="this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
               style="font-size: 32px; font-weight: 800;  color: #4db7fd"> <i class="fas fa-bookmark"></i>
-            </span>
-            <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center; margin-top: 5px">
-              <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{standards_attribute_dump[key].State}} </b> </button>
-              </label>
-              <label *ngFor="let grade of standards_attribute_dump[key].Grades" class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{grade}} </b> </button>
-              </label>
-              <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{standards_attribute_dump[key].Subject}} </b> </button>
-              </label>
-            </div>
-            <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center; margin-top: 5px">
-              <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{standards_attribute_dump[key].State}} </b> </button>
-              </label>
-              <label *ngFor="let grade of standards_attribute_dump[key].Grades" class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{grade}} </b> </button>
-              </label>
-              <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[standards_attribute_dump[key].Subject]}} </b> </button>
-              </label>
-            </div>
-            <span *ngIf="authService.userData as user" style="font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)"> &starf;
             </span>
           </section>
           <h2 *ngIf="screenWidth > mobileWidth"

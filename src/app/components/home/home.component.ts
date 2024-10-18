@@ -2771,6 +2771,7 @@ export class HomeComponent implements OnInit {
     "Geometry": "Geometry",
     "Mathematics": "Math",
     "Physics": "Physics",
+    "SAT Suite": "SAT Suite",
     "Science": "Science",
     "Social Studies": "Social Studies",
     "U.S. History": "U.S. History"

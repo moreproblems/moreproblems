@@ -2004,6 +2004,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
     "Geometry": "Geometry",
     "Mathematics": "Math",
     "Physics": "Physics",
+    "SAT Suite": "SAT Suite",
     "Science": "Science",
     "Social Studies": "Social Studies",
     "U.S. History": "U.S. History"
