@@ -948,6 +948,7 @@ export class QuizzesComponent implements OnInit {
   blank = " ";
 
   user_data: any = {};
+  data_loaded = false;
 
   expand_filters = true;
   topics: string[] = [];
@@ -985,7 +986,7 @@ export class QuizzesComponent implements OnInit {
   enable_timelimit = false;
   shuffle_mode: boolean = false;
 
-  assign_e = false;
+  assign_q = false;
   all_students: string[] = [];
   all_students_data: any = {};
   my_students: string[] = [];
@@ -2896,6 +2897,7 @@ export class QuizzesComponent implements OnInit {
   correct_percent = 0;
   topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
 
+  selected_quiz = "";
   // selected_topic = "";
   selected_subtopic = "";
   standard_id = '';
@@ -2910,7 +2912,10 @@ export class QuizzesComponent implements OnInit {
   subtopic_attempt_response: string[] = [];
   subtopic_attempt_explanation: any[] = [];
 
-  quiz_page: string = "pretext";
+  public_quiz_results: any = {};
+
+  quiz_page: string = "default";
+  cquiz_page: string = "";
   quiz_public = false;
   prob_images: { [key: number]: any } = {};
   image_index: number = 0;
@@ -3022,6 +3027,7 @@ export class QuizzesComponent implements OnInit {
     "Mathematics": "Math",
     "Physics": "Physics",
     "SAT Suite": "SAT Suite",
+    "Sciences": "Science",
     "Science": "Science",
     "Social Studies": "Social Studies",
     "U.S. History": "U.S. History"
@@ -3076,6 +3082,22 @@ export class QuizzesComponent implements OnInit {
       this.expand_topics = true;
       this.expand_overview = true;
     }
+  }
+
+  master_filters(filts: string[]) {
+    var master_filts = []
+    if (filts != undefined) {
+      for (let filt of filts) {
+        if (Object.keys(this.sub_subjects).includes(filt)) {
+          master_filts.push(filt);
+        }
+      }
+    }
+    return master_filts;
+  }
+
+  quiz_results_entries() {
+    return (Object.keys(this.public_quiz_results));
   }
 
   get_part_num(part: string) {
@@ -3356,6 +3378,21 @@ export class QuizzesComponent implements OnInit {
     console.log('plot graph');
   }
 
+  toggle_topic(val: string) {
+    if (!this.topic_filters.includes(val)) {
+      this.topic_filters.push(val)
+    }
+    else {
+      if (this.topic_filters.indexOf(val) != -1) {
+        this.topic_filters.splice(this.topic_filters.indexOf(val), 1);
+      }
+      else {
+        this.topic_filters.pop()
+      }
+    }
+    this.filter_exams();
+  }
+
   select_curriculum(curriculum: string) {
     this.selected_curriculum = curriculum;
     this.selected_grade = "";
@@ -3617,7 +3654,7 @@ export class QuizzesComponent implements OnInit {
           this.exam_dump[i].Number = i;
         }
       }
-      this.quiz_page = "content";
+      this.cquiz_page = "content";
       this.problems_loaded = true;
       setTimeout(() => {
         for (let i = 1; i <= this.exam_length; i++) {
@@ -4179,7 +4216,7 @@ export class QuizzesComponent implements OnInit {
         }, +key * 10);
       }
     }, 100);
-    this.quiz_page = 'postquiz';
+    this.cquiz_page = 'postquiz';
   }
 
   is_image(blob: string) {
@@ -4504,8 +4541,16 @@ export class QuizzesComponent implements OnInit {
     console.log(this.exam_key);
   }
 
+  can_assign_s(std: string, ass: string) {
+    return (!Object.keys(this.all_students_data[std].exams.history).includes('Q-' + ass));
+  }
+
+  can_assign_c(clss: string, ass: string) {
+    return (!this.my_class_metadata[this.authService.userData.classes.indexOf(clss)-1].exams.includes('Q-' + ass));
+  }
+
   assign_quiz() {
-    if (!this.assign_e) {
+    if (!this.assign_q) {
       this.all_students = [];
       this.my_students = [];
       const linked_students = this.authService.userData.students.slice(1);
@@ -4567,7 +4612,7 @@ export class QuizzesComponent implements OnInit {
         }
       }, 100);
     }
-    this.assign_e = !this.assign_e;
+    this.assign_q = !this.assign_q;
   }
 
   toggle_new_quiz(target: string) {
@@ -4584,6 +4629,72 @@ export class QuizzesComponent implements OnInit {
     }
   }
 
+  toggle_assign_quiz() {
+    if (!this.assign_q) {
+      this.all_students = [];
+      this.my_students = [];
+      const linked_students = this.authService.userData.students.slice(1);
+      for (const [key, stud] of Object.entries(linked_students)) {
+        setTimeout(() => {
+          const student_data = this.authService.searchUserId(stud as string);
+          this.all_students.push(stud as string);
+          if (student_data != null) {
+            this.all_students_data[(stud as string)] = (student_data as object);
+          }
+          if ((stud as string).includes(this.authService.userData.uid as string)) {
+            this.my_students.push(stud as string);
+            if (student_data != null) {
+              this.my_students_data[(stud as string)] = (student_data as object);
+            }
+          }
+        }, +key * 10);
+      }
+      setTimeout(() => {
+        this.all_students = [];
+        this.my_students = [];
+        const linked_students = this.authService.userData.students.slice(1);
+        for (const [key, stud] of Object.entries(linked_students)) {
+          setTimeout(() => {
+            const student_data = this.authService.searchUserId(stud as string);
+            this.all_students.push(stud as string);
+            if (student_data != null) {
+              this.all_students_data[(stud as string)] = (student_data as object);
+            }
+            if ((stud as string).includes(this.authService.userData.uid as string)) {
+              this.my_students.push(stud as string);
+              if (student_data != null) {
+                this.my_students_data[(stud as string)] = (student_data as object);
+              }
+            }
+          }, +key * 10);
+        }
+      }, 100);
+      this.my_class_metadata = [];
+      const linked_classes = this.authService.userData.classes.slice(1);
+      for (const [key, clss] of Object.entries(linked_classes)) {
+        setTimeout(() => {
+          console.log(clss);
+          this.class_data = this.authService.searchClassId(clss as string);
+          console.log(this.class_data);
+          this.my_class_metadata.push(this.class_data as object);
+        }, +key * 10);
+      }
+      setTimeout(() => {
+        this.my_class_metadata = [];
+        const linked_classes = this.authService.userData.classes.slice(1);
+        for (const [key, clss] of Object.entries(linked_classes)) {
+          setTimeout(() => {
+            console.log(clss);
+            this.class_data = this.authService.searchClassId(clss as string);
+            console.log(this.class_data);
+            this.my_class_metadata.push(this.class_data as object);
+          }, +key * 10);
+        }
+      }, 100);
+    }
+    this.assign_q = !this.assign_q;
+  }
+
   add_assign_quiz() {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const charactersLength = characters.length;
@@ -4591,14 +4702,21 @@ export class QuizzesComponent implements OnInit {
     for (let i: number = 1; i <= 5; i++) {
       quiz_id += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
-    for (let prob of Object.values(this.prob_images)) {
-      for (const [name, image] of Object.entries(prob)) {
-        // image should be an acutal image, instead of the URL
-        this.authService.UploadQuizPic(quiz_id, name, (image as any)[1]);
+    if (this.quiz_page == 'custom') {
+      for (let prob of Object.values(this.prob_images)) {
+        for (const [name, image] of Object.entries(prob)) {
+          // image should be an acutal image, instead of the URL
+          this.authService.UploadQuizPic(quiz_id, name, (image as any)[1]);
+        }
       }
     }
     var db_updates: any = {};
-    db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, problems: this.exam_dump, grades: [this.selected_grade], subjects: [this.selected_subject], states: [this.state_labels[this.selected_curriculum]], topics: [this.selected_topic], mode: this.mode, length: this.exam_length, timer: this.exam_timer, shuffle: this.shuffle_mode, public: this.quiz_public, author: this.authService.userData.uid };
+    if (this.quiz_page == 'default') {
+      db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, grades: this.grade_filters, subjects: this.subject_filters, states: this.state_filters, topics: this.topic_filters, mode: this.mode, length: this.exam_length, timer: this.exam_timer, shuffle: true, public: false, author: this.authService.userData.uid };
+    }
+    if (this.quiz_page == 'custom') {
+      db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, problems: this.exam_dump, grades: [this.selected_grade], subjects: [this.selected_subject], states: [this.state_labels[this.selected_curriculum]], topics: [this.selected_topic], mode: this.mode, length: this.exam_length, timer: this.exam_timer, shuffle: this.shuffle_mode, public: this.quiz_public, author: this.authService.userData.uid };
+    }
     this.authService.UpdateDatabase(db_updates);
     for (let ass of this.new_assignments) {
       if (ass.length < 10) {
@@ -4621,14 +4739,16 @@ export class QuizzesComponent implements OnInit {
         this.authService.UpdateDatabase(db_updates);
       }
     }
-    setTimeout(() => {
-      this.router.navigate(['quiz/' + quiz_id]);
-    }, 500);
+    if (this.quiz_page == 'custom') {
+      setTimeout(() => {
+        this.router.navigate(['quiz/' + quiz_id]);
+      }, 500);
+    }
   }
 
   clear_assignments() {
     this.new_assignments = [];
-    this.assign_e = false;
+    this.assign_q = false;
   }
 
   toggle_filters() {
@@ -8508,6 +8628,10 @@ export class QuizzesComponent implements OnInit {
   ngOnInit() {
     this.width_change2();
     this.favorite_std_set = [];
+    this.public_quiz_results = this.authService.getPublicQuizzes();
+    for (const [id, dump] of Object.entries(this.public_quiz_results)) {
+      this.public_quiz_results[id].id = id;
+    }
     this.filter_exams();
     if (this.authService.userData) {
       console.log('logged in');
@@ -8582,6 +8706,9 @@ export class QuizzesComponent implements OnInit {
         }, 100);
       }
     }
+    setTimeout(() => {
+      this.data_loaded = true;
+    }, 500);
     // // Just to de-dupe all the subtopic labels
     // for (let exam of this.exam_set) {
     //   if (!this.exam_attribute_dump[exam].HideTopics) {

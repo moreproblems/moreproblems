@@ -2015,7 +2015,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
   sub_subjects: { [key: string]: string[] } = {
     "English Language Arts": ["English Language Arts", "English I", "English II"],
     "Mathematics": ["Mathematics", "Algebra I", "Algebra II", 'Geometry'],
-    "Sciences": ["Sciences", "Science", "Biology", "Physics"],
+    "Science": ["Sciences", "Science", "Biology", "Physics"],
     "Social Studies": ["Social Studies", "U.S. History"],
     "Reading & Writing": ["Reading & Writing", "English Reading", "English Writing"],
   };

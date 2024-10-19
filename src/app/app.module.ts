@@ -22,7 +22,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { ExamsComponent } from './components/exams/exams.component';
-import { ProblemsComponent } from './components/problems/problems.component';
+// import { ProblemsComponent } from './components/problems/problems.component';
 import { QuizzesComponent } from './components/quizzes/quizzes.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { AboutComponent } from './components/about/about.component';
@@ -55,7 +55,7 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
     AppComponent,
     HomeComponent,
     ExamsComponent,
-    ProblemsComponent,
+    // ProblemsComponent,
     QuizzesComponent,
     StandardsComponent,
     AboutComponent,

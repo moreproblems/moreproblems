@@ -2035,14 +2035,14 @@
       </button> -->
         <div *ngIf="authService.userData as user">
           <button
-            *ngIf="exam_set.includes(exam_id) && !['', 'Student', 'Parent'].includes(user.role) && this.screenWidth <= 900"
+            *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="toggle_assign_exam()" class="grade-button"
             style="margin: 10px 5px 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/assign.png" style="height: 22px">
             <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Assign </b>
           </button>
           <button
-            *ngIf="exam_set.includes(exam_id) && !['', 'Student', 'Parent'].includes(user.role) && this.screenWidth > 900"
+            *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
             (click)="toggle_assign_exam()" class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
             <img src="./assets/media/icons/assign.png" style="height: 27px">
             <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Assign </b>

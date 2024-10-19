@@ -453,9 +453,9 @@ button.grade-button-l:hover {
     <div *ngIf="this.screenWidth > this.mobileWidth" style="width: fit-content; display: flex; flex-direction: row">
       <nav *ngIf="this.screenWidth > this.mobileWidth" style="text-align: right; display: flex; flex-direction: row; align-items: center; float: center; margin: auto">
         <a routerLink="/about" routerLinkActive="active" style="font-size: 18px; font-weight: 300"> <u>About</u> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a routerLink="/exams" routerLinkActive="active" style="font-size: 18px; font-weight: 300"> <u>Exams</u> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a routerLink="/standards" routerLinkActive="active" style="font-size: 18px; font-weight: 300"> <u>Standards</u> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a routerLink="/problems" routerLinkActive="active" style="font-size: 18px; font-weight: 300"> <u>Problems</u> </a>
+        <a routerLink="/exams" routerLinkActive="active" style="font-size: 18px; font-weight: 300"> <u>Exams</u> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a routerLink="/quizzes" routerLinkActive="active" style="font-size: 18px; font-weight: 300"> <u>Quizzes</u> </a>
         <!-- <a routerLink="/contact" routerLinkActive="active"> Contact </a>&nbsp; -->
       </nav>
       <div class="spacer" style="width: 20px"></div>
@@ -475,13 +475,13 @@ button.grade-button-l:hover {
         &nbsp;<a routerLink="/about" routerLinkActive="active" style="padding: 5px 15px; font-size: 17px; font-weight: 300"> <u>About</u> </a>&nbsp;
       </div>
       <div class="flex-item" style="margin: 0px; display: inline-block">
-        &nbsp;<a routerLink="/exams" routerLinkActive="active" style="padding: 5px 15px; font-size: 17px; font-weight: 300"> <u>Exams</u> </a>&nbsp;
-      </div>
-      <div class="flex-item" style="margin: 0px; display: inline-block">
         &nbsp;<a routerLink="/standards" routerLinkActive="active" style="padding: 5px 15px; font-size: 17px; font-weight: 300"> <u>Standards</u> </a>&nbsp;
       </div>
       <div class="flex-item" style="margin: 0px; display: inline-block">
-        &nbsp;<a routerLink="/problems" routerLinkActive="active" style="padding: 5px 15px; font-size: 17px; font-weight: 300"> <u>Problems</u> </a>&nbsp;
+        &nbsp;<a routerLink="/exams" routerLinkActive="active" style="padding: 5px 15px; font-size: 17px; font-weight: 300"> <u>Exams</u> </a>&nbsp;
+      </div>
+      <div class="flex-item" style="margin: 0px; display: inline-block">
+        &nbsp;<a routerLink="/quizzes" routerLinkActive="active" style="padding: 5px 15px; font-size: 17px; font-weight: 300"> <u>Quizzes</u> </a>&nbsp;
       </div>
       <div *ngIf="this.screenWidth < 400 && authService.userData as user" class="flex-item" style="margin: 0px; display: inline-block">
         &nbsp;<img src="{{(authService.pp_url) ? authService.pp_url : (user.photoURL) ? user.photoURL : '/assets/media/icons/user/user.png'}}" routerLink="/profile" routerLinkActive="active" style="margin: 2px 15px 4px 15px; width: 35px; height: 35px; border: 2px solid white; border-radius: 50%">&nbsp;

@@ -24,6 +24,7 @@ export class AuthService {
   class_result: any = {};
   exam_result: any = {};
   quiz_result: any = {};
+  quiz_results: any = {};
   inprog_exams: any = {};
   mystud_inprog_exams: any = {};
   exam_sub: any;
@@ -683,7 +684,27 @@ export class AuthService {
         console.log("No data available");
       }
     });
-    return this.quiz_result;
+    return (this.quiz_result);
+  }
+
+  getPublicQuizzes() {
+    this.quiz_results = {};
+    const db = getDatabase();
+    const quizzes_ref = ref(db, "quizzes");
+    onValue(quizzes_ref, (snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        for (const [id, dump] of Object.entries(snapshot.val() as any)) {
+          if ((dump as any).public) {
+            this.quiz_results[id] = (dump as any);
+          }
+        }
+      } else {
+        console.log("No data available");
+      }
+    });
+    console.log(this.quiz_results);
+    return (this.quiz_results);
   }
 
   getInProgExams(id: string) {
