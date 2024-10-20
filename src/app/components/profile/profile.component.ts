@@ -670,6 +670,7 @@ export class ProfileComponent implements OnInit {
 
   selected_exam = "";
   expand_topics = false;
+  expand_problems = false;
   expand_subtopics = false;
   show_correct = false;
   db_submission: any = {};
@@ -2769,6 +2770,7 @@ export class ProfileComponent implements OnInit {
   unique_choices: string[] = [];
   random_index = 0
   random_list: string[] = [];
+  results_hover: { [key: string]: boolean } = {};
 
   subject_labels: { [key: string]: string } = {
     "Algebra I": "Algebra I",
@@ -2801,6 +2803,14 @@ export class ProfileComponent implements OnInit {
   width_change2() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+    if (this.screenWidth <= this.mobileWidth) {
+      this.expand_topics = false;
+      this.expand_problems = false;
+    }
+    else {
+      this.expand_topics = true;
+      this.expand_problems = true;
+    }
   }
 
   master_filters(filts: string[]) {
@@ -5390,6 +5400,36 @@ export class ProfileComponent implements OnInit {
     return g_key;
   }
 
+  hover_row(index: string, hover: boolean) {
+    this.results_hover[index] = hover;
+  }
+
+  hover_results(index: string) {
+    return (this.results_hover[index]);
+  }
+
+  filter_prob_results(probs: any) {
+    var filt_probs = [];
+    for (let prob of probs) {
+      if (prob != undefined) {
+        filt_probs.push(prob);
+      }
+    }
+    return filt_probs;
+  }
+
+  is_MP_complete(choices: any) {
+    var comp = true;
+    for (let part of choices) {
+      for (let ch of part) {
+        if (ch != '✅') {
+          comp = false;
+        }
+      }
+    }
+    return comp;
+  }
+
   is_MP_st_complete() {
     var comp = true;
     for (let resp of this.subtopic_attempt_response) {
@@ -5620,6 +5660,10 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  expandProblems() {
+    this.expand_problems = !this.expand_problems;
+  }
+
   expandTopics() {
     this.expand_topics = !this.expand_topics;
   }
@@ -5659,6 +5703,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle("Your Profile On MoreProblems.Org | U.S. K-12 State Testing Preparation");
     // this.meta.updateTag({ name: 'description', content: "" });
+    this.width_change2();
     setTimeout(() => {
       if (!this.authService.userData) {
         this.router.navigate(['login']);

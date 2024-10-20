@@ -4891,21 +4891,6 @@ export class TemplateStandardsComponent implements OnInit {
         if (this.standards_dump.Standards.length == 0) {
             this.toggle_goals = true;
         }
-        for (let domain of this.standards_dump.Standards) {
-            if (this.screenWidth <= this.mobileWidth) {
-                this.domain_state[domain.Label] = false;
-            }
-            else {
-                this.domain_state[domain.Label] = true;
-            }
-        }
-        for (let goal of this.standards_dump.Goals) {
-            if (this.screenWidth <= this.mobileWidth) {
-                this.goal_state[goal[0]] = false;
-            }
-            else {
-                this.goal_state[goal[0]] = true;
-            }
-        }
+        this.width_change2();
     }
 }
