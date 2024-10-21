@@ -5418,12 +5418,24 @@ export class ProfileComponent implements OnInit {
     return filt_probs;
   }
 
-  is_MP_complete(choices: any) {
+  is_MP_correct(choices: any) {
     var comp = true;
     for (let part of choices) {
       for (let ch of part) {
         if (ch != '✅') {
           comp = false;
+        }
+      }
+    }
+    return comp;
+  }
+
+  is_MP_partial(choices: any) {
+    var comp = false;
+    for (let part of choices) {
+      for (let ch of part) {
+        if (ch == '✅') {
+          comp = true;
         }
       }
     }

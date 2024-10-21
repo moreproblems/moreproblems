@@ -613,6 +613,42 @@
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
+  .circular-progress {
+    --size: 60px;
+    --half-size: calc(var(--size) / 2);
+    --stroke-width: 6px;
+    --radius: calc((var(--size) - var(--stroke-width)) / 2);
+    --circumference: calc(var(--radius) * pi * 2);
+    --dash: calc((var(--progress) * var(--circumference)) / 100);
+  }
+
+  .circular-progress text {
+    fill: black;
+    dominant-baseline: middle;
+    text-anchor: middle;
+  }
+
+  .circular-progress circle {
+    cx: var(--half-size);
+    cy: var(--half-size);
+    r: var(--radius);
+    stroke-width: var(--stroke-width);
+    fill: none;
+    stroke-linecap: round;
+  }
+
+  .circular-progress circle.bg {
+    stroke: #ddd;
+  }
+
+  .circular-progress circle.fg {
+    transform: rotate(-90deg);
+    transform-origin: var(--half-size) var(--half-size);
+    stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+    transition: stroke-dasharray 0.3s linear 0s;
+    stroke: #5394fd;
+  }
+
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
 
@@ -2289,7 +2325,7 @@
                         </div>
                         <br />
                         <div style="overflow: auto">
-                          <table *ngIf="!this.expand_problems" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+                          <table *ngIf="!this.expand_problems" style="border: 1px solid black; margin: auto; width: fit-content; max-width: 95%; background-color: white"
                             #assignmentTableS>
                             <thead>
                               <tr>
@@ -2316,28 +2352,36 @@
                             </thead>
                             <tbody *ngFor="let exm of complete_exam_list" (mouseenter)="hover_row(exm, true)" (mouseleave)="hover_row(exm, false)" style="border: 5px solid black; font-size: 18px">
                               <tr>
-                                <td *ngIf="!hover_results(exm)" colspan="2" style="border-top: 1px solid #ddd; min-width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
+                                <td *ngIf="!hover_results(exm)" colspan="2" style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
                                   <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                                   <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                                     <b>{{""+student_exam_metadata[exm].enddate}}</b>
                                     {{""+student_exam_metadata[exm].endtime}}
                                   </h4>
                                 </td>
-                                <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
-                                  <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
-                                  <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                                    <b>{{""+student_exam_metadata[exm].enddate}}</b>
-                                    {{""+student_exam_metadata[exm].endtime}}
-                                  </h4>
-                                </td>
-                                <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px">
+                                <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px; width: 75px">
                                   <span style="margin: auto; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
                                     <button (click)="this.select_exam(exm)" class="grade-button"
                                       style="margin: auto; padding: 5px"> <b>Results</b> </button>
                                   </span>
                                 </td>
-                                <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_exam_metadata[exm].correct}}</b> / {{student_exam_metadata[exm].total}} </td>
-                                <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_exam_metadata[exm].score}}</b>% </td>
+                                <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
+                                  <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
+                                  <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
+                                    <b>{{""+student_exam_metadata[exm].enddate}}</b>
+                                    {{""+student_exam_metadata[exm].endtime}}
+                                  </h4>
+                                </td>
+                                <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_exam_metadata[exm].correct}}</b> / {{student_exam_metadata[exm].total}} </td>
+                                <td style="border-top: 1px solid #ddd; min-width: 75px">
+                                  <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
+                                    class="circular-progress" style="--progress: {{student_exam_metadata[exm].score}}">
+                                    <circle class="bg"></circle>
+                                    <circle class="fg"></circle>
+                                    <text x="50%" y="50%" font-size= "18px" font-weight="700">{{student_exam_metadata[exm].score}}</text>
+                                    <!-- <text x="80%" y="50%" font-size= "12px" font-weight="500">﹪</text> -->
+                                  </svg>
+                                </td>
                                 <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_exam_metadata[exm].time}}</b> </td>
                               </tr>
                             </tbody>
@@ -2379,6 +2423,12 @@
                                     {{""+student_exam_metadata[exm].endtime}}
                                   </h4>
                                 </td>
+                                <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px">
+                                  <span style="margin: auto; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
+                                    <button (click)="this.select_exam(exm)" class="grade-button"
+                                      style="margin: auto; padding: 5px"> <b>Results</b> </button>
+                                  </span>
+                                </td>
                                 <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
                                   <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                                   <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
@@ -2386,25 +2436,29 @@
                                     {{""+student_exam_metadata[exm].endtime}}
                                   </h4>
                                 </td>
-                                <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px">
-                                  <span style="margin: auto; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
-                                    <button (click)="this.select_exam(exm)" class="grade-button"
-                                      style="margin: auto; padding: 5px"> <b>Results</b> </button>
-                                  </span>
-                                </td>
-                                <td style="border-top: 1px solid #ddd; min-width: 400px; display: flex; flex-direction: row">
+                                <td style="border-top: 1px solid #ddd; min-width: 400px">
                                   <div class="card-container"
-                                    style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin-top: 0px">
-                                    <label *ngFor="let prob of filter_prob_results(student_exam_metadata[exm].problems)" class="switch" style="padding: 0px; margin: 0px; height: 25px; width: 38px">
-                                      <button *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] == '✅') || (prob.Correct.length > 1 && is_MP_complete(prob.Correct)))" class="toggle-button-disabled" style="margin: 0px; min-height: 20px; width: 35px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 5px">
+                                    style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
+                                    <label *ngFor="let prob of filter_prob_results(student_exam_metadata[exm].problems)" class="switch" style="padding: 0px; margin: 0px; height: 14px; width: 32px">
+                                      <button *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] == '✅') || (prob.Correct.length > 1 && is_MP_correct(prob.Correct)))" class="toggle-button-disabled" style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px">
                                       </button>
-                                      <button *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] != '✅') || (prob.Correct.length > 1 && !is_MP_complete(prob.Correct)))" class="toggle-button-disabled" style="margin: 0px; min-height: 20px; width: 35px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 5px">
+                                      <button *ngIf="prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && is_MP_partial(prob.Correct)" class="toggle-button-disabled" style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px">
+                                      </button>
+                                      <button *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] != '✅') || (prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && !is_MP_partial(prob.Correct)))" class="toggle-button-disabled" style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px">
                                       </button>
                                     </label>
                                   </div>
                                 </td>
-                                <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_exam_metadata[exm].correct}}</b> / {{student_exam_metadata[exm].total}} </td>
-                                <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_exam_metadata[exm].score}}</b>% </td>
+                                <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_exam_metadata[exm].correct}}</b> / {{student_exam_metadata[exm].total}} </td>
+                                <td style="border-top: 1px solid #ddd; min-width: 75px">
+                                  <svg width="60" height="60" viewBox="0 0 60 60" style="margin: auto"
+                                    class="circular-progress" style="--progress: {{student_exam_metadata[exm].score}}">
+                                    <circle class="bg"></circle>
+                                    <circle class="fg"></circle>
+                                    <text x="50%" y="50%" font-size= "18px" font-weight="700">{{student_exam_metadata[exm].score}}</text>
+                                    <!-- <text x="80%" y="50%" font-size= "12px" font-weight="500">﹪</text> -->
+                                  </svg>
+                                </td>
                                 <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_exam_metadata[exm].time}}</b> </td>
                               </tr>
                             </tbody>
@@ -3146,7 +3200,7 @@
                             </div>
                             <br />
                             <div style="overflow: auto">
-                              <table *ngIf="!this.expand_problems" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+                              <table *ngIf="!this.expand_problems" style="border: 1px solid black; margin: auto; width: fit-content; max-width: 95%; background-color: white"
                                 #assignmentTableS>
                                 <thead>
                                   <tr>
@@ -3173,28 +3227,36 @@
                                 </thead>
                                 <tbody *ngFor="let exm of complete_exam_list" (mouseenter)="hover_row(exm, true)" (mouseleave)="hover_row(exm, false)" style="border: 5px solid black; font-size: 18px">
                                   <tr>
-                                    <td *ngIf="!hover_results(exm)" colspan="2" style="border-top: 1px solid #ddd; min-width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
+                                    <td *ngIf="!hover_results(exm)" colspan="2" style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
                                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                                         <b>{{""+student_exam_metadata[exm].enddate}}</b>
                                         {{""+student_exam_metadata[exm].endtime}}
                                       </h4>
                                     </td>
-                                    <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
-                                      <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
-                                      <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                                        <b>{{""+student_exam_metadata[exm].enddate}}</b>
-                                        {{""+student_exam_metadata[exm].endtime}}
-                                      </h4>
-                                    </td>
-                                    <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px">
+                                    <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px; width: 75px">
                                       <span style="margin: auto; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
                                         <button (click)="this.select_exam(exm)" class="grade-button"
                                           style="margin: auto; padding: 5px"> <b>Results</b> </button>
                                       </span>
                                     </td>
-                                    <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_exam_metadata[exm].correct}}</b> / {{student_exam_metadata[exm].total}} </td>
-                                    <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_exam_metadata[exm].score}}</b>% </td>
+                                    <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
+                                      <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
+                                      <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
+                                        <b>{{""+student_exam_metadata[exm].enddate}}</b>
+                                        {{""+student_exam_metadata[exm].endtime}}
+                                      </h4>
+                                    </td>
+                                    <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_exam_metadata[exm].correct}}</b> / {{student_exam_metadata[exm].total}} </td>
+                                    <td style="border-top: 1px solid #ddd; min-width: 75px">
+                                      <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
+                                        class="circular-progress" style="--progress: {{student_exam_metadata[exm].score}}">
+                                        <circle class="bg"></circle>
+                                        <circle class="fg"></circle>
+                                        <text x="50%" y="50%" font-size= "18px" font-weight="700">{{student_exam_metadata[exm].score}}</text>
+                                        <!-- <text x="80%" y="50%" font-size= "12px" font-weight="500">﹪</text> -->
+                                      </svg>
+                                    </td>
                                     <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_exam_metadata[exm].time}}</b> </td>
                                   </tr>
                                 </tbody>
@@ -3236,6 +3298,12 @@
                                         {{""+student_exam_metadata[exm].endtime}}
                                       </h4>
                                     </td>
+                                    <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px">
+                                      <span style="margin: auto; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
+                                        <button (click)="this.select_exam(exm)" class="grade-button"
+                                          style="margin: auto; padding: 5px"> <b>Results</b> </button>
+                                      </span>
+                                    </td>
                                     <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
                                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
@@ -3243,25 +3311,29 @@
                                         {{""+student_exam_metadata[exm].endtime}}
                                       </h4>
                                     </td>
-                                    <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px">
-                                      <span style="margin: auto; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
-                                        <button (click)="this.select_exam(exm)" class="grade-button"
-                                          style="margin: auto; padding: 5px"> <b>Results</b> </button>
-                                      </span>
-                                    </td>
-                                    <td style="border-top: 1px solid #ddd; min-width: 400px; display: flex; flex-direction: row">
+                                    <td style="border-top: 1px solid #ddd; min-width: 400px">
                                       <div class="card-container"
-                                        style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin-top: 0px">
-                                        <label *ngFor="let prob of filter_prob_results(student_exam_metadata[exm].problems)" class="switch" style="padding: 0px; margin: 0px; height: 25px; width: 38px">
-                                          <button *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] == '✅') || (prob.Correct.length > 1 && is_MP_complete(prob.Correct)))" class="toggle-button-disabled" style="margin: 0px; min-height: 20px; width: 35px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 5px">
+                                        style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
+                                        <label *ngFor="let prob of filter_prob_results(student_exam_metadata[exm].problems)" class="switch" style="padding: 0px; margin: 0px; height: 14px; width: 32px">
+                                          <button *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] == '✅') || (prob.Correct.length > 1 && is_MP_correct(prob.Correct)))" class="toggle-button-disabled" style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px">
                                           </button>
-                                          <button *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] != '✅') || (prob.Correct.length > 1 && !is_MP_complete(prob.Correct)))" class="toggle-button-disabled" style="margin: 0px; min-height: 20px; width: 35px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 5px">
+                                          <button *ngIf="prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && is_MP_partial(prob.Correct)" class="toggle-button-disabled" style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px">
+                                          </button>
+                                          <button *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] != '✅') || (prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && !is_MP_partial(prob.Correct)))" class="toggle-button-disabled" style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px">
                                           </button>
                                         </label>
                                       </div>
                                     </td>
-                                    <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_exam_metadata[exm].correct}}</b> / {{student_exam_metadata[exm].total}} </td>
-                                    <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_exam_metadata[exm].score}}</b>% </td>
+                                    <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_exam_metadata[exm].correct}}</b> / {{student_exam_metadata[exm].total}} </td>
+                                    <td style="border-top: 1px solid #ddd; min-width: 75px">
+                                      <svg width="60" height="60" viewBox="0 0 60 60" style="margin: auto"
+                                        class="circular-progress" style="--progress: {{student_exam_metadata[exm].score}}">
+                                        <circle class="bg"></circle>
+                                        <circle class="fg"></circle>
+                                        <text x="50%" y="50%" font-size= "18px" font-weight="700">{{student_exam_metadata[exm].score}}</text>
+                                        <!-- <text x="80%" y="50%" font-size= "12px" font-weight="500">﹪</text> -->
+                                      </svg>
+                                    </td>
                                     <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_exam_metadata[exm].time}}</b> </td>
                                   </tr>
                                 </tbody>
