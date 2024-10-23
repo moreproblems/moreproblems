@@ -3629,11 +3629,11 @@ export class TemplateClassComponent implements OnInit {
       this.exam_submission = this.db_submission.problems;
     }
     else if (this.selected_exam_results != '') {
-      this.db_submission = this.exam_sub_metadata[exm];
+      this.db_submission = this.exam_sub_metadata[stud];
       this.exam_submission = this.db_submission.problems;
     }
     else if (this.selected_quiz_results != '') {
-      this.db_submission = this.quiz_sub_metadata[exm];
+      this.db_submission = this.quiz_sub_metadata[stud];
       for (const [id, sub] of Object.entries(this.db_submission.problems)) {
         this.exam_submission[(sub as any).Number] = (sub as any);
       }
@@ -4203,9 +4203,9 @@ export class TemplateClassComponent implements OnInit {
           }
         }
       }
-      else {
+      else if (this.getAssClassSubmissions(quiz)[key] != undefined) {
         console.log('custom quiz');
-        this.class_total_problems = Object.keys(this.getStudClassSubmissions(quiz)[key].problems).length;
+        this.class_total_problems = Object.keys(this.getAssClassSubmissions(quiz)[key].problems).length;
         for (const [id, prob] of Object.entries(this.getAssClassSubmissions(quiz)[key].problems)) {
           console.log('Problem ID: ' + ''+id);
           console.log(prob);
@@ -6503,8 +6503,8 @@ export class TemplateClassComponent implements OnInit {
         this.is_auth = true;
         this.user_data = this.authService.userData;
         if (this.authService.userData.uid == this.class_data.teacher) {
-          this.exams_title = "Exams For Your Class";
-          this.quizzes_title = "Quizzes For Your Class";
+          this.exams_title = "Exams Assigned To Your Class";
+          this.quizzes_title = "Quizzes Assigned To Your Class";
           for (const [key, exam] of Object.entries(this.class_data.exams.slice(1))) {
             setTimeout(() => {
               console.log(exam);

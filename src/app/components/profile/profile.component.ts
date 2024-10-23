@@ -5410,9 +5410,11 @@ export class ProfileComponent implements OnInit {
 
   filter_prob_results(probs: any) {
     var filt_probs = [];
-    for (let prob of probs) {
-      if (prob != undefined) {
-        filt_probs.push(prob);
+    if (probs != undefined && probs.length > 0) {
+      for (let prob of probs) {
+        if (prob != undefined) {
+          filt_probs.push(prob);
+        }
       }
     }
     return filt_probs;
