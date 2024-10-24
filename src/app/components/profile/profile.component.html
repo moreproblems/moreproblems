@@ -2313,13 +2313,15 @@
                                     </div>
                                 </div>
                                 <hr />
-                                <h3>Total Problems: <strong style="font-weight: 500">{{student_data.problems.correct}} /
-                                        {{student_data.problems.total}}</strong>
+                                <h3>Total Exams: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
+                                </h3>
+                                <h3>Total Problems: <strong style="font-weight: 500">{{student_data.problems_correct}} /
+                                        {{student_data.problems_total}}</strong>
                                 </h3>
                                 <h3>Percent Correct: <strong
                                         style="font-weight: 500">{{total_percent_correct}}%</strong>
                                 </h3>
-                                <h3>Total Exams: <strong style="font-weight: 500">{{complete_exam_count}}</strong>
+                                <h3>Total Time: <strong style="font-weight: 500">{{total_test_time}}</strong>
                                 </h3>
                             </div>
                         </div>
@@ -2355,8 +2357,8 @@
                                 <td *ngIf="!hover_results(exm)" colspan="2" style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
                                   <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                                   <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                                    <b>{{""+student_exam_metadata[exm].enddate}}</b>
-                                    {{""+student_exam_metadata[exm].endtime}}
+                                    <b>{{""+student_sub_metadata[exm].enddate}}</b>
+                                    {{""+student_sub_metadata[exm].endtime}}
                                   </h4>
                                 </td>
                                 <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px; width: 75px">
@@ -2368,21 +2370,21 @@
                                 <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
                                   <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                                   <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                                    <b>{{""+student_exam_metadata[exm].enddate}}</b>
-                                    {{""+student_exam_metadata[exm].endtime}}
+                                    <b>{{""+student_sub_metadata[exm].enddate}}</b>
+                                    {{""+student_sub_metadata[exm].endtime}}
                                   </h4>
                                 </td>
                                 <td style="border-top: 1px solid #ddd; min-width: 75px">
                                   <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
-                                    class="circular-progress" style="--progress: {{student_exam_metadata[exm].score}}">
+                                    class="circular-progress" style="--progress: {{student_sub_metadata[exm].score}}">
                                     <circle class="bg"></circle>
                                     <circle class="fg"></circle>
-                                    <text x="50%" y="50%" font-size= "18px" font-weight="700">{{student_exam_metadata[exm].score}}</text>
+                                    <text x="50%" y="50%" font-size= "18px" font-weight="700">{{student_sub_metadata[exm].score}}</text>
                                     <!-- <text x="80%" y="50%" font-size= "12px" font-weight="500">﹪</text> -->
                                   </svg>
                                 </td>
-                                <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_exam_metadata[exm].correct}}</b> / {{student_exam_metadata[exm].total}} </td>
-                                <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_exam_metadata[exm].time}}</b> </td>
+                                <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_sub_metadata[exm].correct}}</b> / {{student_sub_metadata[exm].total}} </td>
+                                <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_sub_metadata[exm].time}}</b> </td>
                               </tr>
                             </tbody>
                           </table>
@@ -2419,8 +2421,8 @@
                                 <td *ngIf="!hover_results(exm)" colspan="2" style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
                                   <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                                   <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                                    <b>{{""+student_exam_metadata[exm].enddate}}</b>
-                                    {{""+student_exam_metadata[exm].endtime}}
+                                    <b>{{""+student_sub_metadata[exm].enddate}}</b>
+                                    {{""+student_sub_metadata[exm].endtime}}
                                   </h4>
                                 </td>
                                 <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px; width: 75px">
@@ -2432,24 +2434,24 @@
                                 <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
                                   <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                                   <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                                    <b>{{""+student_exam_metadata[exm].enddate}}</b>
-                                    {{""+student_exam_metadata[exm].endtime}}
+                                    <b>{{""+student_sub_metadata[exm].enddate}}</b>
+                                    {{""+student_sub_metadata[exm].endtime}}
                                   </h4>
                                 </td>
                                 <td style="border-top: 1px solid #ddd; min-width: 75px">
                                   <svg width="60" height="60" viewBox="0 0 60 60" style="margin: auto"
-                                    class="circular-progress" style="--progress: {{student_exam_metadata[exm].score}}">
+                                    class="circular-progress" style="--progress: {{student_sub_metadata[exm].score}}">
                                     <circle class="bg"></circle>
                                     <circle class="fg"></circle>
-                                    <text x="50%" y="50%" font-size= "18px" font-weight="700">{{student_exam_metadata[exm].score}}</text>
+                                    <text x="50%" y="50%" font-size= "18px" font-weight="700">{{student_sub_metadata[exm].score}}</text>
                                     <!-- <text x="80%" y="50%" font-size= "12px" font-weight="500">﹪</text> -->
                                   </svg>
                                 </td>
-                                <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_exam_metadata[exm].correct}}</b> / {{student_exam_metadata[exm].total}} </td>
+                                <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_sub_metadata[exm].correct}}</b> / {{student_sub_metadata[exm].total}} </td>
                                 <td style="border-top: 1px solid #ddd; min-width: 400px">
                                   <div class="card-container"
                                     style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
-                                    <label *ngFor="let prob of filter_prob_results(student_exam_metadata[exm].problems)" class="switch" style="padding: 0px; margin: 0px; height: 14px; width: 32px">
+                                    <label *ngFor="let prob of filter_prob_results(student_sub_metadata[exm].problems)" class="switch" style="padding: 0px; margin: 0px; height: 14px; width: 32px">
                                       <button *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] == '✅') || (prob.Correct.length > 1 && is_MP_correct(prob.Correct)))" class="toggle-button-disabled" style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px">
                                       </button>
                                       <button *ngIf="prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && is_MP_partial(prob.Correct)" class="toggle-button-disabled" style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px">
@@ -2459,7 +2461,7 @@
                                     </label>
                                   </div>
                                 </td>
-                                <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_exam_metadata[exm].time}}</b> </td>
+                                <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_sub_metadata[exm].time}}</b> </td>
                               </tr>
                             </tbody>
                           </table>
@@ -3230,8 +3232,8 @@
                                     <td *ngIf="!hover_results(exm)" colspan="2" style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
                                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                                        <b>{{""+student_exam_metadata[exm].enddate}}</b>
-                                        {{""+student_exam_metadata[exm].endtime}}
+                                        <b>{{""+student_sub_metadata[exm].enddate}}</b>
+                                        {{""+student_sub_metadata[exm].endtime}}
                                       </h4>
                                     </td>
                                     <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px; width: 75px">
@@ -3243,21 +3245,21 @@
                                     <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
                                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                                        <b>{{""+student_exam_metadata[exm].enddate}}</b>
-                                        {{""+student_exam_metadata[exm].endtime}}
+                                        <b>{{""+student_sub_metadata[exm].enddate}}</b>
+                                        {{""+student_sub_metadata[exm].endtime}}
                                       </h4>
                                     </td>
                                     <td style="border-top: 1px solid #ddd; min-width: 75px">
                                       <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
-                                        class="circular-progress" style="--progress: {{student_exam_metadata[exm].score}}">
+                                        class="circular-progress" style="--progress: {{student_sub_metadata[exm].score}}">
                                         <circle class="bg"></circle>
                                         <circle class="fg"></circle>
-                                        <text x="50%" y="50%" font-size= "18px" font-weight="700">{{student_exam_metadata[exm].score}}</text>
+                                        <text x="50%" y="50%" font-size= "18px" font-weight="700">{{student_sub_metadata[exm].score}}</text>
                                         <!-- <text x="80%" y="50%" font-size= "12px" font-weight="500">﹪</text> -->
                                       </svg>
                                     </td>
-                                    <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_exam_metadata[exm].correct}}</b> / {{student_exam_metadata[exm].total}} </td>
-                                    <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_exam_metadata[exm].time}}</b> </td>
+                                    <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_sub_metadata[exm].correct}}</b> / {{student_sub_metadata[exm].total}} </td>
+                                    <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_sub_metadata[exm].time}}</b> </td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -3294,8 +3296,8 @@
                                     <td *ngIf="!hover_results(exm)" colspan="2" style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
                                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                                        <b>{{""+student_exam_metadata[exm].enddate}}</b>
-                                        {{""+student_exam_metadata[exm].endtime}}
+                                        <b>{{""+student_sub_metadata[exm].enddate}}</b>
+                                        {{""+student_sub_metadata[exm].endtime}}
                                       </h4>
                                     </td>
                                     <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px; width: 75px">
@@ -3307,24 +3309,24 @@
                                     <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
                                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                                        <b>{{""+student_exam_metadata[exm].enddate}}</b>
-                                        {{""+student_exam_metadata[exm].endtime}}
+                                        <b>{{""+student_sub_metadata[exm].enddate}}</b>
+                                        {{""+student_sub_metadata[exm].endtime}}
                                       </h4>
                                     </td>
                                     <td style="border-top: 1px solid #ddd; min-width: 75px">
                                       <svg width="60" height="60" viewBox="0 0 60 60" style="margin: auto"
-                                        class="circular-progress" style="--progress: {{student_exam_metadata[exm].score}}">
+                                        class="circular-progress" style="--progress: {{student_sub_metadata[exm].score}}">
                                         <circle class="bg"></circle>
                                         <circle class="fg"></circle>
-                                        <text x="50%" y="50%" font-size= "18px" font-weight="700">{{student_exam_metadata[exm].score}}</text>
+                                        <text x="50%" y="50%" font-size= "18px" font-weight="700">{{student_sub_metadata[exm].score}}</text>
                                         <!-- <text x="80%" y="50%" font-size= "12px" font-weight="500">﹪</text> -->
                                       </svg>
                                     </td>
-                                    <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_exam_metadata[exm].correct}}</b> / {{student_exam_metadata[exm].total}} </td>
+                                    <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{student_sub_metadata[exm].correct}}</b> / {{student_sub_metadata[exm].total}} </td>
                                     <td style="border-top: 1px solid #ddd; min-width: 400px">
                                       <div class="card-container"
                                         style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
-                                        <label *ngFor="let prob of filter_prob_results(student_exam_metadata[exm].problems)" class="switch" style="padding: 0px; margin: 0px; height: 14px; width: 32px">
+                                        <label *ngFor="let prob of filter_prob_results(student_sub_metadata[exm].problems)" class="switch" style="padding: 0px; margin: 0px; height: 14px; width: 32px">
                                           <button *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] == '✅') || (prob.Correct.length > 1 && is_MP_correct(prob.Correct)))" class="toggle-button-disabled" style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px">
                                           </button>
                                           <button *ngIf="prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && is_MP_partial(prob.Correct)" class="toggle-button-disabled" style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px">
@@ -3334,7 +3336,7 @@
                                         </label>
                                       </div>
                                     </td>
-                                    <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_exam_metadata[exm].time}}</b> </td>
+                                    <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{student_sub_metadata[exm].time}}</b> </td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -3377,8 +3379,82 @@
                                 </button>
                             </div>
                             <h2 style="margin: 10px"> Your Students </h2>
-                            <div class="card-container" style="max-width: 100%">
-                              <div *ngFor="let std of this.student_metadata" class="card card-medium"
+                            <div *ngIf="student_metadata.length >= 1 && screenWidth > mobileWidth" style="overflow: auto">
+                              <table style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
+                                #studentTableL>
+                                <thead>
+                                  <tr>
+                                    <th colspan="5" style="font-size: 18px"> All Student Activity </th>
+                                    <th colspan="2">
+                                      <label class="switch"
+                                        style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
+                                        <input type="checkbox">
+                                        <button *ngIf="!this.expand_problems" (click)="expandProblems()" class="topic-button"
+                                          style="width: 100%; font-size: 14px">
+                                          <b>Show Problems</b> </button>
+                                        <button *ngIf="this.expand_problems" (click)="expandProblems()" class="topic-button"
+                                          style="width: 100%; font-size: 14px">
+                                          Hide Problems </button>
+                                      </label>
+                                    </th>
+                                  </tr>
+                                  <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
+                                    <th colspan="3"> Student (ID) </th>
+                                    <th> Total Assignments </th>
+                                    <th> Average Grade </th>
+                                    <th> Total Problems </th>
+                                    <th colspan="2"> Total Time </th>
+                                  </tr>
+                                </thead>
+                                <tbody *ngFor="let stud of student_metadata" (mouseenter)="hover_row(stud.uid, true)" (mouseleave)="hover_row(stud.uid, false)" style="border: 5px solid black; font-size: 18px">
+                                  <tr>
+                                    <td *ngIf="hover_results(stud.uid)" style="border-top: 1px solid #ddd; min-width: 75px; text-align: left">
+                                      <span style="margin: auto; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
+                                        <button (click)="select_student(stud.uid)" class="grade-button"
+                                          style="margin: auto; padding: 5px"> <b>Results</b> </button>
+                                      </span>
+                                    </td>
+                                    <td style="border-top: 1px solid #ddd; min-width: 50px; padding-left: 5px"> 
+                                      <img *ngIf="stud.uid.includes(user.uid)" (click)="toggle_edit_student(stud.uid)" src="{{(stud.photoURL) ? stud.photoURL : '/assets/media/icons/user/user.png'}}"
+                                        style="padding: 5px 0 0; height: 35px; width: 35px; border-radius: 50%">
+                                      <img *ngIf="!stud.uid.includes(user.uid)" src="{{(stud.photoURL) ? stud.photoURL : '/assets/media/icons/user/user.png'}}"
+                                        style="padding: 5px 0 0; height: 35px; width: 35px; border-radius: 50%">
+                                    </td>
+                                    <td *ngIf="!hover_results(stud.uid)" colspan="2" style="border-top: 1px solid #ddd; min-width: 225px; text-align: left">
+                                      <b>{{stud.displayName}}</b>
+                                      <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
+                                        ({{stud.uid}})
+                                      </h4>
+                                    </td>
+                                    <td *ngIf="hover_results(stud.uid)" style="border-top: 1px solid #ddd; min-width: 150px; text-align: left">
+                                      <b>{{stud.displayName}}</b>
+                                      <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
+                                        ({{stud.uid}})
+                                      </h4>
+                                    </td>
+                                    <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{(stud.average_grade != stud.average_grade) ? '--' : stud.complete_assignments}}</b> </td>
+                                    <td style="border-top: 1px solid #ddd; min-width: 100px">
+                                      <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
+                                        class="circular-progress" style="--progress: {{(stud.average_grade != stud.average_grade) ? 0 : stud.average_grade}}">
+                                        <circle class="bg"></circle>
+                                        <circle class="fg"></circle>
+                                        <text x="50%" y="50%" font-size= "18px" font-weight="700">{{(stud.average_grade != stud.average_grade) ? '--' : stud.average_grade}}</text>
+                                      </svg>
+                                    </td>
+                                    <td style="border-top: 1px solid #ddd; min-width: 100px"> <b>{{(stud.average_grade != stud.average_grade) ? '--' : stud.problems_total}}</b> </td>
+                                    <td *ngIf="!hover_results(stud.uid)" colspan="2"  style="border-top: 1px solid #ddd; min-width: 275px"> <b>{{(stud.average_grade != stud.average_grade) ? '--' : stud.total_time}}</b> </td>
+                                    <td *ngIf="hover_results(stud.uid)" style="border-top: 1px solid #ddd; min-width: 225px"> <b>{{(stud.average_grade != stud.average_grade) ? '--' : stud.total_time}}</b> </td>
+                                    <td *ngIf="hover_results(stud.uid)" style="border-top: 1px solid #ddd; min-width: 50px; text-align: center">
+                                      <span (click)="unlink_student(stud.uid)" style="font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
+                                        <img src="/assets/media/icons/delete.png" style="height: 40px; width: 40px" />
+                                      </span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div *ngIf="screenWidth <= mobileWidth" class="card-container" style="max-width: 100%">
+                              <div *ngFor="let std of student_metadata" class="card card-medium"
                                   style="margin: 0px 8px 16px; height: auto; max-height: 200px; max-width: min(90%, 600px); width: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 10px">
                                   <div style="align-items: center; text-align: center; padding: 5px">
                                       <img *ngIf="this.screenWidth > this.mobileWidth"

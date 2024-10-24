@@ -3206,8 +3206,6 @@ export class TemplateClassComponent implements OnInit {
           if ((det as any).endtimestamp != undefined) {
             this.complete_exam_count = this.complete_exam_count + 1;
             this.complete_exam_list.push(key);
-            // this.student_sub_metadata[key].enddate = new Date(this.student_sub_metadata[key].endtimestamp).toLocaleDateString();
-            // this.student_sub_metadata[key].endtime = new Date(this.student_sub_metadata[key].endtimestamp).toLocaleTimeString();
             this.student_sub_metadata[key].enddate = new Date(this.student_sub_metadata[key].endtimestamp).toLocaleDateString();
             this.student_sub_metadata[key].endtime = new Date(this.student_sub_metadata[key].endtimestamp).toLocaleTimeString();
           }
@@ -3231,7 +3229,6 @@ export class TemplateClassComponent implements OnInit {
   }
 
   subject_break_stud(stud: string) {
-    // this.selected_stud_results = stud;
     this.grade_breakdown = {};
     this.total_test_time = "0h 0m 0s";
     var test_time = 0;
@@ -3253,7 +3250,7 @@ export class TemplateClassComponent implements OnInit {
         this.quiz_config = (this.authService.searchQuizId(key.slice(2)) as any);
         console.log(this.quiz_config);
       }
-      if (key.startsWith('Q-') && this.quiz_config.problems != undefined) {
+      if (key.startsWith('Q-') && this.quiz_config.problems != undefined && this.getStudClassSubmissions(stud)[key] != undefined) {
         console.log('custom quiz');
         this.class_total_problems = Object.keys(this.getStudClassSubmissions(stud)[key].problems).length;
         for (const [id, prob] of Object.entries(this.getStudClassSubmissions(stud)[key].problems)) {
