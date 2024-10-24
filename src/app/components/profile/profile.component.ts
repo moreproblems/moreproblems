@@ -3204,28 +3204,44 @@ export class ProfileComponent implements OnInit {
     }
     else {
       this.student_metadata = [];
-      const linked_students = this.authService.userData.students.slice(1);
-      for (const [key, stud] of Object.entries(linked_students)) {
+      for (const [key, stud] of Object.entries(this.authService.userData.students.slice(1))) {
         setTimeout(() => {
           console.log(stud);
           this.student_data = this.authService.searchUserId(stud as string);
-          console.log(this.student_data);
-          this.student_metadata.push(this.student_data as object);
+          for (let exm of Object.keys(this.student_data.exams.history)) {
+            this.student_sub_metadata[exm] = this.authService.getStudExamSubmission2(stud as string, exm);
+          }
+          var stud_data = this.authService.searchUserId(stud as string);
+          var stud_exams = this.getStudSubmissions(stud as string);
+          stud_data.subs = stud_exams;
+          this.student_metadata.push(stud_data);
         }, +key * 10);
       }
       setTimeout(() => {
         this.student_metadata = [];
-        const linked_students2 = this.authService.userData.students.slice(1);
-        for (const [key, stud] of Object.entries(linked_students2)) {
+        for (const [key, stud] of Object.entries(this.authService.userData.students.slice(1))) {
           setTimeout(() => {
             console.log(stud);
             this.student_data = this.authService.searchUserId(stud as string);
-            console.log(this.student_data);
-            this.student_metadata.push(this.student_data as object);
+            for (let exm of Object.keys(this.student_data.exams.history)) {
+              this.student_sub_metadata[exm] = this.authService.getStudExamSubmission2(stud as string, exm);
+            }
+            var stud_data = this.authService.searchUserId(stud as string);
+            var stud_exams = this.getStudSubmissions(stud as string);
+            stud_data.subs = stud_exams;
+            this.subject_break();
+            stud_data.problems_correct = this.student_data.problems_correct;
+            stud_data.problems_total = this.student_data.problems_total;
+            stud_data.average_grade = Math.round(100 * this.student_data.problems_correct / this.student_data.problems_total);
+            stud_data.complete_assignments = this.complete_exam_count;
+            stud_data.total_time = this.total_test_time;
+            console.log('Student Summary');
+            console.log(stud_data);
+            this.student_metadata.push(stud_data);
           }, +key * 10);
         }
         this.edit_s = !this.edit_s;
-      }, (linked_students.length + 1) * 10);
+      }, 250);
     }
   }
 
