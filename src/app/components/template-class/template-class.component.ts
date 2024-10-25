@@ -3180,6 +3180,15 @@ export class TemplateClassComponent implements OnInit {
     location.reload();
   }
 
+  student_action(act: string, stud: string) {
+    if (act == 'results') {
+      this.student_results(stud);
+    }
+    else if (act == 'remove') {
+      this.remove_student(stud);
+    }
+  }
+
   student_results(stud: string) {
     this.selected_stud_results = stud;
     this.grade_breakdown = {};
@@ -3270,6 +3279,154 @@ export class TemplateClassComponent implements OnInit {
     };
 
     new Chart.Chart(studPlot, {
+      type: 'line',
+      data: data,
+      options: {
+        plugins: {
+          // tooltip: {
+          //   callbacks: {
+          //     title: function(t, d, this) {
+          //       return ((stud_exams[t[0].index].id.startsWith('Q-')) ? this.authService.searchQuizId(stud_exams[t[0].index].id.slice(2)).name : this.exam_names[stud_exams[t[0].index].id]);
+          //       return (stud_exams[t[0].index]);
+          //     },
+          //     label: function(context) {
+          //       // Customize the label text here
+          //       let label = context.dataset.label || '';
+          //       if (label) {
+          //         label += ': ';
+          //       }
+          //       label += context.parsed.y; // Display the y-value
+          //       return label;
+          //     }
+          //   }
+          // },
+          legend: { display: false }
+        },
+        scales: {
+          x: {
+            type: 'time',
+            // time: {
+            //     displayFormats: {
+            //         day: 'MMM DD, YYYY'
+            //     }
+            // }
+          }
+        },
+      }
+    });
+  }
+
+  plot_exam_results() {
+    console.log('Plotting Exam Results');
+    console.log(this.exam_sub_metadata);
+    var examPlot: any = document.getElementById('examPlot');
+    var scores: number[] = [];
+    var dates: Date[] = [];
+    var exam_subs: any[] = [];
+    for (let exm of this.complete_exam_list) {
+      exam_subs.push(this.exam_sub_metadata[exm]);
+    }
+    exam_subs.sort((a, b) => {
+      if (a.endtimestamp < b.endtimestamp) {
+        return -1;
+      }
+      if (a.endtimestamp > b.endtimestamp) {
+        return 1;
+      }
+      return 0;
+    });
+    for (let exm of exam_subs) {
+      scores.push(exm.score);
+      dates.push(new Date(exm.endtimestamp));
+    }
+    var data = {
+      labels: dates,
+      datasets: [{
+        backgroundColor:"rgba(83, 148, 253, 1.0)",
+        borderColor: "rgba(83, 148, 253, 0.25)",
+        borderWidth: 5,
+        pointRadius: 4,
+        pointHoverRadius: 8,
+        data: scores,
+        tension: 0.05,
+      }]
+    };
+
+    new Chart.Chart(examPlot, {
+      type: 'line',
+      data: data,
+      options: {
+        plugins: {
+          // tooltip: {
+          //   callbacks: {
+          //     title: function(t, d, this) {
+          //       return ((stud_exams[t[0].index].id.startsWith('Q-')) ? this.authService.searchQuizId(stud_exams[t[0].index].id.slice(2)).name : this.exam_names[stud_exams[t[0].index].id]);
+          //       return (stud_exams[t[0].index]);
+          //     },
+          //     label: function(context) {
+          //       // Customize the label text here
+          //       let label = context.dataset.label || '';
+          //       if (label) {
+          //         label += ': ';
+          //       }
+          //       label += context.parsed.y; // Display the y-value
+          //       return label;
+          //     }
+          //   }
+          // },
+          legend: { display: false }
+        },
+        scales: {
+          x: {
+            type: 'time',
+            // time: {
+            //     displayFormats: {
+            //         day: 'MMM DD, YYYY'
+            //     }
+            // }
+          }
+        },
+      }
+    });
+  }
+
+  plot_quiz_results() {
+    console.log('Plotting Quiz Results');
+    console.log(this.quiz_sub_metadata);
+    var quizPlot: any = document.getElementById('quizPlot');
+    var scores: number[] = [];
+    var dates: Date[] = [];
+    var quiz_subs: any[] = [];
+    for (let quiz of this.complete_exam_list) {
+      quiz_subs.push(this.quiz_sub_metadata[quiz]);
+    }
+    quiz_subs.sort((a, b) => {
+      if (a.endtimestamp < b.endtimestamp) {
+        return -1;
+      }
+      if (a.endtimestamp > b.endtimestamp) {
+        return 1;
+      }
+      return 0;
+    });
+    for (let quiz of quiz_subs) {
+      scores.push(quiz.score);
+      dates.push(new Date(quiz.endtimestamp));
+    }
+    var data = {
+      labels: dates,
+      datasets: [{
+        backgroundColor:"rgba(83, 148, 253, 1.0)",
+        borderColor: "rgba(83, 148, 253, 0.25)",
+        borderWidth: 5,
+        pointRadius: 4,
+        pointHoverRadius: 8,
+        data: scores,
+        tension: 0.05,
+      }]
+    };
+
+    new Chart.Chart(quizPlot, {
       type: 'line',
       data: data,
       options: {
@@ -3897,6 +4054,22 @@ export class TemplateClassComponent implements OnInit {
     location.reload();
   }
 
+  exam_action(act: string, exm: string) {
+    if (act == 'results') {
+      this.exam_results(exm);
+    }
+    else if (act == 'take') {
+      this.router.navigateByUrl('/exam/' + exm + '/' + this.class_uid);
+    }
+    else if (act == 'view') {
+      this.select_exam(exm);
+      this.scroll_top();
+    }
+    else if (act == 'remove') {
+      this.remove_exam(exm);
+    }
+  }
+
   exam_results(ass: string) {
     this.selected_exam_results = ass;
     this.grade_breakdown = {};
@@ -3934,7 +4107,22 @@ export class TemplateClassComponent implements OnInit {
         temp_count += 1;
       }
       this.exam_results_loaded = true;
+      setTimeout(() => {
+        this.plot_exam_results();
+      }, 750);
     }, 500);
+  }
+
+  quiz_action(act: string, quiz: string) {
+    if (act == 'results') {
+      this.quiz_results('Q-'+quiz);
+    }
+    else if (act == 'take') {
+      this.router.navigateByUrl('/quiz/' + quiz + '/' + this.class_uid);
+    }
+    else if (act == 'remove') {
+      this.remove_quiz(quiz);
+    }
   }
 
   quiz_results(ass: string) {
@@ -3974,6 +4162,9 @@ export class TemplateClassComponent implements OnInit {
         temp_count += 1;
       }
       this.quiz_results_loaded = true;
+      setTimeout(() => {
+        this.plot_quiz_results();
+      }, 750);
     }, 500);
   }
 

@@ -3240,6 +3240,18 @@ export class ProfileComponent implements OnInit {
     }
   }
 
+  student_action(act: string, stud: string) {
+    if (act == 'edit') {
+      this.toggle_edit_student(stud);
+    }
+    else if (act == 'results') {
+      this.select_student(stud);
+    }
+    else if (act == 'unlink') {
+      this.unlink_student(stud);
+    }
+  }
+
   toggle_edit_profile() {
     if (this.edit_p && (this.authService.userData.role == '' || this.authService.userData.role == undefined)) {
       this.edit_p_message = "Please choose your role before moving on.";
