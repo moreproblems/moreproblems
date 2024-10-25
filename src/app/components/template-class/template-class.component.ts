@@ -7,6 +7,8 @@ import { serverTimestamp } from "firebase/database";
 import printJS from 'print-js';
 import { HttpClient } from '@angular/common/http';
 import * as Plotly from 'plotly.js-dist-min';
+import * as Chart from 'chart.js/auto';
+import 'chartjs-adapter-date-fns';
 import * as examMetadata from "src/assets/problems/exams.json";
 import * as COG3EProblems from "src/assets/problems/COG3E/COG3E-problems.json";
 import * as COG4EProblems from "src/assets/problems/COG4E/COG4E-problems.json";
@@ -3213,6 +3215,9 @@ export class TemplateClassComponent implements OnInit {
         temp_count += 1;
       }
       this.stud_results_loaded = true;
+      setTimeout(() => {
+        this.plot_student_results();
+      }, 750);
     }, 500);
   }
 
@@ -3226,6 +3231,80 @@ export class TemplateClassComponent implements OnInit {
       }
     }
     return (exam_submissions);
+  }
+
+  plot_student_results() {
+    console.log('Plotting Student Results');
+    console.log(this.student_sub_metadata);
+    var studPlot: any = document.getElementById('studPlot');
+    var scores: number[] = [];
+    var dates: Date[] = [];
+    var stud_exams: any[] = [];
+    for (let exm of this.complete_exam_list) {
+      stud_exams.push(this.student_sub_metadata[exm]);
+    }
+    stud_exams.sort((a, b) => {
+      if (a.endtimestamp < b.endtimestamp) {
+        return -1;
+      }
+      if (a.endtimestamp > b.endtimestamp) {
+        return 1;
+      }
+      return 0;
+    });
+    for (let exm of stud_exams) {
+      scores.push(exm.score);
+      dates.push(new Date(exm.endtimestamp));
+    }
+    var data = {
+      labels: dates,
+      datasets: [{
+        backgroundColor:"rgba(83, 148, 253, 1.0)",
+        borderColor: "rgba(83, 148, 253, 0.25)",
+        borderWidth: 5,
+        pointRadius: 4,
+        pointHoverRadius: 8,
+        data: scores,
+        tension: 0.05,
+      }]
+    };
+
+    new Chart.Chart(studPlot, {
+      type: 'line',
+      data: data,
+      options: {
+        plugins: {
+          // tooltip: {
+          //   callbacks: {
+          //     title: function(t, d, this) {
+          //       return ((stud_exams[t[0].index].id.startsWith('Q-')) ? this.authService.searchQuizId(stud_exams[t[0].index].id.slice(2)).name : this.exam_names[stud_exams[t[0].index].id]);
+          //       return (stud_exams[t[0].index]);
+          //     },
+          //     label: function(context) {
+          //       // Customize the label text here
+          //       let label = context.dataset.label || '';
+          //       if (label) {
+          //         label += ': ';
+          //       }
+          //       label += context.parsed.y; // Display the y-value
+          //       return label;
+          //     }
+          //   }
+          // },
+          legend: { display: false }
+        },
+        scales: {
+          x: {
+            type: 'time',
+            // time: {
+            //     displayFormats: {
+            //         day: 'MMM DD, YYYY'
+            //     }
+            // }
+          }
+        },
+      }
+    });
   }
 
   subject_break_stud(stud: string) {
