@@ -613,41 +613,54 @@
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
-  .circular-progress {
-    --size: 60px;
-    --half-size: calc(var(--size) / 2);
-    --stroke-width: 6px;
-    --radius: calc((var(--size) - var(--stroke-width)) / 2);
-    --circumference: calc(var(--radius) * pi * 2);
-    --dash: calc((var(--progress) * var(--circumference)) / 100);
-  }
+.circular-progress {
+  --size: 60px;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 6px;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --radiusI: calc((var(--size) - 3 * var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --circumferenceI: calc(var(--radiusI) * pi * 2);
+  --dash: calc((var(--progress) * var(--circumference)) / 100);
+  --dashI: calc((var(--progressI) * var(--circumferenceI)) / 100);
+}
 
-  .circular-progress text {
-    fill: black;
-    dominant-baseline: middle;
-    text-anchor: middle;
-  }
+.circular-progress text {
+  fill: black;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
 
-  .circular-progress circle {
-    cx: var(--half-size);
-    cy: var(--half-size);
-    r: var(--radius);
-    stroke-width: var(--stroke-width);
-    fill: none;
-    stroke-linecap: round;
-  }
+.circular-progress circle {
+  cx: var(--half-size);
+  cy: var(--half-size);
+  stroke-width: var(--stroke-width);
+  fill: none;
+  stroke-linecap: round;
+}
 
-  .circular-progress circle.bg {
-    stroke: #ddd;
-  }
+.circular-progress circle.bg {
+  stroke: #ddd;
+  r: var(--radius);
+}
 
-  .circular-progress circle.fg {
-    transform: rotate(-90deg);
-    transform-origin: var(--half-size) var(--half-size);
-    stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
-    transition: stroke-dasharray 0.3s linear 0s;
-    stroke: #5394fd;
-  }
+.circular-progress circle.fg {
+  r: var(--radius);
+  transform: rotate(-90deg);
+  transform-origin: var(--half-size) var(--half-size);
+  stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+  transition: stroke-dasharray 0.3s linear 0s;
+  stroke: #5394fd;
+}
+
+.circular-progress circle.ig {
+  r: var(--radiusI);
+  transform: rotate(-90deg);
+  transform-origin: var(--half-size) var(--half-size);
+  stroke-dasharray: var(--dashI) calc(var(--circumferenceI) - var(--dashI));
+  transition: stroke-dasharray 0.3s linear 0s;
+  stroke: #5394fd55;
+}
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
@@ -674,12 +687,11 @@
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <div *ngIf="data_loaded" class="content-menu" role="menu" style="margin-bottom: 0px; text-align: center">
-    <br />
     <div *ngIf="selected_exam != '' && selected_subtopic == '' && this.authService.userData.role == 'Student'"
       style="align-items: left; width: min(1075px, 95%)">
       <section>
         <div (click)="selected_exam=''" class="card card-small"
-          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
           <img src="./assets/media/icons/caret.png"
             style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
           <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Profile </a>
@@ -690,7 +702,7 @@
       style="align-items: left; width: min(1075px, 95%)">
       <section>
         <div (click)="selected_exam=''" class="card card-small"
-          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
           <img src="./assets/media/icons/caret.png"
             style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
           <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Student </a>
@@ -700,14 +712,13 @@
     <div *ngIf="selected_subtopic != ''" style="align-items: left; width: min(1075px, 95%)">
       <section>
         <div (click)="selected_subtopic=''" class="card card-small"
-          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
           <img src="./assets/media/icons/caret.png"
             style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
           <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Exam </a>
         </div>
       </section>
     </div>
-    <br *ngIf="selected_exam != '' || selected_subtopic != ''" />
     <div *ngIf="selected_subtopic != ''">
       <div *ngIf="selected_subtopic != ''" class="card card-large"
         style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
@@ -2849,14 +2860,13 @@
       style="align-items: left; width: min(1075px, 95%)">
       <section>
         <div (click)="selected_student=''" class="card card-small"
-          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
           <img src="./assets/media/icons/caret.png"
             style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
           <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Profile </a>
         </div>
       </section>
     </div>
-    <br *ngIf="selected_student != '' && selected_exam == '' && selected_subtopic == ''" />
     <div *ngIf="selected_student != '' && selected_exam == '' && selected_subtopic == '' && stud_data_loaded"
       class="card card-large"
       style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
@@ -2869,6 +2879,7 @@
                 style="margin: 10px; height: auto; max-height: 300px; min-width: 40%; max-width: min(80%, 500px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
                 <h1 *ngIf="screenWidth <= 700" style="font-size: 24px; margin-bottom: 20px">{{(student_data.displayName)
                   ? student_data.displayName : 'User'}}</h1>
+                <hr *ngIf="screenWidth <= 700" style="width: 75%" />
                 <div
                   style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; width: 100%">
                   <img *ngIf="screenWidth > 700" class="align-self-start mr-5 img-thumbnail rounded-circle"
@@ -2879,24 +2890,24 @@
                     style="margin: 10px; max-height: 175px; width: min(175px, 40%); border-radius: 50%"
                     src="{{(student_data.photoURL) ?student_data.photoURL : '/assets/media/icons/user/user.png'}}"
                     alt="{{student_data.displayName}}">
-                  <div style="margin: 10px; align-items: center; text-align: center">
+                  <div style="margin: 10px; align-items: center; text-align: center; width: min(225px, 50%)">
                     <h1 *ngIf="screenWidth > 700" style="font-size: 28px; margin-bottom: 20px">
                       {{(student_data.displayName) ? student_data.displayName : 'User'}}</h1>
-                    <hr />
+                    <hr *ngIf="screenWidth > 700" style="width: 75%" />
                     <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
-                      <div *ngIf="screenWidth > 700" class="media-body" style="padding: 0 20px">
+                      <div *ngIf="screenWidth > 700" class="media-body" style="padding: 0px">
                         <h2 style="font-weight: 600; font-size: 20px; margin-bottom: 15px">{{student_data.email}}</h2>
                         <h2 style="font-weight: 600; font-size: 20px; margin-bottom: 15px">{{student_data.phoneNumber}}
                         </h2>
                         <h2 style="font-weight: 600; font-size: 18px">{{student_data.grade}}</h2>
                         <h2 style="font-weight: 600; font-size: 18px">{{student_data.state}}</h2>
                       </div>
-                      <div *ngIf="screenWidth <= 700" class="media-body" style="padding: 0 20px">
+                      <div *ngIf="screenWidth <= 700" class="media-body" style="padding: 0px">
                         <h2 style="font-weight: 600; font-size: 16px; margin-bottom: 10px">{{student_data.email}}</h2>
                         <h2 style="font-weight: 600; font-size: 16px; margin-bottom: 10px">{{student_data.phoneNumber}}
                         </h2>
-                        <h2 style="font-weight: 600; font-size: 14px; margin: 0px">{{student_data.grade}}</h2>
-                        <h2 style="font-weight: 600; font-size: 14px; margin: 0px">{{student_data.state}}</h2>
+                        <h2 style="font-weight: 600; font-size: 16px; margin: 0px">{{student_data.grade}}</h2>
+                        <h2 style="font-weight: 600; font-size: 16px; margin: 0px">{{student_data.state}}</h2>
                       </div>
                     </div>
                   </div>
@@ -2994,32 +3005,33 @@
                 <tbody *ngFor="let exm of complete_exam_list" (mouseenter)="hover_row(exm, true)"
                   (mouseleave)="hover_row(exm, false)" style="border: 5px solid black; font-size: 18px">
                   <tr>
-                    <td *ngIf="!hover_results(exm)" colspan="2"
-                      style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
+                    <td *ngIf="results_hover != exm" colspan="2"
+                      style="border-top: 1px solid #ddd; min-width: 225px; width: 225px; text-align: left; font-size: 16px; padding-left: 10px">
                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                         <b>{{""+student_sub_metadata[exm].enddate}}</b>
                         {{""+student_sub_metadata[exm].endtime}}
                       </h4>
                     </td>
-                    <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px; width: 75px">
+                    <td *ngIf="results_hover == exm" style="border-top: 1px solid #ddd; min-width: 65px; width: 65px">
                       <span style="margin: auto; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
                         <button (click)="this.select_exam(exm)" class="grade-button" style="margin: auto; padding: 5px">
                           <b>Results</b> </button>
                       </span>
                     </td>
-                    <td *ngIf="hover_results(exm)"
-                      style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
+                    <td *ngIf="results_hover == exm"
+                      style="border-top: 1px solid #ddd; min-width: 150px; width: 150px; text-align: left; font-size: 16px; padding-left: 10px">
                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                         <b>{{""+student_sub_metadata[exm].enddate}}</b>
                         {{""+student_sub_metadata[exm].endtime}}
                       </h4>
                     </td>
-                    <td style="border-top: 1px solid #ddd; min-width: 75px">
+                    <td style="border-top: 1px solid #ddd; min-width: 65px">
                       <svg width="60" height="60" viewBox="0 0 60 60" margin="auto" class="circular-progress"
-                        style="--progress: {{student_sub_metadata[exm].score}}">
+                        style="--progress: {{student_sub_metadata[exm].score}}; --progressI: {{total_percent_correct}}">
                         <circle class="bg"></circle>
+                        <circle class="ig"></circle>
                         <circle class="fg"></circle>
                         <text x="50%" y="50%" font-size="18px"
                           font-weight="700">{{student_sub_metadata[exm].score}}</text>
@@ -3065,7 +3077,7 @@
                 <tbody *ngFor="let exm of complete_exam_list" (mouseenter)="hover_row(exm, true)"
                   (mouseleave)="hover_row(exm, false)" style="border: 5px solid black; font-size: 18px">
                   <tr>
-                    <td *ngIf="!hover_results(exm)" colspan="2"
+                    <td *ngIf="results_hover != exm" colspan="2"
                       style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
@@ -3073,13 +3085,13 @@
                         {{""+student_sub_metadata[exm].endtime}}
                       </h4>
                     </td>
-                    <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px; width: 75px">
+                    <td *ngIf="results_hover == exm" style="border-top: 1px solid #ddd; min-width: 65px; width: 65px">
                       <span style="margin: auto; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
                         <button (click)="this.select_exam(exm)" class="grade-button" style="margin: auto; padding: 5px">
                           <b>Results</b> </button>
                       </span>
                     </td>
-                    <td *ngIf="hover_results(exm)"
+                    <td *ngIf="results_hover == exm"
                       style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
@@ -3089,8 +3101,9 @@
                     </td>
                     <td style="border-top: 1px solid #ddd; min-width: 75px">
                       <svg width="60" height="60" viewBox="0 0 60 60" style="margin: auto" class="circular-progress"
-                        style="--progress: {{student_sub_metadata[exm].score}}">
+                        style="--progress: {{student_sub_metadata[exm].score}}; --progressI: {{total_percent_correct}}">
                         <circle class="bg"></circle>
+                        <circle class="ig"></circle>
                         <circle class="fg"></circle>
                         <text x="50%" y="50%" font-size="18px"
                           font-weight="700">{{student_sub_metadata[exm].score}}</text>
@@ -3099,7 +3112,7 @@
                     </td>
                     <td style="border-top: 1px solid #ddd; min-width: 75px">
                       <b>{{student_sub_metadata[exm].correct}}</b> / {{student_sub_metadata[exm].total}} </td>
-                    <td style="border-top: 1px solid #ddd; min-width: 400px">
+                    <td style="border-top: 1px solid #ddd; min-width: 340px; width: 340px">
                       <div class="card-container"
                         style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
                         <label *ngFor="let prob of filter_prob_results(student_sub_metadata[exm].problems)"
@@ -3247,13 +3260,12 @@
     <div *ngIf="selected_exam == '' && selected_student == ''" style="width: min(1075px, 95%); align-items: left">
       <section>
         <div (click)="authService.SignOut()" class="card card-small"
-          style="width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
           <img src="./assets/media/icons/logout.png" style="width: 25px; height: 25px">
           <a style="font-size: 22px; font-weight: 600; padding-left: 20px"> Log Out </a>
         </div>
       </section>
     </div>
-    <br *ngIf="selected_exam == '' && selected_student == ''" />
     <div *ngIf="selected_exam == '' && selected_student == ''" class="card card-large"
       style="border: 3px solid black; border-radius: 20px; width: min(1075px, 95%); height: auto; margin: auto; padding: 0 2.5%; display: flex; flex-direction: column; min-width: 300px; max-height: 2400px">
       <!-- <br /> -->
@@ -3855,7 +3867,7 @@
                   <tbody *ngFor="let exm of complete_exam_list" (mouseenter)="hover_row(exm, true)"
                     (mouseleave)="hover_row(exm, false)" style="border: 5px solid black; font-size: 18px">
                     <tr>
-                      <td *ngIf="!hover_results(exm)" colspan="2"
+                      <td *ngIf="results_hover != exm" colspan="2"
                         style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
                         <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name :
                           exam_names[exm]}}</b>
@@ -3864,13 +3876,13 @@
                           {{""+student_sub_metadata[exm].endtime}}
                         </h4>
                       </td>
-                      <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px; width: 75px">
+                      <td *ngIf="results_hover == exm" style="border-top: 1px solid #ddd; min-width: 75px; width: 75px">
                         <span style="margin: auto; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
                           <button (click)="this.select_exam(exm)" class="grade-button"
                             style="margin: auto; padding: 5px"> <b>Results</b> </button>
                         </span>
                       </td>
-                      <td *ngIf="hover_results(exm)"
+                      <td *ngIf="results_hover == exm"
                         style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
                         <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name :
                           exam_names[exm]}}</b>
@@ -3881,8 +3893,9 @@
                       </td>
                       <td style="border-top: 1px solid #ddd; min-width: 75px">
                         <svg width="60" height="60" viewBox="0 0 60 60" margin="auto" class="circular-progress"
-                          style="--progress: {{student_sub_metadata[exm].score}}">
+                          style="--progress: {{student_sub_metadata[exm].score}}; --progressI: {{total_percent_correct}}">
                           <circle class="bg"></circle>
+                          <circle class="ig"></circle>
                           <circle class="fg"></circle>
                           <text x="50%" y="50%" font-size="18px"
                             font-weight="700">{{student_sub_metadata[exm].score}}</text>
@@ -3928,7 +3941,7 @@
                   <tbody *ngFor="let exm of complete_exam_list" (mouseenter)="hover_row(exm, true)"
                     (mouseleave)="hover_row(exm, false)" style="border: 5px solid black; font-size: 18px">
                     <tr>
-                      <td *ngIf="!hover_results(exm)" colspan="2"
+                      <td *ngIf="results_hover != exm" colspan="2"
                         style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
                         <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name :
                           exam_names[exm]}}</b>
@@ -3937,13 +3950,13 @@
                           {{""+student_sub_metadata[exm].endtime}}
                         </h4>
                       </td>
-                      <td *ngIf="hover_results(exm)" style="border-top: 1px solid #ddd; min-width: 75px; width: 75px">
+                      <td *ngIf="results_hover == exm" style="border-top: 1px solid #ddd; min-width: 75px; width: 75px">
                         <span style="margin: auto; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
                           <button (click)="this.select_exam(exm)" class="grade-button"
                             style="margin: auto; padding: 5px"> <b>Results</b> </button>
                         </span>
                       </td>
-                      <td *ngIf="hover_results(exm)"
+                      <td *ngIf="results_hover == exm"
                         style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
                         <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name :
                           exam_names[exm]}}</b>
@@ -3954,8 +3967,9 @@
                       </td>
                       <td style="border-top: 1px solid #ddd; min-width: 75px">
                         <svg width="60" height="60" viewBox="0 0 60 60" style="margin: auto" class="circular-progress"
-                          style="--progress: {{student_sub_metadata[exm].score}}">
+                          style="--progress: {{student_sub_metadata[exm].score}}; --progressI: {{total_percent_correct}}">
                           <circle class="bg"></circle>
+                          <circle class="ig"></circle>
                           <circle class="fg"></circle>
                           <text x="50%" y="50%" font-size="18px"
                             font-weight="700">{{student_sub_metadata[exm].score}}</text>
@@ -3964,7 +3978,7 @@
                       </td>
                       <td style="border-top: 1px solid #ddd; min-width: 75px">
                         <b>{{student_sub_metadata[exm].correct}}</b> / {{student_sub_metadata[exm].total}} </td>
-                      <td style="border-top: 1px solid #ddd; min-width: 400px">
+                      <td style="border-top: 1px solid #ddd; min-width: 340px; width: 340px">
                         <div class="card-container"
                           style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
                           <label *ngFor="let prob of filter_prob_results(student_sub_metadata[exm].problems)"
@@ -4057,7 +4071,7 @@
                   <tbody *ngFor="let stud of student_metadata" (mouseenter)="hover_row(stud.uid, true)"
                     (mouseleave)="hover_row(stud.uid, false)" style="border: 5px solid black; font-size: 18px">
                     <tr>
-                      <td *ngIf="hover_results(stud.uid)"
+                      <td *ngIf="results_hover == stud.uid"
                         style="border-top: 1px solid #ddd; min-width: 60px; width: 60px; text-align: center">
                         <label for="studentActions-{{stud.uid}}"
                           style="display: flex; width: 50px; height: 30px; border: 1px solid black; border-radius: 5px; margin-left: 5px">
@@ -4080,14 +4094,14 @@
                           src="{{(stud.photoURL) ? stud.photoURL : '/assets/media/icons/user/user.png'}}"
                           style="padding: 5px 0 0; height: 35px; width: 35px; border-radius: 50%">
                       </td>
-                      <td *ngIf="!hover_results(stud.uid)" colspan="2"
+                      <td *ngIf="results_hover != stud.uid" colspan="2"
                         style="border-top: 1px solid #ddd; min-width: 280px; width: 280px; text-align: left">
                         <b>{{stud.displayName}}</b>
                         <h4 style="margin: 1px auto; font-weight: 400; font-size: 12px; letter-spacing: -0.5px">
                           ({{stud.uid}})
                         </h4>
                       </td>
-                      <td *ngIf="hover_results(stud.uid)"
+                      <td *ngIf="results_hover == stud.uid"
                         style="border-top: 1px solid #ddd; min-width: 210px; width: 210px; text-align: left">
                         <b>{{stud.displayName}}</b>
                         <h4 style="margin: 1px auto; font-weight: 400; font-size: 12px; letter-spacing: -0.5px">
@@ -4172,7 +4186,7 @@
                         </div>
                       </button>
                       <button (click)="unlink_student(std.uid)" class="toggle-button-off"
-                        style="min-height: 30px; margin: 10px auto; margin-bottom: 0; display: flex; flex-direction: row; align-items: center; padding: 5px">
+                        style="width: auto; min-height: 30px; margin: 10px auto; margin-bottom: 0; display: flex; flex-direction: row; align-items: center; padding: 5px">
                         <!-- <div style="margin: 0 5px">
                                                   <img src="./assets/media/icons/link.png"
                                                       style="padding: 5px 0 0; height: 25px; width: 25px">

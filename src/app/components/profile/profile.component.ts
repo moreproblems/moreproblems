@@ -2773,7 +2773,7 @@ export class ProfileComponent implements OnInit {
   unique_choices: string[] = [];
   random_index = 0
   random_list: string[] = [];
-  results_hover: { [key: string]: boolean } = {};
+  results_hover: string = '';
 
   subject_labels: { [key: string]: string } = {
     "Algebra I": "Algebra I",
@@ -5572,11 +5572,12 @@ export class ProfileComponent implements OnInit {
   }
 
   hover_row(index: string, hover: boolean) {
-    this.results_hover[index] = hover;
-  }
-
-  hover_results(index: string) {
-    return (this.results_hover[index]);
+    if (hover) {
+      this.results_hover = index;
+    }
+    else {
+      this.results_hover = '';
+    }
   }
 
   filter_prob_results(probs: any) {
