@@ -568,6 +568,7 @@ export class AuthService {
 
   getStudExamSubmission2(std: string, exm: string) {
     var my_exam_sub: any = {};
+    my_exam_sub.id = exm;
     const db = getDatabase();
     const stud_ref = ref(db,"submissions/exams/" + exm + "/" + std);
     onValue(stud_ref, (snapshot) => {

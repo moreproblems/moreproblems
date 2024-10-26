@@ -2868,8 +2868,13 @@ export class ProfileComponent implements OnInit {
     console.log('Plotting Student Results');
     console.log(this.student_sub_metadata);
     var studPlot: any = document.getElementById('studPlot');
+    var ids: string[] = [];
+    var names: string[] = [];
     var scores: number[] = [];
+    var correct_probs: number[] = [];
+    var total_probs: number[] = [];
     var dates: Date[] = [];
+    var times: string[] = [];
     var stud_exams: any[] = [];
     for (let exm of this.complete_exam_list) {
       stud_exams.push(this.student_sub_metadata[exm]);
@@ -2884,13 +2889,20 @@ export class ProfileComponent implements OnInit {
       return 0;
     });
     for (let exm of stud_exams) {
+      ids.push(exm.id);
+      names.push((exm.id.startsWith('Q-')) ? this.authService.searchQuizId(exm.id.slice(2)).name : this.exam_names[exm.id]);
       scores.push(exm.score);
+      correct_probs.push(exm.correct);
+      total_probs.push(exm.total);
       dates.push(new Date(exm.endtimestamp));
+      times.push(exm.time);
     }
+    const hoverInfo: any = [ids, names, correct_probs, total_probs, times]
     var data = {
       labels: dates,
       datasets: [{
-        backgroundColor:"rgba(83, 148, 253, 1.0)",
+        label: " Grade",
+        backgroundColor: "rgba(83, 148, 253, 1.0)",
         borderColor: "rgba(83, 148, 253, 0.25)",
         borderWidth: 5,
         pointRadius: 4,
@@ -2905,23 +2917,26 @@ export class ProfileComponent implements OnInit {
       data: data,
       options: {
         plugins: {
-          // tooltip: {
-          //   callbacks: {
-          //     title: function(t, d, this) {
-          //       return ((stud_exams[t[0].index].id.startsWith('Q-')) ? this.authService.searchQuizId(stud_exams[t[0].index].id.slice(2)).name : this.exam_names[stud_exams[t[0].index].id]);
-          //       return (stud_exams[t[0].index]);
-          //     },
-          //     label: function(context) {
-          //       // Customize the label text here
-          //       let label = context.dataset.label || '';
-          //       if (label) {
-          //         label += ': ';
-          //       }
-          //       label += context.parsed.y; // Display the y-value
-          //       return label;
-          //     }
-          //   }
-          // },
+          tooltip: {
+            padding: 16,
+            boxPadding: 16,
+            titleFont: {
+                size: 16
+            },
+            bodyFont: {
+                size: 15
+            },
+            callbacks: {
+              title: function(context) {
+                return ([`${hoverInfo[1][context[0].dataIndex]}`, `(${context[0].label})`, ``]);
+              },
+              label: function(context) {
+                // Customize the label text here
+                // let label = (hoverInfo[0][context.dataIndex].startsWith('Q-')) ? 'Quiz' : 'Exam' + context.dataset.label + ': ' + context.parsed.y + '%' + `\n` + 'Total Problems: ' + hoverInfo[3][context.dataIndex] + `\n` + 'Correct Problems: ' + hoverInfo[2][context.dataIndex] + `\n` + 'Time: ' + hoverInfo[4][context.dataIndex];
+                return ([`${(hoverInfo[0][context.dataIndex].startsWith('Q-')) ? 'Quiz' : 'Exam'}${context.dataset.label}: ${context.parsed.y}%`, `Problems: ${hoverInfo[2][context.dataIndex]} / ${hoverInfo[3][context.dataIndex]}`, `Time: ${hoverInfo[4][context.dataIndex]}`]);
+              }
+            }
+          },
           legend: { display: false }
         },
         scales: {
