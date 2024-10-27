@@ -2865,92 +2865,94 @@ export class ProfileComponent implements OnInit {
   }
 
   plot_student_results() {
-    console.log('Plotting Student Results');
-    console.log(this.student_sub_metadata);
-    var studPlot: any = document.getElementById('studPlot');
-    var ids: string[] = [];
-    var names: string[] = [];
-    var scores: number[] = [];
-    var correct_probs: number[] = [];
-    var total_probs: number[] = [];
-    var dates: Date[] = [];
-    var times: string[] = [];
-    var stud_exams: any[] = [];
-    for (let exm of this.complete_exam_list) {
-      stud_exams.push(this.student_sub_metadata[exm]);
-    }
-    stud_exams.sort((a, b) => {
-      if (a.endtimestamp < b.endtimestamp) {
-        return -1;
+    setTimeout(() => {
+      console.log('Plotting Student Results');
+      console.log(this.student_sub_metadata);
+      var studPlot: any = document.getElementById('studPlot');
+      var ids: string[] = [];
+      var names: string[] = [];
+      var scores: number[] = [];
+      var correct_probs: number[] = [];
+      var total_probs: number[] = [];
+      var dates: Date[] = [];
+      var times: string[] = [];
+      var stud_exams: any[] = [];
+      for (let exm of this.complete_exam_list) {
+        stud_exams.push(this.student_sub_metadata[exm]);
       }
-      if (a.endtimestamp > b.endtimestamp) {
-        return 1;
+      stud_exams.sort((a, b) => {
+        if (a.endtimestamp < b.endtimestamp) {
+          return -1;
+        }
+        if (a.endtimestamp > b.endtimestamp) {
+          return 1;
+        }
+        return 0;
+      });
+      for (let exm of stud_exams) {
+        ids.push(exm.id);
+        names.push((exm.id.startsWith('Q-')) ? this.authService.searchQuizId(exm.id.slice(2)).name : this.exam_names[exm.id]);
+        scores.push(exm.score);
+        correct_probs.push(exm.correct);
+        total_probs.push(exm.total);
+        dates.push(new Date(exm.endtimestamp));
+        times.push(exm.time);
       }
-      return 0;
-    });
-    for (let exm of stud_exams) {
-      ids.push(exm.id);
-      names.push((exm.id.startsWith('Q-')) ? this.authService.searchQuizId(exm.id.slice(2)).name : this.exam_names[exm.id]);
-      scores.push(exm.score);
-      correct_probs.push(exm.correct);
-      total_probs.push(exm.total);
-      dates.push(new Date(exm.endtimestamp));
-      times.push(exm.time);
-    }
-    const hoverInfo: any = [ids, names, correct_probs, total_probs, times]
-    var data = {
-      labels: dates,
-      datasets: [{
-        label: " Grade",
-        backgroundColor: "rgba(83, 148, 253, 1.0)",
-        borderColor: "rgba(83, 148, 253, 0.25)",
-        borderWidth: 5,
-        pointRadius: 4,
-        pointHoverRadius: 8,
-        data: scores,
-        tension: 0.05,
-      }]
-    };
-
-    new Chart.Chart(studPlot, {
-      type: 'line',
-      data: data,
-      options: {
-        plugins: {
-          tooltip: {
-            padding: 16,
-            boxPadding: 16,
-            titleFont: {
-                size: 16
-            },
-            bodyFont: {
-                size: 15
-            },
-            callbacks: {
-              title: function(context) {
-                return ([`${hoverInfo[1][context[0].dataIndex]}`, `(${context[0].label})`, ``]);
+      const hoverInfo: any = [ids, names, correct_probs, total_probs, times]
+      var data = {
+        labels: dates,
+        datasets: [{
+          label: " Grade",
+          backgroundColor: "rgba(83, 148, 253, 1.0)",
+          borderColor: "rgba(83, 148, 253, 0.25)",
+          borderWidth: 5,
+          pointRadius: 4,
+          pointHoverRadius: 8,
+          data: scores,
+          tension: 0.05,
+        }]
+      };
+  
+      new Chart.Chart(studPlot, {
+        type: 'line',
+        data: data,
+        options: {
+          plugins: {
+            tooltip: {
+              padding: 16,
+              boxPadding: 16,
+              titleFont: {
+                  size: 16
               },
-              label: function(context) {
-                // Customize the label text here
-                // let label = (hoverInfo[0][context.dataIndex].startsWith('Q-')) ? 'Quiz' : 'Exam' + context.dataset.label + ': ' + context.parsed.y + '%' + `\n` + 'Total Problems: ' + hoverInfo[3][context.dataIndex] + `\n` + 'Correct Problems: ' + hoverInfo[2][context.dataIndex] + `\n` + 'Time: ' + hoverInfo[4][context.dataIndex];
-                return ([`${(hoverInfo[0][context.dataIndex].startsWith('Q-')) ? 'Quiz' : 'Exam'}${context.dataset.label}: ${context.parsed.y}%`, `Problems: ${hoverInfo[2][context.dataIndex]} / ${hoverInfo[3][context.dataIndex]}`, `Time: ${hoverInfo[4][context.dataIndex]}`]);
+              bodyFont: {
+                  size: 15
+              },
+              callbacks: {
+                title: function(context) {
+                  return ([`${hoverInfo[1][context[0].dataIndex]}`, `(${context[0].label})`, ``]);
+                },
+                label: function(context) {
+                  // Customize the label text here
+                  // let label = (hoverInfo[0][context.dataIndex].startsWith('Q-')) ? 'Quiz' : 'Exam' + context.dataset.label + ': ' + context.parsed.y + '%' + `\n` + 'Total Problems: ' + hoverInfo[3][context.dataIndex] + `\n` + 'Correct Problems: ' + hoverInfo[2][context.dataIndex] + `\n` + 'Time: ' + hoverInfo[4][context.dataIndex];
+                  return ([`${(hoverInfo[0][context.dataIndex].startsWith('Q-')) ? 'Quiz' : 'Exam'}${context.dataset.label}: ${context.parsed.y}%`, `Problems: ${hoverInfo[2][context.dataIndex]} / ${hoverInfo[3][context.dataIndex]}`, `Time: ${hoverInfo[4][context.dataIndex]}`]);
+                }
               }
+            },
+            legend: { display: false }
+          },
+          scales: {
+            x: {
+              type: 'time',
+              // time: {
+              //     displayFormats: {
+              //         day: 'MMM DD, YYYY'
+              //     }
+              // }
             }
           },
-          legend: { display: false }
-        },
-        scales: {
-          x: {
-            type: 'time',
-            // time: {
-            //     displayFormats: {
-            //         day: 'MMM DD, YYYY'
-            //     }
-            // }
-          }
-        },
-      }
-    });
+        }
+      });
+    }, 750);
   }
 
   plot_graph_gp(part: string, subtop: boolean) {
@@ -3197,10 +3199,12 @@ export class ProfileComponent implements OnInit {
           this.temp_count += 1;
         }
         console.log(this.student_sub_metadata);
+        this.student_data = this.authService.userData;
+        this.subject_break();
+        this.select_student(this.authService.userData.uid);
         setTimeout(() => {
-          this.student_data = this.authService.userData;
-          this.subject_break();
-        }, 200);
+          this.selected_student = '';
+        }, 500);
       }
     }
     else if (tb == 'students') {
@@ -3242,17 +3246,11 @@ export class ProfileComponent implements OnInit {
           }, +key * 10);
         }
       }, 250);
-      this.profileUploadURL = this.authService.pp_url;
-      setTimeout(() => {
-        this.profileUploadURL = this.authService.getProfilePic(this.authService.userData);
-      }, 500);
     }
-    else {
-      this.profileUploadURL = this.authService.pp_url;
-      setTimeout(() => {
-        this.profileUploadURL = this.authService.getProfilePic(this.authService.userData);
-      }, 500);
-    }
+    this.profileUploadURL = this.authService.pp_url;
+    setTimeout(() => {
+      this.profileUploadURL = this.authService.getProfilePic(this.authService.userData);
+    }, 500);
   }
 
   student_action(act: string, stud: string) {
@@ -3711,9 +3709,7 @@ export class ProfileComponent implements OnInit {
       }
       this.selected_student = stud;
       this.stud_data_loaded = true;
-      setTimeout(() => {
-        this.plot_student_results();
-      }, 750);
+      this.plot_student_results();
     }, 500);
     console.log(this.student_sub_metadata);
   }
@@ -5942,6 +5938,12 @@ export class ProfileComponent implements OnInit {
               this.temp_count += 1;
             }
           }, 500);
+          setTimeout(() => {
+            this.student_data = this.authService.userData;
+            this.subject_break();
+            this.select_student(this.authService.userData.uid);
+            this.selected_student = '';
+          }, 250);
           // this.student_sub_metadata = this.authService.getExamSubmissions();
           // // this.linked_student_count = Object.keys(this.student_sub_metadata).length;
           // const exam_history = this.authService.userData.exams.history;
