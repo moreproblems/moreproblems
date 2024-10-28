@@ -3240,6 +3240,130 @@ export class TemplateClassComponent implements OnInit {
     return (exam_submissions);
   }
 
+  plot_class_student_results() {
+    setTimeout(() => {
+      console.log('Plotting My Student Results');
+      console.log(this.class_student_metadata);
+      var classStudPlot: any = document.getElementById('classStudPlot');
+      var ids: string[] = [];
+      var studs: string[] = [];
+      var names: string[] = [];
+      var scores: number[] = [];
+      var correct_probs: number[] = [];
+      var total_probs: number[] = [];
+      var dates: Date[] = [];
+      var times: string[] = [];
+      var stud_exams: any[] = [];
+      for (let dump of this.class_student_metadata) {
+        for (let exam of Object.values((dump as any).subs)) {
+          if (exam != undefined && (exam as any).endtimestamp != undefined) {
+            var comp_exam: any = exam;
+            comp_exam.stud = (dump as any).uid;
+            stud_exams.push(exam);
+          }
+        }
+      }
+      stud_exams.sort((a, b) => {
+        if (a.endtimestamp < b.endtimestamp) {
+          return -1;
+        }
+        if (a.endtimestamp > b.endtimestamp) {
+          return 1;
+        }
+        return 0;
+      });
+      for (let exm of stud_exams) {
+        ids.push(exm.id);
+        studs.push(this.authService.searchUserId(exm.stud).displayName);
+        names.push((exm.id.startsWith('Q-')) ? this.authService.searchQuizId(exm.id.slice(2)).name : this.exam_names[exm.id]);
+        scores.push(exm.score);
+        correct_probs.push(exm.correct);
+        total_probs.push(exm.total);
+        dates.push(new Date(exm.endtimestamp));
+        times.push(exm.time);
+      }
+      const backs = ['rgba(83, 148, 253, 1.0)', 'rgba(240, 128, 119, 1.0)', 'rgba(118, 194, 138, 1.0)', 'rgba(252, 163, 101, 1.0)', 'rgba(189, 127, 247, 1.0)', 'rgba(253, 208, 88, 1.0)', 'rgba(109, 171, 247, 1.0)', 'rgba(255, 128, 196, 1.0)'];
+      const bords = ['rgba(83, 148, 253, 0.25)', 'rgba(240, 128, 119, 0.25)', 'rgba(118, 194, 138, 0.25)', 'rgba(252, 163, 101, 0.25)', 'rgba(189, 127, 247, 0.25)', 'rgba(253, 208, 88, 0.25)', 'rgba(109, 171, 247, 0.25)', 'rgba(255, 128, 196, 0.25)'];
+      const hoverInfo: any = [ids, studs, names, correct_probs, total_probs, times];
+      var datasets: any[] = [];
+      var count = 0;
+      for (let stud of Object.values(this.class_student_metadata)) {
+        var stud_scores = [];
+        for (let exam of stud_exams) {
+          console.log(exam.stud);
+          console.log((stud as any).uid);
+          if (exam.stud == (stud as any).uid) {
+            stud_scores.push(exam.score);
+          }
+          else {
+            stud_scores.push(null);
+          }
+        }
+        var dataset = {
+          label: " Grade",
+          backgroundColor: backs[count],
+          borderColor: bords[count],
+          borderWidth: 5,
+          pointRadius: 4,
+          pointHoverRadius: 8,
+          data: stud_scores,
+          tension: 0.05,
+          spanGaps: true
+        }
+        datasets.push(dataset);
+        count += 1;
+      }
+      console.log(dates);
+      console.log(datasets);
+      var data = {
+        labels: dates,
+        datasets: datasets
+      };
+  
+      new Chart.Chart(classStudPlot, {
+        type: 'line',
+        data: data,
+        options: {
+          maintainAspectRatio: false,
+          aspectRatio: 16 / 9,
+          plugins: {
+            title: {
+                display: true,
+                text: 'Class Submissions Over Time',
+                font: {
+                  size: 20
+                }
+            },
+            tooltip: {
+              padding: 16,
+              boxPadding: 16,
+              titleFont: {
+                  size: 16
+              },
+              bodyFont: {
+                  size: 15
+              },
+              callbacks: {
+                title: function(context) {
+                  return ([`${hoverInfo[2][context[0].dataIndex]}`, `(${context[0].label})`, ``]);
+                },
+                label: function(context) {
+                  return ([`Student: ${hoverInfo[1][context.dataIndex]}`, `${(hoverInfo[0][context.dataIndex].startsWith('Q-')) ? 'Quiz' : 'Exam'}${context.dataset.label}: ${context.parsed.y}%`, `Problems: ${hoverInfo[3][context.dataIndex]} / ${hoverInfo[4][context.dataIndex]}`, `Time: ${hoverInfo[5][context.dataIndex]}`]);
+                }
+              }
+            },
+            legend: { display: false }
+          },
+          scales: {
+            x: {
+              type: 'time',
+            }
+          },
+        }
+      });
+    }, 750);
+  }
+
   plot_student_results() {
     setTimeout(() => {
       console.log('Plotting Student Results');
@@ -3293,7 +3417,16 @@ export class TemplateClassComponent implements OnInit {
         type: 'line',
         data: data,
         options: {
+          maintainAspectRatio: false,
+          aspectRatio: 16 / 9,
           plugins: {
+            title: {
+                display: true,
+                text: 'Student Submissions Over Time',
+                font: {
+                  size: 20
+                }
+            },
             tooltip: {
               padding: 16,
               boxPadding: 16,
@@ -3384,7 +3517,16 @@ export class TemplateClassComponent implements OnInit {
       type: 'line',
       data: data,
       options: {
+        maintainAspectRatio: false,
+        aspectRatio: 16 / 9,
         plugins: {
+          title: {
+              display: true,
+              text: 'Exam Submissions Over Time',
+              font: {
+                size: 20
+              }
+          },
           tooltip: {
             padding: 16,
             boxPadding: 16,
@@ -3475,7 +3617,16 @@ export class TemplateClassComponent implements OnInit {
       type: 'line',
       data: data,
       options: {
+        maintainAspectRatio: false,
+        aspectRatio: 16 / 9,
         plugins: {
+          title: {
+              display: true,
+              text: 'Quiz Submissions Over Time',
+              font: {
+                size: 20
+              }
+          },
           tooltip: {
             padding: 16,
             boxPadding: 16,
@@ -6950,6 +7101,9 @@ export class TemplateClassComponent implements OnInit {
       }
       setTimeout(() => {
         this.data_loaded = true;
+        if (this.authService.userData.uid == this.class_data.teacher) {
+          this.plot_class_student_results();
+        }
       }, 500);
     }, 1000);
   }

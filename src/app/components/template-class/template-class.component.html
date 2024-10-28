@@ -2312,8 +2312,7 @@
       </section>
     </div>
     <div class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
-      <br />
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <div class="row">
         <div class="col-md-12">
           <div class="media">
@@ -2405,9 +2404,18 @@
                 </div>
               </div>
               <div *ngIf="complete_exam_list.length > 0" class="card card-medium" style="margin: 10px; min-height: 50px; height: auto; padding: 10px; align-items: center">
-                <canvas id="examPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" #examPlot></canvas>
+                <canvas id="examPlot" style="width: min(90%, 800px); min-height: 300px; max-height: 800px; margin: auto" #examPlot></canvas>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-large"
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="media">
             <div style="overflow: auto; padding: 10px">
               <table *ngIf="!this.expand_problems" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
                 #studentTableS>
@@ -2558,6 +2566,15 @@
                 </tbody>
               </table>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-large"
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="media">
             <div style="overflow: auto; padding: 10px">
               <table *ngIf="!this.expand_topics"
                 style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
@@ -2672,7 +2689,6 @@
           </div>
         </div>
       </div>
-      <br />
     </div>
   </div>
   <div *ngIf="quiz_results_loaded && selected_quiz_results != '' && selected_subtopic == '' && selected_sub[0] == '' && selected_sub[1] == ''"
@@ -2688,8 +2704,7 @@
       </section>
     </div>
     <div class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
-      <br />
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <div class="row">
         <div class="col-md-12">
           <div class="media">
@@ -2781,9 +2796,18 @@
                 </div>
               </div>
               <div *ngIf="complete_exam_list.length > 0" class="card card-medium" style="margin: 10px; min-height: 50px; height: auto; padding: 10px; align-items: center">
-                <canvas id="quizPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" #quizPlot></canvas>
+                <canvas id="quizPlot" style="width: min(90%, 800px); min-height: 300px; max-height: 800px; margin: auto" #quizPlot></canvas>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-large"
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="media">
             <div style="overflow: auto; padding: 10px">
               <table *ngIf="!this.expand_problems" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
                 #studentTableS>
@@ -2934,6 +2958,15 @@
                 </tbody>
               </table>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-large"
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="media">
             <div style="overflow: auto; padding: 10px">
               <table *ngIf="!this.expand_topics"
                 style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
@@ -3048,7 +3081,6 @@
           </div>
         </div>
       </div>
-      <br />
     </div>
   </div>
   <div *ngIf="selected_stud_results != '' && selected_subtopic == '' && selected_sub[0] == '' && selected_sub[1] == ''"
@@ -3064,8 +3096,7 @@
       </section>
     </div>
     <div *ngIf="stud_results_loaded" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
-      <br />
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <div class="row">
         <div class="col-md-12">
           <div class="card-container">
@@ -3157,9 +3188,16 @@
               </div>
             </div>
             <div *ngIf="complete_exam_list.length > 0" class="card card-medium" style="margin: 10px; min-height: 50px; height: auto; padding: 10px; align-items: center">
-              <canvas id="studPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" #studPlot></canvas>
+              <canvas id="studPlot" style="width: min(90%, 800px); min-height: 300px; max-height: 800px; margin: auto" #studPlot></canvas>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="stud_results_loaded" class="card card-large"
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <div class="row">
+        <div class="col-md-12">
           <div style="overflow: auto; padding: 10px">
             <table *ngIf="!this.expand_problems" style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
               #assignmentTableS>
@@ -3302,6 +3340,13 @@
               </tbody>
             </table>
           </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="stud_results_loaded" class="card card-large"
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      <div class="row">
+        <div class="col-md-12">
           <div style="overflow: auto; padding: 10px">
             <table *ngIf="!this.expand_topics"
               style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
@@ -3415,7 +3460,6 @@
           </div>
         </div>
       </div>
-      <br />
     </div>
   </div>
   <div
@@ -3719,21 +3763,34 @@
       <div class="card-container">
         <div class="card card-medium"
           style="margin: 10px; height: auto; max-height: 500px; min-width: 40%; max-width: min(80%, 500px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
-          <h3 style="text-align: center; font-size: 24px"> Class Details </h3>
-          <br />
-          <h3 style="text-align: center; font-size: 20px"> Summary: <strong
+          <h3 style="margin: 10px auto; text-align: center; font-size: 24px"> Class Details </h3>
+          <h3 style="margin: 10px auto; text-align: center; font-size: 18px; max-width: 450px"> Summary: <strong
               style="font-weight: 500">{{class_data.description}}</strong> </h3>
-          <br />
-          <h3 style="text-align: center; font-size: 18px"> Grade: <strong
-              style="font-weight: 500">{{class_data.grade}}</strong> </h3>
-          <h3 style="text-align: center; font-size: 18px"> Subject: <strong
-              style="font-weight: 500">{{class_data.subject}}</strong> </h3>
-          <h3 style="text-align: center; font-size: 18px"> State: <strong
-              style="font-weight: 500">{{class_data.state}}</strong> </h3>
-          <br *ngIf="is_auth && exams_title == 'Exams Assigned To Your Class'" />
+          <div *ngIf="screenWidth > 700" class="card-container" style="margin: 10px auto; height: auto; width: 100%; display: flex; justify-content: center">
+            <label *ngIf="class_data.grade != ''" class="switch" style="padding: 0 5px">
+              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{class_data.grade}} </b> </button>
+            </label>
+            <label *ngIf="class_data.subject != ''" class="switch" style="padding: 0 5px">
+              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{class_data.subject}} </b> </button>
+            </label>
+            <label *ngIf="class_data.state != ''" class="switch" style="padding: 0 5px">
+              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{class_data.state}} </b> </button>
+            </label>
+          </div>
+          <div *ngIf="screenWidth <= 700" class="card-container" style="margin: 10px auto; height: auto; width: 100%; display: flex; justify-content: center">
+            <label *ngIf="class_data.grade != ''" class="switch" style="padding: 0 5px">
+              <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; line-height: 18px; min-height: 30px"> <b> {{class_data.grade}} </b> </button>
+            </label>
+            <label *ngIf="class_data.subject != ''" class="switch" style="padding: 0 5px">
+              <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; line-height: 18px; min-height: 30px"> <b> {{class_data.subject}} </b> </button>
+            </label>
+            <label *ngIf="class_data.state != ''" class="switch" style="padding: 0 5px">
+              <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; line-height: 18px; min-height: 30px"> <b> {{class_data.state}} </b> </button>
+            </label>
+          </div>
           <button *ngIf="is_auth && exams_title == 'Exams Assigned To Your Class'" (click)="toggle_edit_class()"
             class="grade-button"
-            style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
+            style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px auto; padding: 2px 5px">
             <div style="margin: 0 5px">
               <img src="./assets/media/icons/edit.png" style="padding: 5px 0 0; height: 30px; width: 30px">
             </div>
@@ -3741,10 +3798,9 @@
               </b>
             </div>
           </button>
-          <br *ngIf="(is_auth && exams_title != 'Exams Assigned To Your Class')" />
           <button *ngIf="is_auth && is_student && !is_enrolled" (click)="enroll_student(authService.userData.uid)"
             class="grade-button"
-            style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
+            style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px auto; padding: 2px 5px">
             <div style="margin: 0 5px">
               <img src="./assets/media/icons/link.png" style="padding: 5px 0 0; height: 30px; width: 30px">
             </div>
@@ -3754,7 +3810,7 @@
           </button>
           <button *ngIf="is_auth && !is_student && exams_title != 'Exams Assigned To Your Class'"
             (click)="toggle_add_students()" class="grade-button"
-            style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
+            style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px auto; padding: 2px 5px">
             <div style="margin: 0 5px">
               <img src="./assets/media/icons/link.png" style="padding: 5px 0 0; height: 30px; width: 30px">
             </div>
@@ -3762,13 +3818,13 @@
               </b>
             </div>
           </button>
-          <h2 *ngIf="is_auth && is_student && is_enrolled" style="color: green"> You're enrolled in this class!
+          <h2 *ngIf="is_auth && is_student && is_enrolled" style="margin: 10px auto; color: green"> You're enrolled in this class!
           </h2>
         </div>
         <div class="card card-medium"
           style="margin: 10px; height: auto; max-height: 600px; min-width: 40%; max-width: min(80%, 500px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
           <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; width: 100%">
-            <h3 style="text-align: center; font-size: 24px"> Class Activity </h3>
+            <h3 style="text-align: center; font-size: 24px"> {{(exams_title == 'Exams Assigned To Your Class') ? 'All' : 'My'}} Class Activity </h3>
             <br />
             <div class="card-container"
               style="height: auto; max-height: 500px; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
@@ -3815,8 +3871,13 @@
             </div>
           </div>
         </div>
+        <div *ngIf="is_auth && exams_title == 'Exams Assigned To Your Class' && class_student_metadata.length >= 1" class="card card-medium"
+          style="margin: 10px; min-height: 50px; height: auto; padding: 10px; align-items: center">
+          <canvas id="classStudPlot" style="width: min(90%, 800px); min-height: 300px; max-height: 800px; margin: auto"
+            #classStudPlot></canvas>
+        </div>
         <div *ngIf="is_auth && is_student && is_enrolled && complete_exam_list.length > 0" class="card card-medium" style="margin: 10px; min-height: 50px; height: auto; padding: 10px; align-items: center">
-          <canvas id="studPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" #studPlot></canvas>
+          <canvas id="studPlot" style="width: min(90%, 800px); min-height: 300px; max-height: 800px; margin: auto" #studPlot></canvas>
         </div>
         <!-- <div *ngIf="complete_exam_list.length > 0" class="card card-medium" style="margin: 10px; min-height: 50px; height: auto; padding: 10px; align-items: center">
           <canvas id="classStudPlot" style="width: min(90%, 800px); max-height: 800px; margin: auto" #studPlot></canvas>
