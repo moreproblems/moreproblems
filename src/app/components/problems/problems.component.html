@@ -323,7 +323,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
   }
@@ -340,7 +340,7 @@
     border-radius: 12px;
     border: 3px solid #0a1e33;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -354,7 +354,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -368,7 +368,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -667,49 +667,49 @@
         <input type="hidden" value="All Grades" #state>
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
-            <input type="checkbox" value="G3">
+            <input type="checkbox" style="margin: 0px" value="G3">
             <button *ngIf="grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button-on"
               tabindex="0"> <b>Grade 3</b> </button>
             <button *ngIf="!grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3')"
               class="toggle-button-off" tabindex="0"> <b>Grade 3</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G4">
+            <input type="checkbox" style="margin: 0px" value="G4">
             <button *ngIf="grade_filters.includes('Grade 4')" (click)="toggle_button('Grade 4')" class="toggle-button-on"
               tabindex="0"> <b>Grade 4</b> </button>
             <button *ngIf="!grade_filters.includes('Grade 4')" (click)="toggle_button('Grade 4')"
               class="toggle-button-off" tabindex="0"> <b>Grade 4</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G5">
+            <input type="checkbox" style="margin: 0px" value="G5">
             <button *ngIf="grade_filters.includes('Grade 5')" (click)="toggle_button('Grade 5')" class="toggle-button-on"
               tabindex="0"> <b>Grade 5</b> </button>
             <button *ngIf="!grade_filters.includes('Grade 5')" (click)="toggle_button('Grade 5')"
               class="toggle-button-off" tabindex="0"> <b>Grade 5</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G6">
+            <input type="checkbox" style="margin: 0px" value="G6">
             <button *ngIf="grade_filters.includes('Grade 6')" (click)="toggle_button('Grade 6')" class="toggle-button-on"
               tabindex="0"> <b>Grade 6</b> </button>
             <button *ngIf="!grade_filters.includes('Grade 6')" (click)="toggle_button('Grade 6')"
               class="toggle-button-off" tabindex="0"> <b>Grade 6</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G7">
+            <input type="checkbox" style="margin: 0px" value="G7">
             <button *ngIf="grade_filters.includes('Grade 7')" (click)="toggle_button('Grade 7')" class="toggle-button-on"
               tabindex="0"> <b>Grade 7</b> </button>
             <button *ngIf="!grade_filters.includes('Grade 7')" (click)="toggle_button('Grade 7')"
               class="toggle-button-off" tabindex="0"> <b>Grade 7</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G8">
+            <input type="checkbox" style="margin: 0px" value="G8">
             <button *ngIf="grade_filters.includes('Grade 8')" (click)="toggle_button('Grade 8')" class="toggle-button-on"
               tabindex="0"> <b>Grade 8</b> </button>
             <button *ngIf="!grade_filters.includes('Grade 8')" (click)="toggle_button('Grade 8')"
               class="toggle-button-off" tabindex="0"> <b>Grade 8</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="HS">
+            <input type="checkbox" style="margin: 0px" value="HS">
             <button *ngIf="grade_filters.includes('High School')" (click)="toggle_button('High School')" class="toggle-button-on"
               tabindex="0"> <b>High School</b> </button>
             <button *ngIf="!grade_filters.includes('High School')" (click)="toggle_button('High School')"
@@ -725,27 +725,27 @@
         <input type="hidden" value="All Subjects" #state>
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
-            <input type="checkbox" value="ELA">
+            <input type="checkbox" style="margin: 0px" value="ELA">
             <button *ngIf="subject_filters.includes('English Language Arts')" (click)="toggle_button('English Language Arts')" class="toggle-button-on" tabindex="0"> <b>English Language Arts</b> </button>
             <button *ngIf="!subject_filters.includes('English Language Arts')" (click)="toggle_button('English Language Arts')" class="toggle-button-off" tabindex="0"> <b>English Language Arts</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="M">
+            <input type="checkbox" style="margin: 0px" value="M">
             <button *ngIf="subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')" class="toggle-button-on" tabindex="0"> <b>Mathematics</b> </button>
             <button *ngIf="!subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')" class="toggle-button-off" tabindex="0"> <b>Mathematics</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="S">
+            <input type="checkbox" style="margin: 0px" value="S">
             <button *ngIf="subject_filters.includes('Sciences')" (click)="toggle_button('Sciences')"class="toggle-button-on" tabindex="0"> <b>Sciences</b> </button>
             <button *ngIf="!subject_filters.includes('Sciences')" (click)="toggle_button('Sciences')" class="toggle-button-off" tabindex="0"> <b>Sciences</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="SS">
+            <input type="checkbox" style="margin: 0px" value="SS">
             <button *ngIf="subject_filters.includes('Social Studies')" (click)="toggle_button('Social Studies')" class="toggle-button-on" tabindex="0"> <b>Social Studies</b> </button>
             <button *ngIf="!subject_filters.includes('Social Studies')" (click)="toggle_button('Social Studies')" class="toggle-button-off" tabindex="0"> <b>Social Studies</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="RW">
+            <input type="checkbox" style="margin: 0px" value="RW">
             <button *ngIf="subject_filters.includes('Reading & Writing')" (click)="toggle_button('Reading & Writing')" class="toggle-button-on" tabindex="0"> <b>Reading & Writing</b> </button>
             <button *ngIf="!subject_filters.includes('Reading & Writing')" (click)="toggle_button('Reading & Writing')" class="toggle-button-off" tabindex="0"> <b>Reading & Writing</b> </button>
           </label>
@@ -759,105 +759,105 @@
         <input type="hidden" value="All United States" #state>
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
-            <input type="checkbox" value="CO">
+            <input type="checkbox" style="margin: 0px" value="CO">
             <button *ngIf="state_filters.includes('Colorado')" (click)="toggle_button('Colorado')" class="toggle-button-on" tabindex="0"> <b>Colorado</b> </button>
             <button *ngIf="!state_filters.includes('Colorado')" (click)="toggle_button('Colorado')" class="toggle-button-off" tabindex="0"> <b>Colorado</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="DE">
+            <input type="checkbox" style="margin: 0px" value="DE">
             <button *ngIf="state_filters.includes('Delaware')" (click)="toggle_button('Delaware')" class="toggle-button-on" tabindex="0"> <b>Delaware</b> </button>
             <button *ngIf="!state_filters.includes('Delaware')" (click)="toggle_button('Delaware')" class="toggle-button-off" tabindex="0"> <b>Delaware</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="FL">
+            <input type="checkbox" style="margin: 0px" value="FL">
             <button *ngIf="state_filters.includes('Florida')" (click)="toggle_button('Florida')" class="toggle-button-on" tabindex="0"> <b>Florida</b> </button>
             <button *ngIf="!state_filters.includes('Florida')" (click)="toggle_button('Florida')" class="toggle-button-off" tabindex="0"> <b>Florida</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="IL">
+            <input type="checkbox" style="margin: 0px" value="IL">
             <button *ngIf="state_filters.includes('Illinois')" (click)="toggle_button('Illinois')" class="toggle-button-on" tabindex="0"> <b>Illinois</b> </button>
             <button *ngIf="!state_filters.includes('Illinois')" (click)="toggle_button('Illinois')" class="toggle-button-off" tabindex="0"> <b>Illinois</b> </button>
           </label>
           <!-- <label class="switch">
-            <input type="checkbox" value="MN">
+            <input type="checkbox" style="margin: 0px" value="MN">
             <button *ngIf="state_filters.includes('Minnesota')" (click)="toggle_button('Minnesota')"
               class="toggle-button-on" tabindex="0"> <b>Minnesota</b> </button>
             <button *ngIf="!state_filters.includes('Minnesota')" (click)="toggle_button('Minnesota')"
               class="toggle-button-off" tabindex="0"> <b>Minnesota</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="MI">
+            <input type="checkbox" style="margin: 0px" value="MI">
             <button *ngIf="state_filters.includes('Missouri')" (click)="toggle_button('Missouri')" class="toggle-button-on"
               tabindex="0"> <b>Missouri</b> </button>
             <button *ngIf="!state_filters.includes('Missouri')" (click)="toggle_button('Missouri')"
               class="toggle-button-off" tabindex="0"> <b>Missouri</b> </button>
           </label> -->
           <label class="switch">
-            <input type="checkbox" value="MD">
+            <input type="checkbox" style="margin: 0px" value="MD">
             <button *ngIf="state_filters.includes('Maryland')" (click)="toggle_button('Maryland')" class="toggle-button-on" tabindex="0"> <b>Maryland</b> </button>
             <button *ngIf="!state_filters.includes('Maryland')" (click)="toggle_button('Maryland')" class="toggle-button-off" tabindex="0"> <b>Maryland</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="MA">
+            <input type="checkbox" style="margin: 0px" value="MA">
             <button *ngIf="state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')" class="toggle-button-on" tabindex="0"> <b>Massachusetts</b> </button>
             <button *ngIf="!state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')" class="toggle-button-off" tabindex="0"> <b>Massachusetts</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="NJ">
+            <input type="checkbox" style="margin: 0px" value="NJ">
             <button *ngIf="state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-on" tabindex="0"> <b>New Jersey</b> </button>
             <button *ngIf="!state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-off" tabindex="0"> <b>New Jersey</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="NM">
+            <input type="checkbox" style="margin: 0px" value="NM">
             <button *ngIf="state_filters.includes('New Mexico')" (click)="toggle_button('New Mexico')" class="toggle-button-on" tabindex="0"> <b>New Mexico</b> </button>
             <button *ngIf="!state_filters.includes('New Mexico')" (click)="toggle_button('New Mexico')" class="toggle-button-off" tabindex="0"> <b>New Mexico</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="NY">
+            <input type="checkbox" style="margin: 0px" value="NY">
             <button *ngIf="state_filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button-on" tabindex="0"> <b>New York</b> </button>
             <button *ngIf="!state_filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button-off" tabindex="0"> <b>New York</b> </button>
           </label>
           <!-- <label class="switch">
-            <input type="checkbox" value="NC">
+            <input type="checkbox" style="margin: 0px" value="NC">
             <button *ngIf="state_filters.includes('North Carolina')" (click)="toggle_button('North Carolina')"
               class="toggle-button-on" tabindex="0"> <b>North Carolina</b> </button>
             <button *ngIf="!state_filters.includes('North Carolina')" (click)="toggle_button('North Carolina')"
               class="toggle-button-off" tabindex="0"> <b>North Carolina</b> </button>
           </label> -->
           <label class="switch">
-            <input type="checkbox" value="PA">
+            <input type="checkbox" style="margin: 0px" value="PA">
             <button *ngIf="state_filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')" class="toggle-button-on" tabindex="0"> <b>Pennsylvania</b> </button>
             <button *ngIf="!state_filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')" class="toggle-button-off" tabindex="0"> <b>Pennsylvania</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="RI">
+            <input type="checkbox" style="margin: 0px" value="RI">
             <button *ngIf="state_filters.includes('Rhode Island')" (click)="toggle_button('Rhode Island')" class="toggle-button-on" tabindex="0"> <b>Rhode Island</b> </button>
             <button *ngIf="!state_filters.includes('Rhode Island')" (click)="toggle_button('Rhode Island')" class="toggle-button-off" tabindex="0"> <b>Rhode Island</b> </button>
           </label>
           <!-- <label class="switch">
-            <input type="checkbox" value="TN">
+            <input type="checkbox" style="margin: 0px" value="TN">
             <button *ngIf="state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')"
               class="toggle-button-on" tabindex="0"> <b>Tennessee</b> </button>
             <button *ngIf="!state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')"
               class="toggle-button-off" tabindex="0"> <b>Tennessee</b> </button>
           </label> -->
           <label class="switch">
-            <input type="checkbox" value="SAT">
+            <input type="checkbox" style="margin: 0px" value="SAT">
             <button *ngIf="state_filters.includes('SAT')" (click)="toggle_button('SAT')" class="toggle-button-on" tabindex="0"> <b>SAT</b> </button>
             <button *ngIf="!state_filters.includes('SAT')" (click)="toggle_button('SAT')" class="toggle-button-off" tabindex="0"> <b>SAT</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="SC">
+            <input type="checkbox" style="margin: 0px" value="SC">
             <button *ngIf="state_filters.includes('South Carolina')" (click)="toggle_button('South Carolina')" class="toggle-button-on" tabindex="0"> <b>South Carolina</b> </button>
             <button *ngIf="!state_filters.includes('South Carolina')" (click)="toggle_button('South Carolina')" class="toggle-button-off" tabindex="0"> <b>South Carolina</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="TN">
+            <input type="checkbox" style="margin: 0px" value="TN">
             <button *ngIf="state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')" class="toggle-button-on" tabindex="0"> <b>Tennessee</b> </button>
             <button *ngIf="!state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')" class="toggle-button-off" tabindex="0"> <b>Tennessee</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="TX">
+            <input type="checkbox" style="margin: 0px" value="TX">
             <button *ngIf="state_filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button-on" tabindex="0"> <b>Texas</b> </button>
             <button *ngIf="!state_filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button-off" tabindex="0"> <b>Texas</b> </button>
           </label>
@@ -902,12 +902,12 @@
         <input type="hidden" value="assess" #quizMode>
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch" style="max-height: 200px; max-width: 350px; width: min(80%, 300px)">
-            <input type="checkbox" value="assess">
+            <input type="checkbox" style="margin: 0px" value="assess">
             <button *ngIf="mode == 'assess'" (click)="mode='assess'" class="toggle-button-on" tabindex="0" style="font-size: 16px"> <b style="font-size: 20px">Assessment Mode</b> <br /> Take a practice test from start to finish then see the breakdown of your overall results </button>
             <button *ngIf="mode != 'assess'" (click)="mode='assess'" class="toggle-button-off" tabindex="0" style="font-size: 16px"> <b style="font-size: 20px">Assessment Mode</b> <br /> Take a practice test from start to finish then see the breakdown of your overall results </button>
           </label>
           <label class="switch" style="max-height: 200px; max-width: 350px; width: min(80%, 300px)">
-            <input type="checkbox" value="explain">
+            <input type="checkbox" style="margin: 0px" value="explain">
             <button *ngIf="mode == 'explain'" (click)="mode='explain'" class="toggle-button-on" tabindex="0" style="font-size: 16px"> <b style="font-size: 20px">Explanation Mode</b> <br /> Take a practice test and see feedback about how you're doing question by question </button>
             <button *ngIf="mode != 'explain'" (click)="mode='explain'" class="toggle-button-off" tabindex="0" style="font-size: 16px"> <b style="font-size: 20px">Explanation Mode</b> <br /> Take a practice test and see feedback about how you're doing question by question </button>
           </label>
@@ -916,12 +916,12 @@
         <input type="hidden" value="number" #lengthMode>
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch" style="max-height: 200px; max-width: 350px; width: min(80%, 300px)">
-            <input type="checkbox" value="number">
+            <input type="checkbox" style="margin: 0px" value="number">
             <button *ngIf="length_mode == 'number'" (click)="length_mode='number'" class="toggle-button-on" tabindex="0" style="font-size: 16px"> <b style="font-size: 20px">Total Questions</b> <br /> Set a total number of questions and take as much time as needed </button>
             <button *ngIf="length_mode != 'number'" (click)="length_mode='number'" class="toggle-button-off" tabindex="0" style="font-size: 16px"> <b style="font-size: 20px">Total Questions</b> <br /> Set a total number of questions and take as much time as needed </button>
           </label>
           <label class="switch" style="max-height: 200px; max-width: 350px; width: min(80%, 300px)">
-            <input type="checkbox" value="timer">
+            <input type="checkbox" style="margin: 0px" value="timer">
             <button *ngIf="length_mode == 'timer'" (click)="length_mode='timer'" class="toggle-button-on" tabindex="0" style="font-size: 16px"> <b style="font-size: 20px">Duration of Time</b> <br /> Set a length of time and answer as many questions as possible</button>
             <button *ngIf="length_mode != 'timer'" (click)="length_mode='timer'" class="toggle-button-off" tabindex="0" style="font-size: 16px"> <b style="font-size: 20px">Duration of Time</b> <br /> Set a length of time and answer as many questions as possible </button>
           </label>
@@ -1293,7 +1293,7 @@
             <section *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" value="{{expand_refsheet}}">
+                <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
                 <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on"> <b> Show
                     Reference Sheet </b>
                 </button>
@@ -1305,7 +1305,7 @@
             <section *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" value="{{expand_supp}}">
+                <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
                 <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
                     Supplement(s) </b>
                 </button>
@@ -1623,7 +1623,7 @@
                   (click)="selection.value = choice.key; attempt_mc_st_problem(choice.key, ''); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button
                       *ngIf="subtopic_problem_selection[0][0]==choice.key && !subtopic_attempt_response[0].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
@@ -1653,7 +1653,7 @@
                   (click)="attempt_ms_st_problem(choice.key, ''); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="subtopic_problem_selection[0].includes(choice.key) && !choice.value.Key.Correct"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
@@ -2219,7 +2219,7 @@
                   (click)="selection.value = choice.key; attempt_mc_st_problem(choice.key, part.key); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && !subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
@@ -2243,7 +2243,7 @@
                   (click)="attempt_ms_st_problem(choice.key, part.key); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && !choice.value.Key.Correct"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
@@ -2438,7 +2438,7 @@
           <div *ngIf="expand_overview && mode == 'assess'" class="card-container"
             style="height: auto; max-height: 650px; width: 100%; margin-top: 15px; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <label *ngFor="let sub of order_numbers()" (click)="go_to_prob(sub)" class="switch" style="padding: 0px; margin: 0px; height: 45px; width: 60px">
-              <input type="checkbox" value="{{sub}}">
+              <input type="checkbox" style="margin: 0px" value="{{sub}}">
               <button *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Attempts[0] != 0)  && !exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]" class="toggle-button-off" style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
                 <span style="font-size: 25px; font-weight: 1200; width: 30px; text-align: right;"> 
@@ -2544,12 +2544,12 @@
                             </div>
                             <div style="text-align: center; align-items: center; margin: auto">
                                 <label class="switch" style="margin: 0 25px">
-                                    <input type="checkbox" value="Parent">
+                                    <input type="checkbox" style="margin: 0px" value="Parent">
                                     <button *ngIf="parent_select" (click)="parent_select = !parent_select" class="toggle-button-on" tabindex="0"> <b> Parent </b> </button>
                                     <button *ngIf="!parent_select" (click)="parent_select = !parent_select" class="toggle-button-off" tabindex="0"> <b> Parent </b> </button>
                                 </label>
                                 <label class="switch" style="margin: 0 25px">
-                                    <input type="checkbox" value="Teacher">
+                                    <input type="checkbox" style="margin: 0px" value="Teacher">
                                     <button *ngIf="teacher_select" (click)="teacher_select = !teacher_select" class="toggle-button-on" tabindex="0"> <b> Teacher </b> </button>
                                     <button *ngIf="!teacher_select" (click)="teacher_select = !teacher_select" class="toggle-button-off" tabindex="0"> <b> Teacher </b> </button>
                                 </label>
@@ -2883,7 +2883,7 @@
           <section *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
             style="height: auto; width: 100%; display: flex; justify-content: center">
             <label class="switch" style="padding: 0 10px">
-              <input type="checkbox" value="{{expand_refsheet}}">
+              <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
               <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on"> <b> Show
                   Reference Sheet </b>
               </button>
@@ -2895,7 +2895,7 @@
           <section *ngIf="exam_dump[problem_number].SuppContent.length > 0"
             style="height: auto; width: 100%; display: flex; justify-content: center">
             <label class="switch" style="padding: 0 10px">
-              <input type="checkbox" value="{{expand_supp}}">
+              <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
               <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
                   Supplement(s) </b>
               </button>
@@ -3360,7 +3360,7 @@
                 (click)="selection.value = choice.key; attempt_mc_problem(choice.key, ''); scroll_bottom()"
                 style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                 <label class="switch" style="padding: 0 10px">
-                  <input type="checkbox" value="{{choice.key}}">
+                  <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                   <button
                     *ngIf="problem_selection[0][0]==choice.key && mode == 'assess'"
                     class="toggle-button-on"> <b> {{choice.key}} </b>
@@ -3405,7 +3405,7 @@
                 (click)="attempt_ms_problem(choice.key, ''); scroll_bottom()"
                 style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                 <label class="switch" style="padding: 0 10px">
-                  <input type="checkbox" value="{{choice.key}}">
+                  <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                   <button *ngIf="problem_selection[0].includes(choice.key) && !choice.value.Key.Correct && mode == 'explain'"
                     class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                   </button>
@@ -4236,7 +4236,7 @@
                 (click)="selection.value = choice.key; attempt_mc_problem(choice.key, part.key); scroll_bottom()"
                 style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                 <label class="switch" style="padding: 0 10px">
-                  <input type="checkbox" value="{{choice.key}}">
+                  <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                   <button
                     *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && mode == 'assess'"
                     class="toggle-button-on"> <b> {{choice.key}} </b>
@@ -4281,7 +4281,7 @@
                 (click)="attempt_ms_problem(choice.key, part.key); scroll_bottom()"
                 style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                 <label class="switch" style="padding: 0 10px">
-                  <input type="checkbox" value="{{choice.key}}">
+                  <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                   <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && !choice.value.Key.Correct && mode == 'explain'"
                     class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                   </button>

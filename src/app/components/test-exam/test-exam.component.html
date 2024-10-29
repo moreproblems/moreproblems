@@ -323,7 +323,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
   }
@@ -340,7 +340,7 @@
     border-radius: 12px;
     border: 3px solid #0a1e33;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -354,7 +354,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -368,7 +368,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -851,7 +851,7 @@
             <section *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" value="{{expand_refsheet}}">
+                <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
                 <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on"> <b> Show
                     Reference Sheet </b>
                 </button>
@@ -863,7 +863,7 @@
             <section *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" value="{{expand_supp}}">
+                <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
                 <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
                     Supplement(s) </b>
                 </button>
@@ -1181,7 +1181,7 @@
                   (click)="selection.value = choice.key; attempt_mc_st_problem(choice.key, ''); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button
                       *ngIf="subtopic_problem_selection[0][0]==choice.key && !subtopic_attempt_response[0].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
@@ -1211,7 +1211,7 @@
                   (click)="attempt_ms_st_problem(choice.key, ''); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="subtopic_problem_selection[0].includes(choice.key) && !choice.value.Key.Correct"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
@@ -1777,7 +1777,7 @@
                   (click)="selection.value = choice.key; attempt_mc_st_problem(choice.key, part.key); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && !subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
@@ -1801,7 +1801,7 @@
                   (click)="attempt_ms_st_problem(choice.key, part.key); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && !choice.value.Key.Correct"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
@@ -2140,7 +2140,7 @@
             <section *ngIf="exam_attribute_dump[key].RefSheet != ''"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" value="{{expand_refsheet}}">
+                <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
                 <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on"> <b> Show
                     Reference Sheet </b>
                 </button>
@@ -2152,7 +2152,7 @@
             <section *ngIf="exam_dump[problem_number].SuppContent.length > 0"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" value="{{expand_supp}}">
+                <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
                 <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
                     Supplement(s) </b>
                 </button>
@@ -2569,7 +2569,7 @@
                   (click)="selection.value = choice.key; attempt_mc_problem(choice.key, ''); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="problem_selection[0][0]==choice.key && !attempt_response[0].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
@@ -2597,7 +2597,7 @@
                   (click)="attempt_ms_problem(choice.key, ''); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="problem_selection[0].includes(choice.key) && !choice.value.Key.Correct"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
@@ -3292,7 +3292,7 @@
                   (click)="selection.value = choice.key; attempt_mc_problem(choice.key, part.key); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && !attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
@@ -3320,7 +3320,7 @@
                   (click)="attempt_ms_problem(choice.key, part.key); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && !choice.value.Key.Correct"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>

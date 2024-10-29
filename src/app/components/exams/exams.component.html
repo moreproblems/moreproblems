@@ -298,7 +298,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
   }
@@ -315,7 +315,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -328,7 +328,7 @@
     border-radius: 12px;
     border: 3px solid #0a1e33;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -543,31 +543,33 @@
     </div>
     <!-- PDF Viewer -->
     <div class="card card-large" (window:resize)="width_change()"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
       #pdfViewer>
-      <br />
       <section
-        style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
-        <h1 *ngIf="this.screenWidth <= 900" style="margin: auto 5px; text-align: center; font-size: 22px">
+        style="margin-top: 15px; height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+        <h1 *ngIf="this.screenWidth <= 550" style="margin: auto 5px; text-align: center; font-size: 17px">
+          {{exam_name}} </h1>
+        <h1 *ngIf="this.screenWidth > 550 && this.screenWidth <= 900" style="margin: auto 10px; text-align: center; font-size: 21px">
           {{exam_name}} </h1>
         <h1 *ngIf="this.screenWidth > 900" style="margin: auto 15px; text-align: center; font-size: 26px">
           {{exam_name}} </h1>
         <button *ngIf="exam_set.includes(exam_id) && this.screenWidth <= 900" (click)="take_exam()"
           class="grade-button"
-          style="margin: 10px 5px 5px; padding: 8px; width: auto; height: auto; background-color: green">
+          style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: green">
           <img src="./assets/media/icons/test.png" style="height: 25px">
-          <b style="margin-left: 10px; font-size: 17px; line-height: 21px; width: auto"> Take Exam! </b>
+          <b style="margin-left: 10px; font-size: 17px; line-height: 19px; width: auto"> Take Exam! </b>
         </button>
         <button *ngIf="exam_set.includes(exam_id) && this.screenWidth > 900" (click)="take_exam()"
-          class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto; background-color: green">
+          class="grade-button" style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: green">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px; font-size: 22px; line-height: 26px; width: auto"> Take Exam! </b>
         </button>
       </section>
+      <hr style="width: max(80%, 300px)">
       <section
         style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
         <button *ngIf="this.screenWidth <= 900 && authService.userData as user" (click)="toggle_favorite()"
-          class="grade-button" style="margin: 10px 5px 5px; padding: 6px; width: auto; height: auto">
+          class="grade-button" style="margin: 5px; padding: 6px; width: auto; height: auto">
           <span *ngIf="!this.exam_fav"
             style="font-size: 18px; font-weight: 2px; color: white; -webkit-text-stroke: 2px #4db7fd"> <i class="fas fa-bookmark"></i>
           </span>
@@ -578,7 +580,7 @@
           <b *ngIf="this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Bookmarked </b>
         </button>
         <button *ngIf="this.screenWidth > 900 && authService.userData as user" (click)="toggle_favorite()"
-          class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
+          class="grade-button" style="margin: 5px; width: auto; height: auto">
           <span *ngIf="!this.exam_fav"
             style="font-size: 22px; font-weight: 2px; color: white; -webkit-text-stroke: 2px #4db7fd"> <i class="fas fa-bookmark"></i>
           </span>
@@ -597,13 +599,13 @@
           <button
             *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="toggle_assign_exam()" class="grade-button"
-            style="margin: 10px 5px 5px; padding: 6px; width: auto; height: auto">
+            style="margin: 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/assign.png" style="height: 22px">
             <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Assign </b>
           </button>
           <button
             *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
-            (click)="toggle_assign_exam()" class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
+            (click)="toggle_assign_exam()" class="grade-button" style="margin: 5px; width: auto; height: auto">
             <img src="./assets/media/icons/assign.png" style="height: 27px">
             <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Assign </b>
           </button>
@@ -612,13 +614,13 @@
           <button
             *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
-            style="margin: 10px 5px 5px; padding: 6px; width: auto; height: auto">
+            style="margin: 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/key.png" style="height: 22px">
             <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Answer Key </b>
           </button>
           <button *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
             (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
-            style="margin: 10px 5px 5px; width: auto; height: auto">
+            style="margin: 5px; width: auto; height: auto">
             <img src="./assets/media/icons/key.png" style="height: 25px">
             <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Answer Key </b>
           </button>
@@ -630,17 +632,17 @@
         <div>
           <div style="display: flex; flex-direction: row">
             <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="download_exam()" class="grade-button"
-              style="margin: 5px 5px auto; padding: 6px; width: auto; height: auto">
+              style="margin: 5px; padding: 6px; width: auto; height: auto">
               <img src="./assets/media/icons/download.png" style="height: 25px">
               <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Download </b>
             </button>
             <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="download_exam()" class="grade-button"
-              style="margin: 5px 5px auto; width: auto; height: auto">
+              style="margin: 5px; width: auto; height: auto">
               <img src="./assets/media/icons/download.png" style="height: 25px">
               <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Download </b>
             </button>
             <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="print_exam()" class="grade-button"
-              style="margin: 5px 5px auto; width: auto; height: auto">
+              style="margin: 5px; width: auto; height: auto">
               <img src="./assets/media/icons/print.png" style="height: 25px">
               <b style="margin-left: 10px"> Print </b>
             </button>
@@ -687,17 +689,16 @@
         </button>
       </section>
       <section *ngIf="file_source != ''"
-        style="height: 90%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden; background-color: #eee">
+        style="margin-bottom: 10px; height: 90%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden; background-color: #eee">
         <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
           [(page)]="file_page" style="min-height: 550px; height: 100%"></pdf-viewer>
         <pdf-viewer *ngIf="this.screenWidth > 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
           [(page)]="file_page" style="min-height: 625px; height: 100%"></pdf-viewer>
       </section>
-      <br />
     </div>
   </div>
   <div *ngIf="assign_e" class="card card-large"
-    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: 10px auto; padding: 0 5%; display: flex; flex-direction: column">
     <br />
     <h1 style="line-height: 28px"> Assign This Exam </h1>
     <div class="media">
@@ -780,9 +781,8 @@
     <br />
   </div>
   <div *ngIf="file_source == ''" class="content-menu" role="menu" style="margin-bottom: 0; align-items: center">
-    <br *ngIf="(selected_state == 'All' && selected_grade == '') || selected_state == ''" />
     <div *ngIf="(selected_state == 'All' && selected_grade == '') || selected_state == ''" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2 *ngIf="screenWidth > mobileWidth" style="font-weight: 400; font-size: 24.5px; line-height: 30px"> Explore our
         library of released end-of-year exams. Find standardized practice problems for every student - with answer keys
@@ -793,49 +793,43 @@
         and explanations for teachers and parents. Just pick your state and/or grade, then download or print available
         exams across math, English language, science, & social studies. </h2>
       <br />
-      <!-- <h3 *ngIf="screenWidth > mobileWidth" (click)="select_state('All'); scroll(chooseGrade)"
-        style="font-weight: 600; font-size: 20px"><a> Don't see your state? Click here to choose your grade and subject
-          instead. </a></h3>
-      <h3 *ngIf="screenWidth <= mobileWidth" (click)="select_state('All'); scroll(chooseGrade)"
-        style="font-weight: 600; font-size: 16px"><a> Don't see your state? Click here to choose your grade and subject
-          instead. </a></h3>
-      <br /> -->
     </div>
-    <br />
     <!-- State Selector -->
     <div class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
       #stateSelectorCard>
       <br />
       <div class="card card-medium"
-        style="margin: auto; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
-        <h2 style="margin-bottom: 0px"> Choose Your State </h2>
-        <br />
+        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(90%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        <h2 style="padding: 10px; margin-bottom: 0px"> Choose Your State </h2>
         <input type="hidden" value="" #state>
-        <div class="card-container" style="max-width: 100%; margin-top: 0px">
+        <div class="card-container" style="padding: 10px; max-width: 100%; margin-top: 0px">
           <!-- <label class="switch">
-              <input type="checkbox" value="CA">
+              <input type="checkbox" style="margin: 0px" value="CA">
               <button *ngIf="selected_state == 'CA'" (click)="select_state('CA'); scroll_top()" class="toggle-button-on"
                 tabindex="0"><b>California</b> <br /> (CAASPP)</button>
               <button *ngIf="selected_state != 'CA'" (click)="select_state('CA'); scroll(chooseGrade)" class="toggle-button-off"
                 tabindex="0"><b>California</b> <br /> (CAASPP)</button>
             </label> -->
           <label class="switch">
-            <input type="checkbox" value="CO">
+            <input type="checkbox" style="margin: 0px" value="CO">
             <button *ngIf="selected_state == 'CO'" (click)="select_state('CO'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/CO.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/CO.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Colorado</b> <br /> (CMAS)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Colorado</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Colorado</b> <br />
                 (CMAS) </div>
             </button>
             <button *ngIf="selected_state != 'CO'" (click)="select_state('CO'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/CO.png" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -843,26 +837,29 @@
                 <b>Colorado</b> <br /> (CMAS)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Colorado</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Colorado</b> <br />
                 (CMAS) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="DE">
+            <input type="checkbox" style="margin: 0px" value="DE">
             <button *ngIf="selected_state == 'DE'" (click)="select_state('DE'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/DE.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/DE.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Delaware</b> <br /> (DeSSA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Delaware</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Delaware</b> <br />
                 (DeSSA) </div>
             </button>
             <button *ngIf="selected_state != 'DE'" (click)="select_state('DE'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/DE.png" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -870,26 +867,29 @@
                 <b>Delaware</b> <br /> (DeSSA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Delaware</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Delaware</b> <br />
                 (DeSSA) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="FL">
+            <input type="checkbox" style="margin: 0px" value="FL">
             <button *ngIf="selected_state == 'FL'" (click)="select_state('FL'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/FL.png" style="padding: 5px 0 0; height: 30px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/FL.png" style="padding: 5px 0 0; height: 24px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Florida</b> <br /> (FSA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Florida</b> <br /> (FSA)
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Florida</b> <br /> (FSA)
               </div>
             </button>
             <button *ngIf="selected_state != 'FL'" (click)="select_state('FL'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/FL.png" style="padding: 5px 0 0; height: 30px">
               </div>
@@ -897,33 +897,36 @@
                 <b>Florida</b> <br /> (FSA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Florida</b> <br /> (FSA)
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Florida</b> <br /> (FSA)
               </div>
             </button>
           </label>
           <!-- <label class="switch">
-              <input type="checkbox" value="GA">
+              <input type="checkbox" style="margin: 0px" value="GA">
               <button *ngIf="selected_state == 'GA'" (click)="select_state('GA'); scroll_top()" class="toggle-button-on"
                 tabindex="0"><b>Georgia</b> <br /> (GMAS)</button>
               <button *ngIf="selected_state != 'GA'" (click)="select_state('GA'); chooseGrade)" class="toggle-button-off"
                 tabindex="0"><b>Georgia</b> <br /> (GMAS)</button>
             </label> -->
           <label class="switch">
-            <input type="checkbox" value="IL">
+            <input type="checkbox" style="margin: 0px" value="IL">
             <button *ngIf="selected_state == 'IL'" (click)="select_state('IL'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/IL.png" style="padding: 5px 0 0; height: 30px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/IL.png" style="padding: 5px 0 0; height: 24px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Illinois</b> <br /> (IAR)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Illinois</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Illinois</b> <br />
                 (IAR) </div>
             </button>
             <button *ngIf="selected_state != 'IL'" (click)="select_state('IL'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/IL.png" style="padding: 5px 0 0; height: 30px">
               </div>
@@ -931,33 +934,36 @@
                 <b>Illinois</b> <br /> (IAR)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Illinois</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Illinois</b> <br />
                 (IAR) </div>
             </button>
           </label>
           <!-- <label class="switch">
-              <input type="checkbox" value="IN">
+              <input type="checkbox" style="margin: 0px" value="IN">
               <button *ngIf="selected_state == 'IN'" (click)="select_state('IN'); scroll_top()" class="toggle-button-on"
                 tabindex="0"><b>Indiana</b> <br /> (ISTEP)</button>
               <button *ngIf="selected_state != 'IN'" (click)="select_state('IN'); scroll(chooseGrade)" class="toggle-button-off"
                 tabindex="0"><b>Indiana</b> <br /> (ISTEP)</button>
             </label> -->
           <label class="switch">
-            <input type="checkbox" value="ME">
+            <input type="checkbox" style="margin: 0px" value="ME">
             <button *ngIf="selected_state == 'ME'" (click)="select_state('ME'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/ME.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/ME.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Maine</b> <br /> (MEA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Maine</b> <br /> (MEA)
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Maine</b> <br /> (MEA)
               </div>
             </button>
             <button *ngIf="selected_state != 'ME'" (click)="select_state('ME'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/ME.png" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -965,26 +971,29 @@
                 <b>Maine</b> <br /> (MEA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Maine</b> <br /> (MEA)
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Maine</b> <br /> (MEA)
               </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="MD">
+            <input type="checkbox" style="margin: 0px" value="MD">
             <button *ngIf="selected_state == 'MD'" (click)="select_state('MD'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/MD.png" style="padding: 5px 0 0; height: 20px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/MD.png" style="padding: 5px 0 0; height: 16px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Maryland</b> <br /> (MCAP)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Maryland</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Maryland</b> <br />
                 (MCAP) </div>
             </button>
             <button *ngIf="selected_state != 'MD'" (click)="select_state('MD'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/MD.png" style="padding: 5px 0 0; height: 20px">
               </div>
@@ -992,26 +1001,29 @@
                 <b>Maryland</b> <br /> (MCAP)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Maryland</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Maryland</b> <br />
                 (MCAP) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="MA">
+            <input type="checkbox" style="margin: 0px" value="MA">
             <button *ngIf="selected_state == 'MA'" (click)="select_state('MA'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/MA.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/MA.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Massachusetts</b> <br /> (MCAS)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Massachusetts</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Massachusetts</b> <br />
                 (MCAS) </div>
             </button>
             <button *ngIf="selected_state != 'MA'" (click)="select_state('MA'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/MA.png" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -1019,33 +1031,36 @@
                 <b>Massachusetts</b> <br /> (MCAS)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Massachusetts</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Massachusetts</b> <br />
                 (MCAS) </div>
             </button>
           </label>
           <!-- <label class="switch">
-              <input type="checkbox" value="MI">
+              <input type="checkbox" style="margin: 0px" value="MI">
               <button *ngIf="selected_state == 'MI'" (click)="select_state('MI'); scroll_top()" class="toggle-button-on"
                 tabindex="0"><b>Michigan</b> <br /> (M-STEP)</button>
               <button *ngIf="selected_state != 'MI'" (click)="select_state('MI'); scroll(chooseGrade)" class="toggle-button-off"
                 tabindex="0"><b>Michigan</b> <br /> (M-STEP)</button>
             </label> -->
           <label class="switch">
-            <input type="checkbox" value="MN">
+            <input type="checkbox" style="margin: 0px" value="MN">
             <button *ngIf="selected_state == 'MN'" (click)="select_state('MN'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/MN.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/MN.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Minnesota</b> <br /> (MCA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Minnesota</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Minnesota</b> <br />
                 (MCA) </div>
             </button>
             <button *ngIf="selected_state != 'MN'" (click)="select_state('MN'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/MN.png" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -1053,26 +1068,29 @@
                 <b>Minnesota</b> <br /> (MCA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Minnesota</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Minnesota</b> <br />
                 (MCA) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="MS">
+            <input type="checkbox" style="margin: 0px" value="MS">
             <button *ngIf="selected_state == 'MS'" (click)="select_state('MS'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/MS.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/MS.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Mississippi</b> <br /> (MAAP)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Mississippi</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Mississippi</b> <br />
                 (MAAP) </div>
             </button>
             <button *ngIf="selected_state != 'MS'" (click)="select_state('MS'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/MS.png" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -1080,26 +1098,29 @@
                 <b>Mississippi</b> <br /> (MAAP)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Mississippi</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Mississippi</b> <br />
                 (MAAP) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="MO">
+            <input type="checkbox" style="margin: 0px" value="MO">
             <button *ngIf="selected_state == 'MO'" (click)="select_state('MO'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/MO.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/MO.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Missouri</b> <br /> (MAP)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Missouri</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Missouri</b> <br />
                 (MAP) </div>
             </button>
             <button *ngIf="selected_state != 'MO'" (click)="select_state('MO'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/MO.png" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -1107,26 +1128,29 @@
                 <b>Missouri</b> <br /> (MAP)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Missouri</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Missouri</b> <br />
                 (MAP) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="NE">
+            <input type="checkbox" style="margin: 0px" value="NE">
             <button *ngIf="selected_state == 'NE'" (click)="select_state('NE'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/NE.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/NE.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Nebraska</b> <br /> (NSCAS)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Nebraska</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Nebraska</b> <br />
                 (NSCAS) </div>
             </button>
             <button *ngIf="selected_state != 'NE'" (click)="select_state('NE'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/NE.png" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -1134,26 +1158,29 @@
                 <b>Nebraska</b> <br /> (NSCAS)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Nebraska</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Nebraska</b> <br />
                 (NSCAS) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="NJ">
+            <input type="checkbox" style="margin: 0px" value="NJ">
             <button *ngIf="selected_state == 'NJ'" (click)="select_state('NJ'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/NJ.png" style="padding: 5px 0 0; height: 30px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/NJ.png" style="padding: 5px 0 0; height: 24px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>New Jersey</b> <br /> (NJSLA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>New Jersey</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>New Jersey</b> <br />
                 (NJSLA) </div>
             </button>
             <button *ngIf="selected_state != 'NJ'" (click)="select_state('NJ'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/NJ.png" style="padding: 5px 0 0; height: 30px">
               </div>
@@ -1161,26 +1188,29 @@
                 <b>New Jersey</b> <br /> (NJSLA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>New Jersey</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>New Jersey</b> <br />
                 (NJSLA) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="NM">
+            <input type="checkbox" style="margin: 0px" value="NM">
             <button *ngIf="selected_state == 'NM'" (click)="select_state('NM'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/NM.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/NM.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>New Mexico</b> <br /> (NM-MSSA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>New Mexico</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>New Mexico</b> <br />
                 (NM-MSSA) </div>
             </button>
             <button *ngIf="selected_state != 'NM'" (click)="select_state('NM'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/NM.png" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -1188,26 +1218,29 @@
                 <b>New Mexico</b> <br /> (NM-MSSA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>New Mexico</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>New Mexico</b> <br />
                 (NM-MSSA) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="NY">
+            <input type="checkbox" style="margin: 0px" value="NY">
             <button *ngIf="selected_state == 'NY'" (click)="select_state('NY'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/NY.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/NY.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>New York</b> <br /> (NYSTP)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>New York</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>New York</b> <br />
                 (NYSTP) </div>
             </button>
             <button *ngIf="selected_state != 'NY'" (click)="select_state('NY'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/NY.png" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -1215,27 +1248,30 @@
                 <b>New York</b> <br /> (NYSTP)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>New York</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>New York</b> <br />
                 (NYSTP) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="NC">
+            <input type="checkbox" style="margin: 0px" value="NC">
             <button *ngIf="selected_state == 'NC'" (click)="select_state('NC'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 15px">
                 <img src="./assets/media/flags/NC.png" style="padding: 5px 0 0; height: 15px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/NC.png" style="padding: 5px 0 0; height: 12px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>North Carolina</b> <br /> (EOG)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>North Carolina</b>
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>North Carolina</b>
                 <br /> (EOG)
               </div>
             </button>
             <button *ngIf="selected_state != 'NC'" (click)="select_state('NC'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/NC.png" style="padding: 5px 0 0; height: 15px">
               </div>
@@ -1243,34 +1279,37 @@
                 <b>North Carolina</b> <br /> (EOG)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>North Carolina</b>
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>North Carolina</b>
                 <br /> (EOG)
               </div>
             </button>
           </label>
           <!-- <label class="switch">
-              <input type="checkbox" value="OH">
+              <input type="checkbox" style="margin: 0px" value="OH">
               <button *ngIf="selected_state == 'OH'" (click)="select_state('OH'); scroll_top()" class="toggle-button-on"
                 tabindex="0"><b>Ohio</b> <br /> (OST)</button>
               <button *ngIf="selected_state != 'OH'" (click)="select_state('OH'); scroll(chooseGrade)" class="toggle-button-off"
                 tabindex="0"><b>Ohio</b> <br /> (OST)</button>
             </label> -->
           <label class="switch">
-            <input type="checkbox" value="PA">
+            <input type="checkbox" style="margin: 0px" value="PA">
             <button *ngIf="selected_state == 'PA'" (click)="select_state('PA'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/PA.png" style="padding: 5px 0 0; height: 20px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/PA.png" style="padding: 5px 0 0; height: 16px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Pennsylvania</b> <br /> (PSSA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Pennsylvania</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Pennsylvania</b> <br />
                 (PSSA) </div>
             </button>
             <button *ngIf="selected_state != 'PA'" (click)="select_state('PA'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/PA.png" style="padding: 5px 0 0; height: 20px">
               </div>
@@ -1278,26 +1317,29 @@
                 <b>Pennsylvania</b> <br /> (PSSA)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Pennsylvania</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Pennsylvania</b> <br />
                 (PSSA) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="RI">
+            <input type="checkbox" style="margin: 0px" value="RI">
             <button *ngIf="selected_state == 'RI'" (click)="select_state('RI'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/RI.svg" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/RI.svg" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Rhode Island</b> <br /> (RICAS)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Rhode Island</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Rhode Island</b> <br />
                 (RICAS) </div>
             </button>
             <button *ngIf="selected_state != 'RI'" (click)="select_state('RI'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/RI.svg" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -1305,27 +1347,30 @@
                 <b>Rhode Island</b> <br /> (RICAS)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Rhode Island</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Rhode Island</b> <br />
                 (RICAS) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="SC">
+            <input type="checkbox" style="margin: 0px" value="SC">
             <button *ngIf="selected_state == 'SC'" (click)="select_state('SC'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/SC.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/SC.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>South Carolina</b> <br /> (SC READY)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>South Carolina</b>
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>South Carolina</b>
                 <br /> (SC READY)
               </div>
             </button>
             <button *ngIf="selected_state != 'SC'" (click)="select_state('SC'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/SC.png" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -1333,27 +1378,30 @@
                 <b>South Carolina</b> <br /> (SC READY)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>South Carolina</b>
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>South Carolina</b>
                 <br /> (SC READY)
               </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="TN">
+            <input type="checkbox" style="margin: 0px" value="TN">
             <button *ngIf="selected_state == 'TN'" (click)="select_state('TN'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/TN.png" style="padding: 5px 0 0; height: 10px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/TN.png" style="padding: 5px 0 0; height: 8px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Tennessee</b> <br /> (TCAP)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Tennessee</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Tennessee</b> <br />
                 (TCAP) </div>
             </button>
             <button *ngIf="selected_state != 'TN'" (click)="select_state('TN'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/TN.png" style="padding: 5px 0 0; height: 10px">
               </div>
@@ -1361,26 +1409,29 @@
                 <b>Tennessee</b> <br /> (TCAP)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Tennessee</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Tennessee</b> <br />
                 (TCAP) </div>
             </button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="TX">
+            <input type="checkbox" style="margin: 0px" value="TX">
             <button *ngIf="selected_state == 'TX'" (click)="select_state('TX'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/TX.png" style="padding: 5px 0 0; height: 30px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/TX.png" style="padding: 5px 0 0; height: 24px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Texas</b> <br /> (STAAR)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Texas</b> <br /> (STAAR)
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Texas</b> <br /> (STAAR)
               </div>
             </button>
             <button *ngIf="selected_state != 'TX'" (click)="select_state('TX'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/TX.png" style="padding: 5px 0 0; height: 30px">
               </div>
@@ -1388,40 +1439,43 @@
                 <b>Texas</b> <br /> (STAAR)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Texas</b> <br /> (STAAR)
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Texas</b> <br /> (STAAR)
               </div>
             </button>
           </label>
           <!-- <label class="switch">
-              <input type="checkbox" value="VA">
+              <input type="checkbox" style="margin: 0px" value="VA">
               <button *ngIf="selected_state == 'VA'" (click)="select_state('VA'); scroll_top()" class="toggle-button-on"
                 tabindex="0"><b>Virginia</b> <br /> (SOL)</button>
               <button *ngIf="selected_state != 'VA'" (click)="select_state('VA'); scroll(chooseGrade)" class="toggle-button-off"
                 tabindex="0"><b>Virginia</b> <br /> (SOL)</button>
             </label> -->
           <!-- <label class="switch">
-              <input type="checkbox" value="WA">
+              <input type="checkbox" style="margin: 0px" value="WA">
               <button *ngIf="selected_state == 'WA'" (click)="select_state('WA'); scroll_top()" class="toggle-button-on"
                 tabindex="0"><b>Washingtong</b> <br /> (WCAP)</button>
               <button *ngIf="selected_state != 'WA'" (click)="select_state('WA'); scroll(chooseGrade)" class="toggle-button-off"
                 tabindex="0"><b>Washingtong</b> <br /> (WCAP)</button>
             </label> -->
           <label class="switch">
-            <input type="checkbox" value="WI">
+            <input type="checkbox" style="margin: 0px" value="WI">
             <button *ngIf="selected_state == 'WI'" (click)="select_state('WI'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/WI.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/WI.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b>Wisconsin</b> <br /> (WFE)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Wisconsin</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Wisconsin</b> <br />
                 (WFE) </div>
             </button>
             <button *ngIf="selected_state != 'WI'" (click)="select_state('WI'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0" style="display: flex; flex-direction: row; align-items: center">
+              class="toggle-button-off" tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/WI.png" style="padding: 5px 0 0; height: 25px">
               </div>
@@ -1429,39 +1483,44 @@
                 <b>Wisconsin</b> <br /> (WFE)
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth"
-                style="margin: 0 1px; text-align: center; font-size: 14px; line-height: 16px"> <b>Wisconsin</b> <br />
+                style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px"> <b>Wisconsin</b> <br />
                 (WFE) </div>
             </button>
           </label>
         </div>
-        <br />
         <input type="hidden" value="" #state>
-        <div class="card-container" style="max-width: 100%">
+        <div class="card-container" style="margin-top: 0px; padding: 10px; max-width: 100%">
           <label class="switch" style="max-width: 500px; width: auto">
-            <input type="checkbox" value="All">
+            <input type="checkbox" style="margin: 0px" value="All">
             <button *ngIf="selected_state == 'All'" (click)="select_state('All'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="display: flex; flex-direction: row; align-items: center; max-width: 500px; width: auto">
-              <div style="margin: 0 5px">
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 500px; width: auto">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/US.png" style="padding: 5px 0 0; height: 25px">
               </div>
-              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
-                <b> All United States Exams </b> <br /> (including The SAT)
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/US.png" style="padding: 5px 0 0; height: 20px">
               </div>
-              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 15px">
-                <b> All United States Exams </b> <br /> (including The SAT)
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
+                <b> All Exams Nationwide </b> <br /> (includes SAT)
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 15px; line-height: 18px">
+                <b> All Exams Nationwide </b> <br /> (includes SAT)
               </div>
             </button>
             <button *ngIf="selected_state != 'All'" (click)="select_state('All'); scroll(chooseGrade)"
               class="toggle-button-off" tabindex="0"
-              style="display: flex; flex-direction: row; align-items: center; max-width: 500px; width: auto">
-              <div style="margin: 0 5px">
+              style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 500px; width: auto">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
                 <img src="./assets/media/flags/US.png" style="padding: 5px 0 0; height: 25px">
               </div>
-              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
-                <b> All United States Exams </b> <br /> (including The SAT)
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/US.png" style="padding: 5px 0 0; height: 20px">
               </div>
-              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 15px">
-                <b> All United States Exams </b> <br /> (including The SAT)
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
+                <b> All Exams Nationwide </b> <br /> (includes SAT)
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 15px; line-height: 18px">
+                <b> All Exams Nationwide </b> <br /> (includes SAT)
               </div>
             </button>
           </label>
@@ -1486,7 +1545,7 @@
         <input type="hidden" #grade>
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
-            <input type="checkbox" value="G2">
+            <input type="checkbox" style="margin: 0px" value="G2">
             <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2'); scroll(chooseSubject)"
               class="toggle-button-on" tabindex="0">Grade
               <b>2</b></button>
@@ -1495,7 +1554,7 @@
               <b>2</b></button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G3">
+            <input type="checkbox" style="margin: 0px" value="G3">
             <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)"
               class="toggle-button-on" tabindex="0">Grade
               <b>3</b></button>
@@ -1504,7 +1563,7 @@
               <b>3</b></button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G4">
+            <input type="checkbox" style="margin: 0px" value="G4">
             <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)"
               class="toggle-button-on" tabindex="0">Grade
               <b>4</b></button>
@@ -1513,7 +1572,7 @@
               <b>4</b></button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G5">
+            <input type="checkbox" style="margin: 0px" value="G5">
             <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)"
               class="toggle-button-on" tabindex="0">Grade
               <b>5</b></button>
@@ -1522,7 +1581,7 @@
               <b>5</b></button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G6">
+            <input type="checkbox" style="margin: 0px" value="G6">
             <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)"
               class="toggle-button-on" tabindex="0">Grade
               <b>6</b></button>
@@ -1531,7 +1590,7 @@
               <b>6</b></button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G7">
+            <input type="checkbox" style="margin: 0px" value="G7">
             <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)"
               class="toggle-button-on" tabindex="0">Grade
               <b>7</b></button>
@@ -1540,7 +1599,7 @@
               <b>7</b></button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G8">
+            <input type="checkbox" style="margin: 0px" value="G8">
             <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)"
               class="toggle-button-on" tabindex="0">Grade
               <b>8</b></button>
@@ -1549,7 +1608,7 @@
               <b>8</b></button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G9">
+            <input type="checkbox" style="margin: 0px" value="G9">
             <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9'); scroll(chooseSubject)"
               class="toggle-button-on" tabindex="0">Grade
               <b>9</b></button>
@@ -1558,7 +1617,7 @@
               <b>9</b></button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G10">
+            <input type="checkbox" style="margin: 0px" value="G10">
             <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10'); scroll(chooseSubject)"
               class="toggle-button-on" tabindex="0">Grade
               <b>10</b></button>
@@ -1567,7 +1626,7 @@
               <b>10</b></button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="G11">
+            <input type="checkbox" style="margin: 0px" value="G11">
             <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11'); scroll(chooseSubject)"
               class="toggle-button-on" tabindex="0">Grade
               <b>11</b></button>
@@ -1576,7 +1635,7 @@
               <b>11</b></button>
           </label>
           <label class="switch">
-            <input type="checkbox" value="HS">
+            <input type="checkbox" style="margin: 0px" value="HS">
             <button *ngIf="selected_grade == 'HS'" (click)="select_grade('HS'); scroll(chooseSubject)"
               class="toggle-button-on" tabindex="0">
               <b>High School</b></button>
@@ -1595,7 +1654,7 @@
             <input type="hidden" #grade>
             <div class="card-container" style="max-width: 100%; margin-top: 0px">
               <label class="switch">
-                <input type="checkbox" value="EnglishLanguage">
+                <input type="checkbox" style="margin: 0px" value="EnglishLanguage">
                 <button *ngIf="selected_subject == 'EnglishLanguage'"
                   (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English Language Arts </b></button>
@@ -1604,7 +1663,7 @@
                   tabindex="0"><b> English Language Arts </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Math">
+                <input type="checkbox" style="margin: 0px" value="Math">
                 <button *ngIf="selected_subject == 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Math </b></button>
                 <button *ngIf="selected_subject != 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
@@ -1618,7 +1677,7 @@
             <input type="hidden" #grade>
             <div class="card-container" style="max-width: 100%; margin-top: 0px">
               <label class="switch">
-                <input type="checkbox" value="EnglishLanguage">
+                <input type="checkbox" style="margin: 0px" value="EnglishLanguage">
                 <button *ngIf="selected_subject == 'EnglishLanguage'"
                   (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English Language Arts </b></button>
@@ -1627,7 +1686,7 @@
                   tabindex="0"><b> English Language Arts </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishReading">
+                <input type="checkbox" style="margin: 0px" value="EnglishReading">
                 <button *ngIf="selected_subject == 'EnglishReading'"
                   (click)="select_subject('EnglishReading'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Reading </b></button>
@@ -1636,14 +1695,14 @@
                   tabindex="0"><b> English - Reading </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Math">
+                <input type="checkbox" style="margin: 0px" value="Math">
                 <button *ngIf="selected_subject == 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Math </b></button>
                 <button *ngIf="selected_subject != 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Math </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Science">
+                <input type="checkbox" style="margin: 0px" value="Science">
                 <button *ngIf="selected_subject == 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Science </b></button>
                 <button *ngIf="selected_subject != 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
@@ -1657,7 +1716,7 @@
             <input type="hidden" #grade>
             <div class="card-container" style="max-width: 100%; margin-top: 0px">
               <label class="switch">
-                <input type="checkbox" value="EnglishLanguage">
+                <input type="checkbox" style="margin: 0px" value="EnglishLanguage">
                 <button *ngIf="selected_subject == 'EnglishLanguage'"
                   (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English Language Arts </b></button>
@@ -1666,7 +1725,7 @@
                   tabindex="0"><b> English Language Arts </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishReading">
+                <input type="checkbox" style="margin: 0px" value="EnglishReading">
                 <button *ngIf="selected_subject == 'EnglishReading'"
                   (click)="select_subject('EnglishReading'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Reading </b></button>
@@ -1675,7 +1734,7 @@
                   tabindex="0"><b> English - Reading </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishWriting">
+                <input type="checkbox" style="margin: 0px" value="EnglishWriting">
                 <button *ngIf="selected_subject == 'EnglishWriting'"
                   (click)="select_subject('EnglishWriting'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Writing </b></button>
@@ -1684,21 +1743,21 @@
                   tabindex="0"><b> English - Writing </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Math">
+                <input type="checkbox" style="margin: 0px" value="Math">
                 <button *ngIf="selected_subject == 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Math </b></button>
                 <button *ngIf="selected_subject != 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Math </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Science">
+                <input type="checkbox" style="margin: 0px" value="Science">
                 <button *ngIf="selected_subject == 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Science </b></button>
                 <button *ngIf="selected_subject != 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Science </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="SocialStudies">
+                <input type="checkbox" style="margin: 0px" value="SocialStudies">
                 <button *ngIf="selected_subject == 'SocialStudies'"
                   (click)="select_subject('SocialStudies'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> Social Studies </b></button>
@@ -1714,7 +1773,7 @@
             <input type="hidden" #grade>
             <div class="card-container" style="max-width: 100%; margin-top: 0px">
               <label class="switch">
-                <input type="checkbox" value="EnglishLanguage">
+                <input type="checkbox" style="margin: 0px" value="EnglishLanguage">
                 <button *ngIf="selected_subject == 'EnglishLanguage'"
                   (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English Language Arts </b></button>
@@ -1723,7 +1782,7 @@
                   tabindex="0"><b> English Language Arts </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishReading">
+                <input type="checkbox" style="margin: 0px" value="EnglishReading">
                 <button *ngIf="selected_subject == 'EnglishReading'"
                   (click)="select_subject('EnglishReading'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Reading </b></button>
@@ -1732,7 +1791,7 @@
                   tabindex="0"><b> English - Reading </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishWriting">
+                <input type="checkbox" style="margin: 0px" value="EnglishWriting">
                 <button *ngIf="selected_subject == 'EnglishWriting'"
                   (click)="select_subject('EnglishWriting'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Writing </b></button>
@@ -1741,14 +1800,14 @@
                   tabindex="0"><b> English - Writing </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Math">
+                <input type="checkbox" style="margin: 0px" value="Math">
                 <button *ngIf="selected_subject == 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Math </b></button>
                 <button *ngIf="selected_subject != 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Math </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Science">
+                <input type="checkbox" style="margin: 0px" value="Science">
                 <button *ngIf="selected_subject == 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Science </b></button>
                 <button *ngIf="selected_subject != 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
@@ -1762,7 +1821,7 @@
             <input type="hidden" #grade>
             <div class="card-container" style="max-width: 100%; margin-top: 0px">
               <label class="switch">
-                <input type="checkbox" value="EnglishLanguage">
+                <input type="checkbox" style="margin: 0px" value="EnglishLanguage">
                 <button *ngIf="selected_subject == 'EnglishLanguage'"
                   (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English Language Arts </b></button>
@@ -1771,7 +1830,7 @@
                   tabindex="0"><b> English Language Arts </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishReading">
+                <input type="checkbox" style="margin: 0px" value="EnglishReading">
                 <button *ngIf="selected_subject == 'EnglishReading'"
                   (click)="select_subject('EnglishReading'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Reading </b></button>
@@ -1780,7 +1839,7 @@
                   tabindex="0"><b> English - Reading </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishWriting">
+                <input type="checkbox" style="margin: 0px" value="EnglishWriting">
                 <button *ngIf="selected_subject == 'EnglishWriting'"
                   (click)="select_subject('EnglishWriting'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Writing </b></button>
@@ -1789,21 +1848,21 @@
                   tabindex="0"><b> English - Writing </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Math">
+                <input type="checkbox" style="margin: 0px" value="Math">
                 <button *ngIf="selected_subject == 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Math </b></button>
                 <button *ngIf="selected_subject != 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Math </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Science">
+                <input type="checkbox" style="margin: 0px" value="Science">
                 <button *ngIf="selected_subject == 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Science </b></button>
                 <button *ngIf="selected_subject != 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Science </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="SocialStudies">
+                <input type="checkbox" style="margin: 0px" value="SocialStudies">
                 <button *ngIf="selected_subject == 'SocialStudies'"
                   (click)="select_subject('SocialStudies'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> Social Studies </b></button>
@@ -1819,7 +1878,7 @@
             <input type="hidden" #grade>
             <div class="card-container" style="max-width: 100%; margin-top: 0px">
               <label class="switch">
-                <input type="checkbox" value="EnglishLanguage">
+                <input type="checkbox" style="margin: 0px" value="EnglishLanguage">
                 <button *ngIf="selected_subject == 'EnglishLanguage'"
                   (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English Language Arts </b></button>
@@ -1828,7 +1887,7 @@
                   tabindex="0"><b> English Language Arts </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishReading">
+                <input type="checkbox" style="margin: 0px" value="EnglishReading">
                 <button *ngIf="selected_subject == 'EnglishReading'"
                   (click)="select_subject('EnglishReading'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Reading </b></button>
@@ -1837,7 +1896,7 @@
                   tabindex="0"><b> English - Reading </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishWriting">
+                <input type="checkbox" style="margin: 0px" value="EnglishWriting">
                 <button *ngIf="selected_subject == 'EnglishWriting'"
                   (click)="select_subject('EnglishWriting'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Writing </b></button>
@@ -1846,21 +1905,21 @@
                   tabindex="0"><b> English - Writing </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Math">
+                <input type="checkbox" style="margin: 0px" value="Math">
                 <button *ngIf="selected_subject == 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Math </b></button>
                 <button *ngIf="selected_subject != 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Math </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Science">
+                <input type="checkbox" style="margin: 0px" value="Science">
                 <button *ngIf="selected_subject == 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Science </b></button>
                 <button *ngIf="selected_subject != 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Science </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="SocialStudies">
+                <input type="checkbox" style="margin: 0px" value="SocialStudies">
                 <button *ngIf="selected_subject == 'SocialStudies'"
                   (click)="select_subject('SocialStudies'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> Social Studies </b></button>
@@ -1876,7 +1935,7 @@
             <input type="hidden" #grade>
             <div class="card-container" style="max-width: 100%; margin-top: 0px">
               <label class="switch">
-                <input type="checkbox" value="EnglishLanguage">
+                <input type="checkbox" style="margin: 0px" value="EnglishLanguage">
                 <button *ngIf="selected_subject == 'EnglishLanguage'"
                   (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English Language Arts </b></button>
@@ -1885,7 +1944,7 @@
                   tabindex="0"><b> English Language Arts </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishReading">
+                <input type="checkbox" style="margin: 0px" value="EnglishReading">
                 <button *ngIf="selected_subject == 'EnglishReading'"
                   (click)="select_subject('EnglishReading'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Reading </b></button>
@@ -1894,7 +1953,7 @@
                   tabindex="0"><b> English - Reading </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishWriting">
+                <input type="checkbox" style="margin: 0px" value="EnglishWriting">
                 <button *ngIf="selected_subject == 'EnglishWriting'"
                   (click)="select_subject('EnglishWriting'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Writing </b></button>
@@ -1903,21 +1962,21 @@
                   tabindex="0"><b> English - Writing </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Math">
+                <input type="checkbox" style="margin: 0px" value="Math">
                 <button *ngIf="selected_subject == 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Math </b></button>
                 <button *ngIf="selected_subject != 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Math </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Science">
+                <input type="checkbox" style="margin: 0px" value="Science">
                 <button *ngIf="selected_subject == 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Science </b></button>
                 <button *ngIf="selected_subject != 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Science </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="SocialStudies">
+                <input type="checkbox" style="margin: 0px" value="SocialStudies">
                 <button *ngIf="selected_subject == 'SocialStudies'"
                   (click)="select_subject('SocialStudies'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> Social Studies </b></button>
@@ -1933,7 +1992,7 @@
             <input type="hidden" #grade>
             <div class="card-container" style="max-width: 100%; margin-top: 0px">
               <label class="switch">
-                <input type="checkbox" value="EnglishLanguage">
+                <input type="checkbox" style="margin: 0px" value="EnglishLanguage">
                 <button *ngIf="selected_subject == 'EnglishLanguage'"
                   (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English Language Arts </b></button>
@@ -1942,7 +2001,7 @@
                   tabindex="0"><b> English Language Arts </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishReading">
+                <input type="checkbox" style="margin: 0px" value="EnglishReading">
                 <button *ngIf="selected_subject == 'EnglishReading'"
                   (click)="select_subject('EnglishReading'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Reading </b></button>
@@ -1951,7 +2010,7 @@
                   tabindex="0"><b> English - Reading </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishWriting">
+                <input type="checkbox" style="margin: 0px" value="EnglishWriting">
                 <button *ngIf="selected_subject == 'EnglishWriting'"
                   (click)="select_subject('EnglishWriting'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Writing </b></button>
@@ -1967,7 +2026,7 @@
             <input type="hidden" #grade>
             <div class="card-container" style="max-width: 100%; margin-top: 0px">
               <label class="switch">
-                <input type="checkbox" value="EnglishLanguage">
+                <input type="checkbox" style="margin: 0px" value="EnglishLanguage">
                 <button *ngIf="selected_subject == 'EnglishLanguage'"
                   (click)="select_subject('EnglishLanguage'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English Language Arts </b></button>
@@ -1976,7 +2035,7 @@
                   tabindex="0"><b> English Language Arts </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishReading">
+                <input type="checkbox" style="margin: 0px" value="EnglishReading">
                 <button *ngIf="selected_subject == 'EnglishReading'"
                   (click)="select_subject('EnglishReading'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Reading </b></button>
@@ -1985,7 +2044,7 @@
                   tabindex="0"><b> English - Reading </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="EnglishWriting">
+                <input type="checkbox" style="margin: 0px" value="EnglishWriting">
                 <button *ngIf="selected_subject == 'EnglishWriting'"
                   (click)="select_subject('EnglishWriting'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> English - Writing </b></button>
@@ -1994,14 +2053,14 @@
                   tabindex="0"><b> English - Writing </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Math">
+                <input type="checkbox" style="margin: 0px" value="Math">
                 <button *ngIf="selected_subject == 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Math </b></button>
                 <button *ngIf="selected_subject != 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Math </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="SocialStudies">
+                <input type="checkbox" style="margin: 0px" value="SocialStudies">
                 <button *ngIf="selected_subject == 'SocialStudies'"
                   (click)="select_subject('SocialStudies'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> Social Studies </b></button>
@@ -2017,21 +2076,21 @@
             <input type="hidden" #grade>
             <div class="card-container" style="max-width: 100%; margin-top: 0px">
               <label class="switch">
-                <input type="checkbox" value="Math">
+                <input type="checkbox" style="margin: 0px" value="Math">
                 <button *ngIf="selected_subject == 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Math </b></button>
                 <button *ngIf="selected_subject != 'Math'" (click)="select_subject('Math'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Math </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Science">
+                <input type="checkbox" style="margin: 0px" value="Science">
                 <button *ngIf="selected_subject == 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Science </b></button>
                 <button *ngIf="selected_subject != 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Science </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="SocialStudies">
+                <input type="checkbox" style="margin: 0px" value="SocialStudies">
                 <button *ngIf="selected_subject == 'SocialStudies'"
                   (click)="select_subject('SocialStudies'); scroll(chooseSubject)" class="toggle-button-on"
                   tabindex="0"><b> Social Studies </b></button>
@@ -2047,77 +2106,77 @@
             <input type="hidden" #grade>
             <div class="card-container" style="max-width: 100%; margin-top: 0px">
               <label class="switch">
-                <input type="checkbox" value="Algebra1">
+                <input type="checkbox" style="margin: 0px" value="Algebra1">
                 <button *ngIf="selected_subject == 'Algebra1'" (click)="select_subject('Algebra1'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Algebra I </b></button>
                 <button *ngIf="selected_subject != 'Algebra1'" (click)="select_subject('Algebra1'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Algebra I </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Algebra2">
+                <input type="checkbox" style="margin: 0px" value="Algebra2">
                 <button *ngIf="selected_subject == 'Algebra2'" (click)="select_subject('Algebra2'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Algebra II </b></button>
                 <button *ngIf="selected_subject != 'Algebra2'" (click)="select_subject('Algebra2'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Algebra II </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Biology">
+                <input type="checkbox" style="margin: 0px" value="Biology">
                 <button *ngIf="selected_subject == 'Biology'" (click)="select_subject('Biology'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Biology </b></button>
                 <button *ngIf="selected_subject != 'Biology'" (click)="select_subject('Biology'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Biology </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="English1">
+                <input type="checkbox" style="margin: 0px" value="English1">
                 <button *ngIf="selected_subject == 'English1'" (click)="select_subject('English1'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> English I </b></button>
                 <button *ngIf="selected_subject != 'English1'" (click)="select_subject('English1'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> English I </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="English2">
+                <input type="checkbox" style="margin: 0px" value="English2">
                 <button *ngIf="selected_subject == 'English2'" (click)="select_subject('English2'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> English II </b></button>
                 <button *ngIf="selected_subject != 'English2'" (click)="select_subject('English2'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> English II </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Geometry">
+                <input type="checkbox" style="margin: 0px" value="Geometry">
                 <button *ngIf="selected_subject == 'Geometry'" (click)="select_subject('Geometry'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Geometry </b></button>
                 <button *ngIf="selected_subject != 'Geometry'" (click)="select_subject('Geometry'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Geometry </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Physics">
+                <input type="checkbox" style="margin: 0px" value="Physics">
                 <button *ngIf="selected_subject == 'Physics'" (click)="select_subject('Physics'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Physics </b></button>
                 <button *ngIf="selected_subject != 'Physics'" (click)="select_subject('Physics'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Physics </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="PSAT">
+                <input type="checkbox" style="margin: 0px" value="PSAT">
                 <button *ngIf="selected_subject == 'PSAT'" (click)="select_subject('PSAT'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> PSAT </b></button>
                 <button *ngIf="selected_subject != 'PSAT'" (click)="select_subject('PSAT'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> PSAT </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="SAT">
+                <input type="checkbox" style="margin: 0px" value="SAT">
                 <button *ngIf="selected_subject == 'SAT'" (click)="select_subject('SAT'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> SAT </b></button>
                 <button *ngIf="selected_subject != 'SAT'" (click)="select_subject('SAT'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> SAT </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="Science">
+                <input type="checkbox" style="margin: 0px" value="Science">
                 <button *ngIf="selected_subject == 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-on" tabindex="0"><b> Science </b></button>
                 <button *ngIf="selected_subject != 'Science'" (click)="select_subject('Science'); scroll(chooseSubject)"
                   class="toggle-button-off" tabindex="0"><b> Science </b></button>
               </label>
               <label class="switch">
-                <input type="checkbox" value="USHistory">
+                <input type="checkbox" style="margin: 0px" value="USHistory">
                 <button *ngIf="selected_subject == 'USHistory'"
                   (click)="select_subject('USHistory'); scroll(chooseSubject)" class="toggle-button-on" tabindex="0"><b>
                     U.S. History </b></button>
@@ -9794,7 +9853,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -9803,7 +9862,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -9812,7 +9871,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -9821,7 +9880,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -9830,7 +9889,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -9839,7 +9898,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -9848,7 +9907,7 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="HS">
+              <input type="checkbox" style="margin: 0px" value="HS">
               <button *ngIf="selected_grade == 'HS'" (click)="select_grade('HS'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">
                 <b>High School</b></button>
@@ -10075,7 +10134,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -10084,7 +10143,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -10093,7 +10152,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -10102,7 +10161,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -10111,7 +10170,7 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G11">
+              <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
@@ -10237,7 +10296,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -10246,7 +10305,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -10255,7 +10314,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -10264,7 +10323,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -10273,7 +10332,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -10282,7 +10341,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -10291,7 +10350,7 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G9">
+              <input type="checkbox" style="margin: 0px" value="G9">
               <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>9</b></button>
@@ -10300,7 +10359,7 @@
                 <b>9</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G10">
+              <input type="checkbox" style="margin: 0px" value="G10">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade <b>10</b></button>
               <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseExam)"
@@ -10610,7 +10669,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -10619,7 +10678,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -10628,7 +10687,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -10637,7 +10696,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -10646,7 +10705,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -10655,7 +10714,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -10849,7 +10908,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -10858,7 +10917,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -10867,7 +10926,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -10876,7 +10935,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -10885,7 +10944,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -10894,7 +10953,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -10903,7 +10962,7 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="HS">
+              <input type="checkbox" style="margin: 0px" value="HS">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>10</b></button>
@@ -11122,7 +11181,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -11131,7 +11190,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -11140,7 +11199,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -11149,7 +11208,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -11158,7 +11217,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -11167,7 +11226,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -11176,7 +11235,7 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="HS">
+              <input type="checkbox" style="margin: 0px" value="HS">
               <button *ngIf="selected_grade == 'HS'" (click)="select_grade('HS'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">
                 <b>High School</b></button>
@@ -11435,7 +11494,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -11444,7 +11503,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -11453,7 +11512,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -11462,7 +11521,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -11471,7 +11530,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -11480,7 +11539,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -11489,7 +11548,7 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="HS">
+              <input type="checkbox" style="margin: 0px" value="HS">
               <button *ngIf="selected_grade == 'HS'" (click)="select_grade('HS'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">
                 <b>High School</b></button>
@@ -12296,7 +12355,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -12305,7 +12364,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -12314,7 +12373,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -12323,7 +12382,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -12332,7 +12391,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -12341,7 +12400,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -12350,7 +12409,7 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G10">
+              <input type="checkbox" style="margin: 0px" value="G10">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>10</b></button>
@@ -12359,7 +12418,7 @@
                 <b>10</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G11">
+              <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
@@ -12368,7 +12427,7 @@
                 <b>11</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="HS">
+              <input type="checkbox" style="margin: 0px" value="HS">
               <button *ngIf="selected_grade == 'HS'" (click)="select_grade('HS'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">
                 <b>High School</b></button>
@@ -12629,7 +12688,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -12638,7 +12697,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -12647,7 +12706,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -12656,7 +12715,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -12665,7 +12724,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -12674,7 +12733,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -13006,7 +13065,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -13015,7 +13074,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -13024,7 +13083,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -13033,7 +13092,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -13042,7 +13101,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -13051,7 +13110,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -13261,7 +13320,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -13270,7 +13329,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -13279,7 +13338,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -13288,7 +13347,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -13297,7 +13356,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -13306,7 +13365,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -13516,7 +13575,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -13525,7 +13584,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -13534,7 +13593,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -13543,7 +13602,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -13552,7 +13611,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -13561,7 +13620,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -13570,7 +13629,7 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G9">
+              <input type="checkbox" style="margin: 0px" value="G9">
               <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>9</b></button>
@@ -13579,7 +13638,7 @@
                 <b>9</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G11">
+              <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
@@ -13823,7 +13882,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -13832,7 +13891,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -13841,7 +13900,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -13850,7 +13909,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -13859,7 +13918,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -13868,7 +13927,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -13877,7 +13936,7 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G11">
+              <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
@@ -14104,7 +14163,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -14113,7 +14172,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -14122,7 +14181,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -14131,7 +14190,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -14140,7 +14199,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -14149,7 +14208,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -15186,7 +15245,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -15195,7 +15254,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -15204,7 +15263,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -15213,7 +15272,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -15222,7 +15281,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -15231,7 +15290,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -15452,7 +15511,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -15461,7 +15520,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -15470,7 +15529,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -15479,7 +15538,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -15488,7 +15547,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -15497,7 +15556,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -16435,7 +16494,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -16444,7 +16503,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -16453,7 +16512,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -16462,7 +16521,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -16471,7 +16530,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -16480,7 +16539,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -17095,7 +17154,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -17104,7 +17163,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -17113,7 +17172,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -17122,7 +17181,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -17131,7 +17190,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -17140,7 +17199,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -17350,7 +17409,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G2">
+              <input type="checkbox" style="margin: 0px" value="G2">
               <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>2</b></button>
@@ -17359,7 +17418,7 @@
                 <b>2</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -17368,7 +17427,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -17377,7 +17436,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -17386,7 +17445,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -17395,7 +17454,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -17404,7 +17463,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -17413,7 +17472,7 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="HS">
+              <input type="checkbox" style="margin: 0px" value="HS">
               <button *ngIf="selected_grade == 'HS'" (click)="select_grade('HS'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">
                 <b>High School</b></button>
@@ -18330,7 +18389,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -18339,7 +18398,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -18348,7 +18407,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -18357,7 +18416,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -18366,7 +18425,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -18375,7 +18434,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -18384,7 +18443,7 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="HS">
+              <input type="checkbox" style="margin: 0px" value="HS">
               <button *ngIf="selected_grade == 'HS'" (click)="select_grade('HS'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">
                 <b>High School</b></button>
@@ -19353,7 +19412,7 @@
           <input type="hidden" #grade>
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="G3">
+              <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
@@ -19362,7 +19421,7 @@
                 <b>3</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G4">
+              <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
@@ -19371,7 +19430,7 @@
                 <b>4</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G5">
+              <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
@@ -19380,7 +19439,7 @@
                 <b>5</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G6">
+              <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
@@ -19389,7 +19448,7 @@
                 <b>6</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G7">
+              <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
@@ -19398,7 +19457,7 @@
                 <b>7</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G8">
+              <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
@@ -19407,7 +19466,7 @@
                 <b>8</b></button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="G10">
+              <input type="checkbox" style="margin: 0px" value="G10">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10'); scroll(chooseExam)"
                 class="toggle-button-on" tabindex="0">Grade
                 <b>10</b></button>
@@ -19621,7 +19680,15 @@
             <br />
             <input type="hidden" #selection>
             <div class="card-container" style="max-width: 100%">
-              <button class="card card-small" (click)="select_exam('WIG10SS')" tabindex="0">
+              <button (click)="select_exam('WIG10SS')" class="card card-small" style="line-height: 18px" tabindex="0">
+                <!-- <span *ngIf="(!authService.userData || !favorite_set.includes('WIG10SS')) && !exam_set.includes('WIG10SS')"
+                  style="font-size: 24px; font-weight: 800; color: #666; margin: 0 5px">
+                  <i class="fa fa-file-text"></i>
+                </span>
+                <span *ngIf="(!authService.userData || !favorite_set.includes('WIG10SS')) && exam_set.includes('WIG10SS')"
+                  style="font-size: 24px; font-weight: 800; color: limegreen; margin: 0 5px">
+                  <i class="fa fa-file-text"></i>
+                </span> -->
                 <img *ngIf="!authService.userData || !favorite_set.includes('WIG10SS')" src="./assets/media/icons/select.png"
                   style="height: 20px; margin: 0 5px 0 0;">
                 <span *ngIf="favorite_set.includes('WIG10SS') && authService.userData as user"

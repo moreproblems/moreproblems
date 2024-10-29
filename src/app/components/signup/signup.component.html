@@ -277,7 +277,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
   }
@@ -294,7 +294,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -307,7 +307,7 @@
     border-radius: 12px;
     border: 3px solid #0a1e33;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -489,7 +489,7 @@
           <!-- <br /> -->
           <div class="card-container" style="align-items: center; margin-top: 0px">
             <label class="switch">
-              <input type="checkbox" value="Teacher">
+              <input type="checkbox" style="margin: 0px" value="Teacher">
               <button *ngIf="user_role != 'Teacher'" (click)="set_user_role('Teacher')"
                 class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
@@ -507,7 +507,7 @@
               </button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="Student">
+              <input type="checkbox" style="margin: 0px" value="Student">
               <button *ngIf="user_role != 'Student'" (click)="set_user_role('Student')" class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
@@ -524,7 +524,7 @@
               </button>
             </label>
             <label class="switch">
-              <input type="checkbox" value="Parent">
+              <input type="checkbox" style="margin: 0px" value="Parent">
               <button *ngIf="user_role != 'Parent'" (click)="set_user_role('Parent')" class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
@@ -546,7 +546,7 @@
           <!-- <br /> -->
           <div class="card-container" style="align-items: center; margin-top: 0px">
             <label *ngIf="user_role == 'Parent' || user_role == 'Teacher'" class="switch">
-              <input type="checkbox" value="google">
+              <input type="checkbox" style="margin: 0px" value="google">
               <button *ngIf="login_method != 'google'" (click)="set_login_method('google'); authService.GoogleAuthSignup('profile', user_role); confetti_light()"
                 class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
@@ -564,7 +564,7 @@
               </button>
             </label>
             <label *ngIf="user_role == 'Parent' || user_role == 'Teacher' || user_role == 'Student'" class="switch">
-              <input type="checkbox" value="email">
+              <input type="checkbox" style="margin: 0px" value="email">
               <button *ngIf="login_method != 'email'" (click)="set_login_method('email')" class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">
@@ -581,7 +581,7 @@
               </button>
             </label>
             <label *ngIf="user_role == 'Parent' || user_role == 'Student'" class="switch">
-              <input type="checkbox" value="phone">
+              <input type="checkbox" style="margin: 0px" value="phone">
               <button *ngIf="login_method != 'phone'" (click)="set_login_method('phone')" class="toggle-button-off"
                 style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
                 <div style="margin: 0 5px">

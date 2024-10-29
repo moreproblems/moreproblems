@@ -3159,110 +3159,110 @@ export class TemplateStandardsComponent implements OnInit {
         }
         this.selected_subtopic = subtopic;
         this.subtopic_problem_number = 0;
-        this.subtopic_attempt_path = [];
-        this.subtopic_attempt_response = [];
-        this.subtopic_attempt_explanation = [];
-        this.subtopic_problem_selection = [];
-        if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts).length == 0) {
-            this.subtopic_problem_attempts = [0];
-            this.subtopic_attempt_path = [[]];
-            this.subtopic_attempt_response = [''];
-            this.subtopic_attempt_explanation = [[]];
-            if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Type)) {
-                this.subtopic_problem_selection = [['']];
-                if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Type)) {
-                    setTimeout(() => {
-                        this.plot_graph_gp('', true);
-                    }, 500);
-                }
-            }
-            else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Type)) {
-                this.subtopic_problem_selection = [[]];
-                if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Type)) {
-                    this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number + 1].AnswerChoices, '');
-                }
-                if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Type)) {
-                    setTimeout(() => {
-                        this.plot_graph_mgp('', true);
-                    }, 500);
-                }
-            }
-            else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Type)) {
-                var msp_nums: string[] = [];
-                this.subtopic_problem_selection.push([]);
-                for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number + 1].AnswerChoices)) {
-                    if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-                        this.subtopic_problem_selection[0].push('');
-                        msp_nums.push(choice[0]);
-                    }
-                }
-            }
-        }
-        else {
-            this.subtopic_problem_attempts = [];
-            for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts)) {
-                this.subtopic_problem_attempts.push(0);
-                this.subtopic_attempt_path.push([]);
-                this.subtopic_attempt_response.push('');
-                this.subtopic_attempt_explanation.push([]);
-                if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Type)) {
-                    this.subtopic_problem_selection.push(['']);
-                    if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Type)) {
-                        setTimeout(() => {
-                            this.plot_graph_gp(part, true);
-                        }, 500);
-                    }
-                }
-                else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Type)) {
-                    this.subtopic_problem_selection.push([]);
-                    if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Type)) {
-                        this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].AnswerChoices, part);
-                    }
-                    if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Type)) {
-                        setTimeout(() => {
-                            this.plot_graph_mgp(part, true);
-                        }, 500);
-                    }
-                }
-                else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Type)) {
-                    var msp_nums: string[] = [];
-                    this.subtopic_problem_selection.push([]);
-                    for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].AnswerChoices)) {
-                        if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-                            this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts).indexOf(part)].push('');
-                            msp_nums.push(choice[0]);
-                        }
-                    }
-                }
-            }
-        }
+        // this.subtopic_attempt_path = [];
+        // this.subtopic_attempt_response = [];
+        // this.subtopic_attempt_explanation = [];
+        // this.subtopic_problem_selection = [];
+        // if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts).length == 0) {
+        //     this.subtopic_problem_attempts = [0];
+        //     this.subtopic_attempt_path = [[]];
+        //     this.subtopic_attempt_response = [''];
+        //     this.subtopic_attempt_explanation = [[]];
+        //     if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Type)) {
+        //         this.subtopic_problem_selection = [['']];
+        //         if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Type)) {
+        //             setTimeout(() => {
+        //                 this.plot_graph_gp('', true);
+        //             }, 500);
+        //         }
+        //     }
+        //     else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Type)) {
+        //         this.subtopic_problem_selection = [[]];
+        //         if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Type)) {
+        //             this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number + 1].AnswerChoices, '');
+        //         }
+        //         if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Type)) {
+        //             setTimeout(() => {
+        //                 this.plot_graph_mgp('', true);
+        //             }, 500);
+        //         }
+        //     }
+        //     else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Type)) {
+        //         var msp_nums: string[] = [];
+        //         this.subtopic_problem_selection.push([]);
+        //         for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number + 1].AnswerChoices)) {
+        //             if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+        //                 this.subtopic_problem_selection[0].push('');
+        //                 msp_nums.push(choice[0]);
+        //             }
+        //         }
+        //     }
+        // }
+        // else {
+        //     this.subtopic_problem_attempts = [];
+        //     for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts)) {
+        //         this.subtopic_problem_attempts.push(0);
+        //         this.subtopic_attempt_path.push([]);
+        //         this.subtopic_attempt_response.push('');
+        //         this.subtopic_attempt_explanation.push([]);
+        //         if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Type)) {
+        //             this.subtopic_problem_selection.push(['']);
+        //             if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Type)) {
+        //                 setTimeout(() => {
+        //                     this.plot_graph_gp(part, true);
+        //                 }, 500);
+        //             }
+        //         }
+        //         else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Type)) {
+        //             this.subtopic_problem_selection.push([]);
+        //             if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Type)) {
+        //                 this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].AnswerChoices, part);
+        //             }
+        //             if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Type)) {
+        //                 setTimeout(() => {
+        //                     this.plot_graph_mgp(part, true);
+        //                 }, 500);
+        //             }
+        //         }
+        //         else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Type)) {
+        //             var msp_nums: string[] = [];
+        //             this.subtopic_problem_selection.push([]);
+        //             for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].AnswerChoices)) {
+        //                 if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+        //                     this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts).indexOf(part)].push('');
+        //                     msp_nums.push(choice[0]);
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
         this.standard_fav = false;
-        this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number + 1].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number + 1].Number).indexOf('-'))].RefSheet;
-        for (let supp of this.subtopic_search_dump[this.subtopic_problem_number + 1].SuppContent) {
-            setTimeout(() => {
-                this.read_supp_st_json(supp);
-            }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number + 1].SuppContent.indexOf(supp)));
-        }
-        if (this.subtopic_search_dump[this.subtopic_problem_number + 1].Type == 'MP') {
-            for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts)) {
-                for (let block of this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Content) {
-                    if (block.startsWith(':table:')) {
-                        setTimeout(() => {
-                            this.read_table_st(block.slice(7));
-                        }, 100);
-                    }
-                }
-            }
-        }
-        if (this.subtopic_search_dump[this.subtopic_problem_number + 1].Type != 'MP') {
-            for (let block of this.subtopic_search_dump[this.subtopic_problem_number + 1].Content) {
-                if (block.startsWith(':table:')) {
-                    setTimeout(() => {
-                        this.read_table_st(block.slice(7));
-                    }, 100);
-                }
-            }
-        }
+        // this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number + 1].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number + 1].Number).indexOf('-'))].RefSheet;
+        // for (let supp of this.subtopic_search_dump[this.subtopic_problem_number + 1].SuppContent) {
+        //     setTimeout(() => {
+        //         this.read_supp_st_json(supp);
+        //     }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number + 1].SuppContent.indexOf(supp)));
+        // }
+        // if (this.subtopic_search_dump[this.subtopic_problem_number + 1].Type == 'MP') {
+        //     for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts)) {
+        //         for (let block of this.subtopic_search_dump[this.subtopic_problem_number + 1].Parts[part].Content) {
+        //             if (block.startsWith(':table:')) {
+        //                 setTimeout(() => {
+        //                     this.read_table_st(block.slice(7));
+        //                 }, 100);
+        //             }
+        //         }
+        //     }
+        // }
+        // if (this.subtopic_search_dump[this.subtopic_problem_number + 1].Type != 'MP') {
+        //     for (let block of this.subtopic_search_dump[this.subtopic_problem_number + 1].Content) {
+        //         if (block.startsWith(':table:')) {
+        //             setTimeout(() => {
+        //                 this.read_table_st(block.slice(7));
+        //             }, 100);
+        //         }
+        //     }
+        // }
         for (let fav of this.authService.userData.standards.favorites) {
             for (let topic of topics) {
                 if (topic == fav[0] && subtopic == fav[1]) {

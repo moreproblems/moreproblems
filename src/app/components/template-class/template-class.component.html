@@ -324,7 +324,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
   }
@@ -341,7 +341,7 @@
     border-radius: 12px;
     border: 3px solid #0a1e33;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -355,7 +355,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -369,7 +369,7 @@
     border-radius: 12px;
     border: 1px solid #eee;
     padding: 7px 15px;
-    margin: 0 2px 10px;
+    margin: 5px;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
@@ -711,7 +711,7 @@
     </div>
     <div *ngIf="selected_subtopic != ''">
       <div *ngIf="selected_subtopic != ''" class="card card-large"
-        style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
         #subtopicSummaryCard>
         <br />
         <div class="content" style="margin: auto; align-items: center">
@@ -832,7 +832,7 @@
           style="width: 100%">
           <br />
           <div class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #subtopicRefsheetCard>
             <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
               <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false"
@@ -843,7 +843,6 @@
           </div>
         </div>
       </div>
-      <br *ngIf="selected_subtopic != ''" />
       <div *ngFor="let prob of subtopic_search_dump | keyvalue">
         <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp">
           <div *ngFor="let supp of prob.value.SuppContent">
@@ -949,20 +948,19 @@
               </div>
               <br />
             </div>
-            <br />
           </div>
         </div>
       </div>
-      <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="width: 100%">
-        <div *ngIf="subtopic_problem_number == +prob.key" style="width: 100%">
+      <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="display: flex; flex-direction: column; width: 100%">
+        <div *ngIf="subtopic_problem_number == +prob.key" style="display: flex; flex-direction: column; width: 100%">
           <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number" class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #subtopicCard>
             <br />
             <section *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" value="{{expand_refsheet}}">
+                <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
                 <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on"> <b> Show
                     Reference Sheet </b>
                 </button>
@@ -974,7 +972,7 @@
             <section *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" value="{{expand_supp}}">
+                <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
                 <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
                     Supplement(s) </b>
                 </button>
@@ -1292,7 +1290,7 @@
                   (click)="selection.value = choice.key; attempt_mc_st_problem(choice.key, ''); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button
                       *ngIf="subtopic_problem_selection[0][0]==choice.key && !subtopic_attempt_response[0].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
@@ -1322,7 +1320,7 @@
                   (click)="attempt_ms_st_problem(choice.key, ''); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="subtopic_problem_selection[0].includes(choice.key) && !choice.value.Key.Correct"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
@@ -1577,9 +1575,8 @@
               </div>
             </div>
           </div>
-          <br *ngIf="(prob.value.Parts | keys).length >= 0" />
           <div *ngFor="let part of prob.value.Parts | keyvalue" class="card card-large"
-            style="height: auto; margin: auto; margin-bottom: 20px; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
             #subtopicPartCard>
             <br />
             <h2>Part {{part.key}}</h2>
@@ -1888,7 +1885,7 @@
                   (click)="selection.value = choice.key; attempt_mc_st_problem(choice.key, part.key); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && !subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
@@ -1912,7 +1909,7 @@
                   (click)="attempt_ms_st_problem(choice.key, part.key); scroll_bottom()"
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
-                    <input type="checkbox" value="{{choice.key}}">
+                    <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                     <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && !choice.value.Key.Correct"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
@@ -2061,31 +2058,33 @@
     </div>
     <!-- PDF Viewer -->
     <div *ngIf="file_source != ''" class="card card-large" (window:resize)="width_change()"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
       #pdfViewer>
-      <br />
       <section
-        style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
-        <h1 *ngIf="this.screenWidth <= 900" style="margin: auto 5px; text-align: center; font-size: 22px">
+        style="margin-top: 15px; height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+        <h1 *ngIf="this.screenWidth <= 550" style="margin: auto 5px; text-align: center; font-size: 17px">
+          {{exam_name}} </h1>
+        <h1 *ngIf="this.screenWidth > 550 && this.screenWidth <= 900" style="margin: auto 10px; text-align: center; font-size: 21px">
           {{exam_name}} </h1>
         <h1 *ngIf="this.screenWidth > 900" style="margin: auto 15px; text-align: center; font-size: 26px">
           {{exam_name}} </h1>
         <button *ngIf="exam_set.includes(exam_id) && this.screenWidth <= 900" (click)="take_exam()"
           class="grade-button"
-          style="margin: 10px 5px 5px; padding: 8px; width: auto; height: auto; background-color: green">
+          style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: green">
           <img src="./assets/media/icons/test.png" style="height: 25px">
-          <b style="margin-left: 10px; font-size: 17px; line-height: 21px; width: auto"> Take Exam! </b>
+          <b style="margin-left: 10px; font-size: 17px; line-height: 19px; width: auto"> Take Exam! </b>
         </button>
         <button *ngIf="exam_set.includes(exam_id) && this.screenWidth > 900" (click)="take_exam()"
-          class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto; background-color: green">
+          class="grade-button" style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: green">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px; font-size: 22px; line-height: 26px; width: auto"> Take Exam! </b>
         </button>
       </section>
+      <hr style="width: max(80%, 300px)">
       <section
         style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
         <button *ngIf="this.screenWidth <= 900 && authService.userData as user" (click)="toggle_favorite_exm()"
-          class="grade-button" style="margin: 10px 5px 5px; padding: 6px; width: auto; height: auto">
+          class="grade-button" style="margin: 5px; padding: 6px; width: auto; height: auto">
           <span *ngIf="!this.exam_fav"
             style="font-size: 18px; font-weight: 2px; color: white; -webkit-text-stroke: 2px #4db7fd">
             <i class="fas fa-bookmark"></i>
@@ -2099,7 +2098,7 @@
           </b>
         </button>
         <button *ngIf="this.screenWidth > 900 && authService.userData as user" (click)="toggle_favorite_exm()"
-          class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
+          class="grade-button" style="margin: 5px; width: auto; height: auto">
           <span *ngIf="!this.exam_fav"
             style="font-size: 22px; font-weight: 2px; color: white; -webkit-text-stroke: 2px #4db7fd">
             <i class="fas fa-bookmark"></i>
@@ -2116,13 +2115,13 @@
           <button
             *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="toggle_assign_exam()" class="grade-button"
-            style="margin: 10px 5px 5px; padding: 6px; width: auto; height: auto">
+            style="margin: 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/assign.png" style="height: 22px">
             <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Assign </b>
           </button>
           <button
             *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
-            (click)="toggle_assign_exam()" class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
+            (click)="toggle_assign_exam()" class="grade-button" style="margin: 5px; width: auto; height: auto">
             <img src="./assets/media/icons/assign.png" style="height: 27px">
             <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Assign </b>
           </button>
@@ -2131,13 +2130,13 @@
           <button
             *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
-            style="margin: 10px 5px 5px; padding: 6px; width: auto; height: auto">
+            style="margin: 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/key.png" style="height: 22px">
             <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Answer Key </b>
           </button>
           <button *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
             (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
-            style="margin: 10px 5px 5px; width: auto; height: auto">
+            style="margin: 5px; width: auto; height: auto">
             <img src="./assets/media/icons/key.png" style="height: 25px">
             <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Answer Key </b>
           </button>
@@ -2149,17 +2148,17 @@
         <div>
           <div style="display: flex; flex-direction: row">
             <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="download_exam()" class="grade-button"
-              style="margin: 5px 5px auto; padding: 6px; width: auto; height: auto">
+              style="margin: 5px; padding: 6px; width: auto; height: auto">
               <img src="./assets/media/icons/download.png" style="height: 25px">
               <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Download </b>
             </button>
             <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="download_exam()" class="grade-button"
-              style="margin: 5px 5px auto; width: auto; height: auto">
+              style="margin: 5px; width: auto; height: auto">
               <img src="./assets/media/icons/download.png" style="height: 25px">
               <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Download </b>
             </button>
             <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="print_exam()" class="grade-button"
-              style="margin: 5px 5px auto; width: auto; height: auto">
+              style="margin: 5px; width: auto; height: auto">
               <img src="./assets/media/icons/print.png" style="height: 25px">
               <b style="margin-left: 10px"> Print </b>
             </button>
@@ -2206,18 +2205,16 @@
         </button>
       </section>
       <section *ngIf="file_source != ''"
-        style="height: 90%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden; background-color: #eee">
+        style="margin-bottom: 10px; height: 90%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden; background-color: #eee">
         <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
           [(page)]="file_page" style="min-height: 550px; height: 100%"></pdf-viewer>
         <pdf-viewer *ngIf="this.screenWidth > 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
           [(page)]="file_page" style="min-height: 625px; height: 100%"></pdf-viewer>
       </section>
-      <br />
     </div>
-    <br />
   </div>
   <div *ngIf="assign_e" class="card card-large"
-    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: 10px auto; padding: 0 5%; display: flex; flex-direction: column">
     <br />
     <h1 style="line-height: 28px"> Assign This Exam </h1>
     <div class="media">
@@ -3496,7 +3493,7 @@
       </section>
     </div>
     <div class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <div *ngIf="selected_exam_results != '' || (selected_stud_results != '' && !selected_sub[0].startsWith('Q-'))" class="card card-medium"
         style="text-align: center; margin: auto; width: fit-content; padding: 20px; display: flex; flex-direction: column">
@@ -3744,9 +3741,8 @@
   <div
     *ngIf="data_loaded && !edit_c && !add_s && !add_a && file_source == '' && selected_subtopic == '' && selected_exam_results == '' && selected_quiz_results == '' && selected_stud_results == ''"
     class="content-menu" style="margin-bottom: 0; align-items: center">
-    <br />
     <div class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h1 style="line-height: 28px; font-weight: 700"> {{class_data.displayName}} </h1>
       <section style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px auto">
@@ -3760,7 +3756,7 @@
           </h3>
         </div>
       </section>
-      <div class="card-container">
+      <div class="card-container" style="margin-top: 0px">
         <div class="card card-medium"
           style="margin: 10px; height: auto; max-height: 500px; min-width: 40%; max-width: min(80%, 500px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
           <h3 style="margin: 10px auto; text-align: center; font-size: 24px"> Class Details </h3>
@@ -3768,24 +3764,24 @@
               style="font-weight: 500">{{class_data.description}}</strong> </h3>
           <div *ngIf="screenWidth > 700" class="card-container" style="margin: 10px auto; height: auto; width: 100%; display: flex; justify-content: center">
             <label *ngIf="class_data.grade != ''" class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{class_data.grade}} </b> </button>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{class_data.grade}} </b> </button>
             </label>
             <label *ngIf="class_data.subject != ''" class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{class_data.subject}} </b> </button>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{class_data.subject}} </b> </button>
             </label>
             <label *ngIf="class_data.state != ''" class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{class_data.state}} </b> </button>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{class_data.state}} </b> </button>
             </label>
           </div>
           <div *ngIf="screenWidth <= 700" class="card-container" style="margin: 10px auto; height: auto; width: 100%; display: flex; justify-content: center">
             <label *ngIf="class_data.grade != ''" class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; line-height: 18px; min-height: 30px"> <b> {{class_data.grade}} </b> </button>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; line-height: 18px; min-height: 30px"> <b> {{class_data.grade}} </b> </button>
             </label>
             <label *ngIf="class_data.subject != ''" class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; line-height: 18px; min-height: 30px"> <b> {{class_data.subject}} </b> </button>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; line-height: 18px; min-height: 30px"> <b> {{class_data.subject}} </b> </button>
             </label>
             <label *ngIf="class_data.state != ''" class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; line-height: 18px; min-height: 30px"> <b> {{class_data.state}} </b> </button>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; line-height: 18px; min-height: 30px"> <b> {{class_data.state}} </b> </button>
             </label>
           </div>
           <button *ngIf="is_auth && exams_title == 'Exams Assigned To Your Class'" (click)="toggle_edit_class()"
@@ -3885,9 +3881,8 @@
       </div>
       <br *ngIf="is_auth" />
     </div>
-    <br *ngIf="exams_title == 'Exams Assigned To Your Class' && is_auth" />
     <div *ngIf="exams_title == 'Exams Assigned To Your Class' && is_auth" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2 #classStudents> Students Enrolled In Your Class (<b *ngIf="class_student_metadata.length < 1"
           style="color: darkslategray">0</b> <b *ngIf="class_student_metadata.length >= 1"
@@ -4050,9 +4045,8 @@
       </button>
       <br *ngIf="is_auth && exams_title == 'Exams Assigned To Your Class'" />
     </div>
-    <br />
     <div class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2 #classExams> {{exams_title}} (<b *ngIf="class_data.exams.slice(1).length < 1"
           style="color: darkslategray">0</b> <b *ngIf="class_data.exams.slice(1).length >= 1"
@@ -4197,9 +4191,8 @@
       </button>
       <br *ngIf="is_auth && exams_title == 'Exams Assigned To Your Class'" />
     </div>
-    <br />
     <div class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
       <br />
       <h2 #classQuizzes> {{quizzes_title}} (<b *ngIf="class_data.quizzes.slice(1).length < 1"
           style="color: darkslategray">0</b> <b *ngIf="class_data.quizzes.slice(1).length >= 1"
@@ -4335,7 +4328,7 @@
     </div>
   </div>
   <div *ngIf="edit_c" class="card card-large"
-    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: 10px auto; padding: 0 5%; display: flex; flex-direction: column">
     <br />
     <h1 style="line-height: 28px"> Edit Your Class Details </h1>
     <br />
@@ -4490,7 +4483,7 @@
     <br />
   </div>
   <div *ngIf="add_a" class="card card-large"
-    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 2200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 2200px; margin: 10px auto; padding: 0 5%; display: flex; flex-direction: column">
     <br />
     <h1 style="line-height: 28px"> Add Exams To Your Class </h1>
     <br />
@@ -4544,7 +4537,7 @@
     <br />
   </div>
   <div *ngIf="add_s" class="card card-large"
-    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: 10px auto; padding: 0 5%; display: flex; flex-direction: column">
     <br />
     <h1 style="line-height: 28px"> Add Students To Your Class </h1>
     <div class="media">
@@ -4600,5 +4593,4 @@
     </div>
     <br />
   </div>
-  <br />
 </div>
