@@ -7228,24 +7228,24 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
     this.width_change2();
     this.quiz_config = (this.authService.searchQuizId(this.key) as any);;
     setTimeout(() => {
+      this.quiz_config = (this.authService.searchQuizId(this.key) as any);
+      console.log(this.quiz_config);
+      if (this.quiz_config.problems != undefined) {
+        this.ordered_dump = this.quiz_config.problems;
+      }
+      this.quiz_name = this.quiz_config.name;
+      this.grade_filters = (this.quiz_config.grades != undefined) ? this.quiz_config.grades : [];
+      this.subject_filters = (this.quiz_config.subjects != undefined) ? this.quiz_config.subjects : [];
+      this.state_filters = (this.quiz_config.states != undefined) ? this.quiz_config.states : [];
+      this.topic_filters = (this.quiz_config.topics != undefined) ? this.quiz_config.topics : [];
+      this.mode = this.quiz_config.mode;
+      this.shuffle = this.quiz_config.shuffle;
+      this.public = this.quiz_config.public;
+      this.quiz_length = this.quiz_config.length;
+      this.quiz_timer = this.quiz_config.timer;
+      this.timer_hours = Math.floor(this.quiz_timer / 60);
+      this.timer_minutes = this.quiz_timer % 60;
       if (this.authService.userData) {
-        this.quiz_config = (this.authService.searchQuizId(this.key) as any);
-        console.log(this.quiz_config);
-        if (this.quiz_config.problems != undefined) {
-          this.ordered_dump = this.quiz_config.problems;
-        }
-        this.quiz_name = this.quiz_config.name;
-        this.grade_filters = (this.quiz_config.grades != undefined) ? this.quiz_config.grades : [];
-        this.subject_filters = (this.quiz_config.subjects != undefined) ? this.quiz_config.subjects : [];
-        this.state_filters = (this.quiz_config.states != undefined) ? this.quiz_config.states : [];
-        this.topic_filters = (this.quiz_config.topics != undefined) ? this.quiz_config.topics : [];
-        this.mode = this.quiz_config.mode;
-        this.shuffle = this.quiz_config.shuffle;
-        this.public = this.quiz_config.public;
-        this.quiz_length = this.quiz_config.length;
-        this.quiz_timer = this.quiz_config.timer;
-        this.timer_hours = Math.floor(this.quiz_timer / 60);
-        this.timer_minutes = this.quiz_timer % 60;
         // this.is_auth = true;
         this.authService.getProfilePic(this.authService.userData);
         this.user_data = this.authService.userData;

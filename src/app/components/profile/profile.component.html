@@ -127,7 +127,7 @@
     background-color: #fafafa;
     /* height: 40px;
         width: 200px; */
-    margin: 0 8px 16px;
+    margin: 8px;
     padding: 8px 8px;
     display: flex;
     flex-direction: row;
@@ -663,7 +663,7 @@
   }
 
   /* Responsive Styles */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 700px) {
 
     .card-container>*:not(.circle-link),
     .terminal {
@@ -672,7 +672,7 @@
 
     .card:not(.highlight-card) {
       /* height: 16px; */
-      margin: 8px 0;
+      margin: 4px;
     }
 
     .card.highlight-card span {
@@ -688,7 +688,7 @@
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <div *ngIf="data_loaded" class="content-menu" role="menu" style="margin-bottom: 0px; text-align: center">
     <div *ngIf="selected_exam != '' && selected_subtopic == '' && this.authService.userData.role == 'Student'"
-      style="align-items: left; width: min(1075px, 95%)">
+      style="align-items: left; width: min(1075px, 92%)">
       <section>
         <div (click)="selected_exam=''; plot_student_results()" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -699,7 +699,7 @@
       </section>
     </div>
     <div *ngIf="selected_exam != '' && selected_subtopic == '' && this.authService.userData.role != 'Student'"
-      style="align-items: left; width: min(1075px, 95%)">
+      style="align-items: left; width: min(1075px, 92%)">
       <section>
         <div (click)="selected_exam=''; plot_student_results()" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -709,7 +709,7 @@
         </div>
       </section>
     </div>
-    <div *ngIf="selected_subtopic != ''" style="align-items: left; width: min(1075px, 95%)">
+    <div *ngIf="selected_subtopic != ''" style="align-items: left; width: min(1075px, 92%)">
       <section>
         <div (click)="selected_subtopic=''" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -721,7 +721,7 @@
     </div>
     <div *ngIf="selected_subtopic != ''">
       <div *ngIf="selected_subtopic != ''" class="card card-large"
-        style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
         #subtopicSummaryCard>
         <br />
         <div class="content" style="margin: auto; align-items: center">
@@ -842,7 +842,7 @@
           style="width: 100%">
           <br />
           <div class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicRefsheetCard>
             <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
               <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false"
@@ -854,11 +854,11 @@
         </div>
       </div>
       <br *ngIf="selected_subtopic != ''" />
-      <div *ngFor="let prob of subtopic_search_dump | keyvalue">
-        <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp">
-          <div *ngFor="let supp of prob.value.SuppContent">
+      <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
+        <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp" style="display: flex; flex-direction: column; width: 100%">
+          <div *ngFor="let supp of prob.value.SuppContent" style="display: flex; flex-direction: column; width: 100%">
             <div class="card card-large"
-              style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+              style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
               #subtopicSuppCard>
               <br />
               <div class="content" style="margin: auto; align-items: center">
@@ -902,15 +902,16 @@
                             <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
                               {{block2[1].slice(5)}}</h3>
                           </div>
+                          <div *ngIf="block2[1].startsWith(':ibox:')"
+                            style="border: none; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block2[1].slice(6)}}</h3>
+                          </div>
                           <h3
-                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && (block2[0] != '' || supp_st_dump[block[1]].LabelType == 'L')"
-                            style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                            {{block2[1]}}</h3>
+                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && !block2[1].startsWith(':ibox:') && (block2[0] != '' || supp_st_dump[block[1]].LabelType == 'L')"
+                            style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block2[1]}}</h3>
                           <h3
-                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && block2[0] == '' && supp_st_dump[block[1]].LabelType == 'P'"
-                            style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                            <b>{{block2[1]}}</b>
-                          </h3>
+                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && !block2[1].startsWith(':ibox:') && block2[0] == '' && supp_st_dump[block[1]].LabelType == 'P'"
+                            style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)"><b>{{block2[1]}}</b></h3>
                           <img *ngIf="is_image(block2[1])" src="./assets/{{block2[1]}}"
                             style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                         </div>
@@ -965,11 +966,11 @@
           </div>
         </div>
       </div>
-      <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="width: 100%">
-        <div *ngIf="subtopic_problem_number == +prob.key" style="width: 100%">
+      <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="width: 100%; display: flex; flex-direction: column">
+        <div *ngIf="subtopic_problem_number == +prob.key" style="width: 100%; display: flex; flex-direction: column">
           <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number"
             class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicCard>
             <br />
             <section
@@ -1001,7 +1002,7 @@
             </section>
             <br />
             <div class="content" style="margin: auto; align-items: center">
-              <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+              <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
                 <div *ngIf="subtopic_problem_number == +prob.key">
                   <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
                     <img *ngIf="is_image(block)" src="./assets/{{block}}"
@@ -1545,7 +1546,7 @@
                 </div>
               </div>
               <br />
-              <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+              <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
                 <div
                   *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts[0] > 0 && (prob.value.Parts | keys).length == 0"
                   class="card highlight-card card-small"
@@ -1811,7 +1812,7 @@
           </div>
           <br *ngIf="(prob.value.Parts | keys).length >= 0" />
           <div *ngFor="let part of prob.value.Parts | keyvalue" class="card card-large"
-            style="height: auto; margin: auto; margin-bottom: 20px; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+            style="height: auto; margin: auto; margin-bottom: 20px; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicPartCard>
             <br />
             <h2>Part {{part.key}}</h2>
@@ -2563,7 +2564,7 @@
       </div>
     </div>
     <div *ngIf="selected_exam != '' && selected_subtopic == ''" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: auto; padding: 0 2.5%; border: 2px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <div class="card card-medium"
         style="margin: auto; height: auto; max-height: 800px; min-width: 40%; max-width: min(80%, 600px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
@@ -2859,7 +2860,7 @@
       </div>
     </div>
     <div *ngIf="selected_student != '' && selected_exam == '' && selected_subtopic == ''"
-      style="align-items: left; width: min(1075px, 95%)">
+      style="align-items: left; width: min(1075px, 92%)">
       <section>
         <div (click)="selected_student=''" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -2871,7 +2872,7 @@
     </div>
     <div *ngIf="selected_student != '' && selected_exam == '' && selected_subtopic == '' && stud_data_loaded"
       class="card card-large"
-      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <div class="row">
         <div class="col-md-12">
           <div class="media">
@@ -2982,7 +2983,7 @@
     </div>
     <div *ngIf="selected_student != '' && selected_exam == '' && selected_subtopic == '' && stud_data_loaded"
       class="card card-large"
-      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <div class="row">
         <div class="col-md-12">
           <div class="media">
@@ -3160,7 +3161,7 @@
     </div>
     <div *ngIf="selected_student != '' && selected_exam == '' && selected_subtopic == '' && stud_data_loaded"
       class="card card-large"
-      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <div class="row">
         <div class="col-md-12">
           <div class="media">
@@ -3279,7 +3280,7 @@
         </div>
       </div>
     </div>
-    <div *ngIf="selected_exam == '' && selected_student == ''" style="width: min(1075px, 95%); align-items: left">
+    <div *ngIf="selected_exam == '' && selected_student == ''" style="width: min(1075px, 92%); align-items: left">
       <section>
         <div (click)="authService.SignOut()" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -3289,7 +3290,7 @@
       </section>
     </div>
     <div *ngIf="selected_exam == '' && selected_student == ''" class="card card-large"
-      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column; min-width: 300px; max-height: 2400px">
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column; min-width: 300px; max-height: 2400px">
       <div class="inner-adjust" *ngIf="authService.userData as user" style="padding-top: 10px">
         <div class="pt-3 pb-2 mb-3 border-bottom">
           <h1 *ngIf="edit_p" style="font-size: 24px; line-height: 28px"> Edit Your Profile </h1>
@@ -4526,7 +4527,7 @@
       <br />
     </div>
     <div *ngIf="selected_exam == '' && authService.userData.role == 'Student' && profile_tab == 'achievements'" class="card card-large"
-      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <div class="row">
         <div class="col-md-12">
           <div class="media">
@@ -4709,7 +4710,7 @@
       </div>
     </div>
     <div *ngIf="selected_exam == '' && authService.userData.role == 'Student' && profile_tab == 'achievements'" class="card card-large"
-      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <div class="row">
         <div class="col-md-12">
           <div class="media">

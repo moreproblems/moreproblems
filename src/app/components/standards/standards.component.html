@@ -127,7 +127,7 @@
     background-color: #fafafa;
     /* height: 40px;
       width: 200px; */
-    margin: 0 8px 16px;
+    margin: 8px;
     padding: 8px 8px;
     display: flex;
     flex-direction: row;
@@ -446,7 +446,7 @@
   }
 
   /* Responsive Styles */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 700px) {
 
     .card-container>*:not(.circle-link),
     .terminal {
@@ -455,7 +455,7 @@
 
     .card:not(.highlight-card) {
       /* height: 16px; */
-      margin: 8px 0;
+      margin: 4px;
     }
 
     .card.highlight-card span {
@@ -470,7 +470,7 @@
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <div class="content-menu" role="main" style="margin-bottom: 0; align-items: center">
     <div *ngIf="selected_grade == '' && selected_subject == ''" class="card card-large"
-      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <h2 *ngIf="screenWidth > mobileWidth" style="font-weight: 400; font-size: 24.5px; line-height: 30px"> Find out what to expect as a student from this year's instruction, all the way down to specific standards. Subjects include Math & English Language Arts from Kindergarten through High School - as they are outlined by the curriculum of specific states. </h2>
       <h2 *ngIf="screenWidth <= mobileWidth" style="font-weight: 400; font-size: 18.5px; line-height: 24px"> Find out what to expect as a student from this year's instruction, all the way down to specific standards. Subjects include Math & English Language Arts from Kindergarten through High School - as they are outlined by the curriculum of specific states. </h2>
@@ -483,7 +483,7 @@
     </div>
     <div
       *ngIf="selected_subject == '' || (selected_subject == 'HSM' && selected_category == '')"
-      class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <!-- Standards Selector -->
       <br />
       <div class="card card-medium"
@@ -5255,7 +5255,7 @@
       </div>
       <br />
     </div>
-    <div *ngIf="selected_curriculum == 'CC' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+    <div *ngIf="selected_curriculum == 'CC' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <div class="card card-medium"
         style="margin: auto; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
@@ -5302,7 +5302,7 @@
       </div>
       <br />
     </div>
-    <div *ngIf="selected_curriculum == 'MA' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+    <div *ngIf="selected_curriculum == 'MA' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <div class="card card-medium"
         style="margin: auto; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
@@ -5349,7 +5349,7 @@
       </div>
       <br />
     </div>
-    <div *ngIf="selected_curriculum == 'RI' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+    <div *ngIf="selected_curriculum == 'RI' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <div class="card card-medium"
         style="margin: auto; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">

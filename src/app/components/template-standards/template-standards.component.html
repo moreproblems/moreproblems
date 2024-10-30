@@ -127,7 +127,7 @@
       background-color: #fafafa;
       /* height: 40px;
     width: 200px; */
-      margin: 0 8px 16px;
+      margin: 8px;
       padding: 8px 8px;
       display: flex;
       flex-direction: row;
@@ -497,7 +497,7 @@
   }
 
   /* Responsive Styles */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 700px) {
 
       .card-container>*:not(.circle-link),
       .terminal {
@@ -506,7 +506,7 @@
 
       .card:not(.highlight-card) {
           /* height: 16px; */
-          margin: 8px 0;
+          margin: 4px;
       }
 
       .card.highlight-card span {
@@ -521,7 +521,7 @@
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <canvas id="confetticanvas"></canvas>
   <div class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
-    <div *ngIf="selected_subtopic != ''" style="align-items: left; width: min(1075px, 95%)">
+    <div *ngIf="selected_subtopic != ''" style="align-items: left; width: min(1075px, 92%)">
       <section>
         <div (click)="selected_subtopic=''" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -533,7 +533,7 @@
     </div>
     <div *ngIf="selected_subtopic != ''">
       <div *ngIf="selected_subtopic != ''" class="card card-large"
-        style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
         #subtopicSummaryCard>
         <br />
         <div class="content" style="margin: auto; align-items: center">
@@ -661,10 +661,10 @@
           <br /> -->
         </div>
       </div>
-      <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center; width: 100%">
+      <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
         <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && st_refsheet_source != '../../' && expand_refsheet" style="width: 100%">
           <div class="card card-large"
-            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicRefsheetCard>
             <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
               <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false" [zoom]="0.95"
@@ -675,11 +675,11 @@
           </div>
         </div>
       </div>
-      <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center; width: 100%">
+      <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
         <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp" style="display: flex; flex-direction: column; width: 100%">
           <div *ngFor="let supp of prob.value.SuppContent" style="display: flex; flex-direction: column; width: 100%">
             <div class="card card-large"
-              style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+              style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
               #subtopicSuppCard>
               <br />
               <div class="content" style="margin: auto; align-items: center">
@@ -716,11 +716,15 @@
                             style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
                             <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block2[1].slice(5)}}</h3>
                           </div>
+                          <div *ngIf="block2[1].startsWith(':ibox:')"
+                            style="border: none; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block2[1].slice(6)}}</h3>
+                          </div>
                           <h3
-                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && (block2[0] != '' || supp_st_dump[block[1]].LabelType == 'L')"
+                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && !block2[1].startsWith(':ibox:') && (block2[0] != '' || supp_st_dump[block[1]].LabelType == 'L')"
                             style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block2[1]}}</h3>
                           <h3
-                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && block2[0] == '' && supp_st_dump[block[1]].LabelType == 'P'"
+                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && !block2[1].startsWith(':ibox:') && block2[0] == '' && supp_st_dump[block[1]].LabelType == 'P'"
                             style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)"><b>{{block2[1]}}</b></h3>
                           <img *ngIf="is_image(block2[1])" src="./assets/{{block2[1]}}" style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                         </div>
@@ -762,10 +766,10 @@
           </div>
         </div>
       </div>
-      <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center; width: 100%">
+      <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
         <div *ngIf="subtopic_problem_number == +prob.key" style="display: flex; flex-direction: column; width: 100%">
           <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number" class="card card-large"
-            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicCard>
             <br />
             <section *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
@@ -794,7 +798,7 @@
             </section>
             <br />
             <div class="content" style="margin: auto; align-items: center">
-              <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+              <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
                 <div *ngIf="subtopic_problem_number == +prob.key">
                   <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
                     <img *ngIf="is_image(block)" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
@@ -1155,7 +1159,7 @@
                 </div>
               </div>
               <br />
-              <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+              <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
                 <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts[0] > 0 && (prob.value.Parts | keys).length == 0"
                   class="card highlight-card card-small"
                   style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
@@ -1387,7 +1391,7 @@
             </div>
           </div>
           <div *ngFor="let part of prob.value.Parts | keyvalue" class="card card-large"
-            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicPartCard>
             <br />
             <h2>Part {{part.key}}</h2>
@@ -1867,8 +1871,8 @@
         </div>
       </div>
     </div>
-    <div *ngIf="selected_subtopic == ''" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
-      <div style="align-items: left; width: min(1075px, 95%)">
+    <div *ngIf="selected_subtopic == ''" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center; width: 100%">
+      <div style="align-items: left; width: min(1075px, 92%)">
         <section>
           <div routerLink="/standards" routerLinkActive="active" class="card card-small"
             style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -1879,7 +1883,7 @@
         </section>
       </div>
       <div class="card card-large"
-        style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+        style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
         <br />
         <h2 *ngIf="!toggle_goals" style="text-align: center; margin-bottom: 10px; font-weight: 800"> {{standards_dump.Title}} > <b style="font-weight: 600">Standards</b> </h2>
         <h2 *ngIf="toggle_goals" style="text-align: center; margin-bottom: 10px; font-weight: 800"> {{standards_dump.Title}} > <b style="font-weight: 600">Learning Goals</b> </h2>

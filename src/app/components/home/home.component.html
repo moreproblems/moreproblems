@@ -127,7 +127,7 @@
     background-color: #fafafa;
     /* height: 40px;
         width: 200px; */
-    margin: 0 8px 16px;
+    margin: 8px;
     padding: 8px 8px;
     display: flex;
     flex-direction: row;
@@ -614,7 +614,7 @@
   }
 
   /* Responsive Styles */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 700px) {
 
     .card-container>*:not(.circle-link),
     .terminal {
@@ -623,7 +623,7 @@
 
     .card:not(.highlight-card) {
       /* height: 16px; */
-      margin: 8px 0;
+      margin: 4px;
     }
 
     .card.highlight-card span {
@@ -636,7 +636,7 @@
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <div *ngIf="standard_id != ''" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
-    <div *ngIf="standard_id != ''" style="align-items: left; width: min(1075px, 95%)">
+    <div *ngIf="standard_id != ''" style="align-items: left; width: min(1075px, 92%)">
       <section>
         <div (click)="standard_id=''" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -648,7 +648,7 @@
     </div>
     <div *ngIf="selected_subtopic != ''">
       <div *ngIf="selected_subtopic != ''" class="card card-large"
-        style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+        style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
         #subtopicSummaryCard>
         <br />
         <div class="content" style="margin: auto; align-items: center">
@@ -757,9 +757,8 @@
         <div
           *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && st_refsheet_source != '../../' && expand_refsheet"
           style="width: 100%">
-          <br />
           <div class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicRefsheetCard>
             <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
               <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false"
@@ -770,12 +769,11 @@
           </div>
         </div>
       </div>
-      <br *ngIf="selected_subtopic != ''" />
-      <div *ngFor="let prob of subtopic_search_dump | keyvalue">
-        <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp">
-          <div *ngFor="let supp of prob.value.SuppContent">
+      <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
+        <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp" style="display: flex; flex-direction: column; width: 100%">
+          <div *ngFor="let supp of prob.value.SuppContent" style="display: flex; flex-direction: column; width: 100%">
             <div class="card card-large"
-              style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+              style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
               #subtopicSuppCard>
               <br />
               <div class="content" style="margin: auto; align-items: center">
@@ -812,11 +810,15 @@
                             style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
                             <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block2[1].slice(5)}}</h3>
                           </div>
+                          <div *ngIf="block2[1].startsWith(':ibox:')"
+                            style="border: none; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
+                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block2[1].slice(6)}}</h3>
+                          </div>
                           <h3
-                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && (block2[0] != '' || supp_st_dump[block[1]].LabelType == 'L')"
+                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && !block2[1].startsWith(':ibox:') && (block2[0] != '' || supp_st_dump[block[1]].LabelType == 'L')"
                             style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">{{block2[1]}}</h3>
                           <h3
-                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && block2[0] == '' && supp_st_dump[block[1]].LabelType == 'P'"
+                            *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && !block2[1].startsWith(':ibox:') && block2[0] == '' && supp_st_dump[block[1]].LabelType == 'P'"
                             style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)"><b>{{block2[1]}}</b></h3>
                           <img *ngIf="is_image(block2[1])" src="./assets/{{block2[1]}}" style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                         </div>
@@ -855,14 +857,13 @@
               </div>
               <br />
             </div>
-            <br />
           </div>
         </div>
       </div>
-      <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="width: 100%">
-        <div *ngIf="subtopic_problem_number == +prob.key" style="width: 100%">
+      <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="width: 100%; display: flex; flex-direction: column">
+        <div *ngIf="subtopic_problem_number == +prob.key" style="width: 100%; display: flex; flex-direction: column">
           <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number" class="card card-large"
-            style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicCard>
             <br />
             <section *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
@@ -891,7 +892,7 @@
             </section>
             <br />
             <div class="content" style="margin: auto; align-items: center">
-              <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+              <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
                 <div *ngIf="subtopic_problem_number == +prob.key">
                   <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
                     <img *ngIf="is_image(block)" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
@@ -1252,7 +1253,7 @@
                 </div>
               </div>
               <br />
-              <div *ngFor="let prob of subtopic_search_dump | keyvalue">
+              <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
                 <div *ngIf="subtopic_problem_number == +prob.key && subtopic_problem_attempts[0] > 0 && (prob.value.Parts | keys).length == 0"
                   class="card highlight-card card-small"
                   style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
@@ -1483,9 +1484,8 @@
               </div>
             </div>
           </div>
-          <br *ngIf="(prob.value.Parts | keys).length >= 0" />
           <div *ngFor="let part of prob.value.Parts | keyvalue" class="card card-large"
-            style="height: auto; margin: auto; margin-bottom: 20px; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicPartCard>
             <br />
             <h2>Part {{part.key}}</h2>
@@ -1967,7 +1967,7 @@
     </div>
   </div>
   <div *ngIf="file_source != '' && !assign_e" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
-    <div *ngIf="file_source != ''" style="align-items: left; width: min(1075px, 95%)">
+    <div *ngIf="file_source != ''" style="align-items: left; width: min(1075px, 92%)">
       <section>
         <div (click)="file_source=''; exam_fav=false" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -1979,7 +1979,7 @@
     </div>
     <!-- PDF Viewer -->
     <div class="card card-large" (window:resize)="width_change()"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column"
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
       #pdfViewer>
       <section
         style="margin-top: 15px; height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
@@ -2062,7 +2062,7 @@
           </button>
         </div>
       </section>
-      <hr style="width: max(50%, 300px)">
+      <hr *ngIf="authService.userData as user" style="width: max(50%, 300px)">
       <section
         style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
         <div>
@@ -2132,10 +2132,9 @@
           [(page)]="file_page" style="min-height: 625px; height: 100%"></pdf-viewer>
       </section>
     </div>
-    <br />
   </div>
   <div *ngIf="assign_e" class="card card-large"
-      style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+      style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: 10px auto; padding: 0 5%; display: flex; flex-direction: column">
       <br />
       <h1 style="line-height: 28px"> Assign This Exam </h1>
       <div class="media">
@@ -2213,9 +2212,8 @@
       </div>
       <br />
   </div>
-  <br *ngIf="create_s || create_c" />
   <div *ngIf="create_s" class="card card-large"
-    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: 10px auto; padding: 0 5%; display: flex; flex-direction: column">
     <br />
     <h1 style="font-size: 24px"> Create Your New Student's Profile </h1>
     <div class="media">
@@ -2361,7 +2359,7 @@
     <br />
   </div>
   <div *ngIf="create_c" class="card card-large"
-    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: auto; padding: 0 5%; display: flex; flex-direction: column">
+    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: 10px auto; padding: 0 5%; display: flex; flex-direction: column">
     <br />
     <h1> Create Your New Class </h1>
     <div class="media">
@@ -2515,14 +2513,12 @@
     </div>
     <br />
   </div>
-  <br *ngIf="create_s || create_c" />
-  <div *ngIf="file_source == '' && standard_id =='' && !create_s && !create_c && data_loaded" class="content"
-    role="main" style="margin-bottom: 0px;">
-    <br />
+  <div *ngIf="file_source == '' && standard_id =='' && !create_s && !create_c && data_loaded" class="content-menu"
+    role="menu" style="margin-bottom: 0px;">
     <div
       *ngIf="(this.authService.userData.role != 'Student' && this.authService.userData.role != 'Parent') || this.has_classes"
       class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <h1 *ngIf="screenWidth > mobileWidth" style="font-size: 26px" #myClasses> My Classes </h1>
       <h1 *ngIf="screenWidth <= mobileWidth" style="font-size: 22px" #myClasses> My Classes </h1>
@@ -2582,9 +2578,8 @@
       </button>
       <br />
     </div>
-    <br />
     <div *ngIf="this.authService.userData.role != 'Student'" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <h1 *ngIf="screenWidth > mobileWidth" style="font-size: 26px" #mStudents> My Students </h1>
       <h1 *ngIf="screenWidth <= mobileWidth" style="font-size: 22px" #mStudents> My Students </h1>
@@ -2656,9 +2651,8 @@
       </button>
       <br />
     </div>
-    <br *ngIf="this.authService.userData.role != 'Student'" />
     <div *ngIf="this.authService.userData.role == 'Student' || selected_stud != ''" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <h2 *ngIf="this.authService.userData.role == 'Student'" #myProgressExams>My In Progress Exams</h2>
       <h2 *ngIf="this.authService.userData.role != 'Student'" #studProgressExams>{{student_data.displayName}}'s In
@@ -2815,15 +2809,14 @@
       </div>
       <br />
     </div>
-    <br *ngIf="this.authService.userData.role == 'Student' || selected_stud != ''" />
     <div *ngIf="this.authService.userData.exams.favorites.slice(1).length != 0 || this.authService.userData.standards.favorites.slice(1).length != 0" class="card card-large"
-      style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 95%); display: flex; flex-direction: column">
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <h1 *ngIf="screenWidth > mobileWidth" style="font-size: 26px" #myBookmarks> My Bookmarks </h1>
       <h1 *ngIf="screenWidth <= mobileWidth" style="font-size: 22px" #myBookmarks> My Bookmarks </h1>
       <br />
       <div class="card card-medium" *ngIf="this.authService.userData.exams.favorites.slice(1).length != 0"
-        style="margin: auto; display: block; text-align: center; width: min(95%, 1200px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(90%, 1200px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 700; font-size: 20px">Exams (<a routerLink="/exams" routerLinkActive="active" style="font-weight: 500">Click here to browse all available exams</a>)</h3>
         <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 700; font-size: 16px">Exams (<a routerLink="/exams" routerLinkActive="active" style="font-weight: 500">Click here for all exams</a>)</h3>
         <br />
@@ -2842,7 +2835,7 @@
       </div>
       <br *ngIf="this.authService.userData.exams.favorites.slice(1).length != 0" />
       <div class="card card-medium" *ngIf="this.authService.userData.standards.favorites.slice(1).length != 0"
-        style="margin: auto; display: block; text-align: center; width: min(95%, 1200px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(90%, 1200px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h3 *ngIf="screenWidth > mobileWidth" style="font-weight: 700; font-size: 20px">Standards (<a routerLink="/standards" routerLinkActive="active" style="font-weight: 500">Click here to browse all available standards</a>)</h3>
         <h3 *ngIf="screenWidth <= mobileWidth" style="font-weight: 700; font-size: 16px">Standards (<a routerLink="/standards" routerLinkActive="active" style="font-weight: 500">Click here for all standards</a>)</h3>
         <br />
@@ -2861,6 +2854,5 @@
       </div>
       <br />
     </div>
-    <br *ngIf="this.authService.userData.standards.favorites.slice(1).length != 0" />
   </div>
 </div>
