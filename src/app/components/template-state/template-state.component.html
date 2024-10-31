@@ -2598,8 +2598,16 @@
       <input type="hidden" #selection>
       <div class="card-container" style="max-width: 100%">
         <button *ngFor="let exam of subject_exams" (click)="select_exam(exam)" class="card card-small" style="display: flex; flex-direction: row; align-items: center;" tabindex="0">
-          <img *ngIf="!authService.userData || !favorite_exm_set.includes(exam)"
-            src="./assets/media/icons/select.png" style="height: 20px; margin: 0 5px 0 0;">
+          <span *ngIf="(!authService.userData || !favorite_exm_set.includes(exam)) && !exam_set.includes(exam)"
+            style="font-size: 24px; font-weight: 800; color: #666666a1; margin: 0 5px">
+            <i class="fa fa-file-text"></i>
+          </span>
+          <span *ngIf="(!authService.userData || !favorite_exm_set.includes(exam)) && exam_set.includes(exam)"
+            style="font-size: 24px; font-weight: 800; color: rgba(29, 159, 0, 0.6); margin: 0 5px">
+            <i class="fa fa-file-text"></i>
+          </span>
+          <!-- <img *ngIf="!authService.userData || !favorite_exm_set.includes(exam)"
+            src="./assets/media/icons/select.png" style="height: 20px; margin: 0 5px 0 0;"> -->
           <span *ngIf="favorite_exm_set.includes(exam) && authService.userData as user"
             style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
           </span>

@@ -19700,14 +19700,6 @@
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
                   <button (click)="select_exam('WIG10SS')" class="card card-small" style="line-height: 18px" tabindex="0">
-                    <!-- <span *ngIf="(!authService.userData || !favorite_set.includes('WIG10SS')) && !exam_set.includes('WIG10SS')"
-                      style="font-size: 24px; font-weight: 800; color: #666; margin: 0 5px">
-                      <i class="fa fa-file-text"></i>
-                    </span>
-                    <span *ngIf="(!authService.userData || !favorite_set.includes('WIG10SS')) && exam_set.includes('WIG10SS')"
-                      style="font-size: 24px; font-weight: 800; color: limegreen; margin: 0 5px">
-                      <i class="fa fa-file-text"></i>
-                    </span> -->
                     <img *ngIf="!authService.userData || !favorite_set.includes('WIG10SS')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
                     <span *ngIf="favorite_set.includes('WIG10SS') && authService.userData as user"
