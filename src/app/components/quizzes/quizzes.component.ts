@@ -3959,7 +3959,7 @@ export class QuizzesComponent implements OnInit {
       return (this.choices_hover[num][index]);
     }
     else {
-      return;
+      return null;
     }
   }
 

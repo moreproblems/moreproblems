@@ -619,7 +619,7 @@ import * as TX19HSUSHProblems from "src/assets/problems/TX19HSUSH/TX19HSUSH-prob
 import * as TX18HSUSHProblems from "src/assets/problems/TX18HSUSH/TX18HSUSH-problems.json";
 import * as TX17HSUSHProblems from "src/assets/problems/TX17HSUSH/TX17HSUSH-problems.json";
 
-const MathJax = require('mathjax');
+// const MathJax = require('mathjax');
 const confetti = require('canvas-confetti');
 
 const confettiCanvas = document.getElementById('confetticanvas');
@@ -5075,7 +5075,7 @@ export class TestExamComponent implements OnInit {
         }
         this.clearProblemTimer();
         this.toggleProblemTimer();
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        // MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
     }
 
     toggle_favorite_std() {
