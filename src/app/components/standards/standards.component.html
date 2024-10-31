@@ -490,77 +490,6 @@
         style="margin: auto; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h2 style="padding: 10px; margin-bottom: 0px"> Choose Your Curriculum </h2>
         <input type="hidden" value="" #state>
-        <div class="card-container" style="padding: 10px; max-width: 100%; margin-top: 0px">
-          <label class="switch" style="max-width: 500px; width: auto">
-            <input type="checkbox" style="margin: 0px" value="CC">
-            <button *ngIf="selected_curriculum == 'CC'" (click)="select_curriculum('CC'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
-              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
-                <img src="./assets/media/flags/US.png" style="padding: 5px 0 0; height: 25px">
-              </div>
-              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
-                <img src="./assets/media/flags/US.png" style="padding: 5px 0 0; height: 20px">
-              </div>
-              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
-                <b> U.S. </b> Common Core
-              </div>
-              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
-                <b> U.S. </b> Common Core
-              </div>
-            </button>
-            <button *ngIf="selected_curriculum != 'CC'" (click)="select_curriculum('CC'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0"
-              style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
-              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
-                <img src="./assets/media/flags/US.png" style="padding: 5px 0 0; height: 25px">
-              </div>
-              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
-                <img src="./assets/media/flags/US.png" style="padding: 5px 0 0; height: 20px">
-              </div>
-              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
-                <b> U.S. </b> Common Core
-              </div>
-              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
-                <b> U.S. </b> Common Core
-              </div>
-            </button>
-          </label>
-          <label class="switch" style="max-width: 500px; width: auto">
-            <input type="checkbox" style="margin: 0px" value="SAT">
-            <button *ngIf="selected_curriculum == 'SAT'" (click)="select_curriculum('SAT'); scroll_top()" class="toggle-button-on"
-              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
-              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
-                <img src="./assets/media/SAT.png" style="padding: 5px 0 0; height: 25px">
-              </div>
-              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
-                <img src="./assets/media/SAT.png" style="padding: 5px 0 0; height: 20px">
-              </div>
-              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
-                <b> SAT </b> Suite
-              </div>
-              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
-                <b> SAT </b> Suite
-              </div>
-            </button>
-            <button *ngIf="selected_curriculum != 'SAT'" (click)="select_curriculum('SAT'); scroll(chooseGrade)"
-              class="toggle-button-off" tabindex="0"
-              style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
-              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
-                <img src="./assets/media/SAT.png" style="padding: 5px 0 0; height: 25px">
-              </div>
-              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
-                <img src="./assets/media/SAT.png" style="padding: 5px 0 0; height: 20px">
-              </div>
-              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
-                <b> SAT </b> Suite
-              </div>
-              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
-                <b> SAT </b> Suite
-              </div>
-            </button>
-          </label>
-        </div>
-        <input type="hidden" value="" #state>
         <div class="card-container" style="max-width: 100%; padding: 10px; margin-top: 0px">
           <label class="switch" style="max-width: 500px; width: auto">
             <input type="checkbox" style="margin: 0px" value="CO">
@@ -842,12 +771,89 @@
             </button>
           </label>
         </div>
+        <input type="hidden" value="" #state>
+        <div class="card-container" style="padding: 10px; max-width: 100%; margin-top: 0px">
+          <label class="switch" style="max-width: 500px; width: auto">
+            <input type="checkbox" style="margin: 0px" value="CC">
+            <button *ngIf="selected_curriculum == 'CC'" (click)="select_curriculum('CC'); scroll_top()" class="toggle-button-on"
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
+                <img src="./assets/media/flags/US.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/US.png" style="padding: 5px 0 0; height: 20px">
+              </div>
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
+                <b> U.S. </b> Common Core
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
+                <b> U.S. </b> Common Core
+              </div>
+            </button>
+            <button *ngIf="selected_curriculum != 'CC'" (click)="select_curriculum('CC'); scroll(chooseGrade)"
+              class="toggle-button-off" tabindex="0"
+              style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
+                <img src="./assets/media/flags/US.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/US.png" style="padding: 5px 0 0; height: 20px">
+              </div>
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
+                <b> U.S. </b> Common Core
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
+                <b> U.S. </b> Common Core
+              </div>
+            </button>
+          </label>
+          <label class="switch" style="max-width: 500px; width: auto">
+            <input type="checkbox" style="margin: 0px" value="SAT">
+            <button *ngIf="selected_curriculum == 'SAT'" (click)="select_curriculum('SAT'); scroll_top()" class="toggle-button-on"
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
+                <img src="./assets/media/SAT.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/SAT.png" style="padding: 5px 0 0; height: 20px">
+              </div>
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
+                <b> SAT </b> Suite
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
+                <b> SAT </b> Suite
+              </div>
+            </button>
+            <button *ngIf="selected_curriculum != 'SAT'" (click)="select_curriculum('SAT'); scroll(chooseGrade)"
+              class="toggle-button-off" tabindex="0"
+              style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
+                <img src="./assets/media/SAT.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/SAT.png" style="padding: 5px 0 0; height: 20px">
+              </div>
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 18px">
+                <b> SAT </b> Suite
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
+                <b> SAT </b> Suite
+              </div>
+            </button>
+          </label>
+        </div>
       </div>
       <br />
-      <div class="card card-medium"
+    </div>
+    <div style="margin: 0px; height: 0px; width: 0px" #chooseGrade></div>
+    <div
+      *ngIf="selected_curriculum != '' && (selected_subject == '' || (selected_subject == 'HSM' && selected_category == ''))"
+      class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
+      <br *ngIf="selected_curriculum != ''" />
+      <div *ngIf="selected_curriculum != ''" class="card card-medium"
         style="margin: auto; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
-        <h2 *ngIf="selected_curriculum != ''" style="margin-bottom: 0px"> Choose Your Grade </h2>
-        <br #chooseGrade />
+        <h2 style="margin-bottom: 0px"> Choose Your Grade </h2>
+        <br />
         <input type="hidden" value="" #grade>
         <div *ngIf="selected_curriculum == 'CC'">
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -855,94 +861,95 @@
               <input type="checkbox" style="margin: 0px" value="K">
               <button *ngIf="selected_grade == 'K'" (click)="select_grade('K')" class="toggle-button-on" tabindex="0">
                 <b>K</b>indergarten</button>
-              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>K</b>indergarten</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G1">
               <button *ngIf="selected_grade == 'G1'" (click)="select_grade('G1')" class="toggle-button-on" tabindex="0">Grade
                 <b>1</b></button>
-              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>1</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G2">
               <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2')" class="toggle-button-on" tabindex="0">Grade
                 <b>2</b></button>
-              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>2</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
-              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>3</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
-              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>4</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
-              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>5</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
-              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>6</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
-              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>7</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
-              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>8</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G9">
               <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9')" class="toggle-button-on" tabindex="0">Grade
                 <b>9</b></button>
-              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>9</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G10">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10')" class="toggle-button-on" tabindex="0">Grade
                 <b>10</b></button>
-              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>10</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11')" class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
-              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>11</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G12">
               <button *ngIf="selected_grade == 'G12'" (click)="select_grade('G12')" class="toggle-button-on" tabindex="0">Grade
                 <b>12</b></button>
-              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>12</b></button>
             </label>
           </div>
+          <div style="margin: 0px; height: 0px; width: 0px" #chooseSubject></div>
           <br *ngIf="selected_grade != ''" />
           <div
             *ngIf="subject_name == '' || (subject_name == 'Ninth Grade Mathematics' && selected_category == '') || (subject_name == 'Tenth Grade Mathematics' && selected_category == '') || (subject_name == 'Eleventh Grade Mathematics' && selected_category == '') || (subject_name == 'Twelfth Grade Mathematics' && selected_category == '')"
@@ -1164,7 +1171,7 @@
                   <input type="checkbox" style="margin: 0px" value="HSM">
                   <button *ngIf="selected_subject == 'HSM'" (click)="select_subject('HSM')" class="toggle-button-on" tabindex="0">
                     <b> Mathematics </b></button>
-                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll_top()"
+                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll(theEnd)"
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
@@ -1185,7 +1192,7 @@
                   <input type="checkbox" style="margin: 0px" value="HSM">
                   <button *ngIf="selected_subject == 'HSM'" (click)="select_subject('HSM')" class="toggle-button-on"
                     tabindex="0"> <b> Mathematics </b></button>
-                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll_top()"
+                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll(theEnd)"
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
@@ -1206,7 +1213,7 @@
                   <input type="checkbox" style="margin: 0px" value="HSM">
                   <button *ngIf="selected_subject == 'HSM'" (click)="select_subject('HSM')" class="toggle-button-on"
                     tabindex="0"> <b> Mathematics </b></button>
-                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll_top()"
+                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll(theEnd)"
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
@@ -1227,7 +1234,7 @@
                   <input type="checkbox" style="margin: 0px" value="HSM">
                   <button *ngIf="selected_subject == 'HSM'" (click)="select_subject('HSM')" class="toggle-button-on"
                     tabindex="0"> <b> Mathematics </b></button>
-                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll_top()"
+                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll(theEnd)"
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
@@ -1240,101 +1247,102 @@
               <input type="checkbox" style="margin: 0px" value="P">
               <button *ngIf="selected_grade == 'P'" (click)="select_grade('P')" class="toggle-button-on" tabindex="0">
                 <b>P</b>reschool</button>
-              <button *ngIf="selected_grade != 'P'" (click)="select_grade('P')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'P'" (click)="select_grade('P'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>P</b>reschool</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="K">
               <button *ngIf="selected_grade == 'K'" (click)="select_grade('K')" class="toggle-button-on" tabindex="0">
                 <b>K</b>indergarten</button>
-              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>K</b>indergarten</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G1">
               <button *ngIf="selected_grade == 'G1'" (click)="select_grade('G1')" class="toggle-button-on" tabindex="0">Grade
                 <b>1</b></button>
-              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>1</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G2">
               <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2')" class="toggle-button-on" tabindex="0">Grade
                 <b>2</b></button>
-              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>2</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
-              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>3</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
-              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>4</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
-              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>5</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
-              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>6</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
-              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>7</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
-              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>8</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G9">
               <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9')" class="toggle-button-on" tabindex="0">Grade
                 <b>9</b></button>
-              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>9</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G10">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10')" class="toggle-button-on" tabindex="0">Grade
                 <b>10</b></button>
-              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>10</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11')" class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
-              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>11</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G12">
               <button *ngIf="selected_grade == 'G12'" (click)="select_grade('G12')" class="toggle-button-on" tabindex="0">Grade
                 <b>12</b></button>
-              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>12</b></button>
             </label>
           </div>
+          <div style="margin: 0px; height: 0px; width: 0px" #chooseSubject></div>
           <br *ngIf="selected_grade != ''" />
           <div class="content" role="main" [ngSwitch]="selected_grade" style="margin-bottom: 0px">
             <!-- Preschool Standards -->
@@ -1751,94 +1759,95 @@
               <input type="checkbox" style="margin: 0px" value="K">
               <button *ngIf="selected_grade == 'K'" (click)="select_grade('K')" class="toggle-button-on" tabindex="0">
                 <b>K</b>indergarten</button>
-              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>K</b>indergarten</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G1">
               <button *ngIf="selected_grade == 'G1'" (click)="select_grade('G1')" class="toggle-button-on" tabindex="0">Grade
                 <b>1</b></button>
-              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>1</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G2">
               <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2')" class="toggle-button-on" tabindex="0">Grade
                 <b>2</b></button>
-              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>2</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
-              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>3</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
-              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>4</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
-              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>5</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
-              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>6</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
-              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>7</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
-              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>8</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G9">
               <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9')" class="toggle-button-on" tabindex="0">Grade
                 <b>9</b></button>
-              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>9</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G10">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10')" class="toggle-button-on" tabindex="0">Grade
                 <b>10</b></button>
-              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>10</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11')" class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
-              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>11</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G12">
               <button *ngIf="selected_grade == 'G12'" (click)="select_grade('G12')" class="toggle-button-on" tabindex="0">Grade
                 <b>12</b></button>
-              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>12</b></button>
             </label>
           </div>
+          <div style="margin: 0px; height: 0px; width: 0px" #chooseSubject></div>
           <br *ngIf="selected_grade != ''" />
           <div
             class="content" role="main" [ngSwitch]="selected_grade" style="margin-bottom: 0px">
@@ -2127,101 +2136,102 @@
               <input type="checkbox" style="margin: 0px" value="PK">
               <button *ngIf="selected_grade == 'PK'" (click)="select_grade('PK')" class="toggle-button-on" tabindex="0">
                 <b>P</b>re-<b>K</b>indergarten</button>
-              <button *ngIf="selected_grade != 'PK'" (click)="select_grade('PK')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'PK'" (click)="select_grade('PK'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>P</b>re-<b>K</b>indergarten</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="K">
               <button *ngIf="selected_grade == 'K'" (click)="select_grade('K')" class="toggle-button-on" tabindex="0">
                 <b>K</b>indergarten</button>
-              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>K</b>indergarten</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G1">
               <button *ngIf="selected_grade == 'G1'" (click)="select_grade('G1')" class="toggle-button-on" tabindex="0">Grade
                 <b>1</b></button>
-              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>1</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G2">
               <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2')" class="toggle-button-on" tabindex="0">Grade
                 <b>2</b></button>
-              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>2</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
-              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>3</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
-              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>4</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
-              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>5</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
-              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>6</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
-              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>7</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
-              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>8</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G9">
               <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9')" class="toggle-button-on" tabindex="0">Grade
                 <b>9</b></button>
-              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>9</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G10">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10')" class="toggle-button-on" tabindex="0">Grade
                 <b>10</b></button>
-              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>10</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11')" class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
-              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>11</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G12">
               <button *ngIf="selected_grade == 'G12'" (click)="select_grade('G12')" class="toggle-button-on" tabindex="0">Grade
                 <b>12</b></button>
-              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>12</b></button>
             </label>
           </div>
+          <div style="margin: 0px; height: 0px; width: 0px" #chooseSubject></div>
           <br *ngIf="selected_grade != ''" />
           <div class="content" role="main" [ngSwitch]="selected_grade" style="margin-bottom: 0px">
             <!-- Pre-Kindergarten Standards -->
@@ -2623,101 +2633,102 @@
               <input type="checkbox" style="margin: 0px" value="PK">
               <button *ngIf="selected_grade == 'PK'" (click)="select_grade('PK')" class="toggle-button-on" tabindex="0">
                 <b>P</b>re-<b>K</b>indergarten</button>
-              <button *ngIf="selected_grade != 'PK'" (click)="select_grade('PK')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'PK'" (click)="select_grade('PK'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>P</b>re-<b>K</b>indergarten</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="K">
               <button *ngIf="selected_grade == 'K'" (click)="select_grade('K')" class="toggle-button-on" tabindex="0">
                 <b>K</b>indergarten</button>
-              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>K</b>indergarten</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G1">
               <button *ngIf="selected_grade == 'G1'" (click)="select_grade('G1')" class="toggle-button-on" tabindex="0">Grade
                 <b>1</b></button>
-              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>1</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G2">
               <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2')" class="toggle-button-on" tabindex="0">Grade
                 <b>2</b></button>
-              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>2</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
-              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>3</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
-              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>4</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
-              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>5</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
-              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>6</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
-              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>7</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
-              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>8</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G9">
               <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9')" class="toggle-button-on" tabindex="0">Grade
                 <b>9</b></button>
-              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>9</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G10">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10')" class="toggle-button-on" tabindex="0">Grade
                 <b>10</b></button>
-              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>10</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11')" class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
-              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>11</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G12">
               <button *ngIf="selected_grade == 'G12'" (click)="select_grade('G12')" class="toggle-button-on" tabindex="0">Grade
                 <b>12</b></button>
-              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>12</b></button>
             </label>
           </div>
+          <div style="margin: 0px; height: 0px; width: 0px" #chooseSubject></div>
           <br *ngIf="selected_grade != ''" />
           <div class="content" role="main" [ngSwitch]="selected_grade" style="margin-bottom: 0px">
             <!-- Pre-Kindergarten Standards -->
@@ -3021,7 +3032,7 @@
                   <input type="checkbox" style="margin: 0px" value="HSM">
                   <button *ngIf="selected_subject == 'HSM'" (click)="select_subject('HSM')" class="toggle-button-on" tabindex="0">
                     <b> Mathematics </b></button>
-                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll_top()"
+                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll(theEnd)"
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
@@ -3072,7 +3083,7 @@
                   <input type="checkbox" style="margin: 0px" value="HSM">
                   <button *ngIf="selected_subject == 'HSM'" (click)="select_subject('HSM')" class="toggle-button-on" tabindex="0">
                     <b> Mathematics </b></button>
-                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll_top()"
+                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll(theEnd)"
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
@@ -3123,7 +3134,7 @@
                   <input type="checkbox" style="margin: 0px" value="HSM">
                   <button *ngIf="selected_subject == 'HSM'" (click)="select_subject('HSM')" class="toggle-button-on" tabindex="0">
                     <b> Mathematics </b></button>
-                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll_top()"
+                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll(theEnd)"
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
@@ -3174,7 +3185,7 @@
                   <input type="checkbox" style="margin: 0px" value="HSM">
                   <button *ngIf="selected_subject == 'HSM'" (click)="select_subject('HSM')" class="toggle-button-on" tabindex="0">
                     <b> Mathematics </b></button>
-                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll_top()"
+                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll(theEnd)"
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
@@ -3217,101 +3228,102 @@
               <input type="checkbox" style="margin: 0px" value="PK">
               <button *ngIf="selected_grade == 'PK'" (click)="select_grade('PK')" class="toggle-button-on" tabindex="0">
                 <b>P</b>re-<b>K</b>indergarten</button>
-              <button *ngIf="selected_grade != 'PK'" (click)="select_grade('PK')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'PK'" (click)="select_grade('PK'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>P</b>re-<b>K</b>indergarten</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="K">
               <button *ngIf="selected_grade == 'K'" (click)="select_grade('K')" class="toggle-button-on" tabindex="0">
                 <b>K</b>indergarten</button>
-              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>K</b>indergarten</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G1">
               <button *ngIf="selected_grade == 'G1'" (click)="select_grade('G1')" class="toggle-button-on" tabindex="0">Grade
                 <b>1</b></button>
-              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>1</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G2">
               <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2')" class="toggle-button-on" tabindex="0">Grade
                 <b>2</b></button>
-              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>2</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
-              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>3</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
-              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>4</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
-              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>5</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
-              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>6</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
-              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>7</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
-              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>8</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G9">
               <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9')" class="toggle-button-on" tabindex="0">Grade
                 <b>9</b></button>
-              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>9</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G10">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10')" class="toggle-button-on" tabindex="0">Grade
                 <b>10</b></button>
-              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>10</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11')" class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
-              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>11</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G12">
               <button *ngIf="selected_grade == 'G12'" (click)="select_grade('G12')" class="toggle-button-on" tabindex="0">Grade
                 <b>12</b></button>
-              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>12</b></button>
             </label>
           </div>
+          <div style="margin: 0px; height: 0px; width: 0px" #chooseSubject></div>
           <br *ngIf="selected_grade != ''" />
           <div class="content" role="main" [ngSwitch]="selected_grade" style="margin-bottom: 0px">
             <!-- Pre-Kindergarten Standards -->
@@ -3686,45 +3698,46 @@
               <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
-              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>3</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
-              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>4</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
-              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>5</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
-              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>6</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
-              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>7</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
-              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>8</b></button>
             </label>
           </div>
+          <div style="margin: 0px; height: 0px; width: 0px" #chooseSubject></div>
           <br *ngIf="selected_grade != ''" />
           <div class="content" role="main" [ngSwitch]="selected_grade" style="margin-bottom: 0px">
             <!-- Third Grade Standards -->
@@ -3879,94 +3892,95 @@
               <input type="checkbox" style="margin: 0px" value="K">
               <button *ngIf="selected_grade == 'K'" (click)="select_grade('K')" class="toggle-button-on" tabindex="0">
                 <b>K</b>indergarten</button>
-              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>K</b>indergarten</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G1">
               <button *ngIf="selected_grade == 'G1'" (click)="select_grade('G1')" class="toggle-button-on" tabindex="0">Grade
                 <b>1</b></button>
-              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>1</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G2">
               <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2')" class="toggle-button-on" tabindex="0">Grade
                 <b>2</b></button>
-              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>2</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
-              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>3</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
-              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>4</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
-              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>5</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
-              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>6</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
-              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>7</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
-              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>8</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G9">
               <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9')" class="toggle-button-on" tabindex="0">Grade
                 <b>9</b></button>
-              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>9</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G10">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10')" class="toggle-button-on" tabindex="0">Grade
                 <b>10</b></button>
-              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>10</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11')" class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
-              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>11</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G12">
               <button *ngIf="selected_grade == 'G12'" (click)="select_grade('G12')" class="toggle-button-on" tabindex="0">Grade
                 <b>12</b></button>
-              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>12</b></button>
             </label>
           </div>
+          <div style="margin: 0px; height: 0px; width: 0px" #chooseSubject></div>
           <br *ngIf="selected_grade != ''" />
           <div
             *ngIf="subject_name == '' || (subject_name == 'Ninth Grade Mathematics' && selected_category == '') || (subject_name == 'Tenth Grade Mathematics' && selected_category == '') || (subject_name == 'Eleventh Grade Mathematics' && selected_category == '') || (subject_name == 'Twelfth Grade Mathematics' && selected_category == '')"
@@ -4188,7 +4202,7 @@
                   <input type="checkbox" style="margin: 0px" value="HSM">
                   <button *ngIf="selected_subject == 'HSM'" (click)="select_subject('HSM')" class="toggle-button-on" tabindex="0">
                     <b> Mathematics </b></button>
-                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll_top()"
+                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll(theEnd)"
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
@@ -4209,7 +4223,7 @@
                   <input type="checkbox" style="margin: 0px" value="HSM">
                   <button *ngIf="selected_subject == 'HSM'" (click)="select_subject('HSM')" class="toggle-button-on"
                     tabindex="0"> <b> Mathematics </b></button>
-                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll_top()"
+                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll(theEnd)"
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
@@ -4230,7 +4244,7 @@
                   <input type="checkbox" style="margin: 0px" value="HSM">
                   <button *ngIf="selected_subject == 'HSM'" (click)="select_subject('HSM')" class="toggle-button-on"
                     tabindex="0"> <b> Mathematics </b></button>
-                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll_top()"
+                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll(theEnd)"
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
@@ -4251,7 +4265,7 @@
                   <input type="checkbox" style="margin: 0px" value="HSM">
                   <button *ngIf="selected_subject == 'HSM'" (click)="select_subject('HSM')" class="toggle-button-on"
                     tabindex="0"> <b> Mathematics </b></button>
-                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll_top()"
+                  <button *ngIf="selected_subject != 'HSM'" (click)="select_subject('HSM'); scroll(theEnd)"
                     class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
@@ -4304,94 +4318,95 @@
               <input type="checkbox" style="margin: 0px" value="K">
               <button *ngIf="selected_grade == 'K'" (click)="select_grade('K')" class="toggle-button-on" tabindex="0">
                 <b>K</b>indergarten</button>
-              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>K</b>indergarten</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G1">
               <button *ngIf="selected_grade == 'G1'" (click)="select_grade('G1')" class="toggle-button-on" tabindex="0">Grade
                 <b>1</b></button>
-              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>1</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G2">
               <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2')" class="toggle-button-on" tabindex="0">Grade
                 <b>2</b></button>
-              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>2</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
-              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>3</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
-              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>4</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
-              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>5</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
-              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>6</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
-              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>7</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
-              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>8</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G9">
               <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9')" class="toggle-button-on" tabindex="0">Grade
                 <b>9</b></button>
-              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>9</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G10">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10')" class="toggle-button-on" tabindex="0">Grade
                 <b>10</b></button>
-              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>10</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11')" class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
-              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>11</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G12">
               <button *ngIf="selected_grade == 'G12'" (click)="select_grade('G12')" class="toggle-button-on" tabindex="0">Grade
                 <b>12</b></button>
-              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>12</b></button>
             </label>
           </div>
+          <div style="margin: 0px; height: 0px; width: 0px" #chooseSubject></div>
           <br *ngIf="selected_grade != ''" />
           <div class="content" role="main" [ngSwitch]="selected_grade" style="margin-bottom: 0px">
             <!-- Kindergarten Standards -->
@@ -4775,94 +4790,95 @@
               <input type="checkbox" style="margin: 0px" value="K">
               <button *ngIf="selected_grade == 'K'" (click)="select_grade('K')" class="toggle-button-on" tabindex="0">
                 <b>K</b>indergarten</button>
-              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K')" class="toggle-button-off" tabindex="0">
+              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
                 <b>K</b>indergarten</button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G1">
               <button *ngIf="selected_grade == 'G1'" (click)="select_grade('G1')" class="toggle-button-on" tabindex="0">Grade
                 <b>1</b></button>
-              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>1</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G2">
               <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2')" class="toggle-button-on" tabindex="0">Grade
                 <b>2</b></button>
-              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>2</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G3">
               <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
                 <b>3</b></button>
-              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>3</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G4">
               <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
                 <b>4</b></button>
-              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>4</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G5">
               <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
                 <b>5</b></button>
-              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>5</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G6">
               <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
                 <b>6</b></button>
-              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>6</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G7">
               <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
                 <b>7</b></button>
-              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>7</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G8">
               <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
                 <b>8</b></button>
-              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>8</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G9">
               <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9')" class="toggle-button-on" tabindex="0">Grade
                 <b>9</b></button>
-              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>9</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G10">
               <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10')" class="toggle-button-on" tabindex="0">Grade
                 <b>10</b></button>
-              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>10</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G11">
               <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11')" class="toggle-button-on" tabindex="0">Grade
                 <b>11</b></button>
-              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>11</b></button>
             </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="G12">
               <button *ngIf="selected_grade == 'G12'" (click)="select_grade('G12')" class="toggle-button-on" tabindex="0">Grade
                 <b>12</b></button>
-              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12')" class="toggle-button-off" tabindex="0">Grade
+              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
                 <b>12</b></button>
             </label>
           </div>
+          <div style="margin: 0px; height: 0px; width: 0px" #chooseSubject></div>
           <br *ngIf="selected_grade != ''" />
           <div class="content" role="main" [ngSwitch]="selected_grade" style="margin-bottom: 0px">
             <!-- Kindergarten Standards -->
@@ -5255,6 +5271,7 @@
       </div>
       <br />
     </div>
+    <div style="margin: 0px; height: 0px; width: 0px" #chooseCategory></div>
     <div *ngIf="selected_curriculum == 'CC' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <div class="card card-medium"
@@ -5263,7 +5280,6 @@
           mathematics that all students should study in order to be college and career ready. The high school standards
           are listed in conceptual categories, which portray a coherent view of high school mathematics. Modeling concepts
           should be understood and applied across these categories. </h4>
-        <br />
         <h2 style="margin-bottom: 0px"> Choose Your Category </h2>
         <br />
         <input type="hidden" #category>
@@ -5310,7 +5326,6 @@
           mathematics that all students should study in order to be college and career ready. The high school standards
           are listed in conceptual categories, which portray a coherent view of high school mathematics. Modeling concepts
           should be understood and applied across these categories. </h4>
-        <br />
         <h2 style="margin-bottom: 0px"> Choose Your Category </h2>
         <br />
         <input type="hidden" #category>
@@ -5357,7 +5372,6 @@
           mathematics that all students should study in order to be college and career ready. The high school standards
           are listed in conceptual categories, which portray a coherent view of high school mathematics. Modeling concepts
           should be understood and applied across these categories. </h4>
-        <br />
         <h2 style="margin-bottom: 0px"> Choose Your Category </h2>
         <br />
         <input type="hidden" #category>
@@ -5396,5 +5410,6 @@
       </div>
       <br />
     </div>
+    <div style="margin: 0px; height: 0px; width: 0px" id="theEnd" #theEnd></div>
   </div>
 </div>

@@ -2072,12 +2072,12 @@
           {{exam_name}} </h1>
         <button *ngIf="exam_set.includes(exam_id) && this.screenWidth <= 900" (click)="take_exam()"
           class="grade-button"
-          style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: green">
+          style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px; font-size: 17px; line-height: 19px; width: auto"> Take Exam! </b>
         </button>
         <button *ngIf="exam_set.includes(exam_id) && this.screenWidth > 900" (click)="take_exam()"
-          class="grade-button" style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: green">
+          class="grade-button" style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px; font-size: 22px; line-height: 26px; width: auto"> Take Exam! </b>
         </button>

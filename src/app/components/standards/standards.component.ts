@@ -61,6 +61,13 @@ export class StandardsComponent implements OnInit{
     }
     else {
       this.selected_subject = sbj;
+      if (sbj == 'HSM') {
+        setTimeout(() => {
+          var theEnd = document.getElementById('theEnd');
+          if (theEnd) {
+            this.scroll(theEnd);
+          }
+        }, 100);}
       // this.selected_category = sbj;
       // this.domain_state = { 1: false, 2: false, 3: false, 4: false };
     }
