@@ -2341,8 +2341,8 @@
               </div>
             </div>
           </section>
-          <h4 *ngIf="exam_timer==0" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+(max_problem_number-1)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
-          <progress *ngIf="!expand_overview && exam_timer==0" value="{{max_problem_number-1}}" max="{{exam_length}}"
+          <h4 *ngIf="exam_timer==0" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+(exam_dump | keys).indexOf(''+max_problem_number)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
+          <progress *ngIf="!expand_overview && exam_timer==0" value="{{(exam_dump | keys).indexOf(''+max_problem_number)}}" max="{{exam_length}}"
             style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           <h4 *ngIf="exam_timer>0" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Remaining Time: <b>{{et_minutes}} mins {{et_counter%60}} secs</b> </h4>

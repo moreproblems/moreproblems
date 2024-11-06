@@ -2076,7 +2076,7 @@
                 </div>
             </div>
           </section>
-          <h4 *ngIf="length_mode=='number'" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+(max_problem_number-1)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
+          <h4 *ngIf="length_mode=='number'" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Quiz Progress: <b>{{""+(max_problem_number-1)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
           <progress *ngIf="(!expand_overview || mode == 'explain') && length_mode=='number'" value="{{max_problem_number-1}}" max="{{exam_length}}"
             style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
@@ -4288,6 +4288,11 @@
             <button *ngIf="!state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')" class="toggle-button-off" tabindex="0"> <b>Massachusetts</b> </button>
           </label>
           <label class="switch">
+            <input type="checkbox" style="margin: 0px" value="MS">
+            <button *ngIf="state_filters.includes('Mississippi')" (click)="toggle_button('Mississippi')" class="toggle-button-on" tabindex="0"> <b>Mississippi</b> </button>
+            <button *ngIf="!state_filters.includes('Mississippi')" (click)="toggle_button('Mississippi')" class="toggle-button-off" tabindex="0"> <b>Mississippi</b> </button>
+          </label>
+          <label class="switch">
             <input type="checkbox" style="margin: 0px" value="NJ">
             <button *ngIf="state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-on" tabindex="0"> <b>New Jersey</b> </button>
             <button *ngIf="!state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-off" tabindex="0"> <b>New Jersey</b> </button>
@@ -4621,6 +4626,14 @@
               tabindex="0"> <b>Massachusetts</b> </button>
             <button *ngIf="selected_curriculum != 'MA'" (click)="select_curriculum('MA')" class="toggle-button-off"
               tabindex="0"> <b>Massachusetts</b> </button>
+          </label>
+          <label class="switch">
+            <input type="checkbox" style="margin: 0px" value="MS">
+            <button *ngIf="selected_curriculum == 'MS'"
+              (click)="selected_curriculum = ''; selected_grade = ''; ; selected_subject = ''" class="toggle-button-on"
+              tabindex="0"> <b>Mississippi</b> </button>
+            <button *ngIf="selected_curriculum != 'MS'" (click)="select_curriculum('MS')" class="toggle-button-off"
+              tabindex="0"> <b>Mississippi</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="NY">

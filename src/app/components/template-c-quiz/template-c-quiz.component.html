@@ -2104,7 +2104,7 @@
                   </div>
               </div>
             </section>
-            <h4 *ngIf="quiz_length>0" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+(max_problem_number-1)}}/{{""+quiz_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
+            <h4 *ngIf="quiz_length>0" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Quiz Progress: <b>{{""+(max_problem_number-1)}}/{{""+quiz_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
             <progress *ngIf="(!expand_overview || mode == 'explain') && quiz_length>0" value="{{max_problem_number-1}}" max="{{quiz_length}}"
               style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
               #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
