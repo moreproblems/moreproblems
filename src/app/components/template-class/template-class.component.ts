@@ -6500,11 +6500,13 @@ export class TemplateClassComponent implements OnInit {
   }
 
   filter_prob_results(probs: any) {
+    console.log(probs);
     var filt_probs = [];
-    if (probs != undefined && probs.length > 0) {
-      for (let prob of probs) {
+    if (probs != undefined && Object.keys(probs).length > 0) {
+      for (let prob of Object.values(probs)) {
+        console.log(prob);
         if (prob != undefined) {
-          filt_probs.push(prob);
+          filt_probs.push(prob as any);
         }
       }
     }

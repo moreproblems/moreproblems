@@ -3137,12 +3137,17 @@
                             style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px">
                           </button>
                           <button
+                            *ngIf="(prob.Correct.length == 1 && prob.Correct[0][0] == '👀')"
+                            class="toggle-button-disabled"
+                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(25, 106, 177); border-radius: 3px">
+                          </button>
+                          <button
                             *ngIf="prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && is_MP_partial(prob.Correct)"
                             class="toggle-button-disabled"
                             style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px">
                           </button>
                           <button
-                            *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] != '✅') || (prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && !is_MP_partial(prob.Correct)))"
+                            *ngIf="((prob.Correct.length == 1 && !['✅', '👀'].includes(prob.Correct[0][0])) || (prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && !is_MP_partial(prob.Correct)))"
                             class="toggle-button-disabled"
                             style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px">
                           </button>
@@ -4686,12 +4691,17 @@
                             style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px">
                           </button>
                           <button
+                            *ngIf="(prob.Correct.length == 1 && prob.Correct[0][0] == '👀')"
+                            class="toggle-button-disabled"
+                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(25, 106, 177); border-radius: 3px">
+                          </button>
+                          <button
                             *ngIf="prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && is_MP_partial(prob.Correct)"
                             class="toggle-button-disabled"
                             style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px">
                           </button>
                           <button
-                            *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] != '✅') || (prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && !is_MP_partial(prob.Correct)))"
+                            *ngIf="((prob.Correct.length == 1 && !['✅', '👀'].includes(prob.Correct[0][0])) || (prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && !is_MP_partial(prob.Correct)))"
                             class="toggle-button-disabled"
                             style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px">
                           </button>

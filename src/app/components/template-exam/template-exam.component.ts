@@ -5736,6 +5736,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
               }
               else if (['MR', 'LR'].includes(prob.Type)) {
                 sub.Correct = [['👀']];
+                sub.Rationale = [['']];
                 if (this.problem_selection[0] == '') {
                   sub.Choice = [['No Student Response Given']];
                 }
@@ -5845,6 +5846,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
                 }
                 else if (['LR'].includes(part.Type)) {
                   sub.Correct.push(['👀']);
+                  sub.Rationale.push(['']);
                   if (this.problem_selection[Object.keys(prob.Parts).indexOf(name)] == '') {
                     sub.Choice[Object.keys(prob.Parts).indexOf(name)] = ['No Student Response Given'];
                   }
