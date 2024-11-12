@@ -166,56 +166,38 @@
             ]
         },
         {
-            "Key": "NJ.MK.M",
-            "Label": "Measurement",
+            "Key": "NJ.MK.MD",
+            "Label": "Measurement & Data",
             "Examples": [],
             "Subs": [
                 {
-                    "Key": "NJ.MK.M.A",
+                    "Key": "NJ.MK.MD.A",
                     "Label": "Describe and compare measurable attributes.",
                     "Examples": [],
                     "Subs": [
                         {
-                            "Key": "NJ.MK.M.A.1",
+                            "Key": "NJ.MK.MD.A.1",
                             "Label": "Describe measurable attributes of objects, such as length or weight. Describe several measurable attributes of a single object.",
                             "Examples": [],
                             "Subs": []
                         },
                         {
-                            "Key": "NJ.MK.M.A.2",
+                            "Key": "NJ.MK.MD.A.2",
                             "Label": "Directly compare two objects with a measurable attribute in common, to see which object has “more of”/“less of” the attribute, and describe the difference.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, directly compare the heights of two children and describe one child as taller/shorter."
+                            ],
                             "Subs": []
                         }
                     ]
                 },
                 {
-                    "Key": "NJ.MK.M.B",
-                    "Label": "Work with money.",
-                    "Examples": [],
-                    "Subs": [
-                        {
-                            "Key": "NJ.MK.M.B.3",
-                            "Label": "Understand that certain objects are coins and dollar bills, and that coins and dollar bills represent money. Identify the values of all U.S. coins and the one-dollar bill.",
-                            "Examples": [],
-                            "Subs": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "Key": "NJ.MK.DL",
-            "Label": "Data Literacy",
-            "Examples": [],
-            "Subs": [
-                {
-                    "Key": "NJ.MK.DL.A",
+                    "Key": "NJ.MK.MD.B",
                     "Label": "Classify objects and count the number of objects in each category.",
                     "Examples": [],
                     "Subs": [
                         {
-                            "Key": "NJ.MK.DL.A.1",
+                            "Key": "NJ.MK.MD.B.3",
                             "Label": "Classify objects into given categories; count the numbers of objects in each category and sort the categories by count.",
                             "Examples": [],
                             "Subs": []
@@ -274,7 +256,9 @@
                         {
                             "Key": "NJ.MK.G.B.6",
                             "Label": "Compose simple shapes to form larger shapes.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, “Can you join these two triangles with full sides touching to make a rectangle?”"
+                            ],
                             "Subs": []
                         }
                     ]

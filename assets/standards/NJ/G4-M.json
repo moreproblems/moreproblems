@@ -4,15 +4,15 @@
     "Goals": [
         [
             "(1) Developing Understanding & Accuracy & Efficiency, With Multi-Digit Multiplication, & Developing Understanding Of Dividing To Find Quotients Involving Multi-Digit Dividends",
-            ""
+            "Students generalize their understanding of place value to 1,000,000, understanding the relative sizes of numbers in each place. They apply their understanding of models for multiplication (equal-sized groups, arrays, area models), place value, and properties of operations, in particular the distributive property, as they develop, discuss, and use efficient, accurate, and generalizable methods to compute products of multi-digit whole numbers. Depending on the numbers and the context, they select and accurately apply appropriate methods to estimate or mentally calculate products. They develop fluency with efficient procedures for multiplying whole numbers; understand and explain why the procedures work based on place value and properties of operations; and use them to solve problems. Students apply their understanding of models for division, place value, properties of operations, and the relationship of division to multiplication as they develop, discuss, and use efficient, accurate, and generalizable procedures to find quotients involving multi-digit dividends. They select and accurately apply appropriate methods to estimate and mentally calculate quotients, and interpret remainders based upon the context."
         ],
         [
             "(2) Developing An Understanding of Fraction Equivalence, Addition & Subtraction Of Fractions With Like Denominators, & Multiplication Of Fractions By Whole Numbers",
-            ""
+            "Students develop understanding of fraction equivalence and operations with fractions. They recognize that two different fractions can be equal (e.g., 15/9 = 5/3), and they develop methods for generating and recognizing equivalent fractions. Students extend previous understandings about how fractions are built from unit fractions, composing fractions from unit fractions, decomposing fractions into unit fractions, and using the meaning of fractions and the meaning of multiplication to multiply a fraction by a whole number."
         ],
         [
             "(3) Understanding That Geometric Figures Can Be Analyzed & Classified Based On Their Properties, Such As Having Parallel Sides, Perpendicular Sides, Particular Angle Measures, & Symmetry",
-            ""
+            "Students describe, analyze, compare, and classify two-dimensional shapes. Through building, drawing, and analyzing two-dimensional shapes, students deepen their understanding of properties of two-dimensional objects and the use of them to solve problems involving symmetry."
         ]
     ],
     "Standards": [
@@ -53,7 +53,7 @@
                     "Subs": [
                         {
                             "Key": "NJ.M4.OA.B.4",
-                            "Label": "Find all factor pairs for a whole number in the range 1–100. Recognize that a whole number is a multiple of each of its factors. Determine whether a given whole number in the range  1–100 is a multiple of a given one-digit number. Determine whether a given whole number in the range 1–100 is prime or composite.",
+                            "Label": "Find all factor pairs for a whole number in the range 1–100. Recognize that a whole number is a multiple of each of its factors. Determine whether a given whole number in the range 1–100 is a multiple of a given one-digit number. Determine whether a given whole number in the range 1–100 is prime or composite.",
                             "Examples": [],
                             "Subs": []
                         }
@@ -67,7 +67,9 @@
                         {
                             "Key": "NJ.M4.OA.C.5",
                             "Label": "Generate a number or shape pattern that follows a given rule. Identify apparent features of the pattern that were not explicit in the rule itself.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, given the rule “Add 3” and the starting number 1, generate terms in the resulting sequence and observe that the terms appear to alternate between odd and even numbers. Explain informally why the numbers will continue to alternate in this way."
+                            ],
                             "Subs": []
                         }
                     ]
@@ -80,24 +82,26 @@
             "Examples": [],
             "Subs": [
                 {
-                    "Key": "NJ.M4.NBT",
+                    "Key": "NJ.M4.NBT.A",
                     "Label": "Generalize place value understanding for multi-digit whole numbers.",
                     "Examples": [],
                     "Subs": [
                         {
-                            "Key": "NJ.M4.NBT.1",
+                            "Key": "NJ.M4.NBT.A.1",
                             "Label": "Recognize that in a multi-digit whole number, a digit in one place represents ten times what it represents in the place to its right.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, recognize that 700 ÷ 70 = 10 by applying concepts of place value and division."
+                            ],
                             "Subs": []
                         },
                         {
-                            "Key": "NJ.M4.NBT.2",
+                            "Key": "NJ.M4.NBT.A.2",
                             "Label": "Read and write multi-digit whole numbers using base-ten numerals, number names, and expanded form. Compare two multi-digit numbers based on meanings of the digits in each place, using >, =, and < symbols to record the results of comparisons.",
                             "Examples": [],
                             "Subs": []
                         },
                         {
-                            "Key": "NJ.M4.NBT.3",
+                            "Key": "NJ.M4.NBT.A.3",
                             "Label": "Use place value understanding to round multi-digit whole numbers to any place.",
                             "Examples": [],
                             "Subs": []
@@ -105,24 +109,24 @@
                     ]
                 },
                 {
-                    "Key": "NJ.M4.NBT",
+                    "Key": "NJ.M4.NBT.B",
                     "Label": "Use place value understanding and properties of operations to perform multi-digit arithmetic.",
                     "Examples": [],
                     "Subs": [
                         {
-                            "Key": "NJ.M4.NBT.4",
+                            "Key": "NJ.M4.NBT.B.4",
                             "Label": "With accuracy and efficiency, add and subtract multi-digit whole numbers using the standard algorithm.",
                             "Examples": [],
                             "Subs": []
                         },
                         {
-                            "Key": "NJ.M4.NBT.5",
+                            "Key": "NJ.M4.NBT.B.5",
                             "Label": "Multiply a whole number of up to four digits by a one-digit whole number, and multiply two two-digit numbers, using strategies based on place value and the properties of operations. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area models.",
                             "Examples": [],
                             "Subs": []
                         },
                         {
-                            "Key": "NJ.M4.NBT.6",
+                            "Key": "NJ.M4.NBT.B.6",
                             "Label": "Find whole-number quotients and remainders with up to four-digit dividends and one-digit divisors, using strategies based on place value, the properties of operations, and/or the relationship between multiplication and division. Illustrate and explain the calculation by using equations, rectangular arrays, and/or area model",
                             "Examples": [],
                             "Subs": []
@@ -174,7 +178,9 @@
                                 {
                                     "Key": "NJ.M4.NF.B.3.b",
                                     "Label": "Decompose a fraction into a sum of fractions with the same denominator in more than one way, recording each decomposition by an equation. Justify decompositions, e.g., by using a visual fraction model.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "Examples: 3/8 = 1/8 + 1/8 + 1/8 ; 3/8 = 1/8 + 2/8 ; 2 1/8 = 1 + 1 + 1/8 = 8/8 + 8/8 + 1/8."
+                                    ],
                                     "Subs": []
                                 },
                                 {
@@ -199,19 +205,25 @@
                                 {
                                     "Key": "NJ.M4.NF.B.4.a",
                                     "Label": "Understand a fraction a/b as a multiple of 1/b.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, use a visual fraction model to represent 5/4 as the product 5 × (1/4), recording the conclusion by the equation 5/4 = 5 × (1/4)."
+                                    ],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "NJ.M4.NF.B.4.b",
                                     "Label": "Understand a multiple of a/b as a multiple of 1/b, and use this understanding to multiply a fraction by a whole number.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "or example, use a visual fraction model to express 3 × (2/5) as 6 × (1/5), recognizing this product as 6/5. (In general, n × (a/b) = (n × a)/b.)"
+                                    ],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "NJ.M4.NF.B.4.c",
                                     "Label": "Solve word problems involving multiplication of a fraction by a whole number, e.g., by using visual fraction models and equations to represent the problem.",
-                                    "Examples": [],
+                                    "Examples": [
+                                        "For example, if each person at a party will eat 3/8 of a pound of roast beef, and there will be 5 people at the party, how many pounds of roast beef will be needed? Between what two whole numbers does your answer lie?"
+                                    ],
                                     "Subs": []
                                 }
                             ]
@@ -226,13 +238,17 @@
                         {
                             "Key": "NJ.M4.NF.C.5",
                             "Label": "Express a fraction with denominator 10 as an equivalent fraction with denominator 100, and use this technique to add two fractions with respective denominators 10 and 100.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, express 3/10 as 30/100, and add 3/10 + 4/100 = 34/100."
+                            ],
                             "Subs": []
                         },
                         {
                             "Key": "NJ.M4.NF.C.6",
                             "Label": "Use decimal notation for fractions with denominators 10 or 100.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, rewrite 0.62 as 62/100; describe a length as 0.62 meters; locate 0.62 on a number line diagram."
+                            ],
                             "Subs": []
                         },
                         {
@@ -246,53 +262,72 @@
             ]
         },
         {
-            "Key": "NJ.M4.M",
-            "Label": "Measurement",
+            "Key": "NJ.M4.MD",
+            "Label": "Measurement & Data",
             "Examples": [],
             "Subs": [
                 {
-                    "Key": "NJ.M4.M.A",
+                    "Key": "NJ.M4.MD.A",
                     "Label": "Solve problems involving measurement and conversion of measurements from a larger unit to a smaller unit.",
                     "Examples": [],
                     "Subs": [
                         {
-                            "Key": "NJ.M4.M.A.1",
+                            "Key": "NJ.M4.MD.A.1",
                             "Label": "Know relative sizes of measurement units within one system of units including km, m, cm. mm; kg, g; lb, oz.; l, ml; hr, min, sec. Within a single system of measurement, express measurements in a larger unit in terms of a smaller unit. Record measurement equivalents in a two-column table.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, know that 1 ft is 12 times as long as 1 in. Express the length of a 4 ft snake as 48 in. Generate a conversion table for feet and inches listing the number pairs (1, 12), (2, 24), (3, 36), ..."
+                            ],
                             "Subs": []
                         },
                         {
-                            "Key": "NJ.M4.M.A.2",
+                            "Key": "NJ.M4.MD.A.2",
                             "Label": "Use the four operations to solve word problems involving distances, intervals of time, liquid volumes, masses of objects, and money, including problems involving simple fractions or decimals, and problems that require expressing measurements given in a larger unit in terms of a smaller unit. Represent measurement quantities using diagrams such as number line diagrams that feature a measurement scale.",
                             "Examples": [],
                             "Subs": []
                         },
                         {
-                            "Key": "NJ.M4.M.A.3",
+                            "Key": "NJ.M4.MD.A.3",
                             "Label": "Apply the area and perimeter formulas for rectangles in real world and mathematical problems.",
-                            "Examples": [],
+                            "Examples": [
+                                "For example, find the width of a rectangular room given the area of the flooring and the length, by viewing the area formula as a multiplication equation with an unknown factor."
+                            ],
                             "Subs": []
                         }
                     ]
                 },
                 {
-                    "Key": "NJ.M4.M.B",
+                    "Key": "NJ.M4.MD.B",
+                    "Label": "Represent and interpret measurement data.",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "NJ.M4.MD.B.4",
+                            "Label": "Make a line plot to display a data set of measurements in fractions of a unit (½, ¼, ⅛). Solve problems involving addition and subtraction of fractions by using information presented in line plots.",
+                            "Examples": [
+                                "For example, from a line plot find and interpret the difference in length between the longest and shortest specimens in an insect collection."
+                            ],
+                            "Subs": []
+                        }
+                    ]
+                },
+                {
+                    "Key": "NJ.M4.M.C",
                     "Label": "Geometric measurement: understand concepts of angle and measure angles.",
                     "Examples": [],
                     "Subs": [
                         {
-                            "Key": "NJ.M4.M.B.4",
+                            "Key": "NJ.M4.MD.C.5",
                             "Label": "Recognize angles as geometric shapes that are formed wherever two rays share a common endpoint, and understand concepts of angle measurement:",
                             "Examples": [],
                             "Subs": [
                                 {
-                                    "Key": "NJ.M4.M.B.4.a",
+                                    "Key": "NJ.M4.MD.C.5.a",
                                     "Label": "An angle is measured with reference to a circle with its center at the common endpoint of the rays, by considering the fraction of the circular arc between the points where the two rays intersect the circle. An angle that turns through 1/360 of a circle is called a “one-degree angle,” and can be used to measure angles.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
-                                    "Key": "NJ.M4.M.B.4.b",
+                                    "Key": "NJ.M4.MD.C.5.b",
                                     "Label": "An angle that turns through  one-degree angles is said to have an angle measure of  degrees.",
                                     "Examples": [],
                                     "Subs": []
@@ -300,65 +335,14 @@
                             ]
                         },
                         {
-                            "Key": "NJ.M4.M.B.5",
+                            "Key": "NJ.M4.MD.C.6",
                             "Label": "Measure angles in whole-number degrees using a protractor. Sketch angles of specified measure.",
                             "Examples": [],
                             "Subs": []
                         },
                         {
-                            "Key": "NJ.M4.M.B.6",
+                            "Key": "NJ.M4.MD.C.7",
                             "Label": "Recognize angle measure as additive. When an angle is decomposed into non-overlapping parts, the angle measure of the whole is the sum of the angle measures of the parts. Solve addition and subtraction problems to find unknown angles on a diagram in real world and mathematical problems, e.g., by using an equation with a symbol for the unknown angle measure.",
-                            "Examples": [],
-                            "Subs": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "Key": "NJ.M4.DL",
-            "Label": "Data Literacy",
-            "Examples": [],
-            "Subs": [
-                {
-                    "Key": "NJ.M4.DL.A",
-                    "Label": "Organize data and understand data visualizations.",
-                    "Examples": [],
-                    "Subs": [
-                        {
-                            "Key": "NJ.M4.DL.A.1",
-                            "Label": "Create data-based questions, generate ideas based on the questions, and then refine the questions.",
-                            "Examples": [],
-                            "Subs": []
-                        },
-                        {
-                            "Key": "NJ.M4.DL.A.2",
-                            "Label": "Develop strategies to collect various types of data and organize data digitally.",
-                            "Examples": [],
-                            "Subs": []
-                        },
-                        {
-                            "Key": "NJ.M4.DL.A.3",
-                            "Label": "Understand that subsets of data can be selected and analyzed for a particular purpose.",
-                            "Examples": [],
-                            "Subs": []
-                        },
-                        {
-                            "Key": "NJ.M4.DL.A.4",
-                            "Label": "Analyze visualizations of a single data set, share explanations and draw conclusions that the data supports.",
-                            "Examples": [],
-                            "Subs": []
-                        }
-                    ]
-                },
-                {
-                    "Key": "NJ.M4.DL.B",
-                    "Label": "Represent and interpret measurement data.",
-                    "Examples": [],
-                    "Subs": [
-                        {
-                            "Key": "NJ.M4.DL.B.5",
-                            "Label": "Make a line plot to display a data set of measurements in fractions of a unit (½, ¼, ⅛). Solve problems involving addition and subtraction of fractions by using information presented in line plots.",
                             "Examples": [],
                             "Subs": []
                         }
