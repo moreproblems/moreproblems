@@ -195,6 +195,31 @@ import * as NGG4SStandards from "src/assets/standards/NG/G4-S.json";
 import * as NGG5SStandards from "src/assets/standards/NG/G5-S.json";
 import * as NGMSSStandards from "src/assets/standards/NG/MS-S.json";
 import * as NGHSSStandards from "src/assets/standards/NG/HS-S.json";
+import * as NJKEStandards from "src/assets/standards/NJ/K-E.json";
+import * as NJKMStandards from "src/assets/standards/NJ/K-M.json";
+import * as NJKSStandards from "src/assets/standards/NJ/K-S.json";
+import * as NJG1EStandards from "src/assets/standards/NJ/G1-E.json";
+import * as NJG1MStandards from "src/assets/standards/NJ/G1-M.json";
+import * as NJG1SStandards from "src/assets/standards/NJ/G1-S.json";
+import * as NJG2EStandards from "src/assets/standards/NJ/G2-E.json";
+import * as NJG2MStandards from "src/assets/standards/NJ/G2-M.json";
+import * as NJG2SStandards from "src/assets/standards/NJ/G2-S.json";
+import * as NJG3EStandards from "src/assets/standards/NJ/G3-E.json";
+import * as NJG3MStandards from "src/assets/standards/NJ/G3-M.json";
+import * as NJG3SStandards from "src/assets/standards/NJ/G3-S.json";
+import * as NJG4EStandards from "src/assets/standards/NJ/G4-E.json";
+import * as NJG4MStandards from "src/assets/standards/NJ/G4-M.json";
+import * as NJG4SStandards from "src/assets/standards/NJ/G4-S.json";
+import * as NJG5EStandards from "src/assets/standards/NJ/G5-E.json";
+import * as NJG5MStandards from "src/assets/standards/NJ/G5-M.json";
+import * as NJG5SStandards from "src/assets/standards/NJ/G5-S.json";
+import * as NJG6EStandards from "src/assets/standards/NJ/G6-E.json";
+import * as NJG6MStandards from "src/assets/standards/NJ/G6-M.json";
+import * as NJG7EStandards from "src/assets/standards/NJ/G7-E.json";
+import * as NJG7MStandards from "src/assets/standards/NJ/G7-M.json";
+import * as NJG8EStandards from "src/assets/standards/NJ/G8-E.json";
+import * as NJG8MStandards from "src/assets/standards/NJ/G8-M.json";
+import * as NJMSSStandards from "src/assets/standards/NJ/MS-S.json";
 import * as NYPEStandards from "src/assets/standards/NY/P-E.json";
 import * as NYPMStandards from "src/assets/standards/NY/P-M.json";
 import * as NYKEStandards from "src/assets/standards/NY/K-E.json";
@@ -260,6 +285,33 @@ import * as RIHSMGStandards from "src/assets/standards/RI/HS-M-G.json";
 import * as RIHSMMStandards from "src/assets/standards/RI/HS-M-M.json";
 import * as RIHSMNStandards from "src/assets/standards/RI/HS-M-N.json";
 import * as RIHSMSStandards from "src/assets/standards/RI/HS-M-S.json";
+import * as SCKEStandards from "src/assets/standards/SC/K-E.json";
+import * as SCKMStandards from "src/assets/standards/SC/K-M.json";
+import * as SCKSStandards from "src/assets/standards/SC/K-S.json";
+import * as SCG1EStandards from "src/assets/standards/SC/G1-E.json";
+import * as SCG1MStandards from "src/assets/standards/SC/G1-M.json";
+import * as SCG1SStandards from "src/assets/standards/SC/G1-S.json";
+import * as SCG2EStandards from "src/assets/standards/SC/G2-E.json";
+import * as SCG2MStandards from "src/assets/standards/SC/G2-M.json";
+import * as SCG2SStandards from "src/assets/standards/SC/G2-S.json";
+import * as SCG3EStandards from "src/assets/standards/SC/G3-E.json";
+import * as SCG3MStandards from "src/assets/standards/SC/G3-M.json";
+import * as SCG3SStandards from "src/assets/standards/SC/G3-S.json";
+import * as SCG4EStandards from "src/assets/standards/SC/G4-E.json";
+import * as SCG4MStandards from "src/assets/standards/SC/G4-M.json";
+import * as SCG4SStandards from "src/assets/standards/SC/G4-S.json";
+import * as SCG5EStandards from "src/assets/standards/SC/G5-E.json";
+import * as SCG5MStandards from "src/assets/standards/SC/G5-M.json";
+import * as SCG5SStandards from "src/assets/standards/SC/G5-S.json";
+import * as SCG6EStandards from "src/assets/standards/SC/G6-E.json";
+import * as SCG6MStandards from "src/assets/standards/SC/G6-M.json";
+import * as SCG6SStandards from "src/assets/standards/SC/G6-S.json";
+import * as SCG7EStandards from "src/assets/standards/SC/G7-E.json";
+import * as SCG7MStandards from "src/assets/standards/SC/G7-M.json";
+import * as SCG7SStandards from "src/assets/standards/SC/G7-S.json";
+import * as SCG8EStandards from "src/assets/standards/SC/G8-E.json";
+import * as SCG8MStandards from "src/assets/standards/SC/G8-M.json";
+import * as SCG8SStandards from "src/assets/standards/SC/G8-S.json";
 import * as TNKEStandards from "src/assets/standards/TN/K-E.json";
 import * as TNKMStandards from "src/assets/standards/TN/K-M.json";
 import * as TNKSStandards from "src/assets/standards/TN/K-S.json";
@@ -987,7 +1039,7 @@ export class TemplateStandardsComponent implements OnInit {
     stateSet = false;
 
     key: string = "";
-    standard_set: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PE-CO", "PM-CO", "PS-CO", "PSS-CO", "KE-CO", "KM-CO", "KS-CO", "KSS-CO", "G1E-CO", "G1M-CO", "G1S-CO", "G1SS-CO", "G2E-CO", "G2M-CO", "G2S-CO", "G2SS-CO", "G3E-CO", "G3M-CO", "G3S-CO", "G3SS-CO", "G4E-CO", "G4M-CO", "G4S-CO", "G4SS-CO", "G5E-CO", "G5M-CO", "G5S-CO", "G5SS-CO", "G6E-CO", "G6M-CO", "G6SS-CO", "G7E-CO", "G7M-CO", "G7SS-CO", "G8E-CO", "G8M-CO", "MSS-CO", "G8SS-CO", "HSE1-CO", "HSE2-CO", "HSM-CO", "HSS-CO", "HSSS-CO", "KE-FL", "KM-FL", "G1E-FL", "G1M-FL", "G2E-FL", "G2M-FL", "G3E-FL", "G3M-FL", "G4E-FL", "G4M-FL", "G5E-FL", "G5M-FL", "G6E-FL", "G6M-FL", "G7E-FL", "G7M-FL", "G8E-FL", "G8M-FL", "G9E-FL", "G10E-FL", "G11E-FL", "G12E-FL", "HSM-FL", "PE-MA", "PM-MA", "PS-MA", "KE-MA", "KM-MA", "KS-MA", "EEST-MA", "G1E-MA", "G1M-MA", "G1S-MA", "G2E-MA", "G2M-MA", "G2S-MA", "G3E-MA", "G3M-MA", "G3S-MA", "UEST-MA", "G4E-MA", "G4M-MA", "G4S-MA", "G5E-MA", "G5M-MA", "G5S-MA", "G6E-MA", "G6M-MA", "G6S-MA", "MST-MA", "G7E-MA", "G7M-MA", "G7S-MA", "G8E-MA", "G8M-MA", "G8S-MA", "HSE1-MA", "HSE2-MA", "HSMA-MA", "HSMF-MA", "HSMG-MA", "HSMM-MA", "HSMN-MA", "HSMS-MA", "HSSB-MA", "HSSC-MA", "HSSP-MA", "HSSES-MA", "HSSTS-MA", "HST-MA", "PE-MD", "PM-MD", "KE-MD", "KM-MD", "G1E-MD", "G1M-MD", "G2E-MD", "G2M-MD", "G3E-MD", "G3M-MD", "G4E-MD", "G4M-MD", "G5E-MD", "G5M-MD", "G6E-MD", "G6M-MD", "G7E-MD", "G7M-MD", "G8E-MD", "G8M-MD", "HSE1-MD", "HSE2-MD", "HSMA1-MD", "HSMA2-MD", "HSMG-MD", "HSMS-MD", "KE-MS", "KM-MS", "G1E-MS", "G1M-MS", "G2E-MS", "G2M-MS", "G3E-MS", "G3M-MS", "G4E-MS", "G4M-MS", "G5E-MS", "G5M-MS", "G6E-MS", "G6M-MS", "G7E-MS", "G7M-MS", "G8E-MS", "G8M-MS", "PE-NY", "PM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KE-RI", "KM-RI", "G1E-RI", "G1M-RI", "G2E-RI", "G2M-RI", "G3E-RI", "G3M-RI", "G4E-RI", "G4M-RI", "G5E-RI", "G5M-RI", "G6E-RI", "G6M-RI", "G7E-RI", "G7M-RI", "G8E-RI", "G8M-RI", "HSE1-RI", "HSE2-RI", "HSMA-RI", "HSMF-RI", "HSMG-RI", "HSMM-RI", "HSMN-RI", "HSMS-RI", "KE-TN", "KM-TN", "KS-TN", "G1E-TN", "G1M-TN", "G1S-TN", "G2E-TN", "G2M-TN", "G2S-TN", "G3E-TN", "G3M-TN", "G3S-TN", "G4E-TN", "G4M-TN", "G4S-TN", "G5E-TN", "G5M-TN", "G5S-TN", "G6E-TN", "G6M-TN", "G6S-TN", "G7E-TN", "G7M-TN", "G7S-TN", "G8E-TN", "G8M-TN", "G8S-TN", "HSMA1-TN", "HSMA2-TN", "HSSB1-TN", "HSE1-TN", "HSE2-TN", "HSMG-TN", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA1-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX", "SAT-M", "SAT-RW"];
+    standard_set: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PE-CO", "PM-CO", "PS-CO", "PSS-CO", "KE-CO", "KM-CO", "KS-CO", "KSS-CO", "G1E-CO", "G1M-CO", "G1S-CO", "G1SS-CO", "G2E-CO", "G2M-CO", "G2S-CO", "G2SS-CO", "G3E-CO", "G3M-CO", "G3S-CO", "G3SS-CO", "G4E-CO", "G4M-CO", "G4S-CO", "G4SS-CO", "G5E-CO", "G5M-CO", "G5S-CO", "G5SS-CO", "G6E-CO", "G6M-CO", "G6SS-CO", "G7E-CO", "G7M-CO", "G7SS-CO", "G8E-CO", "G8M-CO", "MSS-CO", "G8SS-CO", "HSE1-CO", "HSE2-CO", "HSM-CO", "HSS-CO", "HSSS-CO", "KE-FL", "KM-FL", "G1E-FL", "G1M-FL", "G2E-FL", "G2M-FL", "G3E-FL", "G3M-FL", "G4E-FL", "G4M-FL", "G5E-FL", "G5M-FL", "G6E-FL", "G6M-FL", "G7E-FL", "G7M-FL", "G8E-FL", "G8M-FL", "G9E-FL", "G10E-FL", "G11E-FL", "G12E-FL", "HSM-FL", "PE-MA", "PM-MA", "PS-MA", "KE-MA", "KM-MA", "KS-MA", "EEST-MA", "G1E-MA", "G1M-MA", "G1S-MA", "G2E-MA", "G2M-MA", "G2S-MA", "G3E-MA", "G3M-MA", "G3S-MA", "UEST-MA", "G4E-MA", "G4M-MA", "G4S-MA", "G5E-MA", "G5M-MA", "G5S-MA", "G6E-MA", "G6M-MA", "G6S-MA", "MST-MA", "G7E-MA", "G7M-MA", "G7S-MA", "G8E-MA", "G8M-MA", "G8S-MA", "HSE1-MA", "HSE2-MA", "HSMA-MA", "HSMF-MA", "HSMG-MA", "HSMM-MA", "HSMN-MA", "HSMS-MA", "HSSB-MA", "HSSC-MA", "HSSP-MA", "HSSES-MA", "HSSTS-MA", "HST-MA", "PE-MD", "PM-MD", "KE-MD", "KM-MD", "G1E-MD", "G1M-MD", "G2E-MD", "G2M-MD", "G3E-MD", "G3M-MD", "G4E-MD", "G4M-MD", "G5E-MD", "G5M-MD", "G6E-MD", "G6M-MD", "G7E-MD", "G7M-MD", "G8E-MD", "G8M-MD", "HSE1-MD", "HSE2-MD", "HSMA1-MD", "HSMA2-MD", "HSMG-MD", "HSMS-MD", "KE-MS", "KM-MS", "G1E-MS", "G1M-MS", "G2E-MS", "G2M-MS", "G3E-MS", "G3M-MS", "G4E-MS", "G4M-MS", "G5E-MS", "G5M-MS", "G6E-MS", "G6M-MS", "G7E-MS", "G7M-MS", "G8E-MS", "G8M-MS", "KE-NJ", "KM-NJ", "KS-NJ", "G1E-NJ", "G1M-NJ", "G1S-NJ", "G2E-NJ", "G2M-NJ", "G2S-NJ", "G3E-NJ", "G3M-NJ", "G3S-NJ", "G4E-NJ", "G4M-NJ", "G4S-NJ", "G5E-NJ", "G5M-NJ", "G5S-NJ", "G6E-NJ", "G6M-NJ", "G7E-NJ", "G7M-NJ", "G8E-NJ", "G8M-NJ", "MSS-NJ", "PE-NY", "PM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KE-RI", "KM-RI", "G1E-RI", "G1M-RI", "G2E-RI", "G2M-RI", "G3E-RI", "G3M-RI", "G4E-RI", "G4M-RI", "G5E-RI", "G5M-RI", "G6E-RI", "G6M-RI", "G7E-RI", "G7M-RI", "G8E-RI", "G8M-RI", "HSE1-RI", "HSE2-RI", "HSMA-RI", "HSMF-RI", "HSMG-RI", "HSMM-RI", "HSMN-RI", "HSMS-RI", "KE-SC", "KM-SC", "KS-SC", "G1E-SC", "G1M-SC", "G1S-SC", "G2E-SC", "G2M-SC", "G2S-SC", "G3E-SC", "G3M-SC", "G3S-SC", "G4E-SC", "G4M-SC", "G4S-SC", "G5E-SC", "G5M-SC", "G5S-SC", "G6E-SC", "G6M-SC", "G6S-SC", "G7E-SC", "G7M-SC", "G7S-SC", "G8E-SC", "G8M-SC", "G8S-SC", "KE-TN", "KM-TN", "KS-TN", "G1E-TN", "G1M-TN", "G1S-TN", "G2E-TN", "G2M-TN", "G2S-TN", "G3E-TN", "G3M-TN", "G3S-TN", "G4E-TN", "G4M-TN", "G4S-TN", "G5E-TN", "G5M-TN", "G5S-TN", "G6E-TN", "G6M-TN", "G6S-TN", "G7E-TN", "G7M-TN", "G7S-TN", "G8E-TN", "G8M-TN", "G8S-TN", "HSMA1-TN", "HSMA2-TN", "HSSB1-TN", "HSE1-TN", "HSE2-TN", "HSMG-TN", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA1-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX", "SAT-M", "SAT-RW"];
 
     standards_attribute_dump: { [key: string]: { 'State': string, 'Grades': string[], 'Subject': string, 'Curriculum': string } } = standardMetadata;
     KE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KEStandards;
@@ -1181,6 +1233,31 @@ export class TemplateStandardsComponent implements OnInit {
     NGG5S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NGG5SStandards;
     NGMSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NGMSSStandards;
     NGHSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NGHSSStandards;
+    NJKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJKEStandards;
+    NJKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJKMStandards;
+    NJKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJKSStandards;
+    NJG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG1EStandards;
+    NJG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG1MStandards;
+    NJG1S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG1SStandards;
+    NJG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG2EStandards;
+    NJG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG2MStandards;
+    NJG2S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG2SStandards;
+    NJG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG3EStandards;
+    NJG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG3MStandards;
+    NJG3S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG3SStandards;
+    NJG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG4EStandards;
+    NJG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG4MStandards;
+    NJG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG4SStandards;
+    NJG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG5EStandards;
+    NJG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG5MStandards;
+    NJG5S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG5SStandards;
+    NJG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG6EStandards;
+    NJG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG6MStandards;
+    NJG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG7EStandards;
+    NJG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG7MStandards;
+    NJG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG8EStandards;
+    NJG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG8MStandards;
+    NJMSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJMSSStandards;
     NYPE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYPEStandards;
     NYPM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYPMStandards;
     NYKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYKEStandards;
@@ -1246,6 +1323,33 @@ export class TemplateStandardsComponent implements OnInit {
     RIHSMM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMMStandards;
     RIHSMN_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMNStandards;
     RIHSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMSStandards;
+    SCKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCKEStandards;
+    SCKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCKMStandards;
+    SCKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCKSStandards;
+    SCG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG1EStandards;
+    SCG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG1MStandards;
+    SCG1S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG1SStandards;
+    SCG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG2EStandards;
+    SCG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG2MStandards;
+    SCG2S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG2SStandards;
+    SCG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG3EStandards;
+    SCG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG3MStandards;
+    SCG3S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG3SStandards;
+    SCG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG4EStandards;
+    SCG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG4MStandards;
+    SCG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG4SStandards;
+    SCG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG5EStandards;
+    SCG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG5MStandards;
+    SCG5S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG5SStandards;
+    SCG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG6EStandards;
+    SCG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG6MStandards;
+    SCG6S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG6SStandards;
+    SCG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG7EStandards;
+    SCG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG7MStandards;
+    SCG7S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG7SStandards;
+    SCG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG8EStandards;
+    SCG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG8MStandards;
+    SCG8S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG8SStandards;
     TNKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNKEStandards;
     TNKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNKMStandards;
     TNKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNKSStandards;
@@ -2763,7 +2867,6 @@ export class TemplateStandardsComponent implements OnInit {
         "HSMG-MD": ["HSMG-MD", this.MDHSMG_standards_dump],
         "HSMS-MD": ["HSMS-MD", this.MDHSMS_standards_dump],
         "HSS-MD": ["HSS-NG", this.NGHSS_standards_dump],
-        "PE-NY": ["PE-NY", this.NYPE_standards_dump],
         "KE-MS": ["KE-MS", this.MSKE_standards_dump],
         "KM-MS": ["KM-MS", this.MSKM_standards_dump],
         "G1E-MS": ["G1E-MS", this.MSG1E_standards_dump],
@@ -2782,6 +2885,32 @@ export class TemplateStandardsComponent implements OnInit {
         "G7M-MS": ["G7M-MS", this.MSG7M_standards_dump],
         "G8E-MS": ["G8E-MS", this.MSG8E_standards_dump],
         "G8M-MS": ["G8M-MS", this.MSG8M_standards_dump],
+        "KE-NJ": ["KE-NJ", this.NJKE_standards_dump],
+        "KM-NJ": ["KM-NJ", this.NJKM_standards_dump],
+        "KS-NJ": ["KS-NJ", this.NJKS_standards_dump],
+        "G1E-NJ": ["G1E-NJ", this.NJG1E_standards_dump],
+        "G1M-NJ": ["G1M-NJ", this.NJG1M_standards_dump],
+        "G1S-NJ": ["G1S-NJ", this.NJG1S_standards_dump],
+        "G2E-NJ": ["G2E-NJ", this.NJG2E_standards_dump],
+        "G2M-NJ": ["G2M-NJ", this.NJG2M_standards_dump],
+        "G2S-NJ": ["G2S-NJ", this.NJG2S_standards_dump],
+        "G3E-NJ": ["G3E-NJ", this.NJG3E_standards_dump],
+        "G3M-NJ": ["G3M-NJ", this.NJG3M_standards_dump],
+        "G3S-NJ": ["G3S-NJ", this.NJG3S_standards_dump],
+        "G4E-NJ": ["G4E-NJ", this.NJG4E_standards_dump],
+        "G4M-NJ": ["G4M-NJ", this.NJG4M_standards_dump],
+        "G4S-NJ": ["G4S-NJ", this.NJG4S_standards_dump],
+        "G5E-NJ": ["G5E-NJ", this.NJG5E_standards_dump],
+        "G5M-NJ": ["G5M-NJ", this.NJG5M_standards_dump],
+        "G5S-NJ": ["G5S-NJ", this.NJG5S_standards_dump],
+        "G6E-NJ": ["G6E-NJ", this.NJG6E_standards_dump],
+        "G6M-NJ": ["G6M-NJ", this.NJG6M_standards_dump],
+        "G7E-NJ": ["G7E-NJ", this.NJG7E_standards_dump],
+        "G7M-NJ": ["G7M-NJ", this.NJG7M_standards_dump],
+        "G8E-NJ": ["G8E-NJ", this.NJG8E_standards_dump],
+        "G8M-NJ": ["G8M-NJ", this.NJG8M_standards_dump],
+        "MSS-NJ": ["MSS-NJ", this.NJMSS_standards_dump],
+        "PE-NY": ["PE-NY", this.NYPE_standards_dump],
         "PM-NY": ["PM-NY", this.NYPM_standards_dump],
         "KE-NY": ["KE-NY", this.NYKE_standards_dump],
         "KM-NY": ["KM-NY", this.NYKM_standards_dump],
@@ -2846,6 +2975,33 @@ export class TemplateStandardsComponent implements OnInit {
         "HSMM-RI": ["HSMM-RI", this.RIHSMM_standards_dump],
         "HSMN-RI": ["HSMN-RI", this.RIHSMN_standards_dump],
         "HSMS-RI": ["HSMS-RI", this.RIHSMS_standards_dump],
+        "KE-SC": ["KE-SC", this.SCKE_standards_dump],
+        "KM-SC": ["KM-SC", this.SCKM_standards_dump],
+        "KS-SC": ["KS-SC", this.SCKS_standards_dump],
+        "G1E-SC": ["G1E-SC", this.SCG1E_standards_dump],
+        "G1M-SC": ["G1M-SC", this.SCG1M_standards_dump],
+        "G1S-SC": ["G1S-SC", this.SCG1S_standards_dump],
+        "G2E-SC": ["G2E-SC", this.SCG2E_standards_dump],
+        "G2M-SC": ["G2M-SC", this.SCG2M_standards_dump],
+        "G2S-SC": ["G2S-SC", this.SCG2S_standards_dump],
+        "G3E-SC": ["G3E-SC", this.SCG3E_standards_dump],
+        "G3M-SC": ["G3M-SC", this.SCG3M_standards_dump],
+        "G3S-SC": ["G3S-SC", this.SCG3S_standards_dump],
+        "G4E-SC": ["G4E-SC", this.SCG4E_standards_dump],
+        "G4M-SC": ["G4M-SC", this.SCG4M_standards_dump],
+        "G4S-SC": ["G4S-SC", this.SCG4S_standards_dump],
+        "G5E-SC": ["G5E-SC", this.SCG5E_standards_dump],
+        "G5M-SC": ["G5M-SC", this.SCG5M_standards_dump],
+        "G5S-SC": ["G5S-SC", this.SCG5S_standards_dump],
+        "G6E-SC": ["G6E-SC", this.SCG6E_standards_dump],
+        "G6M-SC": ["G6M-SC", this.SCG6M_standards_dump],
+        "G6S-SC": ["G6S-SC", this.SCG6S_standards_dump],
+        "G7E-SC": ["G7E-SC", this.SCG7E_standards_dump],
+        "G7M-SC": ["G7M-SC", this.SCG7M_standards_dump],
+        "G7S-SC": ["G7S-SC", this.SCG7S_standards_dump],
+        "G8E-SC": ["G8E-SC", this.SCG8E_standards_dump],
+        "G8M-SC": ["G8M-SC", this.SCG8M_standards_dump],
+        "G8S-SC": ["G8S-SC", this.SCG8S_standards_dump],
         "KE-TN": ["KE-TN", this.TNKE_standards_dump],
         "KM-TN": ["KM-TN", this.TNKM_standards_dump],
         "KS-TN": ["KS-TN", this.TNKS_standards_dump],

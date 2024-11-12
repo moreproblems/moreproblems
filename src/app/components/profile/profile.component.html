@@ -2862,7 +2862,7 @@
     <div *ngIf="selected_student != '' && selected_exam == '' && selected_subtopic == ''"
       style="align-items: left; width: min(1075px, 92%)">
       <section>
-        <div (click)="selected_student=''" class="card card-small"
+        <div (click)="selected_student=''; plot_my_student_results()" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
           <img src="./assets/media/icons/caret.png"
             style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
@@ -4192,7 +4192,7 @@
                                 style="margin: auto; height: auto; max-height: 200px; max-width: 450px; display: flex; flex-direction: column">
                             </div> -->
               <br />
-              <button *ngIf="authService.userData as user" (click)="toggle_search()" class="grade-button"
+              <button *ngIf="authService.userData as user" (click)="toggle_search(); plot_my_student_results()" class="grade-button"
                 style="display: flex; flex-direction: row; align-items: center; margin: auto">
                 <div style="margin: 0 5px">
                   <img src="./assets/media/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
@@ -4480,14 +4480,14 @@
         {{edit_p_message}} </h3>
       <section *ngIf="edit_p"
         style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
-        <button *ngIf="authService.userData as user" (click)="update_profile(); toggle_edit_profile()"
+        <button *ngIf="authService.userData as user" (click)="update_profile(); toggle_edit_profile(); plot_student_results()"
           class="grade-button" style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
           <div style="margin: 0 5px">
             <img src="./assets/media/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
           </div>
           <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
         </button>
-        <button *ngIf="authService.userData as user" (click)="toggle_edit_profile()" class="grade-button"
+        <button *ngIf="authService.userData as user" (click)="toggle_edit_profile(); plot_student_results()" class="grade-button"
           style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
           <div style="margin: 0 5px">
             <img src="./assets/media/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
@@ -4497,14 +4497,14 @@
       </section>
       <section *ngIf="create_s"
         style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
-        <button *ngIf="authService.userData as user" (click)="create_student()" class="grade-button"
+        <button *ngIf="authService.userData as user" (click)="create_student(); plot_my_student_results()" class="grade-button"
           style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
           <div style="margin: 0 5px">
             <img src="./assets/media/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
           </div>
           <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
         </button>
-        <button *ngIf="authService.userData as user" (click)="toggle_create_student()" class="grade-button"
+        <button *ngIf="authService.userData as user" (click)="toggle_create_student(); plot_my_student_results()" class="grade-button"
           style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
           <div style="margin: 0 5px">
             <img src="./assets/media/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">
@@ -4514,14 +4514,14 @@
       </section>
       <section *ngIf="edit_s"
         style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
-        <button *ngIf="authService.userData as user" (click)="update_student(student_data.uid); toggle_edit_student('')"
+        <button *ngIf="authService.userData as user" (click)="update_student(student_data.uid); toggle_edit_student(''); plot_my_student_results()"
           class="grade-button" style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
           <div style="margin: 0 5px">
             <img src="./assets/media/icons/save.png" style="padding: 5px 0 0; height: 25px; width: 25px">
           </div>
           <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Save </b></div>
         </button>
-        <button *ngIf="authService.userData as user" (click)="toggle_edit_student('')" class="grade-button"
+        <button *ngIf="authService.userData as user" (click)="toggle_edit_student(''); plot_my_student_results()" class="grade-button"
           style="display: flex; flex-direction: row; align-items: center; padding: 2px 5px">
           <div style="margin: 0 5px">
             <img src="./assets/media/icons/cancel.png" style="padding: 5px 0 0; height: 25px; width: 25px">

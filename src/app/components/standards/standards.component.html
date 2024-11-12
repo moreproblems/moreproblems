@@ -527,10 +527,10 @@
             <button *ngIf="selected_curriculum == 'FL'" (click)="select_curriculum('FL'); scroll_top()" class="toggle-button-on"
               tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
-                <img src="./assets/media/flags/FL.png" style="padding: 5px 0 0; height: 25px">
+                <img src="./assets/media/flags/FL.png" style="padding: 5px 0 0; height: 30px">
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
-                <img src="./assets/media/flags/FL.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/FL.png" style="padding: 5px 0 0; height: 24px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Florida </b> <br /> B.E.S.T.
@@ -543,7 +543,7 @@
               class="toggle-button-off" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
-                <img src="./assets/media/flags/FL.png" style="padding: 5px 0 0; height: 25px">
+                <img src="./assets/media/flags/FL.png" style="padding: 5px 0 0; height: 30px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Florida </b> <br /> B.E.S.T.
@@ -647,6 +647,37 @@
             </button>
           </label>
           <label class="switch" style="max-width: 500px; width: auto">
+            <input type="checkbox" style="margin: 0px" value="NJ">
+            <button *ngIf="selected_curriculum == 'NJ'" (click)="select_curriculum('NJ'); scroll_top()" class="toggle-button-on"
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
+                <img src="./assets/media/flags/NJ.png" style="padding: 5px 0 0; height: 30px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/NJ.png" style="padding: 5px 0 0; height: 24px">
+              </div>
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+                <b> New Jersey </b> <br /> Standards
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
+                <b> New Jersey </b> <br /> Standards
+              </div>
+            </button>
+            <button *ngIf="selected_curriculum != 'NJ'" (click)="select_curriculum('NJ'); scroll(chooseGrade)"
+              class="toggle-button-off" tabindex="0"
+              style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
+                <img src="./assets/media/flags/NJ.png" style="padding: 5px 0 0; height: 30px">
+              </div>
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+                <b> New Jersey </b> <br /> Standards
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
+                <b> New Jersey </b> <br /> Standards
+              </div>
+            </button>
+          </label>
+          <label class="switch" style="max-width: 500px; width: auto">
             <input type="checkbox" style="margin: 0px" value="NY">
             <button *ngIf="selected_curriculum == 'NY'" (click)="select_curriculum('NY'); scroll_top()" class="toggle-button-on"
               tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
@@ -682,10 +713,10 @@
             <button *ngIf="selected_curriculum == 'PA'" (click)="select_curriculum('PA'); scroll_top()" class="toggle-button-on"
               tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
-                <img src="./assets/media/flags/PA.png" style="padding: 5px 0 0; height: 25px">
+                <img src="./assets/media/flags/PA.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
-                <img src="./assets/media/flags/PA.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/PA.png" style="padding: 5px 0 0; height: 16px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Pennsylvania </b> <br /> Core
@@ -698,7 +729,7 @@
               class="toggle-button-off" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
-                <img src="./assets/media/flags/PA.png" style="padding: 5px 0 0; height: 25px">
+                <img src="./assets/media/flags/PA.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Pennsylvania </b> <br /> Core
@@ -740,14 +771,45 @@
             </button>
           </label>
           <label class="switch" style="max-width: 500px; width: auto">
+            <input type="checkbox" style="margin: 0px" value="SC">
+            <button *ngIf="selected_curriculum == 'SC'" (click)="select_curriculum('SC'); scroll_top()" class="toggle-button-on"
+              tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
+                <img src="./assets/media/flags/SC.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
+                <img src="./assets/media/flags/SC.png" style="padding: 5px 0 0; height: 20px">
+              </div>
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+                <b> South Carolina </b> <br /> Standards
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
+                <b> South Carolina </b> <br /> Standards
+              </div>
+            </button>
+            <button *ngIf="selected_curriculum != 'SC'" (click)="select_curriculum('SC'); scroll(chooseGrade)"
+              class="toggle-button-off" tabindex="0"
+              style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
+                <img src="./assets/media/flags/SC.png" style="padding: 5px 0 0; height: 25px">
+              </div>
+              <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
+                <b> South Carolina </b> <br /> Standards
+              </div>
+              <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
+                <b> South Carolina </b> <br /> Standards
+              </div>
+            </button>
+          </label>
+          <label class="switch" style="max-width: 500px; width: auto">
             <input type="checkbox" style="margin: 0px" value="TN">
             <button *ngIf="selected_curriculum == 'TN'" (click)="select_curriculum('TN'); scroll_top()" class="toggle-button-on"
               tabindex="0" style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
-                <img src="./assets/media/flags/TN.png" style="padding: 5px 0 0; height: 15px">
+                <img src="./assets/media/flags/TN.png" style="padding: 5px 0 0; height: 10px">
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 3px">
-                <img src="./assets/media/flags/TN.png" style="padding: 5px 0 0; height: 12px">
+                <img src="./assets/media/flags/TN.png" style="padding: 5px 0 0; height: 8px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Tennessee </b> <br /> Standards
@@ -760,7 +822,7 @@
               class="toggle-button-off" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px">
-                <img src="./assets/media/flags/TN.png" style="padding: 5px 0 0; height: 15px">
+                <img src="./assets/media/flags/TN.png" style="padding: 5px 0 0; height: 10px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Tennessee </b> <br /> Standards
@@ -993,14 +1055,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="KM">
-                  <button routerLink="/standards/KM-CC" routerLinkActive="active"
-                    (click)="select_subject('KM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="KE">
                   <button routerLink="/standards/KE-CC" routerLinkActive="active"
                     (click)="select_subject('KE')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="KM">
+                  <button routerLink="/standards/KM-CC" routerLinkActive="active"
+                    (click)="select_subject('KM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -1012,14 +1074,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G1M">
-                  <button routerLink="/standards/G1M-CC" routerLinkActive="active"
-                    (click)="select_subject('G1M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G1E">
                   <button routerLink="/standards/G1E-CC" routerLinkActive="active"
                     (click)="select_subject('G1E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G1M">
+                  <button routerLink="/standards/G1M-CC" routerLinkActive="active"
+                    (click)="select_subject('G1M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -1031,14 +1093,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G2M">
-                  <button routerLink="/standards/G2M-CC" routerLinkActive="active"
-                    (click)="select_subject('G2M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G2E">
                   <button routerLink="/standards/G2E-CC" routerLinkActive="active"
                     (click)="select_subject('G2E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G2M">
+                  <button routerLink="/standards/G2M-CC" routerLinkActive="active"
+                    (click)="select_subject('G2M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -1050,14 +1112,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G3M">
-                  <button routerLink="/standards/G3M-CC" routerLinkActive="active"
-                    (click)="select_subject('G3M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G3E">
                   <button routerLink="/standards/G3E-CC" routerLinkActive="active"
                     (click)="select_subject('G3E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G3M">
+                  <button routerLink="/standards/G3M-CC" routerLinkActive="active"
+                    (click)="select_subject('G3M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -1069,14 +1131,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G4M">
-                  <button routerLink="/standards/G4M-CC" routerLinkActive="active"
-                    (click)="select_subject('G4M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G4E">
                   <button routerLink="/standards/G4E-CC" routerLinkActive="active"
                     (click)="select_subject('G4E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G4M">
+                  <button routerLink="/standards/G4M-CC" routerLinkActive="active"
+                    (click)="select_subject('G4M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -1088,14 +1150,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G5M">
-                  <button routerLink="/standards/G5M-CC" routerLinkActive="active"
-                    (click)="select_subject('G5M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G5E">
                   <button routerLink="/standards/G5E-CC" routerLinkActive="active"
                     (click)="select_subject('G5E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G5M">
+                  <button routerLink="/standards/G5M-CC" routerLinkActive="active"
+                    (click)="select_subject('G5M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -1107,14 +1169,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G6M">
-                  <button routerLink="/standards/G6M-CC" routerLinkActive="active"
-                    (click)="select_subject('G6M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G6E">
                   <button routerLink="/standards/G6E-CC" routerLinkActive="active"
                     (click)="select_subject('G6E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G6M">
+                  <button routerLink="/standards/G6M-CC" routerLinkActive="active"
+                    (click)="select_subject('G6M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G6S">
@@ -1136,14 +1198,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G7M">
-                  <button routerLink="/standards/G7M-CC" routerLinkActive="active"
-                    (click)="select_subject('G7M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G7E">
                   <button routerLink="/standards/G7E-CC" routerLinkActive="active"
                     (click)="select_subject('G7E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G7M">
+                  <button routerLink="/standards/G7M-CC" routerLinkActive="active"
+                    (click)="select_subject('G7M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G7S">
@@ -1165,14 +1227,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G8M">
-                  <button  routerLink="/standards/G8M-CC" routerLinkActive="active"
-                    (click)="select_subject('G8M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G8E">
                   <button routerLink="/standards/G8E-CC" routerLinkActive="active"
                     (click)="select_subject('G8E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G8M">
+                  <button  routerLink="/standards/G8M-CC" routerLinkActive="active"
+                    (click)="select_subject('G8M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G8S">
@@ -3724,6 +3786,480 @@
             </div>
           </div>
         </div>
+        <div *ngIf="selected_curriculum == 'NJ'">
+          <div class="card-container" style="max-width: 100%; margin-top: 0px">
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="K">
+              <button *ngIf="selected_grade == 'K'" (click)="select_grade('K')" class="toggle-button-on" tabindex="0">
+                <b>K</b>indergarten</button>
+              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
+                <b>K</b>indergarten</button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G1">
+              <button *ngIf="selected_grade == 'G1'" (click)="select_grade('G1')" class="toggle-button-on" tabindex="0">Grade
+                <b>1</b></button>
+              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>1</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G2">
+              <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2')" class="toggle-button-on" tabindex="0">Grade
+                <b>2</b></button>
+              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>2</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G3">
+              <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
+                <b>3</b></button>
+              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>3</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G4">
+              <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
+                <b>4</b></button>
+              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>4</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G5">
+              <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
+                <b>5</b></button>
+              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>5</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G6">
+              <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
+                <b>6</b></button>
+              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>6</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G7">
+              <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
+                <b>7</b></button>
+              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>7</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G8">
+              <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
+                <b>8</b></button>
+              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>8</b></button>
+            </label>
+            <!-- <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G9">
+              <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9')" class="toggle-button-on" tabindex="0">Grade
+                <b>9</b></button>
+              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>9</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G10">
+              <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10')" class="toggle-button-on" tabindex="0">Grade
+                <b>10</b></button>
+              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>10</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G11">
+              <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11')" class="toggle-button-on" tabindex="0">Grade
+                <b>11</b></button>
+              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>11</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G12">
+              <button *ngIf="selected_grade == 'G12'" (click)="select_grade('G12')" class="toggle-button-on" tabindex="0">Grade
+                <b>12</b></button>
+              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>12</b></button>
+            </label> -->
+          </div>
+          <div style="margin: 0px; height: 0px; width: 0px" #chooseSubject></div>
+          <br *ngIf="selected_grade != ''" />
+          <div class="content" role="main" [ngSwitch]="selected_grade" style="margin-bottom: 0px">
+            <!-- Kindergarten Standards -->
+            <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #subject>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="KE">
+                  <button routerLink="/standards/KE-NJ" routerLinkActive="active"
+                    (click)="select_subject('KE')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="KM">
+                  <button routerLink="/standards/KM-NJ" routerLinkActive="active"
+                    (click)="select_subject('KM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="KS">
+                  <button routerLink="/standards/KS-NJ" routerLinkActive="active"
+                    (click)="select_subject('KS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- First Grade Standards -->
+            <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #subject>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G1E">
+                  <button routerLink="/standards/G1E-NJ" routerLinkActive="active"
+                    (click)="select_subject('G1E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G1M">
+                  <button routerLink="/standards/G1M-NJ" routerLinkActive="active"
+                    (click)="select_subject('G1M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G1S">
+                  <button routerLink="/standards/G1S-NJ" routerLinkActive="active"
+                    (click)="select_subject('G1S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Second Grade Standards -->
+            <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #subject>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G2E">
+                  <button routerLink="/standards/G2E-NJ" routerLinkActive="active"
+                    (click)="select_subject('G2E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G2M">
+                  <button routerLink="/standards/G2M-NJ" routerLinkActive="active"
+                    (click)="select_subject('G2M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G2S">
+                  <button routerLink="/standards/G2S-NJ" routerLinkActive="active"
+                    (click)="select_subject('G2S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Third Grade Standards -->
+            <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G3E">
+                  <button routerLink="/standards/G3E-NJ" routerLinkActive="active"
+                    (click)="select_subject('G3E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G3M">
+                  <button routerLink="/standards/G3M-NJ" routerLinkActive="active"
+                    (click)="select_subject('G3M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G3S">
+                  <button routerLink="/standards/G3S-NJ" routerLinkActive="active"
+                    (click)="select_subject('G3S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Fourth Grade Standards -->
+            <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G4E">
+                  <button routerLink="/standards/G4E-NJ" routerLinkActive="active"
+                    (click)="select_subject('G4E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G4M">
+                  <button routerLink="/standards/G4M-NJ" routerLinkActive="active"
+                    (click)="select_subject('G4M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G4S">
+                  <button routerLink="/standards/G4S-NJ" routerLinkActive="active"
+                    (click)="select_subject('G4S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Fifth Grade Standards -->
+            <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G5E">
+                  <button routerLink="/standards/G5E-NJ" routerLinkActive="active"
+                    (click)="select_subject('G5E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G5M">
+                  <button routerLink="/standards/G5M-NJ" routerLinkActive="active"
+                    (click)="select_subject('G5M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G5S">
+                  <button routerLink="/standards/G5S-NJ" routerLinkActive="active"
+                    (click)="select_subject('G5S')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Sixth Grade Standards -->
+            <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G6E">
+                  <button routerLink="/standards/G6E-NJ" routerLinkActive="active"
+                    (click)="select_subject('G6E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G6M">
+                  <button routerLink="/standards/G6M-NJ" routerLinkActive="active"
+                    (click)="select_subject('G6M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="MSS">
+                  <button routerLink="/standards/MSS-NJ" routerLinkActive="active"
+                    (click)="select_subject('MSS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G6SS">
+                  <button *ngIf="selected_subject == 'G6SS'" (click)="select_subject('G6SS')" class="toggle-button-on" tabindex="0"> <b> Social Studies </b></button>
+                  <button *ngIf="selected_subject != 'G6SS'" (click)="select_subject('G6SS'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Social Studies </b></button>
+                </label> -->
+              </div>
+            </div>
+            <!-- Seventh Grade Standards -->
+            <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G7E">
+                  <button routerLink="/standards/G7E-NJ" routerLinkActive="active"
+                    (click)="select_subject('G7E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G7M">
+                  <button routerLink="/standards/G7M-NJ" routerLinkActive="active"
+                    (click)="select_subject('G7M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="MSS">
+                  <button routerLink="/standards/MSS-NJ" routerLinkActive="active"
+                    (click)="select_subject('MSS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G7SS">
+                  <button *ngIf="selected_subject == 'G7SS'" (click)="select_subject('G7SS')" class="toggle-button-on" tabindex="0"> <b> Social Studies </b></button>
+                  <button *ngIf="selected_subject != 'G7SS'" (click)="select_subject('G7SS'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Social Studies </b></button>
+                </label> -->
+              </div>
+            </div>
+            <!-- Eighth Grade Standards -->
+            <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G8E">
+                  <button routerLink="/standards/G8E-NJ" routerLinkActive="active"
+                    (click)="select_subject('G8E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G8M">
+                  <button  routerLink="/standards/G8M-NJ" routerLinkActive="active"
+                    (click)="select_subject('G8M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="MSS">
+                  <button routerLink="/standards/MSS-NJ" routerLinkActive="active"
+                    (click)="select_subject('MSS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G8SS">
+                  <button *ngIf="selected_subject == 'G8SS'" (click)="select_subject('G8SS')" class="toggle-button-on" tabindex="0"> <b> Social Studies </b></button>
+                  <button *ngIf="selected_subject != 'G8SS'" (click)="select_subject('G8SS'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Social Studies </b></button>
+                </label> -->
+              </div>
+            </div>
+            <!-- Ninth Grade Standards -->
+            <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSMA1-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> Algebra I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSMA2-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> Algebra II </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSE1-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> English I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSMG-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> Geometry </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9M">
+                  <button *ngIf="selected_subject == 'G9M'" (click)="select_subject('G9M')" class="toggle-button-on" tabindex="0">
+                    <b> Mathematics </b></button>
+                  <button *ngIf="selected_subject != 'G9M'" (click)="select_subject('G9M'); scroll_top()"
+                    class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label> -->
+              </div>
+            </div>
+            <!-- Tenth Grade Standards -->
+            <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSMA1-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> Algebra I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSMA2-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> Algebra II </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G10E">
+                  <button routerLink="/standards/HSE1-NJ" routerLinkActive="active"
+                    (click)="select_subject('G10E')" class="toggle-button-off" tabindex="0"> <b> English I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSMG-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> Geometry </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G10M">
+                  <button *ngIf="selected_subject == 'G10M'" (click)="select_subject('G10M')" class="toggle-button-on"
+                    tabindex="0"> <b> Mathematics </b></button>
+                  <button *ngIf="selected_subject != 'G10M'" (click)="select_subject('G10M'); scroll_top()"
+                    class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label> -->
+              </div>
+            </div>
+            <!-- Eleventh Grade Standards -->
+            <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSMA1-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> Algebra I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSMA2-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> Algebra II </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G11E">
+                  <button routerLink="/standards/HSE2-NJ" routerLinkActive="active"
+                    (click)="select_subject('G11E')" class="toggle-button-off" tabindex="0"> <b> English II </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSMG-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> Geometry </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G11M">
+                  <button *ngIf="selected_subject == 'G11M'" (click)="select_subject('G11M')" class="toggle-button-on"
+                    tabindex="0"> <b> Mathematics </b></button>
+                  <button *ngIf="selected_subject != 'G11M'" (click)="select_subject('G11M'); scroll_top()"
+                    class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label> -->
+              </div>
+            </div>
+            <!-- Twelfth Grade Standards -->
+            <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSMA1-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> Algebra I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSMA2-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> Algebra II </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G12E">
+                  <button routerLink="/standards/HSE2-NJ" routerLinkActive="active"
+                    (click)="select_subject('G12E')" class="toggle-button-off" tabindex="0"> <b> English II </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G9E">
+                  <button routerLink="/standards/HSMG-NJ" routerLinkActive="active"
+                    (click)="select_subject('G9E')" class="toggle-button-off" tabindex="0"> <b> Geometry </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G12M">
+                  <button *ngIf="selected_subject == 'G12M'" (click)="select_subject('G12M')" class="toggle-button-on"
+                    tabindex="0"> <b> Mathematics </b></button>
+                  <button *ngIf="selected_subject != 'G12M'" (click)="select_subject('G12M'); scroll_top()"
+                    class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label> -->
+              </div>
+            </div>
+          </div>
+        </div>
         <div *ngIf="selected_curriculum == 'NY'">
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
             <label class="switch">
@@ -3836,14 +4372,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="PM">
-                  <button routerLink="/standards/PM-NY" routerLinkActive="active"
-                    (click)="select_subject('PM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="PE">
                   <button routerLink="/standards/PE-NY" routerLinkActive="active"
                     (click)="select_subject('PE')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="PM">
+                  <button routerLink="/standards/PM-NY" routerLinkActive="active"
+                    (click)="select_subject('PM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -3855,14 +4391,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="KM">
-                  <button routerLink="/standards/KM-NY" routerLinkActive="active"
-                    (click)="select_subject('KM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="KE">
                   <button routerLink="/standards/KE-NY" routerLinkActive="active"
                     (click)="select_subject('KE')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="KM">
+                  <button routerLink="/standards/KM-NY" routerLinkActive="active"
+                    (click)="select_subject('KM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -3874,14 +4410,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G1M">
-                  <button routerLink="/standards/G1M-NY" routerLinkActive="active"
-                    (click)="select_subject('G1M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G1E">
                   <button routerLink="/standards/G1E-NY" routerLinkActive="active"
                     (click)="select_subject('G1E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G1M">
+                  <button routerLink="/standards/G1M-NY" routerLinkActive="active"
+                    (click)="select_subject('G1M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -3893,14 +4429,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G2M">
-                  <button routerLink="/standards/G2M-NY" routerLinkActive="active"
-                    (click)="select_subject('G2M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G2E">
                   <button routerLink="/standards/G2E-NY" routerLinkActive="active"
                     (click)="select_subject('G2E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G2M">
+                  <button routerLink="/standards/G2M-NY" routerLinkActive="active"
+                    (click)="select_subject('G2M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -3912,14 +4448,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G3M">
-                  <button routerLink="/standards/G3M-NY" routerLinkActive="active"
-                    (click)="select_subject('G3M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G3E">
                   <button routerLink="/standards/G3E-NY" routerLinkActive="active"
                     (click)="select_subject('G3E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G3M">
+                  <button routerLink="/standards/G3M-NY" routerLinkActive="active"
+                    (click)="select_subject('G3M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -3931,14 +4467,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G4M">
-                  <button routerLink="/standards/G4M-NY" routerLinkActive="active"
-                    (click)="select_subject('G4M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G4E">
                   <button routerLink="/standards/G4E-NY" routerLinkActive="active"
                     (click)="select_subject('G4E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G4M">
+                  <button routerLink="/standards/G4M-NY" routerLinkActive="active"
+                    (click)="select_subject('G4M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -3950,14 +4486,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G5M">
-                  <button routerLink="/standards/G5M-NY" routerLinkActive="active"
-                    (click)="select_subject('G5M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G5E">
                   <button routerLink="/standards/G5E-NY" routerLinkActive="active"
                     (click)="select_subject('G5E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G5M">
+                  <button routerLink="/standards/G5M-NY" routerLinkActive="active"
+                    (click)="select_subject('G5M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -3969,14 +4505,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G6M">
-                  <button routerLink="/standards/G6M-NY" routerLinkActive="active"
-                    (click)="select_subject('G6M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G6E">
                   <button routerLink="/standards/G6E-NY" routerLinkActive="active"
                     (click)="select_subject('G6E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G6M">
+                  <button routerLink="/standards/G6M-NY" routerLinkActive="active"
+                    (click)="select_subject('G6M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G6S">
@@ -3998,14 +4534,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G7M">
-                  <button routerLink="/standards/G7M-NY" routerLinkActive="active"
-                    (click)="select_subject('G7M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G7E">
                   <button routerLink="/standards/G7E-NY" routerLinkActive="active"
                     (click)="select_subject('G7E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G7M">
+                  <button routerLink="/standards/G7M-NY" routerLinkActive="active"
+                    (click)="select_subject('G7M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G7S">
@@ -4027,14 +4563,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G8M">
-                  <button  routerLink="/standards/G8M-NY" routerLinkActive="active"
-                    (click)="select_subject('G8M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G8E">
                   <button routerLink="/standards/G8E-NY" routerLinkActive="active"
                     (click)="select_subject('G8E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G8M">
+                  <button  routerLink="/standards/G8M-NY" routerLinkActive="active"
+                    (click)="select_subject('G8M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G8S">
@@ -4250,14 +4786,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G3M">
-                  <button routerLink="/standards/G3M-PA" routerLinkActive="active"
-                    (click)="select_subject('G3M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G3E">
                   <button routerLink="/standards/G3E-PA" routerLinkActive="active"
                     (click)="select_subject('G3E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G3M">
+                  <button routerLink="/standards/G3M-PA" routerLinkActive="active"
+                    (click)="select_subject('G3M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -4269,14 +4805,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G4M">
-                  <button routerLink="/standards/G4M-PA" routerLinkActive="active"
-                    (click)="select_subject('G4M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G4E">
                   <button routerLink="/standards/G4E-PA" routerLinkActive="active"
                     (click)="select_subject('G4E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G4M">
+                  <button routerLink="/standards/G4M-PA" routerLinkActive="active"
+                    (click)="select_subject('G4M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G4S">
@@ -4293,14 +4829,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G5M">
-                  <button routerLink="/standards/G5M-PA" routerLinkActive="active"
-                    (click)="select_subject('G5M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G5E">
                   <button routerLink="/standards/G5E-PA" routerLinkActive="active"
                     (click)="select_subject('G5E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G5M">
+                  <button routerLink="/standards/G5M-PA" routerLinkActive="active"
+                    (click)="select_subject('G5M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -4312,14 +4848,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G6M">
-                  <button routerLink="/standards/G6M-PA" routerLinkActive="active"
-                    (click)="select_subject('G6M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G6E">
                   <button routerLink="/standards/G6E-PA" routerLinkActive="active"
                     (click)="select_subject('G6E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G6M">
+                  <button routerLink="/standards/G6M-PA" routerLinkActive="active"
+                    (click)="select_subject('G6M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G6S">
@@ -4341,14 +4877,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G7M">
-                  <button routerLink="/standards/G7M-PA" routerLinkActive="active"
-                    (click)="select_subject('G7M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G7E">
                   <button routerLink="/standards/G7E-PA" routerLinkActive="active"
                     (click)="select_subject('G7E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G7M">
+                  <button routerLink="/standards/G7M-PA" routerLinkActive="active"
+                    (click)="select_subject('G7M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G7S">
@@ -4370,14 +4906,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G8M">
-                  <button  routerLink="/standards/G8M-PA" routerLinkActive="active"
-                    (click)="select_subject('G8M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G8E">
                   <button routerLink="/standards/G8E-PA" routerLinkActive="active"
                     (click)="select_subject('G8E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G8M">
+                  <button  routerLink="/standards/G8M-PA" routerLinkActive="active"
+                    (click)="select_subject('G8M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G8S">
@@ -4495,14 +5031,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="KM">
-                  <button routerLink="/standards/KM-RI" routerLinkActive="active"
-                    (click)="select_subject('KM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="KE">
                   <button routerLink="/standards/KE-RI" routerLinkActive="active"
                     (click)="select_subject('KE')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="KM">
+                  <button routerLink="/standards/KM-RI" routerLinkActive="active"
+                    (click)="select_subject('KM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -4514,14 +5050,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G1M">
-                  <button routerLink="/standards/G1M-RI" routerLinkActive="active"
-                    (click)="select_subject('G1M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G1E">
                   <button routerLink="/standards/G1E-RI" routerLinkActive="active"
                     (click)="select_subject('G1E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G1M">
+                  <button routerLink="/standards/G1M-RI" routerLinkActive="active"
+                    (click)="select_subject('G1M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -4533,14 +5069,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G2M">
-                  <button routerLink="/standards/G2M-RI" routerLinkActive="active"
-                    (click)="select_subject('G2M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G2E">
                   <button routerLink="/standards/G2E-RI" routerLinkActive="active"
                     (click)="select_subject('G2E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G2M">
+                  <button routerLink="/standards/G2M-RI" routerLinkActive="active"
+                    (click)="select_subject('G2M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -4552,14 +5088,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G3M">
-                  <button routerLink="/standards/G3M-RI" routerLinkActive="active"
-                    (click)="select_subject('G3M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G3E">
                   <button routerLink="/standards/G3E-RI" routerLinkActive="active"
                     (click)="select_subject('G3E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G3M">
+                  <button routerLink="/standards/G3M-RI" routerLinkActive="active"
+                    (click)="select_subject('G3M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -4571,14 +5107,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G4M">
-                  <button routerLink="/standards/G4M-RI" routerLinkActive="active"
-                    (click)="select_subject('G4M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G4E">
                   <button routerLink="/standards/G4E-RI" routerLinkActive="active"
                     (click)="select_subject('G4E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G4M">
+                  <button routerLink="/standards/G4M-RI" routerLinkActive="active"
+                    (click)="select_subject('G4M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -4590,14 +5126,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G5M">
-                  <button routerLink="/standards/G5M-RI" routerLinkActive="active"
-                    (click)="select_subject('G5M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G5E">
                   <button routerLink="/standards/G5E-RI" routerLinkActive="active"
                     (click)="select_subject('G5E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G5M">
+                  <button routerLink="/standards/G5M-RI" routerLinkActive="active"
+                    (click)="select_subject('G5M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
               </div>
             </div>
@@ -4609,14 +5145,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G6M">
-                  <button routerLink="/standards/G6M-RI" routerLinkActive="active"
-                    (click)="select_subject('G6M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G6E">
                   <button routerLink="/standards/G6E-RI" routerLinkActive="active"
                     (click)="select_subject('G6E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G6M">
+                  <button routerLink="/standards/G6M-RI" routerLinkActive="active"
+                    (click)="select_subject('G6M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G6S">
@@ -4638,14 +5174,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G7M">
-                  <button routerLink="/standards/G7M-RI" routerLinkActive="active"
-                    (click)="select_subject('G7M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G7E">
                   <button routerLink="/standards/G7E-RI" routerLinkActive="active"
                     (click)="select_subject('G7E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G7M">
+                  <button routerLink="/standards/G7M-RI" routerLinkActive="active"
+                    (click)="select_subject('G7M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G7S">
@@ -4667,14 +5203,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G8M">
-                  <button  routerLink="/standards/G8M-RI" routerLinkActive="active"
-                    (click)="select_subject('G8M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G8E">
                   <button routerLink="/standards/G8E-RI" routerLinkActive="active"
                     (click)="select_subject('G8E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G8M">
+                  <button  routerLink="/standards/G8M-RI" routerLinkActive="active"
+                    (click)="select_subject('G8M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G8S">
@@ -4776,13 +5312,13 @@
         </div>
         <div *ngIf="selected_curriculum == 'SAT'">
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
-            <!-- <label class="switch">
-              <input type="checkbox" style="margin: 0px" value="PRW">
-              <button *ngIf="selected_grade == 'PRW'" (click)="select_grade('PRW')" class="toggle-button-on" tabindex="0">
-                PSAT <b>Reading & Writing</b></button>
-              <button *ngIf="selected_grade != 'PRW'" routerLink="/standards/PSAT-RW" routerLinkActive="active" (click)="select_grade('PRW')" class="toggle-button-off" tabindex="0">
-                PSAT <b>Reading & Writing</b></button>
-            </label> -->
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="SM">
+              <button *ngIf="selected_grade == 'SM'" (click)="select_grade('SM')" class="toggle-button-on" tabindex="0">
+                SAT <b>Math</b></button>
+              <button *ngIf="selected_grade != 'SM'" routerLink="/standards/SAT-M" routerLinkActive="active" (click)="select_grade('SM')" class="toggle-button-off" tabindex="0">
+                SAT <b>Math</b></button>
+            </label>
             <label class="switch">
               <input type="checkbox" style="margin: 0px" value="SRW">
               <button *ngIf="selected_grade == 'SRW'" (click)="select_grade('SRW')" class="toggle-button-on" tabindex="0">
@@ -4797,15 +5333,494 @@
               <button *ngIf="selected_grade != 'PM'" routerLink="/standards/PSAT-M" routerLinkActive="active" (click)="select_grade('PM')" class="toggle-button-off" tabindex="0">
                 PSAT <b>Math</b></button>
             </label> -->
-            <label class="switch">
-              <input type="checkbox" style="margin: 0px" value="SM">
-              <button *ngIf="selected_grade == 'SM'" (click)="select_grade('SM')" class="toggle-button-on" tabindex="0">
-                SAT <b>Math</b></button>
-              <button *ngIf="selected_grade != 'SM'" routerLink="/standards/SAT-M" routerLinkActive="active" (click)="select_grade('SM')" class="toggle-button-off" tabindex="0">
-                SAT <b>Math</b></button>
-            </label>
+            <!-- <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="PRW">
+              <button *ngIf="selected_grade == 'PRW'" (click)="select_grade('PRW')" class="toggle-button-on" tabindex="0">
+                PSAT <b>Reading & Writing</b></button>
+              <button *ngIf="selected_grade != 'PRW'" routerLink="/standards/PSAT-RW" routerLinkActive="active" (click)="select_grade('PRW')" class="toggle-button-off" tabindex="0">
+                PSAT <b>Reading & Writing</b></button>
+            </label> -->
           </div>
           <br />
+        </div>
+        <div *ngIf="selected_curriculum == 'SC'">
+          <div class="card-container" style="max-width: 100%; margin-top: 0px">
+            <!-- <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="PK">
+              <button *ngIf="selected_grade == 'PK'" (click)="select_grade('PK')" class="toggle-button-on" tabindex="0">
+                <b>P</b>re-<b>K</b>indergarten</button>
+              <button *ngIf="selected_grade != 'PK'" (click)="select_grade('PK')" class="toggle-button-off" tabindex="0">
+                <b>P</b>re-<b>K</b>indergarten</button>
+            </label> -->
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="K">
+              <button *ngIf="selected_grade == 'K'" (click)="select_grade('K')" class="toggle-button-on" tabindex="0">
+                <b>K</b>indergarten</button>
+              <button *ngIf="selected_grade != 'K'" (click)="select_grade('K'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">
+                <b>K</b>indergarten</button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G1">
+              <button *ngIf="selected_grade == 'G1'" (click)="select_grade('G1')" class="toggle-button-on" tabindex="0">Grade
+                <b>1</b></button>
+              <button *ngIf="selected_grade != 'G1'" (click)="select_grade('G1'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>1</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G2">
+              <button *ngIf="selected_grade == 'G2'" (click)="select_grade('G2')" class="toggle-button-on" tabindex="0">Grade
+                <b>2</b></button>
+              <button *ngIf="selected_grade != 'G2'" (click)="select_grade('G2'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>2</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G3">
+              <button *ngIf="selected_grade == 'G3'" (click)="select_grade('G3')" class="toggle-button-on" tabindex="0">Grade
+                <b>3</b></button>
+              <button *ngIf="selected_grade != 'G3'" (click)="select_grade('G3'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>3</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G4">
+              <button *ngIf="selected_grade == 'G4'" (click)="select_grade('G4')" class="toggle-button-on" tabindex="0">Grade
+                <b>4</b></button>
+              <button *ngIf="selected_grade != 'G4'" (click)="select_grade('G4'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>4</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G5">
+              <button *ngIf="selected_grade == 'G5'" (click)="select_grade('G5')" class="toggle-button-on" tabindex="0">Grade
+                <b>5</b></button>
+              <button *ngIf="selected_grade != 'G5'" (click)="select_grade('G5'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>5</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G6">
+              <button *ngIf="selected_grade == 'G6'" (click)="select_grade('G6')" class="toggle-button-on" tabindex="0">Grade
+                <b>6</b></button>
+              <button *ngIf="selected_grade != 'G6'" (click)="select_grade('G6'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>6</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G7">
+              <button *ngIf="selected_grade == 'G7'" (click)="select_grade('G7')" class="toggle-button-on" tabindex="0">Grade
+                <b>7</b></button>
+              <button *ngIf="selected_grade != 'G7'" (click)="select_grade('G7'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>7</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G8">
+              <button *ngIf="selected_grade == 'G8'" (click)="select_grade('G8')" class="toggle-button-on" tabindex="0">Grade
+                <b>8</b></button>
+              <button *ngIf="selected_grade != 'G8'" (click)="select_grade('G8'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>8</b></button>
+            </label>
+            <!-- <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G9">
+              <button *ngIf="selected_grade == 'G9'" (click)="select_grade('G9')" class="toggle-button-on" tabindex="0">Grade
+                <b>9</b></button>
+              <button *ngIf="selected_grade != 'G9'" (click)="select_grade('G9'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>9</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G10">
+              <button *ngIf="selected_grade == 'G10'" (click)="select_grade('G10')" class="toggle-button-on" tabindex="0">Grade
+                <b>10</b></button>
+              <button *ngIf="selected_grade != 'G10'" (click)="select_grade('G10'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>10</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G11">
+              <button *ngIf="selected_grade == 'G11'" (click)="select_grade('G11')" class="toggle-button-on" tabindex="0">Grade
+                <b>11</b></button>
+              <button *ngIf="selected_grade != 'G11'" (click)="select_grade('G11'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>11</b></button>
+            </label>
+            <label class="switch">
+              <input type="checkbox" style="margin: 0px" value="G12">
+              <button *ngIf="selected_grade == 'G12'" (click)="select_grade('G12')" class="toggle-button-on" tabindex="0">Grade
+                <b>12</b></button>
+              <button *ngIf="selected_grade != 'G12'" (click)="select_grade('G12'); scroll(chooseSubject)" class="toggle-button-off" tabindex="0">Grade
+                <b>12</b></button>
+            </label> -->
+          </div>
+          <div style="margin: 0px; height: 0px; width: 0px" #chooseSubject></div>
+          <br *ngIf="selected_grade != ''" />
+          <div class="content" role="main" [ngSwitch]="selected_grade" style="margin-bottom: 0px">
+            <!-- Kindergarten Standards -->
+            <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #subject>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="KE">
+                  <button routerLink="/standards/KE-SC" routerLinkActive="active"
+                    (click)="select_subject('KE')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="KM">
+                  <button routerLink="/standards/KM-SC" routerLinkActive="active"
+                    (click)="select_subject('KM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="KS">
+                  <button routerLink="/standards/KS-SC" routerLinkActive="active"
+                    (click)="select_subject('KS')" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- First Grade Standards -->
+            <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #subject>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G1E">
+                  <button routerLink="/standards/G1E-SC" routerLinkActive="active"
+                    (click)="select_subject('G1E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G1M">
+                  <button routerLink="/standards/G1M-SC" routerLinkActive="active"
+                    (click)="select_subject('G1M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G1S">
+                  <button routerLink="/standards/G1S-SC" routerLinkActive="active"
+                    (click)="select_subject('G1S'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Second Grade Standards -->
+            <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #subject>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G2E">
+                  <button routerLink="/standards/G2E-SC" routerLinkActive="active"
+                    (click)="select_subject('G2E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G2M">
+                  <button routerLink="/standards/G2M-SC" routerLinkActive="active"
+                    (click)="select_subject('G2M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G2S">
+                  <button routerLink="/standards/G2S-SC" routerLinkActive="active"
+                    (click)="select_subject('G2S'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Third Grade Standards -->
+            <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G3E">
+                  <button routerLink="/standards/G3E-SC" routerLinkActive="active"
+                    (click)="select_subject('G3E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G3M">
+                  <button routerLink="/standards/G3M-SC" routerLinkActive="active"
+                    (click)="select_subject('G3M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G3S">
+                  <button routerLink="/standards/G3S-SC" routerLinkActive="active"
+                    (click)="select_subject('G3S'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Fourth Grade Standards -->
+            <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G4E">
+                  <button routerLink="/standards/G4E-SC" routerLinkActive="active"
+                    (click)="select_subject('G4E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G4M">
+                  <button routerLink="/standards/G4M-SC" routerLinkActive="active"
+                    (click)="select_subject('G4M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G4S">
+                  <button routerLink="/standards/G4S-SC" routerLinkActive="active"
+                    (click)="select_subject('G4S'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Fifth Grade Standards -->
+            <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G5E">
+                  <button routerLink="/standards/G5E-SC" routerLinkActive="active"
+                    (click)="select_subject('G5E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G5M">
+                  <button routerLink="/standards/G5M-SC" routerLinkActive="active"
+                    (click)="select_subject('G5M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G5S">
+                  <button routerLink="/standards/G5S-SC" routerLinkActive="active"
+                    (click)="select_subject('G5S'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Sixth Grade Standards -->
+            <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G6E">
+                  <button routerLink="/standards/G6E-SC" routerLinkActive="active"
+                    (click)="select_subject('G6E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G6M">
+                  <button routerLink="/standards/G6M-SC" routerLinkActive="active"
+                    (click)="select_subject('G6M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G6S">
+                  <button routerLink="/standards/G6S-SC" routerLinkActive="active"
+                    (click)="select_subject('G6S'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Seventh Grade Standards -->
+            <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G7E">
+                  <button routerLink="/standards/G7E-SC" routerLinkActive="active"
+                    (click)="select_subject('G7E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G7M">
+                  <button routerLink="/standards/G7M-SC" routerLinkActive="active"
+                    (click)="select_subject('G7M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G7S">
+                  <button routerLink="/standards/G7S-SC" routerLinkActive="active"
+                    (click)="select_subject('G7S'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Eighth Grade Standards -->
+            <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G8E">
+                  <button routerLink="/standards/G8E-SC" routerLinkActive="active"
+                    (click)="select_subject('G8E')" class="toggle-button-off" tabindex="0"> <b> Language Arts </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G8M">
+                  <button  routerLink="/standards/G8M-SC" routerLinkActive="active"
+                    (click)="select_subject('G8M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G8S">
+                  <button  routerLink="/standards/G8S-SC" routerLinkActive="active"
+                    (click)="select_subject('G8S'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Science </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Ninth Grade Standards -->
+            <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSMA1">
+                  <button routerLink="/standards/HSMA1-SC" routerLinkActive="active"
+                    (click)="select_subject('HSMA1')" class="toggle-button-off" tabindex="0"> <b> Algebra I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSMA2">
+                  <button routerLink="/standards/HSMA2-SC" routerLinkActive="active"
+                    (click)="select_subject('HSMA2')" class="toggle-button-off" tabindex="0"> <b> Algebra II </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSSB1">
+                  <button routerLink="/standards/HSSB1-SC" routerLinkActive="active"
+                    (click)="select_subject('HSSB1')" class="toggle-button-off" tabindex="0"> <b> Biology I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSE1">
+                  <button routerLink="/standards/HSE1-SC" routerLinkActive="active"
+                    (click)="select_subject('HSE1')" class="toggle-button-off" tabindex="0"> <b> English I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSMG">
+                  <button routerLink="/standards/HSMG-SC" routerLinkActive="active"
+                    (click)="select_subject('HSMG')" class="toggle-button-off" tabindex="0"> <b> Geometry </b></button>
+                </label>
+              </div>
+            </div>
+            <!-- Tenth Grade Standards -->
+            <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSMA1">
+                  <button routerLink="/standards/HSMA1-SC" routerLinkActive="active"
+                    (click)="select_subject('HSMA1')" class="toggle-button-off" tabindex="0"> <b> Algebra I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSMA2">
+                  <button routerLink="/standards/HSMA2-SC" routerLinkActive="active"
+                    (click)="select_subject('HSMA2')" class="toggle-button-off" tabindex="0"> <b> Algebra II </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSSB1">
+                  <button routerLink="/standards/HSSB1-SC" routerLinkActive="active"
+                    (click)="select_subject('HSSB1')" class="toggle-button-off" tabindex="0"> <b> Biology I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSE1">
+                  <button routerLink="/standards/HSE1-SC" routerLinkActive="active"
+                    (click)="select_subject('HSE1')" class="toggle-button-off" tabindex="0"> <b> English I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSMG">
+                  <button routerLink="/standards/HSMG-SC" routerLinkActive="active"
+                    (click)="select_subject('HSMG')" class="toggle-button-off" tabindex="0"> <b> Geometry </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G10M">
+                  <button *ngIf="selected_subject == 'G10M'" (click)="select_subject('G10M')" class="toggle-button-on"
+                    tabindex="0"> <b> Mathematics </b></button>
+                  <button *ngIf="selected_subject != 'G10M'" (click)="select_subject('G10M'); scroll_top()"
+                    class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label> -->
+              </div>
+            </div>
+            <!-- Eleventh Grade Standards -->
+            <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSMA1">
+                  <button routerLink="/standards/HSMA1-SC" routerLinkActive="active"
+                    (click)="select_subject('HSMA1')" class="toggle-button-off" tabindex="0"> <b> Algebra I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSMA2">
+                  <button routerLink="/standards/HSMA2-SC" routerLinkActive="active"
+                    (click)="select_subject('HSMA2')" class="toggle-button-off" tabindex="0"> <b> Algebra II </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSSB1">
+                  <button routerLink="/standards/HSSB1-SC" routerLinkActive="active"
+                    (click)="select_subject('HSSB1')" class="toggle-button-off" tabindex="0"> <b> Biology I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSE2">
+                  <button routerLink="/standards/HSE2-SC" routerLinkActive="active"
+                    (click)="select_subject('HSE2')" class="toggle-button-off" tabindex="0"> <b> English II </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSMG">
+                  <button routerLink="/standards/HSMG-SC" routerLinkActive="active"
+                    (click)="select_subject('HSMG')" class="toggle-button-off" tabindex="0"> <b> Geometry </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G11M">
+                  <button *ngIf="selected_subject == 'G11M'" (click)="select_subject('G11M')" class="toggle-button-on"
+                    tabindex="0"> <b> Mathematics </b></button>
+                  <button *ngIf="selected_subject != 'G11M'" (click)="select_subject('G11M'); scroll_top()"
+                    class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label> -->
+              </div>
+            </div>
+            <!-- Twelfth Grade Standards -->
+            <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
+              <!-- Subject Selector -->
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <br />
+              <input type="hidden" #grade>
+              <div class="card-container" style="max-width: 100%; margin-top: 0px">
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSMA1">
+                  <button routerLink="/standards/HSMA1-SC" routerLinkActive="active"
+                    (click)="select_subject('HSMA1')" class="toggle-button-off" tabindex="0"> <b> Algebra I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSMA2">
+                  <button routerLink="/standards/HSMA2-SC" routerLinkActive="active"
+                    (click)="select_subject('HSMA2')" class="toggle-button-off" tabindex="0"> <b> Algebra II </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSSB1">
+                  <button routerLink="/standards/HSSB1-SC" routerLinkActive="active"
+                    (click)="select_subject('HSSB1')" class="toggle-button-off" tabindex="0"> <b> Biology I </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSE2">
+                  <button routerLink="/standards/HSE2-SC" routerLinkActive="active"
+                    (click)="select_subject('HSE2')" class="toggle-button-off" tabindex="0"> <b> English II </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="HSMG">
+                  <button routerLink="/standards/HSMG-SC" routerLinkActive="active"
+                    (click)="select_subject('HSMG')" class="toggle-button-off" tabindex="0"> <b> Geometry </b></button>
+                </label>
+                <!-- <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G12M">
+                  <button *ngIf="selected_subject == 'G12M'" (click)="select_subject('G12M')" class="toggle-button-on"
+                    tabindex="0"> <b> Mathematics </b></button>
+                  <button *ngIf="selected_subject != 'G12M'" (click)="select_subject('G12M'); scroll_top()"
+                    class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label> -->
+              </div>
+            </div>
+          </div>
         </div>
         <div *ngIf="selected_curriculum == 'TN'">
           <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5391,14 +6406,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="KE">
-                  <button routerLink="/standards/KR-TX" routerLinkActive="active"
-                    (click)="select_subject('KE')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="KM">
                   <button routerLink="/standards/KM-TX" routerLinkActive="active"
                     (click)="select_subject('KM'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="KE">
+                  <button routerLink="/standards/KR-TX" routerLinkActive="active"
+                    (click)="select_subject('KE')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
                 </label>
               </div>
             </div>
@@ -5410,14 +6425,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G1E">
-                  <button routerLink="/standards/G1R-TX" routerLinkActive="active"
-                    (click)="select_subject('G1E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G1M">
                   <button routerLink="/standards/G1M-TX" routerLinkActive="active"
                     (click)="select_subject('G1M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G1E">
+                  <button routerLink="/standards/G1R-TX" routerLinkActive="active"
+                    (click)="select_subject('G1E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
                 </label>
               </div>
             </div>
@@ -5429,14 +6444,14 @@
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G2E">
-                  <button routerLink="/standards/G2R-TX" routerLinkActive="active"
-                    (click)="select_subject('G2E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G2M">
                   <button routerLink="/standards/G2M-TX" routerLinkActive="active"
                     (click)="select_subject('G2M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G2E">
+                  <button routerLink="/standards/G2R-TX" routerLinkActive="active"
+                    (click)="select_subject('G2E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
                 </label>
               </div>
             </div>
@@ -5448,14 +6463,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G3E">
-                  <button routerLink="/standards/G3R-TX" routerLinkActive="active"
-                    (click)="select_subject('G3E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G3M">
                   <button routerLink="/standards/G3M-TX" routerLinkActive="active"
                     (click)="select_subject('G3M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G3E">
+                  <button routerLink="/standards/G3R-TX" routerLinkActive="active"
+                    (click)="select_subject('G3E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
                 </label>
               </div>
             </div>
@@ -5467,14 +6482,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G4E">
-                  <button routerLink="/standards/G4R-TX" routerLinkActive="active"
-                    (click)="select_subject('G4E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G4M">
                   <button routerLink="/standards/G4M-TX" routerLinkActive="active"
                     (click)="select_subject('G4M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G4E">
+                  <button routerLink="/standards/G4R-TX" routerLinkActive="active"
+                    (click)="select_subject('G4E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
                 </label>
               </div>
             </div>
@@ -5486,14 +6501,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G5E">
-                  <button routerLink="/standards/G5R-TX" routerLinkActive="active"
-                    (click)="select_subject('G5E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G5M">
                   <button routerLink="/standards/G5M-TX" routerLinkActive="active"
                     (click)="select_subject('G5M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G5E">
+                  <button routerLink="/standards/G5R-TX" routerLinkActive="active"
+                    (click)="select_subject('G5E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
                 </label>
               </div>
             </div>
@@ -5505,14 +6520,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G6E">
-                  <button routerLink="/standards/G6R-TX" routerLinkActive="active"
-                    (click)="select_subject('G6E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G6M">
                   <button routerLink="/standards/G6M-TX" routerLinkActive="active"
                     (click)="select_subject('G6M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G6E">
+                  <button routerLink="/standards/G6R-TX" routerLinkActive="active"
+                    (click)="select_subject('G6E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G6S">
@@ -5534,14 +6549,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G7E">
-                  <button routerLink="/standards/G7R-TX" routerLinkActive="active"
-                    (click)="select_subject('G7E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G7M">
                   <button routerLink="/standards/G7M-TX" routerLinkActive="active"
                     (click)="select_subject('G7M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G7E">
+                  <button routerLink="/standards/G7R-TX" routerLinkActive="active"
+                    (click)="select_subject('G7E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G7S">
@@ -5563,14 +6578,14 @@
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
                 <label class="switch">
-                  <input type="checkbox" style="margin: 0px" value="G8E">
-                  <button routerLink="/standards/G8R-TX" routerLinkActive="active"
-                    (click)="select_subject('G8E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
-                </label>
-                <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G8M">
                   <button  routerLink="/standards/G8M-TX" routerLinkActive="active"
                     (click)="select_subject('G8M'); scroll_top()" class="toggle-button-off" tabindex="0"> <b> Mathematics </b></button>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" style="margin: 0px" value="G8E">
+                  <button routerLink="/standards/G8R-TX" routerLinkActive="active"
+                    (click)="select_subject('G8E')" class="toggle-button-off" tabindex="0"> <b> Reading </b></button>
                 </label>
                 <!-- <label class="switch">
                   <input type="checkbox" style="margin: 0px" value="G8S">

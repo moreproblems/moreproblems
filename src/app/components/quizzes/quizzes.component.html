@@ -4303,6 +4303,11 @@
             <button *ngIf="!state_filters.includes('New Mexico')" (click)="toggle_button('New Mexico')" class="toggle-button-off" tabindex="0"> <b>New Mexico</b> </button>
           </label>
           <label class="switch">
+            <input type="checkbox" style="margin: 0px" value="NJ">
+            <button *ngIf="state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-on" tabindex="0"> <b>New Jersey</b> </button>
+            <button *ngIf="!state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-off" tabindex="0"> <b>New Jersey</b> </button>
+          </label>
+          <label class="switch">
             <input type="checkbox" style="margin: 0px" value="NY">
             <button *ngIf="state_filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button-on" tabindex="0"> <b>New York</b> </button>
             <button *ngIf="!state_filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button-off" tabindex="0"> <b>New York</b> </button>
@@ -4634,6 +4639,14 @@
               tabindex="0"> <b>Mississippi</b> </button>
             <button *ngIf="selected_curriculum != 'MS'" (click)="select_curriculum('MS')" class="toggle-button-off"
               tabindex="0"> <b>Mississippi</b> </button>
+          </label>
+          <label class="switch">
+            <input type="checkbox" style="margin: 0px" value="NJ">
+            <button *ngIf="selected_curriculum == 'NJ'"
+              (click)="selected_curriculum = ''; selected_grade = ''; ; selected_subject = ''" class="toggle-button-on"
+              tabindex="0"> <b>New Jersey</b> </button>
+            <button *ngIf="selected_curriculum != 'NJ'" (click)="select_curriculum('NJ')" class="toggle-button-off"
+              tabindex="0"> <b>New Jersey</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="NY">
