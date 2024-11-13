@@ -6296,7 +6296,7 @@ export class TemplateClassComponent implements OnInit {
         }
       }
       for (let choice of unique_c) {
-        if (this.c_submission[part_num][this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Choice[0]].includes(choice)) {
+        if (this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Choice != '' && this.c_submission[part_num][this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Choice[0]].includes(choice)) {
           if (fetti) {
             console.log(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale);
             if (this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[this.m_selection[part_num][0]].Choice[0] == this.m_selection[part_num][1]) {
@@ -7050,7 +7050,7 @@ export class TemplateClassComponent implements OnInit {
         this.is_auth = true;
         this.user_data = this.authService.userData;
         if (this.authService.userData.uid == this.class_data.teacher) {
-          this.exams_title = "Exams Assigned To Your Class";
+          this.exams_title = "Assignments For Your Class";
           this.quizzes_title = "Quizzes Assigned To Your Class";
           for (const [key, exam] of Object.entries(this.class_data.exams.slice(1))) {
             setTimeout(() => {

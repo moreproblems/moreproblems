@@ -5056,7 +5056,7 @@ export class ProblemsComponent implements OnInit {
         }
       }
       for (let choice of unique_c) {
-        if (this.c_submission[part_num][this.exam_dump[this.problem_number].AnswerChoices[choice].Choice[0]].includes(choice)) {
+        if (this.exam_dump[this.problem_number].AnswerChoices[choice].Choice != '' && this.c_submission[part_num][this.exam_dump[this.problem_number].AnswerChoices[choice].Choice[0]].includes(choice)) {
           if (fetti) {
             console.log(this.exam_dump[this.problem_number].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale);
             if (this.exam_dump[this.problem_number].AnswerChoices[this.m_selection[part_num][0]].Choice[0] == this.m_selection[part_num][1]) {

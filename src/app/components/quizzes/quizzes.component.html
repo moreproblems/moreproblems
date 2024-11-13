@@ -4303,11 +4303,6 @@
             <button *ngIf="!state_filters.includes('New Mexico')" (click)="toggle_button('New Mexico')" class="toggle-button-off" tabindex="0"> <b>New Mexico</b> </button>
           </label>
           <label class="switch">
-            <input type="checkbox" style="margin: 0px" value="NJ">
-            <button *ngIf="state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-on" tabindex="0"> <b>New Jersey</b> </button>
-            <button *ngIf="!state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-off" tabindex="0"> <b>New Jersey</b> </button>
-          </label>
-          <label class="switch">
             <input type="checkbox" style="margin: 0px" value="NY">
             <button *ngIf="state_filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button-on" tabindex="0"> <b>New York</b> </button>
             <button *ngIf="!state_filters.includes('New York')" (click)="toggle_button('New York')" class="toggle-button-off" tabindex="0"> <b>New York</b> </button>
@@ -4329,13 +4324,6 @@
             <button *ngIf="state_filters.includes('Rhode Island')" (click)="toggle_button('Rhode Island')" class="toggle-button-on" tabindex="0"> <b>Rhode Island</b> </button>
             <button *ngIf="!state_filters.includes('Rhode Island')" (click)="toggle_button('Rhode Island')" class="toggle-button-off" tabindex="0"> <b>Rhode Island</b> </button>
           </label>
-          <!-- <label class="switch">
-            <input type="checkbox" style="margin: 0px" value="TN">
-            <button *ngIf="state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')"
-              class="toggle-button-on" tabindex="0"> <b>Tennessee</b> </button>
-            <button *ngIf="!state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')"
-              class="toggle-button-off" tabindex="0"> <b>Tennessee</b> </button>
-          </label> -->
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="SAT">
             <button *ngIf="state_filters.includes('SAT')" (click)="toggle_button('SAT')" class="toggle-button-on" tabindex="0"> <b>SAT</b> </button>
@@ -4671,6 +4659,14 @@
               tabindex="0"> <b>Rhode Island</b> </button>
             <button *ngIf="selected_curriculum != 'RI'" (click)="select_curriculum('RI')" class="toggle-button-off"
               tabindex="0"> <b>Rhode Island</b> </button>
+          </label>
+          <label class="switch">
+            <input type="checkbox" style="margin: 0px" value="SC">
+            <button *ngIf="selected_curriculum == 'SC'"
+              (click)="selected_curriculum = ''; selected_grade = ''; ; selected_subject = ''" class="toggle-button-on"
+              tabindex="0"> <b>South Carolina</b> </button>
+            <button *ngIf="selected_curriculum != 'SC'" (click)="select_curriculum('SC')" class="toggle-button-off"
+              tabindex="0"> <b>South Carolina</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="TN">
