@@ -3006,7 +3006,7 @@ export class ProfileComponent implements OnInit {
           if (exam != undefined && (exam as any).endtimestamp != undefined) {
             var comp_exam: any = exam;
             comp_exam.stud = (dump as any).uid;
-            stud_exams.push(exam);
+            stud_exams.push(comp_exam);
           }
         }
       }
@@ -3131,9 +3131,17 @@ export class ProfileComponent implements OnInit {
       else {
         title = ((this.student_data.displayName) ? this.student_data.displayName : 'User') + '\'s Submissions Over Time';
       }
-      for (let exm of this.complete_exam_list) {
-        stud_exams.push(this.student_sub_metadata[exm]);
+      for (const [key, exam] of Object.entries(this.student_sub_metadata)) {
+        if (exam != undefined && (exam as any).endtimestamp != undefined && (exam as any).score != undefined) {
+        // if (this.complete_exam_list.includes(key)) {
+          // var comp_exam: any = exam;
+          // comp_exam.stud = (dump as any).uid;
+          stud_exams.push(exam);
+        }
       }
+      // for (let exm of this.complete_exam_list) {
+      //   stud_exams.push(this.student_sub_metadata[exm]);
+      // }
       stud_exams.sort((a, b) => {
         if (a.endtimestamp < b.endtimestamp) {
           return -1;
@@ -3143,6 +3151,7 @@ export class ProfileComponent implements OnInit {
         }
         return 0;
       });
+      console.log(stud_exams);
       for (let exm of stud_exams) {
         ids.push(exm.id);
         names.push((exm.id.startsWith('Q-')) ? this.authService.searchQuizId(exm.id.slice(2)).name : this.exam_names[exm.id]);
@@ -3436,34 +3445,39 @@ export class ProfileComponent implements OnInit {
     this.search_user_results = {};
     if (this.authService.userData.role == 'Student') {
       if (tb == 'achievements') {
-        this.student_sub_metadata = {};
-        console.log(this.authService.getExamSubmissions());
-        this.student_sub_metadata = this.authService.getExamSubmissions();
-        if (this.authService.userData.problems.total == 0) {
-          this.total_percent_correct = 0;
-        }
-        else {
-          this.total_percent_correct = Math.round(10000 * this.authService.userData.problems.correct / this.authService.userData.problems.total) / 100;
-        }
-        this.complete_exam_count = 0;
-        this.complete_exam_list = [];
-        this.temp_count = 1;
-        const exam_history = this.authService.userData.exams.history;
-        console.log(exam_history);
-        for (const [key, det] of Object.entries(exam_history)) {
-          setTimeout(() => {
-            if ((det as any).status == "Completed" && (!key.startsWith('Q-') || (key.startsWith('Q-') && this.authService.searchQuizId(key.substring(key.indexOf('-') + 1)).mode == 'assess'))) {
-              this.complete_exam_count = this.complete_exam_count + 1;
-              this.complete_exam_list.push(key);
-              this.student_sub_metadata[key].enddate = new Date(this.student_sub_metadata[key].endtimestamp).toLocaleDateString();
-              this.student_sub_metadata[key].endtime = new Date(this.student_sub_metadata[key].endtimestamp).toLocaleTimeString();
-            }
-          }, this.temp_count * 50);
-          this.temp_count += 1;
-        }
-        console.log(this.student_sub_metadata);
-        this.student_data = this.authService.userData;
-        this.subject_break();
+        // this.student_sub_metadata = {};
+        // console.log(this.authService.getExamSubmissions());
+        // this.student_sub_metadata = this.authService.getExamSubmissions();
+        // if (this.authService.userData.problems.total == 0) {
+        //   this.total_percent_correct = 0;
+        // }
+        // else {
+        //   this.total_percent_correct = Math.round(10000 * this.authService.userData.problems.correct / this.authService.userData.problems.total) / 100;
+        // }
+        // setTimeout(() => {
+        //   this.complete_exam_count = 0;
+        //   this.complete_exam_list = [];
+        //   this.temp_count = 1;
+        //   const exam_history = this.authService.userData.exams.history;
+        //   console.log(exam_history);
+        //   this.student_sub_metadata = this.authService.getExamSubmissions();
+        //   for (const [key, det] of Object.entries(exam_history)) {
+        //     setTimeout(() => {
+        //       if ((det as any).status == "Completed" && (!key.startsWith('Q-') || (key.startsWith('Q-') && this.authService.searchQuizId(key.substring(key.indexOf('-') + 1)).mode == 'assess'))) {
+        //         this.complete_exam_count = this.complete_exam_count + 1;
+        //         this.complete_exam_list.push(key);
+        //         this.student_sub_metadata[key].enddate = new Date(this.student_sub_metadata[key].endtimestamp).toLocaleDateString();
+        //         this.student_sub_metadata[key].endtime = new Date(this.student_sub_metadata[key].endtimestamp).toLocaleTimeString();
+        //       }
+        //     }, this.temp_count * 50);
+        //     this.temp_count += 1;
+        //   }
+        // }, 500);
+        // console.log(this.student_sub_metadata);
+        // this.student_data = this.authService.userData;
+        // this.stud_data_loaded = true;
+        // this.plot_student_results();
+        // this.subject_break();
         this.select_student(this.authService.userData.uid);
         setTimeout(() => {
           this.selected_student = '';
