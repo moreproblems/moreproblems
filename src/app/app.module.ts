@@ -26,6 +26,7 @@ import { ExamsComponent } from './components/exams/exams.component';
 import { QuizzesComponent } from './components/quizzes/quizzes.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { AboutComponent } from './components/about/about.component';
+import { JoinComponent } from './components/join/join.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -59,9 +60,10 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
     QuizzesComponent,
     StandardsComponent,
     AboutComponent,
+    JoinComponent,
     LoginComponent,
-    ProfileComponent,
     SignupComponent,
+    ProfileComponent,
     ContactComponent,
     TemplateClassComponent,
     TemplateExamComponent,

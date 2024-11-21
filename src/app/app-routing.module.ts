@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { QuizzesComponent } from './components/quizzes/quizzes.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { AboutComponent } from './components/about/about.component';
+import { JoinComponent } from './components/join/join.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'quizzes', component: QuizzesComponent },
   { path: 'standards', component: StandardsComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'join', component: JoinComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'profile', component: ProfileComponent },
