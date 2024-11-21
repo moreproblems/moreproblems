@@ -731,9 +731,9 @@
           <h3 style="font-size: 18px; padding-left: 5px; width: 100px"> {{all_students_data[std].displayName}} </h3>
         </div>
       </div>
-      <br />
-      <h2 style="line-height: 28px"> Assign To Your Class(es) </h2>
-      <div class="card-container" style="align-items: center; padding-top: 0">
+      <br *ngIf="!['', 'Student', 'Parent'].includes(authService.userData.role)" />
+      <h2 *ngIf="!['', 'Student', 'Parent'].includes(authService.userData.role)" style="line-height: 28px"> Assign To Your Class(es) </h2>
+      <div *ngIf="!['', 'Student', 'Parent'].includes(authService.userData.role)" class="card-container" style="align-items: center; padding-top: 0">
         <h3 *ngIf="authService.userData.classes.length <= 1" style="font-size: 18px"> You haven't created any students
           under your account.
         </h3>

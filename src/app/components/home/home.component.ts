@@ -5702,7 +5702,7 @@ export class HomeComponent implements OnInit {
     this.meta.updateTag({ name: 'description', content: "Access released practice problems & solutions to prepare for end-of-year tests - including Florida FSA, Illinois IAR, New York NYSTP, North Carolina EOG, Pennsylvania PSSA, and Texas STAAR. Choose from more 400 assessments across math, English language, science, & social studies for elementary, middle, & high school students." });
     setTimeout(() => {
       if (!this.authService.userData) {
-        this.router.navigate(['exams']);
+        this.router.navigate(['about']);
       }
       else {
         this.authService.getProfilePic(this.authService.userData);

@@ -977,17 +977,7 @@ export class ExamsComponent implements OnInit {
           }, +key * 10);
         }
       }, 100);
-      this.my_class_metadata = [];
-      const linked_classes = this.authService.userData.classes.slice(1);
-      for (const [key, clss] of Object.entries(linked_classes)) {
-        setTimeout(() => {
-          console.log(clss);
-          this.class_data = this.authService.searchClassId(clss as string);
-          console.log(this.class_data);
-          this.my_class_metadata.push(this.class_data as object);
-        }, +key * 10);
-      }
-      setTimeout(() => {
+      if (!['', 'Student', 'Parent'].includes(this.authService.userData.role)) {
         this.my_class_metadata = [];
         const linked_classes = this.authService.userData.classes.slice(1);
         for (const [key, clss] of Object.entries(linked_classes)) {
@@ -998,7 +988,19 @@ export class ExamsComponent implements OnInit {
             this.my_class_metadata.push(this.class_data as object);
           }, +key * 10);
         }
-      }, 100);
+        setTimeout(() => {
+          this.my_class_metadata = [];
+          const linked_classes = this.authService.userData.classes.slice(1);
+          for (const [key, clss] of Object.entries(linked_classes)) {
+            setTimeout(() => {
+              console.log(clss);
+              this.class_data = this.authService.searchClassId(clss as string);
+              console.log(this.class_data);
+              this.my_class_metadata.push(this.class_data as object);
+            }, +key * 10);
+          }
+        }, 100);
+      }
     }
     this.assign_e = !this.assign_e;
   }
@@ -1211,17 +1213,7 @@ export class ExamsComponent implements OnInit {
             }, +key * 10);
           }
         }, 100);
-        this.my_class_metadata = [];
-        const linked_classes = this.authService.userData.classes.slice(1);
-        for (const [key, clss] of Object.entries(linked_classes)) {
-          setTimeout(() => {
-            console.log(clss);
-            this.class_data = this.authService.searchClassId(clss as string);
-            console.log(this.class_data);
-            this.my_class_metadata.push(this.class_data as object);
-          }, +key * 10);
-        }
-        setTimeout(() => {
+        if (!['', 'Student', 'Parent'].includes(this.authService.userData.role)) {
           this.my_class_metadata = [];
           const linked_classes = this.authService.userData.classes.slice(1);
           for (const [key, clss] of Object.entries(linked_classes)) {
@@ -1232,7 +1224,19 @@ export class ExamsComponent implements OnInit {
               this.my_class_metadata.push(this.class_data as object);
             }, +key * 10);
           }
-        }, 100);
+          setTimeout(() => {
+            this.my_class_metadata = [];
+            const linked_classes = this.authService.userData.classes.slice(1);
+            for (const [key, clss] of Object.entries(linked_classes)) {
+              setTimeout(() => {
+                console.log(clss);
+                this.class_data = this.authService.searchClassId(clss as string);
+                console.log(this.class_data);
+                this.my_class_metadata.push(this.class_data as object);
+              }, +key * 10);
+            }
+          }, 100);
+        }
       }
     }
     // location.reload();

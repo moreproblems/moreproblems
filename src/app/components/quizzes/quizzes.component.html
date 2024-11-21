@@ -4487,9 +4487,9 @@
       <h2 *ngIf="screenWidth <= mobileWidth" style="font-weight: 400; font-size: 18.5px; line-height: 24px"> Find the perfect quiz for every student - with
         real-time feedback for learners and reports for teachers. Just pick which type of problems to work on, then get started on your unique quiz. </h2>
       <span *ngIf="authService.userData as user">
-        <h3 *ngIf="!['', 'Student'].includes(user.role) && screenWidth > mobileWidth" (click)="cquiz_page='pretext'" style="font-weight: 600; font-size: 20px"><a>
+        <h3 *ngIf="!['', 'Student', 'Parent'].includes(user.role) && screenWidth > mobileWidth" (click)="cquiz_page='pretext'" style="font-weight: 600; font-size: 20px"><a>
           Upload your own questions to create a custom quiz for your students. </a></h3>
-        <h3 *ngIf="!['', 'Student'].includes(user.role) && screenWidth <= mobileWidth" (click)="cquiz_page='pretext'" style="font-weight: 600; font-size: 16px"><a>
+        <h3 *ngIf="!['', 'Student', 'Parent'].includes(user.role) && screenWidth <= mobileWidth" (click)="cquiz_page='pretext'" style="font-weight: 600; font-size: 16px"><a>
           Upload your own questions to create a custom quiz for your students. </a></h3>
       </span>
       <br />
