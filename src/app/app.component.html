@@ -457,7 +457,7 @@
     style="display: flex; flex-direction: row; width: 100%; margin: auto; align-items: center; justify-content: space-between; height: fit-content">
     <div *ngIf="this.screenWidth <= this.mobileWidth" style="width: fit-content; display: flex; flex-direction: row">
       <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)"
-        style="margin: 5px 10px; padding: 0px" routerLink="/exams" routerLinkActive="active">
+        style="margin: 5px 10px; padding: 0px" routerLink="/about" routerLinkActive="active">
         <!-- <img *ngIf="this.screenWidth <= this.mobileWidth && (this.screenWidth >= 525  || (440 <= this.screenWidth && this.screenWidth < 490) || (330 <= this.screenWidth && this.screenWidth < 400))" src="./assets/media/logo1.png" style="width: 35px; height: 35px" #logo /> -->
         <span style="padding: 0px; text-align: left; margin: auto">
           <h1 *ngIf="this.screenWidth <= this.mobileWidth"
@@ -512,18 +512,18 @@
     </div> -->
     <div *ngIf="this.screenWidth <= this.mobileWidth" style="width: fit-content; display: flex; flex-direction: row">
       <div style="display: flex; align-items: center; margin-right: 10px; float: right">
-        <button *ngIf="!authService.userData && this.screenWidth >= 570" class="grade-button-s" routerLink="/signup"
+        <!-- <button *ngIf="!authService.userData && this.screenWidth >= 570" class="grade-button-s" routerLink="/signup"
           routerLinkActive="active"
           style="font-size: 16px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 5px; border-radius: 7px">
-          Sign Up </button>
+          Sign Up </button> -->
         <button *ngIf="!authService.userData && this.screenWidth >= 475" class="grade-button-l" routerLink="/login"
           routerLinkActive="active"
           style="font-size: 16px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 5px; border-radius: 7px">
           Log In </button>
-        <button *ngIf="this.screenWidth >= 410" class="grade-button-c" routerLink="/join" routerLinkActive="active"
+        <button *ngIf="this.screenWidth >= 450" class="grade-button-c" routerLink="/join" routerLinkActive="active"
           style="font-size: 16px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 5px; border-radius: 7px">
           Enter Code </button>
-        <img *ngIf="this.screenWidth >= 450 && authService.userData as user"
+        <img *ngIf="this.screenWidth >= 350 && authService.userData as user"
           src="{{(authService.pp_url) ? authService.pp_url : (user.photoURL) ? user.photoURL : '/assets/media/icons/user/user.png'}}"
           routerLink="/profile" routerLinkActive="active"
           style="width: 35px; height: 35px; border: 2px solid white; border-radius: 50%; margin: 7px">
@@ -554,48 +554,97 @@
   </div>
   <hr *ngIf="this.menuOpen && this.screenWidth <= this.mobileWidth"
     style="width: 100%; border-width: 2px; margin-top: 0px; margin-bottom: 1px">
-  <div *ngIf="this.menuOpen && this.screenWidth <= this.mobileWidth" style="width: 100%">
+  <div *ngIf="this.menuOpen && this.screenWidth <= this.mobileWidth && this.screenWidth >= 410" style="width: 100%">
     <nav
       style="width: 100%; text-align: center; display: inline-flex; flex-wrap: wrap; height: fit-content; align-items: center; justify-content: center;">
       <div class="flex-item" style="margin: 0px; display: inline-block">
         &nbsp;<a routerLink="/about" routerLinkActive="active"
-          style="padding: 5px 12px; font-size: 15px; font-weight: 300"> <u>About</u> </a>&nbsp;
+          style="padding: 5px 11px; font-size: 15px; font-weight: 300"> <u>About</u> </a>&nbsp;
       </div>
       <div class="flex-item" style="margin: 0px; display: inline-block">
         &nbsp;<a routerLink="/standards" routerLinkActive="active"
-          style="padding: 5px 12px; font-size: 15px; font-weight: 300"> <u>Standards</u> </a>&nbsp;
+          style="padding: 5px 11px; font-size: 15px; font-weight: 300"> <u>Standards</u> </a>&nbsp;
       </div>
       <div class="flex-item" style="margin: 0px; display: inline-block">
         &nbsp;<a routerLink="/exams" routerLinkActive="active"
-          style="padding: 5px 12px; font-size: 15px; font-weight: 300"> <u>Exams</u> </a>&nbsp;
+          style="padding: 5px 11px; font-size: 15px; font-weight: 300"> <u>Exams</u> </a>&nbsp;
       </div>
       <div class="flex-item" style="margin: 0px; display: inline-block">
         &nbsp;<a routerLink="/quizzes" routerLinkActive="active"
-          style="padding: 5px 12px; font-size: 15px; font-weight: 300"> <u>Quizzes</u> </a>&nbsp;
+          style="padding: 5px 11px; font-size: 15px; font-weight: 300"> <u>Quizzes</u> </a>&nbsp;
       </div>
-      <div *ngIf="!authService.userData && this.screenWidth < 570" class="flex-item"
+      <div *ngIf="!authService.userData && this.screenWidth <= this.mobileWidth" class="flex-item"
         style="margin: 0px; display: inline-block">
         &nbsp;<button class="grade-button-s" routerLink="/signup" routerLinkActive="active"
-          style="margin: 5px 12px; font-size: 15px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
+          style="margin: 5px 10.5px; font-size: 15px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
           Sign Up </button>&nbsp;
       </div>
       <div *ngIf="!authService.userData && this.screenWidth < 475" class="flex-item"
         style="margin: 0px; display: inline-block">
         &nbsp;<button class="grade-button-l" routerLink="/login" routerLinkActive="active"
-          style="margin: 5px 12px; font-size: 15px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
+          style="margin: 5px 11px; font-size: 15px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
           Log In </button>&nbsp;
       </div>
-      <div *ngIf="this.screenWidth < 410" class="flex-item" style="margin: 0px; display: inline-block">
+      <div *ngIf="this.screenWidth < 450" class="flex-item" style="margin: 0px; display: inline-block">
         &nbsp;<button class="grade-button-c" routerLink="/join" routerLinkActive="active"
-          style="margin: 5px 12px; font-size: 15px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
+          style="margin: 5px 11px; font-size: 15px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
           Enter Code </button>&nbsp;
       </div>
-      <div *ngIf="this.screenWidth < 450 && authService.userData as user" class="flex-item"
+      <div *ngIf="this.screenWidth < 350 && authService.userData as user" class="flex-item"
         style="margin: 0px; display: inline-block">
         &nbsp;<img
           src="{{(authService.pp_url) ? authService.pp_url : (user.photoURL) ? user.photoURL : '/assets/media/icons/user/user.png'}}"
           routerLink="/profile" routerLinkActive="active"
-          style="margin: 2px 12px 4px; width: 28px; height: 28px; border: 1px solid white; border-radius: 50%">&nbsp;
+          style="margin: 2px 11px 4px; width: 28px; height: 28px; border: 1px solid white; border-radius: 50%">&nbsp;
+      </div>
+      <!-- <a routerLink="/contact" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Contact </a>&nbsp; -->
+    </nav>
+  </div>
+  <div *ngIf="this.menuOpen && this.screenWidth < 410" style="width: 100%">
+    <nav
+      style="width: 100%; text-align: center; display: inline-flex; flex-wrap: wrap; height: fit-content; align-items: center; justify-content: center;">
+      <div class="flex-item" style="margin: 0px; display: inline-block">
+        &nbsp;<a routerLink="/about" routerLinkActive="active"
+          style="padding: 5px 8px; font-size: 13px; font-weight: 300"> <u>About</u> </a>&nbsp;
+      </div>
+      <div class="flex-item" style="margin: 0px; display: inline-block">
+        &nbsp;<a routerLink="/standards" routerLinkActive="active"
+          style="padding: 5px 8px; font-size: 13px; font-weight: 300"> <u>Standards</u> </a>&nbsp;
+      </div>
+      <div class="flex-item" style="margin: 0px; display: inline-block">
+        &nbsp;<a routerLink="/exams" routerLinkActive="active"
+          style="padding: 5px 8px; font-size: 13px; font-weight: 300"> <u>Exams</u> </a>&nbsp;
+      </div>
+      <div class="flex-item" style="margin: 0px; display: inline-block">
+        &nbsp;<a routerLink="/quizzes" routerLinkActive="active"
+          style="padding: 5px 8px; font-size: 13px; font-weight: 300"> <u>Quizzes</u> </a>&nbsp;
+      </div>
+      <div *ngIf="this.screenWidth >= 320" class="flex-item" style="margin: 0px; display: inline-block">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <div *ngIf="!authService.userData && this.screenWidth >= 319" class="flex-item"
+        style="margin: 0px; display: inline-block">
+        &nbsp;<button class="grade-button-s" routerLink="/signup" routerLinkActive="active"
+          style="margin: 5px 7px; font-size: 13px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
+          Sign Up </button>&nbsp;
+      </div>
+      <div *ngIf="!authService.userData" class="flex-item"
+        style="margin: 0px; display: inline-block">
+        &nbsp;<button class="grade-button-l" routerLink="/login" routerLinkActive="active"
+          style="margin: 5px 7px; font-size: 13px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
+          Log In </button>&nbsp;
+      </div>
+      <div class="flex-item" style="margin: 0px; display: inline-block">
+        &nbsp;<button class="grade-button-c" routerLink="/join" routerLinkActive="active"
+          style="margin: 5px 7px; font-size: 13px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
+          Enter Code </button>&nbsp;
+      </div>
+      <div *ngIf="this.screenWidth < 350 && authService.userData as user" class="flex-item"
+        style="margin: 0px; display: inline-block">
+        &nbsp;<img
+          src="{{(authService.pp_url) ? authService.pp_url : (user.photoURL) ? user.photoURL : '/assets/media/icons/user/user.png'}}"
+          routerLink="/profile" routerLinkActive="active"
+          style="margin: 2px 7px 4px; width: 28px; height: 28px; border: 1px solid white; border-radius: 50%">&nbsp;
       </div>
       <!-- <a routerLink="/contact" routerLinkActive="active" style="padding: 0 15px; font-size: 16px"> Contact </a>&nbsp; -->
     </nav>

@@ -490,52 +490,94 @@
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
-<div class="content" role="main" (window:resize)="width_change2()" style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
+<div class="content" role="main" (window:resize)="width_change2()" style="min-height: 100%; height: auto; min-width: 100%; width: auto; padding: 10px auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <div class="card card-large"
     style="margin: auto; padding: 0px; padding-right: -1px; border: 3px solid black; border-radius: 20px; display: block; min-width: 310px; width: min(800px, 85%); max-height: 1200px; display: flex; flex-direction: row">
-    <div style="margin: auto; padding: 15px">
-      <br />
-      <h1 *ngIf="screenWidth > mobileWidth" style="line-height: 32px; font-weight: 500; font-size: 32px"> Join Your Class With <b style="font-weight: 900">MoreProblems</b> </h1>
-      <h1 *ngIf="screenWidth <= mobileWidth && screenWidth > 700" style="line-height: 28px; font-weight: 500; font-size: 28px"> Join Your Class With <b style="font-weight: 900">MoreProblems</b> </h1>
-      <h1 *ngIf="screenWidth <= 700" style="line-height: 28px; font-weight: 500; font-size: 24px"> Join Your Class With <b style="font-weight: 900">MoreProblems</b> </h1>
-      <!-- <br /> -->
-      <h3 style="line-height: 24px; font-weight: 500; font-size: 18px; margin-top: 24px"> Get started solving problems with your teacher and peers! </h3>
-      <br />
-      <br />
-      <br />
-      <div class="displayTable" style="text-align: center; align-items: center; margin: auto">
-        <div class="card-container" style="min-height: 20px; min-width: 300px; height: auto; width: fit-content; padding: 2px; margin: auto; align-items: center; justify-content: center; display: flex; flex-direction: column; border: 1px solid rgb(118, 118, 118); border-radius: 8px">
-          <div class="card-container" style="min-height: 20px; min-width: 300px; height: auto; width: fit-content; padding: 0px; margin: auto; align-items: center; justify-content: space-between; display: flex; flex-direction: row">
-            <textarea
-              rows="1" maxlength="5" (input)="this.classCode.value=check_code(this.classCode.value)" placeholder="Enter class code"
-              style="margin: 5px; padding: 10px 15px; width: min(55%, 220px); height: auto; font-size: 20px; line-height: 24px; font-weight: 700; text-align: center; border: 1px solid rgba(118, 118, 118, 0.5); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-              #classCode></textarea>
-            <button *ngIf="valid_code" routerLink="/class/{{this.classCode.value}}" class="grade-button" style="margin: 5px; padding: 10px 15px; width: auto; height: auto">
-              <!-- <img src="./assets/media/icons/download.png" style="height: 25px"> -->
-              <b style="font-size: 20px; line-height: 20px"> Join </b>
-            </button>
-            <button *ngIf="!valid_code" class="toggle-button-disabled" style="margin: 5px; padding: 10px 15px; width: auto; height: auto">
-              <!-- <img src="./assets/media/icons/download.png" style="height: 25px"> -->
-              <b style="font-size: 20px; line-height: 20px"> Join </b>
-            </button>
+    <div *ngIf="screenWidth <= 850" style="margin: auto; width: 100%">
+      <div style="margin: auto; padding: 13px">
+        <br />
+        <h1 *ngIf="screenWidth > mobileWidth" style="line-height: 32px; font-weight: 500; font-size: 32px"> Join Your Class With <b style="font-weight: 900">MoreProblems</b> </h1>
+        <h1 *ngIf="screenWidth <= mobileWidth && screenWidth > 700" style="line-height: 28px; font-weight: 500; font-size: 28px"> Join Your Class With <b style="font-weight: 900">MoreProblems</b> </h1>
+        <h1 *ngIf="screenWidth <= 700" style="line-height: 28px; font-weight: 500; font-size: 24px"> Join Your Class With <b style="font-weight: 900">MoreProblems</b> </h1>
+        <!-- <br /> -->
+        <h3 style="line-height: 24px; font-weight: 500; font-size: 18px; margin-top: 24px"> Get started solving problems with your teacher and peers! </h3>
+        <br />
+        <br />
+        <br />
+        <div class="displayTable" style="text-align: center; align-items: center; margin: auto">
+          <div class="card-container" style="min-height: 20px; min-width: 280px; height: auto; width: fit-content; padding: 2px; margin: auto; align-items: center; justify-content: center; display: flex; flex-direction: column; border: 1px solid rgb(118, 118, 118); border-radius: 8px">
+            <div class="card-container" style="min-height: 20px; min-width: 280px; height: auto; width: fit-content; padding: 0px; margin: auto; align-items: center; justify-content: space-between; display: flex; flex-direction: row">
+              <textarea
+                rows="1" maxlength="5" (input)="this.classCode.value=check_code(this.classCode.value)" placeholder="Enter class code"
+                style="margin: 5px; padding: 10px 15px; width: min(55%, 220px); height: auto; font-size: 19.5px; line-height: 24px; font-weight: 700; text-align: center; border: 1px solid rgba(118, 118, 118, 0.5); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                #classCode></textarea>
+              <button *ngIf="valid_code" routerLink="/class/{{this.classCode.value}}" class="grade-button" style="margin: 5px; padding: 10px 15px; width: auto; height: auto">
+                <!-- <img src="./assets/media/icons/download.png" style="height: 25px"> -->
+                <b style="font-size: 20px; line-height: 20px"> Go </b>
+              </button>
+              <button *ngIf="!valid_code" class="toggle-button-disabled" style="margin: 5px; padding: 10px 15px; width: auto; height: auto">
+                <!-- <img src="./assets/media/icons/download.png" style="height: 25px"> -->
+                <b style="font-size: 20px; line-height: 20px"> Go </b>
+              </button>
+            </div>
+            <div *ngIf="valid_code" style="margin-top: 8px"> 
+              <div *ngIf="!search_class"> <b>There is no class with this code</b> </div>
+              <div *ngIf="search_class"> <b>{{search_class_result.displayName}}</b> with {{authService.searchUserId(search_class_result.teacher).displayName}} </div>
+            </div>
           </div>
-          <div *ngIf="valid_code" style="margin-top: 8px"> 
-            <div *ngIf="!search_class"> <b>There is no class with this code</b> </div>
-            <div *ngIf="search_class"> <b>{{search_class_result.displayName}}</b> with {{authService.searchUserId(search_class_result.teacher).displayName}} </div>
+        </div>
+        <br />
+        <br />
+      </div>
+      <div style="height: 250px; min-width: 304px; max-width: 750px; width: 100%; background: url('./assets/media/Summer24/Class7.jpg') no-repeat bottom; background-size: 900px auto; border-radius: 0px 0px 17px 17px; align-content: end">
+        <div style="color: white; background-color: rgba(47, 79, 79, 0.5); backdrop-filter: blur(5px); height: auto; margin-bottom: 0px; border-radius: 0px 0px 17px 17px; text-align: center">
+          <div style="margin-left: 10px; padding: 10px; font-weight: 1200">
+            <h3>Learners ❤️ MoreProblems</h3>
+            <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>1,000+ students & educators</b>!</h4>
           </div>
         </div>
       </div>
-      <br />
-      <!-- <br />
-      <br />
-      <div class="redirectToLogin">
-        <a style="font-size: 17px; font-weight: 600"><span class="redirect" routerLink="/login">Already signed up? <b style="font-weight: 900">Log In</b> instead</span></a>
-      </div> -->
-      <br />
+    </div>
+    <div *ngIf="screenWidth > 850" style="margin: auto">
+      <div style="margin: auto; padding: 13px">
+        <br />
+        <h1 *ngIf="screenWidth > mobileWidth" style="line-height: 32px; font-weight: 500; font-size: 32px"> Join Your Class With <b style="font-weight: 900">MoreProblems</b> </h1>
+        <h1 *ngIf="screenWidth <= mobileWidth && screenWidth > 700" style="line-height: 28px; font-weight: 500; font-size: 28px"> Join Your Class With <b style="font-weight: 900">MoreProblems</b> </h1>
+        <h1 *ngIf="screenWidth <= 700" style="line-height: 28px; font-weight: 500; font-size: 24px"> Join Your Class With <b style="font-weight: 900">MoreProblems</b> </h1>
+        <!-- <br /> -->
+        <h3 style="line-height: 24px; font-weight: 500; font-size: 18px; margin-top: 24px"> Get started solving problems with your teacher and peers! </h3>
+        <br />
+        <br />
+        <br />
+        <div class="displayTable" style="text-align: center; align-items: center; margin: auto">
+          <div class="card-container" style="min-height: 20px; min-width: 280px; height: auto; width: fit-content; padding: 2px; margin: auto; align-items: center; justify-content: center; display: flex; flex-direction: column; border: 1px solid rgb(118, 118, 118); border-radius: 8px">
+            <div class="card-container" style="min-height: 20px; min-width: 280px; height: auto; width: fit-content; padding: 0px; margin: auto; align-items: center; justify-content: space-between; display: flex; flex-direction: row">
+              <textarea
+                rows="1" maxlength="5" (input)="this.classCode.value=check_code(this.classCode.value)" placeholder="Enter class code"
+                style="margin: 5px; padding: 10px 15px; width: min(55%, 220px); height: auto; font-size: 19.5px; line-height: 24px; font-weight: 700; text-align: center; border: 1px solid rgba(118, 118, 118, 0.5); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                #classCode></textarea>
+              <button *ngIf="valid_code" routerLink="/class/{{this.classCode.value}}" class="grade-button" style="margin: 5px; padding: 10px 15px; width: auto; height: auto">
+                <!-- <img src="./assets/media/icons/download.png" style="height: 25px"> -->
+                <b style="font-size: 20px; line-height: 20px"> Go </b>
+              </button>
+              <button *ngIf="!valid_code" class="toggle-button-disabled" style="margin: 5px; padding: 10px 15px; width: auto; height: auto">
+                <!-- <img src="./assets/media/icons/download.png" style="height: 25px"> -->
+                <b style="font-size: 20px; line-height: 20px"> Go </b>
+              </button>
+            </div>
+            <div *ngIf="valid_code" style="margin-top: 8px"> 
+              <div *ngIf="!search_class"> <b>There is no class with this code</b> </div>
+              <div *ngIf="search_class"> <b>{{search_class_result.displayName}}</b> with {{authService.searchUserId(search_class_result.teacher).displayName}} </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+      </div>
     </div>
     <div *ngIf="screenWidth > 850" style="width: 250px; min-height: 450px; height: auto; background: url('./assets/media/Summer24/Class6.jpg') no-repeat center; background-size: auto 800px; border-radius: 0px 17px 17px 0px; align-content: end">
-      <div style="color: white; background-color: rgba(47, 79, 79, 0.5); backdrop-filter: blur(5px); height: 120px; margin-bottom: 0px; border-radius: 0px 0px 17px; text-align: left">
-        <div style="margin-left: 10px; padding-top: 15px; font-weight: 1200">
+      <div style="color: white; background-color: rgba(47, 79, 79, 0.5); backdrop-filter: blur(5px); height: 120px; margin-bottom: 0px; border-radius: 0px 0px 17px; text-align: center">
+        <div style="margin-left: 10px; margin-right: 10px; padding-top: 15px; font-weight: 1200">
           <h3>Learners ❤️ MoreProblems</h3>
           <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>1,000+ students & educators</b>!</h4>
         </div>
