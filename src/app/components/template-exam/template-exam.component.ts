@@ -6746,40 +6746,40 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     this.confetti_pop();
     for (let i: number = 0; i < this.exam_length; i++) {
       if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Attempts[0] > 0) {
-        if (this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics != undefined) {
-          for (let num: number = 0; num < this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics.length; num++) {
-            if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num])) {
-              this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Total += 1;
-              this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Seconds += this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Seconds;
+        if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics != undefined) {
+          for (let num: number = 0; num < this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics.length; num++) {
+            if (Object.keys(this.topic_breakdown).includes(this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num])) {
+              this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Total += 1;
+              this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Seconds += this.exam_submission[+Object.keys(this.ordered_dump)[i]].Seconds;
               if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0][0] == '✅') {
-                this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Correct += 1;
-                if (Object.keys(this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs).includes(this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].SubTopics[num])) {
-                  this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].SubTopics[num]].Total += 1;
-                  this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].SubTopics[num]].Correct += 1;
-                  this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].SubTopics[num]].Seconds += this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Seconds;
+                this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Correct += 1;
+                if (Object.keys(this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs).includes(this.exam_submission[+Object.keys(this.ordered_dump)[i]].SubTopics[num])) {
+                  this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission[+Object.keys(this.ordered_dump)[i]].SubTopics[num]].Total += 1;
+                  this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission[+Object.keys(this.ordered_dump)[i]].SubTopics[num]].Correct += 1;
+                  this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission[+Object.keys(this.ordered_dump)[i]].SubTopics[num]].Seconds += this.exam_submission[+Object.keys(this.ordered_dump)[i]].Seconds;
                 }
                 else {
-                  this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].SubTopics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Seconds, 'Time': '0s' };
+                  this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission[+Object.keys(this.ordered_dump)[i]].SubTopics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission[+Object.keys(this.ordered_dump)[i]].Seconds, 'Time': '0s' };
                 }
               }
               else {
-                this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Incorrect += 1;
-                if (Object.keys(this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs).includes(this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].SubTopics[num])) {
-                  this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].SubTopics[num]].Total += 1;
-                  this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].SubTopics[num]].Incorrect += 1;
-                  this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].SubTopics[num]].Seconds += this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Seconds;
+                this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Incorrect += 1;
+                if (Object.keys(this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs).includes(this.exam_submission[+Object.keys(this.ordered_dump)[i]].SubTopics[num])) {
+                  this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission[+Object.keys(this.ordered_dump)[i]].SubTopics[num]].Total += 1;
+                  this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission[+Object.keys(this.ordered_dump)[i]].SubTopics[num]].Incorrect += 1;
+                  this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission[+Object.keys(this.ordered_dump)[i]].SubTopics[num]].Seconds += this.exam_submission[+Object.keys(this.ordered_dump)[i]].Seconds;
                 }
                 else {
-                  this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].SubTopics[num]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Seconds, 'Time': '0s' };
+                  this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]].Subs[this.exam_submission[+Object.keys(this.ordered_dump)[i]].SubTopics[num]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission[+Object.keys(this.ordered_dump)[i]].Seconds, 'Time': '0s' };
                 }
               }
             }
             else {
               if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Correct[0][0] == '✅') {
-                this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].SubTopics[num]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Seconds, 'Time': '0s' } } };
+                this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission[+Object.keys(this.ordered_dump)[i]].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission[+Object.keys(this.ordered_dump)[i]].SubTopics[num]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission[+Object.keys(this.ordered_dump)[i]].Seconds, 'Time': '0s' } } };
               }
               else {
-                this.topic_breakdown[this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Topics[num]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].SubTopics[num]]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[+Object.keys(this.ordered_dump)[i]].Seconds, 'Time': '0s' } } };
+                this.topic_breakdown[this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics[num]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission[+Object.keys(this.ordered_dump)[i]].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission[+Object.keys(this.ordered_dump)[i]].SubTopics[num]]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission[+Object.keys(this.ordered_dump)[i]].Seconds, 'Time': '0s' } } };
               }
             }
           }

@@ -3535,11 +3535,7 @@
                   <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_m_choice('', 1, '')" *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
-                    <button (click)="remove_m_choice(choice[0], ''); select_m_choice(choice[0], 1, '')" *ngIf="is_matched(choice[0], 1, '') && m_submission[0][choice[0]][0] == choice[choice.length-1]" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(66, 156, 10)">
-                      <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
-                      <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
-                    </button>
-                    <button (click)="remove_m_choice(choice[0], ''); select_m_choice(choice[0], 1, '')" *ngIf="is_matched(choice[0], 1, '') && m_submission[0][choice[0]][0] != choice[choice.length-1]" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(245, 77, 77)">
+                    <button (click)="remove_m_choice(choice[0], ''); select_m_choice(choice[0], 1, '')" *ngIf="is_matched(choice[0], 1, '')" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
                       <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
                     </button>
@@ -3584,19 +3580,8 @@
                   <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, '')" *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
-                    <button (click)="remove_c_choice(selection, '')" *ngIf="selection != '' && prob.value.AnswerChoices[selection].Choice == choice" class="toggle-button-off"
-                        style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(66, 156, 10)">
-                        <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
-                        <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
-                        <div *ngIf="selection.slice(2).startsWith(':box:')"
-                          style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{selection.slice(7)}}</h3>
-                        </div>
-                        <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                    </button>
-                    <button (click)="remove_c_choice(selection, '')" *ngIf="selection != '' && prob.value.AnswerChoices[selection].Choice != choice" class="toggle-button-off"
-                        style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(245, 77, 77)">
+                    <button (click)="remove_c_choice(selection, '')" *ngIf="selection != ''" class="toggle-button-off"
+                        style="display: flex; flex-direction: row; align-items: center; width: fit-content">
                         <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
                         <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                         <div *ngIf="selection.slice(2).startsWith(':box:')"
@@ -3646,19 +3631,8 @@
                   <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, '')" *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
-                    <button (click)="remove_g_choice(selection, choice[0], '')" *ngIf="selection != '' && (prob.value.AnswerChoices | keys).includes(selection + ':' + choice[0]) && prob.value.AnswerChoices[selection + ':' + choice[0]].Choice == choice" class="toggle-button-off"
-                        style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(66, 156, 10)">
-                        <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
-                        <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
-                        <div *ngIf="selection.slice(2).startsWith(':box:')"
-                          style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{selection.slice(7)}}</h3>
-                        </div>
-                        <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                    </button>
-                    <button (click)="remove_g_choice(selection, choice[0], '')" *ngIf="selection != '' && (!(prob.value.AnswerChoices | keys).includes(selection + ':' + choice[0]) || ((prob.value.AnswerChoices | keys).includes(selection + ':' + choice[0]) && prob.value.AnswerChoices[selection + ':' + choice[0]].Choice != choice))" class="toggle-button-off"
-                        style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(245, 77, 77)">
+                    <button (click)="remove_g_choice(selection, choice[0], '')" *ngIf="selection != '' && (prob.value.AnswerChoices | keys).includes(selection + ':' + choice[0])" class="toggle-button-off"
+                        style="display: flex; flex-direction: row; align-items: center; width: fit-content">
                         <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
                         <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                         <div *ngIf="selection.slice(2).startsWith(':box:')"
@@ -4095,11 +4069,7 @@
                   <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_m_choice('', 1, part.key)" *ngIf="!is_matched(choice[0], 1, part.key) && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
-                    <button (click)="remove_m_choice(choice[0], part.key); select_m_choice(choice[0], 1, part.key)" *ngIf="is_matched(choice[0], 1, part.key) && m_submission[get_part_num(part.key)][choice[0]][0] == choice[choice.length-1]" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(66, 156, 10)">
-                      <div style="margin: 0 20px 0 0"> <b>{{m_submission[get_part_num(part.key)][choice[0]][0]}}</b> </div>
-                      <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[get_part_num(part.key)][choice[0]].slice(2)}} </div>
-                    </button>
-                    <button (click)="remove_m_choice(choice[0], part.key); select_m_choice(choice[0], 1, part.key)" *ngIf="is_matched(choice[0], 1, part.key) && m_submission[get_part_num(part.key)][choice[0]][0] != choice[choice.length-1]" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(245, 77, 77)">
+                    <button (click)="remove_m_choice(choice[0], part.key); select_m_choice(choice[0], 1, part.key)" *ngIf="is_matched(choice[0], 1, part.key)" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{m_submission[get_part_num(part.key)][choice[0]][0]}}</b> </div>
                       <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[get_part_num(part.key)][choice[0]].slice(2)}} </div>
                     </button>
@@ -4144,19 +4114,8 @@
                   <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, part.key)" *ngIf="selection == '' && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
-                    <button (click)="remove_c_choice(selection, part.key)" *ngIf="selection != '' && part.value.AnswerChoices[selection].Choice == choice" class="toggle-button-off"
-                        style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(66, 156, 10)">
-                        <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
-                        <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
-                        <div *ngIf="selection.slice(2).startsWith(':box:')"
-                          style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{selection.slice(7)}}</h3>
-                        </div>
-                        <img *ngIf="is_image(selection.slice(2))" src="./assets/{{choice.slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                    </button>
-                    <button (click)="remove_c_choice(selection, part.key)" *ngIf="selection != '' && part.value.AnswerChoices[selection].Choice != choice" class="toggle-button-off"
-                        style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(245, 77, 77)">
+                    <button (click)="remove_c_choice(selection, part.key)" *ngIf="selection != ''" class="toggle-button-off"
+                        style="display: flex; flex-direction: row; align-items: center; width: fit-content">
                         <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
                         <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                         <div *ngIf="selection.slice(2).startsWith(':box:')"
@@ -4206,19 +4165,8 @@
                   <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, part.key)" *ngIf="selection == '' && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
-                    <button (click)="remove_g_choice(selection, choice[0], part.key)" *ngIf="selection != '' && (part.value.AnswerChoices | keys).includes(selection + ':' + choice[0]) && part.value.AnswerChoices[selection + ':' + choice[0]].Choice == choice" class="toggle-button-off"
-                        style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(66, 156, 10)">
-                        <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
-                        <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
-                        <div *ngIf="selection.slice(2).startsWith(':box:')"
-                          style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{selection.slice(7)}}</h3>
-                        </div>
-                        <img *ngIf="is_image(selection.slice(2))" src="./assets/{{choice.slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                    </button>
-                    <button (click)="remove_g_choice(selection, choice[0], part.key)" *ngIf="selection != '' && (!(part.value.AnswerChoices | keys).includes(selection + ':' + choice[0]) || ((part.value.AnswerChoices | keys).includes(selection + ':' + choice[0]) && part.value.AnswerChoices[selection + ':' + choice[0]].Choice != choice))" class="toggle-button-off"
-                        style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(245, 77, 77)">
+                    <button (click)="remove_g_choice(selection, choice[0], part.key)" *ngIf="selection != '' && (part.value.AnswerChoices | keys).includes(selection + ':' + choice[0])" class="toggle-button-off"
+                        style="display: flex; flex-direction: row; align-items: center; width: fit-content">
                         <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
                         <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                         <div *ngIf="selection.slice(2).startsWith(':box:')"

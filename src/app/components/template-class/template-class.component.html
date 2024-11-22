@@ -4471,7 +4471,7 @@
               <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; line-height: 18px; min-height: 30px"> <b> {{class_data.state}} </b> </button>
             </label>
           </div>
-          <button *ngIf="is_auth && exams_title == 'Assignments For Your Class'" (click)="toggle_edit_class()"
+          <button *ngIf="is_auth && assign_title == 'Assignments For Your Class'" (click)="toggle_edit_class()"
             class="grade-button"
             style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px auto; padding: 2px 5px">
             <div style="margin: 0 5px">
@@ -4491,7 +4491,7 @@
               </b>
             </div>
           </button>
-          <button *ngIf="is_auth && !is_student && exams_title != 'Assignments For Your Class'"
+          <button *ngIf="is_auth && !is_student && assign_title != 'Assignments For Your Class'"
             (click)="toggle_add_students()" class="grade-button"
             style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px auto; padding: 2px 5px">
             <div style="margin: 0 5px">
@@ -4511,10 +4511,10 @@
             <button class="grade-button-l" (click)="login=true" style="font-size: 19px; line-height: 20px; font-weight: 900; letter-spacing: 1px; padding: 7px; border-radius: 7px"> Log In </button>
           </div>
         </div>
-        <div *ngIf="is_auth && ((is_student && is_enrolled) || (!is_student && exams_title == 'Assignments For Your Class'))" class="card card-medium"
+        <div *ngIf="is_auth && ((is_student && is_enrolled) || (!is_student && assign_title == 'Assignments For Your Class'))" class="card card-medium"
           style="margin: 10px; height: auto; max-height: 600px; min-width: 40%; max-width: min(80%, 500px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
           <div style="display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; width: 100%">
-            <h3 style="text-align: center; font-size: 24px"> {{(exams_title == 'Assignments For Your Class') ? 'All' : 'My'}} Class Activity </h3>
+            <h3 style="text-align: center; font-size: 24px"> {{(assign_title == 'Assignments For Your Class') ? 'All' : 'My'}} Class Activity </h3>
             <br />
             <div class="card-container"
               style="height: auto; max-height: 500px; width: auto; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
@@ -4561,7 +4561,7 @@
             </div>
           </div>
         </div>
-        <div *ngIf="is_auth && exams_title == 'Assignments For Your Class' && class_student_metadata.length >= 1" class="card card-medium"
+        <div *ngIf="is_auth && assign_title == 'Assignments For Your Class' && class_student_metadata.length >= 1" class="card card-medium"
           style="margin: 10px; min-height: 50px; height: auto; padding: 10px; align-items: center">
           <canvas id="classStudPlot" style="width: min(90%, 800px); min-height: 300px; max-height: 800px; margin: auto"
             #classStudPlot></canvas>
@@ -4575,13 +4575,13 @@
       </div>
       <br *ngIf="is_auth" />
     </div>
-    <div *ngIf="exams_title == 'Assignments For Your Class' && is_auth" class="card card-large"
+    <div *ngIf="assign_title == 'Assignments For Your Class' && is_auth" class="card card-large"
       style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <h2 #classStudents> Students Enrolled In Your Class (<b *ngIf="class_student_metadata.length < 1"
           style="color: darkslategray">0</b> <b *ngIf="class_student_metadata.length >= 1"
           style="color: darkgreen">{{class_student_metadata.length}}</b>) </h2>
-      <button *ngIf="is_auth && exams_title == 'Assignments For Your Class'" (click)="toggle_add_students()"
+      <button *ngIf="is_auth && assign_title == 'Assignments For Your Class'" (click)="toggle_add_students()"
         class="grade-button"
         style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
         <div style="margin: 0 5px">
@@ -4600,7 +4600,9 @@
           #studentTableL>
           <thead>
             <tr>
-              <th colspan="7" style="font-size: 18px"> All Student Activity </th>
+              <th colspan="7" style="font-size: 18px"> All Student Activity (<b *ngIf="complete_exam_count < 1"
+          style="color: darkslategray">0</b> <b *ngIf="complete_exam_count >= 1"
+          style="color: darkgreen">{{complete_exam_count}}</b> submissions) </th>
               <!-- <th colspan="2">
                 <label class="switch"
                   style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
@@ -4736,15 +4738,15 @@
           </section>
         </div>
       </div>
-      <br *ngIf="is_auth && exams_title == 'Assignments For Your Class'" />
+      <br *ngIf="is_auth && assign_title == 'Assignments For Your Class'" />
     </div>
     <div class="card card-large"
       style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
-      <h2 #classExams> {{exams_title}} (<b *ngIf="class_data.exams.slice(1).length < 1"
+      <h2 #classExams> {{(assign_title == 'Assignments For Your Class' && screenWidth > mobileWidth) ? assign_title : exams_title}} (<b *ngIf="class_data.exams.slice(1).length < 1"
           style="color: darkslategray">0</b> <b *ngIf="class_data.exams.slice(1).length >= 1"
-          style="color: darkgreen">{{class_data.exams.slice(1).length}}</b>) </h2>
-      <button *ngIf="is_auth && exams_title == 'Assignments For Your Class'" (click)="toggle_add_exams()"
+          style="color: darkgreen">{{(assign_title == 'Assignments For Your Class' && screenWidth > mobileWidth) ? class_data.exams.slice(1).length+class_data.quizzes.slice(1).length : class_data.exams.slice(1).length}}</b>) </h2>
+      <button *ngIf="is_auth && assign_title == 'Assignments For Your Class'" (click)="toggle_add_exams()"
         class="grade-button"
         style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
         <div style="margin: 0 5px">
@@ -4754,15 +4756,17 @@
           </b>
         </div>
       </button>
-      <br *ngIf="exams_title == 'Assignments For Your Class' && screenWidth > mobileWidth" />
+      <br *ngIf="assign_title == 'Assignments For Your Class' && screenWidth > mobileWidth" />
       <h3 *ngIf="this.class_data.exams.slice(1).length < 1" style="font-size: 18px"> No exams have been assigned to this class yet.
       </h3>
-      <div *ngIf="class_exam_metadata.length >= 1 && exams_title == 'Assignments For Your Class' && screenWidth > mobileWidth" style="overflow: auto">
+      <div *ngIf="class_exam_metadata.length >= 1 && assign_title == 'Assignments For Your Class' && screenWidth > mobileWidth" style="overflow: auto">
         <table style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
           #examTableL>
           <thead>
             <tr>
-              <th colspan="7" style="font-size: 18px"> All Complete Exam Activity </th>
+              <th colspan="7" style="font-size: 18px"> All Complete Exam Activity (<b *ngIf="class_data.exams.slice(1).length < 1"
+                style="color: darkslategray">0</b> <b *ngIf="class_data.exams.slice(1).length >= 1"
+                style="color: darkgreen">{{class_data.exams.slice(1).length}}</b> exams) </th>
               <!-- <th colspan="2">
                 <label class="switch"
                   style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
@@ -4829,7 +4833,7 @@
           </tbody>
         </table>
       </div>
-      <div *ngIf="this.class_data.exams.slice(1).length >= 1 && (exams_title != 'Assignments For Your Class' || screenWidth <= mobileWidth)" class="card-container" style="max-width: 100%">
+      <div *ngIf="this.class_data.exams.slice(1).length >= 1 && (assign_title != 'Assignments For Your Class' || screenWidth <= mobileWidth)" class="card-container" style="max-width: 100%">
         <div *ngFor="let exam of this.class_data.exams.slice(1)" class="card card-medium"
           style="display: block; text-align: center; max-width: 350px; padding: 20px 10px">
           <h2> {{exam_names[exam]}} </h2>
@@ -4862,7 +4866,7 @@
               </button>
             </label>
           </section>
-          <section *ngIf="exams_title == 'Assignments For Your Class' && is_auth"
+          <section *ngIf="assign_title == 'Assignments For Your Class' && is_auth"
             style="height: auto; max-height: 150px; width: fit-content; display: flex; justify-content: center; margin: 5px auto">
             <label class="switch" style="margin: auto 10px">
               <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
@@ -4881,19 +4885,21 @@
           </section>
         </div>
       </div>
-      <br *ngIf="exams_title != 'Assignments For Your Class' || screenWidth <= mobileWidth" />
-      <h2 *ngIf="exams_title != 'Assignments For Your Class' || screenWidth <= mobileWidth" #quizzesExams> {{quizzes_title}} (<b *ngIf="class_data.quizzes.slice(1).length < 1"
+      <br *ngIf="assign_title != 'Assignments For Your Class' || screenWidth <= mobileWidth" />
+      <h2 *ngIf="assign_title != 'Assignments For Your Class' || screenWidth <= mobileWidth" #quizzesExams> {{quizzes_title}} (<b *ngIf="class_data.quizzes.slice(1).length < 1"
           style="color: darkslategray">0</b> <b *ngIf="class_data.quizzes.slice(1).length >= 1"
           style="color: darkgreen">{{class_data.quizzes.slice(1).length}}</b>) </h2>
-      <br *ngIf="exams_title == 'Assignments For Your Class' && screenWidth > mobileWidth" />
+      <br *ngIf="assign_title == 'Assignments For Your Class' && screenWidth > mobileWidth" />
       <h3 *ngIf="this.class_data.quizzes.slice(1).length < 1" style="font-size: 18px"> No quizzes have been assigned to this class yet.
       </h3>
-      <div *ngIf="class_quiz_metadata.length >= 1 && exams_title == 'Assignments For Your Class' && screenWidth > mobileWidth" style="overflow: auto">
+      <div *ngIf="class_quiz_metadata.length >= 1 && assign_title == 'Assignments For Your Class' && screenWidth > mobileWidth" style="overflow: auto">
         <table style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: white"
           #quizTableL>
           <thead>
             <tr>
-              <th colspan="7" style="font-size: 18px"> All Complete Quiz Activity </th>
+              <th colspan="7" style="font-size: 18px"> All Complete Quiz Activity (<b *ngIf="class_data.quizzes.slice(1).length < 1"
+                style="color: darkslategray">0</b> <b *ngIf="class_data.quizzes.slice(1).length >= 1"
+                style="color: darkgreen">{{class_data.quizzes.slice(1).length}}</b> quizzes) </th>
               <!-- <th colspan="2">
                 <label class="switch"
                   style="max-height: 100px; height: auto; max-width: 200px; align-items: center; text-align: center; margin: auto">
@@ -4959,7 +4965,7 @@
           </tbody>
         </table>
       </div>
-      <div *ngIf="this.class_data.quizzes.slice(1).length >= 1 && (exams_title != 'Assignments For Your Class' || screenWidth <= mobileWidth)" class="card-container" style="max-width: 100%">
+      <div *ngIf="this.class_data.quizzes.slice(1).length >= 1 && (assign_title != 'Assignments For Your Class' || screenWidth <= mobileWidth)" class="card-container" style="max-width: 100%">
         <div *ngFor="let quiz of this.class_data.quizzes.slice(1) | values" class="card card-medium"
           style="display: block; text-align: center; max-width: 350px; padding: 20px 10px">
           <h2> {{authService.searchQuizId(quiz).name}} </h2>
@@ -5012,7 +5018,7 @@
           </b>
         </div>
       </button> -->
-      <br *ngIf="is_auth && quizzes_title == 'Quizzes Assigned To Your Class'" />
+      <br />
     </div>
   </div>
   <div *ngIf="edit_c" class="card card-large"
