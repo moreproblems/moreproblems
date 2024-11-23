@@ -63,7 +63,7 @@
     opacity: 0.8;
   }
 
-  #confetticanvas {
+  #confettiCanvas {
     position: fixed;
     z-index: 50;
     top: 81px;
@@ -687,12 +687,12 @@
 
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
-  <canvas id="confetticanvas"></canvas>
-  <div *ngIf="data_loaded && (file_source != '' || selected_subtopic != '' || signup || login) && !assign_e" class="content-menu" role="menu"
+  <canvas id="confettiCanvas"></canvas>
+  <div *ngIf="data_loaded && (file_source != '' || selected_subtopic != '' || signup || login || share_c) && !assign_e" class="content-menu" role="menu"
     style="margin-bottom: 0px; align-items: center">
-    <div *ngIf="signup || login" style="align-items: left; width: min(1075px, 92%)">
+    <div *ngIf="signup || login || share_c" style="align-items: left; width: min(1075px, 92%)">
       <section>
-        <div (click)="signup=false; login=false" class="card card-small"
+        <div (click)="signup=false; login=false; share_c=false" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
           <img src="./assets/media/icons/caret.png"
             style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
@@ -4426,7 +4426,7 @@
     </div>
   </div>
   <div
-    *ngIf="data_loaded && !signup && !login && !edit_c && !add_s && !add_a && file_source == '' && selected_subtopic == '' && selected_exam_results == '' && selected_quiz_results == '' && selected_stud_results == ''"
+    *ngIf="data_loaded && !signup && !login && !share_c && !edit_c && !add_s && !add_a && file_source == '' && selected_subtopic == '' && selected_exam_results == '' && selected_quiz_results == '' && selected_stud_results == ''"
     class="content-menu" style="margin-bottom: 0; align-items: center">
     <div class="card card-large"
       style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
@@ -4471,36 +4471,48 @@
               <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; line-height: 18px; min-height: 30px"> <b> {{class_data.state}} </b> </button>
             </label>
           </div>
-          <button *ngIf="is_auth && assign_title == 'Assignments For Your Class'" (click)="toggle_edit_class()"
-            class="grade-button"
-            style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px auto; padding: 2px 5px">
-            <div style="margin: 0 5px">
-              <img src="./assets/media/icons/edit.png" style="padding: 5px 0 0; height: 24px; width: 24px">
-            </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Edit Class
-              </b>
-            </div>
-          </button>
-          <button *ngIf="is_auth && is_student && !is_enrolled" (click)="enroll_student(authService.userData.uid)"
-            class="grade-button"
-            style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px auto; padding: 2px 5px">
-            <div style="margin: 0 5px">
-              <img src="./assets/media/icons/link.png" style="padding: 5px 0 0; height: 30px; width: 30px">
-            </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Enroll in Class
-              </b>
-            </div>
-          </button>
-          <button *ngIf="is_auth && !is_student && assign_title != 'Assignments For Your Class'"
-            (click)="toggle_add_students()" class="grade-button"
-            style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px auto; padding: 2px 5px">
-            <div style="margin: 0 5px">
-              <img src="./assets/media/icons/link.png" style="padding: 5px 0 0; height: 30px; width: 30px">
-            </div>
-            <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Enroll your Student
-              </b>
-            </div>
-          </button>
+          <div class="card-container">
+            <button *ngIf="is_auth && assign_title == 'Assignments For Your Class'" (click)="toggle_edit_class()"
+              class="grade-button"
+              style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 8px; padding: 2px 5px">
+              <div style="margin: 0 5px">
+                <img src="./assets/media/icons/edit.png" style="padding: 5px 0 0; height: 24px; width: 24px">
+              </div>
+              <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Edit Class
+                </b>
+              </div>
+            </button>
+            <button *ngIf="is_auth && assign_title == 'Assignments For Your Class'" (click)="toggle_share_class()"
+              class="grade-button"
+              style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 8px; padding: 2px 5px">
+              <div style="margin: 0 5px">
+                <img src="./assets/media/icons/link.png" style="padding: 5px 0 0; height: 24px; width: 24px">
+              </div>
+              <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Share Class
+                </b>
+              </div>
+            </button>
+            <button *ngIf="is_auth && is_student && !is_enrolled" (click)="enroll_student(authService.userData.uid)"
+              class="grade-button"
+              style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px; padding: 2px 5px">
+              <div style="margin: 0 5px">
+                <img src="./assets/media/icons/link.png" style="padding: 5px 0 0; height: 30px; width: 30px">
+              </div>
+              <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Enroll in Class
+                </b>
+              </div>
+            </button>
+            <button *ngIf="is_auth && !is_student && assign_title != 'Assignments For Your Class'"
+              (click)="toggle_add_students()" class="grade-button"
+              style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: 10px; padding: 2px 5px">
+              <div style="margin: 0 5px">
+                <img src="./assets/media/icons/link.png" style="padding: 5px 0 0; height: 30px; width: 30px">
+              </div>
+              <div style="margin: 0 5px; text-align: center; font-size: 20px"><b> Enroll your Student
+                </b>
+              </div>
+            </button>
+          </div>
           <h2 *ngIf="is_auth && is_student && is_enrolled" style="margin: 10px auto; color: green"> You're enrolled in this class!
           </h2>
         </div>
@@ -5020,6 +5032,52 @@
       </button> -->
       <br />
     </div>
+  </div>
+  <div *ngIf="share_c" class="card card-large"
+    style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: 10px auto; padding: 0 5%; display: flex; flex-direction: column">
+    <br />
+    <h1 style="line-height: 28px"> Share Your Class With Students </h1>
+    <br />
+    <div class="media">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="media" style="background-color: #eee; max-width: 650px; margin: 15px auto; padding: 10px">
+            <div class="media-body">
+              <div>
+                <h1 style="width: auto; text-align: center; margin: 20px auto; font-weight: 500"> Class Code: <b>{{class_uid}}</b></h1>
+                <br />
+                <div>
+                  <canvas id="qrCanvas" #qrCanvas></canvas>
+                </div>
+                <br />
+                <div class="card-container" style="min-height: 20px; min-width: 270px; height: auto; width: fit-content; padding: 2px; margin: 10px auto; align-items: center; justify-content: center; display: flex; flex-direction: column; border: 1px solid rgb(118, 118, 118); border-radius: 8px">
+                  <div *ngIf="screenWidth >= 500" class="card-container" style="min-height: 20px; width: 330px; height: auto; padding: 0px; margin: auto; align-items: center; justify-content: space-between; display: flex; flex-direction: row">
+                    <textarea rows="1" maxlength="20" placeholder="moreproblems.org/class/{{class_uid}}"
+                      style="margin: 5px; padding: 10px 5px; width: min(75%, 270px); height: auto; font-size: 16px; line-height: 20px; font-weight: 500; text-align: center; border: 1px solid rgba(118, 118, 118, 0.5); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #classCode disabled></textarea>
+                    <button (click)="copy_link();" class="grade-button" style="margin: 5px; padding: 10px; width: auto; height: auto">
+                      <img src="./assets/media/icons/copy.png" style="height: 25px">
+                    </button>
+                  </div>
+                  <div *ngIf="screenWidth < 500" class="card-container" style="min-height: 20px; width: 270px; height: auto; padding: 0px; margin: auto; align-items: center; justify-content: space-between; display: flex; flex-direction: row">
+                    <textarea rows="1" maxlength="20" placeholder="moreproblems.org/class/{{class_uid}}"
+                      style="margin: 5px; padding: 10px 5px; width: min(75%, 240px); height: auto; font-size: 13.5px; line-height: 20px; font-weight: 500; text-align: center; border: 1px solid rgba(118, 118, 118, 0.5); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                      #classCode disabled></textarea>
+                    <button (click)="copy_link()" class="grade-button" style="margin: 5px; padding: 5px; width: auto; height: auto">
+                      <img src="./assets/media/icons/copy.png" style="height: 20px">
+                    </button>
+                  </div>
+                  <div *ngIf="link_copied" style="margin-top: 8px; margin-bottom: 4px; width: 270px; line-height: 16px"> 
+                    <b> Link copied to clipboard </b> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
   </div>
   <div *ngIf="edit_c" class="card card-large"
     style="border: 3px solid black; border-radius: 20px; min-width: 310px; max-width: 650px; width: 70%; max-height: 1200px; margin: 10px auto; padding: 0 5%; display: flex; flex-direction: column">

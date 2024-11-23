@@ -63,7 +63,7 @@
     opacity: 0.8;
   }
 
-  #confetticanvas {
+  #confettiCanvas {
     position: fixed;
     z-index: 50;
     top: 81px;
@@ -2527,12 +2527,10 @@
         account yet. </h3>
       <div *ngIf="my_class_metadata.length != 0" class="card-container" style="max-width: 100%">
         <div *ngFor="let clss of my_class_metadata" class="card card-medium"
-          style="display: block; text-align: center; min-width: 40%; max-width: 470px; max-height: 300px; width: auto; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
-          <h2 style="padding-bottom: 10px">{{(clss.displayName) ?
+          style="display: block; text-align: center; min-width: 40%; max-width: 470px; max-height: 350px; width: auto; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+          <h2 style="margin-bottom: 12px">{{(clss.displayName) ?
             clss.displayName :
             'Class'}}</h2>
-          <h4> {{clss.description}} </h4>
-          <hr style="width: 50%" />
           <div
             style="display: block; text-align: center; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
             <div style="align-items: center; text-align: center; margin-right: 10px">
@@ -2540,30 +2538,35 @@
                 style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto">
                 <div style="margin: 0 5px">
                   <img src="{{this.authService.searchUserId(clss.teacher).photoURL}}"
-                    style="padding: 5px 0 0; height: 35px; width: 35px; border-radius: 50%">
+                    style="height: 35px; width: 35px; border-radius: 50%">
                 </div>
                 <div style="margin: 0 5px; text-align: center; font-weight: 500; font-size: 16px">
-                  <h3 style="padding-bottom: 10px"> {{this.authService.searchUserId(clss.teacher).displayName}} </h3>
+                  <h3> {{this.authService.searchUserId(clss.teacher).displayName}} </h3>
                 </div>
               </section>
-              <label class="switch">
-                <input type="checkbox">
-                <button (click)="select_class(clss.uid)" class="toggle-button-off"
-                  style="margin: auto; margin-top: 10px; padding: 10px 5px; width: auto">
-                  <b> Enter Class </b>
-                </button>
-              </label>
+              <div style="margin: 0 5px; text-align: center; font-weight: 500; font-size: 16px">
+                <h3 style="margin: 4px 0"> <b style="font-weight: 500;">Code:</b> {{clss.uid}} </h3>
+              </div>
             </div>
             <div style="align-items: center; text-align: center; margin-left: 10px">
               <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
                 <div class="media-body" style="padding: 0 20px">
-                  <h3 style="font-weight: 600">{{clss.grade}}</h3>
-                  <h3 style="font-weight: 600">{{clss.subject}}</h3>
-                  <h3 style="font-weight: 600">{{clss.state}}</h3>
+                  <h3 style="font-weight: 600; line-height: 20px; margin: 4px 0">{{clss.grade}}</h3>
+                  <h3 style="font-weight: 600; line-height: 20px; margin: 4px 0">{{clss.subject}}</h3>
+                  <h3 style="font-weight: 600; line-height: 20px; margin: 4px 0">{{clss.state}}</h3>
                 </div>
               </div>
             </div>
           </div>
+          <hr style="width: 50%" />
+          <h4> {{clss.description}} </h4>
+          <label class="switch">
+            <input type="checkbox">
+            <button (click)="select_class(clss.uid)" class="toggle-button-off"
+              style="margin: auto; margin-top: 10px; padding: 10px 5px; width: auto">
+              <b> Enter Class </b>
+            </button>
+          </label>
         </div>
       </div>
       <br />

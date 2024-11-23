@@ -663,7 +663,7 @@ import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 // const MathJax = require('mathjax');
 const confetti = require('canvas-confetti');
 
-const confettiCanvas = document.getElementById('confetticanvas');
+const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {
     resize: true,
     useWorker: true,

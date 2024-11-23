@@ -63,7 +63,7 @@
     opacity: 0.8;
   }
 
-  #confetticanvas {
+  #confettiCanvas {
     position: fixed;
     z-index: 50;
     top: 81px;
@@ -637,7 +637,7 @@
 <!-- <div class="content" role="main" (window:resize)="width_change2()"> -->
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
-  <canvas id="confetticanvas"></canvas>
+  <canvas id="confettiCanvas"></canvas>
   <div *ngIf="data_loaded" class="content-menu" style="margin-bottom: 0; align-items: center">
     <div *ngIf="selected_subtopic != ''" style="align-items: left; width: min(1075px, 92%)">
       <section>

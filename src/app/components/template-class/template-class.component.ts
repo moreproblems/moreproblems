@@ -9,6 +9,7 @@ import { serverTimestamp } from "firebase/database";
 import intlTelInput from 'intl-tel-input';
 import printJS from 'print-js';
 import { HttpClient } from '@angular/common/http';
+import * as QRCode from 'qrcode';
 import * as Plotly from 'plotly.js-dist-min';
 import * as Chart from 'chart.js/auto';
 import 'chartjs-adapter-date-fns';
@@ -670,7 +671,7 @@ import * as WIG10SSProblems from "src/assets/problems/WIG10SS/WIG10SS-problems.j
 
 const confetti = require('canvas-confetti');
 
-const confettiCanvas = document.getElementById('confetticanvas');
+const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {
   resize: true,
   useWorker: true,
@@ -705,6 +706,7 @@ export class TemplateClassComponent implements OnInit {
   exam_fav = false;
   exam_name: string = "";
 
+  share_c = false;
   edit_c = false;
   add_s = false;
   add_a = false;
@@ -2917,6 +2919,7 @@ export class TemplateClassComponent implements OnInit {
   random_index = 0
   random_list: string[] = [];
   results_hover: string = '';
+  link_copied: boolean = false;
 
   state_labels: { [key: string]: string } = {
     "Colorado": "CO",
@@ -3048,6 +3051,11 @@ export class TemplateClassComponent implements OnInit {
       console.log(this.class_data);
       this.data_loaded = true;
     }, 500);
+  }
+
+  copy_link() {
+    navigator.clipboard.writeText('moreproblems.org/class/'+this.class_uid);
+    this.link_copied = true;
   }
 
   select_exam(ex: string) {
@@ -5039,6 +5047,25 @@ export class TemplateClassComponent implements OnInit {
         this.plot_class_student_results();
       }
     }, 500);
+  }
+
+  toggle_share_class() {
+    this.class_data = (this.authService.searchClassId(this.class_uid) as any);
+    this.share_c = !this.share_c;
+    var qrWidth: number = 0;
+    if (this.screenWidth < 550) {
+      qrWidth = 250
+    }
+    else if (this.screenWidth < 750) {
+      qrWidth = 325
+    }
+    else {
+      qrWidth = 450;
+    }
+    setTimeout(() => {
+      var qrCanvas: HTMLCanvasElement = (document.getElementById('qrCanvas') as HTMLCanvasElement);
+      QRCode.toCanvas(qrCanvas, 'moreproblems.org/class/' + this.class_uid, {width: qrWidth});
+    }, 50);
   }
 
   toggle_edit_class() {
