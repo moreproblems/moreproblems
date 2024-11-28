@@ -2046,13 +2046,13 @@
       #problemSummaryCard>
       <br />
       <div class="content" style="margin: auto; align-items: center">
-        <h2 *ngIf="mode == 'assess' && length_mode == 'number' && problem_number > exam_length"> With {{number_correct}} out of
-          {{exam_length}} problems
+        <h2 *ngIf="mode == 'assess' && length_mode == 'number' && problem_number > quiz_length"> With {{number_correct}} out of
+          {{quiz_length}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
         <h2 *ngIf="mode == 'assess' && length_mode == 'timer' && et_counter <= 0"> With {{number_correct}} out of
           {{max_problem_number - 1}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
-        <div *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)"  class="card card-medium"
+        <div *ngIf="(length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)"  class="card card-medium"
           style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
           <section *ngIf="mode == 'assess'" (click)="expand_overview = !expand_overview" style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <div style="display: flex; flex-direction: row; align-items: center">
@@ -2063,7 +2063,7 @@
                         style="margin: auto; padding: 5px 0 0; width: 20px; height: 20px; border-color: darkslategrey; transform: rotate(-90deg)">
                 </div>
                 <div style="margin: auto; text-align: right">
-                  <h3 *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
+                  <h3 *ngIf="(length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
                     Problem #{{problem_number}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
                 </div>
             </div>
@@ -2071,13 +2071,13 @@
           <section *ngIf="mode == 'explain'" style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <div style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: auto; text-align: right">
-                  <h3 *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
+                  <h3 *ngIf="(length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)" style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
                     Problem #{{problem_number}} ({{pt_minutes}}m {{pt_counter%60}}s) </h3>
                 </div>
             </div>
           </section>
-          <h4 *ngIf="length_mode=='number'" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Quiz Progress: <b>{{""+(max_problem_number-1)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
-          <progress *ngIf="(!expand_overview || mode == 'explain') && length_mode=='number'" value="{{max_problem_number-1}}" max="{{exam_length}}"
+          <h4 *ngIf="length_mode=='number'" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Quiz Progress: <b>{{""+(max_problem_number-1)}}/{{""+quiz_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
+          <progress *ngIf="(!expand_overview || mode == 'explain') && length_mode=='number'" value="{{max_problem_number-1}}" max="{{quiz_length}}"
             style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           <h4 *ngIf="length_mode=='timer'" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Remaining Time: <b>{{et_minutes}} mins {{et_counter%60}} secs</b> </h4>
@@ -2128,7 +2128,7 @@
           </div>
         </div>
         <br />
-        <div *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)" class="card card-medium"
+        <div *ngIf="(length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)" class="card card-medium"
           style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
           <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
           <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
@@ -2175,10 +2175,10 @@
             </div>
           </section>
         </div>
-        <!-- <br *ngIf="problem_number <= exam_length" /> -->
+        <!-- <br *ngIf="problem_number <= quiz_length" /> -->
         <br />
       </div>
-      <div *ngIf="mode == 'assess' && ((length_mode == 'number' && problem_number > exam_length) || (length_mode == 'timer' && et_counter <= 0))" style="width: 100%;">
+      <div *ngIf="mode == 'assess' && ((length_mode == 'number' && problem_number > quiz_length) || (length_mode == 'timer' && et_counter <= 0))" style="width: 100%;">
         <button class="grade-button" (click)="resetExam();"
           style="display: block; max-width: 150px; max-height: 150px; margin: auto">
           <b> Reset Test </b> </button>
@@ -2417,7 +2417,7 @@
       </div>
     </div>
     <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%">
-      <div *ngIf="((length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && expand_refsheet" style="width: 100%">
+      <div *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && expand_refsheet" style="width: 100%">
         <br />
         <div class="card card-large"
           style="height: auto; margin: auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -2432,7 +2432,7 @@
       </div>
     </div>
     <div *ngFor="let prob of exam_dump | keyvalue" style="display: flex; flex-direction: column; width: 100%">
-      <div *ngIf="((length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && expand_supp" style="display: flex; flex-direction: column; width: 100%">
+      <div *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && expand_supp" style="display: flex; flex-direction: column; width: 100%">
         <div *ngFor="let supp of prob.value.SuppContent" style="display: flex; flex-direction: column; width: 100%">
           <div class="card card-large"
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -2524,7 +2524,7 @@
       </div>
     </div>
     <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%; display: flex; flex-direction: column">
-      <div *ngIf="((length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key" style="width: 100%; display: flex; flex-direction: column">
+      <div *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key" style="width: 100%; display: flex; flex-direction: column">
         <div *ngIf="selected_subtopic == ''" class="card card-large"
           style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
           #problemCard>
@@ -2694,7 +2694,7 @@
                 </div>
               </div>
             </div>
-            <br *ngIf="problem_number <= exam_length" />
+            <br *ngIf="problem_number <= quiz_length" />
             <div *ngIf="prob.value.Explain" class="card card-medium" style="min-height: 100px; width: min(750px, 90%); padding: 10px; margin: auto; align-items: center; flex-direction: column;">
               <textarea
                   rows="2" maxlength="400" placeholder="Show your work or explain your answer here"
@@ -2741,7 +2741,9 @@
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
+                  <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
+                  <img *ngIf="is_image(choice.slice(2, choice.length-2))" src="./assets/{{choice.slice(2, choice.length-2)}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_m_choice('', 1, '')" *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -2790,7 +2792,9 @@
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, '')" *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -2852,7 +2856,9 @@
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, '')" *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -3079,7 +3085,7 @@
                   style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
               </div>
             </div>
-            <br *ngIf="problem_number <= exam_length" />
+            <br *ngIf="problem_number <= quiz_length" />
             <div *ngFor="let prob of exam_dump | keyvalue" style="max-width: 100%">
               <div *ngIf="problem_number == +prob.key && problem_attempts[0] > 0 && mode == 'explain' && (prob.value.Parts | keys).length == 0"
                 class="card highlight-card card-small"
@@ -3616,7 +3622,9 @@
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
+                  <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
+                  <img *ngIf="is_image(choice.slice(2, choice.length-2))" src="./assets/{{choice.slice(2, choice.length-2)}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_m_choice('', 1, part.key)" *ngIf="!is_matched(choice[0], 1, part.key) && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -3665,7 +3673,9 @@
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, part.key)" *ngIf="selection == '' && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -3727,7 +3737,9 @@
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, part.key)" *ngIf="selection == '' && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -4422,12 +4434,12 @@
             <div class="slider" style="display: flex; justify-content: center; align-items: center; margin-bottom: 5px">
               <p style="font-size: 18px"> Quiz Length: </p>
               <input (keyup)="set_problem_num(+this.probEntry.value)" type="text" inputmode="numeric"
-                value="{{exam_length}}" min="5" max="50" maxlength="2"
+                value="{{quiz_length}}" min="5" max="50" maxlength="2"
                 style="margin: auto 5px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
                 #probEntry />
                 <p style="font-size: 16px"> questions </p>
             </div>
-            <input type="range" min="5" max="50" value="{{exam_length}}" (input)="set_problem_num(+this.probSlider.value)"
+            <input type="range" min="5" max="50" value="{{quiz_length}}" (input)="set_problem_num(+this.probSlider.value)"
               style="width: 230px" #probSlider />
           </div>
           <div *ngIf="length_mode=='timer'" class="slider" style="margin: 0px 10px">
@@ -4707,6 +4719,10 @@
           </label>
         </div>
       </div>
+      <br />
+    </div>
+    <div *ngIf="quiz_page == 'custom' && cquiz_page == 'pretext' && selected_grade != ''" class="card card-large"
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br *ngIf="selected_grade != ''" #chooseSubject />
       <div *ngIf="selected_grade != ''" class="card card-medium"
         style="margin: auto; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
@@ -4723,12 +4739,8 @@
           </label>
         </div>
       </div>
-      <br />
-    </div>
-    <div *ngIf="quiz_page == 'custom' && cquiz_page == 'pretext' && selected_subject != ''" class="card card-large"
-      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
-      <br #chooseTopic />
-      <div class="card card-medium"
+      <br *ngIf="selected_subject != ''" #chooseTopic />
+      <div *ngIf="selected_subject != ''" class="card card-medium"
         style="margin: auto; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h2 style="margin-bottom: 0px">Choose Your Topic</h2>
         <br />
@@ -4747,8 +4759,47 @@
       <br *ngIf="selected_topic != ''" #chooseTopic />
       <div *ngIf="selected_topic != ''" class="card card-medium"
         style="margin: auto; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+          <span>
+            <h4 style="font-size: 18px; font-weight: 500; margin-top: 10px">
+              <b>You will not be able to update these settings after this page.</b>
+            </h4>
+          </span>
+        </section>
+        <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
+          <span>
+            <button class="grade-button" (click)="set_problem_num(5)" style="width: 180px">
+              <h3 (click)="scroll_top()" style="margin-top: 2px; margin-bottom: 2px; font-size: 18px"><b> Author Problems
+                </b></h3>
+            </button>
+          </span>
+        </section>
+      </div>
+      <br />
+    </div>
+    <div *ngIf="quiz_page == 'custom' && cquiz_page == 'content' && problems_loaded" class="card card-large"
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
+      <!-- <br />
+      <div class="card-container"
+        style="display: flex; justify-content: center; align-items: center; max-width: 100%; margin-top: 10px">
+        <div class="slider" style="margin: 0px 10px">
+          <div class="slider" style="display: flex; justify-content: center; align-items: center; margin-bottom: 5px">
+            <p style="font-size: 18px"> Total Problems: </p>
+            <input (keyup)="set_problem_num(+this.probnumEntry.value)" type="text" inputmode="numeric"
+              value="{{quiz_length}}" min="5" max="50" maxlength="2"
+              style="margin: auto 5px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
+              #probnumEntry />
+          </div>
+          <input type="range" min="5" max="50" value="{{quiz_length}}"
+            (input)="set_problem_num(+this.probnumSlider.value)" style="width: 230px" #probnumSlider />
+        </div>
+      </div> -->
+      <br />
+      <div class="card card-medium"
+        style="margin: auto; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h2 style="margin-bottom: 0px">Problem Settings</h2>
         <br />
+        <hr style="width: 90%; margin: 10px auto" />
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <div (click)="toggle_standards()"
             style="display: flex; flex-direction: row; align-items: start; margin: 7px 15px; height: auto">
@@ -4776,7 +4827,7 @@
         </div>
         <div class="card-container" style="max-width: 100%; margin-top: 20px">
           <div style="display: flex; flex-direction: row; align-items: center; margin: 7px 15px; height: auto">
-            <div style="margin-right: 5px; font-size: 18px; line-height: 18px; font-weight: 600; width: 130px"> Default Problem Type:
+            <div style="margin-right: 5px; font-size: 18px; line-height: 18px; font-weight: 600; width: 130px"> Default Type:
             </div>
             <select value="{{default_probtype}}" (change)="set_default_probtype(this.defaultProbTypeInput.value)"
               style="margin: auto 0px auto 3px; padding: 5px 0px 5px 3px; width: 200px; height: 40px; font-size: 16px; font-weight: 500; text-align: center; align-items: center"
@@ -4786,7 +4837,7 @@
           </div>
           <div *ngIf="+problem_types[get_probtype_key(default_probtype)][1] > 0" class="slider" style="margin: 0px 10px">
             <div class="slider" style="display: flex; justify-content: center; align-items: center; margin-bottom: 5px">
-              <p style="font-size: 18px"> Choices per Problem: </p>
+              <p style="font-size: 18px"> Number of Choices: </p>
               <input (keyup)="set_default_numchoices(+this.defaultChoicesEntry.value)" type="text" inputmode="numeric"
                 value="{{default_numchoices}}" min="2" max="10" maxlength="2"
                 style="margin: auto 5px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
@@ -4796,17 +4847,18 @@
               (input)="set_default_numchoices(+this.defaultChoicesSlider.value)" style="width: 230px" #defaultChoicesSlider />
           </div>
         </div>
+        <hr style="width: 70%; margin: 10px auto" />
         <div class="card-container"
           style="display: flex; justify-content: center; align-items: center; max-width: 100%; margin-top: 10px">
           <div class="slider" style="margin: 0px 10px">
             <div class="slider" style="display: flex; justify-content: center; align-items: center; margin-bottom: 5px">
-              <p style="font-size: 18px"> Total Problems: </p>
+              <p style="font-size: 18px"> Number of Problems: </p>
               <input (keyup)="set_problem_num(+this.probnumEntry.value)" type="text" inputmode="numeric"
-                value="{{exam_length}}" min="5" max="50" maxlength="2"
+                value="{{quiz_length}}" min="5" max="50" maxlength="2"
                 style="margin: auto 5px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
                 #probnumEntry />
             </div>
-            <input type="range" min="5" max="50" value="{{exam_length}}"
+            <input type="range" min="5" max="50" value="{{quiz_length}}"
               (input)="set_problem_num(+this.probnumSlider.value)" style="width: 230px" #probnumSlider />
           </div>
         </div>
@@ -4816,32 +4868,40 @@
     <div *ngIf="quiz_page == 'custom' && cquiz_page == 'content' && problems_loaded" class="card card-large"
       style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
-      <div class="card-container"
-        style="display: flex; justify-content: center; align-items: center; max-width: 100%; margin-top: 10px">
-        <div class="slider" style="margin: 0px 10px">
-          <div class="slider" style="display: flex; justify-content: center; align-items: center; margin-bottom: 5px">
-            <p style="font-size: 18px"> Total Problems: </p>
-            <input (keyup)="set_problem_num(+this.probnumEntry.value)" type="text" inputmode="numeric"
-              value="{{exam_length}}" min="5" max="50" maxlength="2"
-              style="margin: auto 5px; width: 30px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
-              #probnumEntry />
-          </div>
-          <input type="range" min="5" max="50" value="{{exam_length}}"
-            (input)="set_problem_num(+this.probnumSlider.value)" style="width: 230px" #probnumSlider />
-        </div>
-      </div>
-      <div *ngFor="let num of (exam_dump | keys)" class="card card-medium"
+      <div *ngFor="let num of (exam_dump | keys)" class="card card-medium" (mouseenter)="hover_card(num, 'problem', 0, true)" (mouseleave)="hover_card(num, 'problem', 0, false)"
         style="margin: auto; margin-top: 20px; display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <section
           style="height: auto; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
-          <span style="font-size: 32px; font-weight: 800; width: 40px; color:rgba(0, 0, 0, 0)">&starf;</span>
-          <span style="font-weight: 800; width: 100%">
+          <span *ngIf="!incomplete_probs.includes(num)" style="font-size: 32px; font-weight: 800; width: 40px">
+            <img *ngIf="screenWidth >= 700" src="/assets/media/icons/save.png" style="height: 40px; width: 40px" />
+            <img *ngIf="screenWidth < 700" src="/assets/media/icons/save.png" style="height: 30px; width: 30px" />
+          </span>
+          <span *ngIf="incomplete_probs.includes(num)" style="font-size: 32px; font-weight: 800; width: 40px">
+            <img *ngIf="screenWidth >= 700" src="/assets/media/icons/warning.png" style="height: 40px; width: 40px" />
+            <img *ngIf="screenWidth < 700" src="/assets/media/icons/warning.png" style="height: 30px; width: 30px" />
+          </span>
+          <span style="font-weight: 800; width: 80%">
             <h2 style="margin-bottom: 0px; width: 100%">Problem #{{num}}</h2>
           </span>
-          <span *ngIf="exam_length > 5" (click)="delete_problem(num)" style="font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
-            <img src="/assets/media/icons/delete.png" style="height: 40px; width: 40px" />
+          <span style="width: 40px; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
+            <img *ngIf="quiz_length > 5 && hover_delete(num, 'problem', 0) && screenWidth >= 700" (click)="delete_problem(num)" src="/assets/media/icons/delete.png" style="height: 40px; width: 40px" />
+            <img *ngIf="quiz_length > 5 && hover_delete(num, 'problem', 0) && screenWidth < 700" (click)="delete_problem(num)" src="/assets/media/icons/delete.png" style="height: 30px; width: 30px" />
           </span>
         </section>
+        <br />
+        <hr style="width: 90%; margin: 10px auto" />
+        <div *ngIf="enable_standards" class="card-container" style="max-width: 100%; margin-top: 10px; margin-bottom: 10px">
+          <div style="display: flex; flex-direction: row; align-items: center; margin: 7px 15px; height: auto; width: 90%">
+            <div style="margin-right: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Standard: </div>
+            <select value="{{(get_topic_subs(selected_topic) | keys)[(get_topic_subs(selected_topic) | values).indexOf(exam_dump[num].SubTopics[0])] + ': ' + exam_dump[num].SubTopics[0]}}"
+              (change)="change_prob_standard(num)"
+              style="margin: auto 0px auto 3px; padding: 5px 0px 5px 3px; min-width: 250px; width: auto; height: 40px; font-size: 16px; font-weight: 500; text-align: center"
+              id="standardInput{{num}}">
+              <option *ngIf="default_standard[0] == '' && default_standard[1] == ''" selected value> -- No standard selected -- </option>
+              <option *ngFor="let standard of (get_topic_subs(selected_topic) | keyvalue)"> {{standard.key}}: {{standard.value}} </option>
+            </select>
+          </div>
+        </div>
         <div class="card-container" style="max-width: 100%; margin-top: 10px">
           <div style="display: flex; flex-direction: row; align-items: center; margin: 7px 15px; height: auto">
             <div style="margin-right: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Problem Type: </div>
@@ -4864,19 +4924,7 @@
               (input)="set_prob_numchoices(num, +get_numchoices_slider_sel(num)); check_content_complete(num)" style="width: 230px" id="choicesSlider{{num}}" />
           </div>
         </div>
-        <div *ngIf="enable_standards" class="card-container" style="max-width: 100%; margin-top: 10px; margin-bottom: 10px">
-          <div style="display: flex; flex-direction: row; align-items: center; margin: 7px 15px; height: auto; width: 90%">
-            <div style="margin-right: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Standard: </div>
-            <select value="{{(get_topic_subs(selected_topic) | keys)[(get_topic_subs(selected_topic) | values).indexOf(exam_dump[num].SubTopics[0])] + ': ' + exam_dump[num].SubTopics[0]}}"
-              (change)="change_prob_standard(num)"
-              style="margin: auto 0px auto 3px; padding: 5px 0px 5px 3px; min-width: 250px; width: auto; height: 40px; font-size: 16px; font-weight: 500; text-align: center"
-              id="standardInput{{num}}">
-              <option *ngIf="default_standard[0] == '' && default_standard[1] == ''" selected value> -- No standard selected -- </option>
-              <option *ngFor="let standard of (get_topic_subs(selected_topic) | keyvalue)"> {{standard.key}}: {{standard.value}} </option>
-            </select>
-          </div>
-        </div>
-        <hr style="width: 90%; margin: auto" />
+        <hr style="width: 70%; margin: 10px auto" />
         <div style="min-height: 20px; height: auto; width: 90%; padding: 10px; margin: 0px; margin-top: 10px; align-items: center; display: flex; flex-direction: column">
           <div *ngFor="let blob of get_content_keys(exam_dump[num].Content)" class="card container" (mouseenter)="hover_card(num, 'content', blob, true)" (mouseleave)="hover_card(num, 'content', blob, false)"
             style="min-height: 20px; height: auto; width: 100%; padding: 10px; margin: 2px; align-items: center; display: flex; flex-direction: row; border: 1px solid rgb(118, 118, 118)">
@@ -4886,7 +4934,7 @@
               <option *ngFor="let type of content_types"> {{type}} </option>
             </select>
             <textarea *ngIf="!is_image(exam_dump[num].Content[blob])" (change)="exam_dump[num].Content[blob]=this.inputProbContent.value; check_content_complete(num)" rows="{{get_text_rows(this, exam_dump[num].Content[blob])}}" maxlength="500"
-              value="{{exam_dump[num].Content[blob]}}" placeholder="Type Your Problem Here"
+              value="{{exam_dump[num].Content[blob]}}" placeholder="Your Question Here"
               style="margin: 0px auto; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 16px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
               #inputProbContent></textarea>
             <div *ngIf="is_image(exam_dump[num].Content[blob])" style="margin: 0px auto; padding: 5px; width: min(90%, 1000px); height: auto; font-size: 16px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -4920,6 +4968,7 @@
             </label>
           </form>
         </div>
+        <hr *ngIf="(exam_dump[num].AnswerChoices | keys).length > 0 && ['MC', 'MS'].includes(exam_dump[num].Type)" style="width: 70%; margin: 10px auto" />
         <div *ngIf="(exam_dump[num].AnswerChoices | keys).length > 0 && ['MC', 'MS'].includes(exam_dump[num].Type)" style="min-height: 20px; height: auto; width: 90%; padding: 10px; margin: 0px; margin-top: 10px; align-items: center; display: flex; flex-direction: column">
           <div *ngFor="let choice of (exam_dump[num].AnswerChoices | keyvalue)" class="card container" (mouseenter)="hover_card(num, 'choices', get_choice_keys(exam_dump[num].AnswerChoices).indexOf(choice.key), true)" (mouseleave)="hover_card(num, 'choices', get_choice_keys(exam_dump[num].AnswerChoices).indexOf(choice.key), false)"
             style="min-height: 20px; height: auto; width: 100%; padding: 10px; margin: 2px; align-items: center; display: flex; flex-direction: row; border: 1px solid rgb(118, 118, 118)">
@@ -4930,7 +4979,7 @@
               <option *ngFor="let type of content_types"> {{type}} </option>
             </select>
             <textarea *ngIf="!is_image(choice.value.Choice)" (change)="exam_dump[num].AnswerChoices[choice.key].Choice=this.inputChoiceContent.value; check_content_complete(num)" rows="{{get_text_rows(this, choice.value.Choice)}}" maxlength="200"
-              value="{{choice.value.Choice}}" placeholder="Type Your Choice Here"
+              value="{{choice.value.Choice}}" placeholder="Your Choice Here"
               style="margin: 0px; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 16px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
               #inputChoiceContent></textarea>
             <div *ngIf="is_image(choice.value.Choice)" style="margin: 0px; padding: 5px; width: min(90%, 1000px); height: auto; font-size: 16px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -4947,7 +4996,7 @@
         </div>
       </div>
       <br />
-      <div *ngIf="exam_length < 50" class="card-container" style="max-width: 100%; margin-top: 0px auto">
+      <div *ngIf="quiz_length < 50" class="card-container" style="max-width: 100%; margin-top: 0px auto">
         <!-- <div style="display: flex; flex-direction: row; align-items: center; margin: 7px 15px; height: auto"></div> -->
         <div style="font-size: 18px; line-height: 18px; font-weight: 600"> <a (click)="add_problem()">Add Problem</a>
         </div>
@@ -4968,7 +5017,7 @@
         <section *ngIf="check_all_content_complete()" style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
           <span>
             <button class="grade-button" (click)="cquiz_page = 'preview'" style="width: 180px">
-              <h3 (click)="scroll_top()" style="margin-top: 2px; margin-bottom: 2px; font-size: 22px"><b> Preview Quiz
+              <h3 (click)="scroll_top()" style="margin-top: 2px; margin-bottom: 2px; font-size: 18px"><b> Preview Problems
                 </b></h3>
             </button>
           </span>
@@ -5150,14 +5199,14 @@
                 </div>
             </div>
           </section>
-          <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+((exam_dump | keys).indexOf(""+this.problem_number)+1)}}/{{""+exam_length}}</b> </h4>
-          <progress value="{{(exam_dump | keys).indexOf(''+problem_number)+1}}" max="{{exam_length}}"
+          <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Exam Progress: <b>{{""+((exam_dump | keys).indexOf(""+this.problem_number)+1)}}/{{""+quiz_length}}</b> </h4>
+          <progress value="{{(exam_dump | keys).indexOf(''+problem_number)+1}}" max="{{quiz_length}}"
             style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
         </div>
         <br />
         <div
-          *ngIf="(length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)"
+          *ngIf="(length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)"
           class="card card-medium"
           style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: auto; padding: min(20px, 3%)">
           <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
@@ -5202,7 +5251,7 @@
         <br />
       </div>
       <div
-        *ngIf="mode == 'assess' && ((length_mode == 'number' && problem_number > exam_length) || (length_mode == 'timer' && et_counter <= 0))"
+        *ngIf="mode == 'assess' && ((length_mode == 'number' && problem_number > quiz_length) || (length_mode == 'timer' && et_counter <= 0))"
         style="width: 100%;">
         <button class="grade-button" (click)="resetExam();"
           style="display: block; max-width: 150px; max-height: 150px; margin: auto">
@@ -5416,7 +5465,7 @@
     </div> -->
     <!-- <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%">
       <div
-        *ngIf="((length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && expand_refsheet"
+        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && expand_refsheet"
         style="width: 100%">
         <br />
         <div class="card card-large"
@@ -5433,7 +5482,7 @@
     </div> -->
     <div *ngFor="let prob of exam_dump | keyvalue" style="display: flex; flex-direction: column; width: 100%">
       <div
-        *ngIf="((length_mode == 'number' && problem_number <= exam_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && expand_supp" style="display: flex; flex-direction: column; width: 100%">
+        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && expand_supp" style="display: flex; flex-direction: column; width: 100%">
         <div *ngFor="let supp of prob.value.SuppContent" style="display: flex; flex-direction: column; width: 100%">
           <div class="card card-large"
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -5756,7 +5805,9 @@
                 <br />
                 <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                   <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
+                    <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
+                    <img *ngIf="is_image(choice.slice(2, choice.length-2))" src="./assets/{{choice.slice(2, choice.length-2)}}"
+                      style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                     <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                       <input type="checkbox">
                       <button (click)="select_m_choice('', 1, '')" *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -5805,7 +5856,9 @@
                 <br />
                 <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                   <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                    <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                    <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
+                      style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                     <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                       <input type="checkbox">
                       <button (click)="select_c_choice('', 1, '')" *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -5867,7 +5920,9 @@
                 <br />
                 <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                   <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                    <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                    <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
+                      style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                     <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                       <input type="checkbox">
                       <button (click)="select_c_choice('', 1, '')" *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -6564,7 +6619,9 @@
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
+                  <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
+                  <img *ngIf="is_image(choice.slice(2, choice.length-2))" src="./assets/{{choice.slice(2, choice.length-2)}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_m_choice('', 1, part.key)" *ngIf="!is_matched(choice[0], 1, part.key) && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -6613,7 +6670,9 @@
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, part.key)" *ngIf="selection == '' && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -6675,7 +6734,9 @@
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
                 <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
+                    style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                     <input type="checkbox">
                     <button (click)="select_c_choice('', 1, part.key)" *ngIf="selection == '' && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
@@ -7066,13 +7127,13 @@
         <section style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
           <span>
             <button class="grade-button" (click)="cquiz_page = 'content'" style="width: 180px">
-              <h3 (click)="scroll_top()" style="margin-top: 2px; margin-bottom: 2px; font-size: 22px"><b> Continue Editing
+              <h3 (click)="scroll_top()" style="margin-top: 2px; margin-bottom: 2px; font-size: 18px"><b> Edit Problems
                 </b></h3>
             </button>
           </span>
           <span *ngIf="check_all_key_complete()">
             <button class="grade-button" (click)="complete_preview()" style="width: 180px">
-              <h3 (click)="scroll_top()" style="margin-top: 2px; margin-bottom: 2px; font-size: 22px"><b> Ready To Publish
+              <h3 (click)="scroll_top()" style="margin-top: 2px; margin-bottom: 2px; font-size: 18px"><b> Ready To Publish
                 </b></h3>
             </button>
           </span>

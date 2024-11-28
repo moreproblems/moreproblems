@@ -26,16 +26,20 @@ import { ExamsComponent } from './components/exams/exams.component';
 import { QuizzesComponent } from './components/quizzes/quizzes.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { AboutComponent } from './components/about/about.component';
+import { AboutParentsComponent } from './components/about-parents/about-parents.component';
+import { AboutStudentsComponent } from './components/about-students/about-students.component';
+import { AboutTeachersComponent } from './components/about-teachers/about-teachers.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { JoinComponent } from './components/join/join.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { TemplateClassComponent } from './components/template-class/template-class.component';
 import { TemplateExamComponent } from './components/template-exam/template-exam.component';
 import { TemplateCExamComponent } from './components/template-c-exam/template-c-exam.component';
 import { TemplateQuizComponent } from './components/template-quiz/template-quiz.component';
 import { TemplateCQuizComponent } from './components/template-c-quiz/template-c-quiz.component';
+import { TemplateEditQuizComponent } from './components/template-edit-quiz/template-edit-quiz.component';
 import { TemplateKeyComponent } from './components/template-key/template-key.component';
 import { TemplateStateComponent } from './components/template-state/template-state.component';
 import { TemplateStandardsComponent } from './components/template-standards/template-standards.component';
@@ -60,16 +64,20 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
     QuizzesComponent,
     StandardsComponent,
     AboutComponent,
+    AboutParentsComponent,
+    AboutTeachersComponent,
+    AboutStudentsComponent,
+    ContactComponent,
     JoinComponent,
     LoginComponent,
     SignupComponent,
     ProfileComponent,
-    ContactComponent,
     TemplateClassComponent,
     TemplateExamComponent,
     TemplateCExamComponent,
     TemplateQuizComponent,
     TemplateCQuizComponent,
+    TemplateEditQuizComponent,
     TemplateKeyComponent,
     TemplateStateComponent,
     TemplateStandardsComponent,

@@ -1142,7 +1142,7 @@ export class QuizzesComponent implements OnInit {
   // exam_subject = 'Mathematics';
   // exam_name = 'STAAR';
   // exam_year = '2021';
-  exam_length = 10;
+  quiz_length = 10;
   exam_timer = 10;
 
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Timer': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number }, 'Parts': string[] } } = examMetadata;
@@ -3321,6 +3321,7 @@ export class QuizzesComponent implements OnInit {
   image_choice_index: string = '';
   prob_statuses: { [key: number]: any } = {};
   incomplete_probs: any[] = [];
+  problem_hover: boolean[] = [];
   content_hover: boolean[][] = [];
   choices_hover: boolean[][] = [];
 
@@ -3809,6 +3810,7 @@ export class QuizzesComponent implements OnInit {
         }
       }
     }
+    this.scroll_bottom();
   }
 
   select_grade(grade: string) {
@@ -3824,6 +3826,7 @@ export class QuizzesComponent implements OnInit {
         }
       }
     }
+    this.scroll_bottom();
   }
 
   select_subject(subject: string) {
@@ -3842,6 +3845,7 @@ export class QuizzesComponent implements OnInit {
         }
       }
     }
+    this.scroll_bottom();
   }
 
   select_topic(topic: string) {
@@ -3861,6 +3865,7 @@ export class QuizzesComponent implements OnInit {
       }
 
     }
+    this.scroll_bottom();
   }
 
   get_topic_subs(topic: string) {
@@ -3902,7 +3907,7 @@ export class QuizzesComponent implements OnInit {
     this.default_problem.SubTopics.pop();
     this.default_problem.SubTopics.push(standard);
     if (Object.keys(this.exam_dump).length > 0) {
-      for (let i = 1; i <= this.exam_length; i++) {
+      for (let i = 1; i <= this.quiz_length; i++) {
         this.exam_dump[i].SubTopics.pop();
         this.exam_dump[i].SubTopics.push(standard);
       }
@@ -3925,7 +3930,7 @@ export class QuizzesComponent implements OnInit {
       this.default_problem.NumChoices = 0;
     }
     if (Object.keys(this.exam_dump).length > 0) {
-      for (let n = 1; n <= this.exam_length; n++) {
+      for (let n = 1; n <= this.quiz_length; n++) {
         this.exam_dump[n].Type = this.get_probtype_key(type);
         this.exam_dump[n].AnswerChoices = {};
         if (+this.problem_types[this.get_probtype_key(type)][1] > 0) {
@@ -3940,7 +3945,7 @@ export class QuizzesComponent implements OnInit {
       }
     }
     setTimeout(() => {
-      for (let i = 1; i <= this.exam_length; i++) {
+      for (let i = 1; i <= this.quiz_length; i++) {
         const probtypeSel: string = "probtypeInput" + '' + i;
         (document.getElementById(probtypeSel) as any).value = this.problem_types[this.exam_dump[i].Type][0];
       }
@@ -3985,7 +3990,7 @@ export class QuizzesComponent implements OnInit {
         this.default_problem.AnswerChoices[this.choices_list[i]] = JSON.parse(JSON.stringify(this.default_choice));
       }
       if (Object.keys(this.exam_dump).length > 0) {
-        for (let n = 1; n <= this.exam_length; n++) {
+        for (let n = 1; n <= this.quiz_length; n++) {
           if (+this.problem_types[this.exam_dump[n].Type][1] > 0) {
             this.exam_dump[n].NumChoices = this.default_numchoices;
             this.exam_dump[n].AnswerChoices = {};
@@ -3995,7 +4000,7 @@ export class QuizzesComponent implements OnInit {
           }
         }
         setTimeout(() => {
-          for (let i = 1; i <= this.exam_length; i++) {
+          for (let i = 1; i <= this.quiz_length; i++) {
             const numchoicesSel: string = "choicesEntry" + '' + i;
             const numchoicesSliderSel: string = "choicesSlider" + '' + i;
             (document.getElementById(numchoicesSel) as any).value = this.exam_dump[i].NumChoices;
@@ -4008,31 +4013,27 @@ export class QuizzesComponent implements OnInit {
   }
 
   set_problem_num(num: number) {
-    const initial_num: number = this.exam_length;
+    const initial_num: number = this.quiz_length;
     if (num < 5) {
-      this.exam_length = 5;
+      this.quiz_length = 5;
     }
     else if (num > 50) {
-      this.exam_length = 50;
+      this.quiz_length = 50;
     }
     else {
-      this.exam_length = num;
+      this.quiz_length = num;
     }
-    if (this.exam_length != initial_num) {
+    if (this.quiz_length != initial_num) {
       const initial_dump = JSON.parse(JSON.stringify(this.exam_dump));
       const initial_images = JSON.parse(JSON.stringify(this.prob_images));
       const initial_statuses = JSON.parse(JSON.stringify(this.prob_statuses));
-      const initial_content = JSON.parse(JSON.stringify(this.content_hover));
-      const initial_choices = JSON.parse(JSON.stringify(this.choices_hover));
       this.problems_loaded = false;
       this.exam_dump = {};
       this.prob_images = {};
       this.prob_statuses = {};
-      for (let i = 1; i <= this.exam_length; i++) {
+      for (let i = 1; i <= this.quiz_length; i++) {
         if (Object.keys(initial_dump).includes('' + i)) {
           this.exam_dump[i] = JSON.parse(JSON.stringify(initial_dump[i]));
-          this.content_hover[i] = JSON.parse(JSON.stringify(initial_content[i]));
-          this.choices_hover[i] = JSON.parse(JSON.stringify(initial_choices[i]));
           if (Object.keys(initial_images).includes('' + i)) {
             var new_images: any = {};
             for (const [k, image] of Object.entries(initial_images[i])) {
@@ -4045,20 +4046,21 @@ export class QuizzesComponent implements OnInit {
         }
         else {
           this.exam_dump[i] = JSON.parse(JSON.stringify(this.default_problem));
-          this.content_hover[i] = [false];
-          var choices: boolean[] = [];
-          for (let i = 1; i <= this.default_numchoices; i++) {
-            choices.push(false);
-          }
-          this.choices_hover[i] = choices;
           this.prob_statuses[i] = [false, false];
           this.exam_dump[i].Number = i;
         }
+        this.problem_hover[i] = false;
+        this.content_hover[i] = [false];
+        var choices: boolean[] = [];
+        for (let i = 1; i <= this.default_numchoices; i++) {
+          choices.push(false);
+        }
+        this.choices_hover[i] = choices;
       }
       this.cquiz_page = "content";
       this.problems_loaded = true;
       setTimeout(() => {
-        for (let i = 1; i <= this.exam_length; i++) {
+        for (let i = 1; i <= this.quiz_length; i++) {
           if (this.enable_standards) {
             const standardSel: string = "standardInput" + '' + i;
             (document.getElementById(standardSel) as any).value = Object.keys(this.get_topic_subs(this.selected_topic))[Object.values(this.get_topic_subs(this.selected_topic)).indexOf(this.exam_dump[i].SubTopics[0])] + ': ' + this.exam_dump[i].SubTopics[0];
@@ -4200,7 +4202,7 @@ export class QuizzesComponent implements OnInit {
   }
 
   change_prob_standard(num: number) {
-    for (let i = 1; i <= this.exam_length; i++) {
+    for (let i = 1; i <= this.quiz_length; i++) {
       if (i == num) {
         // var prob_dump: any = {};
         // for (const [k, val] of Object.entries(this.exam_dump[num])) {
@@ -4246,10 +4248,9 @@ export class QuizzesComponent implements OnInit {
     if (final_num != initial_num) {
       this.exam_dump[num].NumChoices = final_num;
       this.exam_dump[num].AnswerChoices = {};
-      this.choices_hover[num] = [];
       for (let i = 0; i < final_num; i++) {
         this.exam_dump[num].AnswerChoices[this.choices_list[i]] = JSON.parse(JSON.stringify(this.default_choice));
-        this.choices_hover[num].push(false);
+        this.choices_hover[num][i] = false;
       }
     }
   }
@@ -4300,7 +4301,6 @@ export class QuizzesComponent implements OnInit {
       else {
         this.exam_dump[num].Content[index] = '' + image.name;
       }
-      this.content_hover[num].push(false);
       if (!Object.keys(this.prob_images).includes('' + num)) {
         var image_dump: any = {}
         image_dump['' + image.name] = [this.save_image(image), image];
@@ -4344,7 +4344,10 @@ export class QuizzesComponent implements OnInit {
   }
 
   hover_card(num: number, type: string, index: number, hover: boolean) {
-    if (type == 'content') {
+    if (type == 'problem') {
+      this.problem_hover[num] = hover;
+    }
+    else if (type == 'content') {
       this.content_hover[num][index] = hover;
     }
     else if (type == 'choices') {
@@ -4353,7 +4356,10 @@ export class QuizzesComponent implements OnInit {
   }
 
   hover_delete(num: number, type: string, index: number) {
-    if (type == 'content') {
+    if (type == 'problem') {
+      return (this.problem_hover[num]);
+    }
+    else if (type == 'content') {
       return (this.content_hover[num][index]);
     }
     else if (type == 'choices') {
@@ -4376,18 +4382,20 @@ export class QuizzesComponent implements OnInit {
       }
       this.prob_images[num] = new_images;
     }
-    if (index != this.exam_dump[num].Content.length - 1) {
-      this.exam_dump[num].Content.splice(index, 1);
-      this.content_hover[num].splice(index, 1);
-    }
-    else {
-      this.exam_dump[num].Content.pop();
-      this.content_hover[num].pop();
-    }
+    this.exam_dump[num].Content.splice(index, 1);
+    this.content_hover[num].splice(index, 1);
+    // if (index != this.exam_dump[num].Content.length - 1) {
+    //   this.exam_dump[num].Content.splice(index, 1);
+    //   this.content_hover[num].splice(index, 1);
+    // }
+    // else {
+    //   this.exam_dump[num].Content.pop();
+    //   this.content_hover[num].pop();
+    // }
     setTimeout(() => {
       this.problems_loaded = true;
       setTimeout(() => {
-        for (let i = 1; i <= this.exam_length; i++) {
+        for (let i = 1; i <= this.quiz_length; i++) {
           if (this.enable_standards) {
             const standardSel: string = "standardInput" + '' + i;
             (document.getElementById(standardSel) as any).value = Object.keys(this.get_topic_subs(this.selected_topic))[Object.values(this.get_topic_subs(this.selected_topic)).indexOf(this.exam_dump[i].SubTopics[0])] + ': ' + this.exam_dump[i].SubTopics[0];
@@ -4422,7 +4430,7 @@ export class QuizzesComponent implements OnInit {
     setTimeout(() => {
       this.problems_loaded = true;
       setTimeout(() => {
-        for (let i = 1; i <= this.exam_length; i++) {
+        for (let i = 1; i <= this.quiz_length; i++) {
           if (this.enable_standards) {
             const standardSel: string = "standardInput" + '' + i;
             (document.getElementById(standardSel) as any).value = Object.keys(this.get_topic_subs(this.selected_topic))[Object.values(this.get_topic_subs(this.selected_topic)).indexOf(this.exam_dump[i].SubTopics[0])] + ': ' + this.exam_dump[i].SubTopics[0];
@@ -4489,20 +4497,21 @@ export class QuizzesComponent implements OnInit {
 
   add_problem() {
     this.problems_loaded = false;
-    this.exam_dump[this.exam_length + 1] = JSON.parse(JSON.stringify(this.default_problem));
-    this.exam_dump[this.exam_length + 1].Number = this.exam_length + 1;
-    this.prob_statuses[this.exam_length + 1] = [false, false];
-    this.content_hover[this.exam_length + 1] = [false];
+    this.exam_dump[this.quiz_length + 1] = JSON.parse(JSON.stringify(this.default_problem));
+    this.exam_dump[this.quiz_length + 1].Number = this.quiz_length + 1;
+    this.prob_statuses[this.quiz_length + 1] = [false, false];
+    this.problem_hover[this.quiz_length + 1] = false;
+    this.content_hover[this.quiz_length + 1] = [false];
     var choices: boolean[] = [];
-    for (let i = 1; i <= this.exam_length; i++) {
+    for (let i = 1; i <= this.quiz_length; i++) {
       choices.push(false);
     }
-    this.choices_hover[this.exam_length + 1] = choices;
-    this.exam_length += 1;
+    this.choices_hover[this.quiz_length + 1] = choices;
+    this.quiz_length += 1;
     setTimeout(() => {
       this.problems_loaded = true;
       setTimeout(() => {
-        for (let i = 1; i <= this.exam_length; i++) {
+        for (let i = 1; i <= this.quiz_length; i++) {
           if (this.enable_standards) {
             const standardSel: string = "standardInput" + '' + i;
             (document.getElementById(standardSel) as any).value = Object.keys(this.get_topic_subs(this.selected_topic))[Object.values(this.get_topic_subs(this.selected_topic)).indexOf(this.exam_dump[i].SubTopics[0])] + ': ' + this.exam_dump[i].SubTopics[0];
@@ -4524,7 +4533,7 @@ export class QuizzesComponent implements OnInit {
     this.exam_dump = {};
     this.prob_images = {};
     this.prob_statuses = {};
-    for (let i = 1; i <= this.exam_length; i++) {
+    for (let i = 1; i <= this.quiz_length; i++) {
       if (i != num) {
         this.exam_dump[prob] = JSON.parse(JSON.stringify(initial_dump[i]));
         if (Object.keys(initial_images).includes('' + i)) {
@@ -4539,11 +4548,14 @@ export class QuizzesComponent implements OnInit {
         prob += 1;
       }
     }
-    this.exam_length -= 1;
+    this.problem_hover.splice(num, 1);
+    this.content_hover.splice(num, 1);
+    this.choices_hover.splice(num, 1);
+    this.quiz_length -= 1;
     setTimeout(() => {
       this.problems_loaded = true;
       setTimeout(() => {
-        for (let i = 1; i <= this.exam_length; i++) {
+        for (let i = 1; i <= this.quiz_length; i++) {
           if (this.enable_standards) {
             const standardSel: string = "standardInput" + '' + i;
             (document.getElementById(standardSel) as any).value = Object.keys(this.get_topic_subs(this.selected_topic))[Object.values(this.get_topic_subs(this.selected_topic)).indexOf(this.exam_dump[i].SubTopics[0])] + ': ' + this.exam_dump[i].SubTopics[0];
@@ -4844,7 +4856,7 @@ export class QuizzesComponent implements OnInit {
     if (this.filtered_set.length != 0) {
       this.generate_message = "";
       if (this.length_mode == 'number') {
-        this.randomize_problems(this.exam_length);
+        this.randomize_problems(this.quiz_length);
       }
       else {
         this.randomize_problems(Math.min(100, this.filtered_prob_num));
@@ -5113,10 +5125,10 @@ export class QuizzesComponent implements OnInit {
     }
     var db_updates: any = {};
     if (this.quiz_page == 'default') {
-      db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, grades: this.grade_filters, subjects: this.subject_filters, states: this.state_filters, topics: this.topic_filters, mode: this.mode, length: this.exam_length, timer: this.exam_timer, shuffle: true, public: false, author: this.authService.userData.uid };
+      db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, grades: this.grade_filters, subjects: this.subject_filters, states: this.state_filters, topics: this.topic_filters, mode: this.mode, length: this.quiz_length, timer: this.exam_timer, shuffle: true, public: false, author: this.authService.userData.uid };
     }
     if (this.quiz_page == 'custom') {
-      db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, problems: this.exam_dump, grades: [this.selected_grade], subjects: [this.selected_subject], states: [this.state_labels[this.selected_curriculum]], topics: [this.selected_topic], mode: this.mode, length: this.exam_length, timer: this.exam_timer, shuffle: this.shuffle_mode, public: this.quiz_public, author: this.authService.userData.uid };
+      db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, problems: this.exam_dump, grades: [this.selected_grade], subjects: [this.selected_subject], states: [this.state_labels[this.selected_curriculum]], topics: [this.selected_topic], mode: this.mode, length: this.quiz_length, timer: this.exam_timer, shuffle: this.shuffle_mode, public: this.quiz_public, author: this.authService.userData.uid };
     }
     this.authService.UpdateDatabase(db_updates);
     for (let ass of this.new_assignments) {
@@ -8022,7 +8034,7 @@ export class QuizzesComponent implements OnInit {
     if (this.problem_number > this.max_problem_number) {
       this.max_problem_number = this.problem_number;
     }
-    if (this.problem_number > this.exam_length && this.length_mode == 'number') {
+    if (this.problem_number > this.quiz_length && this.length_mode == 'number') {
       this.completeExam();
     }
     else if (this.max_problem_number == this.problem_number) {
@@ -8630,7 +8642,7 @@ export class QuizzesComponent implements OnInit {
     else if (this.mode == 'assess') {
       var length_num = 0;
       if (this.length_mode == 'number') {
-        length_num = this.exam_length;
+        length_num = this.quiz_length;
       }
       else {
         length_num = this.max_problem_number - 1;

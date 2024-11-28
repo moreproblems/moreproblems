@@ -439,14 +439,23 @@ export class AuthService {
   
   getQuizPic(quizID: string, name: string) {
     const strg = stor.getStorage();
-    var quizURL = "";
     return stor.getDownloadURL(stor.ref(strg, 'quiz/' + quizID + '/' + name)).then((url) => {
       console.log(url);
       return (url as any);
     }).catch(error => {
       console.log(error.message);
     });
-    // return (quizURL);
+  }
+  
+  getQuizPics(quizID: String) {
+    const strg = stor.getStorage();
+    const downloads: any = {};
+    return stor.getDownloadURL(stor.ref(strg, 'quiz/' + quizID + '/')).then((url) => {
+      console.log(url);
+      return (url as any);
+    }).catch(error => {
+      console.log(error.message);
+    });
   }
 
   // Set data on localStorage
@@ -707,6 +716,25 @@ export class AuthService {
     console.log(this.quiz_results);
     return (this.quiz_results);
   }
+
+  getUserQuizzes(uid: string) {
+    this.quiz_results = {};
+    const db = getDatabase();
+    const quizzes_ref = ref(db, "quizzes");
+    onValue(quizzes_ref, (snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        for (const [id, dump] of Object.entries(snapshot.val() as any)) {
+          if ((dump as any).author == uid && (dump as any).problems != undefined) {
+            this.quiz_results[id] = (dump as any);
+          }
+        }
+      } else {
+        console.log("No data available");
+      }
+    });
+    console.log(this.quiz_results);
+    return (this.quiz_results);}
 
   getInProgExams(id: string) {
     const usr = this.searchUserId(id);

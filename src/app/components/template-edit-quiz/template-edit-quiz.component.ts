@@ -1,12 +1,13 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { AuthService } from "../../shared/services/auth.service";
 import { serverTimestamp } from "firebase/database";
-import printJS from 'print-js';
 import * as Plotly from 'plotly.js-dist-min';
 import * as examMetadata from "src/assets/problems/exams.json";
+import * as stateMetadata from "src/assets/standards/states.json";
+import * as standardMetadata from "src/assets/standards/standards.json";
 import * as COG3EProblems from "src/assets/problems/COG3E/COG3E-problems.json";
 import * as COG4EProblems from "src/assets/problems/COG4E/COG4E-problems.json";
 import * as COG5EProblems from "src/assets/problems/COG5E/COG5E-problems.json";
@@ -661,6 +662,401 @@ import * as WIG8SProblems from "src/assets/problems/WIG8S/WIG8S-problems.json";
 import * as WIG4SSProblems from "src/assets/problems/WIG4SS/WIG4SS-problems.json";
 import * as WIG8SSProblems from "src/assets/problems/WIG8SS/WIG8SS-problems.json";
 import * as WIG10SSProblems from "src/assets/problems/WIG10SS/WIG10SS-problems.json";
+import * as KEStandards from "src/assets/standards/CC/K-E.json";
+import * as KMStandards from "src/assets/standards/CC/K-M.json";
+import * as G1EStandards from "src/assets/standards/CC/G1-E.json";
+import * as G1MStandards from "src/assets/standards/CC/G1-M.json";
+import * as G2EStandards from "src/assets/standards/CC/G2-E.json";
+import * as G2MStandards from "src/assets/standards/CC/G2-M.json";
+import * as G3EStandards from "src/assets/standards/CC/G3-E.json";
+import * as G3MStandards from "src/assets/standards/CC/G3-M.json";
+import * as G4EStandards from "src/assets/standards/CC/G4-E.json";
+import * as G4MStandards from "src/assets/standards/CC/G4-M.json";
+import * as G5EStandards from "src/assets/standards/CC/G5-E.json";
+import * as G5MStandards from "src/assets/standards/CC/G5-M.json";
+import * as G6EStandards from "src/assets/standards/CC/G6-E.json";
+import * as G6MStandards from "src/assets/standards/CC/G6-M.json";
+import * as G7EStandards from "src/assets/standards/CC/G7-E.json";
+import * as G7MStandards from "src/assets/standards/CC/G7-M.json";
+import * as G8EStandards from "src/assets/standards/CC/G8-E.json";
+import * as G8MStandards from "src/assets/standards/CC/G8-M.json";
+import * as HSE1Standards from "src/assets/standards/CC/HS-E1.json";
+import * as HSE2Standards from "src/assets/standards/CC/HS-E2.json";
+import * as HSMAStandards from "src/assets/standards/CC/HS-M-A.json";
+import * as HSMFStandards from "src/assets/standards/CC/HS-M-F.json";
+import * as HSMGStandards from "src/assets/standards/CC/HS-M-G.json";
+import * as HSMMStandards from "src/assets/standards/CC/HS-M-M.json";
+import * as HSMNStandards from "src/assets/standards/CC/HS-M-N.json";
+import * as HSMSStandards from "src/assets/standards/CC/HS-M-S.json";
+import * as COPEStandards from "src/assets/standards/CO/P-E.json";
+import * as COPMStandards from "src/assets/standards/CO/P-M.json";
+import * as COPSStandards from "src/assets/standards/CO/P-S.json";
+import * as COPSSStandards from "src/assets/standards/CO/P-SS.json";
+import * as COKEStandards from "src/assets/standards/CO/K-E.json";
+import * as COKMStandards from "src/assets/standards/CO/K-M.json";
+import * as COKSStandards from "src/assets/standards/CO/K-S.json";
+import * as COKSSStandards from "src/assets/standards/CO/K-SS.json";
+import * as COG1EStandards from "src/assets/standards/CO/G1-E.json";
+import * as COG1MStandards from "src/assets/standards/CO/G1-M.json";
+import * as COG1SStandards from "src/assets/standards/CO/G1-S.json";
+import * as COG1SSStandards from "src/assets/standards/CO/G1-SS.json";
+import * as COG2EStandards from "src/assets/standards/CO/G2-E.json";
+import * as COG2MStandards from "src/assets/standards/CO/G2-M.json";
+import * as COG2SStandards from "src/assets/standards/CO/G2-S.json";
+import * as COG2SSStandards from "src/assets/standards/CO/G2-SS.json";
+import * as COG3EStandards from "src/assets/standards/CO/G3-E.json";
+import * as COG3MStandards from "src/assets/standards/CO/G3-M.json";
+import * as COG3SStandards from "src/assets/standards/CO/G3-S.json";
+import * as COG3SSStandards from "src/assets/standards/CO/G3-SS.json";
+import * as COG4EStandards from "src/assets/standards/CO/G4-E.json";
+import * as COG4MStandards from "src/assets/standards/CO/G4-M.json";
+import * as COG4SStandards from "src/assets/standards/CO/G4-S.json";
+import * as COG4SSStandards from "src/assets/standards/CO/G4-SS.json";
+import * as COG5EStandards from "src/assets/standards/CO/G5-E.json";
+import * as COG5MStandards from "src/assets/standards/CO/G5-M.json";
+import * as COG5SStandards from "src/assets/standards/CO/G5-S.json";
+import * as COG5SSStandards from "src/assets/standards/CO/G5-SS.json";
+import * as COG6EStandards from "src/assets/standards/CO/G6-E.json";
+import * as COG6MStandards from "src/assets/standards/CO/G6-M.json";
+import * as COG6SSStandards from "src/assets/standards/CO/G6-SS.json";
+import * as COG7EStandards from "src/assets/standards/CO/G7-E.json";
+import * as COG7MStandards from "src/assets/standards/CO/G7-M.json";
+import * as COG7SSStandards from "src/assets/standards/CO/G7-SS.json";
+import * as COG8EStandards from "src/assets/standards/CO/G8-E.json";
+import * as COG8MStandards from "src/assets/standards/CO/G8-M.json";
+import * as COG8SSStandards from "src/assets/standards/CO/G8-SS.json";
+import * as COMSSStandards from "src/assets/standards/CO/MS-S.json";
+import * as COHSE1Standards from "src/assets/standards/CO/HS-E1.json";
+import * as COHSE2Standards from "src/assets/standards/CO/HS-E2.json";
+import * as COHSMStandards from "src/assets/standards/CO/HS-M.json";
+import * as COHSSStandards from "src/assets/standards/CO/HS-S.json";
+import * as COHSSSStandards from "src/assets/standards/CO/HS-SS.json";
+import * as FLKEStandards from "src/assets/standards/FL/K-E.json";
+import * as FLKMStandards from "src/assets/standards/FL/K-M.json";
+import * as FLG1EStandards from "src/assets/standards/FL/G1-E.json";
+import * as FLG1MStandards from "src/assets/standards/FL/G1-M.json";
+import * as FLG2EStandards from "src/assets/standards/FL/G2-E.json";
+import * as FLG2MStandards from "src/assets/standards/FL/G2-M.json";
+import * as FLG3EStandards from "src/assets/standards/FL/G3-E.json";
+import * as FLG3MStandards from "src/assets/standards/FL/G3-M.json";
+import * as FLG4EStandards from "src/assets/standards/FL/G4-E.json";
+import * as FLG4MStandards from "src/assets/standards/FL/G4-M.json";
+import * as FLG5EStandards from "src/assets/standards/FL/G5-E.json";
+import * as FLG5MStandards from "src/assets/standards/FL/G5-M.json";
+import * as FLG6EStandards from "src/assets/standards/FL/G6-E.json";
+import * as FLG6MStandards from "src/assets/standards/FL/G6-M.json";
+import * as FLG7EStandards from "src/assets/standards/FL/G7-E.json";
+import * as FLG7MStandards from "src/assets/standards/FL/G7-M.json";
+import * as FLG8EStandards from "src/assets/standards/FL/G8-E.json";
+import * as FLG8MStandards from "src/assets/standards/FL/G8-M.json";
+import * as FLG9EStandards from "src/assets/standards/FL/G9-E.json";
+import * as FLG10EStandards from "src/assets/standards/FL/G10-E.json";
+import * as FLG11EStandards from "src/assets/standards/FL/G11-E.json";
+import * as FLG12EStandards from "src/assets/standards/FL/G12-E.json";
+import * as FLHSMStandards from "src/assets/standards/FL/HS-M.json";
+import * as MAPEStandards from "src/assets/standards/MA/P-E.json";
+import * as MAPMStandards from "src/assets/standards/MA/P-M.json";
+import * as MAPSStandards from "src/assets/standards/MA/P-S.json";
+import * as MAKEStandards from "src/assets/standards/MA/K-E.json";
+import * as MAKMStandards from "src/assets/standards/MA/K-M.json";
+import * as MAKSStandards from "src/assets/standards/MA/K-S.json";
+import * as MAEESTStandards from "src/assets/standards/MA/EES-T.json";
+import * as MAG1EStandards from "src/assets/standards/MA/G1-E.json";
+import * as MAG1MStandards from "src/assets/standards/MA/G1-M.json";
+import * as MAG1SStandards from "src/assets/standards/MA/G1-S.json";
+import * as MAG2EStandards from "src/assets/standards/MA/G2-E.json";
+import * as MAG2MStandards from "src/assets/standards/MA/G2-M.json";
+import * as MAG2SStandards from "src/assets/standards/MA/G2-S.json";
+import * as MAG3EStandards from "src/assets/standards/MA/G3-E.json";
+import * as MAG3MStandards from "src/assets/standards/MA/G3-M.json";
+import * as MAG3SStandards from "src/assets/standards/MA/G3-S.json";
+import * as MAUESTStandards from "src/assets/standards/MA/UES-T.json";
+import * as MAG4EStandards from "src/assets/standards/MA/G4-E.json";
+import * as MAG4MStandards from "src/assets/standards/MA/G4-M.json";
+import * as MAG4SStandards from "src/assets/standards/MA/G4-S.json";
+import * as MAG5EStandards from "src/assets/standards/MA/G5-E.json";
+import * as MAG5MStandards from "src/assets/standards/MA/G5-M.json";
+import * as MAG5SStandards from "src/assets/standards/MA/G5-S.json";
+import * as MAG6EStandards from "src/assets/standards/MA/G6-E.json";
+import * as MAG6MStandards from "src/assets/standards/MA/G6-M.json";
+import * as MAG6SStandards from "src/assets/standards/MA/G6-S.json";
+import * as MAMSTStandards from "src/assets/standards/MA/MS-T.json";
+import * as MAG7EStandards from "src/assets/standards/MA/G7-E.json";
+import * as MAG7MStandards from "src/assets/standards/MA/G7-M.json";
+import * as MAG7SStandards from "src/assets/standards/MA/G7-S.json";
+import * as MAG8EStandards from "src/assets/standards/MA/G8-E.json";
+import * as MAG8MStandards from "src/assets/standards/MA/G8-M.json";
+import * as MAG8SStandards from "src/assets/standards/MA/G8-S.json";
+import * as MAHSE1Standards from "src/assets/standards/MA/HS-E1.json";
+import * as MAHSE2Standards from "src/assets/standards/MA/HS-E2.json";
+import * as MAHSMAStandards from "src/assets/standards/MA/HS-M-A.json";
+import * as MAHSMFStandards from "src/assets/standards/MA/HS-M-F.json";
+import * as MAHSMGStandards from "src/assets/standards/MA/HS-M-G.json";
+import * as MAHSMMStandards from "src/assets/standards/MA/HS-M-M.json";
+import * as MAHSMNStandards from "src/assets/standards/MA/HS-M-N.json";
+import * as MAHSMSStandards from "src/assets/standards/MA/HS-M-S.json";
+import * as MAHSSBStandards from "src/assets/standards/MA/HS-S-B.json";
+import * as MAHSSCStandards from "src/assets/standards/MA/HS-S-C.json";
+import * as MAHSSPStandards from "src/assets/standards/MA/HS-S-P.json";
+import * as MAHSSESStandards from "src/assets/standards/MA/HS-S-ES.json";
+import * as MAHSSTSStandards from "src/assets/standards/MA/HS-S-TS.json";
+import * as MAHSTStandards from "src/assets/standards/MA/HS-T.json";
+import * as MDPEStandards from "src/assets/standards/MD/P-E.json";
+import * as MDPMStandards from "src/assets/standards/MD/P-M.json";
+import * as MDKEStandards from "src/assets/standards/MD/K-E.json";
+import * as MDKMStandards from "src/assets/standards/MD/K-M.json";
+import * as MDG1EStandards from "src/assets/standards/MD/G1-E.json";
+import * as MDG1MStandards from "src/assets/standards/MD/G1-M.json";
+import * as MDG2EStandards from "src/assets/standards/MD/G2-E.json";
+import * as MDG2MStandards from "src/assets/standards/MD/G2-M.json";
+import * as MDG3EStandards from "src/assets/standards/MD/G3-E.json";
+import * as MDG3MStandards from "src/assets/standards/MD/G3-M.json";
+import * as MDG4EStandards from "src/assets/standards/MD/G4-E.json";
+import * as MDG4MStandards from "src/assets/standards/MD/G4-M.json";
+import * as MDG5EStandards from "src/assets/standards/MD/G5-E.json";
+import * as MDG5MStandards from "src/assets/standards/MD/G5-M.json";
+import * as MDG6EStandards from "src/assets/standards/MD/G6-E.json";
+import * as MDG6MStandards from "src/assets/standards/MD/G6-M.json";
+import * as MDG7EStandards from "src/assets/standards/MD/G7-E.json";
+import * as MDG7MStandards from "src/assets/standards/MD/G7-M.json";
+import * as MDG8EStandards from "src/assets/standards/MD/G8-E.json";
+import * as MDG8MStandards from "src/assets/standards/MD/G8-M.json";
+import * as MDHSE1Standards from "src/assets/standards/MD/HS-E1.json";
+import * as MDHSE2Standards from "src/assets/standards/MD/HS-E2.json";
+import * as MDHSMA1Standards from "src/assets/standards/MD/HS-M-A1.json";
+import * as MDHSMA2Standards from "src/assets/standards/MD/HS-M-A2.json";
+import * as MDHSMGStandards from "src/assets/standards/MD/HS-M-G.json";
+import * as MDHSMSStandards from "src/assets/standards/MD/HS-M-S.json";
+import * as MSKEStandards from "src/assets/standards/MS/K-E.json";
+import * as MSKMStandards from "src/assets/standards/MS/K-M.json";
+import * as MSG1EStandards from "src/assets/standards/MS/G1-E.json";
+import * as MSG1MStandards from "src/assets/standards/MS/G1-M.json";
+import * as MSG2EStandards from "src/assets/standards/MS/G2-E.json";
+import * as MSG2MStandards from "src/assets/standards/MS/G2-M.json";
+import * as MSG3EStandards from "src/assets/standards/MS/G3-E.json";
+import * as MSG3MStandards from "src/assets/standards/MS/G3-M.json";
+import * as MSG4EStandards from "src/assets/standards/MS/G4-E.json";
+import * as MSG4MStandards from "src/assets/standards/MS/G4-M.json";
+import * as MSG5EStandards from "src/assets/standards/MS/G5-E.json";
+import * as MSG5MStandards from "src/assets/standards/MS/G5-M.json";
+import * as MSG6EStandards from "src/assets/standards/MS/G6-E.json";
+import * as MSG6MStandards from "src/assets/standards/MS/G6-M.json";
+import * as MSG7EStandards from "src/assets/standards/MS/G7-E.json";
+import * as MSG7MStandards from "src/assets/standards/MS/G7-M.json";
+import * as MSG8EStandards from "src/assets/standards/MS/G8-E.json";
+import * as MSG8MStandards from "src/assets/standards/MS/G8-M.json";
+import * as NGKSStandards from "src/assets/standards/NG/K-S.json";
+import * as NGG1SStandards from "src/assets/standards/NG/G1-S.json";
+import * as NGG2SStandards from "src/assets/standards/NG/G2-S.json";
+import * as NGG3SStandards from "src/assets/standards/NG/G3-S.json";
+import * as NGG4SStandards from "src/assets/standards/NG/G4-S.json";
+import * as NGG5SStandards from "src/assets/standards/NG/G5-S.json";
+import * as NGMSSStandards from "src/assets/standards/NG/MS-S.json";
+import * as NGHSSStandards from "src/assets/standards/NG/HS-S.json";
+import * as NJKEStandards from "src/assets/standards/NJ/K-E.json";
+import * as NJKMStandards from "src/assets/standards/NJ/K-M.json";
+import * as NJKSStandards from "src/assets/standards/NJ/K-S.json";
+import * as NJG1EStandards from "src/assets/standards/NJ/G1-E.json";
+import * as NJG1MStandards from "src/assets/standards/NJ/G1-M.json";
+import * as NJG1SStandards from "src/assets/standards/NJ/G1-S.json";
+import * as NJG2EStandards from "src/assets/standards/NJ/G2-E.json";
+import * as NJG2MStandards from "src/assets/standards/NJ/G2-M.json";
+import * as NJG2SStandards from "src/assets/standards/NJ/G2-S.json";
+import * as NJG3EStandards from "src/assets/standards/NJ/G3-E.json";
+import * as NJG3MStandards from "src/assets/standards/NJ/G3-M.json";
+import * as NJG3SStandards from "src/assets/standards/NJ/G3-S.json";
+import * as NJG4EStandards from "src/assets/standards/NJ/G4-E.json";
+import * as NJG4MStandards from "src/assets/standards/NJ/G4-M.json";
+import * as NJG4SStandards from "src/assets/standards/NJ/G4-S.json";
+import * as NJG5EStandards from "src/assets/standards/NJ/G5-E.json";
+import * as NJG5MStandards from "src/assets/standards/NJ/G5-M.json";
+import * as NJG5SStandards from "src/assets/standards/NJ/G5-S.json";
+import * as NJG6EStandards from "src/assets/standards/NJ/G6-E.json";
+import * as NJG6MStandards from "src/assets/standards/NJ/G6-M.json";
+import * as NJG7EStandards from "src/assets/standards/NJ/G7-E.json";
+import * as NJG7MStandards from "src/assets/standards/NJ/G7-M.json";
+import * as NJG8EStandards from "src/assets/standards/NJ/G8-E.json";
+import * as NJG8MStandards from "src/assets/standards/NJ/G8-M.json";
+import * as NJMSSStandards from "src/assets/standards/NJ/MS-S.json";
+import * as NYPEStandards from "src/assets/standards/NY/P-E.json";
+import * as NYPMStandards from "src/assets/standards/NY/P-M.json";
+import * as NYKEStandards from "src/assets/standards/NY/K-E.json";
+import * as NYKMStandards from "src/assets/standards/NY/K-M.json";
+import * as NYG1EStandards from "src/assets/standards/NY/G1-E.json";
+import * as NYG1MStandards from "src/assets/standards/NY/G1-M.json";
+import * as NYG2EStandards from "src/assets/standards/NY/G2-E.json";
+import * as NYG2MStandards from "src/assets/standards/NY/G2-M.json";
+import * as NYG3EStandards from "src/assets/standards/NY/G3-E.json";
+import * as NYG3MStandards from "src/assets/standards/NY/G3-M.json";
+import * as NYG4EStandards from "src/assets/standards/NY/G4-E.json";
+import * as NYG4MStandards from "src/assets/standards/NY/G4-M.json";
+import * as NYG5EStandards from "src/assets/standards/NY/G5-E.json";
+import * as NYG5MStandards from "src/assets/standards/NY/G5-M.json";
+import * as NYG6EStandards from "src/assets/standards/NY/G6-E.json";
+import * as NYG6MStandards from "src/assets/standards/NY/G6-M.json";
+import * as NYG7EStandards from "src/assets/standards/NY/G7-E.json";
+import * as NYG7MStandards from "src/assets/standards/NY/G7-M.json";
+import * as NYG8EStandards from "src/assets/standards/NY/G8-E.json";
+import * as NYG8MStandards from "src/assets/standards/NY/G8-M.json";
+import * as NYHSMA1Standards from "src/assets/standards/NY/HS-M-A1.json";
+import * as NYHSMA2Standards from "src/assets/standards/NY/HS-M-A2.json";
+import * as NYHSE1Standards from "src/assets/standards/NY/HS-E1.json";
+import * as NYHSE2Standards from "src/assets/standards/NY/HS-E2.json";
+import * as NYHSMGStandards from "src/assets/standards/NY/HS-M-G.json";
+import * as PAG3EStandards from "src/assets/standards/PA/G3-E.json";
+import * as PAG3MStandards from "src/assets/standards/PA/G3-M.json";
+import * as PAG4EStandards from "src/assets/standards/PA/G4-E.json";
+import * as PAG4MStandards from "src/assets/standards/PA/G4-M.json";
+import * as PAG4SStandards from "src/assets/standards/PA/G4-S.json";
+import * as PAG5EStandards from "src/assets/standards/PA/G5-E.json";
+import * as PAG5MStandards from "src/assets/standards/PA/G5-M.json";
+import * as PAG6EStandards from "src/assets/standards/PA/G6-E.json";
+import * as PAG6MStandards from "src/assets/standards/PA/G6-M.json";
+import * as PAG7EStandards from "src/assets/standards/PA/G7-E.json";
+import * as PAG7MStandards from "src/assets/standards/PA/G7-M.json";
+import * as PAG8EStandards from "src/assets/standards/PA/G8-E.json";
+import * as PAG8MStandards from "src/assets/standards/PA/G8-M.json";
+import * as PAG8SStandards from "src/assets/standards/PA/G8-S.json";
+import * as RIKEStandards from "src/assets/standards/RI/K-E.json";
+import * as RIKMStandards from "src/assets/standards/RI/K-M.json";
+import * as RIG1EStandards from "src/assets/standards/RI/G1-E.json";
+import * as RIG1MStandards from "src/assets/standards/RI/G1-M.json";
+import * as RIG2EStandards from "src/assets/standards/RI/G2-E.json";
+import * as RIG2MStandards from "src/assets/standards/RI/G2-M.json";
+import * as RIG3EStandards from "src/assets/standards/RI/G3-E.json";
+import * as RIG3MStandards from "src/assets/standards/RI/G3-M.json";
+import * as RIG4EStandards from "src/assets/standards/RI/G4-E.json";
+import * as RIG4MStandards from "src/assets/standards/RI/G4-M.json";
+import * as RIG5EStandards from "src/assets/standards/RI/G5-E.json";
+import * as RIG5MStandards from "src/assets/standards/RI/G5-M.json";
+import * as RIG6EStandards from "src/assets/standards/RI/G6-E.json";
+import * as RIG6MStandards from "src/assets/standards/RI/G6-M.json";
+import * as RIG7EStandards from "src/assets/standards/RI/G7-E.json";
+import * as RIG7MStandards from "src/assets/standards/RI/G7-M.json";
+import * as RIG8EStandards from "src/assets/standards/RI/G8-E.json";
+import * as RIG8MStandards from "src/assets/standards/RI/G8-M.json";
+import * as RIHSE1Standards from "src/assets/standards/RI/HS-E1.json";
+import * as RIHSE2Standards from "src/assets/standards/RI/HS-E2.json";
+import * as RIHSMAStandards from "src/assets/standards/RI/HS-M-A.json";
+import * as RIHSMFStandards from "src/assets/standards/RI/HS-M-F.json";
+import * as RIHSMGStandards from "src/assets/standards/RI/HS-M-G.json";
+import * as RIHSMMStandards from "src/assets/standards/RI/HS-M-M.json";
+import * as RIHSMNStandards from "src/assets/standards/RI/HS-M-N.json";
+import * as RIHSMSStandards from "src/assets/standards/RI/HS-M-S.json";
+import * as SCKEStandards from "src/assets/standards/SC/K-E.json";
+import * as SCKMStandards from "src/assets/standards/SC/K-M.json";
+import * as SCKSStandards from "src/assets/standards/SC/K-S.json";
+import * as SCG1EStandards from "src/assets/standards/SC/G1-E.json";
+import * as SCG1MStandards from "src/assets/standards/SC/G1-M.json";
+import * as SCG1SStandards from "src/assets/standards/SC/G1-S.json";
+import * as SCG2EStandards from "src/assets/standards/SC/G2-E.json";
+import * as SCG2MStandards from "src/assets/standards/SC/G2-M.json";
+import * as SCG2SStandards from "src/assets/standards/SC/G2-S.json";
+import * as SCG3EStandards from "src/assets/standards/SC/G3-E.json";
+import * as SCG3MStandards from "src/assets/standards/SC/G3-M.json";
+import * as SCG3SStandards from "src/assets/standards/SC/G3-S.json";
+import * as SCG4EStandards from "src/assets/standards/SC/G4-E.json";
+import * as SCG4MStandards from "src/assets/standards/SC/G4-M.json";
+import * as SCG4SStandards from "src/assets/standards/SC/G4-S.json";
+import * as SCG5EStandards from "src/assets/standards/SC/G5-E.json";
+import * as SCG5MStandards from "src/assets/standards/SC/G5-M.json";
+import * as SCG5SStandards from "src/assets/standards/SC/G5-S.json";
+import * as SCG6EStandards from "src/assets/standards/SC/G6-E.json";
+import * as SCG6MStandards from "src/assets/standards/SC/G6-M.json";
+import * as SCG6SStandards from "src/assets/standards/SC/G6-S.json";
+import * as SCG7EStandards from "src/assets/standards/SC/G7-E.json";
+import * as SCG7MStandards from "src/assets/standards/SC/G7-M.json";
+import * as SCG7SStandards from "src/assets/standards/SC/G7-S.json";
+import * as SCG8EStandards from "src/assets/standards/SC/G8-E.json";
+import * as SCG8MStandards from "src/assets/standards/SC/G8-M.json";
+import * as SCG8SStandards from "src/assets/standards/SC/G8-S.json";
+import * as TNKEStandards from "src/assets/standards/TN/K-E.json";
+import * as TNKMStandards from "src/assets/standards/TN/K-M.json";
+import * as TNKSStandards from "src/assets/standards/TN/K-S.json";
+import * as TNG1EStandards from "src/assets/standards/TN/G1-E.json";
+import * as TNG1MStandards from "src/assets/standards/TN/G1-M.json";
+import * as TNG1SStandards from "src/assets/standards/TN/G1-S.json";
+import * as TNG2EStandards from "src/assets/standards/TN/G2-E.json";
+import * as TNG2MStandards from "src/assets/standards/TN/G2-M.json";
+import * as TNG2SStandards from "src/assets/standards/TN/G2-S.json";
+import * as TNG3EStandards from "src/assets/standards/TN/G3-E.json";
+import * as TNG3MStandards from "src/assets/standards/TN/G3-M.json";
+import * as TNG3SStandards from "src/assets/standards/TN/G3-S.json";
+import * as TNG4EStandards from "src/assets/standards/TN/G4-E.json";
+import * as TNG4MStandards from "src/assets/standards/TN/G4-M.json";
+import * as TNG4SStandards from "src/assets/standards/TN/G4-S.json";
+import * as TNG5EStandards from "src/assets/standards/TN/G5-E.json";
+import * as TNG5MStandards from "src/assets/standards/TN/G5-M.json";
+import * as TNG5SStandards from "src/assets/standards/TN/G5-S.json";
+import * as TNG6EStandards from "src/assets/standards/TN/G6-E.json";
+import * as TNG6MStandards from "src/assets/standards/TN/G6-M.json";
+import * as TNG6SStandards from "src/assets/standards/TN/G6-S.json";
+import * as TNG7EStandards from "src/assets/standards/TN/G7-E.json";
+import * as TNG7MStandards from "src/assets/standards/TN/G7-M.json";
+import * as TNG7SStandards from "src/assets/standards/TN/G7-S.json";
+import * as TNG8EStandards from "src/assets/standards/TN/G8-E.json";
+import * as TNG8MStandards from "src/assets/standards/TN/G8-M.json";
+import * as TNG8SStandards from "src/assets/standards/TN/G8-S.json";
+import * as TNHSMA1Standards from "src/assets/standards/TN/HS-M-A1.json";
+import * as TNHSMA2Standards from "src/assets/standards/TN/HS-M-A2.json";
+import * as TNHSSB1Standards from "src/assets/standards/TN/HS-S-B1.json";
+import * as TNHSE1Standards from "src/assets/standards/TN/HS-E1.json";
+import * as TNHSE2Standards from "src/assets/standards/TN/HS-E2.json";
+import * as TNHSMGStandards from "src/assets/standards/TN/HS-M-G.json";
+import * as TXKRStandards from "src/assets/standards/TX/K-R.json";
+import * as TXKMStandards from "src/assets/standards/TX/K-M.json";
+import * as TXG1RStandards from "src/assets/standards/TX/G1-R.json";
+import * as TXG1MStandards from "src/assets/standards/TX/G1-M.json";
+import * as TXG2RStandards from "src/assets/standards/TX/G2-R.json";
+import * as TXG2MStandards from "src/assets/standards/TX/G2-M.json";
+import * as TXG3RStandards from "src/assets/standards/TX/G3-R.json";
+import * as TXG3MStandards from "src/assets/standards/TX/G3-M.json";
+import * as TXG4RStandards from "src/assets/standards/TX/G4-R.json";
+import * as TXG4MStandards from "src/assets/standards/TX/G4-M.json";
+import * as TXG5RStandards from "src/assets/standards/TX/G5-R.json";
+import * as TXG5MStandards from "src/assets/standards/TX/G5-M.json";
+import * as TXG6RStandards from "src/assets/standards/TX/G6-R.json";
+import * as TXG6MStandards from "src/assets/standards/TX/G6-M.json";
+import * as TXG7RStandards from "src/assets/standards/TX/G7-R.json";
+import * as TXG7MStandards from "src/assets/standards/TX/G7-M.json";
+import * as TXG8RStandards from "src/assets/standards/TX/G8-R.json";
+import * as TXG8MStandards from "src/assets/standards/TX/G8-M.json";
+import * as TXHSE1Standards from "src/assets/standards/TX/HS-E1.json";
+import * as TXHSE2Standards from "src/assets/standards/TX/HS-E2.json";
+import * as TXHSE3Standards from "src/assets/standards/TX/HS-E3.json";
+import * as TXHSE4Standards from "src/assets/standards/TX/HS-E4.json";
+import * as TXHSMAStandards from "src/assets/standards/TX/HS-M-A1.json";
+import * as TXHSMA2Standards from "src/assets/standards/TX/HS-M-A2.json";
+import * as TXHSMGStandards from "src/assets/standards/TX/HS-M-G.json";
+import * as TXHSMPStandards from "src/assets/standards/TX/HS-M-P.json";
+import * as TXHSMSStandards from "src/assets/standards/TX/HS-M-S.json";
+import * as WIKEStandards from "src/assets/standards/WI/K-E.json";
+import * as WIKMStandards from "src/assets/standards/WI/K-M.json";
+import * as WIG1EStandards from "src/assets/standards/WI/G1-E.json";
+import * as WIG1MStandards from "src/assets/standards/WI/G1-M.json";
+import * as WIG2EStandards from "src/assets/standards/WI/G2-E.json";
+import * as WIG2MStandards from "src/assets/standards/WI/G2-M.json";
+import * as WIG3EStandards from "src/assets/standards/WI/G3-E.json";
+import * as WIG3MStandards from "src/assets/standards/WI/G3-M.json";
+import * as WIG4EStandards from "src/assets/standards/WI/G4-E.json";
+import * as WIG4MStandards from "src/assets/standards/WI/G4-M.json";
+import * as WIG5EStandards from "src/assets/standards/WI/G5-E.json";
+import * as WIG5MStandards from "src/assets/standards/WI/G5-M.json";
+import * as WIG6EStandards from "src/assets/standards/WI/G6-E.json";
+import * as WIG6MStandards from "src/assets/standards/WI/G6-M.json";
+import * as WIG7EStandards from "src/assets/standards/WI/G7-E.json";
+import * as WIG7MStandards from "src/assets/standards/WI/G7-M.json";
+import * as WIG8EStandards from "src/assets/standards/WI/G8-E.json";
+import * as WIG8MStandards from "src/assets/standards/WI/G8-M.json";
+import * as WIEESSSStandards from "src/assets/standards/WI/EES-SS.json";
+import * as WIUESSSStandards from "src/assets/standards/WI/UES-SS.json";
+import * as WIMSSSStandards from "src/assets/standards/WI/MS-SS.json";
+import * as WIHSSSStandards from "src/assets/standards/WI/HS-SS.json";
+import * as SATMStandards from "src/assets/standards/SAT/SAT-M.json";
+import * as SATRWStandards from "src/assets/standards/SAT/SAT-RW.json";
+
+import { partition } from 'rxjs/operators';
+import { kMaxLength } from 'buffer';
 
 const confetti = require('canvas-confetti');
 
@@ -671,49 +1067,67 @@ const confettiHandler = confetti.create(confettiCanvas, {
 });
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-template-edit-quiz',
+  templateUrl: './template-edit-quiz.component.html',
+  styleUrls: ['./template-edit-quiz.component.css']
 })
 
 @Injectable()
-export class HomeComponent implements OnInit {
-  // title = 'More Problems';
-
-  user_data: any = {};
+export class TemplateEditQuizComponent implements OnInit {
+  title = 'More Problems';
 
   screenWidth = window.innerWidth;
-  screenHeight = window.innerHeight;
   mobileWidth = 1000;
   blank = " ";
-  menuOpen = false;
+
+  key: string = '';
+  quiz_config: any = {};
+  user_data: any = {};
+  data_loaded = false;
+
+  expand_filters = true;
+  topics: string[] = [];
+  subtopics: string[] = [];
+  topics_count: { [key: string]: number } = {};
+  subtopics_count: { [key: string]: number } = {};
+  state_filters: string[] = [];
+  grade_filters: string[] = [];
+  subject_filters: string[] = [];
+  topic_filters: string[] = [];
+  // sub_topic = false;
   expand_refsheet = false;
   expand_supp = true;
-  quiz_config: any = {};
-  data_loaded = false;
-  has_classes = false;
-  count = 0;
+  expand_overview = true;
+  expand_topics = true;
+  show_correct = false;
+  shuffle = false;
+  public = false;
+  mode = 'assess';
+  length_mode = 'number';
+  quiz_name: string = '';
+  quiz_length = 10;
+  quiz_timer = 10;
+  timer_hours = 0;
+  timer_minutes = 0;
 
-  // user_data: any = null;
-  edit_e_list: any = {};
+  selected_curriculum: string = '';
+  selected_grade: string = '';
+  selected_subject: string = '';
+  selected_topic = "";
+  state_grades: string[] = [];
+  state_subjects: string[] = [];
+  subject_exams: string[] = [];
+  standards_id = '';
+  topic_id = '';
+  enable_standards = false;
+  default_standard: string[] = ['', ''];
+  default_probtype: string = 'Multiple Choice';
+  default_numchoices: number = 4;
+  problems_loaded: boolean = false;
+  enable_timelimit = false;
+  shuffle_mode: boolean = false;
 
-  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Timer': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number }, 'Parts': string[] } } = examMetadata;
-  exam_set = ['COG3E', 'COG4E', 'COG5E', 'COG6E', 'COG7E', 'COG8E', 'COG3M', 'COG4M', 'COG5M', 'COG6M', 'COG7M', 'COG8M', 'COG5S', 'COG8S', 'COHSS', 'DEG4SS', 'DEG7SS', 'DEG11SS', 'FL20G3M', 'FL20G3R', 'FL20G4M', 'FL20G4R', 'FL20G4W', 'FL20G5M', 'FL20G5R', 'FL20G5W', 'FL20G5S', 'FL20G6M', 'FL20G6R', 'FL20G6W', 'FL20G7M', 'FL20G7R', 'FL20G7W', 'FL20G8M', 'FL20G8R', 'FL20G8W', 'FL20G8S', 'FL20G9R', 'FL20G9W', 'FL20G10R', 'FL20G10W', 'ILG3E', 'ILG3M', 'ILG4E', 'ILG4M', 'ILG5E', 'ILG5M', 'ILG6E', 'ILG6M', 'ILG7E', 'ILG7M', 'ILG8E', 'ILG8M', 'MA23G3E', 'MA22G3E', 'MA21G3E', 'MA19G3E', 'MAG3E', 'MA23G3M', 'MA22G3M', 'MA21G3M', 'MA19G3M', 'MAG3M', 'MA23G4E', 'MA22G4E', 'MA21G4E', 'MA19G4E', 'MAG4E', 'MA23G4M', 'MA22G4M', 'MA21G4M', 'MA19G4M', 'MAG4M', 'MA23G5E', 'MA22G5E', 'MA21G5E', 'MA19G5E', 'MAG5E', 'MA23G5M', 'MA22G5M', 'MA21G5M', 'MA19G5M', 'MAG5M', 'MA23G5S', 'MA22G5S', 'MA21G5S', 'MA19G5S', 'MAG5S', 'MA23G6E', 'MA22G6E', 'MA21G6E', 'MA19G6E', 'MAG6E', 'MA23G6M', 'MA22G6M', 'MA21G6M', 'MA19G6M', 'MAG6M', 'MA23G7E', 'MA22G7E', 'MA21G7E', 'MA19G7E', 'MAG7E', 'MA23G7M', 'MA22G7M', 'MA21G7M', 'MA19G7M', 'MAG7M', 'MA23G8E', 'MA22G8E', 'MA21G8E', 'MA19G8E', 'MAG8E', 'MA23G8M', 'MA22G8M', 'MA21G8M', 'MA19G8M', 'MAG8M', 'MA23G8S', 'MA22G8S', 'MA21G8S', 'MA19G8S', 'MAG8S', 'MA23G10E', 'MA22G10E', 'MA21G10E', 'MA19G10E', 'MAG10E', 'MA23G10M', 'MA22G10M', 'MA21G10M', 'MA19G10M', 'MAG10M', 'MA23HSB', 'MA22HSB', 'MA19HSB', 'MA23HSP', 'MA22HSP', 'MA19HSP', 'MDG3E', 'MDG4E', 'MDG5E', 'MDG6E', 'MDG7E', 'MDG8E', 'MDG10E', 'MDG3M', 'MDG4M', 'MDG5M', 'MDG6M', 'MDG7M', 'MDG8M', 'MDG5S', 'MDG8S', 'MDG8SS', 'MS23G3E', 'MS22G3E', 'MS23G4E', 'MS22G4E', 'MS23G5E', 'MS22G5E', 'MS23G6E', 'MS22G6E', 'MS23G7E', 'MS22G7E', 'MS23G8E', 'MS22G8E', 'MS23G3M', 'MS22G3M', 'MS23G4M', 'MS22G4M', 'MS23G5M', 'MS22G5M', 'MS23G6M', 'MS22G6M', 'MS23G7M', 'MS22G7M', 'MS23G8M', 'MS22G8M', 'NJG3E', 'NJG3M', 'NJG4E', 'NJG4M', 'NJG5E', 'NJG5M', 'NJG5S', 'NJG6E', 'NJG6M', 'NJG7E', 'NJG7M', 'NJG8E', 'NJG8M', 'NJG8S', 'NJG9E', 'NJG11S', 'NMG3E', 'NMG3M', 'NMG4E', 'NMG4M', 'NMG5E', 'NMG5M', 'NMG5S', 'NMG6E', 'NMG6M', 'NMG7E', 'NMG7M', 'NMG8E', 'NMG8M', 'NMG8S', 'NMG11S', 'NY23G3M', 'NY23G3E', 'NY22G3M', 'NY22G3E', 'NY21G3M', 'NY21G3E', 'NY19G3M', 'NY19G3E', 'NY18G3M', 'NY18G3E', 'NY17G3M', 'NY17G3E', 'NY16G3M', 'NY16G3E', 'NY15G3M', 'NY15G3E', 'NY23G4M', 'NY23G4E', 'NY22G4M', 'NY22G4E', 'NY21G4M', 'NY21G4E', 'NY19G4M', 'NY19G4E', 'NY18G4M', 'NY18G4E', 'NY17G4M', 'NY17G4E', 'NY16G4M', 'NY16G4E', 'NY15G4M', 'NY15G4E', 'NY22G4S', 'NY21G4S', 'NY19G4S', 'NY18G4S', 'NY17G4S', 'NY16G4S', 'NY15G4S', 'NY23G5M', 'NY23G5E', 'NY22G5M', 'NY22G5E', 'NY21G5M', 'NY21G5E', 'NY19G5M', 'NY19G5E', 'NY18G5M', 'NY18G5E', 'NY17G5M', 'NY17G5E', 'NY16G5M', 'NY16G5E', 'NY15G5M', 'NY15G5E', 'NY23G6M', 'NY23G6E', 'NY22G6M', 'NY22G6E', 'NY21G6M', 'NY21G6E', 'NY19G6M', 'NY19G6E', 'NY18G6M', 'NY18G6E', 'NY17G6M', 'NY17G6E', 'NY16G6M', 'NY16G6E', 'NY15G6M', 'NY15G6E', 'NY23G7M', 'NY23G7E', 'NY22G7M', 'NY22G7E', 'NY21G7M', 'NY21G7E', 'NY19G7M', 'NY19G7E', 'NY18G7M', 'NY18G7E', 'NY17G7M', 'NY17G7E', 'NY16G7M', 'NY16G7E', 'NY15G7M', 'NY15G7E', 'NY23G8M', 'NY23G8E', 'NY22G8M', 'NY22G8E', 'NY21G8M', 'NY21G8E', 'NY19G8M', 'NY19G8E', 'NY18G8M', 'NY18G8E', 'NY17G8M', 'NY17G8E', 'NY16G8M', 'NY16G8E', 'NY15G8M', 'NY15G8E', 'NY22G8S', 'NY21G8S', 'NY19G8S', 'NY18G8S', 'NY17G8S', 'NY16G8S', 'NY15G8S', 'PA23G3M', 'PA23G3E', 'PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA23G4M', 'PA23G4E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA23G4S', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA23G5M', 'PA23G5E', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA23G6M', 'PA23G6E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA23G7M', 'PA23G7E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA23G8M', 'PA23G8E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA23G8S', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S', 'PSAT1RW1', 'PSAT1RW2', 'PSAT1M1', 'PSAT1M2', 'RI23G3M', 'RI22G3M', 'RI21G3M', 'RI19G3M', 'RI18G3M', 'RI23G3E', 'RI22G3E', 'RI21G3E', 'RI19G3E', 'RI18G3E', 'RI23G4M', 'RI22G4M', 'RI21G4M', 'RI19G4M', 'RI18G4M', 'RI23G4E', 'RI22G4E', 'RI21G4E', 'RI19G4E', 'RI18G4E', 'RI23G5M', 'RI22G5M', 'RI21G5M', 'RI19G5M', 'RI18G5M', 'RI23G5E', 'RI22G5E', 'RI21G5E', 'RI19G5E', 'RI18G5E', 'RI23G6M', 'RI22G6M', 'RI21G6M', 'RI19G6M', 'RI18G6M', 'RI23G6E', 'RI22G6E', 'RI21G6E', 'RI19G6E', 'RI18G6E', 'RI23G7M', 'RI22G7M', 'RI21G7M', 'RI19G7M', 'RI18G7M', 'RI23G7E', 'RI22G7E', 'RI21G7E', 'RI19G7E', 'RI18G7E', 'RI23G8M', 'RI22G8M', 'RI21G8M', 'RI19G8M', 'RI18G8M', 'RI23G8E', 'RI22G8E', 'RI21G8E', 'RI19G8E', 'RI18G8E', 'SAT1RW1', 'SAT1RW2', 'SAT1M1', 'SAT1M2', 'SAT2RW1', 'SAT2RW2', 'SAT2M1', 'SAT2M2', 'SAT3RW1', 'SAT3RW2', 'SAT3M1', 'SAT3M2', 'SAT4RW1', 'SAT4RW2', 'SAT4M1', 'SAT4M2', 'SC18G3E', 'SC18G4E', 'SC18G5E', 'SC18G6E', 'SC18G7E', 'SC18G8E', 'SC18G3M', 'SC18G4M', 'SC18G5M', 'SC18G6M', 'SC18G7M', 'SC18G8M', 'SC18G4S', 'SC18G6S', 'TN20G3E', 'TN20G3M', 'TN20G3S', 'TN20G4E', 'TN20G4M', 'TN20G4S', 'TN20G5E', 'TN20G5M', 'TN20G5S', 'TN20G6E', 'TN20G6M', 'TN20G6S', 'TN20G6SS', 'TN20G7E', 'TN20G7M', 'TN20G7S', 'TN20G7SS', 'TN20G8E', 'TN20G8M', 'TN20G8S', 'TN20G8SS', 'TN20HSA1', 'TN20HSA2', 'TN20HSB', 'TN20HSE1', 'TN20HSE2', 'TN20HSG', 'TN20HSUSH', 'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH', 'WIG3E', 'WIG4E', 'WIG5E', 'WIG6E', 'WIG7E', 'WIG8E', 'WIG3M', 'WIG4M', 'WIG5M', 'WIG6M', 'WIG7M', 'WIG8M', 'WIG4S', 'WIG8S', 'WIG4SS', 'WIG8SS', 'WIG10SS'];
-  favorite_exm_set: string[] = [];
-  favorite_std_set: string[][] = [];
-  inprogress_set: string[] = [];
-  inprogress_exams: { [key: string]: any } = {};
-  inprogress_quizzes: { [key: string]: any } = {};
-  my_stud_inprogress_set: string[][] = [];
-  my_stud_inprogress_exams: { [key: string]: { [key: string]: any } } = {};
-  my_stud_inprogress_quizzes: { [key: string]: { [key: string]: any } } = {};
-  selected_stud = '';
-  student_sub_metadata: any = {};
-
-  selected_state = '';
-  selected_grade = '';
-
-  assign_e = false;
+  assign_q = false;
   all_students: string[] = [];
   all_students_data: any = {};
   my_students: string[] = [];
@@ -721,26 +1135,29 @@ export class HomeComponent implements OnInit {
   new_assignments: string[] = [];
   my_class_metadata: any[] = [];
   class_data: any = {};
-  student_list: string[] = [];
-  student_metadata: any[] = [];
-  selected_student = "";
-  my_student_metadata: any[] = [];
-  student_data: any = {};
-  my_quiz_metadata: any[] = [];
-  quiz_data: any = {};
-  class_list: string[] = [];
-  total_percent_correct = 0;
-  total_test_time: string = "";
-  complete_exam_count = 0;
-  complete_exam_list: string[] = [];
-  inprog_exam_count = 0;
 
-  grade_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Tops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'SubTops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } } } } } = {};
-  subject_breakdown_top: { [key: string]: { 'Grade': string, 'Subject': string, 'Break': { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Tops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, } } } } } = {};
-  subject_breakdown_subtop: { [key: string]: { 'Grade': string, 'Subject': string, 'Topic': string, 'Break': { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'SubTops': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, } } } } } = {};
-  topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
+  et_counter: number = 0;
+  et_minutes: number = 0;
+  et_timer: any;
+  et_running: boolean = false;
+  pt_counter: number = 0;
+  pt_minutes: number = 0;
+  pt_timer: any;
+  pt_running: boolean = false;
 
-  avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
+  // exam_state = 'Texas';
+  // exam_grade = 'Grade 3';
+  // exam_subject = 'Mathematics';
+  // exam_name = 'STAAR';
+  // exam_year = '2021';
+  exam_timer = 10;
+
+  exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Timer': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number }, 'Parts': string[] } } = examMetadata;
+  state_attribute_dump: { [key: string]: { 'State': string, 'EOverview': string, 'SOverview': string } } = stateMetadata;
+  standards_attribute_dump: { [key: string]: { 'State': string, 'Grades': string[], 'Subject': string, 'Curriculum': string } } = standardMetadata;
+  state_set: string[] = ['CO', 'FL', 'MA', 'MD', 'MS', 'NJ', 'NY', 'PA', 'RI', 'SC', 'TN', 'TX'];
+  exam_set = ['COG3E', 'COG4E', 'COG5E', 'COG6E', 'COG7E', 'COG8E', 'COG3M', 'COG4M', 'COG5M', 'COG6M', 'COG7M', 'COG8M', 'COG5S', 'COG8S', 'COHSS', 'DEG4SS', 'DEG7SS', 'DEG11SS', 'FL20G3M', 'FL20G3R', 'FL20G4M', 'FL20G4R', 'FL20G4W', 'FL20G5M', 'FL20G5R', 'FL20G5W', 'FL20G5S', 'FL20G6M', 'FL20G6R', 'FL20G6W', 'FL20G7M', 'FL20G7R', 'FL20G7W', 'FL20G8M', 'FL20G8R', 'FL20G8W', 'FL20G8S', 'FL20G9R', 'FL20G9W', 'FL20G10R', 'FL20G10W', 'ILG3E', 'ILG3M', 'ILG4E', 'ILG4M', 'ILG5E', 'ILG5M', 'ILG6E', 'ILG6M', 'ILG7E', 'ILG7M', 'ILG8E', 'ILG8M', 'MA23G3E', 'MA22G3E', 'MA21G3E', 'MA19G3E', 'MAG3E', 'MA23G3M', 'MA22G3M', 'MA21G3M', 'MA19G3M', 'MAG3M', 'MA23G4E', 'MA22G4E', 'MA21G4E', 'MA19G4E', 'MAG4E', 'MA23G4M', 'MA22G4M', 'MA21G4M', 'MA19G4M', 'MAG4M', 'MA23G5E', 'MA22G5E', 'MA21G5E', 'MA19G5E', 'MAG5E', 'MA23G5M', 'MA22G5M', 'MA21G5M', 'MA19G5M', 'MAG5M', 'MA23G5S', 'MA22G5S', 'MA21G5S', 'MA19G5S', 'MAG5S', 'MA23G6E', 'MA22G6E', 'MA21G6E', 'MA19G6E', 'MAG6E', 'MA23G6M', 'MA22G6M', 'MA21G6M', 'MA19G6M', 'MAG6M', 'MA23G7E', 'MA22G7E', 'MA21G7E', 'MA19G7E', 'MAG7E', 'MA23G7M', 'MA22G7M', 'MA21G7M', 'MA19G7M', 'MAG7M', 'MA23G8E', 'MA22G8E', 'MA21G8E', 'MA19G8E', 'MAG8E', 'MA23G8M', 'MA22G8M', 'MA21G8M', 'MA19G8M', 'MAG8M', 'MA23G8S', 'MA22G8S', 'MA21G8S', 'MA19G8S', 'MAG8S', 'MA23G10E', 'MA22G10E', 'MA21G10E', 'MA19G10E', 'MAG10E', 'MA23G10M', 'MA22G10M', 'MA21G10M', 'MA19G10M', 'MAG10M', 'MA23HSB', 'MA22HSB', 'MA19HSB', 'MA23HSP', 'MA22HSP', 'MA19HSP', 'MDG3E', 'MDG4E', 'MDG5E', 'MDG6E', 'MDG7E', 'MDG8E', 'MDG10E', 'MDG3M', 'MDG4M', 'MDG5M', 'MDG6M', 'MDG7M', 'MDG8M', 'MDG5S', 'MDG8S', 'MDG8SS', 'MS23G3E', 'MS22G3E', 'MS23G4E', 'MS22G4E', 'MS23G5E', 'MS22G5E', 'MS23G6E', 'MS22G6E', 'MS23G7E', 'MS22G7E', 'MS23G8E', 'MS22G8E', 'MS23G3M', 'MS22G3M', 'MS23G4M', 'MS22G4M', 'MS23G5M', 'MS22G5M', 'MS23G6M', 'MS22G6M', 'MS23G7M', 'MS22G7M', 'MS23G8M', 'MS22G8M', 'NJG3E', 'NJG3M', 'NJG4E', 'NJG4M', 'NJG5E', 'NJG5M', 'NJG5S', 'NJG6E', 'NJG6M', 'NJG7E', 'NJG7M', 'NJG8E', 'NJG8M', 'NJG8S', 'NJG9E', 'NJG11S', 'NMG3E', 'NMG3M', 'NMG4E', 'NMG4M', 'NMG5E', 'NMG5M', 'NMG5S', 'NMG6E', 'NMG6M', 'NMG7E', 'NMG7M', 'NMG8E', 'NMG8M', 'NMG8S', 'NMG11S', 'NY23G3M', 'NY23G3E', 'NY22G3M', 'NY22G3E', 'NY21G3M', 'NY21G3E', 'NY19G3M', 'NY19G3E', 'NY18G3M', 'NY18G3E', 'NY17G3M', 'NY17G3E', 'NY16G3M', 'NY16G3E', 'NY15G3M', 'NY15G3E', 'NY23G4M', 'NY23G4E', 'NY22G4M', 'NY22G4E', 'NY21G4M', 'NY21G4E', 'NY19G4M', 'NY19G4E', 'NY18G4M', 'NY18G4E', 'NY17G4M', 'NY17G4E', 'NY16G4M', 'NY16G4E', 'NY15G4M', 'NY15G4E', 'NY22G4S', 'NY21G4S', 'NY19G4S', 'NY18G4S', 'NY17G4S', 'NY16G4S', 'NY15G4S', 'NY23G5M', 'NY23G5E', 'NY22G5M', 'NY22G5E', 'NY21G5M', 'NY21G5E', 'NY19G5M', 'NY19G5E', 'NY18G5M', 'NY18G5E', 'NY17G5M', 'NY17G5E', 'NY16G5M', 'NY16G5E', 'NY15G5M', 'NY15G5E', 'NY23G6M', 'NY23G6E', 'NY22G6M', 'NY22G6E', 'NY21G6M', 'NY21G6E', 'NY19G6M', 'NY19G6E', 'NY18G6M', 'NY18G6E', 'NY17G6M', 'NY17G6E', 'NY16G6M', 'NY16G6E', 'NY15G6M', 'NY15G6E', 'NY23G7M', 'NY23G7E', 'NY22G7M', 'NY22G7E', 'NY21G7M', 'NY21G7E', 'NY19G7M', 'NY19G7E', 'NY18G7M', 'NY18G7E', 'NY17G7M', 'NY17G7E', 'NY16G7M', 'NY16G7E', 'NY15G7M', 'NY15G7E', 'NY23G8M', 'NY23G8E', 'NY22G8M', 'NY22G8E', 'NY21G8M', 'NY21G8E', 'NY19G8M', 'NY19G8E', 'NY18G8M', 'NY18G8E', 'NY17G8M', 'NY17G8E', 'NY16G8M', 'NY16G8E', 'NY15G8M', 'NY15G8E', 'NY22G8S', 'NY21G8S', 'NY19G8S', 'NY18G8S', 'NY17G8S', 'NY16G8S', 'NY15G8S', 'PA23G3M', 'PA23G3E', 'PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA23G4M', 'PA23G4E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA23G4S', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA23G5M', 'PA23G5E', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA23G6M', 'PA23G6E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA23G7M', 'PA23G7E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA23G8M', 'PA23G8E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA23G8S', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S', 'PSAT1RW1', 'PSAT1RW2', 'PSAT1M1', 'PSAT1M2', 'RI23G3M', 'RI22G3M', 'RI21G3M', 'RI19G3M', 'RI18G3M', 'RI23G3E', 'RI22G3E', 'RI21G3E', 'RI19G3E', 'RI18G3E', 'RI23G4M', 'RI22G4M', 'RI21G4M', 'RI19G4M', 'RI18G4M', 'RI23G4E', 'RI22G4E', 'RI21G4E', 'RI19G4E', 'RI18G4E', 'RI23G5M', 'RI22G5M', 'RI21G5M', 'RI19G5M', 'RI18G5M', 'RI23G5E', 'RI22G5E', 'RI21G5E', 'RI19G5E', 'RI18G5E', 'RI23G6M', 'RI22G6M', 'RI21G6M', 'RI19G6M', 'RI18G6M', 'RI23G6E', 'RI22G6E', 'RI21G6E', 'RI19G6E', 'RI18G6E', 'RI23G7M', 'RI22G7M', 'RI21G7M', 'RI19G7M', 'RI18G7M', 'RI23G7E', 'RI22G7E', 'RI21G7E', 'RI19G7E', 'RI18G7E', 'RI23G8M', 'RI22G8M', 'RI21G8M', 'RI19G8M', 'RI18G8M', 'RI23G8E', 'RI22G8E', 'RI21G8E', 'RI19G8E', 'RI18G8E', 'SAT1RW1', 'SAT1RW2', 'SAT1M1', 'SAT1M2', 'SAT2RW1', 'SAT2RW2', 'SAT2M1', 'SAT2M2', 'SAT3RW1', 'SAT3RW2', 'SAT3M1', 'SAT3M2', 'SAT4RW1', 'SAT4RW2', 'SAT4M1', 'SAT4M2', 'SC18G3E', 'SC18G4E', 'SC18G5E', 'SC18G6E', 'SC18G7E', 'SC18G8E', 'SC18G3M', 'SC18G4M', 'SC18G5M', 'SC18G6M', 'SC18G7M', 'SC18G8M', 'SC18G4S', 'SC18G6S', 'TN20G3E', 'TN20G3M', 'TN20G3S', 'TN20G4E', 'TN20G4M', 'TN20G4S', 'TN20G5E', 'TN20G5M', 'TN20G5S', 'TN20G6E', 'TN20G6M', 'TN20G6S', 'TN20G6SS', 'TN20G7E', 'TN20G7M', 'TN20G7S', 'TN20G7SS', 'TN20G8E', 'TN20G8M', 'TN20G8S', 'TN20G8SS', 'TN20HSA1', 'TN20HSA2', 'TN20HSB', 'TN20HSE1', 'TN20HSE2', 'TN20HSG', 'TN20HSUSH', 'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH', 'WIG3E', 'WIG4E', 'WIG5E', 'WIG6E', 'WIG7E', 'WIG8E', 'WIG3M', 'WIG4M', 'WIG5M', 'WIG6M', 'WIG7M', 'WIG8M', 'WIG4S', 'WIG8S', 'WIG4SS', 'WIG8SS', 'WIG10SS'];
+  standard_set: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PE-CO", "PM-CO", "PS-CO", "PSS-CO", "KE-CO", "KM-CO", "KS-CO", "KSS-CO", "G1E-CO", "G1M-CO", "G1S-CO", "G1SS-CO", "G2E-CO", "G2M-CO", "G2S-CO", "G2SS-CO", "G3E-CO", "G3M-CO", "G3S-CO", "G3SS-CO", "G4E-CO", "G4M-CO", "G4S-CO", "G4SS-CO", "G5E-CO", "G5M-CO", "G5S-CO", "G5SS-CO", "G6E-CO", "G6M-CO", "G6SS-CO", "G7E-CO", "G7M-CO", "G7SS-CO", "G8E-CO", "G8M-CO", "MSS-CO", "G8SS-CO", "HSE1-CO", "HSE2-CO", "HSM-CO", "HSS-CO", "HSSS-CO", "KE-FL", "KM-FL", "G1E-FL", "G1M-FL", "G2E-FL", "G2M-FL", "G3E-FL", "G3M-FL", "G4E-FL", "G4M-FL", "G5E-FL", "G5M-FL", "G6E-FL", "G6M-FL", "G7E-FL", "G7M-FL", "G8E-FL", "G8M-FL", "G9E-FL", "G10E-FL", "G11E-FL", "G12E-FL", "HSM-FL", "PE-MA", "PM-MA", "PS-MA", "KE-MA", "KM-MA", "KS-MA", "EEST-MA", "G1E-MA", "G1M-MA", "G1S-MA", "G2E-MA", "G2M-MA", "G2S-MA", "G3E-MA", "G3M-MA", "G3S-MA", "UEST-MA", "G4E-MA", "G4M-MA", "G4S-MA", "G5E-MA", "G5M-MA", "G5S-MA", "G6E-MA", "G6M-MA", "G6S-MA", "MST-MA", "G7E-MA", "G7M-MA", "G7S-MA", "G8E-MA", "G8M-MA", "G8S-MA", "HSE1-MA", "HSE2-MA", "HSMA-MA", "HSMF-MA", "HSMG-MA", "HSMM-MA", "HSMN-MA", "HSMS-MA", "HSSB-MA", "HSSC-MA", "HSSP-MA", "HSSES-MA", "HSSTS-MA", "HST-MA", "PE-MD", "PM-MD", "KE-MD", "KM-MD", "G1E-MD", "G1M-MD", "G2E-MD", "G2M-MD", "G3E-MD", "G3M-MD", "G4E-MD", "G4M-MD", "G5E-MD", "G5M-MD", "G6E-MD", "G6M-MD", "G7E-MD", "G7M-MD", "G8E-MD", "G8M-MD", "HSE1-MD", "HSE2-MD", "HSMA1-MD", "HSMA2-MD", "HSMG-MD", "HSMS-MD", "KE-MS", "KM-MS", "G1E-MS", "G1M-MS", "G2E-MS", "G2M-MS", "G3E-MS", "G3M-MS", "G4E-MS", "G4M-MS", "G5E-MS", "G5M-MS", "G6E-MS", "G6M-MS", "G7E-MS", "G7M-MS", "G8E-MS", "G8M-MS", "KS-NG", "G1S-NG", "G2S-NG", "G3S-NG", "G4S-NG", "G5S-NG", "MSS-NG", "HSS-NG", "KE-NJ", "KM-NJ", "KS-NJ", "G1E-NJ", "G1M-NJ", "G1S-NJ", "G2E-NJ", "G2M-NJ", "G2S-NJ", "G3E-NJ", "G3M-NJ", "G3S-NJ", "G4E-NJ", "G4M-NJ", "G4S-NJ", "G5E-NJ", "G5M-NJ", "G5S-NJ", "G6E-NJ", "G6M-NJ", "G7E-NJ", "G7M-NJ", "G8E-NJ", "G8M-NJ", "MSS-NJ", "PE-NY", "PM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KE-RI", "KM-RI", "G1E-RI", "G1M-RI", "G2E-RI", "G2M-RI", "G3E-RI", "G3M-RI", "G4E-RI", "G4M-RI", "G5E-RI", "G5M-RI", "G6E-RI", "G6M-RI", "G7E-RI", "G7M-RI", "G8E-RI", "G8M-RI", "HSE1-RI", "HSE2-RI", "HSMA-RI", "HSMF-RI", "HSMG-RI", "HSMM-RI", "HSMN-RI", "HSMS-RI", "KE-SC", "KM-SC", "KS-SC", "G1E-SC", "G1M-SC", "G1S-SC", "G2E-SC", "G2M-SC", "G2S-SC", "G3E-SC", "G3M-SC", "G3S-SC", "G4E-SC", "G4M-SC", "G4S-SC", "G5E-SC", "G5M-SC", "G5S-SC", "G6E-SC", "G6M-SC", "G6S-SC", "G7E-SC", "G7M-SC", "G7S-SC", "G8E-SC", "G8M-SC", "G8S-SC", "KE-TN", "KM-TN", "KS-TN", "G1E-TN", "G1M-TN", "G1S-TN", "G2E-TN", "G2M-TN", "G2S-TN", "G3E-TN", "G3M-TN", "G3S-TN", "G4E-TN", "G4M-TN", "G4S-TN", "G5E-TN", "G5M-TN", "G5S-TN", "G6E-TN", "G6M-TN", "G6S-TN", "G7E-TN", "G7M-TN", "G7S-TN", "G8E-TN", "G8M-TN", "G8S-TN", "HSMA1-TN", "HSMA2-TN", "HSSB1-TN", "HSE1-TN", "HSE2-TN", "HSMG-TN", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA1-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX", "KE-WI", "KM-WI", "G1E-WI", "G1M-WI", "G2E-WI", "G2M-WI", "G3E-WI", "G3M-WI", "G4E-WI", "G4M-WI", "G5E-WI", "G5M-WI", "G6E-WI", "G6M-WI", "G7E-WI", "G7M-WI", "G8E-WI", "G8M-WI", "EESSS-WI", "UESSS-WI", "MSSS-WI", "HSSS-WI", "SAT-M", "SAT-RW"];
 
   COG3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = COG3EProblems;
   COG4E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = COG4EProblems;
@@ -1396,7 +1813,402 @@ export class HomeComponent implements OnInit {
   WIG4SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = WIG4SSProblems;
   WIG8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = WIG8SSProblems;
   WIG10SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = WIG10SSProblems;
-  dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } } = {
+
+  KE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KEStandards;
+  KM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KMStandards;
+  G1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G1EStandards;
+  G1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G1MStandards;
+  G2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G2EStandards;
+  G2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G2MStandards;
+  G3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G3EStandards;
+  G3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G3MStandards;
+  G4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G4EStandards;
+  G4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G4MStandards;
+  G5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G5EStandards;
+  G5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G5MStandards;
+  G6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G6EStandards;
+  G6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G6MStandards;
+  G7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G7EStandards;
+  G7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G7MStandards;
+  G8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G8EStandards;
+  G8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = G8MStandards;
+  HSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSE1Standards;
+  HSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSE2Standards;
+  HSMA_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMAStandards;
+  HSMF_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMFStandards;
+  HSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMGStandards;
+  HSMM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMMStandards;
+  HSMN_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMNStandards;
+  HSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = HSMSStandards;
+  COPE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COPEStandards;
+  COPM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COPMStandards;
+  COPS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COPSStandards;
+  COPSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COPSSStandards;
+  COKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COKEStandards;
+  COKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COKMStandards;
+  COKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COKSStandards;
+  COKSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COKSSStandards;
+  COG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG1EStandards;
+  COG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG1MStandards;
+  COG1S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG1SStandards;
+  COG1SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG1SSStandards;
+  COG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG2EStandards;
+  COG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG2MStandards;
+  COG2S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG2SStandards;
+  COG2SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG2SSStandards;
+  COG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG3EStandards;
+  COG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG3MStandards;
+  COG3S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG3SStandards;
+  COG3SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG3SSStandards;
+  COG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG4EStandards;
+  COG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG4MStandards;
+  COG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG4SStandards;
+  COG4SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG4SSStandards;
+  COG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG5EStandards;
+  COG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG5MStandards;
+  COG5S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG5SStandards;
+  COG5SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG5SSStandards;
+  COG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG6EStandards;
+  COG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG6MStandards;
+  COG6SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG6SSStandards;
+  COG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG7EStandards;
+  COG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG7MStandards;
+  COG7SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG7SSStandards;
+  COG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG8EStandards;
+  COG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG8MStandards;
+  COMSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COMSSStandards;
+  COG8SS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COG8SSStandards;
+  COHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSE1Standards;
+  COHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSE2Standards;
+  COHSM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSMStandards;
+  COHSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSSStandards;
+  COHSSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = COHSSSStandards;
+  FLKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLKEStandards;
+  FLKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLKMStandards;
+  FLG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG1EStandards;
+  FLG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG1MStandards;
+  FLG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG2EStandards;
+  FLG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG2MStandards;
+  FLG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG3EStandards;
+  FLG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG3MStandards;
+  FLG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG4EStandards;
+  FLG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG4MStandards;
+  FLG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG5EStandards;
+  FLG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG5MStandards;
+  FLG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG6EStandards;
+  FLG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG6MStandards;
+  FLG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG7EStandards;
+  FLG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG7MStandards;
+  FLG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG8EStandards;
+  FLG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG8MStandards;
+  FLG9E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG9EStandards;
+  FLG10E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG10EStandards;
+  FLG11E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG11EStandards;
+  FLG12E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLG12EStandards;
+  FLHSM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = FLHSMStandards;
+  MAPE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAPEStandards;
+  MAPM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAPMStandards;
+  MAPS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAPSStandards;
+  MAKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAKEStandards;
+  MAKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAKMStandards;
+  MAKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAKSStandards;
+  MAEEST_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAEESTStandards;
+  MAG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG1EStandards;
+  MAG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG1MStandards;
+  MAG1S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG1SStandards;
+  MAG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG2EStandards;
+  MAG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG2MStandards;
+  MAG2S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG2SStandards;
+  MAG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG3EStandards;
+  MAG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG3MStandards;
+  MAG3S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG3SStandards;
+  MAUEST_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAUESTStandards;
+  MAG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG4EStandards;
+  MAG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG4MStandards;
+  MAG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG4SStandards;
+  MAG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG5EStandards;
+  MAG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG5MStandards;
+  MAG5S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG5SStandards;
+  MAG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG6EStandards;
+  MAG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG6MStandards;
+  MAG6S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG6SStandards;
+  MAMST_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAMSTStandards;
+  MAG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG7EStandards;
+  MAG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG7MStandards;
+  MAG7S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG7SStandards;
+  MAG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG8EStandards;
+  MAG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG8MStandards;
+  MAG8S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAG8SStandards;
+  MAHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSE1Standards;
+  MAHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSE2Standards;
+  MAHSMA_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSMAStandards;
+  MAHSMF_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSMFStandards;
+  MAHSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSMGStandards;
+  MAHSMM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSMMStandards;
+  MAHSMN_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSMNStandards;
+  MAHSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSMSStandards;
+  MAHSSB_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSSBStandards;
+  MAHSSC_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSSCStandards;
+  MAHSSP_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSSPStandards;
+  MAHSSES_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSSESStandards;
+  MAHSSTS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSSTSStandards;
+  MAHST_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MAHSTStandards;
+  MDPE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDPEStandards;
+  MDPM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDPMStandards;
+  MDKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDKEStandards;
+  MDKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDKMStandards;
+  MDG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG1EStandards;
+  MDG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG1MStandards;
+  MDG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG2EStandards;
+  MDG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG2MStandards;
+  MDG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG3EStandards;
+  MDG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG3MStandards;
+  MDG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG4EStandards;
+  MDG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG4MStandards;
+  MDG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG5EStandards;
+  MDG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG5MStandards;
+  MDG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG6EStandards;
+  MDG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG6MStandards;
+  MDG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG7EStandards;
+  MDG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG7MStandards;
+  MDG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG8EStandards;
+  MDG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDG8MStandards;
+  MDHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDHSE1Standards;
+  MDHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDHSE2Standards;
+  MDHSMA1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDHSMA1Standards;
+  MDHSMA2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDHSMA2Standards;
+  MDHSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDHSMGStandards;
+  MDHSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDHSMSStandards;
+  MSKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSKEStandards;
+  MSKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSKMStandards;
+  MSG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG1EStandards;
+  MSG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG1MStandards;
+  MSG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG2EStandards;
+  MSG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG2MStandards;
+  MSG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG3EStandards;
+  MSG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG3MStandards;
+  MSG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG4EStandards;
+  MSG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG4MStandards;
+  MSG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG5EStandards;
+  MSG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG5MStandards;
+  MSG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG6EStandards;
+  MSG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG6MStandards;
+  MSG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG7EStandards;
+  MSG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG7MStandards;
+  MSG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG8EStandards;
+  MSG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MSG8MStandards;
+  NGKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NGKSStandards;
+  NGG1S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NGG1SStandards;
+  NGG2S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NGG2SStandards;
+  NGG3S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NGG3SStandards;
+  NGG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NGG4SStandards;
+  NGG5S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NGG5SStandards;
+  NGMSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NGMSSStandards;
+  NGHSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NGHSSStandards;
+  NJKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJKEStandards;
+  NJKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJKMStandards;
+  NJKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJKSStandards;
+  NJG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG1EStandards;
+  NJG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG1MStandards;
+  NJG1S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG1SStandards;
+  NJG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG2EStandards;
+  NJG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG2MStandards;
+  NJG2S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG2SStandards;
+  NJG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG3EStandards;
+  NJG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG3MStandards;
+  NJG3S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG3SStandards;
+  NJG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG4EStandards;
+  NJG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG4MStandards;
+  NJG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG4SStandards;
+  NJG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG5EStandards;
+  NJG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG5MStandards;
+  NJG5S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG5SStandards;
+  NJG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG6EStandards;
+  NJG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG6MStandards;
+  NJG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG7EStandards;
+  NJG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG7MStandards;
+  NJG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG8EStandards;
+  NJG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJG8MStandards;
+  NJMSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NJMSSStandards;
+  NYPE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYPEStandards;
+  NYPM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYPMStandards;
+  NYKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYKEStandards;
+  NYKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYKMStandards;
+  NYG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG1EStandards;
+  NYG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG1MStandards;
+  NYG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG2EStandards;
+  NYG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG2MStandards;
+  NYG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG3EStandards;
+  NYG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG3MStandards;
+  NYG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG4EStandards;
+  NYG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG4MStandards;
+  NYG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG5EStandards;
+  NYG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG5MStandards;
+  NYG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG6EStandards;
+  NYG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG6MStandards;
+  NYG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG7EStandards;
+  NYG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG7MStandards;
+  NYG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG8EStandards;
+  NYG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYG8MStandards;
+  NYHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYHSE1Standards;
+  NYHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYHSE2Standards;
+  NYHSMA1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYHSMA1Standards;
+  NYHSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYHSMGStandards;
+  NYHSMA2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = NYHSMA2Standards;
+  PAG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG3EStandards;
+  PAG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG3MStandards;
+  PAG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG4EStandards;
+  PAG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG4MStandards;
+  PAG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG4SStandards;
+  PAG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG5EStandards;
+  PAG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG5MStandards;
+  PAG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG6EStandards;
+  PAG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG6MStandards;
+  PAG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG7EStandards;
+  PAG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG7MStandards;
+  PAG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG8EStandards;
+  PAG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG8MStandards;
+  PAG8S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = PAG8SStandards;
+  RIKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIKEStandards;
+  RIKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIKMStandards;
+  RIG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG1EStandards;
+  RIG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG1MStandards;
+  RIG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG2EStandards;
+  RIG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG2MStandards;
+  RIG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG3EStandards;
+  RIG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG3MStandards;
+  RIG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG4EStandards;
+  RIG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG4MStandards;
+  RIG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG5EStandards;
+  RIG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG5MStandards;
+  RIG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG6EStandards;
+  RIG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG6MStandards;
+  RIG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG7EStandards;
+  RIG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG7MStandards;
+  RIG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG8EStandards;
+  RIG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIG8MStandards;
+  RIHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSE1Standards;
+  RIHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSE2Standards;
+  RIHSMA_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMAStandards;
+  RIHSMF_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMFStandards;
+  RIHSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMGStandards;
+  RIHSMM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMMStandards;
+  RIHSMN_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMNStandards;
+  RIHSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = RIHSMSStandards;
+  SCKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCKEStandards;
+  SCKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCKMStandards;
+  SCKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCKSStandards;
+  SCG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG1EStandards;
+  SCG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG1MStandards;
+  SCG1S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG1SStandards;
+  SCG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG2EStandards;
+  SCG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG2MStandards;
+  SCG2S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG2SStandards;
+  SCG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG3EStandards;
+  SCG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG3MStandards;
+  SCG3S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG3SStandards;
+  SCG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG4EStandards;
+  SCG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG4MStandards;
+  SCG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG4SStandards;
+  SCG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG5EStandards;
+  SCG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG5MStandards;
+  SCG5S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG5SStandards;
+  SCG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG6EStandards;
+  SCG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG6MStandards;
+  SCG6S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG6SStandards;
+  SCG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG7EStandards;
+  SCG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG7MStandards;
+  SCG7S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG7SStandards;
+  SCG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG8EStandards;
+  SCG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG8MStandards;
+  SCG8S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SCG8SStandards;
+  TNKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNKEStandards;
+  TNKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNKMStandards;
+  TNKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNKSStandards;
+  TNG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG1EStandards;
+  TNG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG1MStandards;
+  TNG1S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG1SStandards;
+  TNG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG2EStandards;
+  TNG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG2MStandards;
+  TNG2S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG2SStandards;
+  TNG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG3EStandards;
+  TNG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG3MStandards;
+  TNG3S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG3SStandards;
+  TNG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG4EStandards;
+  TNG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG4MStandards;
+  TNG4S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG4SStandards;
+  TNG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG5EStandards;
+  TNG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG5MStandards;
+  TNG5S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG5SStandards;
+  TNG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG6EStandards;
+  TNG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG6MStandards;
+  TNG6S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG6SStandards;
+  TNG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG7EStandards;
+  TNG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG7MStandards;
+  TNG7S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG7SStandards;
+  TNG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG8EStandards;
+  TNG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG8MStandards;
+  TNG8S_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNG8SStandards;
+  TNHSMA1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNHSMA1Standards;
+  TNHSMA2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNHSMA2Standards;
+  TNHSSB1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNHSSB1Standards;
+  TNHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNHSE1Standards;
+  TNHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNHSE2Standards;
+  TNHSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TNHSMGStandards;
+  TXKR_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXKRStandards;
+  TXKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXKMStandards;
+  TXG1R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG1RStandards;
+  TXG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG1MStandards;
+  TXG2R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG2RStandards;
+  TXG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG2MStandards;
+  TXG3R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG3RStandards;
+  TXG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG3MStandards;
+  TXG4R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG4RStandards;
+  TXG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG4MStandards;
+  TXG5R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG5RStandards;
+  TXG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG5MStandards;
+  TXG6R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG6RStandards;
+  TXG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG6MStandards;
+  TXG7R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG7RStandards;
+  TXG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG7MStandards;
+  TXG8R_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG8RStandards;
+  TXG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXG8MStandards;
+  TXHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE1Standards;
+  TXHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE2Standards;
+  TXHSE3_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE3Standards;
+  TXHSE4_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSE4Standards;
+  TXHSMA1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMAStandards;
+  TXHSMA2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMA2Standards;
+  TXHSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMGStandards;
+  TXHSMP_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMPStandards;
+  TXHSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = TXHSMSStandards;
+  WIKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIKEStandards;
+  WIKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIKMStandards;
+  WIG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG1EStandards;
+  WIG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG1MStandards;
+  WIG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG2EStandards;
+  WIG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG2MStandards;
+  WIG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG3EStandards;
+  WIG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG3MStandards;
+  WIG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG4EStandards;
+  WIG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG4MStandards;
+  WIG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG5EStandards;
+  WIG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG5MStandards;
+  WIG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG6EStandards;
+  WIG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG6MStandards;
+  WIG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG7EStandards;
+  WIG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG7MStandards;
+  WIG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG8EStandards;
+  WIG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIG8MStandards;
+  WIEESSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIEESSSStandards;
+  WIUESSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIUESSSStandards;
+  WIMSSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIMSSSStandards;
+  WIHSSS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = WIHSSSStandards;
+  SATM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SATMStandards;
+  SATRW_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SATRWStandards;
+  standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = SATRWStandards;
+
+  e_dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } } = {
     "COG3E": this.COG3E_exam_dump,
     "COG4E": this.COG4E_exam_dump,
     "COG5E": this.COG5E_exam_dump,
@@ -2053,824 +2865,446 @@ export class HomeComponent implements OnInit {
     "WIG10SS": this.WIG10SS_exam_dump
   };
 
-  exam_names: { [key: string]: string } = {
-    "COG3M": "Colorado CMAS Grade 3 Math Practice Exam",
-    "COG3E": "Colorado CMAS Grade 3 English Language Arts Practice Exam",
-    "COG4M": "Colorado CMAS Grade 4 Math Practice Exam",
-    "COG4E": "Colorado CMAS Grade 4 English Language Arts Practice Exam",
-    "COG5M": "Colorado CMAS Grade 5 Math Practice Exam",
-    "COG5E": "Colorado CMAS Grade 5 English Language Arts Practice Exam",
-    "COG5S": "Colorado CMAS Grade 5 Science Practice Exam",
-    "COG6M": "Colorado CMAS Grade 6 Math Practice Exam",
-    "COG6E": "Colorado CMAS Grade 6 English Language Arts Practice Exam",
-    "COG7M": "Colorado CMAS Grade 7 Math Practice Exam",
-    "COG7E": "Colorado CMAS Grade 7 English Language Arts Practice Exam",
-    "COG8M": "Colorado CMAS Grade 8 Math Practice Exam",
-    "COG8E": "Colorado CMAS Grade 8 English Language Arts Practice Exam",
-    "COG8S": "Colorado CMAS Grade 8 Science Practice Exam",
-    "COHSS": "Colorado CMAS High School Science Practice Exam",
-    "DEG4SS": "Delaware DeSSA Grade 4 Social Studies Practice Exam",
-    "DEG5S": "Delaware DeSSA Grade 5 Science Practice Exam",
-    "DEG7SS": "Delaware DeSSA Grade 7 Social Studies Practice Exam",
-    "DEG8S": "Delaware DeSSA Grade 8 Science Practice Exam",
-    "DEG11SS": "Delaware DeSSA Grade 11 Social Studies Practice Exam",
-    "FL20G3M": "Florida FSA 2020 Grade 3 Math Practice Exam",
-    "FL20G3R": "Florida FSA 2020 Grade 3 Reading Practice Exam",
-    "FL20G4M": "Florida FSA 2020 Grade 4 Math Practice Exam",
-    "FL20G4R": "Florida FSA 2020 Grade 4 Reading Practice Exam",
-    "FL20G4W": "Florida FSA 2020 Grade 4 Writing Practice Exam",
-    "FL20G5M": "Florida FSA 2020 Grade 5 Math Practice Exam",
-    "FL20G5R": "Florida FSA 2020 Grade 5 Reading Practice Exam",
-    "FL20G5W": "Florida FSA 2020 Grade 5 Writing Practice Exam",
-    "FL20G5S": "Florida FSA 2020 Grade 5 Science Practice Exam",
-    "FL20G6M": "Florida FSA 2020 Grade 6 Math Practice Exam",
-    "FL20G6R": "Florida FSA 2020 Grade 6 Reading Practice Exam",
-    "FL20G6W": "Florida FSA 2020 Grade 6 Writing Practice Exam",
-    "FL20G7M": "Florida FSA 2020 Grade 7 Math Practice Exam",
-    "FL20G7R": "Florida FSA 2020 Grade 7 Reading Practice Exam",
-    "FL20G7W": "Florida FSA 2020 Grade 7 Writing Practice Exam",
-    "FL20G8M": "Florida FSA 2020 Grade 8 Math Practice Exam",
-    "FL20G8R": "Florida FSA 2020 Grade 8 Reading Practice Exam",
-    "FL20G8W": "Florida FSA 2020 Grade 8 Writing Practice Exam",
-    "FL20G8S": "Florida FSA 2020 Grade 8 Science Practice Exam",
-    "FL20G9R": "Florida FSA 2020 Grade 9 Reading Practice Exam",
-    "FL20G9W": "Florida FSA 2020 Grade 9 Writing Practice Exam",
-    "FL20G10R": "Florida FSA 2020 Grade 10 Reading Practice Exam",
-    "FL20G10W": "Florida FSA 2020 Grade 10 Writing Practice Exam",
-    "ILG3M": "Illinois IAR Grade 3 Math Practice Exam",
-    "ILG3E": "Illinois IAR Grade 3 English Language Arts Practice Exam",
-    "ILG4M": "Illinois IAR Grade 4 Math Practice Exam",
-    "ILG4E": "Illinois IAR Grade 4 English Language Arts Practice Exam",
-    "ILG5M": "Illinois IAR Grade 5 Math Practice Exam",
-    "ILG5E": "Illinois IAR Grade 5 English Language Arts Practice Exam",
-    "ILG6M": "Illinois IAR Grade 6 Math Practice Exam",
-    "ILG6E": "Illinois IAR Grade 6 English Language Arts Practice Exam",
-    "ILG7M": "Illinois IAR Grade 7 Math Practice Exam",
-    "ILG7E": "Illinois IAR Grade 7 English Language Arts Practice Exam",
-    "ILG8M": "Illinois IAR Grade 8 Math Practice Exam",
-    "ILG8E": "Illinois IAR Grade 8 English Language Arts Practice Exam",
-    "MAG3M": "Massachusetts MCAS Grade 3 Math Practice Exam",
-    "MAG3E": "Massachusetts MCAS Grade 3 English Language Arts Practice Exam",
-    "MAG4M": "Massachusetts MCAS Grade 4 Math Practice Exam",
-    "MAG4E": "Massachusetts MCAS Grade 4 English Language Arts Practice Exam",
-    "MAG5M": "Massachusetts MCAS Grade 5 Math Practice Exam",
-    "MAG5E": "Massachusetts MCAS Grade 5 English Language Arts Practice Exam",
-    "MAG5S": "Massachusetts MCAS Grade 5 Science Practice Exam",
-    "MAG6M": "Massachusetts MCAS Grade 6 Math Practice Exam",
-    "MAG6E": "Massachusetts MCAS Grade 6 English Language Arts Practice Exam",
-    "MAG7M": "Massachusetts MCAS Grade 7 Math Practice Exam",
-    "MAG7E": "Massachusetts MCAS Grade 7 English Language Arts Practice Exam",
-    "MAG8M": "Massachusetts MCAS Grade 8 Math Practice Exam",
-    "MAG8E": "Massachusetts MCAS Grade 8 English Language Arts Practice Exam",
-    "MAG8S": "Massachusetts MCAS Grade 8 Science Practice Exam",
-    "MAG10M": "Massachusetts MCAS Grade 10 Math Practice Exam",
-    "MAG10E": "Massachusetts MCAS Grade 10 English Language Arts Practice Exam",
-    "MA19G3M": "Massachusetts MCAS 2019 Grade 3 Math Exam",
-    "MA19G3E": "Massachusetts MCAS 2019 Grade 3 English Language Arts Exam",
-    "MA19G4M": "Massachusetts MCAS 2019 Grade 4 Math Exam",
-    "MA19G4E": "Massachusetts MCAS 2019 Grade 4 English Language Arts Exam",
-    "MA19G5M": "Massachusetts MCAS 2019 Grade 5 Math Exam",
-    "MA19G5E": "Massachusetts MCAS 2019 Grade 5 English Language Arts Exam",
-    "MA19G5S": "Massachusetts MCAS 2019 Grade 5 Science Exam",
-    "MA19G6M": "Massachusetts MCAS 2019 Grade 6 Math Exam",
-    "MA19G6E": "Massachusetts MCAS 2019 Grade 6 English Language Arts Exam",
-    "MA19G7M": "Massachusetts MCAS 2019 Grade 7 Math Exam",
-    "MA19G7E": "Massachusetts MCAS 2019 Grade 7 English Language Arts Exam",
-    "MA19G8M": "Massachusetts MCAS 2019 Grade 8 Math Exam",
-    "MA19G8E": "Massachusetts MCAS 2019 Grade 8 English Language Arts Exam",
-    "MA19G8S": "Massachusetts MCAS 2019 Grade 8 Science Exam",
-    "MA19G10M": "Massachusetts MCAS 2019 Grade 10 Math Exam",
-    "MA19G10E": "Massachusetts MCAS 2019 Grade 10 English Language Arts Exam",
-    "MA19HSB": "Massachusetts MCAS 2019 High School Biology Exam",
-    "MA19HSP": "Massachusetts MCAS 2019 High School Physics Exam",
-    "MA21G3M": "Massachusetts MCAS 2021 Grade 3 Math Exam",
-    "MA21G3E": "Massachusetts MCAS 2021 Grade 3 English Language Arts Exam",
-    "MA21G4M": "Massachusetts MCAS 2021 Grade 4 Math Exam",
-    "MA21G4E": "Massachusetts MCAS 2021 Grade 4 English Language Arts Exam",
-    "MA21G5M": "Massachusetts MCAS 2021 Grade 5 Math Exam",
-    "MA21G5E": "Massachusetts MCAS 2021 Grade 5 English Language Arts Exam",
-    "MA21G5S": "Massachusetts MCAS 2021 Grade 5 Science Exam",
-    "MA21G6M": "Massachusetts MCAS 2021 Grade 6 Math Exam",
-    "MA21G6E": "Massachusetts MCAS 2021 Grade 6 English Language Arts Exam",
-    "MA21G7M": "Massachusetts MCAS 2021 Grade 7 Math Exam",
-    "MA21G7E": "Massachusetts MCAS 2021 Grade 7 English Language Arts Exam",
-    "MA21G8M": "Massachusetts MCAS 2021 Grade 8 Math Exam",
-    "MA21G8E": "Massachusetts MCAS 2021 Grade 8 English Language Arts Exam",
-    "MA21G8S": "Massachusetts MCAS 2021 Grade 8 Science Exam",
-    "MA21G10M": "Massachusetts MCAS 2021 Grade 10 Math Exam",
-    "MA21G10E": "Massachusetts MCAS 2021 Grade 10 English Language Arts Exam",
-    "MA22G3M": "Massachusetts MCAS 2022 Grade 3 Math Exam",
-    "MA22G3E": "Massachusetts MCAS 2022 Grade 3 English Language Arts Exam",
-    "MA22G4M": "Massachusetts MCAS 2022 Grade 4 Math Exam",
-    "MA22G4E": "Massachusetts MCAS 2022 Grade 4 English Language Arts Exam",
-    "MA22G5M": "Massachusetts MCAS 2022 Grade 5 Math Exam",
-    "MA22G5E": "Massachusetts MCAS 2022 Grade 5 English Language Arts Exam",
-    "MA22G5S": "Massachusetts MCAS 2022 Grade 5 Science Exam",
-    "MA22G6M": "Massachusetts MCAS 2022 Grade 6 Math Exam",
-    "MA22G6E": "Massachusetts MCAS 2022 Grade 6 English Language Arts Exam",
-    "MA22G7M": "Massachusetts MCAS 2022 Grade 7 Math Exam",
-    "MA22G7E": "Massachusetts MCAS 2022 Grade 7 English Language Arts Exam",
-    "MA22G8M": "Massachusetts MCAS 2022 Grade 8 Math Exam",
-    "MA22G8E": "Massachusetts MCAS 2022 Grade 8 English Language Arts Exam",
-    "MA22G8S": "Massachusetts MCAS 2022 Grade 8 Science Exam",
-    "MA22G10M": "Massachusetts MCAS 2022 Grade 10 Math Exam",
-    "MA22G10E": "Massachusetts MCAS 2022 Grade 10 English Language Arts Exam",
-    "MA22HSB": "Massachusetts MCAS 2022 High School Biology Exam",
-    "MA22HSP": "Massachusetts MCAS 2022 High School Physics Exam",
-    "MA23G3M": "Massachusetts MCAS 2023 Grade 3 Math Exam",
-    "MA23G3E": "Massachusetts MCAS 2023 Grade 3 English Language Arts Exam",
-    "MA23G4M": "Massachusetts MCAS 2023 Grade 4 Math Exam",
-    "MA23G4E": "Massachusetts MCAS 2023 Grade 4 English Language Arts Exam",
-    "MA23G5M": "Massachusetts MCAS 2023 Grade 5 Math Exam",
-    "MA23G5E": "Massachusetts MCAS 2023 Grade 5 English Language Arts Exam",
-    "MA23G5S": "Massachusetts MCAS 2023 Grade 5 Science Exam",
-    "MA23G6M": "Massachusetts MCAS 2023 Grade 6 Math Exam",
-    "MA23G6E": "Massachusetts MCAS 2023 Grade 6 English Language Arts Exam",
-    "MA23G7M": "Massachusetts MCAS 2023 Grade 7 Math Exam",
-    "MA23G7E": "Massachusetts MCAS 2023 Grade 7 English Language Arts Exam",
-    "MA23G8M": "Massachusetts MCAS 2023 Grade 8 Math Exam",
-    "MA23G8E": "Massachusetts MCAS 2023 Grade 8 English Language Arts Exam",
-    "MA23G8S": "Massachusetts MCAS 2023 Grade 8 Science Exam",
-    "MA23G10M": "Massachusetts MCAS 2023 Grade 10 Math Exam",
-    "MA23G10E": "Massachusetts MCAS 2023 Grade 10 English Language Arts Exam",
-    "MA23HSB": "Massachusetts MCAS 2023 High School Biology Exam",
-    "MA23HSP": "Massachusetts MCAS 2023 High School Physics Exam",
-    "MDG3M": "Maryland MCAP Grade 3 Math Practice Exam",
-    "MDG3E": "Maryland MCAP Grade 3 English Language Arts Practice Exam",
-    "MDG4M": "Maryland MCAP Grade 4 Math Practice Exam",
-    "MDG4E": "Maryland MCAP Grade 4 English Language Arts Practice Exam",
-    "MDG5M": "Maryland MCAP Grade 5 Math Practice Exam",
-    "MDG5E": "Maryland MCAP Grade 5 English Language Arts Practice Exam",
-    "MDG5S": "Maryland MCAP Grade 5 Science Practice Exam",
-    "MDG6M": "Maryland MCAP Grade 6 Math Practice Exam",
-    "MDG6E": "Maryland MCAP Grade 6 English Language Arts Practice Exam",
-    "MDG7M": "Maryland MCAP Grade 7 Math Practice Exam",
-    "MDG7E": "Maryland MCAP Grade 7 English Language Arts Practice Exam",
-    "MDG8M": "Maryland MCAP Grade 8 Math Practice Exam",
-    "MDG8E": "Maryland MCAP Grade 8 English Language Arts Practice Exam",
-    "MDG8S": "Maryland MCAP Grade 8 Science Practice Exam",
-    "MDG8SS": "Maryland MCAP Grade 8 Social Studies Practice Exam",
-    "MDG10E": "Maryland MCAP Grade 10 English Language Arts Practice Exam",
-    "MDHSA1": "Maryland MCAP High School Algebra I Practice Exam",
-    "MDHSA2": "Maryland MCAP High School Algebra II Practice Exam",
-    "MDHSG": "Maryland MCAP High School Geometry Practice Exam",
-    "MEG3M": "Maine MEA Grade 3 Math Practice Exam",
-    "MEG4M": "Maine MEA Grade 4 Math Practice Exam",
-    "MEG5M": "Maine MEA Grade 5 Math Practice Exam",
-    "MEG35R": "Maine MEA Grades 3 - 5 Reading Practice Exam",
-    "MEG6M": "Maine MEA Grade 6 Math Practice Exam",
-    "MEG7M": "Maine MEA Grade 7 Math Practice Exam",
-    "MEG8M": "Maine MEA Grade 8 Math Practice Exam",
-    "MEG68R": "Maine MEA Grades 6 - 8 Reading Practice Exam",
-    "MEG10M": "Maine MEA Grade 10 Math Practice Exam",
-    "MEG10R": "Maine MEA Grade 10 Reading Practice Exam",
-    "MNG3M": "Minnesota MCA Grade 3 Math Practice Exam",
-    "MNG3R": "Minnesota MCA Grade 3 Reading Practice Exam",
-    "MNG4M": "Minnesota MCA Grade 4 Math Practice Exam",
-    "MNG4R": "Minnesota MCA Grade 4 Reading Practice Exam",
-    "MNG5M": "Minnesota MCA Grade 5 Math Practice Exam",
-    "MNG5R": "Minnesota MCA Grade 5 Reading Practice Exam",
-    "MNG5S": "Minnesota MCA Grade 5 Science Practice Exam",
-    "MNG6M": "Minnesota MCA Grade 6 Math Practice Exam",
-    "MNG6R": "Minnesota MCA Grade 6 Reading Practice Exam",
-    "MNG7M": "Minnesota MCA Grade 7 Math Practice Exam",
-    "MNG7R": "Minnesota MCA Grade 7 Reading Practice Exam",
-    "MNG8M": "Minnesota MCA Grade 8 Math Practice Exam",
-    "MNG8R": "Minnesota MCA Grade 8 Reading Practice Exam",
-    "MNG8S": "Minnesota MCA Grade 8 Science Practice Exam",
-    "MNG8SS": "Minnesota MCA Grade 8 Social Studies Practice Exam",
-    "MNG10R": "Minnesota MCA Grade 10 Reading Practice Exam",
-    "MNG11M": "Minnesota MCA Grade 11 Math Practice Exam",
-    "MNHSS": "Minnesota MCA High School Science Practice Exam",
-    "MOG3M": "Missouri MAP Grade 3 Math Practice Exam",
-    "MOG3E": "Missouri MAP Grade 3 English Language Arts Practice Exam",
-    "MOG4M": "Missouri MAP Grade 4 Math Practice Exam",
-    "MOG4E": "Missouri MAP Grade 4 English Language Arts Practice Exam",
-    "MOG5M": "Missouri MAP Grade 5 Math Practice Exam",
-    "MOG5E": "Missouri MAP Grade 5 English Language Arts Practice Exam",
-    "MOG5S": "Missouri MAP Grade 5 Science Practice Exam",
-    "MOG6M": "Missouri MAP Grade 6 Math Practice Exam",
-    "MOG6E": "Missouri MAP Grade 6 English Language Arts Practice Exam",
-    "MOG7M": "Missouri MAP Grade 7 Math Practice Exam",
-    "MOG7E": "Missouri MAP Grade 7 English Language Arts Practice Exam",
-    "MOG8M": "Missouri MAP Grade 8 Math Practice Exam",
-    "MOG8E": "Missouri MAP Grade 8 English Language Arts Practice Exam",
-    "MOG8S": "Missouri MAP Grade 8 Science Practice Exam",
-    "MS22G3M": "Mississippi MAAP 2022 Grade 3 Math Practice Exam",
-    "MS22G3E": "Mississippi MAAP 2022 Grade 3 English Language Arts Practice Exam",
-    "MS22G4M": "Mississippi MAAP 2022 Grade 4 Math Practice Exam",
-    "MS22G4E": "Mississippi MAAP 2022 Grade 4 English Language Arts Practice Exam",
-    "MS22G5M": "Mississippi MAAP 2022 Grade 5 Math Practice Exam",
-    "MS22G5E": "Mississippi MAAP 2022 Grade 5 English Language Arts Practice Exam",
-    "MS22G6M": "Mississippi MAAP 2022 Grade 6 Math Practice Exam",
-    "MS22G6E": "Mississippi MAAP 2022 Grade 6 English Language Arts Practice Exam",
-    "MS22G7M": "Mississippi MAAP 2022 Grade 7 Math Practice Exam",
-    "MS22G7E": "Mississippi MAAP 2022 Grade 7 English Language Arts Practice Exam",
-    "MS22G8M": "Mississippi MAAP 2022 Grade 8 Math Practice Exam",
-    "MS22G8E": "Mississippi MAAP 2022 Grade 8 English Language Arts Practice Exam",
-    "MS23G3M": "Mississippi MAAP 2023 Grade 3 Math Practice Exam",
-    "MS23G3E": "Mississippi MAAP 2023 Grade 3 English Language Arts Practice Exam",
-    "MS23G4M": "Mississippi MAAP 2023 Grade 4 Math Practice Exam",
-    "MS23G4E": "Mississippi MAAP 2023 Grade 4 English Language Arts Practice Exam",
-    "MS23G5M": "Mississippi MAAP 2023 Grade 5 Math Practice Exam",
-    "MS23G5E": "Mississippi MAAP 2023 Grade 5 English Language Arts Practice Exam",
-    "MS23G6M": "Mississippi MAAP 2023 Grade 6 Math Practice Exam",
-    "MS23G6E": "Mississippi MAAP 2023 Grade 6 English Language Arts Practice Exam",
-    "MS23G7M": "Mississippi MAAP 2023 Grade 7 Math Practice Exam",
-    "MS23G7E": "Mississippi MAAP 2023 Grade 7 English Language Arts Practice Exam",
-    "MS23G8M": "Mississippi MAAP 2023 Grade 8 Math Practice Exam",
-    "MS23G8E": "Mississippi MAAP 2023 Grade 8 English Language Arts Practice Exam",
-    "NC18G3M": "North Carolina EOG 2018 Grade 3 Math Exam",
-    "NC18G3R": "North Carolina EOG 2018 Grade 3 Reading Exam",
-    "NC18G4M": "North Carolina EOG 2018 Grade 4 Math Exam",
-    "NC18G4R": "North Carolina EOG 2018 Grade 4 Reading Exam",
-    "NC18G5M": "North Carolina EOG 2018 Grade 5 Math Exam",
-    "NC18G5R": "North Carolina EOG 2018 Grade 5 Reading Exam",
-    "NC18G5S": "North Carolina EOG 2018 Grade 5 Science Exam",
-    "NC18G6M": "North Carolina EOG 2018 Grade 6 Math Exam",
-    "NC18G6R": "North Carolina EOG 2018 Grade 6 Reading Exam",
-    "NC18G7M": "North Carolina EOG 2018 Grade 7 Math Exam",
-    "NC18G7R": "North Carolina EOG 2018 Grade 7 Reading Exam",
-    "NC18G8M": "North Carolina EOG 2018 Grade 8 Math Exam",
-    "NC18G8R": "North Carolina EOG 2018 Grade 8 Reading Exam",
-    "NC18G8S": "North Carolina EOG 2018 Grade 8 Science Exam",
-    "NEG3M": "Nebraska NSCAS Grade 3 Math Practice Exam",
-    "NEG3E": "Nebraska NSCAS Grade 3 English Language Arts Practice Exam",
-    "NEG4M": "Nebraska NSCAS Grade 4 Math Practice Exam",
-    "NEG4E": "Nebraska NSCAS Grade 4 English Language Arts Practice Exam",
-    "NEG5M": "Nebraska NSCAS Grade 5 Math Practice Exam",
-    "NEG5E": "Nebraska NSCAS Grade 5 English Language Arts Practice Exam",
-    "NEG5S": "Nebraska NSCAS Grade 5 Science Practice Exam",
-    "NEG6M": "Nebraska NSCAS Grade 6 Math Practice Exam",
-    "NEG6E": "Nebraska NSCAS Grade 6 English Language Arts Practice Exam",
-    "NEG7M": "Nebraska NSCAS Grade 7 Math Practice Exam",
-    "NEG7E": "Nebraska NSCAS Grade 7 English Language Arts Practice Exam",
-    "NEG8M": "Nebraska NSCAS Grade 8 Math Practice Exam",
-    "NEG8E": "Nebraska NSCAS Grade 8 English Language Arts Practice Exam",
-    "NEG8S": "Nebraska NSCAS Grade 8 Science Practice Exam",
-    "NJG3M": "New Jersey NJSLA Grade 3 Math Practice Exam",
-    "NJG3E": "New Jersey NJSLA Grade 3 English Language Arts Practice Exam",
-    "NJG4M": "New Jersey NJSLA Grade 4 Math Practice Exam",
-    "NJG4E": "New Jersey NJSLA Grade 4 English Language Arts Practice Exam",
-    "NJG5M": "New Jersey NJSLA Grade 5 Math Practice Exam",
-    "NJG5E": "New Jersey NJSLA Grade 5 English Language Arts Practice Exam",
-    "NJG5S": "New Jersey NJSLA Grade 5 Science Practice Exam",
-    "NJG6M": "New Jersey NJSLA Grade 6 Math Practice Exam",
-    "NJG6E": "New Jersey NJSLA Grade 6 English Language Arts Practice Exam",
-    "NJG7M": "New Jersey NJSLA Grade 7 Math Practice Exam",
-    "NJG7E": "New Jersey NJSLA Grade 7 English Language Arts Practice Exam",
-    "NJG8M": "New Jersey NJSLA Grade 8 Math Practice Exam",
-    "NJG8E": "New Jersey NJSLA Grade 8 English Language Arts Practice Exam",
-    "NJG8S": "New Jersey NJSLA Grade 8 Science Practice Exam",
-    "NJG9E": "New Jersey NJSLA Grade 9 English Language Arts Practice Exam",
-    "NJG11S": "New Jersey NJSLA Grade 11 Science Practice Exam",
-    "NMG3M": "New Mexico NM-MSSA Grade 3 Math Practice Exam",
-    "NMG3E": "New Mexico NM-MSSA Grade 3 English Language Arts Practice Exam",
-    "NMG4M": "New Mexico NM-MSSA Grade 4 Math Practice Exam",
-    "NMG4E": "New Mexico NM-MSSA Grade 4 English Language Arts Practice Exam",
-    "NMG5M": "New Mexico NM-MSSA Grade 5 Math Practice Exam",
-    "NMG5E": "New Mexico NM-MSSA Grade 5 English Language Arts Practice Exam",
-    "NMG5S": "New Mexico NM-ASR Grade 5 Science Practice Exam",
-    "NMG6M": "New Mexico NM-MSSA Grade 6 Math Practice Exam",
-    "NMG6E": "New Mexico NM-MSSA Grade 6 English Language Arts Practice Exam",
-    "NMG7M": "New Mexico NM-MSSA Grade 7 Math Practice Exam",
-    "NMG7E": "New Mexico NM-MSSA Grade 7 English Language Arts Practice Exam",
-    "NMG8M": "New Mexico NM-MSSA Grade 8 Math Practice Exam",
-    "NMG8E": "New Mexico NM-MSSA Grade 8 English Language Arts Practice Exam",
-    "NMG8S": "New Mexico NM-ASR Grade 8 Science Practice Exam",
-    "NMG11S": "New Mexico NM-ASR Grade 11 Science Practice Exam",
-    "NY23G3M": "New York NYSTP 2023 Grade 3 Math Exam",
-    "NY23G3E": "New York NYSTP 2023 Grade 3 English Language Arts Exam",
-    "NY23G4M": "New York NYSTP 2023 Grade 4 Math Exam",
-    "NY23G4E": "New York NYSTP 2023 Grade 4 English Language Arts Exam",
-    "NY23G5M": "New York NYSTP 2023 Grade 5 Math Exam",
-    "NY23G5E": "New York NYSTP 2023 Grade 5 English Language Arts Exam",
-    "NY23G6M": "New York NYSTP 2023 Grade 6 Math Exam",
-    "NY23G6E": "New York NYSTP 2023 Grade 6 English Language Arts Exam",
-    "NY23G7M": "New York NYSTP 2023 Grade 7 Math Exam",
-    "NY23G7E": "New York NYSTP 2023 Grade 7 English Language Arts Exam",
-    "NY23G8M": "New York NYSTP 2023 Grade 8 Math Exam",
-    "NY23G8E": "New York NYSTP 2023 Grade 8 English Language Arts Exam",
-    "NY23G8S": "New York NYSTP 2023 Grade 8 Science Exam",
-    "NY22G3M": "New York NYSTP 2022 Grade 3 Math Exam",
-    "NY22G3E": "New York NYSTP 2022 Grade 3 English Language Arts Exam",
-    "NY22G4M": "New York NYSTP 2022 Grade 4 Math Exam",
-    "NY22G4E": "New York NYSTP 2022 Grade 4 English Language Arts Exam",
-    "NY22G4S": "New York NYSTP 2022 Grade 4 Science Exam",
-    "NY22G5M": "New York NYSTP 2022 Grade 5 Math Exam",
-    "NY22G5E": "New York NYSTP 2022 Grade 5 English Language Arts Exam",
-    "NY22G6M": "New York NYSTP 2022 Grade 6 Math Exam",
-    "NY22G6E": "New York NYSTP 2022 Grade 6 English Language Arts Exam",
-    "NY22G7M": "New York NYSTP 2022 Grade 7 Math Exam",
-    "NY22G7E": "New York NYSTP 2022 Grade 7 English Language Arts Exam",
-    "NY22G8M": "New York NYSTP 2022 Grade 8 Math Exam",
-    "NY22G8E": "New York NYSTP 2022 Grade 8 English Language Arts Exam",
-    "NY22G8S": "New York NYSTP 2022 Grade 8 Science Exam",
-    "NY21G3M": "New York NYSTP 2021 Grade 3 Math Exam",
-    "NY21G3E": "New York NYSTP 2021 Grade 3 English Language Arts Exam",
-    "NY21G4M": "New York NYSTP 2021 Grade 4 Math Exam",
-    "NY21G4E": "New York NYSTP 2021 Grade 4 English Language Arts Exam",
-    "NY21G4S": "New York NYSTP 2021 Grade 4 Science Exam",
-    "NY21G5M": "New York NYSTP 2021 Grade 5 Math Exam",
-    "NY21G5E": "New York NYSTP 2021 Grade 5 English Language Arts Exam",
-    "NY21G6M": "New York NYSTP 2021 Grade 6 Math Exam",
-    "NY21G6E": "New York NYSTP 2021 Grade 6 English Language Arts Exam",
-    "NY21G7M": "New York NYSTP 2021 Grade 7 Math Exam",
-    "NY21G7E": "New York NYSTP 2021 Grade 7 English Language Arts Exam",
-    "NY21G8M": "New York NYSTP 2021 Grade 8 Math Exam",
-    "NY21G8E": "New York NYSTP 2021 Grade 8 English Language Arts Exam",
-    "NY21G8S": "New York NYSTP 2021 Grade 8 Science Exam",
-    "NY19G3M": "New York NYSTP 2019 Grade 3 Math Exam",
-    "NY19G3E": "New York NYSTP 2019 Grade 3 English Language Arts Exam",
-    "NY19G4M": "New York NYSTP 2019 Grade 4 Math Exam",
-    "NY19G4E": "New York NYSTP 2019 Grade 4 English Language Arts Exam",
-    "NY19G4S": "New York NYSTP 2019 Grade 4 Science Exam",
-    "NY19G5M": "New York NYSTP 2019 Grade 5 Math Exam",
-    "NY19G5E": "New York NYSTP 2019 Grade 5 English Language Arts Exam",
-    "NY19G6M": "New York NYSTP 2019 Grade 6 Math Exam",
-    "NY19G6E": "New York NYSTP 2019 Grade 6 English Language Arts Exam",
-    "NY19G7M": "New York NYSTP 2019 Grade 7 Math Exam",
-    "NY19G7E": "New York NYSTP 2019 Grade 7 English Language Arts Exam",
-    "NY19G8M": "New York NYSTP 2019 Grade 8 Math Exam",
-    "NY19G8E": "New York NYSTP 2019 Grade 8 English Language Arts Exam",
-    "NY19G8S": "New York NYSTP 2019 Grade 8 Science Exam",
-    "NY18G3M": "New York NYSTP 2018 Grade 3 Math Exam",
-    "NY18G3E": "New York NYSTP 2018 Grade 3 English Language Arts Exam",
-    "NY18G4M": "New York NYSTP 2018 Grade 4 Math Exam",
-    "NY18G4E": "New York NYSTP 2018 Grade 4 English Language Arts Exam",
-    "NY18G4S": "New York NYSTP 2018 Grade 4 Science Exam",
-    "NY18G5M": "New York NYSTP 2018 Grade 5 Math Exam",
-    "NY18G5E": "New York NYSTP 2018 Grade 5 English Language Arts Exam",
-    "NY18G6M": "New York NYSTP 2018 Grade 6 Math Exam",
-    "NY18G6E": "New York NYSTP 2018 Grade 6 English Language Arts Exam",
-    "NY18G7M": "New York NYSTP 2018 Grade 7 Math Exam",
-    "NY18G7E": "New York NYSTP 2018 Grade 7 English Language Arts Exam",
-    "NY18G8M": "New York NYSTP 2018 Grade 8 Math Exam",
-    "NY18G8E": "New York NYSTP 2018 Grade 8 English Language Arts Exam",
-    "NY18G8S": "New York NYSTP 2018 Grade 8 Science Exam",
-    "NY17G3M": "New York NYSTP 2017 Grade 3 Math Exam",
-    "NY17G3E": "New York NYSTP 2017 Grade 3 English Language Arts Exam",
-    "NY17G4M": "New York NYSTP 2017 Grade 4 Math Exam",
-    "NY17G4E": "New York NYSTP 2017 Grade 4 English Language Arts Exam",
-    "NY17G4S": "New York NYSTP 2017 Grade 4 Science Exam",
-    "NY17G5M": "New York NYSTP 2017 Grade 5 Math Exam",
-    "NY17G5E": "New York NYSTP 2017 Grade 5 English Language Arts Exam",
-    "NY17G6M": "New York NYSTP 2017 Grade 6 Math Exam",
-    "NY17G6E": "New York NYSTP 2017 Grade 6 English Language Arts Exam",
-    "NY17G7M": "New York NYSTP 2017 Grade 7 Math Exam",
-    "NY17G7E": "New York NYSTP 2017 Grade 7 English Language Arts Exam",
-    "NY17G8M": "New York NYSTP 2017 Grade 8 Math Exam",
-    "NY17G8E": "New York NYSTP 2017 Grade 8 English Language Arts Exam",
-    "NY17G8S": "New York NYSTP 2017 Grade 8 Science Exam",
-    "NY16G3M": "New York NYSTP 2016 Grade 3 Math Exam",
-    "NY16G3E": "New York NYSTP 2016 Grade 3 English Language Arts Exam",
-    "NY16G4M": "New York NYSTP 2016 Grade 4 Math Exam",
-    "NY16G4E": "New York NYSTP 2016 Grade 4 English Language Arts Exam",
-    "NY16G4S": "New York NYSTP 2016 Grade 4 Science Exam",
-    "NY16G5M": "New York NYSTP 2016 Grade 5 Math Exam",
-    "NY16G5E": "New York NYSTP 2016 Grade 5 English Language Arts Exam",
-    "NY16G6M": "New York NYSTP 2016 Grade 6 Math Exam",
-    "NY16G6E": "New York NYSTP 2016 Grade 6 English Language Arts Exam",
-    "NY16G7M": "New York NYSTP 2016 Grade 7 Math Exam",
-    "NY16G7E": "New York NYSTP 2016 Grade 7 English Language Arts Exam",
-    "NY16G8M": "New York NYSTP 2016 Grade 8 Math Exam",
-    "NY16G8E": "New York NYSTP 2016 Grade 8 English Language Arts Exam",
-    "NY16G8S": "New York NYSTP 2016 Grade 8 Science Exam",
-    "NY15G3M": "New York NYSTP 2015 Grade 3 Math Exam",
-    "NY15G3E": "New York NYSTP 2015 Grade 3 English Language Arts Exam",
-    "NY15G4M": "New York NYSTP 2015 Grade 4 Math Exam",
-    "NY15G4E": "New York NYSTP 2015 Grade 4 English Language Arts Exam",
-    "NY15G4S": "New York NYSTP 2015 Grade 4 Science Exam",
-    "NY15G5M": "New York NYSTP 2015 Grade 5 Math Exam",
-    "NY15G5E": "New York NYSTP 2015 Grade 5 English Language Arts Exam",
-    "NY15G6M": "New York NYSTP 2015 Grade 6 Math Exam",
-    "NY15G6E": "New York NYSTP 2015 Grade 6 English Language Arts Exam",
-    "NY15G7M": "New York NYSTP 2015 Grade 7 Math Exam",
-    "NY15G7E": "New York NYSTP 2015 Grade 7 English Language Arts Exam",
-    "NY15G8M": "New York NYSTP 2015 Grade 8 Math Exam",
-    "NY15G8E": "New York NYSTP 2015 Grade 8 English Language Arts Exam",
-    "NY15G8S": "New York NYSTP 2015 Grade 8 Science Exam",
-    "PA23G3M": "Pennsylvania PSSA 2023 Grade 3 Math Exam",
-    "PA23G3E": "Pennsylvania PSSA 2023 Grade 3 English Language Arts Exam",
-    "PA23G4M": "Pennsylvania PSSA 2023 Grade 4 Math Exam",
-    "PA23G4E": "Pennsylvania PSSA 2023 Grade 4 English Language Arts Exam",
-    "PA23G4S": "Pennsylvania PSSA 2023 Grade 4 Science Exam",
-    "PA23G5M": "Pennsylvania PSSA 2023 Grade 5 Math Exam",
-    "PA23G5E": "Pennsylvania PSSA 2023 Grade 5 English Language Arts Exam",
-    "PA23G6M": "Pennsylvania PSSA 2023 Grade 6 Math Exam",
-    "PA23G6E": "Pennsylvania PSSA 2023 Grade 6 English Language Arts Exam",
-    "PA23G7M": "Pennsylvania PSSA 2023 Grade 7 Math Exam",
-    "PA23G7E": "Pennsylvania PSSA 2023 Grade 7 English Language Arts Exam",
-    "PA23G8M": "Pennsylvania PSSA 2023 Grade 8 Math Exam",
-    "PA23G8E": "Pennsylvania PSSA 2023 Grade 8 English Language Arts Exam",
-    "PA23G8S": "Pennsylvania PSSA 2023 Grade 8 Science Exam",
-    "PA22G3M": "Pennsylvania PSSA 2022 Grade 3 Math Exam",
-    "PA22G3E": "Pennsylvania PSSA 2022 Grade 3 English Language Arts Exam",
-    "PA22G4M": "Pennsylvania PSSA 2022 Grade 4 Math Exam",
-    "PA22G4E": "Pennsylvania PSSA 2022 Grade 4 English Language Arts Exam",
-    "PA22G4S": "Pennsylvania PSSA 2022 Grade 4 Science Exam",
-    "PA22G5M": "Pennsylvania PSSA 2022 Grade 5 Math Exam",
-    "PA22G5E": "Pennsylvania PSSA 2022 Grade 5 English Language Arts Exam",
-    "PA22G6M": "Pennsylvania PSSA 2022 Grade 6 Math Exam",
-    "PA22G6E": "Pennsylvania PSSA 2022 Grade 6 English Language Arts Exam",
-    "PA22G7M": "Pennsylvania PSSA 2022 Grade 7 Math Exam",
-    "PA22G7E": "Pennsylvania PSSA 2022 Grade 7 English Language Arts Exam",
-    "PA22G8M": "Pennsylvania PSSA 2022 Grade 8 Math Exam",
-    "PA22G8E": "Pennsylvania PSSA 2022 Grade 8 English Language Arts Exam",
-    "PA22G8S": "Pennsylvania PSSA 2022 Grade 8 Science Exam",
-    "PA21G3M": "Pennsylvania PSSA 2021 Grade 3 Math Exam",
-    "PA21G3E": "Pennsylvania PSSA 2021 Grade 3 English Language Arts Exam",
-    "PA21G4M": "Pennsylvania PSSA 2021 Grade 4 Math Exam",
-    "PA21G4E": "Pennsylvania PSSA 2021 Grade 4 English Language Arts Exam",
-    "PA21G4S": "Pennsylvania PSSA 2021 Grade 4 Science Exam",
-    "PA21G5M": "Pennsylvania PSSA 2021 Grade 5 Math Exam",
-    "PA21G5E": "Pennsylvania PSSA 2021 Grade 5 English Language Arts Exam",
-    "PA21G6M": "Pennsylvania PSSA 2021 Grade 6 Math Exam",
-    "PA21G6E": "Pennsylvania PSSA 2021 Grade 6 English Language Arts Exam",
-    "PA21G7M": "Pennsylvania PSSA 2021 Grade 7 Math Exam",
-    "PA21G7E": "Pennsylvania PSSA 2021 Grade 7 English Language Arts Exam",
-    "PA21G8M": "Pennsylvania PSSA 2021 Grade 8 Math Exam",
-    "PA21G8E": "Pennsylvania PSSA 2021 Grade 8 English Language Arts Exam",
-    "PA21G8S": "Pennsylvania PSSA 2021 Grade 8 Science Exam",
-    "PA19G3M": "Pennsylvania PSSA 2019 Grade 3 Math Exam",
-    "PA19G3E": "Pennsylvania PSSA 2019 Grade 3 English Language Arts Exam",
-    "PA19G4M": "Pennsylvania PSSA 2019 Grade 4 Math Exam",
-    "PA19G4E": "Pennsylvania PSSA 2019 Grade 4 English Language Arts Exam",
-    "PA19G4S": "Pennsylvania PSSA 2019 Grade 4 Science Exam",
-    "PA19G5M": "Pennsylvania PSSA 2019 Grade 5 Math Exam",
-    "PA19G5E": "Pennsylvania PSSA 2019 Grade 5 English Language Arts Exam",
-    "PA19G6M": "Pennsylvania PSSA 2019 Grade 6 Math Exam",
-    "PA19G6E": "Pennsylvania PSSA 2019 Grade 6 English Language Arts Exam",
-    "PA19G7M": "Pennsylvania PSSA 2019 Grade 7 Math Exam",
-    "PA19G7E": "Pennsylvania PSSA 2019 Grade 7 English Language Arts Exam",
-    "PA19G8M": "Pennsylvania PSSA 2019 Grade 8 Math Exam",
-    "PA19G8E": "Pennsylvania PSSA 2019 Grade 8 English Language Arts Exam",
-    "PA19G8S": "Pennsylvania PSSA 2019 Grade 8 Science Exam",
-    "PA18G3M": "Pennsylvania PSSA 2018 Grade 3 Math Exam",
-    "PA18G3E": "Pennsylvania PSSA 2018 Grade 3 English Language Arts Exam",
-    "PA18G4M": "Pennsylvania PSSA 2018 Grade 4 Math Exam",
-    "PA18G4E": "Pennsylvania PSSA 2018 Grade 4 English Language Arts Exam",
-    "PA18G4S": "Pennsylvania PSSA 2018 Grade 4 Science Exam",
-    "PA18G5M": "Pennsylvania PSSA 2018 Grade 5 Math Exam",
-    "PA18G5E": "Pennsylvania PSSA 2018 Grade 5 English Language Arts Exam",
-    "PA18G6M": "Pennsylvania PSSA 2018 Grade 6 Math Exam",
-    "PA18G6E": "Pennsylvania PSSA 2018 Grade 6 English Language Arts Exam",
-    "PA18G7M": "Pennsylvania PSSA 2018 Grade 7 Math Exam",
-    "PA18G7E": "Pennsylvania PSSA 2018 Grade 7 English Language Arts Exam",
-    "PA18G8M": "Pennsylvania PSSA 2018 Grade 8 Math Exam",
-    "PA18G8E": "Pennsylvania PSSA 2018 Grade 8 English Language Arts Exam",
-    "PA18G8S": "Pennsylvania PSSA 2018 Grade 8 Science Exam",
-    "PA16G3M": "Pennsylvania PSSA 2016 Grade 3 Math Exam",
-    "PA16G3E": "Pennsylvania PSSA 2016 Grade 3 English Language Arts Exam",
-    "PA16G4M": "Pennsylvania PSSA 2016 Grade 4 Math Exam",
-    "PA16G4E": "Pennsylvania PSSA 2016 Grade 4 English Language Arts Exam",
-    "PA16G4S": "Pennsylvania PSSA 2016 Grade 4 Science Exam",
-    "PA16G5M": "Pennsylvania PSSA 2016 Grade 5 Math Exam",
-    "PA16G5E": "Pennsylvania PSSA 2016 Grade 5 English Language Arts Exam",
-    "PA16G6M": "Pennsylvania PSSA 2016 Grade 6 Math Exam",
-    "PA16G6E": "Pennsylvania PSSA 2016 Grade 6 English Language Arts Exam",
-    "PA16G7M": "Pennsylvania PSSA 2016 Grade 7 Math Exam",
-    "PA16G7E": "Pennsylvania PSSA 2016 Grade 7 English Language Arts Exam",
-    "PA16G8M": "Pennsylvania PSSA 2016 Grade 8 Math Exam",
-    "PA16G8E": "Pennsylvania PSSA 2016 Grade 8 English Language Arts Exam",
-    "PA16G8S": "Pennsylvania PSSA 2016 Grade 8 Science Exam",
-    "PA15G3M": "Pennsylvania PSSA 2015 Grade 3 Math Exam",
-    "PA15G3E": "Pennsylvania PSSA 2015 Grade 3 English Language Arts Exam",
-    "PA15G4M": "Pennsylvania PSSA 2015 Grade 4 Math Exam",
-    "PA15G4E": "Pennsylvania PSSA 2015 Grade 4 English Language Arts Exam",
-    "PA15G4S": "Pennsylvania PSSA 2015 Grade 4 Science Exam",
-    "PA15G5M": "Pennsylvania PSSA 2015 Grade 5 Math Exam",
-    "PA15G5E": "Pennsylvania PSSA 2015 Grade 5 English Language Arts Exam",
-    "PA15G6M": "Pennsylvania PSSA 2015 Grade 6 Math Exam",
-    "PA15G6E": "Pennsylvania PSSA 2015 Grade 6 English Language Arts Exam",
-    "PA15G7M": "Pennsylvania PSSA 2015 Grade 7 Math Exam",
-    "PA15G7E": "Pennsylvania PSSA 2015 Grade 7 English Language Arts Exam",
-    "PA15G8M": "Pennsylvania PSSA 2015 Grade 8 Math Exam",
-    "PA15G8E": "Pennsylvania PSSA 2015 Grade 8 English Language Arts Exam",
-    "PA15G8S": "Pennsylvania PSSA 2015 Grade 8 Science Exam",
-    "RI23G3M": "Rhode Island RICAS 2023 Grade 3 Math Exam",
-    "RI22G3M": "Rhode Island RICAS 2022 Grade 3 Math Exam",
-    "RI21G3M": "Rhode Island RICAS 2021 Grade 3 Math Exam",
-    "RI19G3M": "Rhode Island RICAS 2019 Grade 3 Math Exam",
-    "RI18G3M": "Rhode Island RICAS 2018 Grade 3 Math Exam",
-    "RI23G3E": "Rhode Island RICAS 2023 Grade 3 English Language Arts Exam",
-    "RI22G3E": "Rhode Island RICAS 2022 Grade 3 English Language Arts Exam",
-    "RI21G3E": "Rhode Island RICAS 2021 Grade 3 English Language Arts Exam",
-    "RI19G3E": "Rhode Island RICAS 2019 Grade 3 English Language Arts Exam",
-    "RI18G3E": "Rhode Island RICAS 2018 Grade 3 English Language Arts Exam",
-    "RI23G4M": "Rhode Island RICAS 2023 Grade 4 Math Exam",
-    "RI22G4M": "Rhode Island RICAS 2022 Grade 4 Math Exam",
-    "RI21G4M": "Rhode Island RICAS 2021 Grade 4 Math Exam",
-    "RI19G4M": "Rhode Island RICAS 2019 Grade 4 Math Exam",
-    "RI18G4M": "Rhode Island RICAS 2018 Grade 4 Math Exam",
-    "RI23G4E": "Rhode Island RICAS 2023 Grade 4 English Language Arts Exam",
-    "RI22G4E": "Rhode Island RICAS 2022 Grade 4 English Language Arts Exam",
-    "RI21G4E": "Rhode Island RICAS 2021 Grade 4 English Language Arts Exam",
-    "RI19G4E": "Rhode Island RICAS 2019 Grade 4 English Language Arts Exam",
-    "RI18G4E": "Rhode Island RICAS 2018 Grade 4 English Language Arts Exam",
-    "RI23G5M": "Rhode Island RICAS 2023 Grade 5 Math Exam",
-    "RI22G5M": "Rhode Island RICAS 2022 Grade 5 Math Exam",
-    "RI21G5M": "Rhode Island RICAS 2021 Grade 5 Math Exam",
-    "RI19G5M": "Rhode Island RICAS 2019 Grade 5 Math Exam",
-    "RI18G5M": "Rhode Island RICAS 2018 Grade 5 Math Exam",
-    "RI23G5E": "Rhode Island RICAS 2023 Grade 5 English Language Arts Exam",
-    "RI22G5E": "Rhode Island RICAS 2022 Grade 5 English Language Arts Exam",
-    "RI21G5E": "Rhode Island RICAS 2021 Grade 5 English Language Arts Exam",
-    "RI19G5E": "Rhode Island RICAS 2019 Grade 5 English Language Arts Exam",
-    "RI18G5E": "Rhode Island RICAS 2018 Grade 5 English Language Arts Exam",
-    "RI23G6M": "Rhode Island RICAS 2023 Grade 6 Math Exam",
-    "RI22G6M": "Rhode Island RICAS 2022 Grade 6 Math Exam",
-    "RI21G6M": "Rhode Island RICAS 2021 Grade 6 Math Exam",
-    "RI19G6M": "Rhode Island RICAS 2019 Grade 6 Math Exam",
-    "RI18G6M": "Rhode Island RICAS 2018 Grade 6 Math Exam",
-    "RI23G6E": "Rhode Island RICAS 2023 Grade 6 English Language Arts Exam",
-    "RI22G6E": "Rhode Island RICAS 2022 Grade 6 English Language Arts Exam",
-    "RI21G6E": "Rhode Island RICAS 2021 Grade 6 English Language Arts Exam",
-    "RI19G6E": "Rhode Island RICAS 2019 Grade 6 English Language Arts Exam",
-    "RI18G6E": "Rhode Island RICAS 2018 Grade 6 English Language Arts Exam",
-    "RI23G7M": "Rhode Island RICAS 2023 Grade 7 Math Exam",
-    "RI22G7M": "Rhode Island RICAS 2022 Grade 7 Math Exam",
-    "RI21G7M": "Rhode Island RICAS 2021 Grade 7 Math Exam",
-    "RI19G7M": "Rhode Island RICAS 2019 Grade 7 Math Exam",
-    "RI18G7M": "Rhode Island RICAS 2018 Grade 7 Math Exam",
-    "RI23G7E": "Rhode Island RICAS 2023 Grade 7 English Language Arts Exam",
-    "RI22G7E": "Rhode Island RICAS 2022 Grade 7 English Language Arts Exam",
-    "RI21G7E": "Rhode Island RICAS 2021 Grade 7 English Language Arts Exam",
-    "RI19G7E": "Rhode Island RICAS 2019 Grade 7 English Language Arts Exam",
-    "RI18G7E": "Rhode Island RICAS 2018 Grade 7 English Language Arts Exam",
-    "RI23G8M": "Rhode Island RICAS 2023 Grade 8 Math Exam",
-    "RI22G8M": "Rhode Island RICAS 2022 Grade 8 Math Exam",
-    "RI21G8M": "Rhode Island RICAS 2021 Grade 8 Math Exam",
-    "RI19G8M": "Rhode Island RICAS 2019 Grade 8 Math Exam",
-    "RI18G8M": "Rhode Island RICAS 2018 Grade 8 Math Exam",
-    "RI23G8E": "Rhode Island RICAS 2023 Grade 8 English Language Arts Exam",
-    "RI22G8E": "Rhode Island RICAS 2022 Grade 8 English Language Arts Exam",
-    "RI21G8E": "Rhode Island RICAS 2021 Grade 8 English Language Arts Exam",
-    "RI19G8E": "Rhode Island RICAS 2019 Grade 8 English Language Arts Exam",
-    "RI18G8E": "Rhode Island RICAS 2018 Grade 8 English Language Arts Exam",
-    "SC18G3M": "South Carolina SC READY Grade 3 Math Practice Exam",
-    "SC18G3E": "South Carolina SC READY Grade 3 English Language Arts Practice Exam",
-    "SC18G4M": "South Carolina SC READY Grade 4 Math Practice Exam",
-    "SC18G4E": "South Carolina SC READY Grade 4 English Language Arts Practice Exam",
-    "SC18G4S": "South Carolina SC PASS Grade 4 Science Practice Exam",
-    "SC18G5M": "South Carolina SC READY Grade 5 Math Practice Exam",
-    "SC18G5E": "South Carolina SC READY Grade 5 English Language Arts Practice Exam",
-    "SC18G6M": "South Carolina SC READY Grade 6 Math Practice Exam",
-    "SC18G6E": "South Carolina SC READY Grade 6 English Language Arts Practice Exam",
-    "SC18G6S": "South Carolina SC PASS Grade 6 Science Practice Exam",
-    "SC18G7M": "South Carolina SC READY Grade 7 Math Practice Exam",
-    "SC18G7E": "South Carolina SC READY Grade 7 English Language Arts Practice Exam",
-    "SC18G8M": "South Carolina SC READY Grade 8 Math Practice Exam",
-    "SC18G8E": "South Carolina SC READY Grade 8 English Language Arts Practice Exam",
-    "TN19G2M": "Tennessee TCAP 2019 Grade 2 Math Exam",
-    "TN19G2E": "Tennessee TCAP 2019 Grade 2 English Language Arts Exam",
-    "TN19G3M": "Tennessee TCAP 2019 Grade 3 Math Exam",
-    "TN19G3E": "Tennessee TCAP 2019 Grade 3 English Language Arts Exam",
-    "TN19G4M": "Tennessee TCAP 2019 Grade 4 Math Exam",
-    "TN19G4E": "Tennessee TCAP 2019 Grade 4 English Language Arts Exam",
-    "TN19G5M": "Tennessee TCAP 2019 Grade 5 Math Exam",
-    "TN19G5E": "Tennessee TCAP 2019 Grade 5 English Language Arts Exam",
-    "TN19G6M": "Tennessee TCAP 2019 Grade 6 Math Exam",
-    "TN19G6E": "Tennessee TCAP 2019 Grade 6 English Language Arts Exam",
-    "TN19G6SS": "Tennessee TCAP 2019 Grade 6 Social Studies Exam",
-    "TN19G7M": "Tennessee TCAP 2019 Grade 7 Math Exam",
-    "TN19G7E": "Tennessee TCAP 2019 Grade 7 English Language Arts Exam",
-    "TN19G7SS": "Tennessee TCAP 2019 Grade 7 Social Studies Exam",
-    "TN19G8M": "Tennessee TCAP 2019 Grade 8 Math Exam",
-    "TN19G8E": "Tennessee TCAP 2019 Grade 8 English Language Arts Exam",
-    "TN19G8SS": "Tennessee TCAP 2019 Grade 8 Social Studies Exam",
-    "TN19HSA1": "Tennessee TCAP 2019 High School Algebra I Exam",
-    "TN19HSA2": "Tennessee TCAP 2019 High School Algebra II Exam",
-    "TN19HSE1": "Tennessee TCAP 2019 High School English I Exam",
-    "TN19HSE2": "Tennessee TCAP 2019 High School English II Exam",
-    "TN19HSG": "Tennessee TCAP 2019 High School Geometry Exam",
-    "TN19HSUSH": "Tennessee TCAP 2019 High School U.S. History Exam",
-    "TN20G3M": "Tennessee TCAP 2020 Grade 3 Math Practice Exam",
-    "TN20G3E": "Tennessee TCAP 2020 Grade 3 English Language Arts Practice Exam",
-    "TN20G3S": "Tennessee TCAP 2020 Grade 3 Science Practice Exam",
-    "TN20G4M": "Tennessee TCAP 2020 Grade 4 Math Practice Exam",
-    "TN20G4E": "Tennessee TCAP 2020 Grade 4 English Language Arts Practice Exam",
-    "TN20G4S": "Tennessee TCAP 2020 Grade 4 Science Practice Exam",
-    "TN20G5M": "Tennessee TCAP 2020 Grade 5 Math Practice Exam",
-    "TN20G5E": "Tennessee TCAP 2020 Grade 5 English Language Arts Practice Exam",
-    "TN20G5S": "Tennessee TCAP 2020 Grade 5 Science Practice Exam",
-    "TN20G6M": "Tennessee TCAP 2020 Grade 6 Math Practice Exam",
-    "TN20G6E": "Tennessee TCAP 2020 Grade 6 English Language Arts Practice Exam",
-    "TN20G6S": "Tennessee TCAP 2020 Grade 6 Science Practice Exam",
-    "TN20G6SS": "Tennessee TCAP 2020 Grade 6 Social Studies Practice Exam",
-    "TN20G7M": "Tennessee TCAP 2020 Grade 7 Math Practice Exam",
-    "TN20G7E": "Tennessee TCAP 2020 Grade 7 English Language Arts Practice Exam",
-    "TN20G7S": "Tennessee TCAP 2020 Grade 7 Science Practice Exam",
-    "TN20G7SS": "Tennessee TCAP 2020 Grade 7 Social Studies Practice Exam",
-    "TN20G8M": "Tennessee TCAP 2020 Grade 8 Math Practice Exam",
-    "TN20G8E": "Tennessee TCAP 2020 Grade 8 English Language Arts Practice Exam",
-    "TN20G8S": "Tennessee TCAP 2020 Grade 8 Science Practice Exam",
-    "TN20G8SS": "Tennessee TCAP 2020 Grade 8 Social Studies Practice Exam",
-    "TN20HSA1": "Tennessee TCAP 2020 High School Algebra I Practice Exam",
-    "TN20HSA2": "Tennessee TCAP 2020 High School Algebra II Practice Exam",
-    "TN20HSB": "Tennessee TCAP 2020 High School Biology Practice Exam",
-    "TN20HSE1": "Tennessee TCAP 2020 High School English I Practice Exam",
-    "TN20HSE2": "Tennessee TCAP 2020 High School English II Practice Exam",
-    "TN20HSG": "Tennessee TCAP 2020 High School Geometry Practice Exam",
-    "TN20HSUSH": "Tennessee TCAP 2020 High School U.S. History Practice Exam",
-    "TN21G3M": "Tennessee TCAP 2021 Grade 3 Math Exam",
-    "TN21G4M": "Tennessee TCAP 2021 Grade 4 Math Exam",
-    "TN21G4E": "Tennessee TCAP 2021 Grade 4 English Language Arts Exam",
-    "TN21G5M": "Tennessee TCAP 2021 Grade 5 Math Exam",
-    "TN21G5E": "Tennessee TCAP 2021 Grade 5 English Language Arts Exam",
-    "TN21G6M": "Tennessee TCAP 2021 Grade 6 Math Exam",
-    "TN21G6E": "Tennessee TCAP 2021 Grade 6 English Language Arts Exam",
-    "TN21G6SS": "Tennessee TCAP 2021 Grade 6 Social Studies Exam",
-    "TN21G7M": "Tennessee TCAP 2021 Grade 7 Math Exam",
-    "TN21G7SS": "Tennessee TCAP 2021 Grade 7 Social Studies Exam",
-    "TN21G8M": "Tennessee TCAP 2021 Grade 8 Math Exam",
-    "TN21G8E": "Tennessee TCAP 2021 Grade 8 English Language Arts Exam",
-    "TN21G8SS": "Tennessee TCAP 2021 Grade 8 Social Studies Exam",
-    "TN21HSA1": "Tennessee TCAP 2021 High School Algebra I Exam",
-    "TN21HSA2": "Tennessee TCAP 2021 High School Algebra II Exam",
-    "TN21HSE1": "Tennessee TCAP 2021 High School English I Exam",
-    "TN21HSG": "Tennessee TCAP 2021 High School Geometry Exam",
-    "TN21HSUSH": "Tennessee TCAP 2021 High School U.S. History Exam",
-    "TN23G2E": "Tennessee TCAP 2023 Grade 2 English Language Arts Exam",
-    "TN23G3M": "Tennessee TCAP 2023 Grade 3 Math Exam",
-    "TN23G3E": "Tennessee TCAP 2023 Grade 3 English Language Arts Exam",
-    "TN23G3S": "Tennessee TCAP 2023 Grade 3 Science Exam",
-    "TN23G4M": "Tennessee TCAP 2023 Grade 4 Math Exam",
-    "TN23G4E": "Tennessee TCAP 2023 Grade 4 English Language Arts Exam",
-    "TN23G4S": "Tennessee TCAP 2023 Grade 4 Science Exam",
-    "TN23G5M": "Tennessee TCAP 2023 Grade 5 Math Exam",
-    "TN23G5E": "Tennessee TCAP 2023 Grade 5 English Language Arts Exam",
-    "TN23G5S": "Tennessee TCAP 2023 Grade 5 Science Exam",
-    "TN23G6M": "Tennessee TCAP 2023 Grade 6 Math Exam",
-    "TN23G6E": "Tennessee TCAP 2023 Grade 6 English Language Arts Exam",
-    "TN23G6S": "Tennessee TCAP 2023 Grade 6 Science Exam",
-    "TN23G6SS": "Tennessee TCAP 2023 Grade 6 Social Studies Exam",
-    "TN23G7M": "Tennessee TCAP 2023 Grade 7 Math Exam",
-    "TN23G7E": "Tennessee TCAP 2023 Grade 7 English Language Arts Exam",
-    "TN23G7S": "Tennessee TCAP 2023 Grade 7 Science Exam",
-    "TN23G7SS": "Tennessee TCAP 2023 Grade 7 Social Studies Exam",
-    "TN23G8M": "Tennessee TCAP 2023 Grade 8 Math Exam",
-    "TN23G8E": "Tennessee TCAP 2023 Grade 8 English Language Arts Exam",
-    "TN23G8S": "Tennessee TCAP 2023 Grade 8 Science Exam",
-    "TN23G8SS": "Tennessee TCAP 2023 Grade 8 Social Studies Exam",
-    "TN23HSA1": "Tennessee TCAP 2023 High School Algebra I Exam",
-    "TN23HSA2": "Tennessee TCAP 2023 High School Algebra II Exam",
-    "TN23HSB": "Tennessee TCAP 2023 High School Biology Exam",
-    "TN23HSE1": "Tennessee TCAP 2023 High School English I Exam",
-    "TN23HSE2": "Tennessee TCAP 2023 High School English II Exam",
-    "TN23HSG": "Tennessee TCAP 2023 High School Geometry Exam",
-    "TN23HSUSH": "Tennessee TCAP 2023 High School U.S. History Exam",
-    "TX22G3M": "Texas STAAR 2022 Grade 3 Math Exam",
-    "TX21G3M": "Texas STAAR 2021 Grade 3 Math Exam",
-    "TX19G3M": "Texas STAAR 2019 Grade 3 Math Exam",
-    "TX18G3M": "Texas STAAR 2018 Grade 3 Math Exam",
-    "TX17G3M": "Texas STAAR 2017 Grade 3 Math Exam",
-    "TX22G3R": "Texas STAAR 2022 Grade 3 Reading Exam",
-    "TX21G3R": "Texas STAAR 2021 Grade 3 Reading Exam",
-    "TX19G3R": "Texas STAAR 2019 Grade 3 Reading Exam",
-    "TX18G3R": "Texas STAAR 2018 Grade 3 Reading Exam",
-    "TX17G3R": "Texas STAAR 2017 Grade 3 Reading Exam",
-    "TX22G4M": "Texas STAAR 2022 Grade 4 Math Exam",
-    "TX21G4M": "Texas STAAR 2021 Grade 4 Math Exam",
-    "TX19G4M": "Texas STAAR 2019 Grade 4 Math Exam",
-    "TX18G4M": "Texas STAAR 2018 Grade 4 Math Exam",
-    "TX17G4M": "Texas STAAR 2017 Grade 4 Math Exam",
-    "TX22G4R": "Texas STAAR 2022 Grade 4 Reading Exam",
-    "TX21G4R": "Texas STAAR 2021 Grade 4 Reading Exam",
-    "TX19G4R": "Texas STAAR 2019 Grade 4 Reading Exam",
-    "TX18G4R": "Texas STAAR 2018 Grade 4 Reading Exam",
-    "TX17G4R": "Texas STAAR 2017 Grade 4 Reading Exam",
-    "TX22G5M": "Texas STAAR 2022 Grade 5 Math Exam",
-    "TX21G5M": "Texas STAAR 2021 Grade 5 Math Exam",
-    "TX19G5M": "Texas STAAR 2019 Grade 5 Math Exam",
-    "TX18G5M": "Texas STAAR 2018 Grade 5 Math Exam",
-    "TX17G5M": "Texas STAAR 2017 Grade 5 Math Exam",
-    "TX22G5R": "Texas STAAR 2022 Grade 5 Reading Exam",
-    "TX21G5R": "Texas STAAR 2021 Grade 5 Reading Exam",
-    "TX19G5R": "Texas STAAR 2019 Grade 5 Reading Exam",
-    "TX18G5R": "Texas STAAR 2018 Grade 5 Reading Exam",
-    "TX17G5R": "Texas STAAR 2017 Grade 5 Reading Exam",
-    "TX22G5S": "Texas STAAR 2022 Grade 5 Science Exam",
-    "TX21G5S": "Texas STAAR 2021 Grade 5 Science Exam",
-    "TX19G5S": "Texas STAAR 2019 Grade 5 Science Exam",
-    "TX18G5S": "Texas STAAR 2018 Grade 5 Science Exam",
-    "TX22G6M": "Texas STAAR 2022 Grade 6 Math Exam",
-    "TX21G6M": "Texas STAAR 2021 Grade 6 Math Exam",
-    "TX19G6M": "Texas STAAR 2019 Grade 6 Math Exam",
-    "TX18G6M": "Texas STAAR 2018 Grade 6 Math Exam",
-    "TX17G6M": "Texas STAAR 2017 Grade 6 Math Exam",
-    "TX22G6R": "Texas STAAR 2022 Grade 6 Reading Exam",
-    "TX21G6R": "Texas STAAR 2021 Grade 6 Reading Exam",
-    "TX19G6R": "Texas STAAR 2019 Grade 6 Reading Exam",
-    "TX18G6R": "Texas STAAR 2018 Grade 6 Reading Exam",
-    "TX17G6R": "Texas STAAR 2017 Grade 6 Reading Exam",
-    "TX22G7M": "Texas STAAR 2022 Grade 7 Math Exam",
-    "TX21G7M": "Texas STAAR 2021 Grade 7 Math Exam",
-    "TX19G7M": "Texas STAAR 2019 Grade 7 Math Exam",
-    "TX18G7M": "Texas STAAR 2018 Grade 7 Math Exam",
-    "TX17G7M": "Texas STAAR 2017 Grade 7 Math Exam",
-    "TX22G7R": "Texas STAAR 2022 Grade 7 Reading Exam",
-    "TX21G7R": "Texas STAAR 2021 Grade 7 Reading Exam",
-    "TX19G7R": "Texas STAAR 2019 Grade 7 Reading Exam",
-    "TX18G7R": "Texas STAAR 2018 Grade 7 Reading Exam",
-    "TX17G7R": "Texas STAAR 2017 Grade 7 Reading Exam",
-    "TX22G8M": "Texas STAAR 2022 Grade 8 Math Exam",
-    "TX21G8M": "Texas STAAR 2021 Grade 8 Math Exam",
-    "TX19G8M": "Texas STAAR 2019 Grade 8 Math Exam",
-    "TX18G8M": "Texas STAAR 2018 Grade 8 Math Exam",
-    "TX17G8M": "Texas STAAR 2017 Grade 8 Math Exam",
-    "TX22G8R": "Texas STAAR 2022 Grade 8 Reading Exam",
-    "TX21G8R": "Texas STAAR 2021 Grade 8 Reading Exam",
-    "TX19G8R": "Texas STAAR 2019 Grade 8 Reading Exam",
-    "TX18G8R": "Texas STAAR 2018 Grade 8 Reading Exam",
-    "TX17G8R": "Texas STAAR 2017 Grade 8 Reading Exam",
-    "TX22G8S": "Texas STAAR 2022 Grade 8 Science Exam",
-    "TX21G8S": "Texas STAAR 2021 Grade 8 Science Exam",
-    "TX19G8S": "Texas STAAR 2019 Grade 8 Science Exam",
-    "TX18G8S": "Texas STAAR 2018 Grade 8 Science Exam",
-    "TX22G8SS": "Texas STAAR 2022 Grade 8 Social Studies Exam",
-    "TX21G8SS": "Texas STAAR 2021 Grade 8 Social Studies Exam",
-    "TX19G8SS": "Texas STAAR 2019 Grade 8 Social Studies Exam",
-    "TX18G8SS": "Texas STAAR 2018 Grade 8 Social Studies Exam",
-    "TX22HSA1": "Texas STAAR 2022 Algebra I Exam",
-    "TX21HSA1": "Texas STAAR 2021 Algebra I Exam",
-    "TX19HSA1": "Texas STAAR 2019 Algebra I Exam",
-    "TX18HSA1": "Texas STAAR 2018 Algebra I Exam",
-    "TX17HSA1": "Texas STAAR 2017 Algebra I Exam",
-    "TX22HSB": "Texas STAAR 2022 Biology Exam",
-    "TX21HSB": "Texas STAAR 2021 Biology Exam",
-    "TX19HSB": "Texas STAAR 2019 Biology Exam",
-    "TX18HSB": "Texas STAAR 2018 Biology Exam",
-    "TX17HSB": "Texas STAAR 2017 Biology Exam",
-    "TX22HSE1": "Texas STAAR 2022 English I Exam",
-    "TX21HSE1": "Texas STAAR 2021 English I Exam",
-    "TX19HSE1": "Texas STAAR 2019 English I Exam",
-    "TX18HSE1": "Texas STAAR 2018 English I Exam",
-    "TX17HSE1": "Texas STAAR 2017 English I Exam",
-    "TX22HSE2": "Texas STAAR 2022 English II Exam",
-    "TX21HSE2": "Texas STAAR 2021 English II Exam",
-    "TX19HSE2": "Texas STAAR 2019 English II Exam",
-    "TX18HSE2": "Texas STAAR 2018 English II Exam",
-    "TX17HSE2": "Texas STAAR 2017 English II Exam",
-    "TX22HSUSH": "Texas STAAR 2022 U.S. History Exam",
-    "TX21HSUSH": "Texas STAAR 2021 U.S. History Exam",
-    "TX19HSUSH": "Texas STAAR 2019 U.S. History Exam",
-    "TX18HSUSH": "Texas STAAR 2018 U.S. History Exam",
-    "TX17HSUSH": "Texas STAAR 2017 U.S. History Exam",
-    "WIG3M": "Wisconsin WFE Grade 3 Math Practice Exam",
-    "WIG3E": "Wisconsin WFE Grade 3 English Language Arts Practice Exam",
-    "WIG4M": "Wisconsin WFE Grade 4 Math Practice Exam",
-    "WIG4E": "Wisconsin WFE Grade 4 English Language Arts Practice Exam",
-    "WIG4S": "Wisconsin WFE Grade 4 Science Practice Exam",
-    "WIG4SS": "Wisconsin WFE Grade 4 Social Studies Practice Exam",
-    "WIG5M": "Wisconsin WFE Grade 5 Math Practice Exam",
-    "WIG5E": "Wisconsin WFE Grade 5 English Language Arts Practice Exam",
-    "WIG6M": "Wisconsin WFE Grade 6 Math Practice Exam",
-    "WIG6E": "Wisconsin WFE Grade 6 English Language Arts Practice Exam",
-    "WIG7M": "Wisconsin WFE Grade 7 Math Practice Exam",
-    "WIG7E": "Wisconsin WFE Grade 7 English Language Arts Practice Exam",
-    "WIG8M": "Wisconsin WFE Grade 8 Math Practice Exam",
-    "WIG8E": "Wisconsin WFE Grade 8 English Language Arts Practice Exam",
-    "WIG8S": "Wisconsin WFE Grade 8 Science Practice Exam",
-    "WIG8SS": "Wisconsin WFE Grade 8 Social Studies Practice Exam",
-    "WIG10SS": "Wisconsin WFE Grade 10 Social Studies Practice Exam",
-    "SAT1": "The SAT Practice Test #1",
-    "SAT2": "The SAT Practice Test #2",
-    "SAT3": "The SAT Practice Test #3",
-    "SAT4": "The SAT Practice Test #4",
-    "SAT5": "The SAT Practice Test #5",
-    "SAT6": "The SAT Practice Test #6",
-    "SAT7": "The SAT Practice Test #7",
-    "SAT8": "The SAT Practice Test #8",
-    "SAT9": "The SAT Practice Test #9",
-    "SAT10": "The SAT Practice Test #10",
-    "PSAT1": "PSAT/NMSQT Practice Test #1",
-    "PSAT101": "PSAT 10 Practice Test #1",
-    "PSAT102": "PSAT 10 Practice Test #2",
-    "PSAT891": "PSAT 8/9 Practice Test #1"
+  s_dump_dict: any = {
+    "KE-CC": ["KE-CC", this.KE_standards_dump],
+    "KM-CC": ["KM-CC", this.KM_standards_dump],
+    "G1E-CC": ["G1E-CC", this.G1E_standards_dump],
+    "G1M-CC": ["G1M-CC", this.G1M_standards_dump],
+    "G2E-CC": ["G2E-CC", this.G2E_standards_dump],
+    "G2M-CC": ["G2M-CC", this.G2M_standards_dump],
+    "G3E-CC": ["G3E-CC", this.G3E_standards_dump],
+    "G3M-CC": ["G3M-CC", this.G3M_standards_dump],
+    "G4E-CC": ["G4E-CC", this.G4E_standards_dump],
+    "G4M-CC": ["G4M-CC", this.G4M_standards_dump],
+    "G5E-CC": ["G5E-CC", this.G5E_standards_dump],
+    "G5M-CC": ["G5M-CC", this.G5M_standards_dump],
+    "G6E-CC": ["G6E-CC", this.G6E_standards_dump],
+    "G6M-CC": ["G6M-CC", this.G6M_standards_dump],
+    "G7E-CC": ["G7E-CC", this.G7E_standards_dump],
+    "G7M-CC": ["G7M-CC", this.G7M_standards_dump],
+    "G8E-CC": ["G8E-CC", this.G8E_standards_dump],
+    "G8M-CC": ["G8M-CC", this.G8M_standards_dump],
+    "HSE1-CC": ["HSE1-CC", this.HSE2_standards_dump],
+    "HSE2-CC": ["HSE2-CC", this.HSE2_standards_dump],
+    "HSMA-CC": ["HSMA-CC", this.HSMA_standards_dump],
+    "HSMF-CC": ["HSMF-CC", this.HSMF_standards_dump],
+    "HSMG-CC": ["HSMG-CC", this.HSMG_standards_dump],
+    "HSMM-CC": ["HSMM-CC", this.HSMM_standards_dump],
+    "HSMN-CC": ["HSMN-CC", this.HSMN_standards_dump],
+    "HSMS-CC": ["HSMS-CC", this.HSMS_standards_dump],
+    "PE-CO": ["PE-CO", this.COPE_standards_dump],
+    "PM-CO": ["PM-CO", this.COPM_standards_dump],
+    "PS-CO": ["PS-CO", this.COPS_standards_dump],
+    "PSS-CO": ["PSS-CO", this.COPSS_standards_dump],
+    "KE-CO": ["KE-CO", this.COKE_standards_dump],
+    "KM-CO": ["KM-CO", this.COKM_standards_dump],
+    "KS-CO": ["KS-CO", this.COKS_standards_dump],
+    "KSS-CO": ["KSS-CO", this.COKSS_standards_dump],
+    "G1E-CO": ["G1E-CO", this.COG1E_standards_dump],
+    "G1M-CO": ["G1M-CO", this.COG1M_standards_dump],
+    "G1S-CO": ["G1S-CO", this.COG1S_standards_dump],
+    "G1SS-CO": ["G1SS-CO", this.COG1SS_standards_dump],
+    "G2E-CO": ["G2E-CO", this.COG2E_standards_dump],
+    "G2M-CO": ["G2M-CO", this.COG2M_standards_dump],
+    "G2S-CO": ["G2S-CO", this.COG2S_standards_dump],
+    "G2SS-CO": ["G2SS-CO", this.COG2SS_standards_dump],
+    "G3E-CO": ["G3E-CO", this.COG3E_standards_dump],
+    "G3M-CO": ["G3M-CO", this.COG3M_standards_dump],
+    "G3S-CO": ["G3S-CO", this.COG3S_standards_dump],
+    "G3SS-CO": ["G3SS-CO", this.COG3SS_standards_dump],
+    "G4E-CO": ["G4E-CO", this.COG4E_standards_dump],
+    "G4M-CO": ["G4M-CO", this.COG4M_standards_dump],
+    "G4S-CO": ["G4S-CO", this.COG4S_standards_dump],
+    "G4SS-CO": ["G4SS-CO", this.COG4SS_standards_dump],
+    "G5E-CO": ["G5E-CO", this.COG5E_standards_dump],
+    "G5M-CO": ["G5M-CO", this.COG5M_standards_dump],
+    "G5S-CO": ["G5S-CO", this.COG5S_standards_dump],
+    "G5SS-CO": ["G5SS-CO", this.COG5SS_standards_dump],
+    "G6E-CO": ["G6E-CO", this.COG6E_standards_dump],
+    "G6M-CO": ["G6M-CO", this.COG6M_standards_dump],
+    "G6SS-CO": ["G6SS-CO", this.COG6SS_standards_dump],
+    "G7E-CO": ["G7E-CO", this.COG7E_standards_dump],
+    "G7M-CO": ["G7M-CO", this.COG7M_standards_dump],
+    "G7SS-CO": ["G7SS-CO", this.COG7SS_standards_dump],
+    "G8E-CO": ["G8E-CO", this.COG8E_standards_dump],
+    "G8M-CO": ["G8M-CO", this.COG8M_standards_dump],
+    "MSS-CO": ["MSS-CO", this.COMSS_standards_dump],
+    "G8SS-CO": ["G8SS-CO", this.COG8SS_standards_dump],
+    "HSE1-CO": ["HSE1-CO", this.COHSE1_standards_dump],
+    "HSE2-CO": ["HSE2-CO", this.COHSE2_standards_dump],
+    "HSM-CO": ["HSM-CO", this.COHSM_standards_dump],
+    "HSS-CO": ["HSS-CO", this.COHSS_standards_dump],
+    "HSSS-CO": ["HSSS-CO", this.COHSSS_standards_dump],
+    "KE-FL": ["KE-FL", this.FLKE_standards_dump],
+    "KM-FL": ["KM-FL", this.FLKM_standards_dump],
+    "G1E-FL": ["G1E-FL", this.FLG1E_standards_dump],
+    "G1M-FL": ["G1M-FL", this.FLG1M_standards_dump],
+    "G2E-FL": ["G2E-FL", this.FLG2E_standards_dump],
+    "G2M-FL": ["G2M-FL", this.FLG2M_standards_dump],
+    "G3E-FL": ["G3E-FL", this.FLG3E_standards_dump],
+    "G3M-FL": ["G3M-FL", this.FLG3M_standards_dump],
+    "G4E-FL": ["G4M-FL", this.FLG4E_standards_dump],
+    "G4M-FL": ["G4M-FL", this.FLG4M_standards_dump],
+    "G5E-FL": ["G5E-FL", this.FLG5E_standards_dump],
+    "G5M-FL": ["G5M-FL", this.FLG5M_standards_dump],
+    "G6E-FL": ["G6E-FL", this.FLG6E_standards_dump],
+    "G6M-FL": ["G6M-FL", this.FLG6M_standards_dump],
+    "G7E-FL": ["G7E-FL", this.FLG7E_standards_dump],
+    "G7M-FL": ["G7M-FL", this.FLG7M_standards_dump],
+    "G8E-FL": ["G8E-FL", this.FLG8E_standards_dump],
+    "G8M-FL": ["G8M-FL", this.FLG8M_standards_dump],
+    "G9E-FL": ["G9E-FL", this.FLG9E_standards_dump],
+    "G10E-FL": ["G10E-FL", this.FLG10E_standards_dump],
+    "G11E-FL": ["G11E-FL", this.FLG11E_standards_dump],
+    "G12E-FL": ["G12E-FL", this.FLG12E_standards_dump],
+    "HSM-FL": ["HSM-FL", this.FLHSM_standards_dump],
+    "PE-MA": ["PE-MA", this.MAPE_standards_dump],
+    "PM-MA": ["PM-MA", this.MAPM_standards_dump],
+    "PS-MA": ["PS-MA", this.MAPS_standards_dump],
+    "KE-MA": ["KE-MA", this.MAKE_standards_dump],
+    "KM-MA": ["KM-MA", this.MAKM_standards_dump],
+    "KS-MA": ["KS-MA", this.MAKS_standards_dump],
+    "EEST-MA": ["EEST-MA", this.MAEEST_standards_dump],
+    "G1E-MA": ["G1E-MA", this.MAG1E_standards_dump],
+    "G1M-MA": ["G1M-MA", this.MAG1M_standards_dump],
+    "G1S-MA": ["G1S-MA", this.MAG1S_standards_dump],
+    "G2E-MA": ["G2E-MA", this.MAG2E_standards_dump],
+    "G2M-MA": ["G2M-MA", this.MAG2M_standards_dump],
+    "G2S-MA": ["G2S-MA", this.MAG2S_standards_dump],
+    "G3E-MA": ["G3E-MA", this.MAG3E_standards_dump],
+    "G3M-MA": ["G3M-MA", this.MAG3M_standards_dump],
+    "G3S-MA": ["G3S-MA", this.MAG3S_standards_dump],
+    "UEST-MA": ["UEST-MA", this.MAUEST_standards_dump],
+    "G4E-MA": ["G4E-MA", this.MAG4E_standards_dump],
+    "G4M-MA": ["G4M-MA", this.MAG4M_standards_dump],
+    "G4S-MA": ["G4S-MA", this.MAG4S_standards_dump],
+    "G5E-MA": ["G5E-MA", this.MAG5E_standards_dump],
+    "G5M-MA": ["G5M-MA", this.MAG5M_standards_dump],
+    "G5S-MA": ["G5S-MA", this.MAG5S_standards_dump],
+    "G6E-MA": ["G6E-MA", this.MAG6E_standards_dump],
+    "G6M-MA": ["G6M-MA", this.MAG6M_standards_dump],
+    "G6S-MA": ["G6S-MA", this.MAG6S_standards_dump],
+    "MST-MA": ["MST-MA", this.MAMST_standards_dump],
+    "G7E-MA": ["G7E-MA", this.MAG7E_standards_dump],
+    "G7M-MA": ["G7M-MA", this.MAG7M_standards_dump],
+    "G7S-MA": ["G7S-MA", this.MAG7S_standards_dump],
+    "G8E-MA": ["G8E-MA", this.MAG8E_standards_dump],
+    "G8M-MA": ["G8M-MA", this.MAG8M_standards_dump],
+    "G8S-MA": ["G8S-MA", this.MAG8S_standards_dump],
+    "HSE1-MA": ["HSE1-MA", this.MAHSE1_standards_dump],
+    "HSE2-MA": ["HSE2-MA", this.MAHSE2_standards_dump],
+    "HSMA-MA": ["HSMA-MA", this.MAHSMA_standards_dump],
+    "HSMF-MA": ["HSMF-MA", this.MAHSMF_standards_dump],
+    "HSMG-MA": ["HSMG-MA", this.MAHSMG_standards_dump],
+    "HSMM-MA": ["HSMM-MA", this.MAHSMM_standards_dump],
+    "HSMN-MA": ["HSMN-MA", this.MAHSMN_standards_dump],
+    "HSMS-MA": ["HSMS-MA", this.MAHSMS_standards_dump],
+    "HSSB-MA": ["HSSB-MA", this.MAHSSB_standards_dump],
+    "HSSC-MA": ["HSSC-MA", this.MAHSSC_standards_dump],
+    "HSSP-MA": ["HSSP-MA", this.MAHSSP_standards_dump],
+    "HSSES-MA": ["HSSES-MA", this.MAHSSES_standards_dump],
+    "HSSTS-MA": ["HSSTS-MA", this.MAHSSTS_standards_dump],
+    "HST-MA": ["HST-MA", this.MAHST_standards_dump],
+    "PE-MD": ["PE-MD", this.MDPE_standards_dump],
+    "PM-MD": ["PM-MD", this.MDPM_standards_dump],
+    "KE-MD": ["KE-MD", this.MDKE_standards_dump],
+    "KM-MD": ["KM-MD", this.MDKM_standards_dump],
+    "KS-MD": ["KS-NG", this.NGKS_standards_dump],
+    "G1E-MD": ["G1E-MD", this.MDG1E_standards_dump],
+    "G1M-MD": ["G1M-MD", this.MDG1M_standards_dump],
+    "G1S-MD": ["G1S-NG", this.NGG1S_standards_dump],
+    "G2E-MD": ["G2E-MD", this.MDG2E_standards_dump],
+    "G2M-MD": ["G2M-MD", this.MDG2M_standards_dump],
+    "G2S-MD": ["G2S-NG", this.NGG1S_standards_dump],
+    "G3E-MD": ["G3E-MD", this.MDG3E_standards_dump],
+    "G3M-MD": ["G3M-MD", this.MDG3M_standards_dump],
+    "G3S-MD": ["G3S-NG", this.NGG3S_standards_dump],
+    "G4E-MD": ["G4E-MD", this.MDG4E_standards_dump],
+    "G4M-MD": ["G4M-MD", this.MDG4M_standards_dump],
+    "G4S-MD": ["G4S-NG", this.NGG4S_standards_dump],
+    "G5E-MD": ["G5E-MD", this.MDG5E_standards_dump],
+    "G5M-MD": ["G5M-MD", this.MDG5M_standards_dump],
+    "G5S-MD": ["G5S-NG", this.NGG5S_standards_dump],
+    "G6E-MD": ["G6E-MD", this.MDG6E_standards_dump],
+    "G6M-MD": ["G6M-MD", this.MDG6M_standards_dump],
+    "G7E-MD": ["G7E-MD", this.MDG7E_standards_dump],
+    "G7M-MD": ["G7M-MD", this.MDG7M_standards_dump],
+    "G8E-MD": ["G8E-MD", this.MDG8E_standards_dump],
+    "G8M-MD": ["G8M-MD", this.MDG8M_standards_dump],
+    "MSS-MD": ["MSS-NG", this.NGMSS_standards_dump],
+    "HSE1-MD": ["HSE1-MD", this.MDHSE1_standards_dump],
+    "HSE2-MD": ["HSE2-MD", this.MDHSE2_standards_dump],
+    "HSMA1-MD": ["HSMA1-MD", this.MDHSMA1_standards_dump],
+    "HSMA2-MD": ["HSMA2-MD", this.MDHSMA2_standards_dump],
+    "HSMG-MD": ["HSMG-MD", this.MDHSMG_standards_dump],
+    "HSMS-MD": ["HSMS-MD", this.MDHSMS_standards_dump],
+    "HSS-MD": ["HSS-NG", this.NGHSS_standards_dump],
+    "KE-MS": ["KE-MS", this.MSKE_standards_dump],
+    "KM-MS": ["KM-MS", this.MSKM_standards_dump],
+    "G1E-MS": ["G1E-MS", this.MSG1E_standards_dump],
+    "G1M-MS": ["G1M-MS", this.MSG1M_standards_dump],
+    "G2E-MS": ["G2E-MS", this.MSG2E_standards_dump],
+    "G2M-MS": ["G2M-MS", this.MSG2M_standards_dump],
+    "G3E-MS": ["G3E-MS", this.MSG3E_standards_dump],
+    "G3M-MS": ["G3M-MS", this.MSG3M_standards_dump],
+    "G4E-MS": ["G4E-MS", this.MSG4E_standards_dump],
+    "G4M-MS": ["G4M-MS", this.MSG4M_standards_dump],
+    "G5E-MS": ["G5E-MS", this.MSG5E_standards_dump],
+    "G5M-MS": ["G5M-MS", this.MSG5M_standards_dump],
+    "G6E-MS": ["G6E-MS", this.MSG6E_standards_dump],
+    "G6M-MS": ["G6M-MS", this.MSG6M_standards_dump],
+    "G7E-MS": ["G7E-MS", this.MSG7E_standards_dump],
+    "G7M-MS": ["G7M-MS", this.MSG7M_standards_dump],
+    "G8E-MS": ["G8E-MS", this.MSG8E_standards_dump],
+    "G8M-MS": ["G8M-MS", this.MSG8M_standards_dump],
+    "KE-NJ": ["KE-NJ", this.NJKE_standards_dump],
+    "KM-NJ": ["KM-NJ", this.NJKM_standards_dump],
+    "KS-NJ": ["KS-NJ", this.NJKS_standards_dump],
+    "G1E-NJ": ["G1E-NJ", this.NJG1E_standards_dump],
+    "G1M-NJ": ["G1M-NJ", this.NJG1M_standards_dump],
+    "G1S-NJ": ["G1S-NJ", this.NJG1S_standards_dump],
+    "G2E-NJ": ["G2E-NJ", this.NJG2E_standards_dump],
+    "G2M-NJ": ["G2M-NJ", this.NJG2M_standards_dump],
+    "G2S-NJ": ["G2S-NJ", this.NJG2S_standards_dump],
+    "G3E-NJ": ["G3E-NJ", this.NJG3E_standards_dump],
+    "G3M-NJ": ["G3M-NJ", this.NJG3M_standards_dump],
+    "G3S-NJ": ["G3S-NJ", this.NJG3S_standards_dump],
+    "G4E-NJ": ["G4E-NJ", this.NJG4E_standards_dump],
+    "G4M-NJ": ["G4M-NJ", this.NJG4M_standards_dump],
+    "G4S-NJ": ["G4S-NJ", this.NJG4S_standards_dump],
+    "G5E-NJ": ["G5E-NJ", this.NJG5E_standards_dump],
+    "G5M-NJ": ["G5M-NJ", this.NJG5M_standards_dump],
+    "G5S-NJ": ["G5S-NJ", this.NJG5S_standards_dump],
+    "G6E-NJ": ["G6E-NJ", this.NJG6E_standards_dump],
+    "G6M-NJ": ["G6M-NJ", this.NJG6M_standards_dump],
+    "G7E-NJ": ["G7E-NJ", this.NJG7E_standards_dump],
+    "G7M-NJ": ["G7M-NJ", this.NJG7M_standards_dump],
+    "G8E-NJ": ["G8E-NJ", this.NJG8E_standards_dump],
+    "G8M-NJ": ["G8M-NJ", this.NJG8M_standards_dump],
+    "MSS-NJ": ["MSS-NJ", this.NJMSS_standards_dump],
+    "PE-NY": ["PE-NY", this.NYPE_standards_dump],
+    "PM-NY": ["PM-NY", this.NYPM_standards_dump],
+    "KE-NY": ["KE-NY", this.NYKE_standards_dump],
+    "KM-NY": ["KM-NY", this.NYKM_standards_dump],
+    "G1E-NY": ["G1E-NY", this.NYG1E_standards_dump],
+    "G1M-NY": ["G1M-NY", this.NYG1M_standards_dump],
+    "G2E-NY": ["G2E-NY", this.NYG2E_standards_dump],
+    "G2M-NY": ["G2M-NY", this.NYG2M_standards_dump],
+    "G3E-NY": ["G3E-NY", this.NYG3E_standards_dump],
+    "G3M-NY": ["G3M-NY", this.NYG3M_standards_dump],
+    "G4E-NY": ["G4E-NY", this.NYG4E_standards_dump],
+    "G4M-NY": ["G4M-NY", this.NYG4M_standards_dump],
+    "G5E-NY": ["G5E-NY", this.NYG5E_standards_dump],
+    "G5M-NY": ["G5M-NY", this.NYG5M_standards_dump],
+    "G6E-NY": ["G6E-NY", this.NYG6E_standards_dump],
+    "G6M-NY": ["G6M-NY", this.NYG6M_standards_dump],
+    "G7E-NY": ["G7E-NY", this.NYG7E_standards_dump],
+    "G7M-NY": ["G7M-NY", this.NYG7M_standards_dump],
+    "G8E-NY": ["G8E-NY", this.NYG8E_standards_dump],
+    "G8M-NY": ["G8M-NY", this.NYG8M_standards_dump],
+    "HSE1-NY": ["HSE1-NY", this.NYHSE1_standards_dump],
+    "HSE2-NY": ["HSE2-NY", this.NYHSE2_standards_dump],
+    "HSMA1-NY": ["SMA1-NY", this.NYHSMA1_standards_dump],
+    "HSMG-NY": ["HSMG-NY", this.NYHSMG_standards_dump],
+    "HSMA2-NY": ["HSMA2-NY", this.NYHSMA2_standards_dump],
+    "G3E-PA": ["G3E-PA", this.PAG3E_standards_dump],
+    "G3M-PA": ["G3M-PA", this.PAG3M_standards_dump],
+    "G4E-PA": ["G4E-PA", this.PAG4E_standards_dump],
+    "G4M-PA": ["G4M-PA", this.PAG4M_standards_dump],
+    "G4S-PA": ["G4S-PA", this.PAG4S_standards_dump],
+    "G5E-PA": ["G5E-PA", this.PAG5E_standards_dump],
+    "G5M-PA": ["G5M-PA", this.PAG5M_standards_dump],
+    "G6E-PA": ["G6E-PA", this.PAG6E_standards_dump],
+    "G6M-PA": ["G6M-PA", this.PAG6M_standards_dump],
+    "G7E-PA": ["G7E-PA", this.PAG7E_standards_dump],
+    "G7M-PA": ["G7M-PA", this.PAG7M_standards_dump],
+    "G8E-PA": ["G8E-PA", this.PAG8E_standards_dump],
+    "G8M-PA": ["G8M-PA", this.PAG8M_standards_dump],
+    "G8S-PA": ["G8S-PA", this.PAG8S_standards_dump],
+    "KE-RI": ["KE-RI", this.RIKE_standards_dump],
+    "KM-RI": ["KM-RI", this.RIKM_standards_dump],
+    "G1E-RI": ["G1E-RI", this.RIG1E_standards_dump],
+    "G1M-RI": ["G1M-RI", this.RIG1M_standards_dump],
+    "G2E-RI": ["G2E-RI", this.RIG2E_standards_dump],
+    "G2M-RI": ["G2M-RI", this.RIG2M_standards_dump],
+    "G3E-RI": ["G3E-RI", this.RIG3E_standards_dump],
+    "G3M-RI": ["G3M-RI", this.RIG3M_standards_dump],
+    "G4E-RI": ["G4E-RI", this.RIG4E_standards_dump],
+    "G4M-RI": ["G4M-RI", this.RIG4M_standards_dump],
+    "G5E-RI": ["G5E-RI", this.RIG5E_standards_dump],
+    "G5M-RI": ["G5M-RI", this.RIG5M_standards_dump],
+    "G6E-RI": ["G6E-RI", this.RIG6E_standards_dump],
+    "G6M-RI": ["G6M-RI", this.RIG6M_standards_dump],
+    "G7E-RI": ["G7E-RI", this.RIG7E_standards_dump],
+    "G7M-RI": ["G7M-RI", this.RIG7M_standards_dump],
+    "G8E-RI": ["G8E-RI", this.RIG8E_standards_dump],
+    "G8M-RI": ["G8M-RI", this.RIG8M_standards_dump],
+    "HSE1-RI": ["HSE1-RI", this.RIHSE2_standards_dump],
+    "HSE2-RI": ["HSE2-RI", this.RIHSE2_standards_dump],
+    "HSMA-RI": ["HSMA-RI", this.RIHSMA_standards_dump],
+    "HSMF-RI": ["HSMF-RI", this.RIHSMF_standards_dump],
+    "HSMG-RI": ["HSMG-RI", this.RIHSMG_standards_dump],
+    "HSMM-RI": ["HSMM-RI", this.RIHSMM_standards_dump],
+    "HSMN-RI": ["HSMN-RI", this.RIHSMN_standards_dump],
+    "HSMS-RI": ["HSMS-RI", this.RIHSMS_standards_dump],
+    "KE-SC": ["KE-SC", this.SCKE_standards_dump],
+    "KM-SC": ["KM-SC", this.SCKM_standards_dump],
+    "KS-SC": ["KS-SC", this.SCKS_standards_dump],
+    "G1E-SC": ["G1E-SC", this.SCG1E_standards_dump],
+    "G1M-SC": ["G1M-SC", this.SCG1M_standards_dump],
+    "G1S-SC": ["G1S-SC", this.SCG1S_standards_dump],
+    "G2E-SC": ["G2E-SC", this.SCG2E_standards_dump],
+    "G2M-SC": ["G2M-SC", this.SCG2M_standards_dump],
+    "G2S-SC": ["G2S-SC", this.SCG2S_standards_dump],
+    "G3E-SC": ["G3E-SC", this.SCG3E_standards_dump],
+    "G3M-SC": ["G3M-SC", this.SCG3M_standards_dump],
+    "G3S-SC": ["G3S-SC", this.SCG3S_standards_dump],
+    "G4E-SC": ["G4E-SC", this.SCG4E_standards_dump],
+    "G4M-SC": ["G4M-SC", this.SCG4M_standards_dump],
+    "G4S-SC": ["G4S-SC", this.SCG4S_standards_dump],
+    "G5E-SC": ["G5E-SC", this.SCG5E_standards_dump],
+    "G5M-SC": ["G5M-SC", this.SCG5M_standards_dump],
+    "G5S-SC": ["G5S-SC", this.SCG5S_standards_dump],
+    "G6E-SC": ["G6E-SC", this.SCG6E_standards_dump],
+    "G6M-SC": ["G6M-SC", this.SCG6M_standards_dump],
+    "G6S-SC": ["G6S-SC", this.SCG6S_standards_dump],
+    "G7E-SC": ["G7E-SC", this.SCG7E_standards_dump],
+    "G7M-SC": ["G7M-SC", this.SCG7M_standards_dump],
+    "G7S-SC": ["G7S-SC", this.SCG7S_standards_dump],
+    "G8E-SC": ["G8E-SC", this.SCG8E_standards_dump],
+    "G8M-SC": ["G8M-SC", this.SCG8M_standards_dump],
+    "G8S-SC": ["G8S-SC", this.SCG8S_standards_dump],
+    "KE-TN": ["KE-TN", this.TNKE_standards_dump],
+    "KM-TN": ["KM-TN", this.TNKM_standards_dump],
+    "KS-TN": ["KS-TN", this.TNKS_standards_dump],
+    "G1E-TN": ["G1E-TN", this.TNG1E_standards_dump],
+    "G1M-TN": ["G1M-TN", this.TNG1M_standards_dump],
+    "G1S-TN": ["G1S-TN", this.TNG1S_standards_dump],
+    "G2E-TN": ["G2E-TN", this.TNG2E_standards_dump],
+    "G2M-TN": ["G2M-TN", this.TNG2M_standards_dump],
+    "G2S-TN": ["G2S-TN", this.TNG2S_standards_dump],
+    "G3E-TN": ["G3E-TN", this.TNG3E_standards_dump],
+    "G3M-TN": ["G3M-TN", this.TNG3M_standards_dump],
+    "G3S-TN": ["G3S-TN", this.TNG3S_standards_dump],
+    "G4E-TN": ["G4E-TN", this.TNG4E_standards_dump],
+    "G4M-TN": ["G4M-TN", this.TNG4M_standards_dump],
+    "G4S-TN": ["G4S-TN", this.TNG4S_standards_dump],
+    "G5E-TN": ["G5E-TN", this.TNG5E_standards_dump],
+    "G5M-TN": ["G5M-TN", this.TNG5M_standards_dump],
+    "G5S-TN": ["G5S-TN", this.TNG5S_standards_dump],
+    "G6E-TN": ["G6E-TN", this.TNG6E_standards_dump],
+    "G6M-TN": ["G6M-TN", this.TNG6M_standards_dump],
+    "G6S-TN": ["G6S-TN", this.TNG6S_standards_dump],
+    "G7E-TN": ["G7E-TN", this.TNG7E_standards_dump],
+    "G7M-TN": ["G7M-TN", this.TNG7M_standards_dump],
+    "G7S-TN": ["G7S-TN", this.TNG7S_standards_dump],
+    "G8E-TN": ["G8E-TN", this.TNG8E_standards_dump],
+    "G8M-TN": ["G8M-TN", this.TNG8M_standards_dump],
+    "G8S-TN": ["G8S-TN", this.TNG8S_standards_dump],
+    "HSMA1-TN": ["HSMA1-TN", this.TNHSMA1_standards_dump],
+    "HSMA2-TN": ["HSMA2-TN", this.TNHSMA2_standards_dump],
+    "HSSB1-TN": ["HSSB1-TN", this.TNHSSB1_standards_dump],
+    "HSE1-TN": ["HSE1-TN", this.TNHSE1_standards_dump],
+    "HSE2-TN": ["HSE2-TN", this.TNHSE2_standards_dump],
+    "HSMG-TN": ["HSMG-TN", this.TNHSMG_standards_dump],
+    "KR-TX": ["KR-TX", this.TXKR_standards_dump],
+    "KM-TX": ["KM-TX", this.TXKM_standards_dump],
+    "G1R-TX": ["G1R-TX", this.TXG1R_standards_dump],
+    "G1M-TX": ["G1M-TX", this.TXG1M_standards_dump],
+    "G2R-TX": ["G2R-TX", this.TXG2R_standards_dump],
+    "G2M-TX": ["G2M-TX", this.TXG2M_standards_dump],
+    "G3R-TX": ["G3R-TX", this.TXG3R_standards_dump],
+    "G3M-TX": ["G3M-TX", this.TXG3M_standards_dump],
+    "G4R-TX": ["G4R-TX", this.TXG4R_standards_dump],
+    "G4M-TX": ["G4M-TX", this.TXG4M_standards_dump],
+    "G5R-TX": ["G5R-TX", this.TXG5R_standards_dump],
+    "G5M-TX": ["G5M-TX", this.TXG5M_standards_dump],
+    "G6R-TX": ["G6R-TX", this.TXG6R_standards_dump],
+    "G6M-TX": ["G6M-TX", this.TXG6M_standards_dump],
+    "G7R-TX": ["G7R-TX", this.TXG7R_standards_dump],
+    "G7M-TX": ["G7M-TX", this.TXG7M_standards_dump],
+    "G8R-TX": ["G8R-TX", this.TXG8R_standards_dump],
+    "G8M-TX": ["G8M-TX", this.TXG8M_standards_dump],
+    "HSE1-TX": ["HSE1-TX", this.TXHSE1_standards_dump],
+    "HSE2-TX": ["HSE2-TX", this.TXHSE2_standards_dump],
+    "HSE3-TX": ["HSE3-TX", this.TXHSE3_standards_dump],
+    "HSE4-TX": ["HSE4-TX", this.TXHSE4_standards_dump],
+    "HSMA1-TX": ["HSMA1-TX", this.TXHSMA1_standards_dump],
+    "HSMA2-TX": ["HSMA2-TX", this.TXHSMA2_standards_dump],
+    "HSMG-TX": ["HSMG-TX", this.TXHSMG_standards_dump],
+    "HSMP-TX": ["HSMP-TX", this.TXHSMP_standards_dump],
+    "HSMS-TX": ["HSMS-TX", this.TXHSMS_standards_dump],
+    "KE-WI": ["KE-WI", this.WIKE_standards_dump],
+    "KM-WI": ["KM-WI", this.WIKM_standards_dump],
+    "G1E-WI": ["G1E-WI", this.WIG1E_standards_dump],
+    "G1M-WI": ["G1M-WI", this.WIG1M_standards_dump],
+    "G2E-WI": ["G2E-WI", this.WIG2E_standards_dump],
+    "G2M-WI": ["G2M-WI", this.WIG2M_standards_dump],
+    "G3E-WI": ["G3E-WI", this.WIG3E_standards_dump],
+    "G3M-WI": ["G3M-WI", this.WIG3M_standards_dump],
+    "G4E-WI": ["G4E-WI", this.WIG4E_standards_dump],
+    "G4M-WI": ["G4M-WI", this.WIG4M_standards_dump],
+    "G5E-WI": ["G5E-WI", this.WIG5E_standards_dump],
+    "G5M-WI": ["G5M-WI", this.WIG5M_standards_dump],
+    "G6E-WI": ["G6E-WI", this.WIG6E_standards_dump],
+    "G6M-WI": ["G6M-WI", this.WIG6M_standards_dump],
+    "G7E-WI": ["G7E-WI", this.WIG7E_standards_dump],
+    "G7M-WI": ["G7M-WI", this.WIG7M_standards_dump],
+    "G8E-WI": ["G8E-WI", this.WIG8E_standards_dump],
+    "G8M-WI": ["G8M-WI", this.WIG8M_standards_dump],
+    "EESSS-WI": ["EESSS-WI", this.WIEESSS_standards_dump],
+    "UESSS-WI": ["UESSS-WI", this.WIUESSS_standards_dump],
+    "MSSS-WI": ["MSSS-WI", this.WIMSSS_standards_dump],
+    "HSSS-WI": ["HSSS-WI", this.WIHSSS_standards_dump],
+    "SAT-M": ["SAT-M", this.SATM_standards_dump],
+    "SAT-RW": ["SAT-RW", this.SATRW_standards_dump]
   };
 
-  photoURL = "";
-  create_s: boolean = false;
-  edit_s_list: { [index: string]: any } = {};
-  student_uid: string = "";
-  create_c: boolean = false;
-  edit_c_list: { [index: string]: any } = {};
-  class_uid: string = "";
+  dump_count = 0;
 
-  exam_name = '';
-  exam_url = '';
-  exam_id = '';
-  exam_dl = 0;
-  exam_fav = false;
-  file_source = '';
-  file_page = 1;
+  favorite_std_set: string[][] = [];
+  filtered_set: string[] = this.exam_set;
+  filtered_exam_num = 0;
+  filtered_prob_num = 0;
+  generate_message = "";
 
+  problems_sequence: number[] = [];
+  ordered_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+  exam_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+  refsheet_source: string = '';
+  st_refsheet_source: string = '';
   supp_dump: any = {};
   supp_st_dump: any = {};
-  st_refsheet_source: string = '';
+  random_index = 0
+  random_list: string[] = [];
 
-  selected_topic = "";
+  exam_key: any[] = [];
+
+  problem_number = 1;
+  max_problem_number = 1;
+  problem_selection: any[] = [];
+  problem_attempts: number[] = [];
+  attempt_path: any[] = [];
+  attempt_response: string[] = [];
+  attempt_explanation: any[] = [];
+  m_selection: string[][] = [["", ""]];
+  m_submission: { [key: string]: string }[] = [{}];
+  c_submission: { [key: string]: string[] }[] = [{}];
+  m_shuffled = false;
+  choices_sequence: string[] = [];
+  shuffle_choices: { [key: string]: string[] } = {};
+  unique_choices: string[] = [];
+
+  exam_submission: { [key: number]: { 'Number': number, 'Topics': string[], 'SubTopics': string[], 'Choice': string[][], 'Correct': string[][], 'Rationale': string[][], 'Attempts': number[], 'Path': string[][][], 'Seconds': number, 'Time': string, 'Flags': boolean[] } } = {};
+
+  exam_submission_list: any[] = [];
+  wrong_submission_list: any[] = [];
+  number_correct = 0;
+  correct_percent = 0;
+  topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
+
+  selected_quiz = "";
+  // selected_topic = "";
   selected_subtopic = "";
   standard_id = '';
   standard_fav = false;
@@ -2883,18 +3317,111 @@ export class HomeComponent implements OnInit {
   subtopic_attempt_path: any[] = [];
   subtopic_attempt_response: string[] = [];
   subtopic_attempt_explanation: any[] = [];
-  m_selection: string[][] = [["", ""]];
-  m_submission: { [key: string]: string }[] = [{}];
-  c_submission: { [key: string]: string[] }[] = [{}];
-  m_shuffled = false;
-  choices_sequence: string[] = [];
-  shuffle_choices: { [key: string]: string[] } = {};
-  unique_choices: string[] = [];
-  random_index = 0
-  random_list: string[] = [];
 
-  viewerWidth = Math.round(window.innerWidth * .99).toString() + "px";
-  viewerHeight = Math.round(window.innerHeight * .95).toString() + "px";
+  public_quiz_results: any = {};
+
+  cquiz_page: string = "content";
+  quiz_public = false;
+  prob_images: any = {};
+  image_index: number = 0;
+  image_choice_index: string = '';
+  prob_statuses: { [key: number]: any } = {};
+  incomplete_probs: any[] = [];
+  problem_hover: boolean[] = [];
+  content_hover: boolean[][] = [];
+  choices_hover: boolean[][] = [];
+
+  problem_types: { [key: string]: any[] } = {
+    "MC": ["Multiple Choice", 4],
+    "MS": ["Multiple Select", 4],
+    "FR": ["Free Response", 0]
+    // "LR": ["Long Response", 0],
+    // "IM": ["Inline Matching", 4],
+    // "IMC": ["Inline Multiple Choice", 4],
+    // "IMS": ["Inline Multiple Select", 4],
+    // "IDD": ["Inline Drop Down", 4],
+    // "OM": ["Order Matching", 4],
+    // "CM": ["Category Matching", 4],
+    // "LP": ["Line Plot", 4],
+    // "GP": ["Graph Plot", 0],
+    // "T": ["Table", 4],
+  };
+
+  content_types: string[] = ['Text', 'Image'];
+
+  default_problem: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } = {
+    "Number": 0,
+    "Type": "MC",
+    "NumChoices": 4,
+    "Topics": [],
+    "SubTopics": [],
+    "SuppContent": [],
+    "Explain": false,
+    "Content": [
+      ""
+    ],
+    "AnswerChoices": {
+      "A": {
+        "Choice": "",
+        "Key": {
+          "Correct": false,
+          "Rationale": "",
+          "Percent": 0
+        }
+      },
+      "B": {
+        "Choice": "",
+        "Key": {
+          "Correct": false,
+          "Rationale": "",
+          "Percent": 0
+        }
+      },
+      "C": {
+        "Choice": "",
+        "Key": {
+          "Correct": false,
+          "Rationale": "",
+          "Percent": 0
+        }
+      },
+      "D": {
+        "Choice": "",
+        "Key": {
+          "Correct": false,
+          "Rationale": "",
+          "Percent": 0
+        }
+      }
+    },
+    "Parts": {}
+  };
+
+  default_choice: any = {
+    "Choice": "",
+    "Key": {
+      "Correct": false,
+      "Rationale": "",
+      "Percent": 0
+    }
+  };
+
+  choices_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',]
+
+  state_labels: { [key: string]: string } = {
+    "CC": "Common Core",
+    "CO": "Colorado",
+    "FL": "Florida",
+    "MA": "Massachusetts",
+    "MD": "Maryland",
+    "MS": "Mississippi",
+    "NJ": "New Jersey",
+    "NY": "New York",
+    "PA": "Pennsylvania",
+    "RI": "Rhode Island",
+    "TN": "Tennessee",
+    "TX": "Texas"
+  };
 
   subject_labels: { [key: string]: string } = {
     "Algebra I": "Algebra I",
@@ -2908,18 +3435,87 @@ export class HomeComponent implements OnInit {
     "Mathematics": "Math",
     "Physics": "Physics",
     "SAT Suite": "SAT Suite",
+    "Sciences": "Science",
     "Science": "Science",
     "Social Studies": "Social Studies",
     "U.S. History": "U.S. History"
   };
 
-  constructor(public router: Router, private titleService: Title, private meta: Meta, public authService: AuthService, private http: HttpClient) {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+  sub_subjects: { [key: string]: string[] } = {
+    "English Language Arts": ["English Language Arts", "English I", "English II"],
+    "Mathematics": ["Mathematics", "Algebra I", "Algebra II", 'Geometry'],
+    "Sciences": ["Sciences", "Science", "Biology", "Physics"],
+    "Social Studies": ["Social Studies", "U.S. History"],
+    "Reading & Writing": ["Reading & Writing", "English Reading", "English Writing"],
+  };
+
+  subject_map: { [key: string]: string[] } = {
+    "English Language Arts": ["English Language Arts", "English Language Arts & Reading", "Reading, Writing & Communication", "Reading & Writing", "English Reading", "English Writing", "English I", "English II"],
+    "Social Studies": ["Social Studies", "U.S. History"],
+    "Sciences": ["Sciences", "Science"],
+    "Biology I": ["Biology", "Science - Biology", "Science - Biology 1"],
+    "Biology II": ["Science - Biology 2"],
+    "Mathematics": ["Mathematics"],
+    "Geometry": ["Geometry", "Mathematics - Geometry"],
+    "Algebra": ["Algebra I", "Mathematics - Algebra", "Mathematics - Algebra 1"],
+    "Algebra II": ["Algebra II", "Mathematics - Algebra 2"],
+    "Functions": ["Mathematics - Functions"],
+    "Modeling": ["Mathematics - Modeling"],
+    "Number & Quantity": ["Mathematics - Number & Quantity"],
+    "Statistics": ["Mathematics - Statistics & Probability", "Mathematics - Statistics"],
+    "Precalculus": ["Mathematics - Precalculus"],
+    "Physics": ["Physics", "Science - Introductory Physics"],
+    "Earth & Space": ["Science - Earth & Space Science"],
+    "Engineering": ["Science - Technology/Engineering"]
   }
+
+  constructor(public router: Router, public authService: AuthService, private http: HttpClient, private aRoute: ActivatedRoute, private sanitizer: DomSanitizer) { }
+
+  sub: any;
+
+  // public onChange(file: File): void {
+  //   let fileReader: FileReader = new FileReader();
+  //   let self = this;
+  //   fileReader.onloadend = function(x) {
+  //     self.exam_data = fileReader.result;
+  //   }
+  //   fileReader.readAsText(file);
+  // }
 
   width_change2() {
     this.screenWidth = window.innerWidth;
-    this.screenHeight = window.innerHeight;
+    if (this.screenWidth <= this.mobileWidth) {
+      this.expand_topics = false;
+      this.expand_overview = false;
+    }
+    else {
+      this.expand_topics = true;
+      this.expand_overview = true;
+    }
+  }
+
+  master_filters(filts: string[]) {
+    var master_filts = []
+    if (filts != undefined) {
+      for (let filt of filts) {
+        if (Object.keys(this.sub_subjects).includes(filt)) {
+          master_filts.push(filt);
+        }
+      }
+    }
+    return master_filts;
+  }
+
+  quiz_results_entries() {
+    return (Object.keys(this.public_quiz_results));
+  }
+
+  get_part_num(part: string) {
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    return part_num;
   }
 
   get_part_num_st(part: string) {
@@ -2930,12 +3526,17 @@ export class HomeComponent implements OnInit {
     return part_num;
   }
 
-  can_assign_s(std: string) {
-    return (!Object.keys(this.all_students_data[std].exams.history).includes(this.exam_id));
-  }
-
-  can_assign_c(clss: string) {
-    return (!this.my_class_metadata[this.authService.userData.classes.indexOf(clss) - 1].exams.includes(this.exam_id));
+  read_supp_json(path: string) {
+    this.http.get("./assets/" + path).subscribe(res => {
+      console.log(res);
+      console.log(JSON.stringify(res));
+      this.supp_dump[path] = res;
+      for (let block of this.supp_dump[path].Content) {
+        if (block[1].endsWith('.json')) {
+          this.read_supp_json(block[1]);
+        }
+      }
+    });
   }
 
   read_supp_st_json(path: string) {
@@ -2949,6 +3550,17 @@ export class HomeComponent implements OnInit {
         }
       }
     });
+  }
+
+  read_table(path: string) {
+    // var table: any = {};
+    this.http.get("./assets/" + path).subscribe(res => {
+      console.log(res);
+      console.log(JSON.stringify(res));
+      this.supp_dump[path] = res;
+      // table = res;
+    });
+    // return (table);
   }
 
   read_table_st(path: string) {
@@ -3047,6 +3659,9 @@ export class HomeComponent implements OnInit {
       Plotly.redraw('myPlot');
       if (subtop) {
         this.attempt_gp_st_problem(+grid[0].x, +grid[0].y, part);
+      }
+      else {
+        this.attempt_gp_problem(+grid[0].x, +grid[0].y, part);
       }
     })
     console.log('plot graph');
@@ -3154,6 +3769,9 @@ export class HomeComponent implements OnInit {
         if (subtop) {
           this.attempt_mgp_st_problem(+points[0].x, +points[0].y, part);
         }
+        else {
+          this.attempt_mgp_problem(+points[0].x, +points[0].y, part);
+        }
       }
       if (!point_graphed) {
         sub.x.push(+grid[0].x);
@@ -3162,746 +3780,350 @@ export class HomeComponent implements OnInit {
         if (subtop) {
           this.attempt_mgp_st_problem(+grid[0].x, +grid[0].y, part);
         }
+        else {
+          this.attempt_mgp_problem(+grid[0].x, +grid[0].y, part);
+        }
       }
     })
     console.log('plot graph');
   }
 
-  is_image(blob: string) {
-    return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
-  }
-
-  get_percent_correct(stud: any) {
-    return Math.round(10000 * stud.problems.correct / stud.problems.total) / 100;
-  }
-
-  get_exam_count(stud: any) {
-    this.complete_exam_count = 0;
-    this.inprog_exam_count = 0;
-    const exam_history = stud.exams.history;
-    for (const [key, det] of Object.entries(exam_history)) {
-      if ((det as any).status == "Completed") {
-        this.complete_exam_count += 1;
-      }
-      else if (["Started", "Assigned"].includes((det as any).status)) {
-        this.inprog_exam_count += 1;
-      }
-    }
-    return [this.complete_exam_count, this.inprog_exam_count];
-  }
-
-  select_class(uid: string) {
-    this.router.navigateByUrl('class/' + uid);
-  }
-
-  edit_quiz(uid: string) {
-    this.router.navigateByUrl('quiz/' + uid + '/edit');
-  }
-
-  select_student(id: string) {
-    if (this.selected_stud != id) {
-      this.selected_stud = id;
-      this.student_data = this.authService.searchUserId(id);
-      setTimeout(() => {
-        const exam_history = this.student_data.exams.history;
-        this.inprogress_set = [];
-        this.inprogress_exams = {};
-        this.inprogress_quizzes = {};
-        for (const [key, det] of Object.entries(exam_history)) {
-          if (["Started", "Assigned"].includes((det as any).status)) {
-            this.inprogress_set.push(key);
-            if (("" + key).startsWith('Q-')) {
-              this.inprogress_quizzes[key.substring(2)] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString() };
-            }
-            else {
-              this.inprogress_exams[key] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString() };
-            }
-            console.log(this.inprogress_quizzes);
-          }
-        }
-      }, 200);
+  toggle_topic(val: string) {
+    if (!this.topic_filters.includes(val)) {
+      this.topic_filters.push(val)
     }
     else {
-      this.selected_stud = "";
-      this.student_data = [];
-      this.inprogress_set = [];
-      this.inprogress_exams = {};
-      this.inprogress_quizzes = {};
+      if (this.topic_filters.indexOf(val) != -1) {
+        this.topic_filters.splice(this.topic_filters.indexOf(val), 1);
+      }
+      else {
+        this.topic_filters.pop()
+      }
+    }
+    this.filter_exams();
+  }
+
+  select_curriculum(curriculum: string) {
+    this.selected_curriculum = curriculum;
+    this.selected_grade = "";
+    this.selected_subject = ""
+    this.selected_topic = "";
+    this.state_grades = [];
+    for (const [id, dump] of Object.entries(this.standards_attribute_dump)) {
+      if (id.endsWith('-' + this.selected_curriculum)) {
+        for (let grade of this.standards_attribute_dump[id].Grades) {
+          if (!this.state_grades.includes(grade)) {
+            this.state_grades.push(grade);
+          }
+        }
+      }
+    }
+    this.scroll_bottom();
+  }
+
+  select_grade(grade: string) {
+    this.selected_grade = grade;
+    this.selected_subject = "";
+    this.state_subjects = [];
+    for (const [id, dump] of Object.entries(this.standards_attribute_dump)) {
+      if (id.endsWith('-' + this.selected_curriculum) && this.standards_attribute_dump[id].Grades.includes(grade)) {
+        for (const [name, labels] of Object.entries(this.subject_map)) {
+          if (labels.includes(this.standards_attribute_dump[id].Subject) && !this.state_subjects.includes(name)) {
+            this.state_subjects.push(name);
+          }
+        }
+      }
+    }
+    this.scroll_bottom();
+  }
+
+  select_subject(subject: string) {
+    this.selected_subject = subject;
+    this.selected_topic = '';
+    this.subject_exams = [];
+    this.topics = [];
+    for (const [id, dump] of Object.entries(this.standards_attribute_dump)) {
+      for (const [name, labels] of Object.entries(this.subject_map)) {
+        if (id.endsWith('-' + this.selected_curriculum) && this.standards_attribute_dump[id].Grades.includes(this.selected_grade) && labels.includes(this.standards_attribute_dump[id].Subject) && name == this.selected_subject) {
+          this.standards_id = id;
+          this.standards_dump = this.s_dump_dict[id][1];
+          for (let domain of this.standards_dump.Standards) {
+            this.topics.push(domain.Label);
+          }
+        }
+      }
+    }
+    this.scroll_bottom();
+  }
+
+  select_topic(topic: string) {
+    this.default_standard = ['', ''];
+    if (this.selected_topic != topic) {
+      this.selected_topic = topic;
+      if (this.enable_standards) {
+        this.default_problem.Topics.pop();
+        this.default_problem.Topics.push(topic);
+      }
+    }
+    else {
+      this.selected_topic = '';
+      if (this.enable_standards) {
+        this.default_problem.Topics.pop();
+        this.default_problem.Topics.push('');
+      }
+
+    }
+    this.scroll_bottom();
+  }
+
+  get_topic_subs(topic: string) {
+    var subs: { [key: string]: string } = {};
+    this.standards_dump = this.s_dump_dict[this.standards_id][1];
+    for (let domain of this.standards_dump.Standards) {
+      if (domain.Label == topic) {
+        for (let cluster of domain.Subs) {
+          subs[cluster.Key] = cluster.Label;
+          for (let standard of cluster.Subs) {
+            subs[standard.Key] = standard.Label;
+            for (let substandard of standard.Subs) {
+              subs[substandard.Key] = substandard.Label;
+              for (let subsubstandard of substandard.Subs) {
+                subs[subsubstandard.Key] = subsubstandard.Label;
+              }
+            }
+          }
+        }
+      }
+    }
+    return (subs as any);
+  }
+
+  toggle_standards() {
+    this.enable_standards = !this.enable_standards;
+    if (this.enable_standards) {
+      this.default_problem.Topics.push(this.selected_topic);
+      this.default_problem.SubTopics.push('');
+    }
+    else {
+      this.default_problem.Topics.pop();
+      this.default_problem.SubTopics.pop();
     }
   }
 
-  select_exam(ex: string) {
-    this.exam_dl = (this.authService.searchExamId(ex)).downloads;
+  set_default_standard(id: string, standard: string) {
+    this.default_standard = [id, standard];
+    this.default_problem.SubTopics.pop();
+    this.default_problem.SubTopics.push(standard);
+    if (Object.keys(this.exam_dump).length > 0) {
+      for (let i = 1; i <= this.quiz_length; i++) {
+        this.exam_dump[i].SubTopics.pop();
+        this.exam_dump[i].SubTopics.push(standard);
+      }
+    }
+    console.log(this.default_problem);
+  }
+
+  set_default_probtype(type: string) {
+    this.default_probtype = type;
+    this.default_problem.Type = this.get_probtype_key(type);
+    this.default_problem.AnswerChoices = {};
+    if (+this.problem_types[this.get_probtype_key(type)][1] > 0) {
+      this.default_problem.NumChoices = +this.default_numchoices;
+      for (let i = 0; i < +this.default_numchoices; i++) {
+        this.default_problem.AnswerChoices[this.choices_list[i]] = JSON.parse(JSON.stringify(this.default_choice));
+      }
+    }
+    else if (this.get_probtype_key(type) == 'FR') {
+      this.default_problem.AnswerChoices['KEY'] = JSON.parse(JSON.stringify(this.default_choice));
+      this.default_problem.NumChoices = 0;
+    }
+    if (Object.keys(this.exam_dump).length > 0) {
+      for (let n = 1; n <= this.quiz_length; n++) {
+        this.exam_dump[n].Type = this.get_probtype_key(type);
+        this.exam_dump[n].AnswerChoices = {};
+        if (+this.problem_types[this.get_probtype_key(type)][1] > 0) {
+          this.exam_dump[n].NumChoices = +this.default_numchoices;
+          for (let i = 0; i < +this.default_numchoices; i++) {
+            this.exam_dump[n].AnswerChoices[this.choices_list[i]] = JSON.parse(JSON.stringify(this.default_choice));
+          }
+        }
+        else {
+          this.exam_dump[n].NumChoices = 0;
+        }
+      }
+    }
     setTimeout(() => {
-      console.log(this.exam_dl);
-      this.exam_dl = (this.authService.searchExamId(ex)).downloads;
-      console.log(this.exam_dl);
-      this.exam_id = ex;
-      this.exam_url = '/exam/' + ex;
-      this.file_source = "./assets/exams/" + ex + ".pdf";
-      this.file_page = 1;
-      this.exam_name = this.exam_names[ex];
-      if (this.authService.userData) {
-        for (let exm of this.authService.userData.exams.favorites) {
-          if (ex == exm) {
-            this.exam_fav = true;
-          }
-        }
+      for (let i = 1; i <= this.quiz_length; i++) {
+        const probtypeSel: string = "probtypeInput" + '' + i;
+        (document.getElementById(probtypeSel) as any).value = this.problem_types[this.exam_dump[i].Type][0];
       }
-    }, 250);
+    }, 25);
+    console.log(this.default_problem);
   }
 
-  select_standard(topic: string, subtopic: string) {
-    this.subtopic_problem_count = 0;
-    this.subtopic_search_dump = {};
-    for (const [ex, dump] of Object.entries(this.dump_dict)) {
-      for (const [num, prob] of Object.entries(dump)) {
-        if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-          if (prob.SubTopics.includes(subtopic)) {
-            if (prob.Topics[prob.SubTopics.indexOf(subtopic)] == topic) {
-              this.subtopic_problem_count += 1;
-              this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-              this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
-            }
-          }
-        }
+  get_probtype_key(val: string) {
+    var matched_key = "";
+    for (let standard of Object.keys(this.problem_types)) {
+      if (this.problem_types[standard][0] == val) {
+        matched_key = standard;
       }
     }
-    this.selected_topic = topic;
-    this.selected_subtopic = subtopic;
-    this.subtopic_problem_number = 1;
-    this.subtopic_attempt_path = [];
-    this.subtopic_attempt_response = [];
-    this.subtopic_attempt_explanation = [];
-    this.subtopic_problem_selection = [];
-    if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
-      this.subtopic_problem_attempts = [0];
-      this.subtopic_attempt_path = [[]];
-      this.subtopic_attempt_response = [''];
-      this.subtopic_attempt_explanation = [[]];
-      if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-        this.subtopic_problem_selection = [['']];
-        if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-          setTimeout(() => {
-            this.plot_graph_gp('', true);
-          }, 500);
-        }
-      }
-      else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-        this.subtopic_problem_selection = [[]];
-        if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-          this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
-        }
-        if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-          setTimeout(() => {
-            this.plot_graph_mgp('', true);
-          }, 500);
-        }
-      }
-      else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-        var msp_nums: string[] = [];
-        this.subtopic_problem_selection.push([]);
-        for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
-          if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-            this.subtopic_problem_selection[0].push('');
-            msp_nums.push(choice[0]);
-          }
-        }
-      }
+    return (matched_key);
+  }
+
+  set_default_numchoices(num: number) {
+    const initial_num: number = +this.default_numchoices;
+    if (num < 2) {
+      this.default_numchoices = 2;
+    }
+    else if (num > 10) {
+      this.default_numchoices = 10;
     }
     else {
-      this.subtopic_problem_attempts = [];
-      for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
-        this.subtopic_problem_attempts.push(0);
-        this.subtopic_attempt_path.push([]);
-        this.subtopic_attempt_response.push('');
-        this.subtopic_attempt_explanation.push([]);
-        this.m_selection.push(["", ""]);
-        this.m_submission.push({});
-        this.c_submission.push({});
-        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-          this.subtopic_problem_selection.push(['']);
-          if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-            setTimeout(() => {
-              this.plot_graph_gp(part, true);
-            }, 500);
-          }
-        }
-        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-          this.subtopic_problem_selection.push([]);
-          if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-            this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
-          }
-          if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-            setTimeout(() => {
-              this.plot_graph_mgp(part, true);
-            }, 500);
-          }
-        }
-        else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-          var msp_nums: string[] = [];
-          this.subtopic_problem_selection.push([]);
-          for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
-            if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-              this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part)].push('');
-              msp_nums.push(choice[0]);
+      this.default_numchoices = num;
+    }
+    if (this.default_numchoices != initial_num) {
+      // var prob_dump: any = {};
+      // for (const [k, val] of Object.entries(this.default_problem)) {
+      //   prob_dump[k] = val;
+      // }
+      // prob_dump.NumChoices = this.default_numchoices;
+      // for (let i = 0; i < this.default_numchoices; i++) {
+      //   prob_dump.AnswerChoices[this.choices_list[i]] = this.default_choice;
+      // }
+      // this.default_problem = (prob_dump as any);
+      this.default_problem.NumChoices = this.default_numchoices;
+      this.default_problem.AnswerChoices = {};
+      for (let i = 0; i < this.default_numchoices; i++) {
+        this.default_problem.AnswerChoices[this.choices_list[i]] = JSON.parse(JSON.stringify(this.default_choice));
+      }
+      if (Object.keys(this.exam_dump).length > 0) {
+        for (let n = 1; n <= this.quiz_length; n++) {
+          if (+this.problem_types[this.exam_dump[n].Type][1] > 0) {
+            this.exam_dump[n].NumChoices = this.default_numchoices;
+            this.exam_dump[n].AnswerChoices = {};
+            for (let i = 0; i < this.default_numchoices; i++) {
+              this.exam_dump[n].AnswerChoices[this.choices_list[i]] = JSON.parse(JSON.stringify(this.default_choice));
             }
           }
         }
-      }
-    }
-    this.standard_id = topic + ": " + subtopic;
-    this.standard_fav = false;
-    this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
-    for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
-      setTimeout(() => {
-        this.read_supp_st_json(supp);
-      }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
-    }
-    if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
-      for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
-        for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
-          if (block.startsWith(':table:')) {
-            setTimeout(() => {
-              this.read_table_st(block.slice(7));
-            }, 100);
+        setTimeout(() => {
+          for (let i = 1; i <= this.quiz_length; i++) {
+            const numchoicesSel: string = "choicesEntry" + '' + i;
+            const numchoicesSliderSel: string = "choicesSlider" + '' + i;
+            (document.getElementById(numchoicesSel) as any).value = this.exam_dump[i].NumChoices;
+            (document.getElementById(numchoicesSliderSel) as any).value = this.exam_dump[i].NumChoices;
           }
-        }
+        }, 25);
       }
     }
-    if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
-      for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
-        if (block.startsWith(':table:')) {
-          setTimeout(() => {
-            this.read_table_st(block.slice(7));
-          }, 100);
-        }
-      }
-    }
-    for (let fav of this.authService.userData.standards.favorites) {
-      if (topic == fav[0] && subtopic == fav[1]) {
-        this.standard_fav = true;
-      }
-    }
+    console.log(this.exam_dump);
   }
 
-  getStudSubmissions(stud: string) {
-    var exam_submissions: any = {};
-    for (const [exm, sub] of Object.entries(this.student_data.exams.history)) {
-      exam_submissions[exm] = (this.authService.getStudExamSubmission2(stud, exm) as any);
+  set_problem_num(num: number) {
+    const initial_num: number = this.quiz_length;
+    if (num < 5) {
+      this.quiz_length = 5;
     }
-    return (exam_submissions);
-  }
-
-  subject_break() {
-    this.grade_breakdown = {};
-    this.total_test_time = "0h 0m 0s";
-    var test_time = 0;
-    this.complete_exam_count = 0;
-    this.complete_exam_list = [];
-    // const exam_history = this.student_data.exams.history;
-    console.log(this.student_sub_metadata);
-    for (const [key, det] of Object.entries(this.student_data.exams.history)) {
-    // for (const [key, det] of Object.entries(this.student_sub_metadata)) {
-      var ass_test_time = 0;
-      this.student_data.problems_total = 0;
-      this.student_data.problems_correct = 0;
-      // if ((det as any).status == "Completed" && (!key.startsWith('Q-') || (key.startsWith('Q-') && this.authService.searchQuizId(key.substring(key.indexOf('-') + 1)).mode == 'assess'))) {
-      if (this.student_sub_metadata[key] != undefined && (det as any).status == "Completed") {
-        this.complete_exam_count = this.complete_exam_count + 1;
-        this.complete_exam_list.push(key);
-      }
-      console.log(key);
-      console.log(det);
-      if (this.student_sub_metadata[key] != undefined && (det as any).status == "Completed") {
-        if (key.startsWith('Q-')) {
-          this.quiz_config = (this.authService.searchQuizId(key.slice(2)) as any);
-          console.log(this.quiz_config);
-        }
-        if (key.startsWith('Q-') && this.quiz_config.problems != undefined && this.student_sub_metadata[key].problems != undefined) {
-          console.log('custom quiz');
-          this.student_data.problems_total = Object.keys(this.student_sub_metadata[key].problems).length;
-          for (const [id, prob] of Object.entries(this.student_sub_metadata[key].problems)) {
-            console.log('Problem ID: ' + ''+id);
-            console.log(prob);
-            console.log(this.quiz_config.grades[0]);
-            console.log(this.quiz_config.subjects[0]);
-            test_time += +(prob as any).Seconds;
-            ass_test_time += +(prob as any).Seconds;
-            if ((prob as any).Correct != undefined && (prob as any).Correct.length > 0 && (prob as any).Correct[0][0] == '✅') {
-              this.student_data.problems_correct += 1;
-              if (Object.keys(this.grade_breakdown).includes(this.quiz_config.grades[0])) {
-                this.grade_breakdown[this.quiz_config.grades[0]].Total += 1;
-                this.grade_breakdown[this.quiz_config.grades[0]].Correct += 1;
-                this.grade_breakdown[this.quiz_config.grades[0]].Seconds += +(prob as any).Seconds;
-                if (Object.keys(this.grade_breakdown[this.quiz_config.grades[0]].Subs).includes(this.quiz_config.subjects[0])) {
-                  this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Total += 1;
-                  this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Correct += 1;
-                  this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Seconds += +(prob as any).Seconds;
-                  // if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
-                  for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                    if (Object.keys(this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops).includes((prob as any).Topics[n])) {
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].Total += 1;
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].Correct += 1;
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
-                    }
-                    else {
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                    }
-                    if (Object.keys(this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops).includes((prob as any).SubTopics[n])) {
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Total += 1;
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Correct += 1;
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Seconds += +(prob as any).Seconds;
-                    }
-                    else {
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                    }
-                    // }
-                  }
-                }
-                else {
-                  this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
-                  // if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
-                  for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                    this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                    this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                  }
-                  // }
-                }
-              }
-              else {
-                this.grade_breakdown[this.quiz_config.grades[0]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.quiz_config.subjects[0]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
-                // if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
-                for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                  this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                  this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                }
-                // }
-              }
-            }
-            else {
-              if (Object.keys(this.grade_breakdown).includes(this.quiz_config.grades[0])) {
-                this.grade_breakdown[this.quiz_config.grades[0]].Total += 1;
-                this.grade_breakdown[this.quiz_config.grades[0]].Incorrect += 1;
-                this.grade_breakdown[this.quiz_config.grades[0]].Seconds += +(prob as any).Seconds;
-                if (Object.keys(this.grade_breakdown[this.quiz_config.grades[0]].Subs).includes(this.quiz_config.subjects[0])) {
-                  this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Total += 1;
-                  this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Incorrect += 1;
-                  this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Seconds += +(prob as any).Seconds;
-                  // if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
-                  for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                    if (Object.keys(this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops).includes((prob as any).Topics[n])) {
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].Total += 1;
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].Incorrect += 1;
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
-                    }
-                    else {
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                    }
-                    if (Object.keys(this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops).includes((prob as any).SubTopics[n])) {
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Total += 1;
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Incorrect += 1;
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Seconds += +(prob as any).Seconds;
-                    }
-                    else {
-                      this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                    }
-                  }
-                  // }
-                }
-                else {
-                  this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
-                  // if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
-                  for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                    this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                    this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                  }
-                  // }
-                }
-              }
-              else {
-                this.grade_breakdown[this.quiz_config.grades[0]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.quiz_config.subjects[0]]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
-                // if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
-                for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                  this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                  this.grade_breakdown[this.quiz_config.grades[0]].Subs[this.quiz_config.subjects[0]].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                }
-                // }
-              }
-            }
-          }
-        }
-        else if (key.startsWith('Q-') && this.student_sub_metadata[key].problems != undefined) {
-          this.student_data.problems_total = Object.keys(this.student_sub_metadata[key].problems).length;
-          for (const [id, prob] of Object.entries(this.student_sub_metadata[key].problems)) {
-            test_time += +(prob as any).Seconds;
-            ass_test_time += +(prob as any).Seconds;
-            if ((prob as any).Correct != undefined && (prob as any).Correct.length > 0 && (prob as any).Correct[0][0] == '✅') {
-              this.student_data.problems_correct += 1;
-              if (this.exam_set.includes(id.substring(0, id.indexOf('-'))) && Object.keys(this.grade_breakdown).includes(this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade)) {
-                this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Total += 1;
-                this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Correct += 1;
-                this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Seconds += +(prob as any).Seconds;
-                if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs).includes(this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject)) {
-                  this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Total += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Correct += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Seconds += +(prob as any).Seconds;
-                  if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
-                    for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                      if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops).includes((prob as any).Topics[n])) {
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].Total += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].Correct += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
-                      }
-                      else {
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                      }
-                      if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops).includes((prob as any).SubTopics[n])) {
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Total += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Correct += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Seconds += +(prob as any).Seconds;
-                      }
-                      else {
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                      }
-                    }
-                  }
-                }
-                else {
-                  this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
-                  if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
-                    for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                      this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                      this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                    }
-                  }
-                }
-              }
-              else if (this.exam_set.includes(id.substring(0, id.indexOf('-')))) {
-                this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
-                if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
-                  for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                  }
-                }
-              }
-            }
-            else {
-              if (this.exam_set.includes(id.substring(0, id.indexOf('-'))) && Object.keys(this.grade_breakdown).includes(this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade)) {
-                this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Total += 1;
-                this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Incorrect += 1;
-                this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Seconds += +(prob as any).Seconds;
-                if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs).includes(this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject)) {
-                  this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Total += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Incorrect += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Seconds += +(prob as any).Seconds;
-                  if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
-                    for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                      if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops).includes((prob as any).Topics[n])) {
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].Total += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].Incorrect += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
-                      }
-                      else {
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                      }
-                      if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops).includes((prob as any).SubTopics[n])) {
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Total += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Incorrect += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Seconds += +(prob as any).Seconds;
-                      }
-                      else {
-                        this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                      }
-                    }
-                  }
-                }
-                else {
-                  this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
-                  if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
-                    for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                      this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                      this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                    }
-                  }
-                }
-              }
-              else if (this.exam_set.includes(id.substring(0, id.indexOf('-')))) {
-                this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
-                if (!this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].HideTopics) {
-                  for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                    this.grade_breakdown[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Grade].Subs[this.exam_attribute_dump[id.substring(0, id.indexOf('-'))].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                  }
-                }
-              }
-            }
-          }
-        }
-        else if (this.student_sub_metadata[key].problems != undefined) {
-          this.student_data.problems_total = Object.keys(this.student_sub_metadata[key].problems).length;
-          for (const [id, prob] of Object.entries(this.student_sub_metadata[key].problems)) {
-            test_time += +(prob as any).Seconds;
-            ass_test_time += +(prob as any).Seconds;
-            if ((prob as any).Correct != undefined && (prob as any).Correct.length > 0 && (prob as any).Correct[0][0] == '✅') {
-              this.student_data.problems_total += 1;
-              if (Object.keys(this.grade_breakdown).includes(this.exam_attribute_dump[key].Grade)) {
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Total += 1;
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Correct += 1;
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Seconds += +(prob as any).Seconds;
-                if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs).includes(this.exam_attribute_dump[key].Subject)) {
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Total += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Correct += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Seconds += +(prob as any).Seconds;
-                  if (!this.exam_attribute_dump[key].HideTopics) {
-                    for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                      if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops).includes((prob as any).Topics[n])) {
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Total += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Correct += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
-                      }
-                      else {
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                      }
-                      if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops).includes((prob as any).SubTopics[n])) {
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Total += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Correct += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Seconds += +(prob as any).Seconds;
-                      }
-                      else {
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                      }
-                    }
-                  }
-                }
-                else {
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
-                  if (!this.exam_attribute_dump[key].HideTopics) {
-                    for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                      this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                      this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                    }
-                  }
-                }
-              }
-              else {
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[key].Subject]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
-                if (!this.exam_attribute_dump[key].HideTopics) {
-                  for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                  }
-                }
-              }
-            }
-            else {
-              if (Object.keys(this.grade_breakdown).includes(this.exam_attribute_dump[key].Grade)) {
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Total += 1;
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Incorrect += 1;
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade].Seconds += +(prob as any).Seconds;
-                if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs).includes(this.exam_attribute_dump[key].Subject)) {
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Total += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Incorrect += 1;
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Seconds += +(prob as any).Seconds;
-                  if (!this.exam_attribute_dump[key].HideTopics) {
-                    for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                      if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops).includes((prob as any).Topics[n])) {
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Total += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Incorrect += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].Seconds += +(prob as any).Seconds;
-                      }
-                      else {
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                      }
-                      if (Object.keys(this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops).includes((prob as any).SubTopics[n])) {
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Total += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Incorrect += 1;
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]].Seconds += +(prob as any).Seconds;
-                      }
-                      else {
-                        this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                      }
-                    }
-                  }
-                }
-                else {
-                  this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} };
-                  if (!this.exam_attribute_dump[key].HideTopics) {
-                    for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                      this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                      this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                    }
-                  }
-                }
-              }
-              else {
-                this.grade_breakdown[this.exam_attribute_dump[key].Grade] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': (prob as any).Seconds, 'Time': '0s', 'Subs': { [this.exam_attribute_dump[key].Subject]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'Tops': {} } } };
-                if (!this.exam_attribute_dump[key].HideTopics) {
-                  for (let n: number = 0; n < (prob as any).Topics.length; n++) {
-                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s', 'SubTops': {} };
-                    this.grade_breakdown[this.exam_attribute_dump[key].Grade].Subs[this.exam_attribute_dump[key].Subject].Tops[(prob as any).Topics[n]].SubTops[(prob as any).SubTopics[n]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': +(prob as any).Seconds, 'Time': '0s' };
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      if (this.selected_student != '' && this.student_sub_metadata[key] != undefined) {
-        this.student_sub_metadata[key].total = this.student_data.problems_total;
-        this.student_sub_metadata[key].correct = this.student_data.problems_correct;
-        this.student_sub_metadata[key].score = Math.round(100 * this.student_data.problems_correct / this.student_data.problems_total);
-        this.student_sub_metadata[key].time = "" + Math.floor(ass_test_time / 3600) + "h " + "" + (Math.floor(ass_test_time / 60) % 60) + "m " + "" + (ass_test_time % 60) + "s";
-      }
-    }
-    console.log('Complete Exams Counted')
-    console.log(this.complete_exam_count);
-    this.student_data.problems_correct = 0;
-    this.student_data.problems_total = 0;
-    for (let grade of Object.keys(this.grade_breakdown)) {
-      this.student_data.problems_total += this.grade_breakdown[grade].Total;
-      this.student_data.problems_correct += this.grade_breakdown[grade].Correct;
-      this.grade_breakdown[grade].Percent = Math.round(100 * this.grade_breakdown[grade].Correct / (this.grade_breakdown[grade].Total));
-      this.grade_breakdown[grade].Time = (Math.floor(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Seconds / this.grade_breakdown[grade].Total % 60)).toString() + 's';
-      for (let subject of Object.keys(this.grade_breakdown[grade].Subs)) {
-        this.grade_breakdown[grade].Subs[subject].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Correct / (this.grade_breakdown[grade].Subs[subject].Total));
-        this.grade_breakdown[grade].Subs[subject].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Seconds / this.grade_breakdown[grade].Subs[subject].Total % 60)).toString() + 's';
-        for (let topic of Object.keys(this.grade_breakdown[grade].Subs[subject].Tops)) {
-          this.grade_breakdown[grade].Subs[subject].Tops[topic].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Tops[topic].Correct / (this.grade_breakdown[grade].Subs[subject].Tops[topic].Total));
-          this.grade_breakdown[grade].Subs[subject].Tops[topic].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Tops[topic].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].Total % 60)).toString() + 's';
-          for (let subtop of Object.keys(this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops)) {
-            this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Percent = Math.round(100 * this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Correct / (this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Total));
-            this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Time = (Math.floor(this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Total / 60)).toString() + 'm ' + (Math.round(this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Seconds / this.grade_breakdown[grade].Subs[subject].Tops[topic].SubTops[subtop].Total % 60)).toString() + 's';
-          }
-          this.subject_breakdown_subtop[grade + " " + subject + ": " + topic] = { 'Grade': grade, 'Subject': subject, 'Topic': topic, 'Break': this.grade_breakdown[grade].Subs[subject].Tops[topic] };
-        }
-        this.subject_breakdown_top[grade + " " + subject] = { 'Grade': grade, 'Subject': subject, 'Break': this.grade_breakdown[grade].Subs[subject] };
-      }
-    }
-    this.total_test_time = "" + Math.floor(test_time / 3600) + "h " + "" + (Math.floor(test_time / 60) % 60) + "m " + "" + (test_time % 60) + "s";
-    if (this.student_data.problems_correct == 0) {
-      this.total_percent_correct = 0;
+    else if (num > 50) {
+      this.quiz_length = 50;
     }
     else {
-      this.total_percent_correct = Math.round(10000 * this.student_data.problems_correct / this.student_data.problems_total) / 100;
+      this.quiz_length = num;
     }
-    console.log(this.grade_breakdown);
-  }
-
-  fav_std_includes(topic: string, subtopic: string) {
-    this.favorite_std_set = [];
-    for (let std of this.authService.userData.standards.favorites) {
-      this.favorite_std_set.push(std as string[]);
-    }
-    this.includes_standard = false;
-    if (this.favorite_std_set.length != 0) {
-      for (const [key, std] of Object.entries(this.favorite_std_set)) {
-        if (std[0] == topic && std[1] == subtopic) {
-          this.includes_standard = true;
+    if (this.quiz_length != initial_num) {
+      const initial_dump = JSON.parse(JSON.stringify(this.exam_dump));
+      const initial_images = JSON.parse(JSON.stringify(this.prob_images));
+      const initial_statuses = JSON.parse(JSON.stringify(this.prob_statuses));
+      this.problems_loaded = false;
+      this.exam_dump = {};
+      this.prob_images = {};
+      this.prob_statuses = {};
+      for (let i = 1; i <= this.quiz_length; i++) {
+        if (Object.keys(initial_dump).includes('' + i)) {
+          this.exam_dump[i] = JSON.parse(JSON.stringify(initial_dump[i]));
+          if (Object.keys(initial_images).includes('' + i)) {
+            var new_images: any = {};
+            for (const [k, image] of Object.entries(initial_images[i])) {
+              new_images[k] = this.save_dupe_image((image as any).changingThisBreaksApplicationSecurity as string);
+            }
+            for (const [name, image] of Object.entries(new_images)) {
+              if (!Object.keys(this.prob_images).includes(name)) {
+                this.prob_images[name] = image;
+              }
+            }
+          }
+          this.prob_statuses[i] = JSON.parse(JSON.stringify(initial_statuses[i]));
+          this.exam_dump[i].Number = i;
         }
+        else {
+          this.exam_dump[i] = JSON.parse(JSON.stringify(this.default_problem));
+          this.prob_statuses[i] = [false, false];
+          this.exam_dump[i].Number = i;
+        }
+        this.problem_hover[i] = false;
+        this.content_hover[i] = [false];
+        var choices: boolean[] = [];
+        for (let n = 1; n <= this.default_numchoices; n++) {
+          choices.push(false);
+        }
+        this.choices_hover[i] = choices;
       }
-    }
-    return this.includes_standard;
-  }
-
-  toggle_create_student() {
-    const avatar = this.avatars[Math.floor(Math.random() * this.avatars.length)];
-    this.photoURL = '/assets/media/icons/user/' + avatar + '.png';
-    this.create_s = !this.create_s;
-    this.edit_s_list = [];
-    this.edit_s_list['photoURL'] = this.photoURL;
-  }
-
-  edit_student(field: string, val: string) {
-    this.edit_s_list[field] = val;
-  }
-
-  student_profile_pic(avatar: string) {
-    this.photoURL = '/assets/media/icons/user/' + avatar + '.png';
-    this.edit_s_list['photoURL'] = this.photoURL;
-  }
-
-  create_student() {
-    this.student_uid = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    const charactersLength = characters.length;
-    for (let i: number = 1; i <= 3; i++) {
-      this.student_uid += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    this.edit_s_list['uid'] = this.authService.userData.uid + "-" + this.student_uid;
-    this.authService.WriteUserDataList(this.edit_s_list);
-    this.link_student(this.authService.userData.uid + "-" + this.student_uid);
-    this.student_metadata = [];
-    this.my_student_metadata = [];
-    for (const [key, stud] of Object.entries(this.student_list.slice(1))) {
+      this.cquiz_page = "content";
+      this.problems_loaded = true;
       setTimeout(() => {
-        console.log(stud);
-        this.student_data = this.authService.searchUserId(stud as string);
-        console.log(this.student_data);
-        this.student_metadata.push(this.student_data as object);
-        this.my_student_metadata.push(this.student_data as object);
+        for (let i = 1; i <= this.quiz_length; i++) {
+          if (this.enable_standards) {
+            const standardSel: string = "standardInput" + '' + i;
+            (document.getElementById(standardSel) as any).value = Object.keys(this.get_topic_subs(this.selected_topic))[Object.values(this.get_topic_subs(this.selected_topic)).indexOf(this.exam_dump[i].SubTopics[0])] + ': ' + this.exam_dump[i].SubTopics[0];
+          }
+          const probtypeSel: string = "probtypeInput" + '' + i;
+          (document.getElementById(probtypeSel) as any).value = this.problem_types[this.exam_dump[i].Type][0];
+        }
+        this.scroll_top();
+      }, 25);
+    }
+    this.all_students = [];
+    this.my_students = [];
+    const linked_students = this.authService.userData.students.slice(1);
+    for (const [key, stud] of Object.entries(linked_students)) {
+      setTimeout(() => {
+        const student_data = this.authService.searchUserId(stud as string);
+        this.all_students.push(stud as string);
+        if (student_data != null) {
+          this.all_students_data[(stud as string)] = (student_data as object);
+        }
+        if ((stud as string).includes(this.authService.userData.uid as string)) {
+          this.my_students.push(stud as string);
+          if (student_data != null) {
+            this.my_students_data[(stud as string)] = (student_data as object);
+          }
+        }
       }, +key * 10);
     }
     setTimeout(() => {
-      this.student_metadata = [];
-      this.my_student_metadata = [];
-      for (const [key, stud] of Object.entries(this.student_list.slice(1))) {
+      this.all_students = [];
+      this.my_students = [];
+      const linked_students = this.authService.userData.students.slice(1);
+      for (const [key, stud] of Object.entries(linked_students)) {
         setTimeout(() => {
-          console.log(stud);
-          this.student_data = this.authService.searchUserId(stud as string);
-          console.log(this.student_data);
-          this.student_metadata.push(this.student_data as object);
-          this.my_student_metadata.push(this.student_data as object);
+          const student_data = this.authService.searchUserId(stud as string);
+          this.all_students.push(stud as string);
+          if (student_data != null) {
+            this.all_students_data[(stud as string)] = (student_data as object);
+          }
+          if ((stud as string).includes(this.authService.userData.uid as string)) {
+            this.my_students.push(stud as string);
+            if (student_data != null) {
+              this.my_students_data[(stud as string)] = (student_data as object);
+            }
+          }
         }, +key * 10);
       }
-    }, 500);
-  }
-
-  link_student(id: string) {
-    this.student_list = [];
-    // this.student_metadata = [];
-    for (let std of this.authService.userData.students) {
-      this.student_list.push(std as string);
-    }
-    if (!this.student_list.includes(id)) {
-      this.student_list.push(id);
-    }
-    this.authService.UpdateUserData({ 'students': {} });
-    this.authService.UpdateUserData({ 'students': this.student_list });
-  }
-
-  toggle_create_class() {
-    this.create_c = !this.create_c;
-    this.edit_c_list = [];
-    this.class_uid = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    const charactersLength = characters.length;
-    for (let i: number = 1; i <= 5; i++) {
-      this.class_uid += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-  }
-
-  edit_class(field: string, val: string) {
-    this.edit_c_list[field] = val;
-  }
-
-  create_class() {
-    this.edit_c_list['classes/' + this.class_uid + '/uid'] = this.class_uid;
-    this.edit_c_list['classes/' + this.class_uid + '/teacher'] = this.authService.userData.uid;
-    this.edit_c_list['classes/' + this.class_uid + '/students'] = [""];
-    this.edit_c_list['classes/' + this.class_uid + '/exams'] = [""];
-    this.edit_c_list['classes/' + this.class_uid + '/quizzes'] = [""];
-    this.authService.UpdateDatabase(this.edit_c_list);
-    this.class_list = [];
-    for (let clss of this.authService.userData.classes) {
-      this.class_list.push(clss as string);
-    }
-    this.class_list.push(this.class_uid);
-    this.authService.UpdateUserData({ 'classes': {} });
-    this.authService.UpdateUserData({ 'classes': this.class_list });
+    }, 100);
     this.my_class_metadata = [];
-    for (const [key, clss] of Object.entries(this.class_list.slice(1))) {
+    const linked_classes = this.authService.userData.classes.slice(1);
+    for (const [key, clss] of Object.entries(linked_classes)) {
       setTimeout(() => {
         console.log(clss);
         this.class_data = this.authService.searchClassId(clss as string);
@@ -3911,7 +4133,8 @@ export class HomeComponent implements OnInit {
     }
     setTimeout(() => {
       this.my_class_metadata = [];
-      for (const [key, clss] of Object.entries(this.class_list.slice(1))) {
+      const linked_classes = this.authService.userData.classes.slice(1);
+      for (const [key, clss] of Object.entries(linked_classes)) {
         setTimeout(() => {
           console.log(clss);
           this.class_data = this.authService.searchClassId(clss as string);
@@ -3919,19 +4142,854 @@ export class HomeComponent implements OnInit {
           this.my_class_metadata.push(this.class_data as object);
         }, +key * 10);
       }
-      if (this.class_list.slice(1).length > 0) {
-        this.has_classes = true;
-      }
-      this.toggle_create_class();
-    }, 500);
-    // setTimeout(() => {
-    //   this.set_tab("information");
-    //   this.set_tab("students");
-    // }, 200);
+    }, 100);
   }
 
-  toggle_assign_exam() {
-    if (!this.assign_e) {
+  get_standard_sel(num: number) {
+    const standardSel: string = "standardInput" + '' + num;
+    var dropdown: any = document.getElementById(standardSel);
+    return dropdown.value;
+  }
+
+  get_probtype_sel(num: number) {
+    const probtypeSel: string = "probtypeInput" + '' + num;
+    var dropdown: any = document.getElementById(probtypeSel);
+    return dropdown.value;
+  }
+
+  get_numchoices_sel(num: number) {
+    const numchoicesSel: string = "choicesEntry" + '' + num;
+    var dropdown: any = document.getElementById(numchoicesSel);
+    return dropdown.value;
+  }
+
+  get_numchoices_slider_sel(num: number) {
+    const numchoicesSel: string = "choicesSlider" + '' + num;
+    var slider: any = document.getElementById(numchoicesSel);
+    return slider.value;
+  }
+
+  get_contenttype_sel(num: number, index: number) {
+    const contenttypeSel: string = "contenttypeInput" + '' + num + '-' + '' + index;
+    var dropdown: any = document.getElementById(contenttypeSel);
+    return dropdown.value;
+  }
+
+  get_choicetype_sel(num: number, index: string) {
+    const choicetypeSel: string = "choicetypeInput" + '' + num + '-' + index;
+    var dropdown: any = document.getElementById(choicetypeSel);
+    return dropdown.value;
+  }
+
+  get_content_keys(content: any) {
+    var index: number = 0;
+    var keys: number[] = []
+    for (let block of content) {
+      keys.push(index);
+      index += 1;
+    }
+    return (keys);
+  }
+
+  get_choice_keys(choices: any) {
+    return (Object.keys(choices) as string[]);
+  }
+
+  get_add_images_sel(num: number) {
+    const addimagesSel: string = "uploadProbImage" + '' + num;
+    var input: any = document.getElementById(addimagesSel);
+    return (input.files as any);
+  }
+
+  get_add_imagesinv_sel(num: number) {
+    const addimagesinvSel: string = "uploadProbImageInv" + '' + num;
+    var input: any = document.getElementById(addimagesinvSel);
+    return (input.files as any);
+  }
+
+  get_add_imageschinv_sel(num: number) {
+    const addimageschinvSel: string = "uploadChoiceImageInv" + '' + num;
+    var input: any = document.getElementById(addimageschinvSel);
+    return (input.files as any);
+  }
+
+  change_prob_standard(num: number) {
+    for (let i = 1; i <= this.quiz_length; i++) {
+      if (i == num) {
+        // var prob_dump: any = {};
+        // for (const [k, val] of Object.entries(this.exam_dump[num])) {
+        //   prob_dump[k] = (val as any);
+        // }
+        this.exam_dump[i].SubTopics.pop();
+        this.exam_dump[i].SubTopics.push(this.get_standard_sel(num).slice(this.get_standard_sel(num).split(': ')[0].length + 2));
+        // this.exam_dump[num] = { ...prob_dump };
+      }
+    }
+  }
+
+  set_probtype(num: number, type: string) {
+    const initial_type: string = this.exam_dump[num].Type;
+    if (type != initial_type) {
+      this.exam_dump[num].Type = type;
+      this.exam_dump[num].NumChoices = 0;
+      this.exam_dump[num].AnswerChoices = {};
+      if (+this.problem_types[type][1] > 0) {
+        this.exam_dump[num].NumChoices = +this.default_numchoices;
+        for (let i = 0; i < +this.default_numchoices; i++) {
+          this.exam_dump[num].AnswerChoices[this.choices_list[i]] = JSON.parse(JSON.stringify(this.default_choice));
+        }
+      }
+      else if (type == 'FR') {
+        this.exam_dump[num].AnswerChoices['KEY'] = JSON.parse(JSON.stringify(this.default_choice));
+      }
+    }
+  }
+
+  set_prob_numchoices(num: number, numchoices: number) {
+    const initial_num: number = this.exam_dump[num].NumChoices;
+    var final_num: number = 0;
+    if (numchoices < 2) {
+      final_num = 2;
+    }
+    else if (numchoices > 10) {
+      final_num = 10;
+    }
+    else {
+      final_num = numchoices;
+    }
+    if (final_num != initial_num) {
+      this.exam_dump[num].NumChoices = final_num;
+      this.exam_dump[num].AnswerChoices = {};
+      for (let i = 0; i < final_num; i++) {
+        this.exam_dump[num].AnswerChoices[this.choices_list[i]] = JSON.parse(JSON.stringify(this.default_choice));
+        this.choices_hover[num][i] = false;
+      }
+    }
+  }
+
+  set_content_type(num: number, index: number, type: string) {
+    if (type == 'Text') {
+      console.log();
+    }
+    else if (type == 'Image') {
+      // this.add_image(num, this.get_add_images_sel(num))
+      this.image_index = index;
+      const el_id: string = 'uploadProbImageInv' + '' + num;
+      var upload: any = document.getElementById(el_id);
+      upload.click();
+    }
+  }
+
+  set_choice_type(num: number, index: string, type: string) {
+    if (type == 'Text') {
+      console.log();
+    }
+    else if (type == 'Image') {
+      // this.add_image(num, this.get_add_images_sel(num))
+      this.image_choice_index = index;
+      const el_id: string = 'uploadChoiceImageInv' + '' + num;
+      var upload: any = document.getElementById(el_id);
+      upload.click();
+    }
+  }
+
+  add_text(num: number) {
+    this.exam_dump[num].Content.push('');
+    this.content_hover[num].push(false);
+    console.log(this.exam_dump);
+  }
+
+  get_text_rows(el: any, blob: string) {
+    // element.style.height = "1px";
+    // element.style.height = (25+element.scrollHeight)+"px";
+    return (Math.max(1, Math.ceil(blob.length / (95))));
+  }
+
+  add_image(num: number, index: number, images: any) {
+    for (let image of images) {
+      if (index == -1) {
+        this.exam_dump[num].Content.push('' + image.name);
+      }
+      else {
+        this.exam_dump[num].Content[index] = '' + image.name;
+      }
+      this.prob_images['' + image.name] = [this.save_image(image), image];
+      this.content_hover[num].push(false);
+    }
+    console.log(this.prob_images);
+  }
+
+  add_choice_image(num: number, index: string, images: any) {
+    for (let image of images) {
+      if (index == '') {
+        // this.exam_dump[num].AnswerChoices[].Choice = ''+image.name;
+        console.log();
+      }
+      else {
+        this.exam_dump[num].AnswerChoices[index].Choice = '' + image.name;
+      }
+      this.prob_images['' + image.name] = [this.save_image(image), image];
+    }
+    console.log(this.prob_images);
+  }
+
+  save_image(image: any) {
+    return (this.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(image)) as string);
+  }
+
+  save_dupe_image(image: any) {
+    return (this.sanitizer.bypassSecurityTrustUrl(image) as string);
+  }
+
+  hover_card(num: number, type: string, index: number, hover: boolean) {
+    if (type == 'problem') {
+      this.problem_hover[num] = hover;
+    }
+    else if (type == 'content') {
+      this.content_hover[num][index] = hover;
+    }
+    else if (type == 'choices') {
+      this.choices_hover[num][index] = hover;
+    }
+  }
+
+  hover_delete(num: number, type: string, index: number) {
+    if (type == 'problem') {
+      return (this.problem_hover[num]);
+    }
+    else if (type == 'content') {
+      return (this.content_hover[num][index]);
+    }
+    else if (type == 'choices') {
+      return (this.choices_hover[num][index]);
+    }
+    else {
+      return;
+    }
+  }
+
+  delete_content(num: number, index: number) {
+    console.log('Number: ' + ''+num + ', Index: ' + ''+index);
+    this.problems_loaded = false;
+    if (this.is_image(this.exam_dump[num].Content[index])) {
+      const initial_images = this.prob_images;
+      var new_images: any = {};
+      for (const [k, image] of Object.entries(initial_images)) {
+        if (k != this.exam_dump[num].Content[index]) {
+          if ((image as any).length == 2) {
+            new_images[k] = [this.save_dupe_image(((image as any)[0] as any).changingThisBreaksApplicationSecurity as string), (image as any)[1]];
+          }
+          else {
+            if ((image as any).length == 2) {
+              new_images[k] = [(image as any)[0]];
+            }
+          }
+        }
+      }
+      for (const [name, image] of Object.entries(new_images)) {
+        if (!Object.keys(this.prob_images).includes(name)) {
+          this.prob_images[name] = image;
+        }
+      }
+    }
+    this.exam_dump[num].Content.splice(index, 1);
+    this.content_hover[num].splice(index, 1);
+    // if (index != this.exam_dump[num].Content.length - 1) {
+    //   this.exam_dump[num].Content.splice(index, 1);
+    //   this.content_hover[num].splice(index, 1);
+    // }
+    // else {
+    //   this.exam_dump[num].Content.pop();
+    //   this.content_hover[num].pop();
+    // }
+    setTimeout(() => {
+      this.problems_loaded = true;
+      setTimeout(() => {
+        for (let i = 1; i <= this.quiz_length; i++) {
+          if (this.enable_standards) {
+            const standardSel: string = "standardInput" + '' + i;
+            (document.getElementById(standardSel) as any).value = Object.keys(this.get_topic_subs(this.selected_topic))[Object.values(this.get_topic_subs(this.selected_topic)).indexOf(this.exam_dump[i].SubTopics[0])] + ': ' + this.exam_dump[i].SubTopics[0];
+          }
+          const probtypeSel: string = "probtypeInput" + '' + i;
+          (document.getElementById(probtypeSel) as any).value = this.problem_types[this.exam_dump[i].Type][0];
+        }
+      }, 25);
+    }, 25);
+    console.log(this.exam_dump);
+  }
+
+  add_choice(num: number) {
+    this.exam_dump[num].AnswerChoices[this.choices_list[this.exam_dump[num].NumChoices]] = JSON.parse(JSON.stringify(this.default_choice));
+    this.exam_dump[num].NumChoices += 1;
+    this.choices_hover[num].push(false);
+  }
+
+  delete_choice(num: number, choice: string) {
+    this.problems_loaded = false;
+    const initial_prob: any = JSON.parse(JSON.stringify(this.exam_dump[num]));
+    var choice_num = 1;
+    this.exam_dump[num].AnswerChoices = {}
+    for (let i = 1; i <= Object.keys(initial_prob.AnswerChoices).length; i++) {
+      if (this.choices_list[i - 1] != choice) {
+        this.exam_dump[num].AnswerChoices[this.choices_list[choice_num - 1]] = JSON.parse(JSON.stringify(initial_prob.AnswerChoices[this.choices_list[i - 1]]));
+        choice_num += 1;
+      }
+    }
+    this.exam_dump[num].NumChoices -= 1;
+    this.choices_hover[num].splice(Object.keys(initial_prob.AnswerChoices).indexOf(choice), 1);
+    setTimeout(() => {
+      this.problems_loaded = true;
+      setTimeout(() => {
+        for (let i = 1; i <= this.quiz_length; i++) {
+          if (this.enable_standards) {
+            const standardSel: string = "standardInput" + '' + i;
+            (document.getElementById(standardSel) as any).value = Object.keys(this.get_topic_subs(this.selected_topic))[Object.values(this.get_topic_subs(this.selected_topic)).indexOf(this.exam_dump[i].SubTopics[0])] + ': ' + this.exam_dump[i].SubTopics[0];
+          }
+          const probtypeSel: string = "probtypeInput" + '' + i;
+          (document.getElementById(probtypeSel) as any).value = this.problem_types[this.exam_dump[i].Type][0];
+        }
+      }, 25);
+    }, 25);
+    console.log(this.exam_dump);
+  }
+
+  check_content_complete(num: number) {
+    var complete = true;
+    for (let block of this.exam_dump[num].Content) {
+      if (block == '') {
+        complete = false;
+      }
+    }
+    for (let [k, choice] of Object.entries(this.exam_dump[num].AnswerChoices)) {
+      if (choice.Choice == '' && k != 'KEY') {
+        complete = false;
+      }
+    }
+    if (this.enable_standards && this.exam_dump[num].SubTopics[0] == '') {
+      complete = false;
+    }
+    this.prob_statuses[num][0] = complete;
+  }
+
+  check_all_content_complete() {
+    var complete = true;
+    this.incomplete_probs = [];
+    for (let prob of Object.keys(this.exam_dump)) {
+      this.check_content_complete(+prob);
+      if (!this.prob_statuses[+prob][0]) {
+        complete = false;
+        this.incomplete_probs.push(prob);
+      }
+    }
+    return (complete);
+  }
+
+  check_key_complete(num: number) {
+    var complete = false;
+    for (let choice of Object.values(this.exam_dump[num].AnswerChoices)) {
+      if (choice.Key.Correct) {
+        complete = true;
+      }
+    }
+    this.prob_statuses[num][1] = complete;
+  }
+
+  check_all_key_complete() {
+    var complete = true;
+    this.incomplete_probs = [];
+    for (let prob of Object.keys(this.exam_dump)) {
+      this.check_key_complete(+prob);
+      if (!this.prob_statuses[+prob][1]) {
+        complete = false;
+        this.incomplete_probs.push(prob);
+      }
+    }
+    return (complete);
+  }
+
+  add_problem() {
+    this.problems_loaded = false;
+    this.exam_dump[this.quiz_length + 1] = JSON.parse(JSON.stringify(this.default_problem));
+    this.exam_dump[this.quiz_length + 1].Number = this.quiz_length + 1;
+    this.prob_statuses[this.quiz_length + 1] = [false, false];
+    this.problem_hover[this.quiz_length + 1] = false;
+    this.content_hover[this.quiz_length + 1] = [false];
+    var choices: boolean[] = [];
+    for (let i = 1; i <= this.quiz_length; i++) {
+      choices.push(false);
+    }
+    this.choices_hover[this.quiz_length + 1] = choices;
+    this.quiz_length += 1;
+    setTimeout(() => {
+      this.problems_loaded = true;
+      setTimeout(() => {
+        for (let i = 1; i <= this.quiz_length; i++) {
+          if (this.enable_standards) {
+            const standardSel: string = "standardInput" + '' + i;
+            (document.getElementById(standardSel) as any).value = Object.keys(this.get_topic_subs(this.selected_topic))[Object.values(this.get_topic_subs(this.selected_topic)).indexOf(this.exam_dump[i].SubTopics[0])] + ': ' + this.exam_dump[i].SubTopics[0];
+          }
+          const probtypeSel: string = "probtypeInput" + '' + i;
+          (document.getElementById(probtypeSel) as any).value = this.problem_types[this.exam_dump[i].Type][0];
+        }
+      }, 25);
+    }, 25);
+    console.log(this.exam_dump);
+  }
+
+  delete_problem(num: number) {
+    this.problems_loaded = false;
+    const initial_dump: any = JSON.parse(JSON.stringify(this.exam_dump));
+    const initial_images: any = JSON.parse(JSON.stringify(this.prob_images));
+    const initial_statuses: any = JSON.parse(JSON.stringify(this.prob_statuses));
+    var prob = 1;
+    this.exam_dump = {};
+    this.prob_images = {};
+    this.prob_statuses = {};
+    for (let i = 1; i <= this.quiz_length; i++) {
+      if (i != num) {
+        this.exam_dump[prob] = JSON.parse(JSON.stringify(initial_dump[i]));
+        if (Object.keys(initial_images).includes('' + i)) {
+          var new_images: any = {};
+          for (const [k, image] of Object.entries(initial_images[i])) {
+            new_images[k] = [this.save_dupe_image(((image as any)[0] as any).changingThisBreaksApplicationSecurity as string), (image as any)[1]];
+          }
+          for (const [name, image] of Object.entries(new_images)) {
+            if (!Object.keys(this.prob_images).includes(name)) {
+              this.prob_images[name] = image;
+            }
+          }
+        }
+        this.prob_statuses[prob] = JSON.parse(JSON.stringify(initial_statuses[i]));
+        this.exam_dump[prob].Number = prob;
+        prob += 1;
+      }
+    }
+    this.problem_hover.splice(num, 1);
+    this.content_hover.splice(num, 1);
+    this.choices_hover.splice(num, 1);
+    this.quiz_length -= 1;
+    setTimeout(() => {
+      this.problems_loaded = true;
+      setTimeout(() => {
+        for (let i = 1; i <= this.quiz_length; i++) {
+          if (this.enable_standards) {
+            const standardSel: string = "standardInput" + '' + i;
+            (document.getElementById(standardSel) as any).value = Object.keys(this.get_topic_subs(this.selected_topic))[Object.values(this.get_topic_subs(this.selected_topic)).indexOf(this.exam_dump[i].SubTopics[0])] + ': ' + this.exam_dump[i].SubTopics[0];
+          }
+          const probtypeSel: string = "probtypeInput" + '' + i;
+          (document.getElementById(probtypeSel) as any).value = this.problem_types[this.exam_dump[i].Type][0];
+        }
+      }, 25);
+    }, 25);
+    console.log(this.exam_dump);
+  }
+
+  complete_preview() {
+    this.all_students = [];
+    this.my_students = [];
+    const linked_students = this.authService.userData.students.slice(1);
+    for (const [key, stud] of Object.entries(linked_students)) {
+      setTimeout(() => {
+        const student_data = this.authService.searchUserId(stud as string);
+        this.all_students.push(stud as string);
+        if (student_data != null) {
+          this.all_students_data[(stud as string)] = (student_data as object);
+        }
+        if ((stud as string).includes(this.authService.userData.uid as string)) {
+          this.my_students.push(stud as string);
+          if (student_data != null) {
+            this.my_students_data[(stud as string)] = (student_data as object);
+          }
+        }
+      }, +key * 10);
+    }
+    setTimeout(() => {
+      this.all_students = [];
+      this.my_students = [];
+      const linked_students = this.authService.userData.students.slice(1);
+      for (const [key, stud] of Object.entries(linked_students)) {
+        setTimeout(() => {
+          const student_data = this.authService.searchUserId(stud as string);
+          this.all_students.push(stud as string);
+          if (student_data != null) {
+            this.all_students_data[(stud as string)] = (student_data as object);
+          }
+          if ((stud as string).includes(this.authService.userData.uid as string)) {
+            this.my_students.push(stud as string);
+            if (student_data != null) {
+              this.my_students_data[(stud as string)] = (student_data as object);
+            }
+          }
+        }, +key * 10);
+      }
+    }, 100);
+    this.my_class_metadata = [];
+    const linked_classes = this.authService.userData.classes.slice(1);
+    for (const [key, clss] of Object.entries(linked_classes)) {
+      setTimeout(() => {
+        console.log(clss);
+        this.class_data = this.authService.searchClassId(clss as string);
+        console.log(this.class_data);
+        this.my_class_metadata.push(this.class_data as object);
+      }, +key * 10);
+    }
+    setTimeout(() => {
+      this.my_class_metadata = [];
+      const linked_classes = this.authService.userData.classes.slice(1);
+      for (const [key, clss] of Object.entries(linked_classes)) {
+        setTimeout(() => {
+          console.log(clss);
+          this.class_data = this.authService.searchClassId(clss as string);
+          console.log(this.class_data);
+          this.my_class_metadata.push(this.class_data as object);
+        }, +key * 10);
+      }
+    }, 100);
+    this.cquiz_page = 'postquiz';
+    setTimeout(() => {
+      const editQuizInput: string = "editQuizName";
+      (document.getElementById(editQuizInput) as any).value = this.quiz_name;
+      if (this.enable_timelimit) {
+        const probEntry: string = "probEntry";
+        const probSlider: string = "probSlider";
+        (document.getElementById(probEntry) as any).value = this.quiz_timer;
+        (document.getElementById(probSlider) as any).value = this.quiz_timer;
+      }
+    }, 250);
+  }
+
+  is_image(blob: string) {
+    return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
+  }
+
+  get_refsheet(key: string) {
+    // console.log('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
+    return ('../../' + this.exam_attribute_dump[key.substring(0, key.indexOf('-'))].RefSheet);
+  }
+
+  get_flag_count() {
+    var count = 0;
+    for (let sub of this.order_numbers()) {
+      if (sub <= this.max_problem_number && (this.exam_submission[sub].Attempts[0] != 0) && this.exam_submission[sub].Flags[this.exam_submission[sub].Flags.length - 1]) {
+        count += 1;
+      }
+    }
+    return (count)
+  }
+
+  get_skip_count() {
+    var count = 0;
+    for (let sub of this.order_numbers()) {
+      if (sub < this.max_problem_number && (this.exam_submission[sub].Attempts[0] == 0)) {
+        count += 1;
+      }
+    }
+    return (count)
+  }
+
+  order_numbers() {
+    return (Array.from({ length: Object.keys(this.exam_dump).length }, (_, i) => i + 1));
+  }
+
+  toggle_flag() {
+    console.log('flag');
+    this.exam_submission[this.problem_number].Flags.push(!this.exam_submission[this.problem_number].Flags[this.exam_submission[this.problem_number].Flags.length - 1]);
+    console.log(this.exam_submission[this.problem_number].Flags);
+  }
+
+  toggle_button(val: string) {
+    if (['English Language Arts', 'Mathematics', 'Sciences', 'Social Studies', 'Reading & Writing'].includes(val)) {
+      for (let subval of this.sub_subjects[val]) {
+        if (!this.subject_filters.includes(subval)) {
+          this.subject_filters.push(subval)
+        }
+        else {
+          if (this.subject_filters.indexOf(subval) != -1) {
+            this.subject_filters.splice(this.subject_filters.indexOf(subval), 1);
+          }
+          else {
+            this.subject_filters.pop()
+          }
+        }
+      }
+    }
+    else if (['Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'High School'].includes(val)) {
+      if (['High School'].includes(val)) {
+        for (let subval of ['High School', 'Grade 9', 'Grade 10', 'Grade 11', 'Grade 12']) {
+          if (!this.grade_filters.includes(subval)) {
+            this.grade_filters.push(subval)
+          }
+          else {
+            if (this.grade_filters.indexOf(subval) != -1) {
+              this.grade_filters.splice(this.grade_filters.indexOf(subval), 1);
+            }
+            else {
+              this.grade_filters.pop()
+            }
+          }
+        }
+      }
+      else {
+        if (!this.grade_filters.includes(val)) {
+          this.grade_filters.push(val)
+        }
+        else {
+          if (this.grade_filters.indexOf(val) != -1) {
+            this.grade_filters.splice(this.grade_filters.indexOf(val), 1);
+          }
+          else {
+            this.grade_filters.pop()
+          }
+        }
+      }
+    }
+    else {
+      if (['SAT'].includes(val)) {
+        for (let subval of ['SAT', 'PSAT']) {
+          if (!this.state_filters.includes(subval)) {
+            this.state_filters.push(subval)
+          }
+          else {
+            if (this.state_filters.indexOf(subval) != -1) {
+              this.state_filters.splice(this.state_filters.indexOf(subval), 1);
+            }
+            else {
+              this.state_filters.pop()
+            }
+          }
+        }
+      }
+      else {
+        if (!this.state_filters.includes(val)) {
+          this.state_filters.push(val)
+        }
+        else {
+          if (this.state_filters.indexOf(val) != -1) {
+            this.state_filters.splice(this.state_filters.indexOf(val), 1);
+          }
+          else {
+            this.state_filters.pop()
+          }
+        }
+      }
+    }
+    this.filter_exams();
+  }
+
+  toggle_mode() {
+    if (this.mode == 'assess') {
+      this.mode = 'explain';
+    }
+    else if (this.mode == 'explain') {
+      this.mode = 'assess';
+    }
+  }
+
+  toggle_length_mode() {
+    if (this.length_mode == 'timer') {
+      this.length_mode = 'number';
+    }
+    else if (this.length_mode == 'number') {
+      this.length_mode = 'timer';
+    }
+  }
+
+  set_timer(num: number) {
+    if (num < 5) {
+      this.exam_timer = 5;
+    }
+    else if (num > 60) {
+      this.exam_timer = 60;
+    }
+    else {
+      this.exam_timer = num;
+    }
+  }
+
+  filter_exams() {
+    this.filtered_set = [];
+    this.topics = [];
+    this.topics_count = {};
+    for (let i = 0; i < this.exam_set.length; i++) {
+      if ((this.state_filters.includes(this.exam_attribute_dump[this.exam_set[i]].State) || this.state_filters.includes(this.exam_attribute_dump[this.exam_set[i]].ExamName) || this.state_filters.length == 0) && (this.grade_filters.includes(this.exam_attribute_dump[this.exam_set[i]].Grade) || this.grade_filters.length == 0) && (this.subject_filters.includes(this.exam_attribute_dump[this.exam_set[i]].Subject) || this.subject_filters.length == 0)) {
+        this.filtered_set.push(this.exam_set[i]);
+      }
+    }
+    this.filtered_exam_num = this.filtered_set.length;
+    this.filtered_prob_num = 0;
+    for (let i = 0; i < this.filtered_set.length; i++) {
+      this.filtered_prob_num += this.exam_attribute_dump[this.filtered_set[i]].NumQuestions;
+      if (!this.exam_attribute_dump[this.filtered_set[i]].HideTopics) {
+        for (const [key, val] of Object.entries(this.exam_attribute_dump[this.filtered_set[i]].Topics)) {
+          if (!this.topics.includes(key)) {
+            this.topics.push(key);
+          }
+          if (!Object.keys(this.topics_count).includes(key)) {
+            this.topics_count[key] = val;
+          }
+          else {
+            this.topics_count[key] += val;
+          }
+        }
+      }
+    }
+    // for (let topic of this.topic_filters) {
+    //   if (!this.topics.includes(topic)) {
+    //     this.toggle_topic(topic);
+    //   }
+    // }
+    if (this.grade_filters.length == 0 && this.subject_filters.length == 0) {
+      this.topics = [];
+      this.topics_count = {};
+      this.topic_filters = []
+    }
+    if (this.filtered_set.length == 0) {
+      this.generate_message = "There are no problems based on your selection.";
+    }
+  }
+
+  generate_problems() {
+    this.filter_exams();
+    this.dump_count = 0;
+    for (let online_key of this.exam_set) {
+      if (this.filtered_set.includes(online_key)) {
+        for (const [num, value] of Object.entries(this.e_dump_dict[online_key])) {
+          if (value.Number <= this.exam_attribute_dump[online_key].NumQuestions) {
+            var prob: any = {};
+            for (const [key, val] of Object.entries(value)) {
+              prob[key] = val;
+            }
+            if (this.topic_filters.length == 0) {
+              this.ordered_dump[this.dump_count] = prob;
+              this.ordered_dump[this.dump_count].Number = online_key + '-' + (this.ordered_dump[this.dump_count].Number as string);
+              this.dump_count += 1;
+            }
+            else if (!this.exam_attribute_dump[online_key].HideTopics) {
+              for (let topic of value.Topics) {
+                if (this.topic_filters.includes(topic)) {
+                  this.ordered_dump[this.dump_count] = prob;
+                  this.ordered_dump[this.dump_count].Number = online_key + '-' + (this.ordered_dump[this.dump_count].Number as string);
+                  this.dump_count += 1;
+                }
+              }
+            }
+            console.log(this.dump_count);
+          }
+        }
+      }
+    }
+    console.log(this.ordered_dump);
+    if (this.filtered_set.length != 0) {
+      this.generate_message = "";
+      if (this.length_mode == 'number') {
+        this.randomize_problems(this.quiz_length);
+      }
+      else {
+        this.randomize_problems(Math.min(100, this.filtered_prob_num));
+      }
+      this.toggle_filters();
+    }
+  }
+
+  randomize_problems(total: number) {
+    this.problems_sequence = Array.from({ length: Object.keys(this.ordered_dump).length }, (_, i) => i);
+    this.random_list = []
+    for (let i = 1; i <= total; i++) {
+      this.random_index = Math.floor(Math.random() * this.problems_sequence.length);
+      this.random_list.push('' + this.problems_sequence[this.random_index]);
+      this.exam_dump[i] = this.ordered_dump[this.problems_sequence[this.random_index]];
+      this.problems_sequence.splice(this.random_index, 1);
+    }
+    console.log(this.exam_dump);
+    this.exam_key = [];
+    for (const [num, val] of Object.entries(this.exam_dump)) {
+      this.exam_key.push([]);
+      if (Object.keys(val.Parts).length == 0) {
+        this.exam_key[this.exam_key.length - 1].push([]);
+        if (Object.keys(val.AnswerChoices).length == 0) {
+          this.exam_key[this.exam_key.length - 1][0].push('');
+        }
+        else if (['O'].includes(val.Type)) {
+          this.exam_key[this.exam_key.length - 1][0] = this.get_o_key(val.AnswerChoices);
+        }
+        else if (['C'].includes(val.Type)) {
+          this.exam_key[this.exam_key.length - 1][0] = this.get_c_key(val.AnswerChoices);
+        }
+        else if (['G'].includes(val.Type)) {
+          this.exam_key[this.exam_key.length - 1][0] = this.get_g_key(val.AnswerChoices);
+        }
+        else {
+          for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+            if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Type) && val2.Key.Correct) {
+              this.exam_key[this.exam_key.length - 1][0].push(ch);
+            }
+            else if (['IDD'].includes(val.Type) && val2.Key.Correct) {
+              this.exam_key[this.exam_key.length - 1][0].push([ch[2]]);
+            }
+            else if (['FR'].includes(val.Type) && ch.includes('KEY')) {
+              this.exam_key[this.exam_key.length - 1][0].push(val2.Choice);
+            }
+            else if (['MFR'].includes(val.Type) && ch.includes('KEY')) {
+              this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
+            }
+            else if (['T'].includes(val.Type) && ch.includes('KEY')) {
+              this.exam_key[this.exam_key.length - 1][0].push([val2.Choice]);
+            }
+          }
+        }
+      }
+      else {
+        for (let part of Object.keys(val.Parts)) {
+          this.exam_key[this.exam_key.length - 1].push([]);
+          if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
+            this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push('');
+          }
+          else if (['O'].includes(val.Parts[part].Type)) {
+            this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_o_key(val.Parts[part].AnswerChoices);
+          }
+          else if (['C'].includes(val.Parts[part].Type)) {
+            this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_c_key(val.Parts[part].AnswerChoices);
+          }
+          else if (['G'].includes(val.Parts[part].Type)) {
+            this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_g_key(val.Parts[part].AnswerChoices);
+          }
+          else {
+            for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
+              if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Parts[part].Type) && val2.Key.Correct) {
+                this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(ch);
+              }
+              else if (['IDD'].includes(val.Parts[part].Type) && val2.Key.Correct) {
+                this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([ch[2]]);
+              }
+              else if (['FR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
+                this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
+              }
+              else if (['MFR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
+                this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
+              }
+              else if (['T'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
+                this.exam_key[this.exam_key.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
+              }
+            }
+          }
+        }
+      }
+    }
+    console.log(JSON.stringify(this.exam_dump));
+    console.log(this.exam_submission);
+    console.log(this.exam_key);
+  }
+
+  can_assign_s(std: string, ass: string) {
+    return (!Object.keys(this.all_students_data[std].exams.history).includes('Q-' + ass));
+  }
+
+  can_assign_c(clss: string, ass: string) {
+    return (!this.my_class_metadata[this.authService.userData.classes.indexOf(clss) - 1].exams.includes('Q-' + ass));
+  }
+
+  assign_quiz() {
+    if (!this.assign_q) {
       this.all_students = [];
       this.my_students = [];
       const linked_students = this.authService.userData.students.slice(1);
@@ -3993,10 +5051,10 @@ export class HomeComponent implements OnInit {
         }
       }, 100);
     }
-    this.assign_e = !this.assign_e;
+    this.assign_q = !this.assign_q;
   }
 
-  toggle_new_exam(target: string) {
+  toggle_new_quiz(target: string) {
     if (!this.new_assignments.includes(target)) {
       this.new_assignments.push(target);
     }
@@ -4010,165 +5068,335 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  add_assign_exam() {
+  toggle_assign_quiz() {
+    if (!this.assign_q) {
+      this.all_students = [];
+      this.my_students = [];
+      const linked_students = this.authService.userData.students.slice(1);
+      for (const [key, stud] of Object.entries(linked_students)) {
+        setTimeout(() => {
+          const student_data = this.authService.searchUserId(stud as string);
+          this.all_students.push(stud as string);
+          if (student_data != null) {
+            this.all_students_data[(stud as string)] = (student_data as object);
+          }
+          if ((stud as string).includes(this.authService.userData.uid as string)) {
+            this.my_students.push(stud as string);
+            if (student_data != null) {
+              this.my_students_data[(stud as string)] = (student_data as object);
+            }
+          }
+        }, +key * 10);
+      }
+      setTimeout(() => {
+        this.all_students = [];
+        this.my_students = [];
+        const linked_students = this.authService.userData.students.slice(1);
+        for (const [key, stud] of Object.entries(linked_students)) {
+          setTimeout(() => {
+            const student_data = this.authService.searchUserId(stud as string);
+            this.all_students.push(stud as string);
+            if (student_data != null) {
+              this.all_students_data[(stud as string)] = (student_data as object);
+            }
+            if ((stud as string).includes(this.authService.userData.uid as string)) {
+              this.my_students.push(stud as string);
+              if (student_data != null) {
+                this.my_students_data[(stud as string)] = (student_data as object);
+              }
+            }
+          }, +key * 10);
+        }
+      }, 100);
+      this.my_class_metadata = [];
+      const linked_classes = this.authService.userData.classes.slice(1);
+      for (const [key, clss] of Object.entries(linked_classes)) {
+        setTimeout(() => {
+          console.log(clss);
+          this.class_data = this.authService.searchClassId(clss as string);
+          console.log(this.class_data);
+          this.my_class_metadata.push(this.class_data as object);
+        }, +key * 10);
+      }
+      setTimeout(() => {
+        this.my_class_metadata = [];
+        const linked_classes = this.authService.userData.classes.slice(1);
+        for (const [key, clss] of Object.entries(linked_classes)) {
+          setTimeout(() => {
+            console.log(clss);
+            this.class_data = this.authService.searchClassId(clss as string);
+            console.log(this.class_data);
+            this.my_class_metadata.push(this.class_data as object);
+          }, +key * 10);
+        }
+      }, 100);
+    }
+    this.assign_q = !this.assign_q;
+  }
+
+  add_assign_quiz() {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    var quiz_id = this.key;
+    // for (let i: number = 1; i <= 5; i++) {
+    //   quiz_id += characters.charAt(Math.floor(Math.random() * charactersLength));
+    // }
+    for (const [name, image] of Object.entries(this.prob_images)) {
+      // image should be an acutal image, instead of the URL
+      if ((image as any).length > 1) {
+        this.authService.UploadQuizPic(quiz_id, name, (image as any)[1]);}
+    }
+    var db_updates: any = {};
+    db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, problems: this.exam_dump, grades: [this.selected_grade], subjects: [this.selected_subject], states: [this.state_labels[this.selected_curriculum]], topics: [this.selected_topic], mode: this.mode, length: this.quiz_length, timer: this.exam_timer, shuffle: this.shuffle_mode, public: this.quiz_public, author: this.authService.userData.uid };
+    this.authService.UpdateDatabase(db_updates);
     for (let ass of this.new_assignments) {
       if (ass.length < 10) {
-        const class_ass_ref = 'classes/' + ass + '/exams';
+        const class_ass_ref = 'classes/' + ass + '/quizzes';
         var class_ass_set: any = [];
         var edit_c_list: any = {};
-        for (let exam of this.my_class_metadata[this.authService.userData.classes.indexOf(ass) - 1].exams) {
-          class_ass_set.push(exam as string);
+        for (let quiz of this.my_class_metadata[this.authService.userData.classes.indexOf(ass) - 1].quizzes) {
+          class_ass_set.push(quiz as string);
         }
-        class_ass_set.push(this.exam_id);
+        class_ass_set.push(quiz_id);
         edit_c_list[class_ass_ref] = class_ass_set;
         this.authService.UpdateDatabase({ class_ass_ref: {} });
         this.authService.UpdateDatabase(edit_c_list);
       }
       else {
-        var db_updates: any = {};
-        db_updates['users/' + ass + '/exams/history/' + this.exam_id] = { progress: 0, status: 'Assigned', shuffle: false, lasttimestamp: serverTimestamp() };
+        db_updates = {};
+        db_updates['users/' + ass + '/exams/history/Q-' + quiz_id] = { progress: 0, status: 'Assigned', shuffle: this.shuffle_mode, lasttimestamp: serverTimestamp() };
         // this.db_updates['users/' + ass + '/problems/all/' + this.exam_id + '-' + "" + (this.problem_number + 1) + '/status'] = 'Viewed';
-        db_updates['/submissions/exams/' + ass + '/' + this.exam_id + '/starttimestamp'] = serverTimestamp();
+        db_updates['/submissions/exams/' + ass + '/Q-' + quiz_id + '/starttimestamp'] = serverTimestamp();
         this.authService.UpdateDatabase(db_updates);
       }
     }
+    setTimeout(() => {
+      this.router.navigate(['quiz/' + quiz_id]);
+    }, 500);
   }
 
   clear_assignments() {
     this.new_assignments = [];
-    this.assign_e = false;
+    this.assign_q = false;
   }
 
-  toggle_favorite_exm() {
-    this.favorite_exm_set = [];
-    for (let exm of this.authService.userData.exams.favorites) {
-      this.favorite_exm_set.push(exm as string);
-    }
-    if (this.favorite_exm_set.includes(this.exam_id)) {
-      if (this.favorite_exm_set.indexOf(this.exam_id) != -1) {
-        this.favorite_exm_set.splice(this.favorite_exm_set.indexOf(this.exam_id), 1);
+  toggle_filters() {
+    this.expand_filters = !this.expand_filters;
+    if (this.mode == 'assess') {
+      for (let num of Object.keys(this.exam_dump)) {
+        this.exam_submission[+num] = {
+          'Number': +num,
+          'Topics': [],
+          'SubTopics': [],
+          'Choice': [],
+          'Correct': [],
+          'Rationale': [],
+          'Attempts': [],
+          'Path': [],
+          'Seconds': 0,
+          'Time': '',
+          'Flags': [false]
+        };
+        if (Object.keys(this.exam_dump[+num].Parts).length == 0) {
+          this.exam_submission[+num].Path.push([['']]);
+          this.exam_submission[+num].Attempts.push(0);
+        }
+        else {
+          for (let part of Object.keys(this.exam_dump[+num].Parts)) {
+            this.exam_submission[+num].Path.push([['']]);
+            this.exam_submission[+num].Attempts.push(0);
+          }
+        }
       }
-      else {
-        this.favorite_exm_set.pop()
+    }
+    this.toggleExamTimer();
+    this.toggleProblemTimer();
+    this.problem_number = 1;
+    this.max_problem_number = 1;
+    this.attempt_path = [];
+    this.attempt_response = [];
+    this.attempt_explanation = [];
+    this.problem_selection = [];
+    this.m_shuffled = false;
+    this.m_selection = [];
+    this.m_submission = [];
+    this.c_submission = [];
+    this.shuffle_choices = {};
+    this.unique_choices = [];
+    if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+      this.problem_attempts = [0];
+      this.attempt_path = [[]];
+      this.attempt_response = [''];
+      this.attempt_explanation = [[]];
+      this.m_selection = [["", ""]];
+      this.m_submission = [{}];
+      this.c_submission = [{}];
+      if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
+        this.problem_selection = [['']];
+        if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
+          setTimeout(() => {
+            this.plot_graph_gp('', false);
+          }, 500);
+        }
+      }
+      else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+        this.problem_selection = [[]];
+        if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
+          this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
+        }
+        if (['MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+          setTimeout(() => {
+            this.plot_graph_mgp('', false);
+          }, 500);
+        }
+      }
+      else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Type)) {
+        var msp_nums: string[] = [];
+        this.problem_selection.push([]);
+        for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
+          if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+            this.problem_selection[0].push('');
+            msp_nums.push(choice[0]);
+          }
+        }
       }
     }
     else {
-      this.favorite_exm_set.push(this.exam_id);
+      this.problem_attempts = [];
+      for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+        this.problem_attempts.push(0);
+        this.attempt_path.push([]);
+        this.attempt_response.push('');
+        this.attempt_explanation.push([]);
+        this.m_selection.push(["", ""]);
+        this.m_submission.push({});
+        this.c_submission.push({});
+        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+          this.problem_selection.push(['']);
+          if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            setTimeout(() => {
+              this.plot_graph_gp(part, false);
+            }, 500);
+          }
+        }
+        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+          this.problem_selection.push([]);
+          if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
+          }
+          if (['MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            setTimeout(() => {
+              this.plot_graph_mgp(part, false);
+            }, 500);
+          }
+        }
+        else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+          var msp_nums: string[] = [];
+          this.problem_selection.push([]);
+          for (let choice of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
+            if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+              this.problem_selection[Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part)].push('');
+              msp_nums.push(choice[0]);
+            }
+          }
+        }
+      }
     }
-    this.authService.UpdateUserData({ 'exams/favorites': {} });
-    this.authService.UpdateUserData({ 'exams/favorites': this.favorite_exm_set });
-    this.exam_fav = !this.exam_fav;
+    this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+    for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+      setTimeout(() => {
+        this.read_supp_json(supp);
+      }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+    }
+    if (this.exam_dump[this.problem_number].Type == 'MP') {
+      for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+        for (let block of this.exam_dump[this.problem_number].Parts[part].Content) {
+          if (block.startsWith(':table:')) {
+            setTimeout(() => {
+              this.read_table(block.slice(7));
+            }, 100);
+          }
+        }
+      }
+    }
+    if (this.exam_dump[this.problem_number].Type != 'MP') {
+      for (let block of this.exam_dump[this.problem_number].Content) {
+        if (block.startsWith(':table:')) {
+          setTimeout(() => {
+            this.read_table(block.slice(7));
+          }, 100);
+        }
+      }
+    }
+    this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+    console.log(this.exam_dump[this.problem_number].Number);
+    console.log((this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-')));
+    console.log(this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet);
   }
 
-  toggle_favorite_std() {
-    this.favorite_std_set = [];
-    for (let std of this.authService.userData.standards.favorites) {
-      this.favorite_std_set.push(std as string[]);
+  select_mc_key(num: number, choice: string) {
+    for (let k of Object.keys(this.exam_dump[num].AnswerChoices)) {
+      this.exam_dump[num].AnswerChoices[k].Key.Correct = false;
     }
-    this.includes_standard = false;
-    if (this.favorite_std_set.length != 0) {
-      for (const [key, std] of Object.entries(this.favorite_std_set)) {
-        if (std[0] == this.selected_topic && std[1] == this.selected_subtopic) {
-          this.includes_standard = true;
-          if (+key != this.favorite_std_set.length - 1) {
-            this.favorite_std_set.splice(+key, 1);
+    this.exam_dump[num].AnswerChoices[choice].Key.Correct = true;
+  }
+
+  attempt_mc_problem(choice: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (choice != this.problem_selection[part_num][0]) {
+      this.problem_attempts[part_num] += 1;
+      this.attempt_path[part_num].push([choice]);
+      this.problem_selection[part_num] = [choice];
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
+        if (this.problem_number == +num) {
+          if (part == '') {
+            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+              if (ch == choice) {
+                this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                if (key.Key.Correct == true) {
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
+                  }
+                  if (this.problem_attempts[part_num] == 1) {
+                    this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                  }
+                  else {
+                    this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                  }
+                }
+                else {
+                  this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                }
+              }
+            }
           }
           else {
-            this.favorite_std_set.pop();
+            for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+              if (ch == choice) {
+                this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                if (key.Key.Correct == true) {
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
+                  }
+                  if (this.problem_attempts[part_num] == 1) {
+                    this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                  }
+                  else {
+                    this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                  }
+                }
+                else {
+                  this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                }
+              }
+            }
           }
         }
       }
     }
-    if (!this.includes_standard) {
-      this.favorite_std_set.push([this.selected_topic, this.selected_subtopic]);
-    }
-    this.authService.UpdateUserData({ 'standards/favorites': {} });
-    this.authService.UpdateUserData({ 'standards/favorites': this.favorite_std_set });
-    this.standard_fav = !this.standard_fav;
-  }
-
-  assert_favorite_exm() {
-    this.favorite_exm_set = [];
-    for (let exm of this.authService.userData.exams.favorites) {
-      this.favorite_exm_set.push(exm as string);
-    }
-    if (!this.favorite_exm_set.includes(this.exam_id)) {
-      this.favorite_exm_set.push(this.exam_id);
-    }
-    this.authService.UpdateUserData({ 'exams/favorites': {} });
-    this.authService.UpdateUserData({ 'exams/favorites': this.favorite_exm_set });
-    this.exam_fav = true;
-  }
-
-  assert_favorite_std() {
-    this.favorite_std_set = [];
-    for (let std of this.authService.userData.standards.favorites) {
-      this.favorite_std_set.push(std as string[]);
-    }
-    this.includes_standard = false;
-    if (this.favorite_std_set.length != 0) {
-      for (const [key, std] of Object.entries(this.favorite_std_set)) {
-        if (std[0] == this.selected_topic && std[1] == this.selected_subtopic) {
-          this.includes_standard = true;
-        }
-      }
-    }
-    if (!this.includes_standard) {
-      this.favorite_std_set.push([this.selected_topic, this.selected_subtopic]);
-    }
-    this.authService.UpdateUserData({ 'standards/favorites': {} });
-    this.authService.UpdateUserData({ 'standards/favorites': this.favorite_std_set });
-    this.standard_fav = true;
-  }
-
-  download_exam() {
-    const link = document.createElement('a');
-    const exam_ref: string = 'exams/' + this.exam_id + '/downloads';
-    console.log(exam_ref);
-    link.setAttribute('target', '_blank');
-    link.setAttribute('href', this.file_source);
-    link.setAttribute('download', this.exam_name);
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    if (this.exam_dl == 0) {
-      this.edit_e_list[exam_ref] = 1;
-      this.authService.UpdateDatabase({ exam_ref: {} });
-      this.authService.UpdateDatabase(this.edit_e_list);
-    }
-    else {
-      this.edit_e_list[exam_ref] = this.exam_dl + 1;
-      this.authService.UpdateDatabase({ exam_ref: {} });
-      this.authService.UpdateDatabase(this.edit_e_list);
-    }
-    this.edit_e_list = {};
-    this.assert_favorite_exm();
-    this.exam_dl = (this.authService.searchExamId(this.exam_id)).downloads;
-    setTimeout(() => {
-      this.exam_dl = (this.authService.searchExamId(this.exam_id)).downloads;
-    }, 250);
-  }
-
-  print_exam() {
-    printJS({ printable: this.file_source, type: 'pdf', showModal: true });
-    this.assert_favorite_exm();
-  }
-
-  take_exam() {
-    this.assert_favorite_exm();
-    this.router.navigateByUrl(this.exam_url);
-  }
-
-  prev_page() {
-    this.file_page = Math.max(1, this.file_page - 1);
-  }
-
-  next_page() {
-    this.file_page = this.file_page + 1;
-  }
-
-  go_to_page(num: number) {
-    this.file_page = num;
   }
 
   attempt_mc_st_problem(choice: string, part: string) {
@@ -4182,7 +5410,7 @@ export class HomeComponent implements OnInit {
       this.subtopic_problem_selection[part_num] = [choice];
       for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
         if (this.subtopic_problem_number == +num) {
-          if (Object.keys(prob.Parts).length == 0) {
+          if (part == '') {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (choice == ch) {
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
@@ -4216,6 +5444,65 @@ export class HomeComponent implements OnInit {
                 }
                 else {
                   this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  attempt_imc_problem(choice: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (choice != this.problem_selection[part_num][0]) {
+      this.problem_attempts[part_num] += 1;
+      this.attempt_path[part_num].push(choice);
+      this.problem_selection[part_num] = [choice];
+      console.log(this.problem_selection);
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
+        if (this.problem_number == +num) {
+          if (Object.keys(prob.Parts).length == 0) {
+            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+              if (choice == ch) {
+                this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                if (key.Key.Correct == true) {
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
+                  }
+                  if (this.problem_attempts[part_num] == 1) {
+                    this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                  }
+                  else {
+                    this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                  }
+                }
+                else {
+                  this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                }
+              }
+            }
+          }
+          else {
+            for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+              if (choice == ch) {
+                this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                if (key.Key.Correct == true) {
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
+                  }
+                  if (this.problem_attempts[part_num] == 1) {
+                    this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                  }
+                  else {
+                    this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                  }
+                }
+                else {
+                  this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
                 }
               }
             }
@@ -4278,6 +5565,86 @@ export class HomeComponent implements OnInit {
         }
       }
     }
+  }
+
+  select_ms_key(num: number, choice: string) {
+    this.exam_dump[num].AnswerChoices[choice].Key.Correct = !this.exam_dump[num].AnswerChoices[choice].Key.Correct;
+  }
+
+  attempt_ms_problem(choice: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    for (const [num, prob] of Object.entries(this.exam_dump)) {
+      if (this.problem_number == +num) {
+        this.attempt_response[part_num] = "";
+        if (part == '') {
+          for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+            if (choice == ch) {
+              if (!this.problem_selection[part_num].includes(choice)) {
+                this.attempt_explanation[part_num].push(key.Key.Rationale);
+                this.problem_selection[part_num].push(choice);
+              }
+              else {
+                if (this.problem_selection[part_num].indexOf(choice) != -1) {
+                  this.attempt_explanation[part_num].splice(this.problem_selection[part_num].indexOf(choice), 1);
+                  this.problem_selection[part_num].splice(this.problem_selection[part_num].indexOf(choice), 1);
+                }
+                else {
+                  this.attempt_explanation[part_num].pop();
+                  this.problem_selection[part_num].pop();
+                }
+              }
+            }
+            if ((key.Key.Correct == false && this.problem_selection[part_num].includes(ch)) || (key.Key.Correct == true && !this.problem_selection[part_num].includes(ch))) {
+              this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+            }
+          }
+        }
+        else {
+          for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+            if (choice == ch) {
+              if (!this.problem_selection[part_num].includes(choice)) {
+                this.attempt_explanation[part_num].push(key.Key.Rationale);
+                this.problem_selection[part_num].push(choice);
+              }
+              else {
+                if (this.problem_selection[part_num].indexOf(choice) != -1) {
+                  this.attempt_explanation[part_num].splice(this.problem_selection[part_num].indexOf(choice), 1);
+                  this.problem_selection[part_num].splice(this.problem_selection[part_num].indexOf(choice), 1);
+                }
+                else {
+                  this.attempt_explanation[part_num].pop();
+                  this.problem_selection[part_num].pop();
+                }
+              }
+            }
+            if ((key.Key.Correct == false && this.problem_selection[part_num].includes(ch)) || (key.Key.Correct == true && !this.problem_selection[part_num].includes(ch))) {
+              this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+            }
+          }
+        }
+        if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
+          if (this.mode == 'explain') {
+            this.confetti_light(this.problem_attempts[part_num]);
+          }
+          if (this.problem_attempts[part_num] == 1) {
+            this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+          }
+          else {
+            this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+          }
+        }
+      }
+    }
+    this.problem_attempts[part_num] += 1;
+    var current_selection = [];
+    for (let sel of this.problem_selection[part_num]) {
+      current_selection.push(sel);
+    }
+    this.attempt_path[part_num].push(current_selection);
+    console.log(this.attempt_path[part_num]);
   }
 
   attempt_ms_st_problem(choice: string, part: string) {
@@ -4346,7 +5713,78 @@ export class HomeComponent implements OnInit {
       }
     }
     this.subtopic_problem_attempts[part_num] += 1;
-    this.subtopic_attempt_path.push(this.subtopic_problem_selection[part_num]);
+    this.subtopic_attempt_path[part_num].push(this.subtopic_problem_selection[part_num]);
+  }
+
+  attempt_ims_problem(choice: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    this.problem_attempts[part_num] += 1;
+    this.attempt_path[part_num].push(this.problem_selection[part_num]);
+    for (const [num, prob] of Object.entries(this.exam_dump)) {
+      if (this.problem_number == +num) {
+        this.attempt_response[part_num] = "";
+        if (part == '') {
+          for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+            if (choice == ch) {
+              if (!this.problem_selection[part_num].includes(choice)) {
+                this.attempt_explanation[part_num].push(key.Key.Rationale);
+                this.problem_selection[part_num].push(choice);
+              }
+              else {
+                if (this.problem_selection[part_num].indexOf(choice) != -1) {
+                  this.attempt_explanation[part_num].splice(this.problem_selection[part_num].indexOf(choice), 1);
+                  this.problem_selection[part_num].splice(this.problem_selection[part_num].indexOf(choice), 1);
+                }
+                else {
+                  this.attempt_explanation[part_num].pop();
+                  this.problem_selection[part_num].pop();
+                }
+              }
+            }
+            if ((key.Key.Correct == false && this.problem_selection[part_num].includes(ch)) || (key.Key.Correct == true && !this.problem_selection[part_num].includes(ch))) {
+              this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+            }
+          }
+        }
+        else {
+          for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+            if (choice == ch) {
+              if (!this.problem_selection[part_num].includes(choice)) {
+                this.attempt_explanation[part_num].push(key.Key.Rationale);
+                this.problem_selection[part_num].push(choice);
+              }
+              else {
+                if (this.problem_selection[part_num].indexOf(choice) != -1) {
+                  this.attempt_explanation[part_num].splice(this.problem_selection[part_num].indexOf(choice), 1);
+                  this.problem_selection[part_num].splice(this.problem_selection[part_num].indexOf(choice), 1);
+                }
+                else {
+                  this.attempt_explanation[part_num].pop();
+                  this.problem_selection[part_num].pop();
+                }
+              }
+            }
+            if ((key.Key.Correct == false && this.problem_selection[part_num].includes(ch)) || (key.Key.Correct == true && !this.problem_selection[part_num].includes(ch))) {
+              this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+            }
+          }
+        }
+        if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
+          if (this.mode == 'explain') {
+            this.confetti_light(this.problem_attempts[part_num]);
+          }
+          if (this.problem_attempts[part_num] == 1) {
+            this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+          }
+          else {
+            this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+          }
+        }
+      }
+    }
   }
 
   attempt_ims_st_problem(choice: string, part: string) {
@@ -4418,6 +5856,77 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  attempt_idd_problem(inum: string, choice: string, part: string) {
+    var part_num = 0;
+    var index: number = +inum - 1;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (choice != this.problem_selection[part_num][index]) {
+      this.problem_attempts[part_num] += 1;
+      this.problem_selection[part_num][index] = choice;
+      console.log(this.problem_selection);
+      this.attempt_path[part_num].push(this.problem_selection[part_num]);
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
+        if (this.problem_number == +num) {
+          if (part == '') {
+            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+              if (inum + ':' + choice == ch) {
+                console.log(ch);
+                this.attempt_explanation[part_num][index] = key.Key.Rationale;
+                if (!key.Key.Correct) {
+                  this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                  console.log(this.attempt_response);
+                }
+              }
+            }
+          }
+          else {
+            for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+              if (inum + ':' + choice == ch) {
+                this.attempt_explanation[part_num][index] = key.Key.Rationale;
+                if (!key.Key.Correct) {
+                  this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                }
+              }
+            }
+          }
+          if (!this.problem_selection[part_num].includes('')) {
+            var correct_attempt: boolean = true;
+            for (let i = 0; i < this.problem_selection[part_num].length; i++) {
+              if (part == '') {
+                if (!this.exam_dump[this.problem_number].AnswerChoices['' + (i + 1) + ':' + this.problem_selection[part_num][i]].Key.Correct) {
+                  correct_attempt = false;
+                }
+              }
+              else {
+                if (!this.exam_dump[this.problem_number].Parts[part].AnswerChoices['' + (i + 1) + ':' + this.problem_selection[part_num][i]].Key.Correct) {
+                  correct_attempt = false;
+                }
+              }
+            }
+            if (correct_attempt) {
+              if (this.mode == 'explain') {
+                this.confetti_light(this.problem_attempts[part_num]);
+              }
+              if (this.problem_attempts[part_num] == 1) {
+                this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+              }
+              else {
+                this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+              }
+            }
+          }
+        }
+      }
+      setTimeout(() => {
+        this.update_DD(inum, part);
+      }, 100);
+    }
+    console.log(this.problem_selection);
+    console.log(this.attempt_response);
+  }
+
   attempt_idd_st_problem(inum: string, choice: string, part: string) {
     var part_num = 0;
     var index: number = +inum - 1;
@@ -4487,6 +5996,77 @@ export class HomeComponent implements OnInit {
     console.log(this.subtopic_attempt_response);
   }
 
+  attempt_lp_problem(numb: number, part: string) {
+    var choice = '';
+    var part_num = 0;
+    if (part != '') {
+      var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+      for (let ch of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
+        if (+this.exam_dump[this.problem_number].Parts[part].AnswerChoices[ch].Choice == numb) {
+          choice = ch[0];
+        }
+      }
+    }
+    else {
+      for (let ch of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
+        if (+this.exam_dump[this.problem_number].AnswerChoices[ch].Choice == numb) {
+          choice = ch[0];
+        }
+      }
+    }
+    if (choice != this.problem_selection[part_num][0]) {
+      this.problem_attempts[part_num] += 1;
+      this.attempt_path[part_num].push([choice]);
+      this.problem_selection[part_num] = [choice];
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
+        if (this.problem_number == +num) {
+          if (part == '') {
+            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+              if (ch[0] == choice) {
+                this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                if (key.Key.Correct == true) {
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
+                  }
+                  if (this.problem_attempts[part_num] == 1) {
+                    this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                  }
+                  else {
+                    this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                  }
+                }
+                else {
+                  this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                }
+              }
+            }
+          }
+          else {
+            for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+              if (ch[0] == choice) {
+                this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                if (key.Key.Correct == true) {
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
+                  }
+                  if (this.problem_attempts[part_num] == 1) {
+                    this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                  }
+                  else {
+                    this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                  }
+                }
+                else {
+                  this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   attempt_lp_st_problem(numb: number, part: string) {
     var choice = '';
     var part_num = 0;
@@ -4554,6 +6134,62 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  attempt_gp_problem(xnum: number, ynum: number, part: string) {
+    var choice = '(' + '' + xnum + ',' + '' + ynum + ')';
+    console.log(choice);
+    var part_num = 0;
+    if (part != '') {
+      var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (choice != this.problem_selection[part_num][0]) {
+      this.problem_attempts[part_num] += 1;
+      this.attempt_path[part_num].push([choice]);
+      this.problem_selection[part_num] = [choice];
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
+        if (this.problem_number == +num) {
+          if (part == '') {
+            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+              if (choice == key.Choice) {
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
+                this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                if (this.problem_attempts[part_num] == 1) {
+                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                }
+                else {
+                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                }
+              }
+              else {
+                this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+              }
+            }
+          }
+          else {
+            for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+              if (choice == key.Choice) {
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
+                this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                if (this.problem_attempts[part_num] == 1) {
+                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                }
+                else {
+                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                }
+              }
+              else {
+                this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   attempt_gp_st_problem(xnum: number, ynum: number, part: string) {
     var choice = '(' + '' + xnum + ',' + '' + ynum + ')';
     var part_num = 0;
@@ -4603,6 +6239,119 @@ export class HomeComponent implements OnInit {
         }
       }
     }
+  }
+
+  attempt_mgp_problem(xnum: number, ynum: number, part: string) {
+    var choice = '(' + '' + xnum + ',' + '' + ynum + ')';
+    console.log(choice);
+    var part_num = 0;
+    if (part != '') {
+      var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    var choice_in_key = false;
+    for (const [num, prob] of Object.entries(this.exam_dump)) {
+      if (this.problem_number == +num) {
+        this.attempt_response[part_num] = "";
+        if (part == '') {
+          if (this.problem_selection[part_num].includes(choice)) {
+            if (this.problem_selection[part_num].indexOf(choice) != -1) {
+              this.attempt_explanation[part_num].splice(this.problem_selection[part_num].indexOf(choice), 1);
+              this.problem_selection[part_num].splice(this.problem_selection[part_num].indexOf(choice), 1);
+            }
+            else {
+              this.attempt_explanation[part_num].pop();
+              this.problem_selection[part_num].pop();
+            }
+          }
+          else {
+            this.problem_selection[part_num].push(choice);
+            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+              if (choice == key.Choice) {
+                choice_in_key = true;
+                this.attempt_explanation[part_num].push(key.Key.Rationale);
+              }
+            }
+            if (!choice_in_key) {
+              this.attempt_explanation[part_num].push('');
+            }
+          }
+          for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+            if (!this.problem_selection[part_num].includes(key.Choice)) {
+              console.log('missing selection');
+              this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+            }
+          }
+          var graph_key = [];
+          for (let ch of Object.values(prob.AnswerChoices)) {
+            graph_key.push(ch.Choice)
+          }
+          for (let sel of this.problem_selection[part_num]) {
+            if (!graph_key.includes(sel)) {
+              console.log('extra selection');
+              this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+            }
+          }
+        }
+        else {
+          if (this.problem_selection[part_num].includes(choice)) {
+            if (this.problem_selection[part_num].indexOf(choice) != -1) {
+              this.attempt_explanation[part_num].splice(this.problem_selection[part_num].indexOf(choice), 1);
+              this.problem_selection[part_num].splice(this.problem_selection[part_num].indexOf(choice), 1);
+            }
+            else {
+              this.attempt_explanation[part_num].pop();
+              this.problem_selection[part_num].pop();
+            }
+          }
+          else {
+            this.problem_selection[part_num].push(choice);
+            for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+              if (choice == key.Choice) {
+                choice_in_key = true;
+                this.attempt_explanation[part_num].push(key.Key.Rationale);
+              }
+            }
+            if (!choice_in_key) {
+              this.attempt_explanation[part_num].push('');
+            }
+          }
+          for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+            if (!this.problem_selection[part_num].includes(key.Choice)) {
+              console.log('missing selection');
+              this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+            }
+          }
+          var graph_key = [];
+          for (let ch of Object.values(prob.Parts[part].AnswerChoices)) {
+            graph_key.push(ch.Choice)
+          }
+          for (let sel of this.problem_selection[part_num]) {
+            if (!graph_key.includes(sel)) {
+              console.log('extra selection');
+              this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+            }
+          }
+        }
+        if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
+          if (this.mode == 'explain') {
+            this.confetti_light(this.problem_attempts[part_num]);
+          }
+          if (this.problem_attempts[part_num] == 1) {
+            this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+          }
+          else {
+            this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+          }
+        }
+      }
+    }
+    this.problem_attempts[part_num] += 1;
+    var current_selection = [];
+    for (let sel of this.problem_selection[part_num]) {
+      current_selection.push(sel);
+    }
+    this.attempt_path[part_num].push(current_selection);
+    console.log(this.attempt_path[part_num]);
   }
 
   attempt_mgp_st_problem(xnum: number, ynum: number, part: string) {
@@ -4716,6 +6465,60 @@ export class HomeComponent implements OnInit {
     console.log(this.subtopic_attempt_path[part_num]);
   }
 
+  attempt_t_problem(choice: string, inum: string, part: string) {
+    var correct: boolean = false;
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (choice != this.problem_selection[part_num][+inum - 1]) {
+      this.problem_attempts[part_num] += 1;
+      this.problem_selection[part_num][+inum - 1] = choice;
+      this.attempt_path[part_num].push(this.problem_selection[part_num]);
+      this.attempt_response[part_num] = '';
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
+        if (this.problem_number == +num) {
+          if (part == '') {
+            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+              if (inum + ':KEY' == ch && choice == key.Choice) {
+                correct = true;
+                this.attempt_explanation[part_num][+inum - 1] = key.Key.Rationale;
+              }
+            }
+          }
+          else {
+            for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+              if (inum + ':KEY' == ch && choice == key.Choice) {
+                correct = true;
+                this.attempt_explanation[part_num][+inum - 1] = key.Key.Rationale;
+              }
+            }
+          }
+          if (!correct) {
+            this.attempt_explanation[part_num][+inum - 1] = '';
+            this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+          }
+          for (let sub of Object.keys(this.problem_selection[part_num])) {
+            if (this.problem_selection[part_num][+sub] == '') {
+              this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+            }
+          }
+          if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
+            if (this.mode == 'explain') {
+              this.confetti_light(this.problem_attempts[part_num]);
+            }
+            if (this.problem_attempts[part_num] == 1) {
+              this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+            }
+            else {
+              this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+            }
+          }
+        }
+      }
+    }
+  }
+
   attempt_t_st_problem(choice: string, inum: string, part: string) {
     var correct: boolean = false;
     var part_num = 0;
@@ -4761,6 +6564,66 @@ export class HomeComponent implements OnInit {
             }
             else {
               this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+            }
+          }
+        }
+      }
+    }
+  }
+
+  select_fr_key(num: number, choice: string) {
+    this.exam_dump[num].AnswerChoices['KEY'].Choice = choice;
+    this.exam_dump[num].AnswerChoices['KEY'].Key.Correct = true;
+    console.log(this.exam_dump);
+  }
+
+  attempt_fr_problem(choice: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (choice != this.problem_selection[part_num][0]) {
+      this.problem_attempts[part_num] += 1;
+      this.attempt_path[part_num].push([choice]);
+      this.problem_selection[part_num] = [choice];
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
+        if (this.problem_number == +num) {
+          if (part == '') {
+            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+              if (choice == key.Choice) {
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
+                this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                if (this.problem_attempts[part_num] == 1) {
+                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                }
+                else {
+                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                }
+              }
+              else {
+                this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+              }
+            }
+          }
+          else {
+            for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+              if (choice == key.Choice) {
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
+                this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                if (this.problem_attempts[part_num] == 1) {
+                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                }
+                else {
+                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                }
+              }
+              else {
+                this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+              }
             }
           }
         }
@@ -4820,6 +6683,60 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  attempt_mfr_problem(choice: string, inum: string, part: string) {
+    var correct: boolean = false;
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (choice != this.problem_selection[part_num][+inum - 1]) {
+      this.problem_attempts[part_num] += 1;
+      this.problem_selection[part_num][+inum - 1] = choice;
+      this.attempt_path[part_num].push(this.problem_selection[part_num]);
+      this.attempt_response[part_num] = '';
+      for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+        if (this.problem_number == +num) {
+          if (part == '') {
+            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+              if (inum + ':KEY' == ch && choice == key.Choice) {
+                correct = true;
+                this.attempt_explanation[part_num][+inum - 1] = key.Key.Rationale;
+              }
+            }
+          }
+          else {
+            for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+              if (inum + ':KEY' == ch && choice == key.Choice) {
+                correct = true;
+                this.attempt_explanation[part_num][+inum - 1] = key.Key.Rationale;
+              }
+            }
+          }
+          if (!correct) {
+            this.attempt_explanation[part_num][+inum - 1] = '';
+            this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+          }
+          for (let sub of Object.keys(this.problem_selection[part_num])) {
+            if (this.problem_selection[part_num][+sub] == '') {
+              this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+            }
+          }
+          if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
+            if (this.mode == 'explain') {
+              this.confetti_light(this.problem_attempts[part_num]);
+            }
+            if (this.problem_attempts[part_num] == 1) {
+              this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+            }
+            else {
+              this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+            }
+          }
+        }
+      }
+    }
+  }
+
   attempt_mfr_st_problem(choice: string, inum: string, part: string) {
     var correct: boolean = false;
     var part_num = 0;
@@ -4831,7 +6748,7 @@ export class HomeComponent implements OnInit {
       this.subtopic_problem_selection[part_num][+inum - 1] = choice;
       this.subtopic_attempt_path[part_num].push(this.subtopic_problem_selection[part_num]);
       this.subtopic_attempt_response[part_num] = '';
-      for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
         if (this.subtopic_problem_number == +num) {
           if (part == '') {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
@@ -4865,6 +6782,60 @@ export class HomeComponent implements OnInit {
             }
             else {
               this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+            }
+          }
+        }
+      }
+    }
+  }
+
+  attempt_sr_problem(choice: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (choice != this.problem_selection[part_num][0]) {
+      this.problem_attempts[part_num] += 1;
+      this.attempt_path[part_num].push([choice]);
+      this.problem_selection[part_num] = [choice];
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
+        if (this.problem_number == +num) {
+          if (part == '') {
+            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+              if (choice == key.Choice) {
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
+                this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                if (this.problem_attempts[part_num] == 1) {
+                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                }
+                else {
+                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                }
+              }
+              else {
+                this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+              }
+            }
+          }
+          else {
+            for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+              if (choice == key.Choice) {
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
+                }
+                this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                if (this.problem_attempts[part_num] == 1) {
+                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
+                }
+                else {
+                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                }
+              }
+              else {
+                this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+              }
             }
           }
         }
@@ -4924,6 +6895,17 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  attempt_mr_problem(response: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (response != this.problem_selection[part_num][0]) {
+      this.problem_selection[part_num] = [response];
+      this.problem_attempts[part_num] += 1;
+    }
+  }
+
   attempt_mr_st_problem(response: string, part: string) {
     var part_num = 0;
     if (part != '') {
@@ -4932,6 +6914,17 @@ export class HomeComponent implements OnInit {
     if (response != this.subtopic_problem_selection[part_num][0]) {
       this.subtopic_problem_selection[part_num][0] = response;
       this.subtopic_problem_attempts[part_num] += 1;
+    }
+  }
+
+  attempt_lr_problem(response: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (response != this.problem_selection[part_num][0]) {
+      this.problem_selection[part_num] = [response];
+      this.problem_attempts[part_num] += 1;
     }
   }
 
@@ -4944,6 +6937,29 @@ export class HomeComponent implements OnInit {
       this.subtopic_problem_selection[part_num][0] = response;
       this.subtopic_problem_attempts[part_num] += 1;
     }
+  }
+
+  get_choices_idd(num: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    var choices: any = {};
+    if (part == '') {
+      for (let key of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
+        if (key[0] == num) {
+          choices[key[2]] = this.exam_dump[this.problem_number].AnswerChoices[key].Choice;
+        }
+      }
+    }
+    else {
+      for (let key of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
+        if (key[0] == num) {
+          choices[key[2]] = this.exam_dump[this.problem_number].Parts[part].AnswerChoices[key].Choice;
+        }
+      }
+    }
+    return (choices);
   }
 
   get_choices_idd_st(num: string, part: string) {
@@ -4967,6 +6983,67 @@ export class HomeComponent implements OnInit {
       }
     }
     return (choices);
+  }
+
+  shuffle_m(choices: any, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (!Object.keys(this.shuffle_choices).includes('' + part_num)) {
+      this.m_shuffled = false;
+      this.shuffle_choices['' + part_num] = []
+    }
+    if (!this.m_shuffled) {
+      if (part == '') {
+        if (this.exam_dump[this.problem_number].Type == 'G') {
+          var trimmed_choices: string[] = [];
+          for (let ch of Object.keys(choices)) {
+            if (!trimmed_choices.includes(ch.substring(0, ch.length - 2))) {
+              trimmed_choices.push(ch.substring(0, ch.length - 2));
+            }
+          }
+          this.choices_sequence = trimmed_choices;
+        }
+        else {
+          this.choices_sequence = Array.from(Object.keys(choices));
+        }
+      }
+      else {
+        if (this.exam_dump[this.problem_number].Parts[part].Type == 'G') {
+          var trimmed_choices: string[] = [];
+          for (let ch of Object.keys(choices)) {
+            if (!trimmed_choices.includes(ch.substring(0, ch.length - 2))) {
+              trimmed_choices.push(ch.substring(0, ch.length - 2));
+            }
+          }
+          this.choices_sequence = trimmed_choices;
+        }
+        else {
+          this.choices_sequence = Array.from(Object.keys(choices));
+        }
+      }
+      this.random_list = [];
+      this.shuffle_choices['' + part_num] = [];
+      console.log(this.choices_sequence);
+      for (let i = 0; i < this.choices_sequence.length; i++) {
+        if (this.choices_sequence[i] == '') {
+          this.choices_sequence.splice(i, 1);
+        }
+      }
+      const num_choices = this.choices_sequence.length;
+      for (let i = 0; i < num_choices; i++) {
+        this.random_index = Math.floor(Math.random() * this.choices_sequence.length);
+        this.random_list.push(this.choices_sequence[this.random_index]);
+        this.shuffle_choices['' + part_num][i] = this.choices_sequence[this.random_index];
+        this.choices_sequence.splice(this.random_index, 1);
+        console.log(i);
+        console.log(this.random_index);
+      }
+      console.log(this.shuffle_choices);
+      this.m_shuffled = true;
+    }
+    return (this.shuffle_choices['' + part_num].sort());
   }
 
   shuffle_m_st(choices: any, part: string) {
@@ -5030,6 +7107,30 @@ export class HomeComponent implements OnInit {
     return (this.shuffle_choices['' + part_num].sort());
   }
 
+  unique_m(choices: any, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    this.unique_choices = [];
+    for (const [key, choice] of Object.entries(choices)) {
+      if ((choice as any).Choice != '' && !this.unique_choices.includes((choice as any).Choice)) {
+        if (this.exam_dump[this.problem_number].Type == 'O' || (this.exam_dump[this.problem_number].Type == 'MP' && this.exam_dump[this.problem_number].Parts[part].Type == 'O')) {
+          this.unique_choices.push((choice as any).Choice + ':' + key[0])
+        }
+        else {
+          this.unique_choices.push((choice as any).Choice)
+        }
+        this.c_submission[part_num][(choice as any).Choice[0]] = [""];
+        this.problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
+        this.attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
+      }
+    }
+    this.unique_choices.sort();
+    console.log(this.unique_choices.sort());
+    // return (unique_choices);
+  }
+
   unique_m_st(choices: any, part: string) {
     var part_num = 0;
     if (part != '') {
@@ -5057,34 +7158,39 @@ export class HomeComponent implements OnInit {
   select_m_choice(ch: string, p: number, part: string) {
     var part_num = 0;
     if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
     }
     this.m_selection[part_num][p] = ch;
     if (this.m_selection[part_num][0] != '' && this.m_selection[part_num][1] != '') {
       this.m_submission[part_num][this.m_selection[part_num][1]] = this.m_selection[part_num][0];
-      this.subtopic_problem_selection[part_num][+this.m_selection[part_num][1] - 1] = this.m_selection[part_num][0][0];
-      // this.attempt_path[part_num].push();
-      this.subtopic_problem_attempts[part_num] += 1;
+      this.problem_selection[part_num][+this.m_selection[part_num][1] - 1] = this.m_selection[part_num][0][0];
+      this.attempt_path[part_num].push(this.problem_selection[part_num]);
+      this.problem_attempts[part_num] += 1;
       this.is_m_correct(part, true);
       this.m_selection[part_num] = ["", ""];
     }
+    console.log(this.problem_selection);
+    console.log(this.attempt_explanation);
   }
 
   remove_m_choice(ch: string, part: string) {
     var part_num = 0;
     if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
     }
     this.m_submission[part_num][ch] = '';
-    this.subtopic_problem_selection[part_num][+ch - 1] = '';
-    this.subtopic_attempt_explanation[part_num][+ch - 1] = '';
+    this.problem_selection[part_num][+ch - 1] = '';
+    this.attempt_explanation[part_num][+ch - 1] = '';
+    this.attempt_path[part_num].push(this.problem_selection[part_num]);
+    this.problem_attempts[part_num] += 1;
+    this.is_m_correct(part, true);
     this.select_m_choice('', 1, part)
   }
 
   is_matched(ch: string, p: number, part: string) {
     var part_num = 0;
     if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
     }
     if (p == 0) {
       if (Object.values(this.m_submission[part_num]).includes(ch)) {
@@ -5118,7 +7224,7 @@ export class HomeComponent implements OnInit {
   select_c_choice(ch: string, p: number, part: string) {
     var part_num = 0;
     if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
     }
     this.m_selection[part_num][p] = ch;
     if (this.m_selection[part_num][0] != '' && this.m_selection[part_num][1] != '' && !this.c_submission[part_num][this.m_selection[part_num][1]].includes(this.m_selection[part_num][0])) {
@@ -5129,13 +7235,13 @@ export class HomeComponent implements OnInit {
           cat_choices.push(choice[0]);
         }
       }
-      this.subtopic_problem_selection[part_num][+this.m_selection[part_num][1] - 1] = cat_choices;
-      this.subtopic_attempt_path[part_num].push();
-      this.subtopic_problem_attempts[part_num] += 1;
-      if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'C' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'C')) {
+      this.problem_selection[part_num][+this.m_selection[part_num][1] - 1] = cat_choices;
+      this.attempt_path[part_num].push(this.problem_selection[part_num]);
+      this.problem_attempts[part_num] += 1;
+      if (this.exam_dump[this.problem_number].Type == 'C' || (this.exam_dump[this.problem_number].Type == 'MP' && this.exam_dump[this.problem_number].Parts[part].Type == 'C')) {
         this.is_c_correct(part, true);
       }
-      else if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'G' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'G')) {
+      else if (this.exam_dump[this.problem_number].Type == 'G' || (this.exam_dump[this.problem_number].Type == 'MP' && this.exam_dump[this.problem_number].Parts[part].Type == 'G')) {
         this.is_g_correct(part, true);
       }
       this.m_selection[part_num] = ["", ""];
@@ -5147,7 +7253,7 @@ export class HomeComponent implements OnInit {
   remove_c_choice(ch: string, part: string) {
     var part_num = 0;
     if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
     }
     for (let cat of Object.keys(this.c_submission[part_num])) {
       if (this.c_submission[part_num][cat].includes(ch)) {
@@ -5159,18 +7265,20 @@ export class HomeComponent implements OnInit {
         }
       }
     }
-    for (let cat of this.subtopic_problem_selection[part_num]) {
+    for (let cat of this.problem_selection[part_num]) {
       if (cat.includes(ch)) {
         if (cat.indexOf(ch) != -1) {
-          this.subtopic_attempt_explanation[part_num][this.subtopic_problem_selection[part_num].indexOf(cat)].splice(cat.indexOf(ch), 1);
+          this.attempt_explanation[part_num][this.problem_selection[part_num].indexOf(cat)].splice(cat.indexOf(ch), 1);
           cat.splice(cat.indexOf(ch), 1)
         }
         else {
-          this.subtopic_attempt_explanation[part_num][this.subtopic_problem_selection[part_num].indexOf(cat)].pop();
+          this.attempt_explanation[part_num][this.problem_selection[part_num].indexOf(cat)].pop();
           cat.pop();
         }
       }
     }
+    this.attempt_path[part_num].push(this.problem_selection[part_num]);
+    this.problem_attempts[part_num] += 1;
     this.is_c_correct(part, true);
     this.select_c_choice('', 1, part);
   }
@@ -5178,7 +7286,7 @@ export class HomeComponent implements OnInit {
   remove_g_choice(ch: string, cat: string, part: string) {
     var part_num = 0;
     if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
     }
     if (this.c_submission[part_num][cat].includes(ch)) {
       if (this.c_submission[part_num][cat].indexOf(ch) != -1) {
@@ -5188,27 +7296,30 @@ export class HomeComponent implements OnInit {
         this.c_submission[part_num][cat].pop()
       }
     }
-    if (this.subtopic_problem_selection[part_num][+cat - 1].includes(ch)) {
-      if (this.subtopic_problem_selection[part_num][+cat - 1].indexOf(ch) != -1) {
-        this.subtopic_attempt_explanation[part_num][this.subtopic_problem_selection[part_num].indexOf(this.subtopic_problem_selection[part_num][+cat - 1])].splice(this.subtopic_problem_selection[part_num][+cat - 1].indexOf(ch), 1);
-        this.subtopic_problem_selection[part_num][+cat - 1].splice(this.subtopic_problem_selection[part_num][+cat - 1].indexOf(ch), 1)
+    if (this.problem_selection[part_num][+cat - 1].includes(ch)) {
+      if (this.problem_selection[part_num][+cat - 1].indexOf(ch) != -1) {
+        this.attempt_explanation[part_num][this.problem_selection[part_num].indexOf(this.problem_selection[part_num][+cat - 1])].splice(this.problem_selection[part_num][+cat - 1].indexOf(ch), 1);
+        this.problem_selection[part_num][+cat - 1].splice(this.problem_selection[part_num][+cat - 1].indexOf(ch), 1)
       }
       else {
-        this.subtopic_attempt_explanation[part_num][this.subtopic_problem_selection[part_num].indexOf(this.subtopic_problem_selection[part_num][+cat - 1])].pop();
-        this.subtopic_problem_selection[part_num][+cat - 1].pop();
+        this.attempt_explanation[part_num][this.problem_selection[part_num].indexOf(this.problem_selection[part_num][+cat - 1])].pop();
+        this.problem_selection[part_num][+cat - 1].pop();
       }
-    } this.is_g_correct(part, true);
+    }
+    this.attempt_path[part_num].push(this.problem_selection[part_num]);
+    this.problem_attempts[part_num] += 1;
+    this.is_g_correct(part, true);
     this.select_c_choice('', 1, part);
   }
 
   is_idd_correct(part: string) {
     var part_num = 0;
     if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
     }
-    for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
-      if (this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Key.Correct) {
-        if (this.subtopic_problem_selection[part_num][(+this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Choice[0]) - 1] != this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Choice[2]) {
+    for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
+      if (this.exam_dump[this.problem_number].AnswerChoices[choice].Key.Correct) {
+        if (this.problem_selection[part_num][(+this.exam_dump[this.problem_number].AnswerChoices[choice].Choice[0]) - 1] != this.exam_dump[this.problem_number].AnswerChoices[choice].Choice[2]) {
           return false;
         }
       }
@@ -5220,62 +7331,64 @@ export class HomeComponent implements OnInit {
     var part_num = 0;
     var correct: boolean = true;
     if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
     }
     var unique_c: string[] = [];
-    if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
-      for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+    if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+      for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
         if (!unique_c.includes(choice) && choice != '') {
           unique_c.push(choice)
         }
       }
       for (let choice of unique_c) {
-        if (this.m_submission[part_num][this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Choice[0]] == choice) {
+        if (this.m_submission[part_num][this.exam_dump[this.problem_number].AnswerChoices[choice].Choice[0]] == choice) {
           if (fetti) {
-            this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale;
+            this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = this.exam_dump[this.problem_number].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale;
           }
         }
-        else if (this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Key.Correct) {
-          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
-          this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = '';
+        else if (this.exam_dump[this.problem_number].Parts[part].AnswerChoices[choice].Key.Correct) {
+          this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+          this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = '';
           correct = false;
         }
       }
     }
     else {
-      for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+      for (let choice of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
         if (!unique_c.includes(choice) && choice != '') {
           unique_c.push(choice)
         }
       }
       for (let choice of unique_c) {
-        if (this.m_submission[part_num][this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[choice].Choice[0]] == choice) {
+        if (this.m_submission[part_num][this.exam_dump[this.problem_number].Parts[part].AnswerChoices[choice].Choice[0]] == choice) {
           if (fetti) {
-            this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale;
+            this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = this.exam_dump[this.problem_number].Parts[part].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale;
           }
         }
-        else if (this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[choice].Key.Correct) {
-          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
-          this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = '';
+        else if (this.exam_dump[this.problem_number].Parts[part].AnswerChoices[choice].Key.Correct) {
+          this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+          this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = '';
           correct = false;
         }
       }
     }
     for (let sub of Object.keys(this.m_submission[part_num])) {
       if (this.m_submission[part_num][sub].length == 1 && this.m_submission[part_num][sub][0] == '') {
-        this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+        this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
         correct = false;
       }
     }
-    if (correct && this.subtopic_problem_attempts[part_num] == 1) {
-      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+    if (correct && this.problem_attempts[part_num] == 1) {
+      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
     }
     else if (correct) {
-      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
     }
     // for (let selec of this.m_submission[part_num])
     if (correct && fetti) {
-      this.confetti_light(this.subtopic_problem_attempts[part_num]);
+      if (this.mode == 'explain') {
+        this.confetti_light(this.problem_attempts[part_num]);
+      }
     }
     return correct;
   }
@@ -5284,65 +7397,67 @@ export class HomeComponent implements OnInit {
     var part_num = 0;
     var correct: boolean = true;
     if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
     }
     var unique_c: string[] = [];
-    if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
-      for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+    if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+      for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
         if (!unique_c.includes(choice) && choice != '') {
           unique_c.push(choice)
         }
       }
       for (let choice of unique_c) {
-        if (this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Choice != '' && this.c_submission[part_num][this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Choice[0]].includes(choice)) {
+        if (this.exam_dump[this.problem_number].AnswerChoices[choice].Choice != '' && this.c_submission[part_num][this.exam_dump[this.problem_number].AnswerChoices[choice].Choice[0]].includes(choice)) {
           if (fetti) {
-            console.log(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale);
-            if (this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[this.m_selection[part_num][0]].Choice[0] == this.m_selection[part_num][1]) {
-              this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale].concat(this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
+            console.log(this.exam_dump[this.problem_number].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale);
+            if (this.exam_dump[this.problem_number].AnswerChoices[this.m_selection[part_num][0]].Choice[0] == this.m_selection[part_num][1]) {
+              this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [this.exam_dump[this.problem_number].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale].concat(this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
             }
             else {
-              this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [''].concat(this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
+              this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [''].concat(this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
             }
           }
         }
         else {
-          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+          this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
           correct = false;
         }
       }
     }
     else {
-      for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+      for (let choice of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
         if (!unique_c.includes(choice) && choice != '') {
           unique_c.push(choice)
         }
       }
       for (let choice of unique_c) {
-        if (this.c_submission[part_num][this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[choice].Choice[0]].includes(choice)) {
+        if (this.c_submission[part_num][this.exam_dump[this.problem_number].Parts[part].AnswerChoices[choice].Choice[0]].includes(choice)) {
           if (fetti) {
-            console.log(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale);
-            if (this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[this.m_selection[part_num][0]].Choice[0] == this.m_selection[part_num][1]) {
-              this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale].concat(this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
+            console.log(this.exam_dump[this.problem_number].Parts[part].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale);
+            if (this.exam_dump[this.problem_number].Parts[part].AnswerChoices[this.m_selection[part_num][0]].Choice[0] == this.m_selection[part_num][1]) {
+              this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [this.exam_dump[this.problem_number].Parts[part].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale].concat(this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
             }
             else {
-              this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [''].concat(this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
+              this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [''].concat(this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
             }
           }
         }
         else {
-          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+          this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
           correct = false;
         }
       }
     }
-    if (correct && this.subtopic_problem_attempts[part_num] == 1) {
-      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+    if (correct && this.problem_attempts[part_num] == 1) {
+      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
     }
     else if (correct) {
-      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
     }
     if (correct && fetti) {
-      this.confetti_light(this.subtopic_problem_attempts[part_num]);
+      if (this.mode == 'explain') {
+        this.confetti_light(this.problem_attempts[part_num]);
+      }
     }
     return correct;
   }
@@ -5351,82 +7466,84 @@ export class HomeComponent implements OnInit {
     var part_num = 0;
     var correct: boolean = true;
     if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
     }
     var unique_c: string[] = [];
-    if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
-      for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+    if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+      for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
         if (!unique_c.includes(choice.substring(0, choice.length - 2)) && choice.substring(0, choice.length - 2) != '') {
           unique_c.push(choice.substring(0, choice.length - 2));
         }
       }
-      for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
-        if (choice.substring(0, choice.length - 2) != '' && this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Key.Correct && !this.c_submission[part_num][choice[choice.length - 1]].includes(choice.substring(0, choice.length - 2))) {
-          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+      for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
+        if (choice.substring(0, choice.length - 2) != '' && this.exam_dump[this.problem_number].AnswerChoices[choice].Key.Correct && !this.c_submission[part_num][choice[choice.length - 1]].includes(choice.substring(0, choice.length - 2))) {
+          this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
           correct = false;
         }
       }
       for (let cat of Object.keys(this.c_submission[part_num])) {
         for (let choice of this.c_submission[part_num][cat]) {
-          if (choice != '' && Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices).includes(choice + ':' + cat)) {
+          if (choice != '' && Object.keys(this.exam_dump[this.problem_number].AnswerChoices).includes(choice + ':' + cat)) {
             if (fetti) {
               console.log(choice + ':' + cat);
-              console.log(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice + ':' + cat].Key.Rationale);
-              if (this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice + ':' + cat].Choice[0] == this.m_selection[part_num][1]) {
-                this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice + ':' + cat].Key.Rationale].concat(this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
+              console.log(this.exam_dump[this.problem_number].AnswerChoices[choice + ':' + cat].Key.Rationale);
+              if (this.exam_dump[this.problem_number].AnswerChoices[choice + ':' + cat].Choice[0] == this.m_selection[part_num][1]) {
+                this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [this.exam_dump[this.problem_number].AnswerChoices[choice + ':' + cat].Key.Rationale].concat(this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
               }
               else {
-                this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [''].concat(this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
+                this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [''].concat(this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
               }
             }
           }
           else if (choice != '') {
-            this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+            this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
             correct = false;
           }
         }
       }
     }
     else {
-      for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+      for (let choice of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
         if (!unique_c.includes(choice.substring(0, choice.length - 2)) && choice.substring(0, choice.length - 2) != '') {
           unique_c.push(choice.substring(0, choice.length - 2))
         }
       }
-      for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
-        if (choice.substring(0, choice.length - 2) != '' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[choice].Key.Correct && !this.c_submission[part_num][choice[choice.length - 1]].includes(choice.substring(0, choice.length - 2))) {
-          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+      for (let choice of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
+        if (choice.substring(0, choice.length - 2) != '' && this.exam_dump[this.problem_number].Parts[part].AnswerChoices[choice].Key.Correct && !this.c_submission[part_num][choice[choice.length - 1]].includes(choice.substring(0, choice.length - 2))) {
+          this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
           correct = false;
         }
       }
       for (let cat of Object.keys(this.c_submission[part_num])) {
         for (let choice of this.c_submission[part_num][cat]) {
-          if (choice != '' && Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices).includes(choice + ':' + cat)) {
+          if (choice != '' && Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices).includes(choice + ':' + cat)) {
             if (fetti) {
-              console.log(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[choice + ':' + cat].Key.Rationale);
-              if (this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[choice + ':' + cat].Choice[0] == this.m_selection[part_num][1]) {
-                this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[choice + ':' + cat].Key.Rationale].concat(this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
+              console.log(this.exam_dump[this.problem_number].Parts[part].AnswerChoices[choice + ':' + cat].Key.Rationale);
+              if (this.exam_dump[this.problem_number].Parts[part].AnswerChoices[choice + ':' + cat].Choice[0] == this.m_selection[part_num][1]) {
+                this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [this.exam_dump[this.problem_number].Parts[part].AnswerChoices[choice + ':' + cat].Key.Rationale].concat(this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
               }
               else {
-                this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [''].concat(this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
+                this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = [''].concat(this.attempt_explanation[part_num][+this.m_selection[part_num][1] - 1]);
               }
             }
           }
           else if (choice != '') {
-            this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+            this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
             correct = false;
           }
         }
       }
     }
-    if (correct && this.subtopic_problem_attempts[part_num] == 1) {
-      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+    if (correct && this.problem_attempts[part_num] == 1) {
+      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
     }
     else if (correct) {
-      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
     }
     if (correct && fetti) {
-      this.confetti_light(this.subtopic_problem_attempts[part_num]);
+      if (this.mode == 'explain') {
+        this.confetti_light(this.problem_attempts[part_num]);
+      }
     }
     return correct;
   }
@@ -5488,6 +7605,25 @@ export class HomeComponent implements OnInit {
     return g_key;
   }
 
+  is_MP_complete() {
+    var comp = true;
+    if (this.mode == 'explain') {
+      for (let resp of this.attempt_response) {
+        if (resp == '' || !resp.startsWith('Correct')) {
+          comp = false;
+        }
+      }
+    }
+    else if (this.mode == 'assess') {
+      for (let tempt of this.problem_attempts) {
+        if (tempt == 0) {
+          comp = false;
+        }
+      }
+    }
+    return comp;
+  }
+
   is_MP_st_complete() {
     var comp = true;
     for (let resp of this.subtopic_attempt_response) {
@@ -5524,6 +7660,50 @@ export class HomeComponent implements OnInit {
     dropdown.value = this.subtopic_problem_selection[part_num][+index - 1];
   }
 
+  total_attempts(attempts: number[]) {
+    var sum = 0;
+    for (let num of attempts) {
+      sum += num;
+    }
+    return (sum);
+  }
+
+  update_DD(index: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+      if (this.exam_dump[this.problem_number].Parts[part].AnswerChoices[index + ':' + this.problem_selection[part_num][+index - 1]].Key.Correct) {
+        const DDICel: string = "DDInputC-" + index;
+        var dropdown: any = document.getElementById(DDICel);
+      }
+      else {
+        const DDIIel: string = "DDInputI-" + index;
+        var dropdown: any = document.getElementById(DDIIel);
+      }
+    }
+    else {
+      if (this.exam_dump[this.problem_number].AnswerChoices[index + ':' + this.problem_selection[part_num][+index - 1]].Key.Correct) {
+        const DDICel: string = "DDInputC-" + index;
+        var dropdown: any = document.getElementById(DDICel);
+      }
+      else {
+        const DDIIel: string = "DDInputI-" + index;
+        var dropdown: any = document.getElementById(DDIIel);
+      }
+    }
+    dropdown.value = this.problem_selection[part_num][+index - 1];
+  }
+
+  get_T(index: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    const TIel: string = "inputT-" + part + '-' + index;
+    var input: any = document.getElementById(TIel);
+    return input.value;
+  }
+
   get_T_st(index: string, part: string) {
     var part_num = 0;
     if (part != '') {
@@ -5534,6 +7714,16 @@ export class HomeComponent implements OnInit {
     return input.value;
   }
 
+  get_MFR(index: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    const MFRIel: string = "inputMFR-" + part + "-" + index;
+    var dropdown: any = document.getElementById(MFRIel);
+    return dropdown.value;
+  }
+
   get_MFR_st(index: string, part: string) {
     var part_num = 0;
     if (part != '') {
@@ -5542,6 +7732,479 @@ export class HomeComponent implements OnInit {
     const MFRIel: string = "inputMFR-" + part + "-" + index;
     var dropdown: any = document.getElementById(MFRIel);
     return dropdown.value;
+  }
+
+  toggleExamTimer() {
+    this.et_running = !this.et_running;
+    if (this.length_mode == 'number') {
+      if (this.et_running) {
+        const startTime = Date.now() - (this.et_counter || 0);
+        this.et_timer = setInterval(() => {
+          this.et_counter = Math.round((Date.now() - startTime) / 1000);
+          this.et_minutes = Math.floor(this.et_counter / 60);
+        });
+      } else {
+        clearInterval(this.et_timer);
+      }
+    }
+    else {
+      if (this.et_running) {
+        const startTime = Date.now() - (this.et_counter || 0);
+        this.et_timer = setInterval(() => {
+          this.et_counter = Math.round(this.exam_timer * 60 - ((Date.now() - startTime) / 1000));
+          this.et_minutes = Math.floor(this.et_counter / 60);
+          if (this.et_counter <= 0) {
+            this.completeExam();
+          }
+        });
+      } else {
+        clearInterval(this.et_timer);
+      }
+    }
+  }
+
+  clearExamTimer() {
+    this.et_running = false;
+    this.et_counter = 0;
+    clearInterval(this.et_timer);
+  }
+
+  toggleProblemTimer() {
+    this.pt_running = !this.pt_running;
+    if (this.pt_running) {
+      const startTime = Date.now() - (this.pt_counter || 0);
+      this.pt_timer = setInterval(() => {
+        this.pt_counter = Math.round((Date.now() - startTime) / 1000);
+        this.pt_minutes = Math.floor(this.pt_counter / 60);
+      });
+    } else {
+      clearInterval(this.pt_timer);
+    }
+  }
+
+  clearProblemTimer() {
+    this.pt_running = false;
+    this.pt_counter = 0;
+    clearInterval(this.pt_timer);
+  }
+
+  next_problem() {
+    if (this.mode == 'assess') {
+      this.exam_submission[this.problem_number].Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+      this.exam_submission[this.problem_number].Seconds = this.pt_counter;
+      this.exam_submission[this.problem_number].Number = this.problem_number;
+      this.exam_submission[this.problem_number].Topics = this.exam_dump[this.problem_number].Topics;
+      this.exam_submission[this.problem_number].SubTopics = this.exam_dump[this.problem_number].SubTopics;
+      this.exam_submission[this.problem_number].Choice = this.problem_selection;
+      this.exam_submission[this.problem_number].Attempts = this.problem_attempts;
+      this.exam_submission[this.problem_number].Path = this.attempt_path;
+      // this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
+      this.exam_submission[this.problem_number].Rationale = this.attempt_explanation;
+      for (const [num, prob] of Object.entries(this.exam_dump)) {
+        if (this.problem_number == +num) {
+          for (const [num2, sub] of Object.entries(this.exam_submission)) {
+            if (this.problem_number == +num2) {
+              console.log(sub.Choice);
+              // sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+              // sub.Seconds = this.pt_counter;
+              // sub.Number = this.problem_number;
+              // sub.Topics = prob.Topics;
+              // sub.SubTopics = prob.SubTopics;
+              // sub.Attempts = this.problem_attempts;
+              // sub.Path = this.attempt_path;
+              if (Object.keys(prob.Parts).length == 0) {
+                // sub.Choice.push(sub.Path[0][sub.Path[0].length - 1]);
+                var ms_correct = true;
+                var mp_correct = true;
+                if (['O', 'C', 'G'].includes(prob.Type)) {
+                  if ((prob.Type == 'O' && this.is_m_correct('', false)) || (prob.Type == 'C' && this.is_c_correct('', false)) || (prob.Type == 'G' && this.is_g_correct('', false))) {
+                    sub.Correct = [['✅']];
+                    this.number_correct += 1;
+                  }
+                  else {
+                    sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                  }
+                  // sub.Rationale = this.attempt_explanation;
+                }
+                else if (['MR', 'LR'].includes(prob.Type)) {
+                  sub.Correct = [['👀']];
+                  if (this.problem_selection[0] == '') {
+                    sub.Choice = [['No Student Response Given']];
+                  }
+                  else {
+                    this.number_correct += 1;
+                  }
+                }
+                else {
+                  for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                    if (['MC', 'IMC'].includes(prob.Type)) {
+                      if (sub.Attempts[0] > 0) {
+                        if (sub.Path[0][sub.Path[0].length - 1][0] == ch) {
+                          if (key.Key.Correct == true) {
+                            sub.Correct = [['✅']];
+                            this.number_correct += 1;
+                          }
+                          else {
+                            sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                          }
+                          // sub.Rationale = [[key.Key.Rationale]];
+                        }
+                      }
+                    }
+                    else if (['LP'].includes(prob.Type)) {
+                      if (sub.Attempts[0] > 0) {
+                        if (sub.Path[0][sub.Path[0].length - 1][0] == ch[0]) {
+                          if (key.Key.Correct == true) {
+                            sub.Correct = [['✅']];
+                            this.number_correct += 1;
+                          }
+                          else {
+                            sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                          }
+                          // sub.Rationale = [[key.Key.Rationale]];
+                        }
+                      }
+                    }
+                    else if (['MS', 'IMS'].includes(prob.Type)) {
+                      if (key.Key.Correct && !sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                        ms_correct = false;
+                      }
+                      else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                        ms_correct = false;
+                      }
+                    }
+                    else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
+                      if (prob.Type == 'MFR') {
+                        if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                          mp_correct = false;
+                        }
+                      }
+                      if (prob.Type == 'T') {
+                        if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                          mp_correct = false;
+                        }
+                      }
+                      if (prob.Type == 'IDD') {
+                        if (key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != ch[2]) {
+                          mp_correct = false;
+                        }
+                        else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] == ch[2]) {
+                          mp_correct = false;
+                        }
+                      }
+                    }
+                    else if (prob.Type == 'FR') {
+                      if (sub.Attempts[0] > 0) {
+                        if (sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
+                          sub.Correct = [['✅']];
+                          this.number_correct += 1;
+                          // sub.Rationale = [[key.Key.Rationale]];
+                        }
+                        else {
+                          sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                          // sub.Rationale = [['No rationale provided. The number submitted was not right']];
+                        }
+                      }
+                    }
+                  }
+                }
+                if (['MS', 'IMS'].includes(prob.Type) && ms_correct) {
+                  sub.Correct = [['✅']];
+                  this.number_correct += 1;
+                }
+                else if (['MS', 'IMS'].includes(prob.Type)) {
+                  sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                }
+                else if (['MFR', 'IDD', 'T'].includes(prob.Type) && (mp_correct || this.is_idd_correct(''))) {
+                  sub.Correct = [['✅']];
+                  this.number_correct += 1;
+                }
+                else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
+                  sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                }
+              }
+              else {
+                sub.Correct = [];
+                // sub.Rationale = [];
+                // sub.Rationale = this.attempt_explanation;
+                for (const [name, part] of Object.entries(prob.Parts)) {
+                  // sub.Choice.push(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1]);
+                  var ms_correct = true;
+                  var mp_correct = true;
+                  if (['O', 'C', 'G'].includes(part.Type)) {
+                    if ((part.Type == 'O' && this.is_m_correct(name, false)) || (part.Type == 'C' && this.is_c_correct(name, false)) || (part.Type == 'G' && this.is_g_correct(name, false))) {
+                      sub.Correct.push(['✅']);
+                      this.number_correct += 1;
+                    }
+                    else {
+                      sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                    }
+                    // sub.Rationale.push(this.attempt_explanation);
+                  }
+                  else if (['LR'].includes(part.Type)) {
+                    sub.Correct.push(['👀']);
+                    if (this.problem_selection[Object.keys(prob.Parts).indexOf(name)] == '') {
+                      sub.Choice[Object.keys(prob.Parts).indexOf(name)] = ['No Student Response Given'];
+                    }
+                    else {
+                      this.number_correct += 1;
+                    }
+                  }
+                  else {
+                    for (const [ch, key] of Object.entries(part.AnswerChoices)) {
+                      if (['MC', 'IMC'].includes(part.Type)) {
+                        if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch) {
+                            if (key.Key.Correct == true) {
+                              sub.Correct.push(['✅']);
+                              this.number_correct += 1;
+                            }
+                            else {
+                              sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                            }
+                            // sub.Rationale.push([key.Key.Rationale]);
+                          }
+                        }
+                      }
+                      else if (['LP'].includes(part.Type)) {
+                        if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch[0]) {
+                            if (key.Key.Correct == true) {
+                              sub.Correct = [['✅']];
+                              this.number_correct += 1;
+                            }
+                            else {
+                              sub.Correct = [this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]];
+                            }
+                            // sub.Rationale = [[key.Key.Rationale]];
+                          }
+                        }
+                      }
+                      if (['MS', 'IMS'].includes(part.Type)) {
+                        if (key.Key.Correct && !sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                          ms_correct = false;
+                        }
+                        else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                          ms_correct = false;
+                        }
+                      }
+                      else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
+                        if (part.Type == 'T') {
+                          if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                            mp_correct = false;
+                          }
+                        }
+                        if (part.Type == 'MFR') {
+                          if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                            mp_correct = false;
+                          }
+                        }
+                        if (part.Type == 'IDD') {
+                          if (key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != ch[2]) {
+                            mp_correct = false;
+                          }
+                          else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] == ch[2]) {
+                            mp_correct = false;
+                          }
+                        }
+                      }
+                      else if (part.Type == 'FR') {
+                        if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice) {
+                            sub.Correct.push(['✅']);
+                            this.number_correct += 1;
+                            // sub.Rationale.push([key.Key.Rationale]);
+                          }
+                          else {
+                            sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                            // sub.Rationale.push(['No rationale provided. The number submitted was not right']);
+                          }
+                        }
+                      }
+                    }
+                  }
+                  if (['MS', 'IMS'].includes(part.Type) && ms_correct) {
+                    sub.Correct.push(['✅']);
+                    this.number_correct += 1;
+                  }
+                  else if (['MS', 'IMS'].includes(part.Type)) {
+                    sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                  }
+                  else if (['MFR', 'IDD', 'T'].includes(part.Type) && (mp_correct || this.is_idd_correct(name))) {
+                    sub.Correct.push(['✅']);
+                    this.number_correct += 1;
+                  }
+                  else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
+                    sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                  }
+                }
+              }
+              console.log(sub.Choice);
+            }
+          }
+        }
+      }
+      console.log(this.exam_submission);
+    }
+    this.problem_number += 1;
+    if (this.problem_number > this.max_problem_number) {
+      this.max_problem_number = this.problem_number;
+    }
+    if (this.problem_number > this.quiz_length && this.length_mode == 'number') {
+      this.completeExam();
+    }
+    else if (this.max_problem_number == this.problem_number) {
+      this.attempt_path = [];
+      this.attempt_response = [];
+      this.attempt_explanation = [];
+      this.problem_selection = [];
+      this.m_shuffled = false;
+      this.m_selection = [];
+      this.m_submission = [];
+      this.c_submission = [];
+      this.shuffle_choices = {};
+      this.unique_choices = [];
+      if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+        this.problem_attempts = [0];
+        this.attempt_path = [[]];
+        this.attempt_response = [''];
+        this.attempt_explanation = [[]];
+        this.m_selection = [["", ""]];
+        this.m_submission = [{}];
+        this.c_submission = [{}];
+        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Type)) {
+          this.problem_selection = [['']];
+          if (['GP'].includes(this.exam_dump[this.problem_number].Type)) {
+            setTimeout(() => {
+              this.plot_graph_gp('', false);
+            }, 500);
+          }
+        }
+        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+          this.problem_selection = [[]];
+          if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
+            this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
+          }
+          if (['MGP'].includes(this.exam_dump[this.problem_number].Type)) {
+            setTimeout(() => {
+              this.plot_graph_mgp('', false);
+            }, 500);
+          }
+        }
+        else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Type)) {
+          var msp_nums: string[] = [];
+          this.problem_selection.push([]);
+          for (let choice of Object.keys(this.exam_dump[this.problem_number].AnswerChoices)) {
+            if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+              this.problem_selection[0].push('');
+              msp_nums.push(choice[0]);
+            }
+          }
+        }
+      }
+      else {
+        this.problem_attempts = [];
+        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+          this.problem_attempts.push(0);
+          this.attempt_path.push([]);
+          this.attempt_response.push('');
+          this.attempt_explanation.push([]);
+          this.m_selection.push(["", ""]);
+          this.m_submission.push({});
+          this.c_submission.push({});
+          if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            this.problem_selection.push(['']);
+            if (['GP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+              setTimeout(() => {
+                this.plot_graph_gp(part, false);
+              }, 500);
+            }
+          }
+          else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            this.problem_selection.push([]);
+            if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+              this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
+            }
+            if (['MGP'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+              setTimeout(() => {
+                this.plot_graph_mgp(part, false);
+              }, 500);
+            }
+          }
+          else if (['MFR', 'IDD', 'T'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            var msp_nums: string[] = [];
+            this.problem_selection.push([]);
+            for (let choice of Object.keys(this.exam_dump[this.problem_number].Parts[part].AnswerChoices)) {
+              if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+                this.problem_selection[Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part)].push('');
+                msp_nums.push(choice[0]);
+              }
+            }
+          }
+        }
+      }
+      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_json(supp);
+        }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+      }
+      if (this.exam_dump[this.problem_number].Type == 'MP') {
+        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+          for (let block of this.exam_dump[this.problem_number].Parts[part].Content) {
+            if (block.startsWith(':table:')) {
+              setTimeout(() => {
+                this.read_table(block.slice(7));
+              }, 100);
+            }
+          }
+        }
+      }
+      if (this.exam_dump[this.problem_number].Type != 'MP') {
+        for (let block of this.exam_dump[this.problem_number].Content) {
+          if (block.startsWith(':table:')) {
+            setTimeout(() => {
+              this.read_table(block.slice(7));
+            }, 100);
+          }
+        }
+      }
+    }
+    else {
+      this.attempt_path = [this.exam_submission[this.problem_number].Path];
+      this.attempt_response = [''];
+      this.attempt_explanation = this.exam_submission[this.problem_number].Rationale;
+      this.problem_selection = this.exam_submission[this.problem_number].Choice;
+      this.problem_attempts = this.exam_submission[this.problem_number].Attempts;
+      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_json(supp);
+        }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+      }
+      if (this.exam_dump[this.problem_number].Type == 'MP') {
+        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+          for (let block of this.exam_dump[this.problem_number].Parts[part].Content) {
+            if (block.startsWith(':table:')) {
+              setTimeout(() => {
+                this.read_table(block.slice(7));
+              }, 100);
+            }
+          }
+        }
+      }
+      if (this.exam_dump[this.problem_number].Type != 'MP') {
+        for (let block of this.exam_dump[this.problem_number].Content) {
+          if (block.startsWith(':table:')) {
+            setTimeout(() => {
+              this.read_table(block.slice(7));
+            }, 100);
+          }
+        }
+      }
+    }
+    this.clearProblemTimer();
+    this.toggleProblemTimer();
   }
 
   next_problem_st() {
@@ -5657,6 +8320,530 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  go_to_prob(num: number) {
+    if (num <= this.max_problem_number) {
+      this.exam_submission[this.problem_number].Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+      this.exam_submission[this.problem_number].Seconds = this.pt_counter;
+      this.exam_submission[this.problem_number].Number = this.problem_number;
+      this.exam_submission[this.problem_number].Topics = this.exam_dump[this.problem_number].Topics;
+      this.exam_submission[this.problem_number].SubTopics = this.exam_dump[this.problem_number].SubTopics;
+      this.exam_submission[this.problem_number].Choice = this.problem_selection;
+      this.exam_submission[this.problem_number].Attempts = this.problem_attempts;
+      this.exam_submission[this.problem_number].Path = this.attempt_path;
+      // this.exam_submission[this.problem_number].Correct = this.exam_key[this.problem_number - 1];
+      this.exam_submission[this.problem_number].Rationale = this.attempt_explanation;
+      // if (this.exam_submission[this.problem_number].Attempts.reduce((accumulator, currentValue) => accumulator + currentValue, 0) > 0) {
+      if (this.total_attempts(this.exam_submission[this.problem_number].Attempts) > 0) {
+        for (const [num, prob] of Object.entries(this.exam_dump)) {
+          if (this.problem_number == +num) {
+            for (const [num2, sub] of Object.entries(this.exam_submission)) {
+              if (this.problem_number == +num2) {
+                console.log(sub.Choice);
+                // sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+                // sub.Seconds = this.pt_counter;
+                // sub.Number = this.problem_number;
+                // sub.Topics = prob.Topics;
+                // sub.SubTopics = prob.SubTopics;
+                // sub.Attempts = this.problem_attempts;
+                // sub.Path = this.attempt_path;
+                if (Object.keys(prob.Parts).length == 0) {
+                  // sub.Choice.push(sub.Path[0][sub.Path[0].length - 1]);
+                  var ms_correct = true;
+                  var mp_correct = true;
+                  if (['O', 'C', 'G'].includes(prob.Type)) {
+                    if ((prob.Type == 'O' && this.is_m_correct('', false)) || (prob.Type == 'C' && this.is_c_correct('', false)) || (prob.Type == 'G' && this.is_g_correct('', false))) {
+                      sub.Correct = [['✅']];
+                      this.number_correct += 1;
+                    }
+                    else {
+                      sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                    }
+                    // sub.Rationale = this.attempt_explanation;
+                  }
+                  else if (['MR', 'LR'].includes(prob.Type)) {
+                    sub.Correct = [['👀']];
+                    if (this.problem_selection[0] == '') {
+                      sub.Choice = [['No Student Response Given']];
+                    }
+                    else {
+                      this.number_correct += 1;
+                    }
+                  }
+                  else {
+                    for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                      if (['MC', 'IMC'].includes(prob.Type)) {
+                        if (sub.Attempts[0] > 0) {
+                          if (sub.Path[0][sub.Path[0].length - 1][0] == ch) {
+                            if (key.Key.Correct == true) {
+                              sub.Correct = [['✅']];
+                              this.number_correct += 1;
+                            }
+                            else {
+                              sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                            }
+                            // sub.Rationale = [[key.Key.Rationale]];
+                          }
+                        }
+                      }
+                      else if (['LP'].includes(prob.Type)) {
+                        if (sub.Attempts[0] > 0) {
+                          if (sub.Path[0][sub.Path[0].length - 1][0] == ch[0]) {
+                            if (key.Key.Correct == true) {
+                              sub.Correct = [['✅']];
+                              this.number_correct += 1;
+                            }
+                            else {
+                              sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                            }
+                            // sub.Rationale = [[key.Key.Rationale]];
+                          }
+                        }
+                      }
+                      else if (['MS', 'IMS'].includes(prob.Type)) {
+                        if (key.Key.Correct && !sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                          ms_correct = false;
+                        }
+                        else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                          ms_correct = false;
+                        }
+                      }
+                      else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
+                        if (prob.Type == 'T') {
+                          if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                            mp_correct = false;
+                          }
+                        }
+                        if (prob.Type == 'MFR') {
+                          if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                            mp_correct = false;
+                          }
+                        }
+                        if (prob.Type == 'IDD') {
+                          if (key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != ch[2]) {
+                            mp_correct = false;
+                          }
+                          else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] == ch[2]) {
+                            mp_correct = false;
+                          }
+                        }
+                      }
+                      else if (prob.Type == 'FR') {
+                        if (sub.Attempts[0] > 0) {
+                          if (sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
+                            sub.Correct = [['✅']];
+                            this.number_correct += 1;
+                            // sub.Rationale = [[key.Key.Rationale]];
+                          }
+                          else {
+                            sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                            // sub.Rationale = [['No rationale provided. The number submitted was not right']];
+                          }
+                        }
+                      }
+                    }
+                  }
+                  if (['MS', 'IMS'].includes(prob.Type) && ms_correct) {
+                    sub.Correct = [['✅']];
+                    this.number_correct += 1;
+                  }
+                  else if (['MS', 'IMS'].includes(prob.Type)) {
+                    sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                  }
+                  else if (['MFR', 'IDD', 'T'].includes(prob.Type) && (mp_correct || this.is_idd_correct(''))) {
+                    sub.Correct = [['✅']];
+                    this.number_correct += 1;
+                  }
+                  else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
+                    sub.Correct = [this.exam_key[this.problem_number - 1][0]];
+                  }
+                }
+                else {
+                  sub.Correct = [];
+                  // sub.Rationale = [];
+                  // sub.Rationale = this.attempt_explanation;
+                  for (const [name, part] of Object.entries(prob.Parts)) {
+                    if (this.problem_attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                      // sub.Choice.push(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1]);
+                      var ms_correct = true;
+                      var mp_correct = true;
+                      if (['O', 'C', 'G'].includes(part.Type)) {
+                        if ((part.Type == 'O' && this.is_m_correct(name, false)) || (part.Type == 'C' && this.is_c_correct(name, false)) || (part.Type == 'G' && this.is_g_correct(name, false))) {
+                          sub.Correct.push(['✅']);
+                          this.number_correct += 1;
+                        }
+                        else {
+                          sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                        }
+                        // sub.Rationale.push(this.attempt_explanation);
+                      }
+                      else if (['LR'].includes(part.Type)) {
+                        sub.Correct.push(['👀']);
+                        if (this.problem_selection[Object.keys(prob.Parts).indexOf(name)] == '') {
+                          sub.Choice[Object.keys(prob.Parts).indexOf(name)] = ['No Student Response Given'];
+                        }
+                        else {
+                          this.number_correct += 1;
+                        }
+                      }
+                      else {
+                        for (const [ch, key] of Object.entries(part.AnswerChoices)) {
+                          if (['MC', 'IMC'].includes(part.Type)) {
+                            if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                              if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch) {
+                                if (key.Key.Correct == true) {
+                                  sub.Correct.push(['✅']);
+                                  this.number_correct += 1;
+                                }
+                                else {
+                                  sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                                }
+                                // sub.Rationale.push([key.Key.Rationale]);
+                              }
+                            }
+                          }
+                          else if (['LP'].includes(part.Type)) {
+                            if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                              if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch[0]) {
+                                if (key.Key.Correct == true) {
+                                  sub.Correct = [['✅']];
+                                  this.number_correct += 1;
+                                }
+                                else {
+                                  sub.Correct = [this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]];
+                                }
+                                // sub.Rationale = [[key.Key.Rationale]];
+                              }
+                            }
+                          }
+                          if (['MS', 'IMS'].includes(part.Type)) {
+                            if (key.Key.Correct && !sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                              ms_correct = false;
+                            }
+                            else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                              ms_correct = false;
+                            }
+                          }
+                          else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
+                            if (part.Type == 'T') {
+                              if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                                mp_correct = false;
+                              }
+                            }
+                            if (part.Type == 'MFR') {
+                              if (key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                                mp_correct = false;
+                              }
+                            }
+                            if (part.Type == 'IDD') {
+                              if (key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != ch[2]) {
+                                mp_correct = false;
+                              }
+                              else if (!key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] == ch[2]) {
+                                mp_correct = false;
+                              }
+                            }
+                          }
+                          else if (part.Type == 'FR') {
+                            if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                              if (sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice) {
+                                sub.Correct.push(['✅']);
+                                this.number_correct += 1;
+                                // sub.Rationale.push([key.Key.Rationale]);
+                              }
+                              else {
+                                sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                                // sub.Rationale.push(['No rationale provided. The number submitted was not right']);
+                              }
+                            }
+                          }
+                        }
+                      }
+                      if (['MS', 'IMS'].includes(part.Type) && ms_correct) {
+                        sub.Correct.push(['✅']);
+                        this.number_correct += 1;
+                      }
+                      else if (['MS', 'IMS'].includes(part.Type)) {
+                        sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                      }
+                      else if (['MFR', 'IDD', 'T'].includes(part.Type) && (mp_correct || this.is_idd_correct(name))) {
+                        sub.Correct.push(['✅']);
+                        this.number_correct += 1;
+                      }
+                      else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
+                        sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                      }
+                    }
+                  }
+                }
+                console.log(sub.Choice);
+              }
+            }
+          }
+        }
+      }
+      this.problem_number = num;
+      this.attempt_path = this.exam_submission[num].Path;
+      this.attempt_explanation = this.exam_submission[num].Rationale;
+      this.problem_selection = this.exam_submission[num].Choice;
+      this.problem_attempts = this.exam_submission[num].Attempts;
+      this.attempt_response = [];
+      this.m_shuffled = false;
+      this.m_selection = [];
+      this.m_submission = [];
+      this.c_submission = [];
+      this.shuffle_choices = {};
+      this.unique_choices = [];
+      if (Object.keys(this.exam_dump[this.problem_number].Parts).length == 0) {
+        this.attempt_response = [''];
+        this.m_selection = [["", ""]];
+        this.m_submission = [{}];
+        this.c_submission = [{}];
+        // set m/c_sub based on problem selection
+        if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Type)) {
+          this.unique_m(this.exam_dump[this.problem_number].AnswerChoices, '');
+        }
+      }
+      else {
+        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+          this.attempt_response.push('');
+          this.m_selection.push(["", ""]);
+          this.m_submission.push({});
+          this.c_submission.push({});
+          // set m/c_sub based on problem selection
+          if (['O', 'C', 'G'].includes(this.exam_dump[this.problem_number].Parts[part].Type)) {
+            this.unique_m(this.exam_dump[this.problem_number].Parts[part].AnswerChoices, part);
+          }
+        }
+      }
+      console.log(this.problem_selection);
+      this.refsheet_source = '../../' + this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+      for (let supp of this.exam_dump[this.problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_json(supp);
+        }, 100 * (1 + this.exam_dump[this.problem_number].SuppContent.indexOf(supp)));
+      }
+      if (this.exam_dump[this.problem_number].Type == 'MP') {
+        for (let part of Object.keys(this.exam_dump[this.problem_number].Parts)) {
+          for (let block of this.exam_dump[this.problem_number].Parts[part].Content) {
+            if (block.startsWith(':table:')) {
+              setTimeout(() => {
+                this.read_table(block.slice(7));
+              }, 100);
+            }
+          }
+        }
+      }
+      if (this.exam_dump[this.problem_number].Type != 'MP') {
+        for (let block of this.exam_dump[this.problem_number].Content) {
+          if (block.startsWith(':table:')) {
+            setTimeout(() => {
+              this.read_table(block.slice(7));
+            }, 100);
+          }
+        }
+      }
+      this.clearProblemTimer();
+      this.toggleProblemTimer();
+    }
+  }
+
+  completeExam() {
+    console.log(this.exam_submission);
+    this.toggleExamTimer();
+    this.toggleProblemTimer();
+    this.confetti_pop();
+    if (this.mode == 'explain') {
+      this.resetExam();
+    }
+    else if (this.mode == 'assess') {
+      var length_num = 0;
+      if (this.length_mode == 'number') {
+        length_num = this.quiz_length;
+      }
+      else {
+        length_num = this.max_problem_number - 1;
+      }
+      this.number_correct = 0;
+      for (let i: number = 1; i <= length_num; i++) {
+        console.log('' + i);
+        this.exam_submission_list.push(this.exam_submission[i]);
+        if (Object.keys(this.exam_dump[i].Parts).length == 0) {
+          if (this.exam_submission[i].Correct[0][0] != '✅') {
+            this.wrong_submission_list.push(this.exam_submission[i]);
+          }
+          else {
+            this.number_correct += 1;
+          }
+        }
+        else {
+          var pushed_wrong = false;
+          for (let part of Object.keys(this.exam_dump[i].Parts)) {
+            if (!pushed_wrong && this.exam_submission[i].Correct[(Object.keys(this.exam_dump[i].Parts)).indexOf(part)][0] != '✅') {
+              this.wrong_submission_list.push(this.exam_submission[i]);
+              pushed_wrong = true;
+            }
+          }
+          if (!pushed_wrong) {
+            this.number_correct += 1;
+          }
+        }
+      }
+      this.correct_percent = Math.round(this.number_correct / length_num * 100);
+      for (let i: number = 0; i < length_num; i++) {
+        for (let num: number = 0; num < this.exam_submission_list[i].Topics.length; num++) {
+          if (Object.keys(this.topic_breakdown).includes(this.exam_submission_list[i].Topics[num])) {
+            this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Total += 1;
+            this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Seconds += this.exam_submission_list[i].Seconds;
+            if (this.exam_submission_list[i].Correct[0] == '✅') {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Correct += 1;
+              if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs).includes(this.exam_submission_list[i].SubTopics[num])) {
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Total += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Correct += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Seconds += this.exam_submission_list[i].Seconds;
+              }
+              else {
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
+              }
+            }
+            else {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Incorrect += 1;
+              if (Object.keys(this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs).includes(this.exam_submission_list[i].SubTopics[num])) {
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Total += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Incorrect += 1;
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]].Seconds += this.exam_submission_list[i].Seconds;
+              }
+              else {
+                this.topic_breakdown[this.exam_submission_list[i].Topics[num]].Subs[this.exam_submission_list[i].SubTopics[num]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' };
+              }
+            }
+          }
+          else {
+            if (this.exam_submission_list[i].Correct[0] == '✅') {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[num]] = { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[num]]: { 'Correct': 1, 'Incorrect': 0, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
+            }
+            else {
+              this.topic_breakdown[this.exam_submission_list[i].Topics[num]] = { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s', 'Subs': { [this.exam_submission_list[i].SubTopics[num]]: { 'Correct': 0, 'Incorrect': 1, 'Total': 1, 'Percent': 0, 'Seconds': this.exam_submission_list[i].Seconds, 'Time': '0s' } } };
+            }
+          }
+        }
+      }
+      for (let topic of Object.keys(this.topic_breakdown)) {
+        this.topic_breakdown[topic].Percent = Math.round(100 * this.topic_breakdown[topic].Correct / (this.topic_breakdown[topic].Total));
+        this.topic_breakdown[topic].Time = (Math.floor(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Seconds / this.topic_breakdown[topic].Total % 60)).toString() + 's';
+        for (let subtopic of Object.keys(this.topic_breakdown[topic].Subs)) {
+          this.topic_breakdown[topic].Subs[subtopic].Percent = Math.round(100 * this.topic_breakdown[topic].Subs[subtopic].Correct / (this.topic_breakdown[topic].Subs[subtopic].Total));
+          this.topic_breakdown[topic].Subs[subtopic].Time = (Math.floor(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total / 60)).toString() + 'm ' + (Math.round(this.topic_breakdown[topic].Subs[subtopic].Seconds / this.topic_breakdown[topic].Subs[subtopic].Total % 60)).toString() + 's'
+        }
+      }
+      // this.authService.UpdateUserData({ 'problems': this.exam_submission });
+    }
+  }
+
+  toggle_favorite_std() {
+    this.favorite_std_set = [];
+    for (let std of this.authService.userData.standards.favorites) {
+      this.favorite_std_set.push(std as string[]);
+    }
+    this.includes_standard = false;
+    if (this.favorite_std_set.length != 0) {
+      for (const [key, std] of Object.entries(this.favorite_std_set)) {
+        if (std[0] == this.selected_topic && std[1] == this.selected_subtopic) {
+          this.includes_standard = true;
+          if (+key != this.favorite_std_set.length - 1) {
+            this.favorite_std_set.splice(+key, 1);
+          }
+          else {
+            this.favorite_std_set.pop();
+          }
+        }
+      }
+    }
+    if (!this.includes_standard) {
+      this.favorite_std_set.push([this.selected_topic, this.selected_subtopic]);
+    }
+    this.authService.UpdateUserData({ 'standards/favorites': {} });
+    this.authService.UpdateUserData({ 'standards/favorites': this.favorite_std_set });
+    this.standard_fav = !this.standard_fav;
+  }
+
+  assert_favorite_std() {
+    this.favorite_std_set = [];
+    for (let std of this.authService.userData.standards.favorites) {
+      this.favorite_std_set.push(std as string[]);
+    }
+    this.includes_standard = false;
+    if (this.favorite_std_set.length != 0) {
+      for (const [key, std] of Object.entries(this.favorite_std_set)) {
+        if (std[0] == this.selected_topic && std[1] == this.selected_subtopic) {
+          this.includes_standard = true;
+        }
+      }
+    }
+    if (!this.includes_standard) {
+      this.favorite_std_set.push([this.selected_topic, this.selected_subtopic]);
+    }
+    this.authService.UpdateUserData({ 'standards/favorites': {} });
+    this.authService.UpdateUserData({ 'standards/favorites': this.favorite_std_set });
+    this.standard_fav = true;
+  }
+
+  confetti_pop() {
+    confettiHandler({
+      particleCount: 750,
+      startVelocity: 100,
+      scalar: 1.15,
+      ticks: 300,
+      decay: 0.9,
+      angle: 90,
+      spread: 360,
+      origin: { x: 0.25, y: 0.25 }
+    });
+    confettiHandler({
+      particleCount: 1000,
+      startVelocity: 100,
+      scalar: 1.15,
+      ticks: 300,
+      decay: 0.9,
+      angle: 90,
+      spread: 360,
+      origin: { x: 0.25, y: 0.75 }
+    });
+    confettiHandler({
+      particleCount: 1000,
+      startVelocity: 100,
+      scalar: 1.15,
+      ticks: 300,
+      decay: 0.9,
+      angle: 90,
+      spread: 360,
+      origin: { x: 0.75, y: 0.25 }
+    });
+    confettiHandler({
+      particleCount: 1000,
+      startVelocity: 100,
+      scalar: 1.15,
+      ticks: 300,
+      decay: 0.9,
+      angle: 90,
+      spread: 360,
+      origin: { x: 0.75, y: 0.75 }
+    });
+    if (this.screenWidth > this.mobileWidth) {
+      confettiHandler({
+        shapes: ['star'],
+        colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+        particleCount: 100,
+        startVelocity: 250,
+        ticks: 200,
+        decay: 0.45,
+        scalar: 1.5,
+        angle: 270,
+        spread: 180,
+        origin: { x: 0.5, y: 0 }
+      });
+    }
+  }
+
   confetti_light(attempts: number) {
     confettiHandler({
       particleCount: Math.round(250 / attempts),
@@ -5670,25 +8857,177 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  width_change() {
-    this.viewerWidth = Math.round(window.innerWidth * .99).toString() + "px";
-    this.viewerHeight = Math.round(window.innerHeight * .95).toString() + "px";
+  resetExam() {
+    // Object.keys(this.ordered_dump).forEach(key => delete this.ordered_dump[+key]);
+    // Object.keys(this.exam_dump).forEach(key => delete this.exam_dump[+key]);
+    this.exam_dump = {};
+    this.ordered_dump = {};
+    this.exam_key = [];
+    this.attempt_path = [];
+    this.exam_submission = {};
+    this.exam_submission_list = [];
+    this.wrong_submission_list = [];
+    this.topic_breakdown = {};
+    this.problem_number = 0;
+    this.max_problem_number = 0;
+    this.number_correct = 0;
+    this.expand_filters = true;
+    // this.filter_exams();
   }
 
-  data_reload() {
-    location.reload();
+  searchSubTopic(topic: string, subtopic: string) {
+    this.subtopic_problem_count = 0;
+    this.subtopic_search_dump = {};
+    for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+      for (const [num, prob] of Object.entries(dump)) {
+        if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+          if (prob.SubTopics.includes(subtopic)) {
+            if (prob.Topics[prob.SubTopics.indexOf(subtopic)] == topic) {
+              this.subtopic_problem_count += 1;
+              this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+              this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+            }
+          }
+        }
+      }
+    }
+    this.selected_topic = topic;
+    this.selected_subtopic = subtopic;
+    this.subtopic_problem_number = 1;
+    this.subtopic_attempt_path = [];
+    this.subtopic_attempt_response = [];
+    this.subtopic_attempt_explanation = [];
+    this.subtopic_problem_selection = [];
+    if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
+      this.subtopic_problem_attempts = [0];
+      this.subtopic_attempt_path = [[]];
+      this.subtopic_attempt_response = [''];
+      this.subtopic_attempt_explanation = [[]];
+      if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+        this.subtopic_problem_selection = [['']];
+        if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+          setTimeout(() => {
+            this.plot_graph_gp('', true);
+          }, 500);
+        }
+      }
+      else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+        this.subtopic_problem_selection = [[]];
+        if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+          this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
+        }
+        if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+          setTimeout(() => {
+            this.plot_graph_mgp('', true);
+          }, 500);
+        }
+      }
+      else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+        var msp_nums: string[] = [];
+        this.subtopic_problem_selection.push([]);
+        for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+          if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+            this.subtopic_problem_selection[0].push('');
+            msp_nums.push(choice[0]);
+          }
+        }
+      }
+    }
+    else {
+      this.subtopic_problem_attempts = [];
+      for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+        this.subtopic_problem_attempts.push(0);
+        this.subtopic_attempt_path.push([]);
+        this.subtopic_attempt_response.push('');
+        this.subtopic_attempt_explanation.push([]);
+        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+          this.subtopic_problem_selection.push(['']);
+          if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+            setTimeout(() => {
+              this.plot_graph_gp(part, true);
+            }, 500);
+          }
+        }
+        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+          this.subtopic_problem_selection.push([]);
+          if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+            this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
+          }
+          if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+            setTimeout(() => {
+              this.plot_graph_mgp(part, true);
+            }, 500);
+          }
+        }
+        else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+          var msp_nums: string[] = [];
+          this.subtopic_problem_selection.push([]);
+          for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+            if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+              this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part)].push('');
+              msp_nums.push(choice[0]);
+            }
+          }
+        }
+      }
+    }
+    this.standard_id = topic + ": " + subtopic;
+    this.standard_fav = false;
+    this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
+    for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
+      setTimeout(() => {
+        this.read_supp_st_json(supp);
+      }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+    }
+    if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
+      for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+        for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
+          if (block.startsWith(':table:')) {
+            setTimeout(() => {
+              this.read_table_st(block.slice(7));
+            }, 100);
+          }
+        }
+      }
+    }
+    if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
+      for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
+        if (block.startsWith(':table:')) {
+          setTimeout(() => {
+            this.read_table_st(block.slice(7));
+          }, 100);
+        }
+      }
+    }
+    for (let fav of this.authService.userData.standards.favorites) {
+      if (topic == fav[0] && subtopic == fav[1]) {
+        this.standard_fav = true;
+      }
+    }
   }
 
-  scroll_top() {
-    setTimeout(function () {
-      window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
-    }, 250);
+  fav_std_includes(topic: string, subtopic: string) {
+    this.favorite_std_set = [];
+    for (let std of this.authService.userData.standards.favorites) {
+      this.favorite_std_set.push(std as string[]);
+    }
+    this.includes_standard = false;
+    if (this.favorite_std_set.length != 0) {
+      for (const [key, std] of Object.entries(this.favorite_std_set)) {
+        if (std[0] == topic && std[1] == subtopic) {
+          this.includes_standard = true;
+        }
+      }
+    }
+    return this.includes_standard;
   }
 
-  scroll_bottom() {
-    setTimeout(function () {
-      window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
-    }, 250);
+  expandTopics() {
+    this.expand_topics = !this.expand_topics;
+  }
+
+  showCorrect() {
+    this.show_correct = !this.show_correct;
   }
 
   scroll(el: HTMLElement) {
@@ -5703,32 +9042,192 @@ export class HomeComponent implements OnInit {
     }, 250);
   }
 
+  scroll_top() {
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+    }, 250);
+  }
+
+  scroll_bottom() {
+    setTimeout(function () {
+      window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
+    }, 250);
+  }
+
   ngOnInit() {
-    this.titleService.setTitle("MoreProblems.Org | U.S. K-12 State Testing Practice Exams");
-    this.meta.updateTag({ name: 'description', content: "Access released practice problems & solutions to prepare for end-of-year tests - including Florida FSA, Illinois IAR, New York NYSTP, North Carolina EOG, Pennsylvania PSSA, and Texas STAAR. Choose from more 400 assessments across math, English language, science, & social studies for elementary, middle, & high school students." });
+    this.sub = this.aRoute.paramMap.subscribe((params) => {
+      console.log(params);
+      this.key = (params.get('quizKey') as string);
+      // if (!this.exam_set.includes(this.key)) {
+      //   this.router.navigate(['exams']);
+      // }
+    });
+    this.quiz_config = (this.authService.searchQuizId(this.key) as any);
     setTimeout(() => {
-      if (!this.authService.userData) {
-        this.router.navigate(['about']);
+      this.quiz_config = (this.authService.searchQuizId(this.key) as any);
+      this.quiz_name = this.quiz_config.name;
+      // this.grade_filters = (this.quiz_config.grades != undefined) ? this.quiz_config.grades : [];
+      this.selected_grade = this.quiz_config.grades[0];
+      // this.subject_filters = (this.quiz_config.subjects != undefined) ? this.quiz_config.subjects : [];
+      this.selected_subject = this.quiz_config.subjects[0];
+      // this.state_filters = (this.quiz_config.states != undefined) ? this.quiz_config.states : [];
+      for (let key of Object.keys(this.state_labels)) {
+        if (this.state_labels[key] == this.quiz_config.states[0]) {
+          this.selected_curriculum = key;
+        }
       }
-      else {
-        this.authService.getProfilePic(this.authService.userData);
-        this.user_data = this.authService.userData;
-        // for (let exm of this.authService.userData.exams.favorites.slice(1)) {
-        //   this.favorite_set.push(exm as string);
-        // }
-        if (this.authService.userData.role == 'Student') {
-          const exam_history = this.authService.userData.exams.history;
-          for (const [key, det] of Object.entries(exam_history)) {
-            if (["Started", "Assigned"].includes((det as any).status)) {
-              this.inprogress_set.push(key);
-              if (("" + key).startsWith('Q-')) {
-                this.inprogress_quizzes[key.substring(2)] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString(), metadata: (this.authService.searchQuizId(("" + key).substring(2)) as any) };
+      // this.topic_filters = (this.quiz_config.topics != undefined) ? this.quiz_config.topics : [];
+      this.selected_topic = this.quiz_config.topics[0];
+      this.mode = this.quiz_config.mode;
+      this.shuffle_mode = this.quiz_config.shuffle;
+      // this.shuffle = this.quiz_config.shuffle;
+      // this.public = this.quiz_config.public;
+      this.quiz_public = this.quiz_config.public;
+      this.quiz_length = this.quiz_config.length;
+      this.quiz_timer = this.quiz_config.timer;
+      if (this.quiz_timer > 0) {
+        this.enable_timelimit = true;
+      }
+      this.timer_hours = Math.floor(this.quiz_timer / 60);
+      this.timer_minutes = this.quiz_timer % 60;
+      // this.topics = [];
+      for (const [id, dump] of Object.entries(this.standards_attribute_dump)) {
+        for (const [name, labels] of Object.entries(this.subject_map)) {
+          if (id.endsWith('-' + this.selected_curriculum) && this.standards_attribute_dump[id].Grades.includes(this.selected_grade) && labels.includes(this.standards_attribute_dump[id].Subject) && name == this.selected_subject) {
+            this.standards_id = id;
+            this.standards_dump = this.s_dump_dict[id][1];
+            for (let domain of this.standards_dump.Standards) {
+              this.topics.push(domain.Label);
+            }
+          }
+        }
+      }
+      setTimeout(() => {
+        if (this.quiz_config.problems != undefined) {
+          // this.exam_dump = this.quiz_config.problems;
+          if (this.quiz_config.problems[1].SubTopics != undefined && this.quiz_config.problems[1].SubTopics.length > 0 && this.quiz_config.problems[1].SubTopics[0] != '') {
+            this.enable_standards = true;
+          }
+          for (const [key, prob] of Object.entries(this.quiz_config.problems)) {
+            if (key != undefined && +key > 0) {
+              this.exam_dump[+key] = (prob as any);
+              for (let cont of (prob as any).Content) {
+                if (this.is_image(cont)) {
+                  this.authService.getQuizPic(this.key, cont).then((url) => {
+                    console.log(url);
+                    this.prob_images[cont] = [url];
+                  }).catch(error => {
+                    console.log(error.message);
+                  });
+                }
               }
-              else {
-                this.inprogress_exams[key] = { status: (det as any).status, progress: (det as any).progress, lastdate: new Date((det as any).lasttimestamp).toLocaleDateString(), lasttime: new Date((det as any).lasttimestamp).toLocaleTimeString() };
+              for (let choice of Object.values((prob as any).AnswerChoices)) {
+                if (this.is_image((choice as any).Choice)) {
+                  this.authService.getQuizPic(this.key, (choice as any).Choice).then((url) => {
+                    console.log(url);
+                    this.prob_images[(choice as any).Choice] = [url];
+                  }).catch(error => {
+                    console.log(error.message);
+                  });
+                }
               }
             }
           }
+          console.log(this.exam_dump);
+          console.log(Object.keys(this.exam_dump));
+          // this.prob_images = (this.authService.getQuizPics(this.key) as any);
+          // const img_dump: any = (this.authService.getQuizPics(this.key) as any);
+          // for (const [name, img] of Object.entries(img_dump)) {
+          //   this.prob_images = (this.authService.getQuizPics(this.key) as any); 
+          // }
+          this.prob_statuses = {};
+          for (let prob of Object.keys(this.exam_dump)) {
+            this.prob_statuses[+prob] = [false, false];
+            this.problem_hover[+prob] = false;
+            this.content_hover[+prob] = [false];
+            var choices: boolean[] = [];
+            for (let i = 1; i <= this.default_numchoices; i++) {
+              choices.push(false);
+            }
+            this.choices_hover[+prob] = choices;
+          }
+          this.check_all_content_complete();
+        }
+      }, 250);
+      if (this.authService.userData) {
+        // this.is_auth = true;
+        this.authService.getProfilePic(this.authService.userData);
+        this.user_data = this.authService.userData;
+      }
+      setTimeout(() => {
+        this.width_change2();
+        this.data_loaded = true;
+        this.problems_loaded = true;
+        setTimeout(() => {
+          for (let i = 1; i <= this.quiz_length; i++) {
+            const numchoicesSel: string = "choicesEntry" + '' + i;
+            const numchoicesSliderSel: string = "choicesSlider" + '' + i;
+            (document.getElementById(numchoicesSel) as any).value = this.exam_dump[i].NumChoices;
+            (document.getElementById(numchoicesSliderSel) as any).value = this.exam_dump[i].NumChoices;
+            const standardSel: string = "standardInput" + '' + i;
+            (document.getElementById(standardSel) as any).value = Object.keys(this.get_topic_subs(this.selected_topic))[Object.values(this.get_topic_subs(this.selected_topic)).indexOf(this.exam_dump[i].SubTopics[0])] + ': ' + this.exam_dump[i].SubTopics[0];
+            const probtypeSel: string = "probtypeInput" + '' + i;
+            (document.getElementById(probtypeSel) as any).value = this.problem_types[this.exam_dump[i].Type][0];
+          }
+        }, 25);
+      }, 500);
+    }, 500);
+    setTimeout(() => {
+      // this.favorite_std_set = [];
+      if (this.authService.userData) {
+        console.log('logged in');
+        // this.is_auth = true;
+        this.authService.getProfilePic(this.authService.userData);
+        // setTimeout(() => {
+        //   console.log(this.authService.pp_url);
+        //   this.profileUploadURL = this.authService.pp_url;
+        // }, 150);
+        this.user_data = this.authService.userData;
+        for (let std of this.authService.userData.standards.favorites.slice(1)) {
+          this.favorite_std_set.push(std as string[]);
+        }
+        if (this.authService.userData.role != 'Student' && this.authService.userData.role != '') {
+          const linked_students = this.authService.userData.students.slice(1);
+          for (const [key, stud] of Object.entries(linked_students)) {
+            setTimeout(() => {
+              const student_data = this.authService.searchUserId(stud as string);
+              this.all_students.push(stud as string);
+              if (student_data != null) {
+                this.all_students_data[(stud as string)] = (student_data as object);
+              }
+              if ((stud as string).includes(this.authService.userData.uid as string)) {
+                this.my_students.push(stud as string);
+                if (student_data != null) {
+                  this.my_students_data[(stud as string)] = (student_data as object);
+                }
+              }
+            }, +key * 10);
+          }
+          setTimeout(() => {
+            this.all_students = [];
+            this.my_students = [];
+            const linked_students = this.authService.userData.students.slice(1);
+            for (const [key, stud] of Object.entries(linked_students)) {
+              setTimeout(() => {
+                const student_data = this.authService.searchUserId(stud as string);
+                this.all_students.push(stud as string);
+                if (student_data != null) {
+                  this.all_students_data[(stud as string)] = (student_data as object);
+                }
+                if ((stud as string).includes(this.authService.userData.uid as string)) {
+                  this.my_students.push(stud as string);
+                  if (student_data != null) {
+                    this.my_students_data[(stud as string)] = (student_data as object);
+                  }
+                }
+              }, +key * 10);
+            }
+          }, 100);
           this.my_class_metadata = [];
           const linked_classes = this.authService.userData.classes.slice(1);
           for (const [key, clss] of Object.entries(linked_classes)) {
@@ -5750,161 +9249,37 @@ export class HomeComponent implements OnInit {
                 this.my_class_metadata.push(this.class_data as object);
               }, +key * 10);
             }
-            if (linked_classes.length > 0) {
-              this.has_classes = true;
-            }
           }, 100);
         }
-        if (this.authService.userData.role != 'Student') {
-          this.student_metadata = [];
-          this.my_student_metadata = [];
-          var linked_students = {};
-          if (this.authService.userData.students) {
-            linked_students = this.authService.userData.students.slice(1);
-          }
-          this.student_metadata = [];
-          for (const [key, stud] of Object.entries(this.authService.userData.students.slice(1))) {
-            setTimeout(() => {
-              console.log(stud);
-              this.student_data = this.authService.searchUserId(stud as string);
-              for (let exm of Object.keys(this.student_data.exams.history)) {
-                this.student_sub_metadata[exm] = this.authService.getStudExamSubmission2(stud as string, exm);
-              }
-              var stud_data = this.authService.searchUserId(stud as string);
-              var stud_exams = this.getStudSubmissions(stud as string);
-              stud_data.subs = stud_exams;
-              this.student_metadata.push(stud_data);
-            }, +key * 10);
-          }
-          setTimeout(() => {
-            this.student_metadata = [];
-            for (const [key, stud] of Object.entries(this.authService.userData.students.slice(1))) {
-              setTimeout(() => {
-                console.log(stud);
-                this.student_data = this.authService.searchUserId(stud as string);
-                for (let exm of Object.keys(this.student_data.exams.history)) {
-                  this.student_sub_metadata[exm] = this.authService.getStudExamSubmission2(stud as string, exm);
-                }
-                var stud_data = this.authService.searchUserId(stud as string);
-                var stud_exams = this.getStudSubmissions(stud as string);
-                stud_data.subs = stud_exams;
-                this.subject_break();
-                stud_data.problems_correct = this.student_data.problems_correct;
-                stud_data.problems_total = this.student_data.problems_total;
-                stud_data.average_grade = Math.round(100 * this.student_data.problems_correct / this.student_data.problems_total);
-                stud_data.complete_assignments = this.complete_exam_count;
-                stud_data.total_time = this.total_test_time;
-                console.log('Student Summary');
-                console.log(stud_data);
-                this.student_metadata.push(stud_data);
-                if (stud_data.uid.includes(this.authService.userData.uid)) {
-                  this.my_student_metadata.push(stud_data);
-                }
-              }, +key * 10);
-            }
-            this.my_class_metadata = [];
-            const linked_classes = this.authService.userData.classes.slice(1);
-            for (const [key, clss] of Object.entries(linked_classes)) {
-              setTimeout(() => {
-                console.log(clss);
-                this.class_data = this.authService.searchClassId(clss as string);
-                console.log(this.class_data);
-                this.my_class_metadata.push(this.class_data as object);
-              }, +key * 10);
-            }
-            setTimeout(() => {
-              this.my_class_metadata = [];
-              const linked_classes = this.authService.userData.classes.slice(1);
-              for (const [key, clss] of Object.entries(linked_classes)) {
-                setTimeout(() => {
-                  console.log(clss);
-                  this.class_data = this.authService.searchClassId(clss as string);
-                  console.log(this.class_data);
-                  this.my_class_metadata.push(this.class_data as object);
-                }, +key * 10);
-              }
-            }, 100);
-            if (this.authService.userData.role != 'Student') {
-              this.my_quiz_metadata = [];
-              const authored_quizzes = this.authService.getUserQuizzes(this.user_data.uid);
-              for (const [key, quiz] of Object.entries(authored_quizzes)) {
-                setTimeout(() => {
-                  console.log(quiz);
-                  this.quiz_data = quiz;
-                  this.quiz_data.uid = key;
-                  console.log(this.quiz_data);
-                  this.my_quiz_metadata.push(this.quiz_data as object);
-                }, +key * 10);
-              }
-              setTimeout(() => {
-                this.my_quiz_metadata = [];
-                const authored_quizzes = this.authService.getUserQuizzes(this.user_data.uid);
-                for (const [key, quiz] of Object.entries(authored_quizzes)) {
-                  setTimeout(() => {
-                    console.log(quiz);
-                    this.quiz_data = quiz;
-                    this.quiz_data.uid = key;
-                    console.log(this.quiz_data);
-                    this.my_quiz_metadata.push(this.quiz_data as object);
-                  }, +key * 10);
-                }
-              }, 100);
-            }
-          }, 250);
-          // for (const [key, stud] of Object.entries(linked_students)) {
-          //   setTimeout(() => {
-          //     console.log(stud);
-          //     this.student_data = this.authService.searchUserId(stud as string);
-          //     console.log(this.student_data);
-          //     this.student_metadata.push(this.student_data as object);
-          //     if (this.student_data.uid.includes(this.authService.userData.uid)) {
-          //       this.my_student_metadata.push(this.student_data as object);
-          //     }
-          //   }, +key * 10);
-          // }
-          // setTimeout(() => {
-          //   this.student_metadata = [];
-          //   this.my_student_metadata = [];
-          //   const linked_students = this.authService.userData.students.slice(1);
-          //   for (const [key, stud] of Object.entries(linked_students)) {
-          //     setTimeout(() => {
-          //       console.log(stud);
-          //       this.student_data = this.authService.searchUserId(stud as string);
-          //       console.log(this.student_data);
-          //       this.student_metadata.push(this.student_data as object);
-          //       if (this.student_data.uid.includes(this.authService.userData.uid)) {
-          //         this.my_student_metadata.push(this.student_data as object);
-          //       }
-          //     }, +key * 10);
-          //   }
-          //   this.my_class_metadata = [];
-          //   const linked_classes = this.authService.userData.classes.slice(1);
-          //   for (const [key, clss] of Object.entries(linked_classes)) {
-          //     setTimeout(() => {
-          //       console.log(clss);
-          //       this.class_data = this.authService.searchClassId(clss as string);
-          //       console.log(this.class_data);
-          //       this.my_class_metadata.push(this.class_data as object);
-          //     }, +key * 10);
-          //   }
-          //   setTimeout(() => {
-          //     this.my_class_metadata = [];
-          //     const linked_classes = this.authService.userData.classes.slice(1);
-          //     for (const [key, clss] of Object.entries(linked_classes)) {
-          //       setTimeout(() => {
-          //         console.log(clss);
-          //         this.class_data = this.authService.searchClassId(clss as string);
-          //         console.log(this.class_data);
-          //         this.my_class_metadata.push(this.class_data as object);
-          //       }, +key * 10);
-          //     }
-          //   }, 100);
-          // }, 100);
-        }
       }
-      setTimeout(() => {
-        this.data_loaded = true;
-      }, 500);
-    }, 1000);
+    }, 100);
+    // // Just to de-dupe all the subtopic labels
+    // for (let exam of this.exam_set) {
+    //   if (!this.exam_attribute_dump[exam].HideTopics) {
+    //     for (const [key, val] of Object.entries(this.e_dump_dict[exam])) {
+    //       if (typeof val.SubTopics != 'undefined') {
+    //         for (let subtop of val.SubTopics) {
+    //           if (!this.subtopics.includes(subtop)) {
+    //             this.subtopics.push(subtop);
+    //           }
+    //           if (!Object.keys(this.subtopics_count).includes(subtop)) {
+    //             this.subtopics_count[subtop] = 1;
+    //           }
+    //           else {
+    //             this.subtopics_count[subtop] += 1;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // const subtopics_array = Object.keys(this.subtopics_count).map(sub => [sub, this.subtopics_count[sub]] as [string, number]);
+    // subtopics_array.sort((a, b) => b[1] - a[1])
+    // const sorted_subtopics_count: { [key: string]: number } = {};
+    // subtopics_array.forEach(([sub, count]) => {
+    //   sorted_subtopics_count[sub] = count;
+    // });
+    // console.log(sorted_subtopics_count);
+    // console.log(this.subtopics.sort());
   }
 }

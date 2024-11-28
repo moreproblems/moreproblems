@@ -2766,7 +2766,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
           this.prob_images[block] = url;
         }).catch(error => {
           console.log(error.message);
-        });;
+        });
       }
     }
     if (this.mode == 'assess') {
@@ -2990,7 +2990,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
                   this.prob_images[block] = url;
                 }).catch(error => {
                   console.log(error.message);
-                });;
+                });
               }
             }
             if (this.mode == 'assess' && (det as any).progress != 0) {
@@ -6152,7 +6152,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
             this.prob_images[block] = url;
           }).catch(error => {
             console.log(error.message);
-          });;
+          });
         }
       }
     }
@@ -6806,7 +6806,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
             this.prob_images[block] = url;
           }).catch(error => {
             console.log(error.message);
-          });;
+          });
         }
       }
       this.attempt_path = this.exam_submission[num].Path;

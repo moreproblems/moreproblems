@@ -2516,7 +2516,7 @@
   <div *ngIf="file_source == '' && standard_id =='' && !create_s && !create_c && data_loaded" class="content-menu"
     role="menu" style="margin-bottom: 0px;">
     <div
-      *ngIf="(this.authService.userData.role != 'Student' && this.authService.userData.role != 'Parent') || this.has_classes"
+      *ngIf="!['', 'Student', 'Parent'].includes(this.authService.userData.role) || this.has_classes"
       class="card card-large"
       style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
@@ -2531,6 +2531,7 @@
           <h2 style="margin-bottom: 12px">{{(clss.displayName) ?
             clss.displayName :
             'Class'}}</h2>
+          <hr style="width: 50%" />
           <div
             style="display: block; text-align: center; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
             <div style="align-items: center; text-align: center; margin-right: 10px">
@@ -2558,7 +2559,6 @@
               </div>
             </div>
           </div>
-          <hr style="width: 50%" />
           <h4> {{clss.description}} </h4>
           <label class="switch">
             <input type="checkbox">
@@ -2811,6 +2811,69 @@
           <!-- <button class="grade-button" style="margin: auto; margin-top: 25px; padding: 10px 5px"
             routerLink="/exam/{{exm}}" routerLinkActive="active"> <b>Resume Exam</b> </button> -->
         </div>
+      </div>
+      <br />
+    </div>
+    <div
+      *ngIf="!['', 'Student', 'Parent'].includes(this.authService.userData.role)"
+      class="card card-large"
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
+      <br />
+      <h1 *ngIf="screenWidth > mobileWidth" style="font-size: 26px" #myQuizzes> My Quizzes </h1>
+      <h1 *ngIf="screenWidth <= mobileWidth" style="font-size: 22px" #myQuizzes> My Quizzes </h1>
+      <br />
+      <h3 *ngIf="my_quiz_metadata.length == 0" style="font-size: 18px"> You haven't created any quizzes under this
+        account yet. </h3>
+      <div *ngIf="my_quiz_metadata.length != 0" class="card-container" style="max-width: 100%">
+        <div *ngFor="let quiz of my_quiz_metadata" class="card card-medium"
+          style="display: block; text-align: center; min-width: 40%; max-width: 470px; max-height: 350px; width: auto; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+          <h2 style="margin-bottom: 12px">({{quiz.uid}}) {{(quiz.name) ?
+            quiz.name :
+            'Quiz'}}</h2>
+          <hr style="width: 50%" />
+          <div style="margin: 10px; text-align: center; font-weight: 500; font-size: 16px">
+            <h3 style="margin: 4px 0">{{quiz.length}}<b style="font-weight: 500;"> questions (</b>{{quiz.timer}}<b style="font-weight: 500;"> minutes)</b></h3>
+          </div>
+          <div
+            style="display: block; text-align: center; width: auto; height: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+            <div style="align-items: center; text-align: center; margin-left: 10px">
+              <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+                <div class="media-body" style="padding: 0 20px">
+                  <h3 style="font-weight: 600; line-height: 20px; margin: 4px 0">{{quiz.topics[0]}}</h3>
+                  <h3 style="font-weight: 600; line-height: 20px; margin: 4px 0">{{quiz.subjects[0]}}</h3>
+                </div> 
+              </div>
+            </div>
+            <div style="align-items: center; text-align: center; margin-left: 10px">
+              <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+                <div class="media-body" style="padding: 0 20px">
+                  <h3 style="font-weight: 600; line-height: 20px; margin: 4px 0">{{quiz.grades[0]}}</h3>
+                  <h3 style="font-weight: 600; line-height: 20px; margin: 4px 0">{{quiz.states[0]}}</h3>
+                </div> 
+              </div>
+            </div>
+          </div>
+          <h4> {{quiz.description}} </h4>
+          <label class="switch">
+            <input type="checkbox">
+            <button routerLink="/quiz/{{quiz.uid}}/edit" routerLinkActive="active" class="toggle-button-off"
+              style="margin: auto; margin-top: 10px; padding: 10px 5px; width: auto">
+              <b> Edit Quiz </b>
+            </button>
+          </label>
+        </div>
+      </div>
+      <br />
+      <div *ngIf="authService.userData as user">
+        <button *ngIf="!['Student', 'Parent'].includes(user.role)" (click)="toggle_create_class()" class="grade-button"
+          style="display: flex; flex-direction: row; align-items: center; width: fit-content; margin: auto; padding: 2px 5px">
+          <div style="margin: 0 5px">
+            <img src="./assets/media/icons/add.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+          </div>
+          <div style="margin: 0 5px; text-align: center; font-size: 18px"><b> Create Quiz
+            </b>
+          </div>
+        </button>
       </div>
       <br />
     </div>
