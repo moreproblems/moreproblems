@@ -5030,64 +5030,64 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
   }
 
   shuffle_m(choices: any, part: string) {
-    var part_num = 0;
-    if (part != '') {
-      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
-    }
-    if (!Object.keys(this.shuffle_choices).includes('' + part_num)) {
-      this.m_shuffled = false;
-      this.shuffle_choices['' + part_num] = []
-    }
-    if (!this.m_shuffled) {
-      if (part == '') {
-        if (this.exam_dump[this.problem_number].Type == 'G') {
-          var trimmed_choices: string[] = [];
-          for (let ch of Object.keys(choices)) {
-            if (!trimmed_choices.includes(ch.substring(0, ch.length - 2))) {
-              trimmed_choices.push(ch.substring(0, ch.length - 2));
-            }
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+      }
+      if (!Object.keys(this.shuffle_choices).includes('' + part_num)) {
+          this.m_shuffled = false;
+          this.shuffle_choices['' + part_num] = []
+      }
+      if (!this.m_shuffled) {
+          if (part == '') {
+              if (this.exam_dump[this.problem_number].Type == 'G') {
+                  var trimmed_choices: string[] = [];
+                  for (let ch of Object.keys(choices)) {
+                      if (!trimmed_choices.includes(ch.substring(0, ch.length - 2))) {
+                          trimmed_choices.push(ch.substring(0, ch.length - 2));
+                      }
+                  }
+                  this.choices_sequence = trimmed_choices;
+              }
+              else {
+                  this.choices_sequence = Array.from(Object.keys(choices));
+              }
           }
-          this.choices_sequence = trimmed_choices;
-        }
-        else {
-          this.choices_sequence = Array.from(Object.keys(choices));
-        }
-      }
-      else {
-        if (this.exam_dump[this.problem_number].Parts[part].Type == 'G') {
-          var trimmed_choices: string[] = [];
-          for (let ch of Object.keys(choices)) {
-            if (!trimmed_choices.includes(ch.substring(0, ch.length - 2))) {
-              trimmed_choices.push(ch.substring(0, ch.length - 2));
-            }
+          else {
+              if (this.exam_dump[this.problem_number].Parts[part].Type == 'G') {
+                  var trimmed_choices: string[] = [];
+                  for (let ch of Object.keys(choices)) {
+                      if (!trimmed_choices.includes(ch.substring(0, ch.length - 2))) {
+                          trimmed_choices.push(ch.substring(0, ch.length - 2));
+                      }
+                  }
+                  this.choices_sequence = trimmed_choices;
+              }
+              else {
+                  this.choices_sequence = Array.from(Object.keys(choices));
+              }
           }
-          this.choices_sequence = trimmed_choices;
-        }
-        else {
-          this.choices_sequence = Array.from(Object.keys(choices));
-        }
+          this.random_list = [];
+          this.shuffle_choices['' + part_num] = [];
+          console.log(this.choices_sequence);
+          for (let i = 0; i < this.choices_sequence.length; i++) {
+              if (this.choices_sequence[i] == '' || this.choices_sequence[i][0] == ' ') {
+                  this.choices_sequence.splice(i, 1);
+              }
+          }
+          const num_choices = this.choices_sequence.length;
+          for (let i = 0; i < num_choices; i++) {
+              this.random_index = Math.floor(Math.random() * this.choices_sequence.length);
+              this.random_list.push(this.choices_sequence[this.random_index]);
+              this.shuffle_choices['' + part_num][i] = this.choices_sequence[this.random_index];
+              this.choices_sequence.splice(this.random_index, 1);
+              console.log(i);
+              console.log(this.random_index);
+          }
+          console.log(this.shuffle_choices);
+          this.m_shuffled = true;
       }
-      this.random_list = [];
-      this.shuffle_choices['' + part_num] = [];
-      console.log(this.choices_sequence);
-      for (let i = 0; i < this.choices_sequence.length; i++) {
-        if (this.choices_sequence[i] == '') {
-          this.choices_sequence.splice(i, 1);
-        }
-      }
-      const num_choices = this.choices_sequence.length;
-      for (let i = 0; i < num_choices; i++) {
-        this.random_index = Math.floor(Math.random() * this.choices_sequence.length);
-        this.random_list.push(this.choices_sequence[this.random_index]);
-        this.shuffle_choices['' + part_num][i] = this.choices_sequence[this.random_index];
-        this.choices_sequence.splice(this.random_index, 1);
-        console.log(i);
-        console.log(this.random_index);
-      }
-      console.log(this.shuffle_choices);
-      this.m_shuffled = true;
-    }
-    return (this.shuffle_choices['' + part_num].sort());
+      return (this.shuffle_choices['' + part_num].sort());
   }
 
   shuffle_m_st(choices: any, part: string) {
@@ -5152,27 +5152,31 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
   }
 
   unique_m(choices: any, part: string) {
-    var part_num = 0;
-    if (part != '') {
-      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
-    }
-    this.unique_choices = [];
-    for (const [key, choice] of Object.entries(choices)) {
-      if ((choice as any).Choice != '' && !this.unique_choices.includes((choice as any).Choice)) {
-        if (this.exam_dump[this.problem_number].Type == 'O' || (this.exam_dump[this.problem_number].Type == 'MP' && this.exam_dump[this.problem_number].Parts[part].Type == 'O')) {
-          this.unique_choices.push((choice as any).Choice + ':' + key[0])
-        }
-        else {
-          this.unique_choices.push((choice as any).Choice)
-        }
-        this.c_submission[part_num][(choice as any).Choice[0]] = [""];
-        this.problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
-        this.attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
       }
-    }
-    this.unique_choices.sort();
-    console.log(this.unique_choices.sort());
-    // return (unique_choices);
+      this.unique_choices = [];
+      for (const [key, choice] of Object.entries(choices)) {
+          if ((choice as any).Choice != '' && !this.unique_choices.includes((choice as any).Choice)) {
+              if (this.exam_dump[this.problem_number].Type == 'O' || (this.exam_dump[this.problem_number].Type == 'MP' && this.exam_dump[this.problem_number].Parts[part].Type == 'O')) {
+                  this.unique_choices.push((choice as any).Choice + ':' + key[0])
+              }
+              else {
+                  this.unique_choices.push((choice as any).Choice)
+              }
+              if (key[0] == ' ' && (choice as any).Key.Correct) {
+                  this.m_submission[0][(choice as any).Choice[0]] = key;
+              }
+              this.c_submission[part_num][(choice as any).Choice[0]] = [""];
+              this.problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
+              this.attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
+          }
+      }
+      console.log(this.m_submission);
+      this.unique_choices.sort();
+      console.log(this.unique_choices.sort());
+      // return (unique_choices);
   }
 
   unique_m_st(choices: any, part: string) {

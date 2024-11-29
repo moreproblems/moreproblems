@@ -3409,8 +3409,15 @@
                     <button (click)="select_m_choice('', 1, '')"
                       *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] == choice[0]" class="toggle-button-on"
                       style="margin: auto; margin-top: 10px"></button>
+                    <button *ngIf="is_matched(choice[0], 1, '') && m_submission[0][choice[0]][0] == ' '"
+                      class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
+                      <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 18px">
+                        {{m_submission[0][choice[0]].slice(2)}} </div>
+                    </button>
                     <button (click)="remove_m_choice(choice[0], ''); select_m_choice(choice[0], 1, '')"
-                      *ngIf="is_matched(choice[0], 1, '')"
+                      *ngIf="is_matched(choice[0], 1, '') && m_submission[0][choice[0]][0] != ' '"
                       class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>

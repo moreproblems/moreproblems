@@ -5607,7 +5607,7 @@ export class ProfileComponent implements OnInit {
             this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[this.m_selection[part_num][0]].Key.Rationale;
           }
         }
-        else if (this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices[choice].Key.Correct) {
+        else if (this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices[choice].Key.Correct) {
           this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
           this.subtopic_attempt_explanation[part_num][+this.m_selection[part_num][1] - 1] = '';
           correct = false;

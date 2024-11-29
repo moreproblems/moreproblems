@@ -4156,7 +4156,7 @@ export class TemplateKeyComponent implements OnInit {
             this.shuffle_choices['' + part_num] = [];
             console.log(this.choices_sequence);
             for (let i = 0; i < this.choices_sequence.length; i++) {
-                if (this.choices_sequence[i] == '') {
+                if (this.choices_sequence[i] == '' || this.choices_sequence[i][0] == ' ') {
                     this.choices_sequence.splice(i, 1);
                 }
             }
@@ -4250,11 +4250,15 @@ export class TemplateKeyComponent implements OnInit {
                 else {
                     this.unique_choices.push((choice as any).Choice)
                 }
+                if (key[0] == ' ' && (choice as any).Key.Correct) {
+                    this.m_submission[0][(choice as any).Choice[0]] = key;
+                }
                 this.c_submission[part_num][(choice as any).Choice[0]] = [""];
                 this.problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
                 this.attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
             }
         }
+        console.log(this.m_submission);
         this.unique_choices.sort();
         console.log(this.unique_choices.sort());
         // return (unique_choices);
