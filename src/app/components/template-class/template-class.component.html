@@ -615,7 +615,7 @@
   }
 
 .circular-progress {
-  --size: 60px;
+  --size: 50px;
   --half-size: calc(var(--size) / 2);
   --stroke-width: 6px;
   --radius: calc((var(--size) - var(--stroke-width)) / 2);
@@ -3115,9 +3115,9 @@
                   </tr>
                   <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
                     <th colspan="3"> Student </th>
-                    <th> Grade </th>
-                    <th> Score </th>
-                    <th> Total Time </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Score </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Total</b> Time </th>
                   </tr>
                 </thead>
                 <tbody *ngFor="let stud of complete_exam_list" (mouseenter)="hover_row(stud, true)" (mouseleave)="hover_row(stud, false)" style="border: 5px solid black; font-size: 18px">
@@ -3146,8 +3146,8 @@
                         {{""+exam_sub_metadata[stud].endtime}}
                       </h4>
                     </td>
-                    <td style="border-top: 1px solid #ddd; min-width: 75px">
-                      <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
+                    <td style="border-top: 1px solid #ddd; min-width: 95px">
+                      <svg width="50" height="50" viewBox="0 0 50 50" margin="auto"
                         class="circular-progress" style="--progress: {{exam_sub_metadata[stud].score}}; --progressI: {{total_percent_correct}}">
                         <circle class="bg"></circle>
                         <circle class="ig"></circle>
@@ -3183,10 +3183,10 @@
                   </tr>
                   <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
                     <th colspan="3"> Student </th>
-                    <th> Grade </th>
-                    <th> Score </th>
-                    <th> Problems </th>
-                    <th> Total Time </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Score </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Problems </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Total</b> Time </th>
                   </tr>
                 </thead>
                 <tbody *ngFor="let stud of complete_exam_list" (mouseenter)="hover_row(stud, true)" (mouseleave)="hover_row(stud, false)" style="border: 5px solid black; font-size: 18px">
@@ -3215,8 +3215,8 @@
                         {{""+exam_sub_metadata[stud].endtime}}
                       </h4>
                     </td>
-                    <td style="border-top: 1px solid #ddd; min-width: 75px">
-                      <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
+                    <td style="border-top: 1px solid #ddd; min-width: 95px">
+                      <svg width="50" height="50" viewBox="0 0 50 50" margin="auto"
                         class="circular-progress" style="--progress: {{exam_sub_metadata[stud].score}}; --progressI: {{total_percent_correct}}">
                         <circle class="bg"></circle>
                         <circle class="ig"></circle>
@@ -3276,24 +3276,27 @@
                     </th>
                   </tr>
                   <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                    <th> Subjects & Topics </th>
-                    <th> Total Problems </th>
-                    <th> Missed Problems </th>
-                    <th> Percent Correct </th>
-                    <th> Average Time </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Subjects & Topics </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Score </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Problems</b> Missed </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Average Time </th>
                   </tr>
                 </thead>
                 <tbody *ngFor="let subject of subject_breakdown_top | keyvalue" style="border: 5px solid black">
                   <tr style="background-color: lightgrey">
                     <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Grade + ": " +
                         subject.value.Subject}} </b> </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b>
-                    </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}}
-                      </b>
-                    </td>
                     <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Percent}}%
                       </b>
+                    </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="subject.value.Break.Correct < subject.value.Break.Total"> {{subject.value.Break.Correct}} / {{subject.value.Break.Total}} </b>
+                      <b *ngIf="subject.value.Break.Correct == subject.value.Break.Total" style="color: rgb(66, 156, 10)"> {{subject.value.Break.Correct}} / {{subject.value.Break.Total}} </b>
+                    </td>
+                    <td style="border-top: 1px solid #ddd; ">
+                      <b *ngIf="subject.value.Break.Incorrect == 0"> -- </b>
+                      <b *ngIf="subject.value.Break.Incorrect > 0" style="color: rgb(245, 77, 77)"> {{subject.value.Break.Incorrect}} </b>
                     </td>
                     <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Time}} </b>
                     </td>
@@ -3303,9 +3306,15 @@
                       <i>
                         {{topic.key}} </i>
                     </td>
-                    <td style="border-top: 1px solid #ddd"> {{topic.value.Total}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{topic.value.Incorrect}} </td>
                     <td style="border-top: 1px solid #ddd"> {{topic.value.Percent}}% </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="topic.value.Correct < topic.value.Total"> {{topic.value.Correct}} / {{topic.value.Total}} </b>
+                      <b *ngIf="topic.value.Correct == topic.value.Total" style="color: rgb(66, 156, 10)"> {{topic.value.Correct}} / {{topic.value.Total}} </b>
+                    </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="topic.value.Incorrect == 0">--</b>
+                      <b *ngIf="topic.value.Incorrect > 0" style="color: rgb(245, 77, 77)">{{topic.value.Incorrect}}</b>
+                    </td>
                     <td style="border-top: 1px solid #ddd"> {{topic.value.Time}} </td>
                   </tr>
                 </tbody>
@@ -3332,23 +3341,26 @@
                     </th>
                   </tr>
                   <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                    <th> Topics & Subtopics </th>
-                    <th> Total Problems </th>
-                    <th> Missed Problems </th>
-                    <th> Percent Correct </th>
-                    <th> Average Time </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Topics & Subtopics </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Score </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Problems</b> Missed </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Average Time </th>
                   </tr>
                 </thead>
                 <tbody *ngFor="let subject of subject_breakdown_subtop | keyvalue" style="border: 5px solid black">
                   <tr style="background-color: lightgrey">
                     <td style="border-top: 1px solid #ddd"> <b> {{subject.key}} </b> </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b>
-                    </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}}
-                      </b>
-                    </td>
                     <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Percent}}%
                       </b>
+                    </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="subject.value.Break.Correct < subject.value.Break.Total"> {{subject.value.Break.Correct}} / {{subject.value.Break.Total}} </b>
+                      <b *ngIf="subject.value.Break.Correct == subject.value.Break.Total" style="color: rgb(66, 156, 10)"> {{subject.value.Break.Correct}} / {{subject.value.Break.Total}} </b>
+                    </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="subject.value.Break.Incorrect == 0"> -- </b>
+                      <b *ngIf="subject.value.Break.Incorrect > 0" style="color: rgb(245, 77, 77)"> {{subject.value.Break.Incorrect}} </b>
                     </td>
                     <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Time}} </b>
                     </td>
@@ -3358,9 +3370,15 @@
                       <a (click)="searchSubTopic(subject.value.Topic, subtop.key)" style="font-weight: 500"> <i>
                           {{subtop.key}} </i> </a>
                     </td>
-                    <td style="border-top: 1px solid #ddd"> {{subtop.value.Total}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{subtop.value.Incorrect}} </td>
                     <td style="border-top: 1px solid #ddd"> {{subtop.value.Percent}}% </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="subtop.value.Correct < subtop.value.Total"> {{subtop.value.Correct}} / {{subtop.value.Total}} </b>
+                      <b *ngIf="subtop.value.Correct == subtop.value.Total" style="color: rgb(66, 156, 10)"> {{subtop.value.Correct}} / {{subtop.value.Total}} </b>
+                    </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="subtop.value.Incorrect == 0">--</b>
+                      <b *ngIf="subtop.value.Incorrect > 0" style="color: rgb(245, 77, 77)">{{subtop.value.Incorrect}}</b>
+                    </td>
                     <td style="border-top: 1px solid #ddd"> {{subtop.value.Time}} </td>
                   </tr>
                 </tbody>
@@ -3509,9 +3527,9 @@
                   </tr>
                   <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
                     <th colspan="3"> Student </th>
-                    <th> Grade </th>
-                    <th> Score </th>
-                    <th> Total Time </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Score </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Total</b> Time </th>
                   </tr>
                 </thead>
                 <tbody *ngFor="let stud of complete_exam_list" (mouseenter)="hover_row(stud, true)" (mouseleave)="hover_row(stud, false)" style="border: 5px solid black; font-size: 18px">
@@ -3540,8 +3558,8 @@
                         {{""+quiz_sub_metadata[stud].endtime}}
                       </h4>
                     </td>
-                    <td style="border-top: 1px solid #ddd; min-width: 75px">
-                      <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
+                    <td style="border-top: 1px solid #ddd; min-width: 95px">
+                      <svg width="50" height="50" viewBox="0 0 50 50" margin="auto"
                         class="circular-progress" style="--progress: {{quiz_sub_metadata[stud].score}}; --progressI: {{total_percent_correct}}">
                         <circle class="bg"></circle>
                         <circle class="ig"></circle>
@@ -3577,10 +3595,10 @@
                   </tr>
                   <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
                     <th colspan="3"> Student </th>
-                    <th> Grade </th>
-                    <th> Score </th>
-                    <th> Problems </th>
-                    <th> Total Time </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Score </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Problems </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Total</b> Time </th>
                   </tr>
                 </thead>
                 <tbody *ngFor="let stud of complete_exam_list" (mouseenter)="hover_row(stud, true)" (mouseleave)="hover_row(stud, false)" style="border: 5px solid black; font-size: 18px">
@@ -3609,8 +3627,8 @@
                         {{""+quiz_sub_metadata[stud].endtime}}
                       </h4>
                     </td>
-                    <td style="border-top: 1px solid #ddd; min-width: 75px">
-                      <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
+                    <td style="border-top: 1px solid #ddd; min-width: 95px">
+                      <svg width="50" height="50" viewBox="0 0 50 50" margin="auto"
                         class="circular-progress" style="--progress: {{quiz_sub_metadata[stud].score}}; --progressI: {{total_percent_correct}}">
                         <circle class="bg"></circle>
                         <circle class="ig"></circle>
@@ -3670,24 +3688,27 @@
                     </th>
                   </tr>
                   <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                    <th> Subjects & Topics </th>
-                    <th> Total Problems </th>
-                    <th> Missed Problems </th>
-                    <th> Percent Correct </th>
-                    <th> Average Time </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Subjects & Topics </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Score </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Problems</b> Missed </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Average Time </th>
                   </tr>
                 </thead>
                 <tbody *ngFor="let subject of subject_breakdown_top | keyvalue" style="border: 5px solid black">
                   <tr style="background-color: lightgrey">
                     <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Grade + ": " +
                         subject.value.Subject}} </b> </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b>
-                    </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}}
-                      </b>
-                    </td>
                     <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Percent}}%
                       </b>
+                    </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="subject.value.Break.Correct < subject.value.Break.Total"> {{subject.value.Break.Correct}} / {{subject.value.Break.Total}} </b>
+                      <b *ngIf="subject.value.Break.Correct == subject.value.Break.Total" style="color: rgb(66, 156, 10)"> {{subject.value.Break.Correct}} / {{subject.value.Break.Total}} </b>
+                    </td>
+                    <td style="border-top: 1px solid #ddd; ">
+                      <b *ngIf="subject.value.Break.Incorrect == 0"> -- </b>
+                      <b *ngIf="subject.value.Break.Incorrect > 0" style="color: rgb(245, 77, 77)"> {{subject.value.Break.Incorrect}} </b>
                     </td>
                     <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Time}} </b>
                     </td>
@@ -3697,9 +3718,15 @@
                       <i>
                         {{topic.key}} </i>
                     </td>
-                    <td style="border-top: 1px solid #ddd"> {{topic.value.Total}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{topic.value.Incorrect}} </td>
                     <td style="border-top: 1px solid #ddd"> {{topic.value.Percent}}% </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="topic.value.Correct < topic.value.Total"> {{topic.value.Correct}} / {{topic.value.Total}} </b>
+                      <b *ngIf="topic.value.Correct == topic.value.Total" style="color: rgb(66, 156, 10)"> {{topic.value.Correct}} / {{topic.value.Total}} </b>
+                    </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="topic.value.Incorrect == 0">--</b>
+                      <b *ngIf="topic.value.Incorrect > 0" style="color: rgb(245, 77, 77)">{{topic.value.Incorrect}}</b>
+                    </td>
                     <td style="border-top: 1px solid #ddd"> {{topic.value.Time}} </td>
                   </tr>
                 </tbody>
@@ -3726,23 +3753,26 @@
                     </th>
                   </tr>
                   <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                    <th> Topics & Subtopics </th>
-                    <th> Total Problems </th>
-                    <th> Missed Problems </th>
-                    <th> Percent Correct </th>
-                    <th> Average Time </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Topics & Subtopics </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Score </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Problems</b> Missed </th>
+                    <th style="padding-left: 10px; padding-right: 10px"> Average Time </th>
                   </tr>
                 </thead>
                 <tbody *ngFor="let subject of subject_breakdown_subtop | keyvalue" style="border: 5px solid black">
                   <tr style="background-color: lightgrey">
                     <td style="border-top: 1px solid #ddd"> <b> {{subject.key}} </b> </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b>
-                    </td>
-                    <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}}
-                      </b>
-                    </td>
                     <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Percent}}%
                       </b>
+                    </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="subject.value.Break.Correct < subject.value.Break.Total"> {{subject.value.Break.Correct}} / {{subject.value.Break.Total}} </b>
+                      <b *ngIf="subject.value.Break.Correct == subject.value.Break.Total" style="color: rgb(66, 156, 10)"> {{subject.value.Break.Correct}} / {{subject.value.Break.Total}} </b>
+                    </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="subject.value.Break.Incorrect == 0"> -- </b>
+                      <b *ngIf="subject.value.Break.Incorrect > 0" style="color: rgb(245, 77, 77)"> {{subject.value.Break.Incorrect}} </b>
                     </td>
                     <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Time}} </b>
                     </td>
@@ -3752,9 +3782,15 @@
                       <a (click)="searchSubTopic(subject.value.Topic, subtop.key)" style="font-weight: 500"> <i>
                           {{subtop.key}} </i> </a>
                     </td>
-                    <td style="border-top: 1px solid #ddd"> {{subtop.value.Total}} </td>
-                    <td style="border-top: 1px solid #ddd"> {{subtop.value.Incorrect}} </td>
                     <td style="border-top: 1px solid #ddd"> {{subtop.value.Percent}}% </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="subtop.value.Correct < subtop.value.Total"> {{subtop.value.Correct}} / {{subtop.value.Total}} </b>
+                      <b *ngIf="subtop.value.Correct == subtop.value.Total" style="color: rgb(66, 156, 10)"> {{subtop.value.Correct}} / {{subtop.value.Total}} </b>
+                    </td>
+                    <td style="border-top: 1px solid #ddd">
+                      <b *ngIf="subtop.value.Incorrect == 0">--</b>
+                      <b *ngIf="subtop.value.Incorrect > 0" style="color: rgb(245, 77, 77)">{{subtop.value.Incorrect}}</b>
+                    </td>
                     <td style="border-top: 1px solid #ddd"> {{subtop.value.Time}} </td>
                   </tr>
                 </tbody>
@@ -3901,9 +3937,9 @@
                 </tr>
                 <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
                   <th colspan="2"> Assignment </th>
-                  <th> Grade </th>
-                  <th> Score </th>
-                  <th> Total Time </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Score </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Total</b> Time </th>
                 </tr>
               </thead>
               <tbody *ngFor="let exm of complete_exam_list" (mouseenter)="hover_row(exm, true)" (mouseleave)="hover_row(exm, false)" style="border: 5px solid black; font-size: 18px">
@@ -3928,8 +3964,8 @@
                       {{""+student_sub_metadata[exm].endtime}}
                     </h4>
                   </td>
-                  <td style="border-top: 1px solid #ddd; min-width: 75px">
-                    <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
+                  <td style="border-top: 1px solid #ddd; min-width: 95px">
+                    <svg width="50" height="50" viewBox="0 0 50 50" margin="auto"
                       class="circular-progress" style="--progress: {{student_sub_metadata[exm].score}}; --progressI: {{total_percent_correct}}">
                       <circle class="bg"></circle>
                       <circle class="ig"></circle>
@@ -3965,10 +4001,10 @@
                 </tr>
                 <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
                   <th colspan="2"> Assignment </th>
-                  <th> Grade </th>
-                  <th> Score </th>
-                  <th> Problems </th>
-                  <th> Total Time </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Score </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Problems </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Total</b> Time </th>
                 </tr>
               </thead>
               <tbody *ngFor="let exm of complete_exam_list" (mouseenter)="hover_row(exm, true)" (mouseleave)="hover_row(exm, false)" style="border: 5px solid black; font-size: 18px">
@@ -3993,8 +4029,8 @@
                       {{""+student_sub_metadata[exm].endtime}}
                     </h4>
                   </td>
-                  <td style="border-top: 1px solid #ddd; min-width: 75px">
-                    <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
+                  <td style="border-top: 1px solid #ddd; min-width: 95px">
+                    <svg width="50" height="50" viewBox="0 0 50 50" margin="auto"
                       class="circular-progress" style="--progress: {{student_sub_metadata[exm].score}}; --progressI: {{total_percent_correct}}">
                       <circle class="bg"></circle>
                       <circle class="ig"></circle>
@@ -4052,24 +4088,27 @@
                   </th>
                 </tr>
                 <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                  <th> Subjects & Topics </th>
-                  <th> Total Problems </th>
-                  <th> Missed Problems </th>
-                  <th> Percent Correct </th>
-                  <th> Average Time </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Subjects & Topics </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Score </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Problems</b> Missed </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Average Time </th>
                 </tr>
               </thead>
               <tbody *ngFor="let subject of subject_breakdown_top | keyvalue" style="border: 5px solid black">
                 <tr style="background-color: lightgrey">
                   <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Grade + ": " +
                       subject.value.Subject}} </b> </td>
-                  <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b>
-                  </td>
-                  <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}}
-                    </b>
-                  </td>
                   <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Percent}}%
                     </b>
+                  </td>
+                  <td style="border-top: 1px solid #ddd">
+                    <b *ngIf="subject.value.Break.Correct < subject.value.Break.Total"> {{subject.value.Break.Correct}} / {{subject.value.Break.Total}} </b>
+                    <b *ngIf="subject.value.Break.Correct == subject.value.Break.Total" style="color: rgb(66, 156, 10)"> {{subject.value.Break.Correct}} / {{subject.value.Break.Total}} </b>
+                  </td>
+                  <td style="border-top: 1px solid #ddd; ">
+                    <b *ngIf="subject.value.Break.Incorrect == 0"> -- </b>
+                    <b *ngIf="subject.value.Break.Incorrect > 0" style="color: rgb(245, 77, 77)"> {{subject.value.Break.Incorrect}} </b>
                   </td>
                   <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Time}} </b>
                   </td>
@@ -4079,9 +4118,15 @@
                     <i>
                       {{topic.key}} </i>
                   </td>
-                  <td style="border-top: 1px solid #ddd"> {{topic.value.Total}} </td>
-                  <td style="border-top: 1px solid #ddd"> {{topic.value.Incorrect}} </td>
                   <td style="border-top: 1px solid #ddd"> {{topic.value.Percent}}% </td>
+                  <td style="border-top: 1px solid #ddd">
+                    <b *ngIf="topic.value.Correct < topic.value.Total"> {{topic.value.Correct}} / {{topic.value.Total}} </b>
+                    <b *ngIf="topic.value.Correct == topic.value.Total" style="color: rgb(66, 156, 10)"> {{topic.value.Correct}} / {{topic.value.Total}} </b>
+                  </td>
+                  <td style="border-top: 1px solid #ddd">
+                    <b *ngIf="topic.value.Incorrect == 0">--</b>
+                    <b *ngIf="topic.value.Incorrect > 0" style="color: rgb(245, 77, 77)">{{topic.value.Incorrect}}</b>
+                  </td>
                   <td style="border-top: 1px solid #ddd"> {{topic.value.Time}} </td>
                 </tr>
               </tbody>
@@ -4108,23 +4153,26 @@
                   </th>
                 </tr>
                 <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-                  <th> Topics & Subtopics </th>
-                  <th> Total Problems </th>
-                  <th> Missed Problems </th>
-                  <th> Percent Correct </th>
-                  <th> Average Time </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Topics & Subtopics </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Score </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Problems</b> Missed </th>
+                  <th style="padding-left: 10px; padding-right: 10px"> Average Time </th>
                 </tr>
               </thead>
               <tbody *ngFor="let subject of subject_breakdown_subtop | keyvalue" style="border: 5px solid black">
                 <tr style="background-color: lightgrey">
                   <td style="border-top: 1px solid #ddd"> <b> {{subject.key}} </b> </td>
-                  <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Total}} </b>
-                  </td>
-                  <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Incorrect}}
-                    </b>
-                  </td>
                   <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Percent}}%
                     </b>
+                  </td>
+                  <td style="border-top: 1px solid #ddd">
+                    <b *ngIf="subject.value.Break.Correct < subject.value.Break.Total"> {{subject.value.Break.Correct}} / {{subject.value.Break.Total}} </b>
+                    <b *ngIf="subject.value.Break.Correct == subject.value.Break.Total" style="color: rgb(66, 156, 10)"> {{subject.value.Break.Correct}} / {{subject.value.Break.Total}} </b>
+                  </td>
+                  <td style="border-top: 1px solid #ddd">
+                    <b *ngIf="subject.value.Break.Incorrect == 0"> -- </b>
+                    <b *ngIf="subject.value.Break.Incorrect > 0" style="color: rgb(245, 77, 77)"> {{subject.value.Break.Incorrect}} </b>
                   </td>
                   <td style="border-top: 1px solid #ddd"> <b> {{subject.value.Break.Time}} </b>
                   </td>
@@ -4134,9 +4182,15 @@
                     <a (click)="searchSubTopic(subject.value.Topic, subtop.key)" style="font-weight: 500"> <i>
                         {{subtop.key}} </i> </a>
                   </td>
-                  <td style="border-top: 1px solid #ddd"> {{subtop.value.Total}} </td>
-                  <td style="border-top: 1px solid #ddd"> {{subtop.value.Incorrect}} </td>
                   <td style="border-top: 1px solid #ddd"> {{subtop.value.Percent}}% </td>
+                  <td style="border-top: 1px solid #ddd">
+                    <b *ngIf="subtop.value.Correct < subtop.value.Total"> {{subtop.value.Correct}} / {{subtop.value.Total}} </b>
+                    <b *ngIf="subtop.value.Correct == subtop.value.Total" style="color: rgb(66, 156, 10)"> {{subtop.value.Correct}} / {{subtop.value.Total}} </b>
+                  </td>
+                  <td style="border-top: 1px solid #ddd">
+                    <b *ngIf="subtop.value.Incorrect == 0">--</b>
+                    <b *ngIf="subtop.value.Incorrect > 0" style="color: rgb(245, 77, 77)">{{subtop.value.Incorrect}}</b>
+                  </td>
                   <td style="border-top: 1px solid #ddd"> {{subtop.value.Time}} </td>
                 </tr>
               </tbody>
@@ -4241,19 +4295,21 @@
               </th>
             </tr>
             <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-              <th style="padding-right: 5px; padding-left: 5px"> Topics </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Percent Correct </th>
-              <th *ngIf="this.screenWidth > this.mobileWidth" style="padding-right: 5px; padding-left: 5px"> Missed
-                Problems </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Average Time </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Topics </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+              <th *ngIf="this.screenWidth > this.mobileWidth" style="padding-right: 5px; padding-left: 5px"> <b style="font-size: 13px; font-weight: 500">Problems</b> Missed </th>
+              <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Avg.</b> Time </th>
             </tr>
           </thead>
           <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
             <tr style="background-color: lightgrey">
               <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
               <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}%
-                  ({{topic.value.Correct}}/{{topic.value.Total}}) </b> </td>
-              <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"> <b>
+                (<b *ngIf="topic.value.Correct < topic.value.Total">{{topic.value.Correct}}/{{topic.value.Total}}</b>
+                <b *ngIf="topic.value.Correct == topic.value.Total" style="color: rgb(66, 156, 10)">{{topic.value.Correct}}/{{topic.value.Total}}</b>) </b>
+              </td>
+              <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect == 0" style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+              <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect > 0" style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
                   {{topic.value.Incorrect}} </b> </td>
               <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
             </tr>
@@ -4282,18 +4338,19 @@
               </th>
             </tr>
             <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-              <th style="padding-right: 5px; padding-left: 5px"> Topics & Subtopics </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Percent Correct </th>
-              <th *ngIf="this.screenWidth > this.mobileWidth" style="padding-right: 5px; padding-left: 5px"> Missed
-                Problems </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Average Time </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Topics & Subtopics </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Grade <b style="font-size: 13px; font-weight: 500">(%)</b> </th>
+              <th *ngIf="this.screenWidth > this.mobileWidth" style="padding-right: 5px; padding-left: 5px"> <b style="font-size: 13px; font-weight: 500">Problems</b> Missed </th>
+              <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Avg.</b> Time </th>
             </tr>
           </thead>
           <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
             <tr style="background-color: lightgrey">
               <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
               <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}%
-                  ({{topic.value.Correct}}/{{topic.value.Total}}) </b> </td>
+                (<b *ngIf="topic.value.Correct < topic.value.Total">{{topic.value.Correct}}/{{topic.value.Total}}</b>
+                <b *ngIf="topic.value.Correct == topic.value.Total" style="color: rgb(66, 156, 10)">{{topic.value.Correct}}/{{topic.value.Total}}</b>) </b>
+              </td>
               <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"> <b>
                   {{topic.value.Incorrect}} </b> </td>
               <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
@@ -4304,8 +4361,9 @@
                 <a (click)="searchSubTopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
                     {{subtopic.key}} </i> </a>
               </td>
-              <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"
-                style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
+              <td *ngIf="this.screenWidth > this.mobileWidth && subtopic.value.Incorrect == 0" style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+              <td *ngIf="this.screenWidth > this.mobileWidth && subtopic.value.Incorrect > 0" style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
+                  {{subtopic.value.Incorrect}} </b> </td>
               <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}} </td>
             </tr>
           </tbody>
@@ -4333,14 +4391,14 @@
               </th>
             </tr>
             <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
-              <th style="padding-right: 5px; padding-left: 5px"> # </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Topics </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Time </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Key </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Submission </th>
+              <th style="padding-left: 10px; padding-right: 10px"> # </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Topics </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Time </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Key </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Submission </th>
               <th *ngIf="this.screenWidth > this.mobileWidth" style="padding-right: 5px; padding-left: 5px">
-                Submission Explanation </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Attempts </th>
+                Explanation </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Attempts </th>
             </tr>
           </thead>
           <tbody *ngFor="let sub of wrong_submission_list">
@@ -4388,14 +4446,14 @@
               </th>
             </tr>
             <tr style="border: 1px solid black; background-color: grey; font-size: 16px">
-              <th style="padding-right: 5px; padding-left: 5px"> # </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Topics </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Time </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Key </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Submission </th>
+              <th style="padding-left: 10px; padding-right: 10px"> # </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Topics </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Time </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Key </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Submission </th>
               <th *ngIf="this.screenWidth > this.mobileWidth" style="padding-right: 5px; padding-left: 5px">
-                Submission Explanation </th>
-              <th style="padding-right: 5px; padding-left: 5px"> Attempts </th>
+                Explanation </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Attempts </th>
             </tr>
           </thead>
           <tbody *ngFor="let sub of exam_submission_list">
@@ -4629,11 +4687,11 @@
               </th> -->
             </tr>
             <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-              <th colspan="3"> Student (ID) </th>
-              <th> Submissions </th>
-              <th> Average Grade </th>
-              <th> Total Problems </th>
-              <th> Total Time </th>
+              <th colspan="3"> Student <b style="font-size: 13px; font-weight: 500">(ID)</b> </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Submissions </th>
+              <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Avg.</b> Grade </th>
+              <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Total</b> Problems </th>
+              <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Total</b> Time </th>
             </tr>
           </thead>
           <tbody *ngFor="let stud of class_student_metadata" (mouseenter)="hover_row(stud.uid, true)" (mouseleave)="hover_row(stud.uid, false)" style="border: 5px solid black; font-size: 18px">
@@ -4669,7 +4727,7 @@
               </td>
               <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{(stud.average_grade != stud.average_grade) ? '--' : stud.complete_assignments}}</b> </td>
               <td style="border-top: 1px solid #ddd; min-width: 75px">
-                <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
+                <svg width="50" height="50" viewBox="0 0 50 50" margin="auto"
                   class="circular-progress" style="--progress: {{(stud.average_grade != stud.average_grade) ? 0 : stud.average_grade}}; --progressI: {{total_percent_correct}}">
                   <circle class="bg"></circle>
                   <circle class="ig"></circle>
@@ -4794,10 +4852,10 @@
             </tr>
             <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
               <th colspan="2"> Exam Name </th>
-              <th> Submissions </th>
-              <th> Average Grade </th>
-              <th> Total Problems </th>
-              <th> Total Time </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Submissions </th>
+              <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Avg.</b> Grade </th>
+              <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Total</b> Problems </th>
+              <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Total</b> Time </th>
             </tr>
           </thead>
           <tbody *ngFor="let exam of class_exam_metadata" (mouseenter)="hover_row(exam.id, true)" (mouseleave)="hover_row(exam.id, false)" style="border: 5px solid black; font-size: 18px">
@@ -4831,7 +4889,7 @@
               </td>
               <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{(exam.average_grade != exam.average_grade) ? '--' : exam.complete_assignments}}</b> </td>
               <td style="border-top: 1px solid #ddd; min-width: 75px">
-                <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
+                <svg width="50" height="50" viewBox="0 0 50 50" margin="auto"
                   class="circular-progress" style="--progress: {{(exam.average_grade != exam.average_grade) ? 0 : exam.average_grade}}; --progressI: {{total_percent_correct}}">
                   <circle class="bg"></circle>
                   <circle class="ig"></circle>
@@ -4927,10 +4985,10 @@
             </tr>
             <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
               <th colspan="2"> Quiz Name </th>
-              <th> Submissions </th>
-              <th> Average Grade </th>
-              <th> Total Problems </th>
-              <th> Total Time </th>
+              <th style="padding-left: 10px; padding-right: 10px"> Submissions </th>
+              <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Avg.</b> Grade </th>
+              <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Total</b> Problems </th>
+              <th style="padding-left: 10px; padding-right: 10px"> <b style="font-size: 13px; font-weight: 500">Total</b> Time </th>
             </tr>
           </thead>
           <tbody *ngFor="let quiz of class_quiz_metadata" (mouseenter)="hover_row(quiz.id, true)" (mouseleave)="hover_row(quiz.id, false)" style="border: 5px solid black; font-size: 18px">
@@ -4963,7 +5021,7 @@
               </td>
               <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{(quiz.average_grade != quiz.average_grade) ? '--' : quiz.complete_assignments}}</b> </td>
               <td style="border-top: 1px solid #ddd; min-width: 75px">
-                <svg width="60" height="60" viewBox="0 0 60 60" margin="auto"
+                <svg width="50" height="50" viewBox="0 0 50 50" margin="auto"
                   class="circular-progress" style="--progress: {{(quiz.average_grade != quiz.average_grade) ? 0 : quiz.average_grade}}; --progressI: {{total_percent_correct}}">
                   <circle class="bg"></circle>
                   <circle class="ig"></circle>
