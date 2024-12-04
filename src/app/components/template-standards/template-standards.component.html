@@ -288,6 +288,52 @@
       box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
+button.grade-button-s {
+  font-size: 18px;
+  color: white;
+  background-color: rgba(82, 147, 228, 1.0);
+  border-radius: 12px;
+  border: 1px solid #eee;
+  margin: 8px;
+  padding: 8px 8px;
+  /* display: flex; */
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+button.grade-button-s:hover {
+  background-color: #1976d2;
+  /* color:black; */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+button.grade-button-l {
+  font-size: 18px;
+  color: white;
+  background-color: rgba(82, 197, 243, 1.0);
+  border-radius: 12px;
+  border: 1px solid #eee;
+  margin: 8px;
+  padding: 8px 8px;
+  /* display: flex; */
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+button.grade-button-l:hover {
+  background-color: #1976d2;
+  /* color:black; */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
   button.toggle-button {
       font-size: 18px;
       color: black;
@@ -521,7 +567,685 @@
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <canvas id="confettiCanvas"></canvas>
   <div class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
-    <div *ngIf="selected_subtopic != ''" style="align-items: left; width: min(1075px, 92%)">
+    <div *ngIf="signup || login" style="align-items: left; width: min(1075px, 92%)">
+      <section>
+        <div (click)="signup=false; login=false" class="card card-small"
+          style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/media/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Directions </a>
+        </div>
+      </section>
+    </div>
+    <div *ngIf="signup || login" style="width: 100%; height: calc(100vh - 180px); display: flex">
+      <div *ngIf="signup" class="card card-large"
+        style="margin: auto; padding: 0px; padding-right: -1px; border: 3px solid black; border-radius: 20px; display: block; min-width: 310px; width: min(800px, 85%); max-height: 1200px; display: flex; flex-direction: row">
+        <div *ngIf="screenWidth <= 850" style="margin: auto; width: 100%">
+          <div style="margin: auto; padding: 13px">
+            <h1 *ngIf="screenWidth > mobileWidth" style="line-height: 28px; font-weight: 500; font-size: 32px"> Sign Up For <b style="font-weight: 900">MoreProblems</b> Today </h1>
+            <h1 *ngIf="screenWidth <= mobileWidth && screenWidth > 700" style="line-height: 28px; font-weight: 500; font-size: 28px"> Sign Up For <b style="font-weight: 900">MoreProblems</b> Today </h1>
+            <h1 *ngIf="screenWidth <= 700" style="line-height: 28px; font-weight: 500; font-size: 24px"> Sign Up For <b style="font-weight: 900">MoreProblems</b> Today </h1>
+            <h3 *ngIf="screenWidth > 700"  style="line-height: 24px; font-weight: 500; font-size: 18px"> Get started with your free account! </h3>
+            <h3 *ngIf="screenWidth <= 700"  style="line-height: 20px; font-weight: 500; font-size: 15px"> Get started with your free account! </h3>
+            <br />
+            <div class="displayTable" style="text-align: center; align-items: center; margin: auto">
+              <div class="displayTableCell" style="text-align: center; align-items: center; margin: auto">
+                <h2> Choose Your Role </h2>
+                <!-- <br /> -->
+                <div class="card-container" style="align-items: center; margin-top: 0px">
+                  <label class="switch">
+                    <input type="checkbox" style="margin: 0px" value="Teacher">
+                    <button *ngIf="user_role != 'Teacher'" (click)="set_user_role('Teacher')"
+                      class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/teacher.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Teacher </b></div>
+                    </button>
+                    <button *ngIf="user_role == 'Teacher'" (click)="set_user_role('Teacher')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/teacher.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Teacher </b></div>
+                    </button>
+                  </label>
+                  <label class="switch">
+                    <input type="checkbox" style="margin: 0px" value="Student">
+                    <button *ngIf="user_role != 'Student'" (click)="set_user_role('Student')" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/student.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Student </b></div>
+                    </button>
+                    <button *ngIf="user_role == 'Student'" (click)="set_user_role('Student')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/student.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Student </b></div>
+                    </button>
+                  </label>
+                  <label class="switch">
+                    <input type="checkbox" style="margin: 0px" value="Parent">
+                    <button *ngIf="user_role != 'Parent'" (click)="set_user_role('Parent')" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/parent.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Parent </b></div>
+                    </button>
+                    <button *ngIf="user_role == 'Parent'" (click)="set_user_role('Parent')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/parent.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Parent </b></div>
+                    </button>
+                  </label>
+                </div>
+                <br *ngIf="user_role != ''" />
+                <h2 *ngIf="user_role != ''"> Choose Your Signup Method </h2>
+                <!-- <br /> -->
+                <div class="card-container" style="align-items: center; margin-top: 0px">
+                  <label *ngIf="user_role == 'Parent' || user_role == 'Teacher'" class="switch">
+                    <input type="checkbox" style="margin: 0px" value="google">
+                    <button *ngIf="login_method != 'google'" (click)="set_login_method('google'); authService.GoogleAuthSignup('profile', user_role); confetti_light(1)"
+                      class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Google </b></div>
+                    </button>
+                    <button *ngIf="login_method == 'google'" (click)="authService.GoogleAuthSignup('profile', user_role); confetti_light(1)" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Google </b></div>
+                    </button>
+                  </label>
+                  <label *ngIf="user_role == 'Parent' || user_role == 'Teacher' || user_role == 'Student'" class="switch">
+                    <input type="checkbox" style="margin: 0px" value="email">
+                    <button *ngIf="login_method != 'email'" (click)="set_login_method('email')" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/email.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Email </b></div>
+                    </button>
+                    <button *ngIf="login_method == 'email'" (click)="set_login_method('email')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/email.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Email </b></div>
+                    </button>
+                  </label>
+                  <label *ngIf="user_role == 'Parent' || user_role == 'Student'" class="switch">
+                    <input type="checkbox" style="margin: 0px" value="phone">
+                    <button *ngIf="login_method != 'phone'" (click)="set_login_method('phone')" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/phone.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Phone </b></div>
+                    </button>
+                    <button *ngIf="login_method == 'phone'" (click)="set_login_method('phone')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/phone.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Phone </b></div>
+                    </button>
+                  </label>
+                </div>
+                <br *ngIf="['email', 'phone'].includes(login_method)" />
+                <div *ngIf="login_method=='email'" class="authBlock">
+                  <h2 style="padding-bottom: 10px"> Register Your Email Below </h2>
+                  <div class="formGroup">
+                    <input type="email" class="formControl" placeholder="Email Address"
+                      style="width: 95%; max-width: 400px; height: 50px; margin: 0px auto 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                      #userEmail required>
+                  </div>
+                  <div class="formGroup">
+                    <input type="password" class="formControl" placeholder="Password"
+                      style="width: 95%; max-width: 400px; height: 50px; margin: 0px auto 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                      #userPassword required>
+                  </div>
+                  <br />
+                  <div class="formGroup">
+                    <button class="grade-button" (click)="authService.SignUp('profile', userEmail.value, userPassword.value, this.user_role); confetti_light(1)"
+                      style="margin: auto"> <b>Sign Up</b> </button>
+                  </div>
+                </div>
+                <div *ngIf="login_method=='phone'" class="authBlock">
+                  <h2 style="padding-bottom: 10px"> Enter Your Number Below </h2>
+                  <div class="formGroup">
+                    <input type="tel" class="formControl" placeholder="777 555 4321"
+                      style="width: 100%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
+                      #userPhone required>
+                  </div>
+                  <br />
+                  <div class="formGroup">
+                    <button class="grade-button" (click)="sendLoginCode(userPhone.value)" style="margin: auto"> <b>Send Code</b>
+                    </button>
+                  </div>
+                </div>
+                <br *ngIf="windowRef.confirmationResult" />
+                <div *ngIf="windowRef.confirmationResult">
+                  <h2 style="padding-bottom: 10px"> Enter Your Code Below </h2>
+                  <div class="formGroup">
+                    <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:6, allowNumbersOnly: true, disableAutoFocus: false}" required></ng-otp-input>
+                  </div>
+                  <br />
+                  <div class="formGroup">
+                    <button class="grade-button" (click)="verifyLoginCodeS(phone, this.otp, this.user_role)" style="margin: auto"> <b>Sign Up</b>
+                    </button>
+                  </div>
+                </div>
+                <!-- <br /> -->
+              </div>
+            </div>
+            <br />
+            <div class="redirectToLogin">
+              <a style="font-size: 17px; font-weight: 600"><span (click)="login=true; signup=false; user_role='Student'">Already signed up? <b style="font-weight: 900">Log In</b> instead</span></a>
+            </div>
+            <br />
+          </div>
+          <div *ngIf="user_role==''" style="height: 250px; min-width: 304px; max-width: 750px; width: 100%; background: url('./assets/media/Summer24/Class7.jpg') no-repeat bottom; background-size: 900px auto; border-radius: 0px 0px 17px 17px; align-content: end">
+            <div style="color: white; background-color: rgba(47, 79, 79, 0.5); backdrop-filter: blur(5px); height: auto; margin-bottom: 0px; border-radius: 0px 0px 17px 17px; text-align: center">
+              <div style="margin-left: 10px; padding: 10px; font-weight: 1200">
+                <h3>Learners ❤️ MoreProblems</h3>
+                <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>1,000+ students & educators</b>!</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="screenWidth > 850" style="margin: auto">
+          <div style="margin: auto; padding: 13px">
+            <br />
+            <h1 *ngIf="screenWidth > mobileWidth" style="line-height: 28px; font-weight: 500; font-size: 32px"> Sign Up For <b style="font-weight: 900">MoreProblems</b> Today </h1>
+            <h1 *ngIf="screenWidth <= mobileWidth && screenWidth > 700" style="line-height: 28px; font-weight: 500; font-size: 28px"> Sign Up For <b style="font-weight: 900">MoreProblems</b> Today </h1>
+            <h1 *ngIf="screenWidth <= 700" style="line-height: 28px; font-weight: 500; font-size: 24px"> Sign Up For <b style="font-weight: 900">MoreProblems</b> Today </h1>
+            <h3 *ngIf="screenWidth > 700"  style="line-height: 24px; font-weight: 500; font-size: 18px"> Get started with your free account! </h3>
+            <h3 *ngIf="screenWidth <= 700"  style="line-height: 20px; font-weight: 500; font-size: 15px"> Get started with your free account! </h3>
+            <br />
+            <div class="displayTable" style="text-align: center; align-items: center; margin: auto">
+              <div class="displayTableCell" style="text-align: center; align-items: center; margin: auto">
+                <br />
+                <h2> Choose Your Role </h2>
+                <!-- <br /> -->
+                <div class="card-container" style="align-items: center; margin-top: 0px">
+                  <label class="switch">
+                    <input type="checkbox" style="margin: 0px" value="Teacher">
+                    <button *ngIf="user_role != 'Teacher'" (click)="set_user_role('Teacher')"
+                      class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/teacher.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Teacher </b></div>
+                    </button>
+                    <button *ngIf="user_role == 'Teacher'" (click)="set_user_role('Teacher')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/teacher.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Teacher </b></div>
+                    </button>
+                  </label>
+                  <label class="switch">
+                    <input type="checkbox" style="margin: 0px" value="Student">
+                    <button *ngIf="user_role != 'Student'" (click)="set_user_role('Student')" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/student.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Student </b></div>
+                    </button>
+                    <button *ngIf="user_role == 'Student'" (click)="set_user_role('Student')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/student.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Student </b></div>
+                    </button>
+                  </label>
+                  <label class="switch">
+                    <input type="checkbox" style="margin: 0px" value="Parent">
+                    <button *ngIf="user_role != 'Parent'" (click)="set_user_role('Parent')" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/parent.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Parent </b></div>
+                    </button>
+                    <button *ngIf="user_role == 'Parent'" (click)="set_user_role('Parent')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/parent.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Parent </b></div>
+                    </button>
+                  </label>
+                </div>
+                <br *ngIf="user_role != ''" />
+                <h2 *ngIf="user_role != ''"> Choose Your Signup Method </h2>
+                <!-- <br /> -->
+                <div class="card-container" style="align-items: center; margin-top: 0px">
+                  <label *ngIf="user_role == 'Parent' || user_role == 'Teacher'" class="switch">
+                    <input type="checkbox" style="margin: 0px" value="google">
+                    <button *ngIf="login_method != 'google'" (click)="set_login_method('google'); authService.GoogleAuthSignup('profile', user_role); confetti_light(1)"
+                      class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Google </b></div>
+                    </button>
+                    <button *ngIf="login_method == 'google'" (click)="authService.GoogleAuthSignup('profile', user_role); confetti_light(1)" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Google </b></div>
+                    </button>
+                  </label>
+                  <label *ngIf="user_role == 'Parent' || user_role == 'Teacher' || user_role == 'Student'" class="switch">
+                    <input type="checkbox" style="margin: 0px" value="email">
+                    <button *ngIf="login_method != 'email'" (click)="set_login_method('email')" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/email.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Email </b></div>
+                    </button>
+                    <button *ngIf="login_method == 'email'" (click)="set_login_method('email')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/email.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Email </b></div>
+                    </button>
+                  </label>
+                  <label *ngIf="user_role == 'Parent' || user_role == 'Student'" class="switch">
+                    <input type="checkbox" style="margin: 0px" value="phone">
+                    <button *ngIf="login_method != 'phone'" (click)="set_login_method('phone')" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/phone.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Phone </b></div>
+                    </button>
+                    <button *ngIf="login_method == 'phone'" (click)="set_login_method('phone')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/phone.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Phone </b></div>
+                    </button>
+                  </label>
+                </div>
+                <br *ngIf="['email', 'phone'].includes(login_method)" />
+                <div *ngIf="login_method=='email'" class="authBlock">
+                  <h2 style="padding-bottom: 10px"> Register Your Email Below </h2>
+                  <div class="formGroup">
+                    <input type="email" class="formControl" placeholder="Email Address"
+                      style="width: 95%; max-width: 400px; height: 50px; margin: 0px auto 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                      #userEmail required>
+                  </div>
+                  <div class="formGroup">
+                    <input type="password" class="formControl" placeholder="Password"
+                      style="width: 95%; max-width: 400px; height: 50px; margin: 0px auto 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                      #userPassword required>
+                  </div>
+                  <br />
+                  <div class="formGroup">
+                    <button class="grade-button" (click)="authService.SignUp('profile', userEmail.value, userPassword.value, this.user_role); confetti_light(1)"
+                      style="margin: auto"> <b>Sign Up</b> </button>
+                  </div>
+                </div>
+                <div *ngIf="login_method=='phone'" class="authBlock">
+                  <h2 style="padding-bottom: 10px"> Enter Your Number Below </h2>
+                  <div class="formGroup">
+                    <input type="tel" class="formControl" placeholder="777 555 4321"
+                      style="width: 100%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
+                      #userPhone required>
+                  </div>
+                  <br />
+                  <div class="formGroup">
+                    <button class="grade-button" (click)="sendLoginCode(userPhone.value)" style="margin: auto"> <b>Send Code</b>
+                    </button>
+                  </div>
+                </div>
+                <br *ngIf="windowRef.confirmationResult" />
+                <div *ngIf="windowRef.confirmationResult">
+                  <h2 style="padding-bottom: 10px"> Enter Your Code Below </h2>
+                  <div class="formGroup">
+                    <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:6, allowNumbersOnly: true, disableAutoFocus: false}" required></ng-otp-input>
+                  </div>
+                  <br />
+                  <div class="formGroup">
+                    <button class="grade-button" (click)="verifyLoginCodeS(phone, this.otp, this.user_role)" style="margin: auto"> <b>Sign Up</b>
+                    </button>
+                  </div>
+                </div>
+                <!-- <br /> -->
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="redirectToLogin">
+              <a style="font-size: 17px; font-weight: 600"><span (click)="login=true; signup=false; user_role='Student'">Already signed up? <b style="font-weight: 900">Log In</b> instead</span></a>
+            </div>
+            <br />
+          </div>
+        </div>
+        <div *ngIf="screenWidth > 850" style="width: 250px; min-height: 450px; height: auto; background: url('./assets/media/Summer24/Class6.jpg') no-repeat center; background-size: auto 800px; border-radius: 0px 17px 17px 0px; align-content: end">
+          <div style="color: white; background-color: rgba(47, 79, 79, 0.5); backdrop-filter: blur(5px); height: 120px; margin-bottom: 0px; border-radius: 0px 0px 17px; text-align: center">
+            <div style="margin-left: 10px; margin-right: 10px; padding-top: 15px; font-weight: 1200">
+              <h3>Learners ❤️ MoreProblems</h3>
+              <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>1,000+ students & educators</b>!</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="login" class="card card-large"
+        style="margin: auto; padding: 0px; padding-right: -1px; border: 3px solid black; border-radius: 20px; display: block; min-width: 310px; width: min(800px, 85%); max-height: 1200px; display: flex; flex-direction: row">
+        <div *ngIf="screenWidth <= 850" style="margin: auto; width: 100%">
+          <div style="margin: auto; padding: 13px">
+            <h1 *ngIf="screenWidth > mobileWidth" style="line-height: 28px; font-weight: 500; font-size: 32px"> Log Back Into <b style="font-weight: 900">MoreProblems</b> </h1>
+            <h1 *ngIf="screenWidth <= mobileWidth && screenWidth > 700" style="line-height: 28px; font-weight: 500; font-size: 28px"> Log Back Into <b style="font-weight: 900">MoreProblems</b> </h1>
+            <h1 *ngIf="screenWidth <= 700" style="line-height: 28px; font-weight: 500; font-size: 24px"> Log Back Into <b style="font-weight: 900">MoreProblems</b> </h1>
+            <h3 *ngIf="screenWidth > 700"  style="line-height: 24px; font-weight: 500; font-size: 18px"> Welcome back to your account! </h3>
+            <h3 *ngIf="screenWidth <= 700"  style="line-height: 20px; font-weight: 500; font-size: 15px"> Welcome back to your account! </h3>
+            <br />
+            <div class="displayTable" style="text-align: center; align-items: center; margin: auto">
+              <div class="displayTableCell" style="text-align: center; align-items: center; margin: auto">
+                <h2> Choose Your Login Method </h2>
+                <div class="card-container" style="align-items: center; margin-top: 0px">
+                  <label class="switch">
+                    <input type="checkbox" style="margin: 0px" value="google">
+                    <button *ngIf="login_method != 'google'" (click)="toggle_login_method('google'); authService.GoogleAuthLogin('home')"
+                      class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Google </b></div>
+                    </button>
+                    <button *ngIf="login_method == 'google'" (click)="authService.GoogleAuthLogin('home')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Google </b></div>
+                    </button>
+                  </label>
+                  <label class="switch">
+                    <input type="checkbox" style="margin: 0px" value="email">
+                    <button *ngIf="login_method != 'email'" (click)="toggle_login_method('email')" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/email.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Email </b></div>
+                    </button>
+                    <button *ngIf="login_method == 'email'" (click)="toggle_login_method('email')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/email.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Email </b></div>
+                    </button>
+                  </label>
+                  <label class="switch">
+                    <input type="checkbox" style="margin: 0px" value="phone">
+                    <button *ngIf="login_method != 'phone'" (click)="toggle_login_method('phone')" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/phone.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Phone </b></div>
+                    </button>
+                    <button *ngIf="login_method == 'phone'" (click)="toggle_login_method('phone')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px; padding: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/phone.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Phone </b></div>
+                    </button>
+                  </label>
+                </div>
+                <br *ngIf="['email', 'phone'].includes(login_method)" />
+                <div *ngIf="login_method=='email'" class="authBlock">
+                  <h2 style="padding-bottom: 10px"> Enter Your Email Below </h2>
+                  <div *ngIf="!pw_reset">
+                    <div class="formGroup">
+                      <input type="text" class="formControl" placeholder="Username (Email)"
+                        style="width: 95%; max-width: 400px; height: 50px; margin: 0px auto 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                        #userName required>
+                    </div>
+                    <div class="formGroup">
+                      <input type="password" class="formControl" placeholder="Password"
+                        style="width: 95%; max-width: 400px; height: 50px; margin: 0px 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
+                        #userPassword required>
+                    </div>
+                    <p><span (click)="reset_password()">Can't remember your login? <b>Reset Password</b></span></p>
+                    <br />
+                    <div class="formGroup">
+                      <button class="grade-button" (click)="authService.SignIn('home', userName.value, userPassword.value)"
+                        style="margin: auto"> <b>Log In</b> </button>
+                    </div>
+                  </div>
+                  <div *ngIf="pw_reset">
+                    <div class="formGroup">
+                      <input type="text" class="formControl" placeholder="Username (Email)"
+                        style="width: 95%; max-width: 400px; height: 50px; margin: 0px auto 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                        #userName required>
+                    </div>
+                    <br />
+                    <div class="formGroup">
+                      <button class="grade-button" (click)="authService.ResetPassword(userName.value); pw_reset=false"
+                        style="margin: auto"> <b>Reset Password</b> </button>
+                    </div>
+                  </div>
+                </div>
+                <div *ngIf="login_method=='phone'" class="authBlock">
+                  <h2 style="padding-bottom: 10px"> Enter Your Number Below </h2>
+                  <div class="formGroup">
+                    <input type="tel" class="formControl" placeholder="777 555 4321"
+                      style="width: 100%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
+                      #userPhone required>
+                  </div>
+                  <br />
+                  <div class="formGroup">
+                    <button class="grade-button" (click)="sendLoginCode(userPhone.value)" style="margin: auto"> <b>Send Code</b>
+                    </button>
+                  </div>
+                </div>
+                <br *ngIf="windowRef.confirmationResult" />
+                <div *ngIf="windowRef.confirmationResult">
+                  <h2 style="padding-bottom: 10px"> Enter Your Code Below </h2>
+                  <div class="formGroup">
+                    <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:6, allowNumbersOnly: true, disableAutoFocus: false}" required></ng-otp-input>
+                  </div>
+                  <br />
+                  <div class="formGroup">
+                    <button class="grade-button" (click)="verifyLoginCodeL(this.otp)" style="margin: auto"> <b>Log In</b>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="redirectToLogin">
+              <a style="font-size: 17px; font-weight: 600"><span (click)="signup=true; login=false">No account yet? <b style="font-weight: 900">Sign Up</b> now</span></a>
+            </div>
+            <br />
+          </div>
+          <div *ngIf="login_method==''"  style="height: 250px; min-width: 304px; max-width: 750px; width: 100%; background: url('./assets/media/Summer24/Class7.jpg') no-repeat bottom; background-size: 900px auto; border-radius: 0px 0px 17px 17px; align-content: end">
+            <div style="color: white; background-color: rgba(47, 79, 79, 0.5); backdrop-filter: blur(5px); height: auto; margin-bottom: 0px; border-radius: 0px 0px 17px 17px; text-align: center">
+              <div style="margin-left: 10px; padding: 10px; font-weight: 1200">
+                <h3>Learners ❤️ MoreProblems</h3>
+                <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>1,000+ students & educators</b>!</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="screenWidth > 850" style="margin: auto">
+          <div style="margin: auto; padding: 13px">
+            <br />
+            <h1 *ngIf="screenWidth > mobileWidth" style="line-height: 28px; font-weight: 500; font-size: 32px"> Log Back Into <b style="font-weight: 900">MoreProblems</b> </h1>
+            <h1 *ngIf="screenWidth <= mobileWidth && screenWidth > 700" style="line-height: 28px; font-weight: 500; font-size: 28px"> Log Back Into <b style="font-weight: 900">MoreProblems</b> </h1>
+            <h1 *ngIf="screenWidth <= 700" style="line-height: 28px; font-weight: 500; font-size: 24px"> Log Back Into <b style="font-weight: 900">MoreProblems</b> </h1>
+            <h3 *ngIf="screenWidth > 700"  style="line-height: 24px; font-weight: 500; font-size: 18px"> Welcome back to your account! </h3>
+            <h3 *ngIf="screenWidth <= 700"  style="line-height: 20px; font-weight: 500; font-size: 15px"> Welcome back to your account! </h3>
+            <br />
+            <div class="displayTable" style="text-align: center; align-items: center; margin: auto">
+              <div class="displayTableCell" style="text-align: center; align-items: center; margin: auto">
+                <br />
+                <h2> Choose Your Login Method </h2>
+                <div class="card-container" style="align-items: center; margin-top: 0px">
+                  <label class="switch">
+                    <input type="checkbox" style="margin: 0px" value="google">
+                    <button *ngIf="login_method != 'google'" (click)="toggle_login_method('google'); authService.GoogleAuthLogin('home')"
+                      class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Google </b></div>
+                    </button>
+                    <button *ngIf="login_method == 'google'" (click)="authService.GoogleAuthLogin('home')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/google.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Google </b></div>
+                    </button>
+                  </label>
+                  <label class="switch">
+                    <input type="checkbox" style="margin: 0px" value="email">
+                    <button *ngIf="login_method != 'email'" (click)="toggle_login_method('email')" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/email.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Email </b></div>
+                    </button>
+                    <button *ngIf="login_method == 'email'" (click)="toggle_login_method('email')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/email.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Email </b></div>
+                    </button>
+                  </label>
+                  <label class="switch">
+                    <input type="checkbox" style="margin: 0px" value="phone">
+                    <button *ngIf="login_method != 'phone'" (click)="toggle_login_method('phone')" class="toggle-button-off"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/phone.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Phone </b></div>
+                    </button>
+                    <button *ngIf="login_method == 'phone'" (click)="toggle_login_method('phone')" class="toggle-button-on"
+                      style="display: flex; flex-direction: row; align-items: center; width: auto; height: auto; margin: 5px">
+                      <div style="margin: 0 5px">
+                        <img src="./assets/media/icons/phone.png" style="padding: 5px 0 0; height: 25px; width: 25px">
+                      </div>
+                      <div style="margin: 0 5px; text-align: center; font-size: 17px"><b> Phone </b></div>
+                    </button>
+                  </label>
+                </div>
+                <br *ngIf="['email', 'phone'].includes(login_method)" />
+                <div *ngIf="login_method=='email'" class="authBlock">
+                  <h2 style="padding-bottom: 10px"> Enter Your Email Below </h2>
+                  <div *ngIf="!pw_reset">
+                    <div class="formGroup">
+                      <input type="text" class="formControl" placeholder="Username (Email)"
+                        style="width: 95%; max-width: 400px; height: 50px; margin: 0px auto 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                        #userName required>
+                    </div>
+                    <div class="formGroup">
+                      <input type="password" class="formControl" placeholder="Password"
+                        style="width: 95%; max-width: 400px; height: 50px; margin: 0px 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
+                        #userPassword required>
+                    </div>
+                    <p><span (click)="reset_password()">Can't remember your login? <b>Reset Password</b></span></p>
+                    <br />
+                    <div class="formGroup">
+                      <button class="grade-button" (click)="authService.SignIn('home', userName.value, userPassword.value)"
+                        style="margin: auto"> <b>Log In</b> </button>
+                    </div>
+                  </div>
+                  <div *ngIf="pw_reset">
+                    <div class="formGroup">
+                      <input type="text" class="formControl" placeholder="Username (Email)"
+                        style="width: 95%; max-width: 400px; height: 50px; margin: 0px auto 10px; padding: 0px; font-size: 20px; text-indent: 10px"
+                        #userName required>
+                    </div>
+                    <br />
+                    <div class="formGroup">
+                      <button class="grade-button" (click)="authService.ResetPassword(userName.value); pw_reset=false"
+                        style="margin: auto"> <b>Reset Password</b> </button>
+                    </div>
+                  </div>
+                </div>
+                <div *ngIf="login_method=='phone'" class="authBlock">
+                  <h2 style="padding-bottom: 10px"> Enter Your Number Below </h2>
+                  <div class="formGroup">
+                    <input type="tel" class="formControl" placeholder="777 555 4321"
+                      style="width: 100%; max-width: 400px; height: 50px; margin: 10px auto; padding: 0px; font-size: 20px; text-indent: 10px"
+                      #userPhone required>
+                  </div>
+                  <br />
+                  <div class="formGroup">
+                    <button class="grade-button" (click)="sendLoginCode(userPhone.value)" style="margin: auto"> <b>Send Code</b>
+                    </button>
+                  </div>
+                </div>
+                <br *ngIf="windowRef.confirmationResult" />
+                <div *ngIf="windowRef.confirmationResult">
+                  <h2 style="padding-bottom: 10px"> Enter Your Code Below </h2>
+                  <div class="formGroup">
+                    <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:6, allowNumbersOnly: true, disableAutoFocus: false}" required></ng-otp-input>
+                  </div>
+                  <br />
+                  <div class="formGroup">
+                    <button class="grade-button" (click)="verifyLoginCodeL(this.otp)" style="margin: auto"> <b>Log In</b>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="redirectToLogin">
+              <a style="font-size: 17px; font-weight: 600"><span (click)="signup=true; login=false">No account yet? <b style="font-weight: 900">Sign Up</b> now</span></a>
+            </div>
+            <br />
+          </div>
+        </div>
+        <div *ngIf="screenWidth > 850" style="width: 250px; min-height: 450px; height: auto; background: url('./assets/media/Summer24/Class6.jpg') no-repeat center; background-size: auto 800px; border-radius: 0px 17px 17px 0px; align-content: end">
+          <div style="color: white; background-color: rgba(47, 79, 79, 0.5); backdrop-filter: blur(5px); height: 120px; margin-bottom: 0px; border-radius: 0px 0px 17px; text-align: center">
+            <div style="margin-left: 10px; margin-right: 10px; padding-top: 15px; font-weight: 1200">
+              <h3>Learners ❤️ MoreProblems</h3>
+              <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>1,000+ students & educators</b>!</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="selected_subtopic != '' && !signup && !login" style="align-items: left; width: min(1075px, 92%)">
       <section>
         <div (click)="selected_subtopic=''" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -531,7 +1255,7 @@
         </div>
       </section>
     </div>
-    <div *ngIf="selected_subtopic != ''">
+    <div *ngIf="selected_subtopic != '' && !signup && !login">
       <div *ngIf="selected_subtopic != ''" class="card card-large"
         style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
         #subtopicSummaryCard>
@@ -564,10 +1288,10 @@
               </label>
             </div>
             <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-              style="font-size: 32px; font-weight: 800;  color: #4db7fd"> <i class="far fa-bookmark"></i>
+              style="margin: auto 5px; font-size: 32px; font-weight: 800;  color: #4db7fd"> <i class="far fa-bookmark"></i>
             </span>
             <span *ngIf="this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
-              style="font-size: 32px; font-weight: 800;  color: #4db7fd"> <i class="fas fa-bookmark"></i>
+              style="margin: auto 5px; font-size: 32px; font-weight: 800;  color: #4db7fd"> <i class="fas fa-bookmark"></i>
             </span>
           </section>
           <h2 *ngIf="screenWidth > mobileWidth"
@@ -588,12 +1312,80 @@
           </h3>
           <div *ngIf="subtopic_problem_number == 0" class="card card-medium"
             style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin-top: 20px; padding: min(20px, 3%)">
+            <div
+              *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.my_students != []"
+              class="card-container" style="align-items: center; padding-top: 0px; margin-top: 10px">
+              <div *ngFor="let std of my_students" (click)="select_student(my_students_data[std].uid)"
+                class="card card-small" style="height: 75px; width: 170px; align-items: center; padding-top: 0; background-color: #ccc">
+                <div class="avatar-container"
+                  style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 0">
+                  <img *ngIf="false" src="{{my_students_data[std].photoURL}}" class="select-avatar"
+                    style="width:100%; height: 100%; filter: grayscale(100%)">
+                  <img *ngIf="true && this.selected_student != my_students_data[std].uid"
+                    src="{{my_students_data[std].photoURL}}" class="select-avatar" style="width:100%; height: 100%">
+                  <img *ngIf="true && this.selected_student == my_students_data[std].uid"
+                    src="{{my_students_data[std].photoURL}}" class="select-avatar"
+                    style="width:100%; height: 100%; opacity: 0.3">
+                  <div class="middle">
+                    <div *ngIf="true && this.selected_student != my_students_data[std].uid"
+                      style="color: white; background-color: #1976d2; border-radius: 10px">Select
+                    </div>
+                  </div>
+                  <div *ngIf="true && this.selected_student == my_students_data[std].uid"
+                    class="select-middle">
+                    <img src="/assets/media/icons/save.png" style="height: 30px; width: 30px" />
+                  </div>
+                </div>
+                <h3 style="font-size: 18px; padding-left: 5px; width: 100px"> {{my_students_data[std].displayName}}
+                </h3>
+              </div>
+            </div>
+            <h3 style="font-size: 18px; margin-top: 0px; margin-bottom: 10px"
+              *ngIf="!this.authService.userData">
+              You are signed out - your practice results will not be saved </h3>
+            <h3 style="font-size: 18px; margin-top: 0px; margin-bottom: 10px"
+              *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.my_students != [] && this.selected_student == ''">
+              Choose a student to save your practice results </h3>
+            <h3 style="font-size: 18px; margin-top: 0px; margin-bottom: 10px"
+              *ngIf="this.authService.userData && this.authService.userData.role == 'Student'">
+              Your practice results will be saved as {{(this.authService.userData.displayName) ? this.authService.userData.displayName : 'User'}} </h3>
+            <h3 style="font-size: 18px; margin-top: 0px; margin-bottom: 10px"
+              *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.selected_student != ''">
+              Your practice results will be saved as {{selected_student_data.displayName}} </h3>
+            <div *ngIf="!authService.userData" class="card-container" style="align-items: center">
+              <button class="grade-button-s" (click)="signup=true; user_role='Student'" style="font-size: 19px; line-height: 20px; font-weight: 900; letter-spacing: 1px; padding: 7px; border-radius: 7px"> Sign Up </button>
+              <button class="grade-button-l" (click)="login=true" style="font-size: 19px; line-height: 20px; font-weight: 900; letter-spacing: 1px; padding: 7px; border-radius: 7px"> Log In </button>
+            </div>
+            <!-- <div *ngIf="this.authService.userData && this.exam_inprogress" class="card-container"
+              style="display: flex; flex-direction: row; align-items: center; text-align: center; width: 80%; margin: 0">
+              <div class="card-container" style="align-items: center; margin: 0px 20px">
+                <progress value="{{progress_number-1}}" max="{{exam_length}}"
+                  style="height: 20px; width: 100%; border-radius: 15px; margin: 10px auto 5px"
+                  #progressBar>{{progressBar.value/progressBar.max}}%</progress>
+                <h4 style="margin: auto"> {{exam_length - progress_number + 1}} / {{exam_length}} remaining problems </h4>
+                <h4 *ngIf="exam_status == 'Started'" style="margin: 1px auto; font-weight: 500"> Last Submission:
+                  <b>{{""+last_date}}</b>
+                  {{""+last_time}}
+                </h4>
+                <h4 *ngIf="exam_status == 'Assigned'" style="margin: 1px auto; font-weight: 500"> Assigned On:
+                  <b>{{""+last_date}}</b>
+                  {{""+last_time}}
+                </h4>
+              </div>
+              <button class="grade-button" (click)="resume_exam(); scroll_top()"
+                style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0 20px; margin-top: 40px">
+                <b> Resume Exam </b>
+              </button>
+            </div> -->
             <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
-              {{subtopic_problem_count}} Problems </h3>
-            <button *ngIf="subtopic_problem_number == 0" class="grade-button" (click)="next_problem_st(); scroll_top()"
-              style="display: block; max-width: 150px; max-height: 100px">
-              <b> Begin Practice </b>
-            </button>
+              {{subtopic_problem_count}} Problems <b *ngIf="authService.userData.role == 'Student' || selected_student != ''">({{subtopic_new_problem_count}} you haven't seen yet)</b> </h3>
+            <div class="card-container"
+              style="align-items: center">
+              <button *ngIf="subtopic_problem_number == 0" class="grade-button" (click)="next_problem_st(); scroll_top()"
+                style="display: block; max-width: 150px; max-height: 100px">
+                <b> Begin Practice </b>
+              </button>
+            </div>
           </div>
           <div *ngIf="subtopic_problem_number > 0" class="card card-medium"
             style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin-top: 20px; padding: min(20px, 3%)">
@@ -1871,7 +2663,7 @@
         </div>
       </div>
     </div>
-    <div *ngIf="selected_subtopic == ''" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center; width: 100%">
+    <div *ngIf="selected_subtopic == '' && !signup && !login" class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center; width: 100%">
       <div style="align-items: left; width: min(1075px, 92%)">
         <section>
           <div routerLink="/standards" routerLinkActive="active" class="card card-small"
@@ -1907,27 +2699,43 @@
                   style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
               </div>
               <div style="margin: 0 10px; text-align: left">
-                <h4 style="font-size: 18px"> <b *ngIf="domain.Key != ''" style="font-weight: 900">{{domain.Key}}: </b> <b style="font-weight: 700">{{domain.Label}}</b> </h4>
+                <h4 style="font-size: 18px"> <b *ngIf="domain.Key != ''" style="font-weight: 900">{{domain.Key}}: </b> <b style="font-weight: 700">{{domain.Label}}</b> <b *ngIf="domain.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{domain.NumProb}}</i> problems]</b> </h4>
               </div>
             </div>
             <hr *ngIf="domain_state[domain.Label]" style="width: 100%; border-width: 1px" />
             <div style="display: flex; flex-direction: row; text-align: left">
               <ul *ngIf="domain_state[domain.Label]" style="font-size: 18px; line-height: 22px; padding-left: 17px; margin-top: 0px">
-                <li *ngFor="let cluster of domain.Subs" style="margin-top: 20px; margin-bottom: 8px"> <b *ngIf="cluster.Key != ''" style="font-weight: 800">{{cluster.Key}}: </b>
+                <li *ngFor="let cluster of domain.Subs" style="margin-top: 20px; margin-bottom: 8px">
+                  <span *ngIf="cluster.Fav && authService.userData as user"
+                    style="margin: auto 5px; font-size: 19px; font-weight: 800;  color: #4db7fd"> <i class="fas fa-bookmark"></i>
+                  </span>
+                  <b *ngIf="cluster.Key != ''" style="font-weight: 800">{{cluster.Key}}: </b>
                   <b *ngIf="cluster.NumProb == 0" style="font-weight: 500">{{cluster.Label}}</b>
-                  <a *ngIf="cluster.NumProb > 0" (click)="selectSubTopic([domain.Label], cluster.Label, cluster.Key)" style="font-weight: 500">{{cluster.Label}}</a> <b *ngIf="cluster.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{cluster.NumProb}}</i>)</b>
+                  <a *ngIf="cluster.NumProb > 0" (click)="selectSubTopic([domain.Label], cluster.Label, cluster.Key)" style="font-weight: 500">{{cluster.Label}}</a> <b *ngIf="cluster.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{cluster.NumProb}}</i>]</b>
                   <ul style="font-size: 17px; line-height: 21px; padding-left: 17px">
-                    <li *ngFor="let standard of cluster.Subs" style="margin-top: 15px; margin-bottom: 6px"> <b *ngIf="standard.Key != ''" style="font-weight: 800">{{standard.Key}}: </b>
+                    <li *ngFor="let standard of cluster.Subs" style="margin-top: 15px; margin-bottom: 6px">
+                      <span *ngIf="standard.Fav && authService.userData as user"
+                        style="margin: auto 5px; font-size: 18px; font-weight: 800;  color: #4db7fd"> <i class="fas fa-bookmark"></i>
+                      </span>
+                      <b *ngIf="standard.Key != ''" style="font-weight: 800">{{standard.Key}}: </b>
                       <b *ngIf="standard.NumProb == 0" style="font-weight: 500">{{standard.Label}}</b>
-                      <a *ngIf="standard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], standard.Label, standard.Key)" style="font-weight: 500">{{standard.Label}}</a> <b *ngIf="standard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{standard.NumProb}}</i>)</b>
+                      <a *ngIf="standard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], standard.Label, standard.Key)" style="font-weight: 500">{{standard.Label}}</a> <b *ngIf="standard.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{standard.NumProb}}</i>]</b>
                       <ul style="font-size: 16px; line-height: 20px; padding-left: 17px">
-                        <li *ngFor="let substandard of standard.Subs" style="margin-top: 10px; margin-bottom: 4px"> <b *ngIf="substandard.Key != ''" style="font-weight: 800">{{substandard.Key}}: </b>
+                        <li *ngFor="let substandard of standard.Subs" style="margin-top: 10px; margin-bottom: 4px">
+                          <span *ngIf="substandard.Fav && authService.userData as user"
+                            style="margin: auto 5px; font-size: 17px; font-weight: 800;  color: #4db7fd"> <i class="fas fa-bookmark"></i>
+                          </span>
+                          <b *ngIf="substandard.Key != ''" style="font-weight: 800">{{substandard.Key}}: </b>
                           <b *ngIf="substandard.NumProb == 0" style="font-weight: 500">{{substandard.Label}}</b>
-                          <a *ngIf="substandard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], substandard.Label, substandard.Key)" style="font-weight: 500">{{substandard.Label}}</a> <b *ngIf="substandard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{substandard.NumProb}}</i>)</b>
+                          <a *ngIf="substandard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], substandard.Label, substandard.Key)" style="font-weight: 500">{{substandard.Label}}</a> <b *ngIf="substandard.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{substandard.NumProb}}</i>]</b>
                           <ul style="font-size: 15px; line-height: 19px; padding-left: 17px">
-                            <li *ngFor="let subsubstandard of substandard.Subs" style="margin-top: 10px; margin-bottom: 4px"> <b *ngIf="subsubstandard.Key != ''" style="font-weight: 800">{{subsubstandard.Key}}: </b>
+                            <li *ngFor="let subsubstandard of substandard.Subs" style="margin-top: 10px; margin-bottom: 4px">
+                              <span *ngIf="subsubstandard.Fav && authService.userData as user"
+                                style="margin: auto 5px; font-size: 16px; font-weight: 800;  color: #4db7fd"> <i class="fas fa-bookmark"></i>
+                              </span>
+                              <b *ngIf="subsubstandard.Key != ''" style="font-weight: 800">{{subsubstandard.Key}}: </b>
                               <b *ngIf="subsubstandard.NumProb == 0" style="font-weight: 500">{{subsubstandard.Label}}</b>
-                              <a *ngIf="subsubstandard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], subsubstandard.Label, subsubstandard.Key)" style="font-weight: 500">{{subsubstandard.Label}}</a> <b *ngIf="subsubstandard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{subsubstandard.NumProb}}</i>)</b>
+                              <a *ngIf="subsubstandard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], subsubstandard.Label, subsubstandard.Key)" style="font-weight: 500">{{subsubstandard.Label}}</a> <b *ngIf="subsubstandard.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{subsubstandard.NumProb}}</i>]</b>
                             </li>
                           </ul>
                         </li>

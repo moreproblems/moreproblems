@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { AuthService } from "../../shared/services/auth.service";
 import { Router } from '@angular/router';
@@ -11,7 +11,7 @@ import printJS from 'print-js';
 })
 
 @Injectable()
-export class StandardsComponent implements OnInit{
+export class StandardsComponent implements OnInit, AfterViewInit{
   // title = 'More Problems';
 
   screenWidth = window.innerWidth;
@@ -20,6 +20,7 @@ export class StandardsComponent implements OnInit{
   menuOpen = false;
 
   user_data: any = {};
+  data_loaded = false;
 
   selected_curriculum = 'CC';
   selected_grade = '';
@@ -28,6 +29,37 @@ export class StandardsComponent implements OnInit{
   subject_name = '';
 
   domain_state: {[key: number]: boolean} = {};
+
+  state_labels: { [key: string]: string } = {
+    "CC": "Common Core",
+    "CO": "Colorado",
+    "FL": "Florida",
+    "MA": "Massachusetts",
+    "MD": "Maryland",
+    "MS": "Mississippi",
+    "NJ": "New Jersey",
+    "NY": "New York",
+    "PA": "Pennsylvania",
+    "RI": "Rhode Island",
+    "TN": "Tennessee",
+    "TX": "Texas"
+  };
+
+  grade_labels: { [key: string]: string } = {
+    "K": "Kingergarten",
+    "G1": "Grade 1",
+    "G2": "Grade 2",
+    "G3": "Grade 3",
+    "G4": "Grade 4",
+    "G5": "Grade 5",
+    "G6": "Grade 6",
+    "G7": "Grade 7",
+    "G8": "Grade 8",
+    "G9": "Grade 9",
+    "G10": "Grade 10",
+    "G11": "Grade 11",
+    "G12": "Grade 12"
+  };
   
   constructor(private router: Router, private titleService: Title, private meta: Meta, public authService: AuthService) { }
 
@@ -210,6 +242,10 @@ export class StandardsComponent implements OnInit{
     // this.viewerHeight = Math.round(window.innerHeight*.8).toString() + "px";
   }
 
+  width_change2() {
+    this.screenWidth = window.innerWidth;
+  }
+
   scroll_top() {
     window.scrollTo({left: 0, top: 0, behavior: 'smooth'});
   }
@@ -227,12 +263,40 @@ export class StandardsComponent implements OnInit{
   //   return new Promise( resolve => setTimeout(resolve, ms) );
   // }
 
+  ngAfterViewInit() {
+
+  }
+
   ngOnInit() {
     this.titleService.setTitle("MoreProblems.Org | U.S. K-12 Common Core Learning Standards");
     this.meta.updateTag({ name: 'description', content: "Find out what to expect from your learner's curriculum, all the way down to standards. Subjects include Math & English Language Arts from Kindergarten through High School - as they are outlined by the Common Core state standards adopted by most states in America." });
-    if (this.authService.userData) {
-      this.authService.getProfilePic(this.authService.userData);
-      this.user_data = this.authService.userData;
-    }
+    setTimeout(() => {
+      if (this.authService.userData) {
+        this.authService.getProfilePic(this.authService.userData);
+        this.user_data = this.authService.userData;
+        setTimeout(() => {
+          console.log(this.authService.pp_url);
+          // this.profileUploadURL = this.authService.pp_url;
+          if (this.authService.userData.state != undefined && this.authService.userData.state != '' && Object.values(this.state_labels).includes(this.authService.userData.state)) {
+            for (let state of Object.keys(this.state_labels)) {
+              if (this.state_labels[state] == this.authService.userData.state) {
+                this.select_curriculum(state);
+              }
+            }
+            if (this.authService.userData.grade != undefined && this.authService.userData.grade != '' && Object.values(this.grade_labels).includes(this.authService.userData.grade)) {
+              for (let grade of Object.keys(this.grade_labels)) {
+                if (this.grade_labels[grade] == this.authService.userData.grade) {
+                  this.select_grade(grade);
+                }
+              }
+            }
+          }
+        }, 150);
+      }
+      setTimeout(() => {
+        this.width_change2();
+        this.data_loaded = true;
+      }, 500);
+    }, 1000);
   }
 }

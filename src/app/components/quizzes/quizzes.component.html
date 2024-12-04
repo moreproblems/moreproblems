@@ -4317,6 +4317,11 @@
             <button *ngIf="!state_filters.includes('Mississippi')" (click)="toggle_button('Mississippi')" class="toggle-button-off" tabindex="0"> <b>Mississippi</b> </button>
           </label>
           <label class="switch">
+            <input type="checkbox" style="margin: 0px" value="NE">
+            <button *ngIf="state_filters.includes('Nebraska')" (click)="toggle_button('Nebraska')" class="toggle-button-on" tabindex="0"> <b>Nebraska</b> </button>
+            <button *ngIf="!state_filters.includes('Nebraska')" (click)="toggle_button('Nebraska')" class="toggle-button-off" tabindex="0"> <b>Nebraska</b> </button>
+          </label>
+          <label class="switch">
             <input type="checkbox" style="margin: 0px" value="NJ">
             <button *ngIf="state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-on" tabindex="0"> <b>New Jersey</b> </button>
             <button *ngIf="!state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')" class="toggle-button-off" tabindex="0"> <b>New Jersey</b> </button>
