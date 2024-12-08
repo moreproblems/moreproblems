@@ -3774,7 +3774,7 @@ export class TemplateStandardsComponent implements OnInit {
         this.subtopic_problem_count = 0;
         this.subtopic_new_problem_count = 0;
         this.subtopic_search_dump = {};
-        if (this.authService.userData.role == 'Student') {
+        if (this.authService.userData && this.authService.userData.role == 'Student') {
             const exam_history = this.authService.userData.exams.history;
             for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
                 if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
