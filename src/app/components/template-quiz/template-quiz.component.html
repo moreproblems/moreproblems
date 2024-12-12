@@ -2766,12 +2766,16 @@
                     <button (click)="select_m_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
                         style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                         <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
-                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                        <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
+                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                        <div *ngIf="!is_image(choice.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     </button>
                     <button (click)="select_m_choice(choice, 0, '')" *ngIf="!is_matched(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"
                         style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                         <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
-                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                        <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
+                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                        <div *ngIf="!is_image(choice.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     </button>
                     <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                   </label>
@@ -2787,23 +2791,33 @@
                         <button (click)="select_m_choice('', 1, '')" *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
                         <button *ngIf="is_matched(choice[0], 1, '') && mode == 'explain' && m_submission[0][choice[0]][0] == choice[choice.length-1] && m_submission[0][choice[0]][0] == ' '" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(66, 156, 10)">
                           <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
-                          <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
+                          <img *ngIf="is_image(m_submission[0][choice[0]].slice(2))" src="./assets/{{m_submission[0][choice[0]].slice(2)}}"
+                            style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                          <div *ngIf="!is_image(m_submission[0][choice[0]].slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
                         </button>
                         <button (click)="remove_m_choice(choice[0], ''); select_m_choice(choice[0], 1, '')" *ngIf="is_matched(choice[0], 1, '') && mode == 'explain' && m_submission[0][choice[0]][0] == choice[choice.length-1] && m_submission[0][choice[0]][0] != ' '" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(66, 156, 10)">
                           <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
-                          <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
+                          <img *ngIf="is_image(m_submission[0][choice[0]].slice(2))" src="./assets/{{m_submission[0][choice[0]].slice(2)}}"
+                            style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                          <div *ngIf="!is_image(m_submission[0][choice[0]].slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
                         </button>
                         <button (click)="remove_m_choice(choice[0], ''); select_m_choice(choice[0], 1, '')" *ngIf="is_matched(choice[0], 1, '') && mode == 'explain' && m_submission[0][choice[0]][0] != choice[choice.length-1]" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(245, 77, 77)">
                           <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
-                          <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
+                          <img *ngIf="is_image(m_submission[0][choice[0]].slice(2))" src="./assets/{{m_submission[0][choice[0]].slice(2)}}"
+                            style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                          <div *ngIf="!is_image(m_submission[0][choice[0]].slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
                         </button>
                         <button *ngIf="is_matched(choice[0], 1, '') && mode == 'assess' && m_submission[0][choice[0]][0] == ' '" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                           <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
-                          <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
+                          <img *ngIf="is_image(m_submission[0][choice[0]].slice(2))" src="./assets/{{m_submission[0][choice[0]].slice(2)}}"
+                            style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                          <div *ngIf="!is_image(m_submission[0][choice[0]].slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
                         </button>
                         <button (click)="remove_m_choice(choice[0], ''); select_m_choice(choice[0], 1, '')" *ngIf="is_matched(choice[0], 1, '') && mode == 'assess' && m_submission[0][choice[0]][0] != ' '" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                           <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
-                          <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
+                          <img *ngIf="is_image(m_submission[0][choice[0]].slice(2))" src="./assets/{{m_submission[0][choice[0]].slice(2)}}"
+                            style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                          <div *ngIf="!is_image(m_submission[0][choice[0]].slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
                         </button>
                         <button (click)="select_m_choice(choice[0], 1, '')" *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] != choice[0]" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                       </label>
@@ -3618,12 +3632,16 @@
                     <button (click)="select_m_choice('', 0, part.key)" *ngIf="m_selection[get_part_num(part.key)][0] == choice" class="toggle-button-on"
                         style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                         <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
-                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                        <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
+                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                        <div *ngIf="!is_image(choice.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     </button>
                     <button (click)="select_m_choice(choice, 0, part.key)" *ngIf="!is_matched(choice, 0, part.key) && m_selection[get_part_num(part.key)][0] != choice" class="toggle-button-off"
                         style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                         <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
-                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
+                        <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
+                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                        <div *ngIf="!is_image(choice.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     </button>
                     <button *ngIf="is_matched(choice, 0, part.key)" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                   </label>
@@ -3639,11 +3657,15 @@
                       <button (click)="select_m_choice('', 1, part.key)" *ngIf="!is_matched(choice[0], 1, part.key) && m_selection[get_part_num(part.key)][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px"></button>
                       <button (click)="remove_m_choice(choice[0], part.key); select_m_choice(choice[0], 1, part.key)" *ngIf="is_matched(choice[0], 1, part.key) && m_submission[get_part_num(part.key)][choice[0]][0] == choice[choice.length-1]" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(66, 156, 10)">
                         <div style="margin: 0 20px 0 0"> <b>{{m_submission[get_part_num(part.key)][choice[0]][0]}}</b> </div>
-                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[get_part_num(part.key)][choice[0]].slice(2)}} </div>
+                        <img *ngIf="is_image(m_submission[get_part_num(part.key)][choice[0]].slice(2))" src="./assets/{{m_submission[get_part_num(part.key)][choice[0]].slice(2)}}"
+                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                        <div *ngIf="!is_image(m_submission[get_part_num(part.key)][choice[0]].slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[get_part_num(part.key)][choice[0]].slice(2)}} </div>
                       </button>
                       <button (click)="remove_m_choice(choice[0], part.key); select_m_choice(choice[0], 1, part.key)" *ngIf="is_matched(choice[0], 1, part.key) && m_submission[get_part_num(part.key)][choice[0]][0] != choice[choice.length-1]" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(245, 77, 77)">
                         <div style="margin: 0 20px 0 0"> <b>{{m_submission[get_part_num(part.key)][choice[0]][0]}}</b> </div>
-                        <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[get_part_num(part.key)][choice[0]].slice(2)}} </div>
+                        <img *ngIf="is_image(m_submission[get_part_num(part.key)][choice[0]].slice(2))" src="./assets/{{m_submission[get_part_num(part.key)][choice[0]].slice(2)}}"
+                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
+                        <div *ngIf="!is_image(m_submission[get_part_num(part.key)][choice[0]].slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[get_part_num(part.key)][choice[0]].slice(2)}} </div>
                       </button>
                       <button (click)="select_m_choice(choice[0], 1, part.key)" *ngIf="!is_matched(choice[0], 1, part.key) && m_selection[get_part_num(part.key)][1] != choice[0]" class="toggle-button-off" style="margin: auto; margin-top: 10px"></button>
                     </label>

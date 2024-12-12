@@ -33,16 +33,23 @@ export class StandardsComponent implements OnInit, AfterViewInit{
   state_labels: { [key: string]: string } = {
     "CC": "Common Core",
     "CO": "Colorado",
+    "DE": "Delaware",
     "FL": "Florida",
+    "IL": "Illinois",
     "MA": "Massachusetts",
     "MD": "Maryland",
+    "MO": "Missouri",
     "MS": "Mississippi",
+    "NE": "Nebraska",
     "NJ": "New Jersey",
+    "NM": "New Mexico",
     "NY": "New York",
     "PA": "Pennsylvania",
     "RI": "Rhode Island",
+    "SC": "South Carolina",
     "TN": "Tennessee",
-    "TX": "Texas"
+    "TX": "Texas",
+    "WI": "Wisconsin"
   };
 
   grade_labels: { [key: string]: string } = {
