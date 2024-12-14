@@ -2973,7 +2973,7 @@ export class HomeComponent implements OnInit {
   m_shuffled = false;
   choices_sequence: string[] = [];
   shuffle_choices: { [key: string]: string[] } = {};
-  unique_choices: string[] = [];
+  unique_choices: string[][] = [];
   random_index = 0
   random_list: string[] = [];
 
@@ -5115,27 +5115,27 @@ export class HomeComponent implements OnInit {
   }
 
   unique_m_st(choices: any, part: string) {
-    var part_num = 0;
-    if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
-    }
-    this.unique_choices = [];
-    for (const [key, choice] of Object.entries(choices)) {
-      if ((choice as any).Choice != '' && !this.unique_choices.includes((choice as any).Choice)) {
-        if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
-          this.unique_choices.push((choice as any).Choice + ':' + key[0])
-        }
-        else {
-          this.unique_choices.push((choice as any).Choice)
-        }
-        this.c_submission[part_num][(choice as any).Choice[0]] = [""];
-        this.subtopic_problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
-        this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
       }
-    }
-    this.unique_choices.sort();
-    console.log(this.unique_choices.sort());
-    // return (unique_choices);
+      this.unique_choices[part_num] = [];
+      for (const [key, choice] of Object.entries(choices)) {
+          if ((choice as any).Choice != '' && !this.unique_choices[part_num].includes((choice as any).Choice)) {
+              if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
+                  this.unique_choices[part_num].push((choice as any).Choice + ':' + key[0])
+              }
+              else {
+                  this.unique_choices[part_num].push((choice as any).Choice)
+              }
+              this.c_submission[part_num][(choice as any).Choice[0]] = [""];
+              this.subtopic_problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
+              this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
+          }
+      }
+      this.unique_choices[part_num].sort();
+      console.log(this.unique_choices[part_num].sort());
+      // return (unique_choices);
   }
 
   select_m_choice(ch: string, p: number, part: string) {

@@ -757,7 +757,7 @@
                 style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
                 <div *ngIf="subtopic_problem_number == +prob.key">
                   <label *ngFor="let num of prob.value.SubTopics | keyvalue"
-                    (click)="selectSubTopic([prob.value.Topics[+num.key]], prob.value.SubTopics[+num.key], 'none')" class="switch"
+                    (click)="select_subtopic([prob.value.Topics[+num.key]], prob.value.SubTopics[+num.key], 'none')" class="switch"
                     style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
                     <button class="topic-button"
                       style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey; background-color: #ccc">

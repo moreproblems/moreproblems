@@ -812,7 +812,7 @@
                 style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
                 <div *ngIf="subtopic_problem_number == +prob.key">
                   <label *ngFor="let num of prob.value.SubTopics | keyvalue"
-                    (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
+                    (click)="search_subtopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
                     style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
                     <button class="topic-button"
                       style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey; background-color: #ccc">
@@ -2159,7 +2159,7 @@
               style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
               <div *ngIf="problem_number == +prob.key">
                 <label *ngFor="let num of prob.value.SubTopics | keyvalue"
-                  (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
+                  (click)="search_subtopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
                   style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
                   <button class="topic-button"
                     style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey; background-color: #ccc">
@@ -2304,7 +2304,7 @@
               <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
                 <td colspan="2"
                   style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
-                  <a (click)="searchSubTopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
+                  <a (click)="search_subtopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
                       {{subtopic.key}} </i> </a>
                 </td>
                 <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"
@@ -2744,8 +2744,8 @@
               </div>
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
+                <div *ngFor="let choice of unique_choices[0]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                  <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2, choice.length-2)}} </h3>
                   <img *ngIf="is_image(choice.slice(2, choice.length-2))" src="./assets/{{choice.slice(2, choice.length-2)}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
@@ -2817,8 +2817,8 @@
               </div>
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                <div *ngFor="let choice of unique_choices[0]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2)}} </h3>
                   <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
@@ -2881,8 +2881,8 @@
               </div>
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                <div *ngFor="let choice of unique_choices[0]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2)}} </h3>
                   <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
@@ -3651,8 +3651,8 @@
               </div>
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
+                <div *ngFor="let choice of unique_choices[get_part_num(part.key)]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                  <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2, choice.length-2)}} </h3>
                   <img *ngIf="is_image(choice.slice(2, choice.length-2))" src="./assets/{{choice.slice(2, choice.length-2)}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
@@ -3706,8 +3706,8 @@
               </div>
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                <div *ngFor="let choice of unique_choices[get_part_num(part.key)]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2)}} </h3>
                   <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
@@ -3770,8 +3770,8 @@
               </div>
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                <div *ngFor="let choice of unique_choices[get_part_num(part.key)]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2)}} </h3>
                   <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
@@ -4690,6 +4690,14 @@
               tabindex="0"> <b>Mississippi</b> </button>
           </label>
           <label class="switch">
+            <input type="checkbox" style="margin: 0px" value="MO">
+            <button *ngIf="selected_curriculum == 'MO'"
+              (click)="selected_curriculum = ''; selected_grade = ''; ; selected_subject = ''" class="toggle-button-on"
+              tabindex="0"> <b>Missouri</b> </button>
+            <button *ngIf="selected_curriculum != 'MO'" (click)="select_curriculum('MS')" class="toggle-button-off"
+              tabindex="0"> <b>Missouri</b> </button>
+          </label>
+          <label class="switch">
             <input type="checkbox" style="margin: 0px" value="NJ">
             <button *ngIf="selected_curriculum == 'NJ'"
               (click)="selected_curriculum = ''; selected_grade = ''; ; selected_subject = ''" class="toggle-button-on"
@@ -5276,7 +5284,7 @@
               style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
               <div *ngIf="problem_number == +prob.key">
                 <label *ngFor="let num of prob.value.SubTopics | keyvalue"
-                  (click)="searchSubTopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
+                  (click)="search_subtopic(prob.value.Topics[+num.key], prob.value.SubTopics[+num.key])" class="switch"
                   style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
                   <button class="topic-button"
                     style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey; background-color: #ccc">
@@ -5381,7 +5389,7 @@
               <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
                 <td colspan="2"
                   style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
-                  <a (click)="searchSubTopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
+                  <a (click)="search_subtopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
                       {{subtopic.key}} </i> </a>
                 </td>
                 <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"
@@ -5848,8 +5856,8 @@
                 </div>
                 <br />
                 <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                  <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
+                  <div *ngFor="let choice of unique_choices[0]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                    <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2, choice.length-2)}} </h3>
                     <img *ngIf="is_image(choice.slice(2, choice.length-2))" src="./assets/{{choice.slice(2, choice.length-2)}}"
                       style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                     <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
@@ -5903,8 +5911,8 @@
                 </div>
                 <br />
                 <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                  <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <div *ngFor="let choice of unique_choices[0]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                    <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2)}} </h3>
                     <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
                       style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                     <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
@@ -5967,8 +5975,8 @@
                 </div>
                 <br />
                 <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                  <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                  <div *ngFor="let choice of unique_choices[0]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                    <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2)}} </h3>
                     <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
                       style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                     <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
@@ -6666,8 +6674,8 @@
               </div>
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2, choice.length-2)}} </h3>
+                <div *ngFor="let choice of unique_choices[get_part_num(part.key)]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                  <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2, choice.length-2)}} </h3>
                   <img *ngIf="is_image(choice.slice(2, choice.length-2))" src="./assets/{{choice.slice(2, choice.length-2)}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
@@ -6717,8 +6725,8 @@
               </div>
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                <div *ngFor="let choice of unique_choices[get_part_num(part.key)]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2)}} </h3>
                   <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
@@ -6781,8 +6789,8 @@
               </div>
               <br />
               <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                <div *ngFor="let choice of unique_choices" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px"> {{choice.slice(2)}} </h3>
+                <div *ngFor="let choice of unique_choices[get_part_num(part.key)]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
+                  <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2)}} </h3>
                   <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                   <label *ngFor="let selection of c_submission[get_part_num(part.key)][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">

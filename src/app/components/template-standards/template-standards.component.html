@@ -1247,7 +1247,7 @@ button.grade-button-l:hover {
     </div>
     <div *ngIf="selected_subtopic != '' && !signup && !login" style="align-items: left; width: min(1075px, 92%)">
       <section>
-        <div (click)="selected_subtopic=''" class="card card-small"
+        <div (click)="selected_subtopic=''; selected_student=''" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
           <img src="./assets/media/icons/caret.png"
             style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
@@ -1378,10 +1378,41 @@ button.grade-button-l:hover {
               </button>
             </div> -->
             <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
-              {{subtopic_problem_count}} Problems <b *ngIf="authService.userData.role == 'Student' || selected_student != ''">({{subtopic_new_problem_count}} you haven't seen yet)</b> </h3>
+              <b *ngIf="!authService.userData || (authService.userData.role != 'Student' && selected_student == '')">{{subtopic_problem_count}} Total Problems</b> <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student != '')">{{subtopic_new_problem_count}} Remaining Problems {{(subtopic_new_problem_count != subtopic_problem_count) ? '(' + ''+subtopic_correct_problem_count + ' / ' + ''+(subtopic_problem_count-subtopic_new_problem_count) + ' correct so far)' : ''}}</b> </h3>
+            <div *ngIf="selected_student != ''" class="card-container"
+              style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
+              <label *ngFor="let prob of (subtopic_search_dump | values)"
+                class="switch" style="padding: 0px; margin: 0px; height: 14px; width: 32px">
+                <button
+                  *ngIf="!(my_students_data[selected_student].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) || ((my_students_data[selected_student].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status != 'Completed'"
+                  class="toggle-button-disabled"
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(189, 189, 189); border-radius: 3px">
+                </button>
+                <button
+                  *ngIf="(my_students_data[selected_student].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((my_students_data[selected_student].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && (((authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length == 1 && (authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct[0][0] == '✅') || ((authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length > 1 && is_MP_correct((authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct)))"
+                  class="toggle-button-disabled"
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px">
+                </button>
+                <button
+                  *ngIf="(my_students_data[selected_student].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((my_students_data[selected_student].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && ((authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length == 1 && (authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct[0][0] == '👀')"
+                  class="toggle-button-disabled"
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(25, 106, 177); border-radius: 3px">
+                </button>
+                <button
+                  *ngIf="(my_students_data[selected_student].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((my_students_data[selected_student].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && (authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length > 1 && !is_MP_correct((authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct) && is_MP_partial((authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct)"
+                  class="toggle-button-disabled"
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px">
+                </button>
+                <button
+                  *ngIf="(my_students_data[selected_student].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((my_students_data[selected_student].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && (((authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length == 1 && !['✅', '👀'].includes((authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct[0][0])) || ((authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length > 1 && !is_MP_correct((authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct) && !is_MP_partial((authService.getStudExamSubmission2(selected_student, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct)))"
+                  class="toggle-button-disabled"
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px">
+                </button>
+              </label>
+            </div>
             <div class="card-container"
               style="align-items: center">
-              <button *ngIf="subtopic_problem_number == 0" class="grade-button" (click)="next_problem_st(); scroll_top()"
+              <button *ngIf="subtopic_problem_number == 0" class="grade-button" (click)="begin_practice_st(); scroll_top()"
                 style="display: block; max-width: 150px; max-height: 100px">
                 <b> Begin Practice </b>
               </button>
@@ -1434,7 +1465,7 @@ button.grade-button-l:hover {
                 style="max-height: 500px; height: auto; align-items: center; text-align: center; justify-content: center">
                 <div *ngIf="subtopic_problem_number == +prob.key">
                   <label *ngFor="let num of prob.value.SubTopics | keyvalue"
-                    (click)="selectSubTopic([prob.value.Topics[+num.key]], prob.value.SubTopics[+num.key], 'none')" class="switch"
+                    (click)="select_subtopic([prob.value.Topics[+num.key]], prob.value.SubTopics[+num.key], 'none')" class="switch"
                     style="max-height: 500px; height: auto; max-width: min(900px, 90%); align-items: center; text-align: center; margin: 5px auto">
                     <button class="topic-button"
                       style="width: 100%; font-size: 16px; min-width: 150px; display: flex; flex-direction: row; align-items: center; padding: 5px; color: darkslategrey; background-color: #ccc">
@@ -2711,7 +2742,7 @@ button.grade-button-l:hover {
                   </span>
                   <b *ngIf="cluster.Key != ''" style="font-weight: 800">{{cluster.Key}}: </b>
                   <b *ngIf="cluster.NumProb == 0" style="font-weight: 500">{{cluster.Label}}</b>
-                  <a *ngIf="cluster.NumProb > 0" (click)="selectSubTopic([domain.Label], cluster.Label, cluster.Key)" style="font-weight: 500">{{cluster.Label}}</a> <b *ngIf="cluster.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{cluster.NumProb}}</i>]</b>
+                  <a *ngIf="cluster.NumProb > 0" (click)="select_subtopic([domain.Label], cluster.Label, cluster.Key)" style="font-weight: 500">{{cluster.Label}}</a> <b *ngIf="cluster.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{cluster.NumProb}}</i>]</b>
                   <ul style="font-size: 17px; line-height: 21px; padding-left: 17px">
                     <li *ngFor="let standard of cluster.Subs" style="margin-top: 15px; margin-bottom: 6px">
                       <span *ngIf="standard.Fav && authService.userData as user"
@@ -2719,7 +2750,7 @@ button.grade-button-l:hover {
                       </span>
                       <b *ngIf="standard.Key != ''" style="font-weight: 800">{{standard.Key}}: </b>
                       <b *ngIf="standard.NumProb == 0" style="font-weight: 500">{{standard.Label}}</b>
-                      <a *ngIf="standard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], standard.Label, standard.Key)" style="font-weight: 500">{{standard.Label}}</a> <b *ngIf="standard.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{standard.NumProb}}</i>]</b>
+                      <a *ngIf="standard.NumProb > 0" (click)="select_subtopic([domain.Label, cluster.Label], standard.Label, standard.Key)" style="font-weight: 500">{{standard.Label}}</a> <b *ngIf="standard.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{standard.NumProb}}</i>]</b>
                       <ul style="font-size: 16px; line-height: 20px; padding-left: 17px">
                         <li *ngFor="let substandard of standard.Subs" style="margin-top: 10px; margin-bottom: 4px">
                           <span *ngIf="substandard.Fav && authService.userData as user"
@@ -2727,7 +2758,7 @@ button.grade-button-l:hover {
                           </span>
                           <b *ngIf="substandard.Key != ''" style="font-weight: 800">{{substandard.Key}}: </b>
                           <b *ngIf="substandard.NumProb == 0" style="font-weight: 500">{{substandard.Label}}</b>
-                          <a *ngIf="substandard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], substandard.Label, substandard.Key)" style="font-weight: 500">{{substandard.Label}}</a> <b *ngIf="substandard.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{substandard.NumProb}}</i>]</b>
+                          <a *ngIf="substandard.NumProb > 0" (click)="select_subtopic([domain.Label, cluster.Label], substandard.Label, substandard.Key)" style="font-weight: 500">{{substandard.Label}}</a> <b *ngIf="substandard.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{substandard.NumProb}}</i>]</b>
                           <ul style="font-size: 15px; line-height: 19px; padding-left: 17px">
                             <li *ngFor="let subsubstandard of substandard.Subs" style="margin-top: 10px; margin-bottom: 4px">
                               <span *ngIf="subsubstandard.Fav && authService.userData as user"
@@ -2735,7 +2766,7 @@ button.grade-button-l:hover {
                               </span>
                               <b *ngIf="subsubstandard.Key != ''" style="font-weight: 800">{{subsubstandard.Key}}: </b>
                               <b *ngIf="subsubstandard.NumProb == 0" style="font-weight: 500">{{subsubstandard.Label}}</b>
-                              <a *ngIf="subsubstandard.NumProb > 0" (click)="selectSubTopic([domain.Label, cluster.Label], subsubstandard.Label, subsubstandard.Key)" style="font-weight: 500">{{subsubstandard.Label}}</a> <b *ngIf="subsubstandard.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{subsubstandard.NumProb}}</i>]</b>
+                              <a *ngIf="subsubstandard.NumProb > 0" (click)="select_subtopic([domain.Label, cluster.Label], subsubstandard.Label, subsubstandard.Key)" style="font-weight: 500">{{subsubstandard.Label}}</a> <b *ngIf="subsubstandard.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{subsubstandard.NumProb}}</i>]</b>
                             </li>
                           </ul>
                         </li>

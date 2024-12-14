@@ -2161,7 +2161,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
   m_shuffled = false;
   choices_sequence: string[] = [];
   shuffle_choices: { [key: string]: string[] } = {};
-  unique_choices: string[] = [];
+  unique_choices: string[][] = [];
 
   exam_submission: { [key: number]: { 'Number': number, 'Topics': string[], 'SubTopics': string[], 'Choice': string[][], 'Correct': string[][], 'Rationale': string[][], 'Attempts': number[], 'Path': string[][][], 'Seconds': number, 'Time': string, 'Flags': boolean[] } } = {};
 
@@ -5240,14 +5240,14 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
       if (part != '') {
           part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
       }
-      this.unique_choices = [];
+      this.unique_choices[part_num] = [];
       for (const [key, choice] of Object.entries(choices)) {
-          if ((choice as any).Choice != '' && !this.unique_choices.includes((choice as any).Choice)) {
+          if ((choice as any).Choice != '' && !this.unique_choices[part_num].includes((choice as any).Choice)) {
               if (this.exam_dump[this.problem_number].Type == 'O' || (this.exam_dump[this.problem_number].Type == 'MP' && this.exam_dump[this.problem_number].Parts[part].Type == 'O')) {
-                  this.unique_choices.push((choice as any).Choice + ':' + key[0])
+                  this.unique_choices[part_num].push((choice as any).Choice + ':' + key[0])
               }
               else {
-                  this.unique_choices.push((choice as any).Choice)
+                  this.unique_choices[part_num].push((choice as any).Choice)
               }
               if (key[0] == ' ' && (choice as any).Key.Correct) {
                   this.m_submission[0][(choice as any).Choice[0]] = key;
@@ -5258,33 +5258,33 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
           }
       }
       console.log(this.m_submission);
-      this.unique_choices.sort();
-      console.log(this.unique_choices.sort());
+      this.unique_choices[part_num].sort();
+      console.log(this.unique_choices[part_num].sort());
       // return (unique_choices);
   }
 
   unique_m_st(choices: any, part: string) {
-    var part_num = 0;
-    if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
-    }
-    this.unique_choices = [];
-    for (const [key, choice] of Object.entries(choices)) {
-      if ((choice as any).Choice != '' && !this.unique_choices.includes((choice as any).Choice)) {
-        if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
-          this.unique_choices.push((choice as any).Choice + ':' + key[0])
-        }
-        else {
-          this.unique_choices.push((choice as any).Choice)
-        }
-        this.c_submission[part_num][(choice as any).Choice[0]] = [""];
-        this.subtopic_problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
-        this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
       }
-    }
-    this.unique_choices.sort();
-    console.log(this.unique_choices.sort());
-    // return (unique_choices);
+      this.unique_choices[part_num] = [];
+      for (const [key, choice] of Object.entries(choices)) {
+          if ((choice as any).Choice != '' && !this.unique_choices[part_num].includes((choice as any).Choice)) {
+              if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
+                  this.unique_choices[part_num].push((choice as any).Choice + ':' + key[0])
+              }
+              else {
+                  this.unique_choices[part_num].push((choice as any).Choice)
+              }
+              this.c_submission[part_num][(choice as any).Choice[0]] = [""];
+              this.subtopic_problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
+              this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
+          }
+      }
+      this.unique_choices[part_num].sort();
+      console.log(this.unique_choices[part_num].sort());
+      // return (unique_choices);
   }
 
   select_m_choice(ch: string, p: number, part: string) {
@@ -7038,7 +7038,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     });
   }
 
-  searchSubTopic(topic: string, subtopic: string) {
+  search_subtopic(topic: string, subtopic: string) {
     this.subtopic_problem_count = 0;
     this.subtopic_search_dump = {};
     for (const [ex, dump] of Object.entries(this.dump_dict)) {
@@ -7545,6 +7545,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     // }
     if (this.exam_attribute_dump[this.key].Parts.length == 0) {
       this.ordered_dump = this.dump_dict[this.key];
+      console.log(this.ordered_dump);
       for (let num of Object.keys(this.ordered_dump)) {
         if (num != 'default') {
           this.exam_submission[+num] = {

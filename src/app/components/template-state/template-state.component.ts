@@ -4239,7 +4239,7 @@ export class TemplateStateComponent implements OnInit {
   m_shuffled = false;
   choices_sequence: string[] = [];
   shuffle_choices: { [key: string]: string[] } = {};
-  unique_choices: string[] = [];
+  unique_choices: string[][] = [];
   random_index = 0
   random_list: string[] = [];
 
@@ -4650,16 +4650,16 @@ export class TemplateStateComponent implements OnInit {
           this.standards_dump = this.s_dump_dict[id][1];
           for (let domain of this.standards_dump.Standards) {
             for (let cluster of domain.Subs) {
-              cluster.NumProb = this.searchSubTopic([domain.Label], cluster.Label);
+              cluster.NumProb = this.search_subtopic([domain.Label], cluster.Label);
               this.examples_dump[cluster.Key] = cluster.Examples;
               for (let standard of cluster.Subs) {
-                standard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], standard.Label);
+                standard.NumProb = this.search_subtopic([domain.Label, cluster.Label], standard.Label);
                 this.examples_dump[standard.Key] = standard.Examples;
                 for (let substandard of standard.Subs) {
-                  substandard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], substandard.Label);
+                  substandard.NumProb = this.search_subtopic([domain.Label, cluster.Label], substandard.Label);
                   this.examples_dump[substandard.Key] = substandard.Examples;
                   for (let subsubstandard of substandard.Subs) {
-                    subsubstandard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], subsubstandard.Label);
+                    subsubstandard.NumProb = this.search_subtopic([domain.Label, cluster.Label], subsubstandard.Label);
                     this.examples_dump[subsubstandard.Key] = subsubstandard.Examples;
                   }
                 }
@@ -4757,7 +4757,7 @@ export class TemplateStateComponent implements OnInit {
     }, 250);
   }
 
-  searchSubTopic(topics: string[], subtopic: string) {
+  search_subtopic(topics: string[], subtopic: string) {
     var subtop_num_prob = 0;
     for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
       for (const [num, prob] of Object.entries(dump)) {
@@ -6156,27 +6156,27 @@ export class TemplateStateComponent implements OnInit {
   }
 
   unique_m_st(choices: any, part: string) {
-    var part_num = 0;
-    if (part != '') {
-      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
-    }
-    this.unique_choices = [];
-    for (const [key, choice] of Object.entries(choices)) {
-      if ((choice as any).Choice != '' && !this.unique_choices.includes((choice as any).Choice)) {
-        if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
-          this.unique_choices.push((choice as any).Choice + ':' + key[0])
-        }
-        else {
-          this.unique_choices.push((choice as any).Choice)
-        }
-        this.c_submission[part_num][(choice as any).Choice[0]] = [""];
-        this.subtopic_problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
-        this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
       }
-    }
-    this.unique_choices.sort();
-    console.log(this.unique_choices.sort());
-    // return (unique_choices);
+      this.unique_choices[part_num] = [];
+      for (const [key, choice] of Object.entries(choices)) {
+          if ((choice as any).Choice != '' && !this.unique_choices[part_num].includes((choice as any).Choice)) {
+              if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
+                  this.unique_choices[part_num].push((choice as any).Choice + ':' + key[0])
+              }
+              else {
+                  this.unique_choices[part_num].push((choice as any).Choice)
+              }
+              this.c_submission[part_num][(choice as any).Choice[0]] = [""];
+              this.subtopic_problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
+              this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
+          }
+      }
+      this.unique_choices[part_num].sort();
+      console.log(this.unique_choices[part_num].sort());
+      // return (unique_choices);
   }
 
   select_m_choice(ch: string, p: number, part: string) {

@@ -3486,7 +3486,7 @@ export class TemplateStandardsComponent implements OnInit {
     m_shuffled = false;
     choices_sequence: string[] = [];
     shuffle_choices: { [key: string]: string[] } = {};
-    unique_choices: string[] = [];
+    unique_choices: string[][] = [];
     random_index = 0
     random_list: string[] = [];
 
@@ -3499,6 +3499,7 @@ export class TemplateStandardsComponent implements OnInit {
     includes_standard = false;
     subtopic_problem_count = 0;
     subtopic_new_problem_count = 0;
+    subtopic_correct_problem_count = 0;
     subtopic_problem_number = 0;
     subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
     supp_st_dump: any = {};
@@ -3812,20 +3813,19 @@ export class TemplateStandardsComponent implements OnInit {
     //   this.exam_inprogress = false;
     //   this.progress_number = 0;
       if (id != this.selected_student) {
-        this.selected_student = id;
-        this.subtopic_new_problem_count = 0;
+        this.selected_student = '';
         this.selected_student_data = this.my_students_data[id];
         const exam_history = this.my_students_data[id].exams.history;
+        this.subtopic_problem_count = 0;
+        this.subtopic_search_dump = {};
         for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-            if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+            if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
                 for (const [num, prob] of Object.entries(dump)) {
                     if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
                         if (prob.SubTopics.includes(this.selected_subtopic)) {
                             if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                                // this.selected_topic = topic;
-                                // this.standard_id = standardID;
-                                this.subtopic_new_problem_count += 1;
-                                // this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                                this.subtopic_problem_count += 1;
+                                this.subtopic_search_dump[this.subtopic_problem_count] = prob;
                                 // this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
                             }
                         }
@@ -3833,6 +3833,55 @@ export class TemplateStandardsComponent implements OnInit {
                 }
             }
         }
+        for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+            if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+                for (const [num, prob] of Object.entries(dump)) {
+                    if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                        if (prob.SubTopics.includes(this.selected_subtopic)) {
+                            if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                                this.subtopic_problem_count += 1;
+                                this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                                // this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        this.subtopic_new_problem_count = 0;
+        this.subtopic_correct_problem_count = 0;
+        for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+            if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+                for (const [num, prob] of Object.entries(dump)) {
+                    if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                        if (prob.SubTopics.includes(this.selected_subtopic)) {
+                            if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                                this.subtopic_new_problem_count += 1;
+                            }
+                        }
+                    }
+                }
+            }
+            if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+                const exam_sub = this.authService.getStudExamSubmission2(id, ex);
+                setTimeout(() => {
+                    for (const [num, prob] of Object.entries(dump)) {
+                        if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                            if (prob.SubTopics.includes(this.selected_subtopic)) {
+                                if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                                    if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
+                                        this.subtopic_correct_problem_count += 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }, 50);
+            }
+        }
+        setTimeout(() => {
+            this.selected_student = id;
+        }, 500);
         // const exam_history = this.my_students_data[id].exams.history;
         // for (const [key, det] of Object.entries(exam_history)) {
         //   if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
@@ -3867,7 +3916,7 @@ export class TemplateStandardsComponent implements OnInit {
         this.stateSet = true;
     }
 
-    searchSubTopic(topics: string[], subtopic: string) {
+    search_subtopic(topics: string[], subtopic: string) {
         var subtop_num_prob = 0;
         for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
             for (const [num, prob] of Object.entries(dump)) {
@@ -3887,7 +3936,7 @@ export class TemplateStandardsComponent implements OnInit {
         return (subtop_num_prob);
     }
 
-    selectSubTopic(topics: string[], subtopic: string, standardID: string) {
+    select_subtopic(topics: string[], subtopic: string, standardID: string) {
         this.subtopic_problem_count = 0;
         this.subtopic_new_problem_count = 0;
         this.subtopic_search_dump = {};
@@ -3900,16 +3949,30 @@ export class TemplateStandardsComponent implements OnInit {
                             if (prob.SubTopics.includes(subtopic)) {
                                 for (let topic of topics) {
                                     if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
-                                        // this.selected_topic = topic;
-                                        // this.standard_id = standardID;
                                         this.subtopic_new_problem_count += 1;
-                                        // this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-                                        // this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
                                     }
                                 }
                             }
                         }
                     }
+                }
+                if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+                    const exam_sub = this.authService.getExamSubmission2(ex);
+                    setTimeout(() => {
+                        for (const [num, prob] of Object.entries(dump)) {
+                            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                                if (prob.SubTopics.includes(subtopic)) {
+                                    for (let topic of topics) {
+                                        if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                                            if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
+                                                this.subtopic_correct_problem_count += 1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }, 50);
                 }
             }
         }
@@ -4036,10 +4099,12 @@ export class TemplateStandardsComponent implements OnInit {
         //         }
         //     }
         // }
-        for (let fav of this.authService.userData.standards.favorites) {
-            for (let topic of topics) {
-                if (topic == fav[0] && subtopic == fav[1]) {
-                    this.standard_fav = true;
+        if (this.authService.userData) {
+            for (let fav of this.authService.userData.standards.favorites) {
+                for (let topic of topics) {
+                    if (topic == fav[0] && subtopic == fav[1]) {
+                        this.standard_fav = true;
+                    }
                 }
             }
         }
@@ -4968,29 +5033,29 @@ export class TemplateStandardsComponent implements OnInit {
         return (this.shuffle_choices['' + part_num].sort());
     }
 
-    unique_m_st(choices: any, part: string) {
-        var part_num = 0;
-        if (part != '') {
-            part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
-        }
-        this.unique_choices = [];
-        for (const [key, choice] of Object.entries(choices)) {
-            if ((choice as any).Choice != '' && !this.unique_choices.includes((choice as any).Choice)) {
-                if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
-                    this.unique_choices.push((choice as any).Choice + ':' + key[0])
-                }
-                else {
-                    this.unique_choices.push((choice as any).Choice)
-                }
-                this.c_submission[part_num][(choice as any).Choice[0]] = [""];
-                this.subtopic_problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
-                this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
-            }
-        }
-        this.unique_choices.sort();
-        console.log(this.unique_choices.sort());
-        // return (unique_choices);
-    }
+  unique_m_st(choices: any, part: string) {
+      var part_num = 0;
+      if (part != '') {
+          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      this.unique_choices[part_num] = [];
+      for (const [key, choice] of Object.entries(choices)) {
+          if ((choice as any).Choice != '' && !this.unique_choices[part_num].includes((choice as any).Choice)) {
+              if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
+                  this.unique_choices[part_num].push((choice as any).Choice + ':' + key[0])
+              }
+              else {
+                  this.unique_choices[part_num].push((choice as any).Choice)
+              }
+              this.c_submission[part_num][(choice as any).Choice[0]] = [""];
+              this.subtopic_problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
+              this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
+          }
+      }
+      this.unique_choices[part_num].sort();
+      console.log(this.unique_choices[part_num].sort());
+      // return (unique_choices);
+  }
 
     select_m_choice(ch: string, p: number, part: string) {
         var part_num = 0;
@@ -5428,6 +5493,30 @@ export class TemplateStandardsComponent implements OnInit {
         return g_key;
     }
 
+    is_MP_correct(choices: any) {
+      var comp = true;
+      for (let part of choices) {
+        for (let ch of part) {
+          if (ch != '✅') {
+            comp = false;
+          }
+        }
+      }
+      return comp;
+    }
+  
+    is_MP_partial(choices: any) {
+      var comp = false;
+      for (let part of choices) {
+        for (let ch of part) {
+          if (ch == '✅') {
+            comp = true;
+          }
+        }
+      }
+      return comp;
+    }
+
     is_MP_st_complete() {
         var comp = true;
         for (let resp of this.subtopic_attempt_response) {
@@ -5482,6 +5571,124 @@ export class TemplateStandardsComponent implements OnInit {
         const MFRIel: string = "inputMFR-" + part + "-" + index;
         var dropdown: any = document.getElementById(MFRIel);
         return dropdown.value;
+    }
+
+    begin_practice_st() {
+        if (this.subtopic_problem_count != this.subtopic_new_problem_count) {
+            this.subtopic_problem_number = this.subtopic_problem_count-this.subtopic_new_problem_count + 1;
+        }
+        else {
+            this.subtopic_problem_number = 1;  
+        }
+        if (this.subtopic_problem_number > this.subtopic_problem_count) {
+            this.selected_subtopic = '';
+            this.standard_id = '';
+        }
+        else {
+            this.subtopic_attempt_path = [];
+            this.subtopic_attempt_response = [];
+            this.subtopic_attempt_explanation = [];
+            this.subtopic_problem_selection = [];
+            if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
+                this.subtopic_problem_attempts = [0];
+                this.subtopic_attempt_path = [[]];
+                this.subtopic_attempt_response = [''];
+                this.subtopic_attempt_explanation = [[]];
+                if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                    this.subtopic_problem_selection = [['']];
+                    if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                        setTimeout(() => {
+                            this.plot_graph_gp('', true);
+                        }, 500);
+                    }
+                }
+                else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                    this.subtopic_problem_selection = [[]];
+                    if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                        this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
+                    }
+                    if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                        setTimeout(() => {
+                            this.plot_graph_mgp('', true);
+                        }, 500);
+                    }
+                }
+                else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                    var msp_nums: string[] = [];
+                    this.subtopic_problem_selection.push([]);
+                    for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+                        if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+                            this.subtopic_problem_selection[0].push('');
+                            msp_nums.push(choice[0]);
+                        }
+                    }
+                }
+            }
+            else {
+                this.subtopic_problem_attempts = [];
+                for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+                    this.subtopic_problem_attempts.push(0);
+                    this.subtopic_attempt_path.push([]);
+                    this.subtopic_attempt_response.push('');
+                    this.subtopic_attempt_explanation.push([]);
+                    if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                        this.subtopic_problem_selection.push(['']);
+                        if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                            setTimeout(() => {
+                                this.plot_graph_gp(part, true);
+                            }, 500);
+                        }
+                    }
+                    else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                        this.subtopic_problem_selection.push([]);
+                        if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                            this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
+                        }
+                        if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                            setTimeout(() => {
+                                this.plot_graph_mgp(part, true);
+                            }, 500);
+                        }
+                    }
+                    else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                        var msp_nums: string[] = [];
+                        this.subtopic_problem_selection.push([]);
+                        for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+                            if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+                                this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part)].push('');
+                                msp_nums.push(choice[0]);
+                            }
+                        }
+                    }
+                }
+            }
+            this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
+            for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
+                setTimeout(() => {
+                    this.read_supp_st_json(supp);
+                }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+            }
+            if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
+                for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+                    for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
+                        if (block.startsWith(':table:')) {
+                            setTimeout(() => {
+                                this.read_table_st(block.slice(7));
+                            }, 100);
+                        }
+                    }
+                }
+            }
+            if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
+                for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
+                    if (block.startsWith(':table:')) {
+                        setTimeout(() => {
+                            this.read_table_st(block.slice(7));
+                        }, 100);
+                    }
+                }
+            }
+        }
     }
 
     next_problem_st() {
@@ -5853,8 +6060,8 @@ export class TemplateStandardsComponent implements OnInit {
             for (let domain of this.standards_dump.Standards) {
                 domain.NumProb = 0;
                 for (let cluster of domain.Subs) {
-                    domain.NumProb += this.searchSubTopic([domain.Label], cluster.Label);
-                    cluster.NumProb = this.searchSubTopic([domain.Label], cluster.Label);
+                    domain.NumProb += this.search_subtopic([domain.Label], cluster.Label);
+                    cluster.NumProb = this.search_subtopic([domain.Label], cluster.Label);
                     cluster.Fav = false;
                     this.examples_dump[cluster.Key] = cluster.Examples;
                     if (this.authService.userData) {
@@ -5867,8 +6074,8 @@ export class TemplateStandardsComponent implements OnInit {
                         }
                     }
                     for (let standard of cluster.Subs) {
-                        domain.NumProb += this.searchSubTopic([domain.Label, cluster.Label], standard.Label);
-                        standard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], standard.Label);
+                        domain.NumProb += this.search_subtopic([domain.Label, cluster.Label], standard.Label);
+                        standard.NumProb = this.search_subtopic([domain.Label, cluster.Label], standard.Label);
                         standard.Fav = false;
                         this.examples_dump[standard.Key] = standard.Examples;
                         if (this.authService.userData) {
@@ -5881,8 +6088,8 @@ export class TemplateStandardsComponent implements OnInit {
                             }
                         }
                         for (let substandard of standard.Subs) {
-                            domain.NumProb += this.searchSubTopic([domain.Label, cluster.Label], substandard.Label);
-                            substandard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], substandard.Label);
+                            domain.NumProb += this.search_subtopic([domain.Label, cluster.Label], substandard.Label);
+                            substandard.NumProb = this.search_subtopic([domain.Label, cluster.Label], substandard.Label);
                             substandard.Fav = false;
                             this.examples_dump[substandard.Key] = substandard.Examples;
                             if (this.authService.userData) {
@@ -5895,8 +6102,8 @@ export class TemplateStandardsComponent implements OnInit {
                                 }
                             }
                             for (let subsubstandard of substandard.Subs) {
-                                domain.NumProb += this.searchSubTopic([domain.Label, cluster.Label], subsubstandard.Label);
-                                subsubstandard.NumProb = this.searchSubTopic([domain.Label, cluster.Label], subsubstandard.Label);
+                                domain.NumProb += this.search_subtopic([domain.Label, cluster.Label], subsubstandard.Label);
+                                subsubstandard.NumProb = this.search_subtopic([domain.Label, cluster.Label], subsubstandard.Label);
                                 subsubstandard.Fav = false;
                                 this.examples_dump[subsubstandard.Key] = subsubstandard.Examples;
                                 if (this.authService.userData) {
