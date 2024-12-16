@@ -1247,7 +1247,7 @@ button.grade-button-l:hover {
     </div>
     <div *ngIf="selected_subtopic != '' && !signup && !login" style="align-items: left; width: min(1075px, 92%)">
       <section>
-        <div (click)="selected_subtopic=''; selected_student=''" class="card card-small"
+        <div (click)="selected_subtopic=''; selected_student_st=''; selected_student=''" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
           <img src="./assets/media/icons/caret.png"
             style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
@@ -1315,7 +1315,7 @@ button.grade-button-l:hover {
             <div
               *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.my_students != []"
               class="card-container" style="align-items: center; padding-top: 0px; margin-top: 10px">
-              <div *ngFor="let std of my_students" (click)="select_student(my_students_data[std].uid)"
+              <div *ngFor="let std of my_students" (click)="select_student_st(my_students_data[std].uid)"
                 class="card card-small" style="height: 75px; width: 170px; align-items: center; padding-top: 0; background-color: #ccc">
                 <div class="avatar-container"
                   style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 0">
@@ -1378,8 +1378,10 @@ button.grade-button-l:hover {
               </button>
             </div> -->
             <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
-              <b *ngIf="!authService.userData || (authService.userData.role != 'Student' && selected_student == '')">{{subtopic_problem_count}} Total Problems</b> <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student != '')">{{subtopic_new_problem_count}} Remaining Problems {{(subtopic_new_problem_count != subtopic_problem_count) ? '(' + ''+subtopic_correct_problem_count + ' / ' + ''+(subtopic_problem_count-subtopic_new_problem_count) + ' correct so far)' : ''}}</b> </h3>
-            <div *ngIf="selected_student != ''" class="card-container"
+              <b *ngIf="!authService.userData || (authService.userData.role != 'Student' && selected_student == '')">{{subtopic_problem_count}} Total Problems</b> <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student != '')">{{subtopic_new_problem_count}} Remaining Problems</b> </h3>
+            <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
+              <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student != '')">{{(subtopic_new_problem_count != subtopic_problem_count) ? '(' + ''+subtopic_correct_problem_count + ' / ' + ''+(subtopic_problem_count-subtopic_new_problem_count) + ' correct so far)' : ''}}</b> </h3>
+            <div *ngIf="selected_student != '' && subtopic_new_problem_count != subtopic_problem_count" class="card-container"
               style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
               <label *ngFor="let prob of (subtopic_search_dump | values)"
                 class="switch" style="padding: 0px; margin: 0px; height: 14px; width: 32px">

@@ -1,9 +1,14 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Injectable, ElementRef, ViewChild, Input, Renderer2 } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { getAuth, RecaptchaVerifier } from 'firebase/auth';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AuthService } from "../../shared/services/auth.service";
+import { WindowService } from '../../shared/services/window.service';
 import { serverTimestamp } from "firebase/database";
+import intlTelInput from 'intl-tel-input';
 import * as Plotly from 'plotly.js-dist-min';
+import * as Chart from 'chart.js/auto';
 import * as examMetadata from "src/assets/problems/exams.json";
 import * as COG3EProblems from "src/assets/problems/COG3E/COG3E-problems.json";
 import * as COG4EProblems from "src/assets/problems/COG4E/COG4E-problems.json";
@@ -712,6 +717,11 @@ export class ProblemsComponent implements OnInit {
   blank = " ";
 
   user_data: any = {};
+  my_students: string[] = [];
+  my_students_data: any = {};
+  selected_student: string = "";
+  selected_student_st: string = "";
+  selected_student_data: any = {};
 
   expand_filters = true;
   topics: string[] = [];
@@ -735,8 +745,6 @@ export class ProblemsComponent implements OnInit {
   assign_e = false;
   all_students: string[] = [];
   all_students_data: any = {};
-  my_students: string[] = [];
-  my_students_data: any = {};
   new_assignments: string[] = [];
   my_class_metadata: any[] = [];
   class_data: any = {};
@@ -1440,7 +1448,7 @@ export class ProblemsComponent implements OnInit {
   WIG4SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = WIG4SSProblems;
   WIG8SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = WIG8SSProblems;
   WIG10SS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = WIG10SSProblems;
-  dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } } = {
+  e_dump_dict: { [key: string]: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } } = {
     "COG3E": this.COG3E_exam_dump,
     "COG4E": this.COG4E_exam_dump,
     "COG5E": this.COG5E_exam_dump,
@@ -2169,12 +2177,16 @@ export class ProblemsComponent implements OnInit {
   correct_percent = 0;
   topic_breakdown: { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string, 'Subs': { [key: string]: { 'Correct': number, 'Incorrect': number, 'Total': number, 'Percent': number, 'Seconds': number, 'Time': string } } } } = {};
 
+  signup: boolean = false;
+  login: boolean = false;
   selected_topic = "";
   selected_subtopic = "";
   standard_id = '';
   standard_fav = false;
   includes_standard = false;
   subtopic_problem_count = 0;
+  subtopic_new_problem_count = 0;
+  subtopic_correct_problem_count = 0;
   subtopic_problem_number = 0;
   subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
   subtopic_problem_selection: any[] = [];
@@ -2208,7 +2220,25 @@ export class ProblemsComponent implements OnInit {
     "Reading & Writing": ["Reading & Writing", "English Reading", "English Writing"],
   };
 
-  constructor(public router: Router, public authService: AuthService, private http: HttpClient) { }
+  iti: any;
+  user: any;
+  phone: string = "";
+  iti_msg: string = "";
+  otp: string = '';
+  verify: any
+  windowRef: any;
+  login_method = "";
+  user_role = "";
+  pw_reset = false;
+  win = new WindowService;
+
+  @ViewChild('userPhone') userPhone: ElementRef;
+
+  constructor(public router: Router, public authService: AuthService, private afAuth: AngularFireAuth, private http: HttpClient) { }
+
+  max(num1: number, num2: number) {
+    return (Math.max(num1, num2));
+  }
 
   // public onChange(file: File): void {
   //   let fileReader: FileReader = new FileReader();
@@ -2736,7 +2766,7 @@ export class ProblemsComponent implements OnInit {
     this.dump_count = 0;
     for (let online_key of this.exam_set) {
       if (this.filtered_set.includes(online_key)) {
-        for (const [num, value] of Object.entries(this.dump_dict[online_key])) {
+        for (const [num, value] of Object.entries(this.e_dump_dict[online_key])) {
           if (value.Number <= this.exam_attribute_dump[online_key].NumQuestions) {
             var prob: any = {};
             for (const [key, val] of Object.entries(value)) {
@@ -5393,6 +5423,30 @@ export class ProblemsComponent implements OnInit {
     return g_key;
   }
 
+  is_MP_correct(choices: any) {
+    var comp = true;
+    for (let part of choices) {
+      for (let ch of part) {
+        if (ch != '✅') {
+          comp = false;
+        }
+      }
+    }
+    return comp;
+  }
+
+  is_MP_partial(choices: any) {
+    var comp = false;
+    for (let part of choices) {
+      for (let ch of part) {
+        if (ch == '✅') {
+          comp = true;
+        }
+      }
+    }
+    return comp;
+  }
+
   is_MP_complete() {
     var comp = true;
     if (this.mode == 'explain') {
@@ -6666,7 +6720,7 @@ export class ProblemsComponent implements OnInit {
   search_subtopic(topic: string, subtopic: string) {
     this.subtopic_problem_count = 0;
     this.subtopic_search_dump = {};
-    for (const [ex, dump] of Object.entries(this.dump_dict)) {
+    for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
       for (const [num, prob] of Object.entries(dump)) {
         if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
           if (prob.SubTopics.includes(subtopic)) {
@@ -6681,7 +6735,7 @@ export class ProblemsComponent implements OnInit {
     }
     this.selected_topic = topic;
     this.selected_subtopic = subtopic;
-    this.subtopic_problem_number = 1;
+    this.subtopic_problem_number = 0;
     this.subtopic_attempt_path = [];
     this.subtopic_attempt_response = [];
     this.subtopic_attempt_explanation = [];
@@ -6794,6 +6848,209 @@ export class ProblemsComponent implements OnInit {
     }
   }
 
+  begin_practice_st() {
+      if (this.subtopic_problem_count != this.subtopic_new_problem_count) {
+          this.subtopic_problem_number = this.subtopic_problem_count-this.subtopic_new_problem_count + 1;
+      }
+      else {
+          this.subtopic_problem_number = 1;  
+      }
+      if (this.subtopic_problem_number > this.subtopic_problem_count) {
+          this.selected_subtopic = '';
+          this.standard_id = '';
+      }
+      else {
+          this.subtopic_attempt_path = [];
+          this.subtopic_attempt_response = [];
+          this.subtopic_attempt_explanation = [];
+          this.subtopic_problem_selection = [];
+          if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
+              this.subtopic_problem_attempts = [0];
+              this.subtopic_attempt_path = [[]];
+              this.subtopic_attempt_response = [''];
+              this.subtopic_attempt_explanation = [[]];
+              if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                  this.subtopic_problem_selection = [['']];
+                  if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                      setTimeout(() => {
+                          this.plot_graph_gp('', true);
+                      }, 500);
+                  }
+              }
+              else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                  this.subtopic_problem_selection = [[]];
+                  if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                      this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
+                  }
+                  if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                      setTimeout(() => {
+                          this.plot_graph_mgp('', true);
+                      }, 500);
+                  }
+              }
+              else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+                  var msp_nums: string[] = [];
+                  this.subtopic_problem_selection.push([]);
+                  for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+                      if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+                          this.subtopic_problem_selection[0].push('');
+                          msp_nums.push(choice[0]);
+                      }
+                  }
+              }
+          }
+          else {
+              this.subtopic_problem_attempts = [];
+              for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+                  this.subtopic_problem_attempts.push(0);
+                  this.subtopic_attempt_path.push([]);
+                  this.subtopic_attempt_response.push('');
+                  this.subtopic_attempt_explanation.push([]);
+                  if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                      this.subtopic_problem_selection.push(['']);
+                      if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                          setTimeout(() => {
+                              this.plot_graph_gp(part, true);
+                          }, 500);
+                      }
+                  }
+                  else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                      this.subtopic_problem_selection.push([]);
+                      if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                          this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
+                      }
+                      if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                          setTimeout(() => {
+                              this.plot_graph_mgp(part, true);
+                          }, 500);
+                      }
+                  }
+                  else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                      var msp_nums: string[] = [];
+                      this.subtopic_problem_selection.push([]);
+                      for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+                          if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+                              this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part)].push('');
+                              msp_nums.push(choice[0]);
+                          }
+                      }
+                  }
+              }
+          }
+          this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
+          for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
+              setTimeout(() => {
+                  this.read_supp_st_json(supp);
+              }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+          }
+          if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
+              for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+                  for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
+                      if (block.startsWith(':table:')) {
+                          setTimeout(() => {
+                              this.read_table_st(block.slice(7));
+                          }, 100);
+                      }
+                  }
+              }
+          }
+          if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
+              for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
+                  if (block.startsWith(':table:')) {
+                      setTimeout(() => {
+                          this.read_table_st(block.slice(7));
+                      }, 100);
+                  }
+              }
+          }
+      }
+  }
+
+  select_student_st(id: string) {
+  //   this.exam_inprogress = false;
+  //   this.progress_number = 0;
+    if (id != this.selected_student_st) {
+      console.log(this.subtopic_search_dump);
+      this.selected_student_st = '';
+      this.selected_student_data = this.my_students_data[id];
+      const exam_history = this.my_students_data[id].exams.history;
+      this.subtopic_problem_count = 0;
+      this.subtopic_search_dump = {};
+      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+          if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+              for (const [num, prob] of Object.entries(dump)) {
+                  if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                      if (prob.SubTopics.includes(this.selected_subtopic)) {
+                          if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                              this.subtopic_problem_count += 1;
+                              this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                              if (!(''+this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                                  this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+          if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+              for (const [num, prob] of Object.entries(dump)) {
+                  if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                      if (prob.SubTopics.includes(this.selected_subtopic)) {
+                          if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                              this.subtopic_problem_count += 1;
+                              this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                              if (!(''+this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                                  this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+      this.subtopic_new_problem_count = 0;
+      this.subtopic_correct_problem_count = 0;
+      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+          if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+              for (const [num, prob] of Object.entries(dump)) {
+                  if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                      if (prob.SubTopics.includes(this.selected_subtopic)) {
+                          if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                              this.subtopic_new_problem_count += 1;
+                          }
+                      }
+                  }
+              }
+          }
+          if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+              const exam_sub = this.authService.getStudExamSubmission2(id, ex);
+              setTimeout(() => {
+                  for (const [num, prob] of Object.entries(dump)) {
+                      if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                          if (prob.SubTopics.includes(this.selected_subtopic)) {
+                              if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                                  if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
+                                      this.subtopic_correct_problem_count += 1;
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }, 50);
+          }
+      }
+      console.log(this.subtopic_search_dump);
+      setTimeout(() => {
+          this.selected_student_st = id;
+      }, 250);
+    }
+    else {
+      this.selected_student_st = '';
+    }
+  }
+
   fav_std_includes(topic: string, subtopic: string) {
     this.favorite_std_set = [];
     for (let std of this.authService.userData.standards.favorites) {
@@ -6840,6 +7097,212 @@ export class ProblemsComponent implements OnInit {
     setTimeout(function () {
       window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
     }, 250);
+  }
+
+  set_user_role(role: string) {
+    if (this.user_role != role) {
+      this.user_role = role;
+    }
+    else {
+      this.user_role = "";
+    }
+  }
+
+  set_login_method(mthd: string) {
+    if (this.login_method != mthd) {
+      this.login_method = mthd;
+    }
+    else {
+      this.login_method = "";
+    }
+    setTimeout(() => {
+      this.iti = intlTelInput(this.userPhone.nativeElement, {
+        allowDropdown: true,
+        autoPlaceholder: "aggressive",
+        placeholderNumberType: "FIXED_LINE_OR_MOBILE",
+        nationalMode: true,
+        formatOnDisplay: true,
+        initialCountry: 'auto',
+        geoIpLookup: callback => {
+          fetch("https://ipapi.co/json")
+            .then(res => res.json())
+            .then(data => callback(data.country_code))
+            .catch(() => callback("us"));
+        },
+        utilsScript: "node_modules/intl-tel-input/build/js/utils.js",
+        // onlyCountries: ['JP'],
+        separateDialCode: true,
+      });
+    }, 10);
+  }
+
+  toggle_login_method(mthd: string) {
+    if (this.login_method != mthd) {
+      this.login_method = mthd;
+    }
+    else {
+      this.login_method = "";
+    }
+    if (this.login_method == 'phone') {
+      setTimeout(() => {
+        this.iti = intlTelInput(this.userPhone.nativeElement, {
+          allowDropdown: true,
+          autoPlaceholder: "aggressive",
+          placeholderNumberType: "FIXED_LINE_OR_MOBILE",
+          nationalMode: true,
+          formatOnDisplay: true,
+          initialCountry: 'auto',
+          geoIpLookup: callback => {
+            fetch("https://ipapi.co/json")
+              .then(res => res.json())
+              .then(data => callback(data.country_code))
+              .catch(() => callback("us"));
+          },
+          utilsScript: "node_modules/intl-tel-input/build/js/utils.js",
+          // onlyCountries: ['JP'],
+          separateDialCode: true,
+        });
+      }, 25);
+    }
+  }
+
+  reset_password() {
+    this.pw_reset = true;
+  }
+
+  sendLoginCode(phone: string) {
+    // const appVerifier = this.windowRef.recaptchaVerifier;
+    // const num = `+${phone}`;
+    const appVerifier = new RecaptchaVerifier('sign-in-button', {
+      'size': 'invisible',
+      // 'callback': (response) => {
+      //   // reCAPTCHA solved, allow signInWithPhoneNumber.
+      //   // onSignInSubmit();
+      // }
+    }, getAuth());
+    const intlPhone = '+' + "" + this.iti.getSelectedCountryData().dialCode + phone;
+    if (phone != '') {
+      this.afAuth
+        .signInWithPhoneNumber(intlPhone, appVerifier)
+        .then(result => {
+          this.windowRef.confirmationResult = result;
+          console.log(result);
+        })
+        .catch((error: any) => window.alert(error.message));
+    } else {
+      this.iti_msg = "Please enter a valid number below";
+      window.alert(this.iti_msg);
+    }
+  }
+
+  verifyLoginCodeL(code: string) {
+    this.windowRef.confirmationResult
+      .confirm(code)
+      .then((result: any) => {
+        this.user = result.user;
+        // check if user in database, write user data
+        this.authService.userData = this.user;
+        // this.login = false;
+        console.log(result);
+        this.onLogIn();
+      })
+      .catch((error: any) => console.log(error, 'Incorrect code entered?'));
+    // get(child(ref(getDatabase()), '/users/' + this.user.uid)).then((snapshot) => {
+    //   if (snapshot.exists()) {
+    //     console.log(snapshot.val());
+    //     this.authService.userData = snapshot.val();
+    //   } else {
+    //     console.log("No data available");
+    //     this.authService.WriteUserData(this.user, "");
+    //     this.authService.SetUserData(this.user);
+    //   }
+    // }).catch((error) => {
+    //   console.error(error);
+    // });
+  }
+
+  verifyLoginCodeS(phone: string, code: string, role: string) {
+    const appVerifier = new RecaptchaVerifier('sign-in-button', {
+      'size': 'invisible',
+      // 'callback': (response) => {
+      //   // reCAPTCHA solved, allow signInWithPhoneNumber.
+      //   // onSignInSubmit();
+      // }
+    }, getAuth());
+    this.windowRef.confirmationResult
+      .confirm(code)
+      .then((result: any) => {
+        this.user = result.user;
+        // check if user in database, write user data
+        // this.authService.userData = this.user;
+        this.authService.WriteUserData(this.user, role);
+        this.authService.SetUserData(this.user);
+        this.signup = false;
+        // console.log(this.user);
+        // console.log(result);
+      })
+      .catch((error: any) => window.alert(error));
+    // get(child(ref(getDatabase()), '/users/' + this.user.uid)).then((snapshot) => {
+    //   if (snapshot.exists()) {
+    //     console.log(snapshot.val());
+    //     this.authService.userData = snapshot.val();
+    //   } else {
+    //     console.log("No data available");
+    //     this.authService.WriteUserData(this.user, this.user_role);
+    //     this.authService.SetUserData(this.user);
+    //   }
+    // }).catch((error) => {
+    //   console.error(error);
+    // });
+  }
+
+  onLogIn() {
+      setTimeout(() => {
+        this.login = true;
+        if (this.authService.userData.role != 'Student') {
+          const linked_students = this.authService.userData.students.slice(1);
+          var count = 0;
+          for (const [key, stud] of Object.entries(linked_students)) {
+            setTimeout(() => {
+              if ((stud as string).includes(this.authService.userData.uid as string)) {
+                count += 1;
+                this.my_students.push(stud as string);
+                // setTimeout(() => {
+                const student_data = this.authService.searchUserId(stud as string);
+                if (student_data != null) {
+                  this.my_students_data[(stud as string)] = (student_data as object);
+                }
+              }
+            }, +key * 10);
+          }
+          setTimeout(() => {
+            this.my_students = [];
+            var count = 0;
+            for (const [key, stud] of Object.entries(linked_students)) {
+              setTimeout(() => {
+                if ((stud as string).includes(this.authService.userData.uid as string)) {
+                  count += 1;
+                  this.my_students.push(stud as string);
+                  // setTimeout(() => {
+                  const student_data = this.authService.searchUserId(stud as string);
+                  if (student_data != null) {
+                    this.my_students_data[(stud as string)] = (student_data as object);
+                  }
+                }
+              }, +key * 10);
+            }
+          }, 500);
+        }
+        this.login = false;
+      }, 500);
+  }
+
+  onOtpChange(otpCode: any) {
+    this.otp = otpCode;
+  }
+  
+  ngAfterViewInit() {
+
   }
 
   ngOnInit() {
@@ -6918,10 +7381,89 @@ export class ProblemsComponent implements OnInit {
         }, 100);
       }
     }
+    if (this.authService.userData) {
+        this.authService.getProfilePic(this.authService.userData);
+        this.user_data = this.authService.userData;
+        if (this.authService.userData.role != 'Student') {
+            const linked_students = this.authService.userData.students.slice(1);
+            var count = 0;
+            for (const [key, stud] of Object.entries(linked_students)) {
+                setTimeout(() => {
+                    if ((stud as string).includes(this.authService.userData.uid as string)) {
+                        count += 1;
+                        this.my_students.push(stud as string);
+                        // setTimeout(() => {
+                        const student_data = this.authService.searchUserId(stud as string);
+                        if (student_data != null) {
+                            this.my_students_data[(stud as string)] = (student_data as object);
+                        }
+                    }
+                }, +key * 10);
+            }
+            setTimeout(() => {
+                this.my_students = [];
+                var count = 0;
+                for (const [key, stud] of Object.entries(linked_students)) {
+                    setTimeout(() => {
+                        if ((stud as string).includes(this.authService.userData.uid as string)) {
+                            count += 1;
+                            this.my_students.push(stud as string);
+                            // setTimeout(() => {
+                            const student_data = this.authService.searchUserId(stud as string);
+                            if (student_data != null) {
+                                this.my_students_data[(stud as string)] = (student_data as object);
+                            }
+                        }
+                    }, +key * 10);
+                }
+            }, 500);
+        }
+        // if (this.authService.userData.role == 'Student') {
+        //   const exam_history = this.authService.userData.exams.history;
+        //   for (const [key, det] of Object.entries(exam_history)) {
+        //     if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
+        //       this.exam_inprogress = true;
+        //       this.exam_status = (det as any).status;
+        //       this.progress_number = (det as any).progress + 1;
+        //       this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
+        //       this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
+        //       if ((det as any).progress != 0) {
+        //         var db_submission = this.authService.getExamSubmission2(this.key);
+        //         setTimeout(() => {
+        //           console.log(db_submission.problems);
+        //           for (const [key2, det2] of Object.entries(db_submission.problems)) {
+        //             if (+key2 != 0) {
+        //               this.exam_submission[+(det2 as any).Number] = (det2 as any);
+        //               // const sub_prob: any = (det2 as any);
+        //               // var sub_prob_2: any = {};
+        //               // for (const [field, dump] of Object.entries(det2 as any)) {
+        //               //   // sub_prob[field] = dump;
+        //               //   sub_prob_2[field] = dump;
+        //               // }
+        //               // if (typeof (det2 as any).Choice == "string") {
+        //               //   sub_prob_2.Choice = [];
+        //               //   sub_prob_2.Correct = [];
+        //               //   sub_prob_2.Attempts = [];
+        //               //   sub_prob_2.Path = [];
+        //               //   sub_prob_2.Choice.push([sub_prob.Choice]);
+        //               //   sub_prob_2.Correct.push([sub_prob.Correct]);
+        //               //   sub_prob_2.Attempts.push(sub_prob.Attempts);
+        //               //   sub_prob_2.Path.push([[sub_prob.Path]]);
+        //               // }
+        //               // this.exam_submission[+(det2 as any).Number] = sub_prob_2;
+        //             }
+        //           }
+        //         }, 500);
+        //       }
+        //       console.log(this.exam_submission);
+        //     }
+        //   }
+        // }
+    }
     // // Just to de-dupe all the subtopic labels
     // for (let exam of this.exam_set) {
     //   if (!this.exam_attribute_dump[exam].HideTopics) {
-    //     for (const [key, val] of Object.entries(this.dump_dict[exam])) {
+    //     for (const [key, val] of Object.entries(this.e_dump_dict[exam])) {
     //       if (typeof val.SubTopics != 'undefined') {
     //         for (let subtop of val.SubTopics) {
     //           if (!this.subtopics.includes(subtop)) {
