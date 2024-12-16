@@ -5935,6 +5935,7 @@ export class ProfileComponent implements OnInit {
             }
         }
     }
+    this.subtopic_new_problem_count = this.subtopic_problem_count;
     this.selected_subtopic = subtopic;
     this.subtopic_problem_number = 0;
     this.standard_fav = false;

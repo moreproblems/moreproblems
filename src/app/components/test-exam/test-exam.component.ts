@@ -5424,6 +5424,7 @@ export class TestExamComponent implements OnInit {
                 }
             }
         }
+        this.subtopic_new_problem_count = this.subtopic_problem_count;
         this.selected_topic = topic;
         this.selected_subtopic = subtopic;
         this.subtopic_problem_number = 0;

@@ -7088,9 +7088,10 @@ export class TemplateCExamComponent implements OnInit {
                 }
             }
         }
+        this.subtopic_new_problem_count = this.subtopic_problem_count;
         this.selected_topic = topic;
         this.selected_subtopic = subtopic;
-    this.subtopic_problem_number = 0;
+        this.subtopic_problem_number = 0;
         this.subtopic_attempt_path = [];
         this.subtopic_attempt_response = [];
         this.subtopic_attempt_explanation = [];
