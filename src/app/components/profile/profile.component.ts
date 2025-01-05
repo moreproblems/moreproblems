@@ -176,6 +176,27 @@ import * as MDHSMA1Standards from "src/assets/standards/MD/HS-M-A1.json";
 import * as MDHSMA2Standards from "src/assets/standards/MD/HS-M-A2.json";
 import * as MDHSMGStandards from "src/assets/standards/MD/HS-M-G.json";
 import * as MDHSMSStandards from "src/assets/standards/MD/HS-M-S.json";
+import * as MNKEStandards from "src/assets/standards/MN/K-E.json";
+import * as MNKMStandards from "src/assets/standards/MN/K-M.json";
+import * as MNG1EStandards from "src/assets/standards/MN/G1-E.json";
+import * as MNG1MStandards from "src/assets/standards/MN/G1-M.json";
+import * as MNG2EStandards from "src/assets/standards/MN/G2-E.json";
+import * as MNG2MStandards from "src/assets/standards/MN/G2-M.json";
+import * as MNG3EStandards from "src/assets/standards/MN/G3-E.json";
+import * as MNG3MStandards from "src/assets/standards/MN/G3-M.json";
+import * as MNG4EStandards from "src/assets/standards/MN/G4-E.json";
+import * as MNG4MStandards from "src/assets/standards/MN/G4-M.json";
+import * as MNG5EStandards from "src/assets/standards/MN/G5-E.json";
+import * as MNG5MStandards from "src/assets/standards/MN/G5-M.json";
+import * as MNG6EStandards from "src/assets/standards/MN/G6-E.json";
+import * as MNG6MStandards from "src/assets/standards/MN/G6-M.json";
+import * as MNG7EStandards from "src/assets/standards/MN/G7-E.json";
+import * as MNG7MStandards from "src/assets/standards/MN/G7-M.json";
+import * as MNG8EStandards from "src/assets/standards/MN/G8-E.json";
+import * as MNG8MStandards from "src/assets/standards/MN/G8-M.json";
+import * as MNHSE1Standards from "src/assets/standards/MN/HS-E1.json";
+import * as MNHSE2Standards from "src/assets/standards/MN/HS-E2.json";
+import * as MNHSMStandards from "src/assets/standards/MN/HS-M.json";
 import * as MOKEStandards from "src/assets/standards/MO/K-E.json";
 import * as MOKMStandards from "src/assets/standards/MO/K-M.json";
 import * as MOKSStandards from "src/assets/standards/MO/K-S.json";
@@ -594,6 +615,20 @@ import * as MEG10MProblems from "src/assets/problems/MEG10M/MEG10M-problems.json
 import * as MEG35RProblems from "src/assets/problems/MEG35R/MEG35R-problems.json";
 import * as MEG68RProblems from "src/assets/problems/MEG68R/MEG68R-problems.json";
 import * as MEG10RProblems from "src/assets/problems/MEG10R/MEG10R-problems.json";
+import * as MNG3MProblems from "src/assets/problems/MNG3M/MNG3M-problems.json";
+import * as MNG4MProblems from "src/assets/problems/MNG4M/MNG4M-problems.json";
+import * as MNG5MProblems from "src/assets/problems/MNG5M/MNG5M-problems.json";
+import * as MNG6MProblems from "src/assets/problems/MNG6M/MNG6M-problems.json";
+import * as MNG7MProblems from "src/assets/problems/MNG7M/MNG7M-problems.json";
+import * as MNG8MProblems from "src/assets/problems/MNG8M/MNG8M-problems.json";
+import * as MNG11MProblems from "src/assets/problems/MNG11M/MNG11M-problems.json";
+import * as MNG3RProblems from "src/assets/problems/MNG3R/MNG3R-problems.json";
+import * as MNG4RProblems from "src/assets/problems/MNG4R/MNG4R-problems.json";
+import * as MNG5RProblems from "src/assets/problems/MNG5R/MNG5R-problems.json";
+import * as MNG6RProblems from "src/assets/problems/MNG6R/MNG6R-problems.json";
+import * as MNG7RProblems from "src/assets/problems/MNG7R/MNG7R-problems.json";
+import * as MNG8RProblems from "src/assets/problems/MNG8R/MNG8R-problems.json";
+import * as MNG10RProblems from "src/assets/problems/MNG10R/MNG10R-problems.json";
 import * as MOG3EProblems from "src/assets/problems/MOG3E/MOG3E-problems.json";
 import * as MOG4EProblems from "src/assets/problems/MOG4E/MOG4E-problems.json";
 import * as MOG5EProblems from "src/assets/problems/MOG5E/MOG5E-problems.json";
@@ -1174,7 +1209,7 @@ export class ProfileComponent implements OnInit {
 
 
   exam_attribute_dump: { [key: string]: { 'State': string, 'Grade': string, 'Subject': string, 'ExamName': string, 'ExamYear': string, 'ExamType': string, 'NumQuestions': number, 'Timer': number, 'HideTopics': boolean, 'Directions': string, 'RefSheet': string, 'Topics': { [key: string]: number }, 'Levels': { [key: string]: number }, 'Parts': string[] } } = examMetadata;
-  exam_set = ['COG3E', 'COG4E', 'COG5E', 'COG6E', 'COG7E', 'COG8E', 'COG3M', 'COG4M', 'COG5M', 'COG6M', 'COG7M', 'COG8M', 'COG5S', 'COG8S', 'COHSS', 'DEG4SS', 'DEG7SS', 'DEG11SS', 'FL20G3M', 'FL20G3R', 'FL20G4M', 'FL20G4R', 'FL20G4W', 'FL20G5M', 'FL20G5R', 'FL20G5W', 'FL20G5S', 'FL20G6M', 'FL20G6R', 'FL20G6W', 'FL20G7M', 'FL20G7R', 'FL20G7W', 'FL20G8M', 'FL20G8R', 'FL20G8W', 'FL20G8S', 'FL20G9R', 'FL20G9W', 'FL20G10R', 'FL20G10W', 'ILG3E', 'ILG3M', 'ILG4E', 'ILG4M', 'ILG5E', 'ILG5M', 'ILG6E', 'ILG6M', 'ILG7E', 'ILG7M', 'ILG8E', 'ILG8M', 'MA23G3E', 'MA22G3E', 'MA21G3E', 'MA19G3E', 'MAG3E', 'MA23G3M', 'MA22G3M', 'MA21G3M', 'MA19G3M', 'MAG3M', 'MA23G4E', 'MA22G4E', 'MA21G4E', 'MA19G4E', 'MAG4E', 'MA23G4M', 'MA22G4M', 'MA21G4M', 'MA19G4M', 'MAG4M', 'MA23G5E', 'MA22G5E', 'MA21G5E', 'MA19G5E', 'MAG5E', 'MA23G5M', 'MA22G5M', 'MA21G5M', 'MA19G5M', 'MAG5M', 'MA23G5S', 'MA22G5S', 'MA21G5S', 'MA19G5S', 'MAG5S', 'MA23G6E', 'MA22G6E', 'MA21G6E', 'MA19G6E', 'MAG6E', 'MA23G6M', 'MA22G6M', 'MA21G6M', 'MA19G6M', 'MAG6M', 'MA23G7E', 'MA22G7E', 'MA21G7E', 'MA19G7E', 'MAG7E', 'MA23G7M', 'MA22G7M', 'MA21G7M', 'MA19G7M', 'MAG7M', 'MA23G8E', 'MA22G8E', 'MA21G8E', 'MA19G8E', 'MAG8E', 'MA23G8M', 'MA22G8M', 'MA21G8M', 'MA19G8M', 'MAG8M', 'MA23G8S', 'MA22G8S', 'MA21G8S', 'MA19G8S', 'MAG8S', 'MA23G10E', 'MA22G10E', 'MA21G10E', 'MA19G10E', 'MAG10E', 'MA23G10M', 'MA22G10M', 'MA21G10M', 'MA19G10M', 'MAG10M', 'MA23HSB', 'MA22HSB', 'MA19HSB', 'MA23HSP', 'MA22HSP', 'MA19HSP', 'MDG3E', 'MDG4E', 'MDG5E', 'MDG6E', 'MDG7E', 'MDG8E', 'MDG10E', 'MDG3M', 'MDG4M', 'MDG5M', 'MDG6M', 'MDG7M', 'MDG8M', 'MDG5S', 'MDG8S', 'MEG3M', 'MEG4M', 'MEG5M', 'MEG6M', 'MEG7M', 'MEG8M', 'MEG10M','MEG35R', 'MEG68R', 'MEG10R', 'MOG3E', 'MOG4E', 'MOG5E', 'MOG6E', 'MOG7E', 'MOG8E', 'MOG3M', 'MOG4M', 'MOG5M', 'MOG6M', 'MOG7M', 'MOG8M', 'MOG5S', 'MOG8S', 'MDG8SS', 'MS23G3E', 'MS22G3E', 'MS23G4E', 'MS22G4E', 'MS23G5E', 'MS22G5E', 'MS23G6E', 'MS22G6E', 'MS23G7E', 'MS22G7E', 'MS23G8E', 'MS22G8E', 'MS23G3M', 'MS22G3M', 'MS23G4M', 'MS22G4M', 'MS23G5M', 'MS22G5M', 'MS23G6M', 'MS22G6M', 'MS23G7M', 'MS22G7M', 'MS23G8M', 'MS22G8M', 'NEG3E', 'NEG3M', 'NEG4E', 'NEG4M', 'NEG5E', 'NEG5M', 'NEG5S', 'NEG6E', 'NEG6M', 'NEG7E', 'NEG7M', 'NEG8E', 'NEG8M', 'NEG8S', 'NJG3E', 'NJG3M', 'NJG4E', 'NJG4M', 'NJG5E', 'NJG5M', 'NJG5S', 'NJG6E', 'NJG6M', 'NJG7E', 'NJG7M', 'NJG8E', 'NJG8M', 'NJG8S', 'NJG9E', 'NJG11S', 'NMG3E', 'NMG3M', 'NMG4E', 'NMG4M', 'NMG5E', 'NMG5M', 'NMG5S', 'NMG6E', 'NMG6M', 'NMG7E', 'NMG7M', 'NMG8E', 'NMG8M', 'NMG8S', 'NMG11S', 'NY23G3M', 'NY23G3E', 'NY22G3M', 'NY22G3E', 'NY21G3M', 'NY21G3E', 'NY19G3M', 'NY19G3E', 'NY18G3M', 'NY18G3E', 'NY17G3M', 'NY17G3E', 'NY16G3M', 'NY16G3E', 'NY15G3M', 'NY15G3E', 'NY23G4M', 'NY23G4E', 'NY22G4M', 'NY22G4E', 'NY21G4M', 'NY21G4E', 'NY19G4M', 'NY19G4E', 'NY18G4M', 'NY18G4E', 'NY17G4M', 'NY17G4E', 'NY16G4M', 'NY16G4E', 'NY15G4M', 'NY15G4E', 'NY22G4S', 'NY21G4S', 'NY19G4S', 'NY18G4S', 'NY17G4S', 'NY16G4S', 'NY15G4S', 'NY23G5M', 'NY23G5E', 'NY22G5M', 'NY22G5E', 'NY21G5M', 'NY21G5E', 'NY19G5M', 'NY19G5E', 'NY18G5M', 'NY18G5E', 'NY17G5M', 'NY17G5E', 'NY16G5M', 'NY16G5E', 'NY15G5M', 'NY15G5E', 'NY23G6M', 'NY23G6E', 'NY22G6M', 'NY22G6E', 'NY21G6M', 'NY21G6E', 'NY19G6M', 'NY19G6E', 'NY18G6M', 'NY18G6E', 'NY17G6M', 'NY17G6E', 'NY16G6M', 'NY16G6E', 'NY15G6M', 'NY15G6E', 'NY23G7M', 'NY23G7E', 'NY22G7M', 'NY22G7E', 'NY21G7M', 'NY21G7E', 'NY19G7M', 'NY19G7E', 'NY18G7M', 'NY18G7E', 'NY17G7M', 'NY17G7E', 'NY16G7M', 'NY16G7E', 'NY15G7M', 'NY15G7E', 'NY23G8M', 'NY23G8E', 'NY22G8M', 'NY22G8E', 'NY21G8M', 'NY21G8E', 'NY19G8M', 'NY19G8E', 'NY18G8M', 'NY18G8E', 'NY17G8M', 'NY17G8E', 'NY16G8M', 'NY16G8E', 'NY15G8M', 'NY15G8E', 'NY22G8S', 'NY21G8S', 'NY19G8S', 'NY18G8S', 'NY17G8S', 'NY16G8S', 'NY15G8S', 'PA23G3M', 'PA23G3E', 'PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA23G4M', 'PA23G4E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA23G4S', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA23G5M', 'PA23G5E', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA23G6M', 'PA23G6E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA23G7M', 'PA23G7E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA23G8M', 'PA23G8E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA23G8S', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S', 'PSAT1RW1', 'PSAT1RW2', 'PSAT1M1', 'PSAT1M2', 'RI23G3M', 'RI22G3M', 'RI21G3M', 'RI19G3M', 'RI18G3M', 'RI23G3E', 'RI22G3E', 'RI21G3E', 'RI19G3E', 'RI18G3E', 'RI23G4M', 'RI22G4M', 'RI21G4M', 'RI19G4M', 'RI18G4M', 'RI23G4E', 'RI22G4E', 'RI21G4E', 'RI19G4E', 'RI18G4E', 'RI23G5M', 'RI22G5M', 'RI21G5M', 'RI19G5M', 'RI18G5M', 'RI23G5E', 'RI22G5E', 'RI21G5E', 'RI19G5E', 'RI18G5E', 'RI23G6M', 'RI22G6M', 'RI21G6M', 'RI19G6M', 'RI18G6M', 'RI23G6E', 'RI22G6E', 'RI21G6E', 'RI19G6E', 'RI18G6E', 'RI23G7M', 'RI22G7M', 'RI21G7M', 'RI19G7M', 'RI18G7M', 'RI23G7E', 'RI22G7E', 'RI21G7E', 'RI19G7E', 'RI18G7E', 'RI23G8M', 'RI22G8M', 'RI21G8M', 'RI19G8M', 'RI18G8M', 'RI23G8E', 'RI22G8E', 'RI21G8E', 'RI19G8E', 'RI18G8E', 'SAT1RW1', 'SAT1RW2', 'SAT1M1', 'SAT1M2', 'SAT2RW1', 'SAT2RW2', 'SAT2M1', 'SAT2M2', 'SAT3RW1', 'SAT3RW2', 'SAT3M1', 'SAT3M2', 'SAT4RW1', 'SAT4RW2', 'SAT4M1', 'SAT4M2', 'SC18G3E', 'SC18G4E', 'SC18G5E', 'SC18G6E', 'SC18G7E', 'SC18G8E', 'SC18G3M', 'SC18G4M', 'SC18G5M', 'SC18G6M', 'SC18G7M', 'SC18G8M', 'SC18G4S', 'SC18G6S', 'TN20G3E', 'TN20G3M', 'TN20G3S', 'TN20G4E', 'TN20G4M', 'TN20G4S', 'TN20G5E', 'TN20G5M', 'TN20G5S', 'TN20G6E', 'TN20G6M', 'TN20G6S', 'TN20G6SS', 'TN20G7E', 'TN20G7M', 'TN20G7S', 'TN20G7SS', 'TN20G8E', 'TN20G8M', 'TN20G8S', 'TN20G8SS', 'TN20HSA1', 'TN20HSA2', 'TN20HSB', 'TN20HSE1', 'TN20HSE2', 'TN20HSG', 'TN20HSUSH', 'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH', 'WIG3E', 'WIG4E', 'WIG5E', 'WIG6E', 'WIG7E', 'WIG8E', 'WIG3M', 'WIG4M', 'WIG5M', 'WIG6M', 'WIG7M', 'WIG8M', 'WIG4S', 'WIG8S', 'WIG4SS', 'WIG8SS', 'WIG10SS'];
+  exam_set = ['COG3E', 'COG4E', 'COG5E', 'COG6E', 'COG7E', 'COG8E', 'COG3M', 'COG4M', 'COG5M', 'COG6M', 'COG7M', 'COG8M', 'COG5S', 'COG8S', 'COHSS', 'DEG4SS', 'DEG7SS', 'DEG11SS', 'FL20G3M', 'FL20G3R', 'FL20G4M', 'FL20G4R', 'FL20G4W', 'FL20G5M', 'FL20G5R', 'FL20G5W', 'FL20G5S', 'FL20G6M', 'FL20G6R', 'FL20G6W', 'FL20G7M', 'FL20G7R', 'FL20G7W', 'FL20G8M', 'FL20G8R', 'FL20G8W', 'FL20G8S', 'FL20G9R', 'FL20G9W', 'FL20G10R', 'FL20G10W', 'ILG3E', 'ILG3M', 'ILG4E', 'ILG4M', 'ILG5E', 'ILG5M', 'ILG6E', 'ILG6M', 'ILG7E', 'ILG7M', 'ILG8E', 'ILG8M', 'MA23G3E', 'MA22G3E', 'MA21G3E', 'MA19G3E', 'MAG3E', 'MA23G3M', 'MA22G3M', 'MA21G3M', 'MA19G3M', 'MAG3M', 'MA23G4E', 'MA22G4E', 'MA21G4E', 'MA19G4E', 'MAG4E', 'MA23G4M', 'MA22G4M', 'MA21G4M', 'MA19G4M', 'MAG4M', 'MA23G5E', 'MA22G5E', 'MA21G5E', 'MA19G5E', 'MAG5E', 'MA23G5M', 'MA22G5M', 'MA21G5M', 'MA19G5M', 'MAG5M', 'MA23G5S', 'MA22G5S', 'MA21G5S', 'MA19G5S', 'MAG5S', 'MA23G6E', 'MA22G6E', 'MA21G6E', 'MA19G6E', 'MAG6E', 'MA23G6M', 'MA22G6M', 'MA21G6M', 'MA19G6M', 'MAG6M', 'MA23G7E', 'MA22G7E', 'MA21G7E', 'MA19G7E', 'MAG7E', 'MA23G7M', 'MA22G7M', 'MA21G7M', 'MA19G7M', 'MAG7M', 'MA23G8E', 'MA22G8E', 'MA21G8E', 'MA19G8E', 'MAG8E', 'MA23G8M', 'MA22G8M', 'MA21G8M', 'MA19G8M', 'MAG8M', 'MA23G8S', 'MA22G8S', 'MA21G8S', 'MA19G8S', 'MAG8S', 'MA23G10E', 'MA22G10E', 'MA21G10E', 'MA19G10E', 'MAG10E', 'MA23G10M', 'MA22G10M', 'MA21G10M', 'MA19G10M', 'MAG10M', 'MA23HSB', 'MA22HSB', 'MA19HSB', 'MA23HSP', 'MA22HSP', 'MA19HSP', 'MDG3E', 'MDG4E', 'MDG5E', 'MDG6E', 'MDG7E', 'MDG8E', 'MDG10E', 'MDG3M', 'MDG4M', 'MDG5M', 'MDG6M', 'MDG7M', 'MDG8M', 'MDG5S', 'MDG8S', 'MEG3M', 'MEG4M', 'MEG5M', 'MEG6M', 'MEG7M', 'MEG8M', 'MEG10M','MEG35R', 'MEG68R', 'MEG10R', 'MNG3M', 'MNG3R', 'MNG4M', 'MNG4R', 'MNG5M', 'MNG5R', 'MNG6M', 'MNG6R', 'MNG7M', 'MNG7R', 'MNG8M', 'MNG8R', 'MNG10R', 'MNG11M', 'MOG3E', 'MOG4E', 'MOG5E', 'MOG6E', 'MOG7E', 'MOG8E', 'MOG3M', 'MOG4M', 'MOG5M', 'MOG6M', 'MOG7M', 'MOG8M', 'MOG5S', 'MOG8S', 'MDG8SS', 'MS23G3E', 'MS22G3E', 'MS23G4E', 'MS22G4E', 'MS23G5E', 'MS22G5E', 'MS23G6E', 'MS22G6E', 'MS23G7E', 'MS22G7E', 'MS23G8E', 'MS22G8E', 'MS23G3M', 'MS22G3M', 'MS23G4M', 'MS22G4M', 'MS23G5M', 'MS22G5M', 'MS23G6M', 'MS22G6M', 'MS23G7M', 'MS22G7M', 'MS23G8M', 'MS22G8M', 'NEG3E', 'NEG3M', 'NEG4E', 'NEG4M', 'NEG5E', 'NEG5M', 'NEG5S', 'NEG6E', 'NEG6M', 'NEG7E', 'NEG7M', 'NEG8E', 'NEG8M', 'NEG8S', 'NJG3E', 'NJG3M', 'NJG4E', 'NJG4M', 'NJG5E', 'NJG5M', 'NJG5S', 'NJG6E', 'NJG6M', 'NJG7E', 'NJG7M', 'NJG8E', 'NJG8M', 'NJG8S', 'NJG9E', 'NJG11S', 'NMG3E', 'NMG3M', 'NMG4E', 'NMG4M', 'NMG5E', 'NMG5M', 'NMG5S', 'NMG6E', 'NMG6M', 'NMG7E', 'NMG7M', 'NMG8E', 'NMG8M', 'NMG8S', 'NMG11S', 'NY23G3M', 'NY23G3E', 'NY22G3M', 'NY22G3E', 'NY21G3M', 'NY21G3E', 'NY19G3M', 'NY19G3E', 'NY18G3M', 'NY18G3E', 'NY17G3M', 'NY17G3E', 'NY16G3M', 'NY16G3E', 'NY15G3M', 'NY15G3E', 'NY23G4M', 'NY23G4E', 'NY22G4M', 'NY22G4E', 'NY21G4M', 'NY21G4E', 'NY19G4M', 'NY19G4E', 'NY18G4M', 'NY18G4E', 'NY17G4M', 'NY17G4E', 'NY16G4M', 'NY16G4E', 'NY15G4M', 'NY15G4E', 'NY22G4S', 'NY21G4S', 'NY19G4S', 'NY18G4S', 'NY17G4S', 'NY16G4S', 'NY15G4S', 'NY23G5M', 'NY23G5E', 'NY22G5M', 'NY22G5E', 'NY21G5M', 'NY21G5E', 'NY19G5M', 'NY19G5E', 'NY18G5M', 'NY18G5E', 'NY17G5M', 'NY17G5E', 'NY16G5M', 'NY16G5E', 'NY15G5M', 'NY15G5E', 'NY23G6M', 'NY23G6E', 'NY22G6M', 'NY22G6E', 'NY21G6M', 'NY21G6E', 'NY19G6M', 'NY19G6E', 'NY18G6M', 'NY18G6E', 'NY17G6M', 'NY17G6E', 'NY16G6M', 'NY16G6E', 'NY15G6M', 'NY15G6E', 'NY23G7M', 'NY23G7E', 'NY22G7M', 'NY22G7E', 'NY21G7M', 'NY21G7E', 'NY19G7M', 'NY19G7E', 'NY18G7M', 'NY18G7E', 'NY17G7M', 'NY17G7E', 'NY16G7M', 'NY16G7E', 'NY15G7M', 'NY15G7E', 'NY23G8M', 'NY23G8E', 'NY22G8M', 'NY22G8E', 'NY21G8M', 'NY21G8E', 'NY19G8M', 'NY19G8E', 'NY18G8M', 'NY18G8E', 'NY17G8M', 'NY17G8E', 'NY16G8M', 'NY16G8E', 'NY15G8M', 'NY15G8E', 'NY22G8S', 'NY21G8S', 'NY19G8S', 'NY18G8S', 'NY17G8S', 'NY16G8S', 'NY15G8S', 'PA23G3M', 'PA23G3E', 'PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA23G4M', 'PA23G4E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA23G4S', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA23G5M', 'PA23G5E', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA23G6M', 'PA23G6E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA23G7M', 'PA23G7E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA23G8M', 'PA23G8E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA23G8S', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S', 'PSAT1RW1', 'PSAT1RW2', 'PSAT1M1', 'PSAT1M2', 'RI23G3M', 'RI22G3M', 'RI21G3M', 'RI19G3M', 'RI18G3M', 'RI23G3E', 'RI22G3E', 'RI21G3E', 'RI19G3E', 'RI18G3E', 'RI23G4M', 'RI22G4M', 'RI21G4M', 'RI19G4M', 'RI18G4M', 'RI23G4E', 'RI22G4E', 'RI21G4E', 'RI19G4E', 'RI18G4E', 'RI23G5M', 'RI22G5M', 'RI21G5M', 'RI19G5M', 'RI18G5M', 'RI23G5E', 'RI22G5E', 'RI21G5E', 'RI19G5E', 'RI18G5E', 'RI23G6M', 'RI22G6M', 'RI21G6M', 'RI19G6M', 'RI18G6M', 'RI23G6E', 'RI22G6E', 'RI21G6E', 'RI19G6E', 'RI18G6E', 'RI23G7M', 'RI22G7M', 'RI21G7M', 'RI19G7M', 'RI18G7M', 'RI23G7E', 'RI22G7E', 'RI21G7E', 'RI19G7E', 'RI18G7E', 'RI23G8M', 'RI22G8M', 'RI21G8M', 'RI19G8M', 'RI18G8M', 'RI23G8E', 'RI22G8E', 'RI21G8E', 'RI19G8E', 'RI18G8E', 'SAT1RW1', 'SAT1RW2', 'SAT1M1', 'SAT1M2', 'SAT2RW1', 'SAT2RW2', 'SAT2M1', 'SAT2M2', 'SAT3RW1', 'SAT3RW2', 'SAT3M1', 'SAT3M2', 'SAT4RW1', 'SAT4RW2', 'SAT4M1', 'SAT4M2', 'SC18G3E', 'SC18G4E', 'SC18G5E', 'SC18G6E', 'SC18G7E', 'SC18G8E', 'SC18G3M', 'SC18G4M', 'SC18G5M', 'SC18G6M', 'SC18G7M', 'SC18G8M', 'SC18G4S', 'SC18G6S', 'TN20G3E', 'TN20G3M', 'TN20G3S', 'TN20G4E', 'TN20G4M', 'TN20G4S', 'TN20G5E', 'TN20G5M', 'TN20G5S', 'TN20G6E', 'TN20G6M', 'TN20G6S', 'TN20G6SS', 'TN20G7E', 'TN20G7M', 'TN20G7S', 'TN20G7SS', 'TN20G8E', 'TN20G8M', 'TN20G8S', 'TN20G8SS', 'TN20HSA1', 'TN20HSA2', 'TN20HSB', 'TN20HSE1', 'TN20HSE2', 'TN20HSG', 'TN20HSUSH', 'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH', 'WIG3E', 'WIG4E', 'WIG5E', 'WIG6E', 'WIG7E', 'WIG8E', 'WIG3M', 'WIG4M', 'WIG5M', 'WIG6M', 'WIG7M', 'WIG8M', 'WIG4S', 'WIG8S', 'WIG4SS', 'WIG8SS', 'WIG10SS'];
 
   selected_exam = "";
   expand_topics = false;
@@ -1222,7 +1257,7 @@ export class ProfileComponent implements OnInit {
   avatars = ['bear', 'boar', 'cat', 'chicken', 'deer', 'dog', 'fox', 'giraffe', 'gorilla', 'horse', 'koala', 'lemur', 'lion', 'llama', 'owl', 'panda', 'rabbit', 'rhino', 'seal', 'shark', 'snake', 'tiger', 'walrus', 'wolf'];
 
   key: string = "";
-  standard_set: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PE-CO", "PM-CO", "PS-CO", "PSS-CO", "KE-CO", "KM-CO", "KS-CO", "KSS-CO", "G1E-CO", "G1M-CO", "G1S-CO", "G1SS-CO", "G2E-CO", "G2M-CO", "G2S-CO", "G2SS-CO", "G3E-CO", "G3M-CO", "G3S-CO", "G3SS-CO", "G4E-CO", "G4M-CO", "G4S-CO", "G4SS-CO", "G5E-CO", "G5M-CO", "G5S-CO", "G5SS-CO", "G6E-CO", "G6M-CO", "G6SS-CO", "G7E-CO", "G7M-CO", "G7SS-CO", "G8E-CO", "G8M-CO", "MSS-CO", "G8SS-CO", "HSE1-CO", "HSE2-CO", "HSM-CO", "HSS-CO", "HSSS-CO", "KE-FL", "KM-FL", "G1E-FL", "G1M-FL", "G2E-FL", "G2M-FL", "G3E-FL", "G3M-FL", "G4E-FL", "G4M-FL", "G5E-FL", "G5M-FL", "G6E-FL", "G6M-FL", "G7E-FL", "G7M-FL", "G8E-FL", "G8M-FL", "G9E-FL", "G10E-FL", "G11E-FL", "G12E-FL", "HSM-FL", "PE-MA", "PM-MA", "PS-MA", "KE-MA", "KM-MA", "KS-MA", "EEST-MA", "G1E-MA", "G1M-MA", "G1S-MA", "G2E-MA", "G2M-MA", "G2S-MA", "G3E-MA", "G3M-MA", "G3S-MA", "UEST-MA", "G4E-MA", "G4M-MA", "G4S-MA", "G5E-MA", "G5M-MA", "G5S-MA", "G6E-MA", "G6M-MA", "G6S-MA", "MST-MA", "G7E-MA", "G7M-MA", "G7S-MA", "G8E-MA", "G8M-MA", "G8S-MA", "HSE1-MA", "HSE2-MA", "HSMA-MA", "HSMF-MA", "HSMG-MA", "HSMM-MA", "HSMN-MA", "HSMS-MA", "HSSB-MA", "HSSC-MA", "HSSP-MA", "HSSES-MA", "HSSTS-MA", "HST-MA", "PE-MD", "PM-MD", "KE-MD", "KM-MD", "G1E-MD", "G1M-MD", "G2E-MD", "G2M-MD", "G3E-MD", "G3M-MD", "G4E-MD", "G4M-MD", "G5E-MD", "G5M-MD", "G6E-MD", "G6M-MD", "G7E-MD", "G7M-MD", "G8E-MD", "G8M-MD", "HSE1-MD", "HSE2-MD", "HSMA1-MD", "HSMA2-MD", "HSMG-MD", "HSMS-MD", "KE-MO", "KM-MO", "KS-MO", "G1E-MO", "G1M-MO", "G1S-MO", "G2E-MO", "G2M-MO", "G2S-MO","G3E-MO", "G3M-MO", "G3S-MO", "G4E-MO", "G4M-MO", "G4S-MO", "G5E-MO", "G5M-MO", "G5S-MO", "G6E-MO", "G6M-MO", "G7E-MO", "G7M-MO", "G8E-MO", "G8M-MO", "MSS-MO", "KE-MS", "KM-MS", "G1E-MS", "G1M-MS", "G2E-MS", "G2M-MS", "G3E-MS", "G3M-MS", "G4E-MS", "G4M-MS", "G5E-MS", "G5M-MS", "G6E-MS", "G6M-MS", "G7E-MS", "G7M-MS", "G8E-MS", "G8M-MS", "KS-NG", "G1S-NG", "G2S-NG", "G3S-NG", "G4S-NG", "G5S-NG", "MSS-NG", "HSS-NG", "KE-NJ", "KM-NJ", "KS-NJ", "G1E-NJ", "G1M-NJ", "G1S-NJ", "G2E-NJ", "G2M-NJ", "G2S-NJ", "G3E-NJ", "G3M-NJ", "G3S-NJ", "G4E-NJ", "G4M-NJ", "G4S-NJ", "G5E-NJ", "G5M-NJ", "G5S-NJ", "G6E-NJ", "G6M-NJ", "G7E-NJ", "G7M-NJ", "G8E-NJ", "G8M-NJ", "MSS-NJ", "PE-NY", "PM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KE-RI", "KM-RI", "G1E-RI", "G1M-RI", "G2E-RI", "G2M-RI", "G3E-RI", "G3M-RI", "G4E-RI", "G4M-RI", "G5E-RI", "G5M-RI", "G6E-RI", "G6M-RI", "G7E-RI", "G7M-RI", "G8E-RI", "G8M-RI", "HSE1-RI", "HSE2-RI", "HSMA-RI", "HSMF-RI", "HSMG-RI", "HSMM-RI", "HSMN-RI", "HSMS-RI", "KE-SC", "KM-SC", "KS-SC", "G1E-SC", "G1M-SC", "G1S-SC", "G2E-SC", "G2M-SC", "G2S-SC", "G3E-SC", "G3M-SC", "G3S-SC", "G4E-SC", "G4M-SC", "G4S-SC", "G5E-SC", "G5M-SC", "G5S-SC", "G6E-SC", "G6M-SC", "G6S-SC", "G7E-SC", "G7M-SC", "G7S-SC", "G8E-SC", "G8M-SC", "G8S-SC", "KE-TN", "KM-TN", "KS-TN", "G1E-TN", "G1M-TN", "G1S-TN", "G2E-TN", "G2M-TN", "G2S-TN", "G3E-TN", "G3M-TN", "G3S-TN", "G4E-TN", "G4M-TN", "G4S-TN", "G5E-TN", "G5M-TN", "G5S-TN", "G6E-TN", "G6M-TN", "G6S-TN", "G7E-TN", "G7M-TN", "G7S-TN", "G8E-TN", "G8M-TN", "G8S-TN", "HSMA1-TN", "HSMA2-TN", "HSSB1-TN", "HSE1-TN", "HSE2-TN", "HSMG-TN", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA1-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX", "KE-WI", "KM-WI", "G1E-WI", "G1M-WI", "G2E-WI", "G2M-WI", "G3E-WI", "G3M-WI", "G4E-WI", "G4M-WI", "G5E-WI", "G5M-WI", "G6E-WI", "G6M-WI", "G7E-WI", "G7M-WI", "G8E-WI", "G8M-WI", "EESSS-WI", "UESSS-WI", "MSSS-WI", "HSSS-WI", "SAT-M", "SAT-RW"];
+  standard_set: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PE-CO", "PM-CO", "PS-CO", "PSS-CO", "KE-CO", "KM-CO", "KS-CO", "KSS-CO", "G1E-CO", "G1M-CO", "G1S-CO", "G1SS-CO", "G2E-CO", "G2M-CO", "G2S-CO", "G2SS-CO", "G3E-CO", "G3M-CO", "G3S-CO", "G3SS-CO", "G4E-CO", "G4M-CO", "G4S-CO", "G4SS-CO", "G5E-CO", "G5M-CO", "G5S-CO", "G5SS-CO", "G6E-CO", "G6M-CO", "G6SS-CO", "G7E-CO", "G7M-CO", "G7SS-CO", "G8E-CO", "G8M-CO", "MSS-CO", "G8SS-CO", "HSE1-CO", "HSE2-CO", "HSM-CO", "HSS-CO", "HSSS-CO", "KE-FL", "KM-FL", "G1E-FL", "G1M-FL", "G2E-FL", "G2M-FL", "G3E-FL", "G3M-FL", "G4E-FL", "G4M-FL", "G5E-FL", "G5M-FL", "G6E-FL", "G6M-FL", "G7E-FL", "G7M-FL", "G8E-FL", "G8M-FL", "G9E-FL", "G10E-FL", "G11E-FL", "G12E-FL", "HSM-FL", "PE-MA", "PM-MA", "PS-MA", "KE-MA", "KM-MA", "KS-MA", "EEST-MA", "G1E-MA", "G1M-MA", "G1S-MA", "G2E-MA", "G2M-MA", "G2S-MA", "G3E-MA", "G3M-MA", "G3S-MA", "UEST-MA", "G4E-MA", "G4M-MA", "G4S-MA", "G5E-MA", "G5M-MA", "G5S-MA", "G6E-MA", "G6M-MA", "G6S-MA", "MST-MA", "G7E-MA", "G7M-MA", "G7S-MA", "G8E-MA", "G8M-MA", "G8S-MA", "HSE1-MA", "HSE2-MA", "HSMA-MA", "HSMF-MA", "HSMG-MA", "HSMM-MA", "HSMN-MA", "HSMS-MA", "HSSB-MA", "HSSC-MA", "HSSP-MA", "HSSES-MA", "HSSTS-MA", "HST-MA", "PE-MD", "PM-MD", "KE-MD", "KM-MD", "G1E-MD", "G1M-MD", "G2E-MD", "G2M-MD", "G3E-MD", "G3M-MD", "G4E-MD", "G4M-MD", "G5E-MD", "G5M-MD", "G6E-MD", "G6M-MD", "G7E-MD", "G7M-MD", "G8E-MD", "G8M-MD", "HSE1-MD", "HSE2-MD", "HSMA1-MD", "HSMA2-MD", "HSMG-MD", "HSMS-MD", "KE-MN", "KM-MN", "G1E-MN", "G1M-MN", "G2E-MN", "G2M-MN", "G3E-MN", "G3M-MN", "G4E-MN", "G4M-MN", "G5E-MN", "G5M-MN", "G6E-MN", "G6M-MN", "G7E-MN", "G7M-MN", "G8E-MN", "G8M-MN", "HSE1-MN", "HSE2-MN", "HSM-MN", "KE-MO", "KM-MO", "KS-MO", "G1E-MO", "G1M-MO", "G1S-MO", "G2E-MO", "G2M-MO", "G2S-MO", "G3E-MO", "G3M-MO", "G3S-MO", "G4E-MO", "G4M-MO", "G4S-MO", "G5E-MO", "G5M-MO", "G5S-MO", "G6E-MO", "G6M-MO", "G7E-MO", "G7M-MO", "G8E-MO", "G8M-MO", "MSS-MO", "KE-MS", "KM-MS", "G1E-MS", "G1M-MS", "G2E-MS", "G2M-MS", "G3E-MS", "G3M-MS", "G4E-MS", "G4M-MS", "G5E-MS", "G5M-MS", "G6E-MS", "G6M-MS", "G7E-MS", "G7M-MS", "G8E-MS", "G8M-MS", "KS-NG", "G1S-NG", "G2S-NG", "G3S-NG", "G4S-NG", "G5S-NG", "MSS-NG", "HSS-NG", "KE-NJ", "KM-NJ", "KS-NJ", "G1E-NJ", "G1M-NJ", "G1S-NJ", "G2E-NJ", "G2M-NJ", "G2S-NJ", "G3E-NJ", "G3M-NJ", "G3S-NJ", "G4E-NJ", "G4M-NJ", "G4S-NJ", "G5E-NJ", "G5M-NJ", "G5S-NJ", "G6E-NJ", "G6M-NJ", "G7E-NJ", "G7M-NJ", "G8E-NJ", "G8M-NJ", "MSS-NJ", "PE-NY", "PM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KE-RI", "KM-RI", "G1E-RI", "G1M-RI", "G2E-RI", "G2M-RI", "G3E-RI", "G3M-RI", "G4E-RI", "G4M-RI", "G5E-RI", "G5M-RI", "G6E-RI", "G6M-RI", "G7E-RI", "G7M-RI", "G8E-RI", "G8M-RI", "HSE1-RI", "HSE2-RI", "HSMA-RI", "HSMF-RI", "HSMG-RI", "HSMM-RI", "HSMN-RI", "HSMS-RI", "KE-SC", "KM-SC", "KS-SC", "G1E-SC", "G1M-SC", "G1S-SC", "G2E-SC", "G2M-SC", "G2S-SC", "G3E-SC", "G3M-SC", "G3S-SC", "G4E-SC", "G4M-SC", "G4S-SC", "G5E-SC", "G5M-SC", "G5S-SC", "G6E-SC", "G6M-SC", "G6S-SC", "G7E-SC", "G7M-SC", "G7S-SC", "G8E-SC", "G8M-SC", "G8S-SC", "KE-TN", "KM-TN", "KS-TN", "G1E-TN", "G1M-TN", "G1S-TN", "G2E-TN", "G2M-TN", "G2S-TN", "G3E-TN", "G3M-TN", "G3S-TN", "G4E-TN", "G4M-TN", "G4S-TN", "G5E-TN", "G5M-TN", "G5S-TN", "G6E-TN", "G6M-TN", "G6S-TN", "G7E-TN", "G7M-TN", "G7S-TN", "G8E-TN", "G8M-TN", "G8S-TN", "HSMA1-TN", "HSMA2-TN", "HSSB1-TN", "HSE1-TN", "HSE2-TN", "HSMG-TN", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA1-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX", "KE-WI", "KM-WI", "G1E-WI", "G1M-WI", "G2E-WI", "G2M-WI", "G3E-WI", "G3M-WI", "G4E-WI", "G4M-WI", "G5E-WI", "G5M-WI", "G6E-WI", "G6M-WI", "G7E-WI", "G7M-WI", "G8E-WI", "G8M-WI", "EESSS-WI", "UESSS-WI", "MSSS-WI", "HSSS-WI", "SAT-M", "SAT-RW"];
 
   standards_attribute_dump: { [key: string]: { 'State': string, 'Grades': string[], 'Subject': string, 'Curriculum': string } } = standardMetadata;
   KE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = KEStandards;
@@ -1390,6 +1425,27 @@ export class ProfileComponent implements OnInit {
   MDHSMA2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDHSMA2Standards;
   MDHSMG_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDHSMGStandards;
   MDHSMS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MDHSMSStandards;
+  MNKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNKEStandards;
+  MNKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNKMStandards;
+  MNG1E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG1EStandards;
+  MNG1M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG1MStandards;
+  MNG2E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG2EStandards;
+  MNG2M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG2MStandards;
+  MNG3E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG3EStandards;
+  MNG3M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG3MStandards;
+  MNG4E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG4EStandards;
+  MNG4M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG4MStandards;
+  MNG5E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG5EStandards;
+  MNG5M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG5MStandards;
+  MNG6E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG6EStandards;
+  MNG6M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG6MStandards;
+  MNG7E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG7EStandards;
+  MNG7M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG7MStandards;
+  MNG8E_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG8EStandards;
+  MNG8M_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNG8MStandards;
+  MNHSE1_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNHSE1Standards;
+  MNHSE2_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNHSE2Standards;
+  MNHSM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MNHSMStandards;
   MOKE_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MOKEStandards;
   MOKM_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MOKMStandards;
   MOKS_standards_dump: { 'Title': string, 'Overview': string, 'Goals': any[], 'Standards': any[], 'References': any[] } = MOKSStandards;
@@ -1810,6 +1866,20 @@ export class ProfileComponent implements OnInit {
   MEG35R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MEG35RProblems;
   MEG68R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MEG68RProblems;
   MEG10R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MEG10RProblems;
+  MNG3M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG3MProblems;
+  MNG4M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG4MProblems;
+  MNG5M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG5MProblems;
+  MNG6M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG6MProblems;
+  MNG7M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG7MProblems;
+  MNG8M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG8MProblems;
+  MNG11M_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG11MProblems;
+  MNG3R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG3RProblems;
+  MNG4R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG4RProblems;
+  MNG5R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG5RProblems;
+  MNG6R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG6RProblems;
+  MNG7R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG7RProblems;
+  MNG8R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG8RProblems;
+  MNG10R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG10RProblems;
   MOG3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MOG3EProblems;
   MOG4E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MOG4EProblems;
   MOG5E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MOG5EProblems;
@@ -2503,6 +2573,20 @@ export class ProfileComponent implements OnInit {
     "MEG35R": this.MEG35R_exam_dump,
     "MEG68R": this.MEG68R_exam_dump,
     "MEG10R": this.MEG10R_exam_dump,
+    "MNG3M": this.MNG3M_exam_dump,
+    "MNG4M": this.MNG4M_exam_dump,
+    "MNG5M": this.MNG5M_exam_dump,
+    "MNG6M": this.MNG6M_exam_dump,
+    "MNG7M": this.MNG7M_exam_dump,
+    "MNG8M": this.MNG8M_exam_dump,
+    "MNG11M": this.MNG11M_exam_dump,
+    "MNG3R": this.MNG3R_exam_dump,
+    "MNG4R": this.MNG4R_exam_dump,
+    "MNG5R": this.MNG5R_exam_dump,
+    "MNG6R": this.MNG6R_exam_dump,
+    "MNG7R": this.MNG7R_exam_dump,
+    "MNG8R": this.MNG8R_exam_dump,
+    "MNG10R": this.MNG10R_exam_dump,
     "MOG3E": this.MOG3E_exam_dump,
     "MOG4E": this.MOG4E_exam_dump,
     "MOG5E": this.MOG5E_exam_dump,
@@ -3033,533 +3117,554 @@ export class ProfileComponent implements OnInit {
   };
 
   s_dump_dict: any = {
-      "KE-CC": ["KE-CC", this.KE_standards_dump],
-      "KM-CC": ["KM-CC", this.KM_standards_dump],
-      "KS-CC": ["KS-NG", this.NGKS_standards_dump],
-      "G1E-CC": ["G1E-CC", this.G1E_standards_dump],
-      "G1M-CC": ["G1M-CC", this.G1M_standards_dump],
-      "G1S-CC": ["G1S-NG", this.NGG1S_standards_dump],
-      "G2E-CC": ["G2E-CC", this.G2E_standards_dump],
-      "G2M-CC": ["G2M-CC", this.G2M_standards_dump],
-      "G2S-CC": ["G2S-NG", this.NGG2S_standards_dump],
-      "G3E-CC": ["G3E-CC", this.G3E_standards_dump],
-      "G3M-CC": ["G3M-CC", this.G3M_standards_dump],
-      "G3S-CC": ["G3S-NG", this.NGG3S_standards_dump],
-      "G4E-CC": ["G4E-CC", this.G4E_standards_dump],
-      "G4M-CC": ["G4M-CC", this.G4M_standards_dump],
-      "G4S-CC": ["G4S-NG", this.NGG4S_standards_dump],
-      "G5E-CC": ["G5E-CC", this.G5E_standards_dump],
-      "G5M-CC": ["G5M-CC", this.G5M_standards_dump],
-      "G5S-CC": ["G5S-NG", this.NGG5S_standards_dump],
-      "G6E-CC": ["G6E-CC", this.G6E_standards_dump],
-      "G6M-CC": ["G6M-CC", this.G6M_standards_dump],
-      "G7E-CC": ["G7E-CC", this.G7E_standards_dump],
-      "G7M-CC": ["G7M-CC", this.G7M_standards_dump],
-      "G8E-CC": ["G8E-CC", this.G8E_standards_dump],
-      "G8M-CC": ["G8M-CC", this.G8M_standards_dump],
-      "MSS-CC": ["MSS-NG", this.NGMSS_standards_dump],
-      "HSE1-CC": ["HSE1-CC", this.HSE2_standards_dump],
-      "HSE2-CC": ["HSE2-CC", this.HSE2_standards_dump],
-      "HSMA-CC": ["HSMA-CC", this.HSMA_standards_dump],
-      "HSMF-CC": ["HSMF-CC", this.HSMF_standards_dump],
-      "HSMG-CC": ["HSMG-CC", this.HSMG_standards_dump],
-      "HSMM-CC": ["HSMM-CC", this.HSMM_standards_dump],
-      "HSMN-CC": ["HSMN-CC", this.HSMN_standards_dump],
-      "HSMS-CC": ["HSMS-CC", this.HSMS_standards_dump],
-      "HSS-CC": ["HSS-NG", this.NGHSS_standards_dump],
-      "PE-CO": ["PE-CO", this.COPE_standards_dump],
-      "PM-CO": ["PM-CO", this.COPM_standards_dump],
-      "PS-CO": ["PS-CO", this.COPS_standards_dump],
-      "PSS-CO": ["PSS-CO", this.COPSS_standards_dump],
-      "KE-CO": ["KE-CO", this.COKE_standards_dump],
-      "KM-CO": ["KM-CO", this.COKM_standards_dump],
-      "KS-CO": ["KS-CO", this.COKS_standards_dump],
-      "KSS-CO": ["KSS-CO", this.COKSS_standards_dump],
-      "G1E-CO": ["G1E-CO", this.COG1E_standards_dump],
-      "G1M-CO": ["G1M-CO", this.COG1M_standards_dump],
-      "G1S-CO": ["G1S-CO", this.COG1S_standards_dump],
-      "G1SS-CO": ["G1SS-CO", this.COG1SS_standards_dump],
-      "G2E-CO": ["G2E-CO", this.COG2E_standards_dump],
-      "G2M-CO": ["G2M-CO", this.COG2M_standards_dump],
-      "G2S-CO": ["G2S-CO", this.COG2S_standards_dump],
-      "G2SS-CO": ["G2SS-CO", this.COG2SS_standards_dump],
-      "G3E-CO": ["G3E-CO", this.COG3E_standards_dump],
-      "G3M-CO": ["G3M-CO", this.COG3M_standards_dump],
-      "G3S-CO": ["G3S-CO", this.COG3S_standards_dump],
-      "G3SS-CO": ["G3SS-CO", this.COG3SS_standards_dump],
-      "G4E-CO": ["G4E-CO", this.COG4E_standards_dump],
-      "G4M-CO": ["G4M-CO", this.COG4M_standards_dump],
-      "G4S-CO": ["G4S-CO", this.COG4S_standards_dump],
-      "G4SS-CO": ["G4SS-CO", this.COG4SS_standards_dump],
-      "G5E-CO": ["G5E-CO", this.COG5E_standards_dump],
-      "G5M-CO": ["G5M-CO", this.COG5M_standards_dump],
-      "G5S-CO": ["G5S-CO", this.COG5S_standards_dump],
-      "G5SS-CO": ["G5SS-CO", this.COG5SS_standards_dump],
-      "G6E-CO": ["G6E-CO", this.COG6E_standards_dump],
-      "G6M-CO": ["G6M-CO", this.COG6M_standards_dump],
-      "G6SS-CO": ["G6SS-CO", this.COG6SS_standards_dump],
-      "G7E-CO": ["G7E-CO", this.COG7E_standards_dump],
-      "G7M-CO": ["G7M-CO", this.COG7M_standards_dump],
-      "G7SS-CO": ["G7SS-CO", this.COG7SS_standards_dump],
-      "G8E-CO": ["G8E-CO", this.COG8E_standards_dump],
-      "G8M-CO": ["G8M-CO", this.COG8M_standards_dump],
-      "MSS-CO": ["MSS-CO", this.COMSS_standards_dump],
-      "G8SS-CO": ["G8SS-CO", this.COG8SS_standards_dump],
-      "HSE1-CO": ["HSE1-CO", this.COHSE1_standards_dump],
-      "HSE2-CO": ["HSE2-CO", this.COHSE2_standards_dump],
-      "HSM-CO": ["HSM-CO", this.COHSM_standards_dump],
-      "HSS-CO": ["HSS-CO", this.COHSS_standards_dump],
-      "HSSS-CO": ["HSSS-CO", this.COHSSS_standards_dump],
-      "KE-DE": ["KE-CC", this.KE_standards_dump],
-      "KM-DE": ["KM-CC", this.KM_standards_dump],
-      "KS-DE": ["KS-NG", this.NGKS_standards_dump],
-      "G1E-DE": ["G1E-CC", this.G1E_standards_dump],
-      "G1M-DE": ["G1M-CC", this.G1M_standards_dump],
-      "G1S-DE": ["G1S-NG", this.NGG1S_standards_dump],
-      "G2E-DE": ["G2E-CC", this.G2E_standards_dump],
-      "G2M-DE": ["G2M-CC", this.G2M_standards_dump],
-      "G2S-DE": ["G2S-NG", this.NGG2S_standards_dump],
-      "G3E-DE": ["G3E-CC", this.G3E_standards_dump],
-      "G3M-DE": ["G3M-CC", this.G3M_standards_dump],
-      "G3S-DE": ["G3S-NG", this.NGG3S_standards_dump],
-      "G4E-DE": ["G4E-CC", this.G4E_standards_dump],
-      "G4M-DE": ["G4M-CC", this.G4M_standards_dump],
-      "G4S-DE": ["G4S-NG", this.NGG4S_standards_dump],
-      "G5E-DE": ["G5E-CC", this.G5E_standards_dump],
-      "G5M-DE": ["G5M-CC", this.G5M_standards_dump],
-      "G5S-DE": ["G5S-NG", this.NGG5S_standards_dump],
-      "G6E-DE": ["G6E-CC", this.G6E_standards_dump],
-      "G6M-DE": ["G6M-CC", this.G6M_standards_dump],
-      "G7E-DE": ["G7E-CC", this.G7E_standards_dump],
-      "G7M-DE": ["G7M-CC", this.G7M_standards_dump],
-      "G8E-DE": ["G8E-CC", this.G8E_standards_dump],
-      "G8M-DE": ["G8M-CC", this.G8M_standards_dump],
-      "MSS-DE": ["MSS-NG", this.NGMSS_standards_dump],
-      "HSE1-DE": ["HSE1-CC", this.HSE2_standards_dump],
-      "HSE2-DE": ["HSE2-CC", this.HSE2_standards_dump],
-      "HSMA-DE": ["HSMA-CC", this.HSMA_standards_dump],
-      "HSMF-DE": ["HSMF-CC", this.HSMF_standards_dump],
-      "HSMG-DE": ["HSMG-CC", this.HSMG_standards_dump],
-      "HSMM-DE": ["HSMM-CC", this.HSMM_standards_dump],
-      "HSMN-DE": ["HSMN-CC", this.HSMN_standards_dump],
-      "HSMS-DE": ["HSMS-CC", this.HSMS_standards_dump],
-      "HSS-DE": ["HSS-NG", this.NGHSS_standards_dump],
-      "KE-FL": ["KE-FL", this.FLKE_standards_dump],
-      "KM-FL": ["KM-FL", this.FLKM_standards_dump],
-      "G1E-FL": ["G1E-FL", this.FLG1E_standards_dump],
-      "G1M-FL": ["G1M-FL", this.FLG1M_standards_dump],
-      "G2E-FL": ["G2E-FL", this.FLG2E_standards_dump],
-      "G2M-FL": ["G2M-FL", this.FLG2M_standards_dump],
-      "G3E-FL": ["G3E-FL", this.FLG3E_standards_dump],
-      "G3M-FL": ["G3M-FL", this.FLG3M_standards_dump],
-      "G4E-FL": ["G4M-FL", this.FLG4E_standards_dump],
-      "G4M-FL": ["G4M-FL", this.FLG4M_standards_dump],
-      "G5E-FL": ["G5E-FL", this.FLG5E_standards_dump],
-      "G5M-FL": ["G5M-FL", this.FLG5M_standards_dump],
-      "G6E-FL": ["G6E-FL", this.FLG6E_standards_dump],
-      "G6M-FL": ["G6M-FL", this.FLG6M_standards_dump],
-      "G7E-FL": ["G7E-FL", this.FLG7E_standards_dump],
-      "G7M-FL": ["G7M-FL", this.FLG7M_standards_dump],
-      "G8E-FL": ["G8E-FL", this.FLG8E_standards_dump],
-      "G8M-FL": ["G8M-FL", this.FLG8M_standards_dump],
-      "G9E-FL": ["G9E-FL", this.FLG9E_standards_dump],
-      "G10E-FL": ["G10E-FL", this.FLG10E_standards_dump],
-      "G11E-FL": ["G11E-FL", this.FLG11E_standards_dump],
-      "G12E-FL": ["G12E-FL", this.FLG12E_standards_dump],
-      "HSM-FL": ["HSM-FL", this.FLHSM_standards_dump],
-      "KE-IL": ["KE-CC", this.KE_standards_dump],
-      "KM-IL": ["KM-CC", this.KM_standards_dump],
-      "KS-IL": ["KS-NG", this.NGKS_standards_dump],
-      "G1E-IL": ["G1E-CC", this.G1E_standards_dump],
-      "G1M-IL": ["G1M-CC", this.G1M_standards_dump],
-      "G1S-IL": ["G1S-NG", this.NGG1S_standards_dump],
-      "G2E-IL": ["G2E-CC", this.G2E_standards_dump],
-      "G2M-IL": ["G2M-CC", this.G2M_standards_dump],
-      "G2S-IL": ["G2S-NG", this.NGG2S_standards_dump],
-      "G3E-IL": ["G3E-CC", this.G3E_standards_dump],
-      "G3M-IL": ["G3M-CC", this.G3M_standards_dump],
-      "G3S-IL": ["G3S-NG", this.NGG3S_standards_dump],
-      "G4E-IL": ["G4E-CC", this.G4E_standards_dump],
-      "G4M-IL": ["G4M-CC", this.G4M_standards_dump],
-      "G4S-IL": ["G4S-NG", this.NGG4S_standards_dump],
-      "G5E-IL": ["G5E-CC", this.G5E_standards_dump],
-      "G5M-IL": ["G5M-CC", this.G5M_standards_dump],
-      "G5S-IL": ["G5S-NG", this.NGG5S_standards_dump],
-      "G6E-IL": ["G6E-CC", this.G6E_standards_dump],
-      "G6M-IL": ["G6M-CC", this.G6M_standards_dump],
-      "G7E-IL": ["G7E-CC", this.G7E_standards_dump],
-      "G7M-IL": ["G7M-CC", this.G7M_standards_dump],
-      "G8E-IL": ["G8E-CC", this.G8E_standards_dump],
-      "G8M-IL": ["G8M-CC", this.G8M_standards_dump],
-      "MSS-IL": ["MSS-NG", this.NGMSS_standards_dump],
-      "HSE1-IL": ["HSE1-CC", this.HSE2_standards_dump],
-      "HSE2-IL": ["HSE2-CC", this.HSE2_standards_dump],
-      "HSMA-IL": ["HSMA-CC", this.HSMA_standards_dump],
-      "HSMF-IL": ["HSMF-CC", this.HSMF_standards_dump],
-      "HSMG-IL": ["HSMG-CC", this.HSMG_standards_dump],
-      "HSMM-IL": ["HSMM-CC", this.HSMM_standards_dump],
-      "HSMN-IL": ["HSMN-CC", this.HSMN_standards_dump],
-      "HSMS-IL": ["HSMS-CC", this.HSMS_standards_dump],
-      "HSS-IL": ["HSS-NG", this.NGHSS_standards_dump],
-      "PE-MA": ["PE-MA", this.MAPE_standards_dump],
-      "PM-MA": ["PM-MA", this.MAPM_standards_dump],
-      "PS-MA": ["PS-MA", this.MAPS_standards_dump],
-      "KE-MA": ["KE-MA", this.MAKE_standards_dump],
-      "KM-MA": ["KM-MA", this.MAKM_standards_dump],
-      "KS-MA": ["KS-MA", this.MAKS_standards_dump],
-      "EEST-MA": ["EEST-MA", this.MAEEST_standards_dump],
-      "G1E-MA": ["G1E-MA", this.MAG1E_standards_dump],
-      "G1M-MA": ["G1M-MA", this.MAG1M_standards_dump],
-      "G1S-MA": ["G1S-MA", this.MAG1S_standards_dump],
-      "G2E-MA": ["G2E-MA", this.MAG2E_standards_dump],
-      "G2M-MA": ["G2M-MA", this.MAG2M_standards_dump],
-      "G2S-MA": ["G2S-MA", this.MAG2S_standards_dump],
-      "G3E-MA": ["G3E-MA", this.MAG3E_standards_dump],
-      "G3M-MA": ["G3M-MA", this.MAG3M_standards_dump],
-      "G3S-MA": ["G3S-MA", this.MAG3S_standards_dump],
-      "UEST-MA": ["UEST-MA", this.MAUEST_standards_dump],
-      "G4E-MA": ["G4E-MA", this.MAG4E_standards_dump],
-      "G4M-MA": ["G4M-MA", this.MAG4M_standards_dump],
-      "G4S-MA": ["G4S-MA", this.MAG4S_standards_dump],
-      "G5E-MA": ["G5E-MA", this.MAG5E_standards_dump],
-      "G5M-MA": ["G5M-MA", this.MAG5M_standards_dump],
-      "G5S-MA": ["G5S-MA", this.MAG5S_standards_dump],
-      "G6E-MA": ["G6E-MA", this.MAG6E_standards_dump],
-      "G6M-MA": ["G6M-MA", this.MAG6M_standards_dump],
-      "G6S-MA": ["G6S-MA", this.MAG6S_standards_dump],
-      "MST-MA": ["MST-MA", this.MAMST_standards_dump],
-      "G7E-MA": ["G7E-MA", this.MAG7E_standards_dump],
-      "G7M-MA": ["G7M-MA", this.MAG7M_standards_dump],
-      "G7S-MA": ["G7S-MA", this.MAG7S_standards_dump],
-      "G8E-MA": ["G8E-MA", this.MAG8E_standards_dump],
-      "G8M-MA": ["G8M-MA", this.MAG8M_standards_dump],
-      "G8S-MA": ["G8S-MA", this.MAG8S_standards_dump],
-      "HSE1-MA": ["HSE1-MA", this.MAHSE1_standards_dump],
-      "HSE2-MA": ["HSE2-MA", this.MAHSE2_standards_dump],
-      "HSMA-MA": ["HSMA-MA", this.MAHSMA_standards_dump],
-      "HSMF-MA": ["HSMF-MA", this.MAHSMF_standards_dump],
-      "HSMG-MA": ["HSMG-MA", this.MAHSMG_standards_dump],
-      "HSMM-MA": ["HSMM-MA", this.MAHSMM_standards_dump],
-      "HSMN-MA": ["HSMN-MA", this.MAHSMN_standards_dump],
-      "HSMS-MA": ["HSMS-MA", this.MAHSMS_standards_dump],
-      "HSSB-MA": ["HSSB-MA", this.MAHSSB_standards_dump],
-      "HSSC-MA": ["HSSC-MA", this.MAHSSC_standards_dump],
-      "HSSP-MA": ["HSSP-MA", this.MAHSSP_standards_dump],
-      "HSSES-MA": ["HSSES-MA", this.MAHSSES_standards_dump],
-      "HSSTS-MA": ["HSSTS-MA", this.MAHSSTS_standards_dump],
-      "HST-MA": ["HST-MA", this.MAHST_standards_dump],
-      "PE-MD": ["PE-MD", this.MDPE_standards_dump],
-      "PM-MD": ["PM-MD", this.MDPM_standards_dump],
-      "KE-MD": ["KE-MD", this.MDKE_standards_dump],
-      "KM-MD": ["KM-MD", this.MDKM_standards_dump],
-      "KS-MD": ["KS-NG", this.NGKS_standards_dump],
-      "G1E-MD": ["G1E-MD", this.MDG1E_standards_dump],
-      "G1M-MD": ["G1M-MD", this.MDG1M_standards_dump],
-      "G1S-MD": ["G1S-NG", this.NGG1S_standards_dump],
-      "G2E-MD": ["G2E-MD", this.MDG2E_standards_dump],
-      "G2M-MD": ["G2M-MD", this.MDG2M_standards_dump],
-      "G2S-MD": ["G2S-NG", this.NGG1S_standards_dump],
-      "G3E-MD": ["G3E-MD", this.MDG3E_standards_dump],
-      "G3M-MD": ["G3M-MD", this.MDG3M_standards_dump],
-      "G3S-MD": ["G3S-NG", this.NGG3S_standards_dump],
-      "G4E-MD": ["G4E-MD", this.MDG4E_standards_dump],
-      "G4M-MD": ["G4M-MD", this.MDG4M_standards_dump],
-      "G4S-MD": ["G4S-NG", this.NGG4S_standards_dump],
-      "G5E-MD": ["G5E-MD", this.MDG5E_standards_dump],
-      "G5M-MD": ["G5M-MD", this.MDG5M_standards_dump],
-      "G5S-MD": ["G5S-NG", this.NGG5S_standards_dump],
-      "G6E-MD": ["G6E-MD", this.MDG6E_standards_dump],
-      "G6M-MD": ["G6M-MD", this.MDG6M_standards_dump],
-      "G7E-MD": ["G7E-MD", this.MDG7E_standards_dump],
-      "G7M-MD": ["G7M-MD", this.MDG7M_standards_dump],
-      "G8E-MD": ["G8E-MD", this.MDG8E_standards_dump],
-      "G8M-MD": ["G8M-MD", this.MDG8M_standards_dump],
-      "MSS-MD": ["MSS-NG", this.NGMSS_standards_dump],
-      "HSE1-MD": ["HSE1-MD", this.MDHSE1_standards_dump],
-      "HSE2-MD": ["HSE2-MD", this.MDHSE2_standards_dump],
-      "HSMA1-MD": ["HSMA1-MD", this.MDHSMA1_standards_dump],
-      "HSMA2-MD": ["HSMA2-MD", this.MDHSMA2_standards_dump],
-      "HSMG-MD": ["HSMG-MD", this.MDHSMG_standards_dump],
-      "HSMS-MD": ["HSMS-MD", this.MDHSMS_standards_dump],
-      "HSS-MD": ["HSS-NG", this.NGHSS_standards_dump],
-      "KE-MO": ["KE-MO", this.MOKE_standards_dump],
-      "KM-MO": ["KM-MO", this.MOKM_standards_dump],
-      "KS-MO": ["KS-MO", this.MOKS_standards_dump],
-      "G1E-MO": ["G1E-MO", this.MOG1E_standards_dump],
-      "G1M-MO": ["G1M-MO", this.MOG1M_standards_dump],
-      "G1S-MO": ["G1S-MO", this.MOG1S_standards_dump],
-      "G2E-MO": ["G2E-MO", this.MOG2E_standards_dump],
-      "G2M-MO": ["G2M-MO", this.MOG2M_standards_dump],
-      "G2S-MO": ["G2S-MO", this.MOG2S_standards_dump],
-      "G3E-MO": ["G3E-MO", this.MOG3E_standards_dump],
-      "G3M-MO": ["G3M-MO", this.MOG3M_standards_dump],
-      "G3S-MO": ["G3S-MO", this.MOG3S_standards_dump],
-      "G4E-MO": ["G4E-MO", this.MOG4E_standards_dump],
-      "G4M-MO": ["G4M-MO", this.MOG4M_standards_dump],
-      "G4S-MO": ["G4S-MO", this.MOG4S_standards_dump],
-      "G5E-MO": ["G5E-MO", this.MOG5E_standards_dump],
-      "G5M-MO": ["G5M-MO", this.MOG5M_standards_dump],
-      "G5S-MO": ["G5S-MO", this.MOG5S_standards_dump],
-      "G6E-MO": ["G6E-MO", this.MOG6E_standards_dump],
-      "G6M-MO": ["G6M-MO", this.MOG6M_standards_dump],
-      "G7E-MO": ["G7E-MO", this.MOG7E_standards_dump],
-      "G7M-MO": ["G7M-MO", this.MOG7M_standards_dump],
-      "G8E-MO": ["G8E-MO", this.MOG8E_standards_dump],
-      "G8M-MO": ["G8M-MO", this.MOG8M_standards_dump],
-      "MSS-MO": ["MSS-MO", this.MOMSS_standards_dump],
-      "KE-MS": ["KE-MS", this.MSKE_standards_dump],
-      "KM-MS": ["KM-MS", this.MSKM_standards_dump],
-      "G1E-MS": ["G1E-MS", this.MSG1E_standards_dump],
-      "G1M-MS": ["G1M-MS", this.MSG1M_standards_dump],
-      "G2E-MS": ["G2E-MS", this.MSG2E_standards_dump],
-      "G2M-MS": ["G2M-MS", this.MSG2M_standards_dump],
-      "G3E-MS": ["G3E-MS", this.MSG3E_standards_dump],
-      "G3M-MS": ["G3M-MS", this.MSG3M_standards_dump],
-      "G4E-MS": ["G4E-MS", this.MSG4E_standards_dump],
-      "G4M-MS": ["G4M-MS", this.MSG4M_standards_dump],
-      "G5E-MS": ["G5E-MS", this.MSG5E_standards_dump],
-      "G5M-MS": ["G5M-MS", this.MSG5M_standards_dump],
-      "G6E-MS": ["G6E-MS", this.MSG6E_standards_dump],
-      "G6M-MS": ["G6M-MS", this.MSG6M_standards_dump],
-      "G7E-MS": ["G7E-MS", this.MSG7E_standards_dump],
-      "G7M-MS": ["G7M-MS", this.MSG7M_standards_dump],
-      "G8E-MS": ["G8E-MS", this.MSG8E_standards_dump],
-      "G8M-MS": ["G8M-MS", this.MSG8M_standards_dump],
-      "KE-NJ": ["KE-NJ", this.NJKE_standards_dump],
-      "KM-NJ": ["KM-NJ", this.NJKM_standards_dump],
-      "KS-NJ": ["KS-NJ", this.NJKS_standards_dump],
-      "G1E-NJ": ["G1E-NJ", this.NJG1E_standards_dump],
-      "G1M-NJ": ["G1M-NJ", this.NJG1M_standards_dump],
-      "G1S-NJ": ["G1S-NJ", this.NJG1S_standards_dump],
-      "G2E-NJ": ["G2E-NJ", this.NJG2E_standards_dump],
-      "G2M-NJ": ["G2M-NJ", this.NJG2M_standards_dump],
-      "G2S-NJ": ["G2S-NJ", this.NJG2S_standards_dump],
-      "G3E-NJ": ["G3E-NJ", this.NJG3E_standards_dump],
-      "G3M-NJ": ["G3M-NJ", this.NJG3M_standards_dump],
-      "G3S-NJ": ["G3S-NJ", this.NJG3S_standards_dump],
-      "G4E-NJ": ["G4E-NJ", this.NJG4E_standards_dump],
-      "G4M-NJ": ["G4M-NJ", this.NJG4M_standards_dump],
-      "G4S-NJ": ["G4S-NJ", this.NJG4S_standards_dump],
-      "G5E-NJ": ["G5E-NJ", this.NJG5E_standards_dump],
-      "G5M-NJ": ["G5M-NJ", this.NJG5M_standards_dump],
-      "G5S-NJ": ["G5S-NJ", this.NJG5S_standards_dump],
-      "G6E-NJ": ["G6E-NJ", this.NJG6E_standards_dump],
-      "G6M-NJ": ["G6M-NJ", this.NJG6M_standards_dump],
-      "G7E-NJ": ["G7E-NJ", this.NJG7E_standards_dump],
-      "G7M-NJ": ["G7M-NJ", this.NJG7M_standards_dump],
-      "G8E-NJ": ["G8E-NJ", this.NJG8E_standards_dump],
-      "G8M-NJ": ["G8M-NJ", this.NJG8M_standards_dump],
-      "MSS-NJ": ["MSS-NJ", this.NJMSS_standards_dump],
-      "KE-NM": ["KE-CC", this.KE_standards_dump],
-      "KM-NM": ["KM-CC", this.KM_standards_dump],
-      "KS-NM": ["KS-NG", this.NGKS_standards_dump],
-      "G1E-NM": ["G1E-CC", this.G1E_standards_dump],
-      "G1M-NM": ["G1M-CC", this.G1M_standards_dump],
-      "G1S-NM": ["G1S-NG", this.NGG1S_standards_dump],
-      "G2E-NM": ["G2E-CC", this.G2E_standards_dump],
-      "G2M-NM": ["G2M-CC", this.G2M_standards_dump],
-      "G2S-NM": ["G2S-NG", this.NGG2S_standards_dump],
-      "G3E-NM": ["G3E-CC", this.G3E_standards_dump],
-      "G3M-NM": ["G3M-CC", this.G3M_standards_dump],
-      "G3S-NM": ["G3S-NG", this.NGG3S_standards_dump],
-      "G4E-NM": ["G4E-CC", this.G4E_standards_dump],
-      "G4M-NM": ["G4M-CC", this.G4M_standards_dump],
-      "G4S-NM": ["G4S-NG", this.NGG4S_standards_dump],
-      "G5E-NM": ["G5E-CC", this.G5E_standards_dump],
-      "G5M-NM": ["G5M-CC", this.G5M_standards_dump],
-      "G5S-NM": ["G5S-NG", this.NGG5S_standards_dump],
-      "G6E-NM": ["G6E-CC", this.G6E_standards_dump],
-      "G6M-NM": ["G6M-CC", this.G6M_standards_dump],
-      "G7E-NM": ["G7E-CC", this.G7E_standards_dump],
-      "G7M-NM": ["G7M-CC", this.G7M_standards_dump],
-      "G8E-NM": ["G8E-CC", this.G8E_standards_dump],
-      "G8M-NM": ["G8M-CC", this.G8M_standards_dump],
-      "MSS-NM": ["MSS-NG", this.NGMSS_standards_dump],
-      "HSE1-NM": ["HSE1-CC", this.HSE2_standards_dump],
-      "HSE2-NM": ["HSE2-CC", this.HSE2_standards_dump],
-      "HSMA-NM": ["HSMA-CC", this.HSMA_standards_dump],
-      "HSMF-NM": ["HSMF-CC", this.HSMF_standards_dump],
-      "HSMG-NM": ["HSMG-CC", this.HSMG_standards_dump],
-      "HSMM-NM": ["HSMM-CC", this.HSMM_standards_dump],
-      "HSMN-NM": ["HSMN-CC", this.HSMN_standards_dump],
-      "HSMS-NM": ["HSMS-CC", this.HSMS_standards_dump],
-      "HSS-NM": ["HSS-NG", this.NGHSS_standards_dump],
-      "PE-NY": ["PE-NY", this.NYPE_standards_dump],
-      "PM-NY": ["PM-NY", this.NYPM_standards_dump],
-      "KE-NY": ["KE-NY", this.NYKE_standards_dump],
-      "KM-NY": ["KM-NY", this.NYKM_standards_dump],
-      "G1E-NY": ["G1E-NY", this.NYG1E_standards_dump],
-      "G1M-NY": ["G1M-NY", this.NYG1M_standards_dump],
-      "G2E-NY": ["G2E-NY", this.NYG2E_standards_dump],
-      "G2M-NY": ["G2M-NY", this.NYG2M_standards_dump],
-      "G3E-NY": ["G3E-NY", this.NYG3E_standards_dump],
-      "G3M-NY": ["G3M-NY", this.NYG3M_standards_dump],
-      "G4E-NY": ["G4E-NY", this.NYG4E_standards_dump],
-      "G4M-NY": ["G4M-NY", this.NYG4M_standards_dump],
-      "G5E-NY": ["G5E-NY", this.NYG5E_standards_dump],
-      "G5M-NY": ["G5M-NY", this.NYG5M_standards_dump],
-      "G6E-NY": ["G6E-NY", this.NYG6E_standards_dump],
-      "G6M-NY": ["G6M-NY", this.NYG6M_standards_dump],
-      "G7E-NY": ["G7E-NY", this.NYG7E_standards_dump],
-      "G7M-NY": ["G7M-NY", this.NYG7M_standards_dump],
-      "G8E-NY": ["G8E-NY", this.NYG8E_standards_dump],
-      "G8M-NY": ["G8M-NY", this.NYG8M_standards_dump],
-      "HSE1-NY": ["HSE1-NY", this.NYHSE1_standards_dump],
-      "HSE2-NY": ["HSE2-NY", this.NYHSE2_standards_dump],
-      "HSMA1-NY": ["SMA1-NY", this.NYHSMA1_standards_dump],
-      "HSMG-NY": ["HSMG-NY", this.NYHSMG_standards_dump],
-      "HSMA2-NY": ["HSMA2-NY", this.NYHSMA2_standards_dump],
-      "G3E-PA": ["G3E-PA", this.PAG3E_standards_dump],
-      "G3M-PA": ["G3M-PA", this.PAG3M_standards_dump],
-      "G4E-PA": ["G4E-PA", this.PAG4E_standards_dump],
-      "G4M-PA": ["G4M-PA", this.PAG4M_standards_dump],
-      "G4S-PA": ["G4S-PA", this.PAG4S_standards_dump],
-      "G5E-PA": ["G5E-PA", this.PAG5E_standards_dump],
-      "G5M-PA": ["G5M-PA", this.PAG5M_standards_dump],
-      "G6E-PA": ["G6E-PA", this.PAG6E_standards_dump],
-      "G6M-PA": ["G6M-PA", this.PAG6M_standards_dump],
-      "G7E-PA": ["G7E-PA", this.PAG7E_standards_dump],
-      "G7M-PA": ["G7M-PA", this.PAG7M_standards_dump],
-      "G8E-PA": ["G8E-PA", this.PAG8E_standards_dump],
-      "G8M-PA": ["G8M-PA", this.PAG8M_standards_dump],
-      "G8S-PA": ["G8S-PA", this.PAG8S_standards_dump],
-      "KE-RI": ["KE-RI", this.RIKE_standards_dump],
-      "KM-RI": ["KM-RI", this.RIKM_standards_dump],
-      "G1E-RI": ["G1E-RI", this.RIG1E_standards_dump],
-      "G1M-RI": ["G1M-RI", this.RIG1M_standards_dump],
-      "G2E-RI": ["G2E-RI", this.RIG2E_standards_dump],
-      "G2M-RI": ["G2M-RI", this.RIG2M_standards_dump],
-      "G3E-RI": ["G3E-RI", this.RIG3E_standards_dump],
-      "G3M-RI": ["G3M-RI", this.RIG3M_standards_dump],
-      "G4E-RI": ["G4E-RI", this.RIG4E_standards_dump],
-      "G4M-RI": ["G4M-RI", this.RIG4M_standards_dump],
-      "G5E-RI": ["G5E-RI", this.RIG5E_standards_dump],
-      "G5M-RI": ["G5M-RI", this.RIG5M_standards_dump],
-      "G6E-RI": ["G6E-RI", this.RIG6E_standards_dump],
-      "G6M-RI": ["G6M-RI", this.RIG6M_standards_dump],
-      "G7E-RI": ["G7E-RI", this.RIG7E_standards_dump],
-      "G7M-RI": ["G7M-RI", this.RIG7M_standards_dump],
-      "G8E-RI": ["G8E-RI", this.RIG8E_standards_dump],
-      "G8M-RI": ["G8M-RI", this.RIG8M_standards_dump],
-      "HSE1-RI": ["HSE1-RI", this.RIHSE2_standards_dump],
-      "HSE2-RI": ["HSE2-RI", this.RIHSE2_standards_dump],
-      "HSMA-RI": ["HSMA-RI", this.RIHSMA_standards_dump],
-      "HSMF-RI": ["HSMF-RI", this.RIHSMF_standards_dump],
-      "HSMG-RI": ["HSMG-RI", this.RIHSMG_standards_dump],
-      "HSMM-RI": ["HSMM-RI", this.RIHSMM_standards_dump],
-      "HSMN-RI": ["HSMN-RI", this.RIHSMN_standards_dump],
-      "HSMS-RI": ["HSMS-RI", this.RIHSMS_standards_dump],
-      "KE-SC": ["KE-SC", this.SCKE_standards_dump],
-      "KM-SC": ["KM-SC", this.SCKM_standards_dump],
-      "KS-SC": ["KS-SC", this.SCKS_standards_dump],
-      "G1E-SC": ["G1E-SC", this.SCG1E_standards_dump],
-      "G1M-SC": ["G1M-SC", this.SCG1M_standards_dump],
-      "G1S-SC": ["G1S-SC", this.SCG1S_standards_dump],
-      "G2E-SC": ["G2E-SC", this.SCG2E_standards_dump],
-      "G2M-SC": ["G2M-SC", this.SCG2M_standards_dump],
-      "G2S-SC": ["G2S-SC", this.SCG2S_standards_dump],
-      "G3E-SC": ["G3E-SC", this.SCG3E_standards_dump],
-      "G3M-SC": ["G3M-SC", this.SCG3M_standards_dump],
-      "G3S-SC": ["G3S-SC", this.SCG3S_standards_dump],
-      "G4E-SC": ["G4E-SC", this.SCG4E_standards_dump],
-      "G4M-SC": ["G4M-SC", this.SCG4M_standards_dump],
-      "G4S-SC": ["G4S-SC", this.SCG4S_standards_dump],
-      "G5E-SC": ["G5E-SC", this.SCG5E_standards_dump],
-      "G5M-SC": ["G5M-SC", this.SCG5M_standards_dump],
-      "G5S-SC": ["G5S-SC", this.SCG5S_standards_dump],
-      "G6E-SC": ["G6E-SC", this.SCG6E_standards_dump],
-      "G6M-SC": ["G6M-SC", this.SCG6M_standards_dump],
-      "G6S-SC": ["G6S-SC", this.SCG6S_standards_dump],
-      "G7E-SC": ["G7E-SC", this.SCG7E_standards_dump],
-      "G7M-SC": ["G7M-SC", this.SCG7M_standards_dump],
-      "G7S-SC": ["G7S-SC", this.SCG7S_standards_dump],
-      "G8E-SC": ["G8E-SC", this.SCG8E_standards_dump],
-      "G8M-SC": ["G8M-SC", this.SCG8M_standards_dump],
-      "G8S-SC": ["G8S-SC", this.SCG8S_standards_dump],
-      "KE-TN": ["KE-TN", this.TNKE_standards_dump],
-      "KM-TN": ["KM-TN", this.TNKM_standards_dump],
-      "KS-TN": ["KS-TN", this.TNKS_standards_dump],
-      "G1E-TN": ["G1E-TN", this.TNG1E_standards_dump],
-      "G1M-TN": ["G1M-TN", this.TNG1M_standards_dump],
-      "G1S-TN": ["G1S-TN", this.TNG1S_standards_dump],
-      "G2E-TN": ["G2E-TN", this.TNG2E_standards_dump],
-      "G2M-TN": ["G2M-TN", this.TNG2M_standards_dump],
-      "G2S-TN": ["G2S-TN", this.TNG2S_standards_dump],
-      "G3E-TN": ["G3E-TN", this.TNG3E_standards_dump],
-      "G3M-TN": ["G3M-TN", this.TNG3M_standards_dump],
-      "G3S-TN": ["G3S-TN", this.TNG3S_standards_dump],
-      "G4E-TN": ["G4E-TN", this.TNG4E_standards_dump],
-      "G4M-TN": ["G4M-TN", this.TNG4M_standards_dump],
-      "G4S-TN": ["G4S-TN", this.TNG4S_standards_dump],
-      "G5E-TN": ["G5E-TN", this.TNG5E_standards_dump],
-      "G5M-TN": ["G5M-TN", this.TNG5M_standards_dump],
-      "G5S-TN": ["G5S-TN", this.TNG5S_standards_dump],
-      "G6E-TN": ["G6E-TN", this.TNG6E_standards_dump],
-      "G6M-TN": ["G6M-TN", this.TNG6M_standards_dump],
-      "G6S-TN": ["G6S-TN", this.TNG6S_standards_dump],
-      "G7E-TN": ["G7E-TN", this.TNG7E_standards_dump],
-      "G7M-TN": ["G7M-TN", this.TNG7M_standards_dump],
-      "G7S-TN": ["G7S-TN", this.TNG7S_standards_dump],
-      "G8E-TN": ["G8E-TN", this.TNG8E_standards_dump],
-      "G8M-TN": ["G8M-TN", this.TNG8M_standards_dump],
-      "G8S-TN": ["G8S-TN", this.TNG8S_standards_dump],
-      "HSMA1-TN": ["HSMA1-TN", this.TNHSMA1_standards_dump],
-      "HSMA2-TN": ["HSMA2-TN", this.TNHSMA2_standards_dump],
-      "HSSB1-TN": ["HSSB1-TN", this.TNHSSB1_standards_dump],
-      "HSE1-TN": ["HSE1-TN", this.TNHSE1_standards_dump],
-      "HSE2-TN": ["HSE2-TN", this.TNHSE2_standards_dump],
-      "HSMG-TN": ["HSMG-TN", this.TNHSMG_standards_dump],
-      "KR-TX": ["KR-TX", this.TXKR_standards_dump],
-      "KM-TX": ["KM-TX", this.TXKM_standards_dump],
-      "G1R-TX": ["G1R-TX", this.TXG1R_standards_dump],
-      "G1M-TX": ["G1M-TX", this.TXG1M_standards_dump],
-      "G2R-TX": ["G2R-TX", this.TXG2R_standards_dump],
-      "G2M-TX": ["G2M-TX", this.TXG2M_standards_dump],
-      "G3R-TX": ["G3R-TX", this.TXG3R_standards_dump],
-      "G3M-TX": ["G3M-TX", this.TXG3M_standards_dump],
-      "G4R-TX": ["G4R-TX", this.TXG4R_standards_dump],
-      "G4M-TX": ["G4M-TX", this.TXG4M_standards_dump],
-      "G5R-TX": ["G5R-TX", this.TXG5R_standards_dump],
-      "G5M-TX": ["G5M-TX", this.TXG5M_standards_dump],
-      "G6R-TX": ["G6R-TX", this.TXG6R_standards_dump],
-      "G6M-TX": ["G6M-TX", this.TXG6M_standards_dump],
-      "G7R-TX": ["G7R-TX", this.TXG7R_standards_dump],
-      "G7M-TX": ["G7M-TX", this.TXG7M_standards_dump],
-      "G8R-TX": ["G8R-TX", this.TXG8R_standards_dump],
-      "G8M-TX": ["G8M-TX", this.TXG8M_standards_dump],
-      "HSE1-TX": ["HSE1-TX", this.TXHSE1_standards_dump],
-      "HSE2-TX": ["HSE2-TX", this.TXHSE2_standards_dump],
-      "HSE3-TX": ["HSE3-TX", this.TXHSE3_standards_dump],
-      "HSE4-TX": ["HSE4-TX", this.TXHSE4_standards_dump],
-      "HSMA1-TX": ["HSMA1-TX", this.TXHSMA1_standards_dump],
-      "HSMA2-TX": ["HSMA2-TX", this.TXHSMA2_standards_dump],
-      "HSMG-TX": ["HSMG-TX", this.TXHSMG_standards_dump],
-      "HSMP-TX": ["HSMP-TX", this.TXHSMP_standards_dump],
-      "HSMS-TX": ["HSMS-TX", this.TXHSMS_standards_dump],
-      "KE-WI": ["KE-WI", this.WIKE_standards_dump],
-      "KM-WI": ["KM-WI", this.WIKM_standards_dump],
-      "G1E-WI": ["G1E-WI", this.WIG1E_standards_dump],
-      "G1M-WI": ["G1M-WI", this.WIG1M_standards_dump],
-      "G2E-WI": ["G2E-WI", this.WIG2E_standards_dump],
-      "G2M-WI": ["G2M-WI", this.WIG2M_standards_dump],
-      "G3E-WI": ["G3E-WI", this.WIG3E_standards_dump],
-      "G3M-WI": ["G3M-WI", this.WIG3M_standards_dump],
-      "G4E-WI": ["G4E-WI", this.WIG4E_standards_dump],
-      "G4M-WI": ["G4M-WI", this.WIG4M_standards_dump],
-      "G5E-WI": ["G5E-WI", this.WIG5E_standards_dump],
-      "G5M-WI": ["G5M-WI", this.WIG5M_standards_dump],
-      "G6E-WI": ["G6E-WI", this.WIG6E_standards_dump],
-      "G6M-WI": ["G6M-WI", this.WIG6M_standards_dump],
-      "G7E-WI": ["G7E-WI", this.WIG7E_standards_dump],
-      "G7M-WI": ["G7M-WI", this.WIG7M_standards_dump],
-      "G8E-WI": ["G8E-WI", this.WIG8E_standards_dump],
-      "G8M-WI": ["G8M-WI", this.WIG8M_standards_dump],
-      "EESSS-WI": ["EESSS-WI", this.WIEESSS_standards_dump],
-      "UESSS-WI": ["UESSS-WI", this.WIUESSS_standards_dump],
-      "MSSS-WI": ["MSSS-WI", this.WIMSSS_standards_dump],
-      "HSSS-WI": ["HSSS-WI", this.WIHSSS_standards_dump],
-      "SAT-M": ["SAT-M", this.SATM_standards_dump],
-      "SAT-RW": ["SAT-RW", this.SATRW_standards_dump]
+    "KE-CC": ["KE-CC", this.KE_standards_dump],
+    "KM-CC": ["KM-CC", this.KM_standards_dump],
+    "KS-CC": ["KS-NG", this.NGKS_standards_dump],
+    "G1E-CC": ["G1E-CC", this.G1E_standards_dump],
+    "G1M-CC": ["G1M-CC", this.G1M_standards_dump],
+    "G1S-CC": ["G1S-NG", this.NGG1S_standards_dump],
+    "G2E-CC": ["G2E-CC", this.G2E_standards_dump],
+    "G2M-CC": ["G2M-CC", this.G2M_standards_dump],
+    "G2S-CC": ["G2S-NG", this.NGG2S_standards_dump],
+    "G3E-CC": ["G3E-CC", this.G3E_standards_dump],
+    "G3M-CC": ["G3M-CC", this.G3M_standards_dump],
+    "G3S-CC": ["G3S-NG", this.NGG3S_standards_dump],
+    "G4E-CC": ["G4E-CC", this.G4E_standards_dump],
+    "G4M-CC": ["G4M-CC", this.G4M_standards_dump],
+    "G4S-CC": ["G4S-NG", this.NGG4S_standards_dump],
+    "G5E-CC": ["G5E-CC", this.G5E_standards_dump],
+    "G5M-CC": ["G5M-CC", this.G5M_standards_dump],
+    "G5S-CC": ["G5S-NG", this.NGG5S_standards_dump],
+    "G6E-CC": ["G6E-CC", this.G6E_standards_dump],
+    "G6M-CC": ["G6M-CC", this.G6M_standards_dump],
+    "G7E-CC": ["G7E-CC", this.G7E_standards_dump],
+    "G7M-CC": ["G7M-CC", this.G7M_standards_dump],
+    "G8E-CC": ["G8E-CC", this.G8E_standards_dump],
+    "G8M-CC": ["G8M-CC", this.G8M_standards_dump],
+    "MSS-CC": ["MSS-NG", this.NGMSS_standards_dump],
+    "HSE1-CC": ["HSE1-CC", this.HSE2_standards_dump],
+    "HSE2-CC": ["HSE2-CC", this.HSE2_standards_dump],
+    "HSMA-CC": ["HSMA-CC", this.HSMA_standards_dump],
+    "HSMF-CC": ["HSMF-CC", this.HSMF_standards_dump],
+    "HSMG-CC": ["HSMG-CC", this.HSMG_standards_dump],
+    "HSMM-CC": ["HSMM-CC", this.HSMM_standards_dump],
+    "HSMN-CC": ["HSMN-CC", this.HSMN_standards_dump],
+    "HSMS-CC": ["HSMS-CC", this.HSMS_standards_dump],
+    "HSS-CC": ["HSS-NG", this.NGHSS_standards_dump],
+    "PE-CO": ["PE-CO", this.COPE_standards_dump],
+    "PM-CO": ["PM-CO", this.COPM_standards_dump],
+    "PS-CO": ["PS-CO", this.COPS_standards_dump],
+    "PSS-CO": ["PSS-CO", this.COPSS_standards_dump],
+    "KE-CO": ["KE-CO", this.COKE_standards_dump],
+    "KM-CO": ["KM-CO", this.COKM_standards_dump],
+    "KS-CO": ["KS-CO", this.COKS_standards_dump],
+    "KSS-CO": ["KSS-CO", this.COKSS_standards_dump],
+    "G1E-CO": ["G1E-CO", this.COG1E_standards_dump],
+    "G1M-CO": ["G1M-CO", this.COG1M_standards_dump],
+    "G1S-CO": ["G1S-CO", this.COG1S_standards_dump],
+    "G1SS-CO": ["G1SS-CO", this.COG1SS_standards_dump],
+    "G2E-CO": ["G2E-CO", this.COG2E_standards_dump],
+    "G2M-CO": ["G2M-CO", this.COG2M_standards_dump],
+    "G2S-CO": ["G2S-CO", this.COG2S_standards_dump],
+    "G2SS-CO": ["G2SS-CO", this.COG2SS_standards_dump],
+    "G3E-CO": ["G3E-CO", this.COG3E_standards_dump],
+    "G3M-CO": ["G3M-CO", this.COG3M_standards_dump],
+    "G3S-CO": ["G3S-CO", this.COG3S_standards_dump],
+    "G3SS-CO": ["G3SS-CO", this.COG3SS_standards_dump],
+    "G4E-CO": ["G4E-CO", this.COG4E_standards_dump],
+    "G4M-CO": ["G4M-CO", this.COG4M_standards_dump],
+    "G4S-CO": ["G4S-CO", this.COG4S_standards_dump],
+    "G4SS-CO": ["G4SS-CO", this.COG4SS_standards_dump],
+    "G5E-CO": ["G5E-CO", this.COG5E_standards_dump],
+    "G5M-CO": ["G5M-CO", this.COG5M_standards_dump],
+    "G5S-CO": ["G5S-CO", this.COG5S_standards_dump],
+    "G5SS-CO": ["G5SS-CO", this.COG5SS_standards_dump],
+    "G6E-CO": ["G6E-CO", this.COG6E_standards_dump],
+    "G6M-CO": ["G6M-CO", this.COG6M_standards_dump],
+    "G6SS-CO": ["G6SS-CO", this.COG6SS_standards_dump],
+    "G7E-CO": ["G7E-CO", this.COG7E_standards_dump],
+    "G7M-CO": ["G7M-CO", this.COG7M_standards_dump],
+    "G7SS-CO": ["G7SS-CO", this.COG7SS_standards_dump],
+    "G8E-CO": ["G8E-CO", this.COG8E_standards_dump],
+    "G8M-CO": ["G8M-CO", this.COG8M_standards_dump],
+    "MSS-CO": ["MSS-CO", this.COMSS_standards_dump],
+    "G8SS-CO": ["G8SS-CO", this.COG8SS_standards_dump],
+    "HSE1-CO": ["HSE1-CO", this.COHSE1_standards_dump],
+    "HSE2-CO": ["HSE2-CO", this.COHSE2_standards_dump],
+    "HSM-CO": ["HSM-CO", this.COHSM_standards_dump],
+    "HSS-CO": ["HSS-CO", this.COHSS_standards_dump],
+    "HSSS-CO": ["HSSS-CO", this.COHSSS_standards_dump],
+    "KE-DE": ["KE-CC", this.KE_standards_dump],
+    "KM-DE": ["KM-CC", this.KM_standards_dump],
+    "KS-DE": ["KS-NG", this.NGKS_standards_dump],
+    "G1E-DE": ["G1E-CC", this.G1E_standards_dump],
+    "G1M-DE": ["G1M-CC", this.G1M_standards_dump],
+    "G1S-DE": ["G1S-NG", this.NGG1S_standards_dump],
+    "G2E-DE": ["G2E-CC", this.G2E_standards_dump],
+    "G2M-DE": ["G2M-CC", this.G2M_standards_dump],
+    "G2S-DE": ["G2S-NG", this.NGG2S_standards_dump],
+    "G3E-DE": ["G3E-CC", this.G3E_standards_dump],
+    "G3M-DE": ["G3M-CC", this.G3M_standards_dump],
+    "G3S-DE": ["G3S-NG", this.NGG3S_standards_dump],
+    "G4E-DE": ["G4E-CC", this.G4E_standards_dump],
+    "G4M-DE": ["G4M-CC", this.G4M_standards_dump],
+    "G4S-DE": ["G4S-NG", this.NGG4S_standards_dump],
+    "G5E-DE": ["G5E-CC", this.G5E_standards_dump],
+    "G5M-DE": ["G5M-CC", this.G5M_standards_dump],
+    "G5S-DE": ["G5S-NG", this.NGG5S_standards_dump],
+    "G6E-DE": ["G6E-CC", this.G6E_standards_dump],
+    "G6M-DE": ["G6M-CC", this.G6M_standards_dump],
+    "G7E-DE": ["G7E-CC", this.G7E_standards_dump],
+    "G7M-DE": ["G7M-CC", this.G7M_standards_dump],
+    "G8E-DE": ["G8E-CC", this.G8E_standards_dump],
+    "G8M-DE": ["G8M-CC", this.G8M_standards_dump],
+    "MSS-DE": ["MSS-NG", this.NGMSS_standards_dump],
+    "HSE1-DE": ["HSE1-CC", this.HSE2_standards_dump],
+    "HSE2-DE": ["HSE2-CC", this.HSE2_standards_dump],
+    "HSMA-DE": ["HSMA-CC", this.HSMA_standards_dump],
+    "HSMF-DE": ["HSMF-CC", this.HSMF_standards_dump],
+    "HSMG-DE": ["HSMG-CC", this.HSMG_standards_dump],
+    "HSMM-DE": ["HSMM-CC", this.HSMM_standards_dump],
+    "HSMN-DE": ["HSMN-CC", this.HSMN_standards_dump],
+    "HSMS-DE": ["HSMS-CC", this.HSMS_standards_dump],
+    "HSS-DE": ["HSS-NG", this.NGHSS_standards_dump],
+    "KE-FL": ["KE-FL", this.FLKE_standards_dump],
+    "KM-FL": ["KM-FL", this.FLKM_standards_dump],
+    "G1E-FL": ["G1E-FL", this.FLG1E_standards_dump],
+    "G1M-FL": ["G1M-FL", this.FLG1M_standards_dump],
+    "G2E-FL": ["G2E-FL", this.FLG2E_standards_dump],
+    "G2M-FL": ["G2M-FL", this.FLG2M_standards_dump],
+    "G3E-FL": ["G3E-FL", this.FLG3E_standards_dump],
+    "G3M-FL": ["G3M-FL", this.FLG3M_standards_dump],
+    "G4E-FL": ["G4M-FL", this.FLG4E_standards_dump],
+    "G4M-FL": ["G4M-FL", this.FLG4M_standards_dump],
+    "G5E-FL": ["G5E-FL", this.FLG5E_standards_dump],
+    "G5M-FL": ["G5M-FL", this.FLG5M_standards_dump],
+    "G6E-FL": ["G6E-FL", this.FLG6E_standards_dump],
+    "G6M-FL": ["G6M-FL", this.FLG6M_standards_dump],
+    "G7E-FL": ["G7E-FL", this.FLG7E_standards_dump],
+    "G7M-FL": ["G7M-FL", this.FLG7M_standards_dump],
+    "G8E-FL": ["G8E-FL", this.FLG8E_standards_dump],
+    "G8M-FL": ["G8M-FL", this.FLG8M_standards_dump],
+    "G9E-FL": ["G9E-FL", this.FLG9E_standards_dump],
+    "G10E-FL": ["G10E-FL", this.FLG10E_standards_dump],
+    "G11E-FL": ["G11E-FL", this.FLG11E_standards_dump],
+    "G12E-FL": ["G12E-FL", this.FLG12E_standards_dump],
+    "HSM-FL": ["HSM-FL", this.FLHSM_standards_dump],
+    "KE-IL": ["KE-CC", this.KE_standards_dump],
+    "KM-IL": ["KM-CC", this.KM_standards_dump],
+    "KS-IL": ["KS-NG", this.NGKS_standards_dump],
+    "G1E-IL": ["G1E-CC", this.G1E_standards_dump],
+    "G1M-IL": ["G1M-CC", this.G1M_standards_dump],
+    "G1S-IL": ["G1S-NG", this.NGG1S_standards_dump],
+    "G2E-IL": ["G2E-CC", this.G2E_standards_dump],
+    "G2M-IL": ["G2M-CC", this.G2M_standards_dump],
+    "G2S-IL": ["G2S-NG", this.NGG2S_standards_dump],
+    "G3E-IL": ["G3E-CC", this.G3E_standards_dump],
+    "G3M-IL": ["G3M-CC", this.G3M_standards_dump],
+    "G3S-IL": ["G3S-NG", this.NGG3S_standards_dump],
+    "G4E-IL": ["G4E-CC", this.G4E_standards_dump],
+    "G4M-IL": ["G4M-CC", this.G4M_standards_dump],
+    "G4S-IL": ["G4S-NG", this.NGG4S_standards_dump],
+    "G5E-IL": ["G5E-CC", this.G5E_standards_dump],
+    "G5M-IL": ["G5M-CC", this.G5M_standards_dump],
+    "G5S-IL": ["G5S-NG", this.NGG5S_standards_dump],
+    "G6E-IL": ["G6E-CC", this.G6E_standards_dump],
+    "G6M-IL": ["G6M-CC", this.G6M_standards_dump],
+    "G7E-IL": ["G7E-CC", this.G7E_standards_dump],
+    "G7M-IL": ["G7M-CC", this.G7M_standards_dump],
+    "G8E-IL": ["G8E-CC", this.G8E_standards_dump],
+    "G8M-IL": ["G8M-CC", this.G8M_standards_dump],
+    "MSS-IL": ["MSS-NG", this.NGMSS_standards_dump],
+    "HSE1-IL": ["HSE1-CC", this.HSE2_standards_dump],
+    "HSE2-IL": ["HSE2-CC", this.HSE2_standards_dump],
+    "HSMA-IL": ["HSMA-CC", this.HSMA_standards_dump],
+    "HSMF-IL": ["HSMF-CC", this.HSMF_standards_dump],
+    "HSMG-IL": ["HSMG-CC", this.HSMG_standards_dump],
+    "HSMM-IL": ["HSMM-CC", this.HSMM_standards_dump],
+    "HSMN-IL": ["HSMN-CC", this.HSMN_standards_dump],
+    "HSMS-IL": ["HSMS-CC", this.HSMS_standards_dump],
+    "HSS-IL": ["HSS-NG", this.NGHSS_standards_dump],
+    "PE-MA": ["PE-MA", this.MAPE_standards_dump],
+    "PM-MA": ["PM-MA", this.MAPM_standards_dump],
+    "PS-MA": ["PS-MA", this.MAPS_standards_dump],
+    "KE-MA": ["KE-MA", this.MAKE_standards_dump],
+    "KM-MA": ["KM-MA", this.MAKM_standards_dump],
+    "KS-MA": ["KS-MA", this.MAKS_standards_dump],
+    "EEST-MA": ["EEST-MA", this.MAEEST_standards_dump],
+    "G1E-MA": ["G1E-MA", this.MAG1E_standards_dump],
+    "G1M-MA": ["G1M-MA", this.MAG1M_standards_dump],
+    "G1S-MA": ["G1S-MA", this.MAG1S_standards_dump],
+    "G2E-MA": ["G2E-MA", this.MAG2E_standards_dump],
+    "G2M-MA": ["G2M-MA", this.MAG2M_standards_dump],
+    "G2S-MA": ["G2S-MA", this.MAG2S_standards_dump],
+    "G3E-MA": ["G3E-MA", this.MAG3E_standards_dump],
+    "G3M-MA": ["G3M-MA", this.MAG3M_standards_dump],
+    "G3S-MA": ["G3S-MA", this.MAG3S_standards_dump],
+    "UEST-MA": ["UEST-MA", this.MAUEST_standards_dump],
+    "G4E-MA": ["G4E-MA", this.MAG4E_standards_dump],
+    "G4M-MA": ["G4M-MA", this.MAG4M_standards_dump],
+    "G4S-MA": ["G4S-MA", this.MAG4S_standards_dump],
+    "G5E-MA": ["G5E-MA", this.MAG5E_standards_dump],
+    "G5M-MA": ["G5M-MA", this.MAG5M_standards_dump],
+    "G5S-MA": ["G5S-MA", this.MAG5S_standards_dump],
+    "G6E-MA": ["G6E-MA", this.MAG6E_standards_dump],
+    "G6M-MA": ["G6M-MA", this.MAG6M_standards_dump],
+    "G6S-MA": ["G6S-MA", this.MAG6S_standards_dump],
+    "MST-MA": ["MST-MA", this.MAMST_standards_dump],
+    "G7E-MA": ["G7E-MA", this.MAG7E_standards_dump],
+    "G7M-MA": ["G7M-MA", this.MAG7M_standards_dump],
+    "G7S-MA": ["G7S-MA", this.MAG7S_standards_dump],
+    "G8E-MA": ["G8E-MA", this.MAG8E_standards_dump],
+    "G8M-MA": ["G8M-MA", this.MAG8M_standards_dump],
+    "G8S-MA": ["G8S-MA", this.MAG8S_standards_dump],
+    "HSE1-MA": ["HSE1-MA", this.MAHSE1_standards_dump],
+    "HSE2-MA": ["HSE2-MA", this.MAHSE2_standards_dump],
+    "HSMA-MA": ["HSMA-MA", this.MAHSMA_standards_dump],
+    "HSMF-MA": ["HSMF-MA", this.MAHSMF_standards_dump],
+    "HSMG-MA": ["HSMG-MA", this.MAHSMG_standards_dump],
+    "HSMM-MA": ["HSMM-MA", this.MAHSMM_standards_dump],
+    "HSMN-MA": ["HSMN-MA", this.MAHSMN_standards_dump],
+    "HSMS-MA": ["HSMS-MA", this.MAHSMS_standards_dump],
+    "HSSB-MA": ["HSSB-MA", this.MAHSSB_standards_dump],
+    "HSSC-MA": ["HSSC-MA", this.MAHSSC_standards_dump],
+    "HSSP-MA": ["HSSP-MA", this.MAHSSP_standards_dump],
+    "HSSES-MA": ["HSSES-MA", this.MAHSSES_standards_dump],
+    "HSSTS-MA": ["HSSTS-MA", this.MAHSSTS_standards_dump],
+    "HST-MA": ["HST-MA", this.MAHST_standards_dump],
+    "PE-MD": ["PE-MD", this.MDPE_standards_dump],
+    "PM-MD": ["PM-MD", this.MDPM_standards_dump],
+    "KE-MD": ["KE-MD", this.MDKE_standards_dump],
+    "KM-MD": ["KM-MD", this.MDKM_standards_dump],
+    "KS-MD": ["KS-NG", this.NGKS_standards_dump],
+    "G1E-MD": ["G1E-MD", this.MDG1E_standards_dump],
+    "G1M-MD": ["G1M-MD", this.MDG1M_standards_dump],
+    "G1S-MD": ["G1S-NG", this.NGG1S_standards_dump],
+    "G2E-MD": ["G2E-MD", this.MDG2E_standards_dump],
+    "G2M-MD": ["G2M-MD", this.MDG2M_standards_dump],
+    "G2S-MD": ["G2S-NG", this.NGG1S_standards_dump],
+    "G3E-MD": ["G3E-MD", this.MDG3E_standards_dump],
+    "G3M-MD": ["G3M-MD", this.MDG3M_standards_dump],
+    "G3S-MD": ["G3S-NG", this.NGG3S_standards_dump],
+    "G4E-MD": ["G4E-MD", this.MDG4E_standards_dump],
+    "G4M-MD": ["G4M-MD", this.MDG4M_standards_dump],
+    "G4S-MD": ["G4S-NG", this.NGG4S_standards_dump],
+    "G5E-MD": ["G5E-MD", this.MDG5E_standards_dump],
+    "G5M-MD": ["G5M-MD", this.MDG5M_standards_dump],
+    "G5S-MD": ["G5S-NG", this.NGG5S_standards_dump],
+    "G6E-MD": ["G6E-MD", this.MDG6E_standards_dump],
+    "G6M-MD": ["G6M-MD", this.MDG6M_standards_dump],
+    "G7E-MD": ["G7E-MD", this.MDG7E_standards_dump],
+    "G7M-MD": ["G7M-MD", this.MDG7M_standards_dump],
+    "G8E-MD": ["G8E-MD", this.MDG8E_standards_dump],
+    "G8M-MD": ["G8M-MD", this.MDG8M_standards_dump],
+    "MSS-MD": ["MSS-NG", this.NGMSS_standards_dump],
+    "HSE1-MD": ["HSE1-MD", this.MDHSE1_standards_dump],
+    "HSE2-MD": ["HSE2-MD", this.MDHSE2_standards_dump],
+    "HSMA1-MD": ["HSMA1-MD", this.MDHSMA1_standards_dump],
+    "HSMA2-MD": ["HSMA2-MD", this.MDHSMA2_standards_dump],
+    "HSMG-MD": ["HSMG-MD", this.MDHSMG_standards_dump],
+    "HSMS-MD": ["HSMS-MD", this.MDHSMS_standards_dump],
+    "HSS-MD": ["HSS-NG", this.NGHSS_standards_dump],
+    "KE-MN": ["KE-MN", this.MNKE_standards_dump],
+    "KM-MN": ["KM-MN", this.MNKM_standards_dump],
+    "G1E-MN": ["G1E-MN", this.MNG1E_standards_dump],
+    "G1M-MN": ["G1M-MN", this.MNG1M_standards_dump],
+    "G2E-MN": ["G2E-MN", this.MNG2E_standards_dump],
+    "G2M-MN": ["G2M-MN", this.MNG2M_standards_dump],
+    "G3E-MN": ["G3E-MN", this.MNG3E_standards_dump],
+    "G3M-MN": ["G3M-MN", this.MNG3M_standards_dump],
+    "G4E-MN": ["G4E-MN", this.MNG4E_standards_dump],
+    "G4M-MN": ["G4M-MN", this.MNG4M_standards_dump],
+    "G5E-MN": ["G5E-MN", this.MNG5E_standards_dump],
+    "G5M-MN": ["G5M-MN", this.MNG5M_standards_dump],
+    "G6E-MN": ["G6E-MN", this.MNG6E_standards_dump],
+    "G6M-MN": ["G6M-MN", this.MNG6M_standards_dump],
+    "G7E-MN": ["G7E-MN", this.MNG7E_standards_dump],
+    "G7M-MN": ["G7M-MN", this.MNG7M_standards_dump],
+    "G8E-MN": ["G8E-MN", this.MNG8E_standards_dump],
+    "G8M-MN": ["G8M-MN", this.MNG8M_standards_dump],
+    "HSE1-MN": ["HSE1-MN", this.MNHSE1_standards_dump],
+    "HSE2-MN": ["HSE2-MN", this.MNHSE2_standards_dump],
+    "HSM-MN": ["HSM-MN", this.MNHSM_standards_dump],
+    "KE-MO": ["KE-MO", this.MOKE_standards_dump],
+    "KM-MO": ["KM-MO", this.MOKM_standards_dump],
+    "KS-MO": ["KS-MO", this.MOKS_standards_dump],
+    "G1E-MO": ["G1E-MO", this.MOG1E_standards_dump],
+    "G1M-MO": ["G1M-MO", this.MOG1M_standards_dump],
+    "G1S-MO": ["G1S-MO", this.MOG1S_standards_dump],
+    "G2E-MO": ["G2E-MO", this.MOG2E_standards_dump],
+    "G2M-MO": ["G2M-MO", this.MOG2M_standards_dump],
+    "G2S-MO": ["G2S-MO", this.MOG2S_standards_dump],
+    "G3E-MO": ["G3E-MO", this.MOG3E_standards_dump],
+    "G3M-MO": ["G3M-MO", this.MOG3M_standards_dump],
+    "G3S-MO": ["G3S-MO", this.MOG3S_standards_dump],
+    "G4E-MO": ["G4E-MO", this.MOG4E_standards_dump],
+    "G4M-MO": ["G4M-MO", this.MOG4M_standards_dump],
+    "G4S-MO": ["G4S-MO", this.MOG4S_standards_dump],
+    "G5E-MO": ["G5E-MO", this.MOG5E_standards_dump],
+    "G5M-MO": ["G5M-MO", this.MOG5M_standards_dump],
+    "G5S-MO": ["G5S-MO", this.MOG5S_standards_dump],
+    "G6E-MO": ["G6E-MO", this.MOG6E_standards_dump],
+    "G6M-MO": ["G6M-MO", this.MOG6M_standards_dump],
+    "G7E-MO": ["G7E-MO", this.MOG7E_standards_dump],
+    "G7M-MO": ["G7M-MO", this.MOG7M_standards_dump],
+    "G8E-MO": ["G8E-MO", this.MOG8E_standards_dump],
+    "G8M-MO": ["G8M-MO", this.MOG8M_standards_dump],
+    "MSS-MO": ["MSS-MO", this.MOMSS_standards_dump],
+    "KE-MS": ["KE-MS", this.MSKE_standards_dump],
+    "KM-MS": ["KM-MS", this.MSKM_standards_dump],
+    "G1E-MS": ["G1E-MS", this.MSG1E_standards_dump],
+    "G1M-MS": ["G1M-MS", this.MSG1M_standards_dump],
+    "G2E-MS": ["G2E-MS", this.MSG2E_standards_dump],
+    "G2M-MS": ["G2M-MS", this.MSG2M_standards_dump],
+    "G3E-MS": ["G3E-MS", this.MSG3E_standards_dump],
+    "G3M-MS": ["G3M-MS", this.MSG3M_standards_dump],
+    "G4E-MS": ["G4E-MS", this.MSG4E_standards_dump],
+    "G4M-MS": ["G4M-MS", this.MSG4M_standards_dump],
+    "G5E-MS": ["G5E-MS", this.MSG5E_standards_dump],
+    "G5M-MS": ["G5M-MS", this.MSG5M_standards_dump],
+    "G6E-MS": ["G6E-MS", this.MSG6E_standards_dump],
+    "G6M-MS": ["G6M-MS", this.MSG6M_standards_dump],
+    "G7E-MS": ["G7E-MS", this.MSG7E_standards_dump],
+    "G7M-MS": ["G7M-MS", this.MSG7M_standards_dump],
+    "G8E-MS": ["G8E-MS", this.MSG8E_standards_dump],
+    "G8M-MS": ["G8M-MS", this.MSG8M_standards_dump],
+    "KE-NJ": ["KE-NJ", this.NJKE_standards_dump],
+    "KM-NJ": ["KM-NJ", this.NJKM_standards_dump],
+    "KS-NJ": ["KS-NJ", this.NJKS_standards_dump],
+    "G1E-NJ": ["G1E-NJ", this.NJG1E_standards_dump],
+    "G1M-NJ": ["G1M-NJ", this.NJG1M_standards_dump],
+    "G1S-NJ": ["G1S-NJ", this.NJG1S_standards_dump],
+    "G2E-NJ": ["G2E-NJ", this.NJG2E_standards_dump],
+    "G2M-NJ": ["G2M-NJ", this.NJG2M_standards_dump],
+    "G2S-NJ": ["G2S-NJ", this.NJG2S_standards_dump],
+    "G3E-NJ": ["G3E-NJ", this.NJG3E_standards_dump],
+    "G3M-NJ": ["G3M-NJ", this.NJG3M_standards_dump],
+    "G3S-NJ": ["G3S-NJ", this.NJG3S_standards_dump],
+    "G4E-NJ": ["G4E-NJ", this.NJG4E_standards_dump],
+    "G4M-NJ": ["G4M-NJ", this.NJG4M_standards_dump],
+    "G4S-NJ": ["G4S-NJ", this.NJG4S_standards_dump],
+    "G5E-NJ": ["G5E-NJ", this.NJG5E_standards_dump],
+    "G5M-NJ": ["G5M-NJ", this.NJG5M_standards_dump],
+    "G5S-NJ": ["G5S-NJ", this.NJG5S_standards_dump],
+    "G6E-NJ": ["G6E-NJ", this.NJG6E_standards_dump],
+    "G6M-NJ": ["G6M-NJ", this.NJG6M_standards_dump],
+    "G7E-NJ": ["G7E-NJ", this.NJG7E_standards_dump],
+    "G7M-NJ": ["G7M-NJ", this.NJG7M_standards_dump],
+    "G8E-NJ": ["G8E-NJ", this.NJG8E_standards_dump],
+    "G8M-NJ": ["G8M-NJ", this.NJG8M_standards_dump],
+    "MSS-NJ": ["MSS-NJ", this.NJMSS_standards_dump],
+    "KE-NM": ["KE-CC", this.KE_standards_dump],
+    "KM-NM": ["KM-CC", this.KM_standards_dump],
+    "KS-NM": ["KS-NG", this.NGKS_standards_dump],
+    "G1E-NM": ["G1E-CC", this.G1E_standards_dump],
+    "G1M-NM": ["G1M-CC", this.G1M_standards_dump],
+    "G1S-NM": ["G1S-NG", this.NGG1S_standards_dump],
+    "G2E-NM": ["G2E-CC", this.G2E_standards_dump],
+    "G2M-NM": ["G2M-CC", this.G2M_standards_dump],
+    "G2S-NM": ["G2S-NG", this.NGG2S_standards_dump],
+    "G3E-NM": ["G3E-CC", this.G3E_standards_dump],
+    "G3M-NM": ["G3M-CC", this.G3M_standards_dump],
+    "G3S-NM": ["G3S-NG", this.NGG3S_standards_dump],
+    "G4E-NM": ["G4E-CC", this.G4E_standards_dump],
+    "G4M-NM": ["G4M-CC", this.G4M_standards_dump],
+    "G4S-NM": ["G4S-NG", this.NGG4S_standards_dump],
+    "G5E-NM": ["G5E-CC", this.G5E_standards_dump],
+    "G5M-NM": ["G5M-CC", this.G5M_standards_dump],
+    "G5S-NM": ["G5S-NG", this.NGG5S_standards_dump],
+    "G6E-NM": ["G6E-CC", this.G6E_standards_dump],
+    "G6M-NM": ["G6M-CC", this.G6M_standards_dump],
+    "G7E-NM": ["G7E-CC", this.G7E_standards_dump],
+    "G7M-NM": ["G7M-CC", this.G7M_standards_dump],
+    "G8E-NM": ["G8E-CC", this.G8E_standards_dump],
+    "G8M-NM": ["G8M-CC", this.G8M_standards_dump],
+    "MSS-NM": ["MSS-NG", this.NGMSS_standards_dump],
+    "HSE1-NM": ["HSE1-CC", this.HSE2_standards_dump],
+    "HSE2-NM": ["HSE2-CC", this.HSE2_standards_dump],
+    "HSMA-NM": ["HSMA-CC", this.HSMA_standards_dump],
+    "HSMF-NM": ["HSMF-CC", this.HSMF_standards_dump],
+    "HSMG-NM": ["HSMG-CC", this.HSMG_standards_dump],
+    "HSMM-NM": ["HSMM-CC", this.HSMM_standards_dump],
+    "HSMN-NM": ["HSMN-CC", this.HSMN_standards_dump],
+    "HSMS-NM": ["HSMS-CC", this.HSMS_standards_dump],
+    "HSS-NM": ["HSS-NG", this.NGHSS_standards_dump],
+    "PE-NY": ["PE-NY", this.NYPE_standards_dump],
+    "PM-NY": ["PM-NY", this.NYPM_standards_dump],
+    "KE-NY": ["KE-NY", this.NYKE_standards_dump],
+    "KM-NY": ["KM-NY", this.NYKM_standards_dump],
+    "G1E-NY": ["G1E-NY", this.NYG1E_standards_dump],
+    "G1M-NY": ["G1M-NY", this.NYG1M_standards_dump],
+    "G2E-NY": ["G2E-NY", this.NYG2E_standards_dump],
+    "G2M-NY": ["G2M-NY", this.NYG2M_standards_dump],
+    "G3E-NY": ["G3E-NY", this.NYG3E_standards_dump],
+    "G3M-NY": ["G3M-NY", this.NYG3M_standards_dump],
+    "G4E-NY": ["G4E-NY", this.NYG4E_standards_dump],
+    "G4M-NY": ["G4M-NY", this.NYG4M_standards_dump],
+    "G5E-NY": ["G5E-NY", this.NYG5E_standards_dump],
+    "G5M-NY": ["G5M-NY", this.NYG5M_standards_dump],
+    "G6E-NY": ["G6E-NY", this.NYG6E_standards_dump],
+    "G6M-NY": ["G6M-NY", this.NYG6M_standards_dump],
+    "G7E-NY": ["G7E-NY", this.NYG7E_standards_dump],
+    "G7M-NY": ["G7M-NY", this.NYG7M_standards_dump],
+    "G8E-NY": ["G8E-NY", this.NYG8E_standards_dump],
+    "G8M-NY": ["G8M-NY", this.NYG8M_standards_dump],
+    "HSE1-NY": ["HSE1-NY", this.NYHSE1_standards_dump],
+    "HSE2-NY": ["HSE2-NY", this.NYHSE2_standards_dump],
+    "HSMA1-NY": ["SMA1-NY", this.NYHSMA1_standards_dump],
+    "HSMG-NY": ["HSMG-NY", this.NYHSMG_standards_dump],
+    "HSMA2-NY": ["HSMA2-NY", this.NYHSMA2_standards_dump],
+    "G3E-PA": ["G3E-PA", this.PAG3E_standards_dump],
+    "G3M-PA": ["G3M-PA", this.PAG3M_standards_dump],
+    "G4E-PA": ["G4E-PA", this.PAG4E_standards_dump],
+    "G4M-PA": ["G4M-PA", this.PAG4M_standards_dump],
+    "G4S-PA": ["G4S-PA", this.PAG4S_standards_dump],
+    "G5E-PA": ["G5E-PA", this.PAG5E_standards_dump],
+    "G5M-PA": ["G5M-PA", this.PAG5M_standards_dump],
+    "G6E-PA": ["G6E-PA", this.PAG6E_standards_dump],
+    "G6M-PA": ["G6M-PA", this.PAG6M_standards_dump],
+    "G7E-PA": ["G7E-PA", this.PAG7E_standards_dump],
+    "G7M-PA": ["G7M-PA", this.PAG7M_standards_dump],
+    "G8E-PA": ["G8E-PA", this.PAG8E_standards_dump],
+    "G8M-PA": ["G8M-PA", this.PAG8M_standards_dump],
+    "G8S-PA": ["G8S-PA", this.PAG8S_standards_dump],
+    "KE-RI": ["KE-RI", this.RIKE_standards_dump],
+    "KM-RI": ["KM-RI", this.RIKM_standards_dump],
+    "G1E-RI": ["G1E-RI", this.RIG1E_standards_dump],
+    "G1M-RI": ["G1M-RI", this.RIG1M_standards_dump],
+    "G2E-RI": ["G2E-RI", this.RIG2E_standards_dump],
+    "G2M-RI": ["G2M-RI", this.RIG2M_standards_dump],
+    "G3E-RI": ["G3E-RI", this.RIG3E_standards_dump],
+    "G3M-RI": ["G3M-RI", this.RIG3M_standards_dump],
+    "G4E-RI": ["G4E-RI", this.RIG4E_standards_dump],
+    "G4M-RI": ["G4M-RI", this.RIG4M_standards_dump],
+    "G5E-RI": ["G5E-RI", this.RIG5E_standards_dump],
+    "G5M-RI": ["G5M-RI", this.RIG5M_standards_dump],
+    "G6E-RI": ["G6E-RI", this.RIG6E_standards_dump],
+    "G6M-RI": ["G6M-RI", this.RIG6M_standards_dump],
+    "G7E-RI": ["G7E-RI", this.RIG7E_standards_dump],
+    "G7M-RI": ["G7M-RI", this.RIG7M_standards_dump],
+    "G8E-RI": ["G8E-RI", this.RIG8E_standards_dump],
+    "G8M-RI": ["G8M-RI", this.RIG8M_standards_dump],
+    "HSE1-RI": ["HSE1-RI", this.RIHSE2_standards_dump],
+    "HSE2-RI": ["HSE2-RI", this.RIHSE2_standards_dump],
+    "HSMA-RI": ["HSMA-RI", this.RIHSMA_standards_dump],
+    "HSMF-RI": ["HSMF-RI", this.RIHSMF_standards_dump],
+    "HSMG-RI": ["HSMG-RI", this.RIHSMG_standards_dump],
+    "HSMM-RI": ["HSMM-RI", this.RIHSMM_standards_dump],
+    "HSMN-RI": ["HSMN-RI", this.RIHSMN_standards_dump],
+    "HSMS-RI": ["HSMS-RI", this.RIHSMS_standards_dump],
+    "KE-SC": ["KE-SC", this.SCKE_standards_dump],
+    "KM-SC": ["KM-SC", this.SCKM_standards_dump],
+    "KS-SC": ["KS-SC", this.SCKS_standards_dump],
+    "G1E-SC": ["G1E-SC", this.SCG1E_standards_dump],
+    "G1M-SC": ["G1M-SC", this.SCG1M_standards_dump],
+    "G1S-SC": ["G1S-SC", this.SCG1S_standards_dump],
+    "G2E-SC": ["G2E-SC", this.SCG2E_standards_dump],
+    "G2M-SC": ["G2M-SC", this.SCG2M_standards_dump],
+    "G2S-SC": ["G2S-SC", this.SCG2S_standards_dump],
+    "G3E-SC": ["G3E-SC", this.SCG3E_standards_dump],
+    "G3M-SC": ["G3M-SC", this.SCG3M_standards_dump],
+    "G3S-SC": ["G3S-SC", this.SCG3S_standards_dump],
+    "G4E-SC": ["G4E-SC", this.SCG4E_standards_dump],
+    "G4M-SC": ["G4M-SC", this.SCG4M_standards_dump],
+    "G4S-SC": ["G4S-SC", this.SCG4S_standards_dump],
+    "G5E-SC": ["G5E-SC", this.SCG5E_standards_dump],
+    "G5M-SC": ["G5M-SC", this.SCG5M_standards_dump],
+    "G5S-SC": ["G5S-SC", this.SCG5S_standards_dump],
+    "G6E-SC": ["G6E-SC", this.SCG6E_standards_dump],
+    "G6M-SC": ["G6M-SC", this.SCG6M_standards_dump],
+    "G6S-SC": ["G6S-SC", this.SCG6S_standards_dump],
+    "G7E-SC": ["G7E-SC", this.SCG7E_standards_dump],
+    "G7M-SC": ["G7M-SC", this.SCG7M_standards_dump],
+    "G7S-SC": ["G7S-SC", this.SCG7S_standards_dump],
+    "G8E-SC": ["G8E-SC", this.SCG8E_standards_dump],
+    "G8M-SC": ["G8M-SC", this.SCG8M_standards_dump],
+    "G8S-SC": ["G8S-SC", this.SCG8S_standards_dump],
+    "KE-TN": ["KE-TN", this.TNKE_standards_dump],
+    "KM-TN": ["KM-TN", this.TNKM_standards_dump],
+    "KS-TN": ["KS-TN", this.TNKS_standards_dump],
+    "G1E-TN": ["G1E-TN", this.TNG1E_standards_dump],
+    "G1M-TN": ["G1M-TN", this.TNG1M_standards_dump],
+    "G1S-TN": ["G1S-TN", this.TNG1S_standards_dump],
+    "G2E-TN": ["G2E-TN", this.TNG2E_standards_dump],
+    "G2M-TN": ["G2M-TN", this.TNG2M_standards_dump],
+    "G2S-TN": ["G2S-TN", this.TNG2S_standards_dump],
+    "G3E-TN": ["G3E-TN", this.TNG3E_standards_dump],
+    "G3M-TN": ["G3M-TN", this.TNG3M_standards_dump],
+    "G3S-TN": ["G3S-TN", this.TNG3S_standards_dump],
+    "G4E-TN": ["G4E-TN", this.TNG4E_standards_dump],
+    "G4M-TN": ["G4M-TN", this.TNG4M_standards_dump],
+    "G4S-TN": ["G4S-TN", this.TNG4S_standards_dump],
+    "G5E-TN": ["G5E-TN", this.TNG5E_standards_dump],
+    "G5M-TN": ["G5M-TN", this.TNG5M_standards_dump],
+    "G5S-TN": ["G5S-TN", this.TNG5S_standards_dump],
+    "G6E-TN": ["G6E-TN", this.TNG6E_standards_dump],
+    "G6M-TN": ["G6M-TN", this.TNG6M_standards_dump],
+    "G6S-TN": ["G6S-TN", this.TNG6S_standards_dump],
+    "G7E-TN": ["G7E-TN", this.TNG7E_standards_dump],
+    "G7M-TN": ["G7M-TN", this.TNG7M_standards_dump],
+    "G7S-TN": ["G7S-TN", this.TNG7S_standards_dump],
+    "G8E-TN": ["G8E-TN", this.TNG8E_standards_dump],
+    "G8M-TN": ["G8M-TN", this.TNG8M_standards_dump],
+    "G8S-TN": ["G8S-TN", this.TNG8S_standards_dump],
+    "HSMA1-TN": ["HSMA1-TN", this.TNHSMA1_standards_dump],
+    "HSMA2-TN": ["HSMA2-TN", this.TNHSMA2_standards_dump],
+    "HSSB1-TN": ["HSSB1-TN", this.TNHSSB1_standards_dump],
+    "HSE1-TN": ["HSE1-TN", this.TNHSE1_standards_dump],
+    "HSE2-TN": ["HSE2-TN", this.TNHSE2_standards_dump],
+    "HSMG-TN": ["HSMG-TN", this.TNHSMG_standards_dump],
+    "KR-TX": ["KR-TX", this.TXKR_standards_dump],
+    "KM-TX": ["KM-TX", this.TXKM_standards_dump],
+    "G1R-TX": ["G1R-TX", this.TXG1R_standards_dump],
+    "G1M-TX": ["G1M-TX", this.TXG1M_standards_dump],
+    "G2R-TX": ["G2R-TX", this.TXG2R_standards_dump],
+    "G2M-TX": ["G2M-TX", this.TXG2M_standards_dump],
+    "G3R-TX": ["G3R-TX", this.TXG3R_standards_dump],
+    "G3M-TX": ["G3M-TX", this.TXG3M_standards_dump],
+    "G4R-TX": ["G4R-TX", this.TXG4R_standards_dump],
+    "G4M-TX": ["G4M-TX", this.TXG4M_standards_dump],
+    "G5R-TX": ["G5R-TX", this.TXG5R_standards_dump],
+    "G5M-TX": ["G5M-TX", this.TXG5M_standards_dump],
+    "G6R-TX": ["G6R-TX", this.TXG6R_standards_dump],
+    "G6M-TX": ["G6M-TX", this.TXG6M_standards_dump],
+    "G7R-TX": ["G7R-TX", this.TXG7R_standards_dump],
+    "G7M-TX": ["G7M-TX", this.TXG7M_standards_dump],
+    "G8R-TX": ["G8R-TX", this.TXG8R_standards_dump],
+    "G8M-TX": ["G8M-TX", this.TXG8M_standards_dump],
+    "HSE1-TX": ["HSE1-TX", this.TXHSE1_standards_dump],
+    "HSE2-TX": ["HSE2-TX", this.TXHSE2_standards_dump],
+    "HSE3-TX": ["HSE3-TX", this.TXHSE3_standards_dump],
+    "HSE4-TX": ["HSE4-TX", this.TXHSE4_standards_dump],
+    "HSMA1-TX": ["HSMA1-TX", this.TXHSMA1_standards_dump],
+    "HSMA2-TX": ["HSMA2-TX", this.TXHSMA2_standards_dump],
+    "HSMG-TX": ["HSMG-TX", this.TXHSMG_standards_dump],
+    "HSMP-TX": ["HSMP-TX", this.TXHSMP_standards_dump],
+    "HSMS-TX": ["HSMS-TX", this.TXHSMS_standards_dump],
+    "KE-WI": ["KE-WI", this.WIKE_standards_dump],
+    "KM-WI": ["KM-WI", this.WIKM_standards_dump],
+    "G1E-WI": ["G1E-WI", this.WIG1E_standards_dump],
+    "G1M-WI": ["G1M-WI", this.WIG1M_standards_dump],
+    "G2E-WI": ["G2E-WI", this.WIG2E_standards_dump],
+    "G2M-WI": ["G2M-WI", this.WIG2M_standards_dump],
+    "G3E-WI": ["G3E-WI", this.WIG3E_standards_dump],
+    "G3M-WI": ["G3M-WI", this.WIG3M_standards_dump],
+    "G4E-WI": ["G4E-WI", this.WIG4E_standards_dump],
+    "G4M-WI": ["G4M-WI", this.WIG4M_standards_dump],
+    "G5E-WI": ["G5E-WI", this.WIG5E_standards_dump],
+    "G5M-WI": ["G5M-WI", this.WIG5M_standards_dump],
+    "G6E-WI": ["G6E-WI", this.WIG6E_standards_dump],
+    "G6M-WI": ["G6M-WI", this.WIG6M_standards_dump],
+    "G7E-WI": ["G7E-WI", this.WIG7E_standards_dump],
+    "G7M-WI": ["G7M-WI", this.WIG7M_standards_dump],
+    "G8E-WI": ["G8E-WI", this.WIG8E_standards_dump],
+    "G8M-WI": ["G8M-WI", this.WIG8M_standards_dump],
+    "EESSS-WI": ["EESSS-WI", this.WIEESSS_standards_dump],
+    "UESSS-WI": ["UESSS-WI", this.WIUESSS_standards_dump],
+    "MSSS-WI": ["MSSS-WI", this.WIMSSS_standards_dump],
+    "HSSS-WI": ["HSSS-WI", this.WIHSSS_standards_dump],
+    "SAT-M": ["SAT-M", this.SATM_standards_dump],
+    "SAT-RW": ["SAT-RW", this.SATRW_standards_dump]
   };
 
   exam_names: { [key: string]: string } = {
@@ -4369,11 +4474,13 @@ export class ProfileComponent implements OnInit {
   standard_id = '';
   standard_fav = false;
   includes_standard = false;
+  subtopic_streak_count = 0;
   subtopic_problem_count = 0;
   subtopic_new_problem_count = 0;
   subtopic_correct_problem_count = 0;
   subtopic_problem_number = 0;
   subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+  subtopic_submission: any[] = [];
   subtopic_problem_selection: any[] = [];
   subtopic_problem_attempts: number[] = [];
   subtopic_attempt_path: any[] = [];
@@ -4575,7 +4682,7 @@ export class ProfileComponent implements OnInit {
         labels: dates,
         datasets: datasets
       };
-  
+
       new Chart.Chart(myStudPlot, {
         type: 'line',
         data: data,
@@ -4584,26 +4691,26 @@ export class ProfileComponent implements OnInit {
           aspectRatio: 16 / 9,
           plugins: {
             title: {
-                display: true,
-                text: 'My Student Submissions Over Time',
-                font: {
-                  size: 20
-                }
+              display: true,
+              text: 'My Student Submissions Over Time',
+              font: {
+                size: 20
+              }
             },
             tooltip: {
               padding: 16,
               boxPadding: 16,
               titleFont: {
-                  size: 16
+                size: 16
               },
               bodyFont: {
-                  size: 15
+                size: 15
               },
               callbacks: {
-                title: function(context) {
+                title: function (context) {
                   return ([`${hoverInfo[2][context[0].dataIndex]}`, `(${context[0].label})`, ``]);
                 },
-                label: function(context) {
+                label: function (context) {
                   return ([`Student: ${hoverInfo[1][context.dataIndex]}`, `${(hoverInfo[0][context.dataIndex].startsWith('Q-')) ? 'Quiz' : 'Exam'}${context.dataset.label}: ${context.parsed.y}%`, `Problems: ${hoverInfo[3][context.dataIndex]} / ${hoverInfo[4][context.dataIndex]}`, `Time: ${hoverInfo[5][context.dataIndex]}`]);
                 }
               }
@@ -4642,7 +4749,7 @@ export class ProfileComponent implements OnInit {
       }
       for (const [key, exam] of Object.entries(this.student_sub_metadata)) {
         if (exam != undefined && (exam as any).endtimestamp != undefined && (exam as any).score != undefined) {
-        // if (this.complete_exam_list.includes(key)) {
+          // if (this.complete_exam_list.includes(key)) {
           // var comp_exam: any = exam;
           // comp_exam.stud = (dump as any).uid;
           stud_exams.push(exam);
@@ -4684,7 +4791,7 @@ export class ProfileComponent implements OnInit {
           tension: 0.05
         }]
       };
-  
+
       new Chart.Chart(studPlot, {
         type: 'line',
         data: data,
@@ -4693,26 +4800,26 @@ export class ProfileComponent implements OnInit {
           aspectRatio: 16 / 9,
           plugins: {
             title: {
-                display: true,
-                text: title,
-                font: {
-                  size: 20
-                }
+              display: true,
+              text: title,
+              font: {
+                size: 20
+              }
             },
             tooltip: {
               padding: 16,
               boxPadding: 16,
               titleFont: {
-                  size: 16
+                size: 16
               },
               bodyFont: {
-                  size: 15
+                size: 15
               },
               callbacks: {
-                title: function(context) {
+                title: function (context) {
                   return ([`${hoverInfo[1][context[0].dataIndex]}`, `(${context[0].label})`, ``]);
                 },
-                label: function(context) {
+                label: function (context) {
                   // Customize the label text here
                   // let label = (hoverInfo[0][context.dataIndex].startsWith('Q-')) ? 'Quiz' : 'Exam' + context.dataset.label + ': ' + context.parsed.y + '%' + `\n` + 'Total Problems: ' + hoverInfo[3][context.dataIndex] + `\n` + 'Correct Problems: ' + hoverInfo[2][context.dataIndex] + `\n` + 'Time: ' + hoverInfo[4][context.dataIndex];
                   return ([`${(hoverInfo[0][context.dataIndex].startsWith('Q-')) ? 'Quiz' : 'Exam'}${context.dataset.label}: ${context.parsed.y}%`, `Problems: ${hoverInfo[2][context.dataIndex]} / ${hoverInfo[3][context.dataIndex]}`, `Time: ${hoverInfo[4][context.dataIndex]}`]);
@@ -5909,198 +6016,267 @@ export class ProfileComponent implements OnInit {
     this.selected_student_st = '';
     this.subtopic_problem_count = 0;
     this.subtopic_new_problem_count = 0;
+    this.subtopic_correct_problem_count = 0;
     this.subtopic_search_dump = {};
     if (this.authService.userData && this.authService.userData.role == 'Student') {
-        const exam_history = this.authService.userData.exams.history;
-        for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-            if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
-                for (const [num, prob] of Object.entries(dump)) {
-                    if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-                        if (prob.SubTopics.includes(subtopic)) {
-                            for (let topic of topics) {
-                                if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
-                                    this.subtopic_new_problem_count += 1;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
-                const exam_sub = this.authService.getExamSubmission2(ex);
-                setTimeout(() => {
-                    for (const [num, prob] of Object.entries(dump)) {
-                        if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-                            if (prob.SubTopics.includes(subtopic)) {
-                                for (let topic of topics) {
-                                    if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
-                                        if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
-                                            this.subtopic_correct_problem_count += 1;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }, 50);
-            }
-        }
-    }
-    for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-        for (const [num, prob] of Object.entries(dump)) {
+      const exam_history = this.authService.userData.exams.history;
+      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+        if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+          for (const [num, prob] of Object.entries(dump)) {
             if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-                if (prob.SubTopics.includes(subtopic)) {
-                    for (let topic of topics) {
-                        if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
-                            this.selected_topic = topic;
-                            // this.standard_id = standardID;
-                            this.subtopic_problem_count += 1;
-                            this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-                            if (!(''+this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
-                                this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
-                            }
-                        }
-                    }
+              if (prob.SubTopics.includes(subtopic)) {
+                for (let topic of topics) {
+                  if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                    this.subtopic_new_problem_count += 1;
+                  }
                 }
+              }
             }
+          }
         }
+        if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+          const exam_sub = this.authService.getExamSubmission2(ex);
+          setTimeout(() => {
+            for (const [num, prob] of Object.entries(dump)) {
+              if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                if (prob.SubTopics.includes(subtopic)) {
+                  for (let topic of topics) {
+                    if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                      if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
+                        this.subtopic_correct_problem_count += 1;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }, 50);
+        }
+      }
     }
-    this.subtopic_new_problem_count = this.subtopic_problem_count;
+    // else{}
+    for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+      for (const [num, prob] of Object.entries(dump)) {
+        if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+          if (prob.SubTopics.includes(subtopic)) {
+            for (let topic of topics) {
+              if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                this.selected_topic = topic;
+                // this.standard_id = standardID;
+                this.subtopic_problem_count += 1;
+                this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                  this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    if (this.authService.userData && this.authService.userData.role == 'Student') {
+      const exam_history = this.authService.userData.exams.history;
+      this.subtopic_problem_count = 0;
+      this.subtopic_search_dump = {};
+      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+        if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+          for (const [num, prob] of Object.entries(dump)) {
+            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+              if (prob.SubTopics.includes(subtopic)) {
+                for (let topic of topics) {
+                  if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                    this.subtopic_problem_count += 1;
+                    this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                    if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                      this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      Object.entries(this.subtopic_search_dump).sort(([, valueA], [, valueB]) => (this.authService.getStudProbSubmission2(this.user_data.uid, valueA.Number)).timestamp - (this.authService.getStudProbSubmission2(this.user_data.uid, valueB.Number)).timestamp);
+      this.subtopic_streak_count = 0;
+      var streak = true;
+      var nums: string[] = [];
+      var subs: any[] = [];
+      for (let i = 1; i <= Object.keys(this.subtopic_search_dump).length; i++) {
+        nums.push(this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[Object.keys(this.subtopic_search_dump).length - i] as any].Number);
+        subs.push(this.authService.getStudExamSubmission2(this.user_data.uid, this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[Object.keys(this.subtopic_search_dump).length - i] as any].Number.substring(0, (this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[Object.keys(this.subtopic_search_dump).length - i] as any].Number).indexOf('-'))));
+      }
+      console.log(nums);
+      console.log(subs);
+      setTimeout(() => {
+        for (let i = 1; i <= Object.keys(this.subtopic_search_dump).length; i++) {
+          this.subtopic_submission.push(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)]);
+          if (streak && ((subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length == 1 && subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct[0][0] == '✅') || (subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length > 1 && this.is_MP_correct(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct)))) {
+            this.subtopic_streak_count += 1;
+          }
+          else {
+            streak = false;
+            this.subtopic_streak_count = 0;
+          }
+        }
+      }, 50);
+      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+        if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+          for (const [num, prob] of Object.entries(dump)) {
+            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+              if (prob.SubTopics.includes(subtopic)) {
+                for (let topic of topics) {
+                  if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                    this.subtopic_problem_count += 1;
+                    this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                    if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                      this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // setTimeout(() => {
     this.selected_subtopic = subtopic;
     this.subtopic_problem_number = 0;
     this.standard_fav = false;
     if (this.authService.userData) {
-        for (let fav of this.authService.userData.standards.favorites) {
-            for (let topic of topics) {
-                if (topic == fav[0] && subtopic == fav[1]) {
-                    this.standard_fav = true;
-                }
-            }
+      for (let fav of this.authService.userData.standards.favorites) {
+        for (let topic of topics) {
+          if (topic == fav[0] && subtopic == fav[1]) {
+            this.standard_fav = true;
+          }
         }
+      }
     }
+    // }, 500);
   }
 
   begin_practice_st() {
-      if (this.subtopic_problem_count != this.subtopic_new_problem_count) {
-          this.subtopic_problem_number = this.subtopic_problem_count-this.subtopic_new_problem_count + 1;
+    if (this.subtopic_problem_count != this.subtopic_new_problem_count) {
+      this.subtopic_problem_number = this.subtopic_problem_count - this.subtopic_new_problem_count + 1;
+    }
+    else {
+      this.subtopic_problem_number = 1;
+    }
+    if (this.subtopic_problem_number > this.subtopic_problem_count) {
+      this.selected_subtopic = '';
+      this.standard_id = '';
+    }
+    else {
+      this.subtopic_attempt_path = [];
+      this.subtopic_attempt_response = [];
+      this.subtopic_attempt_explanation = [];
+      this.subtopic_problem_selection = [];
+      if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
+        this.subtopic_problem_attempts = [0];
+        this.subtopic_attempt_path = [[]];
+        this.subtopic_attempt_response = [''];
+        this.subtopic_attempt_explanation = [[]];
+        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+          this.subtopic_problem_selection = [['']];
+          if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            setTimeout(() => {
+              this.plot_graph_gp('', true);
+            }, 500);
+          }
+        }
+        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+          this.subtopic_problem_selection = [[]];
+          if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
+          }
+          if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            setTimeout(() => {
+              this.plot_graph_mgp('', true);
+            }, 500);
+          }
+        }
+        else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+          var msp_nums: string[] = [];
+          this.subtopic_problem_selection.push([]);
+          for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+            if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+              this.subtopic_problem_selection[0].push('');
+              msp_nums.push(choice[0]);
+            }
+          }
+        }
       }
       else {
-          this.subtopic_problem_number = 1;  
-      }
-      if (this.subtopic_problem_number > this.subtopic_problem_count) {
-          this.selected_subtopic = '';
-          this.standard_id = '';
-      }
-      else {
-          this.subtopic_attempt_path = [];
-          this.subtopic_attempt_response = [];
-          this.subtopic_attempt_explanation = [];
-          this.subtopic_problem_selection = [];
-          if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
-              this.subtopic_problem_attempts = [0];
-              this.subtopic_attempt_path = [[]];
-              this.subtopic_attempt_response = [''];
-              this.subtopic_attempt_explanation = [[]];
-              if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                  this.subtopic_problem_selection = [['']];
-                  if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                      setTimeout(() => {
-                          this.plot_graph_gp('', true);
-                      }, 500);
-                  }
-              }
-              else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                  this.subtopic_problem_selection = [[]];
-                  if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                      this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
-                  }
-                  if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                      setTimeout(() => {
-                          this.plot_graph_mgp('', true);
-                      }, 500);
-                  }
-              }
-              else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                  var msp_nums: string[] = [];
-                  this.subtopic_problem_selection.push([]);
-                  for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
-                      if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-                          this.subtopic_problem_selection[0].push('');
-                          msp_nums.push(choice[0]);
-                      }
-                  }
-              }
-          }
-          else {
-              this.subtopic_problem_attempts = [];
-              for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
-                  this.subtopic_problem_attempts.push(0);
-                  this.subtopic_attempt_path.push([]);
-                  this.subtopic_attempt_response.push('');
-                  this.subtopic_attempt_explanation.push([]);
-                  if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                      this.subtopic_problem_selection.push(['']);
-                      if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                          setTimeout(() => {
-                              this.plot_graph_gp(part, true);
-                          }, 500);
-                      }
-                  }
-                  else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                      this.subtopic_problem_selection.push([]);
-                      if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                          this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
-                      }
-                      if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                          setTimeout(() => {
-                              this.plot_graph_mgp(part, true);
-                          }, 500);
-                      }
-                  }
-                  else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                      var msp_nums: string[] = [];
-                      this.subtopic_problem_selection.push([]);
-                      for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
-                          if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-                              this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part)].push('');
-                              msp_nums.push(choice[0]);
-                          }
-                      }
-                  }
-              }
-          }
-          this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
-          for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
+        this.subtopic_problem_attempts = [];
+        for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+          this.subtopic_problem_attempts.push(0);
+          this.subtopic_attempt_path.push([]);
+          this.subtopic_attempt_response.push('');
+          this.subtopic_attempt_explanation.push([]);
+          if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+            this.subtopic_problem_selection.push(['']);
+            if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
               setTimeout(() => {
-                  this.read_supp_st_json(supp);
-              }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+                this.plot_graph_gp(part, true);
+              }, 500);
+            }
           }
-          if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
-              for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
-                  for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
-                      if (block.startsWith(':table:')) {
-                          setTimeout(() => {
-                              this.read_table_st(block.slice(7));
-                          }, 100);
-                      }
-                  }
+          else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+            this.subtopic_problem_selection.push([]);
+            if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+              this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
+            }
+            if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+              setTimeout(() => {
+                this.plot_graph_mgp(part, true);
+              }, 500);
+            }
+          }
+          else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+            var msp_nums: string[] = [];
+            this.subtopic_problem_selection.push([]);
+            for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+              if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+                this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part)].push('');
+                msp_nums.push(choice[0]);
               }
+            }
           }
-          if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
-              for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
-                  if (block.startsWith(':table:')) {
-                      setTimeout(() => {
-                          this.read_table_st(block.slice(7));
-                      }, 100);
-                  }
-              }
-          }
+        }
       }
+      this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
+      for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_st_json(supp);
+        }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+      }
+      if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
+        for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+          for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
+            if (block.startsWith(':table:')) {
+              setTimeout(() => {
+                this.read_table_st(block.slice(7));
+              }, 100);
+            }
+          }
+        }
+      }
+      if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
+        for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
+          if (block.startsWith(':table:')) {
+            setTimeout(() => {
+              this.read_table_st(block.slice(7));
+            }, 100);
+          }
+        }
+      }
+    }
   }
 
   select_student_st(id: string) {
-  //   this.exam_inprogress = false;
-  //   this.progress_number = 0;
+    //   this.exam_inprogress = false;
+    //   this.progress_number = 0;
     if (id != this.selected_student_st) {
       console.log(this.subtopic_search_dump);
       this.selected_student_st = '';
@@ -6109,78 +6285,106 @@ export class ProfileComponent implements OnInit {
       this.subtopic_problem_count = 0;
       this.subtopic_search_dump = {};
       for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-          if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
-              for (const [num, prob] of Object.entries(dump)) {
-                  if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-                      if (prob.SubTopics.includes(this.selected_subtopic)) {
-                          if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                              this.subtopic_problem_count += 1;
-                              this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-                              if (!(''+this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
-                                  this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
-                              }
-                          }
-                      }
+        if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+          for (const [num, prob] of Object.entries(dump)) {
+            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+              if (prob.SubTopics.includes(this.selected_subtopic)) {
+                if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                  this.subtopic_problem_count += 1;
+                  this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                  if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                    this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
                   }
+                }
               }
+            }
           }
+        }
       }
-      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-          if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
-              for (const [num, prob] of Object.entries(dump)) {
-                  if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-                      if (prob.SubTopics.includes(this.selected_subtopic)) {
-                          if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                              this.subtopic_problem_count += 1;
-                              this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-                              if (!(''+this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
-                                  this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
-                              }
-                          }
-                      }
-                  }
-              }
+      Object.entries(this.subtopic_search_dump).sort(([, valueA], [, valueB]) => (this.authService.getStudProbSubmission2(id, valueA.Number)).timestamp - (this.authService.getStudProbSubmission2(id, valueB.Number)).timestamp);
+      console.log(this.subtopic_search_dump);
+      this.subtopic_streak_count = 0;
+      var streak = true;
+      var nums: string[] = [];
+      var subs: any[] = [];
+      for (let i = 1; i <= Object.keys(this.subtopic_search_dump).length; i++) {
+        nums.push(this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[Object.keys(this.subtopic_search_dump).length - i] as any].Number);
+        subs.push(this.authService.getStudExamSubmission2(id, this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[Object.keys(this.subtopic_search_dump).length - i] as any].Number.substring(0, (this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[Object.keys(this.subtopic_search_dump).length - i] as any].Number).indexOf('-'))));
+      }
+      console.log(nums);
+      console.log(subs);
+      setTimeout(() => {
+        for (let i = 1; i <= subs.length; i++) {
+          this.subtopic_submission.push(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)]);
+          if (streak && ((subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length == 1 && subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct[0][0] == '✅') || (subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length > 1 && this.is_MP_correct(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct)))) {
+            this.subtopic_streak_count += 1;
           }
+          else {
+            streak = false;
+            this.subtopic_streak_count = 0;
+          }
+        }
+      }, 100);
+      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+        if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+          for (const [num, prob] of Object.entries(dump)) {
+            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+              if (prob.SubTopics.includes(this.selected_subtopic)) {
+                if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                  this.subtopic_problem_count += 1;
+                  this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                  if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                    this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
       this.subtopic_new_problem_count = 0;
       this.subtopic_correct_problem_count = 0;
       for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-          if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
-              for (const [num, prob] of Object.entries(dump)) {
-                  if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-                      if (prob.SubTopics.includes(this.selected_subtopic)) {
-                          if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                              this.subtopic_new_problem_count += 1;
-                          }
-                      }
-                  }
+        if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+          for (const [num, prob] of Object.entries(dump)) {
+            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+              if (prob.SubTopics.includes(this.selected_subtopic)) {
+                if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                  this.subtopic_new_problem_count += 1;
+                }
               }
+            }
           }
-          if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
-              const exam_sub = this.authService.getStudExamSubmission2(id, ex);
-              setTimeout(() => {
-                  for (const [num, prob] of Object.entries(dump)) {
-                      if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-                          if (prob.SubTopics.includes(this.selected_subtopic)) {
-                              if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                                  if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
-                                      this.subtopic_correct_problem_count += 1;
-                                  }
-                              }
-                          }
-                      }
+        }
+        if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+          const exam_sub = this.authService.getStudExamSubmission2(id, ex);
+          setTimeout(() => {
+            for (const [num, prob] of Object.entries(dump)) {
+              if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                if (prob.SubTopics.includes(this.selected_subtopic)) {
+                  if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                    if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
+                      this.subtopic_correct_problem_count += 1;
+                    }
                   }
-              }, 50);
-          }
+                }
+              }
+            }
+          }, 100);
+        }
       }
       console.log(this.subtopic_search_dump);
       setTimeout(() => {
-          this.selected_student_st = id;
+        this.selected_student_st = id;
       }, 250);
     }
     else {
       this.selected_student_st = '';
     }
+  }
+
+  subtopic_correct_percent() {
+    return (Math.round(100 * this.subtopic_correct_problem_count / (this.subtopic_problem_count - this.subtopic_new_problem_count)));
   }
 
   fav_std_includes(topic: string, subtopic: string) {
@@ -7059,27 +7263,27 @@ export class ProfileComponent implements OnInit {
   }
 
   unique_m_st(choices: any, part: string) {
-      var part_num = 0;
-      if (part != '') {
-          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+    }
+    this.unique_choices[part_num] = [];
+    for (const [key, choice] of Object.entries(choices)) {
+      if ((choice as any).Choice != '' && !this.unique_choices[part_num].includes((choice as any).Choice)) {
+        if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
+          this.unique_choices[part_num].push((choice as any).Choice + ':' + key[0])
+        }
+        else {
+          this.unique_choices[part_num].push((choice as any).Choice)
+        }
+        this.c_submission[part_num][(choice as any).Choice[0]] = [""];
+        this.subtopic_problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
+        this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
       }
-      this.unique_choices[part_num] = [];
-      for (const [key, choice] of Object.entries(choices)) {
-          if ((choice as any).Choice != '' && !this.unique_choices[part_num].includes((choice as any).Choice)) {
-              if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
-                  this.unique_choices[part_num].push((choice as any).Choice + ':' + key[0])
-              }
-              else {
-                  this.unique_choices[part_num].push((choice as any).Choice)
-              }
-              this.c_submission[part_num][(choice as any).Choice[0]] = [""];
-              this.subtopic_problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
-              this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
-          }
-      }
-      this.unique_choices[part_num].sort();
-      console.log(this.unique_choices[part_num].sort());
-      // return (unique_choices);
+    }
+    this.unique_choices[part_num].sort();
+    console.log(this.unique_choices[part_num].sort());
+    // return (unique_choices);
   }
 
   select_m_choice(ch: string, p: number, part: string) {
@@ -7526,11 +7730,11 @@ export class ProfileComponent implements OnInit {
   }
 
   filter_prob_results(probs: any) {
-    console.log(probs);
+    // console.log(probs);
     var filt_probs = [];
     if (probs != undefined && Object.keys(probs).length > 0) {
       for (let prob of Object.values(probs)) {
-        console.log(prob);
+        // console.log(prob);
         if (prob != undefined) {
           filt_probs.push(prob as any);
         }
@@ -7991,10 +8195,26 @@ export class ProfileComponent implements OnInit {
   }
 
   onLogIn() {
-      setTimeout(() => {
-        this.login = true;
-        if (this.authService.userData.role != 'Student') {
-          const linked_students = this.authService.userData.students.slice(1);
+    setTimeout(() => {
+      this.login = true;
+      if (this.authService.userData.role != 'Student') {
+        const linked_students = this.authService.userData.students.slice(1);
+        var count = 0;
+        for (const [key, stud] of Object.entries(linked_students)) {
+          setTimeout(() => {
+            if ((stud as string).includes(this.authService.userData.uid as string)) {
+              count += 1;
+              this.my_students.push(stud as string);
+              // setTimeout(() => {
+              const student_data = this.authService.searchUserId(stud as string);
+              if (student_data != null) {
+                this.my_students_data[(stud as string)] = (student_data as object);
+              }
+            }
+          }, +key * 10);
+        }
+        setTimeout(() => {
+          this.my_students = [];
           var count = 0;
           for (const [key, stud] of Object.entries(linked_students)) {
             setTimeout(() => {
@@ -8009,32 +8229,16 @@ export class ProfileComponent implements OnInit {
               }
             }, +key * 10);
           }
-          setTimeout(() => {
-            this.my_students = [];
-            var count = 0;
-            for (const [key, stud] of Object.entries(linked_students)) {
-              setTimeout(() => {
-                if ((stud as string).includes(this.authService.userData.uid as string)) {
-                  count += 1;
-                  this.my_students.push(stud as string);
-                  // setTimeout(() => {
-                  const student_data = this.authService.searchUserId(stud as string);
-                  if (student_data != null) {
-                    this.my_students_data[(stud as string)] = (student_data as object);
-                  }
-                }
-              }, +key * 10);
-            }
-          }, 500);
-        }
-        this.login = false;
-      }, 500);
+        }, 500);
+      }
+      this.login = false;
+    }, 500);
   }
 
   onOtpChange(otpCode: any) {
     this.otp = otpCode;
   }
-  
+
   ngAfterViewInit() {
 
   }
@@ -8120,83 +8324,83 @@ export class ProfileComponent implements OnInit {
         }
       }
       if (this.authService.userData) {
-          this.authService.getProfilePic(this.authService.userData);
-          this.user_data = this.authService.userData;
-          if (this.authService.userData.role != 'Student') {
-              const linked_students = this.authService.userData.students.slice(1);
-              var count = 0;
-              for (const [key, stud] of Object.entries(linked_students)) {
-                  setTimeout(() => {
-                      if ((stud as string).includes(this.authService.userData.uid as string)) {
-                          count += 1;
-                          this.my_students.push(stud as string);
-                          // setTimeout(() => {
-                          const student_data = this.authService.searchUserId(stud as string);
-                          if (student_data != null) {
-                              this.my_students_data[(stud as string)] = (student_data as object);
-                          }
-                      }
-                  }, +key * 10);
+        this.authService.getProfilePic(this.authService.userData);
+        this.user_data = this.authService.userData;
+        if (this.authService.userData.role != 'Student') {
+          const linked_students = this.authService.userData.students.slice(1);
+          var count = 0;
+          for (const [key, stud] of Object.entries(linked_students)) {
+            setTimeout(() => {
+              if ((stud as string).includes(this.authService.userData.uid as string)) {
+                count += 1;
+                this.my_students.push(stud as string);
+                // setTimeout(() => {
+                const student_data = this.authService.searchUserId(stud as string);
+                if (student_data != null) {
+                  this.my_students_data[(stud as string)] = (student_data as object);
+                }
               }
-              setTimeout(() => {
-                  this.my_students = [];
-                  var count = 0;
-                  for (const [key, stud] of Object.entries(linked_students)) {
-                      setTimeout(() => {
-                          if ((stud as string).includes(this.authService.userData.uid as string)) {
-                              count += 1;
-                              this.my_students.push(stud as string);
-                              // setTimeout(() => {
-                              const student_data = this.authService.searchUserId(stud as string);
-                              if (student_data != null) {
-                                  this.my_students_data[(stud as string)] = (student_data as object);
-                              }
-                          }
-                      }, +key * 10);
-                  }
-              }, 500);
+            }, +key * 10);
           }
-          // if (this.authService.userData.role == 'Student') {
-          //   const exam_history = this.authService.userData.exams.history;
-          //   for (const [key, det] of Object.entries(exam_history)) {
-          //     if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
-          //       this.exam_inprogress = true;
-          //       this.exam_status = (det as any).status;
-          //       this.progress_number = (det as any).progress + 1;
-          //       this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
-          //       this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
-          //       if ((det as any).progress != 0) {
-          //         var db_submission = this.authService.getExamSubmission2(this.key);
-          //         setTimeout(() => {
-          //           console.log(db_submission.problems);
-          //           for (const [key2, det2] of Object.entries(db_submission.problems)) {
-          //             if (+key2 != 0) {
-          //               this.exam_submission[+(det2 as any).Number] = (det2 as any);
-          //               // const sub_prob: any = (det2 as any);
-          //               // var sub_prob_2: any = {};
-          //               // for (const [field, dump] of Object.entries(det2 as any)) {
-          //               //   // sub_prob[field] = dump;
-          //               //   sub_prob_2[field] = dump;
-          //               // }
-          //               // if (typeof (det2 as any).Choice == "string") {
-          //               //   sub_prob_2.Choice = [];
-          //               //   sub_prob_2.Correct = [];
-          //               //   sub_prob_2.Attempts = [];
-          //               //   sub_prob_2.Path = [];
-          //               //   sub_prob_2.Choice.push([sub_prob.Choice]);
-          //               //   sub_prob_2.Correct.push([sub_prob.Correct]);
-          //               //   sub_prob_2.Attempts.push(sub_prob.Attempts);
-          //               //   sub_prob_2.Path.push([[sub_prob.Path]]);
-          //               // }
-          //               // this.exam_submission[+(det2 as any).Number] = sub_prob_2;
-          //             }
-          //           }
-          //         }, 500);
-          //       }
-          //       console.log(this.exam_submission);
-          //     }
-          //   }
-          // }
+          setTimeout(() => {
+            this.my_students = [];
+            var count = 0;
+            for (const [key, stud] of Object.entries(linked_students)) {
+              setTimeout(() => {
+                if ((stud as string).includes(this.authService.userData.uid as string)) {
+                  count += 1;
+                  this.my_students.push(stud as string);
+                  // setTimeout(() => {
+                  const student_data = this.authService.searchUserId(stud as string);
+                  if (student_data != null) {
+                    this.my_students_data[(stud as string)] = (student_data as object);
+                  }
+                }
+              }, +key * 10);
+            }
+          }, 500);
+        }
+        // if (this.authService.userData.role == 'Student') {
+        //   const exam_history = this.authService.userData.exams.history;
+        //   for (const [key, det] of Object.entries(exam_history)) {
+        //     if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
+        //       this.exam_inprogress = true;
+        //       this.exam_status = (det as any).status;
+        //       this.progress_number = (det as any).progress + 1;
+        //       this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
+        //       this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
+        //       if ((det as any).progress != 0) {
+        //         var db_submission = this.authService.getExamSubmission2(this.key);
+        //         setTimeout(() => {
+        //           console.log(db_submission.problems);
+        //           for (const [key2, det2] of Object.entries(db_submission.problems)) {
+        //             if (+key2 != 0) {
+        //               this.exam_submission[+(det2 as any).Number] = (det2 as any);
+        //               // const sub_prob: any = (det2 as any);
+        //               // var sub_prob_2: any = {};
+        //               // for (const [field, dump] of Object.entries(det2 as any)) {
+        //               //   // sub_prob[field] = dump;
+        //               //   sub_prob_2[field] = dump;
+        //               // }
+        //               // if (typeof (det2 as any).Choice == "string") {
+        //               //   sub_prob_2.Choice = [];
+        //               //   sub_prob_2.Correct = [];
+        //               //   sub_prob_2.Attempts = [];
+        //               //   sub_prob_2.Path = [];
+        //               //   sub_prob_2.Choice.push([sub_prob.Choice]);
+        //               //   sub_prob_2.Correct.push([sub_prob.Correct]);
+        //               //   sub_prob_2.Attempts.push(sub_prob.Attempts);
+        //               //   sub_prob_2.Path.push([[sub_prob.Path]]);
+        //               // }
+        //               // this.exam_submission[+(det2 as any).Number] = sub_prob_2;
+        //             }
+        //           }
+        //         }, 500);
+        //       }
+        //       console.log(this.exam_submission);
+        //     }
+        //   }
+        // }
       }
       setTimeout(() => {
         this.data_loaded = true;

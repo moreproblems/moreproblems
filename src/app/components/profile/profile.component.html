@@ -1523,35 +1523,66 @@
             <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
               <b *ngIf="!authService.userData || (authService.userData.role != 'Student' && selected_student_st == '')">{{subtopic_problem_count}} Total Problems</b> <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{subtopic_new_problem_count}} Remaining Problems</b> </h3>
             <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
-              <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{(subtopic_new_problem_count != subtopic_problem_count) ? '(' + ''+subtopic_correct_problem_count + ' / ' + ''+(subtopic_problem_count-subtopic_new_problem_count) + ' correct so far)' : ''}}</b> </h3>
-            <div *ngIf="selected_student_st != '' && subtopic_new_problem_count != subtopic_problem_count" class="card-container"
+              <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{(subtopic_new_problem_count != subtopic_problem_count) ? ''+subtopic_correct_percent() + '% correct so far' : ''}} {{(subtopic_streak_count > 1) ? '(🔥 x' + ''+subtopic_streak_count + ')' : ''}}</b> </h3>
+            <div *ngIf="authService.userData && selected_student_st != '' && subtopic_new_problem_count != subtopic_problem_count" class="card-container"
               style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
               <label *ngFor="let prob of (subtopic_search_dump | values)"
                 class="switch" style="padding: 0px; margin: 0px; height: 14px; width: 32px">
                 <button
                   *ngIf="!(my_students_data[selected_student_st].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) || ((my_students_data[selected_student_st].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status != 'Completed'"
                   class="toggle-button-disabled"
-                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(189, 189, 189); border-radius: 3px">
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(189, 189, 189); border-radius: 3px; border: 1px solid #000">
                 </button>
                 <button
                   *ngIf="(my_students_data[selected_student_st].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((my_students_data[selected_student_st].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && (((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length == 1 && (authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct[0][0] == '✅') || ((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length > 1 && is_MP_correct((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct)))"
                   class="toggle-button-disabled"
-                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px">
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px; border: 1px solid #000">
                 </button>
                 <button
                   *ngIf="(my_students_data[selected_student_st].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((my_students_data[selected_student_st].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && ((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length == 1 && (authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct[0][0] == '👀')"
                   class="toggle-button-disabled"
-                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(25, 106, 177); border-radius: 3px">
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(25, 106, 177); border-radius: 3px; border: 1px solid #000">
                 </button>
                 <button
                   *ngIf="(my_students_data[selected_student_st].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((my_students_data[selected_student_st].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && (authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length > 1 && !is_MP_correct((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct) && is_MP_partial((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct)"
                   class="toggle-button-disabled"
-                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px">
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px; border: 1px solid #000">
                 </button>
                 <button
                   *ngIf="(my_students_data[selected_student_st].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((my_students_data[selected_student_st].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && (((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length == 1 && !['✅', '👀'].includes((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct[0][0])) || ((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length > 1 && !is_MP_correct((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct) && !is_MP_partial((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct)))"
                   class="toggle-button-disabled"
-                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px">
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px; border: 1px solid #000">
+                </button>
+              </label>
+            </div>
+            <div *ngIf="authService.userData && authService.userData.role == 'Student' && subtopic_new_problem_count != subtopic_problem_count" class="card-container"
+              style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
+              <label *ngFor="let prob of (subtopic_search_dump | values)"
+                class="switch" style="padding: 0px; margin: 0px; height: 14px; width: 32px">
+                <button
+                  *ngIf="!(student_data.exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) || ((student_data.exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status != 'Completed'"
+                  class="toggle-button-disabled"
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(189, 189, 189); border-radius: 3px; border: 1px solid #000">
+                </button>
+                <button
+                  *ngIf="(student_data.exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((student_data.exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && (((authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length == 1 && (authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct[0][0] == '✅') || ((authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length > 1 && is_MP_correct((authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct)))"
+                  class="toggle-button-disabled"
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px; border: 1px solid #000">
+                </button>
+                <button
+                  *ngIf="(student_data.exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((student_data.exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && ((authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length == 1 && (authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct[0][0] == '👀')"
+                  class="toggle-button-disabled"
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(25, 106, 177); border-radius: 3px; border: 1px solid #000">
+                </button>
+                <button
+                  *ngIf="(student_data.exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((student_data.exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && (authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length > 1 && !is_MP_correct((authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct) && is_MP_partial((authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct)"
+                  class="toggle-button-disabled"
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px; border: 1px solid #000">
+                </button>
+                <button
+                  *ngIf="(student_data.exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((student_data.exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && (((authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length == 1 && !['✅', '👀'].includes((authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct[0][0])) || ((authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length > 1 && !is_MP_correct((authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct) && !is_MP_partial((authService.getStudExamSubmission2(authService.userData.uid, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct)))"
+                  class="toggle-button-disabled"
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px; border: 1px solid #000">
                 </button>
               </label>
             </div>
@@ -3932,22 +3963,22 @@
                           <button
                             *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] == '✅') || (prob.Correct.length > 1 && is_MP_correct(prob.Correct)))"
                             class="toggle-button-disabled"
-                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px">
+                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px; border: 1px solid #000">
                           </button>
                           <button
                             *ngIf="(prob.Correct.length == 1 && prob.Correct[0][0] == '👀')"
                             class="toggle-button-disabled"
-                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(25, 106, 177); border-radius: 3px">
+                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(25, 106, 177); border-radius: 3px; border: 1px solid #000">
                           </button>
                           <button
                             *ngIf="prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && is_MP_partial(prob.Correct)"
                             class="toggle-button-disabled"
-                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px">
+                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px; border: 1px solid #000">
                           </button>
                           <button
                             *ngIf="((prob.Correct.length == 1 && !['✅', '👀'].includes(prob.Correct[0][0])) || (prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && !is_MP_partial(prob.Correct)))"
                             class="toggle-button-disabled"
-                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px">
+                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px; border: 1px solid #000">
                           </button>
                         </label>
                       </div>
@@ -4101,7 +4132,7 @@
         </div>
       </div>
     </div>
-    <div *ngIf="selected_exam == '' && selected_student == ''" style="width: min(1075px, 92%); align-items: left">
+    <div *ngIf="selected_exam == '' && selected_student == '' && selected_subtopic == ''" style="width: min(1075px, 92%); align-items: left">
       <section>
         <div (click)="authService.SignOut()" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -4110,7 +4141,7 @@
         </div>
       </section>
     </div>
-    <div *ngIf="selected_exam == '' && selected_student == ''" class="card card-large"
+    <div *ngIf="selected_exam == '' && selected_student == '' && selected_subtopic == ''" class="card card-large"
       style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column; min-width: 300px; max-height: 2400px">
       <div class="inner-adjust" *ngIf="authService.userData as user" style="padding-top: 10px">
         <div class="pt-3 pb-2 mb-3 border-bottom">
@@ -5347,7 +5378,7 @@
       </section>
       <br />
     </div>
-    <div *ngIf="selected_exam == '' && authService.userData.role == 'Student' && profile_tab == 'achievements'" class="card card-large"
+    <div *ngIf="selected_exam == '' && selected_subtopic == '' && authService.userData.role == 'Student' && profile_tab == 'achievements'" class="card card-large"
       style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <div class="row">
         <div class="col-md-12">
@@ -5504,22 +5535,22 @@
                           <button
                             *ngIf="((prob.Correct.length == 1 && prob.Correct[0][0] == '✅') || (prob.Correct.length > 1 && is_MP_correct(prob.Correct)))"
                             class="toggle-button-disabled"
-                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px">
+                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px; border: 1px solid #000">
                           </button>
                           <button
                             *ngIf="(prob.Correct.length == 1 && prob.Correct[0][0] == '👀')"
                             class="toggle-button-disabled"
-                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(25, 106, 177); border-radius: 3px">
+                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(25, 106, 177); border-radius: 3px; border: 1px solid #000">
                           </button>
                           <button
                             *ngIf="prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && is_MP_partial(prob.Correct)"
                             class="toggle-button-disabled"
-                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px">
+                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px; border: 1px solid #000">
                           </button>
                           <button
                             *ngIf="((prob.Correct.length == 1 && !['✅', '👀'].includes(prob.Correct[0][0])) || (prob.Correct.length > 1 && !is_MP_correct(prob.Correct) && !is_MP_partial(prob.Correct)))"
                             class="toggle-button-disabled"
-                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px">
+                            style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px; border: 1px solid #000">
                           </button>
                         </label>
                       </div>
@@ -5535,7 +5566,7 @@
         </div>
       </div>
     </div>
-    <div *ngIf="selected_exam == '' && authService.userData.role == 'Student' && profile_tab == 'achievements'" class="card card-large"
+    <div *ngIf="selected_exam == '' && selected_subtopic == '' && authService.userData.role == 'Student' && profile_tab == 'achievements'" class="card card-large"
       style="height: auto; margin: 10px auto; padding: 10px 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <div class="row">
         <div class="col-md-12">

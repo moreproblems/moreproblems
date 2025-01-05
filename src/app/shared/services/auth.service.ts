@@ -54,10 +54,10 @@ export class AuthService {
         // this.userData = user;
         get(child(ref(db), '/users/' + user.uid)).then((snapshot) => {
           if (snapshot.exists()) {
-            console.log(snapshot.val());
+            // console.log(snapshot.val());
             this.userData = snapshot.val();
           } else {
-            console.log("No data available");
+            // console.log("No data available");
           }
         }).catch((error) => {
           console.error(error);
@@ -177,17 +177,17 @@ export class AuthService {
       .signInWithPopup(provider)
       .then(async (result) => {
         // const authMethods: string[] = await (<any>this.afAuth.fetchSignInMethodsForEmail(result.user != null && result.user.email != null ? result.user.email : ''));
-        // console.log(authMethods);
+        // // console.log(authMethods);
         this.userCredential = result.credential;
         this.SetUserData(result.user);
-        console.log(result.user);
+        // console.log(result.user);
         if (result.user != null) {
-          console.log(result.user.uid);
+          // console.log(result.user.uid);
           this.userData = this.searchUserId(result.user.uid as string);
           setTimeout(() => {
             if (result.user != null) {
               this.userData = this.searchUserId(result.user.uid as string);
-              console.log(this.userData);
+              // console.log(this.userData);
               if (Object.keys(this.userData).length == 0) {
                 this.WriteUserData(result.user, '').then (() => {
                 });
@@ -264,10 +264,10 @@ export class AuthService {
     };
     get(child(ref(db), '/users/' + user.uid)).then((snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
         this.userData = snapshot.val();
       } else {
-        console.log("No data available");
+        // console.log("No data available");
       }
     }).catch((error) => {
       console.error(error);
@@ -321,13 +321,13 @@ export class AuthService {
         }
         update(ref(db), updates2);
       }).catch(error => {
-        console.log(error.message)
+        // console.log(error.message)
       });
     }
     else {
       updates['/users/' + user.uid] = this.userData;
       return update(ref(db), updates).then(() => {}).catch(error => {
-        console.log(error.message)
+        // console.log(error.message)
       });
     }
   }
@@ -356,7 +356,7 @@ export class AuthService {
       updates2['/users/' + student['uid'] + '/problems/correct'] = 0;
       update(ref(db), updates2);
     }).catch(error => {
-      console.log(error.message)
+      // console.log(error.message)
     });
   }
 
@@ -373,7 +373,7 @@ export class AuthService {
       //   return;
       // }, 200);
     }).catch(error => {
-      console.log(error.message);
+      // console.log(error.message);
     });
   }
 
@@ -390,28 +390,28 @@ export class AuthService {
     return update(ref(db), updates).then(() => {
       get(child(ref(db), '/users/' + this.userData.uid)).then((snapshot) => {
         if (snapshot.exists()) {
-          console.log(snapshot.val());
+          // console.log(snapshot.val());
           this.userData = snapshot.val();
         } else {
-          console.log("No data available");
+          // console.log("No data available");
         }
       }).catch((error) => {
         console.error(error);
       });
     }).catch(error => {
-      console.log(error.message);
+      // console.log(error.message);
     });
   }
 
   UpdateDatabase(changes: { [index: string]: any }) {
     const db = getDatabase();
     const updates: any = {};
-    console.log(this.userData)
+    // console.log(this.userData)
     for (let key in changes) {
       updates[key] = changes[key];
     }
     return update(ref(db), updates).then(() => {}).catch(error => {
-      console.log(error.message);
+      // console.log(error.message);
     });
   }
 
@@ -425,9 +425,9 @@ export class AuthService {
     const strg = stor.getStorage();
     return stor.getDownloadURL(stor.ref(strg, 'profile/' + ""+user.uid + '/pic')).then((url) => {
       this.pp_url = url;
-      console.log(this.pp_url);
+      // console.log(this.pp_url);
     }).catch(error => {
-      console.log(error.message);
+      // console.log(error.message);
     });
   }
 
@@ -440,10 +440,10 @@ export class AuthService {
   getQuizPic(quizID: string, name: string) {
     const strg = stor.getStorage();
     return stor.getDownloadURL(stor.ref(strg, 'quiz/' + quizID + '/' + name)).then((url) => {
-      console.log(url);
+      // console.log(url);
       return (url as any);
     }).catch(error => {
-      console.log(error.message);
+      // console.log(error.message);
     });
   }
   
@@ -451,24 +451,24 @@ export class AuthService {
     const strg = stor.getStorage();
     const downloads: any = {};
     return stor.getDownloadURL(stor.ref(strg, 'quiz/' + quizID + '/')).then((url) => {
-      console.log(url);
+      // console.log(url);
       return (url as any);
     }).catch(error => {
-      console.log(error.message);
+      // console.log(error.message);
     });
   }
 
   // Set data on localStorage
   setUserLoggedIn(user: User) {
     localStorage.setItem('user', JSON.stringify(user));
-    console.log('saved on localStorage');
+    // console.log('saved on localStorage');
 
   }
 
   // get data on localStorage
   getUserLoggedIn() {
     if (localStorage.getItem('user') == null) {
-      console.log('localStorage empty');
+      // console.log('localStorage empty');
     } else {
       JSON.parse(localStorage.getItem('user') || '{}');
     }
@@ -482,10 +482,10 @@ export class AuthService {
     const stud_ref = ref(db,"users/" + this.userData.uid + "/exams/history");
     onValue(stud_ref, (snapshot) => {
       if (snapshot.exists()) {
-        console.log(Object.keys(snapshot.val()));
+        // console.log(Object.keys(snapshot.val()));
         exam_history = snapshot.val();
       } else {
-        console.log("No data available");
+        // console.log("No data available");
       }
     });
     for (let exm of Object.keys(exam_history)) {
@@ -502,12 +502,12 @@ export class AuthService {
     // const exam_history: any = {};
     get(child(ref(db), "submissions/exams/" + this.userData.uid + "/" + exm)).then((snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
         this.exam_sub = snapshot.val();
         db_updates['/submissions/exams/' + exm + '/' + this.userData.uid] = this.exam_sub;
         this.UpdateDatabase(db_updates);
       } else {
-        console.log("No data available");
+        // console.log("No data available");
       }
     }).catch((error) => {
       console.error(error);
@@ -523,19 +523,19 @@ export class AuthService {
     // const exam_history: any = {};
     get(child(ref(db), "submissions/exams/" + exm + "/" + this.userData.uid)).then((snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
         for (const [key, val] of Object.entries(snapshot.val())) {
           my_exam_sub[key] = val;
         }
         // this.exam_sub = snapshot.val();
       } else {
-        console.log("No data available");
+        // console.log("No data available");
         my_exam_sub = this.getExamSubmission(exm);
       }
     }).catch((error) => {
       console.error(error);
     });
-    console.log(my_exam_sub);
+    // console.log(my_exam_sub);
     return my_exam_sub;
   }
 
@@ -547,52 +547,90 @@ export class AuthService {
     const stud_ref = ref(db,"users/" + std + "/exams/history");
     onValue(stud_ref, (snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
         for (let exm of Object.keys(snapshot.val)) {
           my_exam_subs[exm] = this.getStudExamSubmission2(std, exm)
         }
       } else {
-        console.log("No data available");
+        // console.log("No data available");
       }
     });
     return my_exam_subs;
   }
 
   getStudExamSubmission(std: string, exm: string) {
+    var exam_sub: any = {};
     const db = getDatabase();
     const db_updates: any = {};
     const stud_ref = ref(db,"submissions/exams/" + std + "/" + exm);
     onValue(stud_ref, (snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
-        this.exam_sub = snapshot.val();
-        db_updates['/submissions/exams/' + exm + '/' + std] = this.exam_sub;
+        // console.log(snapshot.val());
+        exam_sub = snapshot.val();
+        db_updates['/submissions/exams/' + exm + '/' + std] = exam_sub;
         this.UpdateDatabase(db_updates);
       } else {
-        console.log("No data available");
+        // console.log("No data available");
+      }
+    });
+    return exam_sub;
+  }
+
+  getStudExamSubmission2(std: string, exm: string) {
+    var exam_sub: any = {};
+    exam_sub.id = exm;
+    const db = getDatabase();
+    const stud_ref = ref(db,"submissions/exams/" + exm + "/" + std);
+    onValue(stud_ref, (snapshot) => {
+      if (snapshot.exists()) {
+        // console.log(snapshot.val());
+        for (const [key, val] of Object.entries(snapshot.val())) {
+          exam_sub[key] = val;
+        }
+        // this.exam_sub = snapshot.val();
+      } else {
+        // console.log("No data available");
+        exam_sub = this.getStudExamSubmission(std, exm);
+      }
+    });
+    return exam_sub;
+  }
+
+  getStudProbSubmission(std: string, prob: string) {
+    const db = getDatabase();
+    const db_updates: any = {};
+    const stud_ref = ref(db,"submissions/problems/" + std + "/" + prob);
+    onValue(stud_ref, (snapshot) => {
+      if (snapshot.exists()) {
+        // console.log(snapshot.val());
+        this.exam_sub = snapshot.val();
+        db_updates['/submissions/problems/' + prob + '/' + std] = this.exam_sub;
+        this.UpdateDatabase(db_updates);
+      } else {
+        // console.log("No data available");
       }
     });
     return this.exam_sub;
   }
 
-  getStudExamSubmission2(std: string, exm: string) {
-    var my_exam_sub: any = {};
-    my_exam_sub.id = exm;
+  getStudProbSubmission2(std: string, prob: string) {
+    var my_prob_sub: any = {};
+    my_prob_sub.id = prob;
     const db = getDatabase();
-    const stud_ref = ref(db,"submissions/exams/" + exm + "/" + std);
+    const stud_ref = ref(db,"submissions/problems/" + prob + "/" + std);
     onValue(stud_ref, (snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
         for (const [key, val] of Object.entries(snapshot.val())) {
-          my_exam_sub[key] = val;
+          my_prob_sub[key] = val;
         }
         // this.exam_sub = snapshot.val();
       } else {
-        console.log("No data available");
-        my_exam_sub = this.getStudExamSubmission(std, exm);
+        // console.log("No data available");
+        my_prob_sub = this.getStudProbSubmission(std, prob);
       }
     });
-    return my_exam_sub;
+    return my_prob_sub;
   }
 
   // getStudClassSubmissions(std: string, clss: string) {
@@ -601,10 +639,10 @@ export class AuthService {
   //   const stud_ref = ref(db,"submissions/exams/" + std);
   //   onValue(stud_ref, (snapshot) => {
   //     if (snapshot.exists()) {
-  //       console.log(snapshot.val());
+  //       // console.log(snapshot.val());
   //       this.exam_sub = snapshot.val();
   //     } else {
-  //       console.log("No data available");
+  //       // console.log("No data available");
   //     }
   //   });
   //   return this.exam_sub;
@@ -616,10 +654,10 @@ export class AuthService {
     const user_ref = ref(db, "users/" + id);
     onValue(user_ref, (snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
         this.user_result = snapshot.val();
       } else {
-        console.log("No data available");
+        // console.log("No data available");
       }
     });
     return this.user_result;
@@ -636,16 +674,16 @@ export class AuthService {
           search_users.push(childSnapshot.key);
         }
       })
-      console.log(search_users);
+      // console.log(search_users);
     });
     for (let userID of search_users) {
       // const user_ref = ref(db, "users/" + userID);
       onValue(ref(db, "users/" + userID), (snapshot) => {
         if (snapshot.exists()) {
-          console.log(snapshot.val());
+          // console.log(snapshot.val());
           this.user_result[userID] = snapshot.val();
         } else {
-          console.log("No data available");
+          // console.log("No data available");
         }
       });
     }
@@ -658,10 +696,10 @@ export class AuthService {
     const class_ref = ref(db, "classes/" + id);
     onValue(class_ref, (snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
         this.class_result = snapshot.val();
       } else {
-        console.log("No data available");
+        // console.log("No data available");
       }
     });
     return this.class_result;
@@ -673,10 +711,10 @@ export class AuthService {
     const class_ref = ref(db, "exams/" + id);
     onValue(class_ref, (snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
         this.exam_result = snapshot.val();
       } else {
-        console.log("No data available");
+        // console.log("No data available");
       }
     });
     return this.exam_result;
@@ -688,10 +726,10 @@ export class AuthService {
     const quiz_ref = ref(db, "quizzes/" + id);
     onValue(quiz_ref, (snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
         this.quiz_result = snapshot.val();
       } else {
-        console.log("No data available");
+        // console.log("No data available");
       }
     });
     return (this.quiz_result);
@@ -703,17 +741,17 @@ export class AuthService {
     const quizzes_ref = ref(db, "quizzes");
     onValue(quizzes_ref, (snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
         for (const [id, dump] of Object.entries(snapshot.val() as any)) {
           if ((dump as any).public) {
             this.quiz_results[id] = (dump as any);
           }
         }
       } else {
-        console.log("No data available");
+        // console.log("No data available");
       }
     });
-    console.log(this.quiz_results);
+    // console.log(this.quiz_results);
     return (this.quiz_results);
   }
 
@@ -723,17 +761,17 @@ export class AuthService {
     const quizzes_ref = ref(db, "quizzes");
     onValue(quizzes_ref, (snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
         for (const [id, dump] of Object.entries(snapshot.val() as any)) {
           if ((dump as any).author == uid && (dump as any).problems != undefined) {
             this.quiz_results[id] = (dump as any);
           }
         }
       } else {
-        console.log("No data available");
+        // console.log("No data available");
       }
     });
-    console.log(this.quiz_results);
+    // console.log(this.quiz_results);
     return (this.quiz_results);}
 
   getInProgExams(id: string) {

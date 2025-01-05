@@ -1460,27 +1460,27 @@
                 <button
                   *ngIf="!(my_students_data[selected_student_st].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) || ((my_students_data[selected_student_st].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status != 'Completed'"
                   class="toggle-button-disabled"
-                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(189, 189, 189); border-radius: 3px">
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(189, 189, 189); border-radius: 3px; border: 1px solid #000">
                 </button>
                 <button
                   *ngIf="(my_students_data[selected_student_st].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((my_students_data[selected_student_st].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && (((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length == 1 && (authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct[0][0] == '✅') || ((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length > 1 && is_MP_correct((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct)))"
                   class="toggle-button-disabled"
-                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px">
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(66, 156, 10); border-radius: 3px; border: 1px solid #000">
                 </button>
                 <button
                   *ngIf="(my_students_data[selected_student_st].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((my_students_data[selected_student_st].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && ((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length == 1 && (authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct[0][0] == '👀')"
                   class="toggle-button-disabled"
-                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(25, 106, 177); border-radius: 3px">
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(25, 106, 177); border-radius: 3px; border: 1px solid #000">
                 </button>
                 <button
                   *ngIf="(my_students_data[selected_student_st].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((my_students_data[selected_student_st].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && (authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length > 1 && !is_MP_correct((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct) && is_MP_partial((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct)"
                   class="toggle-button-disabled"
-                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px">
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(217, 187, 68); border-radius: 3px; border: 1px solid #000">
                 </button>
                 <button
                   *ngIf="(my_students_data[selected_student_st].exams.history | keys).includes(prob.Number.substring(0, (prob.Number).indexOf('-'))) && ((my_students_data[selected_student_st].exams.history)[prob.Number.substring(0, (prob.Number).indexOf('-'))]).status == 'Completed' && (((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length == 1 && !['✅', '👀'].includes((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct[0][0])) || ((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct.length > 1 && !is_MP_correct((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct) && !is_MP_partial((authService.getStudExamSubmission2(selected_student_st, prob.Number.substring(0, (prob.Number).indexOf('-')))).problems[prob.Number.substring((prob.Number).indexOf('-')+1)].Correct)))"
                   class="toggle-button-disabled"
-                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px">
+                  style="margin: 0px; min-height: 12px; width: 30px; font-size: 16px; padding: 0px; background-color: rgb(245, 77, 77); border-radius: 3px; border: 1px solid #000">
                 </button>
               </label>
             </div>
