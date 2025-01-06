@@ -344,7 +344,6 @@
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
-    min-height: 50px;
   }
 
   button.toggle-button-off {
@@ -358,7 +357,6 @@
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
-    min-height: 50px;
   }
 
   button.toggle-button-disabled {
@@ -820,7 +818,7 @@
         <br />
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <div *ngFor="let topic of topics" (click)="select_topic(topic)"
-            style="display: flex; flex-direction: row; align-items: start; margin: 7px 15px; height: auto">
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="selected_topic == topic" type="checkbox" checked />
             <input *ngIf="selected_topic != topic" type="checkbox" unchecked />
             <div *ngIf="selected_topic == topic"
@@ -876,7 +874,7 @@
         <hr style="width: 90%; margin: 10px auto" />
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <div (click)="toggle_standards()"
-            style="display: flex; flex-direction: row; align-items: start; margin: 7px 15px; height: auto">
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="enable_standards" type="checkbox" style="height: 18px" checked />
             <input *ngIf="!enable_standards" type="checkbox" style="height: 18px" unchecked />
             <div *ngIf="enable_standards"
@@ -1163,7 +1161,7 @@
         <br />
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <div (click)="shuffle_mode = !shuffle_mode"
-            style="display: flex; flex-direction: row; align-items: start; margin: 7px 15px; height: auto">
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="shuffle_mode" type="checkbox" style="height: 18px" checked />
             <input *ngIf="!shuffle_mode" type="checkbox" style="height: 18px" unchecked />
             <div *ngIf="shuffle_mode"
@@ -1287,15 +1285,15 @@
           <div class="card-container"
             style="height: auto; width: 100%; display: flex; justify-content: center">
             <label class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
                   {{state_labels[selected_curriculum]}} </b> </button>
             </label>
             <label class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
                   {{selected_grade}} </b> </button>
             </label>
             <label class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
                   {{selected_subject}} </b> </button>
             </label>
           </div>

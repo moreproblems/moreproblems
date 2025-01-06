@@ -8031,7 +8031,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
           this.user_data = this.authService.userData;
           if (this.authService.userData.role != 'Student') {
               const linked_students = this.authService.userData.students.slice(1);
-              var count = 0;
+              var count = 1;
               for (const [key, stud] of Object.entries(linked_students)) {
                   setTimeout(() => {
                       if ((stud as string).includes(this.authService.userData.uid as string)) {
@@ -8043,25 +8043,25 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
                               this.my_students_data[(stud as string)] = (student_data as object);
                           }
                       }
-                  }, +key * 10);
+                  }, +count * 10);
               }
-              setTimeout(() => {
-                  this.my_students = [];
-                  var count = 0;
-                  for (const [key, stud] of Object.entries(linked_students)) {
-                      setTimeout(() => {
-                          if ((stud as string).includes(this.authService.userData.uid as string)) {
-                              count += 1;
-                              this.my_students.push(stud as string);
-                              // setTimeout(() => {
-                              const student_data = this.authService.searchUserId(stud as string);
-                              if (student_data != null) {
-                                  this.my_students_data[(stud as string)] = (student_data as object);
-                              }
-                          }
-                      }, +key * 10);
-                  }
-              }, 500);
+              // setTimeout(() => {
+              //     this.my_students = [];
+              //     var count = 1;
+              //     for (const [key, stud] of Object.entries(linked_students)) {
+              //         setTimeout(() => {
+              //             if ((stud as string).includes(this.authService.userData.uid as string)) {
+              //                 count += 1;
+              //                 this.my_students.push(stud as string);
+              //                 // setTimeout(() => {
+              //                 const student_data = this.authService.searchUserId(stud as string);
+              //                 if (student_data != null) {
+              //                     this.my_students_data[(stud as string)] = (student_data as object);
+              //                 }
+              //             }
+              //         }, +count * 10);
+              //     }
+              // }, 500);
           }
           // if (this.authService.userData.role == 'Student') {
           //   const exam_history = this.authService.userData.exams.history;

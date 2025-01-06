@@ -1286,24 +1286,24 @@ button.grade-button-l:hover {
             </span>
             <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center; margin-top: 5px">
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{standards_attribute_dump[s_dump_dict[key][0]].State}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{standards_attribute_dump[s_dump_dict[key][0]].State}} </b> </button>
               </label>
               <label *ngFor="let grade of standards_attribute_dump[s_dump_dict[key][0]].Grades" class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{standards_attribute_dump[s_dump_dict[key][0]].Subject}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{standards_attribute_dump[s_dump_dict[key][0]].Subject}} </b> </button>
               </label>
             </div>
             <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center; margin-top: 5px">
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{standards_attribute_dump[s_dump_dict[key][0]].State}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{standards_attribute_dump[s_dump_dict[key][0]].State}} </b> </button>
               </label>
               <label *ngFor="let grade of standards_attribute_dump[s_dump_dict[key][0]].Grades" class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[standards_attribute_dump[s_dump_dict[key][0]].Subject]}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[standards_attribute_dump[s_dump_dict[key][0]].Subject]}} </b> </button>
               </label>
             </div>
             <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
@@ -1367,10 +1367,10 @@ button.grade-button-l:hover {
               Choose a student to save your practice results </h3>
             <h3 style="font-size: 18px; margin-top: 0px; margin-bottom: 10px"
               *ngIf="this.authService.userData && this.authService.userData.role == 'Student'">
-              Your practice results will be saved as {{(this.authService.userData.displayName) ? this.authService.userData.displayName : 'User'}} </h3>
+              Saving your practice results as {{(this.authService.userData.displayName) ? this.authService.userData.displayName : 'User'}} </h3>
             <h3 style="font-size: 18px; margin-top: 0px; margin-bottom: 10px"
               *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.selected_student_st != ''">
-              Your practice results will be saved as {{selected_student_data.displayName}} </h3>
+              Saving your practice results as {{selected_student_data.displayName}} </h3>
             <div *ngIf="!authService.userData" class="card-container" style="align-items: center">
               <button class="grade-button-s" (click)="signup=true; user_role='Student'" style="font-size: 19px; line-height: 20px; font-weight: 900; letter-spacing: 1px; padding: 7px; border-radius: 7px"> Sign Up </button>
               <button class="grade-button-l" (click)="login=true" style="font-size: 19px; line-height: 20px; font-weight: 900; letter-spacing: 1px; padding: 7px; border-radius: 7px"> Log In </button>
@@ -1397,9 +1397,9 @@ button.grade-button-l:hover {
               </button>
             </div> -->
             <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
-              <b *ngIf="!authService.userData || (authService.userData.role != 'Student' && selected_student_st == '')">{{subtopic_problem_count}} Total Problems</b> <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{subtopic_new_problem_count}} Remaining Problems</b> </h3>
-            <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
-              <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{(subtopic_new_problem_count != subtopic_problem_count) ? ''+subtopic_correct_percent() + '% correct so far' : ''}} {{(subtopic_streak_count > 1) ? '(🔥 x' + ''+subtopic_streak_count + ')' : ''}}</b> </h3>
+              <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{(subtopic_new_problem_count != subtopic_problem_count) ? ''+subtopic_correct_percent() + '% so far' : ''}} {{(subtopic_streak_count > 1) ? '(🔥 x' + ''+subtopic_streak_count + ')' : ''}}</b> </h3>
+            <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 5px; color: darkslategrey; font-size: 20px">
+              <b *ngIf="!authService.userData || (authService.userData.role != 'Student' && selected_student_st == '')">{{subtopic_problem_count}} Total Problems</b> <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{subtopic_new_problem_count}} More Problems</b> </h3>
             <div *ngIf="authService.userData && selected_student_st != '' && subtopic_new_problem_count != subtopic_problem_count" class="card-container"
               style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
               <label *ngFor="let prob of (subtopic_search_dump | values)"
@@ -1491,24 +1491,24 @@ button.grade-button-l:hover {
             <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
             <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <section *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12"
@@ -2782,7 +2782,7 @@ button.grade-button-l:hover {
                   style="padding: 5px 0 0; width: 25px; height: 25px; transform: rotate(-90deg)">
               </div>
               <div style="margin: 0 10px; text-align: left">
-                <h4 style="font-size: 18px"> <b *ngIf="domain.Key != ''" style="font-weight: 900">{{domain.Key}}: </b> <b style="font-weight: 700">{{domain.Label}}</b> <b *ngIf="domain.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{domain.NumProb}}</i> problems]</b> </h4>
+                <h4 style="font-size: 18px"> <b *ngIf="domain.Key != ''" style="font-weight: 900">{{domain.Key}}: </b> <b style="font-weight: 700">{{domain.Label}}</b> <b *ngIf="domain.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{domain.NumProb}}</i> <i style="font-weight: 400"> problems</i>)</b> </h4>
               </div>
             </div>
             <hr *ngIf="domain_state[domain.Label]" style="width: 100%; border-width: 1px" />
@@ -2794,7 +2794,7 @@ button.grade-button-l:hover {
                   </span>
                   <b *ngIf="cluster.Key != ''" style="font-weight: 800">{{cluster.Key}}: </b>
                   <b *ngIf="cluster.NumProb == 0" style="font-weight: 500">{{cluster.Label}}</b>
-                  <a *ngIf="cluster.NumProb > 0" (click)="select_subtopic([domain.Label], cluster.Label, cluster.Key)" style="font-weight: 500">{{cluster.Label}}</a> <b *ngIf="cluster.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{cluster.NumProb}}</i>]</b>
+                  <a *ngIf="cluster.NumProb > 0" (click)="select_subtopic([domain.Label], cluster.Label, cluster.Key)" style="font-weight: 500">{{cluster.Label}}</a> <b *ngIf="cluster.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{cluster.NumProb}}</i>)</b>
                   <ul style="font-size: 17px; line-height: 21px; padding-left: 17px">
                     <li *ngFor="let standard of cluster.Subs" style="margin-top: 15px; margin-bottom: 6px">
                       <span *ngIf="standard.Fav && authService.userData as user"
@@ -2802,7 +2802,7 @@ button.grade-button-l:hover {
                       </span>
                       <b *ngIf="standard.Key != ''" style="font-weight: 800">{{standard.Key}}: </b>
                       <b *ngIf="standard.NumProb == 0" style="font-weight: 500">{{standard.Label}}</b>
-                      <a *ngIf="standard.NumProb > 0" (click)="select_subtopic([domain.Label, cluster.Label], standard.Label, standard.Key)" style="font-weight: 500">{{standard.Label}}</a> <b *ngIf="standard.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{standard.NumProb}}</i>]</b>
+                      <a *ngIf="standard.NumProb > 0" (click)="select_subtopic([domain.Label, cluster.Label], standard.Label, standard.Key)" style="font-weight: 500">{{standard.Label}}</a> <b *ngIf="standard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{standard.NumProb}}</i>)</b>
                       <ul style="font-size: 16px; line-height: 20px; padding-left: 17px">
                         <li *ngFor="let substandard of standard.Subs" style="margin-top: 10px; margin-bottom: 4px">
                           <span *ngIf="substandard.Fav && authService.userData as user"
@@ -2810,7 +2810,7 @@ button.grade-button-l:hover {
                           </span>
                           <b *ngIf="substandard.Key != ''" style="font-weight: 800">{{substandard.Key}}: </b>
                           <b *ngIf="substandard.NumProb == 0" style="font-weight: 500">{{substandard.Label}}</b>
-                          <a *ngIf="substandard.NumProb > 0" (click)="select_subtopic([domain.Label, cluster.Label], substandard.Label, substandard.Key)" style="font-weight: 500">{{substandard.Label}}</a> <b *ngIf="substandard.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{substandard.NumProb}}</i>]</b>
+                          <a *ngIf="substandard.NumProb > 0" (click)="select_subtopic([domain.Label, cluster.Label], substandard.Label, substandard.Key)" style="font-weight: 500">{{substandard.Label}}</a> <b *ngIf="substandard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{substandard.NumProb}}</i>)</b>
                           <ul style="font-size: 15px; line-height: 19px; padding-left: 17px">
                             <li *ngFor="let subsubstandard of substandard.Subs" style="margin-top: 10px; margin-bottom: 4px">
                               <span *ngIf="subsubstandard.Fav && authService.userData as user"
@@ -2818,7 +2818,7 @@ button.grade-button-l:hover {
                               </span>
                               <b *ngIf="subsubstandard.Key != ''" style="font-weight: 800">{{subsubstandard.Key}}: </b>
                               <b *ngIf="subsubstandard.NumProb == 0" style="font-weight: 500">{{subsubstandard.Label}}</b>
-                              <a *ngIf="subsubstandard.NumProb > 0" (click)="select_subtopic([domain.Label, cluster.Label], subsubstandard.Label, subsubstandard.Key)" style="font-weight: 500">{{subsubstandard.Label}}</a> <b *ngIf="subsubstandard.NumProb > 0" style="font-weight: 400"> [<i style="font-weight: 700">{{subsubstandard.NumProb}}</i>]</b>
+                              <a *ngIf="subsubstandard.NumProb > 0" (click)="select_subtopic([domain.Label, cluster.Label], subsubstandard.Label, subsubstandard.Key)" style="font-weight: 500">{{subsubstandard.Label}}</a> <b *ngIf="subsubstandard.NumProb > 0" style="font-weight: 400"> (<i style="font-weight: 700">{{subsubstandard.NumProb}}</i>)</b>
                             </li>
                           </ul>
                         </li>

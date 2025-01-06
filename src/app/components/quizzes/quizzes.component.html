@@ -344,7 +344,6 @@
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
-    min-height: 50px;
   }
 
   button.toggle-button-off {
@@ -358,7 +357,6 @@
     transition: all 0.2s ease-in-out;
     line-height: 24px;
     width: 100%;
-    min-height: 50px;
   }
 
   button.toggle-button-disabled {
@@ -1432,24 +1430,24 @@
             </span>
             <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Subject}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Subject}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Subject]}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
@@ -1513,10 +1511,10 @@
               Choose a student to save your practice results </h3>
             <h3 style="font-size: 18px; margin-top: 0px; margin-bottom: 10px"
               *ngIf="this.authService.userData && this.authService.userData.role == 'Student'">
-              Your practice results will be saved as {{(this.authService.userData.displayName) ? this.authService.userData.displayName : 'User'}} </h3>
+              Saving your practice results as {{(this.authService.userData.displayName) ? this.authService.userData.displayName : 'User'}} </h3>
             <h3 style="font-size: 18px; margin-top: 0px; margin-bottom: 10px"
               *ngIf="this.authService.userData && this.authService.userData.role != 'Student' && this.selected_student_st != ''">
-              Your practice results will be saved as {{selected_student_data.displayName}} </h3>
+              Saving your practice results as {{selected_student_data.displayName}} </h3>
             <div *ngIf="!authService.userData" class="card-container" style="align-items: center">
               <button class="grade-button-s" (click)="signup=true; user_role='Student'" style="font-size: 19px; line-height: 20px; font-weight: 900; letter-spacing: 1px; padding: 7px; border-radius: 7px"> Sign Up </button>
               <button class="grade-button-l" (click)="login=true" style="font-size: 19px; line-height: 20px; font-weight: 900; letter-spacing: 1px; padding: 7px; border-radius: 7px"> Log In </button>
@@ -1543,9 +1541,9 @@
               </button>
             </div> -->
             <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
-              <b *ngIf="!authService.userData || (authService.userData.role != 'Student' && selected_student_st == '')">{{subtopic_problem_count}} Total Problems</b> <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{subtopic_new_problem_count}} Remaining Problems</b> </h3>
+              <b *ngIf="!authService.userData || (authService.userData.role != 'Student' && selected_student_st == '')">{{subtopic_problem_count}} Total Problems</b> <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{subtopic_new_problem_count}} More Problems</b> </h3>
             <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
-              <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{(subtopic_new_problem_count != subtopic_problem_count) ? '(' + ''+subtopic_correct_problem_count + ' / ' + ''+(subtopic_problem_count-subtopic_new_problem_count) + ' correct so far)' : ''}}</b> </h3>
+              <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{(subtopic_new_problem_count != subtopic_problem_count) ? '(' + ''+subtopic_correct_problem_count + ' / ' + ''+(subtopic_problem_count-subtopic_new_problem_count) + ' correct)' : ''}}</b> </h3>
             <div *ngIf="selected_student_st != '' && subtopic_new_problem_count != subtopic_problem_count" class="card-container"
               style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
               <label *ngFor="let prob of (subtopic_search_dump | values)"
@@ -1606,24 +1604,24 @@
             <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
             <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <section *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12"
@@ -2953,24 +2951,24 @@
           <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
           <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
             <label class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].Grade}} </b> </button>
             </label>
             <label class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].Subject}} </b> </button>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].Subject}} </b> </button>
             </label>
             <label class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
             </label>
           </div>
           <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
             <label class="switch" style="padding: 0 2px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].Grade}} </b> </button>
             </label>
             <label class="switch" style="padding: 0 2px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
             </label>
             <label class="switch" style="padding: 0 2px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(exam_dump[problem_number].Number).substring(0, (exam_dump[problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
             </label>
           </div>
           <section *ngIf="exam_dump[problem_number].SubTopics.length > 0 && exam_dump[problem_number].SubTopics[0].length > 12"
@@ -5020,51 +5018,51 @@
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="G3">
             <button *ngIf="grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3')" class="toggle-button-on"
-              tabindex="0"> <b>Grade 3</b> </button>
+              tabindex="0"> Grade <b>3</b> </button>
             <button *ngIf="!grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3')"
-              class="toggle-button-off" tabindex="0"> <b>Grade 3</b> </button>
+              class="toggle-button-off" tabindex="0"> Grade <b>3</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="G4">
             <button *ngIf="grade_filters.includes('Grade 4')" (click)="toggle_button('Grade 4')" class="toggle-button-on"
-              tabindex="0"> <b>Grade 4</b> </button>
+              tabindex="0"> Grade <b>4</b> </button>
             <button *ngIf="!grade_filters.includes('Grade 4')" (click)="toggle_button('Grade 4')"
-              class="toggle-button-off" tabindex="0"> <b>Grade 4</b> </button>
+              class="toggle-button-off" tabindex="0"> Grade <b>4</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="G5">
             <button *ngIf="grade_filters.includes('Grade 5')" (click)="toggle_button('Grade 5')" class="toggle-button-on"
-              tabindex="0"> <b>Grade 5</b> </button>
+              tabindex="0"> Grade <b>5</b> </button>
             <button *ngIf="!grade_filters.includes('Grade 5')" (click)="toggle_button('Grade 5')"
-              class="toggle-button-off" tabindex="0"> <b>Grade 5</b> </button>
+              class="toggle-button-off" tabindex="0"> Grade <b>5</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="G6">
             <button *ngIf="grade_filters.includes('Grade 6')" (click)="toggle_button('Grade 6')" class="toggle-button-on"
-              tabindex="0"> <b>Grade 6</b> </button>
+              tabindex="0"> Grade <b>6</b> </button>
             <button *ngIf="!grade_filters.includes('Grade 6')" (click)="toggle_button('Grade 6')"
-              class="toggle-button-off" tabindex="0"> <b>Grade 6</b> </button>
+              class="toggle-button-off" tabindex="0"> Grade <b>6</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="G7">
             <button *ngIf="grade_filters.includes('Grade 7')" (click)="toggle_button('Grade 7')" class="toggle-button-on"
-              tabindex="0"> <b>Grade 7</b> </button>
+              tabindex="0"> Grade <b>7</b> </button>
             <button *ngIf="!grade_filters.includes('Grade 7')" (click)="toggle_button('Grade 7')"
-              class="toggle-button-off" tabindex="0"> <b>Grade 7</b> </button>
+              class="toggle-button-off" tabindex="0"> Grade <b>7</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="G8">
             <button *ngIf="grade_filters.includes('Grade 8')" (click)="toggle_button('Grade 8')" class="toggle-button-on"
-              tabindex="0"> <b>Grade 8</b> </button>
+              tabindex="0"> Grade <b>8</b> </button>
             <button *ngIf="!grade_filters.includes('Grade 8')" (click)="toggle_button('Grade 8')"
-              class="toggle-button-off" tabindex="0"> <b>Grade 8</b> </button>
+              class="toggle-button-off" tabindex="0"> Grade <b>8</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="HS">
             <button *ngIf="grade_filters.includes('High School')" (click)="toggle_button('High School')" class="toggle-button-on"
-              tabindex="0"> <b>High School</b> </button>
+              tabindex="0"> <b>H</b>igh <b>S</b>chool </button>
             <button *ngIf="!grade_filters.includes('High School')" (click)="toggle_button('High School')"
-              class="toggle-button-off" tabindex="0"> <b>High School</b> </button>
+              class="toggle-button-off" tabindex="0"> <b>H</b>igh <b>S</b>chool </button>
           </label>
         </div>
       </div>
@@ -5108,7 +5106,7 @@
         <h2 style="margin-bottom: 0px">Choose Your State(s)</h2>
         <br />
         <input type="hidden" value="All United States" #state>
-        <div class="card-container" style="max-width: 100%; margin-top: 0px">
+        <div *ngIf="this.screenWidth > this.mobileWidth" class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="CO">
             <button *ngIf="state_filters.includes('Colorado')" (click)="toggle_button('Colorado')" class="toggle-button-on" tabindex="0"> <b>Colorado</b> </button>
@@ -5200,8 +5198,8 @@
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="SAT">
-            <button *ngIf="state_filters.includes('SAT')" (click)="toggle_button('SAT')" class="toggle-button-on" tabindex="0"> <b>SAT</b> </button>
-            <button *ngIf="!state_filters.includes('SAT')" (click)="toggle_button('SAT')" class="toggle-button-off" tabindex="0"> <b>SAT</b> </button>
+            <button *ngIf="state_filters.includes('SAT')" (click)="toggle_button('SAT')" class="toggle-button-on" tabindex="0"> <b>The SAT Suite</b> </button>
+            <button *ngIf="!state_filters.includes('SAT')" (click)="toggle_button('SAT')" class="toggle-button-off" tabindex="0"> <b>The SAT Suite</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="SC">
@@ -5224,6 +5222,162 @@
             <button *ngIf="!state_filters.includes('Wisconsin')" (click)="toggle_button('Wisconsin')" class="toggle-button-off" tabindex="0"> <b>Wisconsin</b> </button>
           </label>
         </div>
+        <div *ngIf="this.screenWidth <= this.mobileWidth" class="card-container" style="max-width: 100%; margin-top: 0px">
+          <div (click)="toggle_button('Colorado')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Colorado')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Colorado')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Colorado')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Colorado </div>
+            <div *ngIf="!state_filters.includes('Colorado')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Colorado </div>
+          </div>
+          <div (click)="toggle_button('Delaware')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Delaware')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Delaware')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Delaware')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Delaware </div>
+            <div *ngIf="!state_filters.includes('Delaware')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Delaware </div>
+          </div>
+          <div (click)="toggle_button('Florida')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Florida')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Florida')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Florida')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Florida </div>
+            <div *ngIf="!state_filters.includes('Florida')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Florida </div>
+          </div>
+          <div (click)="toggle_button('Illinois')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Illinois')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Illinois')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Illinois')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Illinois </div>
+            <div *ngIf="!state_filters.includes('Illinois')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Illinois </div>
+          </div>
+          <div (click)="toggle_button('Maine')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Maine')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Maine')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Maine')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Maine </div>
+            <div *ngIf="!state_filters.includes('Maine')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Maine </div>
+          </div>
+          <div (click)="toggle_button('Maryland')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Maryland')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Maryland')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Maryland')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Maryland </div>
+            <div *ngIf="!state_filters.includes('Maryland')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Maryland </div>
+          </div>
+          <div (click)="toggle_button('Massachusetts')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Massachusetts')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Massachusetts')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Massachusetts')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Massachusetts </div>
+            <div *ngIf="!state_filters.includes('Massachusetts')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Massachusetts </div>
+          </div>
+          <div (click)="toggle_button('Minnesota')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Minnesota')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Minnesota')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Minnesota')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Minnesota </div>
+            <div *ngIf="!state_filters.includes('Minnesota')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Minnesota </div>
+          </div>
+          <div (click)="toggle_button('Mississippi')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Mississippi')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Mississippi')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Mississippi')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Mississippi </div>
+            <div *ngIf="!state_filters.includes('Mississippi')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Mississippi </div>
+          </div>
+          <div (click)="toggle_button('Missouri')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Missouri')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Missouri')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Missouri')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Missouri </div>
+            <div *ngIf="!state_filters.includes('Missouri')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Missouri </div>
+          </div>
+          <div (click)="toggle_button('Nebraska')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Nebraska')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Nebraska')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Nebraska')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Nebraska </div>
+            <div *ngIf="!state_filters.includes('Nebraska')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Nebraska </div>
+          </div>
+          <div (click)="toggle_button('New Jersey')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('New Jersey')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('New Jersey')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('New Jersey')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> New Jersey </div>
+            <div *ngIf="!state_filters.includes('New Jersey')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> New Jersey </div>
+          </div>
+          <div (click)="toggle_button('New Mexico')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('New Mexico')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('New Mexico')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('New Mexico')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> New Mexico </div>
+            <div *ngIf="!state_filters.includes('New Mexico')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> New Mexico </div>
+          </div>
+          <div (click)="toggle_button('New York')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('New York')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('New York')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('New York')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> New York </div>
+            <div *ngIf="!state_filters.includes('New York')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> New York </div>
+          </div>
+          <!-- <div (click)="toggle_button('North Carolina')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('North Carolina')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('North Carolina')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('North Carolina')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> North Carolina </div>
+            <div *ngIf="!state_filters.includes('North Carolina')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> North Carolina </div>
+          </div> -->
+          <div (click)="toggle_button('Pennsylvania')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Pennsylvania')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Pennsylvania')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Pennsylvania')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Pennsylvania </div>
+            <div *ngIf="!state_filters.includes('Pennsylvania')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Pennsylvania </div>
+          </div>
+          <div (click)="toggle_button('Rhode Island')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Rhode Island')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Rhode Island')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Rhode Island')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Rhode Island </div>
+            <div *ngIf="!state_filters.includes('Rhode Island')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Rhode Island </div>
+          </div>
+          <div (click)="toggle_button('SAT')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('SAT')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('SAT')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('SAT')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> The SAT Suite </div>
+            <div *ngIf="!state_filters.includes('SAT')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> The SAT Suite </div>
+          </div>
+          <div (click)="toggle_button('South Carolina')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('South Carolina')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('South Carolina')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('South Carolina')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> South Carolina </div>
+            <div *ngIf="!state_filters.includes('South Carolina')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> South Carolina </div>
+          </div>
+          <div (click)="toggle_button('Tennessee')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Tennessee')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Tennessee')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Tennessee')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Tennessee </div>
+            <div *ngIf="!state_filters.includes('Tennessee')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Tennessee </div>
+          </div>
+          <div (click)="toggle_button('Texas')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Texas')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Texas')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Texas')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Texas </div>
+            <div *ngIf="!state_filters.includes('Texas')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Texas </div>
+          </div>
+          <div (click)="toggle_button('Wisconsin')"
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
+            <input *ngIf="state_filters.includes('Wisconsin')" type="checkbox" checked />
+            <input *ngIf="!state_filters.includes('Wisconsin')" type="checkbox" unchecked />
+            <div *ngIf="state_filters.includes('Wisconsin')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Wisconsin </div>
+            <div *ngIf="!state_filters.includes('Wisconsin')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> Wisconsin </div>
+          </div>
+        </div>
       </div>
       <br />
       <h3 *ngIf="filtered_set.length != 0" style="color: blue; text-align: center"> There are a total of
@@ -5240,13 +5394,13 @@
         <br />
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <div *ngFor="let topic of topics.sort()" (click)="toggle_topic(topic)"
-            style="display: flex; flex-direction: row; align-items: start; margin: 7px 15px; height: auto">
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="topic_filters.includes(topic)" type="checkbox" checked />
             <input *ngIf="!topic_filters.includes(topic)" type="checkbox" unchecked />
             <div *ngIf="topic_filters.includes(topic)" style="margin-left: 5px; font-size: 16px; line-height: 18px; font-weight: 600">
               {{topic}} ({{topics_count[topic]}}) </div>
             <div *ngIf="!topic_filters.includes(topic)" style="margin-left: 5px; font-size: 16px; line-height: 18px"> {{topic}}
-              ({{topics_count[topic]}}) </div>
+              (<i>{{topics_count[topic]}}</i>) </div>
           </div>
         </div>
       </div>
@@ -5624,7 +5778,7 @@
         <br />
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <div *ngFor="let topic of topics" (click)="select_topic(topic)"
-            style="display: flex; flex-direction: row; align-items: start; margin: 7px 15px; height: auto">
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="selected_topic == topic" type="checkbox" checked />
             <input *ngIf="selected_topic != topic" type="checkbox" unchecked />
             <div *ngIf="selected_topic == topic"
@@ -5680,7 +5834,7 @@
         <hr style="width: 90%; margin: 10px auto" />
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <div (click)="toggle_standards()"
-            style="display: flex; flex-direction: row; align-items: start; margin: 7px 15px; height: auto">
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="enable_standards" type="checkbox" style="height: 18px" checked />
             <input *ngIf="!enable_standards" type="checkbox" style="height: 18px" unchecked />
             <div *ngIf="enable_standards"
@@ -5967,7 +6121,7 @@
         <br />
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <div (click)="shuffle_mode = !shuffle_mode"
-            style="display: flex; flex-direction: row; align-items: start; margin: 7px 15px; height: auto">
+            style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="shuffle_mode" type="checkbox" style="height: 18px" checked />
             <input *ngIf="!shuffle_mode" type="checkbox" style="height: 18px" unchecked />
             <div *ngIf="shuffle_mode"
@@ -6091,15 +6245,15 @@
           <div class="card-container"
             style="height: auto; width: 100%; display: flex; justify-content: center">
             <label class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
                   {{state_labels[selected_curriculum]}} </b> </button>
             </label>
             <label class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
                   {{selected_grade}} </b> </button>
             </label>
             <label class="switch" style="padding: 0 5px">
-              <button class="toggle-button-off" style="color: darkslategrey; font-size: 16px"> <b>
+              <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
                   {{selected_subject}} </b> </button>
             </label>
           </div>
