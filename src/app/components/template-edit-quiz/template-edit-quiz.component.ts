@@ -192,6 +192,9 @@ import * as MNG6RProblems from "src/assets/problems/MNG6R/MNG6R-problems.json";
 import * as MNG7RProblems from "src/assets/problems/MNG7R/MNG7R-problems.json";
 import * as MNG8RProblems from "src/assets/problems/MNG8R/MNG8R-problems.json";
 import * as MNG10RProblems from "src/assets/problems/MNG10R/MNG10R-problems.json";
+import * as MNG5SProblems from "src/assets/problems/MNG5S/MNG5S-problems.json";
+import * as MNG8SProblems from "src/assets/problems/MNG8S/MNG8S-problems.json";
+import * as MNHSSProblems from "src/assets/problems/MNHSS/MNHSS-problems.json";
 import * as MOG3EProblems from "src/assets/problems/MOG3E/MOG3E-problems.json";
 import * as MOG4EProblems from "src/assets/problems/MOG4E/MOG4E-problems.json";
 import * as MOG5EProblems from "src/assets/problems/MOG5E/MOG5E-problems.json";
@@ -1265,7 +1268,7 @@ export class TemplateEditQuizComponent implements OnInit {
   state_attribute_dump: { [key: string]: { 'State': string, 'EOverview': string, 'SOverview': string } } = stateMetadata;
   standards_attribute_dump: { [key: string]: { 'State': string, 'Grades': string[], 'Subject': string, 'Curriculum': string } } = standardMetadata;
   state_set: string[] = ['CO', 'FL', 'MA', 'MD', 'MS', 'NJ', 'NY', 'PA', 'RI', 'SC', 'TN', 'TX'];
-  exam_set = ['COG3E', 'COG4E', 'COG5E', 'COG6E', 'COG7E', 'COG8E', 'COG3M', 'COG4M', 'COG5M', 'COG6M', 'COG7M', 'COG8M', 'COG5S', 'COG8S', 'COHSS', 'DEG4SS', 'DEG7SS', 'DEG11SS', 'FL20G3M', 'FL20G3R', 'FL20G4M', 'FL20G4R', 'FL20G4W', 'FL20G5M', 'FL20G5R', 'FL20G5W', 'FL20G5S', 'FL20G6M', 'FL20G6R', 'FL20G6W', 'FL20G7M', 'FL20G7R', 'FL20G7W', 'FL20G8M', 'FL20G8R', 'FL20G8W', 'FL20G8S', 'FL20G9R', 'FL20G9W', 'FL20G10R', 'FL20G10W', 'ILG3E', 'ILG3M', 'ILG4E', 'ILG4M', 'ILG5E', 'ILG5M', 'ILG6E', 'ILG6M', 'ILG7E', 'ILG7M', 'ILG8E', 'ILG8M', 'MA23G3E', 'MA22G3E', 'MA21G3E', 'MA19G3E', 'MAG3E', 'MA23G3M', 'MA22G3M', 'MA21G3M', 'MA19G3M', 'MAG3M', 'MA23G4E', 'MA22G4E', 'MA21G4E', 'MA19G4E', 'MAG4E', 'MA23G4M', 'MA22G4M', 'MA21G4M', 'MA19G4M', 'MAG4M', 'MA23G5E', 'MA22G5E', 'MA21G5E', 'MA19G5E', 'MAG5E', 'MA23G5M', 'MA22G5M', 'MA21G5M', 'MA19G5M', 'MAG5M', 'MA23G5S', 'MA22G5S', 'MA21G5S', 'MA19G5S', 'MAG5S', 'MA23G6E', 'MA22G6E', 'MA21G6E', 'MA19G6E', 'MAG6E', 'MA23G6M', 'MA22G6M', 'MA21G6M', 'MA19G6M', 'MAG6M', 'MA23G7E', 'MA22G7E', 'MA21G7E', 'MA19G7E', 'MAG7E', 'MA23G7M', 'MA22G7M', 'MA21G7M', 'MA19G7M', 'MAG7M', 'MA23G8E', 'MA22G8E', 'MA21G8E', 'MA19G8E', 'MAG8E', 'MA23G8M', 'MA22G8M', 'MA21G8M', 'MA19G8M', 'MAG8M', 'MA23G8S', 'MA22G8S', 'MA21G8S', 'MA19G8S', 'MAG8S', 'MA23G10E', 'MA22G10E', 'MA21G10E', 'MA19G10E', 'MAG10E', 'MA23G10M', 'MA22G10M', 'MA21G10M', 'MA19G10M', 'MAG10M', 'MA23HSB', 'MA22HSB', 'MA19HSB', 'MA23HSP', 'MA22HSP', 'MA19HSP', 'MDG3E', 'MDG4E', 'MDG5E', 'MDG6E', 'MDG7E', 'MDG8E', 'MDG10E', 'MDG3M', 'MDG4M', 'MDG5M', 'MDG6M', 'MDG7M', 'MDG8M', 'MDG5S', 'MDG8S', 'MEG3M', 'MEG4M', 'MEG5M', 'MEG6M', 'MEG7M', 'MEG8M', 'MEG10M','MEG35R', 'MEG68R', 'MEG10R', 'MNG3M', 'MNG3R', 'MNG4M', 'MNG4R', 'MNG5M', 'MNG5R', 'MNG6M', 'MNG6R', 'MNG7M', 'MNG7R', 'MNG8M', 'MNG8R', 'MNG10R', 'MNG11M', 'MOG3E', 'MOG4E', 'MOG5E', 'MOG6E', 'MOG7E', 'MOG8E', 'MOG3M', 'MOG4M', 'MOG5M', 'MOG6M', 'MOG7M', 'MOG8M', 'MOG5S', 'MOG8S', 'MDG8SS', 'MS23G3E', 'MS22G3E', 'MS23G4E', 'MS22G4E', 'MS23G5E', 'MS22G5E', 'MS23G6E', 'MS22G6E', 'MS23G7E', 'MS22G7E', 'MS23G8E', 'MS22G8E', 'MS23G3M', 'MS22G3M', 'MS23G4M', 'MS22G4M', 'MS23G5M', 'MS22G5M', 'MS23G6M', 'MS22G6M', 'MS23G7M', 'MS22G7M', 'MS23G8M', 'MS22G8M', 'NEG3E', 'NEG3M', 'NEG4E', 'NEG4M', 'NEG5E', 'NEG5M', 'NEG5S', 'NEG6E', 'NEG6M', 'NEG7E', 'NEG7M', 'NEG8E', 'NEG8M', 'NEG8S', 'NJG3E', 'NJG3M', 'NJG4E', 'NJG4M', 'NJG5E', 'NJG5M', 'NJG5S', 'NJG6E', 'NJG6M', 'NJG7E', 'NJG7M', 'NJG8E', 'NJG8M', 'NJG8S', 'NJG9E', 'NJG11S', 'NMG3E', 'NMG3M', 'NMG4E', 'NMG4M', 'NMG5E', 'NMG5M', 'NMG5S', 'NMG6E', 'NMG6M', 'NMG7E', 'NMG7M', 'NMG8E', 'NMG8M', 'NMG8S', 'NMG11S', 'NY23G3M', 'NY23G3E', 'NY22G3M', 'NY22G3E', 'NY21G3M', 'NY21G3E', 'NY19G3M', 'NY19G3E', 'NY18G3M', 'NY18G3E', 'NY17G3M', 'NY17G3E', 'NY16G3M', 'NY16G3E', 'NY15G3M', 'NY15G3E', 'NY23G4M', 'NY23G4E', 'NY22G4M', 'NY22G4E', 'NY21G4M', 'NY21G4E', 'NY19G4M', 'NY19G4E', 'NY18G4M', 'NY18G4E', 'NY17G4M', 'NY17G4E', 'NY16G4M', 'NY16G4E', 'NY15G4M', 'NY15G4E', 'NY22G4S', 'NY21G4S', 'NY19G4S', 'NY18G4S', 'NY17G4S', 'NY16G4S', 'NY15G4S', 'NY23G5M', 'NY23G5E', 'NY22G5M', 'NY22G5E', 'NY21G5M', 'NY21G5E', 'NY19G5M', 'NY19G5E', 'NY18G5M', 'NY18G5E', 'NY17G5M', 'NY17G5E', 'NY16G5M', 'NY16G5E', 'NY15G5M', 'NY15G5E', 'NY23G6M', 'NY23G6E', 'NY22G6M', 'NY22G6E', 'NY21G6M', 'NY21G6E', 'NY19G6M', 'NY19G6E', 'NY18G6M', 'NY18G6E', 'NY17G6M', 'NY17G6E', 'NY16G6M', 'NY16G6E', 'NY15G6M', 'NY15G6E', 'NY23G7M', 'NY23G7E', 'NY22G7M', 'NY22G7E', 'NY21G7M', 'NY21G7E', 'NY19G7M', 'NY19G7E', 'NY18G7M', 'NY18G7E', 'NY17G7M', 'NY17G7E', 'NY16G7M', 'NY16G7E', 'NY15G7M', 'NY15G7E', 'NY23G8M', 'NY23G8E', 'NY22G8M', 'NY22G8E', 'NY21G8M', 'NY21G8E', 'NY19G8M', 'NY19G8E', 'NY18G8M', 'NY18G8E', 'NY17G8M', 'NY17G8E', 'NY16G8M', 'NY16G8E', 'NY15G8M', 'NY15G8E', 'NY22G8S', 'NY21G8S', 'NY19G8S', 'NY18G8S', 'NY17G8S', 'NY16G8S', 'NY15G8S', 'PA23G3M', 'PA23G3E', 'PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA23G4M', 'PA23G4E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA23G4S', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA23G5M', 'PA23G5E', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA23G6M', 'PA23G6E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA23G7M', 'PA23G7E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA23G8M', 'PA23G8E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA23G8S', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S', 'PSAT1RW1', 'PSAT1RW2', 'PSAT1M1', 'PSAT1M2', 'RI23G3M', 'RI22G3M', 'RI21G3M', 'RI19G3M', 'RI18G3M', 'RI23G3E', 'RI22G3E', 'RI21G3E', 'RI19G3E', 'RI18G3E', 'RI23G4M', 'RI22G4M', 'RI21G4M', 'RI19G4M', 'RI18G4M', 'RI23G4E', 'RI22G4E', 'RI21G4E', 'RI19G4E', 'RI18G4E', 'RI23G5M', 'RI22G5M', 'RI21G5M', 'RI19G5M', 'RI18G5M', 'RI23G5E', 'RI22G5E', 'RI21G5E', 'RI19G5E', 'RI18G5E', 'RI23G6M', 'RI22G6M', 'RI21G6M', 'RI19G6M', 'RI18G6M', 'RI23G6E', 'RI22G6E', 'RI21G6E', 'RI19G6E', 'RI18G6E', 'RI23G7M', 'RI22G7M', 'RI21G7M', 'RI19G7M', 'RI18G7M', 'RI23G7E', 'RI22G7E', 'RI21G7E', 'RI19G7E', 'RI18G7E', 'RI23G8M', 'RI22G8M', 'RI21G8M', 'RI19G8M', 'RI18G8M', 'RI23G8E', 'RI22G8E', 'RI21G8E', 'RI19G8E', 'RI18G8E', 'SAT1RW1', 'SAT1RW2', 'SAT1M1', 'SAT1M2', 'SAT2RW1', 'SAT2RW2', 'SAT2M1', 'SAT2M2', 'SAT3RW1', 'SAT3RW2', 'SAT3M1', 'SAT3M2', 'SAT4RW1', 'SAT4RW2', 'SAT4M1', 'SAT4M2', 'SC18G3E', 'SC18G4E', 'SC18G5E', 'SC18G6E', 'SC18G7E', 'SC18G8E', 'SC18G3M', 'SC18G4M', 'SC18G5M', 'SC18G6M', 'SC18G7M', 'SC18G8M', 'SC18G4S', 'SC18G6S', 'TN20G3E', 'TN20G3M', 'TN20G3S', 'TN20G4E', 'TN20G4M', 'TN20G4S', 'TN20G5E', 'TN20G5M', 'TN20G5S', 'TN20G6E', 'TN20G6M', 'TN20G6S', 'TN20G6SS', 'TN20G7E', 'TN20G7M', 'TN20G7S', 'TN20G7SS', 'TN20G8E', 'TN20G8M', 'TN20G8S', 'TN20G8SS', 'TN20HSA1', 'TN20HSA2', 'TN20HSB', 'TN20HSE1', 'TN20HSE2', 'TN20HSG', 'TN20HSUSH', 'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH', 'WIG3E', 'WIG4E', 'WIG5E', 'WIG6E', 'WIG7E', 'WIG8E', 'WIG3M', 'WIG4M', 'WIG5M', 'WIG6M', 'WIG7M', 'WIG8M', 'WIG4S', 'WIG8S', 'WIG4SS', 'WIG8SS', 'WIG10SS'];
+  exam_set = ['COG3E', 'COG4E', 'COG5E', 'COG6E', 'COG7E', 'COG8E', 'COG3M', 'COG4M', 'COG5M', 'COG6M', 'COG7M', 'COG8M', 'COG5S', 'COG8S', 'COHSS', 'DEG4SS', 'DEG7SS', 'DEG11SS', 'FL20G3M', 'FL20G3R', 'FL20G4M', 'FL20G4R', 'FL20G4W', 'FL20G5M', 'FL20G5R', 'FL20G5W', 'FL20G5S', 'FL20G6M', 'FL20G6R', 'FL20G6W', 'FL20G7M', 'FL20G7R', 'FL20G7W', 'FL20G8M', 'FL20G8R', 'FL20G8W', 'FL20G8S', 'FL20G9R', 'FL20G9W', 'FL20G10R', 'FL20G10W', 'ILG3E', 'ILG3M', 'ILG4E', 'ILG4M', 'ILG5E', 'ILG5M', 'ILG6E', 'ILG6M', 'ILG7E', 'ILG7M', 'ILG8E', 'ILG8M', 'MA23G3E', 'MA22G3E', 'MA21G3E', 'MA19G3E', 'MAG3E', 'MA23G3M', 'MA22G3M', 'MA21G3M', 'MA19G3M', 'MAG3M', 'MA23G4E', 'MA22G4E', 'MA21G4E', 'MA19G4E', 'MAG4E', 'MA23G4M', 'MA22G4M', 'MA21G4M', 'MA19G4M', 'MAG4M', 'MA23G5E', 'MA22G5E', 'MA21G5E', 'MA19G5E', 'MAG5E', 'MA23G5M', 'MA22G5M', 'MA21G5M', 'MA19G5M', 'MAG5M', 'MA23G5S', 'MA22G5S', 'MA21G5S', 'MA19G5S', 'MAG5S', 'MA23G6E', 'MA22G6E', 'MA21G6E', 'MA19G6E', 'MAG6E', 'MA23G6M', 'MA22G6M', 'MA21G6M', 'MA19G6M', 'MAG6M', 'MA23G7E', 'MA22G7E', 'MA21G7E', 'MA19G7E', 'MAG7E', 'MA23G7M', 'MA22G7M', 'MA21G7M', 'MA19G7M', 'MAG7M', 'MA23G8E', 'MA22G8E', 'MA21G8E', 'MA19G8E', 'MAG8E', 'MA23G8M', 'MA22G8M', 'MA21G8M', 'MA19G8M', 'MAG8M', 'MA23G8S', 'MA22G8S', 'MA21G8S', 'MA19G8S', 'MAG8S', 'MA23G10E', 'MA22G10E', 'MA21G10E', 'MA19G10E', 'MAG10E', 'MA23G10M', 'MA22G10M', 'MA21G10M', 'MA19G10M', 'MAG10M', 'MA23HSB', 'MA22HSB', 'MA19HSB', 'MA23HSP', 'MA22HSP', 'MA19HSP', 'MDG3E', 'MDG4E', 'MDG5E', 'MDG6E', 'MDG7E', 'MDG8E', 'MDG10E', 'MDG3M', 'MDG4M', 'MDG5M', 'MDG6M', 'MDG7M', 'MDG8M', 'MDG5S', 'MDG8S', 'MEG3M', 'MEG4M', 'MEG5M', 'MEG6M', 'MEG7M', 'MEG8M', 'MEG10M', 'MEG35R', 'MEG68R', 'MEG10R', 'MNG3M', 'MNG3R', 'MNG4M', 'MNG4R', 'MNG5M', 'MNG5R', 'MNG5S', 'MNG6M', 'MNG6R', 'MNG7M', 'MNG7R', 'MNG8M', 'MNG8R', 'MNG8S', 'MNG10R', 'MNG11M', 'MNHSS', 'MOG3E', 'MOG4E', 'MOG5E', 'MOG6E', 'MOG7E', 'MOG8E', 'MOG3M', 'MOG4M', 'MOG5M', 'MOG6M', 'MOG7M', 'MOG8M', 'MOG5S', 'MOG8S', 'MDG8SS', 'MS23G3E', 'MS22G3E', 'MS23G4E', 'MS22G4E', 'MS23G5E', 'MS22G5E', 'MS23G6E', 'MS22G6E', 'MS23G7E', 'MS22G7E', 'MS23G8E', 'MS22G8E', 'MS23G3M', 'MS22G3M', 'MS23G4M', 'MS22G4M', 'MS23G5M', 'MS22G5M', 'MS23G6M', 'MS22G6M', 'MS23G7M', 'MS22G7M', 'MS23G8M', 'MS22G8M', 'NEG3E', 'NEG3M', 'NEG4E', 'NEG4M', 'NEG5E', 'NEG5M', 'NEG5S', 'NEG6E', 'NEG6M', 'NEG7E', 'NEG7M', 'NEG8E', 'NEG8M', 'NEG8S', 'NJG3E', 'NJG3M', 'NJG4E', 'NJG4M', 'NJG5E', 'NJG5M', 'NJG5S', 'NJG6E', 'NJG6M', 'NJG7E', 'NJG7M', 'NJG8E', 'NJG8M', 'NJG8S', 'NJG9E', 'NJG11S', 'NMG3E', 'NMG3M', 'NMG4E', 'NMG4M', 'NMG5E', 'NMG5M', 'NMG5S', 'NMG6E', 'NMG6M', 'NMG7E', 'NMG7M', 'NMG8E', 'NMG8M', 'NMG8S', 'NMG11S', 'NY23G3M', 'NY23G3E', 'NY22G3M', 'NY22G3E', 'NY21G3M', 'NY21G3E', 'NY19G3M', 'NY19G3E', 'NY18G3M', 'NY18G3E', 'NY17G3M', 'NY17G3E', 'NY16G3M', 'NY16G3E', 'NY15G3M', 'NY15G3E', 'NY23G4M', 'NY23G4E', 'NY22G4M', 'NY22G4E', 'NY21G4M', 'NY21G4E', 'NY19G4M', 'NY19G4E', 'NY18G4M', 'NY18G4E', 'NY17G4M', 'NY17G4E', 'NY16G4M', 'NY16G4E', 'NY15G4M', 'NY15G4E', 'NY22G4S', 'NY21G4S', 'NY19G4S', 'NY18G4S', 'NY17G4S', 'NY16G4S', 'NY15G4S', 'NY23G5M', 'NY23G5E', 'NY22G5M', 'NY22G5E', 'NY21G5M', 'NY21G5E', 'NY19G5M', 'NY19G5E', 'NY18G5M', 'NY18G5E', 'NY17G5M', 'NY17G5E', 'NY16G5M', 'NY16G5E', 'NY15G5M', 'NY15G5E', 'NY23G6M', 'NY23G6E', 'NY22G6M', 'NY22G6E', 'NY21G6M', 'NY21G6E', 'NY19G6M', 'NY19G6E', 'NY18G6M', 'NY18G6E', 'NY17G6M', 'NY17G6E', 'NY16G6M', 'NY16G6E', 'NY15G6M', 'NY15G6E', 'NY23G7M', 'NY23G7E', 'NY22G7M', 'NY22G7E', 'NY21G7M', 'NY21G7E', 'NY19G7M', 'NY19G7E', 'NY18G7M', 'NY18G7E', 'NY17G7M', 'NY17G7E', 'NY16G7M', 'NY16G7E', 'NY15G7M', 'NY15G7E', 'NY23G8M', 'NY23G8E', 'NY22G8M', 'NY22G8E', 'NY21G8M', 'NY21G8E', 'NY19G8M', 'NY19G8E', 'NY18G8M', 'NY18G8E', 'NY17G8M', 'NY17G8E', 'NY16G8M', 'NY16G8E', 'NY15G8M', 'NY15G8E', 'NY22G8S', 'NY21G8S', 'NY19G8S', 'NY18G8S', 'NY17G8S', 'NY16G8S', 'NY15G8S', 'PA23G3M', 'PA23G3E', 'PA22G3M', 'PA22G3E', 'PA21G3M', 'PA21G3E', 'PA19G3M', 'PA19G3E', 'PA18G3M', 'PA18G3E', 'PA16G3M', 'PA16G3E', 'PA15G3M', 'PA15G3E', 'PA23G4M', 'PA23G4E', 'PA22G4M', 'PA22G4E', 'PA21G4M', 'PA21G4E', 'PA19G4M', 'PA19G4E', 'PA18G4M', 'PA18G4E', 'PA16G4M', 'PA16G4E', 'PA15G4M', 'PA15G4E', 'PA23G4S', 'PA22G4S', 'PA21G4S', 'PA19G4S', 'PA18G4S', 'PA16G4S', 'PA15G4S', 'PA23G5M', 'PA23G5E', 'PA22G5M', 'PA22G5E', 'PA21G5M', 'PA21G5E', 'PA19G5M', 'PA19G5E', 'PA18G5M', 'PA18G5E', 'PA16G5M', 'PA16G5E', 'PA15G5M', 'PA15G5E', 'PA23G6M', 'PA23G6E', 'PA22G6M', 'PA22G6E', 'PA21G6M', 'PA21G6E', 'PA19G6M', 'PA19G6E', 'PA18G6M', 'PA18G6E', 'PA16G6M', 'PA16G6E', 'PA15G6M', 'PA15G6E', 'PA23G7M', 'PA23G7E', 'PA22G7M', 'PA22G7E', 'PA21G7M', 'PA21G7E', 'PA19G7M', 'PA19G7E', 'PA18G7M', 'PA18G7E', 'PA16G7M', 'PA16G7E', 'PA15G7M', 'PA15G7E', 'PA23G8M', 'PA23G8E', 'PA22G8M', 'PA22G8E', 'PA21G8M', 'PA21G8E', 'PA19G8M', 'PA19G8E', 'PA18G8M', 'PA18G8E', 'PA16G8M', 'PA16G8E', 'PA15G8M', 'PA15G8E', 'PA23G8S', 'PA22G8S', 'PA21G8S', 'PA19G8S', 'PA18G8S', 'PA16G8S', 'PA15G8S', 'PSAT1RW1', 'PSAT1RW2', 'PSAT1M1', 'PSAT1M2', 'RI23G3M', 'RI22G3M', 'RI21G3M', 'RI19G3M', 'RI18G3M', 'RI23G3E', 'RI22G3E', 'RI21G3E', 'RI19G3E', 'RI18G3E', 'RI23G4M', 'RI22G4M', 'RI21G4M', 'RI19G4M', 'RI18G4M', 'RI23G4E', 'RI22G4E', 'RI21G4E', 'RI19G4E', 'RI18G4E', 'RI23G5M', 'RI22G5M', 'RI21G5M', 'RI19G5M', 'RI18G5M', 'RI23G5E', 'RI22G5E', 'RI21G5E', 'RI19G5E', 'RI18G5E', 'RI23G6M', 'RI22G6M', 'RI21G6M', 'RI19G6M', 'RI18G6M', 'RI23G6E', 'RI22G6E', 'RI21G6E', 'RI19G6E', 'RI18G6E', 'RI23G7M', 'RI22G7M', 'RI21G7M', 'RI19G7M', 'RI18G7M', 'RI23G7E', 'RI22G7E', 'RI21G7E', 'RI19G7E', 'RI18G7E', 'RI23G8M', 'RI22G8M', 'RI21G8M', 'RI19G8M', 'RI18G8M', 'RI23G8E', 'RI22G8E', 'RI21G8E', 'RI19G8E', 'RI18G8E', 'SAT1RW1', 'SAT1RW2', 'SAT1M1', 'SAT1M2', 'SAT2RW1', 'SAT2RW2', 'SAT2M1', 'SAT2M2', 'SAT3RW1', 'SAT3RW2', 'SAT3M1', 'SAT3M2', 'SAT4RW1', 'SAT4RW2', 'SAT4M1', 'SAT4M2', 'SC18G3E', 'SC18G4E', 'SC18G5E', 'SC18G6E', 'SC18G7E', 'SC18G8E', 'SC18G3M', 'SC18G4M', 'SC18G5M', 'SC18G6M', 'SC18G7M', 'SC18G8M', 'SC18G4S', 'SC18G6S', 'TN20G3E', 'TN20G3M', 'TN20G3S', 'TN20G4E', 'TN20G4M', 'TN20G4S', 'TN20G5E', 'TN20G5M', 'TN20G5S', 'TN20G6E', 'TN20G6M', 'TN20G6S', 'TN20G6SS', 'TN20G7E', 'TN20G7M', 'TN20G7S', 'TN20G7SS', 'TN20G8E', 'TN20G8M', 'TN20G8S', 'TN20G8SS', 'TN20HSA1', 'TN20HSA2', 'TN20HSB', 'TN20HSE1', 'TN20HSE2', 'TN20HSG', 'TN20HSUSH', 'TX22G3M', 'TX22G3R', 'TX21G3M', 'TX21G3R', 'TX19G3M', 'TX19G3R', 'TX18G3M', 'TX18G3R', 'TX17G3M', 'TX17G3R', 'TX22G4M', 'TX22G4R', 'TX21G4M', 'TX21G4R', 'TX19G4M', 'TX19G4R', 'TX18G4M', 'TX18G4R', 'TX17G4M', 'TX17G4R', 'TX22G5M', 'TX22G5R', 'TX21G5M', 'TX21G5R', 'TX19G5M', 'TX19G5R', 'TX18G5M', 'TX18G5R', 'TX17G5M', 'TX17G5R', 'TX22G5S', 'TX21G5S', 'TX19G5S', 'TX18G5S', 'TX22G6M', 'TX22G6R', 'TX21G6M', 'TX21G6R', 'TX19G6M', 'TX19G6R', 'TX18G6M', 'TX18G6R', 'TX17G6M', 'TX17G6R', 'TX22G7M', 'TX22G7R', 'TX21G7M', 'TX21G7R', 'TX19G7M', 'TX19G7R', 'TX18G7M', 'TX18G7R', 'TX17G7M', 'TX17G7R', 'TX22G8M', 'TX22G8R', 'TX21G8M', 'TX21G8R', 'TX19G8M', 'TX19G8R', 'TX18G8M', 'TX18G8R', 'TX17G8M', 'TX17G8R', 'TX22G8S', 'TX21G8S', 'TX19G8S', 'TX18G8S', 'TX22G8SS', 'TX21G8SS', 'TX19G8SS', 'TX18G8SS', 'TX22HSA1', 'TX21HSA1', 'TX19HSA1', 'TX18HSA1', 'TX17HSA1', 'TX22HSB', 'TX21HSB', 'TX19HSB', 'TX18HSB', 'TX17HSB', 'TX22HSE1', 'TX21HSE1', 'TX19HSE1', 'TX18HSE1', 'TX17HSE1', 'TX22HSE2', 'TX21HSE2', 'TX19HSE2', 'TX18HSE2', 'TX17HSE2', 'TX22HSUSH', 'TX21HSUSH', 'TX19HSUSH', 'TX18HSUSH', 'TX17HSUSH', 'WIG3E', 'WIG4E', 'WIG5E', 'WIG6E', 'WIG7E', 'WIG8E', 'WIG3M', 'WIG4M', 'WIG5M', 'WIG6M', 'WIG7M', 'WIG8M', 'WIG4S', 'WIG8S', 'WIG4SS', 'WIG8SS', 'WIG10SS'];
   standard_set: string[] = ["KE-CC", "KM-CC", "G1E-CC", "G1M-CC", "G2E-CC", "G2M-CC", "G3E-CC", "G3M-CC", "G4E-CC", "G4M-CC", "G5E-CC", "G5M-CC", "G6E-CC", "G6M-CC", "G7E-CC", "G7M-CC", "G8E-CC", "G8M-CC", "HSE1-CC", "HSE2-CC", "HSMA-CC", "HSMF-CC", "HSMG-CC", "HSMM-CC", "HSMN-CC", "HSMS-CC", "PE-CO", "PM-CO", "PS-CO", "PSS-CO", "KE-CO", "KM-CO", "KS-CO", "KSS-CO", "G1E-CO", "G1M-CO", "G1S-CO", "G1SS-CO", "G2E-CO", "G2M-CO", "G2S-CO", "G2SS-CO", "G3E-CO", "G3M-CO", "G3S-CO", "G3SS-CO", "G4E-CO", "G4M-CO", "G4S-CO", "G4SS-CO", "G5E-CO", "G5M-CO", "G5S-CO", "G5SS-CO", "G6E-CO", "G6M-CO", "G6SS-CO", "G7E-CO", "G7M-CO", "G7SS-CO", "G8E-CO", "G8M-CO", "MSS-CO", "G8SS-CO", "HSE1-CO", "HSE2-CO", "HSM-CO", "HSS-CO", "HSSS-CO", "KE-FL", "KM-FL", "G1E-FL", "G1M-FL", "G2E-FL", "G2M-FL", "G3E-FL", "G3M-FL", "G4E-FL", "G4M-FL", "G5E-FL", "G5M-FL", "G6E-FL", "G6M-FL", "G7E-FL", "G7M-FL", "G8E-FL", "G8M-FL", "G9E-FL", "G10E-FL", "G11E-FL", "G12E-FL", "HSM-FL", "PE-MA", "PM-MA", "PS-MA", "KE-MA", "KM-MA", "KS-MA", "EEST-MA", "G1E-MA", "G1M-MA", "G1S-MA", "G2E-MA", "G2M-MA", "G2S-MA", "G3E-MA", "G3M-MA", "G3S-MA", "UEST-MA", "G4E-MA", "G4M-MA", "G4S-MA", "G5E-MA", "G5M-MA", "G5S-MA", "G6E-MA", "G6M-MA", "G6S-MA", "MST-MA", "G7E-MA", "G7M-MA", "G7S-MA", "G8E-MA", "G8M-MA", "G8S-MA", "HSE1-MA", "HSE2-MA", "HSMA-MA", "HSMF-MA", "HSMG-MA", "HSMM-MA", "HSMN-MA", "HSMS-MA", "HSSB-MA", "HSSC-MA", "HSSP-MA", "HSSES-MA", "HSSTS-MA", "HST-MA", "PE-MD", "PM-MD", "KE-MD", "KM-MD", "G1E-MD", "G1M-MD", "G2E-MD", "G2M-MD", "G3E-MD", "G3M-MD", "G4E-MD", "G4M-MD", "G5E-MD", "G5M-MD", "G6E-MD", "G6M-MD", "G7E-MD", "G7M-MD", "G8E-MD", "G8M-MD", "HSE1-MD", "HSE2-MD", "HSMA1-MD", "HSMA2-MD", "HSMG-MD", "HSMS-MD", "KE-MN", "KM-MN", "G1E-MN", "G1M-MN", "G2E-MN", "G2M-MN", "G3E-MN", "G3M-MN", "G4E-MN", "G4M-MN", "G5E-MN", "G5M-MN", "G6E-MN", "G6M-MN", "G7E-MN", "G7M-MN", "G8E-MN", "G8M-MN", "HSE1-MN", "HSE2-MN", "HSM-MN", "KE-MO", "KM-MO", "KS-MO", "G1E-MO", "G1M-MO", "G1S-MO", "G2E-MO", "G2M-MO", "G2S-MO", "G3E-MO", "G3M-MO", "G3S-MO", "G4E-MO", "G4M-MO", "G4S-MO", "G5E-MO", "G5M-MO", "G5S-MO", "G6E-MO", "G6M-MO", "G7E-MO", "G7M-MO", "G8E-MO", "G8M-MO", "MSS-MO", "KE-MS", "KM-MS", "G1E-MS", "G1M-MS", "G2E-MS", "G2M-MS", "G3E-MS", "G3M-MS", "G4E-MS", "G4M-MS", "G5E-MS", "G5M-MS", "G6E-MS", "G6M-MS", "G7E-MS", "G7M-MS", "G8E-MS", "G8M-MS", "KS-NG", "G1S-NG", "G2S-NG", "G3S-NG", "G4S-NG", "G5S-NG", "MSS-NG", "HSS-NG", "KE-NJ", "KM-NJ", "KS-NJ", "G1E-NJ", "G1M-NJ", "G1S-NJ", "G2E-NJ", "G2M-NJ", "G2S-NJ", "G3E-NJ", "G3M-NJ", "G3S-NJ", "G4E-NJ", "G4M-NJ", "G4S-NJ", "G5E-NJ", "G5M-NJ", "G5S-NJ", "G6E-NJ", "G6M-NJ", "G7E-NJ", "G7M-NJ", "G8E-NJ", "G8M-NJ", "MSS-NJ", "PE-NY", "PM-NY", "KE-NY", "KM-NY", "G1E-NY", "G1M-NY", "G2E-NY", "G2M-NY", "G3E-NY", "G3M-NY", "G4E-NY", "G4M-NY", "G5E-NY", "G5M-NY", "G6E-NY", "G6M-NY", "G7E-NY", "G7M-NY", "G8E-NY", "G8M-NY", "HSE1-NY", "HSE2-NY", "HSMA1-NY", "HSMG-NY", "HSMA2-NY", "G3E-PA", "G3M-PA", "G4E-PA", "G4M-PA", "G4S-PA", "G5E-PA", "G5M-PA", "G6E-PA", "G6M-PA", "G7E-PA", "G7M-PA", "G8E-PA", "G8M-PA", "G8S-PA", "KE-RI", "KM-RI", "G1E-RI", "G1M-RI", "G2E-RI", "G2M-RI", "G3E-RI", "G3M-RI", "G4E-RI", "G4M-RI", "G5E-RI", "G5M-RI", "G6E-RI", "G6M-RI", "G7E-RI", "G7M-RI", "G8E-RI", "G8M-RI", "HSE1-RI", "HSE2-RI", "HSMA-RI", "HSMF-RI", "HSMG-RI", "HSMM-RI", "HSMN-RI", "HSMS-RI", "KE-SC", "KM-SC", "KS-SC", "G1E-SC", "G1M-SC", "G1S-SC", "G2E-SC", "G2M-SC", "G2S-SC", "G3E-SC", "G3M-SC", "G3S-SC", "G4E-SC", "G4M-SC", "G4S-SC", "G5E-SC", "G5M-SC", "G5S-SC", "G6E-SC", "G6M-SC", "G6S-SC", "G7E-SC", "G7M-SC", "G7S-SC", "G8E-SC", "G8M-SC", "G8S-SC", "KE-TN", "KM-TN", "KS-TN", "G1E-TN", "G1M-TN", "G1S-TN", "G2E-TN", "G2M-TN", "G2S-TN", "G3E-TN", "G3M-TN", "G3S-TN", "G4E-TN", "G4M-TN", "G4S-TN", "G5E-TN", "G5M-TN", "G5S-TN", "G6E-TN", "G6M-TN", "G6S-TN", "G7E-TN", "G7M-TN", "G7S-TN", "G8E-TN", "G8M-TN", "G8S-TN", "HSMA1-TN", "HSMA2-TN", "HSSB1-TN", "HSE1-TN", "HSE2-TN", "HSMG-TN", "KR-TX", "KM-TX", "G1R-TX", "G1M-TX", "G2R-TX", "G2M-TX", "G3R-TX", "G3M-TX", "G4R-TX", "G4M-TX", "G5R-TX", "G5M-TX", "G6R-TX", "G6M-TX", "G7R-TX", "G7M-TX", "G8R-TX", "G8M-TX", "HSE1-TX", "HSE2-TX", "HSE3-TX", "HSE4-TX", "HSMA1-TX", "HSMA2-TX", "HSMG-TX", "HSMP-TX", "HSMS-TX", "KE-WI", "KM-WI", "G1E-WI", "G1M-WI", "G2E-WI", "G2M-WI", "G3E-WI", "G3M-WI", "G4E-WI", "G4M-WI", "G5E-WI", "G5M-WI", "G6E-WI", "G6M-WI", "G7E-WI", "G7M-WI", "G8E-WI", "G8M-WI", "EESSS-WI", "UESSS-WI", "MSSS-WI", "HSSS-WI", "SAT-M", "SAT-RW"];
 
   COG3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = COG3EProblems;
@@ -1447,6 +1450,9 @@ export class TemplateEditQuizComponent implements OnInit {
   MNG7R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG7RProblems;
   MNG8R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG8RProblems;
   MNG10R_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG10RProblems;
+  MNG5S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG5SProblems;
+  MNG8S_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNG8SProblems;
+  MNHSS_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MNHSSProblems;
   MOG3E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MOG3EProblems;
   MOG4E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MOG4EProblems;
   MOG5E_exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = MOG5EProblems;
@@ -2595,6 +2601,9 @@ export class TemplateEditQuizComponent implements OnInit {
     "MNG7R": this.MNG7R_exam_dump,
     "MNG8R": this.MNG8R_exam_dump,
     "MNG10R": this.MNG10R_exam_dump,
+    "MNG5S": this.MNG5S_exam_dump,
+    "MNG8S": this.MNG8S_exam_dump,
+    "MNHSS": this.MNHSS_exam_dump,
     "MOG3E": this.MOG3E_exam_dump,
     "MOG4E": this.MOG4E_exam_dump,
     "MOG5E": this.MOG5E_exam_dump,
@@ -3614,11 +3623,13 @@ export class TemplateEditQuizComponent implements OnInit {
   standard_id = '';
   standard_fav = false;
   includes_standard = false;
+  subtopic_streak_count = 0;
   subtopic_problem_count = 0;
   subtopic_new_problem_count = 0;
   subtopic_correct_problem_count = 0;
   subtopic_problem_number = 0;
   subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+  subtopic_submission: any[] = [];
   subtopic_problem_selection: any[] = [];
   subtopic_problem_attempts: number[] = [];
   subtopic_attempt_path: any[] = [];
@@ -4701,7 +4712,7 @@ export class TemplateEditQuizComponent implements OnInit {
   }
 
   delete_content(num: number, index: number) {
-    console.log('Number: ' + ''+num + ', Index: ' + ''+index);
+    console.log('Number: ' + '' + num + ', Index: ' + '' + index);
     this.problems_loaded = false;
     if (this.is_image(this.exam_dump[num].Content[index])) {
       const initial_images = this.prob_images;
@@ -5476,7 +5487,8 @@ export class TemplateEditQuizComponent implements OnInit {
     for (const [name, image] of Object.entries(this.prob_images)) {
       // image should be an acutal image, instead of the URL
       if ((image as any).length > 1) {
-        this.authService.UploadQuizPic(quiz_id, name, (image as any)[1]);}
+        this.authService.UploadQuizPic(quiz_id, name, (image as any)[1]);
+      }
     }
     var db_updates: any = {};
     db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, problems: this.exam_dump, grades: [this.selected_grade], subjects: [this.selected_subject], states: [this.state_labels[this.selected_curriculum]], topics: [this.selected_topic], mode: this.mode, length: this.quiz_length, timer: this.exam_timer, shuffle: this.shuffle_mode, public: this.quiz_public, author: this.authService.userData.uid };
@@ -7318,64 +7330,64 @@ export class TemplateEditQuizComponent implements OnInit {
   }
 
   shuffle_m(choices: any, part: string) {
-      var part_num = 0;
-      if (part != '') {
-          part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    if (!Object.keys(this.shuffle_choices).includes('' + part_num)) {
+      this.m_shuffled = false;
+      this.shuffle_choices['' + part_num] = []
+    }
+    if (!this.m_shuffled) {
+      if (part == '') {
+        if (this.exam_dump[this.problem_number].Type == 'G') {
+          var trimmed_choices: string[] = [];
+          for (let ch of Object.keys(choices)) {
+            if (!trimmed_choices.includes(ch.substring(0, ch.length - 2))) {
+              trimmed_choices.push(ch.substring(0, ch.length - 2));
+            }
+          }
+          this.choices_sequence = trimmed_choices;
+        }
+        else {
+          this.choices_sequence = Array.from(Object.keys(choices));
+        }
       }
-      if (!Object.keys(this.shuffle_choices).includes('' + part_num)) {
-          this.m_shuffled = false;
-          this.shuffle_choices['' + part_num] = []
+      else {
+        if (this.exam_dump[this.problem_number].Parts[part].Type == 'G') {
+          var trimmed_choices: string[] = [];
+          for (let ch of Object.keys(choices)) {
+            if (!trimmed_choices.includes(ch.substring(0, ch.length - 2))) {
+              trimmed_choices.push(ch.substring(0, ch.length - 2));
+            }
+          }
+          this.choices_sequence = trimmed_choices;
+        }
+        else {
+          this.choices_sequence = Array.from(Object.keys(choices));
+        }
       }
-      if (!this.m_shuffled) {
-          if (part == '') {
-              if (this.exam_dump[this.problem_number].Type == 'G') {
-                  var trimmed_choices: string[] = [];
-                  for (let ch of Object.keys(choices)) {
-                      if (!trimmed_choices.includes(ch.substring(0, ch.length - 2))) {
-                          trimmed_choices.push(ch.substring(0, ch.length - 2));
-                      }
-                  }
-                  this.choices_sequence = trimmed_choices;
-              }
-              else {
-                  this.choices_sequence = Array.from(Object.keys(choices));
-              }
-          }
-          else {
-              if (this.exam_dump[this.problem_number].Parts[part].Type == 'G') {
-                  var trimmed_choices: string[] = [];
-                  for (let ch of Object.keys(choices)) {
-                      if (!trimmed_choices.includes(ch.substring(0, ch.length - 2))) {
-                          trimmed_choices.push(ch.substring(0, ch.length - 2));
-                      }
-                  }
-                  this.choices_sequence = trimmed_choices;
-              }
-              else {
-                  this.choices_sequence = Array.from(Object.keys(choices));
-              }
-          }
-          this.random_list = [];
-          this.shuffle_choices['' + part_num] = [];
-          console.log(this.choices_sequence);
-          for (let i = 0; i < this.choices_sequence.length; i++) {
-              if (this.choices_sequence[i] == '' || this.choices_sequence[i][0] == ' ') {
-                  this.choices_sequence.splice(i, 1);
-              }
-          }
-          const num_choices = this.choices_sequence.length;
-          for (let i = 0; i < num_choices; i++) {
-              this.random_index = Math.floor(Math.random() * this.choices_sequence.length);
-              this.random_list.push(this.choices_sequence[this.random_index]);
-              this.shuffle_choices['' + part_num][i] = this.choices_sequence[this.random_index];
-              this.choices_sequence.splice(this.random_index, 1);
-              console.log(i);
-              console.log(this.random_index);
-          }
-          console.log(this.shuffle_choices);
-          this.m_shuffled = true;
+      this.random_list = [];
+      this.shuffle_choices['' + part_num] = [];
+      const num_choices1 = this.choices_sequence.length;
+      for (let i = 0; i < num_choices1; i++) {
+        if (this.choices_sequence[num_choices1 - i - 1] == '' || this.choices_sequence[num_choices1 - i - 1][0] == ' ') {
+          this.choices_sequence.splice(num_choices1 - i - 1, 1);
+        }
       }
-      return (this.shuffle_choices['' + part_num].sort());
+      const num_choices = this.choices_sequence.length;
+      for (let i = 0; i < num_choices; i++) {
+        this.random_index = Math.floor(Math.random() * this.choices_sequence.length);
+        this.random_list.push(this.choices_sequence[this.random_index]);
+        this.shuffle_choices['' + part_num][i] = this.choices_sequence[this.random_index];
+        this.choices_sequence.splice(this.random_index, 1);
+        console.log(i);
+        console.log(this.random_index);
+      }
+      console.log(this.shuffle_choices);
+      this.m_shuffled = true;
+    }
+    return (this.shuffle_choices['' + part_num].sort());
   }
 
   shuffle_m_st(choices: any, part: string) {
@@ -7418,10 +7430,10 @@ export class TemplateEditQuizComponent implements OnInit {
       }
       this.random_list = [];
       this.shuffle_choices['' + part_num] = [];
-      console.log(this.choices_sequence);
-      for (let i = 0; i < this.choices_sequence.length; i++) {
-        if (this.choices_sequence[i] == '') {
-          this.choices_sequence.splice(i, 1);
+      const num_choices1 = this.choices_sequence.length;
+      for (let i = 0; i < num_choices1; i++) {
+        if (this.choices_sequence[num_choices1 - i - 1] == '' || this.choices_sequence[num_choices1 - i - 1][0] == ' ') {
+          this.choices_sequence.splice(num_choices1 - i - 1, 1);
         }
       }
       const num_choices = this.choices_sequence.length;
@@ -7440,55 +7452,66 @@ export class TemplateEditQuizComponent implements OnInit {
   }
 
   unique_m(choices: any, part: string) {
-      var part_num = 0;
-      if (part != '') {
-          part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    this.unique_choices[part_num] = [];
+    for (const [key, choice] of Object.entries(choices)) {
+      if ((choice as any).Choice != '' && (!this.unique_choices[part_num].includes((choice as any).Choice) || !Object.keys(this.c_submission[part_num]).includes((choice as any).Choice[0]) || key[0] == ' ')) {
+        if (this.exam_dump[this.problem_number].Type == 'O' || (this.exam_dump[this.problem_number].Type == 'MP' && this.exam_dump[this.problem_number].Parts[part].Type == 'O')) {
+          this.unique_choices[part_num].push((choice as any).Choice + ':' + key[0])
+        }
+        else if (!this.unique_choices[part_num].includes((choice as any).Choice)) {
+          this.unique_choices[part_num].push((choice as any).Choice);
+        }
+        this.m_submission[part_num][(choice as any).Choice[0]] = "";
+        if (!Object.keys(this.c_submission[part_num]).includes((choice as any).Choice[0])) {
+          this.c_submission[part_num][(choice as any).Choice[0]] = [""];
+        }
+        if (key[0] == ' ' && (choice as any).Key.Correct) {
+          this.m_submission[part_num][(choice as any).Choice[0]] = key;
+          this.c_submission[part_num][(choice as any).Choice[0]] = [key].concat(this.c_submission[part_num][(choice as any).Choice[0]]);
+          console.log(this.c_submission);
+        }
+        this.problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
+        this.attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
       }
-      this.unique_choices[part_num] = [];
-      for (const [key, choice] of Object.entries(choices)) {
-          if ((choice as any).Choice != '' && !this.unique_choices[part_num].includes((choice as any).Choice)) {
-              if (this.exam_dump[this.problem_number].Type == 'O' || (this.exam_dump[this.problem_number].Type == 'MP' && this.exam_dump[this.problem_number].Parts[part].Type == 'O')) {
-                  this.unique_choices[part_num].push((choice as any).Choice + ':' + key[0])
-              }
-              else {
-                  this.unique_choices[part_num].push((choice as any).Choice)
-              }
-              if (key[0] == ' ' && (choice as any).Key.Correct) {
-                  this.m_submission[0][(choice as any).Choice[0]] = key;
-              }
-              this.c_submission[part_num][(choice as any).Choice[0]] = [""];
-              this.problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
-              this.attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
-          }
-      }
-      console.log(this.m_submission);
-      this.unique_choices[part_num].sort();
-      console.log(this.unique_choices[part_num].sort());
-      // return (unique_choices);
+    }
+    this.unique_choices[part_num].sort();
+    console.log(this.unique_choices[part_num].sort());
+    // return (unique_choices);
   }
 
   unique_m_st(choices: any, part: string) {
-      var part_num = 0;
-      if (part != '') {
-          part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+    }
+    this.unique_choices[part_num] = [];
+    for (const [key, choice] of Object.entries(choices)) {
+      if ((choice as any).Choice != '' && !this.unique_choices[part_num].includes((choice as any).Choice)) {
+        if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
+          this.unique_choices[part_num].push((choice as any).Choice + ':' + key[0])
+        }
+        else if (!this.unique_choices[part_num].includes((choice as any).Choice)) {
+          this.unique_choices[part_num].push((choice as any).Choice)
+        }
+        this.m_submission[part_num][(choice as any).Choice[0]] = "";
+        if (!Object.keys(this.c_submission[part_num]).includes((choice as any).Choice[0])) {
+          this.c_submission[part_num][(choice as any).Choice[0]] = [""];
+        }
+        if (key[0] == ' ' && (choice as any).Key.Correct) {
+          this.m_submission[part_num][(choice as any).Choice[0]] = key;
+          this.c_submission[part_num][(choice as any).Choice[0]] = [key].concat(this.c_submission[part_num][(choice as any).Choice[0]]);
+        }
+        this.subtopic_problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
+        this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
       }
-      this.unique_choices[part_num] = [];
-      for (const [key, choice] of Object.entries(choices)) {
-          if ((choice as any).Choice != '' && !this.unique_choices[part_num].includes((choice as any).Choice)) {
-              if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
-                  this.unique_choices[part_num].push((choice as any).Choice + ':' + key[0])
-              }
-              else {
-                  this.unique_choices[part_num].push((choice as any).Choice)
-              }
-              this.c_submission[part_num][(choice as any).Choice[0]] = [""];
-              this.subtopic_problem_selection[part_num][+(choice as any).Choice[0] - 1] = [""];
-              this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
-          }
-      }
-      this.unique_choices[part_num].sort();
-      console.log(this.unique_choices[part_num].sort());
-      // return (unique_choices);
+    }
+    this.unique_choices[part_num].sort();
+    console.log(this.unique_choices[part_num].sort());
+    // return (unique_choices);
   }
 
   select_m_choice(ch: string, p: number, part: string) {
@@ -9236,237 +9259,366 @@ export class TemplateEditQuizComponent implements OnInit {
   }
 
   search_subtopic(topic: string, subtopic: string) {
+    this.selected_student_st = '';
     this.subtopic_problem_count = 0;
+    this.subtopic_new_problem_count = 0;
+    this.subtopic_correct_problem_count = 0;
     this.subtopic_search_dump = {};
+    if (this.authService.userData && this.authService.userData.role == 'Student') {
+      const exam_history = this.authService.userData.exams.history;
+      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+        if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+          for (const [num, prob] of Object.entries(dump)) {
+            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+              if (prob.SubTopics.includes(subtopic)) {
+                if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                  this.subtopic_new_problem_count += 1;
+                }
+              }
+            }
+          }
+        }
+        if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+          const exam_sub = this.authService.getExamSubmission2(ex);
+          setTimeout(() => {
+            for (const [num, prob] of Object.entries(dump)) {
+              if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                if (prob.SubTopics.includes(subtopic)) {
+                  if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                    if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
+                      this.subtopic_correct_problem_count += 1;
+                    }
+                  }
+                }
+              }
+            }
+          }, 50);
+        }
+      }
+    }
+    // else{}
     for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
       for (const [num, prob] of Object.entries(dump)) {
         if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
           if (prob.SubTopics.includes(subtopic)) {
-            if (prob.Topics[prob.SubTopics.indexOf(subtopic)] == topic) {
+            if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+              this.selected_topic = topic;
+              // this.standard_id = standardID;
               this.subtopic_problem_count += 1;
               this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-              if (!(''+this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
-                  this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+              if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
               }
             }
           }
         }
       }
     }
-    this.subtopic_new_problem_count = this.subtopic_problem_count;
-    this.selected_topic = topic;
+    if (this.authService.userData && this.authService.userData.role == 'Student') {
+      const exam_history = this.authService.userData.exams.history;
+      this.subtopic_problem_count = 0;
+      this.subtopic_search_dump = {};
+      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+        if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+          for (const [num, prob] of Object.entries(dump)) {
+            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+              if (prob.SubTopics.includes(subtopic)) {
+                if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                  this.subtopic_problem_count += 1;
+                  this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                  if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                    this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      Object.entries(this.subtopic_search_dump).sort(([, valueA], [, valueB]) => (this.authService.getStudProbSubmission2(this.user_data.uid, valueA.Number)).timestamp - (this.authService.getStudProbSubmission2(this.user_data.uid, valueB.Number)).timestamp);
+      this.subtopic_streak_count = 0;
+      var streak = true;
+      var nums: string[] = [];
+      var subs: any[] = [];
+      for (let i = 1; i <= Object.keys(this.subtopic_search_dump).length; i++) {
+        nums.push(this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[Object.keys(this.subtopic_search_dump).length - i] as any].Number);
+        subs.push(this.authService.getStudExamSubmission2(this.user_data.uid, this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[Object.keys(this.subtopic_search_dump).length - i] as any].Number.substring(0, (this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[Object.keys(this.subtopic_search_dump).length - i] as any].Number).indexOf('-'))));
+      }
+      console.log(nums);
+      console.log(subs);
+      setTimeout(() => {
+        for (let i = 1; i <= Object.keys(this.subtopic_search_dump).length; i++) {
+          this.subtopic_submission.push(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)]);
+          if (streak && ((subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length == 1 && subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct[0][0] == '✅') || (subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length > 1 && this.is_MP_correct(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct)))) {
+            this.subtopic_streak_count += 1;
+          }
+          else {
+            streak = false;
+            this.subtopic_streak_count = 0;
+          }
+        }
+      }, 50);
+      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+        if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+          for (const [num, prob] of Object.entries(dump)) {
+            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+              if (prob.SubTopics.includes(subtopic)) {
+                if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                  this.subtopic_problem_count += 1;
+                  this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                  if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                    this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // setTimeout(() => {
     this.selected_subtopic = subtopic;
     this.subtopic_problem_number = 0;
-    this.standard_id = topic + ": " + subtopic;
     this.standard_fav = false;
-    for (let fav of this.authService.userData.standards.favorites) {
-      if (topic == fav[0] && subtopic == fav[1]) {
-        this.standard_fav = true;
+    if (this.authService.userData) {
+      for (let fav of this.authService.userData.standards.favorites) {
+        if (topic == fav[0] && subtopic == fav[1]) {
+          this.standard_fav = true;
+        }
+      }
+    }
+    // }, 500);
+  }
+
+  begin_practice_st() {
+    if (this.subtopic_problem_count != this.subtopic_new_problem_count) {
+      this.subtopic_problem_number = this.subtopic_problem_count - this.subtopic_new_problem_count + 1;
+    }
+    else {
+      this.subtopic_problem_number = 1;
+    }
+    if (this.subtopic_problem_number > this.subtopic_problem_count) {
+      this.selected_subtopic = '';
+      this.standard_id = '';
+    }
+    else {
+      this.subtopic_attempt_path = [];
+      this.subtopic_attempt_response = [];
+      this.subtopic_attempt_explanation = [];
+      this.subtopic_problem_selection = [];
+      if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
+        this.subtopic_problem_attempts = [0];
+        this.subtopic_attempt_path = [[]];
+        this.subtopic_attempt_response = [''];
+        this.subtopic_attempt_explanation = [[]];
+        if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+          this.subtopic_problem_selection = [['']];
+          if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            setTimeout(() => {
+              this.plot_graph_gp('', true);
+            }, 500);
+          }
+        }
+        else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+          this.subtopic_problem_selection = [[]];
+          if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
+          }
+          if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            setTimeout(() => {
+              this.plot_graph_mgp('', true);
+            }, 500);
+          }
+        }
+        else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+          var msp_nums: string[] = [];
+          this.subtopic_problem_selection.push([]);
+          for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+            if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+              this.subtopic_problem_selection[0].push('');
+              msp_nums.push(choice[0]);
+            }
+          }
+        }
+      }
+      else {
+        this.subtopic_problem_attempts = [];
+        for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+          this.subtopic_problem_attempts.push(0);
+          this.subtopic_attempt_path.push([]);
+          this.subtopic_attempt_response.push('');
+          this.subtopic_attempt_explanation.push([]);
+          if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+            this.subtopic_problem_selection.push(['']);
+            if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+              setTimeout(() => {
+                this.plot_graph_gp(part, true);
+              }, 500);
+            }
+          }
+          else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+            this.subtopic_problem_selection.push([]);
+            if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+              this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
+            }
+            if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+              setTimeout(() => {
+                this.plot_graph_mgp(part, true);
+              }, 500);
+            }
+          }
+          else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+            var msp_nums: string[] = [];
+            this.subtopic_problem_selection.push([]);
+            for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+              if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+                this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part)].push('');
+                msp_nums.push(choice[0]);
+              }
+            }
+          }
+        }
+      }
+      this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
+      for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
+        setTimeout(() => {
+          this.read_supp_st_json(supp);
+        }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+      }
+      if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
+        for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+          for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
+            if (block.startsWith(':table:')) {
+              setTimeout(() => {
+                this.read_table_st(block.slice(7));
+              }, 100);
+            }
+          }
+        }
+      }
+      if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
+        for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
+          if (block.startsWith(':table:')) {
+            setTimeout(() => {
+              this.read_table_st(block.slice(7));
+            }, 100);
+          }
+        }
       }
     }
   }
 
-  begin_practice_st() {
-      if (this.subtopic_problem_count != this.subtopic_new_problem_count) {
-          this.subtopic_problem_number = this.subtopic_problem_count-this.subtopic_new_problem_count + 1;
-      }
-      else {
-          this.subtopic_problem_number = 1;  
-      }
-      if (this.subtopic_problem_number > this.subtopic_problem_count) {
-          this.selected_subtopic = '';
-          this.standard_id = '';
-      }
-      else {
-          this.subtopic_attempt_path = [];
-          this.subtopic_attempt_response = [];
-          this.subtopic_attempt_explanation = [];
-          this.subtopic_problem_selection = [];
-          if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
-              this.subtopic_problem_attempts = [0];
-              this.subtopic_attempt_path = [[]];
-              this.subtopic_attempt_response = [''];
-              this.subtopic_attempt_explanation = [[]];
-              if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                  this.subtopic_problem_selection = [['']];
-                  if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                      setTimeout(() => {
-                          this.plot_graph_gp('', true);
-                      }, 500);
-                  }
-              }
-              else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                  this.subtopic_problem_selection = [[]];
-                  if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                      this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
-                  }
-                  if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                      setTimeout(() => {
-                          this.plot_graph_mgp('', true);
-                      }, 500);
-                  }
-              }
-              else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                  var msp_nums: string[] = [];
-                  this.subtopic_problem_selection.push([]);
-                  for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
-                      if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-                          this.subtopic_problem_selection[0].push('');
-                          msp_nums.push(choice[0]);
-                      }
-                  }
-              }
-          }
-          else {
-              this.subtopic_problem_attempts = [];
-              for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
-                  this.subtopic_problem_attempts.push(0);
-                  this.subtopic_attempt_path.push([]);
-                  this.subtopic_attempt_response.push('');
-                  this.subtopic_attempt_explanation.push([]);
-                  if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                      this.subtopic_problem_selection.push(['']);
-                      if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                          setTimeout(() => {
-                              this.plot_graph_gp(part, true);
-                          }, 500);
-                      }
-                  }
-                  else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                      this.subtopic_problem_selection.push([]);
-                      if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                          this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
-                      }
-                      if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                          setTimeout(() => {
-                              this.plot_graph_mgp(part, true);
-                          }, 500);
-                      }
-                  }
-                  else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                      var msp_nums: string[] = [];
-                      this.subtopic_problem_selection.push([]);
-                      for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
-                          if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-                              this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part)].push('');
-                              msp_nums.push(choice[0]);
-                          }
-                      }
-                  }
-              }
-          }
-          this.st_refsheet_source = '../../' + this.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
-          for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
-              setTimeout(() => {
-                  this.read_supp_st_json(supp);
-              }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
-          }
-          if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
-              for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
-                  for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
-                      if (block.startsWith(':table:')) {
-                          setTimeout(() => {
-                              this.read_table_st(block.slice(7));
-                          }, 100);
-                      }
-                  }
-              }
-          }
-          if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
-              for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
-                  if (block.startsWith(':table:')) {
-                      setTimeout(() => {
-                          this.read_table_st(block.slice(7));
-                      }, 100);
-                  }
-              }
-          }
-      }
-  }
-
   select_student_st(id: string) {
-  //   this.exam_inprogress = false;
-  //   this.progress_number = 0;
-    if (id != this.selected_student_st) {
-      console.log(this.subtopic_search_dump);
-      this.selected_student_st = '';
-      this.selected_student_data = this.my_students_data[id];
-      const exam_history = this.my_students_data[id].exams.history;
-      this.subtopic_problem_count = 0;
-      this.subtopic_search_dump = {};
-      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-          if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
-              for (const [num, prob] of Object.entries(dump)) {
-                  if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-                      if (prob.SubTopics.includes(this.selected_subtopic)) {
-                          if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                              this.subtopic_problem_count += 1;
-                              this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-                              if (!(''+this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
-                                  this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
-                              }
-                          }
-                      }
-                  }
-              }
-          }
-      }
-      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-          if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
-              for (const [num, prob] of Object.entries(dump)) {
-                  if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-                      if (prob.SubTopics.includes(this.selected_subtopic)) {
-                          if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                              this.subtopic_problem_count += 1;
-                              this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-                              if (!(''+this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
-                                  this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
-                              }
-                          }
-                      }
-                  }
-              }
-          }
-      }
-      this.subtopic_new_problem_count = 0;
-      this.subtopic_correct_problem_count = 0;
-      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-          if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
-              for (const [num, prob] of Object.entries(dump)) {
-                  if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-                      if (prob.SubTopics.includes(this.selected_subtopic)) {
-                          if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                              this.subtopic_new_problem_count += 1;
-                          }
-                      }
-                  }
-              }
-          }
-          if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
-              const exam_sub = this.authService.getStudExamSubmission2(id, ex);
-              setTimeout(() => {
+      //   this.exam_inprogress = false;
+      //   this.progress_number = 0;
+      if (id != this.selected_student_st) {
+          console.log(this.subtopic_search_dump);
+          this.selected_student_st = '';
+          this.selected_student_data = this.my_students_data[id];
+          const exam_history = this.my_students_data[id].exams.history;
+          this.subtopic_problem_count = 0;
+          this.subtopic_search_dump = {};
+          for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+              if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
                   for (const [num, prob] of Object.entries(dump)) {
                       if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
                           if (prob.SubTopics.includes(this.selected_subtopic)) {
                               if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                                  if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
-                                      this.subtopic_correct_problem_count += 1;
+                                  this.subtopic_problem_count += 1;
+                                  this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                                  if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                                      this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
                                   }
                               }
                           }
                       }
                   }
-              }, 50);
+              }
           }
+          Object.entries(this.subtopic_search_dump).sort(([, valueA], [, valueB]) => (this.authService.getStudProbSubmission2(id, valueA.Number)).timestamp - (this.authService.getStudProbSubmission2(id, valueB.Number)).timestamp);
+          console.log(this.subtopic_search_dump);
+          this.subtopic_streak_count = 0;
+          var streak = true;
+          var nums: string[] = [];
+          var subs: any[] = [];
+          for (let i = 1; i <= Object.keys(this.subtopic_search_dump).length; i++) {
+              nums.push(this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[Object.keys(this.subtopic_search_dump).length - i] as any].Number);
+              subs.push(this.authService.getStudExamSubmission2(id, this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[Object.keys(this.subtopic_search_dump).length - i] as any].Number.substring(0, (this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[Object.keys(this.subtopic_search_dump).length - i] as any].Number).indexOf('-'))));
+          }
+          console.log(nums);
+          console.log(subs);
+          setTimeout(() => {
+              for (let i = 1; i <= subs.length; i++) {
+                  this.subtopic_submission.push(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)]);
+                  if (streak && ((subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length == 1 && subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct[0][0] == '✅') || (subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length > 1 && this.is_MP_correct(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct)))) {
+                      this.subtopic_streak_count += 1;
+                  }
+                  else {
+                      streak = false;
+                      this.subtopic_streak_count = 0;
+                  }
+              }
+          }, 100);
+          for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+              if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+                  for (const [num, prob] of Object.entries(dump)) {
+                      if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                          if (prob.SubTopics.includes(this.selected_subtopic)) {
+                              if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                                  this.subtopic_problem_count += 1;
+                                  this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                                  if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                                      this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+          this.subtopic_new_problem_count = 0;
+          this.subtopic_correct_problem_count = 0;
+          for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+              if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+                  for (const [num, prob] of Object.entries(dump)) {
+                      if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                          if (prob.SubTopics.includes(this.selected_subtopic)) {
+                              if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                                  this.subtopic_new_problem_count += 1;
+                              }
+                          }
+                      }
+                  }
+              }
+              if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+                  const exam_sub = this.authService.getStudExamSubmission2(id, ex);
+                  setTimeout(() => {
+                      for (const [num, prob] of Object.entries(dump)) {
+                          if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                              if (prob.SubTopics.includes(this.selected_subtopic)) {
+                                  if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                                      if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
+                                          this.subtopic_correct_problem_count += 1;
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }, 100);
+              }
+          }
+          console.log(this.subtopic_search_dump);
+          setTimeout(() => {
+              this.selected_student_st = id;
+          }, 250);
       }
-      console.log(this.subtopic_search_dump);
-      setTimeout(() => {
-          this.selected_student_st = id;
-      }, 250);
-    }
-    else {
-      this.selected_student_st = '';
-    }
+      else {
+          this.selected_student_st = '';
+      }
+  }
+
+  subtopic_correct_percent() {
+    return (Math.round(100 * this.subtopic_correct_problem_count / (this.subtopic_problem_count - this.subtopic_new_problem_count)));
   }
 
   fav_std_includes(topic: string, subtopic: string) {
@@ -9675,10 +9827,26 @@ export class TemplateEditQuizComponent implements OnInit {
   }
 
   onLogIn() {
-      setTimeout(() => {
-        this.login = true;
-        if (this.authService.userData.role != 'Student') {
-          const linked_students = this.authService.userData.students.slice(1);
+    setTimeout(() => {
+      this.login = true;
+      if (this.authService.userData.role != 'Student') {
+        const linked_students = this.authService.userData.students.slice(1);
+        var count = 0;
+        for (const [key, stud] of Object.entries(linked_students)) {
+          setTimeout(() => {
+            if ((stud as string).includes(this.authService.userData.uid as string)) {
+              count += 1;
+              this.my_students.push(stud as string);
+              // setTimeout(() => {
+              const student_data = this.authService.searchUserId(stud as string);
+              if (student_data != null) {
+                this.my_students_data[(stud as string)] = (student_data as object);
+              }
+            }
+          }, +key * 10);
+        }
+        setTimeout(() => {
+          this.my_students = [];
           var count = 0;
           for (const [key, stud] of Object.entries(linked_students)) {
             setTimeout(() => {
@@ -9693,32 +9861,16 @@ export class TemplateEditQuizComponent implements OnInit {
               }
             }, +key * 10);
           }
-          setTimeout(() => {
-            this.my_students = [];
-            var count = 0;
-            for (const [key, stud] of Object.entries(linked_students)) {
-              setTimeout(() => {
-                if ((stud as string).includes(this.authService.userData.uid as string)) {
-                  count += 1;
-                  this.my_students.push(stud as string);
-                  // setTimeout(() => {
-                  const student_data = this.authService.searchUserId(stud as string);
-                  if (student_data != null) {
-                    this.my_students_data[(stud as string)] = (student_data as object);
-                  }
-                }
-              }, +key * 10);
-            }
-          }, 500);
-        }
-        this.login = false;
-      }, 500);
+        }, 500);
+      }
+      this.login = false;
+    }, 500);
   }
 
   onOtpChange(otpCode: any) {
     this.otp = otpCode;
   }
-  
+
   ngAfterViewInit() {
 
   }
@@ -9923,83 +10075,83 @@ export class TemplateEditQuizComponent implements OnInit {
       }
     }, 100);
     if (this.authService.userData) {
-        this.authService.getProfilePic(this.authService.userData);
-        this.user_data = this.authService.userData;
-        if (this.authService.userData.role != 'Student') {
-            const linked_students = this.authService.userData.students.slice(1);
-            var count = 0;
-            for (const [key, stud] of Object.entries(linked_students)) {
-                setTimeout(() => {
-                    if ((stud as string).includes(this.authService.userData.uid as string)) {
-                        count += 1;
-                        this.my_students.push(stud as string);
-                        // setTimeout(() => {
-                        const student_data = this.authService.searchUserId(stud as string);
-                        if (student_data != null) {
-                            this.my_students_data[(stud as string)] = (student_data as object);
-                        }
-                    }
-                }, +key * 10);
+      this.authService.getProfilePic(this.authService.userData);
+      this.user_data = this.authService.userData;
+      if (this.authService.userData.role != 'Student') {
+        const linked_students = this.authService.userData.students.slice(1);
+        var count = 0;
+        for (const [key, stud] of Object.entries(linked_students)) {
+          setTimeout(() => {
+            if ((stud as string).includes(this.authService.userData.uid as string)) {
+              count += 1;
+              this.my_students.push(stud as string);
+              // setTimeout(() => {
+              const student_data = this.authService.searchUserId(stud as string);
+              if (student_data != null) {
+                this.my_students_data[(stud as string)] = (student_data as object);
+              }
             }
-            setTimeout(() => {
-                this.my_students = [];
-                var count = 0;
-                for (const [key, stud] of Object.entries(linked_students)) {
-                    setTimeout(() => {
-                        if ((stud as string).includes(this.authService.userData.uid as string)) {
-                            count += 1;
-                            this.my_students.push(stud as string);
-                            // setTimeout(() => {
-                            const student_data = this.authService.searchUserId(stud as string);
-                            if (student_data != null) {
-                                this.my_students_data[(stud as string)] = (student_data as object);
-                            }
-                        }
-                    }, +key * 10);
-                }
-            }, 500);
+          }, +key * 10);
         }
-        // if (this.authService.userData.role == 'Student') {
-        //   const exam_history = this.authService.userData.exams.history;
-        //   for (const [key, det] of Object.entries(exam_history)) {
-        //     if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
-        //       this.exam_inprogress = true;
-        //       this.exam_status = (det as any).status;
-        //       this.progress_number = (det as any).progress + 1;
-        //       this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
-        //       this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
-        //       if ((det as any).progress != 0) {
-        //         var db_submission = this.authService.getExamSubmission2(this.key);
-        //         setTimeout(() => {
-        //           console.log(db_submission.problems);
-        //           for (const [key2, det2] of Object.entries(db_submission.problems)) {
-        //             if (+key2 != 0) {
-        //               this.exam_submission[+(det2 as any).Number] = (det2 as any);
-        //               // const sub_prob: any = (det2 as any);
-        //               // var sub_prob_2: any = {};
-        //               // for (const [field, dump] of Object.entries(det2 as any)) {
-        //               //   // sub_prob[field] = dump;
-        //               //   sub_prob_2[field] = dump;
-        //               // }
-        //               // if (typeof (det2 as any).Choice == "string") {
-        //               //   sub_prob_2.Choice = [];
-        //               //   sub_prob_2.Correct = [];
-        //               //   sub_prob_2.Attempts = [];
-        //               //   sub_prob_2.Path = [];
-        //               //   sub_prob_2.Choice.push([sub_prob.Choice]);
-        //               //   sub_prob_2.Correct.push([sub_prob.Correct]);
-        //               //   sub_prob_2.Attempts.push(sub_prob.Attempts);
-        //               //   sub_prob_2.Path.push([[sub_prob.Path]]);
-        //               // }
-        //               // this.exam_submission[+(det2 as any).Number] = sub_prob_2;
-        //             }
-        //           }
-        //         }, 500);
-        //       }
-        //       console.log(this.exam_submission);
-        //     }
-        //   }
-        // }
+        setTimeout(() => {
+          this.my_students = [];
+          var count = 0;
+          for (const [key, stud] of Object.entries(linked_students)) {
+            setTimeout(() => {
+              if ((stud as string).includes(this.authService.userData.uid as string)) {
+                count += 1;
+                this.my_students.push(stud as string);
+                // setTimeout(() => {
+                const student_data = this.authService.searchUserId(stud as string);
+                if (student_data != null) {
+                  this.my_students_data[(stud as string)] = (student_data as object);
+                }
+              }
+            }, +key * 10);
+          }
+        }, 500);
+      }
+      // if (this.authService.userData.role == 'Student') {
+      //   const exam_history = this.authService.userData.exams.history;
+      //   for (const [key, det] of Object.entries(exam_history)) {
+      //     if (["Started", "Assigned"].includes((det as any).status) && key == this.key) {
+      //       this.exam_inprogress = true;
+      //       this.exam_status = (det as any).status;
+      //       this.progress_number = (det as any).progress + 1;
+      //       this.last_date = new Date((det as any).lasttimestamp).toLocaleDateString();
+      //       this.last_time = new Date((det as any).lasttimestamp).toLocaleTimeString()
+      //       if ((det as any).progress != 0) {
+      //         var db_submission = this.authService.getExamSubmission2(this.key);
+      //         setTimeout(() => {
+      //           console.log(db_submission.problems);
+      //           for (const [key2, det2] of Object.entries(db_submission.problems)) {
+      //             if (+key2 != 0) {
+      //               this.exam_submission[+(det2 as any).Number] = (det2 as any);
+      //               // const sub_prob: any = (det2 as any);
+      //               // var sub_prob_2: any = {};
+      //               // for (const [field, dump] of Object.entries(det2 as any)) {
+      //               //   // sub_prob[field] = dump;
+      //               //   sub_prob_2[field] = dump;
+      //               // }
+      //               // if (typeof (det2 as any).Choice == "string") {
+      //               //   sub_prob_2.Choice = [];
+      //               //   sub_prob_2.Correct = [];
+      //               //   sub_prob_2.Attempts = [];
+      //               //   sub_prob_2.Path = [];
+      //               //   sub_prob_2.Choice.push([sub_prob.Choice]);
+      //               //   sub_prob_2.Correct.push([sub_prob.Correct]);
+      //               //   sub_prob_2.Attempts.push(sub_prob.Attempts);
+      //               //   sub_prob_2.Path.push([[sub_prob.Path]]);
+      //               // }
+      //               // this.exam_submission[+(det2 as any).Number] = sub_prob_2;
+      //             }
+      //           }
+      //         }, 500);
+      //       }
+      //       console.log(this.exam_submission);
+      //     }
+      //   }
+      // }
     }
     // // Just to de-dupe all the subtopic labels
     // for (let exam of this.exam_set) {
