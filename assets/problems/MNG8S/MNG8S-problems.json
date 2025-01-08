@@ -4,45 +4,47 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Explain the role of weathering, erosion, and glacial activity in shaping Minnesota's current landscape."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S1.json"
+        ],
         "Explain": false,
         "Content": [
-            "`pi`",
-            "problems/MNG8S/media/1a.jpg",
-            ""
+            "Which observation suggests that Minnesota was covered by glaciers in the past?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Rocks have fossils.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Fossils can occur without glaciers.",
+                    "Percent": 13
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Rocks show wind erosion.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Wind erosion is not due to glaciers.",
+                    "Percent": 8
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Rocks show chemical weathering.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Chemical weathering can occur without glaciers.",
+                    "Percent": 28
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Rocks have scrapes and striations.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "Striations are a direct result of glaciers moving over exposed rock.",
+                    "Percent": 51
                 }
             }
         },
@@ -50,47 +52,58 @@
     },
     "2": {
         "Number": 2,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Analyze changes in wind direction, temperature, humidity and air pressure and relate them to fronts and pressure systems."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S2.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/2a.jpg",
-            ""
+            "Based on the air pressure data, which 2 weather predictions will most likely be accurate?",
+            "problems/MNG8S/media/2a.jpg"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "problems/MNG8S/media/2b.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "High pressure systems are associated with fair weather.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "problems/MNG8S/media/2c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Strong winds are not associated with an established high pressure system.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "problems/MNG8S/media/2d.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "High pressure systems are associated with cirrus clouds.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "problems/MNG8S/media/2e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Heavy rains are not associated with an established high pressure system.",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "problems/MNG8S/media/2f.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Stratus clouds are not associated with an established high pressure system.",
                     "Percent": 0
                 }
             }
@@ -102,45 +115,47 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Generate and refine a variety of scientific questions and match them with appropriate methods of investigation, such as field studies, controlled experiments, reviews of existing work and development of models."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S3.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/3a.jpg",
-            ""
+            "Based on the data collected, which testable question are the scientists trying to answer?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "What is the source of the pollution?",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Only the type of pollutant was measured. This gives no information about the source.",
+                    "Percent": 19
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Which pollutants are found in the lake?",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "Only the type of pollutant was measured.",
+                    "Percent": 46
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Which pollutants have been in the water the longest?",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Only the type of pollutant was measured. This gives no information about the length of time the pollutants have been present.",
+                    "Percent": 9
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "What effect does the pollution have on the lake ecosystem?",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Only the type of pollutant was measured. This gives no information about the effect on the lake ecosystem.",
+                    "Percent": 25
                 }
             }
         },
@@ -148,19 +163,21 @@
     },
     "4": {
         "Number": 4,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "O",
+        "NumChoices": 3,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Describe ways that human activities can change the populations and communities in an ecosystem."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S4.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/4a.jpg",
-            ""
+            "Show how these factors would most likely change if people began to use less energy."
         ],
         "AnswerChoices": {
-            "A": {
+            "A:increases": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -168,7 +185,15 @@
                     "Percent": 0
                 }
             },
-            "B": {
+            "B:decreases": {
+                "Choice": "1:Amount of Coal Burned",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "If people use less energy, the amount of coal burned to produce electricity would decrease",
+                    "Percent": 0
+                }
+            },
+            "C:increases": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -176,15 +201,23 @@
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "D:decreases": {
+                "Choice": "2:Amount of Mercury Released",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "If the amount of coal burned to produce electricity decreases, the result would be a decrease in the amount of mercury released",
                     "Percent": 0
                 }
             },
-            "D": {
+            "E:improves": {
+                "Choice": "3:Condition of the Lake",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Less mercury in the environment will improve the condition of the lake.",
+                    "Percent": 0
+                }
+            },
+            "F:declines": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -200,45 +233,47 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Recognize that producers use the energy from sunlight to make sugars from carbon dioxide and water through a process called photosynthesis. This food can be used immediately, stored for later use, or used by other organisms."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S5.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/5a.jpg",
-            ""
+            "What 2 substances do plants take in to make sugars during photosynthesis?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Soil and light",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "While plants use light energy, they do not use soil in the process of photosynthesis.",
+                    "Percent": 22
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Water and oxygen",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "While water is used during photosynthesis, plants produce oxygen, not use it to make sugars.",
+                    "Percent": 19
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Soil and carbon dioxide",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "While plants do take in carbon dioxide, they do not use soil in the process of photosynthesis.",
+                    "Percent": 6
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Water and carbon dioxide",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "Plants take in water and carbon dioxide to produce sugars during photosynthesis.",
+                    "Percent": 53
                 }
             }
         },
@@ -249,45 +284,47 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Determine and use appropriate safety procedures, tools, measurements, graphs and mathematical analyses to describe and investigate natural and designed systems in a life science context."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S6.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/6a.jpg",
-            ""
+            "Which graph best shows the information from the table?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "problems/MNG8S/media/6a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "The values on the circle graph do not match the data in the table.",
+                    "Percent": 5
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "problems/MNG8S/media/6b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Line graphs are used to track changes over a short or long period of time.",
+                    "Percent": 14
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "problems/MNG8S/media/6c.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "A circle graph can be used to convey proportional data.",
+                    "Percent": 76
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "problems/MNG8S/media/6d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Line graphs are used to track changes over a short or long period of time. The axis’s do not convey the appropriate information.",
+                    "Percent": 5
                 }
             }
         },
@@ -295,46 +332,62 @@
     },
     "7": {
         "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "C",
+        "NumChoices": 2,
         "Topics": [],
-        "SubTopics": [],
+        "SubTopics": [
+            "Recognize that variation exists in every population and describe how a variation can help or hinder an organism’s ability to survive."
+        ],
         "SuppContent": [],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/7a.jpg",
-            ""
+            "Reproduction is important for a species to survive. Select one factor that might affect a species. Then select the most likely outcome of that factor."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "A:large amount of genetic diversity": {
+                "Choice": "1:Factor",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "B:small number of organisms": {
+                "Choice": "1:Factor",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "C:negative change in environment": {
+                "Choice": "1:Factor",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "D:decreased chance of species survival": {
+                "Choice": "2:Outcome",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E:increased chance of species survival": {
+                "Choice": "2:Outcome",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "F:no chance of species survival": {
+                "Choice": "2:Outcome",
+                "Key": {
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -344,47 +397,50 @@
     },
     "8": {
         "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "C",
+        "NumChoices": 3,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Plan and conduct a controlled experiment to test a hypothesis about a relationship between two variables, ensuring that one variable is systematically manipulated, the other is measured and recorded, and any other variables are kept the same (controlled). For example: The effect of various factors on the production of carbon dioxide by plants."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S7.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/8a.jpg",
-            ""
+            "Several types of variables are found in this experiment. Identify each of the 4 variables shown as changed, measured, or kept the same.",
+            "problems/MNG8S/media/8a.jpg"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "A:Amount of water": {
+                "Choice": "1:Variable(s) Changed",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "In this controlled experiment, only the amount of water was changed.",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "B:Amount of light": {
+                "Choice": "3:Variable(s) Kept the Same",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "This variable was kept the same.",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "C:Height of plant": {
+                "Choice": "2:Variable(s) Measured",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "In this controlled experiment, only  the height of the plant was measured.",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "D:Size of container": {
+                "Choice": "3:Variable(s) Kept the Same",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "This variable was kept the same.",
                     "Percent": 0
                 }
             }
@@ -393,47 +449,65 @@
     },
     "9": {
         "Number": 9,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 6,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Describe how gravity and inertia keep most objects in the solar system in regular and predictable motion."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S8.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/9a.jpg",
-            ""
+            "Satellites move in regular, predictable patterns. Identify which 2 properties keep satellites moving in regular, predictable patterns."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Density",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While objects in orbit have a density, this property is not what keeps them in orbit.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Friction",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While objects in orbit experience some friction, this property is not what keeps them in orbit.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Gravity",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Gravity is one of the properties that keeps objects in orbit.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Inertia",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Inertia is one of the properties that keeps objects in orbit.",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "Magnetism",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This property is not what keeps objects in orbit.",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "Speed",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "While objects in orbit have speed, this property is not what keeps them in orbit.",
                     "Percent": 0
                 }
             }
@@ -442,19 +516,30 @@
     },
     "10": {
         "Number": 10,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "O",
+        "NumChoices": 3,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Trace the changes of energy forms, including thermal, electrical, chemical, mechanical or others as energy is used in devices. For example: A bicycle, lightbulb or automobile."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S9.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/10a.jpg",
-            ""
+            "Scientists use rockets to launch satellites from Earth. Identify which energy types are involved in launching a rocket.",
+            "problems/MNG8S/media/10a.jpg"
         ],
         "AnswerChoices": {
-            "A": {
+            "A:chemical": {
+                "Choice": "2:Energy stored in fuel cells",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "When a rocket is launched, chemical energy is stored in fuel cells.",
+                    "Percent": 0
+                }
+            },
+            "B:electrical": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -462,27 +547,19 @@
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "C:heat": {
+                "Choice": "3:Energy released into atmosphere",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "When a rocket is launched, heat is released into the atmosphere.",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "D:mechanical": {
+                "Choice": "1:Energy of moving rocket",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "When a rocket is launched, the energy of motion is a form of mechanical energy.",
                     "Percent": 0
                 }
             }
@@ -494,45 +571,47 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Use wave properties of light to explain reflection, refraction and the color spectrum."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S10.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/11a.jpg",
-            ""
+            "The glacier in the satellite image appears white and the land appears brown. Which statement explains why objects appear to be different colors?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Objects reflect all wavelengths of light.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "In a white object, all wavelengths of light are reflected into the eye, but what causes us to perceive objects as different colors is that only certain wavelengths are reflected from the object into our eyes.",
+                    "Percent": 11
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Objects refract all wavelengths of light.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Refraction does occur to some extent when the light hits an object, but it is the reflecting light that makes the objects appear different colors.",
+                    "Percent": 8
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Objects reflect some wavelengths of light and absorb others.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "People perceive color by wavelengths of light that are reflected off the object.",
+                    "Percent": 67
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Objects refract some wavelengths of light and absorb others.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Some wavelengths of light are refracted and some are absorbed, but it is the reflected light that makes an object appear a particular color.",
+                    "Percent": 14
                 }
             }
         },
@@ -540,46 +619,28 @@
     },
     "12": {
         "Number": 12,
-        "Type": "MC",
+        "Type": "BP",
         "NumChoices": 4,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Use maps, satellite images and other data sets to describe patterns and make predictions about local and global systems in Earth science contexts. For example:  Use data or satellite images to identify locations of earthquakes and volcanoes,ocean surface temperatures, or weather patterns."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S10.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
+            "As the glacier melts, the volume of water in the lake near the glacier increases. Every 3 square kilometers of ice that melts adds 1,000,000 liters of water to the lake.",
             "problems/MNG8S/media/12a.jpg",
-            ""
+            "Assume the glacier melts at the same rate through 2020. Graph the volume of water in the lake from 1980 to 2020.",
+            "You can use the calculator to help you answer this question.",
+            "problems/MNG8S/media/12b.jpg"
         ],
         "AnswerChoices": {
-            "A": {
+            "KEY1": {
                 "Choice": "",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -589,20 +650,23 @@
     },
     "13": {
         "Number": 13,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Identify a common engineered system and evaluate its impact on the daily life of humans. For example: Refrigeration, cell phone or automobile."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S11.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/13a.jpg",
-            ""
+            "Internet services use satellite signals. People can use the Internet in homes to replace some older technologies. Identify which items people can replace by using the Internet.",
+            "problems/MNG8S/media/13a.jpg"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Refrigerator",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -610,7 +674,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Stove",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -618,17 +682,25 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Books",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Lamp",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "E": {
+                "Choice": "Newspapers",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -641,45 +713,47 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Explain how the vibration of particles in air and other materials results in the transfer of energy through sound waves."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S11.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/14a.jpg",
-            ""
+            "Which statement describes why sound waves cannot travel beyond Earth’s atmosphere to the satellites?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Sound waves need light to move.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Light is also a wave and can move through outer space, but sound does not rely on light.",
+                    "Percent": 7
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Sound waves cannot travel in air.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Sound waves can travel in the air, but there is no air outside of the atmosphere.",
+                    "Percent": 5
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Sound waves need particles to move.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "The vibration of particles is what results in the transfer of energy through sound waves.",
+                    "Percent": 60
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Sound waves cannot travel fast enough.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Sound waves are slower than some other types of waves, but sound does not travel at all in outer space.",
+                    "Percent": 28
                 }
             }
         },
@@ -687,46 +761,49 @@
     },
     "15": {
         "Number": 15,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "C",
+        "NumChoices": 2,
         "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
+        "SubTopics": [
+            "Describe the trade-offs in using manufactured products in terms of features, performance, durability and cost."
+        ],
+        "SuppContent": [
+            "problems/MNG8S/supps/MNG8S-S12.json"
+        ],
         "Explain": false,
         "Content": [
-            "",
-            "problems/MNG8S/media/15a.jpg",
-            ""
+            "A compass and a GPS device have similar features and different features. Identify which features are similar and which are different.",
+            "problems/MNG8S/media/15a.jpg"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "A:Shows which direction is north": {
+                "Choice": "1:Similar",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "B:Cost": {
+                "Choice": "2:Different",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "C:Number of functions": {
+                "Choice": "2:Different",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "D:Includes a map": {
+                "Choice": "2:Different",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }

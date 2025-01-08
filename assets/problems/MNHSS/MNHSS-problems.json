@@ -1,0 +1,598 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "G",
+        "NumChoices": 3,
+        "Topics": [],
+        "SubTopics": [
+            "Describe how viruses, prokaryotic cells and eukaryotic cells differ in relative size, complexity and general structure."
+        ],
+        "SuppContent": [
+            "problems/MNHSS/supps/MNHSS-S1.json"
+        ],
+        "Explain": false,
+        "Content": [
+            "Genetic material in bacteria is organized differently than genetic material in plant and animal cells. Identify the correct genetic material for each cell."
+        ],
+        "AnswerChoices": {
+            "A:problems/MNHSS/media/1d.jpg:1": {
+                "Choice": "1:problems/MNHSS/media/1a.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Bacterial cells have a circular chromosome.",
+                    "Percent": 0
+                }
+            },
+            "B:problems/MNHSS/media/1e.jpg:2": {
+                "Choice": "2:problems/MNHSS/media/1b.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Plant cells have a chromosome inside a nucleus.",
+                    "Percent": 0
+                }
+            },
+            "B:problems/MNHSS/media/1e.jpg:3": {
+                "Choice": "3:problems/MNHSS/media/1c.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Animal cells have a chromosome inside a nucleus.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "O",
+        "NumChoices": 2,
+        "Topics": [],
+        "SubTopics": [
+            "Compare and contrast passive transport (including osmosis and facilitated transport) with active transport, such as endocytosis and exocytosis."
+        ],
+        "SuppContent": [
+            "problems/MNHSS/supps/MNHSS-S1.json"
+        ],
+        "Explain": false,
+        "Content": [
+            "Cyanobacteria cell membranes are selectively permeable. Cells use many methods of transport to move materials into and out of the cells. Label each method of material transport in the diagram.",
+            "problems/MNHSS/media/2a.jpg",
+            "problems/MNHSS/media/2b.jpg"
+        ],
+        "AnswerChoices": {
+            "A:osmosis": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B:facilitated transport": {
+                "Choice": "2:Box 2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C:active transport": {
+                "Choice": "1:Box 1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "O",
+        "NumChoices": 3,
+        "Topics": [],
+        "SubTopics": [
+            "Explain how matter and energy is transformed and transferred among organisms in an ecosystem, and how energy is dissipated as heat into the environment."
+        ],
+        "SuppContent": [
+            "problems/MNHSS/supps/MNHSS-S2.json"
+        ],
+        "Explain": false,
+        "Content": [
+            "Identify 3 objects involved in photosynthesis.",
+            "problems/MNHSS/media/3a.jpg"
+        ],
+        "AnswerChoices": {
+            "A:problems/MNHSS/media/3b.jpg": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B:problems/MNHSS/media/3c.jpg": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C:problems/MNHSS/media/3d.jpg": {
+                "Choice": "3:Waste Product",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D:problems/MNHSS/media/3e.jpg": {
+                "Choice": "2:Stored Energy",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E:problems/MNHSS/media/3f.jpg": {
+                "Choice": "1:Energy Source",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "F:problems/MNHSS/media/3g.jpg": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [
+            "Explain how matter and energy is transformed and transferred among organisms in an ecosystem, and how energy is dissipated as heat into the environment."
+        ],
+        "SuppContent": [
+            "problems/MNHSS/supps/MNHSS-S3.json"
+        ],
+        "Explain": false,
+        "Content": [
+            "How are cyanobacteria important to aquatic plants in the nitrogen cycle?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Aquatic plants use cyanobacteria for food.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Aquatic plants make their own food.",
+                    "Percent": 10
+                }
+            },
+            "B": {
+                "Choice": "Aquatic plants absorb cyanobacteria for nitrogen.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Aquatic plants do not absorb cyanobacteria. The nitrogen is converted into usable forms for plants.",
+                    "Percent": 14
+                }
+            },
+            "C": {
+                "Choice": "Aquatic plants depend on cyanobacteria to fix nitrogen gas.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Without atmospheric nitrogen fixation, no nitrogen would be available to plants.",
+                    "Percent": 52
+                }
+            },
+            "D": {
+                "Choice": "Aquatic plants use the form of nitrogen made by cyanobacteria.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Aquatic plants need a form of nitrogen produced by other intermediates.",
+                    "Percent": 24
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [
+            "Recognize that cells are composed primarily of a few elements (carbon, hydrogen, oxygen, nitrogen, phosphorus, and sulfur), and describe the basic molecular structures and the primary functions of carbohydrates, lipids, proteins and nucleic acids."
+        ],
+        "SuppContent": [
+            "problems/MNHSS/supps/MNHSS-S4.json"
+        ],
+        "Explain": false,
+        "Content": [
+            "Students observe fruit flies with different eye colors and wing lengths. Which type of molecule carries the instructions for characteristics in fruit flies?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "ATP",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "ATP is an energy source for cellular processes, but it does not determine genetic differences.",
+                    "Percent": 30
+                }
+            },
+            "B": {
+                "Choice": "Glucose",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Glucose is a form of stored energy for the cell, but it does not determine genetic differences.",
+                    "Percent": 8
+                }
+            },
+            "C": {
+                "Choice": "Fatty acids",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Fatty acids are structures that make up different types of cells, but they do not determine genetic differences.",
+                    "Percent": 4
+                }
+            },
+            "D": {
+                "Choice": "Nucleic acids",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Nucleic acids determine genetic differences in organisms.",
+                    "Percent": 58
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [
+            "Explain the relationships among DNA, genes and chromosomes."
+        ],
+        "SuppContent": [
+            "problems/MNHSS/supps/MNHSS-S5.json"
+        ],
+        "Explain": false,
+        "Content": [
+            "Which statement best describes the composition of genetic material in fruit flies and other animals?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Genes and chromosomes are composed of DNA.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Both genes and chromosomes are composed of DNA.",
+                    "Percent": 55
+                }
+            },
+            "B": {
+                "Choice": "Genes and chromosomes are composed of RNA.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student thinks that genes and chromosomes are composed of RNA instead of DNA.",
+                    "Percent": 4
+                }
+            },
+            "C": {
+                "Choice": "Genes are composed of DNA; chromosomes are composed of RNA.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student thinks there is a difference in the composition of genes and chromosomes.",
+                    "Percent": 33
+                }
+            },
+            "D": {
+                "Choice": "Genes are composed of RNA; chromosomes are composed of DNA.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The student thinks there is a difference in the composition of genes and chromosomes.",
+                    "Percent": 8
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [
+            "Communicate, justify, and defend the procedures and results of a scientific inquiry or engineering design project using verbal, graphic, quantitative, virtual or written means."
+        ],
+        "SuppContent": [
+            "problems/MNHSS/supps/MNHSS-S6.json"
+        ],
+        "Explain": false,
+        "Content": [
+            "The students count the offspring from the cross and show the results in a circle graph. Which graph best represents the results of the cross?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/MNHSS/media/7a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This circle graph represents more long wings and fewer short wings than shown in the data table.",
+                    "Percent": 6
+                }
+            },
+            "B": {
+                "Choice": "problems/MNHSS/media/7b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This circle graph represents fewer long wings and more short wings than shown in the data table.",
+                    "Percent": 3
+                }
+            },
+            "C": {
+                "Choice": "problems/MNHSS/media/7c.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This circle graph shows the correct percentage of long and short wings shown in the data table.",
+                    "Percent": 89
+                }
+            },
+            "D": {
+                "Choice": "problems/MNHSS/media/7d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The number of long and short wings are not equal in the data table.",
+                    "Percent": 2
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "BP",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [
+            "Select and use appropriate numeric, symbolic, pictorial, or graphical representation to communicate scientific ideas, procedures and experimental results."
+        ],
+        "SuppContent": [
+            "problems/MNHSS/supps/MNHSS-S6.json"
+        ],
+        "Explain": false,
+        "Content": [
+            "The students perform 3 trials of the cross. In the first trial, the students count 8 offspring. In the second trial, the students count 16 offspring. In the third trial, the students count 24 offspring.",
+            "Calculate the number of long-winged fruit flies counted in each of the 3 trials. Make a graph of this data.",
+            "You can use the calculator to help you answer this question.",
+            "problems/MNHSS/media/8a.jpg"
+        ],
+        "AnswerChoices": {
+            "KEY1": {
+                "Choice": "",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "O",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [
+            "Describe how the functions of individual organ systems are integrated to maintain homeostasis in an organism."
+        ],
+        "SuppContent": [
+            "problems/MNHSS/supps/MNHSS-S7.json"
+        ],
+        "Explain": false,
+        "Content": [
+            "Match each activity with its place in the diagram to show how organ systems work together to help the cells transform energy.",
+            "problems/MNHSS/media/9a.jpg"
+        ],
+        "AnswerChoices": {
+            "A:Cells get raw materials": {
+                "Choice": "4:Box 4",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B:Circulatory system transports": {
+                "Choice": "3:Box 3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C:Digestive system breaks down food": {
+                "Choice": "1:Box 1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D:Respiratory system gets oxygen": {
+                "Choice": "2:Box 2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [
+            "Use words and equations to differentiate between the processes of photosynthesis and respiration in terms of energy flow, beginning reactants and end products."
+        ],
+        "SuppContent": [
+            "problems/MNHSS/supps/MNHSS-S8.json"
+        ],
+        "Explain": false,
+        "Content": [
+            "What is 1 way more oxygen helps athletes’ muscle cells when they exercise? Athletes’ muscle cells"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "require less food.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Athletes’ muscle cells will require more food as cellular respiration increases.",
+                    "Percent": 4
+                }
+            },
+            "B": {
+                "Choice": "produce less waste.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Athletes’ muscle cells will produce more waste as cellular respiration increases.",
+                    "Percent": 6
+                }
+            },
+            "C": {
+                "Choice": "use more carbon dioxide.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Athletes’ muscle cells do not use carbon dioxide, they produce it as waste.",
+                    "Percent": 13
+                }
+            },
+            "D": {
+                "Choice": "convert more glucose to energy.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Athletes’ muscle cells will be able to convert more glucose to energy due to increased oxygen.",
+                    "Percent": 77
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "G",
+        "NumChoices": 3,
+        "Topics": [],
+        "SubTopics": [
+            "Formulate a testable hypothesis, design and conduct an experiment to test the hypothesis, analyze the data, consider alternative explanations and draw conclusions supported by evidence from the investigation."
+        ],
+        "SuppContent": [
+            "problems/MNHSS/supps/MNHSS-S9.json"
+        ],
+        "Explain": false,
+        "Content": [
+            "Identify the time period during which each athlete showed the greatest increase in VO₂ measurements."
+        ],
+        "AnswerChoices": {
+            "A:Week 0 - 1:": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B:Week 1 - 2:2": {
+                "Choice": "2:Athlete 2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C:Week 2 - 3::": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D:Week 3 - 4:1": {
+                "Choice": "1:Athlete 1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D:Week 3 - 4:3": {
+                "Choice": "3:Athlete 3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "O",
+        "NumChoices": 3,
+        "Topics": [],
+        "SubTopics": [
+            "Select and use appropriate numeric, symbolic, pictorial, or graphical representation to communicate scientific ideas, procedures and experimental results."
+        ],
+        "SuppContent": [
+            "problems/MNHSS/supps/MNHSS-S10.json"
+        ],
+        "Explain": false,
+        "Content": [
+            "The graph shows the improvement in race times (min.:sec.) for each of the 3 athletes. Complete the graph by putting labels on the x-axis.",
+            "problems/MNHSS/media/12a.jpg"
+        ],
+        "AnswerChoices": {
+            "A:Athlete 1": {
+                "Choice": "2:Box 2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B:Athlete 2": {
+                "Choice": "3:Box 3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C:Athlete 3": {
+                "Choice": "1:Box 1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    }
+}

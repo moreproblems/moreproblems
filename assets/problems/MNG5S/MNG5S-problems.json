@@ -3,8 +3,12 @@
         "Number": 1,
         "Type": "MS",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Life Science"
+        ],
+        "SubTopics": [
+            "Compare how the different structures of plants and animals serve various functions of growth, survival and reproduction. For example: Skeletons in animals and stems in plants provide strength and stability."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S1.json"
         ],
@@ -17,23 +21,23 @@
                 "Choice": "problems/MNG5S/media/1a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Cattails do not have protective coverings.",
                     "Percent": 0
                 }
             },
             "B": {
                 "Choice": "problems/MNG5S/media/1b.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Mussels have hard outer coverings that protect them from predators.",
                     "Percent": 0
                 }
             },
             "C": {
                 "Choice": "problems/MNG5S/media/1c.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Snails have hard outer coverings that protect them from predators.",
                     "Percent": 0
                 }
             },
@@ -41,7 +45,7 @@
                 "Choice": "problems/MNG5S/media/1d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Leeches do not have protective coverings.",
                     "Percent": 0
                 }
             }
@@ -52,8 +56,12 @@
         "Number": 2,
         "Type": "MC",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Life Science"
+        ],
+        "SubTopics": [
+            "Explain what would happen to a system such as a wetland, prairie or garden if one of its parts were changed. For example: Investigate how road salt runoff affects plants, insects and other parts of an ecosystem. Another example: Investigate how an invasive species changes an ecosystem."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S2.json"
         ],
@@ -67,32 +75,32 @@
                 "Choice": "It reproduced too rapidly.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "The loss of habitat caused by a decrease in rainfall, not a rapid increase in population, causes a local extinction.",
+                    "Percent": 8
                 }
             },
             "B": {
                 "Choice": "It could not live near plants.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "The loss of habitat caused by a decrease in rainfall is the issue, not increased competition by living near plants.",
+                    "Percent": 4
                 }
             },
             "C": {
                 "Choice": "It could not adapt to new conditions.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "Inability to adapt to new conditions leads to extinction.",
+                    "Percent": 73
                 }
             },
             "D": {
                 "Choice": "It was eaten by too many consumers.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Student may think that predation (rather than ability to adapt) caused the snails to die out.",
+                    "Percent": 15
                 }
             }
         },
@@ -102,8 +110,12 @@
         "Number": 3,
         "Type": "C",
         "NumChoices": 2,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Life Science"
+        ],
+        "SubTopics": [
+            "Identify common groups of plants and animals using observable physical characteristics, structures and behaviors. For example: Sort animals into groups such as mammals and amphibians based on physical characteristics. Another example: Sort and identify common Minnesota trees based on leaf/needle characteristics."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S3.json"
         ],
@@ -113,30 +125,6 @@
         ],
         "AnswerChoices": {
             "A:problems/MNG5S/media/3a.jpg": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B:problems/MNG5S/media/3b.jpg": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C:problems/MNG5S/media/3c.jpg": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            ":problems/MNG5S/media/3d.jpg": {
                 "Choice": "1:Group 1",
                 "Key": {
                     "Correct": true,
@@ -144,7 +132,7 @@
                     "Percent": 0
                 }
             },
-            ":problems/MNG5S/media/3e.jpg": {
+            "B:problems/MNG5S/media/3b.jpg": {
                 "Choice": "2:Group 2",
                 "Key": {
                     "Correct": true,
@@ -152,7 +140,31 @@
                     "Percent": 0
                 }
             },
-            ":problems/MNG5S/media/3f.jpg": {
+            "C:problems/MNG5S/media/3c.jpg": {
+                "Choice": "2:Group 2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            " :problems/MNG5S/media/3d.jpg": {
+                "Choice": "1:Group 1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            " :problems/MNG5S/media/3e.jpg": {
+                "Choice": "2:Group 2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            " :problems/MNG5S/media/3f.jpg": {
                 "Choice": "2:Group 2",
                 "Key": {
                     "Correct": true,
@@ -167,8 +179,12 @@
         "Number": 4,
         "Type": "MC",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Earth & Space Science"
+        ],
+        "SubTopics": [
+            "Describe how the states of matter change as a result of heating and cooling."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S4.json"
         ],
@@ -181,32 +197,32 @@
                 "Choice": "Snow starts to melt.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Melting will not occur at this cold temperature.",
+                    "Percent": 15
                 }
             },
             "B": {
                 "Choice": "Snow remains frozen.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "Snow remains frozen at this cold temperature.",
+                    "Percent": 68
                 }
             },
             "C": {
                 "Choice": "Snow changes to steam.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Steam will not be produced at this temperature.",
+                    "Percent": 3
                 }
             },
             "D": {
                 "Choice": "Snow melts and then freezes again.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Snow is already frozen and will not melt at this temperature.",
+                    "Percent": 14
                 }
             }
         },
@@ -216,8 +232,12 @@
         "Number": 5,
         "Type": "BP",
         "NumChoices": 0,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Earth & Space Science"
+        ],
+        "SubTopics": [
+            "Use appropriate tools and techniques in gathering, analyzing and interpreting data. For example: Spring scale, metric measurements, tables, mean/median/range, spreadsheets, and appropriate graphs"
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S5.json"
         ],
@@ -233,8 +253,12 @@
         "Number": 6,
         "Type": "MC",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Earth & Space Science"
+        ],
+        "SubTopics": [
+            "Describe how the states of matter change as a result of heating and cooling."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S6.json"
         ],
@@ -247,32 +271,32 @@
                 "Choice": "It will lose mass.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Student thinks that a change in phase from solid to liquid will decrease the water’s mass.",
+                    "Percent": 9
                 }
             },
             "B": {
                 "Choice": "It will get heavier.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Student thinks that a change in phase from solid to liquid will increase the water’s weight.",
+                    "Percent": 7
                 }
             },
             "C": {
                 "Choice": "It will start to boil.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Student thinks the temperature is high enough to cause boiling.",
+                    "Percent": 3
                 }
             },
             "D": {
                 "Choice": "It will change into a liquid.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "The solid water will melt and become a liquid at this temperature. This temperature will facilitate a complete change from a solid to liquid but not a gas.",
+                    "Percent": 81
                 }
             }
         },
@@ -282,8 +306,12 @@
         "Number": 7,
         "Type": "MC",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Physical Science"
+        ],
+        "SubTopics": [
+            "Give examples of how mineral and energy resources are obtained and processed and how that processing modifies their properties to make them more useful. For example: Iron ore, biofuels, or coal."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S7.json"
         ],
@@ -295,33 +323,33 @@
             "A": {
                 "Choice": "Hematite is processed.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "Minerals must be processed to become useful resources.",
+                    "Percent": 66
                 }
             },
             "B": {
                 "Choice": "Hematite is kept in one piece.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "To remove the iron from hematite, the hematite cannot be kept in one piece.",
+                    "Percent": 11
                 }
             },
             "C": {
                 "Choice": "Hematite is found in more than one mine.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "A single mine can support hematite processing for iron so more than one mine is not necessary.",
+                    "Percent": 16
                 }
             },
             "D": {
                 "Choice": "Hematite is sold for a large amount of money.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Hematite need not be sold before it is processed.",
+                    "Percent": 7
                 }
             }
         },
@@ -331,8 +359,12 @@
         "Number": 8,
         "Type": "MC",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Physical Science"
+        ],
+        "SubTopics": [
+            "Identify renewable and non-renewable energy and material resources that are found in Minnesota and describe how they are used. For example: Water, iron ore, granite, sand and gravel, wind and forests."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S7.json"
         ],
@@ -344,33 +376,33 @@
             "A": {
                 "Choice": "Coal",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "Coal is a non-renewable resource.",
+                    "Percent": 71
                 }
             },
             "B": {
                 "Choice": "Solar",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Solar energy is a renewable resource.",
+                    "Percent": 12
                 }
             },
             "C": {
                 "Choice": "Water",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Water is a renewable resource.",
+                    "Percent": 8
                 }
             },
             "D": {
                 "Choice": "Wind",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Wind is a renewable resource.",
+                    "Percent": 9
                 }
             }
         },
@@ -380,8 +412,12 @@
         "Number": 9,
         "Type": "MC",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Physical Science"
+        ],
+        "SubTopics": [
+            "Describe and classify minerals based on their physical properties. For example: Streak, luster, hardness, reaction to vinegar."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S8.json"
         ],
@@ -394,32 +430,32 @@
                 "Choice": "The mineral is bauxite.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "While the mineral can be bauxite, there is not enough evidence to prove that it isn’t gypsum.",
+                    "Percent": 6
                 }
             },
             "B": {
                 "Choice": "The mineral is gypsum.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "While the mineral can be gypsum, there is not enough evidence to prove that it isn’t bauxite.",
+                    "Percent": 11
                 }
             },
             "C": {
                 "Choice": "The mineral is softer than hematite.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "Because the mineral could be scratched by hematite, the only claim that can be made is that the mineral is softer than hematite.",
+                    "Percent": 69
                 }
             },
             "D": {
                 "Choice": "The mineral is harder than hematite.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "If the mineral is scratched by another mineral with a known hardness of 6, then this unknown mineral’s hardness cannot be greater than 6.",
+                    "Percent": 15
                 }
             }
         },
@@ -429,8 +465,12 @@
         "Number": 10,
         "Type": "MS",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Physical Science"
+        ],
+        "SubTopics": [
+            "Give examples of beneficial and harmful human interaction with natural systems. For example: Recreation, pollution, or wildlife management."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S9.json"
         ],
@@ -442,8 +482,8 @@
             "A": {
                 "Choice": "Decreases natural habitat",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The destruction of wildlife’s natural habitat is a negative effect of mining.",
                     "Percent": 0
                 }
             },
@@ -451,15 +491,15 @@
                 "Choice": "Discover source of groundwater",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is not a negative effect of mining.",
                     "Percent": 0
                 }
             },
             "C": {
                 "Choice": "Pollution produced by machines",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Pollution from machines is a negative effect of mining.",
                     "Percent": 0
                 }
             },
@@ -467,7 +507,7 @@
                 "Choice": "Find needed resources",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is not a negative effect of mining.",
                     "Percent": 0
                 }
             }
@@ -478,8 +518,12 @@
         "Number": 11,
         "Type": "MS",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Physical Science"
+        ],
+        "SubTopics": [
+            "Identify the force that starts something moving or changes its speed or direction of motion. For example: Friction slows down a moving skateboard."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S10.json"
         ],
@@ -492,23 +536,23 @@
                 "Choice": "Electricity",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Electricity is not a force that would affect a child’s motion on a slide.",
                     "Percent": 0
                 }
             },
             "B": {
                 "Choice": "Friction",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Friction is a force that affects the speed and direction of motion when a child is on a slide.",
                     "Percent": 0
                 }
             },
             "C": {
                 "Choice": "Gravity",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Gravity is a force that affects the speed and direction of motion when a child is on a slide.",
                     "Percent": 0
                 }
             },
@@ -516,7 +560,7 @@
                 "Choice": "Magnetism",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Magnetism is not a force that would affect a child’s motion on a slide.",
                     "Percent": 0
                 }
             }
@@ -527,8 +571,12 @@
         "Number": 12,
         "Type": "MS",
         "NumChoices": 5,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Physical Science"
+        ],
+        "SubTopics": [
+            "Construct a simple electrical circuit using wires, batteries, and lightbulbs."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S11.json"
         ],
@@ -541,31 +589,31 @@
                 "Choice": "problems/MNG5S/media/12a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While a light socket can be part of a circuit, it will not form a completed circuit.",
                     "Percent": 0
                 }
             },
             "B": {
                 "Choice": "problems/MNG5S/media/12b.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "To have a compete circuit you need an energy source.",
                     "Percent": 0
                 }
             },
             "C": {
                 "Choice": "problems/MNG5S/media/12c.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "To have a compete circuit you need wires.",
                     "Percent": 0
                 }
             },
             "D": {
                 "Choice": "problems/MNG5S/media/12d.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "To have a compete circuit you need a socket with a lightbulb.",
                     "Percent": 0
                 }
             },
@@ -573,7 +621,7 @@
                 "Choice": "problems/MNG5S/media/12e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While an open switch can be part of a circuit, it will not form a completed circuit.",
                     "Percent": 0
                 }
             }
@@ -584,8 +632,12 @@
         "Number": 13,
         "Type": "MGP",
         "NumChoices": 0,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Physical Science"
+        ],
+        "SubTopics": [
+            "Use appropriate tools and techniques in gathering, analyzing and interpreting data. For example: Spring scale, metric measurements, tables, mean/median/range, spreadsheets, and appropriate graphs."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S12.json"
         ],
@@ -597,7 +649,7 @@
         ],
         "AnswerChoices": {
             "KEY1": {
-                "Choice": "",
+                "Choice": "(0,25)",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -605,7 +657,7 @@
                 }
             },
             "KEY2": {
-                "Choice": "",
+                "Choice": "(2,25)",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -613,7 +665,7 @@
                 }
             },
             "KEY3": {
-                "Choice": "",
+                "Choice": "(4,25)",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -627,8 +679,12 @@
         "Number": 14,
         "Type": "C",
         "NumChoices": 2,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Physical Science"
+        ],
+        "SubTopics": [
+            "Describe how the states of matter change as a result of heating and cooling."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S13.json"
         ],
@@ -638,26 +694,26 @@
         ],
         "AnswerChoices": {
             "A:problems/MNG5S/media/14a.jpg": {
-                "Choice": "1:Cooling",
+                "Choice": "2:Heating",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Heating is needed to change water from a solid to a gas.",
                     "Percent": 0
                 }
             },
             "B:problems/MNG5S/media/14b.jpg": {
-                "Choice": "2:Heating",
+                "Choice": "1:Cooling",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Cooling is needed to change water from a liquid to a solid.",
                     "Percent": 0
                 }
             },
             "C:problems/MNG5S/media/14c.jpg": {
-                "Choice": "",
+                "Choice": "1:Cooling",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The student does not understand how heating and cooling affect phase changes.",
                     "Percent": 0
                 }
             }
@@ -668,8 +724,12 @@
         "Number": 15,
         "Type": "MC",
         "NumChoices": 4,
-        "Topics": [],
-        "SubTopics": [],
+        "Topics": [
+            "Physical Science"
+        ],
+        "SubTopics": [
+            "Describe how the states of matter change as a result of heating and cooling."
+        ],
         "SuppContent": [
             "problems/MNG5S/supps/MNG5S-S14.json"
         ],
@@ -682,32 +742,32 @@
                 "Choice": "The water gets hotter.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "The temperature of the water does not change during evaporation.",
+                    "Percent": 8
                 }
             },
             "B": {
                 "Choice": "The water changes color.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "The color of water does not change during a change of state.",
+                    "Percent": 2
                 }
             },
             "C": {
                 "Choice": "The water changes into a gas.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Correct": true,
+                    "Rationale": "Evaporation is a change of state from a liquid to a gas.",
+                    "Percent": 86
                 }
             },
             "D": {
                 "Choice": "The water changes into a solid.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                    "Rationale": "Freezing is a change of state from a liquid to a solid.",
+                    "Percent": 4
                 }
             }
         },
