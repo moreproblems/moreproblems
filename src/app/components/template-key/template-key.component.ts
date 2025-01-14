@@ -721,7 +721,7 @@ import * as WIG10SSProblems from "src/assets/problems/WIG10SS/WIG10SS-problems.j
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 // const MathJax = require('mathjax');
-const confetti = require('canvas-confetti');
+const confetti = require('canvas-confetti').default;
 
 const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {

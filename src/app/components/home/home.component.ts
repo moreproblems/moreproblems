@@ -722,7 +722,7 @@ import * as WIG4SSProblems from "src/assets/problems/WIG4SS/WIG4SS-problems.json
 import * as WIG8SSProblems from "src/assets/problems/WIG8SS/WIG8SS-problems.json";
 import * as WIG10SSProblems from "src/assets/problems/WIG10SS/WIG10SS-problems.json";
 
-const confetti = require('canvas-confetti');
+const confetti = require('canvas-confetti').default;
 
 const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {

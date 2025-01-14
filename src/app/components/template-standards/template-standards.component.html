@@ -1397,7 +1397,7 @@ button.grade-button-l:hover {
               </button>
             </div> -->
             <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
-              <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{(subtopic_new_problem_count != subtopic_problem_count) ? ''+subtopic_correct_percent() + '% so far' : ''}} {{(subtopic_streak_count > 1) ? '(🔥 x' + ''+subtopic_streak_count + ')' : ''}}</b> </h3>
+              <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{(subtopic_new_problem_count != subtopic_problem_count) ? ''+subtopic_correct_percent() + '% so far' : ''}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}}</b> </h3>
             <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 5px; color: darkslategrey; font-size: 20px">
               <b *ngIf="!authService.userData || (authService.userData.role != 'Student' && selected_student_st == '')">{{subtopic_problem_count}} Total Problems</b> <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{subtopic_new_problem_count}} More Problems</b> </h3>
             <div *ngIf="authService.userData && selected_student_st != '' && subtopic_new_problem_count != subtopic_problem_count" class="card-container"

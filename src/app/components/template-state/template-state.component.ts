@@ -1162,7 +1162,7 @@ import * as WIHSSSStandards from "src/assets/standards/WI/HS-SS.json";
 import * as SATMStandards from "src/assets/standards/SAT/SAT-M.json";
 import * as SATRWStandards from "src/assets/standards/SAT/SAT-RW.json";
 
-const confetti = require('canvas-confetti');
+const confetti = require('canvas-confetti').default;
 
 const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {

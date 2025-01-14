@@ -721,7 +721,7 @@ import * as WIG8SSProblems from "src/assets/problems/WIG8SS/WIG8SS-problems.json
 import * as WIG10SSProblems from "src/assets/problems/WIG10SS/WIG10SS-problems.json";
 import { partition } from 'rxjs/operators';
 
-const confetti = require('canvas-confetti');
+const confetti = require('canvas-confetti').default;
 
 const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {
@@ -6587,7 +6587,7 @@ export class ProblemsComponent implements OnInit {
     console.log(this.exam_submission);
     this.toggleExamTimer();
     this.toggleProblemTimer();
-    this.confetti_pop();
+    this.confetti_fireworks();
     if (this.mode == 'explain') {
       this.resetExam();
     }
@@ -6778,6 +6778,53 @@ export class ProblemsComponent implements OnInit {
         origin: { x: 0.5, y: 0 }
       });
     }
+  }
+  
+  confetti_fireworks() {
+    const duration = 5 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0, scalar: 1.15 };
+ 
+    const randomInRange = (min: number, max: number) =>
+      Math.random() * (max - min) + min;
+ 
+    const interval = window.setInterval(() => {
+      const timeLeft = animationEnd - Date.now();
+ 
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+ 
+      const particleCount = 100 * (timeLeft / duration);
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      });
+      // if (this.screenWidth > this.mobileWidth) {
+      confetti({
+        ...defaults,
+        particleCount: particleCount/5,
+        scalar: 1.5,
+        shapes: ['star'],
+        colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount: particleCount/5,
+        scalar: 1.5,
+        shapes: ['star'],
+        colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      });
+      // }
+    }, 250);
   }
 
   confetti_light(attempts: number) {

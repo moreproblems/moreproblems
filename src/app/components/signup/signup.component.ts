@@ -10,7 +10,7 @@ import intlTelInput from 'intl-tel-input';
 
 import 'node_modules/intl-tel-input/build/css/intlTelInput.css';
 
-const confetti = require('canvas-confetti');
+const confetti = require('canvas-confetti').default;
 
 const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {

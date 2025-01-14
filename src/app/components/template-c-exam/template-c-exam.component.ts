@@ -721,7 +721,7 @@ import * as WIG4SSProblems from "src/assets/problems/WIG4SS/WIG4SS-problems.json
 import * as WIG8SSProblems from "src/assets/problems/WIG8SS/WIG8SS-problems.json";
 import * as WIG10SSProblems from "src/assets/problems/WIG10SS/WIG10SS-problems.json";
 
-const confetti = require('canvas-confetti');
+const confetti = require('canvas-confetti').default;
 
 const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {
@@ -6959,7 +6959,7 @@ export class TemplateCExamComponent implements OnInit {
         // this.et_counter = this.total_seconds;
         this.et_minutes = Math.floor(this.total_seconds / 60);
         this.correct_percent = Math.round(this.number_correct / (this.exam_length) * 100);
-        this.confetti_pop();
+        this.confetti_fireworks();
         for (let i: number = 0; i < this.exam_length; i++) {
             if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Attempts[0] > 0) {
                 if (this.exam_submission[+Object.keys(this.ordered_dump)[i]].Topics != undefined) {
@@ -7153,6 +7153,53 @@ export class TemplateCExamComponent implements OnInit {
         }
     }
 
+    confetti_fireworks() {
+        const duration = 5 * 1000;
+        const animationEnd = Date.now() + duration;
+        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0, scalar: 1.15 };
+
+        const randomInRange = (min: number, max: number) =>
+            Math.random() * (max - min) + min;
+
+        const interval = window.setInterval(() => {
+            const timeLeft = animationEnd - Date.now();
+
+            if (timeLeft <= 0) {
+                return clearInterval(interval);
+            }
+
+            const particleCount = 100 * (timeLeft / duration);
+            confetti({
+                ...defaults,
+                particleCount,
+                origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+            });
+            confetti({
+                ...defaults,
+                particleCount,
+                origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+            });
+            // if (this.screenWidth > this.mobileWidth) {
+            confetti({
+                ...defaults,
+                particleCount: particleCount / 5,
+                scalar: 1.5,
+                shapes: ['star'],
+                colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+                origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+            });
+            confetti({
+                ...defaults,
+                particleCount: particleCount / 5,
+                scalar: 1.5,
+                shapes: ['star'],
+                colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+                origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+            });
+            // }
+        }, 250);
+    }
+
     confetti_light(attempts: number) {
         confettiHandler({
             particleCount: Math.round(250 / attempts),
@@ -7166,139 +7213,139 @@ export class TemplateCExamComponent implements OnInit {
         });
     }
 
-  search_subtopic(topic: string, subtopic: string) {
-    this.selected_student_st = '';
-    this.subtopic_problem_count = 0;
-    this.subtopic_new_problem_count = 0;
-    this.subtopic_correct_problem_count = 0;
-    this.subtopic_search_dump = {};
-    if (this.authService.userData && this.authService.userData.role == 'Student') {
-      const exam_history = this.authService.userData.exams.history;
-      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-        if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
-          for (const [num, prob] of Object.entries(dump)) {
-            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-              if (prob.SubTopics.includes(subtopic)) {
-                if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
-                  this.subtopic_new_problem_count += 1;
-                }
-              }
-            }
-          }
-        }
-        if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
-          const exam_sub = this.authService.getExamSubmission2(ex);
-          setTimeout(() => {
-            for (const [num, prob] of Object.entries(dump)) {
-              if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-                if (prob.SubTopics.includes(subtopic)) {
-                  if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
-                    if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
-                      this.subtopic_correct_problem_count += 1;
+    search_subtopic(topic: string, subtopic: string) {
+        this.selected_student_st = '';
+        this.subtopic_problem_count = 0;
+        this.subtopic_new_problem_count = 0;
+        this.subtopic_correct_problem_count = 0;
+        this.subtopic_search_dump = {};
+        if (this.authService.userData && this.authService.userData.role == 'Student') {
+            const exam_history = this.authService.userData.exams.history;
+            for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+                if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+                    for (const [num, prob] of Object.entries(dump)) {
+                        if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                            if (prob.SubTopics.includes(subtopic)) {
+                                if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                                    this.subtopic_new_problem_count += 1;
+                                }
+                            }
+                        }
                     }
-                  }
                 }
-              }
-            }
-          }, 50);
-        }
-      }
-    }
-    for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-      for (const [num, prob] of Object.entries(dump)) {
-        if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-          if (prob.SubTopics.includes(subtopic)) {
-            if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
-              this.selected_topic = topic;
-              // this.standard_id = standardID;
-              this.subtopic_problem_count += 1;
-              this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-              if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
-                this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
-              }
-            }
-          }
-        }
-      }
-    }
-    if (this.authService.userData && this.authService.userData.role == 'Student') {
-      const exam_history = this.authService.userData.exams.history;
-      this.subtopic_problem_count = 0;
-      this.subtopic_search_dump = {};
-      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-        if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
-          for (const [num, prob] of Object.entries(dump)) {
-            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-              if (prob.SubTopics.includes(subtopic)) {
-                if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
-                  this.subtopic_problem_count += 1;
-                  this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-                  if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
-                    this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
-                  }
+                if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+                    const exam_sub = this.authService.getExamSubmission2(ex);
+                    setTimeout(() => {
+                        for (const [num, prob] of Object.entries(dump)) {
+                            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                                if (prob.SubTopics.includes(subtopic)) {
+                                    if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                                        if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
+                                            this.subtopic_correct_problem_count += 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }, 50);
                 }
-              }
             }
-          }
         }
-      }
-      Object.entries(this.subtopic_search_dump).sort(([, valueA], [, valueB]) => (this.authService.getStudProbSubmission2(this.user_data.uid, valueA.Number)).timestamp - (this.authService.getStudProbSubmission2(this.user_data.uid, valueB.Number)).timestamp);
-      this.subtopic_streak_count = 0;
-      var nums: string[] = [];
-      var subs: any[] = [];
-      for (let i = 0; i < Object.keys(this.subtopic_search_dump).length; i++) {
-          nums.push(this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[i] as any].Number);
-          subs.push(this.authService.getStudExamSubmission2(this.user_data.uid, this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[i] as any].Number.substring(0, (this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[i] as any].Number).indexOf('-'))));
-      }
-      console.log(nums);
-      console.log(subs);
-      setTimeout(() => {
-          for (let i = 1; i <= Object.keys(this.subtopic_search_dump).length; i++) {
-              if (subs[i - 1] != undefined) {
-                  this.subtopic_submission.push(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)]);
-                  if (((subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length == 1 && subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct[0][0] == '✅') || (subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length > 1 && this.is_MP_correct(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct)))) {
-                      this.subtopic_streak_count += 1;
-                  }
-                  else {
-                      this.subtopic_streak_count = 0;
-                  }
-              }
-          }
-      }, 50);
-      for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
-        if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
-          for (const [num, prob] of Object.entries(dump)) {
-            if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
-              if (prob.SubTopics.includes(subtopic)) {
-                if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
-                  this.subtopic_problem_count += 1;
-                  this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-                  if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
-                    this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
-                  }
+        for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+            for (const [num, prob] of Object.entries(dump)) {
+                if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                    if (prob.SubTopics.includes(subtopic)) {
+                        if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                            this.selected_topic = topic;
+                            // this.standard_id = standardID;
+                            this.subtopic_problem_count += 1;
+                            this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                            if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                                this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                            }
+                        }
+                    }
                 }
-              }
             }
-          }
         }
-      }
-    }
-    else {
-        this.subtopic_new_problem_count = this.subtopic_problem_count;
-    }
-    // setTimeout(() => {
-    this.selected_subtopic = subtopic;
-    this.subtopic_problem_number = 0;
-    this.standard_fav = false;
-    if (this.authService.userData) {
-      for (let fav of this.authService.userData.standards.favorites) {
-        if (topic == fav[0] && subtopic == fav[1]) {
-          this.standard_fav = true;
+        if (this.authService.userData && this.authService.userData.role == 'Student') {
+            const exam_history = this.authService.userData.exams.history;
+            this.subtopic_problem_count = 0;
+            this.subtopic_search_dump = {};
+            for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+                if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+                    for (const [num, prob] of Object.entries(dump)) {
+                        if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                            if (prob.SubTopics.includes(subtopic)) {
+                                if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                                    this.subtopic_problem_count += 1;
+                                    this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                                    if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                                        this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            Object.entries(this.subtopic_search_dump).sort(([, valueA], [, valueB]) => (this.authService.getStudProbSubmission2(this.user_data.uid, valueA.Number)).timestamp - (this.authService.getStudProbSubmission2(this.user_data.uid, valueB.Number)).timestamp);
+            this.subtopic_streak_count = 0;
+            var nums: string[] = [];
+            var subs: any[] = [];
+            for (let i = 0; i < Object.keys(this.subtopic_search_dump).length; i++) {
+                nums.push(this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[i] as any].Number);
+                subs.push(this.authService.getStudExamSubmission2(this.user_data.uid, this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[i] as any].Number.substring(0, (this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[i] as any].Number).indexOf('-'))));
+            }
+            console.log(nums);
+            console.log(subs);
+            setTimeout(() => {
+                for (let i = 1; i <= Object.keys(this.subtopic_search_dump).length; i++) {
+                    if (subs[i - 1] != undefined) {
+                        this.subtopic_submission.push(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)]);
+                        if (((subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length == 1 && subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct[0][0] == '✅') || (subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length > 1 && this.is_MP_correct(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct)))) {
+                            this.subtopic_streak_count += 1;
+                        }
+                        else {
+                            this.subtopic_streak_count = 0;
+                        }
+                    }
+                }
+            }, 50);
+            for (const [ex, dump] of Object.entries(this.e_dump_dict)) {
+                if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+                    for (const [num, prob] of Object.entries(dump)) {
+                        if (typeof prob.SubTopics != 'undefined' && !this.exam_attribute_dump[ex].HideTopics) {
+                            if (prob.SubTopics.includes(subtopic)) {
+                                if (prob.Topics[prob.SubTopics.indexOf(subtopic)].includes(topic)) {
+                                    this.subtopic_problem_count += 1;
+                                    this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                                    if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                                        this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-      }
+        else {
+            this.subtopic_new_problem_count = this.subtopic_problem_count;
+        }
+        // setTimeout(() => {
+        this.selected_subtopic = subtopic;
+        this.subtopic_problem_number = 0;
+        this.standard_fav = false;
+        if (this.authService.userData) {
+            for (let fav of this.authService.userData.standards.favorites) {
+                if (topic == fav[0] && subtopic == fav[1]) {
+                    this.standard_fav = true;
+                }
+            }
+        }
+        // }, 500);
     }
-    // }, 500);
-  }
 
     begin_practice_st() {
         if (this.subtopic_problem_count != this.subtopic_new_problem_count) {
@@ -7526,7 +7573,7 @@ export class TemplateCExamComponent implements OnInit {
     }
 
     subtopic_correct_percent() {
-      return (Math.round(100 * this.subtopic_correct_problem_count / (this.subtopic_problem_count - this.subtopic_new_problem_count)));
+        return (Math.round(100 * this.subtopic_correct_problem_count / (this.subtopic_problem_count - this.subtopic_new_problem_count)));
     }
 
     fav_std_includes(topic: string, subtopic: string) {

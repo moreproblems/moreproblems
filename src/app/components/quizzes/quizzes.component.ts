@@ -1164,7 +1164,7 @@ import * as SATRWStandards from "src/assets/standards/SAT/SAT-RW.json";
 import { partition } from 'rxjs/operators';
 import { kMaxLength } from 'buffer';
 
-const confetti = require('canvas-confetti');
+const confetti = require('canvas-confetti').default;
 
 const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {
@@ -5702,15 +5702,15 @@ export class QuizzesComponent implements OnInit {
               if (ch == choice) {
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
-                  if (this.mode == 'explain') {
-                    this.confetti_light(this.problem_attempts[part_num]);
-                  }
                   if (this.problem_attempts[part_num] == 1) {
                     this.streak_count += 1;
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                  }
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
                   }
                 }
                 else {
@@ -5725,14 +5725,14 @@ export class QuizzesComponent implements OnInit {
               if (ch == choice) {
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
-                  if (this.mode == 'explain') {
-                    this.confetti_light(this.problem_attempts[part_num]);
-                  }
                   if (this.problem_attempts[part_num] == 1) {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                  }
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
                   }
                 }
                 else {
@@ -5762,13 +5762,13 @@ export class QuizzesComponent implements OnInit {
               if (choice == ch) {
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
-                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
                   if (this.subtopic_problem_attempts[part_num] == 1) {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
                   }
+                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
                 }
                 else {
                   this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
@@ -5781,13 +5781,13 @@ export class QuizzesComponent implements OnInit {
               if (choice == ch) {
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
-                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
                   if (this.subtopic_problem_attempts[part_num] == 1) {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
                   }
+                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
                 }
                 else {
                   this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
@@ -5817,15 +5817,15 @@ export class QuizzesComponent implements OnInit {
               if (choice == ch) {
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
-                  if (this.mode == 'explain') {
-                    this.confetti_light(this.problem_attempts[part_num]);
-                  }
                   if (this.problem_attempts[part_num] == 1) {
                     this.streak_count += 1;
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                  }
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
                   }
                 }
                 else {
@@ -5840,14 +5840,14 @@ export class QuizzesComponent implements OnInit {
               if (choice == ch) {
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
-                  if (this.mode == 'explain') {
-                    this.confetti_light(this.problem_attempts[part_num]);
-                  }
                   if (this.problem_attempts[part_num] == 1) {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                  }
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
                   }
                 }
                 else {
@@ -5878,13 +5878,13 @@ export class QuizzesComponent implements OnInit {
               if (choice == ch) {
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
-                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
                   if (this.subtopic_problem_attempts[part_num] == 1) {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
                   }
+                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
                 }
                 else {
                   this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
@@ -5897,13 +5897,13 @@ export class QuizzesComponent implements OnInit {
               if (choice == ch) {
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
-                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
                   if (this.subtopic_problem_attempts[part_num] == 1) {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
                   }
+                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
                 }
                 else {
                   this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
@@ -5975,14 +5975,14 @@ export class QuizzesComponent implements OnInit {
           }
         }
         if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
-          if (this.mode == 'explain') {
-            this.confetti_light(this.problem_attempts[part_num]);
-          }
           if (this.problem_attempts[part_num] == 1) {
             this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
           }
           else {
             this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+          }
+          if (this.mode == 'explain') {
+            this.confetti_light(this.problem_attempts[part_num]);
           }
         }
       }
@@ -6051,13 +6051,13 @@ export class QuizzesComponent implements OnInit {
           }
         }
         if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
-          this.confetti_light(this.subtopic_problem_attempts[part_num]);
           if (this.subtopic_problem_attempts[part_num] == 1) {
             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
           }
           else {
             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
           }
+          this.confetti_light(this.subtopic_problem_attempts[part_num]);
         }
       }
     }
@@ -6122,14 +6122,14 @@ export class QuizzesComponent implements OnInit {
           }
         }
         if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
-          if (this.mode == 'explain') {
-            this.confetti_light(this.problem_attempts[part_num]);
-          }
           if (this.problem_attempts[part_num] == 1) {
             this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
           }
           else {
             this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+          }
+          if (this.mode == 'explain') {
+            this.confetti_light(this.problem_attempts[part_num]);
           }
         }
       }
@@ -6193,13 +6193,13 @@ export class QuizzesComponent implements OnInit {
           }
         }
         if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
-          this.confetti_light(this.subtopic_problem_attempts[part_num]);
           if (this.subtopic_problem_attempts[part_num] == 1) {
             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
           }
           else {
             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
           }
+          this.confetti_light(this.subtopic_problem_attempts[part_num]);
         }
       }
     }
@@ -6257,15 +6257,15 @@ export class QuizzesComponent implements OnInit {
               }
             }
             if (correct_attempt) {
-              if (this.mode == 'explain') {
-                this.confetti_light(this.problem_attempts[part_num]);
-              }
               if (this.problem_attempts[part_num] == 1) {
                 this.streak_count += 1;
                 this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
               }
               else {
                 this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+              }
+              if (this.mode == 'explain') {
+                this.confetti_light(this.problem_attempts[part_num]);
               }
             }
           }
@@ -6329,13 +6329,13 @@ export class QuizzesComponent implements OnInit {
               }
             }
             if (correct_attempt) {
-              this.confetti_light(this.subtopic_problem_attempts[part_num]);
               if (this.subtopic_problem_attempts[part_num] == 1) {
                 this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
               }
               else {
                 this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
               }
+              this.confetti_light(this.subtopic_problem_attempts[part_num]);
             }
           }
         }
@@ -6377,14 +6377,14 @@ export class QuizzesComponent implements OnInit {
               if (ch[0] == choice) {
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
-                  if (this.mode == 'explain') {
-                    this.confetti_light(this.problem_attempts[part_num]);
-                  }
                   if (this.problem_attempts[part_num] == 1) {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                  }
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
                   }
                 }
                 else {
@@ -6398,14 +6398,14 @@ export class QuizzesComponent implements OnInit {
               if (ch[0] == choice) {
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
-                  if (this.mode == 'explain') {
-                    this.confetti_light(this.problem_attempts[part_num]);
-                  }
                   if (this.problem_attempts[part_num] == 1) {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                  }
+                  if (this.mode == 'explain') {
+                    this.confetti_light(this.problem_attempts[part_num]);
                   }
                 }
                 else {
@@ -6448,13 +6448,13 @@ export class QuizzesComponent implements OnInit {
               if (ch[0] == choice) {
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
-                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
                   if (this.subtopic_problem_attempts[part_num] == 1) {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
                   }
+                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
                 }
                 else {
                   this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
@@ -6467,13 +6467,13 @@ export class QuizzesComponent implements OnInit {
               if (ch[0] == choice) {
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (key.Key.Correct == true) {
-                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
                   if (this.subtopic_problem_attempts[part_num] == 1) {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
                   }
+                  this.confetti_light(this.subtopic_problem_attempts[part_num]);
                 }
                 else {
                   this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
@@ -6502,15 +6502,15 @@ export class QuizzesComponent implements OnInit {
           if (part == '') {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (choice == key.Choice) {
-                if (this.mode == 'explain') {
-                  this.confetti_light(this.problem_attempts[part_num]);
-                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                 }
                 else {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                }
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
                 }
               }
               else {
@@ -6521,15 +6521,15 @@ export class QuizzesComponent implements OnInit {
           else {
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
               if (choice == key.Choice) {
-                if (this.mode == 'explain') {
-                  this.confetti_light(this.problem_attempts[part_num]);
-                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                 }
                 else {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                }
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
                 }
               }
               else {
@@ -6557,7 +6557,6 @@ export class QuizzesComponent implements OnInit {
           if (part == '') {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (choice == key.Choice) {
-                this.confetti_light(this.subtopic_problem_attempts[part_num]);
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.subtopic_problem_attempts[part_num] == 1) {
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
@@ -6565,6 +6564,7 @@ export class QuizzesComponent implements OnInit {
                 else {
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
                 }
+                this.confetti_light(this.subtopic_problem_attempts[part_num]);
               }
               else {
                 this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
@@ -6574,7 +6574,6 @@ export class QuizzesComponent implements OnInit {
           else {
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
               if (choice == key.Choice) {
-                this.confetti_light(this.subtopic_problem_attempts[part_num]);
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.subtopic_problem_attempts[part_num] == 1) {
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
@@ -6582,6 +6581,7 @@ export class QuizzesComponent implements OnInit {
                 else {
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
                 }
+                this.confetti_light(this.subtopic_problem_attempts[part_num]);
               }
               else {
                 this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
@@ -6685,14 +6685,14 @@ export class QuizzesComponent implements OnInit {
           }
         }
         if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
-          if (this.mode == 'explain') {
-            this.confetti_light(this.problem_attempts[part_num]);
-          }
           if (this.problem_attempts[part_num] == 1) {
             this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
           }
           else {
             this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+          }
+          if (this.mode == 'explain') {
+            this.confetti_light(this.problem_attempts[part_num]);
           }
         }
       }
@@ -6798,13 +6798,13 @@ export class QuizzesComponent implements OnInit {
           }
         }
         if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
-          this.confetti_light(this.subtopic_problem_attempts[part_num]);
           if (this.subtopic_problem_attempts[part_num] == 1) {
             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
           }
           else {
             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
           }
+          this.confetti_light(this.subtopic_problem_attempts[part_num]);
         }
       }
     }
@@ -6856,14 +6856,14 @@ export class QuizzesComponent implements OnInit {
             }
           }
           if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
-            if (this.mode == 'explain') {
-              this.confetti_light(this.problem_attempts[part_num]);
-            }
             if (this.problem_attempts[part_num] == 1) {
               this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
             }
             else {
               this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+            }
+            if (this.mode == 'explain') {
+              this.confetti_light(this.problem_attempts[part_num]);
             }
           }
         }
@@ -6910,13 +6910,13 @@ export class QuizzesComponent implements OnInit {
             }
           }
           if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
-            this.confetti_light(this.subtopic_problem_attempts[part_num]);
             if (this.subtopic_problem_attempts[part_num] == 1) {
               this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
             }
             else {
               this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
             }
+            this.confetti_light(this.subtopic_problem_attempts[part_num]);
           }
         }
       }
@@ -6943,9 +6943,6 @@ export class QuizzesComponent implements OnInit {
           if (part == '') {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (choice == key.Choice) {
-                if (this.mode == 'explain') {
-                  this.confetti_light(this.problem_attempts[part_num]);
-                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.streak_count += 1;
@@ -6953,6 +6950,9 @@ export class QuizzesComponent implements OnInit {
                 }
                 else {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                }
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
                 }
               }
               else {
@@ -6964,15 +6964,15 @@ export class QuizzesComponent implements OnInit {
           else {
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
               if (choice == key.Choice) {
-                if (this.mode == 'explain') {
-                  this.confetti_light(this.problem_attempts[part_num]);
-                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                 }
                 else {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                }
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
                 }
               }
               else {
@@ -7000,7 +7000,6 @@ export class QuizzesComponent implements OnInit {
           if (this.subtopic_problem_number == +num) {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (choice == key.Choice) {
-                this.confetti_light(this.subtopic_problem_attempts[part_num]);
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.subtopic_problem_attempts[part_num] == 1) {
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
@@ -7008,6 +7007,7 @@ export class QuizzesComponent implements OnInit {
                 else {
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
                 }
+                this.confetti_light(this.subtopic_problem_attempts[part_num]);
               }
               else {
                 this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
@@ -7019,7 +7019,6 @@ export class QuizzesComponent implements OnInit {
           if (this.subtopic_problem_number == +num) {
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
               if (choice == key.Choice) {
-                this.confetti_light(this.subtopic_problem_attempts[part_num]);
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.subtopic_problem_attempts[part_num] == 1) {
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
@@ -7027,6 +7026,7 @@ export class QuizzesComponent implements OnInit {
                 else {
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
                 }
+                this.confetti_light(this.subtopic_problem_attempts[part_num]);
               }
               else {
                 this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
@@ -7077,14 +7077,14 @@ export class QuizzesComponent implements OnInit {
             }
           }
           if (!this.attempt_response[part_num].startsWith('That is not the correct answer')) {
-            if (this.mode == 'explain') {
-              this.confetti_light(this.problem_attempts[part_num]);
-            }
             if (this.problem_attempts[part_num] == 1) {
               this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
             }
             else {
               this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+            }
+            if (this.mode == 'explain') {
+              this.confetti_light(this.problem_attempts[part_num]);
             }
           }
         }
@@ -7131,13 +7131,13 @@ export class QuizzesComponent implements OnInit {
             }
           }
           if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
-            this.confetti_light(this.subtopic_problem_attempts[part_num]);
             if (this.subtopic_problem_attempts[part_num] == 1) {
               this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
             }
             else {
               this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
             }
+            this.confetti_light(this.subtopic_problem_attempts[part_num]);
           }
         }
       }
@@ -7158,15 +7158,15 @@ export class QuizzesComponent implements OnInit {
           if (part == '') {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (choice == key.Choice) {
-                if (this.mode == 'explain') {
-                  this.confetti_light(this.problem_attempts[part_num]);
-                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                 }
                 else {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                }
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
                 }
               }
               else {
@@ -7177,15 +7177,15 @@ export class QuizzesComponent implements OnInit {
           else {
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
               if (choice == key.Choice) {
-                if (this.mode == 'explain') {
-                  this.confetti_light(this.problem_attempts[part_num]);
-                }
                 this.attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.problem_attempts[part_num] == 1) {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                 }
                 else {
                   this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
+                }
+                if (this.mode == 'explain') {
+                  this.confetti_light(this.problem_attempts[part_num]);
                 }
               }
               else {
@@ -7212,7 +7212,6 @@ export class QuizzesComponent implements OnInit {
           if (this.subtopic_problem_number == +num) {
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (choice == key.Choice) {
-                this.confetti_light(this.subtopic_problem_attempts[part_num]);
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.subtopic_problem_attempts[part_num] == 1) {
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
@@ -7220,6 +7219,7 @@ export class QuizzesComponent implements OnInit {
                 else {
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
                 }
+                this.confetti_light(this.subtopic_problem_attempts[part_num]);
               }
               else {
                 this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
@@ -7231,7 +7231,6 @@ export class QuizzesComponent implements OnInit {
           if (this.subtopic_problem_number == +num) {
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
               if (choice == key.Choice) {
-                this.confetti_light(this.subtopic_problem_attempts[part_num]);
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.subtopic_problem_attempts[part_num] == 1) {
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
@@ -7239,6 +7238,7 @@ export class QuizzesComponent implements OnInit {
                 else {
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
                 }
+                this.confetti_light(this.subtopic_problem_attempts[part_num]);
               }
               else {
                 this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
@@ -9045,7 +9045,7 @@ export class QuizzesComponent implements OnInit {
     console.log(this.exam_submission);
     this.toggleExamTimer();
     this.toggleProblemTimer();
-    this.confetti_pop();
+    this.confetti_fireworks();
     if (this.mode == 'explain') {
       this.resetExam();
     }
@@ -9183,7 +9183,7 @@ export class QuizzesComponent implements OnInit {
 
   confetti_pop() {
     confettiHandler({
-      particleCount: 750,
+      particleCount: 1000,
       startVelocity: 100,
       scalar: 1.15,
       ticks: 300,
@@ -9237,18 +9237,190 @@ export class QuizzesComponent implements OnInit {
       });
     }
   }
+  
+  confetti_fireworks() {
+    const duration = 5 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0, scalar: 1.15 };
+ 
+    const randomInRange = (min: number, max: number) =>
+      Math.random() * (max - min) + min;
+ 
+    const interval = window.setInterval(() => {
+      const timeLeft = animationEnd - Date.now();
+ 
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+ 
+      const particleCount = 100 * (timeLeft / duration);
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      });
+      // if (this.screenWidth > this.mobileWidth) {
+      confetti({
+        ...defaults,
+        particleCount: particleCount/5,
+        scalar: 1.5,
+        shapes: ['star'],
+        colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount: particleCount/5,
+        scalar: 1.5,
+        shapes: ['star'],
+        colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      });
+      // }
+    }, 250);
+  }
 
   confetti_light(attempts: number) {
-    confettiHandler({
-      particleCount: Math.round(250 / attempts),
-      startVelocity: 125,
-      scalar: 1.15,
-      ticks: 150,
-      decay: 0.8,
-      angle: 90,
-      spread: 60,
-      origin: { x: 0.5, y: 1 }
-    });
+    const fire = confetti.shapeFromText({ text: '🔥' });
+    if (this.screenWidth > this.mobileWidth) {
+      confettiHandler({
+        particleCount: Math.round(62.5 / attempts),
+        startVelocity: 125,
+        scalar: 1.15,
+        ticks: 150,
+        decay: 0.8,
+        angle: 90,
+        spread: 60,
+        origin: { x: 0.3, y: 0.75 }
+      });
+      confettiHandler({
+        particleCount: Math.round(62.5 / attempts),
+        startVelocity: 125,
+        scalar: 1.15,
+        ticks: 150,
+        decay: 0.8,
+        angle: 90,
+        spread: 60,
+        origin: { x: 0.7, y: 0.75 }
+      });
+      confettiHandler({
+        particleCount: Math.round(62.5 / attempts),
+        startVelocity: 125,
+        scalar: 1.15,
+        ticks: 150,
+        decay: 0.8,
+        angle: 90,
+        spread: 60,
+        origin: { x: 0.3, y: 1.25 }
+      });
+      confettiHandler({
+        particleCount: Math.round(62.5 / attempts),
+        startVelocity: 125,
+        scalar: 1.15,
+        ticks: 150,
+        decay: 0.8,
+        angle: 90,
+        spread: 60,
+        origin: { x: 0.7, y: 1.25 }
+      });
+      if (this.streak_count > 1) {
+        confettiHandler({
+          shapes: [fire],
+          particleCount: Math.round(1.25 * this.streak_count),
+          startVelocity: 150,
+          scalar: 3,
+          ticks: 175,
+          decay: 0.75,
+          angle: 90,
+          spread: 60,
+          origin: { x: 0.3, y: 0.75 }
+        });
+        confettiHandler({
+          shapes: [fire],
+          particleCount: Math.round(1.25 * this.streak_count),
+          startVelocity: 150,
+          scalar: 3,
+          ticks: 175,
+          decay: 0.75,
+          angle: 90,
+          spread: 60,
+          origin: { x: 0.5, y: 0.75 }
+        });
+        confettiHandler({
+          shapes: [fire],
+          particleCount: Math.round(1.25 * this.streak_count),
+          startVelocity: 150,
+          scalar: 3,
+          ticks: 175,
+          decay: 0.75,
+          angle: 90,
+          spread: 60,
+          origin: { x: 0.3, y: 1.25 }
+        });
+        confettiHandler({
+          shapes: [fire],
+          particleCount: Math.round(1.25 * this.streak_count),
+          startVelocity: 150,
+          scalar: 3,
+          ticks: 175,
+          decay: 0.75,
+          angle: 90,
+          spread: 60,
+          origin: { x: 0.5, y: 1.25 }
+        });
+      }
+    }
+    if (this.screenWidth <= this.mobileWidth) {
+      confettiHandler({
+        particleCount: Math.round(125 / attempts),
+        startVelocity: 125,
+        scalar: 1.15,
+        ticks: 150,
+        decay: 0.8,
+        angle: 90,
+        spread: 60,
+        origin: { x: 0.5, y: 0.75 }
+      });
+      confettiHandler({
+        particleCount: Math.round(125 / attempts),
+        startVelocity: 125,
+        scalar: 1.15,
+        ticks: 150,
+        decay: 0.8,
+        angle: 90,
+        spread: 60,
+        origin: { x: 0.5, y: 1.25 }
+      });
+      if (this.streak_count > 1) {
+        confettiHandler({
+          shapes: [fire],
+          particleCount: Math.round(2.5 * this.streak_count),
+          startVelocity: 150,
+          scalar: 3,
+          ticks: 175,
+          decay: 0.75,
+          angle: 90,
+          spread: 60,
+          origin: { x: 0.5, y: 0.75 }
+        });
+        confettiHandler({
+          shapes: [fire],
+          particleCount: Math.round(2.5 * this.streak_count),
+          startVelocity: 150,
+          scalar: 3,
+          ticks: 175,
+          decay: 0.75,
+          angle: 90,
+          spread: 60,
+          origin: { x: 0.5, y: 1.25 }
+        });
+      }
+    }
   }
 
   resetExam() {
