@@ -2437,7 +2437,7 @@
             "Locate/identify rational and irrational numbers at their approximate locations on a number line."
         ],
         "SuppContent": [],
-        "Points": 1,
+        "Points": 3,
         "Explain": false,
         "Content": [
             "Kelsey draws a series of right triangles with sides that have the lengths shown in the table below.",
@@ -2531,7 +2531,7 @@
             "Represent and use expressions and equations to solve problems involving radicals and integer exponents."
         ],
         "SuppContent": [],
-        "Points": 1,
+        "Points": 3,
         "Explain": false,
         "Content": [
             "Fiona is making her own checkers game set."
@@ -2632,7 +2632,7 @@
             "Describe qualitatively the functional relationship between two quantities by analyzing a graph (e.g., where the function is increasing or decreasing, linear or nonlinear). Sketch or determine a graph that exhibits the qualitative features of a function that has been described verbally."
         ],
         "SuppContent": [],
-        "Points": 1,
+        "Points": 3,
         "Explain": false,
         "Content": [
             "Jerry goes to a theme park to ride the roller coasters. The theme park charges an entry fee in addition to a fee for each roller coaster ride. The table below represents the total price for two different numbers of roller coaster rides.",
@@ -2690,210 +2690,218 @@
                 ],
                 "AnswerChoices": {}
             }
-        },
-        "49": {
-            "Number": 49,
-            "Type": "MP",
-            "NumChoices": 0,
-            "Topics": [
-                "Geometry",
-                "Geometry"
-            ],
-            "SubTopics": [
-                "Given two congruent figures, describe a sequence of transformations that exhibits the congruence between them.",
-                "Describe the effect of dilations, translations, rotations, and reflections on two-dimensional figures using coordinates."
-            ],
-            "SuppContent": [],
-            "Explain": false,
-            "Content": [
-                "Quadrilateral WXYZ is shown on the coordinate grid below.",
-                "problems/PA15G8M/media/49a.jpg"
-            ],
-            "AnswerChoices": {},
-            "Parts": {
-                "A": {
-                    "Type": "FR",
-                    "NumChoices": 0,
-                    "Explain": false,
-                    "Content": [
-                        "Esther applies a translation of 4 units up and 6 units to the right to create W'X'Y'Z'.",
-                        "What are the coordinate, in the form (x, y), of Z'?"
-                    ],
-                    "AnswerChoices": {
-                        "KEY": {
-                            "Choice": "(3,2)",
-                            "Key": {
-                                "Correct": true,
-                                "Rationale": "",
-                                "Percent": 0
-                            }
+        }
+    },
+    "49": {
+        "Number": 49,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Geometry",
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Given two congruent figures, describe a sequence of transformations that exhibits the congruence between them.",
+            "Describe the effect of dilations, translations, rotations, and reflections on two-dimensional figures using coordinates."
+        ],
+        "SuppContent": [],
+        "Points": 3,
+        "Explain": false,
+        "Content": [
+            "Quadrilateral WXYZ is shown on the coordinate grid below.",
+            "problems/PA15G8M/media/49a.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Esther applies a translation of 4 units up and 6 units to the right to create W'X'Y'Z'.",
+                    "What are the coordinate, in the form (x, y), of Z'?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "(3,2)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
                         }
                     }
-                },
-                "B": {
-                    "Type": "MFR",
-                    "NumChoices": 0,
-                    "Explain": false,
-                    "Content": [
-                        "Sylvia applies two transformations to WXYZ. She applies a reflection across the y-axis and then a rotation of 180° counterclockwise about the origin.",
-                        "W': :FR-1:",
-                        "X': :FR-2:",
-                        "Y': :FR-3:",
-                        "Z': :FR-4:"
-                    ],
-                    "AnswerChoices": {
-                        "1:KEY": {
-                            "Choice": "(-4,1)",
-                            "Key": {
-                                "Correct": true,
-                                "Rationale": "",
-                                "Percent": 0
-                            }
-                        },
-                        "2:KEY": {
-                            "Choice": "(-2,1)",
-                            "Key": {
-                                "Correct": true,
-                                "Rationale": "",
-                                "Percent": 0
-                            }
-                        },
-                        "3:KEY": {
-                            "Choice": "(-2,4)",
-                            "Key": {
-                                "Correct": true,
-                                "Rationale": "",
-                                "Percent": 0
-                            }
-                        },
-                        "4:KEY": {
-                            "Choice": "(-3,2)",
-                            "Key": {
-                                "Correct": true,
-                                "Rationale": "",
-                                "Percent": 0
-                            }
+                }
+            },
+            "B": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Sylvia applies two transformations to WXYZ. She applies a reflection across the y-axis and then a rotation of 180° counterclockwise about the origin.",
+                    "W': :FR-1:",
+                    "X': :FR-2:",
+                    "Y': :FR-3:",
+                    "Z': :FR-4:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "(-4,1)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "(-2,1)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "3:KEY": {
+                        "Choice": "(-2,4)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "4:KEY": {
+                        "Choice": "(-3,2)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
                         }
                     }
-                },
-                "C": {
-                    "Type": "MFR",
-                    "NumChoices": 0,
-                    "Explain": false,
-                    "Content": [
-                        "Nelson applies two transformations to WXYZ so that the final vertices of the transformed figure are located at (–2, 0), (2, 0), (2, –6), and (0, –2).",
-                        "Which transformations could be the two transformations Nelson applies to WXYZ?",
-                        "First transformation: :FR-1:",
-                        "Second transformation: :FR-2:"
-                    ],
-                    "AnswerChoices": {
-                        "1:KEY": {
-                            "Choice": "translate 3 units to the right and 1 unit up",
-                            "Key": {
-                                "Correct": true,
-                                "Rationale": "",
-                                "Percent": 0
-                            }
-                        },
-                        "2:KEY": {
-                            "Choice": "dilate by a scale factor of 2",
-                            "Key": {
-                                "Correct": true,
-                                "Rationale": "",
-                                "Percent": 0
-                            }
+                }
+            },
+            "C": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Nelson applies two transformations to WXYZ so that the final vertices of the transformed figure are located at (–2, 0), (2, 0), (2, –6), and (0, –2).",
+                    "Which transformations could be the two transformations Nelson applies to WXYZ?",
+                    "First transformation: :FR-1:",
+                    "Second transformation: :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "translate 3 units to the right and 1 unit up",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "dilate by a scale factor of 2",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
                         }
                     }
                 }
             }
-        },
-        "50": {
-            "Number": 50,
-            "Type": "MP",
-            "NumChoices": 0,
-            "Topics": [
-                "Statistics & Probability",
-                "Statistics & Probability"
-            ],
-            "SubTopics": [
-                "Construct and interpret scatter plots for bivariate measurement data to investigate patterns of association between two quantities. Describe patterns such as clustering, outliers, positive or negative correlation, linear association, and nonlinear association.",
-                "For scatter plots that suggest a linear association, identify a line of best fit by judging the closeness of the data points to the line."
-            ],
-            "SuppContent": [],
-            "Explain": false,
-            "Content": [
-                "The scatter plot below shows the results of a survey of 16 people. They were asked how many days per week they eat breakfast and how many days per week they go to the gym.",
-                "problems/PA15G8M/media/50a.jpg"
-            ],
-            "AnswerChoices": {},
-            "Parts": {
-                "A": {
-                    "Type": "FR",
-                    "NumChoices": 0,
-                    "Explain": false,
-                    "Content": [
-                        "What are the coordinates of the point that is the outlier of the data? Explain what the point represents."
-                    ],
-                    "AnswerChoices": {
-                        "KEY": {
-                            "Choice": "(2,6)",
-                            "Key": {
-                                "Correct": true,
-                                "Rationale": "",
-                                "Percent": 0
-                            }
+        }
+    },
+    "50": {
+        "Number": 50,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Statistics & Probability",
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Construct and interpret scatter plots for bivariate measurement data to investigate patterns of association between two quantities. Describe patterns such as clustering, outliers, positive or negative correlation, linear association, and nonlinear association.",
+            "For scatter plots that suggest a linear association, identify a line of best fit by judging the closeness of the data points to the line."
+        ],
+        "SuppContent": [],
+        "Points": 3,
+        "Explain": false,
+        "Content": [
+            "The scatter plot below shows the results of a survey of 16 people. They were asked how many days per week they eat breakfast and how many days per week they go to the gym.",
+            "problems/PA15G8M/media/50a.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "What are the coordinates of the point that is the outlier of the data? Explain what the point represents."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "(2,6)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
                         }
                     }
-                },
-                "B": {
-                    "Type": "MR",
-                    "NumChoices": 0,
-                    "Explain": false,
-                    "Content": [
-                        "Jeff drew a line through (0, 0) and (7, 7) and said it was the line of best fit for the data.",
-                        "Explain why Jeff's line is not a line of best fit."
-                    ],
-                    "AnswerChoices": {}
-                },
-                "C": {
-                    "Type": "MS",
-                    "NumChoices": 4,
-                    "Explain": false,
-                    "Content": [
-                        "How does the actual line of best fit compare with Jeff's line? Select 𝗔𝗟𝗟 choices that are correct."
-                    ],
-                    "AnswerChoices": {
-                        "A": {
-                            "Choice": "The slope should be less",
-                            "Key": {
-                                "Correct": true,
-                                "Rationale": "",
-                                "Percent": 0
-                            }
-                        },
-                        "B": {
-                            "Choice": "The slope should be greater",
-                            "Key": {
-                                "Correct": false,
-                                "Rationale": "",
-                                "Percent": 0
-                            }
-                        },
-                        "C": {
-                            "Choice": "The y-intercept should be less than 0",
-                            "Key": {
-                                "Correct": false,
-                                "Rationale": "",
-                                "Percent": 0
-                            }
-                        },
-                        "D": {
-                            "Choice": "The y-intercept should be greater than 0",
-                            "Key": {
-                                "Correct": true,
-                                "Rationale": "",
-                                "Percent": 0
-                            }
+                }
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Jeff drew a line through (0, 0) and (7, 7) and said it was the line of best fit for the data.",
+                    "Explain why Jeff's line is not a line of best fit."
+                ],
+                "AnswerChoices": {}
+            },
+            "C": {
+                "Type": "MS",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "How does the actual line of best fit compare with Jeff's line? Select 𝗔𝗟𝗟 choices that are correct."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "The slope should be less",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "The slope should be greater",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "The y-intercept should be less than 0",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "The y-intercept should be greater than 0",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
                         }
                     }
                 }
