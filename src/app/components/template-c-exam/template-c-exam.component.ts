@@ -2243,8 +2243,11 @@ export class TemplateCExamComponent implements OnInit {
     c_submission: { [key: string]: string[] }[] = [{}];
     m_shuffled = false;
     choices_sequence: string[] = [];
+    choices_sequence_st: string[] = [];
     shuffle_choices: { [key: string]: string[] } = {};
+    shuffle_choices_st: { [key: string]: string[] } = {};
     unique_choices: string[][] = [];
+    unique_choices_st: string[][] = [];
 
     exam_submission: { [key: number]: { 'Number': number, 'Topics': string[], 'SubTopics': string[], 'Choice': string[][], 'Correct': string[][], 'Rationale': string[][], 'Attempts': number[], 'Path': string[][][], 'Seconds': number, 'Time': string, 'Flags': boolean[] } } = {};
 
@@ -5298,9 +5301,9 @@ export class TemplateCExamComponent implements OnInit {
         if (part != '') {
             part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
         }
-        if (!Object.keys(this.shuffle_choices).includes('' + part_num)) {
+        if (!Object.keys(this.shuffle_choices_st).includes('' + part_num)) {
             this.m_shuffled = false;
-            this.shuffle_choices['' + part_num] = []
+            this.shuffle_choices_st['' + part_num] = []
         }
         if (!this.m_shuffled) {
             if (part == '') {
@@ -5311,10 +5314,10 @@ export class TemplateCExamComponent implements OnInit {
                             trimmed_choices.push(ch.substring(0, ch.length - 2));
                         }
                     }
-                    this.choices_sequence = trimmed_choices;
+                    this.choices_sequence_st = trimmed_choices;
                 }
                 else {
-                    this.choices_sequence = Array.from(Object.keys(choices));
+                    this.choices_sequence_st = Array.from(Object.keys(choices));
                 }
             }
             else {
@@ -5325,33 +5328,33 @@ export class TemplateCExamComponent implements OnInit {
                             trimmed_choices.push(ch.substring(0, ch.length - 2));
                         }
                     }
-                    this.choices_sequence = trimmed_choices;
+                    this.choices_sequence_st = trimmed_choices;
                 }
                 else {
-                    this.choices_sequence = Array.from(Object.keys(choices));
+                    this.choices_sequence_st = Array.from(Object.keys(choices));
                 }
             }
             this.random_list = [];
-            this.shuffle_choices['' + part_num] = [];
-            const num_choices1 = this.choices_sequence.length;
+            this.shuffle_choices_st['' + part_num] = [];
+            const num_choices1 = this.choices_sequence_st.length;
             for (let i = 0; i < num_choices1; i++) {
-                if (this.choices_sequence[num_choices1 - i - 1] == '' || this.choices_sequence[num_choices1 - i - 1][0] == ' ') {
-                    this.choices_sequence.splice(num_choices1 - i - 1, 1);
+                if (this.choices_sequence_st[num_choices1 - i - 1] == '' || this.choices_sequence_st[num_choices1 - i - 1][0] == ' ') {
+                    this.choices_sequence_st.splice(num_choices1 - i - 1, 1);
                 }
             }
-            const num_choices = this.choices_sequence.length;
+            const num_choices = this.choices_sequence_st.length;
             for (let i = 0; i < num_choices; i++) {
-                this.random_index = Math.floor(Math.random() * this.choices_sequence.length);
-                this.random_list.push(this.choices_sequence[this.random_index]);
-                this.shuffle_choices['' + part_num][i] = this.choices_sequence[this.random_index];
-                this.choices_sequence.splice(this.random_index, 1);
+                this.random_index = Math.floor(Math.random() * this.choices_sequence_st.length);
+                this.random_list.push(this.choices_sequence_st[this.random_index]);
+                this.shuffle_choices_st['' + part_num][i] = this.choices_sequence_st[this.random_index];
+                this.choices_sequence_st.splice(this.random_index, 1);
                 console.log(i);
                 console.log(this.random_index);
             }
-            console.log(this.shuffle_choices);
+            console.log(this.shuffle_choices_st);
             this.m_shuffled = true;
         }
-        return (this.shuffle_choices['' + part_num].sort());
+        return (this.shuffle_choices_st['' + part_num].sort());
     }
 
     unique_m(choices: any, part: string) {
@@ -5391,14 +5394,14 @@ export class TemplateCExamComponent implements OnInit {
         if (part != '') {
             part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
         }
-        this.unique_choices[part_num] = [];
+        this.unique_choices_st[part_num] = [];
         for (const [key, choice] of Object.entries(choices)) {
-            if ((choice as any).Choice != '' && !this.unique_choices[part_num].includes((choice as any).Choice)) {
+            if ((choice as any).Choice != '' && !this.unique_choices_st[part_num].includes((choice as any).Choice)) {
                 if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'O' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'O')) {
-                    this.unique_choices[part_num].push((choice as any).Choice + ':' + key[0])
+                    this.unique_choices_st[part_num].push((choice as any).Choice + ':' + key[0])
                 }
-                else if (!this.unique_choices[part_num].includes((choice as any).Choice)) {
-                    this.unique_choices[part_num].push((choice as any).Choice)
+                else if (!this.unique_choices_st[part_num].includes((choice as any).Choice)) {
+                    this.unique_choices_st[part_num].push((choice as any).Choice)
                 }
                 this.m_submission[part_num][(choice as any).Choice[0]] = "";
                 if (!Object.keys(this.c_submission[part_num]).includes((choice as any).Choice[0])) {
@@ -5412,8 +5415,8 @@ export class TemplateCExamComponent implements OnInit {
                 this.subtopic_attempt_explanation[part_num][+(choice as any).Choice[0] - 1] = [""];
             }
         }
-        this.unique_choices[part_num].sort();
-        console.log(this.unique_choices[part_num].sort());
+        this.unique_choices_st[part_num].sort();
+        console.log(this.unique_choices_st[part_num].sort());
         // return (unique_choices);
     }
 
