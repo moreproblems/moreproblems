@@ -1449,7 +1449,7 @@
             </div> -->
             <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
               <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{(subtopic_new_problem_count != subtopic_problem_count) ? ''+subtopic_correct_percent() + '% so far' : ''}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}}</b> </h3>
-            <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 10px; color: darkslategrey; font-size: 20px">
+            <h3 *ngIf="subtopic_problem_number == 0" style="margin-top: 5px; color: darkslategrey; font-size: 20px">
               <b *ngIf="!authService.userData || (authService.userData.role != 'Student' && selected_student_st == '')">{{subtopic_problem_count}} Total Problems</b> <b *ngIf="authService.userData && (authService.userData.role == 'Student' || selected_student_st != '')">{{subtopic_new_problem_count}} More Problems</b> </h3>
             <div *ngIf="authService.userData && selected_student_st != '' && subtopic_new_problem_count != subtopic_problem_count" class="card-container"
               style="height: auto; max-height: 350px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; margin: auto">
@@ -1587,7 +1587,7 @@
           <br /> -->
         </div>
       </div>
-      <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="width: 100%">
+      <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
         <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && st_refsheet_source != '../../' && expand_refsheet" style="width: 100%">
           <div class="card card-large"
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -1692,8 +1692,8 @@
           </div>
         </div>
       </div>
-      <div *ngFor="let prob of subtopic_search_dump | keyvalue" style="width: 100%; display: flex; flex-direction: column">
-        <div *ngIf="subtopic_problem_number == +prob.key" style="width: 100%; display: flex; flex-direction: column">
+      <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main" style="margin-bottom: 0px; align-items: center; width: 100%">
+        <div *ngIf="subtopic_problem_number == +prob.key" style="display: flex; flex-direction: column; width: 100%">
           <div *ngIf="selected_subtopic != '' && subtopic_problem_count >= subtopic_problem_number" class="card card-large"
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicCard>
@@ -1880,199 +1880,31 @@
                   </label>
                 </div>
               </div>
-              <div *ngIf="prob.value.Type == 'O'">
-                <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
-                  <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
+              <!-- <div *ngIf="prob.value.Type == 'O'">
+                <div class="card card-small" style="min-height: 100px; width: auto; max-height: 500px; padding: 10px; align-items: center">
+                  <label *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" class="switch" style="padding: 0 10px; min-width: 100px; margin: auto">
                     <input type="checkbox">
-                    <button (click)="select_m_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
-                        style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
-                        <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
-                        <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                        <div *ngIf="!is_image(choice.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
-                    </button>
-                    <button (click)="select_m_choice(choice, 0, '')" *ngIf="!is_matched(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"
-                        style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
-                        <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
-                        <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                        <div *ngIf="!is_image(choice.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
-                    </button>
-                    <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off" style="margin: auto; margin-top: 10px; min-height: 40px"></button>
+                    <button (click)="select_m_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"> <b>{{choice}}</b> </button>
+                    <button (click)="select_m_choice(choice, 0, '')" *ngIf="!is_matched(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"> <b>{{choice}}</b> </button>
+                    <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off"></button>
                   </label>
                 </div>
                 <br />
-                <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                  <div *ngFor="let choice of unique_choices[0]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 *ngIf="!is_image(choice.slice(2, choice.length-2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2, choice.length-2)}} </h3>
-                    <img *ngIf="is_image(choice.slice(2, choice.length-2))" src="./assets/{{choice.slice(2, choice.length-2)}}"
-                      style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                    <label class="switch" style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
+                <div class="card card-small" style="min-height: 100px; width: auto; max-height: 500px; padding: 10px; align-items: center">
+                  <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" style="margin: auto; margin-top: 0px; align-items: center; flex-direction: column">
+                    <label class="switch" style="padding: 0 10px; min-width: 100px">
                       <input type="checkbox">
-                      <button (click)="select_m_choice('', 1, '')" *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px; min-height: 40px"></button>
-                      <button (click)="remove_m_choice(choice[0], ''); select_m_choice(choice[0], 1, '')" *ngIf="is_matched(choice[0], 1, '') && m_submission[0][choice[0]][0] == choice[choice.length-1] && m_submission[0][choice[0]][0] != ' '" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(66, 156, 10)">
-                        <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
-                        <img *ngIf="is_image(m_submission[0][choice[0]].slice(2))" src="./assets/{{m_submission[0][choice[0]].slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                        <div *ngIf="!is_image(m_submission[0][choice[0]].slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
+                      <button (click)="select_m_choice('', 1, '')" *ngIf="!is_matched(choice.value.Choice[0], 1, '') && m_selection[0][1] == choice.value.Choice[0]" class="toggle-button-on"></button>
+                      <button (click)="remove_m_choice(choice.value.Choice[0], ''); select_m_choice(choice.value.Choice[0], 1, '')" *ngIf="is_matched(choice.value.Choice[0], 1, '') && m_submission[0][choice.value.Choice[0]] == choice.key" class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{m_submission[0][choice.value.Choice[0]]}} </b>
                       </button>
-                      <button *ngIf="is_matched(choice[0], 1, '') && m_submission[0][choice[0]][0] == choice[choice.length-1] && m_submission[0][choice[0]][0] == ' '" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(66, 156, 10)">
-                        <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
-                        <img *ngIf="is_image(m_submission[0][choice[0]].slice(2))" src="./assets/{{m_submission[0][choice[0]].slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                        <div *ngIf="!is_image(m_submission[0][choice[0]].slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
+                      <button (click)="remove_m_choice(choice.value.Choice[0], ''); select_m_choice(choice.value.Choice[0], 1, '')" *ngIf="is_matched(choice.value.Choice[0], 1, '') && m_submission[0][choice.value.Choice[0]] != choice.key" class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{m_submission[0][choice.value.Choice[0]]}} </b>
                       </button>
-                      <button (click)="remove_m_choice(choice[0], ''); select_m_choice(choice[0], 1, '')" *ngIf="is_matched(choice[0], 1, '') && m_submission[0][choice[0]][0] != choice[choice.length-1]" class="toggle-button-off" style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(245, 77, 77)">
-                        <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
-                        <img *ngIf="is_image(m_submission[0][choice[0]].slice(2))" src="./assets/{{m_submission[0][choice[0]].slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                        <div *ngIf="!is_image(m_submission[0][choice[0]].slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{m_submission[0][choice[0]].slice(2)}} </div>
-                      </button>
-                      <button (click)="select_m_choice(choice[0], 1, '')" *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] != choice[0]" class="toggle-button-off" style="margin: auto; margin-top: 10px; min-height: 40px"></button>
+                      <button (click)="select_m_choice(choice.value.Choice[0], 1, '')" *ngIf="!is_matched(choice.value.Choice[0], 1, '') && m_selection[0][1] != choice.value.Choice[0]" class="toggle-button-off"></button>
                     </label>
+                    <h3> {{choice.value.Choice.slice(2)}} </h3>
                   </div>
                 </div>
-              </div>
-              <div *ngIf="prob.value.Type == 'C'">
-                <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
-                  <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
-                    <input type="checkbox">
-                    <button (click)="select_c_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
-                        style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
-                        <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
-                        <div *ngIf="!choice.slice(2).startsWith(':box:') && !is_image(choice.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
-                        <div *ngIf="choice.slice(2).startsWith(':box:')"
-                          style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{choice.slice(7)}}</h3>
-                        </div>
-                        <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                    </button>
-                    <button (click)="select_c_choice(choice, 0, '')" *ngIf="!is_matched(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"
-                        style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
-                        <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
-                        <div *ngIf="!choice.slice(2).startsWith(':box:') && !is_image(choice.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
-                        <div *ngIf="choice.slice(2).startsWith(':box:')"
-                          style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{choice.slice(7)}}</h3>
-                        </div>
-                        <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                    </button>
-                    <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off" style="margin: auto; margin-top: 10px; min-height: 40px"></button>
-                  </label>
-                </div>
-                <br />
-                <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                  <div *ngFor="let choice of unique_choices[0]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2)}} </h3>
-                    <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
-                      style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                    <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
-                      <input type="checkbox">
-                      <button (click)="select_c_choice('', 1, '')" *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px; min-height: 40px"></button>
-                      <button (click)="remove_c_choice(selection, '')" *ngIf="selection != '' && prob.value.AnswerChoices[selection].Choice == choice && selection[0] != ' '" class="toggle-button-off"
-                          style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(66, 156, 10)">
-                          <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
-                          <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
-                          <div *ngIf="selection.slice(2).startsWith(':box:')"
-                            style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{selection.slice(7)}}</h3>
-                          </div>
-                          <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
-                            style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                      </button>
-                      <button *ngIf="selection != '' && prob.value.AnswerChoices[selection].Choice == choice && selection[0] == ' '" class="toggle-button-off"
-                          style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(66, 156, 10)">
-                          <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
-                          <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
-                          <div *ngIf="selection.slice(2).startsWith(':box:')"
-                            style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{selection.slice(7)}}</h3>
-                          </div>
-                          <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
-                            style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                      </button>
-                      <button (click)="remove_c_choice(selection, '')" *ngIf="selection != '' && prob.value.AnswerChoices[selection].Choice != choice" class="toggle-button-off"
-                          style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(245, 77, 77)">
-                          <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
-                          <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
-                          <div *ngIf="selection.slice(2).startsWith(':box:')"
-                            style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{selection.slice(7)}}</h3>
-                          </div>
-                          <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
-                            style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                      </button>
-                      <button (click)="select_c_choice(choice[0], 1, '')" *ngIf="selection == '' && m_selection[0][1] != choice[0]" class="toggle-button-off" style="margin: auto; margin-top: 10px; min-height: 40px"></button>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div *ngIf="prob.value.Type == 'G'">
-                <div class="card card-medium" style="min-height: 100px; max-width: 80vw; width: auto; max-height: 1500px; padding:0px 10px 10px; align-items: center; flex-wrap: wrap">
-                  <label *ngFor="let choice of shuffle_m(prob.value.AnswerChoices, '')" class="switch" style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
-                    <input type="checkbox">
-                    <button (click)="select_c_choice('', 0, '')" *ngIf="m_selection[0][0] == choice" class="toggle-button-on"
-                        style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
-                        <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
-                        <div *ngIf="!choice.slice(2).startsWith(':box:') && !is_image(choice.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
-                        <div *ngIf="choice.slice(2).startsWith(':box:')"
-                          style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{choice.slice(7)}}</h3>
-                        </div>
-                        <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                    </button>
-                    <button (click)="select_c_choice(choice, 0, '')" *ngIf="m_selection[0][0] != choice" class="toggle-button-off"
-                        style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
-                        <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
-                        <div *ngIf="!choice.slice(2).startsWith(':box:') && !is_image(choice.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
-                        <div *ngIf="choice.slice(2).startsWith(':box:')"
-                          style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{choice.slice(7)}}</h3>
-                        </div>
-                        <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
-                          style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                    </button>
-                  </label>
-                </div>
-                <br />
-                <div class="card-container" style="min-height: 100px; max-width: 100%; width: auto; max-height: 1500px; padding: 10px; align-items: center">
-                  <div *ngFor="let choice of unique_choices[0]" class="card card-medium" style="margin: 10px; margin-top: 10px; padding: 10px; width: auto; align-items: center; flex-direction: column">
-                    <h3 *ngIf="!is_image(choice.slice(2))" style="width: fit-content; max-width: 400px; min-height: 24px; margin: auto; margin-bottom: 10px; white-space: pre-wrap"> {{choice.slice(2)}} </h3>
-                    <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
-                      style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                    <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch" style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
-                      <input type="checkbox">
-                      <button (click)="select_c_choice('', 1, '')" *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on" style="margin: auto; margin-top: 10px; min-height: 40px"></button>
-                      <button (click)="remove_g_choice(selection, choice[0], '')" *ngIf="selection != '' && (prob.value.AnswerChoices | keys).includes(selection + ':' + choice[0]) && prob.value.AnswerChoices[selection + ':' + choice[0]].Choice == choice" class="toggle-button-off"
-                          style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(66, 156, 10)">
-                          <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
-                          <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
-                          <div *ngIf="selection.slice(2).startsWith(':box:')"
-                            style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{selection.slice(7)}}</h3>
-                          </div>
-                          <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
-                            style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                      </button>
-                      <button (click)="remove_g_choice(selection, choice[0], '')" *ngIf="selection != '' && (!(prob.value.AnswerChoices | keys).includes(selection + ':' + choice[0]) || ((prob.value.AnswerChoices | keys).includes(selection + ':' + choice[0]) && prob.value.AnswerChoices[selection + ':' + choice[0]].Choice != choice))" class="toggle-button-off"
-                          style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(245, 77, 77)">
-                          <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
-                          <div *ngIf="!selection.slice(2).startsWith(':box:') && !is_image(selection.slice(2))" style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
-                          <div *ngIf="selection.slice(2).startsWith(':box:')"
-                            style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{selection.slice(7)}}</h3>
-                          </div>
-                          <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
-                            style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
-                      </button>
-                      <button (click)="select_c_choice(choice[0], 1, '')" *ngIf="selection == '' && m_selection[0][1] != choice[0]" class="toggle-button-off" style="margin: auto; margin-top: 10px; min-height: 40px"></button>
-                    </label>
-                  </div>
-                </div>
-              </div>
+              </div> -->
               <div *ngIf="prob.value.Type == 'LP'" style="width: 90%">
                 <div style="min-height: 50px; max-height: 100px; padding: 10px; margin: auto; align-items: center">
                   <div style="display: flex; justify-content: space-between">
@@ -2259,7 +2091,7 @@
                   style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
                   <div *ngIf="prob.value.Type == 'IM'">
                     <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                       <!-- replace choice iteration with counter -->
                       <br /> <br /> <p *ngFor="let choice of subtopic_problem_selection[0]"><span *ngIf="choice != ''"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[0].indexOf(choice)+1) + ' (' + choice + ')'}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(choice)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(choice)] : 'No explanation or rationale is available.'}}</span></p>
                     </h3>
@@ -2276,12 +2108,12 @@
                     <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="choice.key == selection.value && subtopic_attempt_explanation[0][0] != ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                         <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[0][0]}}
                       </h3>
                       <h3 *ngIf="choice.key == selection.value && subtopic_attempt_explanation[0][0] == ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                         <br /> <br /> <b>No explanation or rationale is available.</b>
                       </h3>
                       <br
@@ -2298,7 +2130,7 @@
                   </div>
                   <div *ngIf="prob.value.Type == 'MS'">
                     <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                       <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[0].sort()"> <b>{{'\nExplanation (' + selec + ')'}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                     </h3>
                     <br
@@ -2314,7 +2146,7 @@
                     <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="choice.key[0] == subtopic_problem_selection[0][0]"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                         <br /> <br /> <b>Explanation:</b> {{(subtopic_attempt_explanation[0][0] != '') ? subtopic_attempt_explanation[0][0] : 'No explanation or rationale is available.'}}
                       </h3>
                     </div>
@@ -2323,13 +2155,13 @@
                     <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="subtopic_attempt_response[0].startsWith('Correct') && subtopic_attempt_explanation[0][0] != ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                         <!-- wrong data format, extra KEY -->
                         <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[0]}}
                       </h3>
                       <h3 *ngIf="!subtopic_attempt_response[0].startsWith('Correct') || subtopic_attempt_explanation[0][0] == ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                         <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                       </h3>
                     </div>
@@ -2343,7 +2175,7 @@
                   </div>
                   <div *ngIf="prob.value.Type == 'MGP'">
                     <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                       <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[0]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[0].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                     </h3>
                     <br
@@ -2357,7 +2189,7 @@
                   </div>
                   <div *ngIf="prob.value.Type == 'T'">
                     <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                       <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[0]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[0].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                     </h3>
                     <br
@@ -2406,13 +2238,13 @@
                     <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="subtopic_attempt_response[0].startsWith('Correct') && subtopic_attempt_explanation[0][0] != ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                         <!-- wrong data format, extra KEY -->
                         <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[0]}}
                       </h3>
                       <h3 *ngIf="!subtopic_attempt_response[0].startsWith('Correct') || subtopic_attempt_explanation[0][0] == ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                         <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                       </h3>
                     </div>
@@ -2428,13 +2260,13 @@
                     <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="subtopic_attempt_response[0].startsWith('Correct') && subtopic_attempt_explanation[0][0] != ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                         <!-- wrong data format, extra KEY -->
                         <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[0]}}
                       </h3>
                       <h3 *ngIf="!subtopic_attempt_response[0].startsWith('Correct') || subtopic_attempt_explanation[0][0] == ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                         <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                       </h3>
                     </div>
@@ -2448,7 +2280,7 @@
                   </div>
                   <div *ngIf="prob.value.Type == 'MFR'">
                     <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
                       <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[0]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[0].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                     </h3>
                     <br
@@ -2843,7 +2675,7 @@
                 style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
                 <div *ngIf="part.value.Type == 'IM'">
                   <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                    <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                    <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                     <br /> <br /> <p *ngFor="let choice of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"><span *ngIf="choice != ''"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)+1) + ' (' + choice + ')'}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)] : 'No explanation or rationale is available.'}}</span></p>
                   </h3>
                 </div>
@@ -2851,14 +2683,14 @@
                   <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
                     <h3 *ngIf="choice.key == selection.value"
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                       <br /> <br /> <b>Explanation:</b> {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] : 'No explanation or rationale is available.'}}
                     </h3>
                   </div>
                 </div>
                 <div *ngIf="part.value.Type == 'MS'">
                   <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                    <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                    <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                     <br /> <br /> <b>Explanation</b> <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].sort()"> <b>{{'\nOption'}} {{selec}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                   </h3>
                 </div>
@@ -2866,7 +2698,7 @@
                   <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
                     <h3 *ngIf="choice.key[0] == subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]"
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                       <br /> <br /> <b>Explanation:</b> {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] : 'No explanation or rationale is available.'}}
                     </h3>
                   </div>
@@ -2875,26 +2707,26 @@
                   <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
                     <h3 *ngIf="subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                       <!-- wrong data format, extra KEY -->
                       <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
                     </h3>
                     <h3 *ngIf="!subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') || subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                       <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                     </h3>
                   </div>
                 </div>
                 <div *ngIf="part.value.Type == 'MGP'">
                   <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                    <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                    <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                     <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'T'">
                   <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                    <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                    <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                     <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                   </h3>
                 </div>
@@ -2921,13 +2753,13 @@
                   <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
                     <h3 *ngIf="subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                       <!-- wrong data format, extra KEY -->
                       <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
                     </h3>
                     <h3 *ngIf="!subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') || subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                       <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                     </h3>
                   </div>
@@ -2936,20 +2768,20 @@
                   <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
                     <h3 *ngIf="subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                       <!-- wrong data format, extra KEY -->
                       <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
                     </h3>
                     <h3 *ngIf="!subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') || subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                       <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                     </h3>
                   </div>
                 </div>
                 <div *ngIf="part.value.Type == 'MFR'">
                   <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                    <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                    <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
                     <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                   </h3>
                 </div>
