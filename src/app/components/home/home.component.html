@@ -3168,6 +3168,10 @@
         <pdf-viewer *ngIf="this.screenWidth > 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
           [(page)]="file_page" style="min-height: 625px; height: 100%"></pdf-viewer>
       </section>
+      <!-- <section *ngIf="file_source != ''"
+        style="margin-bottom: 10px; height: 90%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden; background-color: #eee">
+        <div id="my-pdf"></div>
+      </section> -->
     </div>
   </div>
   <div *ngIf="assign_e" class="card card-large"

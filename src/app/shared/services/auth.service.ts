@@ -457,6 +457,16 @@ export class AuthService {
       // console.log(error.message);
     });
   }
+  
+  getQuizPicB(quizID: string, name: string) {
+    const strg = stor.getStorage();
+    return stor.getBlob(stor.ref(strg, 'quiz/' + quizID + '/' + name)).then((url) => {
+      // console.log(url);
+      return (url as any);
+    }).catch(error => {
+      // console.log(error.message);
+    });
+  }
 
   // Set data on localStorage
   setUserLoggedIn(user: User) {

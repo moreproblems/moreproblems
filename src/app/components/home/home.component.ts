@@ -9,6 +9,7 @@ import { WindowService } from '../../shared/services/window.service';
 import { serverTimestamp } from "firebase/database";
 import printJS from 'print-js';
 import intlTelInput from 'intl-tel-input';
+import * as PDFObject from 'pdfobject';
 import * as Plotly from 'plotly.js-dist-min';
 import * as Chart from 'chart.js/auto';
 import * as examMetadata from "src/assets/problems/exams.json";
@@ -3448,6 +3449,7 @@ export class HomeComponent implements OnInit {
           }
         }
       }
+      // PDFObject.embed(this.file_source, document.getElementById("my-pdf"));
     }, 250);
   }
 
