@@ -6731,7 +6731,7 @@ export class HomeComponent implements OnInit {
             }
           }, 100);
         }
-        if (this.authService.userData.role != 'Student') {
+        if (!['', 'Student'].includes(this.authService.userData.role)) {
           this.student_metadata = [];
           this.my_student_metadata = [];
           var linked_students = {};
@@ -6778,17 +6778,7 @@ export class HomeComponent implements OnInit {
                 }
               }, +key * 10);
             }
-            this.my_class_metadata = [];
-            const linked_classes = this.authService.userData.classes.slice(1);
-            for (const [key, clss] of Object.entries(linked_classes)) {
-              setTimeout(() => {
-                console.log(clss);
-                this.class_data = this.authService.searchClassId(clss as string);
-                console.log(this.class_data);
-                this.my_class_metadata.push(this.class_data as object);
-              }, +key * 10);
-            }
-            setTimeout(() => {
+            if (!['', 'Parent'].includes(this.authService.userData.role)) {
               this.my_class_metadata = [];
               const linked_classes = this.authService.userData.classes.slice(1);
               for (const [key, clss] of Object.entries(linked_classes)) {
@@ -6799,8 +6789,20 @@ export class HomeComponent implements OnInit {
                   this.my_class_metadata.push(this.class_data as object);
                 }, +key * 10);
               }
-            }, 100);
-            if (this.authService.userData.role != 'Student') {
+              setTimeout(() => {
+                this.my_class_metadata = [];
+                const linked_classes = this.authService.userData.classes.slice(1);
+                for (const [key, clss] of Object.entries(linked_classes)) {
+                  setTimeout(() => {
+                    console.log(clss);
+                    this.class_data = this.authService.searchClassId(clss as string);
+                    console.log(this.class_data);
+                    this.my_class_metadata.push(this.class_data as object);
+                  }, +key * 10);
+                }
+              }, 100);
+            }
+            if (!['', 'Student'].includes(this.authService.userData.role)) {
               this.my_quiz_metadata = [];
               const authored_quizzes = this.authService.getUserQuizzes(this.user_data.uid);
               for (const [key, quiz] of Object.entries(authored_quizzes)) {
@@ -6881,7 +6883,7 @@ export class HomeComponent implements OnInit {
       if (this.authService.userData) {
         this.authService.getProfilePic(this.authService.userData);
         this.user_data = this.authService.userData;
-        if (this.authService.userData.role != 'Student') {
+        if (!['', 'Student'].includes(this.authService.userData.role)) {
           const linked_students = this.authService.userData.students.slice(1);
           var count = 0;
           for (const [key, stud] of Object.entries(linked_students)) {

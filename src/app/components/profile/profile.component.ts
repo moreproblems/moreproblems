@@ -8622,7 +8622,7 @@ export class ProfileComponent implements OnInit {
           //   }
           // }
         }
-        else {
+        else if (!['', 'Student'].includes(this.authService.userData.role)) {
           this.student_metadata = [];
           var linked_students = {};
           if (this.authService.userData.students) {
@@ -8646,7 +8646,7 @@ export class ProfileComponent implements OnInit {
       if (this.authService.userData) {
         this.authService.getProfilePic(this.authService.userData);
         this.user_data = this.authService.userData;
-        if (this.authService.userData.role != 'Student') {
+        if (!['', 'Student'].includes(this.authService.userData.role)) {
           const linked_students = this.authService.userData.students.slice(1);
           var count = 0;
           for (const [key, stud] of Object.entries(linked_students)) {

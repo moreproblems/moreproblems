@@ -636,7 +636,175 @@
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <canvas id="confettiCanvas"></canvas>
-  <div *ngIf="data_loaded" class="content-menu" style="margin-bottom: 0; align-items: center">
+  <div *ngIf="file_source != '' && !assign_q" class="content-menu" role="menu"
+    style="margin-bottom: 0px; align-items: center">
+    <div style="align-items: left; width: min(1075px, 92%)">
+      <section>
+        <div (click)="file_source=''; exam_fav=false" class="card card-small"
+          style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
+          <img src="./assets/media/icons/caret.png"
+            style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
+          <a style="font-size: 22px; font-weight: 600; padding-left: 10px"> Back To Quizzes </a>
+        </div>
+      </section>
+    </div>
+    <!-- PDF Viewer -->
+    <div class="card card-large" (window:resize)="width_change2()"
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
+      #pdfViewer>
+      <section
+        style="margin-top: 15px; height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+        <h1 *ngIf="this.screenWidth <= 550" style="margin: auto 5px; text-align: center; font-size: 17px">
+          {{quiz_config.name}} </h1>
+        <h1 *ngIf="this.screenWidth > 550 && this.screenWidth <= 900" style="margin: auto 10px; text-align: center; font-size: 21px">
+          {{quiz_config.name}} </h1>
+        <h1 *ngIf="this.screenWidth > 900" style="margin: auto 15px; text-align: center; font-size: 26px">
+          {{quiz_config.name}} </h1>
+        <button *ngIf="this.screenWidth <= 900" (click)="router.navigate(['quiz/' + key])"
+          class="grade-button"
+          style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
+          <img src="./assets/media/icons/test.png" style="height: 25px">
+          <b style="margin-left: 10px; font-size: 17px; line-height: 19px; width: auto"> Take Quiz! </b>
+        </button>
+        <button *ngIf="this.screenWidth > 900" (click)="router.navigate(['quiz/' + key])"
+          class="grade-button" style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
+          <img src="./assets/media/icons/test.png" style="height: 25px">
+          <b style="margin-left: 10px; font-size: 22px; line-height: 26px; width: auto"> Take Quiz! </b>
+        </button>
+      </section>
+      <hr style="width: max(80%, 300px)">
+      <section
+        style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+        <!-- <button *ngIf="this.screenWidth <= 900 && authService.userData as user" (click)="toggle_favorite()"
+          class="grade-button" style="margin: 5px; padding: 6px; width: auto; height: auto">
+          <span *ngIf="!this.exam_fav"
+            style="font-size: 18px; font-weight: 2px; color: white; -webkit-text-stroke: 2px #4db7fd"> <i class="fas fa-bookmark"></i>
+          </span>
+          <span *ngIf="this.exam_fav"
+            style="font-size: 18px; font-weight: 2px; color:#4db7fd; -webkit-text-stroke: 2px #4db7fd">
+            <i class="fas fa-bookmark"></i> </span>
+          <b *ngIf="!this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Bookmark </b>
+          <b *ngIf="this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Bookmarked </b>
+        </button>
+        <button *ngIf="this.screenWidth > 900 && authService.userData as user" (click)="toggle_favorite()"
+          class="grade-button" style="margin: 5px; width: auto; height: auto">
+          <span *ngIf="!this.exam_fav"
+            style="font-size: 22px; font-weight: 2px; color: white; -webkit-text-stroke: 2px #4db7fd"> <i class="fas fa-bookmark"></i>
+          </span>
+          <span *ngIf="this.exam_fav"
+            style="font-size: 22px; font-weight: 2px; color:#4db7fd; -webkit-text-stroke: 2px #4db7fd">
+            <i class="fas fa-bookmark"></i> </span>
+          <b *ngIf="!this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmark </b>
+          <b *ngIf="this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmarked </b>
+        </button> -->
+        <!-- <button *ngIf="exam_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
+          style="margin: 10px 5px 5px; width: auto; height: auto; background-color: green">
+          <img src="./assets/media/icons/test.png" style="height: 25px">
+          <b style="margin-left: 10px"> Take Exam! </b>
+        </button> -->
+        <div *ngIf="authService.userData as user">
+          <button
+            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth <= 900"
+            (click)="toggle_assign_quiz()" class="grade-button"
+            style="margin: 5px; padding: 6px; width: auto; height: auto">
+            <img src="./assets/media/icons/assign.png" style="height: 22px">
+            <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Assign </b>
+          </button>
+          <button
+            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth > 900"
+            (click)="toggle_assign_quiz()" class="grade-button" style="margin: 5px; width: auto; height: auto">
+            <img src="./assets/media/icons/assign.png" style="height: 27px">
+            <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Assign </b>
+          </button>
+        </div>
+        <div *ngIf="authService.userData as user">
+          <button
+            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth <= 900"
+            (click)="router.navigate(['quiz/' + key + '/edit'])" class="grade-button"
+            style="margin: 5px; padding: 6px; width: auto; height: auto">
+            <img src="./assets/media/icons/edit.png" style="height: 22px">
+            <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Edit Quiz </b>
+          </button>
+          <button *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth > 900"
+            (click)="router.navigate(['quiz/' + key + '/edit'])" class="grade-button"
+            style="margin: 5px; width: auto; height: auto">
+            <img src="./assets/media/icons/edit.png" style="height: 25px">
+            <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Edit Quiz </b>
+          </button>
+        </div>
+      </section>
+      <hr *ngIf="authService.userData as user" style="width: max(50%, 300px)">
+      <section
+        style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+        <div>
+          <div style="display: flex; flex-direction: row">
+            <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="download_exam()" class="grade-button"
+              style="margin: 5px; padding: 6px; width: auto; height: auto">
+              <img src="./assets/media/icons/download.png" style="height: 25px">
+              <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Download </b>
+            </button>
+            <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="download_exam()" class="grade-button"
+              style="margin: 5px; width: auto; height: auto">
+              <img src="./assets/media/icons/download.png" style="height: 25px">
+              <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Download </b>
+            </button>
+            <!-- <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="print_exam()" class="grade-button"
+              style="margin: 5px; width: auto; height: auto">
+              <img src="./assets/media/icons/print.png" style="height: 25px">
+              <b style="margin-left: 10px"> Print </b>
+            </button> -->
+          </div>
+          <!-- <h4 *ngIf="exam_dl == 1 && screenWidth > mobileWidth"
+            style="font-weight: 500; font-size: 20px; margin: 0px auto 5px; color: #1976d2"> <b
+              style="font-weight: 800">{{''+exam_dl}}</b> download </h4>
+          <h4 *ngIf="exam_dl == 1 && screenWidth <= mobileWidth"
+            style="font-weight: 500; font-size: 16px; margin: 0px auto 5px; color: #1976d2"> <b
+              style="font-weight: 800">{{''+exam_dl}}</b> download </h4>
+          <h4 *ngIf="exam_dl > 1 && screenWidth > mobileWidth"
+            style="font-weight: 500; font-size: 20px; margin: 0px auto 5px; color: #1976d2"> <b
+              style="font-weight: 800">{{''+exam_dl}}</b> downloads </h4>
+          <h4 *ngIf="exam_dl > 1 && screenWidth <= mobileWidth"
+            style="font-weight: 500; font-size: 16px; margin: 0px auto 5px; color: #1976d2"> <b
+              style="font-weight: 800">{{''+exam_dl}}</b> downloads </h4> -->
+        </div>
+        <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="prev_page()" class="grade-button"
+          style="margin-left: 20px; margin-right: 0px; width: auto; height: auto">
+          <img src="./assets/media/icons/minus.png" style="height: 20px; filter: invert(100%)">
+          <!-- <b>PD</b> -->
+        </button>
+        <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="prev_page()" class="grade-button"
+          style="margin-left: 20px; margin-right: 0px; width: auto; height: auto">
+          <img src="./assets/media/icons/minus.png" style="height: 25px; filter: invert(100%)">
+          <!-- <b>PD</b> -->
+        </button>
+        <div style="padding-bottom: 5px">
+          <p style="margin: auto 10px; font-size: 18px; font-weight: 600">Page </p>
+          <input (keyup)="go_to_page(+this.pageNum.value)" type="text" inputmode="numeric" value="{{file_page}}" min="1"
+            maxlength="3"
+            style="margin: auto 10px; width: 40px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
+            #pageNum />
+        </div>
+        <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="next_page()" class="grade-button"
+          style="margin-left: 0px; width: auto; height: auto">
+          <img src="./assets/media/icons/plus.png" style="height: 20px; filter: invert(100%)">
+          <!-- <b>PU</b> -->
+        </button>
+        <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="next_page()" class="grade-button"
+          style="margin-left: 0px; width: auto; height: auto">
+          <img src="./assets/media/icons/plus.png" style="height: 25px; filter: invert(100%)">
+          <!-- <b>PU</b> -->
+        </button>
+      </section>
+      <section *ngIf="file_source != ''"
+        style="margin-bottom: 10px; height: 90%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden; background-color: #eee">
+        <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
+          [(page)]="file_page" style="min-height: 550px; height: 100%"></pdf-viewer>
+        <pdf-viewer *ngIf="this.screenWidth > 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
+          [(page)]="file_page" style="min-height: 625px; height: 100%"></pdf-viewer>
+      </section>
+    </div>
+  </div>
+  <div *ngIf="file_source == '' && data_loaded" class="content-menu" style="margin-bottom: 0; align-items: center">
     <div *ngIf="signup || login" style="align-items: left; width: min(1075px, 92%)">
       <section>
         <div (click)="signup=false; login=false" class="card card-small"
@@ -1365,19 +1533,19 @@
                 class="card card-small" style="height: 75px; width: 170px; align-items: center; padding-top: 0; background-color: #ccc">
                 <div class="avatar-container"
                   style="position: relative; height: 60px; width: 60px; border-radius: 50%; padding: 0">
-                  <img *ngIf="!can_assign_s(std)" src="{{my_students_data[std].photoURL}}" class="select-avatar"
+                  <img *ngIf="!can_assign_stud(std)" src="{{my_students_data[std].photoURL}}" class="select-avatar"
                     style="width:100%; height: 100%; filter: grayscale(100%)">
-                  <img *ngIf="can_assign_s(std) && this.selected_student != my_students_data[std].uid"
+                  <img *ngIf="can_assign_stud(std) && this.selected_student != my_students_data[std].uid"
                     src="{{my_students_data[std].photoURL}}" class="select-avatar" style="width:100%; height: 100%">
-                  <img *ngIf="can_assign_s(std) && this.selected_student == my_students_data[std].uid"
+                  <img *ngIf="can_assign_stud(std) && this.selected_student == my_students_data[std].uid"
                     src="{{my_students_data[std].photoURL}}" class="select-avatar"
                     style="width:100%; height: 100%; opacity: 0.3">
                   <div class="middle">
-                    <div *ngIf="can_assign_s(std) && this.selected_student != my_students_data[std].uid"
+                    <div *ngIf="can_assign_stud(std) && this.selected_student != my_students_data[std].uid"
                       style="color: white; background-color: #1976d2; border-radius: 10px">Select
                     </div>
                   </div>
-                  <div *ngIf="can_assign_s(std) && this.selected_student == my_students_data[std].uid"
+                  <div *ngIf="can_assign_stud(std) && this.selected_student == my_students_data[std].uid"
                     class="select-middle">
                     <img src="/assets/media/icons/save.png" style="height: 30px; width: 30px" />
                   </div>
@@ -1430,6 +1598,10 @@
                 <b> Begin Quiz </b>
               </button>
             </div>
+            <!-- <button class="grade-button" (click)="toggle_quiz_pdf(key); scroll_top()"
+              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px">
+              <b> View PDF </b>
+            </button> -->
           </div>
         </div>
       </div>
