@@ -5575,10 +5575,10 @@ export class QuizzesComponent implements OnInit {
       );
   }
 
-  toggle_quiz_pdf(quiz: string) {
+  toggle_cquiz_pdf(quiz: string) {
     this.selected_quiz = quiz;
     this.quiz_config = (this.authService.searchQuizId(quiz) as any);
-    this.pdf_dump = { content: [], styles: { tableExample: { fontSize: 14, margin: [0, 5, 0, 15] }, tableHeader: { bold: true, alignment: 'center', fontSize: 15, fillColor: '#AAAAAA' } }, defaultStyle: { columnGap: 10, fontSize: 15 }, images: {} };
+    this.pdf_dump = { content: [], styles: { tableExample: { fontSize: 14, alignment: 'center', margin: [0, 5, 0, 15] }, tableHeader: { bold: true, alignment: 'center', fontSize: 15, fillColor: '#AAAAAA' } }, defaultStyle: { columnGap: 10, fontSize: 15 }, images: {}, footer: function(currentPage: any, pageCount: any) { return { text: 'Page ' + currentPage.toString() + ' of ' + pageCount, alignment: 'center', bold: true }; } };
     this.pdf_dump.content.push({ margin: [0, 0, 0, 15], columns: [{ width: "*", fontSize: 18, lineHeight: 0.9, alignment: 'center', bold: true, text: this.quiz_config.name }, { margin: [0, 5, 0, 0], width: "auto", fontSize: 24, alignment: 'right', font: 'MajorMonoDisplay', characterSpacing: -2, text: 'More+Problems!' }] });
     this.pdf_dump.content.push({ columns: [[{ margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 16, bold: true, alignment: 'right', text: 'Name' }, { table: { widths: [195], heights: [20], body: [['']] } }] }, { margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 15, bold: true, alignment: 'right', text: 'Class' }, { table: { widths: [195], heights: [20], body: [['']] } }] }, { margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 15, bold: true, alignment: 'right', text: 'Date' }, { table: { widths: [195], heights: [20], body: [['']] } }] }], [{ margin: [0, 0, 0, 5], width: 200, fontSize: 15, lineHeight: 1.1, italics: true, alignment: 'center', text: this.quiz_config.topics[0] }, { margin: [0, 0, 0, 5], fontSize: 16, alignment: 'center', text: '' + this.quiz_config.length + ' total problems' }, { margin: [0, 0, 0, 5], fontSize: 16, alignment: 'center', text: '' + this.quiz_config.timer + ' minutes allowed' }]] });
     this.pdf_dump.content.push({
@@ -5634,11 +5634,11 @@ export class QuizzesComponent implements OnInit {
               if (key != undefined && +key > 0) {
                 var prob_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
                 prob_pdf_dump.unbreakable = true;
-                prob_pdf_dump.columns.push({ width: 20, fontSize: 18, bold: true, text: '' + key });
+                prob_pdf_dump.columns.push({ width: 35, fontSize: 18, bold: true, text: '' + key });
                 var prob_pdf_content: any[] = [];
                 for (let cont of (prob as any).Content) {
                   if (this.is_image(cont)) {
-                    prob_pdf_content.push({ margin: [0, 0, 0, 10], image: cont, fit: [400, 300] });
+                    prob_pdf_content.push({ margin: [0, 0, 0, 10], alignment: 'center', image: cont, fit: [400, 300] });
                   }
                   else {
                     prob_pdf_content.push({ margin: [0, 0, 0, 10], text: cont });
@@ -5646,7 +5646,7 @@ export class QuizzesComponent implements OnInit {
                 }
                 prob_pdf_content.push('\n');
                 if ((prob as any).Type == 'FR') {
-                  prob_pdf_content.push({ margin: [0, 0, 0, 5], table: { widths: [400], heights: [50], body: [['']] } });
+                  prob_pdf_content.push({ margin: [0, 0, 0, 5], alignment: 'center', table: { widths: [400], heights: [50], body: [['']] } });
                 }
                 else {
                   var choice_num = 1;
@@ -5656,7 +5656,7 @@ export class QuizzesComponent implements OnInit {
                     var choice_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
                     choice_pdf_dump.columns.push({ width: 20, fontSize: 16, bold: true, text: choice });
                     if (this.is_image((prob as any).AnswerChoices[choice].Choice)) {
-                      choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], image: (prob as any).AnswerChoices[choice].Choice, fit: [200, 150] });
+                      choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], alignment: 'center', image: (prob as any).AnswerChoices[choice].Choice, fit: [200, 150] });
                     }
                     else {
                       choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], text: (prob as any).AnswerChoices[choice].Choice });

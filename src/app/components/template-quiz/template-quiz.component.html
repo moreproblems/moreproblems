@@ -1582,26 +1582,30 @@
                   {{""+last_time}}
                 </h4>
               </div>
-              <button *ngIf="exam_status == 'Started'" class="grade-button" (click)="resume_exam(); scroll_top()"
+              <button *ngIf="exam_status == 'Started'" class="grade-button" (click)="resume_quiz(); scroll_top()"
                 style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0 20px; margin-top: 20px">
                 <b> Resume Quiz </b>
               </button>
-              <button *ngIf="exam_status == 'Assigned'" class="grade-button" (click)="begin_exam(); scroll_top()"
+              <button *ngIf="exam_status == 'Assigned'" class="grade-button" (click)="begin_quiz(); scroll_top()"
                 style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0 20px; margin-top: 20px">
                 <b> Begin Quiz </b>
               </button>
             </div>
             <div *ngIf="!this.authService.userData || !this.exam_inprogress" class="card-container"
               style="align-items: center">
-              <button class="grade-button" (click)="begin_exam(); scroll_top()"
+              <button class="grade-button" (click)="begin_quiz(); scroll_top()"
                 style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px">
                 <b> Begin Quiz </b>
               </button>
             </div>
-            <!-- <button class="grade-button" (click)="toggle_quiz_pdf(key); scroll_top()"
+            <button *ngIf="quiz_config.problems != undefined" class="grade-button" (click)="toggle_cquiz_pdf(key); scroll_top()"
               style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px">
               <b> View PDF </b>
-            </button> -->
+            </button>
+            <button *ngIf="quiz_config.problems == undefined" class="grade-button" (click)="toggle_quiz_pdf(key); scroll_top()"
+              style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0px 20px">
+              <b> View PDF </b>
+            </button>
           </div>
         </div>
       </div>
@@ -1734,7 +1738,7 @@
                     {{""+last_time}}
                   </h4>
                 </div>
-                <button class="grade-button" (click)="resume_exam(); scroll_top()"
+                <button class="grade-button" (click)="resume_quiz(); scroll_top()"
                   style="display: block; max-width: 150px; max-height: 100px; margin: 0px 20px 0 20px; margin-top: 40px">
                   <b> Resume Exam </b>
                 </button>
@@ -2551,7 +2555,7 @@
                     style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
                     <div *ngIf="prob.value.Type == 'IM'">
                       <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <!-- replace choice iteration with counter -->
                         <br /> <br /> <p *ngFor="let choice of subtopic_problem_selection[0]"><span *ngIf="choice != ''"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[0].indexOf(choice)+1) + ' (' + choice + ')'}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(choice)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(choice)] : 'No explanation or rationale is available.'}}</span></p>
                       </h3>
@@ -2567,7 +2571,7 @@
                     <div *ngIf="prob.value.Type == 'O'">
                       <h3 *ngIf="subtopic_problem_attempts[0] > 0"
                         style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; color: black">
-                        <b style="font-size: 20px; color: #1976d2">{{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}}</b> 
+                        <b style="font-size: 20px; color: #1976d2">{{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}}</b> 
                         <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[0]"><span *ngIf="selec != ''"><b>{{'\nExplanation (' + selec
                          + ')'}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] : 'No explanation or rationale is available.'}}</span></p>
                       </h3>
@@ -2581,7 +2585,7 @@
                     <div *ngIf="prob.value.Type == 'C'">
                       <h3 *ngIf="subtopic_problem_attempts[0] > 0"
                         style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; color: black">
-                        <b style="font-size: 20px; color: #1976d2">{{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}}</b>
+                        <b style="font-size: 20px; color: #1976d2">{{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}}</b>
                         <br /> <br /> <span *ngFor="let selec of subtopic_problem_selection[0]"> <p *ngFor="let ch of selec"><span *ngIf="ch != ''"><b>{{'\nExplanation (' + ch.substring(0, 1) + ')'}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)][selec.indexOf(ch)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)][selec.indexOf(ch)] : 'No explanation or rationale is available.'}}</span></p></span>
                       </h3>
                       <br *ngIf="subtopic_problem_attempts[0] > 0 && is_c_correct('', false) && screenWidth <= mobileWidth" />
@@ -2594,7 +2598,7 @@
                     <div *ngIf="prob.value.Type == 'G'">
                       <h3 *ngIf="subtopic_problem_attempts[0] > 0"
                         style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; color: black">
-                        <b style="font-size: 20px; color: #1976d2">{{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}}</b>
+                        <b style="font-size: 20px; color: #1976d2">{{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}}</b>
                         <br /> <br /> <span *ngFor="let selec of subtopic_problem_selection[0]"> <p *ngFor="let ch of selec"><span *ngIf="ch != ''"><b>{{'\nExplanation (' + ch.substring(0, 1) + ': ' + unique_choices_st[subtopic_problem_selection[0].indexOf(selec)].slice(2) + ')'}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)][selec.indexOf(ch)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)][selec.indexOf(ch)] : 'No explanation or rationale is available.'}}</span></p></span>
                       </h3>
                       <br *ngIf="subtopic_problem_attempts[0] > 0 && is_g_correct('', false) && screenWidth <= mobileWidth" />
@@ -2608,12 +2612,12 @@
                       <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                         <h3 *ngIf="choice.key == selection.value && subtopic_attempt_explanation[0][0] != ''"
                           style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                          <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                          <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                           <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[0][0]}}
                         </h3>
                         <h3 *ngIf="choice.key == selection.value && subtopic_attempt_explanation[0][0] == ''"
                           style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                          <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                          <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                           <br /> <br /> <b>No explanation or rationale is available.</b>
                         </h3>
                         <br
@@ -2630,7 +2634,7 @@
                     </div>
                     <div *ngIf="prob.value.Type == 'MS'">
                       <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[0].sort()"> <b>{{'\nExplanation (' + selec + ')'}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                       </h3>
                       <br
@@ -2646,7 +2650,7 @@
                       <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                         <h3 *ngIf="choice.key[0] == subtopic_problem_selection[0][0]"
                           style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                          <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                          <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                           <br /> <br /> <b>Explanation:</b> {{(subtopic_attempt_explanation[0][0] != '') ? subtopic_attempt_explanation[0][0] : 'No explanation or rationale is available.'}}
                         </h3>
                       </div>
@@ -2655,13 +2659,13 @@
                       <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                         <h3 *ngIf="subtopic_attempt_response[0].startsWith('Correct') && subtopic_attempt_explanation[0][0] != ''"
                           style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                          <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                          <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                           <!-- wrong data format, extra KEY -->
                           <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[0]}}
                         </h3>
                         <h3 *ngIf="!subtopic_attempt_response[0].startsWith('Correct') || subtopic_attempt_explanation[0][0] == ''"
                           style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                          <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                          <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                           <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                         </h3>
                       </div>
@@ -2675,7 +2679,7 @@
                     </div>
                     <div *ngIf="prob.value.Type == 'MGP'">
                       <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[0]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[0].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                       </h3>
                       <br
@@ -2689,7 +2693,7 @@
                     </div>
                     <div *ngIf="prob.value.Type == 'T'">
                       <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[0]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[0].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                       </h3>
                       <br
@@ -2738,13 +2742,13 @@
                       <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                         <h3 *ngIf="subtopic_attempt_response[0].startsWith('Correct') && subtopic_attempt_explanation[0][0] != ''"
                           style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                          <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                          <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                           <!-- wrong data format, extra KEY -->
                           <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[0]}}
                         </h3>
                         <h3 *ngIf="!subtopic_attempt_response[0].startsWith('Correct') || subtopic_attempt_explanation[0][0] == ''"
                           style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                          <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                          <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                           <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                         </h3>
                       </div>
@@ -2760,13 +2764,13 @@
                       <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
                         <h3 *ngIf="subtopic_attempt_response[0].startsWith('Correct') && subtopic_attempt_explanation[0][0] != ''"
                           style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                          <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                          <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                           <!-- wrong data format, extra KEY -->
                           <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[0]}}
                         </h3>
                         <h3 *ngIf="!subtopic_attempt_response[0].startsWith('Correct') || subtopic_attempt_explanation[0][0] == ''"
                           style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                          <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                          <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                           <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                         </h3>
                       </div>
@@ -2780,7 +2784,7 @@
                     </div>
                     <div *ngIf="prob.value.Type == 'MFR'">
                       <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[0]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[0]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[0].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] != '') ? subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                       </h3>
                       <br
@@ -3175,7 +3179,7 @@
                   style="height: auto; min-height: 100px; max-width: 90%; padding: 40px; margin: 0 0 20px 0; align-items: center; display: inline-flex; background-color: white;">
                   <div *ngIf="part.value.Type == 'IM'">
                     <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                       <br /> <br /> <p *ngFor="let choice of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"><span *ngIf="choice != ''"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)+1) + ' (' + choice + ')'}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)] : 'No explanation or rationale is available.'}}</span></p>
                     </h3>
                   </div>
@@ -3183,14 +3187,14 @@
                     <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="choice.key == selection.value"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <br /> <br /> <b>Explanation:</b> {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] : 'No explanation or rationale is available.'}}
                       </h3>
                     </div>
                   </div>
                   <div *ngIf="part.value.Type == 'MS'">
                     <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                       <br /> <br /> <b>Explanation</b> <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].sort()"> <b>{{'\nOption'}} {{selec}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                     </h3>
                   </div>
@@ -3198,7 +3202,7 @@
                     <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="choice.key[0] == subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <br /> <br /> <b>Explanation:</b> {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] : 'No explanation or rationale is available.'}}
                       </h3>
                     </div>
@@ -3207,26 +3211,26 @@
                     <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <!-- wrong data format, extra KEY -->
                         <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
                       </h3>
                       <h3 *ngIf="!subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') || subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                       </h3>
                     </div>
                   </div>
                   <div *ngIf="part.value.Type == 'MGP'">
                     <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                       <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                     </h3>
                   </div>
                   <div *ngIf="part.value.Type == 'T'">
                     <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                       <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                     </h3>
                   </div>
@@ -3253,13 +3257,13 @@
                     <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <!-- wrong data format, extra KEY -->
                         <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
                       </h3>
                       <h3 *ngIf="!subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') || subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                       </h3>
                     </div>
@@ -3268,20 +3272,20 @@
                     <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
                       <h3 *ngIf="subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <!-- wrong data format, extra KEY -->
                         <br /> <br /> <b>Explanation:</b> {{subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
                       </h3>
                       <h3 *ngIf="!subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') || subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                        <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                         <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
                       </h3>
                     </div>
                   </div>
                   <div *ngIf="part.value.Type == 'MFR'">
                     <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                       <br /> <br /> <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"> <b>{{'\nExplanation '  + ''+(subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)+1)}}</b>: {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
                     </h3>
                   </div>

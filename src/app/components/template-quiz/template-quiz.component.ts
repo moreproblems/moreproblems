@@ -2701,7 +2701,8 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
   }
 
   is_image(blob: string) {
-    return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
+    // return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
+    return (['.jpg', '.jpeg', '.png', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
   }
 
   get_refsheet(key: string) {
@@ -3167,7 +3168,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
     // console.log(this.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet);
   }
 
-  resume_exam() {
+  resume_quiz() {
     if (this.quiz_config.problems == undefined) {
       for (let i: number = 1; i <= this.problem_ids.length; i++) {
         this.exam_dump[i] = this.e_dump_dict[this.problem_ids[i - 1].substring(0, this.problem_ids[i - 1].indexOf('-'))][+this.problem_ids[i - 1].substring(this.problem_ids[i - 1].indexOf('-') + 1)];
@@ -3579,7 +3580,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
     }, 200);
   }
 
-  begin_exam() {
+  begin_quiz() {
     this.generate_problems();
     this.db_updates = {};
     if (this.authService.userData.role == 'Student') {
@@ -7495,10 +7496,196 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
   }
 
   toggle_quiz_pdf(quiz: string) {
+    // this.selected_quiz = quiz;
+    this.filter_exams();
+    this.dump_count = 0;
+    for (let online_key of this.exam_set) {
+      if (this.filtered_set.includes(online_key)) {
+        for (const [num, value] of Object.entries(this.e_dump_dict[online_key])) {
+          if (value.Number <= this.exam_attribute_dump[online_key].NumQuestions) {
+            var prob: any = {};
+            for (const [key, val] of Object.entries(value)) {
+              prob[key] = val;
+            }
+            if (this.topic_filters.length == 0) {
+              this.ordered_dump[this.dump_count] = prob;
+              this.ordered_dump[this.dump_count].Number = online_key + '-' + (this.ordered_dump[this.dump_count].Number as string);
+              this.dump_count += 1;
+            }
+            else if (!this.exam_attribute_dump[online_key].HideTopics) {
+              for (let topic of value.Topics) {
+                if (this.topic_filters.includes(topic)) {
+                  this.ordered_dump[this.dump_count] = prob;
+                  this.ordered_dump[this.dump_count].Number = online_key + '-' + (this.ordered_dump[this.dump_count].Number as string);
+                  this.dump_count += 1;
+                }
+              }
+            }
+            console.log(this.dump_count);
+          }
+        }
+      }
+    }
+    console.log(this.ordered_dump);
+    if (this.filtered_set.length != 0) {
+      this.generate_message = "";
+      if (this.quiz_length > 0) {
+        this.randomize_problems(this.quiz_length);
+      }
+      else {
+        this.randomize_problems(Math.min(100, this.filtered_prob_num));
+      }
+    }
     this.quiz_config = (this.authService.searchQuizId(quiz) as any);
-    this.pdf_dump = { content: [], styles: { tableExample: { fontSize: 14, margin: [0, 5, 0, 15] }, tableHeader: { bold: true, alignment: 'center', fontSize: 15, color: 'black' } }, defaultStyle: { columnGap: 10, fontSize: 15 }, images: {} };
+    this.pdf_dump = { content: [], styles: { tableExample: { fontSize: 14, alignment: 'center', margin: [0, 5, 0, 15] }, tableHeader: { bold: true, alignment: 'center', fontSize: 15, fillColor: '#AAAAAA' } }, defaultStyle: { columnGap: 10, fontSize: 15 }, images: {}, footer: function (currentPage: any, pageCount: any) { return { text: 'Page ' + currentPage.toString() + ' of ' + pageCount, alignment: 'center', bold: true }; } };
     this.pdf_dump.content.push({ margin: [0, 0, 0, 15], columns: [{ width: "*", fontSize: 18, lineHeight: 0.9, alignment: 'center', bold: true, text: this.quiz_config.name }, { margin: [0, 5, 0, 0], width: "auto", fontSize: 24, alignment: 'right', font: 'MajorMonoDisplay', characterSpacing: -2, text: 'More+Problems!' }] });
-    this.pdf_dump.content.push({ columns: [[{ margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 16, bold: true, alignment: 'right', text: 'Name' }, { table: { widths: [195], heights: [20], body: [['']] } }] }, { margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 15, bold: true, alignment: 'right', text: 'Class' }, { table: { widths: [195], heights: [20], body: [['']] } }] }, { margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 15, bold: true, alignment: 'right', text: 'Date' }, { table: { widths: [195], heights: [20], body: [['']] } }] }], [{ margin: [0, 0, 0, 5], width: 200, fontSize: 15, lineHeight: 1.1, alignment: 'center', text: 'Topic: ' + this.quiz_config.topics[0] }, { margin: [0, 0, 0, 5], fontSize: 16, alignment: 'center', text: '' + this.quiz_config.length + ' total problems' }, { margin: [0, 0, 0, 5], fontSize: 16, alignment: 'center', text: '' + this.quiz_config.timer + ' minutes allowed' }]] });
+    this.pdf_dump.content.push({ columns: [[{ margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 16, bold: true, alignment: 'right', text: 'Name' }, { table: { widths: [195], heights: [20], body: [['']] } }] }, { margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 15, bold: true, alignment: 'right', text: 'Class' }, { table: { widths: [195], heights: [20], body: [['']] } }] }, { margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 15, bold: true, alignment: 'right', text: 'Date' }, { table: { widths: [195], heights: [20], body: [['']] } }] }], [{ margin: [0, 0, 0, 5], width: 200, fontSize: 15, lineHeight: 1.1, italics: true, alignment: 'center', text: ((this.quiz_config.topics != undefined) ? this.quiz_config.topics[0] : 'No Topics Added') }, { margin: [0, 0, 0, 5], fontSize: 16, alignment: 'center', text: '' + this.quiz_config.length + ' total problems' }, { margin: [0, 0, 0, 5], fontSize: 16, alignment: 'center', text: '' + this.quiz_config.timer + ' minutes allowed' }]] });
+    this.pdf_dump.content.push({
+      table: {
+        widths: ['*'],
+        body: [[" "], [" "]]
+      },
+      layout: {
+        hLineWidth: function (i: any, node: any) {
+          return (i === 0 || i === node.table.body.length) ? 0 : 2;
+        },
+        vLineWidth: function (i: any, node: any) {
+          return 0;
+        },
+      }
+    });
+    this.pdf_dump.content.push('\n');
+    setTimeout(() => {
+      this.quiz_config = (this.authService.searchQuizId(quiz) as any);
+      for (const [key, prob] of Object.entries(this.exam_dump)) {
+        if (key != undefined && +key > 0) {
+          for (let cont of (prob as any).Content) {
+            if (this.is_image(cont)) {
+              this.toDataURL('./assets/' + (cont as string)).then((dataUrl) => {
+                console.log(dataUrl as string);
+                this.pdf_dump.images[cont] = (dataUrl as string);
+              }).catch(error => {
+                console.log(error.message);
+              });
+              // this.authService.getQuizPic(quiz, cont).then((url) => {
+              //   this.toDataURL(url).then((dataUrl) => {
+              //     console.log(dataUrl as string);
+              //     this.pdf_dump.images[cont] = (dataUrl as string);
+              //   }).catch(error => {
+              //     console.log(error.message);
+              //   });
+              // });
+            }
+          }
+          for (let choice of Object.keys((prob as any).AnswerChoices)) {
+            if (this.is_image((prob as any).AnswerChoices[choice].Choice)) {
+              this.toDataURL('./assets/' + ((prob as any).AnswerChoices[choice].Choice as string)).then((dataUrl) => {
+                console.log(dataUrl as string);
+                this.pdf_dump.images[(prob as any).AnswerChoices[choice].Choice] = (dataUrl as string);
+              }).catch(error => {
+                console.log(error.message);
+              });
+              // this.authService.getQuizPic(quiz, (prob as any).AnswerChoices[choice].Choice).then((url) => {
+              //   this.toDataURL(url).then((dataUrl) => {
+              //     console.log(dataUrl as string);
+              //     this.pdf_dump.images[(prob as any).AnswerChoices[choice].Choice] = (dataUrl as string);
+              //   }).catch(error => {
+              //     console.log(error.message);
+              //   });
+              // });
+            }
+          }
+        }
+      }
+      setTimeout(() => {
+        for (const [key, prob] of Object.entries(this.exam_dump)) {
+          if (key != undefined && +key > 0) {
+            var prob_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
+            prob_pdf_dump.unbreakable = true;
+            prob_pdf_dump.columns.push({ width: 35, fontSize: 18, bold: true, text: ''+key });
+            var prob_pdf_content: any[] = [];
+            for (let cont of (prob as any).Content) {
+              if (this.is_image(cont)) {
+                prob_pdf_content.push({ margin: [0, 0, 0, 10], alignment: 'center', image: cont, fit: [400, 300] });
+              }
+              else {
+                prob_pdf_content.push({ margin: [0, 0, 0, 10], text: cont });
+              }
+            }
+            prob_pdf_content.push('\n');
+            if ((prob as any).Type == 'FR') {
+              prob_pdf_content.push({ margin: [0, 0, 0, 5], alignment: 'center', table: { widths: [400], heights: [50], body: [['']] } });
+            }
+            else {
+              var choice_num = 1;
+              var column1: any[] = [];
+              var column2: any[] = [];
+              for (let choice of Object.keys((prob as any).AnswerChoices)) {
+                var choice_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
+                choice_pdf_dump.columns.push({ width: 20, fontSize: 16, bold: true, text: choice });
+                if (this.is_image((prob as any).AnswerChoices[choice].Choice)) {
+                  choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], alignment: 'center', image: (prob as any).AnswerChoices[choice].Choice, fit: [200, 150] });
+                }
+                else {
+                  choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], text: (prob as any).AnswerChoices[choice].Choice });
+                }
+                if (choice_num % 2 == 1) {
+                  column1.push(choice_pdf_dump);
+                }
+                else {
+                  column2.push(choice_pdf_dump);
+                }
+                choice_num += 1;
+              }
+              prob_pdf_content.push({ columns: [column1, column2] });
+            }
+            prob_pdf_dump.columns.push(prob_pdf_content);
+            prob_pdf_dump.headlineLevel = 1;
+            this.pdf_dump.content.push(prob_pdf_dump);
+            this.pdf_dump.content.push('\n\n\n');
+          }
+        }
+        this.pdf_dump.content.push({ fontSize: 18, bold: true, alignment: 'center', pageBreak: 'before', text: 'Answer Key\n\n' });
+        // var key_pdf_dump: any = { style: "tableExample", table: { body: [[{ text: '', style: 'tableHeader' }, { text: 'Answer', style: 'tableHeader' }, { text: 'Subtopic', style: 'tableHeader' }]] }, layout: { fillColor: function (rowIndex: any, node: any, columnIndex: any) { return (rowIndex % 2 === 0) ? '#EEEEEE' : null; } } };
+        var key_pdf_dump: any = { style: "tableExample", table: { body: [[{ text: '', style: 'tableHeader' }, { text: 'Answer', style: 'tableHeader' }, { text: 'Explanation', style: 'tableHeader' }, { text: 'Subtopic', style: 'tableHeader' }]], dontBreakRows: true }, layout: { fillColor: function (rowIndex: any, node: any, columnIndex: any) { return (rowIndex % 2 === 0) ? '#EEEEEE' : null; } } };
+        for (const [key, prob] of Object.entries(this.exam_dump)) {
+          var answer: string = '';
+          var rationale: string = '';
+          if ((prob as any).Type != 'FR') {
+            for (const [ch, choice] of Object.entries((prob as any).AnswerChoices)) {
+              if ((choice as any).Key.Correct) {
+                if (answer.length > 0) {
+                  answer += ', ';
+                }
+                answer += ''+ch;
+                rationale = ''+(choice as any).Key.Rationale;
+              }
+            }
+          }
+          else {
+            answer = ''+(prob as any).AnswerChoices['KEY'].Choice;
+            rationale = ''+(prob as any).AnswerChoices['KEY'].Key.Rationale;
+          }
+          // key_pdf_dump.table.body.push([ { bold: true, text: ''+key }, { bold: true, lineHeight: 0.9, alignment: 'center', text: answer }, { fontSize: 12, lineHeight: 0.9, text: ((prob as any).SubTopics[0] as string) }]);
+          key_pdf_dump.table.body.push([ { bold: true, text: ''+key }, { bold: true, lineHeight: 0.9, alignment: 'center', text: answer }, { fontSize: 12, lineHeight: 0.9, text: rationale }, { fontSize: 12, lineHeight: 0.9, text: ((prob as any).SubTopics[0] as string) } ]);
+        }
+        this.pdf_dump.content.push(key_pdf_dump);
+      }, 500);
+      setTimeout(() => {
+        console.log(this.pdf_dump);
+        pdfMake.createPdf(this.pdf_dump, undefined, this.fonts).getDataUrl((dataUrl) => {
+          this.file_source = dataUrl;
+        });
+      }, 1000);
+    }, 500);
+  }
+
+  toggle_cquiz_pdf(quiz: string) {
+    // this.selected_quiz = quiz;
+    this.quiz_config = (this.authService.searchQuizId(quiz) as any);
+    this.pdf_dump = { content: [], styles: { tableExample: { fontSize: 14, alignment: 'center', margin: [0, 5, 0, 15] }, tableHeader: { bold: true, alignment: 'center', fontSize: 15, fillColor: '#AAAAAA' } }, defaultStyle: { columnGap: 10, fontSize: 15 }, images: {}, footer: function (currentPage: any, pageCount: any) { return { text: 'Page ' + currentPage.toString() + ' of ' + pageCount, alignment: 'center', bold: true }; } };
+    this.pdf_dump.content.push({ margin: [0, 0, 0, 15], columns: [{ width: "*", fontSize: 18, lineHeight: 0.9, alignment: 'center', bold: true, text: this.quiz_config.name }, { margin: [0, 5, 0, 0], width: "auto", fontSize: 24, alignment: 'right', font: 'MajorMonoDisplay', characterSpacing: -2, text: 'More+Problems!' }] });
+    this.pdf_dump.content.push({ columns: [[{ margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 16, bold: true, alignment: 'right', text: 'Name' }, { table: { widths: [195], heights: [20], body: [['']] } }] }, { margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 15, bold: true, alignment: 'right', text: 'Class' }, { table: { widths: [195], heights: [20], body: [['']] } }] }, { margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 15, bold: true, alignment: 'right', text: 'Date' }, { table: { widths: [195], heights: [20], body: [['']] } }] }], [{ margin: [0, 0, 0, 5], width: 200, fontSize: 15, lineHeight: 1.1, italics: true, alignment: 'center', text: this.quiz_config.topics[0] }, { margin: [0, 0, 0, 5], fontSize: 16, alignment: 'center', text: '' + this.quiz_config.length + ' total problems' }, { margin: [0, 0, 0, 5], fontSize: 16, alignment: 'center', text: '' + this.quiz_config.timer + ' minutes allowed' }]] });
     this.pdf_dump.content.push({
       table: {
         widths: ['*'],
@@ -7552,36 +7739,42 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
               if (key != undefined && +key > 0) {
                 var prob_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
                 prob_pdf_dump.unbreakable = true;
-                prob_pdf_dump.columns.push({ width: 20, fontSize: 18, bold: true, text: '' + key });
+                prob_pdf_dump.columns.push({ width: 35, fontSize: 18, bold: true, text: '' + key });
                 var prob_pdf_content: any[] = [];
                 for (let cont of (prob as any).Content) {
                   if (this.is_image(cont)) {
-                    prob_pdf_content.push({ image: cont, width: 400 });
+                    prob_pdf_content.push({ margin: [0, 0, 0, 10], alignment: 'center', image: cont, fit: [400, 300] });
                   }
                   else {
-                    prob_pdf_content.push(cont);
+                    prob_pdf_content.push({ margin: [0, 0, 0, 10], text: cont });
                   }
-                  prob_pdf_content.push('\n');
                 }
                 prob_pdf_content.push('\n');
                 if ((prob as any).Type == 'FR') {
-                  prob_pdf_content.push({ table: { widths: [400], heights: [50], body: [['']] } });
+                  prob_pdf_content.push({ margin: [0, 0, 0, 5], alignment: 'center', table: { widths: [400], heights: [50], body: [['']] } });
                 }
                 else {
+                  var choice_num = 1;
+                  var column1: any[] = [];
+                  var column2: any[] = [];
                   for (let choice of Object.keys((prob as any).AnswerChoices)) {
+                    var choice_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
+                    choice_pdf_dump.columns.push({ width: 20, fontSize: 16, bold: true, text: choice });
                     if (this.is_image((prob as any).AnswerChoices[choice].Choice)) {
-                      var choice_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
-                      choice_pdf_dump.columns.push({ width: 20, fontSize: 16, bold: true, text: choice });
-                      choice_pdf_dump.columns.push({ image: (prob as any).AnswerChoices[choice].Choice, width: 200 });
-                      prob_pdf_content.push(choice_pdf_dump);
+                      choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], alignment: 'center', image: (prob as any).AnswerChoices[choice].Choice, fit: [200, 150] });
                     }
                     else {
-                      var choice_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
-                      choice_pdf_dump.columns.push({ width: 20, fontSize: 16, bold: true, text: choice });
-                      choice_pdf_dump.columns.push((prob as any).AnswerChoices[choice].Choice);
-                      prob_pdf_content.push(choice_pdf_dump);
+                      choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], text: (prob as any).AnswerChoices[choice].Choice });
                     }
+                    if (choice_num % 2 == 1) {
+                      column1.push(choice_pdf_dump);
+                    }
+                    else {
+                      column2.push(choice_pdf_dump);
+                    }
+                    choice_num += 1;
                   }
+                  prob_pdf_content.push({ columns: [column1, column2] });
                 }
                 prob_pdf_dump.columns.push(prob_pdf_content);
                 prob_pdf_dump.headlineLevel = 1;
@@ -7590,7 +7783,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
               }
             }
             this.pdf_dump.content.push({ fontSize: 18, bold: true, alignment: 'center', pageBreak: 'before', text: 'Answer Key\n\n' });
-            var key_pdf_dump: any = { style: "tableExample", table: { body: [[{ text: '', style: 'tableHeader' }, { text: 'Answer', style: 'tableHeader' }, { text: 'Subtopic', style: 'tableHeader' }]] } };
+            var key_pdf_dump: any = { style: "tableExample", table: { body: [[{ text: '', style: 'tableHeader' }, { text: 'Answer', style: 'tableHeader' }, { text: 'Subtopic', style: 'tableHeader' }]] }, layout: { fillColor: function (rowIndex: any, node: any, columnIndex: any) { return (rowIndex % 2 === 0) ? '#EEEEEE' : null; } } };
             // var key_pdf_dump: any = { style: "tableExample", table: { body: [ [ {text: '', style: 'tableHeader'}, {text: 'Answer', style: 'tableHeader'}, {text: 'Explanation', style: 'tableHeader'}, {text: 'Subtopic', style: 'tableHeader'} ] ] } };
             for (const [key, prob] of Object.entries(this.quiz_config.problems)) {
               var answer: string = '';
