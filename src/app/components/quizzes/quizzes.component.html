@@ -668,17 +668,6 @@
           {{quiz_config.name}} </h1>
         <h1 *ngIf="this.screenWidth > 900" style="margin: auto 15px; text-align: center; font-size: 26px">
           {{quiz_config.name}} </h1>
-        <button *ngIf="this.screenWidth <= 900" (click)="router.navigate(['quiz/' + selected_quiz])"
-          class="grade-button"
-          style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
-          <img src="./assets/media/icons/test.png" style="height: 25px">
-          <b style="margin-left: 10px; font-size: 17px; line-height: 19px; width: auto"> Take Quiz! </b>
-        </button>
-        <button *ngIf="this.screenWidth > 900" (click)="router.navigate(['quiz/' + selected_quiz])"
-          class="grade-button" style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
-          <img src="./assets/media/icons/test.png" style="height: 25px">
-          <b style="margin-left: 10px; font-size: 22px; line-height: 26px; width: auto"> Take Quiz! </b>
-        </button>
       </section>
       <hr style="width: max(80%, 300px)">
       <section
@@ -711,33 +700,46 @@
           <b style="margin-left: 10px"> Take Exam! </b>
         </button> -->
         <div *ngIf="authService.userData as user">
-          <button
-            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth <= 900"
-            (click)="toggle_assign_quiz()" class="grade-button"
-            style="margin: 5px; padding: 6px; width: auto; height: auto">
-            <img src="./assets/media/icons/assign.png" style="height: 22px">
-            <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Assign </b>
+          <button *ngIf="this.screenWidth <= 900" (click)="this.file_source=''; this.toggle_filters()"
+            class="grade-button"
+            style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
+            <img src="./assets/media/icons/test.png" style="height: 22px">
+            <b style="margin-left: 10px; font-size: 17px; line-height: 20px; width: auto"> Take Quiz! </b>
           </button>
-          <button
-            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth > 900"
-            (click)="toggle_assign_quiz()" class="grade-button" style="margin: 5px; width: auto; height: auto">
-            <img src="./assets/media/icons/assign.png" style="height: 27px">
-            <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Assign </b>
+          <button *ngIf="this.screenWidth > 900" (click)="this.file_source=''; this.toggle_filters()"
+            class="grade-button" style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
+            <img src="./assets/media/icons/test.png" style="height: 25px">
+            <b style="margin-left: 10px; font-size: 22px; line-height: 26px; width: auto"> Take Quiz! </b>
           </button>
         </div>
-        <div *ngIf="authService.userData as user">
+        <!-- <div *ngIf="authService.userData as user">
           <button
             *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="router.navigate(['quiz/' + selected_quiz + '/edit'])" class="grade-button"
             style="margin: 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/edit.png" style="height: 22px">
-            <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Edit Quiz </b>
+            <b style="margin-left: 5px; font-size: 17px; line-height: 20px"> Edit Quiz </b>
           </button>
           <button *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth > 900"
             (click)="router.navigate(['quiz/' + selected_quiz + '/edit'])" class="grade-button"
             style="margin: 5px; width: auto; height: auto">
             <img src="./assets/media/icons/edit.png" style="height: 25px">
-            <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Edit Quiz </b>
+            <b style="margin-left: 10px; font-size: 22px; line-height: 26px"> Edit Quiz </b>
+          </button>
+        </div> -->
+        <div *ngIf="authService.userData as user">
+          <button
+            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth <= 900"
+            (click)="toggle_assign_quiz()" class="grade-button"
+            style="margin: 5px; padding: 6px; width: auto; height: auto">
+            <img src="./assets/media/icons/assign.png" style="height: 22px">
+            <b style="margin-left: 5px; font-size: 17px; line-height: 20px"> Assign </b>
+          </button>
+          <button
+            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth > 900"
+            (click)="toggle_assign_quiz()" class="grade-button" style="margin: 5px; width: auto; height: auto">
+            <img src="./assets/media/icons/assign.png" style="height: 25px">
+            <b style="margin-left: 10px; font-size: 22px; line-height: 26px"> Assign </b>
           </button>
         </div>
       </section>
@@ -6089,14 +6091,19 @@
           </span> -->
           <span *ngIf="authService.userData as user">
             <button *ngIf="!['', 'Student'].includes(user.role) && (grade_filters.length > 0 || state_filters.length > 0 || subject_filters.length > 0)"
-              (click)="assign_quiz()" class="grade-button" style="margin: 10px 5px 5px; width: auto; height: auto">
-              <img src="./assets/media/icons/assign.png" style="height: 27px; margin-top: 2px; margin-bottom: 2px">
+              (click)="assign_quiz()" class="grade-button" style="width: auto; height: auto">
+              <img src="./assets/media/icons/assign.png" style="height: 27px">
               <b style="margin-left: 10px; font-size: 20px; font-size: 22px; margin-top: 2px; margin-bottom: 2px"> Assign </b>
             </button>
           </span>
           <span>
             <button class="grade-button" (click)="generate_problems()" style="width: 180px">
               <h3 (click)="scroll_top()" style="margin-top: 2px; margin-bottom: 2px; font-size: 22px"><b> Begin Practice </b></h3>
+            </button>
+          </span>
+          <span>
+            <button class="grade-button" (click)="toggle_quiz_pdf()">
+              <h3 (click)="scroll_top()" style="margin-top: 2px; margin-bottom: 2px; font-size: 22px"><b> View PDF </b></h3>
             </button>
           </span>
         </div>

@@ -2344,6 +2344,24 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
   };
 
   fonts: any = {
+    Courier: {
+      normal: 'Courier',
+      bold: 'Courier-Bold',
+      italics: 'Courier-Oblique',
+      bolditalics: 'Courier-BoldOblique'
+    },
+    Helvetica: {
+      normal: 'Helvetica',
+      bold: 'Helvetica-Bold',
+      italics: 'Helvetica-Oblique',
+      bolditalics: 'Helvetica-BoldOblique'
+    },
+    Times: {
+      normal: 'Times-Roman',
+      bold: 'Times-Bold',
+      italics: 'Times-Italic',
+      bolditalics: 'Times-BoldItalic'
+    },
     Roboto: {
       normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
       bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
@@ -7537,7 +7555,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
       }
     }
     this.quiz_config = (this.authService.searchQuizId(quiz) as any);
-    this.pdf_dump = { content: [], styles: { tableExample: { fontSize: 14, alignment: 'center', margin: [0, 5, 0, 15] }, tableHeader: { bold: true, alignment: 'center', fontSize: 15, fillColor: '#AAAAAA' } }, defaultStyle: { columnGap: 10, fontSize: 15 }, images: {}, footer: function (currentPage: any, pageCount: any) { return { text: 'Page ' + currentPage.toString() + ' of ' + pageCount, alignment: 'center', bold: true }; } };
+    this.pdf_dump = { content: [], styles: { tableExample: { fontSize: 14, alignment: 'center', margin: [0, 5, 0, 15] }, tableHeader: { bold: true, alignment: 'center', fontSize: 15, fillColor: '#AAAAAA' } }, defaultStyle: { columnGap: 10, font: 'Helvetica', fontSize: 14 }, images: {}, footer: function (currentPage: any, pageCount: any) { return [{columns:[{ margin: [150, 10, 0, 0], width: '*', text: 'Page ' + currentPage.toString() + ' of ' + pageCount, alignment: 'left', bold: true }, { margin: [0, 10, 150, 0], width: "*", alignment: 'right', font: 'MajorMonoDisplay', characterSpacing: -2, text: 'moreproblems.org' }]}]; } };
     this.pdf_dump.content.push({ margin: [0, 0, 0, 15], columns: [{ width: "*", fontSize: 18, lineHeight: 0.9, alignment: 'center', bold: true, text: this.quiz_config.name }, { margin: [0, 5, 0, 0], width: "auto", fontSize: 24, alignment: 'right', font: 'MajorMonoDisplay', characterSpacing: -2, text: 'More+Problems!' }] });
     this.pdf_dump.content.push({ columns: [[{ margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 16, bold: true, alignment: 'right', text: 'Name' }, { table: { widths: [195], heights: [20], body: [['']] } }] }, { margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 15, bold: true, alignment: 'right', text: 'Class' }, { table: { widths: [195], heights: [20], body: [['']] } }] }, { margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 15, bold: true, alignment: 'right', text: 'Date' }, { table: { widths: [195], heights: [20], body: [['']] } }] }], [{ margin: [0, 0, 0, 5], width: 200, fontSize: 15, lineHeight: 1.1, italics: true, alignment: 'center', text: ((this.quiz_config.topics != undefined) ? this.quiz_config.topics[0] : 'No Topics Added') }, { margin: [0, 0, 0, 5], fontSize: 16, alignment: 'center', text: '' + this.quiz_config.length + ' total problems' }, { margin: [0, 0, 0, 5], fontSize: 16, alignment: 'center', text: '' + this.quiz_config.timer + ' minutes allowed' }]] });
     this.pdf_dump.content.push({
@@ -7559,40 +7577,25 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
       this.quiz_config = (this.authService.searchQuizId(quiz) as any);
       for (const [key, prob] of Object.entries(this.exam_dump)) {
         if (key != undefined && +key > 0) {
+          for (let supp of (prob as any).SuppContent) {
+            this.read_supp_json(supp);
+          }
           for (let cont of (prob as any).Content) {
             if (this.is_image(cont)) {
               this.toDataURL('./assets/' + (cont as string)).then((dataUrl) => {
-                console.log(dataUrl as string);
                 this.pdf_dump.images[cont] = (dataUrl as string);
               }).catch(error => {
                 console.log(error.message);
               });
-              // this.authService.getQuizPic(quiz, cont).then((url) => {
-              //   this.toDataURL(url).then((dataUrl) => {
-              //     console.log(dataUrl as string);
-              //     this.pdf_dump.images[cont] = (dataUrl as string);
-              //   }).catch(error => {
-              //     console.log(error.message);
-              //   });
-              // });
             }
           }
           for (let choice of Object.keys((prob as any).AnswerChoices)) {
             if (this.is_image((prob as any).AnswerChoices[choice].Choice)) {
               this.toDataURL('./assets/' + ((prob as any).AnswerChoices[choice].Choice as string)).then((dataUrl) => {
-                console.log(dataUrl as string);
                 this.pdf_dump.images[(prob as any).AnswerChoices[choice].Choice] = (dataUrl as string);
               }).catch(error => {
                 console.log(error.message);
               });
-              // this.authService.getQuizPic(quiz, (prob as any).AnswerChoices[choice].Choice).then((url) => {
-              //   this.toDataURL(url).then((dataUrl) => {
-              //     console.log(dataUrl as string);
-              //     this.pdf_dump.images[(prob as any).AnswerChoices[choice].Choice] = (dataUrl as string);
-              //   }).catch(error => {
-              //     console.log(error.message);
-              //   });
-              // });
             }
           }
         }
@@ -7600,31 +7603,178 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
       setTimeout(() => {
         for (const [key, prob] of Object.entries(this.exam_dump)) {
           if (key != undefined && +key > 0) {
+            for (let supp of (prob as any).SuppContent) {
+              for (let block of this.supp_dump[supp].Context) {
+                if (this.is_image(block)) {
+                  this.toDataURL('./assets/' + (block as string)).then((dataUrl) => {
+                    this.pdf_dump.images[block] = (dataUrl as string);
+                  }).catch(error => {
+                    console.log(error.message);
+                  });
+                }
+              }
+              for (let block of this.supp_dump[supp].Content) {
+                if (this.is_image(block[1])) {
+                  this.toDataURL('./assets/' + (block[1] as string)).then((dataUrl) => {
+                    this.pdf_dump.images[block[1]] = (dataUrl as string);
+                  }).catch(error => {
+                    console.log(error.message);
+                  });
+                }
+              }
+            }
+          }
+        }
+      }, 100);
+      setTimeout(() => {
+        for (const [key, prob] of Object.entries(this.exam_dump)) {
+          if (key != undefined && +key > 0) {
+            for (let supp of (prob as any).SuppContent) {
+              if (this.supp_dump[supp].Directions != '') {
+                this.pdf_dump.content.push({ margin: [0, 0, 0, 10], bold: true, italics: true, alignment: 'center', pageBreak: 'before', text: this.supp_dump[supp].Directions });
+              }
+              if (this.supp_dump[supp].Directions != '') {
+                this.pdf_dump.content.push({ margin: [0, 0, 0, 10], fontSize: 16, bold: true, alignment: 'center', text: this.supp_dump[supp].Title });
+              }
+              else {
+                this.pdf_dump.content.push({ margin: [0, 0, 0, 10], fontSize: 16, bold: true, alignment: 'center', pageBreak: 'before', text: this.supp_dump[supp].Title });
+              }
+              if (this.supp_dump[supp].Subtitle != '') {
+                this.pdf_dump.content.push({ margin: [0, 0, 0, 10], bold: true, alignment: 'center', text: this.supp_dump[supp].Subtitle });
+              }
+              if (this.supp_dump[supp].Author != '') {
+                this.pdf_dump.content.push({ margin: [0, 0, 0, 10], italics: true, alignment: 'center', text: this.supp_dump[supp].Author });
+              }
+              for (let block of this.supp_dump[supp].Context) {
+                if (this.is_image(block)) {
+                  this.pdf_dump.content.push({ margin: [0, 0, 0, 10], alignment: 'center', image: block, fit: [400, 250] });
+                }
+                else {
+                  this.pdf_dump.content.push({ margin: [0, 0, 0, 10], italics: true, alignment: 'center', text: block });
+                }
+              }
+              for (let block of this.supp_dump[supp].Content) {
+                if (this.is_image(block[1])) {
+                  this.pdf_dump.content.push({ unbreakable: true, columns: [ { width: 20, fontSize: 15, bold: true, text: '' }, { margin: [0, 0, 0, 10], alignment: 'center', image: block[1], fit: [400, 250] } ] });
+                }
+                else if (block[1].startsWith(':box:')) {
+                  this.pdf_dump.content.push({ unbreakable: true, columns: [ { width: 20, fontSize: 15, bold: true, text: '' }, { margin: [0, 0, 40, 10], alignment: 'left', table: { widths: ['auto'], heights: ['auto'], body: [ [ block[1].slice(5) ] ] }, layout: { paddingRight: function(i: any, node: any) { return 20; }, paddingLeft: function(i: any, node: any) { return 20; }, paddingTop: function(i: any, node: any) { return 10; }, paddingBottom: function(i: any, node: any) { return 10; } } } ] });
+                }
+                else if (block[1].startsWith(':ibox:')) {
+                  this.pdf_dump.content.push({ unbreakable: true, columns: [ { width: 20, fontSize: 15, bold: true, text: '' }, { margin: [0, 0, 40, 10], alignment: 'left', table: { widths: ['auto'], heights: ['auto'], body: [ [ { text: block[1].slice(6), border: [false, false, false, false] } ] ] }, layout: { paddingRight: function(i: any, node: any) { return 20; }, paddingLeft: function(i: any, node: any) { return 20; }, paddingTop: function(i: any, node: any) { return 10; }, paddingBottom: function(i: any, node: any) { return 10; } } } ] });
+                }
+                else {
+                  if (block[0] == '') {
+                    this.pdf_dump.content.push({ unbreakable: true, columns: [ { width: 20, fontSize: 15, bold: true, text: '' }, { margin: [0, 0, 0, 10], fontSize: 12.5, characterSpacing: 0, bold: true, alignment: 'center', text: block[1] } ] } );
+                  }
+                  else {
+                    this.pdf_dump.content.push({ unbreakable: true, columns: [ { width: 20, fontSize: 15, bold: true, text: block[0] }, { margin: [0, 0, 0, 10], fontSize: 12.5, characterSpacing: 0, text: block[1] } ] } );
+                  }
+                }
+              }
+            }
+            this.pdf_dump.content.push('\n\n\n');
             var prob_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
             prob_pdf_dump.unbreakable = true;
             prob_pdf_dump.columns.push({ width: 35, fontSize: 18, bold: true, text: ''+key });
             var prob_pdf_content: any[] = [];
             for (let cont of (prob as any).Content) {
               if (this.is_image(cont)) {
-                prob_pdf_content.push({ margin: [0, 0, 0, 10], alignment: 'center', image: cont, fit: [400, 300] });
+                prob_pdf_content.push({ margin: [0, 0, 20, 10], alignment: 'center', image: cont, fit: [400, 250] });
+              }
+              else if (cont.startsWith(':box:')) {
+                prob_pdf_content.push({ margin: [0, 0, 40, 10], alignment: 'left', table: { widths: ['auto'], heights: ['auto'], body: [ [ cont.slice(5) ] ] }, layout: { paddingRight: function(i: any, node: any) { return 20; }, paddingLeft: function(i: any, node: any) { return 20; }, paddingTop: function(i: any, node: any) { return 10; }, paddingBottom: function(i: any, node: any) { return 10; } } });
+              }
+              else if (cont.startsWith(':ibox:')) {
+                prob_pdf_content.push({ margin: [0, 0, 40, 10], alignment: 'left', table: { widths: ['auto'], heights: ['auto'], body: [ [ { text: cont.slice(6), border: [false, false, false, false] } ] ] }, layout: { paddingRight: function(i: any, node: any) { return 20; }, paddingLeft: function(i: any, node: any) { return 20; }, paddingTop: function(i: any, node: any) { return 10; }, paddingBottom: function(i: any, node: any) { return 10; } } });
               }
               else {
                 prob_pdf_content.push({ margin: [0, 0, 0, 10], text: cont });
               }
             }
-            prob_pdf_content.push('\n');
             if ((prob as any).Type == 'FR') {
-              prob_pdf_content.push({ margin: [0, 0, 0, 5], alignment: 'center', table: { widths: [400], heights: [50], body: [['']] } });
+              prob_pdf_content.push('\n');
+              prob_pdf_content.push({ columns: [ { width: '*', text: '' }, { width: 250, margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: [50], body: [[{ margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } }, { width: '*', text: '' } ] });
+            }
+            else if ((prob as any).Type == 'SR') {
+              prob_pdf_content.push('\n');
+              prob_pdf_content.push({ margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: ['auto'], body: [[{ margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } });
+            }
+            else if ((prob as any).Type == 'MR') {
+              prob_pdf_content.push('\n');
+              prob_pdf_content.push({ margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: ['auto'], body: [[{ border: [true, true, true, false], margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, true], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } });
+            }
+            else if ((prob as any).Type == 'LR') {
+              prob_pdf_content.push('\n');
+              prob_pdf_content.push({ margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: ['auto'], body: [[{ border: [true, true, true, false], margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, true], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } });
+            }
+            else if ((prob as any).Type == 'MP') {
+              for (let part of Object.keys((prob as any).Parts)) {
+                prob_pdf_content.push('\n');
+                prob_pdf_content.push({ margin: [0, 10, 40, 15], fontSize: 16, bold: true, italics: true, alignment: 'center', text: 'Part ' + part });
+                for (let cont of (prob as any).Parts[part].Content) {
+                  if (this.is_image(cont)) {
+                    prob_pdf_content.push({ margin: [0, 0, 20, 10], alignment: 'center', image: cont, fit: [400, 250] });
+                  }
+                  else if (cont.startsWith(':box:')) {
+                    prob_pdf_content.push({ margin: [0, 0, 40, 10], alignment: 'left', table: { widths: ['auto'], heights: ['auto'], body: [ [ cont.slice(5) ] ] }, layout: { paddingRight: function(i: any, node: any) { return 20; }, paddingLeft: function(i: any, node: any) { return 20; }, paddingTop: function(i: any, node: any) { return 10; }, paddingBottom: function(i: any, node: any) { return 10; } } });
+                  }
+                  else if (cont.startsWith(':ibox:')) {
+                    prob_pdf_content.push({ margin: [0, 0, 40, 10], alignment: 'left', table: { widths: ['auto'], heights: ['auto'], body: [ [ { text: cont.slice(6), border: [false, false, false, false] } ] ] }, layout: { paddingRight: function(i: any, node: any) { return 20; }, paddingLeft: function(i: any, node: any) { return 20; }, paddingTop: function(i: any, node: any) { return 10; }, paddingBottom: function(i: any, node: any) { return 10; } } });
+                  }
+                  else {
+                    prob_pdf_content.push({ margin: [0, 0, 0, 10], text: cont });
+                  }
+                }
+                prob_pdf_content.push('\n');
+                if ((prob as any).Parts[part].Type == 'FR') {
+                  prob_pdf_content.push({ columns: [ { width: '*', text: '' }, { width: 250, margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: [50], body: [[{ margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } }, { width: '*', text: '' } ] });
+                }
+                else if ((prob as any).Parts[part].Type == 'SR') {
+                  prob_pdf_content.push({ margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: ['auto'], body: [[{ margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } });
+                }
+                else if ((prob as any).Parts[part].Type == 'MR') {
+                  prob_pdf_content.push({ margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: ['auto'], body: [[{ border: [true, true, true, false], margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, true], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } });
+                }
+                else if ((prob as any).Parts[part].Type == 'LR') {
+                  prob_pdf_content.push('\n');
+                  prob_pdf_content.push({ margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: ['auto'], body: [[{ border: [true, true, true, false], margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, true], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } });
+                }
+                else {
+                  var choice_num = 1;
+                  var column1: any[] = [];
+                  var column2: any[] = [];
+                  for (let choice of Object.keys((prob as any).Parts[part].AnswerChoices)) {
+                    var choice_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
+                    choice_pdf_dump.columns.push({ width: 20, fontSize: 16, bold: true, text: choice });
+                    if (this.is_image((prob as any).Parts[part].AnswerChoices[choice].Choice)) {
+                      choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], alignment: 'center', image: (prob as any).Parts[part].AnswerChoices[choice].Choice, fit: [200, 125] });
+                    }
+                    else {
+                      choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], text: (prob as any).Parts[part].AnswerChoices[choice].Choice });
+                    }
+                    if (choice_num % 2 == 1) {
+                      column1.push(choice_pdf_dump);
+                    }
+                    else {
+                      column2.push(choice_pdf_dump);
+                    }
+                    choice_num += 1;
+                  }
+                  prob_pdf_content.push({ columns: [column1, column2] });
+                }
+              }
             }
             else {
               var choice_num = 1;
               var column1: any[] = [];
               var column2: any[] = [];
+              prob_pdf_content.push('\n');
               for (let choice of Object.keys((prob as any).AnswerChoices)) {
                 var choice_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
                 choice_pdf_dump.columns.push({ width: 20, fontSize: 16, bold: true, text: choice });
                 if (this.is_image((prob as any).AnswerChoices[choice].Choice)) {
-                  choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], alignment: 'center', image: (prob as any).AnswerChoices[choice].Choice, fit: [200, 150] });
+                  choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], alignment: 'center', image: (prob as any).AnswerChoices[choice].Choice, fit: [200, 125] });
                 }
                 else {
                   choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], text: (prob as any).AnswerChoices[choice].Choice });
@@ -7670,20 +7820,20 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
           key_pdf_dump.table.body.push([ { bold: true, text: ''+key }, { bold: true, lineHeight: 0.9, alignment: 'center', text: answer }, { fontSize: 12, lineHeight: 0.9, text: rationale }, { fontSize: 12, lineHeight: 0.9, text: ((prob as any).SubTopics[0] as string) } ]);
         }
         this.pdf_dump.content.push(key_pdf_dump);
-      }, 500);
+      }, 750);
       setTimeout(() => {
         console.log(this.pdf_dump);
         pdfMake.createPdf(this.pdf_dump, undefined, this.fonts).getDataUrl((dataUrl) => {
           this.file_source = dataUrl;
         });
-      }, 1000);
+      }, 1250);
     }, 500);
   }
 
   toggle_cquiz_pdf(quiz: string) {
     // this.selected_quiz = quiz;
     this.quiz_config = (this.authService.searchQuizId(quiz) as any);
-    this.pdf_dump = { content: [], styles: { tableExample: { fontSize: 14, alignment: 'center', margin: [0, 5, 0, 15] }, tableHeader: { bold: true, alignment: 'center', fontSize: 15, fillColor: '#AAAAAA' } }, defaultStyle: { columnGap: 10, fontSize: 15 }, images: {}, footer: function (currentPage: any, pageCount: any) { return { text: 'Page ' + currentPage.toString() + ' of ' + pageCount, alignment: 'center', bold: true }; } };
+    this.pdf_dump = { content: [], styles: { tableExample: { fontSize: 14, alignment: 'center', margin: [0, 5, 0, 15] }, tableHeader: { bold: true, alignment: 'center', fontSize: 15, fillColor: '#AAAAAA' } }, defaultStyle: { columnGap: 10, font: 'Helvetica', fontSize: 15 }, images: {}, footer: function (currentPage: any, pageCount: any) { return [{columns:[{ margin: [150, 10, 0, 0], width: '*', text: 'Page ' + currentPage.toString() + ' of ' + pageCount, alignment: 'left', bold: true }, { margin: [0, 10, 150, 0], width: "*", alignment: 'right', font: 'MajorMonoDisplay', characterSpacing: -2, text: 'moreproblems.org' }]}]; } };
     this.pdf_dump.content.push({ margin: [0, 0, 0, 15], columns: [{ width: "*", fontSize: 18, lineHeight: 0.9, alignment: 'center', bold: true, text: this.quiz_config.name }, { margin: [0, 5, 0, 0], width: "auto", fontSize: 24, alignment: 'right', font: 'MajorMonoDisplay', characterSpacing: -2, text: 'More+Problems!' }] });
     this.pdf_dump.content.push({ columns: [[{ margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 16, bold: true, alignment: 'right', text: 'Name' }, { table: { widths: [195], heights: [20], body: [['']] } }] }, { margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 15, bold: true, alignment: 'right', text: 'Class' }, { table: { widths: [195], heights: [20], body: [['']] } }] }, { margin: [0, 1, 0, 1], columns: [{ width: 45, fontSize: 15, bold: true, alignment: 'right', text: 'Date' }, { table: { widths: [195], heights: [20], body: [['']] } }] }], [{ margin: [0, 0, 0, 5], width: 200, fontSize: 15, lineHeight: 1.1, italics: true, alignment: 'center', text: this.quiz_config.topics[0] }, { margin: [0, 0, 0, 5], fontSize: 16, alignment: 'center', text: '' + this.quiz_config.length + ' total problems' }, { margin: [0, 0, 0, 5], fontSize: 16, alignment: 'center', text: '' + this.quiz_config.timer + ' minutes allowed' }]] });
     this.pdf_dump.content.push({
@@ -7712,7 +7862,6 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
                 if (this.is_image(cont)) {
                   this.authService.getQuizPic(quiz, cont).then((url) => {
                     this.toDataURL(url).then((dataUrl) => {
-                      console.log(dataUrl as string);
                       this.pdf_dump.images[cont] = (dataUrl as string);
                     }).catch(error => {
                       console.log(error.message);
@@ -7724,7 +7873,6 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
                 if (this.is_image((prob as any).AnswerChoices[choice].Choice)) {
                   this.authService.getQuizPic(quiz, (prob as any).AnswerChoices[choice].Choice).then((url) => {
                     this.toDataURL(url).then((dataUrl) => {
-                      console.log(dataUrl as string);
                       this.pdf_dump.images[(prob as any).AnswerChoices[choice].Choice] = (dataUrl as string);
                     }).catch(error => {
                       console.log(error.message);
@@ -7743,25 +7891,92 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
                 var prob_pdf_content: any[] = [];
                 for (let cont of (prob as any).Content) {
                   if (this.is_image(cont)) {
-                    prob_pdf_content.push({ margin: [0, 0, 0, 10], alignment: 'center', image: cont, fit: [400, 300] });
+                    prob_pdf_content.push({ margin: [0, 0, 20, 10], alignment: 'center', image: cont, fit: [400, 250] });
+                  }
+                  else if (cont.startsWith(':box:')) {
+                    prob_pdf_content.push({ margin: [0, 0, 40, 10], alignment: 'left', table: { widths: ['auto'], heights: ['auto'], body: [ [ cont.slice(5) ] ] }, layout: { paddingRight: function(i: any, node: any) { return 20; }, paddingLeft: function(i: any, node: any) { return 20; }, paddingTop: function(i: any, node: any) { return 10; }, paddingBottom: function(i: any, node: any) { return 10; } } });
+                  }
+                  else if (cont.startsWith(':ibox:')) {
+                    prob_pdf_content.push({ margin: [0, 0, 40, 10], alignment: 'left', table: { widths: ['auto'], heights: ['auto'], body: [ [ { text: cont.slice(6), border: [false, false, false, false] } ] ] }, layout: { paddingRight: function(i: any, node: any) { return 20; }, paddingLeft: function(i: any, node: any) { return 20; }, paddingTop: function(i: any, node: any) { return 10; }, paddingBottom: function(i: any, node: any) { return 10; } } });
                   }
                   else {
                     prob_pdf_content.push({ margin: [0, 0, 0, 10], text: cont });
                   }
                 }
-                prob_pdf_content.push('\n');
                 if ((prob as any).Type == 'FR') {
-                  prob_pdf_content.push({ margin: [0, 0, 0, 5], alignment: 'center', table: { widths: [400], heights: [50], body: [['']] } });
+                  prob_pdf_content.push('\n');
+                  prob_pdf_content.push({ columns: [ { width: '*', text: '' }, { width: 250, margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: [50], body: [[{ margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } }, { width: '*', text: '' } ] });
+                }
+                else if ((prob as any).Type == 'SR') {
+                  prob_pdf_content.push('\n');
+                  prob_pdf_content.push({ margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: ['auto'], body: [[{ margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } });
+                }
+                else if ((prob as any).Type == 'MR') {
+                  prob_pdf_content.push('\n');
+                  prob_pdf_content.push({ margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: ['auto'], body: [[{ border: [true, true, true, false], margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, true], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } });
+                }
+                else if ((prob as any).Type == 'MP') {
+                  for (let part of Object.keys((prob as any).Parts)) {
+                    prob_pdf_content.push('\n');
+                    prob_pdf_content.push({ margin: [0, 10, 40, 15], fontSize: 16, bold: true, italics: true, alignment: 'center', text: 'Part ' + part });
+                    for (let cont of (prob as any).Parts[part].Content) {
+                      if (this.is_image(cont)) {
+                        prob_pdf_content.push({ margin: [0, 0, 20, 10], alignment: 'center', image: cont, fit: [400, 250] });
+                      }
+                      else if (cont.startsWith(':box:')) {
+                        prob_pdf_content.push({ margin: [0, 0, 40, 10], alignment: 'left', table: { widths: ['auto'], heights: ['auto'], body: [ [ cont.slice(5) ] ] }, layout: { paddingRight: function(i: any, node: any) { return 20; }, paddingLeft: function(i: any, node: any) { return 20; }, paddingTop: function(i: any, node: any) { return 10; }, paddingBottom: function(i: any, node: any) { return 10; } } });
+                      }
+                      else if (cont.startsWith(':ibox:')) {
+                        prob_pdf_content.push({ margin: [0, 0, 40, 10], alignment: 'left', table: { widths: ['auto'], heights: ['auto'], body: [ [ { text: cont.slice(6), border: [false, false, false, false] } ] ] }, layout: { paddingRight: function(i: any, node: any) { return 20; }, paddingLeft: function(i: any, node: any) { return 20; }, paddingTop: function(i: any, node: any) { return 10; }, paddingBottom: function(i: any, node: any) { return 10; } } });
+                      }
+                      else {
+                        prob_pdf_content.push({ margin: [0, 0, 0, 10], text: cont });
+                      }
+                    }
+                    if ((prob as any).Parts[part].Type == 'FR') {
+                      prob_pdf_content.push({ columns: [ { width: '*', text: '' }, { width: 250, margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: [50], body: [[{ margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } }, { width: '*', text: '' } ] });
+                    }
+                    else if ((prob as any).Parts[part].Type == 'SR') {
+                      prob_pdf_content.push({ margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: ['auto'], body: [[{ margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } });
+                    }
+                    else if ((prob as any).Parts[part].Type == 'MR') {
+                      prob_pdf_content.push({ margin: [0, 0, 40, 5], alignment: 'center', table: { widths: ['*'], heights: ['auto'], body: [[{ border: [true, true, true, false], margin: [15, 15, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }], [{ border: [true, false, true, false], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; } } }], [{ border: [true, false, true, true], margin: [15, 0, 15, 0], table: { widths: ['*'], body: [[" "], [" "]] }, layout: { hLineWidth: function (i: any, node: any) { return (i === 0 || i === node.table.body.length) ? 0 : 2; }, vLineWidth: function (i: any, node: any) { return 0; }, } }]] } });
+                    }
+                    else {
+                      var choice_num = 1;
+                      var column1: any[] = [];
+                      var column2: any[] = [];
+                      for (let choice of Object.keys((prob as any).Parts[part].AnswerChoices)) {
+                        var choice_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
+                        choice_pdf_dump.columns.push({ width: 20, fontSize: 16, bold: true, text: choice });
+                        if (this.is_image((prob as any).Parts[part].AnswerChoices[choice].Choice)) {
+                          choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], alignment: 'center', image: (prob as any).Parts[part].AnswerChoices[choice].Choice, fit: [200, 125] });
+                        }
+                        else {
+                          choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], text: (prob as any).Parts[part].AnswerChoices[choice].Choice });
+                        }
+                        if (choice_num % 2 == 1) {
+                          column1.push(choice_pdf_dump);
+                        }
+                        else {
+                          column2.push(choice_pdf_dump);
+                        }
+                        choice_num += 1;
+                      }
+                      prob_pdf_content.push({ columns: [column1, column2] });
+                    }
+                  }
                 }
                 else {
                   var choice_num = 1;
                   var column1: any[] = [];
                   var column2: any[] = [];
+                  prob_pdf_content.push('\n');
                   for (let choice of Object.keys((prob as any).AnswerChoices)) {
                     var choice_pdf_dump = JSON.parse(JSON.stringify(this.default_problem_pdf));
                     choice_pdf_dump.columns.push({ width: 20, fontSize: 16, bold: true, text: choice });
                     if (this.is_image((prob as any).AnswerChoices[choice].Choice)) {
-                      choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], alignment: 'center', image: (prob as any).AnswerChoices[choice].Choice, fit: [200, 150] });
+                      choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], alignment: 'center', image: (prob as any).AnswerChoices[choice].Choice, fit: [200, 125] });
                     }
                     else {
                       choice_pdf_dump.columns.push({ margin: [0, 0, 0, 5], text: (prob as any).AnswerChoices[choice].Choice });

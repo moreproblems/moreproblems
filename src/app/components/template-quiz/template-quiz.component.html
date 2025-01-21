@@ -705,21 +705,6 @@
         <div *ngIf="authService.userData as user">
           <button
             *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth <= 900"
-            (click)="toggle_assign_quiz()" class="grade-button"
-            style="margin: 5px; padding: 6px; width: auto; height: auto">
-            <img src="./assets/media/icons/assign.png" style="height: 22px">
-            <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Assign </b>
-          </button>
-          <button
-            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth > 900"
-            (click)="toggle_assign_quiz()" class="grade-button" style="margin: 5px; width: auto; height: auto">
-            <img src="./assets/media/icons/assign.png" style="height: 27px">
-            <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Assign </b>
-          </button>
-        </div>
-        <div *ngIf="authService.userData as user">
-          <button
-            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="router.navigate(['quiz/' + key + '/edit'])" class="grade-button"
             style="margin: 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/edit.png" style="height: 22px">
@@ -730,6 +715,21 @@
             style="margin: 5px; width: auto; height: auto">
             <img src="./assets/media/icons/edit.png" style="height: 25px">
             <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Edit Quiz </b>
+          </button>
+        </div>
+        <div *ngIf="authService.userData as user">
+          <button
+            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth <= 900"
+            (click)="toggle_assign_quiz()" class="grade-button"
+            style="margin: 5px; padding: 6px; width: auto; height: auto">
+            <img src="./assets/media/icons/assign.png" style="height: 22px">
+            <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Assign </b>
+          </button>
+          <button
+            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth > 900"
+            (click)="toggle_assign_quiz()" class="grade-button" style="margin: 5px; width: auto; height: auto">
+            <img src="./assets/media/icons/assign.png" style="height: 27px">
+            <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Assign </b>
           </button>
         </div>
       </section>

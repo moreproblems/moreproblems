@@ -226,7 +226,7 @@ export class JoinComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.titleService.setTitle("Sign Up For MoreProblems.Org | U.S. K-12 State Testing Preparation");
+    this.titleService.setTitle("Join Your Class On MoreProblems.Org | U.S. K-12 State Testing Preparation");
     // this.meta.updateTag({ name: 'description', content: "" });
     // setTimeout(() => {
     //   this.authService.AuthRoute('profile');
