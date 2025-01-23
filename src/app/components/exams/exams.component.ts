@@ -845,6 +845,7 @@ export class ExamsComponent implements OnInit, AfterViewInit {
   exam_fav = false;
   file_source = '';
   file_page = 1;
+  file_zoom = 85;
 
   profileUploadURL: any = null;
   edit_e_list: any = {};
@@ -895,6 +896,12 @@ export class ExamsComponent implements OnInit, AfterViewInit {
   width_change2() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+    if (this.screenWidth <= this.mobileWidth) {
+      this.file_zoom = 95;
+    }
+    else {
+      this.file_zoom = 75;
+    }
   }
 
   can_assign_s(std: string) {
@@ -1164,6 +1171,14 @@ export class ExamsComponent implements OnInit, AfterViewInit {
 
   go_to_page(num: number) {
     this.file_page = num;
+  }
+
+  zoom_out() {
+    this.file_zoom = Math.max(75, this.file_zoom - 5);
+  }
+
+  zoom_in() {
+    this.file_zoom = Math.min(125, this.file_zoom + 5);
   }
 
   width_change() {

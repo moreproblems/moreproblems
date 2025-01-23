@@ -4361,6 +4361,7 @@ export class TemplateStateComponent implements OnInit {
   exam_fav = false;
   file_source = '';
   file_page = 1;
+  file_zoom = 85;
 
   toggle_goals: boolean = false;
   goal_state: { [key: string]: boolean } = {};
@@ -4493,6 +4494,12 @@ export class TemplateStateComponent implements OnInit {
   width_change2() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+    if (this.screenWidth <= this.mobileWidth) {
+      this.file_zoom = 95;
+    }
+    else {
+      this.file_zoom = 75;
+    }
     if (!this.stateSet) {
       for (let domain of this.standards_dump.Standards) {
         if (this.screenWidth <= this.mobileWidth) {
@@ -4759,7 +4766,8 @@ export class TemplateStateComponent implements OnInit {
   }
 
   is_image(blob: string) {
-    return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
+    // return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
+    return (['.jpg', '.jpeg', '.png', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
   }
 
   get_percent_correct(stud: any) {
@@ -5716,6 +5724,14 @@ export class TemplateStateComponent implements OnInit {
 
   go_to_page(num: number) {
     this.file_page = num;
+  }
+
+  zoom_out() {
+    this.file_zoom = Math.max(75, this.file_zoom - 5);
+  }
+
+  zoom_in() {
+    this.file_zoom = Math.min(125, this.file_zoom + 5);
   }
 
   attempt_mc_st_problem(choice: string, part: string) {

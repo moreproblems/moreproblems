@@ -3017,7 +3017,7 @@
     <!-- PDF Viewer -->
     <div class="card card-large" (window:resize)="width_change()"
       style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
-      #pdfViewer>
+      #examPdfViewer>
       <section
         style="margin-top: 15px; height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
         <h1 *ngIf="this.screenWidth <= 550" style="margin: auto 5px; text-align: center; font-size: 17px">
@@ -3102,15 +3102,44 @@
       <hr *ngIf="authService.userData as user" style="width: max(50%, 300px)">
       <section
         style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
-        <div>
+        <div style="display: flex; flex-direction: row">
+          <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="prev_page()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 2px; border-radius: 13px">
+            <img src="./assets/media/icons/minus.png" style="height: 20px; filter: invert(100%)">
+            <!-- <b>PD</b> -->
+          </button>
+          <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="prev_page()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 3px; border-radius: 16px">
+            <img src="./assets/media/icons/minus.png" style="height: 25px; filter: invert(100%)">
+            <!-- <b>PD</b> -->
+          </button>
+          <div style="padding-bottom: 5px">
+            <p style="margin: auto 5px; font-size: 18px; font-weight: 600">Page </p>
+            <input (keyup)="go_to_page(+this.pageNum.value)" type="text" inputmode="numeric" value="{{file_page}}" min="1"
+              maxlength="3"
+              style="margin: auto 5px; width: 40px; height: 20px; font-size: 20px; font-weight: 800; text-align: center"
+              #pageNum />
+          </div>
+          <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="next_page()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 2px; border-radius: 13px">
+            <img src="./assets/media/icons/plus.png" style="height: 20px; filter: invert(100%)">
+            <!-- <b>PU</b> -->
+          </button>
+          <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="next_page()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 3px; border-radius: 16px">
+            <img src="./assets/media/icons/plus.png" style="height: 25px; filter: invert(100%)">
+            <!-- <b>PU</b> -->
+          </button>
+        </div>
+        <div style="margin: auto 15px">
           <div style="display: flex; flex-direction: row">
             <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="download_exam()" class="grade-button"
-              style="margin: 5px; padding: 6px; width: auto; height: auto">
+              style="margin: auto 5px; padding: 6px; width: auto; height: auto">
               <img src="./assets/media/icons/download.png" style="height: 25px">
               <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Download </b>
             </button>
             <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="download_exam()" class="grade-button"
-              style="margin: 5px; width: auto; height: auto">
+              style="margin: auto 5px; width: auto; height: auto">
               <img src="./assets/media/icons/download.png" style="height: 25px">
               <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Download </b>
             </button>
@@ -3124,48 +3153,47 @@
             style="font-weight: 500; font-size: 20px; margin: 0px auto 5px; color: #1976d2"> <b
               style="font-weight: 800">{{''+exam_dl}}</b> download </h4>
           <h4 *ngIf="exam_dl == 1 && screenWidth <= mobileWidth"
-            style="font-weight: 500; font-size: 16px; margin: 0px auto 5px; color: #1976d2"> <b
+            style="font-weight: 500; font-size: 16px; line-height: 20px; margin: 0px auto 5px; color: #1976d2"> <b
               style="font-weight: 800">{{''+exam_dl}}</b> download </h4>
           <h4 *ngIf="exam_dl > 1 && screenWidth > mobileWidth"
             style="font-weight: 500; font-size: 20px; margin: 0px auto 5px; color: #1976d2"> <b
               style="font-weight: 800">{{''+exam_dl}}</b> downloads </h4>
           <h4 *ngIf="exam_dl > 1 && screenWidth <= mobileWidth"
-            style="font-weight: 500; font-size: 16px; margin: 0px auto 5px; color: #1976d2"> <b
+            style="font-weight: 500; font-size: 16px; line-height: 20px; margin: 0px auto 5px; color: #1976d2"> <b
               style="font-weight: 800">{{''+exam_dl}}</b> downloads </h4>
         </div>
-        <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="prev_page()" class="grade-button"
-          style="margin-left: 20px; margin-right: 0px; width: auto; height: auto">
-          <img src="./assets/media/icons/minus.png" style="height: 20px; filter: invert(100%)">
-          <!-- <b>PD</b> -->
-        </button>
-        <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="prev_page()" class="grade-button"
-          style="margin-left: 20px; margin-right: 0px; width: auto; height: auto">
-          <img src="./assets/media/icons/minus.png" style="height: 25px; filter: invert(100%)">
-          <!-- <b>PD</b> -->
-        </button>
-        <div style="padding-bottom: 5px">
-          <p style="margin: auto 10px; font-size: 18px; font-weight: 600">Page </p>
-          <input (keyup)="go_to_page(+this.pageNum.value)" type="text" inputmode="numeric" value="{{file_page}}" min="1"
-            maxlength="3"
-            style="margin: auto 10px; width: 40px; height: 30px; font-size: 20px; font-weight: 800; text-align: center"
-            #pageNum />
+        <div *ngIf="this.screenWidth > 450" style="display: flex; flex-direction: row">
+          <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="zoom_out()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 2px; border-radius: 13px">
+            <img src="./assets/media/icons/minus.png" style="height: 20px; filter: invert(100%)">
+            <!-- <b>PD</b> -->
+          </button>
+          <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="zoom_out()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 3px; border-radius: 16px">
+            <img src="./assets/media/icons/minus.png" style="height: 25px; filter: invert(100%)">
+            <!-- <b>PD</b> -->
+          </button>
+          <div style="padding-bottom: 5px">
+            <p style="margin: auto 5px; font-size: 18px; font-weight: 600">Zoom </p>
+            <h2 style="margin: auto 5px; font-size: 20px; font-weight: 800">{{file_zoom}}<b style="font-size: 16px; font-weight: 500">%</b> </h2>
+          </div>
+          <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="zoom_in()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 2px; border-radius: 13px">
+            <img src="./assets/media/icons/plus.png" style="height: 20px; filter: invert(100%)">
+            <!-- <b>PU</b> -->
+          </button>
+          <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="zoom_in()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 3px; border-radius: 16px">
+            <img src="./assets/media/icons/plus.png" style="height: 25px; filter: invert(100%)">
+            <!-- <b>PU</b> -->
+          </button>
         </div>
-        <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="next_page()" class="grade-button"
-          style="margin-left: 0px; width: auto; height: auto">
-          <img src="./assets/media/icons/plus.png" style="height: 20px; filter: invert(100%)">
-          <!-- <b>PU</b> -->
-        </button>
-        <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="next_page()" class="grade-button"
-          style="margin-left: 0px; width: auto; height: auto">
-          <img src="./assets/media/icons/plus.png" style="height: 25px; filter: invert(100%)">
-          <!-- <b>PU</b> -->
-        </button>
       </section>
       <section *ngIf="file_source != ''"
         style="margin-bottom: 10px; height: 90%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden; background-color: #eee">
-        <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
+        <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="file_source" [original-size]="false" [zoom]="file_zoom/100"
           [(page)]="file_page" style="min-height: 550px; height: 100%"></pdf-viewer>
-        <pdf-viewer *ngIf="this.screenWidth > 700" [src]="file_source" [original-size]="false" [zoom]="0.85"
+        <pdf-viewer *ngIf="this.screenWidth > 700" [src]="file_source" [original-size]="false" [zoom]="file_zoom/100"
           [(page)]="file_page" style="min-height: 625px; height: 100%"></pdf-viewer>
       </section>
     </div>

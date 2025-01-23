@@ -3663,6 +3663,7 @@ export class QuizzesComponent implements OnInit {
   exam_fav = false;
   file_source = '';
   file_page = 1;
+  file_zoom = 85;
 
   problem_types: { [key: string]: any[] } = {
     "MC": ["Multiple Choice", 4],
@@ -3893,10 +3894,12 @@ export class QuizzesComponent implements OnInit {
     if (this.screenWidth <= this.mobileWidth) {
       this.expand_topics = false;
       this.expand_overview = false;
+      this.file_zoom = 95;
     }
     else {
       this.expand_topics = true;
       this.expand_overview = true;
+      this.file_zoom = 75;
     }
   }
 
@@ -5901,7 +5904,7 @@ export class QuizzesComponent implements OnInit {
   }
 
   toggle_cquiz_pdf(quiz: string) {
-    this.selected_quiz = quiz;
+    // this.selected_quiz = quiz;
     this.quiz_config = (this.authService.searchQuizId(quiz) as any);
     this.pdf_dump = { content: [], styles: { tableExample: { fontSize: 14, alignment: 'center', margin: [0, 5, 0, 15] }, tableHeader: { bold: true, alignment: 'center', fontSize: 15, fillColor: '#AAAAAA' } }, defaultStyle: { columnGap: 10, font: 'Helvetica', fontSize: 15 }, images: {}, footer: function (currentPage: any, pageCount: any) { return [{columns:[{ margin: [150, 10, 0, 0], width: '*', text: 'Page ' + currentPage.toString() + ' of ' + pageCount, alignment: 'left', italics: true }, { margin: [0, 10, 150, 0], width: "*", alignment: 'right', font: 'MajorMonoDisplay', characterSpacing: -2, text: 'moreproblems.org' }]}]; } };
     this.pdf_dump.content.push({ margin: [0, 0, 0, 15], columns: [{ width: "*", fontSize: 18, lineHeight: 0.9, alignment: 'center', bold: true, text: this.quiz_config.name }, { margin: [0, 5, 0, 0], width: "auto", fontSize: 24, alignment: 'right', font: 'MajorMonoDisplay', characterSpacing: -2, text: 'More+Problems!' }] });
@@ -6168,6 +6171,14 @@ export class QuizzesComponent implements OnInit {
 
   go_to_page(num: number) {
     this.file_page = num;
+  }
+
+  zoom_out() {
+    this.file_zoom = Math.max(75, this.file_zoom - 5);
+  }
+
+  zoom_in() {
+    this.file_zoom = Math.min(125, this.file_zoom + 5);
   }
 
   toggle_filters() {
