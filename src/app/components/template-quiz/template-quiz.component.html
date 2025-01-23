@@ -698,7 +698,7 @@
           <b *ngIf="!this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmark </b>
           <b *ngIf="this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmarked </b>
         </button> -->
-        <!-- <button *ngIf="exam_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
+        <!-- <button *ngIf="dumpService.exam_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
           style="margin: 10px 5px 5px; width: auto; height: auto; background-color: green">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px"> Take Exam! </b>
@@ -1776,23 +1776,23 @@
                 style="height: auto; width: 100%; display: flex; justify-content: center">
                 <label class="switch" style="padding: 0 5px">
                   <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
-                      {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                      {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                       (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b>
                   </button>
                 </label>
                 <label class="switch" style="padding: 0 5px">
                   <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
-                      {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                      {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                       (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Subject}} </b>
                   </button>
                 </label>
                 <label class="switch" style="padding: 0 5px">
                   <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
-                      {{(exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                      {{(dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                       (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ?
-                      exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                      dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                       (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State :
-                      exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                      dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                       (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b>
                   </button>
                 </label>
@@ -1801,24 +1801,24 @@
                 style="height: auto; width: 100%; display: flex; justify-content: center">
                 <label class="switch" style="padding: 0 2px">
                   <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px">
-                    <b> {{exam_attribute_dump[(subtopic_search_dump[max(1,
+                    <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
                       subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1,
                       subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
                 </label>
                 <label class="switch" style="padding: 0 2px">
                   <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px">
-                    <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[max(1,
+                    <b> {{subject_labels[dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
                       subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1,
                       subtopic_problem_number)].Number).indexOf('-'))].Subject]}} </b> </button>
                 </label>
                 <label class="switch" style="padding: 0 2px">
                   <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px">
-                    <b> {{(exam_attribute_dump[(subtopic_search_dump[max(1,
+                    <b> {{(dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
                       subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1,
                       subtopic_problem_number)].Number).indexOf('-'))].State) ?
-                      exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                      dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                       (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State :
-                      exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                      dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                       (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b>
                   </button>
                 </label>
@@ -2029,24 +2029,24 @@
               <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
               <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
                 <label class="switch" style="padding: 0 5px">
-                  <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+                  <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
                 </label>
                 <label class="switch" style="padding: 0 5px">
-                  <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
+                  <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
                 </label>
                 <label class="switch" style="padding: 0 5px">
-                  <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
+                  <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{(dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
                 </label>
               </div>
               <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
                 <label class="switch" style="padding: 0 2px">
-                  <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+                  <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
                 </label>
                 <label class="switch" style="padding: 0 2px">
-                  <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
+                  <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
                 </label>
                 <label class="switch" style="padding: 0 2px">
-                  <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
+                  <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
                 </label>
               </div>
               <section *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12"
@@ -2215,7 +2215,7 @@
               #subtopicCard>
               <br />
               <section
-                *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
+                *ngIf="dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
                 style="height: auto; width: 100%; display: flex; justify-content: center">
                 <label class="switch" style="padding: 0 10px">
                   <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
@@ -4299,21 +4299,21 @@
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 5px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
-                    {{exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
+                    {{dumpService.exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
                     (exam_dump[problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
-                    {{exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
+                    {{dumpService.exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
                     (exam_dump[problem_number].Number).indexOf('-'))].Subject}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
-                    {{(exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
+                    {{(dumpService.exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
                     (exam_dump[problem_number].Number).indexOf('-'))].State) ?
-                    exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
+                    dumpService.exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
                     (exam_dump[problem_number].Number).indexOf('-'))].State :
-                    exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
+                    dumpService.exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
                     (exam_dump[problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
@@ -4321,21 +4321,21 @@
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 2px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b>
-                    {{exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
+                    {{dumpService.exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
                     (exam_dump[problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b>
-                    {{subject_labels[exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
+                    {{subject_labels[dumpService.exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
                     (exam_dump[problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b>
-                    {{(exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
+                    {{(dumpService.exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
                     (exam_dump[problem_number].Number).indexOf('-'))].State) ?
-                    exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
+                    dumpService.exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
                     (exam_dump[problem_number].Number).indexOf('-'))].State :
-                    exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
+                    dumpService.exam_attribute_dump[(exam_dump[problem_number].Number).substring(0,
                     (exam_dump[problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
@@ -4790,7 +4790,7 @@
             #problemCard>
             <br />
             <section
-              *ngIf="this.quiz_config.problems == undefined && exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
+              *ngIf="this.quiz_config.problems == undefined && dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
                 <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">

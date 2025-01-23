@@ -553,13 +553,13 @@
           {{exam_name}} </h1>
         <h1 *ngIf="this.screenWidth > 900" style="margin: auto 15px; text-align: center; font-size: 26px">
           {{exam_name}} </h1>
-        <button *ngIf="exam_set.includes(exam_id) && this.screenWidth <= 900" (click)="take_exam()"
+        <button *ngIf="dumpService.exam_set.includes(exam_id) && this.screenWidth <= 900" (click)="take_exam()"
           class="grade-button"
           style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px; font-size: 17px; line-height: 19px; width: auto"> Take Exam! </b>
         </button>
-        <button *ngIf="exam_set.includes(exam_id) && this.screenWidth > 900" (click)="take_exam()"
+        <button *ngIf="dumpService.exam_set.includes(exam_id) && this.screenWidth > 900" (click)="take_exam()"
           class="grade-button" style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px; font-size: 22px; line-height: 26px; width: auto"> Take Exam! </b>
@@ -590,21 +590,21 @@
           <b *ngIf="!this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmark </b>
           <b *ngIf="this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmarked </b>
         </button>
-        <!-- <button *ngIf="exam_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
+        <!-- <button *ngIf="dumpService.exam_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
           style="margin: 10px 5px 5px; width: auto; height: auto; background-color: green">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px"> Take Exam! </b>
         </button> -->
         <div *ngIf="authService.userData as user">
           <button
-            *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
+            *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="toggle_assign_exam()" class="grade-button"
             style="margin: 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/assign.png" style="height: 22px">
             <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Assign </b>
           </button>
           <button
-            *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
+            *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
             (click)="toggle_assign_exam()" class="grade-button" style="margin: 5px; width: auto; height: auto">
             <img src="./assets/media/icons/assign.png" style="height: 27px">
             <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Assign </b>
@@ -612,13 +612,13 @@
         </div>
         <div *ngIf="authService.userData as user">
           <button
-            *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
+            *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
             style="margin: 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/key.png" style="height: 22px">
             <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Answer Key </b>
           </button>
-          <button *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
+          <button *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
             (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
             style="margin: 5px; width: auto; height: auto">
             <img src="./assets/media/icons/key.png" style="height: 25px">
@@ -808,7 +808,7 @@
     </div>
     <br />
   </div>
-  <div *ngIf="file_source == ''" class="content-menu" role="menu" style="margin-bottom: 0; align-items: center">
+  <div *ngIf="file_source == '' && !assign_e && data_loaded" class="content-menu" role="menu" style="margin-bottom: 0; align-items: center">
     <div *ngIf="(selected_state == 'All' && selected_grade == '') || selected_state == ''" class="card card-large"
       style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
@@ -1557,8 +1557,9 @@
       <br />
     </div>
   </div>
-  <div class="content-menu" role="menu" style="margin-bottom: 0; align-items: center" #chooseGrade>
-    <div *ngIf="file_source == ''" [ngSwitch]="selected_state"
+  <div style="margin: 0px; height: 0px; width: 0px" #chooseGrade></div>
+  <div *ngIf="data_loaded" class="content-menu" role="menu" style="margin-bottom: 0; align-items: center">
+    <div *ngIf="file_source == '' && !assign_e" [ngSwitch]="selected_state"
       style="display: flex; flex-direction: column; width: 100%">
       <!-- All Exams -->
       <div *ngSwitchCase="'All'" class="card card-large"

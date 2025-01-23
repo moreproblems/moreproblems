@@ -1483,22 +1483,22 @@
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 5px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
-                    {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
-                    {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Subject}} </b>
                 </button>
               </label>
               <label class="switch" style="padding: 0 5px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
-                    {{(exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    {{(dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ?
-                    exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State :
-                    exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b>
                 </button>
               </label>
@@ -1507,22 +1507,22 @@
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 2px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b>
-                    {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b>
-                    {{subject_labels[exam_attribute_dump[(subtopic_search_dump[max(1,
+                    {{subject_labels[dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
                     subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1,
                     subtopic_problem_number)].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b>
-                    {{(exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    {{(dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ?
-                    exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State :
-                    exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b>
                 </button>
               </label>
@@ -1730,24 +1730,24 @@
             <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
             <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{(dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <section *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12"
@@ -1916,7 +1916,7 @@
             #subtopicCard>
             <br />
             <section
-              *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
+              *ngIf="dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
                 <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
@@ -3907,7 +3907,7 @@
           <b *ngIf="!this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmark </b>
           <b *ngIf="this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmarked </b>
         </button> -->
-        <!-- <button *ngIf="exam_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
+        <!-- <button *ngIf="dumpService.exam_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
           style="margin: 10px 5px 5px; width: auto; height: auto; background-color: green">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px"> Take Exam! </b>
@@ -4051,12 +4051,12 @@
           {{exam_name}} </h1>
         <h1 *ngIf="this.screenWidth > 900" style="margin: auto 15px; text-align: center; font-size: 26px">
           {{exam_name}} </h1>
-        <button *ngIf="exam_set.includes(exam_id) && this.screenWidth <= 900" (click)="take_exam()" class="grade-button"
+        <button *ngIf="dumpService.exam_set.includes(exam_id) && this.screenWidth <= 900" (click)="take_exam()" class="grade-button"
           style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px; font-size: 17px; line-height: 19px; width: auto"> Take Exam! </b>
         </button>
-        <button *ngIf="exam_set.includes(exam_id) && this.screenWidth > 900" (click)="take_exam()" class="grade-button"
+        <button *ngIf="dumpService.exam_set.includes(exam_id) && this.screenWidth > 900" (click)="take_exam()" class="grade-button"
           style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px; font-size: 22px; line-height: 26px; width: auto"> Take Exam! </b>
@@ -4094,26 +4094,26 @@
           </b>
         </button>
         <div *ngIf="authService.userData as user">
-          <button *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
+          <button *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="toggle_assign_exam()" class="grade-button"
             style="margin: 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/assign.png" style="height: 22px">
             <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Assign </b>
           </button>
-          <button *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
+          <button *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
             (click)="toggle_assign_exam()" class="grade-button" style="margin: 5px; width: auto; height: auto">
             <img src="./assets/media/icons/assign.png" style="height: 27px">
             <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Assign </b>
           </button>
         </div>
         <div *ngIf="authService.userData as user">
-          <button *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
+          <button *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
             style="margin: 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/key.png" style="height: 22px">
             <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Answer Key </b>
           </button>
-          <button *ngIf="exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
+          <button *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
             (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
             style="margin: 5px; width: auto; height: auto">
             <img src="./assets/media/icons/key.png" style="height: 25px">
@@ -4326,41 +4326,41 @@
               <div class="card card-medium"
                 style="margin: 10px; height: auto; max-height: 300px; min-width: 40%; max-width: min(80%, 500px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
                 <h1 *ngIf="screenWidth > 700" style="font-size: 26px; margin-bottom: 20px; max-width: 400px">
-                  {{exam_names[selected_exam_results]}}</h1>
+                  {{dumpService.exam_names[selected_exam_results]}}</h1>
                 <h1 *ngIf="screenWidth <= 700" style="font-size: 22px; margin-bottom: 20px">
-                  {{exam_names[selected_exam_results]}}</h1>
+                  {{dumpService.exam_names[selected_exam_results]}}</h1>
                 <hr style="width: 75%" />
                 <div
                   style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; width: 100%">
                   <img *ngIf="screenWidth > 700" class="align-self-start mr-5 img-thumbnail rounded-circle"
                     style="margin: 10px; height: 200px; width: 200px; border-radius: 50%"
-                    src="./assets/media/flags/{{state_labels[exam_attribute_dump[selected_exam_results].State]}}.png"
-                    alt="{{exam_attribute_dump[selected_exam_results].State}} Flag">
+                    src="./assets/media/flags/{{state_labels[dumpService.exam_attribute_dump[selected_exam_results].State]}}.png"
+                    alt="{{dumpService.exam_attribute_dump[selected_exam_results].State}} Flag">
                   <img *ngIf="screenWidth <= 700" class="align-self-start mr-5 img-thumbnail rounded-circle"
                     style="margin: 10px; max-height: 175px; width: min(175px, 40%); border-radius: 50%"
-                    src="./assets/media/flags/{{state_labels[exam_attribute_dump[selected_exam_results].State]}}.png"
-                    alt="{{exam_attribute_dump[selected_exam_results].State}} Flag">
+                    src="./assets/media/flags/{{state_labels[dumpService.exam_attribute_dump[selected_exam_results].State]}}.png"
+                    alt="{{dumpService.exam_attribute_dump[selected_exam_results].State}} Flag">
                   <div style="margin: 10px; align-items: center; text-align: center">
                     <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
                       <div *ngIf="screenWidth > 700" class="media-body" style="padding: 0px">
                         <h2 style="font-weight: 600; font-size: 20px; margin-bottom: 15px">
-                          {{exam_attribute_dump[selected_exam_results].NumQuestions}} Problems</h2>
+                          {{dumpService.exam_attribute_dump[selected_exam_results].NumQuestions}} Problems</h2>
                         <h2 style="font-weight: 600; font-size: 18px">
-                          {{exam_attribute_dump[selected_exam_results].Subject}}</h2>
+                          {{dumpService.exam_attribute_dump[selected_exam_results].Subject}}</h2>
                         <h2 style="font-weight: 600; font-size: 18px">
-                          {{exam_attribute_dump[selected_exam_results].Grade}}</h2>
+                          {{dumpService.exam_attribute_dump[selected_exam_results].Grade}}</h2>
                         <h2 style="font-weight: 600; font-size: 18px">
-                          {{exam_attribute_dump[selected_exam_results].State}}</h2>
+                          {{dumpService.exam_attribute_dump[selected_exam_results].State}}</h2>
                       </div>
                       <div *ngIf="screenWidth <= 700" class="media-body" style="padding: 0px">
                         <h2 style="font-weight: 600; font-size: 16px; margin-bottom: 10px">
-                          {{exam_attribute_dump[selected_exam_results].NumQuestions}} Problems</h2>
+                          {{dumpService.exam_attribute_dump[selected_exam_results].NumQuestions}} Problems</h2>
                         <h2 style="font-weight: 600; font-size: 14px">
-                          {{exam_attribute_dump[selected_exam_results].Subject}}</h2>
+                          {{dumpService.exam_attribute_dump[selected_exam_results].Subject}}</h2>
                         <h2 style="font-weight: 600; font-size: 14px; margin: 0px">
-                          {{exam_attribute_dump[selected_exam_results].Grade}}</h2>
+                          {{dumpService.exam_attribute_dump[selected_exam_results].Grade}}</h2>
                         <h2 style="font-weight: 600; font-size: 14px; margin: 0px">
-                          {{exam_attribute_dump[selected_exam_results].State}}</h2>
+                          {{dumpService.exam_attribute_dump[selected_exam_results].State}}</h2>
                       </div>
                     </div>
                   </div>
@@ -5448,7 +5448,7 @@
                 <tr>
                   <td *ngIf="results_hover != exm" colspan="2"
                     style="border-top: 1px solid #ddd; min-width: 225px; width: 225px; text-align: left; font-size: 16px; padding-left: 10px">
-                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
+                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : dumpService.exam_names[exm]}}</b>
                     <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                       <b>{{""+student_sub_metadata[exm].enddate}}</b>
                       {{""+student_sub_metadata[exm].endtime}}
@@ -5462,7 +5462,7 @@
                   </td>
                   <td *ngIf="results_hover == exm"
                     style="border-top: 1px solid #ddd; min-width: 150px; width: 150px; text-align: left; font-size: 16px; padding-left: 10px">
-                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
+                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : dumpService.exam_names[exm]}}</b>
                     <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                       <b>{{""+student_sub_metadata[exm].enddate}}</b>
                       {{""+student_sub_metadata[exm].endtime}}
@@ -5522,7 +5522,7 @@
                 <tr>
                   <td *ngIf="results_hover != exm" colspan="2"
                     style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
-                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
+                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : dumpService.exam_names[exm]}}</b>
                     <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                       <b>{{""+student_sub_metadata[exm].enddate}}</b>
                       {{""+student_sub_metadata[exm].endtime}}
@@ -5536,7 +5536,7 @@
                   </td>
                   <td *ngIf="results_hover == exm"
                     style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
-                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
+                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : dumpService.exam_names[exm]}}</b>
                     <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                       <b>{{""+student_sub_metadata[exm].enddate}}</b>
                       {{""+student_sub_metadata[exm].endtime}}
@@ -5782,7 +5782,7 @@
       <div *ngIf="selected_exam_results != '' || (selected_stud_results != '' && !selected_sub[0].startsWith('Q-'))"
         class="card card-medium"
         style="text-align: center; margin: auto; width: fit-content; padding: 20px; display: flex; flex-direction: column">
-        <h2> {{authService.searchUserId(selected_sub[1]).displayName}} - {{exam_names[selected_sub[0]]}} </h2>
+        <h2> {{authService.searchUserId(selected_sub[1]).displayName}} - {{dumpService.exam_names[selected_sub[0]]}} </h2>
         <h3 style="font-size: 18px; color: rgb(94, 104, 113)"> With {{number_correct}} out of {{exam_length}}
           problems
           correct, you scored {{correct_percent}}% in {{time_duration}}</h3>
@@ -6480,7 +6480,7 @@
                     id="examActions-{{exam.id}}" #examActions>
                     <option disabled selected value> -- Exam Actions -- </option>
                     <option value="results">View Results</option>
-                    <option *ngIf="exam_set.includes(exam.id)" value="take">Take Exam Online</option>
+                    <option *ngIf="dumpService.exam_set.includes(exam.id)" value="take">Take Exam Online</option>
                     <option value="view">View Exam As PDF</option>
                     <option value="remove">Remove Exam</option>
                   </select>
@@ -6489,18 +6489,18 @@
               </td>
               <td *ngIf="results_hover != exam.id" colspan="2"
                 style="border-top: 1px solid #ddd; min-width: 320px; width: 320px; text-align: left; font-size: 16px; padding-left: 10px">
-                <b>{{exam_names[exam.id]}}</b>
+                <b>{{dumpService.exam_names[exam.id]}}</b>
                 <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                  {{""+exam_attribute_dump[exam.id].NumQuestions}} questions {{(exam_attribute_dump[exam.id].Timer > 0)
-                  ? '(' + ""+exam_attribute_dump[exam.id].Timer + ' minutes)' : ''}}
+                  {{""+dumpService.exam_attribute_dump[exam.id].NumQuestions}} questions {{(dumpService.exam_attribute_dump[exam.id].Timer > 0)
+                  ? '(' + ""+dumpService.exam_attribute_dump[exam.id].Timer + ' minutes)' : ''}}
                 </h4>
               </td>
               <td *ngIf="results_hover == exam.id"
                 style="border-top: 1px solid #ddd; min-width: 250px; width: 250px; text-align: left; font-size: 16px; padding-left: 10px">
-                <b>{{exam_names[exam.id]}}</b>
+                <b>{{dumpService.exam_names[exam.id]}}</b>
                 <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                  {{""+exam_attribute_dump[exam.id].NumQuestions}} questions {{(exam_attribute_dump[exam.id].Timer > 0)
-                  ? '(' + ""+exam_attribute_dump[exam.id].Timer + ' minutes)' : ''}}
+                  {{""+dumpService.exam_attribute_dump[exam.id].NumQuestions}} questions {{(dumpService.exam_attribute_dump[exam.id].Timer > 0)
+                  ? '(' + ""+dumpService.exam_attribute_dump[exam.id].Timer + ' minutes)' : ''}}
                 </h4>
               </td>
               <td style="border-top: 1px solid #ddd; min-width: 75px"> <b>{{(exam.average_grade != exam.average_grade) ?
@@ -6528,16 +6528,16 @@
         class="card-container" style="max-width: 100%">
         <div *ngFor="let exam of this.class_data.exams.slice(1)" class="card card-medium"
           style="display: block; text-align: center; max-width: 350px; padding: 20px 10px">
-          <h2> {{exam_names[exam]}} </h2>
-          <h3 *ngIf="exam_set.includes(exam)" style="margin: 25px auto 0px"> Exam Length:
-            {{""+exam_attribute_dump[exam].NumQuestions}} questions </h3>
-          <h3 *ngIf="exam_set.includes(exam) && exam_attribute_dump[exam].Timer > 0" style="margin: 0px auto">
-            ({{""+exam_attribute_dump[exam].Timer}} minutes) </h3>
-          <h3 *ngIf="!exam_set.includes(exam)" style="margin: auto; margin: 25px auto"> This exam is not
+          <h2> {{dumpService.exam_names[exam]}} </h2>
+          <h3 *ngIf="dumpService.exam_set.includes(exam)" style="margin: 25px auto 0px"> Exam Length:
+            {{""+dumpService.exam_attribute_dump[exam].NumQuestions}} questions </h3>
+          <h3 *ngIf="dumpService.exam_set.includes(exam) && dumpService.exam_attribute_dump[exam].Timer > 0" style="margin: 0px auto">
+            ({{""+dumpService.exam_attribute_dump[exam].Timer}} minutes) </h3>
+          <h3 *ngIf="!dumpService.exam_set.includes(exam)" style="margin: auto; margin: 25px auto"> This exam is not
             online yet. </h3>
           <!-- <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
-                        {{""+exam_attribute_dump[exm].NumQuestions}} </h4>
-                    <progress value="{{inprogress_exams[exm].progress}}" max="{{exam_attribute_dump[exm].NumQuestions}}"
+                        {{""+dumpService.exam_attribute_dump[exm].NumQuestions}} </h4>
+                    <progress value="{{inprogress_exams[exm].progress}}" max="{{dumpService.exam_attribute_dump[exm].NumQuestions}}"
                         style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
                         #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
                     <h4 style="margin: 1px auto; font-weight: 500"> Last Submission:
@@ -6545,7 +6545,7 @@
                     </h4> -->
           <section
             style="height: auto; max-height: 150px; width: fit-content; display: flex; justify-content: center; margin: 25px auto 5px">
-            <label *ngIf="exam_set.includes(exam)" class="switch" style="margin: auto 10px">
+            <label *ngIf="dumpService.exam_set.includes(exam)" class="switch" style="margin: auto 10px">
               <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
               <button class="grade-button" style="margin: auto; padding: 10px 5px; width: auto"
                 routerLink="/exam/{{exam}}/{{class_uid}}" routerLinkActive="active">
@@ -6689,8 +6689,8 @@
           <h3 style="margin: auto; margin: 25px auto"> Quiz Length: {{authService.searchQuizId(quiz).length}}
             {{(authService.searchQuizId(quiz).lmode=='number') ? 'questions' : 'minutes'}} </h3>
           <!-- <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
-                        {{""+exam_attribute_dump[exm].NumQuestions}} </h4>
-                    <progress value="{{inprogress_exams[exm].progress}}" max="{{exam_attribute_dump[exm].NumQuestions}}"
+                        {{""+dumpService.exam_attribute_dump[exm].NumQuestions}} </h4>
+                    <progress value="{{inprogress_exams[exm].progress}}" max="{{dumpService.exam_attribute_dump[exm].NumQuestions}}"
                         style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
                         #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
                     <h4 style="margin: 1px auto; font-weight: 500"> Last Submission:
@@ -6976,7 +6976,7 @@
               <img src="/assets/media/icons/save.png" style="height: 30px; width: 30px" />
             </div>
           </div>
-          <h4 style="font-size: 16px; padding-left: 5px; width: 190px"> {{exam_names[fav]}} </h4>
+          <h4 style="font-size: 16px; padding-left: 5px; width: 190px"> {{dumpService.exam_names[fav]}} </h4>
         </div>
       </div>
       <br />

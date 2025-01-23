@@ -17,6 +17,7 @@ import { environment } from "src/environments/environment";
 // import * as fs from 'fs';
 
 import { AuthService } from "./shared/services/auth.service";
+import { DumpService } from "./shared/services/dump.service";
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -102,7 +103,7 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
     // printJS
     // fs
   ],
-  providers: [AuthService],
+  providers: [AuthService, DumpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

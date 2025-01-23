@@ -1408,24 +1408,24 @@
             </span>
             <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Subject}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Subject}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{(dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ? dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State : dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Subject]}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ? dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State : dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <span *ngIf="!this.standard_fav && authService.userData as user" (click)="toggle_favorite_std()"
@@ -1613,24 +1613,24 @@
             <h3 style="margin: auto 0; color: darkslategrey; font-size: 18px"> Related Curriculum:</h3>
             <div *ngIf="screenWidth > 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b> {{(dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <div *ngIf="screenWidth <= 700" class="card-container" style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
               </label>
             </div>
             <section *ngIf="subtopic_search_dump[subtopic_problem_number].SubTopics.length > 0 && subtopic_search_dump[subtopic_problem_number].SubTopics[0].length > 12"
@@ -1769,7 +1769,7 @@
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicCard>
             <br />
-            <section *ngIf="exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
+            <section *ngIf="dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
                 <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
@@ -3081,10 +3081,10 @@
       <br />
       <div class="card card-medium"
         style="margin: auto; height: auto; max-height: 800px; min-width: 40%; max-width: min(80%, 600px); width: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; padding: 15px 10px">
-        <h1 *ngIf="!selected_exam.startsWith('Q-')" style="font-size: 26px"> {{exam_names[selected_exam]}} </h1>
+        <h1 *ngIf="!selected_exam.startsWith('Q-')" style="font-size: 26px"> {{dumpService.exam_names[selected_exam]}} </h1>
         <h1 *ngIf="selected_exam.startsWith('Q-')" style="font-size: 26px">
           {{authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).name}} </h1>
-        <p *ngIf="(!selected_exam.startsWith('Q-') && exam_attribute_dump[selected_exam].Timer > 0) || (selected_exam.startsWith('Q-') && authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).lmode == 'timer')"
+        <p *ngIf="(!selected_exam.startsWith('Q-') && dumpService.exam_attribute_dump[selected_exam].Timer > 0) || (selected_exam.startsWith('Q-') && authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).lmode == 'timer')"
           style="font-size: 20px; padding: 10px; white-space: pre-wrap"> <b>Time Allowed</b> :
           {{(get_hours(authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).length) >= 1) ?
           (get_hours(authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).length) >= 2) ?
@@ -3093,7 +3093,7 @@
           : ''}} {{''+(authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).length % 60)}}
           mins
         </p>
-        <p *ngIf="(!selected_exam.startsWith('Q-') && exam_attribute_dump[selected_exam].Timer == 0) || (selected_exam.startsWith('Q-') && authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).lmode == 'number')"
+        <p *ngIf="(!selected_exam.startsWith('Q-') && dumpService.exam_attribute_dump[selected_exam].Timer == 0) || (selected_exam.startsWith('Q-') && authService.searchQuizId(selected_exam.substring(selected_exam.indexOf('-')+1)).lmode == 'number')"
           style="font-size: 20px; padding: 10px; white-space: pre-wrap;"> <b>No Time Limit</b>
         </p>
         <div *ngIf="selected_exam.startsWith('Q-') && screenWidth > 700" class="card-container"
@@ -3537,7 +3537,7 @@
                   <tr>
                     <td *ngIf="results_hover != exm" colspan="2"
                       style="border-top: 1px solid #ddd; min-width: 225px; width: 225px; text-align: left; font-size: 16px; padding-left: 10px">
-                      <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
+                      <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : dumpService.exam_names[exm]}}</b>
                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                         <b>{{""+student_sub_metadata[exm].enddate}}</b>
                         {{""+student_sub_metadata[exm].endtime}}
@@ -3551,7 +3551,7 @@
                     </td>
                     <td *ngIf="results_hover == exm"
                       style="border-top: 1px solid #ddd; min-width: 150px; width: 150px; text-align: left; font-size: 16px; padding-left: 10px">
-                      <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
+                      <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : dumpService.exam_names[exm]}}</b>
                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                         <b>{{""+student_sub_metadata[exm].enddate}}</b>
                         {{""+student_sub_metadata[exm].endtime}}
@@ -3610,7 +3610,7 @@
                   <tr>
                     <td *ngIf="results_hover != exm" colspan="2"
                       style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
-                      <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
+                      <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : dumpService.exam_names[exm]}}</b>
                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                         <b>{{""+student_sub_metadata[exm].enddate}}</b>
                         {{""+student_sub_metadata[exm].endtime}}
@@ -3624,7 +3624,7 @@
                     </td>
                     <td *ngIf="results_hover == exm"
                       style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
-                      <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : exam_names[exm]}}</b>
+                      <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : dumpService.exam_names[exm]}}</b>
                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                         <b>{{""+student_sub_metadata[exm].enddate}}</b>
                         {{""+student_sub_metadata[exm].endtime}}
@@ -5105,7 +5105,7 @@
                     <td *ngIf="results_hover != exm" colspan="2"
                       style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name :
-                        exam_names[exm]}}</b>
+                        dumpService.exam_names[exm]}}</b>
                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                         <b>{{""+student_sub_metadata[exm].enddate}}</b>
                         {{""+student_sub_metadata[exm].endtime}}
@@ -5120,7 +5120,7 @@
                     <td *ngIf="results_hover == exm"
                       style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name :
-                        exam_names[exm]}}</b>
+                        dumpService.exam_names[exm]}}</b>
                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                         <b>{{""+student_sub_metadata[exm].enddate}}</b>
                         {{""+student_sub_metadata[exm].endtime}}
@@ -5181,7 +5181,7 @@
                     <td *ngIf="results_hover != exm" colspan="2"
                       style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name :
-                        exam_names[exm]}}</b>
+                        dumpService.exam_names[exm]}}</b>
                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                         <b>{{""+student_sub_metadata[exm].enddate}}</b>
                         {{""+student_sub_metadata[exm].endtime}}
@@ -5196,7 +5196,7 @@
                     <td *ngIf="results_hover == exm"
                       style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
                       <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name :
-                        exam_names[exm]}}</b>
+                        dumpService.exam_names[exm]}}</b>
                       <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                         <b>{{""+student_sub_metadata[exm].enddate}}</b>
                         {{""+student_sub_metadata[exm].endtime}}

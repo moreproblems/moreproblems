@@ -53,7 +53,7 @@ export class StandardsComponent implements OnInit, AfterViewInit{
   };
 
   grade_labels: { [key: string]: string } = {
-    "K": "Kingergarten",
+    "K": "Kindergarten",
     "G1": "Grade 1",
     "G2": "Grade 2",
     "G3": "Grade 3",
@@ -300,10 +300,16 @@ export class StandardsComponent implements OnInit, AfterViewInit{
           }
         }, 150);
       }
-      setTimeout(() => {
+      if (this.authService.userData) {
+        setTimeout(() => {
+          this.width_change2();
+          this.data_loaded = true;
+        }, 250);
+      }
+      else {
         this.width_change2();
         this.data_loaded = true;
-      }, 500);
-    }, 1000);
+      }
+    }, 500);
   }
 }
