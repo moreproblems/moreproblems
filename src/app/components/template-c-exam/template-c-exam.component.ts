@@ -6417,10 +6417,16 @@ export class TemplateCExamComponent implements OnInit {
                 //   }
                 // }
             }
-            setTimeout(() => {
+            if (this.authService.userData) {
+              setTimeout(() => {
+                this.width_change2();
                 this.data_loaded = true;
-                console.log('data loaded');
-            }, 500);
-        }, 1200);
+              }, 250);
+            }
+            else {
+              this.width_change2();
+              this.data_loaded = true;
+            }
+        }, 500);
     }
 }

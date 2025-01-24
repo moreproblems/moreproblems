@@ -5486,6 +5486,26 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
               });
             }
           }
+          for (let part of Object.keys((prob as any).Parts)) {
+            for (let cont of (prob as any).Parts[part].Content) {
+              if (this.is_image(cont)) {
+                this.toDataURL('./assets/' + (cont as string)).then((dataUrl) => {
+                  this.pdf_dump.images[cont] = (dataUrl as string);
+                }).catch(error => {
+                  console.log(error.message);
+                });
+              }
+            }
+            for (let choice of Object.keys((prob as any).Parts[part].AnswerChoices)) {
+              if (this.is_image((prob as any).Parts[part].AnswerChoices[choice].Choice)) {
+                this.toDataURL('./assets/' + ((prob as any).Parts[part].AnswerChoices[choice].Choice as string)).then((dataUrl) => {
+                  this.pdf_dump.images[(prob as any).Parts[part].AnswerChoices[choice].Choice] = (dataUrl as string);
+                }).catch(error => {
+                  console.log(error.message);
+                });
+              }
+            }
+          }
         }
       }
       setTimeout(() => {
@@ -5513,7 +5533,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
             }
           }
         }
-      }, 250);
+      }, 100);
       setTimeout(() => {
         for (const [key, prob] of Object.entries(this.exam_dump)) {
           if (key != undefined && +key > 0) {
@@ -5712,14 +5732,14 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
           key_pdf_dump.table.body.push([{ bold: true, text: '' + key }, { bold: true, lineHeight: 0.9, alignment: 'center', text: answer }, { fontSize: 12, lineHeight: 0.9, text: rationale }, { fontSize: 12, lineHeight: 0.9, text: ((prob as any).SubTopics[0] as string) }]);
         }
         this.pdf_dump.content.push(key_pdf_dump);
-      }, 1000);
+      }, 100);
       setTimeout(() => {
         console.log(this.pdf_dump);
         pdfMake.createPdf(this.pdf_dump, undefined, this.fonts).getDataUrl((dataUrl) => {
           this.file_source = dataUrl;
         });
-      }, 1500);
-    }, 500);
+      }, 250);
+    }, 100);
   }
 
   toggle_cquiz_pdf(quiz: string) {
@@ -5899,16 +5919,16 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
               // key_pdf_dump.table.body.push([ { bold: true, text: ''+key }, { bold: true, lineHeight: 0.9, alignment: 'center', text: answer }, '', { fontSize: 12, lineHeight: 0.9, text: ((prob as any).SubTopics[0] as string) } ]);
             }
             this.pdf_dump.content.push(key_pdf_dump);
-          }, 500);
+          }, 100);
         }
         setTimeout(() => {
           console.log(this.pdf_dump);
           pdfMake.createPdf(this.pdf_dump, undefined, this.fonts).getDataUrl((dataUrl) => {
             this.file_source = dataUrl;
           });
-        }, 1000);
-      }, 250);
-    }, 500);
+        }, 750);
+      }, 100);
+    }, 100);
   }
 
   toggle_favorite_std() {
@@ -7230,10 +7250,16 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
         //   }
         // }
       }
-      setTimeout(() => {
+      if (this.authService.userData) {
+        setTimeout(() => {
+          this.width_change2();
+          this.data_loaded = true;
+        }, 250);
+      }
+      else {
+        this.width_change2();
         this.data_loaded = true;
-        console.log('data loaded');
-      }, 500);
-    }, 1200);
+      }
+    }, 500);
   }
 }

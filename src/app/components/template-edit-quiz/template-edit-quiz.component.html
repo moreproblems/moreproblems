@@ -1088,8 +1088,8 @@
         </section>
         <section *ngIf="check_all_content_complete()" style="height: auto; max-height: 150px; width: 100%; display: flex; justify-content: center">
           <span>
-            <button class="grade-button" (click)="cquiz_page = 'preview'; check_all_key_complete()" style="width: 180px">
-              <h3 (click)="scroll_top()" style="margin-top: 2px; margin-bottom: 2px; font-size: 18px"><b> Preview Problems
+            <button class="grade-button" (click)="cquiz_page = 'preview'; check_all_key_complete(); scroll_top()" style="width: 180px">
+              <h3 style="margin-top: 2px; margin-bottom: 2px; font-size: 18px"><b> Preview Problems
                 </b></h3>
             </button>
           </span>

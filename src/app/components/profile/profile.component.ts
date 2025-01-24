@@ -377,7 +377,7 @@ export class ProfileComponent implements OnInit {
           },
         }
       });
-    }, 750);
+    }, 250);
   }
 
   plot_student_results() {
@@ -493,7 +493,7 @@ export class ProfileComponent implements OnInit {
           },
         }
       });
-    }, 750);
+    }, 250);
   }
 
   plot_graph_gp(part: string, subtop: boolean) {
@@ -751,7 +751,7 @@ export class ProfileComponent implements OnInit {
         this.select_student(this.authService.userData.uid);
         setTimeout(() => {
           this.selected_student = '';
-        }, 500);
+        }, 250);
       }
     }
     else if (tb == 'students') {
@@ -798,7 +798,7 @@ export class ProfileComponent implements OnInit {
     this.profileUploadURL = this.authService.pp_url;
     setTimeout(() => {
       this.profileUploadURL = this.authService.getProfilePic(this.authService.userData);
-    }, 500);
+    }, 250);
   }
 
   student_action(act: string, stud: string) {

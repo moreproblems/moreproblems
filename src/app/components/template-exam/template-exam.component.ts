@@ -6408,10 +6408,16 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
         //   }
         // }
       }
-      setTimeout(() => {
+      if (this.authService.userData) {
+        setTimeout(() => {
+          this.width_change2();
+          this.data_loaded = true;
+        }, 250);
+      }
+      else {
+        this.width_change2();
         this.data_loaded = true;
-        console.log('data loaded');
-      }, 500);
-    }, 1200);
+      }
+    }, 500);
   }
 }

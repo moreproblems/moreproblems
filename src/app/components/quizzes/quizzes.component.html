@@ -648,7 +648,7 @@
     style="margin-bottom: 0px; align-items: center">
     <div style="align-items: left; width: min(1075px, 92%)">
       <section>
-        <div (click)="file_source=''; exam_fav=false" class="card card-small"
+        <div (click)="file_source=''; exam_fav=false; selected_quiz=''; quiz_config={}" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
           <img src="./assets/media/icons/caret.png"
             style="padding: 10px 0 0; width: 20px; height: 20px; transform: rotate(90deg)">
@@ -660,7 +660,7 @@
     <div class="card card-large" (window:resize)="width_change2()"
       style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
       #quizPdfViewer>
-      <section
+      <section *ngIf="selected_quiz != ''"
         style="margin-top: 15px; height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
         <h1 *ngIf="this.screenWidth <= 550" style="margin: auto 5px; text-align: center; font-size: 17px">
           {{quiz_config.name}} </h1>
@@ -668,6 +668,15 @@
           {{quiz_config.name}} </h1>
         <h1 *ngIf="this.screenWidth > 900" style="margin: auto 15px; text-align: center; font-size: 26px">
           {{quiz_config.name}} </h1>
+      </section>
+      <section *ngIf="selected_quiz == ''"
+        style="margin-top: 15px; height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+        <h1 *ngIf="this.screenWidth <= 550" style="margin: auto 5px; text-align: center; font-size: 17px">
+          Practice Worksheet </h1>
+        <h1 *ngIf="this.screenWidth > 550 && this.screenWidth <= 900" style="margin: auto 10px; text-align: center; font-size: 21px">
+          Practice Worksheet </h1>
+        <h1 *ngIf="this.screenWidth > 900" style="margin: auto 15px; text-align: center; font-size: 26px">
+          Practice Worksheet </h1>
       </section>
       <hr style="width: max(80%, 300px)">
       <section
@@ -699,7 +708,7 @@
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px"> Take Exam! </b>
         </button> -->
-        <div *ngIf="authService.userData as user">
+        <div *ngIf="selected_quiz != ''">
           <button *ngIf="this.screenWidth <= 900" routerLink="/quiz/{{selected_quiz}}" routerLinkActive="active"
             class="grade-button"
             style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
@@ -707,6 +716,19 @@
             <b style="margin-left: 10px; font-size: 17px; line-height: 20px; width: auto"> Take Quiz! </b>
           </button>
           <button *ngIf="this.screenWidth > 900" routerLink="/quiz/{{selected_quiz}}" routerLinkActive="active"
+            class="grade-button" style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
+            <img src="./assets/media/icons/test.png" style="height: 25px">
+            <b style="margin-left: 10px; font-size: 22px; line-height: 26px; width: auto"> Take Quiz! </b>
+          </button>
+        </div>
+        <div *ngIf="selected_quiz == ''">
+          <button *ngIf="this.screenWidth <= 900" (click)="toggle_filters(); file_source=''"
+            class="grade-button"
+            style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
+            <img src="./assets/media/icons/test.png" style="height: 22px">
+            <b style="margin-left: 10px; font-size: 17px; line-height: 20px; width: auto"> Take Quiz! </b>
+          </button>
+          <button *ngIf="this.screenWidth > 900" (click)="toggle_filters(); file_source=''"
             class="grade-button" style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
             <img src="./assets/media/icons/test.png" style="height: 25px">
             <b style="margin-left: 10px; font-size: 22px; line-height: 26px; width: auto"> Take Quiz! </b>

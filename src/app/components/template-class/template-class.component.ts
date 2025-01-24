@@ -912,6 +912,26 @@ export class TemplateClassComponent implements OnInit {
               });
             }
           }
+          for (let part of Object.keys((prob as any).Parts)) {
+            for (let cont of (prob as any).Parts[part].Content) {
+              if (this.is_image(cont)) {
+                this.toDataURL('./assets/' + (cont as string)).then((dataUrl) => {
+                  this.pdf_dump.images[cont] = (dataUrl as string);
+                }).catch(error => {
+                  console.log(error.message);
+                });
+              }
+            }
+            for (let choice of Object.keys((prob as any).Parts[part].AnswerChoices)) {
+              if (this.is_image((prob as any).Parts[part].AnswerChoices[choice].Choice)) {
+                this.toDataURL('./assets/' + ((prob as any).Parts[part].AnswerChoices[choice].Choice as string)).then((dataUrl) => {
+                  this.pdf_dump.images[(prob as any).Parts[part].AnswerChoices[choice].Choice] = (dataUrl as string);
+                }).catch(error => {
+                  console.log(error.message);
+                });
+              }
+            }
+          }
         }
       }
       setTimeout(() => {
@@ -939,7 +959,7 @@ export class TemplateClassComponent implements OnInit {
             }
           }
         }
-      }, 250);
+      }, 100);
       setTimeout(() => {
         for (const [key, prob] of Object.entries(this.exam_dump)) {
           if (key != undefined && +key > 0) {
@@ -1138,14 +1158,14 @@ export class TemplateClassComponent implements OnInit {
           key_pdf_dump.table.body.push([{ bold: true, text: '' + key }, { bold: true, lineHeight: 0.9, alignment: 'center', text: answer }, { fontSize: 12, lineHeight: 0.9, text: rationale }, { fontSize: 12, lineHeight: 0.9, text: ((prob as any).SubTopics[0] as string) }]);
         }
         this.pdf_dump.content.push(key_pdf_dump);
-      }, 1000);
+      }, 100);
       setTimeout(() => {
         console.log(this.pdf_dump);
         pdfMake.createPdf(this.pdf_dump, undefined, this.fonts).getDataUrl((dataUrl) => {
           this.file_source = dataUrl;
         });
-      }, 1500);
-    }, 500);
+      }, 250);
+    }, 100);
   }
 
   toggle_cquiz_pdf(quiz: string) {
@@ -1325,16 +1345,16 @@ export class TemplateClassComponent implements OnInit {
               // key_pdf_dump.table.body.push([ { bold: true, text: ''+key }, { bold: true, lineHeight: 0.9, alignment: 'center', text: answer }, '', { fontSize: 12, lineHeight: 0.9, text: ((prob as any).SubTopics[0] as string) } ]);
             }
             this.pdf_dump.content.push(key_pdf_dump);
-          }, 500);
+          }, 100);
         }
         setTimeout(() => {
           console.log(this.pdf_dump);
           pdfMake.createPdf(this.pdf_dump, undefined, this.fonts).getDataUrl((dataUrl) => {
             this.file_source = dataUrl;
           });
-        }, 1000);
-      }, 250);
-    }, 500);
+        }, 750);
+      }, 100);
+    }, 100);
   }
 
   toggle_favorite_exm() {
@@ -1669,7 +1689,7 @@ export class TemplateClassComponent implements OnInit {
           },
         }
       });
-    }, 750);
+    }, 250);
   }
 
   plot_student_results() {
@@ -1769,7 +1789,7 @@ export class TemplateClassComponent implements OnInit {
           },
         }
       });
-    }, 750);
+    }, 250);
   }
 
   plot_exam_results() {
@@ -1869,7 +1889,7 @@ export class TemplateClassComponent implements OnInit {
           },
         }
       });
-    }, 750);
+    }, 250);
   }
 
   plot_quiz_results() {
@@ -1969,7 +1989,7 @@ export class TemplateClassComponent implements OnInit {
           },
         }
       });
-    }, 750);
+    }, 250);
   }
 
   subject_break_stud(stud: string) {

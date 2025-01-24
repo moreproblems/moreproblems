@@ -830,17 +830,9 @@ export class TemplateEditQuizComponent implements OnInit {
     }
     if (Object.keys(this.exam_dump).length > 0) {
       for (let n = 1; n <= this.quiz_length; n++) {
-        this.exam_dump[n].Type = this.get_probtype_key(type);
-        this.exam_dump[n].AnswerChoices = {};
-        if (+this.problem_types[this.get_probtype_key(type)][1] > 0) {
-          this.exam_dump[n].NumChoices = +this.default_numchoices;
-          for (let i = 0; i < +this.default_numchoices; i++) {
-            this.exam_dump[n].AnswerChoices[this.choices_list[i]] = JSON.parse(JSON.stringify(this.default_choice));
-          }
-        }
-        else {
-          this.exam_dump[n].NumChoices = 0;
-        }
+        this.exam_dump[n].Type = ''+this.default_problem.Type;
+        this.exam_dump[n].NumChoices = +this.default_problem.NumChoices;
+        this.exam_dump[n].AnswerChoices = JSON.parse(JSON.stringify(this.default_problem.AnswerChoices));
       }
     }
     setTimeout(() => {
@@ -1267,21 +1259,10 @@ export class TemplateEditQuizComponent implements OnInit {
       var new_images: any = {};
       for (const [k, image] of Object.entries(initial_images)) {
         if (k != this.exam_dump[num].Content[index]) {
-          if ((image as any).length == 2) {
-            new_images[k] = [this.save_dupe_image(((image as any)[0] as any).changingThisBreaksApplicationSecurity as string), (image as any)[1]];
-          }
-          else {
-            if ((image as any).length == 2) {
-              new_images[k] = [(image as any)[0]];
-            }
-          }
+          new_images[k] = image;
         }
       }
-      for (const [name, image] of Object.entries(new_images)) {
-        if (!Object.keys(this.prob_images).includes(name)) {
-          this.prob_images[name] = image;
-        }
-      }
+      this.prob_images = (new_images as any);
     }
     this.exam_dump[num].Content.splice(index, 1);
     this.content_hover[num].splice(index, 1);
@@ -1436,18 +1417,18 @@ export class TemplateEditQuizComponent implements OnInit {
     this.exam_dump = {};
     this.prob_images = {};
     this.prob_statuses = {};
+    var new_images: any = {};
     for (let i = 1; i <= this.quiz_length; i++) {
       if (i != num) {
         this.exam_dump[prob] = JSON.parse(JSON.stringify(initial_dump[i]));
-        if (Object.keys(initial_images).includes('' + i)) {
-          var new_images: any = {};
-          for (const [k, image] of Object.entries(initial_images[i])) {
-            new_images[k] = [this.save_dupe_image(((image as any)[0] as any).changingThisBreaksApplicationSecurity as string), (image as any)[1]];
+        for (let block of this.exam_dump[prob].Content) {
+          if (this.is_image(block)) {
+            new_images[block] = initial_images[block];
           }
-          for (const [name, image] of Object.entries(new_images)) {
-            if (!Object.keys(this.prob_images).includes(name)) {
-              this.prob_images[name] = image;
-            }
+        }
+        for (let block of Object.values(this.exam_dump[prob].AnswerChoices)) {
+          if (this.is_image(block.Choice)) {
+            new_images[block.Choice] = initial_images[block.Choice];
           }
         }
         this.prob_statuses[prob] = JSON.parse(JSON.stringify(initial_statuses[i]));
@@ -1455,6 +1436,7 @@ export class TemplateEditQuizComponent implements OnInit {
         prob += 1;
       }
     }
+    this.prob_images = (new_images as any);
     this.problem_hover.splice(num, 1);
     this.content_hover.splice(num, 1);
     this.choices_hover.splice(num, 1);
@@ -6882,7 +6864,7 @@ export class TemplateEditQuizComponent implements OnInit {
             (document.getElementById(probtypeSel) as any).value = this.problem_types[this.exam_dump[i].Type][0];
           }
         }, 25);
-      }, 500);
+      }, 250);
     }, 500);
     setTimeout(() => {
       // this.favorite_std_set = [];

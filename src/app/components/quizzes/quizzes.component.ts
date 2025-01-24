@@ -2211,6 +2211,26 @@ export class QuizzesComponent implements OnInit {
               });
             }
           }
+          for (let part of Object.keys((prob as any).Parts)) {
+            for (let cont of (prob as any).Parts[part].Content) {
+              if (this.is_image(cont)) {
+                this.toDataURL('./assets/' + (cont as string)).then((dataUrl) => {
+                  this.pdf_dump.images[cont] = (dataUrl as string);
+                }).catch(error => {
+                  console.log(error.message);
+                });
+              }
+            }
+            for (let choice of Object.keys((prob as any).Parts[part].AnswerChoices)) {
+              if (this.is_image((prob as any).Parts[part].AnswerChoices[choice].Choice)) {
+                this.toDataURL('./assets/' + ((prob as any).Parts[part].AnswerChoices[choice].Choice as string)).then((dataUrl) => {
+                  this.pdf_dump.images[(prob as any).Parts[part].AnswerChoices[choice].Choice] = (dataUrl as string);
+                }).catch(error => {
+                  console.log(error.message);
+                });
+              }
+            }
+          }
         }
       }
       setTimeout(() => {
@@ -2238,7 +2258,7 @@ export class QuizzesComponent implements OnInit {
             }
           }
         }
-      }, 250);
+      }, 100);
       setTimeout(() => {
         for (const [key, prob] of Object.entries(this.exam_dump)) {
           if (key != undefined && +key > 0) {
@@ -2437,18 +2457,18 @@ export class QuizzesComponent implements OnInit {
           key_pdf_dump.table.body.push([{ bold: true, text: '' + key }, { bold: true, lineHeight: 0.9, alignment: 'center', text: answer }, { fontSize: 12, lineHeight: 0.9, text: rationale }, { fontSize: 12, lineHeight: 0.9, text: ((prob as any).SubTopics[0] as string) }]);
         }
         this.pdf_dump.content.push(key_pdf_dump);
-      }, 1000);
+      }, 100);
       setTimeout(() => {
         console.log(this.pdf_dump);
         pdfMake.createPdf(this.pdf_dump, undefined, this.fonts).getDataUrl((dataUrl) => {
           this.file_source = dataUrl;
         });
-      }, 1500);
-    }, 500);
+      }, 250);
+    }, 100);
   }
 
   toggle_cquiz_pdf(quiz: string) {
-    // this.selected_quiz = quiz;
+    this.selected_quiz = quiz;
     this.quiz_config = (this.authService.searchQuizId(quiz) as any);
     this.pdf_dump = { content: [], styles: { tableExample: { fontSize: 14, alignment: 'center', margin: [0, 5, 0, 15] }, tableHeader: { bold: true, alignment: 'center', fontSize: 15, fillColor: '#AAAAAA' } }, defaultStyle: { columnGap: 10, font: 'Helvetica', fontSize: 15 }, images: {}, footer: function (currentPage: any, pageCount: any) { return [{columns:[{ margin: [150, 10, 0, 0], width: '*', text: 'Page ' + currentPage.toString() + ' of ' + pageCount, alignment: 'left', italics: true }, { margin: [0, 10, 150, 0], width: "*", alignment: 'right', font: 'MajorMonoDisplay', characterSpacing: -2, text: 'moreproblems.org' }]}]; } };
     this.pdf_dump.content.push({ margin: [0, 0, 0, 15], columns: [{ width: "*", fontSize: 18, lineHeight: 0.9, alignment: 'center', bold: true, text: this.quiz_config.name }, { margin: [0, 5, 0, 0], width: "auto", fontSize: 24, alignment: 'right', font: 'MajorMonoDisplay', characterSpacing: -2, text: 'More+Problems!' }] });
@@ -2625,16 +2645,16 @@ export class QuizzesComponent implements OnInit {
               // key_pdf_dump.table.body.push([ { bold: true, text: ''+key }, { bold: true, lineHeight: 0.9, alignment: 'center', text: answer }, '', { fontSize: 12, lineHeight: 0.9, text: ((prob as any).SubTopics[0] as string) } ]);
             }
             this.pdf_dump.content.push(key_pdf_dump);
-          }, 500);
+          }, 100);
         }
         setTimeout(() => {
           console.log(this.pdf_dump);
           pdfMake.createPdf(this.pdf_dump, undefined, this.fonts).getDataUrl((dataUrl) => {
             this.file_source = dataUrl;
           });
-        }, 1000);
-      }, 250);
-    }, 500);
+        }, 750);
+      }, 100);
+    }, 100);
   }
 
   toggle_favorite() {
