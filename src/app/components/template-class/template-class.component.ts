@@ -959,7 +959,7 @@ export class TemplateClassComponent implements OnInit {
             }
           }
         }
-      }, 100);
+      }, 250);
       setTimeout(() => {
         for (const [key, prob] of Object.entries(this.exam_dump)) {
           if (key != undefined && +key > 0) {
@@ -1158,14 +1158,14 @@ export class TemplateClassComponent implements OnInit {
           key_pdf_dump.table.body.push([{ bold: true, text: '' + key }, { bold: true, lineHeight: 0.9, alignment: 'center', text: answer }, { fontSize: 12, lineHeight: 0.9, text: rationale }, { fontSize: 12, lineHeight: 0.9, text: ((prob as any).SubTopics[0] as string) }]);
         }
         this.pdf_dump.content.push(key_pdf_dump);
-      }, 100);
+      }, 250);
       setTimeout(() => {
         console.log(this.pdf_dump);
         pdfMake.createPdf(this.pdf_dump, undefined, this.fonts).getDataUrl((dataUrl) => {
           this.file_source = dataUrl;
         });
-      }, 250);
-    }, 100);
+      }, 500);
+    }, 250);
   }
 
   toggle_cquiz_pdf(quiz: string) {
@@ -1345,7 +1345,7 @@ export class TemplateClassComponent implements OnInit {
               // key_pdf_dump.table.body.push([ { bold: true, text: ''+key }, { bold: true, lineHeight: 0.9, alignment: 'center', text: answer }, '', { fontSize: 12, lineHeight: 0.9, text: ((prob as any).SubTopics[0] as string) } ]);
             }
             this.pdf_dump.content.push(key_pdf_dump);
-          }, 100);
+          }, 250);
         }
         setTimeout(() => {
           console.log(this.pdf_dump);
@@ -1353,8 +1353,8 @@ export class TemplateClassComponent implements OnInit {
             this.file_source = dataUrl;
           });
         }, 750);
-      }, 100);
-    }, 100);
+      }, 250);
+    }, 250);
   }
 
   toggle_favorite_exm() {

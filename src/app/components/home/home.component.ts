@@ -1937,7 +1937,7 @@ export class HomeComponent implements OnInit {
               // key_pdf_dump.table.body.push([ { bold: true, text: ''+key }, { bold: true, lineHeight: 0.9, alignment: 'center', text: answer }, '', { fontSize: 12, lineHeight: 0.9, text: ((prob as any).SubTopics[0] as string) } ]);
             }
             this.pdf_dump.content.push(key_pdf_dump);
-          }, 100);
+          }, 250);
         }
         setTimeout(() => {
           console.log(this.pdf_dump);
@@ -1945,8 +1945,8 @@ export class HomeComponent implements OnInit {
             this.file_source = dataUrl;
           });
         }, 750);
-      }, 100);
-    }, 100);
+      }, 250);
+    }, 250);
   }
 
   toggle_favorite_exm() {
