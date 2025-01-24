@@ -5708,7 +5708,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
         pdfMake.createPdf(this.pdf_dump, undefined, this.fonts).getDataUrl((dataUrl) => {
           this.file_source = dataUrl;
         });
-      }, 500);
+      }, 1000);
     }, 250);
   }
 
