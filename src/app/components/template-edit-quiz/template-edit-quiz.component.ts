@@ -272,75 +272,7 @@ export class TemplateEditQuizComponent implements OnInit {
     }
   };
 
-  choices_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',]
-
-  state_labels: { [key: string]: string } = {
-    "CC": "Common Core",
-    "CO": "Colorado",
-    "DE": "Delaware",
-    "FL": "Florida",
-    "IL": "Illinois",
-    "MA": "Massachusetts",
-    "MD": "Maryland",
-    "MO": "Missouri",
-    "MS": "Mississippi",
-    "NE": "Nebraska",
-    "NJ": "New Jersey",
-    "NM": "New Mexico",
-    "NY": "New York",
-    "PA": "Pennsylvania",
-    "RI": "Rhode Island",
-    "SC": "South Carolina",
-    "TN": "Tennessee",
-    "TX": "Texas",
-    "WI": "Wisconsin"
-  };
-
-  subject_labels: { [key: string]: string } = {
-    "Algebra I": "Algebra I",
-    "Algebra II": "Algebra II",
-    "Biology": "Biology",
-    "English I": "English I",
-    "English II": "English II",
-    "English Language Arts": "Language Arts",
-    "English Reading": "Reading",
-    "Geometry": "Geometry",
-    "Mathematics": "Math",
-    "Physics": "Physics",
-    "SAT Suite": "SAT Suite",
-    "Sciences": "Science",
-    "Science": "Science",
-    "Social Studies": "Social Studies",
-    "U.S. History": "U.S. History"
-  };
-
-  sub_subjects: { [key: string]: string[] } = {
-    "English Language Arts": ["English Language Arts", "English I", "English II"],
-    "Mathematics": ["Mathematics", "Algebra I", "Algebra II", 'Geometry'],
-    "Sciences": ["Sciences", "Science", "Biology", "Physics"],
-    "Social Studies": ["Social Studies", "U.S. History"],
-    "Reading & Writing": ["Reading & Writing", "English Reading", "English Writing"],
-  };
-
-  subject_map: { [key: string]: string[] } = {
-    "English Language Arts": ["English Language Arts", "English Language Arts & Reading", "Reading, Writing & Communication", "Reading & Writing", "English Reading", "English Writing", "English I", "English II"],
-    "Social Studies": ["Social Studies", "U.S. History"],
-    "Sciences": ["Sciences", "Science"],
-    "Biology I": ["Biology", "Science - Biology", "Science - Biology 1"],
-    "Biology II": ["Science - Biology 2"],
-    "Mathematics": ["Mathematics"],
-    "Geometry": ["Geometry", "Mathematics - Geometry"],
-    "Algebra": ["Algebra I", "Mathematics - Algebra", "Mathematics - Algebra 1"],
-    "Algebra II": ["Algebra II", "Mathematics - Algebra 2"],
-    "Functions": ["Mathematics - Functions"],
-    "Modeling": ["Mathematics - Modeling"],
-    "Number & Quantity": ["Mathematics - Number & Quantity"],
-    "Statistics": ["Mathematics - Statistics & Probability", "Mathematics - Statistics"],
-    "Precalculus": ["Mathematics - Precalculus"],
-    "Physics": ["Physics", "Science - Introductory Physics"],
-    "Earth & Space": ["Science - Earth & Space Science"],
-    "Engineering": ["Science - Technology/Engineering"]
-  }
+  choices_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',];
 
   iti: any;
   user: any;
@@ -389,7 +321,7 @@ export class TemplateEditQuizComponent implements OnInit {
     var master_filts = []
     if (filts != undefined) {
       for (let filt of filts) {
-        if (Object.keys(this.sub_subjects).includes(filt)) {
+        if (Object.keys(this.dumpService.sub_subjects).includes(filt)) {
           master_filts.push(filt);
         }
       }
@@ -718,7 +650,7 @@ export class TemplateEditQuizComponent implements OnInit {
     this.state_subjects = [];
     for (const [id, dump] of Object.entries(this.dumpService.standards_attribute_dump)) {
       if (id.endsWith('-' + this.selected_curriculum) && this.dumpService.standards_attribute_dump[id].Grades.includes(grade)) {
-        for (const [name, labels] of Object.entries(this.subject_map)) {
+        for (const [name, labels] of Object.entries(this.dumpService.subject_map)) {
           if (labels.includes(this.dumpService.standards_attribute_dump[id].Subject) && !this.state_subjects.includes(name)) {
             this.state_subjects.push(name);
           }
@@ -734,7 +666,7 @@ export class TemplateEditQuizComponent implements OnInit {
     this.subject_exams = [];
     this.topics = [];
     for (const [id, dump] of Object.entries(this.dumpService.standards_attribute_dump)) {
-      for (const [name, labels] of Object.entries(this.subject_map)) {
+      for (const [name, labels] of Object.entries(this.dumpService.subject_map)) {
         if (id.endsWith('-' + this.selected_curriculum) && this.dumpService.standards_attribute_dump[id].Grades.includes(this.selected_grade) && labels.includes(this.dumpService.standards_attribute_dump[id].Subject) && name == this.selected_subject) {
           this.standards_id = id;
           this.standards_dump = this.dumpService.s_dump_dict[id][1];
@@ -1573,7 +1505,7 @@ export class TemplateEditQuizComponent implements OnInit {
 
   toggle_button(val: string) {
     if (['English Language Arts', 'Mathematics', 'Sciences', 'Social Studies', 'Reading & Writing'].includes(val)) {
-      for (let subval of this.sub_subjects[val]) {
+      for (let subval of this.dumpService.sub_subjects[val]) {
         if (!this.subject_filters.includes(subval)) {
           this.subject_filters.push(subval)
         }
@@ -2022,7 +1954,7 @@ export class TemplateEditQuizComponent implements OnInit {
       }
     }
     var db_updates: any = {};
-    db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, problems: this.exam_dump, grades: [this.selected_grade], subjects: [this.selected_subject], states: [this.state_labels[this.selected_curriculum]], topics: [this.selected_topic], mode: this.mode, length: this.quiz_length, timer: this.exam_timer, shuffle: this.shuffle_mode, public: this.quiz_public, author: this.authService.userData.uid };
+    db_updates['quizzes/' + quiz_id] = { name: this.quiz_name, problems: this.exam_dump, grades: [this.selected_grade], subjects: [this.selected_subject], states: [this.dumpService.state_labels[this.selected_curriculum]], topics: [this.selected_topic], mode: this.mode, length: this.quiz_length, timer: this.exam_timer, shuffle: this.shuffle_mode, public: this.quiz_public, author: this.authService.userData.uid };
     this.authService.UpdateDatabase(db_updates);
     for (let ass of this.new_assignments) {
       if (ass.length < 10) {
@@ -6760,8 +6692,8 @@ export class TemplateEditQuizComponent implements OnInit {
       // this.subject_filters = (this.quiz_config.subjects != undefined) ? this.quiz_config.subjects : [];
       this.selected_subject = this.quiz_config.subjects[0];
       // this.state_filters = (this.quiz_config.states != undefined) ? this.quiz_config.states : [];
-      for (let key of Object.keys(this.state_labels)) {
-        if (this.state_labels[key] == this.quiz_config.states[0]) {
+      for (let key of Object.keys(this.dumpService.state_labels)) {
+        if (this.dumpService.state_labels[key] == this.quiz_config.states[0]) {
           this.selected_curriculum = key;
         }
       }
@@ -6781,7 +6713,7 @@ export class TemplateEditQuizComponent implements OnInit {
       this.timer_minutes = this.quiz_timer % 60;
       // this.topics = [];
       for (const [id, dump] of Object.entries(this.dumpService.standards_attribute_dump)) {
-        for (const [name, labels] of Object.entries(this.subject_map)) {
+        for (const [name, labels] of Object.entries(this.dumpService.subject_map)) {
           if (id.endsWith('-' + this.selected_curriculum) && this.dumpService.standards_attribute_dump[id].Grades.includes(this.selected_grade) && labels.includes(this.dumpService.standards_attribute_dump[id].Subject) && name == this.selected_subject) {
             this.standards_id = id;
             this.standards_dump = this.dumpService.s_dump_dict[id][1];

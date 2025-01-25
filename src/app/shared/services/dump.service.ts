@@ -4266,6 +4266,90 @@ export class DumpService {
     "PSAT891": "PSAT 8/9 Practice Test #1"
   };
 
+  state_labels: { [key: string]: string } = {
+    "CC": "Common Core",
+    "CO": "Colorado",
+    "DE": "Delaware",
+    "FL": "Florida",
+    "IL": "Illinois",
+    "MA": "Massachusetts",
+    "MD": "Maryland",
+    "MO": "Missouri",
+    "MS": "Mississippi",
+    "NE": "Nebraska",
+    "NJ": "New Jersey",
+    "NM": "New Mexico",
+    "NY": "New York",
+    "PA": "Pennsylvania",
+    "RI": "Rhode Island",
+    "SC": "South Carolina",
+    "TN": "Tennessee",
+    "TX": "Texas",
+    "WI": "Wisconsin"
+  };
+  
+  grade_labels: { [key: string]: string } = {
+    "K": "Kindergarten",
+    "G1": "Grade 1",
+    "G2": "Grade 2",
+    "G3": "Grade 3",
+    "G4": "Grade 4",
+    "G5": "Grade 5",
+    "G6": "Grade 6",
+    "G7": "Grade 7",
+    "G8": "Grade 8",
+    "G9": "Grade 9",
+    "G10": "Grade 10",
+    "G11": "Grade 11",
+    "G12": "Grade 12"
+  };
+
+  subject_labels: { [key: string]: string } = {
+    "Algebra I": "Algebra I",
+    "Algebra II": "Algebra II",
+    "Biology": "Biology",
+    "English I": "English I",
+    "English II": "English II",
+    "English Language Arts": "Language Arts",
+    "English Reading": "Reading",
+    "Geometry": "Geometry",
+    "Mathematics": "Math",
+    "Physics": "Physics",
+    "SAT Suite": "SAT Suite",
+    "Sciences": "Science",
+    "Science": "Science",
+    "Social Studies": "Social Studies",
+    "U.S. History": "U.S. History"
+  };
+
+  sub_subjects: { [key: string]: string[] } = {
+    "English Language Arts": ["English Language Arts", "English I", "English II"],
+    "Mathematics": ["Mathematics", "Algebra I", "Algebra II", 'Geometry'],
+    "Sciences": ["Sciences", "Science", "Biology", "Physics"],
+    "Social Studies": ["Social Studies", "U.S. History"],
+    "Reading & Writing": ["Reading & Writing", "English Reading", "English Writing"],
+  };
+
+  subject_map: { [key: string]: string[] } = {
+    "English Language Arts": ["English Language Arts", "English Language Arts & Reading", "Reading, Writing & Communication", "Reading & Writing", "English Reading", "English Writing", "English I", "English II"],
+    "Social Studies": ["Social Studies", "U.S. History"],
+    "Sciences": ["Sciences", "Science"],
+    "Biology I": ["Biology", "Science - Biology", "Science - Biology 1"],
+    "Biology II": ["Science - Biology 2"],
+    "Mathematics": ["Mathematics"],
+    "Geometry": ["Geometry", "Mathematics - Geometry"],
+    "Algebra": ["Algebra I", "Mathematics - Algebra", "Mathematics - Algebra 1"],
+    "Algebra II": ["Algebra II", "Mathematics - Algebra 2"],
+    "Functions": ["Mathematics - Functions"],
+    "Modeling": ["Mathematics - Modeling"],
+    "Number & Quantity": ["Mathematics - Number & Quantity"],
+    "Statistics": ["Mathematics - Statistics & Probability", "Mathematics - Statistics"],
+    "Precalculus": ["Mathematics - Precalculus"],
+    "Physics": ["Physics", "Science - Introductory Physics"],
+    "Earth & Space": ["Science - Earth & Space Science"],
+    "Engineering": ["Science - Technology/Engineering"]
+  }
+
   constructor() {}
 
 //   // Set data on localStorage

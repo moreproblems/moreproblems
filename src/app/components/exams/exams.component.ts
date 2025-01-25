@@ -56,44 +56,6 @@ export class ExamsComponent implements OnInit, AfterViewInit {
   viewerWidth = Math.round(window.innerWidth * .99).toString() + "px";
   viewerHeight = Math.round(window.innerHeight * .95).toString() + "px";
 
-  state_labels: { [key: string]: string } = {
-    "CC": "Common Core",
-    "CO": "Colorado",
-    "DE": "Delaware",
-    "FL": "Florida",
-    "IL": "Illinois",
-    "MA": "Massachusetts",
-    "MD": "Maryland",
-    "MO": "Missouri",
-    "MS": "Mississippi",
-    "NE": "Nebraska",
-    "NJ": "New Jersey",
-    "NM": "New Mexico",
-    "NY": "New York",
-    "PA": "Pennsylvania",
-    "RI": "Rhode Island",
-    "SC": "South Carolina",
-    "TN": "Tennessee",
-    "TX": "Texas",
-    "WI": "Wisconsin"
-  };
-
-  grade_labels: { [key: string]: string } = {
-    "K": "Kindergarten",
-    "G1": "Grade 1",
-    "G2": "Grade 2",
-    "G3": "Grade 3",
-    "G4": "Grade 4",
-    "G5": "Grade 5",
-    "G6": "Grade 6",
-    "G7": "Grade 7",
-    "G8": "Grade 8",
-    "G9": "Grade 9",
-    "G10": "Grade 10",
-    "G11": "Grade 11",
-    "G12": "Grade 12"
-  };
-
   constructor(public router: Router, private titleService: Title, private meta: Meta, public authService: AuthService, public dumpService: DumpService, private http: HttpClient) { }
 
   width_change2() {
@@ -432,15 +394,15 @@ export class ExamsComponent implements OnInit, AfterViewInit {
         setTimeout(() => {
           console.log(this.authService.pp_url);
           this.profileUploadURL = this.authService.pp_url;
-          if (this.authService.userData.state != undefined && this.authService.userData.state != '' && Object.values(this.state_labels).includes(this.authService.userData.state)) {
-            for (let state of Object.keys(this.state_labels)) {
-              if (this.state_labels[state] == this.authService.userData.state) {
+          if (this.authService.userData.state != undefined && this.authService.userData.state != '' && Object.values(this.dumpService.state_labels).includes(this.authService.userData.state)) {
+            for (let state of Object.keys(this.dumpService.state_labels)) {
+              if (this.dumpService.state_labels[state] == this.authService.userData.state) {
                 this.select_state(state);
               }
             }
-            if (this.authService.userData.grade != undefined && this.authService.userData.grade != '' && Object.values(this.grade_labels).includes(this.authService.userData.grade)) {
-              for (let grade of Object.keys(this.grade_labels)) {
-                if (this.grade_labels[grade] == this.authService.userData.grade) {
+            if (this.authService.userData.grade != undefined && this.authService.userData.grade != '' && Object.values(this.dumpService.grade_labels).includes(this.authService.userData.grade)) {
+              for (let grade of Object.keys(this.dumpService.grade_labels)) {
+                if (this.dumpService.grade_labels[grade] == this.authService.userData.grade) {
                   this.select_grade(grade);
                 }
               }

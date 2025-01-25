@@ -114,23 +114,6 @@ export class TestExamComponent implements OnInit {
     subtopic_attempt_response: string[] = [];
     subtopic_attempt_explanation: any[] = [];
 
-    subject_labels: { [key: string]: string } = {
-        "Algebra I": "Algebra I",
-        "Algebra II": "Algebra II",
-        "Biology": "Biology",
-        "English I": "English I",
-        "English II": "English II",
-        "English Language Arts": "Language Arts",
-        "English Reading": "Reading",
-        "Geometry": "Geometry",
-        "Mathematics": "Math",
-        "Physics": "Physics",
-        "SAT Suite": "SAT Suite",
-        "Science": "Science",
-        "Social Studies": "Social Studies",
-        "U.S. History": "U.S. History"
-    };
-
     iti: any;
     user: any;
     phone: string = "";

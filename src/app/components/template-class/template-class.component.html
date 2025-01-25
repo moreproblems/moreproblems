@@ -1127,7 +1127,8 @@
               style="line-height: 28px; font-weight: 500; font-size: 28px"> Log Back Into <b
                 style="font-weight: 900">MoreProblems</b> </h1>
             <h1 *ngIf="screenWidth <= 700" style="line-height: 28px; font-weight: 500; font-size: 24px"> Log Back Into
-              <b style="font-weight: 900">MoreProblems</b> </h1>
+              <b style="font-weight: 900">MoreProblems</b>
+            </h1>
             <h3 *ngIf="screenWidth > 700" style="line-height: 24px; font-weight: 500; font-size: 18px"> Welcome back to
               your account! </h3>
             <h3 *ngIf="screenWidth <= 700" style="line-height: 20px; font-weight: 500; font-size: 15px"> Welcome back to
@@ -1289,7 +1290,8 @@
               style="line-height: 28px; font-weight: 500; font-size: 28px"> Log Back Into <b
                 style="font-weight: 900">MoreProblems</b> </h1>
             <h1 *ngIf="screenWidth <= 700" style="line-height: 28px; font-weight: 500; font-size: 24px"> Log Back Into
-              <b style="font-weight: 900">MoreProblems</b> </h1>
+              <b style="font-weight: 900">MoreProblems</b>
+            </h1>
             <h3 *ngIf="screenWidth > 700" style="line-height: 24px; font-weight: 500; font-size: 18px"> Welcome back to
               your account! </h3>
             <h3 *ngIf="screenWidth <= 700" style="line-height: 20px; font-weight: 500; font-size: 15px"> Welcome back to
@@ -1447,7 +1449,7 @@
         </div>
       </div>
     </div>
-    <div *ngIf="file_source != '' && !signup && !login" style="align-items: left; width: min(1075px, 92%)">
+    <div *ngIf="file_source != '' && quiz_id != '' && exam_id != '' && !signup && !login" style="align-items: left; width: min(1075px, 92%)">
       <section>
         <div (click)="back_to_class()" class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
@@ -1459,7 +1461,8 @@
     </div>
     <div *ngIf="selected_subtopic != '' && !signup && !login" style="align-items: left; width: min(1075px, 92%)">
       <section>
-        <div (click)="selected_subtopic=''; selected_student_st=''; plot_exam_results(); plot_student_results()"
+        <div
+          (click)="selected_subtopic=''; selected_student_st=''; file_source=''; plot_exam_results(); plot_student_results()"
           class="card card-small"
           style="margin: 10px 0px; width: fit-content; border: none; background-color: rgba(255, 255, 255, 0.5)">
           <img src="./assets/media/icons/caret.png"
@@ -1468,7 +1471,193 @@
         </div>
       </section>
     </div>
-    <div *ngIf="selected_subtopic != '' && !signup && !login">
+    <!-- PDF Viewer -->
+    <div *ngIf="file_source != '' && exam_id == '' && quiz_id == ''" class="card card-large" (window:resize)="width_change2()"
+      style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
+      #quizPdfViewer>
+      <section
+        style="margin-top: 15px; height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+        <h1 *ngIf="this.screenWidth <= 550" style="margin: auto 5px; text-align: center; font-size: 17px">
+          Practice Worksheet </h1>
+        <h1 *ngIf="this.screenWidth > 550 && this.screenWidth <= 900"
+          style="margin: auto 10px; text-align: center; font-size: 21px">
+          Practice Worksheet </h1>
+        <h1 *ngIf="this.screenWidth > 900" style="margin: auto 15px; text-align: center; font-size: 26px">
+          Practice Worksheet </h1>
+      </section>
+      <hr style="width: max(80%, 300px)">
+      <section
+        style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+        <!-- <button *ngIf="this.screenWidth <= 900 && authService.userData as user" (click)="toggle_favorite()"
+          class="grade-button" style="margin: 5px; padding: 6px; width: auto; height: auto">
+          <span *ngIf="!this.exam_fav"
+            style="font-size: 18px; font-weight: 2px; color: white; -webkit-text-stroke: 2px #4db7fd"> <i class="fas fa-bookmark"></i>
+          </span>
+          <span *ngIf="this.exam_fav"
+            style="font-size: 18px; font-weight: 2px; color:#4db7fd; -webkit-text-stroke: 2px #4db7fd">
+            <i class="fas fa-bookmark"></i> </span>
+          <b *ngIf="!this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Bookmark </b>
+          <b *ngIf="this.exam_fav" style="margin-left: 5px; font-size: 16px; line-height: 20px"> Bookmarked </b>
+        </button>
+        <button *ngIf="this.screenWidth > 900 && authService.userData as user" (click)="toggle_favorite()"
+          class="grade-button" style="margin: 5px; width: auto; height: auto">
+          <span *ngIf="!this.exam_fav"
+            style="font-size: 22px; font-weight: 2px; color: white; -webkit-text-stroke: 2px #4db7fd"> <i class="fas fa-bookmark"></i>
+          </span>
+          <span *ngIf="this.exam_fav"
+            style="font-size: 22px; font-weight: 2px; color:#4db7fd; -webkit-text-stroke: 2px #4db7fd">
+            <i class="fas fa-bookmark"></i> </span>
+          <b *ngIf="!this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmark </b>
+          <b *ngIf="this.exam_fav" style="margin-left: 10px; font-size: 20px; line-height: 24px"> Bookmarked </b>
+        </button> -->
+        <!-- <button *ngIf="dumpService.exam_set.includes(exam_id)" (click)="take_exam()" class="grade-button"
+          style="margin: 10px 5px 5px; width: auto; height: auto; background-color: green">
+          <img src="./assets/media/icons/test.png" style="height: 25px">
+          <b style="margin-left: 10px"> Take Exam! </b>
+        </button> -->
+        <div>
+          <button *ngIf="this.screenWidth <= 900" (click)="file_source=''" class="grade-button"
+            style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
+            <img src="./assets/media/icons/test.png" style="height: 22px">
+            <b style="margin-left: 10px; font-size: 17px; line-height: 20px; width: auto"> Take Quiz! </b>
+          </button>
+          <button *ngIf="this.screenWidth > 900" (click)="file_source=''" class="grade-button"
+            style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
+            <img src="./assets/media/icons/test.png" style="height: 25px">
+            <b style="margin-left: 10px; font-size: 22px; line-height: 26px; width: auto"> Take Quiz! </b>
+          </button>
+        </div>
+        <!-- <div *ngIf="authService.userData as user">
+          <button
+            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth <= 900"
+            (click)="router.navigate(['quiz/' + selected_quiz + '/edit'])" class="grade-button"
+            style="margin: 5px; padding: 6px; width: auto; height: auto">
+            <img src="./assets/media/icons/edit.png" style="height: 22px">
+            <b style="margin-left: 5px; font-size: 17px; line-height: 20px"> Edit Quiz </b>
+          </button>
+          <button *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth > 900"
+            (click)="router.navigate(['quiz/' + selected_quiz + '/edit'])" class="grade-button"
+            style="margin: 5px; width: auto; height: auto">
+            <img src="./assets/media/icons/edit.png" style="height: 25px">
+            <b style="margin-left: 10px; font-size: 22px; line-height: 26px"> Edit Quiz </b>
+          </button>
+        </div> -->
+        <!-- <div *ngIf="authService.userData as user">
+          <button
+            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth <= 900"
+            (click)="toggle_assign_quiz()" class="grade-button"
+            style="margin: 5px; padding: 6px; width: auto; height: auto">
+            <img src="./assets/media/icons/assign.png" style="height: 22px">
+            <b style="margin-left: 5px; font-size: 17px; line-height: 20px"> Assign </b>
+          </button>
+          <button
+            *ngIf="!['', 'Student'].includes(user.role) && this.screenWidth > 900"
+            (click)="toggle_assign_quiz()" class="grade-button" style="margin: 5px; width: auto; height: auto">
+            <img src="./assets/media/icons/assign.png" style="height: 25px">
+            <b style="margin-left: 10px; font-size: 22px; line-height: 26px"> Assign </b>
+          </button>
+        </div> -->
+      </section>
+      <hr *ngIf="authService.userData as user" style="width: max(50%, 300px)">
+      <section
+        style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+        <div style="display: flex; flex-direction: row">
+          <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="prev_page()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 2px; border-radius: 13px">
+            <img src="./assets/media/icons/minus.png" style="height: 20px; filter: invert(100%)">
+            <!-- <b>PD</b> -->
+          </button>
+          <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="prev_page()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 3px; border-radius: 16px">
+            <img src="./assets/media/icons/minus.png" style="height: 25px; filter: invert(100%)">
+            <!-- <b>PD</b> -->
+          </button>
+          <div style="padding-bottom: 5px">
+            <p style="margin: auto 5px; font-size: 18px; font-weight: 600">Page </p>
+            <input (keyup)="go_to_page(+this.pageNum.value)" type="text" inputmode="numeric" value="{{file_page}}"
+              min="1" maxlength="3"
+              style="margin: auto 5px; width: 40px; height: 20px; font-size: 20px; font-weight: 800; text-align: center"
+              #pageNum />
+          </div>
+          <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="next_page()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 2px; border-radius: 13px">
+            <img src="./assets/media/icons/plus.png" style="height: 20px; filter: invert(100%)">
+            <!-- <b>PU</b> -->
+          </button>
+          <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="next_page()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 3px; border-radius: 16px">
+            <img src="./assets/media/icons/plus.png" style="height: 25px; filter: invert(100%)">
+            <!-- <b>PU</b> -->
+          </button>
+        </div>
+        <div style="margin: auto 15px">
+          <div style="display: flex; flex-direction: row">
+            <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="download_quiz()" class="grade-button"
+              style="margin: auto 5px; padding: 6px; width: auto; height: auto">
+              <img src="./assets/media/icons/download.png" style="height: 25px">
+              <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Download </b>
+            </button>
+            <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="download_quiz()" class="grade-button"
+              style="margin: auto 5px; width: auto; height: auto">
+              <img src="./assets/media/icons/download.png" style="height: 25px">
+              <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Download </b>
+            </button>
+            <!-- <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="print_quiz()" class="grade-button"
+              style="margin: 5px; width: auto; height: auto">
+              <img src="./assets/media/icons/print.png" style="height: 25px">
+              <b style="margin-left: 10px"> Print </b>
+            </button> -->
+          </div>
+          <!-- <h4 *ngIf="exam_dl == 1 && screenWidth > mobileWidth"
+            style="font-weight: 500; font-size: 20px; margin: 0px auto 5px; color: #1976d2"> <b
+              style="font-weight: 800">{{''+exam_dl}}</b> download </h4>
+          <h4 *ngIf="exam_dl == 1 && screenWidth <= mobileWidth"
+            style="font-weight: 500; font-size: 16px; line-height: 20px; margin: 0px auto 5px; color: #1976d2"> <b
+              style="font-weight: 800">{{''+exam_dl}}</b> download </h4>
+          <h4 *ngIf="exam_dl > 1 && screenWidth > mobileWidth"
+            style="font-weight: 500; font-size: 20px; margin: 0px auto 5px; color: #1976d2"> <b
+              style="font-weight: 800">{{''+exam_dl}}</b> downloads </h4>
+          <h4 *ngIf="exam_dl > 1 && screenWidth <= mobileWidth"
+            style="font-weight: 500; font-size: 16px; line-height: 20px; margin: 0px auto 5px; color: #1976d2"> <b
+              style="font-weight: 800">{{''+exam_dl}}</b> downloads </h4> -->
+        </div>
+        <div *ngIf="this.screenWidth > 450" style="display: flex; flex-direction: row">
+          <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="zoom_out()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 2px; border-radius: 13px">
+            <img src="./assets/media/icons/minus.png" style="height: 20px; filter: invert(100%)">
+            <!-- <b>PD</b> -->
+          </button>
+          <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="zoom_out()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 3px; border-radius: 16px">
+            <img src="./assets/media/icons/minus.png" style="height: 25px; filter: invert(100%)">
+            <!-- <b>PD</b> -->
+          </button>
+          <div style="padding-bottom: 5px">
+            <p style="margin: auto 5px; font-size: 18px; font-weight: 600">Zoom </p>
+            <h2 style="margin: auto 5px; font-size: 20px; font-weight: 800">{{file_zoom}}<b
+                style="font-size: 16px; font-weight: 500">%</b> </h2>
+          </div>
+          <button *ngIf="file_source != '' && this.screenWidth <= 900" (click)="zoom_in()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 2px; border-radius: 13px">
+            <img src="./assets/media/icons/plus.png" style="height: 20px; filter: invert(100%)">
+            <!-- <b>PU</b> -->
+          </button>
+          <button *ngIf="file_source != '' && this.screenWidth > 900" (click)="zoom_in()" class="grade-button"
+            style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 3px; border-radius: 16px">
+            <img src="./assets/media/icons/plus.png" style="height: 25px; filter: invert(100%)">
+            <!-- <b>PU</b> -->
+          </button>
+        </div>
+      </section>
+      <section *ngIf="file_source != ''"
+        style="margin-bottom: 10px; height: 90%; border: 1px solid black; border-radius: 10px; display: flex; flex-direction: column;  overflow: hidden; background-color: #eee">
+        <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="file_source" [original-size]="false" [zoom]="file_zoom/100"
+          [(page)]="file_page" style="min-height: 550px; height: 100%"></pdf-viewer>
+        <pdf-viewer *ngIf="this.screenWidth > 700" [src]="file_source" [original-size]="false" [zoom]="file_zoom/100"
+          [(page)]="file_page" style="min-height: 625px; height: 100%"></pdf-viewer>
+      </section>
+    </div>
+    <div *ngIf="selected_subtopic != '' && file_source == '' && !signup && !login">
       <div *ngIf="selected_subtopic != ''" class="card card-large"
         style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
         #subtopicSummaryCard>
@@ -1483,22 +1672,27 @@
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 5px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
-                    {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
+                    subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 5px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
-                    {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
+                    subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Subject}} </b>
                 </button>
               </label>
               <label class="switch" style="padding: 0 5px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 16px"> <b>
-                    {{(dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    {{(dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
+                    subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ?
-                    dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
+                    subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State :
-                    dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
+                    subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b>
                 </button>
               </label>
@@ -1507,22 +1701,26 @@
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 2px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b>
-                    {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    {{dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
+                    subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b>
-                    {{subject_labels[dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
+                    {{dumpService.subject_labels[dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
                     subtopic_problem_number)].Number).substring(0, (subtopic_search_dump[max(1,
                     subtopic_problem_number)].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b>
-                    {{(dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    {{(dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
+                    subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State) ?
-                    dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
+                    subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].State :
-                    dumpService.exam_attribute_dump[(subtopic_search_dump[max(1, subtopic_problem_number)].Number).substring(0,
+                    dumpService.exam_attribute_dump[(subtopic_search_dump[max(1,
+                    subtopic_problem_number)].Number).substring(0,
                     (subtopic_search_dump[max(1, subtopic_problem_number)].Number).indexOf('-'))].ExamName}} </b>
                 </button>
               </label>
@@ -1705,6 +1903,10 @@
                 (click)="begin_practice_st(); scroll_top()" style="display: block; max-width: 150px; max-height: 100px">
                 <b> Begin Practice </b>
               </button>
+              <button *ngIf="subtopic_problem_number == 0" class="grade-button"
+                (click)="toggle_squiz_pdf(); scroll_top()" style="display: block; max-width: 150px; max-height: 100px">
+                <b> View PDF </b>
+              </button>
             </div>
           </div>
           <div *ngIf="subtopic_problem_number > 0" class="card card-medium"
@@ -1719,7 +1921,8 @@
               </div>
             </section>
             <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Subtopic Progress:
-              <b>{{""+(subtopic_problem_number)}}/{{""+subtopic_problem_count}}</b> </h4>
+              <b>{{""+(subtopic_problem_number)}}/{{""+subtopic_problem_count}}</b>
+            </h4>
             <progress value="{{subtopic_problem_number}}" max="{{subtopic_problem_count}}"
               style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
               #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
@@ -1744,7 +1947,7 @@
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Grade}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
-                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{subject_labels[dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
+                <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{dumpService.subject_labels[dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].Subject]}} </b> </button>
               </label>
               <label class="switch" style="padding: 0 2px">
                 <button class="toggle-button-disabled" style="color: darkslategrey; font-size: 14px; padding: 5px"> <b> {{(dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State) ? dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].State : dumpService.exam_attribute_dump[(subtopic_search_dump[subtopic_problem_number].Number).substring(0, (subtopic_search_dump[subtopic_problem_number].Number).indexOf('-'))].ExamName}} </b> </button>
@@ -1854,7 +2057,8 @@
                           <h3
                             *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && !block2[1].startsWith(':ibox:') && block2[0] == '' && supp_st_dump[block[1]].LabelType == 'P'"
                             style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                            <b>{{block2[1]}}</b></h3>
+                            <b>{{block2[1]}}</b>
+                          </h3>
                           <img *ngIf="is_image(block2[1])" src="./assets/{{block2[1]}}"
                             style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                         </div>
@@ -1881,7 +2085,8 @@
                     <h3
                       *ngIf="!block[1].endsWith('.json') && !is_image(block[1]) && !block[1].startsWith(':box:') && !block[1].startsWith(':ibox:') && block[0] == '' && supp_st_dump[supp].LabelType != 'N'"
                       style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px); margin: 10px auto; text-align: center">
-                      <b>{{block[1]}}</b></h3>
+                      <b>{{block[1]}}</b>
+                    </h3>
                     <img *ngIf="is_image(block[1])" src="./assets/{{block[1]}}"
                       style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                   </div>
@@ -3683,7 +3888,8 @@
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
                       keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts |
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
-                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                    </p>
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'LP'">
@@ -3736,7 +3942,8 @@
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
                       keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts |
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
-                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                    </p>
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'T'">
@@ -3753,7 +3960,8 @@
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
                       keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts |
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
-                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                    </p>
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'LR'">
@@ -3837,7 +4045,8 @@
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
                       keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts |
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
-                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                    </p>
                   </h3>
                 </div>
               </div>
@@ -4051,12 +4260,14 @@
           {{exam_name}} </h1>
         <h1 *ngIf="this.screenWidth > 900" style="margin: auto 15px; text-align: center; font-size: 26px">
           {{exam_name}} </h1>
-        <button *ngIf="dumpService.exam_set.includes(exam_id) && this.screenWidth <= 900" (click)="take_exam()" class="grade-button"
+        <button *ngIf="dumpService.exam_set.includes(exam_id) && this.screenWidth <= 900" (click)="take_exam()"
+          class="grade-button"
           style="margin: 5px; padding: 5px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px; font-size: 17px; line-height: 19px; width: auto"> Take Exam! </b>
         </button>
-        <button *ngIf="dumpService.exam_set.includes(exam_id) && this.screenWidth > 900" (click)="take_exam()" class="grade-button"
+        <button *ngIf="dumpService.exam_set.includes(exam_id) && this.screenWidth > 900" (click)="take_exam()"
+          class="grade-button"
           style="margin: 5px; padding: 8px; width: auto; height: auto; background-color: rgba(29, 159, 0, 0.8)">
           <img src="./assets/media/icons/test.png" style="height: 25px">
           <b style="margin-left: 10px; font-size: 22px; line-height: 26px; width: auto"> Take Exam! </b>
@@ -4094,26 +4305,30 @@
           </b>
         </button>
         <div *ngIf="authService.userData as user">
-          <button *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
+          <button
+            *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="toggle_assign_exam()" class="grade-button"
             style="margin: 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/assign.png" style="height: 22px">
             <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Assign </b>
           </button>
-          <button *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
+          <button
+            *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
             (click)="toggle_assign_exam()" class="grade-button" style="margin: 5px; width: auto; height: auto">
             <img src="./assets/media/icons/assign.png" style="height: 27px">
             <b style="margin-left: 10px; font-size: 20px; line-height: 24px"> Assign </b>
           </button>
         </div>
         <div *ngIf="authService.userData as user">
-          <button *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
+          <button
+            *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth <= 900"
             (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
             style="margin: 5px; padding: 6px; width: auto; height: auto">
             <img src="./assets/media/icons/key.png" style="height: 22px">
             <b style="margin-left: 5px; font-size: 16px; line-height: 20px"> Answer Key </b>
           </button>
-          <button *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
+          <button
+            *ngIf="dumpService.exam_set.includes(exam_id) && !['', 'Student'].includes(user.role) && this.screenWidth > 900"
             (click)="router.navigate(['exam/' + exam_id + '/key'])" class="grade-button"
             style="margin: 5px; width: auto; height: auto">
             <img src="./assets/media/icons/key.png" style="height: 25px">
@@ -5448,7 +5663,8 @@
                 <tr>
                   <td *ngIf="results_hover != exm" colspan="2"
                     style="border-top: 1px solid #ddd; min-width: 225px; width: 225px; text-align: left; font-size: 16px; padding-left: 10px">
-                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : dumpService.exam_names[exm]}}</b>
+                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name :
+                      dumpService.exam_names[exm]}}</b>
                     <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                       <b>{{""+student_sub_metadata[exm].enddate}}</b>
                       {{""+student_sub_metadata[exm].endtime}}
@@ -5462,7 +5678,8 @@
                   </td>
                   <td *ngIf="results_hover == exm"
                     style="border-top: 1px solid #ddd; min-width: 150px; width: 150px; text-align: left; font-size: 16px; padding-left: 10px">
-                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : dumpService.exam_names[exm]}}</b>
+                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name :
+                      dumpService.exam_names[exm]}}</b>
                     <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                       <b>{{""+student_sub_metadata[exm].enddate}}</b>
                       {{""+student_sub_metadata[exm].endtime}}
@@ -5522,7 +5739,8 @@
                 <tr>
                   <td *ngIf="results_hover != exm" colspan="2"
                     style="border-top: 1px solid #ddd; min-width: 275px; width: 275px; text-align: left; font-size: 16px; padding-left: 10px">
-                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : dumpService.exam_names[exm]}}</b>
+                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name :
+                      dumpService.exam_names[exm]}}</b>
                     <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                       <b>{{""+student_sub_metadata[exm].enddate}}</b>
                       {{""+student_sub_metadata[exm].endtime}}
@@ -5536,7 +5754,8 @@
                   </td>
                   <td *ngIf="results_hover == exm"
                     style="border-top: 1px solid #ddd; min-width: 200px; width: 200px; text-align: left; font-size: 16px; padding-left: 10px">
-                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name : dumpService.exam_names[exm]}}</b>
+                    <b>{{(exm.startsWith('Q-')) ? authService.searchQuizId(exm.slice(2)).name :
+                      dumpService.exam_names[exm]}}</b>
                     <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
                       <b>{{""+student_sub_metadata[exm].enddate}}</b>
                       {{""+student_sub_metadata[exm].endtime}}
@@ -5782,7 +6001,8 @@
       <div *ngIf="selected_exam_results != '' || (selected_stud_results != '' && !selected_sub[0].startsWith('Q-'))"
         class="card card-medium"
         style="text-align: center; margin: auto; width: fit-content; padding: 20px; display: flex; flex-direction: column">
-        <h2> {{authService.searchUserId(selected_sub[1]).displayName}} - {{dumpService.exam_names[selected_sub[0]]}} </h2>
+        <h2> {{authService.searchUserId(selected_sub[1]).displayName}} - {{dumpService.exam_names[selected_sub[0]]}}
+        </h2>
         <h3 style="font-size: 18px; color: rgb(94, 104, 113)"> With {{number_correct}} out of {{exam_length}}
           problems
           correct, you scored {{correct_percent}}% in {{time_duration}}</h3>
@@ -6491,7 +6711,8 @@
                 style="border-top: 1px solid #ddd; min-width: 320px; width: 320px; text-align: left; font-size: 16px; padding-left: 10px">
                 <b>{{dumpService.exam_names[exam.id]}}</b>
                 <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                  {{""+dumpService.exam_attribute_dump[exam.id].NumQuestions}} questions {{(dumpService.exam_attribute_dump[exam.id].Timer > 0)
+                  {{""+dumpService.exam_attribute_dump[exam.id].NumQuestions}} questions
+                  {{(dumpService.exam_attribute_dump[exam.id].Timer > 0)
                   ? '(' + ""+dumpService.exam_attribute_dump[exam.id].Timer + ' minutes)' : ''}}
                 </h4>
               </td>
@@ -6499,7 +6720,8 @@
                 style="border-top: 1px solid #ddd; min-width: 250px; width: 250px; text-align: left; font-size: 16px; padding-left: 10px">
                 <b>{{dumpService.exam_names[exam.id]}}</b>
                 <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                  {{""+dumpService.exam_attribute_dump[exam.id].NumQuestions}} questions {{(dumpService.exam_attribute_dump[exam.id].Timer > 0)
+                  {{""+dumpService.exam_attribute_dump[exam.id].NumQuestions}} questions
+                  {{(dumpService.exam_attribute_dump[exam.id].Timer > 0)
                   ? '(' + ""+dumpService.exam_attribute_dump[exam.id].Timer + ' minutes)' : ''}}
                 </h4>
               </td>
@@ -6531,7 +6753,8 @@
           <h2> {{dumpService.exam_names[exam]}} </h2>
           <h3 *ngIf="dumpService.exam_set.includes(exam)" style="margin: 25px auto 0px"> Exam Length:
             {{""+dumpService.exam_attribute_dump[exam].NumQuestions}} questions </h3>
-          <h3 *ngIf="dumpService.exam_set.includes(exam) && dumpService.exam_attribute_dump[exam].Timer > 0" style="margin: 0px auto">
+          <h3 *ngIf="dumpService.exam_set.includes(exam) && dumpService.exam_attribute_dump[exam].Timer > 0"
+            style="margin: 0px auto">
             ({{""+dumpService.exam_attribute_dump[exam].Timer}} minutes) </h3>
           <h3 *ngIf="!dumpService.exam_set.includes(exam)" style="margin: auto; margin: 25px auto"> This exam is not
             online yet. </h3>
@@ -6751,7 +6974,8 @@
             <div class="media-body">
               <div>
                 <h1 style="width: auto; text-align: center; margin: 20px auto; font-weight: 500"> Class Code:
-                  <b>{{class_uid}}</b></h1>
+                  <b>{{class_uid}}</b>
+                </h1>
                 <br />
                 <div>
                   <canvas id="qrCanvas" #qrCanvas></canvas>

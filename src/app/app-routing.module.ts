@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { QuizzesComponent } from './components/quizzes/quizzes.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { AboutComponent } from './components/about/about.component';
+import { AboutContactComponent } from './components/about-contact/about-contact.component';
 import { AboutParentsComponent } from './components/about-parents/about-parents.component';
 import { AboutStudentsComponent } from './components/about-students/about-students.component';
 import { AboutTeachersComponent } from './components/about-teachers/about-teachers.component';
@@ -29,6 +30,7 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
+  { path: 'about/contact', component: AboutContactComponent },
   { path: 'about/parents', component: AboutParentsComponent },
   { path: 'about/students', component: AboutStudentsComponent },
   { path: 'about/teachers', component: AboutTeachersComponent },
