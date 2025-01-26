@@ -6768,14 +6768,14 @@
                     </h4> -->
           <section
             style="height: auto; max-height: 150px; width: fit-content; display: flex; justify-content: center; margin: 25px auto 5px">
-            <label *ngIf="dumpService.exam_set.includes(exam)" class="switch" style="margin: auto 10px">
+            <label *ngIf="dumpService.exam_set.includes(exam)" class="switch" style="margin: auto 5px">
               <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
               <button class="grade-button" style="margin: auto; padding: 10px 5px; width: auto"
                 routerLink="/exam/{{exam}}/{{class_uid}}" routerLinkActive="active">
                 <b> Take Exam </b>
               </button>
             </label>
-            <label class="switch" style="margin: auto 10px">
+            <label class="switch" style="margin: auto 5px">
               <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
               <button (click)="select_exam(exam); scroll_top()" class="toggle-button-off"
                 style="margin: auto; padding: 10px 5px; width: auto">
@@ -6785,14 +6785,14 @@
           </section>
           <section *ngIf="assign_title == 'Assignments For Your Class' && is_auth"
             style="height: auto; max-height: 150px; width: fit-content; display: flex; justify-content: center; margin: 5px auto">
-            <label class="switch" style="margin: auto 10px">
+            <label class="switch" style="margin: auto 5px">
               <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
               <button (click)="exam_results(exam)" class="grade-button"
                 style="margin: auto; padding: 10px 5px; width: auto">
                 <b> Results </b>
               </button>
             </label>
-            <label class="switch" style="margin: auto 10px">
+            <label class="switch" style="margin: auto 5px">
               <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
               <button (click)="remove_exam(exam)" class="toggle-button-off"
                 style="margin: auto; padding: 10px 5px; width: auto">
@@ -6921,24 +6921,38 @@
                     </h4> -->
           <section
             style="height: auto; max-height: 150px; width: fit-content; display: flex; justify-content: center; margin: 5px auto">
-            <label class="switch" style="margin: auto 10px">
+            <label class="switch" style="margin: auto 5px">
               <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
               <button class="grade-button" style="margin: auto; padding: 10px 5px; width: auto"
                 routerLink="/quiz/{{quiz}}/{{class_uid}}" routerLinkActive="active">
                 <b> Take Quiz </b>
               </button>
             </label>
+            <label *ngIf="authService.searchQuizId(quiz).problems == undefined" class="switch" style="margin: auto 5px">
+              <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
+              <button (click)="toggle_quiz_pdf(quiz)" class="toggle-button-off"
+                style="margin: auto; padding: 10px 5px; width: auto">
+                <b> View PDF </b>
+              </button>
+            </label>
+            <label *ngIf="authService.searchQuizId(quiz).problems != undefined" class="switch" style="margin: auto 5px">
+              <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
+              <button (click)="toggle_cquiz_pdf(quiz)" class="toggle-button-off"
+                style="margin: auto; padding: 10px 5px; width: auto">
+                <b> View PDF </b>
+              </button>
+            </label>
           </section>
           <section *ngIf="quizzes_title == 'Quizzes Assigned To Your Class' && is_auth"
             style="height: auto; max-height: 150px; width: fit-content; display: flex; justify-content: center; margin: 5px auto">
-            <label class="switch" style="margin: auto 10px">
+            <label class="switch" style="margin: auto 5px">
               <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
               <button (click)="quiz_results('Q-'+quiz)" class="grade-button"
                 style="margin: auto; padding: 10px 5px; width: auto">
                 <b> Results </b>
               </button>
             </label>
-            <label class="switch" style="margin: auto 10px">
+            <label class="switch" style="margin: auto 5px">
               <input type="checkbox" style="margin: auto; margin-top: 25px" hidden>
               <button (click)="remove_quiz(quiz)" class="toggle-button-off"
                 style="margin: auto; padding: 10px 5px; width: auto">

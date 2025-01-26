@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ExamsComponent } from './components/exams/exams.component';
 import { HomeComponent } from './components/home/home.component';
-// import { ProblemsComponent } from './components/problems/problems.component';
 import { QuizzesComponent } from './components/quizzes/quizzes.component';
 import { StandardsComponent } from './components/standards/standards.component';
 import { AboutComponent } from './components/about/about.component';
@@ -36,7 +35,6 @@ const routes: Routes = [
   { path: 'about/teachers', component: AboutTeachersComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'exams', component: ExamsComponent },
-  // { path: 'problems', component: ProblemsComponent },
   { path: 'quizzes', component: QuizzesComponent },
   { path: 'standards', component: StandardsComponent },
   { path: 'home', component: HomeComponent },

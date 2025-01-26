@@ -350,12 +350,12 @@
         "Content": [
             "Curt uses 42 pencils to make groups of pencils.",
             "Each group has 7 pencils.",
-            "The equation 42 ÷ The □  = 7 describes this story.",
-            "Which sentence correctly explains what the □ equals?"
+            "The equation 42 ÷ The [_]  = 7 describes this story.",
+            "Which sentence correctly explains what the [_] equals?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The □ equals the 6 groups Curt made.",
+                "Choice": "The [_] equals the 6 groups Curt made.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -363,7 +363,7 @@
                 }
             },
             "B": {
-                "Choice": "The □ equals the 6 pencils Curt has remaining.",
+                "Choice": "The [_] equals the 6 pencils Curt has remaining.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Picks the right number but does not know what it represents.",
@@ -371,7 +371,7 @@
                 }
             },
             "C": {
-                "Choice": "The □ equals the 7 groups Curt made.",
+                "Choice": "The [_] equals the 7 groups Curt made.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Picks another interpretation for the number 7.",
@@ -379,7 +379,7 @@
                 }
             },
             "D": {
-                "Choice": "The □ equals the 7 pencils Curt has remaining.",
+                "Choice": "The [_] equals the 7 pencils Curt has remaining.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Picks a correct interpretation of 7 in the problem but doesn't realize that 7 does not go in the box.",
@@ -518,11 +518,11 @@
             "problems/PA19G3M/media/10a.jpg",
             "Maya is feeding the cats and dogs at the pet store.",
             "She already gave food to 4 of the cats and none of the dogs.",
-            "Which number sentence can be used to find the total number of cats and dogs (□) Maya still needs to feed?"
+            "Which number sentence can be used to find the total number of cats and dogs ([_]) Maya still needs to feed?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4 + □ = 11",
+                "Choice": "4 + [_] = 11",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -530,7 +530,7 @@
                 }
             },
             "B": {
-                "Choice": "5 + 6 = □",
+                "Choice": "5 + 6 = [_]",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds the cats and dogs but does not subtract those fed.",
@@ -538,7 +538,7 @@
                 }
             },
             "C": {
-                "Choice": "13 – □ = 4",
+                "Choice": "13 – [_] = 4",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses dogs and birds (two tallest bars) as the total to be fed.",
@@ -546,7 +546,7 @@
                 }
             },
             "D": {
-                "Choice": "27 – 4 = □",
+                "Choice": "27 – 4 = [_]",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses all animals as the total.",
