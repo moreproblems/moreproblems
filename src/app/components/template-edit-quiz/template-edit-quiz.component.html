@@ -1923,7 +1923,7 @@
                         <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
                           style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                     </button>
-                    <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off" style="margin: auto; margin-top: 10px; min-height: 40px"></button>
+                    <button *ngIf="is_matched_st(choice, 0, '')" class="toggle-button-off" style="margin: auto; margin-top: 10px; min-height: 40px"></button>
                   </label>
                 </div>
                 <br />
@@ -2310,7 +2310,7 @@
                     <h3 *ngIf="problem_attempts[0] > 0"
                       style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; color: black">
                       <b style="font-size: 20px; color: #1976d2">{{attempt_response[0]}}</b>
-                      <br /> <br /> <span *ngFor="let selec of problem_selection[0]"> <p *ngFor="let ch of selec"><span *ngIf="ch != ''"><b>{{'\nExplanation (' + ch.substring(0, 1) + ': ' + unique_choices[problem_selection[0].indexOf(selec)].slice(2) + ')'}}</b>: {{(attempt_explanation[0][problem_selection[0].indexOf(selec)][selec.indexOf(ch)] != '') ? attempt_explanation[0][problem_selection[0].indexOf(selec)][selec.indexOf(ch)] : 'No explanation or rationale is available.'}}</span></p></span>
+                      <br /> <br /> <span *ngFor="let selec of problem_selection[0]"> <p *ngFor="let ch of selec"><span *ngIf="ch != ''"><b>{{'\nExplanation (' + ch.substring(0, 1) + ': ' + unique_choices[0][problem_selection[0].indexOf(selec)].slice(2) + ')'}}</b>: {{(attempt_explanation[0][problem_selection[0].indexOf(selec)][selec.indexOf(ch)] != '') ? attempt_explanation[0][problem_selection[0].indexOf(selec)][selec.indexOf(ch)] : 'No explanation or rationale is available.'}}</span></p></span>
                     </h3>
                     <br *ngIf="problem_attempts[0] > 0 && is_g_correct('', false) && screenWidth <= mobileWidth" />
                     <button *ngIf="problem_attempts[0] > 0 && is_g_correct('', false) && screenWidth <= mobileWidth"

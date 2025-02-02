@@ -457,7 +457,7 @@
     style="display: flex; flex-direction: row; width: 100%; margin: auto; align-items: center; justify-content: space-between; height: fit-content">
     <div *ngIf="this.screenWidth <= this.mobileWidth" style="width: fit-content; display: flex; flex-direction: row">
       <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)"
-        style="margin: 5px 10px; padding: 0px" routerLink="/about" routerLinkActive="active">
+        style="margin: 5px 10px; padding: 0px" routerLink="/exams" routerLinkActive="active">
         <!-- <img *ngIf="this.screenWidth <= this.mobileWidth && (this.screenWidth >= 525  || (440 <= this.screenWidth && this.screenWidth < 490) || (330 <= this.screenWidth && this.screenWidth < 400))" src="./assets/media/logo1.png" style="width: 35px; height: 35px" #logo /> -->
         <span style="padding: 0px; text-align: left; margin: auto">
           <h1 *ngIf="this.screenWidth <= this.mobileWidth"
@@ -477,7 +477,7 @@
     </div>
     <div *ngIf="this.screenWidth > this.mobileWidth" style="width: fit-content; display: flex; flex-direction: row">
       <div *ngIf="!authService.userData" class="card highlight-card" style="transform: translateY(0.25rem)"
-        style="margin: 5px 10px; padding: 0px" routerLink="/about" routerLinkActive="active">
+        style="margin: 5px 10px; padding: 0px" routerLink="/exams" routerLinkActive="active">
         <!-- <img *ngIf="this.screenWidth > this.mobileWidth" src="./assets/media/logo1.png" style="width: 45px; height: 45px" #logo /> -->
         <span style="padding: 0px; text-align: left; margin: auto">
           <h1 *ngIf="this.screenWidth > this.mobileWidth"

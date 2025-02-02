@@ -2159,7 +2159,8 @@
               </div>
             </section>
             <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Subtopic Progress:
-              <b>{{""+(subtopic_problem_number)}}/{{""+subtopic_problem_count}}</b> </h4>
+              <b>{{""+(subtopic_problem_number)}}/{{""+subtopic_problem_count}}</b>
+            </h4>
             <progress value="{{subtopic_problem_number}}" max="{{subtopic_problem_count}}"
               style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
               #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
@@ -2294,7 +2295,8 @@
                           <h3
                             *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && !block2[1].startsWith(':ibox:') && block2[0] == '' && supp_st_dump[block[1]].LabelType == 'P'"
                             style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                            <b>{{block2[1]}}</b></h3>
+                            <b>{{block2[1]}}</b>
+                          </h3>
                           <img *ngIf="is_image(block2[1])" src="./assets/{{block2[1]}}"
                             style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                         </div>
@@ -2321,7 +2323,8 @@
                     <h3
                       *ngIf="!block[1].endsWith('.json') && !is_image(block[1]) && !block[1].startsWith(':box:') && !block[1].startsWith(':ibox:') && block[0] == '' && supp_st_dump[supp].LabelType != 'N'"
                       style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px); margin: 10px auto; text-align: center">
-                      <b>{{block[1]}}</b></h3>
+                      <b>{{block[1]}}</b>
+                    </h3>
                     <img *ngIf="is_image(block[1])" src="./assets/{{block[1]}}"
                       style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                   </div>
@@ -2471,22 +2474,22 @@
                             style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)">
                             <b>{{word[4]}}</b> </button>
                           <button
-                            *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] == word[3]"
-                            (click)="select_m_choice('', 1, '')" class="toggle-button-on"
+                            *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched_st(word[3], 1, '') && m_selection[0][1] == word[3]"
+                            (click)="select_m_choice_st('', 1, '')" class="toggle-button-on"
                             style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
                           <span *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')"
                             style="max-height: 300px; min-width: 0px; margin: auto">
                             <button
-                              *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct"
-                              (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')"
+                              *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched_st(word[3], 1, '') && m_submission[0][word[3]] == choice && prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct"
+                              (click)="remove_m_choice_st(word[3], ''); select_m_choice_st(word[3], 1, '')"
                               class="toggle-button-off"
                               style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
                               <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}}
                               </div>
                             </button>
                             <button
-                              *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && !(prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct)"
-                              (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')"
+                              *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched_st(word[3], 1, '') && m_submission[0][word[3]] == choice && !(prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct)"
+                              (click)="remove_m_choice_st(word[3], ''); select_m_choice_st(word[3], 1, '')"
                               class="toggle-button-off"
                               style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
                               <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}}
@@ -2494,8 +2497,8 @@
                             </button>
                           </span>
                           <button
-                            *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] != word[3]"
-                            (click)="select_m_choice(word[3], 1, '')" class="toggle-button-off"
+                            *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched_st(word[3], 1, '') && m_selection[0][1] != word[3]"
+                            (click)="select_m_choice_st(word[3], 1, '')" class="toggle-button-off"
                             style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
                           <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] == ''"
                             (change)="attempt_idd_st_problem(word[4], this.DDInput.value, '')"
@@ -2598,29 +2601,29 @@
                           style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)">
                           <b>{{word[4]}}</b> </button>
                         <button
-                          *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] == word[3]"
-                          (click)="select_m_choice('', 1, '')" class="toggle-button-on"
+                          *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched_st(word[3], 1, '') && m_selection[0][1] == word[3]"
+                          (click)="select_m_choice_st('', 1, '')" class="toggle-button-on"
                           style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
                         <span *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')"
                           style="max-height: 300px; min-width: 0px; margin: auto">
                           <button
-                            *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct"
-                            (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')"
+                            *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched_st(word[3], 1, '') && m_submission[0][word[3]] == choice && prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct"
+                            (click)="remove_m_choice_st(word[3], ''); select_m_choice_st(word[3], 1, '')"
                             class="toggle-button-off"
                             style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
                             <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                           </button>
                           <button
-                            *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, '') && m_submission[0][word[3]] == choice && !(prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct)"
-                            (click)="remove_m_choice(word[3], ''); select_m_choice(word[3], 1, '')"
+                            *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && is_matched_st(word[3], 1, '') && m_submission[0][word[3]] == choice && !(prob.value.AnswerChoices[choice].Choice == word[3] && prob.value.AnswerChoices[choice].Key.Correct)"
+                            (click)="remove_m_choice_st(word[3], ''); select_m_choice_st(word[3], 1, '')"
                             class="toggle-button-off"
                             style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
                             <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                           </button>
                         </span>
                         <button
-                          *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, '') && m_selection[0][1] != word[3]"
-                          (click)="select_m_choice(word[3], 1, '')" class="toggle-button-off"
+                          *ngIf="prob.value.Type == 'IM' && word.startsWith(':M-') && !is_matched_st(word[3], 1, '') && m_selection[0][1] != word[3]"
+                          (click)="select_m_choice_st(word[3], 1, '')" class="toggle-button-off"
                           style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
                         <select *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[0][+word[4]-1] == ''"
                           (change)="attempt_idd_st_problem(word[4], this.DDInput.value, '')"
@@ -2686,19 +2689,19 @@
                   <label *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" class="switch"
                     style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
                     <input type="checkbox">
-                    <button (click)="select_m_choice('', 0, '')" *ngIf="m_selection[0][0] == choice"
+                    <button (click)="select_m_choice_st('', 0, '')" *ngIf="m_selection[0][0] == choice"
                       class="toggle-button-on"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
                       <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     </button>
-                    <button (click)="select_m_choice(choice, 0, '')"
-                      *ngIf="!is_matched(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"
+                    <button (click)="select_m_choice_st(choice, 0, '')"
+                      *ngIf="!is_matched_st(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
                       <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     </button>
-                    <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off"
+                    <button *ngIf="is_matched_st(choice, 0, '')" class="toggle-button-off"
                       style="margin: auto; margin-top: 10px; min-height: 40px"></button>
                   </label>
                 </div>
@@ -2709,7 +2712,7 @@
                   <label *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" class="switch"
                     style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
                     <input type="checkbox">
-                    <button (click)="select_m_choice('', 0, '')" *ngIf="m_selection[0][0] == choice"
+                    <button (click)="select_m_choice_st('', 0, '')" *ngIf="m_selection[0][0] == choice"
                       class="toggle-button-on"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
@@ -2718,8 +2721,8 @@
                       <div *ngIf="!is_image(choice.slice(2))"
                         style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     </button>
-                    <button (click)="select_m_choice(choice, 0, '')"
-                      *ngIf="!is_matched(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"
+                    <button (click)="select_m_choice_st(choice, 0, '')"
+                      *ngIf="!is_matched_st(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
                       <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -2727,7 +2730,7 @@
                       <div *ngIf="!is_image(choice.slice(2))"
                         style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     </button>
-                    <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off"
+                    <button *ngIf="is_matched_st(choice, 0, '')" class="toggle-button-off"
                       style="margin: auto; margin-top: 10px; min-height: 40px"></button>
                   </label>
                 </div>
@@ -2745,11 +2748,11 @@
                     <label class="switch"
                       style="padding: 0 15x; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                       <input type="checkbox">
-                      <button (click)="select_m_choice('', 1, '')"
-                        *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] == choice[0]" class="toggle-button-on"
-                        style="margin: auto; margin-top: 10px; min-height: 40px"></button>
-                      <button (click)="remove_m_choice(choice[0], ''); select_m_choice(choice[0], 1, '')"
-                        *ngIf="is_matched(choice[0], 1, '') && m_submission[0][choice[0]][0] == choice[choice.length-1] && m_submission[0][choice[0]][0] != ' '"
+                      <button (click)="select_m_choice_st('', 1, '')"
+                        *ngIf="!is_matched_st(choice[0], 1, '') && m_selection[0][1] == choice[0]"
+                        class="toggle-button-on" style="margin: auto; margin-top: 10px; min-height: 40px"></button>
+                      <button (click)="remove_m_choice_st(choice[0], ''); select_m_choice_st(choice[0], 1, '')"
+                        *ngIf="is_matched_st(choice[0], 1, '') && m_submission[0][choice[0]][0] == choice[choice.length-1] && m_submission[0][choice[0]][0] != ' '"
                         class="toggle-button-off"
                         style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(66, 156, 10)">
                         <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
@@ -2761,7 +2764,7 @@
                           {{m_submission[0][choice[0]].slice(2)}} </div>
                       </button>
                       <button
-                        *ngIf="is_matched(choice[0], 1, '') && m_submission[0][choice[0]][0] == choice[choice.length-1] && m_submission[0][choice[0]][0] == ' '"
+                        *ngIf="is_matched_st(choice[0], 1, '') && m_submission[0][choice[0]][0] == choice[choice.length-1] && m_submission[0][choice[0]][0] == ' '"
                         class="toggle-button-off"
                         style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(66, 156, 10)">
                         <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
@@ -2772,8 +2775,8 @@
                           style="margin: 0 5px; text-align: center; font-size: 18px">
                           {{m_submission[0][choice[0]].slice(2)}} </div>
                       </button>
-                      <button (click)="remove_m_choice(choice[0], ''); select_m_choice(choice[0], 1, '')"
-                        *ngIf="is_matched(choice[0], 1, '') && m_submission[0][choice[0]][0] != choice[choice.length-1]"
+                      <button (click)="remove_m_choice_st(choice[0], ''); select_m_choice_st(choice[0], 1, '')"
+                        *ngIf="is_matched_st(choice[0], 1, '') && m_submission[0][choice[0]][0] != choice[choice.length-1]"
                         class="toggle-button-off"
                         style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content; background-color: rgb(245, 77, 77)">
                         <div style="margin: 0 20px 0 0"> <b>{{m_submission[0][choice[0]][0]}}</b> </div>
@@ -2784,8 +2787,8 @@
                           style="margin: 0 5px; text-align: center; font-size: 18px">
                           {{m_submission[0][choice[0]].slice(2)}} </div>
                       </button>
-                      <button (click)="select_m_choice(choice[0], 1, '')"
-                        *ngIf="!is_matched(choice[0], 1, '') && m_selection[0][1] != choice[0]"
+                      <button (click)="select_m_choice_st(choice[0], 1, '')"
+                        *ngIf="!is_matched_st(choice[0], 1, '') && m_selection[0][1] != choice[0]"
                         class="toggle-button-off" style="margin: auto; margin-top: 10p; min-height: 40px"></button>
                     </label>
                   </div>
@@ -2797,7 +2800,7 @@
                   <label *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" class="switch"
                     style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
                     <input type="checkbox">
-                    <button (click)="select_c_choice('', 0, '')" *ngIf="m_selection[0][0] == choice"
+                    <button (click)="select_c_choice_st('', 0, '')" *ngIf="m_selection[0][0] == choice"
                       class="toggle-button-on"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
@@ -2811,8 +2814,8 @@
                       <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
                         style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                     </button>
-                    <button (click)="select_c_choice(choice, 0, '')"
-                      *ngIf="!is_matched(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"
+                    <button (click)="select_c_choice_st(choice, 0, '')"
+                      *ngIf="!is_matched_st(choice, 0, '') && m_selection[0][0] != choice" class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
                       <div *ngIf="!choice.slice(2).startsWith(':box:') && !is_image(choice.slice(2))"
@@ -2825,7 +2828,7 @@
                       <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
                         style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                     </button>
-                    <button *ngIf="is_matched(choice, 0, '')" class="toggle-button-off"
+                    <button *ngIf="is_matched_st(choice, 0, '')" class="toggle-button-off"
                       style="margin: auto; margin-top: 10px; min-height: 40px"></button>
                   </label>
                 </div>
@@ -2842,10 +2845,10 @@
                     <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch"
                       style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                       <input type="checkbox">
-                      <button (click)="select_c_choice('', 1, '')"
+                      <button (click)="select_c_choice_st('', 1, '')"
                         *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on"
                         style="margin: auto; margin-top: 10px; min-height: 40px"></button>
-                      <button (click)="remove_c_choice(selection, '')"
+                      <button (click)="remove_c_choice_st(selection, '')"
                         *ngIf="selection != '' && prob.value.AnswerChoices[selection].Choice == choice && selection[0] != ' '"
                         class="toggle-button-off"
                         style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(66, 156, 10)">
@@ -2875,7 +2878,7 @@
                         <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
                           style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                       </button>
-                      <button (click)="remove_c_choice(selection, '')"
+                      <button (click)="remove_c_choice_st(selection, '')"
                         *ngIf="selection != '' && prob.value.AnswerChoices[selection].Choice != choice"
                         class="toggle-button-off"
                         style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(245, 77, 77)">
@@ -2890,7 +2893,7 @@
                         <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
                           style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                       </button>
-                      <button (click)="select_c_choice(choice[0], 1, '')"
+                      <button (click)="select_c_choice_st(choice[0], 1, '')"
                         *ngIf="selection == '' && m_selection[0][1] != choice[0]" class="toggle-button-off"
                         style="margin: auto; margin-top: 10px; min-height: 40px"></button>
                     </label>
@@ -2903,7 +2906,7 @@
                   <label *ngFor="let choice of shuffle_m_st(prob.value.AnswerChoices, '')" class="switch"
                     style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
                     <input type="checkbox">
-                    <button (click)="select_c_choice('', 0, '')" *ngIf="m_selection[0][0] == choice"
+                    <button (click)="select_c_choice_st('', 0, '')" *ngIf="m_selection[0][0] == choice"
                       class="toggle-button-on"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
@@ -2917,7 +2920,7 @@
                       <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
                         style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                     </button>
-                    <button (click)="select_c_choice(choice, 0, '')" *ngIf="m_selection[0][0] != choice"
+                    <button (click)="select_c_choice_st(choice, 0, '')" *ngIf="m_selection[0][0] != choice"
                       class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
@@ -2946,10 +2949,10 @@
                     <label *ngFor="let selection of c_submission[0][choice[0]]" class="switch"
                       style="padding: 0 5px; width: fit-content; min-width: 150px; max-height: 300px; margin: auto">
                       <input type="checkbox">
-                      <button (click)="select_c_choice('', 1, '')"
+                      <button (click)="select_c_choice_st('', 1, '')"
                         *ngIf="selection == '' && m_selection[0][1] == choice[0]" class="toggle-button-on"
                         style="margin: auto; margin-top: 10px; min-height: 40px"></button>
-                      <button (click)="remove_g_choice(selection, choice[0], '')"
+                      <button (click)="remove_g_choice_st(selection, choice[0], '')"
                         *ngIf="selection != '' && (prob.value.AnswerChoices | keys).includes(selection + ':' + choice[0]) && prob.value.AnswerChoices[selection + ':' + choice[0]].Choice == choice"
                         class="toggle-button-off"
                         style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(66, 156, 10)">
@@ -2964,7 +2967,7 @@
                         <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
                           style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                       </button>
-                      <button (click)="remove_g_choice(selection, choice[0], '')"
+                      <button (click)="remove_g_choice_st(selection, choice[0], '')"
                         *ngIf="selection != '' && (!(prob.value.AnswerChoices | keys).includes(selection + ':' + choice[0]) || ((prob.value.AnswerChoices | keys).includes(selection + ':' + choice[0]) && prob.value.AnswerChoices[selection + ':' + choice[0]].Choice != choice))"
                         class="toggle-button-off"
                         style="display: flex; flex-direction: row; align-items: center; width: fit-content; background-color: rgb(245, 77, 77)">
@@ -2979,7 +2982,7 @@
                         <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
                           style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                       </button>
-                      <button (click)="select_c_choice(choice[0], 1, '')"
+                      <button (click)="select_c_choice_st(choice[0], 1, '')"
                         *ngIf="selection == '' && m_selection[0][1] != choice[0]" class="toggle-button-off"
                         style="margin: auto; margin-top: 10px; min-height: 40px"></button>
                     </label>
@@ -3227,9 +3230,9 @@
                           explanation or rationale is available.'}}</span></p>
                     </h3>
                     <br
-                      *ngIf="subtopic_problem_attempts[0] > 0 && is_m_correct('', false) && screenWidth <= mobileWidth" />
+                      *ngIf="subtopic_problem_attempts[0] > 0 && is_m_correct_st('', false) && screenWidth <= mobileWidth" />
                     <button
-                      *ngIf="subtopic_problem_attempts[0] > 0 && is_m_correct('', false) && screenWidth <= mobileWidth"
+                      *ngIf="subtopic_problem_attempts[0] > 0 && is_m_correct_st('', false) && screenWidth <= mobileWidth"
                       class="grade-button" (click)="next_problem_st(); scroll_top()"
                       style="display: block; max-width: 150px; max-height: 100px; margin: auto">
                       <b> Next Problem </b>
@@ -3250,9 +3253,9 @@
                       </span>
                     </h3>
                     <br
-                      *ngIf="subtopic_problem_attempts[0] > 0 && is_c_correct('', false) && screenWidth <= mobileWidth" />
+                      *ngIf="subtopic_problem_attempts[0] > 0 && is_c_correct_st('', false) && screenWidth <= mobileWidth" />
                     <button
-                      *ngIf="subtopic_problem_attempts[0] > 0 && is_c_correct('', false) && screenWidth <= mobileWidth"
+                      *ngIf="subtopic_problem_attempts[0] > 0 && is_c_correct_st('', false) && screenWidth <= mobileWidth"
                       class="grade-button" (click)="next_problem_st(); scroll_top()"
                       style="display: block; max-width: 150px; max-height: 100px; margin: auto">
                       <b> Next Problem </b>
@@ -3265,7 +3268,7 @@
                         {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}}</b>
                       <br /> <br /> <span *ngFor="let selec of subtopic_problem_selection[0]">
                         <p *ngFor="let ch of selec"><span *ngIf="ch != ''"><b>{{'\nExplanation (' + ch.substring(0, 1) +
-                              ': ' + unique_choices_st[subtopic_problem_selection[0].indexOf(selec)].slice(2) +
+                              ': ' + unique_choices_st[0][subtopic_problem_selection[0].indexOf(selec)].slice(2) +
                               ')'}}</b>:
                             {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)][selec.indexOf(ch)]
                             != '') ?
@@ -3274,9 +3277,9 @@
                       </span>
                     </h3>
                     <br
-                      *ngIf="subtopic_problem_attempts[0] > 0 && is_g_correct('', false) && screenWidth <= mobileWidth" />
+                      *ngIf="subtopic_problem_attempts[0] > 0 && is_g_correct_st('', false) && screenWidth <= mobileWidth" />
                     <button
-                      *ngIf="subtopic_problem_attempts[0] > 0 && is_g_correct('', false) && screenWidth <= mobileWidth"
+                      *ngIf="subtopic_problem_attempts[0] > 0 && is_g_correct_st('', false) && screenWidth <= mobileWidth"
                       class="grade-button" (click)="next_problem_st(); scroll_top()"
                       style="display: block; max-width: 150px; max-height: 100px; margin: auto">
                       <b> Next Problem </b>
@@ -3624,29 +3627,29 @@
                         style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)">
                         <b>{{word[4]}}</b> </button>
                       <button
-                        *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] == word[3]"
-                        (click)="select_m_choice('', 1, part.key)" class="toggle-button-on"
+                        *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched_st(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] == word[3]"
+                        (click)="select_m_choice_st('', 1, part.key)" class="toggle-button-on"
                         style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
                       <span *ngFor="let choice of shuffle_m_st(part.value.AnswerChoices, part.key)"
                         style="max-height: 300px; min-width: 0px; margin: auto">
                         <button
-                          *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct"
-                          (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)"
+                          *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched_st(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct"
+                          (click)="remove_m_choice_st(word[3], part.key); select_m_choice_st(word[3], 1, part.key)"
                           class="toggle-button-off"
                           style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
                           <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                         </button>
                         <button
-                          *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && !(part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct)"
-                          (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)"
+                          *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched_st(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && !(part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct)"
+                          (click)="remove_m_choice_st(word[3], part.key); select_m_choice_st(word[3], 1, part.key)"
                           class="toggle-button-off"
                           style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
                           <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                         </button>
                       </span>
                       <button
-                        *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] != word[3]"
-                        (click)="select_m_choice(word[3], 1, part.key)" class="toggle-button-off"
+                        *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched_st(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] != word[3]"
+                        (click)="select_m_choice_st(word[3], 1, part.key)" class="toggle-button-off"
                         style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
                       <select
                         *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] == ''"
@@ -3748,29 +3751,29 @@
                       style="width: auto; height: auto; min-height: 20px; margin: 0px; padding: 1px 10px; background-color: rgb(66, 156, 10)">
                       <b>{{word[4]}}</b> </button>
                     <button
-                      *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] == word[3]"
-                      (click)="select_m_choice('', 1, part.key)" class="toggle-button-on"
+                      *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched_st(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] == word[3]"
+                      (click)="select_m_choice_st('', 1, part.key)" class="toggle-button-on"
                       style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
                     <span *ngFor="let choice of shuffle_m_st(part.value.AnswerChoices, part.key)"
                       style="max-height: 300px; min-width: 0px; margin: auto">
                       <button
-                        *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct"
-                        (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)"
+                        *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched_st(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct"
+                        (click)="remove_m_choice_st(word[3], part.key); select_m_choice_st(word[3], 1, part.key)"
                         class="toggle-button-off"
                         style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(66, 156, 10)">
                         <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                       </button>
                       <button
-                        *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && !(part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct)"
-                        (click)="remove_m_choice(word[3], part.key); select_m_choice(word[3], 1, part.key)"
+                        *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && is_matched_st(word[3], 1, part.key) && m_submission[get_part_num_st(part.key)][word[3]] == choice && !(part.value.AnswerChoices[choice].Choice == word[3] && part.value.AnswerChoices[choice].Key.Correct)"
+                        (click)="remove_m_choice_st(word[3], part.key); select_m_choice_st(word[3], 1, part.key)"
                         class="toggle-button-off"
                         style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center; background-color: rgb(245, 77, 77)">
                         <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                       </button>
                     </span>
                     <button
-                      *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] != word[3]"
-                      (click)="select_m_choice(word[3], 1, part.key)" class="toggle-button-off"
+                      *ngIf="part.value.Type == 'IM' && word.startsWith(':M-') && !is_matched_st(word[3], 1, part.key) && m_selection[get_part_num_st(part.key)][1] != word[3]"
+                      (click)="select_m_choice_st(word[3], 1, part.key)" class="toggle-button-off"
                       style="width: auto; height: auto; min-height: 30px; min-width: 40px; margin: 0px; padding: 1px 10px; align-items: center">{{blank}}</button>
                     <select
                       *ngIf="word.startsWith(':DD-') && subtopic_problem_selection[get_part_num_st(part.key)][+word[4]-1] == ''"
@@ -3835,20 +3838,20 @@
                   <label *ngFor="let choice of shuffle_m_st(part.value.AnswerChoices, part.key)" class="switch"
                     style="padding: 10px 5px 0px; min-width: 75px; max-height: 300px; margin: auto">
                     <input type="checkbox">
-                    <button (click)="select_m_choice('', 0, part.key)"
+                    <button (click)="select_m_choice_st('', 0, part.key)"
                       *ngIf="m_selection[get_part_num_st(part.key)][0] == choice" class="toggle-button-on"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
                       <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     </button>
-                    <button (click)="select_m_choice(choice, 0, part.key)"
-                      *ngIf="!is_matched(choice, 0, part.key) && m_selection[get_part_num_st(part.key)][0] != choice"
+                    <button (click)="select_m_choice_st(choice, 0, part.key)"
+                      *ngIf="!is_matched_st(choice, 0, part.key) && m_selection[get_part_num_st(part.key)][0] != choice"
                       class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; margin: auto; margin-top: 10px; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{choice[0]}}</b> </div>
                       <div style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     </button>
-                    <button *ngIf="is_matched(choice, 0, part.key)" class="toggle-button-off"
+                    <button *ngIf="is_matched_st(choice, 0, part.key)" class="toggle-button-off"
                       style="margin: auto; margin-top: 10px; min-height: 40px"></button>
                   </label>
                 </div>
@@ -3857,9 +3860,9 @@
                 <div class="card card-small" style="min-height: 100px; width: auto; max-height: 500px; padding: 10px; align-items: center">
                   <label *ngFor="let choice of shuffle_m_st(part.value.AnswerChoices, part.key)" class="switch" style="padding: 0 10px; min-width: 100px; margin: auto">
                     <input type="checkbox">
-                    <button (click)="select_m_choice('', 0, part.key)" *ngIf="m_selection[get_part_num_st(part.key)][0] == choice" class="toggle-button-on"> <b>{{choice}}</b> </button>
-                    <button (click)="select_m_choice(choice, 0, part.key)" *ngIf="!is_matched(choice, 0, part.key) && m_selection[get_part_num_st(part.key)][0] != choice" class="toggle-button-off"> <b>{{choice}}</b> </button>
-                    <button *ngIf="is_matched(choice, 0, part.key)" class="toggle-button-off"></button>
+                    <button (click)="select_m_choice_st('', 0, part.key)" *ngIf="m_selection[get_part_num_st(part.key)][0] == choice" class="toggle-button-on"> <b>{{choice}}</b> </button>
+                    <button (click)="select_m_choice_st(choice, 0, part.key)" *ngIf="!is_matched_st(choice, 0, part.key) && m_selection[get_part_num_st(part.key)][0] != choice" class="toggle-button-off"> <b>{{choice}}</b> </button>
+                    <button *ngIf="is_matched_st(choice, 0, part.key)" class="toggle-button-off"></button>
                   </label>
                 </div>
                 <br />
@@ -3867,12 +3870,12 @@
                   <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue" style="margin: auto; margin-top: 0px; align-items: center; flex-direction: column">
                     <label class="switch" style="padding: 0 10px; min-width: 100px">
                       <input type="checkbox">
-                      <button (click)="select_m_choice('', 1, part.key)" *ngIf="!is_matched(choice.value.Choice[0], 1, part.key) && m_selection[get_part_num_st(part.key)][1] == choice.value.Choice[0]" class="toggle-button-on"></button>
-                      <button (click)="remove_m_choice(choice.value.Choice[0], part.key); select_m_choice(choice.value.Choice[0], 1, part.key)" *ngIf="is_matched(choice.value.Choice[0], 1, part.key) && m_submission[get_part_num_st(part.key)][choice.value.Choice[0]] == choice.key" class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{m_submission[get_part_num_st(part.key)][choice.value.Choice[0]]}} </b>
+                      <button (click)="select_m_choice_st('', 1, part.key)" *ngIf="!is_matched_st(choice.value.Choice[0], 1, part.key) && m_selection[get_part_num_st(part.key)][1] == choice.value.Choice[0]" class="toggle-button-on"></button>
+                      <button (click)="remove_m_choice_st(choice.value.Choice[0], part.key); select_m_choice_st(choice.value.Choice[0], 1, part.key)" *ngIf="is_matched_st(choice.value.Choice[0], 1, part.key) && m_submission[get_part_num_st(part.key)][choice.value.Choice[0]] == choice.key" class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{m_submission[get_part_num_st(part.key)][choice.value.Choice[0]]}} </b>
                       </button>
-                      <button (click)="remove_m_choice(choice.value.Choice[0], part.key); select_m_choice(choice.value.Choice[0], 1, part.key)" *ngIf="is_matched(choice.value.Choice[0], 1, part.key) && m_submission[get_part_num_st(part.key)][choice.value.Choice[0]] != choice.key" class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{m_submission[get_part_num_st(part.key)][choice.value.Choice[0]]}} </b>
+                      <button (click)="remove_m_choice_st(choice.value.Choice[0], part.key); select_m_choice_st(choice.value.Choice[0], 1, part.key)" *ngIf="is_matched_st(choice.value.Choice[0], 1, part.key) && m_submission[get_part_num_st(part.key)][choice.value.Choice[0]] != choice.key" class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{m_submission[get_part_num_st(part.key)][choice.value.Choice[0]]}} </b>
                       </button>
-                      <button (click)="select_m_choice(choice.value.Choice[0], 1, part.key)" *ngIf="!is_matched(choice.value.Choice[0], 1, part.key) && m_selection[get_part_num_st(part.key)][1] != choice.value.Choice[0]" class="toggle-button-off"></button>
+                      <button (click)="select_m_choice_st(choice.value.Choice[0], 1, part.key)" *ngIf="!is_matched_st(choice.value.Choice[0], 1, part.key) && m_selection[get_part_num_st(part.key)][1] != choice.value.Choice[0]" class="toggle-button-off"></button>
                     </label>
                     <h3> {{choice.value.Choice.slice(2)}} </h3>
                   </div>
@@ -4123,7 +4126,8 @@
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
                       keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts |
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
-                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                    </p>
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'LP'">
@@ -4176,7 +4180,8 @@
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
                       keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts |
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
-                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                    </p>
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'T'">
@@ -4193,7 +4198,8 @@
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
                       keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts |
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
-                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                    </p>
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'LR'">
@@ -4277,7 +4283,8 @@
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
                       keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts |
                       keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
-                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                    </p>
                   </h3>
                 </div>
               </div>
@@ -4341,23 +4348,27 @@
             </div>
           </section>
           <h4 *ngIf="length_mode=='number'" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Quiz Progress:
-            <b>{{""+(max_problem_number-1)}}/{{""+quiz_length}} ({{et_minutes}}m {{et_counter%60}}s)</b> </h4>
+            <b>{{""+(max_problem_number-1)}}/{{""+quiz_length}} ({{et_minutes}}m {{et_counter%60}}s)</b>
+          </h4>
           <progress *ngIf="(!expand_overview || mode == 'explain') && length_mode=='number'"
             value="{{max_problem_number-1}}" max="{{quiz_length}}"
             style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           <h4 *ngIf="length_mode=='timer'" style="margin: auto 30px; font-size: 16px; font-weight: 500"> Remaining Time:
-            <b>{{et_minutes}} mins {{et_counter%60}} secs</b> </h4>
+            <b>{{et_minutes}} mins {{et_counter%60}} secs</b>
+          </h4>
           <progress *ngIf="length_mode=='timer'" value="{{et_counter}}" max="{{exam_timer*60}}"
             style="height: 20px; width: min(95%, 300px); border-radius: 15px; margin: auto 10px; direction: rtl"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           <h4 *ngIf="mode == 'assess' && get_flag_count() != 0 && !expand_overview"
             style="margin-top: 5px; font-size: 17px; font-weight: 500"> <b
               style="font-size: 27px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); padding-right: 5px">&#9873;</b>
-            <b>Flagged</b> Problems: <b>{{get_flag_count()}}</b> </h4>
+            <b>Flagged</b> Problems: <b>{{get_flag_count()}}</b>
+          </h4>
           <h4 *ngIf="mode == 'assess' && get_skip_count() != 0 && !expand_overview"
             style="margin-top: 5px; font-size: 17px; font-weight: 500"> ⏩ <b>Skipped</b> Problems:
-            <b>{{get_skip_count()}}</b> </h4>
+            <b>{{get_skip_count()}}</b>
+          </h4>
           <div *ngIf="expand_overview && mode == 'assess'" class="card-container"
             style="height: auto; max-height: 650px; width: 100%; margin-top: 15px; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <label *ngFor="let sub of order_numbers()" (click)="go_to_prob(sub)" class="switch"
@@ -4829,7 +4840,8 @@
                         <h3
                           *ngIf="!is_image(block2[1]) && !block2[1].startsWith(':box:') && !block2[1].startsWith(':ibox:') && block2[0] == '' && supp_dump[block[1]].LabelType == 'P'"
                           style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px)">
-                          <b>{{block2[1]}}</b></h3>
+                          <b>{{block2[1]}}</b>
+                        </h3>
                         <img *ngIf="is_image(block2[1])" src="./assets/{{block2[1]}}"
                           style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                       </div>
@@ -4856,7 +4868,8 @@
                   <h3
                     *ngIf="!block[1].endsWith('.json') && !is_image(block[1]) && !block[1].endsWith('.mp3') && !block[1].startsWith(':box:') && !block[1].startsWith(':ibox:') && block[0] == '' && supp_dump[supp].LabelType != 'N'"
                     style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left; width: calc(100% - 20px); margin: 10px auto; text-align: center">
-                    <b>{{block[1]}}</b></h3>
+                    <b>{{block[1]}}</b>
+                  </h3>
                   <img *ngIf="is_image(block[1])" src="./assets/{{block[1]}}"
                     style="max-width: min(750px, 90%); max-height: 750px; margin: auto">
                   <audio *ngIf="block[1].endsWith('.mp3')" src="./assets/{{block[1]}}" style="background-color: #eee"
@@ -5903,7 +5916,7 @@
                       ''+streak_count + ')' : ''}}</b>
                     <br /> <br /> <span *ngFor="let selec of problem_selection[0]">
                       <p *ngFor="let ch of selec"><span *ngIf="ch != ''"><b>{{'\nExplanation (' + ch.substring(0, 1) +
-                            ': ' + unique_choices[problem_selection[0].indexOf(selec)].slice(2) + ')'}}</b>:
+                            ': ' + unique_choices[0][problem_selection[0].indexOf(selec)].slice(2) + ')'}}</b>:
                           {{(attempt_explanation[0][problem_selection[0].indexOf(selec)][selec.indexOf(ch)] != '') ?
                           attempt_explanation[0][problem_selection[0].indexOf(selec)][selec.indexOf(ch)] : 'No
                           explanation or rationale is available.'}}</span></p>
@@ -7080,7 +7093,8 @@
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
                     keys).indexOf(part.key)].indexOf(selec)] != '') ? attempt_explanation[(prob.value.Parts |
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
-                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                  </p>
                 </h3>
               </div>
               <div *ngIf="part.value.Type == 'O'">
@@ -7160,7 +7174,8 @@
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
                     keys).indexOf(part.key)].indexOf(selec)] != '') ? attempt_explanation[(prob.value.Parts |
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
-                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                  </p>
                 </h3>
               </div>
               <div *ngIf="part.value.Type == 'LP'">
@@ -7207,7 +7222,8 @@
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
                     keys).indexOf(part.key)].indexOf(selec)] != '') ? attempt_explanation[(prob.value.Parts |
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
-                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                  </p>
                 </h3>
               </div>
               <div *ngIf="part.value.Type == 'T'">
@@ -7222,7 +7238,8 @@
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
                     keys).indexOf(part.key)].indexOf(selec)] != '') ? attempt_explanation[(prob.value.Parts |
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
-                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                  </p>
                 </h3>
               </div>
               <div *ngIf="part.value.Type == 'LR'">
@@ -7300,7 +7317,8 @@
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
                     keys).indexOf(part.key)].indexOf(selec)] != '') ? attempt_explanation[(prob.value.Parts |
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
-                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                  </p>
                 </h3>
               </div>
             </div>
@@ -10256,7 +10274,7 @@
                         + ''+streak_count + ')' : ''}}</b>
                       <br /> <br /> <span *ngFor="let selec of problem_selection[0]">
                         <p *ngFor="let ch of selec"><span *ngIf="ch != ''"><b>{{'\nExplanation (' + ch.substring(0, 1) +
-                              ': ' + unique_choices[problem_selection[0].indexOf(selec)].slice(2) + ')'}}</b>:
+                              ': ' + unique_choices[0][problem_selection[0].indexOf(selec)].slice(2) + ')'}}</b>:
                             {{(attempt_explanation[0][problem_selection[0].indexOf(selec)][selec.indexOf(ch)] != '') ?
                             attempt_explanation[0][problem_selection[0].indexOf(selec)][selec.indexOf(ch)] : 'No
                             explanation or rationale is available.'}}</span></p>
@@ -11318,7 +11336,8 @@
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
                     keys).indexOf(part.key)].indexOf(selec)] != '') ? attempt_explanation[(prob.value.Parts |
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
-                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                  </p>
                 </h3>
               </div>
               <div *ngIf="part.value.Type == 'O'">
@@ -11398,7 +11417,8 @@
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
                     keys).indexOf(part.key)].indexOf(selec)] != '') ? attempt_explanation[(prob.value.Parts |
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
-                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                  </p>
                 </h3>
               </div>
               <div *ngIf="part.value.Type == 'LP'">
@@ -11445,7 +11465,8 @@
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
                     keys).indexOf(part.key)].indexOf(selec)] != '') ? attempt_explanation[(prob.value.Parts |
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
-                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                  </p>
                 </h3>
               </div>
               <div *ngIf="part.value.Type == 'T'">
@@ -11460,7 +11481,8 @@
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
                     keys).indexOf(part.key)].indexOf(selec)] != '') ? attempt_explanation[(prob.value.Parts |
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
-                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                  </p>
                 </h3>
               </div>
               <div *ngIf="part.value.Type == 'LR'">
@@ -11538,7 +11560,8 @@
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
                     keys).indexOf(part.key)].indexOf(selec)] != '') ? attempt_explanation[(prob.value.Parts |
                     keys).indexOf(part.key)][problem_selection[(prob.value.Parts |
-                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                    keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
+                  </p>
                 </h3>
               </div>
             </div>
