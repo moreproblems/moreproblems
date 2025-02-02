@@ -1,0 +1,930 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Building Functions"
+        ],
+        "SubTopics": [
+            "Define sequences as functions, including recursive definitions, whose domain is a subset of the integers. Write explicit and recursive formulas for arithmetic and geometric sequences in context and connect them to linear and exponential functions."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The first three terms of a numerical sequence are given.",
+            ":ibox:64, 32, 16, . . .",
+            "Which formula represents the nᵗʰ term of this sequence?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "aₙ = (1/2)64ⁿ⁻¹",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "aₙ = 64(1/2)ⁿ⁻¹",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "aₙ = n(64)¹/²",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "aₙ = 64(1/2)ⁿ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Building Functions"
+        ],
+        "SubTopics": [
+            "Determine whether a function is one-to-one."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Given f(x) = 5x − 7, what is f⁻¹(x)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "f⁻¹(x) = x/5 − 7/5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "f⁻¹(x) = x/5 + 7/5",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "f⁻¹(x) = −5x + 7",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "f⁻¹(x) = −7x + 5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Arithmetic With Polynomials & Rational Expressions"
+        ],
+        "SubTopics": [
+            "Know and apply the Factor Theorem: For a polynomial p(x) and a number a, p(a) = 0 if and only if (x – a) is a factor of p(x)."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "If (x + 7) is a factor of h(x), what is the remainder of h(x)/(x+7)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "−7",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "0",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "7",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MS",
+        "NumChoices": 5,
+        "Topics": [
+            "Reasoning With Equations & Inequalities"
+        ],
+        "SubTopics": [
+            "Write and solve a system of linear equations in a real-world context."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "What are the solutions to this equation?",
+            ":ibox:2x² − 5x = 12",
+            "Select the TWO that apply."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "x = −3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "x = −3/2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "x = 2/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "x = 3/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "x = 4",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Linear, Quadratic & Exponential Models"
+        ],
+        "SubTopics": [
+            "Know the relationship between exponential functions and logarithmic functions."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Jenny is arranging rows of chairs for the student play.",
+            ":ibox:• There are 7 chairs in the first row.\n• Each row behind the first row has 2 more chairs than the previous row.",
+            "Which equation represents the number of chairs, c, in row r?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "c = (2 × 7)r",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "c = 7 + 2 + r",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "c = 7 + (r − 1)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "c = 7 + 2(r − 1)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MS",
+        "NumChoices": 5,
+        "Topics": [
+            "Seeing Structure In Expressions"
+        ],
+        "SubTopics": [
+            "Interpret expressions that represent a quantity in terms of its context."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which binomials are factors of the given polynomial?",
+            ":ibox:2x⁴ + 5x² − 12",
+            "Select ALL that apply."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "(x − 2)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "(x + 2)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "(x² + 4)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "(2x² − 3)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "(2x² + 3)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Arithmetic With Polynomials & Rational Expressions"
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Given: (x² – 16)/(x³ + 64)",
+            "Which expression is equivalent to the given expression, if the denominator does not equal 0?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1/(x – 4)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "1/(x + 4)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "(x + 4)/(x² – 4x + 16)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "(x – 4)/(x² – 4x + 16)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MS",
+        "NumChoices": 5,
+        "Topics": [
+            "Arithmetic With Polynomials & Rational Expressions"
+        ],
+        "SubTopics": [
+            "Identify zeros of polynomials when suitable factorizations are available, and use the zeros to construct a rough graph of the function defined by the polynomial."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The equation of a function is shown.",
+            ":ibox:y – 10 = –x²/3 + x/3",
+            "Which statements correctly describe the zeros and shape of the graph of the function?",
+            "Select the TWO that apply."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The zeros of the function are (0, −5) and (0, 6).",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The zeros of the function are (5, 0) and (−6, 0).",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The zeros of the function are (−5, 0) and (6, 0).",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The graph is a parabola that opens downward.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "The graph is a parabola that opens upward.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Trigonometric Functions"
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "What are the values of sin(θ) and cos(θ) when θ = 7π/6?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "sin(θ) = –1/2 and cos(θ) = –√3/2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "sin(θ) = –√3/2 and cos(θ) = –1/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "sin(θ) = –1/2 and cos(θ) = √3/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "sin(θ) = 1/2 and cos(θ) = –√3/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Conditional Probability & The Rules Of Probability"
+        ],
+        "SubTopics": [
+            "Understand and apply basic concepts of probability."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A farmer has some cows and horses. All the animals are either brown or black. The table shows how many of each animal is on the farm.",
+            "problems/TN21HSA2/media/10a.jpg",
+            "One animal is selected randomly. What is the probability of choosing an animal that is black or of choosing a cow?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "0.80",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "0.65",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "0.40",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "0.20",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Interpreting Functions"
+        ],
+        "SubTopics": [
+            "Analyze functions using different representations."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A function k(x) is defined as k(x) = √(2 − x). What is the domain of k(x)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "(−∞, −2]",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "(−∞, 2]",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "[−2, ∞)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "[2, ∞)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Conditional Probability & The Rules Of Probability"
+        ],
+        "SubTopics": [
+            "Understand and apply basic concepts of probability."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A counselor determined that 60% of the senior class had taken a precalculus course and that 15% of the senior class had taken both a precalculus course and a statistics course. What percentage of seniors who took a precalculus course also took a statistics course?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "9%",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "25%",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "45%",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "75%",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Reasoning With Equations & Inequalities"
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The given functions will be graphed on a coordinate plane.",
+            ":ibox:f(x) = 3 • log(x + 2)\n\ng(x) = x³ − 2x² − 5x − 1",
+            "Which statement describes the relationship between the graphs of the two functions and the solutions to the equation 3 • log(x + 2) = x³ − 2x² − 5x − 1?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The solutions are the x-intercepts of the graphs.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The solutions are the y-intercepts of the graphs.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The solutions are the x-coordinates of the points of intersection of the graphs.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The solutions are the y-coordinates of the points of intersection of the graphs.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Seeing Structure In Expressions"
+        ],
+        "SubTopics": [
+            "Interpret expressions that represent a quantity in terms of its context."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which expression is equivalent to (2n⁴ – 1)/(n⁴ + 3) if the denominator does not equal 0?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "2n⁴/n⁴ – 1/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "(n⁴ + 3)/(n⁴ + 3) + (n⁴ – 2)/(n⁴ + 3)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "(2n⁴ + 6)/(n⁴ + 3) – 7/(n⁴ + 3)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "(2n⁴ – 1)/n⁴ + (2n⁴ – 1)/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Creating Equations"
+        ],
+        "SubTopics": [
+            "Create equations and inequalities in two variables to represent relationships between quantities and use them to solve problems in a real-world context. Graph equations and inequalities with two variables on coordinate axes with labels and scales, and use the graphs to make predictions."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The number of hours, t, it takes a boat to travel 15 miles upstream is represented by the given equation.",
+            ":ibox:t = 15/(r – c)",
+            "Which equation represents the rate of the current, c, in terms of r, the rate of the boat, and t?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "c = (15 – rt)/t",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "c = (rt – 15)/t",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "c = –15 + r + t",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "c = 15 – r – t",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Reasoning With Equations & Inequalities"
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A system of equations is given.",
+            ":ibox:3x + y = 6\n\n6x − y + 4z = 13\n\n7x + 2z = 7",
+            "What is the x-value of the solution to the system?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "7",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "−1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "−5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Complex Number System"
+        ],
+        "SubTopics": [
+            "Know there is a complex number i such that i² = –1, and every complex number has the form a + bi with a and b real."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "If f(x) = x⁵ − 4x², then f(i) is equivalent to which expression?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "−4 − i",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "−4 + i",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "4 − i",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "4 + i",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    }
+}
