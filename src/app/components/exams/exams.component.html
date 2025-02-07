@@ -2409,6 +2409,15 @@
                   </span>
                   <span><b>New Mexico NM-MSSA</b> Grade 3 English Practice Exam</span>
                 </button>
+                <button class="card card-small" (click)="select_exam('NY24G3E')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G3E')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G3E') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 3 English Exam</span>
+                </button>
                 <button class="card card-small" (click)="select_exam('NY23G3E')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G3E')" src="./assets/media/flags/NY.png"
                     style="height: 20px; margin: 0 5px 0 0;">
@@ -2889,6 +2898,15 @@
                   </span>
                   <span><b>New Mexico NM-MSSA</b> Grade 3 Math Practice Exam</span>
                 </button>
+                <button class="card card-small" (click)="select_exam('NY24G3M')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G3M')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G3M') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 3 Math Exam</span>
+                </button>
                 <button class="card card-small" (click)="select_exam('NY23G3M')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G3M')" src="./assets/media/flags/NY.png"
                     style="height: 20px; margin: 0 5px 0 0;">
@@ -3345,6 +3363,15 @@
                     <i class="fas fa-bookmark"></i>
                   </span>
                   <span><b>New Mexico NM-MSSA</b> Grade 4 English Practice Exam</span>
+                </button>
+                <button class="card card-small" (click)="select_exam('NY24G4E')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G4E')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G4E') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 4 English Exam</span>
                 </button>
                 <button class="card card-small" (click)="select_exam('NY23G4E')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G4E')" src="./assets/media/flags/NY.png"
@@ -3831,6 +3858,15 @@
                     <i class="fas fa-bookmark"></i>
                   </span>
                   <span><b>New Mexico NM-MSSA</b> Grade 4 Math Practice Exam</span>
+                </button>
+                <button class="card card-small" (click)="select_exam('NY24G4M')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G4M')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G4M') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 4 Math Exam</span>
                 </button>
                 <button class="card card-small" (click)="select_exam('NY23G4M')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G4M')" src="./assets/media/flags/NY.png"
@@ -4457,6 +4493,15 @@
                   </span>
                   <span><b>New Mexico NM-MSSA</b> Grade 5 English Practice Exam</span>
                 </button>
+                <button class="card card-small" (click)="select_exam('NY24G5E')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G5E')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G5E') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 5 English Exam</span>
+                </button>
                 <button class="card card-small" (click)="select_exam('NY23G5E')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G5E')" src="./assets/media/flags/NY.png"
                     style="height: 20px; margin: 0 5px 0 0;">
@@ -4952,6 +4997,15 @@
                   </span>
                   <span><b>New Mexico NM-MSSA</b> Grade 5 Math Practice Exam</span>
                 </button>
+                <button class="card card-small" (click)="select_exam('NY24G5M')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G5M')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G5M') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 5 Math Exam</span>
+                </button>
                 <button class="card card-small" (click)="select_exam('NY23G5M')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G5M')" src="./assets/media/flags/NY.png"
                     style="height: 20px; margin: 0 5px 0 0;">
@@ -5372,6 +5426,15 @@
                   </span>
                   <span><b>New Mexico NM-ASR</b> Grade 5 Science Practice Exam</span>
                 </button>
+                <button class="card card-small" (click)="select_exam('NY24G5S')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G5S')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G5S') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 5 Science Exam</span>
+                </button>
                 <button class="card card-small" (click)="select_exam('NC18G5S')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NC18G5S')" src="./assets/media/flags/NC.png"
                     style="height: 20px; margin: 0 5px 0 0;">
@@ -5579,6 +5642,15 @@
                     <i class="fas fa-bookmark"></i>
                   </span>
                   <span><b>New Mexico NM-MSSA</b> Grade 6 English Practice Exam</span>
+                </button>
+                <button class="card card-small" (click)="select_exam('NY24G6E')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G6E')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G6E') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 6 English Exam</span>
                 </button>
                 <button class="card card-small" (click)="select_exam('NY23G6E')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G6E')" src="./assets/media/flags/NY.png"
@@ -6074,6 +6146,15 @@
                     <i class="fas fa-bookmark"></i>
                   </span>
                   <span><b>New Mexico NM-MSSA</b> Grade 6 Math Practice Exam</span>
+                </button>
+                <button class="card card-small" (click)="select_exam('NY24G6M')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G6M')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G6M') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 6 Math Exam</span>
                 </button>
                 <button class="card card-small" (click)="select_exam('NY23G6M')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G6M')" src="./assets/media/flags/NY.png"
@@ -6583,6 +6664,15 @@
                   </span>
                   <span><b>New Mexico NM-MSSA</b> Grade 7 English Practice Exam</span>
                 </button>
+                <button class="card card-small" (click)="select_exam('NY24G7E')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G7E')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G7E') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 7 English Exam</span>
+                </button>
                 <button class="card card-small" (click)="select_exam('NY23G7E')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G7E')" src="./assets/media/flags/NY.png"
                     style="height: 20px; margin: 0 5px 0 0;">
@@ -7077,6 +7167,15 @@
                     <i class="fas fa-bookmark"></i>
                   </span>
                   <span><b>New Mexico NM-MSSA</b> Grade 7 Math Practice Exam</span>
+                </button>
+                <button class="card card-small" (click)="select_exam('NY24G7M')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G7M')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G7M') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 7 Math Exam</span>
                 </button>
                 <button class="card card-small" (click)="select_exam('NY23G7M')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G7M')" src="./assets/media/flags/NY.png"
@@ -7586,6 +7685,15 @@
                   </span>
                   <span><b>New Mexico NM-MSSA</b> Grade 8 English Practice Exam</span>
                 </button>
+                <button class="card card-small" (click)="select_exam('NY24G8E')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G8E')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G8E') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 8 English Exam</span>
+                </button>
                 <button class="card card-small" (click)="select_exam('NY23G8E')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G8E')" src="./assets/media/flags/NY.png"
                     style="height: 20px; margin: 0 5px 0 0;">
@@ -8081,6 +8189,15 @@
                   </span>
                   <span><b>New Mexico NM-MSSA</b> Grade 8 Math Practice Exam</span>
                 </button>
+                <button class="card card-small" (click)="select_exam('NY24G8M')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G8M')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G8M') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 8 Math Exam</span>
+                </button>
                 <button class="card card-small" (click)="select_exam('NY23G8M')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G8M')" src="./assets/media/flags/NY.png"
                     style="height: 20px; margin: 0 5px 0 0;">
@@ -8500,6 +8617,15 @@
                     <i class="fas fa-bookmark"></i>
                   </span>
                   <span><b>New Mexico NM-ASR</b> Grade 8 Science Practice Exam</span>
+                </button>
+                <button class="card card-small" (click)="select_exam('NY24G8S')" tabindex="0">
+                  <img *ngIf="!authService.userData || !favorite_set.includes('NY24G8S')" src="./assets/media/flags/NY.png"
+                    style="height: 20px; margin: 0 5px 0 0;">
+                  <span *ngIf="favorite_set.includes('NY24G8S') && authService.userData as user"
+                    style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0">
+                    <i class="fas fa-bookmark"></i>
+                  </span>
+                  <span><b>New York NYSTP 2024</b> Grade 8 Science Exam</span>
                 </button>
                 <button class="card card-small" (click)="select_exam('NY23G8S')" tabindex="0">
                   <img *ngIf="!authService.userData || !favorite_set.includes('NY23G8S')" src="./assets/media/flags/NY.png"
@@ -14276,6 +14402,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G3M')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G3M')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G3M') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 3 Math Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G3M')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G3M')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
@@ -14347,6 +14481,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G3E')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G3E')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G3E') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 3 English Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G3E')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G3E')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
@@ -14420,6 +14562,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G4M')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G4M')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G4M') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 4 Math Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G4M')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G4M')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
@@ -14491,6 +14641,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G4E')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G4E')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G4E') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 4 English Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G4E')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G4E')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
@@ -14627,6 +14785,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G5M')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G5M')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G5M') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 5 Math Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G5M')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G5M')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
@@ -14698,6 +14864,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G5E')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G5E')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G5E') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 5 English Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G5E')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G5E')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
@@ -14763,6 +14937,21 @@
                     <span>New York NYSTP <b>2015</b> Grade 5 English Exam</span>
                   </button>
                 </div>
+                <br />
+                <br />
+                <h3>Grade 5 Science</h3>
+                <br />
+                <input type="hidden" #selection>
+                <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G5S')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G5S')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G5S') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 5 Science Exam</span>
+                  </button>
+                </div>
               </div>
               <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
                 <h2 style="margin-bottom: 0px">Choose Your Exam</h2>
@@ -14771,6 +14960,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G6M')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G6M')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G6M') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 6 Math Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G6M')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G6M')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
@@ -14842,6 +15039,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G6E')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G6E')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G6E') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 6 English Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G6E')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G6E')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
@@ -14915,6 +15120,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G7M')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G7M')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G7M') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 7 Math Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G7M')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G7M')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
@@ -14986,6 +15199,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G7E')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G7E')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G7E') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 7 English Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G7E')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G7E')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
@@ -15059,6 +15280,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G8M')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G8M')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G8M') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 8 Math Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G8M')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G8M')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
@@ -15130,6 +15359,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G8E')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G8E')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G8E') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 8 English Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G8E')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G8E')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
@@ -15201,6 +15438,14 @@
                 <br />
                 <input type="hidden" #selection>
                 <div class="card-container" style="max-width: 100%">
+                  <button class="card card-small" (click)="select_exam('NY24G8S')" tabindex="0">
+                    <img *ngIf="!authService.userData || !favorite_set.includes('NY24G8S')" src="./assets/media/icons/select.png"
+                      style="height: 20px; margin: 0 5px 0 0;">
+                    <span *ngIf="favorite_set.includes('NY24G8S') && authService.userData as user"
+                      style="font-size: 24px; font-weight: 800;  color: #4db7fd; margin: 0 5px 0 0"> <i class="fas fa-bookmark"></i>
+                    </span>
+                    <span>New York NYSTP <b>2024</b> Grade 8 Science Exam</span>
+                  </button>
                   <button class="card card-small" (click)="select_exam('NY23G8S')" tabindex="0">
                     <img *ngIf="!authService.userData || !favorite_set.includes('NY23G8S')" src="./assets/media/icons/select.png"
                       style="height: 20px; margin: 0 5px 0 0;">
