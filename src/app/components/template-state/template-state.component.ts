@@ -537,7 +537,7 @@ export class TemplateStateComponent implements OnInit {
     for (const [id, dump] of Object.entries(this.dumpService.exam_attribute_dump)) {
       if (dump.State == this.dumpService.state_labels[this.state_key] && (this.dumpService.exam_attribute_dump[id].Grade == this.selected_grade || (this.dumpService.exam_attribute_dump[id].Grade == 'High School') && ['Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'].includes(this.selected_grade))) {
         this.filtered_set.push(id);
-        this.filtered_prob_num += dump.NumQuestions;
+        this.filtered_prob_num += dump.NumProblems;
       }
     }
     this.filtered_exam_num = this.filtered_set.length;
@@ -554,7 +554,7 @@ export class TemplateStateComponent implements OnInit {
         if (this.dumpService.exam_attribute_dump[id].State == this.dumpService.state_labels[this.state_key] && (this.dumpService.exam_attribute_dump[id].Grade == this.selected_grade || (this.dumpService.exam_attribute_dump[id].Grade == 'High School') && ['Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'].includes(this.selected_grade)) && labels.includes(this.dumpService.exam_attribute_dump[id].Subject) && name == this.selected_subject) {
           this.subject_exams.push(id);
           this.filtered_set.push(id);
-          this.filtered_prob_num += dump.NumQuestions;
+          this.filtered_prob_num += dump.NumProblems;
         }
       }
     }
@@ -3924,7 +3924,7 @@ export class TemplateStateComponent implements OnInit {
     for (const [id, dump] of Object.entries(this.dumpService.exam_attribute_dump)) {
       if (dump.State == this.dumpService.state_labels[this.state_key]) {
         this.filtered_set.push(id);
-        this.filtered_prob_num += dump.NumQuestions;
+        this.filtered_prob_num += dump.NumProblems;
       }
     }
     this.filtered_exam_num = this.filtered_set.length;

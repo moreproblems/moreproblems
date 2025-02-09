@@ -4561,7 +4561,7 @@
                     <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
                       <div *ngIf="screenWidth > 700" class="media-body" style="padding: 0px">
                         <h2 style="font-weight: 600; font-size: 20px; margin-bottom: 15px">
-                          {{dumpService.exam_attribute_dump[selected_exam_results].NumQuestions}} Problems</h2>
+                          {{dumpService.exam_attribute_dump[selected_exam_results].NumProblems}} Problems</h2>
                         <h2 style="font-weight: 600; font-size: 18px">
                           {{dumpService.exam_attribute_dump[selected_exam_results].Subject}}</h2>
                         <h2 style="font-weight: 600; font-size: 18px">
@@ -4571,7 +4571,7 @@
                       </div>
                       <div *ngIf="screenWidth <= 700" class="media-body" style="padding: 0px">
                         <h2 style="font-weight: 600; font-size: 16px; margin-bottom: 10px">
-                          {{dumpService.exam_attribute_dump[selected_exam_results].NumQuestions}} Problems</h2>
+                          {{dumpService.exam_attribute_dump[selected_exam_results].NumProblems}} Problems</h2>
                         <h2 style="font-weight: 600; font-size: 14px">
                           {{dumpService.exam_attribute_dump[selected_exam_results].Subject}}</h2>
                         <h2 style="font-weight: 600; font-size: 14px; margin: 0px">
@@ -6713,7 +6713,7 @@
                 style="border-top: 1px solid #ddd; min-width: 320px; width: 320px; text-align: left; font-size: 16px; padding-left: 10px">
                 <b>{{dumpService.exam_names[exam.id]}}</b>
                 <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                  {{""+dumpService.exam_attribute_dump[exam.id].NumQuestions}} questions
+                  {{""+dumpService.exam_attribute_dump[exam.id].NumProblems}} questions
                   {{(dumpService.exam_attribute_dump[exam.id].Timer > 0)
                   ? '(' + ""+dumpService.exam_attribute_dump[exam.id].Timer + ' minutes)' : ''}}
                 </h4>
@@ -6722,7 +6722,7 @@
                 style="border-top: 1px solid #ddd; min-width: 250px; width: 250px; text-align: left; font-size: 16px; padding-left: 10px">
                 <b>{{dumpService.exam_names[exam.id]}}</b>
                 <h4 style="margin: 1px auto; font-weight: 500; font-size: 12px">
-                  {{""+dumpService.exam_attribute_dump[exam.id].NumQuestions}} questions
+                  {{""+dumpService.exam_attribute_dump[exam.id].NumProblems}} questions
                   {{(dumpService.exam_attribute_dump[exam.id].Timer > 0)
                   ? '(' + ""+dumpService.exam_attribute_dump[exam.id].Timer + ' minutes)' : ''}}
                 </h4>
@@ -6754,15 +6754,15 @@
           style="display: block; text-align: center; max-width: 350px; padding: 20px 10px">
           <h2> {{dumpService.exam_names[exam]}} </h2>
           <h3 *ngIf="dumpService.exam_set.includes(exam)" style="margin: 25px auto 0px"> Exam Length:
-            {{""+dumpService.exam_attribute_dump[exam].NumQuestions}} questions </h3>
+            {{""+dumpService.exam_attribute_dump[exam].NumProblems}} questions </h3>
           <h3 *ngIf="dumpService.exam_set.includes(exam) && dumpService.exam_attribute_dump[exam].Timer > 0"
             style="margin: 0px auto">
             ({{""+dumpService.exam_attribute_dump[exam].Timer}} minutes) </h3>
           <h3 *ngIf="!dumpService.exam_set.includes(exam)" style="margin: auto; margin: 25px auto"> This exam is not
             online yet. </h3>
           <!-- <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
-                        {{""+dumpService.exam_attribute_dump[exm].NumQuestions}} </h4>
-                    <progress value="{{inprogress_exams[exm].progress}}" max="{{dumpService.exam_attribute_dump[exm].NumQuestions}}"
+                        {{""+dumpService.exam_attribute_dump[exm].NumProblems}} </h4>
+                    <progress value="{{inprogress_exams[exm].progress}}" max="{{dumpService.exam_attribute_dump[exm].NumProblems}}"
                         style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
                         #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
                     <h4 style="margin: 1px auto; font-weight: 500"> Last Submission:
@@ -6914,8 +6914,8 @@
           <h3 style="margin: auto; margin: 25px auto"> Quiz Length: {{authService.searchQuizId(quiz).length}}
             {{(authService.searchQuizId(quiz).lmode=='number') ? 'questions' : 'minutes'}} </h3>
           <!-- <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
-                        {{""+dumpService.exam_attribute_dump[exm].NumQuestions}} </h4>
-                    <progress value="{{inprogress_exams[exm].progress}}" max="{{dumpService.exam_attribute_dump[exm].NumQuestions}}"
+                        {{""+dumpService.exam_attribute_dump[exm].NumProblems}} </h4>
+                    <progress value="{{inprogress_exams[exm].progress}}" max="{{dumpService.exam_attribute_dump[exm].NumProblems}}"
                         style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
                         #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
                     <h4 style="margin: 1px auto; font-weight: 500"> Last Submission:

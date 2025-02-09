@@ -8226,8 +8226,8 @@
               *ngIf="public_quiz_results[quiz].timer>0" style="font-weight: 500">({{public_quiz_results[quiz].timer}}
               minutes)</b></h3>
           <!-- <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
-                        {{""+dumpService.exam_attribute_dump[exm].NumQuestions}} </h4>
-                    <progress value="{{inprogress_exams[exm].progress}}" max="{{dumpService.exam_attribute_dump[exm].NumQuestions}}"
+                        {{""+dumpService.exam_attribute_dump[exm].NumProblems}} </h4>
+                    <progress value="{{inprogress_exams[exm].progress}}" max="{{dumpService.exam_attribute_dump[exm].NumProblems}}"
                         style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
                         #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
                     <h4 style="margin: 1px auto; font-weight: 500"> Last Submission:

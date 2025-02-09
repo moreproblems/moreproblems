@@ -14,7 +14,6 @@ import { JoinComponent } from './components/join/join.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { TemplateClassComponent } from './components/template-class/template-class.component';
 import { TemplateExamComponent } from './components/template-exam/template-exam.component';
 import { TemplateCExamComponent } from './components/template-c-exam/template-c-exam.component';
@@ -24,7 +23,6 @@ import { TemplateEditQuizComponent } from './components/template-edit-quiz/templ
 import { TemplateKeyComponent } from './components/template-key/template-key.component';
 import { TemplateStateComponent } from './components/template-state/template-state.component';
 import { TemplateStandardsComponent } from './components/template-standards/template-standards.component';
-import { TestExamComponent } from './components/test-exam/test-exam.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -33,7 +31,6 @@ const routes: Routes = [
   { path: 'about/parents', component: AboutParentsComponent },
   { path: 'about/students', component: AboutStudentsComponent },
   { path: 'about/teachers', component: AboutTeachersComponent },
-  { path: 'contact', component: ContactComponent },
   { path: 'exams', component: ExamsComponent },
   { path: 'quizzes', component: QuizzesComponent },
   { path: 'standards', component: StandardsComponent },
@@ -43,7 +40,6 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'class/:classKey', component: TemplateClassComponent },
-  { path: 'exam/test', component: TestExamComponent },
   { path: 'exam/:examKey', component: TemplateExamComponent },
   { path: 'exam/:examKey/key', component: TemplateKeyComponent },
   { path: 'exam/:examKey/:classKey', component: TemplateCExamComponent },

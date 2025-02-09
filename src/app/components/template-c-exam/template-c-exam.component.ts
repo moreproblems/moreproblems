@@ -6915,7 +6915,7 @@ export class TemplateCExamComponent implements OnInit {
         this.exam_name = this.dumpService.exam_attribute_dump[this.eKey].ExamName;
         this.exam_year = this.dumpService.exam_attribute_dump[this.eKey].ExamYear;
         this.exam_type = this.dumpService.exam_attribute_dump[this.eKey].ExamType;
-        this.exam_length = this.dumpService.exam_attribute_dump[this.eKey].NumQuestions;
+        this.exam_length = this.dumpService.exam_attribute_dump[this.eKey].NumProblems;
         this.exam_timer = this.dumpService.exam_attribute_dump[this.eKey].Timer;
         this.exam_directions = this.dumpService.exam_attribute_dump[this.eKey].Directions;
         this.timer_hours = Math.floor(this.exam_timer / 60);

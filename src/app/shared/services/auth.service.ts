@@ -719,6 +719,7 @@ export class AuthService {
     // this.exam_result = {"downloads": 0};
     const db = getDatabase();
     const class_ref = ref(db, "exams/" + id);
+    this.exam_result = {downloads: 0};
     onValue(class_ref, (snapshot) => {
       if (snapshot.exists()) {
         // console.log(snapshot.val());

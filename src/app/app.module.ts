@@ -30,7 +30,6 @@ import { AboutContactComponent } from './components/about-contact/about-contact.
 import { AboutParentsComponent } from './components/about-parents/about-parents.component';
 import { AboutStudentsComponent } from './components/about-students/about-students.component';
 import { AboutTeachersComponent } from './components/about-teachers/about-teachers.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { JoinComponent } from './components/join/join.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -44,7 +43,6 @@ import { TemplateEditQuizComponent } from './components/template-edit-quiz/templ
 import { TemplateKeyComponent } from './components/template-key/template-key.component';
 import { TemplateStateComponent } from './components/template-state/template-state.component';
 import { TemplateStandardsComponent } from './components/template-standards/template-standards.component';
-import { TestExamComponent } from './components/test-exam/test-exam.component';
 
 // const firebaseUiAuthConfig: firebaseui.auth.Config = {
 //   signInFlow: 'popup',
@@ -68,7 +66,6 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
     AboutParentsComponent,
     AboutTeachersComponent,
     AboutStudentsComponent,
-    ContactComponent,
     JoinComponent,
     LoginComponent,
     SignupComponent,
@@ -81,8 +78,7 @@ import { TestExamComponent } from './components/test-exam/test-exam.component';
     TemplateEditQuizComponent,
     TemplateKeyComponent,
     TemplateStateComponent,
-    TemplateStandardsComponent,
-    TestExamComponent
+    TemplateStandardsComponent
   ],
   imports: [
     BrowserModule,

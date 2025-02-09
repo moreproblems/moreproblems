@@ -4942,9 +4942,9 @@
           style="display: block; text-align: center; max-width: 350px">
           <h3 style="font-size: 18px; white-space: pre-wrap"> {{dumpService.exam_names[exm]}} </h3>
           <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
-            {{""+dumpService.exam_attribute_dump[exm].NumQuestions}} </h4>
+            {{""+dumpService.exam_attribute_dump[exm].NumProblems}} </h4>
           <progress value="{{inprogress_exams[exm].progress}}"
-            max="{{dumpService.exam_attribute_dump[exm].NumQuestions}}"
+            max="{{dumpService.exam_attribute_dump[exm].NumProblems}}"
             style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           <!-- time spent on exam so far -->
@@ -4978,9 +4978,9 @@
           <h3 style="font-size: 18px; white-space: pre-wrap"> {{dumpService.exam_names[exm]}} </h3>
           <!-- resolve hard code exam length -->
           <h4 style="margin: auto; margin-top: 25px"> Exam Progress: {{inprogress_exams[exm].progress}} /
-            {{""+dumpService.exam_attribute_dump[exm].NumQuestions}} </h4>
+            {{""+dumpService.exam_attribute_dump[exm].NumProblems}} </h4>
           <progress value="{{inprogress_exams[exm].progress}}"
-            max="{{dumpService.exam_attribute_dump[exm].NumQuestions}}"
+            max="{{dumpService.exam_attribute_dump[exm].NumProblems}}"
             style="height: 20px; width: 80%; border-radius: 15px; margin: 10px auto"
             #progressBar>{{this.progressBar.value/this.progressBar.max}}%</progress>
           <!-- time spent on exam so far -->

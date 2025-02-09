@@ -670,7 +670,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
     this.filtered_exam_num = this.filtered_set.length;
     this.filtered_prob_num = 0;
     for (let i = 0; i < this.filtered_set.length; i++) {
-      this.filtered_prob_num += this.dumpService.exam_attribute_dump[this.filtered_set[i]].NumQuestions;
+      this.filtered_prob_num += this.dumpService.exam_attribute_dump[this.filtered_set[i]].NumProblems;
       if (!this.dumpService.exam_attribute_dump[this.filtered_set[i]].HideTopics) {
         for (const [key, val] of Object.entries(this.dumpService.exam_attribute_dump[this.filtered_set[i]].Topics)) {
           if (!this.topics.includes(key)) {
@@ -707,7 +707,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
       for (let online_key of this.dumpService.exam_set) {
         if (this.filtered_set.includes(online_key)) {
           for (const [num, value] of Object.entries(this.dumpService.e_dump_dict[online_key])) {
-            if (value.Number <= this.dumpService.exam_attribute_dump[online_key].NumQuestions) {
+            if (value.Number <= this.dumpService.exam_attribute_dump[online_key].NumProblems) {
               var prob: any = {};
               for (const [key, val] of Object.entries(value)) {
                 prob[key] = val;
@@ -5792,7 +5792,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
     for (let online_key of this.dumpService.exam_set) {
       if (this.filtered_set.includes(online_key)) {
         for (const [num, value] of Object.entries(this.dumpService.e_dump_dict[online_key])) {
-          if (value.Number <= this.dumpService.exam_attribute_dump[online_key].NumQuestions) {
+          if (value.Number <= this.dumpService.exam_attribute_dump[online_key].NumProblems) {
             var prob: any = {};
             for (const [key, val] of Object.entries(value)) {
               prob[key] = val;

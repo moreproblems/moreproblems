@@ -6903,7 +6903,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
     this.exam_name = this.dumpService.exam_attribute_dump[this.key].ExamName;
     this.exam_year = this.dumpService.exam_attribute_dump[this.key].ExamYear;
     this.exam_type = this.dumpService.exam_attribute_dump[this.key].ExamType;
-    this.exam_length = this.dumpService.exam_attribute_dump[this.key].NumQuestions;
+    this.exam_length = this.dumpService.exam_attribute_dump[this.key].NumProblems;
     this.exam_timer = this.dumpService.exam_attribute_dump[this.key].Timer;
     this.exam_directions = this.dumpService.exam_attribute_dump[this.key].Directions;
     this.timer_hours = Math.floor(this.exam_timer / 60);

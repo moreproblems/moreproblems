@@ -5235,7 +5235,7 @@ export class TemplateKeyComponent implements OnInit {
         this.exam_name = this.dumpService.exam_attribute_dump[this.key].ExamName;
         this.exam_year = this.dumpService.exam_attribute_dump[this.key].ExamYear;
         this.exam_type = this.dumpService.exam_attribute_dump[this.key].ExamType;
-        this.exam_length = this.dumpService.exam_attribute_dump[this.key].NumQuestions;
+        this.exam_length = this.dumpService.exam_attribute_dump[this.key].NumProblems;
         if (this.dumpService.exam_attribute_dump[this.key].Parts.length == 0) {
             this.exam_dump = this.dumpService.e_dump_dict[this.key];
             this.problem_number = +Object.keys(this.exam_dump)[0];
