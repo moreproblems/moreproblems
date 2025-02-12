@@ -506,7 +506,11 @@ export class HomeComponent implements OnInit {
   select_student(id: string) {
     if (this.selected_stud != id) {
       this.selected_stud = id;
-      this.student_data = this.authService.searchUserId(id);
+      for (let stud of this.my_student_metadata) {
+        if (stud.uid == id) {
+          this.student_data = stud;
+        }
+      }
       setTimeout(() => {
         const exam_history = this.student_data.exams.history;
         this.inprogress_set = [];

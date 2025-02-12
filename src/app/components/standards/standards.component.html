@@ -476,9 +476,9 @@
       <h2 *ngIf="screenWidth <= mobileWidth" style="font-weight: 400; font-size: 18.5px; line-height: 24px"> Find out what to expect as a student from this year's instruction, all the way down to specific standards. Subjects include Math & English Language Arts from Kindergarten through High School - as they are outlined by the curriculum of specific states. </h2>
       <br />
       <!-- <h3 *ngIf="screenWidth > mobileWidth" (click)="scroll(chooseGrade)" style="font-weight: 600; font-size: 20px"><a>
-          Don't see your state? Click here to choose your grade and subject instead. </a></h3>
+          Don't see your state? Click here to Select Your Grade and subject instead. </a></h3>
       <h3 *ngIf="screenWidth <= mobileWidth" (click)="scroll(chooseGrade)" style="font-weight: 600; font-size: 16px"><a>
-          Don't see your state? Click here to choose your grade and subject instead. </a></h3>
+          Don't see your state? Click here to Select Your Grade and subject instead. </a></h3>
       <br /> -->
     </div>
     <div
@@ -487,8 +487,8 @@
       <!-- Standards Selector -->
       <br />
       <div class="card card-medium"
-        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
-        <h2 style="padding: 10px; margin-bottom: 0px"> Choose Your Curriculum </h2>
+        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(90%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        <h2 style="padding: 10px; margin-bottom: 0px"> Select Your Curriculum </h2>
         <input type="hidden" value="" #state>
         <div class="card-container" style="max-width: 100%; padding: 10px; margin-top: 0px">
           <label class="switch" style="max-width: 500px; width: auto">
@@ -843,10 +843,10 @@
                 <img src="./assets/media/flags/NY.png" style="padding: 5px 0 0; height: 20px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
-                <b> New York </b> <br /> Next Generation
+                <b> New York </b> <br /> Next Gen.
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
-                <b> New York </b> <br /> Next Generation
+                <b> New York </b> <br /> Next Gen.
               </div>
             </button>
             <button *ngIf="selected_curriculum != 'NY'" (click)="select_curriculum('NY'); scroll(chooseGrade)"
@@ -856,10 +856,10 @@
                 <img src="./assets/media/flags/NY.png" style="padding: 5px 0 0; height: 25px">
               </div>
               <div *ngIf="this.screenWidth > this.mobileWidth" style="margin: 0 5px; text-align: center; font-size: 17px">
-                <b> New York </b> <br /> Next Generation
+                <b> New York </b> <br /> Next Gen.
               </div>
               <div *ngIf="this.screenWidth <= this.mobileWidth" style="margin: 0 2px; text-align: center; font-size: 14px; line-height: 16px">
-                <b> New York </b> <br /> Next Generation
+                <b> New York </b> <br /> Next Gen.
               </div>
             </button>
           </label>
@@ -1122,16 +1122,11 @@
           </label>
         </div>
       </div>
-      <br />
-    </div>
-    <div style="margin: 0px; height: 0px; width: 0px" #chooseGrade></div>
-    <div
-      *ngIf="selected_curriculum != '' && (selected_subject == '' || (selected_subject == 'HSM' && selected_category == ''))"
-      class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
+      <div style="margin: 0px; height: 0px; width: 0px" #chooseGrade></div>
       <br *ngIf="selected_curriculum != ''" />
       <div *ngIf="selected_curriculum != ''" class="card card-medium"
-        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
-        <h2 style="margin-bottom: 0px"> Choose Your Grade </h2>
+        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(90%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        <h2 style="margin-bottom: 0px"> Select Your Grade </h2>
         <br />
         <input type="hidden" value="" #grade>
         <div *ngIf="selected_curriculum == 'CC'">
@@ -1236,7 +1231,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1260,7 +1255,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1284,7 +1279,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1308,7 +1303,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1332,7 +1327,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1356,7 +1351,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1380,7 +1375,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1414,7 +1409,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1448,7 +1443,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1482,7 +1477,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1508,7 +1503,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1534,7 +1529,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1560,7 +1555,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1692,7 +1687,7 @@
             <!-- Preschool Standards -->
             <div *ngSwitchCase="'P'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1721,7 +1716,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1750,7 +1745,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1779,7 +1774,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1808,7 +1803,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1837,7 +1832,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1866,7 +1861,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1895,7 +1890,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1924,7 +1919,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1953,7 +1948,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -1982,7 +1977,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2011,7 +2006,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2040,7 +2035,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2069,7 +2064,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2199,7 +2194,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2223,7 +2218,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2247,7 +2242,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2271,7 +2266,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2295,7 +2290,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2319,7 +2314,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2343,7 +2338,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2377,7 +2372,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2411,7 +2406,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2445,7 +2440,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2471,7 +2466,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2497,7 +2492,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2523,7 +2518,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2649,7 +2644,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2668,7 +2663,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2687,7 +2682,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2706,7 +2701,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2725,7 +2720,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2744,7 +2739,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2763,7 +2758,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2792,7 +2787,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2821,7 +2816,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2850,7 +2845,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2869,7 +2864,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2888,7 +2883,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -2907,7 +2902,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3027,7 +3022,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3051,7 +3046,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3075,7 +3070,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3099,7 +3094,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3123,7 +3118,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3147,7 +3142,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3171,7 +3166,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3205,7 +3200,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3239,7 +3234,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3273,7 +3268,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3299,7 +3294,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3325,7 +3320,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3351,7 +3346,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3483,7 +3478,7 @@
             <!-- Pre-Kindergarten Standards -->
             <div *ngSwitchCase="'PK'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3502,7 +3497,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3526,7 +3521,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3550,7 +3545,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3574,7 +3569,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3598,7 +3593,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3622,7 +3617,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3646,7 +3641,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3670,7 +3665,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3694,7 +3689,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3718,7 +3713,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3757,7 +3752,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3796,7 +3791,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3835,7 +3830,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -3980,7 +3975,7 @@
             <!-- Pre-Kindergarten Standards -->
             <div *ngSwitchCase="'PK'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4004,7 +3999,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4033,7 +4028,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4062,7 +4057,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4091,7 +4086,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4120,7 +4115,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4149,7 +4144,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4178,7 +4173,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4207,7 +4202,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4236,7 +4231,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4265,7 +4260,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4316,7 +4311,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4367,7 +4362,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4418,7 +4413,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4568,7 +4563,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4592,7 +4587,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4616,7 +4611,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4640,7 +4635,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4664,7 +4659,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4688,7 +4683,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4712,7 +4707,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4736,7 +4731,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4760,7 +4755,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4784,7 +4779,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4823,7 +4818,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4862,7 +4857,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -4901,7 +4896,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5039,7 +5034,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5063,7 +5058,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5087,7 +5082,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5111,7 +5106,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5135,7 +5130,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5159,7 +5154,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5183,7 +5178,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5207,7 +5202,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5231,7 +5226,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5255,7 +5250,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5294,7 +5289,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5333,7 +5328,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5372,7 +5367,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5510,7 +5505,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5534,7 +5529,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5558,7 +5553,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5582,7 +5577,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5606,7 +5601,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5630,7 +5625,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5654,7 +5649,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5678,7 +5673,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5702,7 +5697,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5726,7 +5721,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5765,7 +5760,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5804,7 +5799,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5843,7 +5838,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -5981,7 +5976,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6005,7 +6000,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6029,7 +6024,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6053,7 +6048,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6077,7 +6072,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6101,7 +6096,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6125,7 +6120,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6154,7 +6149,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6183,7 +6178,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6212,7 +6207,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6248,7 +6243,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6284,7 +6279,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6320,7 +6315,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6457,7 +6452,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6481,7 +6476,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6505,7 +6500,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6529,7 +6524,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6553,7 +6548,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6577,7 +6572,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6601,7 +6596,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6635,7 +6630,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6669,7 +6664,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6703,7 +6698,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6729,7 +6724,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6755,7 +6750,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6781,7 +6776,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6913,7 +6908,7 @@
             <!-- Pre-Kindergarten Standards -->
             <div *ngSwitchCase="'PK'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6932,7 +6927,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6951,7 +6946,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6970,7 +6965,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -6989,7 +6984,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7008,7 +7003,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7027,7 +7022,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7046,7 +7041,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7075,7 +7070,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7104,7 +7099,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7133,7 +7128,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7169,7 +7164,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7205,7 +7200,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7241,7 +7236,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7327,7 +7322,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7346,7 +7341,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7370,7 +7365,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7389,7 +7384,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7418,7 +7413,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7447,7 +7442,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7572,7 +7567,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7591,7 +7586,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7610,7 +7605,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7629,7 +7624,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7648,7 +7643,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7667,7 +7662,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7686,7 +7681,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7715,7 +7710,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7744,7 +7739,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7773,7 +7768,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7794,7 +7789,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7815,7 +7810,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7836,7 +7831,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -7996,7 +7991,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8020,7 +8015,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8044,7 +8039,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8068,7 +8063,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8092,7 +8087,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8116,7 +8111,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8140,7 +8135,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8164,7 +8159,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8188,7 +8183,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8212,7 +8207,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8246,7 +8241,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8287,7 +8282,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8328,7 +8323,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8475,7 +8470,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8504,7 +8499,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8533,7 +8528,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8562,7 +8557,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8591,7 +8586,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8620,7 +8615,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8649,7 +8644,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8678,7 +8673,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8707,7 +8702,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8736,7 +8731,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8775,7 +8770,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8821,7 +8816,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -8867,7 +8862,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9012,7 +9007,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9031,7 +9026,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9050,7 +9045,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9069,7 +9064,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9088,7 +9083,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9107,7 +9102,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9126,7 +9121,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9155,7 +9150,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9184,7 +9179,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9213,7 +9208,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9259,7 +9254,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9305,7 +9300,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9351,7 +9346,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9496,7 +9491,7 @@
             <!-- Kindergarten Standards -->
             <div *ngSwitchCase="'K'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9520,7 +9515,7 @@
             <!-- First Grade Standards -->
             <div *ngSwitchCase="'G1'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9544,7 +9539,7 @@
             <!-- Second Grade Standards -->
             <div *ngSwitchCase="'G2'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #subject>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9568,7 +9563,7 @@
             <!-- Third Grade Standards -->
             <div *ngSwitchCase="'G3'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9592,7 +9587,7 @@
             <!-- Fourth Grade Standards -->
             <div *ngSwitchCase="'G4'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9616,7 +9611,7 @@
             <!-- Fifth Grade Standards -->
             <div *ngSwitchCase="'G5'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9640,7 +9635,7 @@
             <!-- Sixth Grade Standards -->
             <div *ngSwitchCase="'G6'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9674,7 +9669,7 @@
             <!-- Seventh Grade Standards -->
             <div *ngSwitchCase="'G7'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9708,7 +9703,7 @@
             <!-- Eighth Grade Standards -->
             <div *ngSwitchCase="'G8'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9742,7 +9737,7 @@
             <!-- Ninth Grade Standards -->
             <div *ngSwitchCase="'G9'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9793,7 +9788,7 @@
             <!-- Tenth Grade Standards -->
             <div *ngSwitchCase="'G10'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9844,7 +9839,7 @@
             <!-- Eleventh Grade Standards -->
             <div *ngSwitchCase="'G11'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9895,7 +9890,7 @@
             <!-- Twelfth Grade Standards -->
             <div *ngSwitchCase="'G12'" class="subcontent" style="margin-bottom: 0px">
               <!-- Subject Selector -->
-              <h2 style="margin-bottom: 0px; margin-top: 0px"> Choose Your Subject </h2>
+              <h2 style="margin-bottom: 0px; margin-top: 0px"> Select Your Subject </h2>
               <br />
               <input type="hidden" #grade>
               <div class="card-container" style="max-width: 100%; margin-top: 0px">
@@ -9952,12 +9947,12 @@
     <div *ngIf="selected_curriculum == 'CC' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <div class="card card-medium"
-        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(90%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 30px"> The high school standards specify the
           mathematics that all students should study in order to be college and career ready. The high school standards
           are listed in conceptual categories, which portray a coherent view of high school mathematics. Modeling concepts
           should be understood and applied across these categories. </h4>
-        <h2 style="margin-bottom: 0px"> Choose Your Category </h2>
+        <h2 style="margin-bottom: 0px"> Select A Category </h2>
         <br />
         <input type="hidden" #category>
         <div class="card-container" role="main" style="max-width: 100%; margin-top: 0px">
@@ -9998,12 +9993,12 @@
     <div *ngIf="selected_curriculum == 'DE' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <div class="card card-medium"
-        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(90%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 30px"> The high school standards specify the
           mathematics that all students should study in order to be college and career ready. The high school standards
           are listed in conceptual categories, which portray a coherent view of high school mathematics. Modeling concepts
           should be understood and applied across these categories. </h4>
-        <h2 style="margin-bottom: 0px"> Choose Your Category </h2>
+        <h2 style="margin-bottom: 0px"> Select A Category </h2>
         <br />
         <input type="hidden" #category>
         <div class="card-container" role="main" style="max-width: 100%; margin-top: 0px">
@@ -10044,12 +10039,12 @@
     <div *ngIf="selected_curriculum == 'IL' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <div class="card card-medium"
-        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(90%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 30px"> The high school standards specify the
           mathematics that all students should study in order to be college and career ready. The high school standards
           are listed in conceptual categories, which portray a coherent view of high school mathematics. Modeling concepts
           should be understood and applied across these categories. </h4>
-        <h2 style="margin-bottom: 0px"> Choose Your Category </h2>
+        <h2 style="margin-bottom: 0px"> Select A Category </h2>
         <br />
         <input type="hidden" #category>
         <div class="card-container" role="main" style="max-width: 100%; margin-top: 0px">
@@ -10090,12 +10085,12 @@
     <div *ngIf="selected_curriculum == 'MA' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <div class="card card-medium"
-        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(90%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 30px"> The high school standards specify the
           mathematics that all students should study in order to be college and career ready. The high school standards
           are listed in conceptual categories, which portray a coherent view of high school mathematics. Modeling concepts
           should be understood and applied across these categories. </h4>
-        <h2 style="margin-bottom: 0px"> Choose Your Category </h2>
+        <h2 style="margin-bottom: 0px"> Select A Category </h2>
         <br />
         <input type="hidden" #category>
         <div class="card-container" role="main" style="max-width: 100%; margin-top: 0px">
@@ -10136,12 +10131,12 @@
     <div *ngIf="selected_curriculum == 'NM' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <div class="card card-medium"
-        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(90%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 30px"> The high school standards specify the
           mathematics that all students should study in order to be college and career ready. The high school standards
           are listed in conceptual categories, which portray a coherent view of high school mathematics. Modeling concepts
           should be understood and applied across these categories. </h4>
-        <h2 style="margin-bottom: 0px"> Choose Your Category </h2>
+        <h2 style="margin-bottom: 0px"> Select A Category </h2>
         <br />
         <input type="hidden" #category>
         <div class="card-container" role="main" style="max-width: 100%; margin-top: 0px">
@@ -10182,12 +10177,12 @@
     <div *ngIf="selected_curriculum == 'RI' && selected_subject == 'HSM'" class="card card-large" style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
       <div class="card card-medium"
-        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(85%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+        style="margin: auto; padding: 15px min(20px, 2.5%); display: block; text-align: center; width: min(90%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 30px"> The high school standards specify the
           mathematics that all students should study in order to be college and career ready. The high school standards
           are listed in conceptual categories, which portray a coherent view of high school mathematics. Modeling concepts
           should be understood and applied across these categories. </h4>
-        <h2 style="margin-bottom: 0px"> Choose Your Category </h2>
+        <h2 style="margin-bottom: 0px"> Select A Category </h2>
         <br />
         <input type="hidden" #category>
         <div class="card-container" role="main" style="max-width: 100%; margin-top: 0px">
