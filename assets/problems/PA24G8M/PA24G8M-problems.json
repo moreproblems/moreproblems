@@ -1,0 +1,936 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Estimate very large or very small quantities by using numbers expressed in the form of a single digit times an integer power of 10 and express how many times larger or smaller one number is than another."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The speed of sound is approximately 3 × 10² meters per second. The speed of light is approximately 3 × 10⁸ meters per second. The speed of light is approximately how many times as fast as the speed of sound?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1,000,000",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option divides 3 × 10⁸ by 3 × 10² by dividing the coefficients as 3/3 = 1 and the powers of 10 as 10⁸/10² = 10⁸⁻² = 10⁶, which results in a quotient of 1 × 10⁶, and then converts the quotient to standard form by moving the decimal point in 1.0 to the right 6 places.",
+                    "Percent": 42
+                }
+            },
+            "B": {
+                "Choice": "3,000,000",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option divides the powers of 10 as 10⁸/10² = 10⁸⁻² = 10⁶ but then uses the common coefficient (3), resulting in a quotient of 3 × 10⁶ and then converts to standard form.",
+                    "Percent": 28
+                }
+            },
+            "C": {
+                "Choice": "10,000,000,000",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option divides the coefficients as 3/3 = 1 but then divides the powers of 10 by adding the exponents (10⁸/10² = 10⁸⁺² = 10¹⁰), resulting in a quotient of 1 × 10¹⁰, and then converts to standard form.",
+                    "Percent": 15
+                }
+            },
+            "D": {
+                "Choice": "30,000,000,000",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses the common coefficient (3) and divides the powers of 10 by adding the exponents (10⁸/10² = 10⁸⁺² = 10¹), resulting in a quotient of 3 × 10¹⁰, and then converts to standard form..",
+                    "Percent": 15
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Determine whether a number is rational or irrational. For rational numbers, show that the decimal expansion terminates or repeats (limit repeating decimals to thousandths)."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which pair has one rational number and one irrational number?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "√0 and √9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers √0 to be irrational (may have confused √0 with “dividing by 0”).",
+                    "Percent": 20
+                }
+            },
+            "B": {
+                "Choice": "√4 and √5",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that √4 is a rational number since √4 simplifies to 2 because 4 = 2² and recognizes that √5 is an irrational number since √5 cannot be simplified to a rational number because there is no whole number that when squared equals 5.",
+                    "Percent": 57
+                }
+            },
+            "C": {
+                "Choice": "√3 and √6",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers √6 to be rational by identifying 6 as a composite number but does not recognize that the prime factors of 6 are 2 and 3 (i.e., 6 = 2 ⋅ 3), which means √6 cannot be simplified to a rational number since the prime factors do not have even exponents (2 and 3 have exponents of 1).",
+                    "Percent": 12
+                }
+            },
+            "D": {
+                "Choice": "√4 and √9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option does not recognize that √4 simplifies to 2 and that √9 simplifies to 3, which makes both numbers rational.",
+                    "Percent": 11
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Convert a terminating or repeating decimal to a rational number (limit repeating decimals to thousandths)."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "To determine the width, in units, of a rectangle, Jamal uses a calculator to divide the area of the rectangle by its length. The result on the calculator is shown below.",
+            ":ibox:3.188888889",
+            "Which value is MOST LIKELY the exact width, in units, of the rectangle?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "3 17/99",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option begins with the fraction 18/100 and then subtracts 1 from the numerator and from the denominator.",
+                    "Percent": 11
+                }
+            },
+            "B": {
+                "Choice": "3 17/90",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that 3.188888889 on a calculator represents the repeating decimal number 3.1888... and then either represents 3.1888... as 3 + 0.1 + 0.0888..., converts 0.1 to 1/10, and converts 0.0888. as 0.0888... = 0.1 ⋅ 0.888... = 1/10 ⋅ 8/9 = 8/90 = resulting in 3.1888... = 3 + 0.1 + 0.0888. = 3 + 1/10 + 8/90 = 3 + 9/90 + 8/90 = 3 + 17/90 17/90 = 3 17/90 OR writes the equation x = 3.18... , 10x = 31.888..., and 100x = 318.88..., and subtracts 10x = 31.888... from 100x = 318.888..., resulting in a difference of 90x = 287, and then solves for x by dividing both sides by 90, resulting in x = 287/90= 3 17/90.",
+                    "Percent": 54
+                }
+            },
+            "C": {
+                "Choice": "3 19/99",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses the non-repeating decimal digits (1 and 9) to create a fraction using 99 as the denominator.",
+                    "Percent": 17
+                }
+            },
+            "D": {
+                "Choice": "3 18/90",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses the 18 as if it were the repeating decimal digits and uses 90 rather than 99 as the denominator.",
+                    "Percent": 18
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Use rational approximations of irrational numbers to compare and order irrational numbers."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which set of statements correctly describes how to compare the values of 5√7 and 7√5?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "5√7 ≈ 17.5\n7√5 ≈ 5.9\n5√7 > 7√5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option calculates 5√7 as 5 ⋅ 7/2 and 7√5 as (7 ⋅ 5).",
+                    "Percent": 12
+                }
+            },
+            "B": {
+                "Choice": "5√7 ≈ 7.6\n7√5 ≈ 5.9\n5√7 > 7√5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option calculates 5√7 as 5 + 7 and 7√5 as (7 ⋅ 5).",
+                    "Percent": 12
+                }
+            },
+            "C": {
+                "Choice": "5√7 ≈ 13.2\n7√5 ≈ 17.5\n5√7 < 7√5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option calculates 5√7 as 5 ⋅ √7 but then calculates 7√5 as 7 ⋅ 5/2.",
+                    "Percent": 14
+                }
+            },
+            "D": {
+                "Choice": "5√7 ≈ 13.2\n7√5 ≈ 15.7\n5√7 < 7√5",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option calculates 5√7 as 5 ⋅ √7 , resulting in the product 13.22875 . . ., calculates 7√5 as 7 ⋅ √5 , resulting in the product 15.65247 . . ., and then uses these values to compare the two expressions.",
+                    "Percent": 62
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Perform operations with numbers expressed in scientific notation, including problems where both decimal and scientific notation are used. Express answers in scientific notation and choose units of appropriate size for measurements of very large or very small quantities (e.g., use millimeters per year for seafloor spreading). Interpret scientific notation that has been generated by technology (e.g., interpret 4.7EE9 displayed on a calculator as 4.7 × 10⁹)."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A computer monitor uses square pixels to display an image. The expression shown below represents the approximate area, in square inches, of one pixel on the computer monitor.",
+            ":ibox:(1.04 × 10⁻²)²",
+            "What is the approximate area, in square inches, of one pixel on the computer monitor?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1.0816 × 10⁻²",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that the expression (1.04² × 10⁻²)² can be represented as (1.04² × 10⁻²)(1.04² × 10⁻²) = 1.04² × (10⁻²)², squares the 1.04, resulting in 1.0816, and then applies the exponential property (aᵐ)ⁿ = aᵐˣⁿ to simplify (10⁻²)² as 10⁻²ˣ², resulting in 10⁻⁴.",
+                    "Percent": 60
+                }
+            },
+            "B": {
+                "Choice": "1.0816 × 10⁻²",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option squares only the 1.04.",
+                    "Percent": 12
+                }
+            },
+            "C": {
+                "Choice": "1.0816 × 10⁰",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option squares the 1.04 but adds the exponents when simplifying (10⁻²)².",
+                    "Percent": 17
+                }
+            },
+            "D": {
+                "Choice": "1.0816 × 10⁴",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option squares the 1.04 but squares the exponent –2 when simplifying (10⁻²)².",
+                    "Percent": 11
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Analyze and describe linear relationships between two variables, using slope."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A line on a coordinate grid is shown below.",
+            "problems/PA24G8M/media/6a.jpg",
+            "Which equation can be used to determine the slope (m) of the line?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "m = (–a – b)/(–b – b)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses the reciprocal of the slope and reverses the order of the difference in the numerator.",
+                    "Percent": 27
+                }
+            },
+            "B": {
+                "Choice": "m = (–b – b)/(–a – b)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option reverses the order of the difference in the denominator.",
+                    "Percent": 171
+                }
+            },
+            "C": {
+                "Choice": "m = (b – (–a))/(–b – b)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses the reciprocal of the slope.",
+                    "Percent": 16
+                }
+            },
+            "D": {
+                "Choice": "m = (–b – b)/(b – (–a))",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option applies the slope formula m = (y₂ – y₁)/(x₂ – x₁), using (−a, b) for (x₁, y₁) and (b, −b) for (x₂, y₂) by substituting −b for y₂, b for y₁, b for x₂, and −a for x₁.",
+                    "Percent": 40
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Graph proportional relationships, interpreting the unit rate as the slope of the graph. Compare two different proportional relationships represented in different ways."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Information about the costs of apples at an orchard is listed below.",
+            ":ibox:• The cost of apples is $1.00 per pound when picked by an employee.\n• The equation t = 0.85 n describes the relationship between the total cost (t), in dollars, and the number of pounds of apples (n) when picked by a customer.",
+            "An employee and a customer both pick some apples. The employee and the customer each picked $34.00 worth of apples. How many more pounds of apples did the customer pick than the employee picked?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "5.1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option determines that the employee picked 34 pounds of apples since the cost is $1.00 per pound of apples but then determines that the customer picked 28.9 pounds of apples by substituting 34.00 for n (rather than for t) into the equation t = 0.85 n, resulting in t = 0.85(34.00) = 28.90, and then finds the difference between the two amounts picked (34 − 28.9 = 5.1).",
+                    "Percent": 16
+                }
+            },
+            "B": {
+                "Choice": "6.0",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option determines that the employee picked 34 pounds of apples since the cost is $1.00 per pound of apples, determines that the customer picked 40 pounds of apples by substituting 34.00 for t into the equation t = 0.85 n, resulting in 34.00 = 0.85 n, and dividing both sides of the equation by 0.85, resulting in 40 = n, and then finds the difference between the two amounts picked (40 − 34 = 6).",
+                    "Percent": 45
+                }
+            },
+            "C": {
+                "Choice": "40.0",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option substitutes 34.00 for t into the equation t = 0.85 n, resulting in 34.00 = 0.85 n, and then solves the equation for n by dividing both sides of the equation by 0.85, resulting in 40 pounds of apples picked by the customer, but does not consider the pounds of apples picked by the employee.",
+                    "Percent": 32
+                }
+            },
+            "D": {
+                "Choice": "62.9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option adds the two costs, resulting in 1 + 0.85 = 1.85, and then multiplies the sum by 34.00.",
+                    "Percent": 7
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Interpret solutions to a system of two linear equations in two variables as points of intersection of their graphs because points of intersection satisfy both equations simultaneously."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Mr. Klavier rents out two different studio spaces to bands. The equations shown below represent the total cost (y), in dollars, to rent each studio for x hours.",
+            ":ibox:large studio: y = 80 x + 40\n\nsmall studio: y = 60 x + 60",
+            "Based on the system of equations, which statement about the rental costs is correct?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "There is no length of time at which the rental cost for the large studio is equal to the rental cost for the small studio since the graph consists of two curves that never intersect.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option recognizes that the equations are not equivalent because the y-intercepts are not equal (40 ≠ 60) but thinks that each equation can be represented by a curve rather than a line and that the curves are “parallel” since 80 + 40 = 60 + 60.",
+                    "Percent": 13
+                }
+            },
+            "B": {
+                "Choice": "There is no length of time at which the rental cost for the large studio is equal to the rental cost for the small studio since the graph consists of two straight lines that never intersect.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option recognizes that each equation can be represented by a line and that the lines are not collinear since the y-intercepts are not equal (40 ≠ 60) but thinks that the lines are parallel since 80 + 40 = 60 + 60.",
+                    "Percent": 23
+                }
+            },
+            "C": {
+                "Choice": "There is a length of time at which the rental cost for the large studio is equal to the rental cost for the small studio since the graph consists of two curves that intersect at two points.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option thinks that each equation can be represented by a curve rather than a line, which would make two points of intersection possible.",
+                    "Percent": 19
+                }
+            },
+            "D": {
+                "Choice": "There is a length of time at which the rental cost for the large studio is equal to the rental cost for the small studio since the graph consists of two straight lines that intersect at a single point.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that each equation can be represented by a line since 80 x and 60 x both represent constant rates of change (80 and 60 are the rates of change, and the x indicates the rate of change is constant because the exponent for the x variable is 1) and recognizes that the lines will have a single point of intersection since the rates of change are not equal (80 ≠ 60).",
+                    "Percent": 45
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Solve real-world and mathematical problems leading to two linear equations in two variables."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The Rodriguez family buys 4 student tickets and 2 adult tickets to the school play for a total of $22. The Delgado family buys 2 student tickets and 3 adult tickets for a total of $21. What is the price of an adult ticket to the school play?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "$3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option solves the system of equations 4 x + 2 y = 22 and 2 x + 3 y = 21 for x, resulting in x = 3, but misinterprets this solution as the price of an adult ticket rather than the price of a student ticket (i.e., did not define the variables x and y prior to writing the system of equations).",
+                    "Percent": 15
+                }
+            },
+            "B": {
+                "Choice": "$5",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option writes the equation for the Rodriguez family as 4s + 2a = 22, writes the equation for the Delgado family as 2s + 3a = 21, and then solves the system of two equations either by multiplying both sides of the second equation by 2, resulting in 4s + 6a = 42, subtracting the first equation from the second equation, resulting in 4a = 20, and then dividing each side of the equation by 4, resulting in a = 5 OR by multiplying both sides of the first equation by 1/2, resulting in 2s + 1a = 11, subtracting the first equation from the second equation, resulting in 2a = 10, and then dividing each side of the equation by 2, resulting in a = 5.",
+                    "Percent": 58
+                }
+            },
+            "C": {
+                "Choice": "$7",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option writes the system of equations as 4s + 2a = 22 and 2s + 3a = 21, multiplies both sides of the second equation by 2, resulting in 4s + 6a = 42, but then eliminates the 4 s terms and uses only the remaining part of the second equation, resulting in 6a = 42, and then divides each side of the equation by 6, resulting in a = 7.",
+                    "Percent": 18
+                }
+            },
+            "D": {
+                "Choice": "$8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option writes the system of equations as 4s + 2a = 22 and 2s + 3a = 21, multiplies both sides of the second equation by 2, resulting in 4s + 6a = 42, but then combines the two equations by eliminating the 4s terms and adding the remaining terms of the equations, resulting in 8a = 64, and then divides each side of the equation by 8, resulting in a = 8.",
+                    "Percent": 9
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Functions"
+        ],
+        "SubTopics": [
+            "Determine whether a relation is a function."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A relation is shown on the graph below.",
+            "problems/PA24G8M/media/10a.jpg",
+            "Which statement explains why this relation is NOT a function?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "At x = –2, the relation has two closed points.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option either recognizes that a relation cannot be a function if there are two or more distinct y-values for any given x-value and that the two closed points at x = –2 represent two distinct y-values (2 and –4) OR uses the vertical line test and identifies two distinct points for the vertical line at x = –2, resulting in a failure of the vertical line test.",
+                    "Percent": 31
+                }
+            },
+            "B": {
+                "Choice": "Between x = –2 and x = 1, the relation is not a straight line.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers that functions can be represented only by straight lines and notices that the relation is represented by a curved segment between x = –2 and x = 1.",
+                    "Percent": 30
+                }
+            },
+            "C": {
+                "Choice": "At x = 1, the relation has a closed point and an open point.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option recognizes that a relation cannot be a function if there are two or more distinct y-values for any given x-value but does not realize that the open point at (1, 6) does not represent an actual value for x = 1 and that the open point only indicates that the line segment extends to the right of (1, 6).",
+                    "Percent": 21
+                }
+            },
+            "D": {
+                "Choice": "Between x = 3 and x = 4, the relation has no values.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers that functions must be continuous for all x-values and notices a gap in the relation between x = 3 and x = 4.",
+                    "Percent": 18
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Functions"
+        ],
+        "SubTopics": [
+            "Interpret the equation y = mx + b as defining a linear function whose graph is a straight line; give examples of functions that are not linear."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which equation is a linear function?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "y = 65/1.2x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers any equation with no y-intercept to represent a proportional relationship and is therefore a linear function.",
+                    "Percent": 15
+                }
+            },
+            "B": {
+                "Choice": "y = 1.2/x + 65",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option selects an equation that appears to be in the form y = m x + b but does not consider that the x-variable is in the denominator.",
+                    "Percent": 15
+                }
+            },
+            "C": {
+                "Choice": "y = 65 + 1.2x",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that the equation can be written in the form y = m x + b, with m = 1.2 and b = 65.",
+                    "Percent": 50
+                }
+            },
+            "D": {
+                "Choice": "y = 1.2x² + 65",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option selects an equation that appears to be in the form y = m x + b but does not consider the exponent of the x-variable.",
+                    "Percent": 20
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Functions"
+        ],
+        "SubTopics": [
+            "Represent or interpret functional relationships between quantities using tables, graphs, and descriptions."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A library charges a flat fee of $0.50 for keeping a book past its due date. The library also charges $0.15 for each day the book is overdue. The table shown below represents some of the library’s fees.",
+            "problems/PA24G8M/media/12a.jpg",
+            "What is the total fee when a library book is 2 days overdue?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "$0.70",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses $0.05 rather than $0.15 and adds $0.05 to the 1-day overdue fee ($0.65).",
+                    "Percent": 4
+                }
+            },
+            "B": {
+                "Choice": "$0.75",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option adds $0.10 to the 1-day overdue fee ($0.65) since the change in the number of days was 1.",
+                    "Percent": 14
+                }
+            },
+            "C": {
+                "Choice": "$0.80",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option uses the description “charges a flat fee of $0.50 . . . [and] $0.15 for each day” to write the equation y = 0.50 + 0.15x and then substitutes 2 for x into the equation, resulting in y = 0.50 + 0.15(2) = 0.50 + 0.30 = 0.80 OR uses the table and finds the midpoint between $0.65 and $0.95 ($0.65 + $0.95 = $1.60, $1.60 ÷ 2 = $0.80) since 2 days overdue is the midpoint between 1 day overdue and 3 days overdue OR uses the description “charges $0.15 for each day” along with the table and adds $0.15 to the 1-day overdue fee ($0.65).",
+                    "Percent": 79
+                }
+            },
+            "D": {
+                "Choice": "$0.90",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option ses $0.05 rather than $0.15 and subtracts $0.05 from the 3-day overdue fee ($0.95).",
+                    "Percent": 3
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Functions"
+        ],
+        "SubTopics": [
+            "Construct a function to model a linear relationship between two quantities. Determine the rate of change and initial value of the function from a description of a relationship or from two (x, y) values, including reading these from a table or from a graph. Interpret the rate of change and initial value of a linear function in terms of the situation it models and in terms of its graph or a table of values."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A science experiment requires students to find the mass of a bucket with different numbers of pennies in it. The table below shows the total masses, in grams, of the bucket with different numbers of pennies in the bucket.",
+            "problems/PA24G8M/media/13a.jpg",
+            "Which equation represents the relationship between the total mass (y), in grams, of the bucket and the number of pennies (x) in the bucket?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "y = 2.5x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option calculates the rate of change by using the change in total mass for any two rows divided by the change in the number of pennies for the same two rows (e.g., (257.5 – 252.5)/(3 – 1) = 5/2 = 2.5) but does not include the y-intercept.",
+                    "Percent": 18
+                }
+            },
+            "B": {
+                "Choice": "y = 2.5x + 250",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option calculates the rate of change by using the change in total mass for any two rows divided by the change in the number of pennies for the same two rows (e.g., (260 – 257.5)/(4 – 3) = 2.5/1 = 2.5) and then determines the y-intercept by subtracting the rate of change from the total mass for 1 penny (252.5 – 2.5 = 250).",
+                    "Percent": 54
+                }
+            },
+            "C": {
+                "Choice": "y = 250x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses the y-intercept as the rate of change and does not include a y-intercept.",
+                    "Percent": 11
+                }
+            },
+            "D": {
+                "Choice": "y = 250x + 2.5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option switches the y-intercept and rate of change.",
+                    "Percent": 17
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Given two similar two-dimensional figures, describe a sequence of transformations that exhibits the similarity between them."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Trapezoid PQRS and trapezoid TUVW are graphed on the coordinate grid shown below.",
+            "problems/PA24G8M/media/14a.jpg",
+            "Which series of two transformations can be used to map trapezoid PQRS onto trapezoid TUVW?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "a rotation of 180° centered at (4, 4)\na dilation with a scale factor of 2 centered at (5, 4)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that to orient trapezoid PQRS in the same direction as trapezoid TUVW, a rotation of 180° must occur and that the rotation should be centered at (4, 4) to move point S from (3, 4) to (5, 4), which is the location of point W, and this would result in point P rotating from (3, 1) to (5, 7), point Q rotating from (1, 2) to (7, 6), and point R rotating from (1, 4) to (7, 4), and then recognizes that, to increase the size of trapezoid PQRS to match the size of trapezoid TUVW, a dilation with a scale factor of 2 must occur and that the dilation should be centered at (5, 4) to keep the rotated point S on point W, and this would result in moving the rotated point P from (5, 7) to (5, 10), which is the location of point T, moving the rotated point Q from (7, 6) to (9, 8), which is the location of point U, and moving the rotated point R from (7, 4) to which is the location of point V.",
+                    "Percent": 41
+                }
+            },
+            "B": {
+                "Choice": "a rotation of 180° centered at (4, 4)\na dilation with a scale factor of 2 centered at the origin",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers that all dilations must be centered at the origin.",
+                    "Percent": 20
+                }
+            },
+            "C": {
+                "Choice": "a rotation of 180° centered at the origin\na dilation with a scale factor of 2 centered at (5, 4)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers that all rotations must be centered at the origin.",
+                    "Percent": 25
+                }
+            },
+            "D": {
+                "Choice": "a rotation of 180° centered at the origin\na dilation with a scale factor of 2 centered at the origin",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers that all rotations and all dilations must be centered at the origin.",
+                    "Percent": 14
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Apply the Pythagorean theorem to determine unknown side lengths in right triangles in real-world and mathematical problems in two and three dimensions."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The lengths of the two legs of a right triangle are 4 centimeters and 8 centimeters. The length (h), in centimeters, of the hypotenuse of the right triangle can be determined using the equation shown below.",
+            ":ibox:4² + 8² = h²",
+            "What is the length, in centimeters, of the hypotenuse of the right triangle?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "√12",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option adds 4 and 8 without applying the exponents, resulting in the equation 12 = h², and then takes the square root of both sides of the equation to remove the exponent of 2 from h².",
+                    "Percent": 11
+                }
+            },
+            "B": {
+                "Choice": "√32",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option multiplies 4 and 8 without applying the exponents, resulting in the equation 32 = h², and then takes the square root of both sides of the equation to remove the exponent of 2 from h.",
+                    "Percent": 11
+                }
+            },
+            "C": {
+                "Choice": "√40",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option determines that 4² = 16 and 8² = 64, adds 16 and 64, resulting in the equation 80 = h², but then divides 80 by 2 before taking the square root of both sides of the equation to remove the exponent of 2 from h².",
+                    "Percent": 9
+                }
+            },
+            "D": {
+                "Choice": "√80",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option determines that 4² = 16 and 8² = 64, adds 16 and 64, resulting in the equation 80 = h², and then takes the square root of both sides of the equation to remove the exponent of 2 from h².",
+                    "Percent": 69
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Apply formulas for the volumes of cones, cylinders, and spheres to solve real-world and mathematical problems."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "An artist has a piece of wood in the shape of a cylinder. It has a height of 36 inches and a diameter of 8 inches. The artist cuts the piece of wood into 6 equal-sized pieces. Which measurement is CLOSEST to the volume of each piece?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "201 cubic inches",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option divides the diameter by 6 rather than 2, resulting in a quotient of 4/3, and applies the volume formula for a cylinder as V = π ⋅ (4/3) ⋅ 36 = 64π, which can be approximated using 64 ⋅ 3.14 = 200.96.",
+                    "Percent": 15
+                }
+            },
+            "B": {
+                "Choice": "301 cubic inches",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option divides the diameter (8) by 2 to determine the radius, resulting in a radius of 4, applies the volume formula for a cylinder (V = πr²h), using r = 4 and h = 36 to write the equation V = π ⋅ 4² ⋅ 36, which can be simplified as V = π ⋅ 16 ⋅ 36 = 576π, and then divides the volume by 6, resulting in a quotient of 96π, which can be approximated using 96 ⋅ 3.14 = 301.44.",
+                    "Percent": 58
+                }
+            },
+            "C": {
+                "Choice": "1,206 cubic inches",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option .",
+                    "Percent": 16
+                }
+            },
+            "D": {
+                "Choice": "1,356 cubic inches",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses (h/2)² ⋅ d rather than (d/2)² ⋅ h to apply the volume formula for a cylinder as V = π ⋅ (36/2)² ⋅ 8 = 2,592π, and then divides the volume by 6, resulting in a quotient of 432π, which can be approximated using 432 ⋅ 3.14 = 1,356.48.",
+                    "Percent": 1
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Construct and interpret a two-way table summarizing data on two categorical variables collected from the same subjects. Use relative frequencies calculated for rows or columns to describe possible associations between the two variables."
+        ],
+        "SuppContent": [],
+        "Points": 4,
+        "Explain": false,
+        "Content": [
+            "A quiz competition was held for grade 7 and grade 8 students. In the first round, each of the 150 contestants was given a quiz. Contestants advanced to the second round if they answered enough questions correctly. The tables below show some information about the 150 contestants in the competition as well as some information about the grade 8 students who competed.",
+            "problems/PA24G8M/media/17a.jpg",
+            "problems/PA24G8M/media/17b.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "How many grade 8 male students did not advance to the second round?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "17",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "A grade 8 female student who competed is randomly selected.",
+                    "What is the probability that the randomly selected student advanced to the second round?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "2/3",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "One of the 150 students who competed is randomly selected.",
+                    "Explain why the randomly selected student MOST LIKELY advanced to the second round."
+                ],
+                "AnswerChoices": {}
+            },
+            "D": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Explain why a grade 7 student is less likely to have advanced to the second round than a grade 8 student even though the same number of grade 7 students advanced to the second round as grade 8 students."
+                ],
+                "AnswerChoices": {}
+            }
+        }
+    }
+}

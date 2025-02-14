@@ -1,0 +1,861 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Operations - Fractions"
+        ],
+        "SubTopics": [
+            "Add and subtract fractions (including mixed numbers) with unlike denominators. (May include multiple methods and representations.)"
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Add: 7/8 + 11/5"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1 5/13",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option adds the numerators (7 + 11 = 18) and adds the denominators (8 + 5 = 13) before correctly converting 18/13 to a mixed number.",
+                    "Percent": 26
+                }
+            },
+            "B": {
+                "Choice": "1 37/40",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option multiplies the numerators (7 × 11 = 77) and the denominators (8 × 5 = 40) before correctly converting 77/40 to a mixed number.",
+                    "Percent": 13
+                }
+            },
+            "C": {
+                "Choice": "2 31/40",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses 40 as the common denominator but then uses the sum of the products of 7 × 8 and 11 × 5 (56 + 55 = 111) as the numerator before correctly converting 111/40 to a mixed number.",
+                    "Percent": 13
+                }
+            },
+            "D": {
+                "Choice": "3 3/40",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option identifies 40 as a common denominator since 8 × 5 = 40, converts 7/8 to 35/40 by multiplying both the 7 and the 8 by 5, converts 11/5 to 88/40 by multiplying both the 11 and the 5 by 8, adds the two fractions by adding the numerators (35 + 88 = 123) and leaving the common denominator (40), and then converts 123/40 to a mixed number by dividing 123 by 40, resulting in 3 R3, which is changed to a mixed number by using the remainder (3) as the numerator and the divisor (40) as the denominator.",
+                    "Percent": 48
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Operations In Base Ten"
+        ],
+        "SubTopics": [
+            "Demonstrate an understanding that in a multi-digit whole number (through 1,000,000), a digit in one place represents ten times what it represents in the place to its right."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The mass of a rock is 52.17 grams. The mass of a bolt, in grams, includes a digit that is 1/10 the value of the 1 in the mass of the rock. Which value could be the mass, in grams, of the bolt?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "11.27",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option does not consider the mass of the rock and selects a number with two 1s, such that the value of one of the 1s is 1/10 the value of the other 1 (i.e., the 1 in the ones place is 1/10 the value of the 1 in the tens place).",
+                    "Percent": 22
+                }
+            },
+            "B": {
+                "Choice": "18.27",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses the digit in the ones place (2) rather than the 1 in the mass of the rock and selects a number with a 2 in the tenths place, which is 1/10 the value of the 2 in the mass of the rock.",
+                    "Percent": 19
+                }
+            },
+            "C": {
+                "Choice": "18.71",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option either identifies that the 1 in the mass of the rock is in the tenths place, determines that a 1 in the next place to the right (the hundredths place) would have a value that is 1/10 the value of the 1 in the mass of the rock, and then identifies a number with a 1 in the hundredths place OR identifies that the value of the 1 in the mass of the rock is 0.1, multiplies this value by 1/10 , resulting in a product of 0.01, and then selects a number for which the value of the 1 is equal to 0.01.",
+                    "Percent": 34
+                }
+            },
+            "D": {
+                "Choice": "20.17",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option selects a number for which the value of the 1 is the same as the value of the 1 in the mass of the rock.",
+                    "Percent": 25
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Operations In Base Ten"
+        ],
+        "SubTopics": [
+            "Round decimals to any place (limit rounding to ones, tenths, hundredths, or thousandths place)."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A scientist records the diameter of a strand of hair as 0.00754 centimeters. To the nearest thousandth, what is the rounded diameter of this strand of hair?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "0.007 cm",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option identifies the 7 as the digit in the thousandths place but rounds down rather than up by considering the rightmost digit (the 4) rather than the digit to the immediate right of the 7 (the 5).",
+                    "Percent": 14
+                }
+            },
+            "B": {
+                "Choice": "0.0075 cm",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option identifies the 5 as the digit in the thousandths place rather than the ten-thousandths place.",
+                    "Percent": 27
+                }
+            },
+            "C": {
+                "Choice": "0.008 cm",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option identifies the 7 as the digit in the thousandths place and then either looks at the next digit to the right (the digit in the ten-thousandths place) before applying the rule “5 or greater, round up” to round the 7 up to an 8 OR recognizes that 754 is closer to 800 than to 700.",
+                    "Percent": 51
+                }
+            },
+            "D": {
+                "Choice": "0.01 cm",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option identifies the second 0 to the right of the decimal point as the digit in the thousandths place rather than the hundredths place.",
+                    "Percent": 8
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Operations In Base Ten"
+        ],
+        "SubTopics": [
+            "Use whole numbers and decimals to compute accurately (straight computation or word problems)."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Two deli workers cut a 9-kilogram block of cheese in half. The first worker divides his half into 15 equal packages. The second worker divides the other half into 18 equal packages. What is the difference in the mass, in kilograms, of the two sizes of packages?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "0.05",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option divides the product of 1/2 × 9 by 15 and by 18, resulting in quotients of 0.3 and 0.25, and then subtracts 0.25 from 0.3 by first converting 0.3 to 0.30, resulting in a difference of 0.05.",
+                    "Percent": 40
+                }
+            },
+            "B": {
+                "Choice": "0.10",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option divides 9 by 15 and by 18, resulting in quotients of 0.6 and 0.5, and then subtracts 0.5 from 0.6, resulting in a difference of 0.1, which is equivalent to 0.10 (i.e., does not consider that each deli worker uses only half of the 9-kilogram block and uses a full 9-kilogram block for each deli worker).",
+                    "Percent": 22
+                }
+            },
+            "C": {
+                "Choice": "0.17",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option divides 18 and 15 by 9, resulting in quotients of 2 and 1.666 . . . , multiplies both quotients by 1/2 , resulting in products of 1 and 0.8333 . . . , and then subtracts 0.8333 . . . from 1, resulting in a difference of 0.1666 . . . , which rounds to 0.17.",
+                    "Percent": 18
+                }
+            },
+            "D": {
+                "Choice": "0.22",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option divides the product of 1/2 × 9 by 15 and by 18, resulting in quotients of 0.3 and 0.25, but then subtracts the digits to the right of the decimal point as 25 − 3 = 22, resulting in a final answer of 0.22.",
+                    "Percent": 20
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Operations In Base Ten"
+        ],
+        "SubTopics": [
+            "Multiply multi-digit whole numbers (not to exceed three-digit by three-digit)."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The multiplication problem below shows the partial products with two digits missing.",
+            "problems/PA24G5M/media/5a.jpg",
+            "What values of the two missing digits would make the partial products correct?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "m = 8 and n = 2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option multiplies 164 by 3 without regrouping to the tens place, resulting in the partial product 482, multiplies 164 by 20 without regrouping to the hundreds place, resulting in the partial product 2,280, and then identifies the 8 as the value of m and the 2 as the value of n.",
+                    "Percent": 15
+                }
+            },
+            "B": {
+                "Choice": "m = 8 and n = 3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option multiplies 164 by 3 without regrouping to the tens place, resulting in the partial product 482, multiplies 164 by 20 with correct regrouping, resulting in the partial product 3,280, and then identifies the 8 as the value of m and the 3 as the value of n.",
+                    "Percent": 19
+                }
+            },
+            "C": {
+                "Choice": "m = 9 and n = 2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option multiplies 164 by 3 with correct regrouping, resulting in the partial product 492, multiplies 164 by 20 without regrouping to the hundreds place, resulting in the partial product 2,280, and then identifies the 9 as the value of m and the 2 as the value of n.",
+                    "Percent": 15
+                }
+            },
+            "D": {
+                "Choice": "m = 9 and n = 3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option multiplies 164 by 3 by regrouping to both the tens place and the hundreds place, resulting in the partial product 492, multiplies 164 by 20 by regrouping to the thousands place, resulting in the partial product 3,280, and then identifies the 9 as the value of m and the 3 as the value of n.",
+                    "Percent": 51
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Operations In Base Ten"
+        ],
+        "SubTopics": [
+            "Find whole-number quotients of whole numbers with up to four-digit dividends and two-digit divisors."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Jody earned $648 for walking a neighbor’s dog for 18 weeks. She earned the same amount of money each week. How much money did Jody earn each week?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "$30",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option places a 3 in the tens place of the quotient, uses 30 × 18 = 640 rather than 540, subtracts 640 from 648, resulting in a difference of 8, and places a 0 in the ones place of the quotient, resulting in a quotient of 30 R8, but does not account for the remainder.",
+                    "Percent": 5
+                }
+            },
+            "B": {
+                "Choice": "$31",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option places a 3 in the tens place of the quotient, uses 30 × 18 = 540, subtracts 540 from 648, incorrectly using a difference of 18 rather than 108, places a 1 in the ones place of the quotient, uses 1 × 18 = 18, and subtracts 18 from 18, resulting in a difference of 0 and a quotient of 31.",
+                    "Percent": 5
+                }
+            },
+            "C": {
+                "Choice": "$36",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option places a 3 in the tens place of the quotient, uses 30 × 18 = 540, subtracts 540 from 648, resulting in a difference of 108, places a 6 in the ones place of the quotient, uses 6 × 18 = 108, and subtracts 108 from 108, resulting in a difference of 0 and a quotient of 36.",
+                    "Percent": 83
+                }
+            },
+            "D": {
+                "Choice": "$37",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option places a 3 in the tens place of the quotient, uses 30 × 18 = 540, subtracts 540 from 648, resulting in a difference of 108, places a 7 rather than a 6 in the ones place of the quotient, uses 7 × 18 = 108 rather than 6 × 18 = 108, and subtracts 108 from 108, resulting in a difference of 0 and a quotient of 37.",
+                    "Percent": 7
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Operations - Fractions"
+        ],
+        "SubTopics": [
+            "Solve multiplication and division problems involving fractions and whole numbers (straight computation or word problems)."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A deli has 10 pounds of turkey and 7 pounds of cheese. Each sandwich the deli makes has both turkey and cheese. For each turkey-and-cheese sandwich, the deli uses 1/4 pound of turkey and 1/6 pound of cheese. Which phrase describes the GREATEST number of turkey-and-cheese sandwiches the deli can make and whether there is any turkey or cheese remaining?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "40 sandwiches, with some cheese remaining",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option divides 10 by 1/4 , resulting in 40 sandwiches, divides 7 by 1/6 , resulting in 42 sandwiches, and then recognizes that there is enough turkey and cheese to make 40 sandwiches with some cheese remaining (since 42 > 40).",
+                    "Percent": 37
+                }
+            },
+            "B": {
+                "Choice": "42 sandwiches, with some turkey remaining",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option determines there was enough turkey for 40 sandwiches and enough cheese for 42 sandwiches but selects the greater number and identifies the part of the sandwiches for which more is needed.",
+                    "Percent": 29
+                }
+            },
+            "C": {
+                "Choice": "82 sandwiches, with no turkey or cheese remaining",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option determines there was enough turkey for 40 sandwiches and enough cheese for 42 sandwiches but then adds these numbers (i.e., 40 turkey sandwiches + 42 cheese sandwiches = 82 sandwiches).",
+                    "Percent": 23
+                }
+            },
+            "D": {
+                "Choice": "85 sandwiches, with no turkey or cheese remaining",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option finds the total weight of the turkey and cheese (10 + 7 = 17), adds the fractions by adding the numerators and denominators separately, resulting in a “sum” of 2/10 , and then divides 17 by 2/10 , resulting in a quotient of 85.",
+                    "Percent": 11
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Operations - Fractions"
+        ],
+        "SubTopics": [
+            "Multiply a fraction (including mixed numbers) by a fraction."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Mr. Brown drives 6 1/5 miles from his home to work. By 8:30 a.m., he has driven 1/3 of this distance.",
+            "How far, in miles, has Mr. Brown driven by 8:30 a.m.?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "2 1/15",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option multiplies 6 by 1/3, resulting in a partial product of 2, multiplies the 1/5 by 1/3, resulting in a partial product of 1/15, and then adds the partial products (2 + 1/15 = 2 1/15).",
+                    "Percent": 55
+                }
+            },
+            "B": {
+                "Choice": "2 1/8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option multiplies 6 by 1/3, resulting in a partial product of 2, adds the denominators of the fractions (5 + 3) while keeping the common numerator (1), resulting in a “sum” of 1/8, and then adds the partial results (2 + 1/8 = 2 1/8).",
+                    "Percent": 16
+                }
+            },
+            "C": {
+                "Choice": "2 1/5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option multiplies only the 6 by 1/3 , resulting in a partial product of 2, and adds 1/5 to the partial product.",
+                    "Percent": 19
+                }
+            },
+            "D": {
+                "Choice": "2 1/4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option multiplies 6 by 1/3, resulting in a partial product of 2, adds the fractions by adding the numerators and denominators separately, resulting in a “sum” of 2/8, which simplifies to 1/4, and then adds the partial results (2 + 1/4 = 2 1/4).",
+                    "Percent": 10
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Operations - Fractions"
+        ],
+        "SubTopics": [
+            "Demonstrate an understanding of multiplication as scaling (resizing)."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Tamaya earned $88 last week at her part-time job. Lucius earned more money at his part-time job last week than Tamaya earned. Which statement could be true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Lucius earned 6/5 of the amount of money Tamaya earned last week.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that multiplying $88 by a number greater than 1 would result in a product that is greater than $88 (6/5 × $88 = $105.60).",
+                    "Percent": 53
+                }
+            },
+            "B": {
+                "Choice": "Lucius earned 7/8 of the amount of money Tamaya earned last week.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option selects the fraction that, when multiplied by $88, would result in a whole-number product (7/8 × $88 = $77).",
+                    "Percent": 20
+                }
+            },
+            "C": {
+                "Choice": "Lucius earned 8/15 of the amount of money Tamaya earned last week.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option thinks multiplying $88 by the fraction with the greatest numerator would result in a product that is greater than $88.",
+                    "Percent": 18
+                }
+            },
+            "D": {
+                "Choice": "Lucius earned 5/16 of the amount of money Tamaya earned last week.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option thinks multiplying $88 by the fraction with the greatest denominator would result in a product that is greater than $88.",
+                    "Percent": 9
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Number & Operations - Fractions"
+        ],
+        "SubTopics": [
+            "Divide unit fractions by whole numbers and whole numbers by unit fractions."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A cook used 1/4 pound of flour to make 5 dumplings of equal size. How many pounds of flour were used in each dumpling?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1/20",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option divides 1/4 by 5 by identifying the reciprocal of 5 as and then multiplying 1/4 by 1/5, resulting in a product of 1/20.",
+                    "Percent": 48
+                }
+            },
+            "B": {
+                "Choice": "4/5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option divides 1/4 by 5 by identifying the reciprocal of 1/4 as 4/1 and the reciprocal of 5 as 1/5and then multiplying 4/1 by 1/5, resulting in a product of 4/5.",
+                    "Percent": 9
+                }
+            },
+            "C": {
+                "Choice": "1 1/14",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option multiplies 1/4 by 5 rather than dividing 1/4 by 5.",
+                    "Percent": 35
+                }
+            },
+            "D": {
+                "Choice": "20",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option divides 1/4 by 5 by identifying the reciprocal of 1/4 as  4/1 rather than identifying the reciprocal of 5 as 1/5 and then multiplying 4/1 by 5/1, resulting in a product of 20.",
+                    "Percent": 8
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Operations & Algebraic Thinking"
+        ],
+        "SubTopics": [
+            "Analyze and complete calculations by applying the order of operations."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which expression represents 6 times the product of 4 and the difference of 12 and 8?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "6 × [4 × (12 – 8)]",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes “the difference of 12 and 8” to be 12 − 8, “the product of 4 and the difference” to be 4 × (12 − 8), placing grouping symbols around the difference, and “6 times the product” to be 6 × [4 × (12 − 8)] , placing grouping symbols around the product.",
+                    "Percent": 35
+                }
+            },
+            "B": {
+                "Choice": "6 × 4 + (12 – 8)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option applies “the product” to the first calculation, interpreting the word “and” as addition rather than identifying the two factors of the product.",
+                    "Percent": 34
+                }
+            },
+            "C": {
+                "Choice": "6 × [4 – (12 – 8)]",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option misreads “4 and the difference of 12 and 8” as subtracting (12 − 8) from 4.",
+                    "Percent": 18
+                }
+            },
+            "D": {
+                "Choice": "6 × (4 × 12 – 8)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option does not place grouping symbols around the 12 − 8 to represent “the difference of 12 and 8”.",
+                    "Percent": 13
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Operations & Algebraic Thinking"
+        ],
+        "SubTopics": [
+            "Write simple expressions that model calculations with numbers and interpret numerical expressions without evaluating them."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "D’Angelo sells paintings for $15 each. He pays $6 for supplies for each painting. Which expression could be used to find the amount of money D’Angelo makes by selling 25 paintings?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "25 × (15 + 6)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option adds the amount paid for supplies ($6) to the selling price for each painting ($15) and then multiplies the sum (15 + 6) by the number of paintings (25).",
+                    "Percent": 21
+                }
+            },
+            "B": {
+                "Choice": "25 × (15 – 6)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option subtracts the amount paid for supplies ($6) from the selling price for each painting ($15) and then multiplies the difference (15 − 6) by the number of paintings (25).",
+                    "Percent": 44
+                }
+            },
+            "C": {
+                "Choice": "(25 × 15) + 6",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses addition rather than subtraction and places the parentheses around the product rather than around the sum, resulting in adding the amount paid for supplies for one painting to the total amount collected from selling 25 paintings (25 × $15).",
+                    "Percent": 12
+                }
+            },
+            "D": {
+                "Choice": "(25 × 15) – 6",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option places the parentheses around the product rather than around the difference, resulting in subtracting the amount paid for supplies for one painting to the total amount collected from selling 25 paintings (25 × $15).",
+                    "Percent": 23
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Operations & Algebraic Thinking"
+        ],
+        "SubTopics": [
+            "Generate two numerical patterns using two given rules."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Sarah creates two different number patterns. She uses the numbers in her patterns as ordered pairs on a graph. The two rules are described below.",
+            ":ibox:x-coordinate rule: start at 2 and follow the pattern “add 2”\n\ny-coordinate rule: start at 6 and follow the pattern “add 4”",
+            "The patterns continue. What is the ordered pair of the 4th point on Sarah’s graph?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "(6, 18)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option adds 4 to the starting x-coordinate (2 + 4 = 6) to find an incorrect x-coordinate but then identifies the correct y-coordinate (18).",
+                    "Percent": 18
+                }
+            },
+            "B": {
+                "Choice": "(6, 24)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option adds 4 to the starting x-coordinate (2 + 4 = 6) and multiplies the starting y-coordinate by 4 (6 × 4 = 24).",
+                    "Percent": 17
+                }
+            },
+            "C": {
+                "Choice": "(8, 18)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that the 4th point is found by applying each rule three times, so applies “add 2” three times to the starting x-coordinate (2 + 2 × 3 = 8) and applies “add 4” three times to the starting y-coordinate (6 + 4 × 3 = 18).",
+                    "Percent": 42
+                }
+            },
+            "D": {
+                "Choice": "(8, 24)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option multiplies the starting x-coordinate by 4 (2 × 4 = 8) and the starting y-coordinate by 4 (6 × 4 = 24).",
+                    "Percent": 23
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Identify parts of a coordinate grid and describe or interpret points given an ordered pair."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A coordinate grid is shown below.",
+            "problems/PA24G5M/media/14a.jpg",
+            "Based on distances along the grid lines, which location is CLOSEST to the point (2, 3) on the coordinate grid?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "(5, 3)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option identifies a point with the same y-coordinate as (2, 3) but does not consider that this point is 3 units from the given point.",
+                    "Percent": 26
+                }
+            },
+            "B": {
+                "Choice": "origin",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option recognizes that the origin is at (0, 0), which contains the smallest x-coordinate and y-coordinate, but does not consider how far this point is from (2, 3).",
+                    "Percent": 17
+                }
+            },
+            "C": {
+                "Choice": "x-axis",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option either plots the given point at (3, 2) rather than at (2, 3) and compares the distance to each axis OR plots (2, 3) correctly but then switches the axes.",
+                    "Percent": 16
+                }
+            },
+            "D": {
+                "Choice": "y-axis",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option identifies the point (2, 3) as 2 units to the right of the y-axis and 3 units up from the x-axis, meaning the point is closer to the y-axis (2 units) than to the x-axis (3 units), to the point (5, 3), which is 3 units away, or to the origin, which is more than 3 units away.",
+                    "Percent": 41
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Represent real-world and mathematical problems by plotting points in quadrant I of the coordinate plane and interpret coordinate values of points in the context of the situation."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The coordinate grid shown below is used to determine the locations of future buildings on a plot of land.",
+            "problems/PA24G5M/media/15a.jpg",
+            "The four corners of the plot of land are (0, 0), (0, 10), (10, 10), and (10, 0). Because of spacing regulations, any buildings represented by points with the same y-coordinate must be at least 2 units apart. The location of the first building will be represented by point (3, 7). What is the GREATEST number of buildings that can have a y-coordinate of 7?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "5",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that there is only 1 available point between (3, 7) and the y-axis [(1, 7) ] and that there are at most 3 available points between (3, 7) and the right side of the coordinate grid [(5, 7), (7, 7), and (9, 7)], for a total of 5 available points, which represents 5 buildings.",
+                    "Percent": 39
+                }
+            },
+            "B": {
+                "Choice": "6",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option identifies the greatest number of points with a common y-coordinate that could appear on the grid with a minimum distance of 2 units (i.e., counts all the even x-coordinates) but does not consider that the given point of (3, 7) has an odd x-coordinate.",
+                    "Percent": 18
+                }
+            },
+            "C": {
+                "Choice": "8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers the 10 points with positive whole-number x-coordinates when y = 7 and eliminates only the points (2, 7) and (4, 7) from this set since they are each only 1 unit from the given point of (3, 7).",
+                    "Percent": 17
+                }
+            },
+            "D": {
+                "Choice": "9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers all 11 points with whole-number x-coordinates when y = 7 and eliminates only the points (2, 7) and (4, 7) from this set since they are each only 1 unit from the given point of (3, 7).",
+                    "Percent": 26
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Measurement & Data"
+        ],
+        "SubTopics": [
+            "Organize, display, and answer questions based on data."
+        ],
+        "SuppContent": [],
+        "Points": 4,
+        "Explain": false,
+        "Content": [
+            "Each month for four months, Gabriela recorded the number of days the Sun was visible at noon. She started the pictograph below but has not yet completed the row for June.",
+            "problems/PA24G5M/media/16a.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "How many days was the Sun visible at noon in March?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "24",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 2,
+                "Explain": true,
+                "Content": [
+                    "How many more days was the Sun visible at noon in May than in April? Explain how you found your answer."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "6",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "To finish the pictograph, Gabriela put 9 complete sun pictures in the row for June.",
+                    "Explain how you know Gabriela made a mistake when she finished the pictograph."
+                ],
+                "AnswerChoices": {}
+            }
+        }
+    }
+}

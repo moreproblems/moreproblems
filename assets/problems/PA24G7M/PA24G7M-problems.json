@@ -1,0 +1,846 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Apply properties of operations to add and subtract rational numbers, including real-world contexts."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Simplify: –28 + 20 + (–3)"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "–51",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option first adds as 28 + 20 + 3 and then uses either the sign of the “greatest” number (28) OR the most common sign (two negatives vs. only one positive).",
+                    "Percent": 20
+                }
+            },
+            "B": {
+                "Choice": "–11",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option either first adds −28 to 20, resulting in a sum of −8, and then adds the sum to −3, resulting in a sum of −11 OR reorders the terms of the expression to 20 + − 28 + − 3, rewrites the expression as 20 − 28 + − 3 by changing the first “plus a negative” to subtraction, and subtracts 28 from 20 (20 − 28 = − 8), resulting in − 8 + − 3, which has a sum of −11.",
+                    "Percent": 61
+                }
+            },
+            "C": {
+                "Choice": "–9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option determines the difference between 28 and 20 (28 − 20 = 8) and the difference between 20 and 3 (20 − 3 = 17) and then determines the difference between the differences (8 − 17 = −9).",
+                    "Percent": 6
+                }
+            },
+            "D": {
+                "Choice": "–5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option determines the difference between 28 and 20 (28 − 20 = 8) and the difference between 8 and 3 (8 − 3 = 5) and then uses either the sign of the “greatest” number (28) OR the most common sign (two negatives vs. only one positive).",
+                    "Percent": 13
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Apply and extend previous understandings of operations to add, subtract, multiply, and divide rational numbers."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "While on a road trip with his family, Tristan records the price of a gallon of gasoline they buy each day. The change in price each day is shown in the table below.",
+            "problems/PA24G7M/media/2a.jpg",
+            "Which statement about the average change in price for a gallon of gasoline is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The average change in price is negative because the largest amount of change is –$0.12 and that affects the average the most.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers only the largest individual change (in terms of absolute value) without considering the actual sum of all the values divided by 4.",
+                    "Percent": 29
+                }
+            },
+            "B": {
+                "Choice": "The average change in price is positive because the total change is positive, and a positive total change in price divided by 4 days is positive.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option does not find the sum of the change in price correctly (e.g., may have added the values without considering one or both negative signs).",
+                    "Percent": 16
+                }
+            },
+            "C": {
+                "Choice": "The average change in price is negative because the total change is negative, and a negative total change in price divided by 4 days is negative.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that, to find the average, the total must first be found, and then either adds the values (0.07 + (−0.12) = 0.07 − 0.12 = −0.05 , − 0.05 + (−0.03) = − 0.08 , −0.08 + 0.06 = 0.06 − 0.08 = − 0.02 ) and recognizes that a negative total (− 0.02 ) divided by a positive number (4) would result in a negative quotient, which is the average change in price OR adds the two positive values (0.07 + 0.06 = 0.13) and the two negative values (−0.12 + − 0.03 = −0.15 ), recognizes that the negative sum is farther from 0 than the positive sum, which means the total change in price would be negative, and recognizes that a negative total divided by a positive number would result in a negative quotient, which is the average change in price.",
+                    "Percent": 39
+                }
+            },
+            "D": {
+                "Choice": "The average change in price is positive because change represents subtraction, and when the values are subtracted the result is a positive number.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses subtraction (“change”) rather than addition (“total”), resulting in 0.07 − (−0.12) − (−0.03) − 0.06 = 0.07 + 0.12 + 0.03 − 0.06 = 0.22 − 0.06 = 0.16, and then concludes the average would be positive since a positive number divided by a positive number results in a positive quotient.",
+                    "Percent": 16
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "The Number System"
+        ],
+        "SubTopics": [
+            "Apply properties of operations to multiply and divide rational numbers, including real-world contexts; demonstrate that the decimal form of a rational number terminates or eventually repeats."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The track at a fitness center is 0.32 kilometer long. Jamie ran around the track 3 1/2 times.",
+            "How many kilometers did Jamie run?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1.12",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option converts 3 1/2 to 3.5 and then multiplies 3.5 by 0.32.",
+                    "Percent": 74
+                }
+            },
+            "B": {
+                "Choice": "1.46",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option adds 1/2 to the product of 3 and 0.32 (i.e., 1/2 + 3 ⋅ 0.32 = 0.5 + 0.96 = 1.46).",
+                    "Percent": 8
+                }
+            },
+            "C": {
+                "Choice": "3.16",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option adds 3 to the product of 1/2 and 0.32 (i.e., 3 + 1/2 ⋅ 0.32 = 3 + 0.16 = 3.16).",
+                    "Percent": 9
+                }
+            },
+            "D": {
+                "Choice": "3.82",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option converts 3 1/2 to 3.5 and then adds 3.5 and 0.32.",
+                    "Percent": 9
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Ratios & Proportional Relationships"
+        ],
+        "SubTopics": [
+            "Analyze, recognize, and represent proportional relationships and use them to solve real-world and mathematical problems."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Alice buys songs online. The number of songs she buys and the total price to buy those songs are proportional to one another. She determines that the total price to buy 20 songs is d dollars. How could Alice determine the total price, in dollars, to buy 30 songs?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "by adding 10 to d because 20 + 10 = 30",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers a proportional relationship to be additive rather than multiplicative.",
+                    "Percent": 34
+                }
+            },
+            "B": {
+                "Choice": "by subtracting 10 from d because 30 − 10 = 20",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers a proportional relationship to be additive rather than multiplicative and starts with 30 songs rather than 20 songs.",
+                    "Percent": 14
+                }
+            },
+            "C": {
+                "Choice": "by multiplying d by 2/3 because 30 • 2/3 = 20",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses the reciprocal of the proportional relationship by starting with 30 songs rather than 20 songs.",
+                    "Percent": 17
+                }
+            },
+            "D": {
+                "Choice": "by multiplying d by 1.5 because 20 • 1.5 = 30",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that a proportional relationship is multiplicative and recognizes that buying 1.5 times as many songs would change the total price by a factor of 1.5.",
+                    "Percent": 35
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Ratios & Proportional Relationships"
+        ],
+        "SubTopics": [
+            "Identify the constant of proportionality (unit rate) in tables, graphs, equations, diagrams, and verbal descriptions of proportional relationships."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Mr. Krenshaw is typing a novel he has written. He types at a constant rate. The numbers of pages he has typed after different amounts of time are shown in the table below.",
+            "problems/PA24G7M/media/5a.jpg",
+            "The pattern continues. How many pages does Mr. Krenshaw type each hour?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "6",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option divides the number of pages for any row of the table by that row’s time (e.g., 21 ÷ 3.5 = 6).",
+                    "Percent": 71
+                }
+            },
+            "B": {
+                "Choice": "7.5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option finds the difference between the number of pages and the time in the first row (i.e., 9 − 1.5 = 7.5).",
+                    "Percent": 10
+                }
+            },
+            "C": {
+                "Choice": "8.5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option recognizes that pages typed per hour can be determined when the time is at 1 hour but subtracts 0.5 from the number of pages in the first row (9 − 0.5 = 8.5) since subtracting 0.5 from the time in the first row (1.5 hours) has a difference of 1 hour.",
+                    "Percent": 10
+                }
+            },
+            "D": {
+                "Choice": "9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses the number of pages in the first row (9) without considering that the time in the first row is not 1 hour.",
+                    "Percent": 9
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Ratios & Proportional Relationships"
+        ],
+        "SubTopics": [
+            "Represent proportional relationships by equations."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Ben is making chocolate chip cookies with walnuts in them. The ratio of cups of chocolate chips to cups of walnuts is 4:3. To make his cookies, Ben uses 2 1/2 cups of chocolate chips. Which equation could be used to determine the number of cups of walnuts (x) that Ben needs?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "x/2.5 = 4/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option sets up the first fraction as the cups of walnuts needed (x) divided by the cups of chocolate chips used (2 1/2 = 2.5) but sets up the second fraction by converting the given ratio 4 : 3 to fractional form without considering that this ratio is cups of chocolate chips to cups of walnuts rather than cups of walnuts to cups of chocolate chips.",
+                    "Percent": 26
+                }
+            },
+            "B": {
+                "Choice": "2.5/x = 4/3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option sets up each fraction using “chocolate chips” divided by “walnuts” by writing the first fraction as the cups of chocolate chips used (2 1/2 = 2.5) divided by the cups of walnuts needed (x) and the second fraction by converting the given ratio 4 : 3 to fractional form.",
+                    "Percent": 48
+                }
+            },
+            "C": {
+                "Choice": "2.5/3 = 4/x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option sets up each fraction using “chocolate chips” divided by “walnuts,” but pairs the cups of chocolate chips used (2 1/2 = 2.5) with the cups of walnuts from the given ratio (3) and pairs the cups of chocolate chips from the given ratio (4) with the cups of walnuts needed (x).",
+                    "Percent": 13
+                }
+            },
+            "D": {
+                "Choice": "2.5/4 = 3/x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option sets up the first fraction as the cups of chocolate chips used (2 1/2 = 2.5) divided by the cups of chocolate chips from the given ratio (4) but then uses the reciprocal of this relationship in the second fraction by setting the cups of walnuts from the given ratio (3) divided by the cups of walnuts needed (x).",
+                    "Percent": 13
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Ratios & Proportional Relationships"
+        ],
+        "SubTopics": [
+            "Explain what a point (x, y) on the graph of a proportional relationship means in terms of the situation, with special attention to the points (0, 0) and (1, r), where r is the unit rate."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Rahim measures the temperature of water as it is heated in a science experiment. He makes the graph below to show the relationship between the time (x), in minutes, and the increase in temperature (y), in degrees Fahrenheit.",
+            "problems/PA24G7M/media/7a.jpg",
+            "Which point on the graph represents the change in temperature in degrees Fahrenheit per minute?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "point P",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option selects the point at (0, 0) as the point common to all proportional relationships but does not consider that 0/0 is undefined (i.e., it is the only point on the graph of a proportional relationship that cannot be used to determine the unit rate).",
+                    "Percent": 9
+                }
+            },
+            "B": {
+                "Choice": "point Q",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that the point (1, r) of a proportional relationship represents the change in temperature per minute since the y‑coordinate of this point (r) is the unit rate.",
+                    "Percent": 40
+                }
+            },
+            "C": {
+                "Choice": "point R",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option selects the first point with a positive y‑value that is labeled along the y‑axis.",
+                    "Percent": 13
+                }
+            },
+            "D": {
+                "Choice": "point S",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option selects the point with a y‑coordinate of 1 rather than the point with an x‑coordinate of 1.",
+                    "Percent": 38
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Ratios & Proportional Relationships"
+        ],
+        "SubTopics": [
+            "Use proportional relationships to solve multi-step ratio and percent problems."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The table below shows the relationship between a dog’s weight, in pounds, and the dog’s mass, in kilograms, during three visits to the veterinarian.",
+            "problems/PA24G7M/media/8a.jpg",
+            "During visit 4, the dog’s mass is 7.71 kilograms greater than its mass during visit 3. Rounded to the nearest pound, what is the dog’s weight during visit 4?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "23",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option adds 7.71 to 6.82, resulting in a sum of 14.53, but then divides the sum by 4 (from visit 4), resulting in a quotient of 3.6325, divides the quotient by 0.45 [the approximate ratio of mass (kilograms) to weight (pounds)], resulting in a quotient of 8.07222 . . . , and adds the quotient to 15, resulting in a sum of 23.07222 . . . , which is then rounded to the nearest whole number.",
+                    "Percent": 36
+                }
+            },
+            "B": {
+                "Choice": "26",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option adds 7.71 to 6.82, resulting in a sum of 14.53, but then multiplies the sum by 4 (from visit 4), resulting in a product of 58.12, and multiplies the product by 0.45 [the approximate ratio of mass (kilograms) to weight (pounds)], resulting in a product of 26.154, which is then rounded to the nearest whole number.",
+                    "Percent": 18
+                }
+            },
+            "C": {
+                "Choice": "32",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option adds 7.71 to the mass during visit 3 (6.82 kilograms) to determine the mass during visit 4 (6.82 + 7.71 = 14.53 kilograms), determines the approximate ratio of weight (pounds) to mass (kilograms) by dividing the weight for any row of the table by that row’s mass (e.g., 15 ÷ 6.82 ≈ 2.2), and then multiplies the approximate ratio (2.2) by the mass during visit 4 (14.53 kilograms), resulting in a product of 31.966, which is then rounded to the nearest whole number.",
+                    "Percent": 37
+                }
+            },
+            "D": {
+                "Choice": "50",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option adds 7.71 to 15 (the weight during visit 3 rather than adding to the mass during visit 3), resulting in a sum of 22.71, and divides the sum by 0.45 [the approximate ratio of mass (kilograms) to weight (pounds)], resulting in a quotient of 50.4666 . . . , which is then rounded to the nearest whole number.",
+                    "Percent": 9
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Apply properties of operations to add, subtract, factor, and expand linear expressions with rational coefficients."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which expression is equivalent to 2(3p + 72 + 3p)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "81p",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option distributes the 2 to the first term only, resulting in 6 p + 72 + 3 p, adds the numerals from all three terms (6 + 72 + 3 = 81), and then multiplies the sum by p.",
+                    "Percent": 9
+                }
+            },
+            "B": {
+                "Choice": "156p",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option simplifies the second factor by adding the numerals from all three terms (3 + 72 + 3 = 78), multiplies the sum by p, resulting in the product 78 p, and then multiplies the product by 2.",
+                    "Percent": 19
+                }
+            },
+            "C": {
+                "Choice": "12p + 72",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option simplifies the second factor by combining the like terms, resulting in 6 p + 72, but then distributes the 2 to the first term only (i.e., does not multiply the 72 by 2).",
+                    "Percent": 14
+                }
+            },
+            "D": {
+                "Choice": "12p + 144",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option simplifies the second factor by combining the like terms, resulting in 6 p + 72, and then distributes the 2 by multiplying both the 6 p and the 72 by 2.",
+                    "Percent": 58
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Solve real-world and mathematical problems using numerical and algebraic expressions, equations, and inequalities."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The price of a pair of pants is $25.50. Mai will use a coupon for 20% off when she buys the pants. Which method can be used to correctly determine the amount of money Mai will save by using her coupon?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Since 10% of $25.50 is $2.55, multiply $2.55 by 2 to get $5.10.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that 20% can be determined by finding 10% of the original amount (0.10 ⋅ $25.50 = $2.55) and multiplying that value by 2 since 20% is 2 ⋅ 10% (i.e., since 0.20 = 2 ⋅ 0.10, then 0.20 ⋅ $25.50 = 2 ⋅ 0.10 ⋅ $25.50).",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Since $25 is 1/4 of $100, divide 20 by 4 and then add the extra $0.50 to get $5.50.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option subtracts $0.50 from $25.50, resulting in a difference of $25, represents the $25 as a fraction of 100 and treats the actual percentage (20%) as the number 20, and then adds the $0.50 (which was subtracted from $25.50) to the quotient.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Since $25 is 1/4 of $100, divide 20 by 4 and then subtract the extra $0.50 to get $4.50.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option subtracts $0.50 from $25.50, resulting in a difference of $25, represents the $25 as a fraction of 100 and treats the actual percentage (20%) as the number 20, and then subtracts the $0.50 (which was already subtracted from $25.50) from the quotient.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Since 10% of $25.50 is $2.50, multiply $2.50 by 2 and then add another 10% to get $5.10.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option determines an incorrect value for 10% of $25.50 by omitting one of the 5s and then adds “10%” (0.10) to increase the value to the correct solution [Note: Even though this method results in a correct solution for this situation, this method cannot be applied to any dollar amount and is therefore considered an incorrect method.].",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Solve word problems leading to equations of the form px + q = r and p(x + q) = r, where p, q, and r are specific rational numbers."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Ms. Rodriguez buys markers for the students in her class. She buys 3 boxes of markers for every 5 students. She also buys 2 extra boxes of markers. She buys a total of 17 boxes of markers. How many students are in Ms. Rodriguez’s class?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option subtracts 2 from 17, resulting in a difference of 15, but then multiplies the difference by the ratio of boxes of markers to students (3/5) rather than by the ratio of students to boxes of markers (5/3).",
+                    "Percent": 9
+                }
+            },
+            "B": {
+                "Choice": "25",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option subtracts the 2 extra boxes from the total number of boxes (17 − 2 = 15) and then multiplies the difference (15) by the ratio of students to boxes of markers (5/3), resulting in 25 students.",
+                    "Percent": 56
+                }
+            },
+            "C": {
+                "Choice": "27",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option subtracts the 2 extra boxes from the total number of boxes (17 − 2 = 15), multiplies the difference (15) by the ratio of students to boxes of markers (5/3), resulting in a product of 25, but then adds the 2 (which was subtracted from the 17) to the product.",
+                    "Percent": 21
+                }
+            },
+            "D": {
+                "Choice": "30",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option sets up the expression 17 ⋅ 5 + 2, which simplifies to 87, divides this amount by 3, resulting in a quotient of 29, and then rounds the quotient up to the nearest multiple of 5 since the number of students should be a multiple of 5 (“3 boxes for every 5 students”).",
+                    "Percent": 14
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Expressions & Equations"
+        ],
+        "SubTopics": [
+            "Determine the reasonableness of answer(s) or interpret the solution(s) in the context of the problem."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A school is collecting donations for a new baseball field. The table below shows the donations received for five months.",
+            "problems/PA24G7M/media/12a.jpg",
+            "Which method gives the MOST accurate estimate of the sum of the donations the school has received in five months?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "rounding each monthly donation value to 3,000 and then adding",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option notices that the only number to not start with a 3 would round to 3,000, so thinks that this method would be the most accurate.",
+                    "Percent": 19
+                }
+            },
+            "B": {
+                "Choice": "rounding each monthly donation value to the nearest 1,000 and then adding",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that, since each monthly donation amount is a 4‑digit number, rounding to the nearest thousand would be more accurate than rounding every value up to the next thousand, rounding (i.e., truncating) every value down to the previous thousand, or rounding to a specific dollar amount in the thousands.",
+                    "Percent": 51
+                }
+            },
+            "C": {
+                "Choice": "rounding each monthly donation value up to the nearest 1,000 and then adding",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option rounds up rather than to the closest thousand (i.e., may have thought that an overestimate would be the most accurate since money is involved but confuses estimation strategies for “money collected” and “budget”).",
+                    "Percent": 19
+                }
+            },
+            "D": {
+                "Choice": "rounding each monthly donation value down to the nearest 1,000 and then adding",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option rounds down rather than to the closest thousand (i.e., may have thought that an underestimate would be the most accurate since money collected is involved).",
+                    "Percent": 11
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Identify or describe the properties of all types of triangles based on angle and side measures."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Victoria makes a triangular shelf for her room. The shelf has side lengths of 9 inches, 12 inches, and 15 inches. The largest angle is 90°. Which description of the shape of the shelf is accurate?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "an acute equilateral triangle",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option thinks that a triangle with a 90° angle is an acute triangle (may have considered that the other two angles must be acute angles) and that a triangle with three sides of different lengths is an equilateral triangle (may have confused all equal sides and no equal sides).",
+                    "Percent": 11
+                }
+            },
+            "B": {
+                "Choice": "an acute scalene triangle",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option recognizes that a triangle with three sides of different lengths is a scalene triangle but thinks that a triangle with a 90° angle is an acute triangle (may have considered that the other two angles must be acute angles).",
+                    "Percent": 17
+                }
+            },
+            "C": {
+                "Choice": "a right isosceles triangle",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option recognizes that a triangle with a 90° angle is a right triangle but thinks that a triangle with three sides of different lengths is an isosceles triangle (may have confused two equal sides and no equal sides).",
+                    "Percent": 29
+                }
+            },
+            "D": {
+                "Choice": "a right scalene triangle",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that a triangle with a 90° angle is a right triangle and that a triangle with three sides of different lengths is a scalene triangle.",
+                    "Percent": 43
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Use and apply the triangle inequality theorem."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Daria is trying to make a triangular brace from three metal rods. The metal rods have lengths of 3 inches, 7 inches, and 11 inches. Daria cannot cut or bend the metal rods. Which statement explains whether Daria can make a triangular brace from the three metal rods?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Because 11 is less than the double of 7, Daria can make a triangular brace from the three metal rods.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option thinks that a triangle can be formed only when the longest side is less than twice the longer of the two shorter sides (i.e., considers the shortest side length to be irrelevant when determining whether a triangle can be formed).",
+                    "Percent": 13
+                }
+            },
+            "B": {
+                "Choice": "Because 11 is greater than the double of 3, Daria cannot make a triangular brace from the three metal rods.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option thinks that a triangle can be formed only when the longest side is less than twice the shortest side (i.e., considers the middle side length to be irrelevant when determining whether a triangle can be formed).",
+                    "Percent": 14
+                }
+            },
+            "C": {
+                "Choice": "Because the sum of 3 and 7 is less than 11, Daria cannot make a triangular brace from the three metal rods.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option applies the triangle inequality theorem, which states that the sum of the lengths of any two sides of a triangle is greater than the length of the third side, and compares the sum of the shorter two side lengths (3 + 7 = 10) to the longest side length (11).",
+                    "Percent": 62
+                }
+            },
+            "D": {
+                "Choice": "Because the product of 3 and 7 is greater than 11, Daria can make a triangular brace from the three metal rods.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses the product of the two shortest sides (3 ⋅ 7 = 21) rather than the sum (3 + 7 = 10) when comparing to the longest side (11).",
+                    "Percent": 11
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometry"
+        ],
+        "SubTopics": [
+            "Solve real-world and mathematical problems involving area, volume, and surface area of two- and three-dimensional objects composed of triangles, quadrilaterals, polygons, cubes, and right prisms."
+        ],
+        "SuppContent": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A shipping company has two different sizes of boxes. Both boxes are cubes. The first box has a side length of 4 inches. The second box has a side length of 6 inches. Hannah claims that the volume of the second box is 8 cubic inches greater than the volume of the first box because the difference in side lengths is 2 inches and 2³ = 8. Which statement could be used to show that Hannah’s claim is NOT correct?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The value of 2³ is 6, not 8.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option considers 2³ to be another way to represent 2 ⋅ 3.",
+                    "Percent": 23
+                }
+            },
+            "B": {
+                "Choice": "The value of (6 – 4)³ is equal to 6³ – 4³, not 2³.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option thinks that distributing should always be the first step but does not consider that distributing is a possible first step only when a grouped expression is being multiplied by another expression rather than being raised to an exponent.",
+                    "Percent": 17
+                }
+            },
+            "C": {
+                "Choice": "The difference in the volumes is actually 6³ – 4³, which is 152 and not 8.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This option recognizes that each volume should be determined individually by raising each side length to the power of 3 (6³ and 4³) before finding the difference.",
+                    "Percent": 42
+                }
+            },
+            "D": {
+                "Choice": "The difference in the volumes is actually 6 • 6² – 6 • 4², which is 120 and not 8.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This option uses the surface area formula for a cube (SA = 6s²) rather than the volume formula for a cube (V = s³).",
+                    "Percent": 18
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Statistics & Probability"
+        ],
+        "SubTopics": [
+            "Use random sampling to draw inferences about a population."
+        ],
+        "SuppContent": [],
+        "Points": 4,
+        "Explain": false,
+        "Content": [
+            "Some students want to learn about the exercise habits of the students at their middle school."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 2,
+                "Explain": false,
+                "Content": [
+                    "Three students conducted the surveys described below.",
+                    ":ibox:• Kari surveyed the girls at her lunch table.\n• Mandy surveyed every 10th student who entered the school building.\n• Lea surveyed all the members of the girls’ and boys’ soccer teams.",
+                    "Explain why Mandy’s survey is the best representation of a random sample to learn about the exercise habits of the students at the middle school. As part of your explanation, state why the other two surveys do not represent random samples."
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 2,
+                "Explain": true,
+                "Content": [
+                    "A school-wide survey was conducted to find out how many students ride a bike for exercise. Nick conducted a survey of a sample of 75 students to find out how many students ride a bike for exercise. The results of both surveys are shown in the table below.",
+                    "problems/PA24G7M/media/16a.jpg",
+                    "Based on the information in the table, why is it likely that Nick’s sample is NOT random? State how many students from Nick’s sample would have been expected to ride a bike for exercise had his sample been truly random."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "42",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
