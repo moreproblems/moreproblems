@@ -1988,12 +1988,49 @@
           <div class="card card-large"
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicRefsheetCard>
-            <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden">
-              <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false"
-                [zoom]="0.95" style="min-height: 400px; height: fit-content"></pdf-viewer>
-              <pdf-viewer *ngIf="this.screenWidth > 700" [src]="st_refsheet_source" [original-size]="false"
-                [zoom]="0.85" style="min-height: 625px; height: fit-content"></pdf-viewer>
+            <section style="height: auto; max-height: 100px; width: 100%; margin-top: 10px; display: flex; flex-direction: row; align-items: center; justify-content: center">
+              <div style="display: flex; flex-direction: row">
+                <button *ngIf="st_refsheet_source != '' && this.screenWidth <= 900" (click)="zoom_out_r()" class="grade-button"
+                  style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 2px; border-radius: 13px">
+                  <img src="./assets/media/icons/minus.png" style="height: 20px; filter: invert(100%)">
+                </button>
+                <button *ngIf="st_refsheet_source != '' && this.screenWidth > 900" (click)="zoom_out_r()" class="grade-button"
+                  style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 3px; border-radius: 16px">
+                  <img src="./assets/media/icons/minus.png" style="height: 25px; filter: invert(100%)">
+                </button>
+                <div style="padding-bottom: 5px">
+                  <p style="margin: auto 5px; font-size: 18px; font-weight: 600">Zoom </p>
+                  <h2 style="margin: auto 5px; font-size: 20px; font-weight: 800">{{ref_zoom}}<b
+                      style="font-size: 16px; font-weight: 500">%</b> </h2>
+                </div>
+                <button *ngIf="st_refsheet_source != '' && this.screenWidth <= 900" (click)="zoom_in_r()" class="grade-button"
+                  style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 2px; border-radius: 13px">
+                  <img src="./assets/media/icons/plus.png" style="height: 20px; filter: invert(100%)">
+                </button>
+                <button *ngIf="st_refsheet_source != '' && this.screenWidth > 900" (click)="zoom_in_r()" class="grade-button"
+                  style="margin-left: 0px; margin-right: 0px; width: auto; height: fit-content; padding: 3px; border-radius: 16px">
+                  <img src="./assets/media/icons/plus.png" style="height: 25px; filter: invert(100%)">
+                </button>
+              </div>
             </section>
+            <section style="height: fit-content; display: flex; flex-direction: column;  overflow: hidden; margin: 10px 0px; border: 1px solid black; border-radius: 10px">
+              <pdf-viewer *ngIf="this.screenWidth <= 700" [src]="st_refsheet_source" [original-size]="false"
+              [zoom]="ref_zoom/100" style="min-height: 400px; height: fit-content"></pdf-viewer>
+              <pdf-viewer *ngIf="this.screenWidth > 700" [src]="st_refsheet_source" [original-size]="false"
+                [zoom]="ref_zoom/100" style="min-height: 625px; height: fit-content"></pdf-viewer>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
+        style="margin-bottom: 0px; align-items: center; width: 100%">
+        <div
+          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_calc"
+          style="width: 100%">
+          <div class="card card-large"
+            style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
+            #subtopicCalculatorCard>
+            <div id="calculatorCanvas" style="width: 100%; height: 450px; margin: 10px 0px"></div>
           </div>
         </div>
       </div>
@@ -2122,34 +2159,59 @@
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
             #subtopicCard>
             <br />
-            <section
-              *ngIf="dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
-              style="height: auto; width: 100%; display: flex; justify-content: center">
-              <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
-                <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on">
-                  <b> Show
-                    Reference Sheet </b>
-                </button>
-                <button (click)="expand_refsheet = !expand_refsheet" *ngIf="expand_refsheet" class="toggle-button-off">
-                  <b> Hide
-                    Reference Sheet </b>
-                </button>
-              </label>
-            </section>
-            <section *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0"
-              style="height: auto; width: 100%; display: flex; justify-content: center">
-              <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
-                <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
-                    Supplement(s) </b>
-                </button>
-                <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp" class="toggle-button-off"> <b> Hide
-                    Supplement(s) </b>
-                </button>
-              </label>
-            </section>
-            <br />
+            <div class="card-container" style="margin-top: 0px">
+              <span *ngIf="dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
+                style="height: auto; width: auto; display: flex; justify-content: center">
+                <label class="switch" style="padding: 0 10px">
+                  <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
+                  <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on">
+                    <b> Show
+                      Reference Sheet </b>
+                  </button>
+                  <button (click)="expand_refsheet = !expand_refsheet" *ngIf="expand_refsheet" class="toggle-button-off">
+                    <b> Hide
+                      Reference Sheet </b>
+                  </button>
+                </label>
+              </span>
+              <span *ngIf="subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')"
+                style="height: auto; width: auto; display: flex; justify-content: center">
+                <label class="switch" style="padding: 0 10px">
+                  <input type="checkbox" style="margin: 0px" value="{{expand_calc}}">
+                  <button (click)="expand_calc = !expand_calc; render_calc_st('')" *ngIf="!expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator')" class="toggle-button-on"> <b> Show
+                      Calculator </b>
+                  </button>
+                  <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator')" class="toggle-button-off"> <b> Hide
+                      Calculator </b>
+                  </button>
+                  <button (click)="expand_calc = !expand_calc; render_calc_st('sci')" *ngIf="!expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-on"> <b> Show
+                      Calculator </b>
+                  </button>
+                  <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-off"> <b> Hide
+                      Calculator </b>
+                  </button>
+                  <button (click)="expand_calc = !expand_calc; render_calc_st('graph')" *ngIf="!expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-on"> <b> Show
+                      Calculator </b>
+                  </button>
+                  <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-off"> <b> Hide
+                      Calculator </b>
+                  </button>
+                </label>
+              </span>
+              <span *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0"
+                style="height: auto; width: auto; display: flex; justify-content: center">
+                <label class="switch" style="padding: 0 10px">
+                  <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
+                  <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
+                      Supplement(s) </b>
+                  </button>
+                  <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp" class="toggle-button-off"> <b> Hide
+                      Supplement(s) </b>
+                  </button>
+                </label>
+              </span>
+            </div>
+            <hr *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0 || dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != '' || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" style="width: 100%; margin: 20px auto; border-width: 2px" />
             <div class="content" style="margin: auto; align-items: center">
               <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
                 style="margin-bottom: 0px; align-items: center; width: 100%">

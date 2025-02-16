@@ -21,6 +21,7 @@ import { kMaxLength } from 'buffer';
 (<any>pdfMake).addVirtualFileSystem(pdfFonts);
 
 const confetti = require('canvas-confetti').default;
+const Desmos = require('desmos');
 
 const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {
@@ -62,6 +63,7 @@ export class QuizzesComponent implements OnInit {
   topic_filters: string[] = [];
   // sub_topic = false;
   expand_refsheet = false;
+  expand_calc = false;
   expand_supp = true;
   expand_overview = true;
   expand_topics = true;
@@ -128,8 +130,8 @@ export class QuizzesComponent implements OnInit {
   generate_message = "";
 
   problems_sequence: number[] = [];
-  ordered_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
-  exam_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+  ordered_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'SuppTools': string[], 'Points': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+  exam_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'SuppTools': string[], 'Points': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
   pdf_dump: any = { content: [], styles: { tableExample: { margin: [0, 5, 0, 15] } }, defaultStyle: { columnGap: 20, fontSize: 15 }, images: {} };
   refsheet_source: string = '';
   st_refsheet_source: string = '';
@@ -178,7 +180,7 @@ export class QuizzesComponent implements OnInit {
   subtopic_new_problem_count = 0;
   subtopic_correct_problem_count = 0;
   subtopic_problem_number = 0;
-  subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+  subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'SuppTools': string[], 'Points': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
   subtopic_submission: any[] = [];
   subtopic_problem_selection: any[] = [];
   subtopic_problem_attempts: number[] = [];
@@ -208,6 +210,7 @@ export class QuizzesComponent implements OnInit {
   file_source = '';
   file_page = 1;
   file_zoom = 85;
+  ref_zoom = 100;
 
   problem_types: { [key: string]: any[] } = {
     "MC": ["Multiple Choice", 4],
@@ -227,13 +230,15 @@ export class QuizzesComponent implements OnInit {
 
   content_types: string[] = ['Text', 'Image'];
 
-  default_problem: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } = {
+  default_problem: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'SuppTools': string[], 'Points': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } = {
     "Number": 0,
     "Type": "MC",
     "NumChoices": 4,
     "Topics": [],
     "SubTopics": [],
     "SuppContent": [],
+    "SuppTools": [],
+    "Points": 1,
     "Explain": false,
     "Content": [
       ""
@@ -393,6 +398,46 @@ export class QuizzesComponent implements OnInit {
       part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
     }
     return part_num;
+  }
+
+  render_calc(type: string) {
+      setTimeout(() => {
+          var calculatorCanvas = document.getElementById('calculatorCanvas');
+          if (this.screenWidth > 600) {
+              if (type == '') {
+                  const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+              }
+              else if (type == 'sci') {
+                  const calculator: any = Desmos.ScientificCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+              }
+              else if (type == 'graph') {
+                  const calculator: any = Desmos.GraphingCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+              }
+          }
+          else {
+              const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+          }
+      }, 100);
+  }
+
+  render_calc_st(type: string) {
+      setTimeout(() => {
+          var calculatorCanvas = document.getElementById('calculatorCanvas');
+          if (this.screenWidth > 600) {
+              if (type == '') {
+                  const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+              }
+              else if (type == 'sci') {
+                  const calculator: any = Desmos.ScientificCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+              }
+              else if (type == 'graph') {
+                  const calculator: any = Desmos.GraphingCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+              }
+          }
+          else {
+              const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+          }
+      }, 100);
   }
 
   read_supp_json(path: string) {
@@ -1665,7 +1710,7 @@ export class QuizzesComponent implements OnInit {
     this.topics = [];
     this.topics_count = {};
     for (let i = 0; i < this.dumpService.exam_set.length; i++) {
-      if (Object.keys(this.dumpService.exam_names).includes(this.dumpService.exam_set[i]) && (this.state_filters.includes(this.dumpService.exam_attribute_dump[this.dumpService.exam_set[i]].State) || this.state_filters.includes(this.dumpService.exam_attribute_dump[this.dumpService.exam_set[i]].ExamName) || this.state_filters.length == 0) && (this.grade_filters.includes(this.dumpService.exam_attribute_dump[this.dumpService.exam_set[i]].Grade) || this.grade_filters.length == 0) && (this.subject_filters.includes(this.dumpService.exam_attribute_dump[this.dumpService.exam_set[i]].Subject) || this.subject_filters.length == 0)) {
+      if (this.dumpService.exam_attribute_dump[this.dumpService.exam_set[i]].Parts.length == 0 && (this.state_filters.includes(this.dumpService.exam_attribute_dump[this.dumpService.exam_set[i]].State) || this.state_filters.includes(this.dumpService.exam_attribute_dump[this.dumpService.exam_set[i]].ExamName) || this.state_filters.length == 0) && (this.grade_filters.includes(this.dumpService.exam_attribute_dump[this.dumpService.exam_set[i]].Grade) || this.grade_filters.length == 0) && (this.subject_filters.includes(this.dumpService.exam_attribute_dump[this.dumpService.exam_set[i]].Subject) || this.subject_filters.length == 0)) {
         this.filtered_set.push(this.dumpService.exam_set[i]);
       }
     }
@@ -2954,6 +2999,14 @@ export class QuizzesComponent implements OnInit {
 
   zoom_in() {
     this.file_zoom = Math.min(125, this.file_zoom + 5);
+  }
+
+  zoom_out_r() {
+      this.ref_zoom = Math.max(75, this.ref_zoom - 5);
+  }
+
+  zoom_in_r() {
+      this.ref_zoom = Math.min(125, this.ref_zoom + 5);
   }
 
   toggle_filters() {

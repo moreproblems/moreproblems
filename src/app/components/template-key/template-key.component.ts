@@ -18,6 +18,7 @@ import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 // const MathJax = require('mathjax');
 const confetti = require('canvas-confetti').default;
+const Desmos = require('desmos');
 
 const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {
@@ -58,6 +59,7 @@ export class TemplateKeyComponent implements OnInit {
 
     expand_filters = true;
     expand_refsheet = false;
+    expand_calc = false;
     expand_supp = true;
 
     favorite_std_set: string[][] = [];
@@ -73,7 +75,7 @@ export class TemplateKeyComponent implements OnInit {
 
     favorite_set: string[] = [];
 
-    exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Points': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Points': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+    exam_dump: { [key: number]: { 'Number': number, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'SuppTools': string[], 'Points': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Points': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
     pdf_dump: any = { content: [], styles: { tableExample: { margin: [0, 5, 0, 15] } }, defaultStyle: { columnGap: 20, fontSize: 15 }, images: {} };
     refsheet_source: string = '';
     st_refsheet_source: string = '';
@@ -112,7 +114,7 @@ export class TemplateKeyComponent implements OnInit {
     subtopic_new_problem_count = 0;
     subtopic_correct_problem_count = 0;
     subtopic_problem_number = 0;
-    subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+    subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'SuppTools': string[], 'Points': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
     subtopic_submission: any[] = [];
     subtopic_problem_selection: any[] = [];
     subtopic_problem_attempts: number[] = [];
@@ -128,6 +130,7 @@ export class TemplateKeyComponent implements OnInit {
     file_source = '';
     file_page = 1;
     file_zoom = 85;
+    ref_zoom = 100;
 
     default_problem_pdf: any = {
         columns: []
@@ -213,6 +216,46 @@ export class TemplateKeyComponent implements OnInit {
             part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
         }
         return part_num;
+    }
+
+    render_calc(type: string) {
+        setTimeout(() => {
+            var calculatorCanvas = document.getElementById('calculatorCanvas');
+            if (this.screenWidth > 600) {
+                if (type == '') {
+                    const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                }
+                else if (type == 'sci') {
+                    const calculator: any = Desmos.ScientificCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                }
+                else if (type == 'graph') {
+                    const calculator: any = Desmos.GraphingCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                }
+            }
+            else {
+                const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+            }
+        }, 100);
+    }
+
+    render_calc_st(type: string) {
+        setTimeout(() => {
+            var calculatorCanvas = document.getElementById('calculatorCanvas');
+            if (this.screenWidth > 600) {
+                if (type == '') {
+                    const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                }
+                else if (type == 'sci') {
+                    const calculator: any = Desmos.ScientificCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                }
+                else if (type == 'graph') {
+                    const calculator: any = Desmos.GraphingCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                }
+            }
+            else {
+                const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+            }
+        }, 100);
     }
 
     read_supp_json(path: string) {
@@ -4274,6 +4317,14 @@ export class TemplateKeyComponent implements OnInit {
 
     zoom_in() {
         this.file_zoom = Math.min(125, this.file_zoom + 5);
+    }
+
+    zoom_out_r() {
+        this.ref_zoom = Math.max(75, this.ref_zoom - 5);
+    }
+
+    zoom_in_r() {
+        this.ref_zoom = Math.min(125, this.ref_zoom + 5);
     }
 
     toggle_favorite_std() {

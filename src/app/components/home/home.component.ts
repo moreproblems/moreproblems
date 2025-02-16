@@ -19,6 +19,7 @@ import * as Chart from 'chart.js/auto';
 (<any>pdfMake).addVirtualFileSystem(pdfFonts);
 
 const confetti = require('canvas-confetti').default;
+const Desmos = require('desmos');
 
 const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {
@@ -49,6 +50,7 @@ export class HomeComponent implements OnInit {
   blank = " ";
   menuOpen = false;
   expand_refsheet = false;
+  expand_calc = false;
   expand_supp = true;
   quiz_config: any = {};
   data_loaded = false;
@@ -107,7 +109,7 @@ export class HomeComponent implements OnInit {
   edit_c_list: { [index: string]: any } = {};
   class_uid: string = "";
 
-  subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+  subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'SuppTools': string[], 'Points': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
   pdf_dump: any = { content: [], styles: { tableExample: { margin: [0, 5, 0, 15] } }, defaultStyle: { columnGap: 20, fontSize: 15 }, images: {} };
 
   supp_dump: any = {};
@@ -155,6 +157,7 @@ export class HomeComponent implements OnInit {
   file_source = '';
   file_page = 1;
   file_zoom = 85;
+  ref_zoom = 100;
 
   viewerWidth = Math.round(window.innerWidth * .99).toString() + "px";
   viewerHeight = Math.round(window.innerHeight * .95).toString() + "px";
@@ -240,6 +243,26 @@ export class HomeComponent implements OnInit {
 
   can_assign_c(clss: string) {
     return (!this.my_class_metadata[this.authService.userData.classes.indexOf(clss) - 1].exams.includes(this.exam_id));
+  }
+
+  render_calc_st(type: string) {
+      setTimeout(() => {
+          var calculatorCanvas = document.getElementById('calculatorCanvas');
+          if (this.screenWidth > 600) {
+              if (type == '') {
+                  const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+              }
+              else if (type == 'sci') {
+                  const calculator: any = Desmos.ScientificCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+              }
+              else if (type == 'graph') {
+                  const calculator: any = Desmos.GraphingCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+              }
+          }
+          else {
+              const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+          }
+      }, 100);
   }
 
   read_supp_st_json(path: string) {
@@ -2400,6 +2423,14 @@ export class HomeComponent implements OnInit {
 
   zoom_in() {
     this.file_zoom = Math.min(125, this.file_zoom + 5);
+  }
+
+  zoom_out_r() {
+      this.ref_zoom = Math.max(75, this.ref_zoom - 5);
+  }
+
+  zoom_in_r() {
+      this.ref_zoom = Math.min(125, this.ref_zoom + 5);
   }
 
   attempt_mc_st_problem(choice: string, part: string) {

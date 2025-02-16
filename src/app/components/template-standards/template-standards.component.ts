@@ -18,6 +18,7 @@ import * as Chart from 'chart.js/auto';
 (<any>pdfMake).addVirtualFileSystem(pdfFonts);
 
 const confetti = require('canvas-confetti').default;
+const Desmos = require('desmos');
 
 const confettiCanvas = document.getElementById('confettiCanvas');
 const confettiHandler = confetti.create(confettiCanvas, {
@@ -62,6 +63,7 @@ export class TemplateStandardsComponent implements OnInit {
     domain_state: { [key: string]: boolean } = {};
 
     expand_refsheet = false;
+    expand_calc = false;
     expand_supp = true;
 
     problem_number = 1;
@@ -83,7 +85,7 @@ export class TemplateStandardsComponent implements OnInit {
     random_index = 0
     random_list: string[] = [];
 
-    subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
+    subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'SuppTools': string[], 'Points': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
     pdf_dump: any = { content: [], styles: { tableExample: { margin: [0, 5, 0, 15] } }, defaultStyle: { columnGap: 20, fontSize: 15 }, images: {} };
 
     signup: boolean = false;
@@ -117,6 +119,7 @@ export class TemplateStandardsComponent implements OnInit {
     file_source = '';
     file_page = 1;
     file_zoom = 85;
+    ref_zoom = 100;
 
     default_problem_pdf: any = {
         columns: []
@@ -203,6 +206,26 @@ export class TemplateStandardsComponent implements OnInit {
             part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
         }
         return part_num;
+    }
+
+    render_calc_st(type: string) {
+        setTimeout(() => {
+            var calculatorCanvas = document.getElementById('calculatorCanvas');
+            if (this.screenWidth > 600) {
+                if (type == '') {
+                    const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                }
+                else if (type == 'sci') {
+                    const calculator: any = Desmos.ScientificCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                }
+                else if (type == 'graph') {
+                    const calculator: any = Desmos.GraphingCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                }
+            }
+            else {
+                const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+            }
+        }, 100);
     }
 
     read_supp_st_json(path: string) {
@@ -2853,6 +2876,14 @@ export class TemplateStandardsComponent implements OnInit {
         this.file_zoom = Math.min(125, this.file_zoom + 5);
     }
 
+    zoom_out_r() {
+        this.ref_zoom = Math.max(75, this.ref_zoom - 5);
+    }
+
+    zoom_in_r() {
+        this.ref_zoom = Math.min(125, this.ref_zoom + 5);
+    }
+
     confetti_light(attempts: number) {
         const fire = confetti.shapeFromText({ text: '🔥' });
         if (this.screenWidth > this.mobileWidth) {
@@ -3356,7 +3387,9 @@ export class TemplateStandardsComponent implements OnInit {
     }
 
     ngAfterViewInit() {
-
+        var calculatorCanvas = document.getElementById('calculatorCanvas');
+        var calculator: any = Desmos.GraphingCalculator(calculatorCanvas);
+        calculator.setExpression({ id: 'graph1', latex: 'y=x^2' });
     }
 
     ngOnInit() {
