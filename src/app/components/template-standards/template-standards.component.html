@@ -1885,7 +1885,7 @@
       <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
         style="margin-bottom: 0px; align-items: center; width: 100%">
         <div
-          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_calc"
+          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && (subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')) && expand_calc"
           style="width: 100%">
           <div class="card card-large"
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"

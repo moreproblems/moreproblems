@@ -1287,6 +1287,16 @@ export class TemplateCExamComponent implements OnInit {
                 }
             }
         }
+        this.refsheet_source = '../../' + this.dumpService.exam_attribute_dump[this.eKey].RefSheet;
+        if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+          this.render_calc('');
+        }
+        else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+          this.render_calc('sci');
+        }
+        else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+          this.render_calc('graph');
+        }
         for (let supp of this.exam_dump[this.problem_number].SuppContent) {
             setTimeout(() => {
                 this.read_supp_json(supp);
@@ -1541,6 +1551,16 @@ export class TemplateCExamComponent implements OnInit {
                     }
                 }
             }
+        }
+        this.refsheet_source = '../../' + this.dumpService.exam_attribute_dump[this.eKey].RefSheet;
+        if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+          this.render_calc('');
+        }
+        else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+          this.render_calc('sci');
+        }
+        else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+          this.render_calc('graph');
         }
         for (let supp of this.exam_dump[this.problem_number].SuppContent) {
             setTimeout(() => {
@@ -4735,6 +4755,16 @@ export class TemplateCExamComponent implements OnInit {
                         }
                     }
                 }
+                this.refsheet_source = '../../' + this.dumpService.exam_attribute_dump[this.eKey].RefSheet;
+                if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+                  this.render_calc('');
+                }
+                else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+                  this.render_calc('sci');
+                }
+                else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+                  this.render_calc('graph');
+                }
                 for (let supp of this.exam_dump[this.problem_number].SuppContent) {
                     setTimeout(() => {
                         this.read_supp_json(supp);
@@ -4767,6 +4797,16 @@ export class TemplateCExamComponent implements OnInit {
                 this.attempt_explanation = this.exam_submission[this.problem_number].Rationale;
                 this.problem_selection = this.exam_submission[this.problem_number].Choice;
                 this.problem_attempts = this.exam_submission[this.problem_number].Attempts;
+                this.refsheet_source = '../../' + this.dumpService.exam_attribute_dump[this.eKey].RefSheet;
+                if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+                  this.render_calc('');
+                }
+                else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+                  this.render_calc('sci');
+                }
+                else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+                  this.render_calc('graph');
+                }
                 for (let supp of this.exam_dump[this.problem_number].SuppContent) {
                     setTimeout(() => {
                         this.read_supp_json(supp);
@@ -5142,7 +5182,16 @@ export class TemplateCExamComponent implements OnInit {
                 }
             }
             console.log(this.problem_selection);
-            // this.refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
+            this.refsheet_source = '../../' + this.dumpService.exam_attribute_dump[this.eKey].RefSheet;
+            if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+              this.render_calc('');
+            }
+            else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+              this.render_calc('sci');
+            }
+            else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+              this.render_calc('graph');
+            }
             for (let supp of this.exam_dump[this.problem_number].SuppContent) {
                 setTimeout(() => {
                     this.read_supp_json(supp);
@@ -5270,6 +5319,15 @@ export class TemplateCExamComponent implements OnInit {
                 }
             }
             this.st_refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
+            if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+              this.render_calc_st('');
+            }
+            else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+              this.render_calc_st('sci');
+            }
+            else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+              this.render_calc_st('graph');
+            }
             for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
                 setTimeout(() => {
                     this.read_supp_st_json(supp);
@@ -6458,6 +6516,15 @@ export class TemplateCExamComponent implements OnInit {
                 }
             }
             this.st_refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
+            if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+              this.render_calc_st('');
+            }
+            else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+              this.render_calc_st('sci');
+            }
+            else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+              this.render_calc_st('graph');
+            }
             for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
                 setTimeout(() => {
                     this.read_supp_st_json(supp);

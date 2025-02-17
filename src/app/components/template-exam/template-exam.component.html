@@ -1956,7 +1956,7 @@
       <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
         style="margin-bottom: 0px; align-items: center; width: 100%">
         <div
-          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_calc"
+          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && (subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')) && expand_calc"
           style="width: 100%">
           <div class="card card-large"
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -4612,7 +4612,7 @@
     <div *ngFor="let prob of exam_dump | keyvalue" class="content" role="main"
       style="margin-bottom: 0px; align-items: center; width: 100%">
       <div
-        *ngIf="selected_subtopic == '' && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && dumpService.exam_attribute_dump[key].RefSheet != '' && expand_refsheet"
+        *ngIf="selected_subtopic == '' && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && dumpService.exam_attribute_dump[key].RefSheet != '' && problem_number == +prob.key && expand_refsheet"
         style="width: 100%">
         <div class="card card-large"
           style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -4654,7 +4654,7 @@
     <div *ngFor="let prob of exam_dump | keyvalue" class="content" role="main"
       style="margin-bottom: 0px; align-items: center; width: 100%">
       <div
-        *ngIf="problem_number == +prob.key && selected_subtopic == '' && expand_calc"
+        *ngIf="selected_subtopic == '' && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && problem_number == +prob.key && selected_subtopic == '' && expand_calc"
         style="width: 100%">
         <div class="card card-large"
           style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -4789,7 +4789,7 @@
           #problemCard>
           <br />
           <div class="card-container" style="margin-top: 0px">
-            <span *ngIf="dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
+            <span *ngIf="dumpService.exam_attribute_dump[key].RefSheet != ''"
               style="height: auto; width: auto; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
                 <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
@@ -4840,7 +4840,7 @@
               </label>
             </span>
           </div>
-          <hr *ngIf="exam_dump[problem_number].SuppContent.length > 0 || dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != '' || exam_dump[problem_number].SuppTools.includes('Calculator') || exam_dump[problem_number].SuppTools.includes('Calculator-S') || exam_dump[problem_number].SuppTools.includes('Calculator-G')" style="width: 100%; margin: 20px auto; border-width: 2px" />
+          <hr *ngIf="exam_dump[problem_number].SuppContent.length > 0 || dumpService.exam_attribute_dump[key].RefSheet != '' || exam_dump[problem_number].SuppTools.includes('Calculator') || exam_dump[problem_number].SuppTools.includes('Calculator-S') || exam_dump[problem_number].SuppTools.includes('Calculator-G')" style="width: 100%; margin: 20px auto; border-width: 2px" />
           <div class="content" style="margin: auto; align-items: center; max-width: 100%">
             <div *ngFor="let prob of exam_dump | keyvalue">
               <div *ngIf="problem_number == +prob.key">

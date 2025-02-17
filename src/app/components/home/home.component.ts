@@ -1232,6 +1232,15 @@ export class HomeComponent implements OnInit {
         }
       }
       this.st_refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
+      if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+        this.render_calc_st('');
+      }
+      else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+        this.render_calc_st('sci');
+      }
+      else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+        this.render_calc_st('graph');
+      }
       for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
         setTimeout(() => {
           this.read_supp_st_json(supp);
@@ -3972,6 +3981,15 @@ export class HomeComponent implements OnInit {
         }
       }
       this.st_refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
+      if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+        this.render_calc_st('');
+      }
+      else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+        this.render_calc_st('sci');
+      }
+      else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+        this.render_calc_st('graph');
+      }
       for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
         setTimeout(() => {
           this.read_supp_st_json(supp);
